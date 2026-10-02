@@ -376,19 +376,35 @@
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch31-l03-ex07",
-      "xp_value": 1,
-      "statement": {
-        "en": "Parse: kam taaliban fii al-madrasati",
-        "ur": "پارس: کام طالبن فی المدراستی"
-      },
-      "ar_example": {
+      "prompt": {
         "ar": "كَمْ طَالِبًا فِي الْمَدْرَسَةِ",
-        "en": "kam taaliban fii al-madrasati",
-        "ur": "کامطالبان فی المدراساتی"
+        "ar_plain": "كم طالبا في المدرسة",
+        "translit": "kam taaliban fil-madrasa",
+        "en": "How many students are in the school?",
+        "ur": "اسکول میں کتنے طالب علم ہیں؟"
       },
-      "correct_answer": true
+      "options": [
+        {
+          "en": "Where is the student in the school?",
+          "ur": "اسکول میں طالب علم کہاں ہے؟"
+        },
+        {
+          "en": "Many students are in the school.",
+          "ur": "اسکول میں بہت سے طالب علم ہیں۔"
+        },
+        {
+          "en": "Who is the student in the school?",
+          "ur": "اسکول میں طالب علم کون ہے؟"
+        },
+        {
+          "en": "How many students are in the school?",
+          "ur": "اسکول میں کتنے طالب علم ہیں؟"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1
     }
   ],
   "reveal": {

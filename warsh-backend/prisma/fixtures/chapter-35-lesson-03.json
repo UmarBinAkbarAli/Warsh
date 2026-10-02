@@ -13,17 +13,17 @@
   },
   "hook": {
     "ayah": {
-      "surah": 39,
-      "ayah": 11,
-      "label": "Az-Zumar 39:11",
-      "ar": "قُلْ إِنِّي أُمِرْتُ أَنْ أَعْبُدَ اللَّهَ مُخْلِصًا لَّهُ الدِّينَ",
-      "en": "Say: I have been commanded to worship Allah with sincere devotion.",
-      "ur": "کہہ دیجیے: بے شک میں حکم دیا گیا ہوں کہ اللہ کی صرف تنہائی میں عبادت کروں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/039011.mp3"
+      "surah": 2,
+      "ayah": 142,
+      "label": "Al-Baqarah 2:142",
+      "ar": "سَيَقُولُ السُّفَهَاءُ مِنَ النَّاسِ مَا وَلَّاهُمْ عَنْ قِبْلَتِهِمُ الَّتِي كَانُوا عَلَيْهَا",
+      "en": "The foolish among the people will say, \"What has turned them from the qiblah they used to face?\"",
+      "ur": "لوگوں میں سے بے وقوف کہیں گے: \"انہیں ان کے اس قبلے سے کس چیز نے پھیر دیا جس پر وہ تھے؟\"",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002142.mp3"
     },
     "noor_intro": {
-      "en": "The future tense appears throughout the Quran in promises, warnings, and prophecies. Let's practice recognizing it in context.",
-      "ur": "Future tense-promises، warnings، اور prophecies میں پورے قرآن میں appear کرتا ہے۔ آئیے context میں اسے پہچاننے کی مشق کریں۔"
+      "en": "سَيَقُولُ السُّفَهَاءُ — \"the foolish will say\". Let us find the future in real Quranic sentences.",
+      "ur": "سَيَقُولُ السُّفَهَاءُ — \"بے وقوف کہیں گے\"۔ آئیے اصل قرآنی جملوں میں مستقبل تلاش کریں۔"
     },
     "autoplay": true
   },
@@ -363,44 +363,61 @@
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch35-l03-ex07",
-      "xp_value": 1,
-      "statement": {
-        "en": "Parse: sauufa ya'lamu al-kaafiroona",
-        "ur": "پارس: صوفا یعلمو الکافرونا"
-      },
-      "ar_example": {
+      "prompt": {
         "ar": "سَوْفَ يَعْلَمُ الْكَافِرُونَ",
-        "en": "sauufa ya'lamu al-kaafiroona",
-        "ur": "صوفا یعلمو الکافرونا"
+        "ar_plain": "سوف يعلم الكافرون",
+        "translit": "sawfa ya'lamu al-kaafiruun",
+        "en": "The disbelievers will come to know.",
+        "ur": "کافر عنقریب جان لیں گے۔"
       },
-      "correct_answer": true
+      "options": [
+        {
+          "en": "The disbelievers knew.",
+          "ur": "کافر جانتے تھے۔"
+        },
+        {
+          "en": "The disbelievers will come to know.",
+          "ur": "کافر عنقریب جان لیں گے۔"
+        },
+        {
+          "en": "The disbelievers do not know.",
+          "ur": "کافر نہیں جانتے۔"
+        },
+        {
+          "en": "Teach the disbelievers.",
+          "ur": "کافروں کو سکھاؤ۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Future and past in context",
-      "ar": "Context میں future اور ماضی",
-      "ur": "Context میں future اور ماضی"
+      "en": "The future in a Quranic sentence",
+      "ar": "الْمُسْتَقْبَلُ فِي الْآيَةِ",
+      "ur": "قرآنی جملے میں مستقبل"
     },
     "ayah": {
-      "surah": 39,
-      "ayah": 11,
-      "label": "Az-Zumar 39:11",
-      "ar": "قُلْ إِنِّي أُمِرْتُ أَنْ أَعْبُدَ اللَّهَ مُخْلِصًا لَّهُ الدِّينَ",
-      "en": "Say: I have been commanded to worship Allah with sincere devotion.",
-      "ur": "کہہ دیجیے: بے شک میں حکم دیا گیا ہوں کہ اللہ کی صرف تنہائی میں عبادت کروں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/039011.mp3"
+      "surah": 2,
+      "ayah": 142,
+      "label": "Al-Baqarah 2:142",
+      "ar": "سَيَقُولُ السُّفَهَاءُ مِنَ النَّاسِ مَا وَلَّاهُمْ عَنْ قِبْلَتِهِمُ الَّتِي كَانُوا عَلَيْهَا",
+      "en": "The foolish among the people will say, \"What has turned them from the qiblah they used to face?\"",
+      "ur": "لوگوں میں سے بے وقوف کہیں گے: \"انہیں ان کے اس قبلے سے کس چیز نے پھیر دیا جس پر وہ تھے؟\"",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002142.mp3"
     },
     "highlighted_word_indices": [
-      1,
-      3,
-      5
+      0
+    ],
+    "highlighted_words": [
+      "سَيَقُولُ"
     ],
     "noor_explanation": {
-      "en": "أُمِرْتُ = I was commanded (past passive). أَعْبُدَ = I worship (present). مُخْلِصًا لَّهُ = sincerely for Him (adverbial phrase). This describes the Prophet's ongoing mission.",
-      "ur": "أُمِرْتُ = مجھے حکم دیا گیا (ماضی passive)۔ أَعْبُدَ = میں عبادت کروں (present)۔ مُخْلِصًا لَّهُ = اس کے لیے خلوص سے (adverbial phrase)۔ یہ نبی کے ongoing mission کو describe کرتا ہے۔"
+      "en": "سَيَقُولُ = سَـ + يَقُولُ: \"will say\". Its subject is السُّفَهَاءُ, \"the foolish\".",
+      "ur": "سَيَقُولُ = سَـ + يَقُولُ: \"کہیں گے\"۔ اس کا فاعل السُّفَهَاءُ، \"بے وقوف\" ہے۔"
     }
   },
   "close": {

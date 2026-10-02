@@ -351,19 +351,35 @@
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch32-l04-ex07",
-      "xp_value": 1,
-      "statement": {
-        "en": "Parse: fa-sabbih bi-hamdi rabbika wastaghfirhu innahu kaana tawwaaban",
-        "ur": "پارس: فاصبیح بحمدی ربیکا واستغفیرھو اننہو کانا توابن"
+      "prompt": {
+        "ar": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ ۚ إِنَّهُ كَانَ تَوَّابًا",
+        "ar_plain": "فسبح بحمد ربك واستغفره انه كان توابا",
+        "translit": "fasabbih bihamdi rabbika wastaghfirh, innahu kaana tawwaabaa",
+        "en": "So glorify the praise of your Lord and ask His forgiveness. Indeed, He is ever-accepting of repentance.",
+        "ur": "تو اپنے رب کی حمد کے ساتھ تسبیح کرو اور اس سے بخشش مانگو۔ بے شک وہ بہت توبہ قبول کرنے والا ہے۔"
       },
-      "ar_example": {
-        "ar": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ إِنَّهُ كَانَ تَوَّابًا",
-        "en": "fa-sabbih bi-hamdi rabbika wastaghfirhu innahu kaana tawwaaban",
-        "ur": "فَصَبِّح بِحمِدِ رَبِّكَ وَتَغْفِرُهُ إِنَّهُ كَانَ تَوَابَن"
-      },
-      "correct_answer": true
+      "options": [
+        {
+          "en": "Your Lord glorified you and forgave you.",
+          "ur": "تمہارے رب نے تمہاری تعریف کی اور تمہیں بخش دیا۔"
+        },
+        {
+          "en": "So glorify the praise of your Lord and ask His forgiveness. Indeed, He is ever-accepting of repentance.",
+          "ur": "تو اپنے رب کی حمد کے ساتھ تسبیح کرو اور اس سے بخشش مانگو۔ بے شک وہ بہت توبہ قبول کرنے والا ہے۔"
+        },
+        {
+          "en": "Praise your Lord, for He will not forgive.",
+          "ur": "اپنے رب کی تعریف کرو، کیونکہ وہ نہیں بخشے گا۔"
+        },
+        {
+          "en": "They glorified their Lord and repented.",
+          "ur": "انہوں نے اپنے رب کی تسبیح کی اور توبہ کی۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1
     }
   ],
   "reveal": {

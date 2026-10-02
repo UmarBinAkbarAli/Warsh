@@ -363,19 +363,35 @@
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch33-l04-ex07",
-      "xp_value": 1,
-      "statement": {
-        "en": "Parse: inna al-muslima ya'budullaaha",
-        "ur": "پارس: انا المسلمہ یعبد اللہ"
-      },
-      "ar_example": {
+      "prompt": {
         "ar": "إِنَّ الْمُسْلِمَ يَعْبُدُ اللَّهَ",
-        "en": "inna al-muslima ya'budullaaha",
-        "ur": "انا المسلمین یعبد اللہ"
+        "ar_plain": "ان المسلم يعبد الله",
+        "translit": "inna al-muslima ya'budu allaah",
+        "en": "Indeed, the Muslim worships Allah.",
+        "ur": "بے شک مسلمان اللہ کی عبادت کرتا ہے۔"
       },
-      "correct_answer": true
+      "options": [
+        {
+          "en": "The Muslim worshipped Allah.",
+          "ur": "مسلمان نے اللہ کی عبادت کی۔"
+        },
+        {
+          "en": "Indeed, the Muslim worships Allah.",
+          "ur": "بے شک مسلمان اللہ کی عبادت کرتا ہے۔"
+        },
+        {
+          "en": "Worship Allah, O Muslim.",
+          "ur": "اے مسلمان، اللہ کی عبادت کرو۔"
+        },
+        {
+          "en": "Does the Muslim worship Allah?",
+          "ur": "کیا مسلمان اللہ کی عبادت کرتا ہے؟"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1
     }
   ],
   "reveal": {

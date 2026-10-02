@@ -361,19 +361,35 @@
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch31-l04-ex07",
-      "xp_value": 1,
-      "statement": {
-        "en": "Parse: aajaaba ar-rajulu al-kitaabu 'inda al-ustaazi",
-        "ur": "پارس: عجابہ اررجولو الکتابو عند الاستازی"
+      "prompt": {
+        "ar": "الْكِتَابُ عِنْدَ الْأُسْتَاذِ",
+        "ar_plain": "الكتاب عند الاستاذ",
+        "translit": "al-kitaabu 'inda al-ustaadh",
+        "en": "The book is with the teacher.",
+        "ur": "کتاب استاد کے پاس ہے۔"
       },
-      "ar_example": {
-        "ar": "أَجَابَ الرَّجُلُ الْكِتَابُ عِنْدَ الْأَسْتَاذِ",
-        "en": "aajaaba ar-rajulu al-kitaabu 'inda al-ustaazi",
-        "ur": "عجابہ اررجولو الکتابو عند الاستازی"
-      },
-      "correct_answer": true
+      "options": [
+        {
+          "en": "The book is with the teacher.",
+          "ur": "کتاب استاد کے پاس ہے۔"
+        },
+        {
+          "en": "The teacher is with the book.",
+          "ur": "استاد کتاب کے پاس ہیں۔"
+        },
+        {
+          "en": "Where is the teacher's book?",
+          "ur": "استاد کی کتاب کہاں ہے؟"
+        },
+        {
+          "en": "The teacher wrote the book.",
+          "ur": "استاد نے کتاب لکھی۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
     }
   ],
   "reveal": {

@@ -376,19 +376,35 @@
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch33-l02-ex07",
-      "xp_value": 1,
-      "statement": {
-        "en": "Parse: a'uudhu bi-rabbi al-falaqi",
-        "ur": "پارس: اَعُوذُ بِی رَبِّی الفلقی"
-      },
-      "ar_example": {
+      "prompt": {
         "ar": "أَعُوذُ بِرَبِّ الْفَلَقِ",
-        "en": "a'uudhu bi-rabbi al-falaqi",
-        "ur": "a'udhu bi-Rabbi al-falaqi"
+        "ar_plain": "اعوذ برب الفلق",
+        "translit": "a'uudhu birabbil-falaq",
+        "en": "I seek refuge in the Lord of daybreak.",
+        "ur": "میں صبح کے رب کی پناہ مانگتا ہوں۔"
       },
-      "correct_answer": true
+      "options": [
+        {
+          "en": "The Lord of daybreak protected me.",
+          "ur": "صبح کے رب نے میری حفاظت کی۔"
+        },
+        {
+          "en": "Seek refuge from the daybreak.",
+          "ur": "صبح سے پناہ مانگو۔"
+        },
+        {
+          "en": "I love the Lord of daybreak.",
+          "ur": "میں صبح کے رب سے محبت کرتا ہوں۔"
+        },
+        {
+          "en": "I seek refuge in the Lord of daybreak.",
+          "ur": "میں صبح کے رب کی پناہ مانگتا ہوں۔"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1
     }
   ],
   "reveal": {

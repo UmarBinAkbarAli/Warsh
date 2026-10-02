@@ -365,19 +365,35 @@
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch32-l03-ex07",
-      "xp_value": 1,
-      "statement": {
-        "en": "Parse: innahu kaana tawwaaban",
-        "ur": "پارس: اِنَّہُ کانَ تَوَابَن"
-      },
-      "ar_example": {
+      "prompt": {
         "ar": "إِنَّهُ كَانَ تَوَّابًا",
-        "en": "innahu kaana tawwaaban",
-        "ur": "innahu kaana tawaaban"
+        "ar_plain": "انه كان توابا",
+        "translit": "innahu kaana tawwaabaa",
+        "en": "Indeed, He is ever-accepting of repentance.",
+        "ur": "بے شک وہ بہت توبہ قبول کرنے والا ہے۔"
       },
-      "correct_answer": true
+      "options": [
+        {
+          "en": "Indeed, He is ever-accepting of repentance.",
+          "ur": "بے شک وہ بہت توبہ قبول کرنے والا ہے۔"
+        },
+        {
+          "en": "He repented once.",
+          "ur": "اس نے ایک بار توبہ کی۔"
+        },
+        {
+          "en": "Is He accepting of repentance?",
+          "ur": "کیا وہ توبہ قبول کرنے والا ہے؟"
+        },
+        {
+          "en": "Repent to Him.",
+          "ur": "اس سے توبہ کرو۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
     }
   ],
   "reveal": {

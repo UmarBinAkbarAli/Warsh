@@ -377,19 +377,35 @@
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch34-l05-ex07",
-      "xp_value": 1,
-      "statement": {
-        "en": "Parse: yaraani at-taalibu",
-        "ur": "پارس: یارانی التعلیبو"
-      },
-      "ar_example": {
+      "prompt": {
         "ar": "يَرَانِي الطَّالِبُ",
-        "en": "yaraani at-taalibu",
-        "ur": "یارانی پر طالب"
+        "ar_plain": "يراني الطالب",
+        "translit": "yaraanii at-taalib",
+        "en": "The student sees me.",
+        "ur": "طالب علم مجھے دیکھتا ہے۔"
       },
-      "correct_answer": true
+      "options": [
+        {
+          "en": "I see the student.",
+          "ur": "میں طالب علم کو دیکھتا ہوں۔"
+        },
+        {
+          "en": "The student sees me.",
+          "ur": "طالب علم مجھے دیکھتا ہے۔"
+        },
+        {
+          "en": "The student saw me.",
+          "ur": "طالب علم نے مجھے دیکھا۔"
+        },
+        {
+          "en": "Do you see the student?",
+          "ur": "کیا تم طالب علم کو دیکھتے ہو؟"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1
     }
   ],
   "reveal": {
@@ -418,8 +434,8 @@
   },
   "close": {
     "noor_message": {
-      "en": "Now you understand the complete Al-Fatiha. You know the present tense, its prefixes, negation, and how it takes objects. This is the greatest gift of Book 3 to your Arabic journey.",
-      "ur": "اب آپ مکمل Al-Fatiha سمجھتے ہیں۔ آپ present tense، اس کے prefixes، negation، اور یہ objects کیسے لیتا ہے جانتے ہیں۔ یہ Book 3 کا آپ کے عربی سفر کو سب سے بڑا تحفہ ہے۔"
+      "en": "You can now read the verbs of Al-Fatiha 1:5–6: the present-tense نَعْبُدُ and نَسْتَعِينُ, and the request اهْدِنَا with its attached object نَا.",
+      "ur": "اب آپ الفاتحہ 1:5–6 کے افعال پڑھ سکتے ہیں: مضارع نَعْبُدُ اور نَسْتَعِينُ، اور دعا اهْدِنَا جس کے ساتھ مفعول نَا جڑا ہے۔"
     }
   }
 }

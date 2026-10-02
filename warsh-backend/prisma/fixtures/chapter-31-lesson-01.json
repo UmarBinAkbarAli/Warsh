@@ -377,19 +377,35 @@
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch31-l01-ex07",
-      "xp_value": 1,
-      "statement": {
-        "en": "Parse: man haazaa",
-        "ur": "پارس: man hazaa"
-      },
-      "ar_example": {
+      "prompt": {
         "ar": "مَنْ هَذَا",
-        "en": "man haazaa",
-        "ur": "آدمی ہازا"
+        "ar_plain": "من هذا",
+        "translit": "man haadhaa",
+        "en": "Who is this?",
+        "ur": "یہ کون ہے؟"
       },
-      "correct_answer": true
+      "options": [
+        {
+          "en": "What is this?",
+          "ur": "یہ کیا ہے؟"
+        },
+        {
+          "en": "Who is this?",
+          "ur": "یہ کون ہے؟"
+        },
+        {
+          "en": "Where is this?",
+          "ur": "یہ کہاں ہے؟"
+        },
+        {
+          "en": "This is him.",
+          "ur": "یہ وہی ہے۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1
     }
   ],
   "reveal": {

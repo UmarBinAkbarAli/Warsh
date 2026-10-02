@@ -362,19 +362,35 @@
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch32-l02-ex07",
-      "xp_value": 1,
-      "statement": {
-        "en": "Parse: inna al-muslima mu'minun",
-        "ur": "پارس: انا المسلمہ مؤمنون"
-      },
-      "ar_example": {
+      "prompt": {
         "ar": "إِنَّ الْمُسْلِمَ مُؤْمِنٌ",
-        "en": "inna al-muslima mu'minun",
-        "ur": "انا المسلمین مومنون"
+        "ar_plain": "ان المسلم مؤمن",
+        "translit": "inna al-muslima mu'min",
+        "en": "Indeed, the Muslim is a believer.",
+        "ur": "بے شک مسلمان مومن ہے۔"
       },
-      "correct_answer": true
+      "options": [
+        {
+          "en": "Is the Muslim a believer?",
+          "ur": "کیا مسلمان مومن ہے؟"
+        },
+        {
+          "en": "The Muslim is not a believer.",
+          "ur": "مسلمان مومن نہیں۔"
+        },
+        {
+          "en": "The believer became a Muslim.",
+          "ur": "مومن مسلمان ہو گیا۔"
+        },
+        {
+          "en": "Indeed, the Muslim is a believer.",
+          "ur": "بے شک مسلمان مومن ہے۔"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1
     }
   ],
   "reveal": {

@@ -363,19 +363,35 @@
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch30-l05-ex07",
-      "xp_value": 1,
-      "statement": {
-        "en": "Parse: lakum diinakum waliya diini",
-        "ur": "پارس: لکم دینکم ولی دینی"
-      },
-      "ar_example": {
+      "prompt": {
         "ar": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
-        "en": "lakum diinakum waliya diini",
-        "ur": "لکم دینکم ولی دینی"
+        "ar_plain": "لكم دينكم ولي دين",
+        "translit": "lakum diinukum wa liya diin",
+        "en": "For you is your religion, and for me is my religion.",
+        "ur": "تمہارے لیے تمہارا دین اور میرے لیے میرا دین۔"
       },
-      "correct_answer": true
+      "options": [
+        {
+          "en": "For you is your religion, and for me is my religion.",
+          "ur": "تمہارے لیے تمہارا دین اور میرے لیے میرا دین۔"
+        },
+        {
+          "en": "For me is your religion, and for you is mine.",
+          "ur": "میرے لیے تمہارا دین اور تمہارے لیے میرا۔"
+        },
+        {
+          "en": "We all share one religion.",
+          "ur": "ہم سب کا ایک ہی دین ہے۔"
+        },
+        {
+          "en": "Leave your religion for mine.",
+          "ur": "اپنا دین چھوڑ کر میرا اپناؤ۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
     }
   ],
   "reveal": {

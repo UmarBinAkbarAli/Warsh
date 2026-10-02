@@ -22,8 +22,8 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002021.mp3"
     },
     "noor_intro": {
-      "en": "The prefix system works with EVERY verb in Arabic. ع-ب-د, ق-ر-أ, ك-ت-ب, س-ع-ن — all follow the same four prefixes. This is the beauty of Arabic verb conjugation.",
-      "ur": "Prefix system ہر عربی verb کے ساتھ کام کرتا ہے۔ ع-ب-د، ق-ر-أ، ك-ت-ب، س-ع-ن — سب یہی چار prefixes follow کرتے ہیں۔ یہ عربی verb conjugation کی خوبصورتی ہے۔"
+      "en": "The prefix system works across present-tense verbs. ع-ب-د, ق-ر-أ, ك-ت-ب — all take the same four prefixes. This is the beauty of Arabic verb conjugation.",
+      "ur": "سابقوں کا نظام مضارع افعال میں عام ہے۔ ع-ب-د، ق-ر-أ، ك-ت-ب — سب یہی چار سابقے لیتے ہیں۔ یہ عربی verb conjugation کی خوبصورتی ہے۔"
     },
     "autoplay": true
   },
@@ -379,19 +379,35 @@
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch34-l03-ex07",
-      "xp_value": 1,
-      "statement": {
-        "en": "Parse: i'buduu rabbakum",
-        "ur": "پارس: اَبدو ربکم"
-      },
-      "ar_example": {
+      "prompt": {
         "ar": "اعْبُدُوا رَبَّكُمُ",
-        "en": "i'buduu rabbakum",
-        "ur": "میں بُدو ربّکم"
+        "ar_plain": "اعبدوا ربكم",
+        "translit": "u'buduu rabbakum",
+        "en": "Worship your Lord.",
+        "ur": "اپنے رب کی عبادت کرو۔"
       },
-      "correct_answer": true
+      "options": [
+        {
+          "en": "They worshipped their Lord.",
+          "ur": "انہوں نے اپنے رب کی عبادت کی۔"
+        },
+        {
+          "en": "Your Lord worships you.",
+          "ur": "تمہارا رب تمہاری عبادت کرتا ہے۔"
+        },
+        {
+          "en": "Do not worship your Lord.",
+          "ur": "اپنے رب کی عبادت مت کرو۔"
+        },
+        {
+          "en": "Worship your Lord.",
+          "ur": "اپنے رب کی عبادت کرو۔"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1
     }
   ],
   "reveal": {

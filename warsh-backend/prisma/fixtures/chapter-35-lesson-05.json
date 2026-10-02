@@ -362,19 +362,35 @@
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch35-l05-ex07",
-      "xp_value": 1,
-      "statement": {
-        "en": "Parse: innaa a'taynaaka al-kawthara",
-        "ur": "پارس: اِنَّا اَطَیْنَکَ الْقُوْطَرَہ"
-      },
-      "ar_example": {
+      "prompt": {
         "ar": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ",
-        "en": "innaa a'taynaaka al-kawthara",
-        "ur": "انا اعطیناکا الکوثرہ"
+        "ar_plain": "انا اعطيناك الكوثر",
+        "translit": "innaa a'taynaaka al-kawthar",
+        "en": "Indeed, We have given you al-Kawthar.",
+        "ur": "بے شک ہم نے آپ کو کوثر عطا کی۔"
       },
-      "correct_answer": true
+      "options": [
+        {
+          "en": "You have given Us al-Kawthar.",
+          "ur": "آپ نے ہمیں کوثر دی۔"
+        },
+        {
+          "en": "We will give you al-Kawthar.",
+          "ur": "ہم آپ کو کوثر دیں گے۔"
+        },
+        {
+          "en": "Give al-Kawthar to others.",
+          "ur": "کوثر دوسروں کو دو۔"
+        },
+        {
+          "en": "Indeed, We have given you al-Kawthar.",
+          "ur": "بے شک ہم نے آپ کو کوثر عطا کی۔"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1
     }
   ],
   "reveal": {
@@ -397,8 +413,8 @@
       1
     ],
     "noor_explanation": {
-      "en": "أَعْطَيْنَاكَ is past tense: We have given you (with attached pronoun ك). إِنَّا adds emphasis: Indeed We. This is the opening of Surah Al-Kawthar — a short but powerful ayah.",
-      "ur": "أَعْطَيْنَاكَ ماضی tense ہے: ہم نے تمہیں دے دیا (attached pronoun ك کے ساتھ)۔ إِنَّا emphasis شامل کرتا ہے: بے شک ہم۔ یہ Surah Al-Kawthar کا opening ہے — مختصر لیکن powerful ayah۔"
+      "en": "أَعْطَيْنَاكَ is past tense — \"We have given you\" — shown here as a contrast with the present and future forms of this chapter. إِنَّا adds emphasis: \"Indeed, We\".",
+      "ur": "أَعْطَيْنَاكَ ماضی ہے — \"ہم نے آپ کو عطا کیا\" — یہاں اس باب کے حال اور مستقبل سے موازنے کے لیے۔ إِنَّا تاکید دیتا ہے: \"بے شک ہم نے\"۔"
     }
   },
   "close": {

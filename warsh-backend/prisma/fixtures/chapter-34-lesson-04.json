@@ -376,19 +376,35 @@
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch34-l04-ex07",
-      "xp_value": 1,
-      "statement": {
-        "en": "Parse: laa a'budul-kufaara",
-        "ur": "پارس: لا اعبد الکفارہ"
+      "prompt": {
+        "ar": "لَا أَعْبُدُ إِلَّا اللَّهَ",
+        "ar_plain": "لا اعبد الا الله",
+        "translit": "laa a'budu illallaah",
+        "en": "I worship none but Allah.",
+        "ur": "میں اللہ کے سوا کسی کی عبادت نہیں کرتا۔"
       },
-      "ar_example": {
-        "ar": "لَا أَعْبُدُ الْكُفَّارَ",
-        "en": "laa a'budul-kufaara",
-        "ur": "لا عبادۃ الکفارہ"
-      },
-      "correct_answer": true
+      "options": [
+        {
+          "en": "I worship none but Allah.",
+          "ur": "میں اللہ کے سوا کسی کی عبادت نہیں کرتا۔"
+        },
+        {
+          "en": "I do not worship Allah.",
+          "ur": "میں اللہ کی عبادت نہیں کرتا۔"
+        },
+        {
+          "en": "Worship none but Allah.",
+          "ur": "اللہ کے سوا کسی کی عبادت مت کرو۔"
+        },
+        {
+          "en": "Allah worships no one.",
+          "ur": "اللہ کسی کی عبادت نہیں کرتا۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
     }
   ],
   "reveal": {

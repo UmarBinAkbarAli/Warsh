@@ -360,19 +360,35 @@
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch31-l05-ex07",
-      "xp_value": 1,
-      "statement": {
-        "en": "Parse: hal al-muslimu mu'minun",
-        "ur": "پارس: ھل المسلمون مؤمنون"
-      },
-      "ar_example": {
+      "prompt": {
         "ar": "هَلِ الْمُسْلِمُ مُؤْمِنٌ",
-        "en": "hal al-muslimu mu'minun",
-        "ur": "ھل المسلمون مومنون"
+        "ar_plain": "هل المسلم مؤمن",
+        "translit": "halil-muslimu mu'min",
+        "en": "Is the Muslim a believer?",
+        "ur": "کیا مسلمان مومن ہے؟"
       },
-      "correct_answer": true
+      "options": [
+        {
+          "en": "The Muslim is a believer.",
+          "ur": "مسلمان مومن ہے۔"
+        },
+        {
+          "en": "Is the Muslim a believer?",
+          "ur": "کیا مسلمان مومن ہے؟"
+        },
+        {
+          "en": "Who is the believing Muslim?",
+          "ur": "مومن مسلمان کون ہے؟"
+        },
+        {
+          "en": "Be a believer, O Muslim.",
+          "ur": "اے مسلمان، مومن بنو۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1
     }
   ],
   "reveal": {

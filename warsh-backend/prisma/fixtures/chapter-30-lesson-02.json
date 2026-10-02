@@ -381,19 +381,35 @@
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch30-l02-ex07",
-      "xp_value": 1,
-      "statement": {
-        "en": "Parse: qaala muhammadun inna al-kitaaba jadiidun",
-        "ur": "پارس: قال محمدون انا الکتاب جدیدون"
-      },
-      "ar_example": {
+      "prompt": {
         "ar": "قَالَ مُحَمَّدٌ إِنَّ الْكِتَابَ جَدِيدٌ",
-        "en": "qaala muhammadun inna al-kitaaba jadiidun",
-        "ur": "قال محمدون انا الکتاب جدیدون"
+        "ar_plain": "قال محمد ان الكتاب جديد",
+        "translit": "qaala muhammadun inna al-kitaaba jadiid",
+        "en": "Muhammad said that the book is new.",
+        "ur": "محمد نے کہا کہ کتاب نئی ہے۔"
       },
-      "correct_answer": true
+      "options": [
+        {
+          "en": "Muhammad has a new book.",
+          "ur": "محمد کے پاس نئی کتاب ہے۔"
+        },
+        {
+          "en": "Muhammad said that the book is new.",
+          "ur": "محمد نے کہا کہ کتاب نئی ہے۔"
+        },
+        {
+          "en": "Is the book new, Muhammad?",
+          "ur": "محمد، کیا کتاب نئی ہے؟"
+        },
+        {
+          "en": "Muhammad said the book is old.",
+          "ur": "محمد نے کہا کہ کتاب پرانی ہے۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1
     }
   ],
   "reveal": {

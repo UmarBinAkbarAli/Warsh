@@ -361,19 +361,35 @@
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch31-l02-ex07",
-      "xp_value": 1,
-      "statement": {
-        "en": "Parse: hal dhahaba al-ustaazu ilaa al-masjidi",
-        "ur": "پارس: ھل ذہبہ الاستعزو الا المسجدی۔"
+      "prompt": {
+        "ar": "هَلْ ذَهَبَ الْأُسْتَاذُ إِلَى الْمَسْجِدِ",
+        "ar_plain": "هل ذهب الاستاذ الى المسجد",
+        "translit": "hal dhahaba al-ustaadhu ilaa al-masjid",
+        "en": "Did the teacher go to the mosque?",
+        "ur": "کیا استاد مسجد گئے؟"
       },
-      "ar_example": {
-        "ar": "هَلْ ذَهَبَ الْأَسْتَاذُ إِلَى الْمَسْجِدِ",
-        "en": "hal dhahaba al-ustaazu ilaa al-masjidi",
-        "ur": "ھل ذہبہ الاستعزو الا المسجدی۔"
-      },
-      "correct_answer": true
+      "options": [
+        {
+          "en": "The teacher went to the mosque.",
+          "ur": "استاد مسجد گئے۔"
+        },
+        {
+          "en": "Where did the teacher go?",
+          "ur": "استاد کہاں گئے؟"
+        },
+        {
+          "en": "Did the teacher go to the mosque?",
+          "ur": "کیا استاد مسجد گئے؟"
+        },
+        {
+          "en": "Go to the mosque, teacher.",
+          "ur": "استاد، مسجد جائیے۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1
     }
   ],
   "reveal": {

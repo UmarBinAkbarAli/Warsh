@@ -361,19 +361,35 @@
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch30-l04-ex07",
-      "xp_value": 1,
-      "statement": {
-        "en": "Parse: laa a'budu maa ta'budoona",
-        "ur": "پارس: لا اعبدو ما تعبدونا۔"
-      },
-      "ar_example": {
+      "prompt": {
         "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
-        "en": "laa a'budu maa ta'budoona",
-        "ur": "لا اعبدو ما تعبدونا۔"
+        "ar_plain": "لا اعبد ما تعبدون",
+        "translit": "laa a'budu maa ta'buduun",
+        "en": "I do not worship what you worship.",
+        "ur": "میں اس کی عبادت نہیں کرتا جس کی تم عبادت کرتے ہو۔"
       },
-      "correct_answer": true
+      "options": [
+        {
+          "en": "You do not worship what I worship.",
+          "ur": "تم اس کی عبادت نہیں کرتے جس کی میں عبادت کرتا ہوں۔"
+        },
+        {
+          "en": "I worship what you worship.",
+          "ur": "میں اسی کی عبادت کرتا ہوں جس کی تم کرتے ہو۔"
+        },
+        {
+          "en": "Do not worship what I worship.",
+          "ur": "اس کی عبادت مت کرو جس کی میں کرتا ہوں۔"
+        },
+        {
+          "en": "I do not worship what you worship.",
+          "ur": "میں اس کی عبادت نہیں کرتا جس کی تم عبادت کرتے ہو۔"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1
     }
   ],
   "reveal": {

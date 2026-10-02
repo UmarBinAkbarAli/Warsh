@@ -357,19 +357,35 @@
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch32-l01-ex07",
-      "xp_value": 1,
-      "statement": {
-        "en": "Parse: izaa jaa'a nasrullaahi",
-        "ur": "پارس: اذا جعاء نصر اللہ"
-      },
-      "ar_example": {
+      "prompt": {
         "ar": "إِذَا جَاءَ نَصْرُ اللَّهِ",
-        "en": "izaa jaa'a nasrullaahi",
-        "ur": "izaa jaa'a Nasrullaahi"
+        "ar_plain": "اذا جاء نصر الله",
+        "translit": "idhaa jaa'a nasrullaah",
+        "en": "When the help of Allah comes",
+        "ur": "جب اللہ کی مدد آ جائے"
       },
-      "correct_answer": true
+      "options": [
+        {
+          "en": "The help of Allah came.",
+          "ur": "اللہ کی مدد آئی۔"
+        },
+        {
+          "en": "If the help of Allah does not come",
+          "ur": "اگر اللہ کی مدد نہ آئے"
+        },
+        {
+          "en": "When the help of Allah comes",
+          "ur": "جب اللہ کی مدد آ جائے"
+        },
+        {
+          "en": "Ask for the help of Allah.",
+          "ur": "اللہ کی مدد مانگو۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1
     }
   ],
   "reveal": {

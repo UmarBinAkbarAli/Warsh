@@ -374,19 +374,35 @@
       "xp_value": 1
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch30-l01-ex07",
-      "xp_value": 1,
-      "statement": {
-        "en": "Parse: at-taalibu yaqra'u al-kitaaba",
-        "ur": "پارس: التعلیبو یقرعو الکتاب"
-      },
-      "ar_example": {
+      "prompt": {
         "ar": "الطَّالِبُ يَقْرَأُ الْكِتَابَ",
-        "en": "at-taalibu yaqra'u al-kitaaba",
-        "ur": "التعلیبو یقرعو الکتاب"
+        "ar_plain": "الطالب يقرا الكتاب",
+        "translit": "at-taalibu yaqra'u al-kitaab",
+        "en": "The student reads the book.",
+        "ur": "طالب علم کتاب پڑھتا ہے۔"
       },
-      "correct_answer": true
+      "options": [
+        {
+          "en": "The student reads the book.",
+          "ur": "طالب علم کتاب پڑھتا ہے۔"
+        },
+        {
+          "en": "The book reads the student.",
+          "ur": "کتاب طالب علم کو پڑھتی ہے۔"
+        },
+        {
+          "en": "The student wrote a book.",
+          "ur": "طالب علم نے ایک کتاب لکھی۔"
+        },
+        {
+          "en": "Read the book, student!",
+          "ur": "اے طالب علم، کتاب پڑھو!"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
     }
   ],
   "reveal": {
