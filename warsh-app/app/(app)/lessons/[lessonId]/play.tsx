@@ -413,6 +413,35 @@ function splitWords(value?: string) {
   return value?.trim().split(/\s+/).filter(Boolean) ?? [];
 }
 
+// One answer slot per keyed tile. A tile may hold a phrase ("إِلَى الْبَيْتِ"),
+// so counting the words of the joined answer would leave Check unreachable.
+function answerSlotCount(ex: RawEx | undefined, correctAnswer: string) {
+  const order = ex?.correct_order as number[] | undefined;
+  return Array.isArray(order) && order.length > 0 ? order.length : splitWords(correctAnswer).length;
+}
+
+// A FILL_BLANK in TYPE mode (or authored without tap options) is answered by
+// typing, not by an option grid that would render empty.
+function isTypedFillBlank(ex: RawEx | undefined) {
+  if (!ex || exType(ex) !== "FILL_BLANK") return false;
+  const options = ex.options as unknown[] | undefined;
+  return ex.mode === "TYPE" || !options || options.length === 0;
+}
+
+// A matching choice is stored as "<position>␟<text>" so a category label that
+// appears on several cards ("nominal", "verbal") can be paired more than once.
+const MATCH_CHOICE_SEPARATOR = "␟";
+
+function matchChoiceKey(index: number, text: string) {
+  return `${index}${MATCH_CHOICE_SEPARATOR}${text}`;
+}
+
+function matchChoiceText(value?: string | null) {
+  if (!value) return value;
+  const separator = value.indexOf(MATCH_CHOICE_SEPARATOR);
+  return separator >= 0 ? value.slice(separator + 1) : value;
+}
+
 function containsArabic(value?: string | null) {
   return Boolean(value && /[؀-ۿ]/.test(value));
 }
@@ -445,7 +474,7 @@ function isAnswerCorrect(ex: RawEx | undefined, selectedAnswer: SelectedAnswer, 
 
   if (exType(ex) === "MATCHING") {
     if (!selectedAnswer || Array.isArray(selectedAnswer) || typeof selectedAnswer !== "object") return false;
-    return exPairs(ex, language).every((pair) => normalizeAnswer(selectedAnswer[pair.left]) === normalizeAnswer(pair.right));
+    return exPairs(ex, language).every((pair) => normalizeAnswer(matchChoiceText(selectedAnswer[pair.left])) === normalizeAnswer(pair.right));
   }
 
   if (exType(ex) === "GRAMMAR_PARSE") {
@@ -453,7 +482,7 @@ function isAnswerCorrect(ex: RawEx | undefined, selectedAnswer: SelectedAnswer, 
     return exParseTokens(ex, language, t).every((token) => normalizeAnswer(selectedAnswer[token.word]) === normalizeAnswer(token.label));
   }
 
-  if (exType(ex) === "WRITE_ARABIC" || exType(ex) === "HARAKAH_PLACEMENT") {
+  if (exType(ex) === "WRITE_ARABIC" || exType(ex) === "HARAKAH_PLACEMENT" || isTypedFillBlank(ex)) {
     const selText = getSelectedText(selectedAnswer) ?? "";
     const correct = exCorrectAnswer(ex, language, t);
     return normalizeArabicAnswer(selText) === normalizeArabicAnswer(correct);
@@ -805,7 +834,7 @@ export default function LessonPlayScreen() {
     if (isAnswered) return;
     setSelectedAnswer((current) => {
       const tiles = Array.isArray(current) ? current : [];
-      const expected = splitWords(exCorrectAnswer(currentExercise, language, t)).length;
+      const expected = answerSlotCount(currentExercise, exCorrectAnswer(currentExercise, language, t));
       if (tiles.length >= expected) return tiles;
       return [...tiles, option];
     });
@@ -1029,7 +1058,7 @@ export default function LessonPlayScreen() {
 
   function renderBuildSentence() {
     const selectedTiles = Array.isArray(selectedAnswer) ? selectedAnswer : [];
-    const slots = splitWords(exCorrectAnswer(currentExercise ?? {}, language, t));
+    const slots = Array.from({ length: answerSlotCount(currentExercise, exCorrectAnswer(currentExercise ?? {}, language, t)) }, (_, index) => `slot-${index}`);
     const canCheck = selectedTiles.length === slots.length && !isAnswered;
     const options = exOptions(currentExercise ?? {}, language, t);
     const remainingPlaced = new Map<string, number>();
@@ -1151,7 +1180,7 @@ export default function LessonPlayScreen() {
               {pairs.map((pair) => {
                 const paired = Boolean(selectedMap[pair.left]);
                 const active = matchActive?.side === "left" && matchActive.value === pair.left;
-                const correct = isAnswered && normalizeAnswer(selectedMap[pair.left]) === normalizeAnswer(pair.right);
+                const correct = isAnswered && normalizeAnswer(matchChoiceText(selectedMap[pair.left])) === normalizeAnswer(pair.right);
                 const state = !isAnswered ? "neutral" : correct ? "correct" : "wrong";
                 return (
                   <Pressable
@@ -1170,8 +1199,9 @@ export default function LessonPlayScreen() {
             </View>
             <View style={styles.matchColumn}>
               {choices.map((choice, index) => {
-                const pairedLeft = leftOfChoice(choice);
-                const active = matchActive?.side === "right" && matchActive.value === choice;
+                const choiceKey = matchChoiceKey(index, choice);
+                const pairedLeft = leftOfChoice(choiceKey);
+                const active = matchActive?.side === "right" && matchActive.value === choiceKey;
                 const correct = isAnswered && Boolean(pairedLeft) && pairs.some((pair) => pair.left === pairedLeft && normalizeAnswer(pair.right) === normalizeAnswer(choice));
                 const state = !isAnswered || !pairedLeft ? "neutral" : correct ? "correct" : "wrong";
                 return (
@@ -1180,7 +1210,7 @@ export default function LessonPlayScreen() {
                     accessibilityRole="button"
                     accessibilityState={{ selected: active, disabled: isAnswered }}
                     disabled={isAnswered}
-                    onPress={() => tapRight(choice)}
+                    onPress={() => tapRight(choiceKey)}
                     style={[styles.matchCell, pairedLeft ? styles.matchCellPaired : null, active ? styles.matchCellActive : null, state === "correct" ? styles.optionCorrect : state === "wrong" ? styles.optionWrong : null]}
                   >
                     {pairedLeft ? badge(numberOfLeft(pairedLeft), state) : null}
@@ -1548,6 +1578,7 @@ export default function LessonPlayScreen() {
     if (type === "AUDIO_RECOGNITION")    return renderAudioRecognition();
     if (type === "WRITE_ARABIC")         return renderWriteArabic();
     if (type === "HARAKAH_PLACEMENT")    return renderHarakahPlacement();
+    if (isTypedFillBlank(currentExercise)) return renderWriteArabic();
     if (type === "WORD_ORDER")           return renderBuildSentence();   // same tile-tap UX
     if (type === "BUILD_SENTENCE")       return renderBuildSentence();
     if (type === "MATCHING")             return renderMatching();

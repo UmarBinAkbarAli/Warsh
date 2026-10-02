@@ -149,7 +149,7 @@ async function main() {
 
   if (AUDIT) {
     const targets = [
-      ...catalogItems.map((item) => ({ key: item.key, label: item.text })),
+      ...catalogItems.map((item) => ({ key: item.key, label: `${item.text} ⟵ ${[...item.sources].join(", ")}` })),
       ...vocabularyItems.map((word) => ({ key: vocabWordAudioKey(word.id), label: word.arabic })),
     ];
     const [catalogueKeys, vocabularyKeys] = await Promise.all([
