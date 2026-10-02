@@ -22,8 +22,8 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002278.mp3"
     },
     "noor_intro": {
-      "en": "اتَّقُوا and ذَرُوا — both are الأفعال الخمسة in the command (imperative) form, ن absent. This ayah is a direct divine command. Today we read the Quran specifically looking for these five forms and reading them correctly.",
-      "ur": "اتَّقُوا اور ذَرُوا — دونوں الأفعال الخمسة امر کی شکل میں ہیں، ن غیر موجود۔ یہ آیت ایک براہ راست الہی حکم ہے۔ آج ہم قرآن میں خاص طور پر ان پانچ شکلوں کو تلاش کر کے انہیں درست پڑھتے ہیں۔"
+      "en": "اتَّقُوا and ذَرُوا are plural commands. A command is built on the jussive of the present tense, so like تَتَّقُوا and تَذَرُوا it has no ن. Today we read the Quran looking for the ن — present or missing.",
+      "ur": "اتَّقُوا اور ذَرُوا جمع امر ہیں۔ امر مضارع کے مجزوم پر بنتا ہے، اس لیے تَتَّقُوا اور تَذَرُوا کی طرح اس میں ن نہیں۔ آج ہم قرآن میں ن تلاش کریں گے — موجود یا غائب۔"
     },
     "autoplay": true
   },
@@ -38,8 +38,8 @@
         "ur": "اللہ سے ڈرو اور جو سود باقی ہے اسے چھوڑ دو۔"
       },
       "explanation": {
-        "en": "Both اتَّقُوا and ذَرُوا are imperative forms of الأفعال الخمسة (2nd person masculine plural imperative). The ن is absent because imperatives follow the مجزوم pattern. اتَّقُوا = تَتَّقُونَ → imperative → اتَّقُوا.",
-        "ur": "اتَّقُوا اور ذَرُوا دونوں الأفعال الخمسة کی امر شکلیں ہیں (دوسرا شخص مذکر جمع امر)۔ ن غیر موجود ہے کیونکہ امر مجزوم pattern follow کرتا ہے۔"
+        "en": "Al-Baqarah 2:278. اتَّقُوا (\"fear!\") and ذَرُوا (\"give up!\") are plural commands. The command is formed from the jussive (تَتَّقُوا → اتَّقُوا), so it has no ن, just like the five verbs in jazm.",
+        "ur": "سورۃ البقرہ 2:278۔ اتَّقُوا (\"ڈرو!\") اور ذَرُوا (\"چھوڑ دو!\") جمع امر ہیں۔ امر مجزوم سے بنتا ہے (تَتَّقُوا ← اتَّقُوا)، اس لیے اس میں ن نہیں، بالکل جزم والے افعال خمسہ کی طرح۔"
       }
     },
     {
@@ -66,8 +66,8 @@
         "ur": "کہ تم لڑو (دوسرا جمع، منصوب)"
       },
       "explanation": {
-        "en": "After أَن (which triggers منصوب), تُقَاتِلُونَ loses its ن: → تُقَاتِلُوا. From Al-Baqarah 2:216: كُتِبَ عَلَيْكُمُ الْقِتَالُ وَهُوَ كُرْهٌ لَّكُمْ — fighting is prescribed for you. This structure أَن + مجزوم is very common.",
-        "ur": "أَن (جو منصوب trigger کرتا ہے) کے بعد، تُقَاتِلُونَ اپنی ن کھو دیتا ہے: → تُقَاتِلُوا۔ البقرۃ 2:216 سے۔"
+        "en": "After أَنْ (which causes naṣb), تُقَاتِلُونَ loses its ن: أَنْ تُقَاتِلُوا. أَنْ + naṣb is very common.",
+        "ur": "أَنْ (جو نصب دیتا ہے) کے بعد تُقَاتِلُونَ اپنا ن کھو دیتا ہے: أَنْ تُقَاتِلُوا۔ أَنْ + نصب بہت عام ہے۔"
       }
     },
     {
@@ -133,7 +133,11 @@
         }
       },
       "correct_answer": false,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. أَنْ causes naṣb, not jazm. In the five verbs both look the same — the ن drops — but the state is naṣb.",
+        "ur": "غلط۔ أَنْ نصب دیتا ہے، جزم نہیں۔ افعال خمسہ میں دونوں ایک جیسے لگتے ہیں — ن گر جاتا ہے — مگر حالت نصب ہے۔"
+      }
     },
     {
       "type": "FILL_BLANK",
@@ -320,14 +324,14 @@
       6
     ],
     "noor_explanation": {
-      "en": "اتَّقُوا and ذَرُوا — both imperative plurals of الأفعال الخمسة. The ن is absent in both: this is the مجزوم-type form that imperatives follow. When you see وا / ا / ي without ن, you now know: this verb is either commanded, prohibited, negated past, or in a أَن/لَن/كَي clause.",
-      "ur": "اتَّقُوا اور ذَرُوا — دونوں الأفعال الخمسة کے جمع امر ہیں۔ دونوں میں ن غیر موجود ہے: یہ مجزوم قسم کی شکل ہے جو امر follow کرتا ہے۔ جب آپ ن کے بغیر وا / ا / ي دیکھیں، اب آپ جانتے ہیں: یہ فعل یا حکم، منع، ماضی نفی، یا أَن/لَن/كَي clause میں ہے۔"
+      "en": "اتَّقُوا and ذَرُوا — plural commands, built on the jussive, so no ن. When you see ـُوا / ـَا / ـِي without ن, look for the reason: a command, a prohibition with لَا, لَمْ, or a naṣb particle like أَنْ، لَنْ، كَيْ.",
+      "ur": "اتَّقُوا اور ذَرُوا — جمع امر، مجزوم پر بنے، اس لیے ن نہیں۔ جب ـُوا / ـَا / ـِي بغیر ن کے دیکھیں تو وجہ تلاش کریں: امر، لَا سے نہی، لَمْ، یا أَنْ، لَنْ، كَيْ جیسا ناصب حرف۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You have completed the الأفعال الخمسة journey: five forms, the ن rule, and dozens of Quranic examples. From Al-Baqarah to Al-Imran to Al-Fil — these forms are everywhere. You now read them with full awareness.",
-      "ur": "آپ نے الأفعال الخمسة کا سفر مکمل کیا: پانچ شکلیں، ن کا قاعدہ، اور قرآن کی درجنوں مثالیں۔ البقرۃ سے آل عمران سے الفیل تک — یہ شکلیں ہر جگہ ہیں۔ اب آپ انہیں مکمل شعور کے ساتھ پڑھتے ہیں۔"
+      "en": "Five forms, one signal: ن in raf'; no ن in naṣb, jazm and the command. يُؤْمِنُونَ، أَنْ يُؤْمِنُوا، لَمْ يُؤْمِنُوا، اتَّقُوا — you can now read them all.",
+      "ur": "پانچ صورتیں، ایک علامت: رفع میں ن؛ نصب، جزم اور امر میں ن نہیں۔ يُؤْمِنُونَ، أَنْ يُؤْمِنُوا، لَمْ يُؤْمِنُوا، اتَّقُوا — اب آپ سب پڑھ سکتے ہیں۔"
     }
   }
 }
