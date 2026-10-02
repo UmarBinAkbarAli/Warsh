@@ -48,8 +48,8 @@
         "ur": "الْجُمْلَةُ الْفِعْلِيَّةُ — ایک ایسی جملہ جو فعل سے شروع ہوتی ہے"
       },
       "explanation": {
-        "en": "A verbal sentence (جُمْلَةٌ فِعْلِيَّة) begins with a verb — called the فَاعِل (subject/doer). The rest of the sentence is the مَفْعُول بِهِ or other complements. Example: قَامَ الرَّجَلُ — 'The man stood.' قَامَ is the verb, الرَّجَلُ is the subject/doer.",
-        "ur": "A verbal sentence (جُمْلَةٌ فِعْلِيَّة) فعل سے شروع ہوتی ہے — اسے فَاعِل (subject/doer) کہتے ہیں۔ باقی جملہ مَفْعُول بِهِ یا دوسرے complements ہیں۔ مثال: قَامَ الرَّجَلُ — 'آدمی کھڑا ہوا'۔ قَامَ verb ہے، الرَّجَلُ subject/doer ہے۔"
+        "en": "A verbal sentence (جُمْلَةٌ فِعْلِيَّةٌ) begins with a verb. The doer that follows it is the فَاعِل (nominative); an object, if any, is the مَفْعُولٌ بِهِ. Example: قَامَ الرَّجُلُ — \"the man stood\": قَامَ is the verb, الرَّجُلُ the فَاعِل.",
+        "ur": "جملہ فعلیہ فعل سے شروع ہوتا ہے۔ اس کے بعد آنے والا کرنے والا فاعل ہے (مرفوع)؛ اگر مفعول ہو تو مفعول بہ۔ مثال: قَامَ الرَّجُلُ — \"آدمی کھڑا ہوا\": قَامَ فعل، الرَّجُلُ فاعل۔"
       }
     },
     {
@@ -171,14 +171,14 @@
       "type": "FILL_BLANK",
       "id": "ch64-l01-ex03",
       "mode": "TAP",
-      "sentence_ar": "قَامَ ___ — the man stood (verbal sentence)",
+      "sentence_ar": "قَامَ ___",
       "hint": {
         "en": "In a verbal sentence, the verb comes first, followed by the فَاعِل (subject). قَامَ is the verb.",
         "ur": "verbal sentence میں، verb پہلے آتا ہے، پھر فَاعِل (subject)۔ قَامَ verb ہے۔"
       },
       "options": [
         {
-          "ar": "الرَّجَلُ",
+          "ar": "الرَّجُلُ",
           "ar_plain": "الرجل",
           "translit": "ar-rajulu",
           "en": "the man",
@@ -207,7 +207,7 @@
         }
       ],
       "correct_answer": {
-        "ar": "الرَّجَلُ",
+        "ar": "الرَّجُلُ",
         "ar_plain": "الرجل",
         "translit": "ar-rajulu",
         "en": "the man",
@@ -341,8 +341,8 @@
           "ur": "اللہ بخشنے والا ہے"
         },
         {
-          "en": "Allah forgives",
-          "ur": "اللہ بخشتا ہے"
+          "en": "Allah forgave",
+          "ur": "اللہ نے بخش دیا"
         },
         {
           "en": "The Forgiving Allah",
@@ -364,7 +364,7 @@
       "type": "FILL_BLANK",
       "id": "ch64-l01-ex08",
       "mode": "TYPE",
-      "sentence_ar": "The sentence ذَهَبَ الْوَلَدُ is a ___ sentence (starts with a verb).",
+      "sentence_ar": "ذَهَبَ الْوَلَدُ: جُمْلَةٌ ___",
       "hint": {
         "en": "ذَهَبَ is a verb. The subject follows it. This pattern is a verbal sentence.",
         "ur": "ذَهَبَ ایک verb ہے۔ subject اس کے بعد آتا ہے۔ یہ pattern ایک verbal sentence ہے۔"
@@ -387,26 +387,26 @@
     },
     "ayah": {
       "surah": 1,
-      "ayah": 1,
-      "label": "Al-Fatiha 1:1",
-      "ar": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
-      "en": "In the name of Allah, the Most Gracious, the Most Merciful.",
-      "ur": "اللہ کے نام سے جو بڑا مہربان نہایت رحم والا ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001001.mp3"
+      "ayah": 2,
+      "label": "Al-Fatiha 1:2",
+      "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+      "en": "[All] praise is [due] to Allah, Lord of the worlds",
+      "ur": "سب تعریف اللہ ہی کے لیے ہے جو تمام جہانوں کا رب ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001002.mp3"
     },
     "highlighted_word_indices": [
-      2,
-      3
+      0,
+      1
     ],
     "noor_explanation": {
-      "en": "اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ — this phrase is entirely إضافة (no verbs). الْحَمْدُ لِلَّهِ is a nominal sentence: الْحَمْدُ is مُبْتَدَأ, لِلَّهِ is خَبَر (in جَر, the preposition لِ does the relating). The whole Surah is built on these two sentence types.",
-      "ur": "اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ — یہ phrase entirely إضافہ ہے (کوئی verb نہیں)۔ الْحَمْدُ لِلَّهِ ایک nominal sentence ہے: الْحَمْدُ مُبْتَدَأ ہے، لِلَّهِ خَبَر ہے (جر میں، حرف لِ نسبت کرتا ہے)۔ پورا Surah ان دو sentence types پر built ہے۔"
+      "en": "الْحَمْدُ لِلَّهِ is a nominal sentence: الْحَمْدُ is the مُبْتَدَأ (nominative) and لِلَّهِ is the خَبَر. (بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ in 1:1 is a phrase, not a full sentence: an iḍāfa with two adjectives.)",
+      "ur": "الْحَمْدُ لِلَّهِ جملہ اسمیہ ہے: الْحَمْدُ مبتدا (مرفوع) اور لِلَّهِ خبر۔ (1:1 کا بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ مکمل جملہ نہیں، ایک مرکب ہے: اضافت اور دو صفات۔)"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Every sentence in Arabic is either nominal or verbal. الْجُمْلَةُ الِاسْمِيَّةُ starts with مُبْتَدَأٌ, الْجُمْلَةُ الْفِعْلِيَّةُ starts with فَاعِلٌ after the verb. Knowing this, you can parse any sentence.",
-      "ur": "عربی میں ہر جملہ یا تو nominal ہے یا verbal۔ الْجُمْلَةُ الِاسْمِيَّةُ مُبْتَدَأٌ سے شروع ہوتی ہے، الْجُمْلَةُ الْفِعْلِيَّةُ verb کے بعد فَاعِلٌ سے شروع ہوتی ہے۔ یہ جاننا، آپ کوئی بھی جملہ parse کر سکتے ہیں۔"
+      "en": "A sentence that starts with a noun is nominal (مُبْتَدَأ + خَبَر); one that starts with a verb is verbal (فِعْل + فَاعِل). Spotting which is which is the first step in parsing.",
+      "ur": "جو جملہ اسم سے شروع ہو وہ اسمیہ ہے (مبتدا + خبر)؛ جو فعل سے شروع ہو وہ فعلیہ (فعل + فاعل)۔ یہ پہچاننا اعراب کا پہلا قدم ہے۔"
     }
   }
 }
