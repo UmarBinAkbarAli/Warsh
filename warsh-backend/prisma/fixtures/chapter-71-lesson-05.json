@@ -1,11 +1,13 @@
 {
   "schema_version": "1.0",
+  "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 71, Lesson 5 — Telling الحال from التمييز.",
     "chapter_order": 71,
     "lesson_order": 5,
     "chapter_title": "الحال والتمييز",
-    "title": "Distinguishing الْحَال from التَّمْيِيز",
-    "titleAr": "التمييز بين الحال والتمييز",
+    "title": "Telling الْحَال from التَّمْيِيز",
+    "titleAr": "الْفَرْقُ بَيْنَ الْحَالِ وَالتَّمْيِيزِ",
     "source": "arabai-backend/prisma/fixtures",
     "estimated_minutes": 10,
     "xp_reward": 10
@@ -15,450 +17,343 @@
       "surah": 3,
       "ayah": 41,
       "label": "Aal Imran 3:41",
-      "ar": "قَالَ رَبِّ اجْعَل لِّي آيَةً ۖ قَالَ آيَتُكَ أَلَّا تُكَلِّمَ النَّاسَ ثَلَاثَةَ أَيَّامٍ إِلَّا رَمْزًا ۗ وَاذْكُر رَّبَّكَ كَثِيرًا وَسَبِّحْ بِالْعَشِيِّ وَالْإِبْكَارِ",
-      "en": "He said, \"My Lord, make for me a sign.\" He said, \"Your sign is that you will not [be able to] speak to the people for three days except by gesture. And remember your Lord much and exalt [Him with praise] in the evening and the morning.\"",
-      "ur": "زکریا نے کہا کہ پروردگار (میرے لیے) کوئی نشانی مقرر فرما خدا نے فرمایا نشانی یہ ہے کہ تم لوگوں سے تین دن اشارے کے سوا بات نہ کر سکو گے تو (ان دنوں میں) اپنے پروردگار کی کثرت سے یاد اور صبح و شام اس کی تسبیح کرنا",
+      "ar": "قَالَ رَبِّ اجْعَل لِّي آيَةً ۖ قَالَ آيَتُكَ أَلَّا تُكَلِّمَ النَّاسَ ثَلَاثَةَ أَيَّامٍ إِلَّا رَمْزًا ۗ وَاذْكُر رَّبَّكَ كَثِيرًا وَسَبِّحْ بِالْعَشِيِّ وَالْإِبْكَارِ",
+      "en": "He said, 'My Lord, make for me a sign.' He said, 'Your sign is that you will not [be able to] speak to the people for three days except by gesture. And remember your Lord much and exalt [Him with praise] in the evening and the morning.'",
+      "ur": "عرض کیا: اے میرے رب! میرے لیے کوئی نشانی مقرر کر دے۔ فرمایا: تمہاری نشانی یہ ہے کہ تم تین دن لوگوں سے اشارے کے سوا بات نہ کر سکو گے، اور اپنے رب کو بہت یاد کرو اور شام و صبح اس کی تسبیح کرو",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003041.mp3"
     },
     "noor_intro": {
-      "ar": "This is the key distinction lesson. Both الحال and التمييز are nouns in the accusative, but they do fundamentally different things. Today you will learn the reliable rule for telling them apart.",
-      "en": "This is the key distinction lesson. Both الحال and التمييز are nouns in the accusative, but they do fundamentally different things. Today you will learn the reliable rule for telling them apart.",
-      "ur": "یہ کلیدی تمییز کا سبق ہے۔ الحال اور التمييز دونوں نصب میں ہیں، لیکن وہ بنیادی طور پر مختلف کام کرتے ہیں۔ آج آپ قابل اعتماد قاعدہ سیکھیں گے۔"
+      "en": "Both الْحَال and التَّمْيِيز are indefinite accusatives, so endings alone will not separate them. This ayah has a counted noun (ثَلَاثَةَ أَيَّامٍ) and accusatives of other kinds (رَمْزًا, كَثِيرًا). Today: the question that tells them apart.",
+      "ur": "حال اور تمییز دونوں نکرہ منصوب ہیں، اس لیے صرف آخری حرکت سے ان میں فرق نہیں ہوگا۔ اس آیت میں گنی ہوئی چیز (ثَلَاثَةَ أَيَّامٍ) اور دوسری قسم کے منصوب (رَمْزًا، كَثِيرًا) ہیں۔ آج: وہ سوال جو دونوں کو الگ کرتا ہے۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "WORD",
+      "type": "CONCEPT",
+      "concept": {
+        "en": "حَال: 'in what state?'",
+        "ar": "الْحَالُ: كَيْفَ؟",
+        "ur": "حال: 'کس حال میں؟'"
+      },
+      "explanation": {
+        "en": "A حَال describes the state of a person or thing at the time of the action. It is usually a describing word (ضَاحِكًا، خَائِفًا، قَانِتِينَ) and always has a صَاحِب whose state it is.",
+        "ur": "حال کام کے وقت کسی شخص یا چیز کی حالت بتاتا ہے۔ یہ عموماً صفت جیسا لفظ ہوتا ہے (ضَاحِكًا، خَائِفًا، قَانِتِينَ) اور ہمیشہ اس کا کوئی صاحب ہوتا ہے جس کی حالت بیان ہو۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "تَمْيِيز: 'of what? in what respect?'",
+        "ar": "التَّمْيِيزُ: مِنْ أَيِّ شَيْءٍ؟",
+        "ur": "تمییز: 'کس چیز کا؟ کس لحاظ سے؟'"
+      },
+      "explanation": {
+        "en": "A تَمْيِيز removes vagueness. It is usually a plain noun (يَوْمًا، زَيْتًا، مَالًا، شَيْبًا) after a number, a measure, a comparison or a vague statement. It describes no one's state.",
+        "ur": "تمییز ابہام دور کرتی ہے۔ یہ عموماً سادہ اسم ہوتا ہے (يَوْمًا، زَيْتًا، مَالًا، شَيْبًا) جو عدد، پیمانے، موازنے یا مبہم جملے کے بعد آتا ہے۔ یہ کسی کی حالت بیان نہیں کرتا۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
       "text": {
-        "ar": "الحال يصف هيئة صاحب الحال عند الفعل",
-        "ar_plain": "الحال يصف هيئة صاحب الحال عند الفعل",
-        "translit": "al-haal yasifu hayyat sahib al-haal",
-        "en": "الْحَال describes the state/manner of صاحب الحال during the action",
-        "ur": "الْحَال ایکشن کے دوران صاحب الحال کی حالت/طریقہ کو بیان کرتا ہے۔"
-      },
-      "definition_ar": "الحال = HOW the subject was during the action",
-      "definition_en": "The حال tells us the state, condition, or manner in which the subject performed or experienced the action",
-      "example_ar": "خَرَجَ زيدٌ ضَاحِكًا — Zayd left while laughing",
-      "highlight": true
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "ar": "التمييز يوضح ويخصص ما قبله",
-        "en": "التمييز clarifies and specifies what precedes it",
-        "ur": "التمييز وضاحت کرتا ہے اور بتاتا ہے کہ اس سے پہلے کیا ہے۔"
+        "ar": "أَنَا أَكْثَرُ مِنْكَ مَالًا وَأَعَزُّ نَفَرًا",
+        "ar_plain": "أنا أكثر منك مالا وأعز نفرا",
+        "translit": "ana aktharu minka maalan wa-a'azzu nafaran",
+        "en": "I am greater than you in wealth and mightier in men.",
+        "ur": "میں تجھ سے مال میں زیادہ اور جتھے میں زیادہ طاقتور ہوں۔"
       },
       "explanation": {
-        "en": "The تمييز clarifies, specifies, or narrows down the noun that precedes it",
-        "ar": "التمييز = WHICH / WHAT KIND / HOW MANY of the previous noun",
-        "example_ar": "جَاءَني رَجَلٌ يَوْمًا — A man came (specifies a time)",
-        "ur": "تمييز اس سے پہلے والے اسم کو واضح کرتا ہے، بیان کرتا ہے یا اسے کم کرتا ہے"
+        "en": "From 18:34. 'I am more' — in what? مَالًا. 'Mightier' — in what? نَفَرًا. Both are تَمْيِيز after a comparative.",
+        "ur": "18:34 سے۔ 'میں زیادہ ہوں' — کس چیز میں؟ مَالًا۔ 'زیادہ طاقتور' — کس لحاظ سے؟ نَفَرًا۔ دونوں اسمِ تفضیل کے بعد تمییز ہیں۔"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "ar": "التمييز منصوب بالفتحة فقط",
-        "en": "تمييز takes only fatha (فتحة) as its case marker",
-        "ur": "تمييز صرف فتا (فتحة) کو اپنے کیس مارکر کے طور پر لیتا ہے۔"
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "The deciding question",
+        "ur": "فیصلہ کن سوال"
       },
-      "explanation": {
-        "en": "The key distinguishing feature: تمييز ALWAYS takes fatha for accusative.",
-        "ar": "الحال may take various case markings, but التمييز is always منصوب بالفتحة",
-        "example_ar": "ثَلَاثُونَ يَوْمًا — يومًا is منصوب بالفتحة consistently",
-        "ur": "اہم امتیازی خصوصیت: تمييز ALWAYS الزام لگانے کے لیے فتویٰ لیتا ہے۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "ar": "الحال له صاحب حال محدد",
-        "en": "الْحَال always has a صاحب حال",
-        "ur": "الْحَال میں ہمیشہ ایک صاحب حال ہوتا ہے"
-      },
-      "explanation": {
-        "en": "A حال ALWAYS describes a specific noun (صاحب الحال). A تمييز can clarify an indefinite noun or a number.",
-        "ar": "لا يوجد حال بدون صاحب حال",
-        "example_ar": "في \"خَرَجَ زيدٌ ضَاحِكًا\" — زيدٌ is صاحب الحال, ضَاحِكًا is الحال",
-        "ur": "A حال ALWAYS ایک مخصوص اسم (صاحب الحال) کو بیان کرتا ہے۔ A تمييز ایک غیر معینہ اسم یا عدد کو واضح کر سکتا ہے۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "ar": "التمييز قد يكون مستقلًا",
-        "en": "التمييز can be independent",
-        "ur": "التمييز خود مختار ہو سکتا ہے۔"
-      },
-      "explanation": {
-        "en": "Number تمييز and indefinite noun تمييز exist independently.",
-        "ar": "التمييز of numbers and indefinite nouns exists independently",
-        "example_ar": "ثَلَاثُونَ يَوْمًا — يومًا is not describing manner of action",
-        "ur": "نمبر تمييز اور غیر معینہ اسم تمييز آزادانہ طور پر موجود ہے۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "ar": "القاعدة الذهبية",
-        "en": "The Golden Rule",
-        "ur": "سنہری اصول"
-      },
-      "explanation": {
-        "en": "Ask: 'Is this describing the manner/state of the subject (HOW)?' then حال. If specifying WHAT/WHICH/HOW MANY then تمييز.",
-        "ar": "إذا كان اللفظ يصف HOW = حال. إذا كان يوضح WHICH/HOW MANY = تمييز",
-        "example_ar": "ضَاحِكًا = HOW did he come? → حال\nثَلَاثُونَ يَوْمًا = HOW MANY days? → تمييز",
-        "ur": "پوچھیں: 'کیا یہ موضوع کے انداز/ریاست (HOW) کو بیان کر رہا ہے؟' پھر حال اگر یہ بتا رہے ہیں کہ کیا/WHICH/HOW MANY تو تمييز۔"
+      "body": {
+        "en": "Ask كَيْفَ؟ ('in what state?') — if the word answers it, it is a حَال. Ask مِنْ أَيِّ شَيْءٍ؟ ('of what? in what respect?') — if the word answers that, it is a تَمْيِيز.",
+        "ur": "پوچھیے كَيْفَ؟ ('کس حال میں؟') — اگر لفظ اس کا جواب دے تو حال ہے۔ پوچھیے مِنْ أَيِّ شَيْءٍ؟ ('کس چیز کا؟ کس لحاظ سے؟') — اگر لفظ اس کا جواب دے تو تمییز ہے۔"
       }
     }
   ],
   "exercises": [
     {
-      "id": "ch71l05ex1",
       "type": "TAP_TRANSLATION",
+      "id": "ch71-l05-ex01",
       "prompt": {
-        "ar": "خَرَجَ زيدٌ ضَاحِكًا",
-        "ar_plain": "adobe",
-        "translit": "kharaja zaydun dhaahikan",
-        "en": "Zayd left while laughing",
-        "ur": "زید ہنستا ہوا چلا گیا۔"
+        "ar": "خَرَجَ زَيْدٌ ضَاحِكًا",
+        "ar_plain": "خرج زيد ضاحكا",
+        "translit": "kharaja zaydun daahikan",
+        "en": "Zayd left laughing.",
+        "ur": "زید ہنستا ہوا نکلا۔"
       },
       "options": [
         {
-          "en": "HOW Zayd left — laughing state",
-          "ur": "زید کیسے چلا گیا — ہنسنے کی حالت"
+          "en": "حَال — it answers 'in what state?'",
+          "ur": "حال — 'کس حال میں؟' کا جواب"
         },
         {
-          "en": "WHICH one / HOW MANY",
-          "ur": "کون سا ایک / کتنے"
+          "en": "تَمْيِيز — it answers 'of what?'",
+          "ur": "تمییز — 'کس چیز کا؟' کا جواب"
         },
         {
-          "en": "What kind of man",
-          "ur": "کیسا آدمی ہے۔"
+          "en": "an adjective of زَيْدٌ",
+          "ur": "زَيْدٌ کی صفت"
         },
         {
-          "en": "Where did Zayd go",
-          "ur": "زید کہاں گیا؟"
+          "en": "the object of خَرَجَ",
+          "ur": "خَرَجَ کا مفعول"
         }
       ],
-      "correct_index": 0
-    },
-    {
-      "id": "ch71l05ex2",
-      "type": "TRUE_FALSE",
-      "statement": {
-        "ar": "\"ثَلَاثُونَ يَوْمًا\" — يومًا is a تمييز because it specifies WHAT KIND/HOW MANY",
-        "en": "\"Thirty days\" — يومًا is a تمييز because it specifies WHAT KIND/HOW MANY",
-        "ur": "\"تیس دن\" — يومًا ایک تمييز ہے کیونکہ یہ بتاتا ہے کہ کس قسم کے/کتنے لوگ ہیں"
-      },
-      "correct_answer": true
-    },
-    {
-      "id": "ch71l05ex3",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "جلسَ الطالبُ ___ — جالسًا في حالة التفكير",
-      "hint": {
-        "en": "The student sat ___ — sitting in a thinking state",
-        "ur": "طالب علم بیٹھا ___ — سوچنے کی حالت میں بیٹھا۔"
-      },
-      "options": [
-        {
-          "ar": "حال",
-          "ar_plain": "حال",
-          "translit": "haal",
-          "en": " حال",
-          "ur": "حال"
-        },
-        {
-          "ar": "تمييز",
-          "ar_plain": "تمييز",
-          "translit": "tamyeez",
-          "en": "تمييز",
-          "ur": "تمييز"
-        },
-        {
-          "ar": "صفة",
-          "ar_plain": "صفة",
-          "translit": "sifa",
-          "en": "adjective",
-          "ur": "صفت"
-        },
-        {
-          "ar": "مفعول",
-          "ar_plain": "مفعول",
-          "translit": "maf'ul",
-          "en": "object",
-          "ur": "اعتراض"
-        }
-      ],
-      "correct_answer": {
-        "ar": "حال",
-        "ar_plain": "حال",
-        "translit": "haal",
-        "en": "حال",
-        "ur": "حال"
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ضَاحِكًا describes Zayd's state while leaving — a حَال. It is a describing word (laughing), not a noun that names what is counted or measured.",
+        "ur": "ضَاحِكًا نکلتے وقت زید کی حالت بتاتا ہے — حال۔ یہ صفت جیسا لفظ ہے (ہنستا ہوا)، ایسا اسم نہیں جو بتائے کہ کیا گنا یا ناپا گیا۔"
       }
     },
     {
-      "id": "ch71l05ex4",
-      "type": "GRAMMAR_PARSE",
-      "sentence_ar": "سافرَ زيدٌ وَحْدَهُ",
-      "words": [
-        {
-          "ar": "سافرَ",
-          "ar_plain": "سافر",
-          "translit": "saahara",
-          "en": "traveled",
-          "ur": "سفر کیا"
-        },
-        {
-          "ar": "زيدٌ",
-          "ar_plain": "زيد",
-          "translit": "zaydun",
-          "en": "Zayd",
-          "ur": "زید"
-        },
-        {
-          "ar": "وَحْدَهُ",
-          "ar_plain": "وحده",
-          "translit": "wahdahu",
-          "en": "alone",
-          "ur": "اکیلے"
-        }
-      ],
-      "available_roles": [
-        "SUBJECT",
-        "VERB",
-        "OBJECT",
-        "PARTICLE",
-        "PREPOSITION",
-        "ADJECTIVE",
-        "DEMONSTRATIVE",
-        "NOUN",
-        "TIME_ZARF"
-      ],
-      "correct_roles": [
-        "VERB",
-        "SUBJECT",
-        "ADJECTIVE"
-      ]
+      "type": "TRUE_FALSE",
+      "id": "ch71-l05-ex02",
+      "statement": {
+        "en": "In أَنَا أَكْثَرُ مِنْكَ مَالًا, مَالًا is a تَمْيِيز: it says in what respect 'I am more'.",
+        "ur": "أَنَا أَكْثَرُ مِنْكَ مَالًا میں مَالًا تمییز ہے: یہ بتاتا ہے کہ 'میں زیادہ ہوں' کس لحاظ سے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1
     },
     {
-      "id": "ch71l05ex5",
+      "type": "FILL_BLANK",
+      "id": "ch71-l05-ex03",
+      "mode": "TAP",
+      "sentence_ar": "جَلَسَ الْعَالِمُ ___",
+      "hint": {
+        "en": "'The scholar sat reflecting.' Choose the word that gives his state.",
+        "ur": "'عالم غور کرتا ہوا بیٹھا۔' وہ لفظ چنیے جو اس کی حالت بتائے۔"
+      },
+      "options": [
+        {
+          "ar": "مُتَأَمِّلًا",
+          "ar_plain": "متأملا",
+          "translit": "muta'ammilan",
+          "en": "reflecting (حَال)",
+          "ur": "غور کرتا ہوا (حال)"
+        },
+        {
+          "ar": "تَأَمُّلٌ",
+          "ar_plain": "تأمل",
+          "translit": "ta'ammulun",
+          "en": "reflection (noun, nominative)",
+          "ur": "غور (اسم، مرفوع)"
+        },
+        {
+          "ar": "الْمُتَأَمِّلُ",
+          "ar_plain": "المتأمل",
+          "translit": "al-muta'ammilu",
+          "en": "the reflecting one",
+          "ur": "غور کرنے والا"
+        },
+        {
+          "ar": "عِشْرِينَ",
+          "ar_plain": "عشرين",
+          "translit": "'ishriina",
+          "en": "twenty",
+          "ur": "بیس"
+        }
+      ],
+      "correct_answer": {
+        "ar": "مُتَأَمِّلًا",
+        "ar_plain": "متأملا",
+        "translit": "muta'ammilan",
+        "en": "reflecting (حَال)",
+        "ur": "غور کرتا ہوا (حال)"
+      },
+      "xp_value": 1
+    },
+    {
       "type": "MATCHING",
+      "id": "ch71-l05-ex04",
       "left_column": [
         {
-          "ar": "مَشَى زيدٌ حَزِينًا",
-          "ar_plain": "adobe",
-          "translit": "masha zaydun hazinan",
+          "ar": "مَشَى زَيْدٌ حَزِينًا",
+          "ar_plain": "مشى زيد حزينا",
+          "translit": "mashaa zaydun haziinan",
           "en": "Zayd walked sadly",
-          "ur": "زید اداسی سے چل دیا۔"
+          "ur": "زید غمگین چلا"
         },
         {
-          "ar": "ثَمَانِيَةُ أَفْرَادٍ",
-          "ar_plain": "adobe",
-          "translit": "thamaaniyata afraadin",
-          "en": "eight individuals",
-          "ur": "آٹھ افراد"
+          "ar": "ثَمَانِيَةُ رِجَالٍ",
+          "ar_plain": "ثمانية رجال",
+          "translit": "thamaaniyatu rijaalin",
+          "en": "eight men",
+          "ur": "آٹھ آدمی"
         },
         {
-          "ar": "صليتُ مُسْتَعْمِرًا",
-          "ar_plain": "adobe",
-          "translit": "sallaytu mustaghiran",
-          "en": "I prayed as a conqueror",
-          "ur": "میں نے فاتح کی طرح دعا کی۔"
+          "ar": "أَكْثَرُ مِنْكَ مَالًا",
+          "ar_plain": "أكثر منك مالا",
+          "translit": "aktharu minka maalan",
+          "en": "more than you in wealth",
+          "ur": "مال میں تجھ سے زیادہ"
         },
         {
           "ar": "خَمْسَةٌ وَعِشْرُونَ رَجُلًا",
-          "ar_plain": "adobe",
-          "translit": "khamsa wa-ishrun rajulan",
+          "ar_plain": "خمسة وعشرون رجلا",
+          "translit": "khamsatun wa-'ishruuna rajulan",
           "en": "twenty-five men",
           "ur": "پچیس آدمی"
         }
       ],
       "right_column": [
         {
-          "en": "تمييز عدد: مفرد منصوب",
-          "ur": "تمييز عدد: مفرد منصوب"
+          "en": "حَال — 'in what state?'",
+          "ur": "حال — 'کس حال میں؟'"
         },
         {
-          "en": "حال يصف هيئة",
-          "ur": "حال يصف هيئة"
+          "en": "counted noun after 3–10: plural genitive",
+          "ur": "3 تا 10 کے بعد: جمع مجرور"
         },
         {
-          "en": "تمييز عدد: معطوف (مضاف إليه)",
-          "ur": "تمييز عدد: معطوف (مضاف إليه)"
+          "en": "تَمْيِيز of a statement — 'in what respect?'",
+          "ur": "جملے کی تمییز — 'کس لحاظ سے؟'"
         },
         {
-          "en": "حال وصفي (alt)",
-          "ur": "حال وصفي (alt)"
+          "en": "تَمْيِيز after 11–99: singular accusative",
+          "ur": "11 تا 99 کے بعد تمییز: واحد منصوب"
         }
       ],
       "correct_pairs": [
         [
           0,
-          1
-        ],
-        [
-          1,
           0
         ],
         [
+          1,
+          1
+        ],
+        [
           2,
-          3
+          2
         ],
         [
           3,
-          2
+          3
         ]
-      ]
+      ],
+      "xp_value": 1
     },
     {
-      "id": "ch71l05ex6",
       "type": "BUILD_SENTENCE",
+      "id": "ch71-l05-ex05",
       "target_translation": {
-        "en": "The scholar sat contemplating",
-        "ur": "عالم بیٹھا سوچتا رہا۔"
+        "en": "The scholar sat reflecting.",
+        "ur": "عالم غور کرتا ہوا بیٹھا۔"
       },
       "tiles": [
         {
-          "ar": "جلس",
+          "ar": "جَلَسَ",
           "ar_plain": "جلس",
           "translit": "jalasa",
           "en": "sat",
-          "ur": "بیٹھ گیا"
+          "ur": "بیٹھا"
         },
         {
-          "ar": "العالم",
+          "ar": "الْعَالِمُ",
           "ar_plain": "العالم",
-          "translit": "al-alim",
+          "translit": "al-'aalimu",
           "en": "the scholar",
           "ur": "عالم"
         },
         {
-          "ar": "متأملًا",
-          "ar_plain": "متأمل",
-          "translit": "mutaammilan",
-          "en": "contemplating",
-          "ur": "غور کرنا"
+          "ar": "مُتَأَمِّلًا",
+          "ar_plain": "متأملا",
+          "translit": "muta'ammilan",
+          "en": "reflecting",
+          "ur": "غور کرتا ہوا"
+        },
+        {
+          "ar": "الْمُتَأَمِّلُ",
+          "ar_plain": "المتأمل",
+          "translit": "al-muta'ammilu",
+          "en": "the reflecting one",
+          "ur": "غور کرنے والا"
         }
       ],
       "correct_order": [
-        1,
         0,
+        1,
         2
-      ]
-    },
-    {
-      "id": "ch71l05ex7",
-      "type": "TAP_TRANSLATION",
-      "prompt": {
-        "ar": "عادَ الطالبُ وَحْدَهُ",
-        "ar_plain": "ada",
-        "translit": "aada al-talibu wahdahu",
-        "en": "The student returned alone",
-        "ur": "طالب علم اکیلا ہی واپس آیا"
-      },
-      "options": [
-        {
-          "en": "HOW the student returned — in a state of being alone",
-          "ur": "طالب علم کیسے واپس آیا — تنہا ہونے کی حالت میں"
-        },
-        {
-          "en": "Number specification",
-          "ur": "نمبر کی تفصیلات"
-        },
-        {
-          "en": "Simple adjective",
-          "ur": "سادہ صفت"
-        },
-        {
-          "en": "Demonstrative",
-          "ur": "مظاہرہ کرنے والا"
-        }
       ],
-      "correct_index": 0
+      "xp_value": 1
     },
     {
-      "id": "ch71l05ex8",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "إذا يصف HOW = ___ إذا يوضح WHICH/HOW MANY = ___",
-      "hint": {
-        "en": "The Golden Rule — if it describes HOW = ___ if it specifies WHICH/HOW MANY = ___",
-        "ur": "سنہری اصول - اگر یہ وضاحت کرتا ہے HOW = ___ اگر یہ بتاتا ہے کہ کون سا/کتنا = ___"
+      "type": "TAP_TRANSLATION",
+      "id": "ch71-l05-ex06",
+      "prompt": {
+        "ar": "عَادَ الطَّالِبُ وَحْدَهُ",
+        "ar_plain": "عاد الطالب وحده",
+        "translit": "'aada at-taalibu wahdahu",
+        "en": "The student returned alone.",
+        "ur": "طالب علم اکیلا لوٹا۔"
       },
       "options": [
         {
-          "ar": "حال",
-          "ar_plain": "حال",
-          "translit": "haal",
-          "en": "حال",
-          "ur": "حال"
+          "en": "حَال — how the student was as he returned",
+          "ur": "حال — لوٹتے وقت طالب علم کس حال میں تھا"
         },
         {
-          "ar": "تمييز",
-          "ar_plain": "تمييز",
-          "translit": "tamyeez",
-          "en": "تمييز",
-          "ur": "تمييز"
+          "en": "تَمْيِيز of a number",
+          "ur": "عدد کی تمییز"
         },
         {
-          "ar": "صفة",
-          "ar_plain": "صفة",
-          "translit": "sifa",
-          "en": "adjective",
+          "en": "an adjective",
           "ur": "صفت"
         },
         {
-          "ar": "مضاف",
-          "ar_plain": "مضاف",
-          "translit": "mazuf",
-          "en": "genitive",
-          "ur": "جینیاتی"
+          "en": "a demonstrative",
+          "ur": "اسمِ اشارہ"
         }
       ],
-      "correct_answer": {
-        "ar": "حال",
-        "ar_plain": "حال",
-        "translit": "haal",
-        "en": "حال",
-        "ur": "حال"
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "وَحْدَهُ is a حَال: 'on his own'. It describes the student at the time of returning.",
+        "ur": "وَحْدَهُ حال ہے: 'اکیلا'۔ یہ لوٹتے وقت طالب علم کی حالت بتاتا ہے۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "ar": "الحال vs. التمييز — الفرق الجوهري",
-      "en": "الحال vs. التمييز — The Essential Difference",
-      "ur": "الحال بمقابل التمييز — بنیادی فرق"
+      "en": "الْحَال vs التَّمْيِيز — the essential difference",
+      "ar": "الْحَالُ وَالتَّمْيِيزُ — الْفَرْقُ الْجَوْهَرِيُّ",
+      "ur": "حال اور تمییز — بنیادی فرق"
     },
     "ayah": {
-      "surah": 3,
-      "ayah": 41,
-      "label": "Aal Imran 3:41",
-      "ar": "قَالَ رَبِّ اجْعَل لِّي آيَةً ۖ قَالَ آيَتُكَ أَلَّا تُكَلِّمَ النَّاسَ ثَلَاثَةَ أَيَّامٍ إِلَّا رَمْزًا ۗ وَاذْكُر رَّبَّكَ كَثِيرًا وَسَبِّحْ بِالْعَشِيِّ وَالْإِبْكَارِ",
-      "en": "He said, \"My Lord, make for me a sign.\" He said, \"Your sign is that you will not [be able to] speak to the people for three days except by gesture. And remember your Lord much and exalt [Him with praise] in the evening and the morning.\"",
-      "ur": "زکریا نے کہا کہ پروردگار (میرے لیے) کوئی نشانی مقرر فرما خدا نے فرمایا نشانی یہ ہے کہ تم لوگوں سے تین دن اشارے کے سوا بات نہ کر سکو گے تو (ان دنوں میں) اپنے پروردگار کی کثرت سے یاد اور صبح و شام اس کی تسبیح کرنا",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003041.mp3"
+      "surah": 18,
+      "ayah": 34,
+      "label": "Al-Kahf 18:34",
+      "ar": "وَكَانَ لَهُ ثَمَرٌ فَقَالَ لِصَاحِبِهِ وَهُوَ يُحَاوِرُهُ أَنَا أَكْثَرُ مِنكَ مَالًا وَأَعَزُّ نَفَرًا",
+      "en": "And he had fruit, so he said to his companion while he was conversing with him, 'I am greater than you in wealth and mightier in [numbers of] men.'",
+      "ur": "اور اس کے پاس پھل تھے، تو اس نے اپنے ساتھی سے باتیں کرتے ہوئے کہا: میں تجھ سے مال میں زیادہ اور جتھے میں زیادہ طاقتور ہوں",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/018034.mp3"
     },
     "highlighted_word_indices": [
-      3
+      5,
+      6,
+      10,
+      12
     ],
     "noor_explanation": {
-      "ar": "في \"ثَلَاثَ لَيَالٍ سَوِيًّا\" — ثَلَاثَ لَيَالٍ هو تمييز عدد (ثلاث ليالٍ), و سَوِيًّا هو حال من الكلام — 'in an even/equal manner' يصف هيئة Zakariyya's silence. لاحظ: حال واحد (سَوِيًّا) يصف هيئة الكلام، وتمييز عدد (ثلاث ليالٍ) يحدد المدة.",
-      "en": "In 'for three days in an even manner' — ثَلَاثَ لَيَالٍ is a number تمييز (three nights), and سَوِيًّا is a حال describing the manner of speaking — 'in an even/equal manner' describing Zakariyya's silence. Notice: one حال (سَوِيًّا) describes the manner of speaking, while the number تمييز (ثلاث ليالٍ) specifies the duration. Both are accusative, both near each other, but doing different jobs.",
-      "ur": "'تین دن برابر طریقے سے' میں — 'تین راتیں' عدد تمييز ہے، اور 'برابر' حال ہے جو کلام کی حالت بیان کرتی ہے۔ نوٹ: ایک حال (برابر) کلام کی کیفیت بیان کرتی ہے، جبکہ عدد تمييز (تین راتیں) مدت متعین کرتی ہے۔ دونوں نصب ہیں، قریب ہیں، لیکن مختلف کام کرتے ہیں۔"
+      "en": "Both in one ayah. وَهُوَ يُحَاوِرُهُ — 'while he was conversing with him' — is a حَال clause: the state of the speaker as he spoke. مَالًا and نَفَرًا are تَمْيِيز: 'more in wealth, mightier in men'. The garden owner's boast is built on تَمْيِيز — and the story shows how little that wealth was worth.",
+      "ur": "ایک آیت میں دونوں۔ وَهُوَ يُحَاوِرُهُ — 'اس سے باتیں کرتے ہوئے' — حالیہ جملہ ہے: بولتے وقت بولنے والے کی حالت۔ مَالًا اور نَفَرًا تمییز ہیں: 'مال میں زیادہ، جتھے میں زیادہ طاقتور'۔ باغ والے کا فخر تمییز پر قائم ہے — اور قصہ دکھاتا ہے کہ وہ مال کتنا بے وقعت تھا۔"
     }
   },
   "close": {
     "noor_message": {
-      "ar": "The distinction between الحال and التمييز is now clear in your mind. Ask: 'Is it describing the manner/state of the subject during the action (HOW)?' If yes, it's حال. If it's specifying which one, what kind, or how many, it's تمييز. Tomorrow we tackle advanced constructions with both.",
-      "en": "The distinction between الحال and التمييز is now clear in your mind. Ask: 'Is it describing the manner/state of the subject during the action (HOW)?' If yes, it's حال. If it's specifying which one, what kind, or how many, it's تمييز. Tomorrow we tackle advanced constructions with both.",
-      "ur": "الحال اور التمييز کے درمیان فرق اب آپ کے ذہن میں واضح ہے۔ پوچھیں: 'کیا یہ فاعل کی حالت/کیفیت بیان کر رہا ہے (کیسے)؟' اگر ہاں، تو حال ہے۔ اگر یہ بتا رہا ہے کہ کون سا، کس قسم، یا کتنا، تو تمييز ہے۔ کل ہم دونوں کے ساتھ جدید ساختیں دیکھیں گے۔"
+      "en": "Two indefinite accusatives, two jobs. حَال answers 'in what state?' and has a صَاحِب. تَمْيِيز answers 'of what? in what respect?' and removes vagueness. Next: the حَال as a clause and other advanced forms.",
+      "ur": "دو نکرہ منصوب، دو کام۔ حال 'کس حال میں؟' کا جواب دیتا ہے اور اس کا صاحب ہوتا ہے۔ تمییز 'کس چیز کا؟ کس لحاظ سے؟' کا جواب دیتی ہے اور ابہام دور کرتی ہے۔ آگے: جملہ بطور حال اور دوسری صورتیں۔"
     }
-  },
-  "template": "STANDARD"
+  }
 }

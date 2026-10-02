@@ -1,303 +1,221 @@
 {
   "schema_version": "1.0",
+  "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 71, Lesson 3 — Introduction to التمييز: removing vagueness.",
     "chapter_order": 71,
     "lesson_order": 3,
     "chapter_title": "الحال والتمييز",
     "title": "Introduction to التَّمْيِيز — Specification",
-    "titleAr": "مقدمة في التمييز — التخصيص",
+    "titleAr": "مُقَدِّمَةٌ فِي التَّمْيِيزِ",
     "source": "arabai-backend/prisma/fixtures",
     "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 2,
-      "ayah": 238,
-      "label": "Al-Baqarah 2:238",
-      "ar": "حَافِظُوا عَلَى الصَّلَوَاتِ وَالصَّلَاةِ الْوُسْطَىٰ وَقُومُوا لِلَّهِ قَانِتِينَ",
-      "en": "Maintain with care the [obligatory] prayers and [in particular] the middle [i.e., ʿaṣr] prayer and stand before Allāh, devoutly obedient.",
-      "ur": "(مسلمانو) سب نمازیں خصوصاً بیچ کی نماز (یعنی نماز عصر) پورے التزام کے ساتھ ادا کرتے رہو۔ اور خدا کے آگے ادب سے کھڑے رہا کرو",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002238.mp3"
+      "surah": 19,
+      "ayah": 4,
+      "label": "Maryam 19:4",
+      "ar": "قَالَ رَبِّ إِنِّي وَهَنَ الْعَظْمُ مِنِّي وَاشْتَعَلَ الرَّأْسُ شَيْبًا وَلَمْ أَكُن بِدُعَائِكَ رَبِّ شَقِيًّا",
+      "en": "He said, 'My Lord, indeed my bones have weakened, and my head has filled with white, and never have I been in my supplication to You, my Lord, unhappy.'",
+      "ur": "عرض کیا: اے میرے رب! میری ہڈیاں کمزور ہو گئیں اور سر بڑھاپے کی سفیدی سے بھڑک اٹھا، اور اے میرے رب! میں تجھ سے دعا کر کے کبھی محروم نہیں رہا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/019004.mp3"
     },
     "noor_intro": {
-      "ar": "Where الْحَال describes a state, التَّمْيِيز specifies and clarifies. It answers: 'Which one? How many? What kind?' It's the grammatical tool for adding precision to an otherwise vague noun.",
-      "en": "Where الْحَال describes a state, التَّمْيِيز specifies and clarifies. It answers: 'Which one? How many? What kind?' It's the grammatical tool for adding precision to an otherwise vague noun.",
-      "ur": "جہاں الْحَال ایک حالت بیان کرتی ہے، التَّمْيِيز وضاحت کرتی ہے۔ یہ جواب دے: 'کون سی؟ کتنے؟ کس قسم؟' یہ گرامر کا ٹول ہے مبہم اسم کو درست کرنے کے لیے۔"
+      "en": "وَاشْتَعَلَ الرَّأْسُ شَيْبًا — Zakariyya's words: 'and my head has blazed with white'. 'Blazed' alone is vague; شَيْبًا says with what. A word that removes vagueness like this is called التَّمْيِيز.",
+      "ur": "وَاشْتَعَلَ الرَّأْسُ شَيْبًا — زکریا علیہ السلام کے الفاظ: 'اور سر سفیدی سے بھڑک اٹھا'۔ صرف 'بھڑک اٹھا' مبہم ہے؛ شَيْبًا بتاتا ہے کس چیز سے۔ ایسا ابہام دور کرنے والا لفظ تمییز کہلاتا ہے۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "WORD",
+      "type": "CONCEPT",
+      "concept": {
+        "en": "التَّمْيِيز — removing vagueness",
+        "ar": "التَّمْيِيزُ",
+        "ur": "تمییز"
+      },
+      "explanation": {
+        "en": "A تَمْيِيز is an indefinite accusative noun that removes vagueness from what comes before it. It answers 'of what?' or 'in what respect?': عِشْرُونَ يَوْمًا — 'twenty days'; وَاشْتَعَلَ الرَّأْسُ شَيْبًا.",
+        "ur": "تمییز ایک نکرہ منصوب اسم ہے جو اپنے سے پہلے کا ابہام دور کرتا ہے۔ یہ 'کس چیز کا؟' یا 'کس لحاظ سے؟' کا جواب دیتا ہے: عِشْرُونَ يَوْمًا — 'بیس دن'؛ وَاشْتَعَلَ الرَّأْسُ شَيْبًا۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "تمييز of a word: numbers and measures",
+        "ar": "تَمْيِيزُ الذَّاتِ (الْمُفْرَدِ)",
+        "ur": "ذات کی تمییز: عدد اور پیمانے"
+      },
+      "explanation": {
+        "en": "Numbers, weights, measures and areas are vague on their own. The تَمْيِيز names what is counted or measured: عِشْرُونَ يَوْمًا; رِطْلٌ زَيْتًا ('a pound of oil'); شِبْرٌ أَرْضًا ('a span of land').",
+        "ur": "عدد، وزن، پیمانے اور رقبے اکیلے مبہم ہیں۔ تمییز بتاتی ہے کیا گنا یا ناپا گیا: عِشْرُونَ يَوْمًا؛ رِطْلٌ زَيْتًا ('ایک رطل تیل')؛ شِبْرٌ أَرْضًا ('ایک بالشت زمین')۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "تمييز of a statement",
+        "ar": "تَمْيِيزُ النِّسْبَةِ",
+        "ur": "نسبت کی تمییز"
+      },
+      "explanation": {
+        "en": "Sometimes the whole statement is vague: 'the head blazed', 'We made the earth burst'. The تَمْيِيز says in what respect: شَيْبًا (19:4), عُيُونًا (54:12), أَنَا أَكْثَرُ مِنْكَ مَالًا — 'I am greater than you in wealth' (18:34).",
+        "ur": "کبھی پورا جملہ مبہم ہوتا ہے: 'سر بھڑک اٹھا'، 'ہم نے زمین پھاڑ دی'۔ تمییز بتاتی ہے کس لحاظ سے: شَيْبًا (19:4)، عُيُونًا (54:12)، أَنَا أَكْثَرُ مِنْكَ مَالًا — 'میں مال میں تجھ سے زیادہ ہوں' (18:34)۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
       "text": {
-        "ar": "التَّمْيِيز",
-        "ar_plain": "التمييز",
-        "translit": "at-tamyeez",
-        "en": "Specification / Clarification",
-        "ur": "تفصیلات / وضاحت"
-      },
-      "definition_ar": "اسم منصوب يُوضح ويخصص ما قبله",
-      "definition_en": "A noun in the accusative that clarifies and specifies what precedes it",
-      "example_ar": "عِشْرُونَ يَوْمًا — twenty days",
-      "highlight": true
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "ar": "تمييز العدد",
-        "en": "Number Specification",
-        "ur": "نمبر کی تفصیلات"
+        "ar": "وَاشْتَعَلَ الرَّأْسُ شَيْبًا",
+        "ar_plain": "واشتعل الرأس شيبا",
+        "translit": "wa-shta'ala ar-ra'su shayban",
+        "en": "And my head has blazed with white.",
+        "ur": "اور سر سفیدی سے بھڑک اٹھا۔"
       },
       "explanation": {
-        "en": "A تمييز that clarifies the number or quantity",
-        "ar": "تمييز يوضح العدد أو الكمية",
-        "example_ar": "عِشْرُونَ يَوْمًا — twenty days",
-        "ur": "ایک تمييز جو تعداد یا مقدار کو واضح کرتا ہے۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "ar": "تمييز النكرة",
-        "en": "Indefinite Noun Specification",
-        "ur": "غیر معینہ اسم تصریح"
-      },
-      "explanation": {
-        "en": "A تمييز that specifies an indefinite/vague noun",
-        "ar": "تمييز يخصص اسمًا نكرة مبهمًا",
-        "example_ar": "اكَتَفْتُ يَدًا — I took a handful",
-        "ur": "ایک تمييز جو ایک غیر معینہ/مبہم اسم کی وضاحت کرتا ہے۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "ar": "مُبَيَّن",
-        "en": "The Specified",
-        "ur": "مخصوص"
-      },
-      "explanation": {
-        "en": "The noun that the تمييز clarifies",
-        "ar": "الاسم الذي يوضحه التمييز",
-        "example_ar": "في \"عِشْرُونَ يَوْمًا\" — يوم is المُبَيَّن",
-        "ur": "وہ اسم جو تمييز واضح کرتا ہے۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "ar": "تمييز العَدد المفرد",
-        "en": "Singular Number Specification",
-        "ur": "واحد نمبر کی تفصیلات"
-      },
-      "explanation": {
-        "en": "Number تمييز from 3 to 10 is singular",
-        "ar": "تمييز العدد من 3 إلى 10 يكون مفردًا",
-        "example_ar": "ثَلَاثَةٌ أَفْرَادٍ — three individuals",
-        "ur": "نمبر تمييز 3 سے 10 تک واحد ہے۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "ar": "تمييز العَدد المعطوف",
-        "en": "Coordinated Number Specification",
-        "ur": "مربوط نمبر کی تفصیلات"
-      },
-      "explanation": {
-        "en": "Number تمييز from 11 to 99 is in the معطوف form",
-        "ar": "تمييز العدد من 11 إلى 99 يكون معطوفًا",
-        "example_ar": "خَمْسَةٌ وَعِشْرُونَ يَوْمًا — 25 days",
-        "ur": "نمبر تمييز 11 سے 99 تک معطوف فارم میں ہے۔"
+        "en": "Zakariyya's words in 19:4. شَيْبًا is a plain noun ('white hair'), indefinite and accusative. It does not describe anyone's state; it says with what the head 'blazed'.",
+        "ur": "19:4 میں زکریا علیہ السلام کے الفاظ۔ شَيْبًا سادہ اسم ہے ('سفید بال')، نکرہ اور منصوب۔ یہ کسی کی حالت بیان نہیں کرتا؛ بتاتا ہے کہ سر کس چیز سے 'بھڑک' اٹھا۔"
       }
     }
   ],
   "exercises": [
     {
-      "id": "ch71l03ex1",
       "type": "TAP_TRANSLATION",
+      "id": "ch71-l03-ex01",
       "prompt": {
-        "ar": "ثَلَاثُونَ يَوْمًا",
-        "ar_plain": "ثلاثون يومًا",
-        "translit": "thalaathuuna yawman",
-        "en": "Thirty days",
-        "ur": "تیس دن"
+        "ar": "وَاشْتَعَلَ الرَّأْسُ شَيْبًا",
+        "ar_plain": "واشتعل الرأس شيبا",
+        "translit": "wa-shta'ala ar-ra'su shayban",
+        "en": "And my head has filled with white.",
+        "ur": "اور سر بڑھاپے کی سفیدی سے بھڑک اٹھا۔"
       },
       "options": [
         {
-          "en": "Thirty (the number being specified)",
-          "ur": "تیس (جو تعداد بتائی جا رہی ہے)"
+          "en": "شَيْبًا — it tells in what way the head \"blazed\"",
+          "ur": "شَيْبًا — بتاتا ہے کہ سر کس چیز سے \"بھڑکا\""
         },
         {
-          "en": "Days (the تمييز clarifying what is counted)",
-          "ur": "دن (تمييز یہ واضح کرتا ہے کہ کیا شمار کیا جاتا ہے)"
+          "en": "الرَّأْسُ — it is the تَمْيِيز",
+          "ur": "الرَّأْسُ — یہ تمییز ہے"
         },
         {
-          "en": "Three",
-          "ur": "تین"
+          "en": "اشْتَعَلَ — it is the تَمْيِيز",
+          "ur": "اشْتَعَلَ — یہ تمییز ہے"
         },
         {
-          "en": "Many",
-          "ur": "بہت سے"
+          "en": "There is no تَمْيِيز here",
+          "ur": "یہاں کوئی تمییز نہیں"
         }
       ],
-      "correct_index": 1
-    },
-    {
-      "id": "ch71l03ex2",
-      "type": "TRUE_FALSE",
-      "statement": {
-        "ar": "تمييز العدد من 3 إلى 10 يكون جمعًا",
-        "en": "Number تمييز from 3 to 10 is plural",
-        "ur": "نمبر تمييز 3 سے 10 تک جمع ہے۔"
-      },
-      "correct_answer": false,
+      "correct_index": 0,
+      "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "Number تمييز from 3 to 10 is مفرد (singular, منصوب) not جمع. Example: ثَلَاثَةٌ أَفْرَادٍ — أَفْرَاد is مفرد.",
-        "ar": "تمييز العدد من 3 إلى 10 يكون مفردًا (مَنْصُوبًا) bukan جمع.",
-        "ur": "نمبر تمييز 3 سے 10 تک ہے مفرد (واحد، منصوب) نہیں جمع۔ مثال: ثَلَاثَةٌ أَفْرَادٍ — أَفْرَاد is مفرد."
+        "en": "'The head blazed' is vague — blazed with what? شَيْبًا ('with white hair') removes the vagueness. That is a تَمْيِيز: an indefinite accusative that specifies (19:4).",
+        "ur": "'سر بھڑک اٹھا' مبہم ہے — کس چیز سے؟ شَيْبًا ('بڑھاپے کی سفیدی سے') ابہام دور کرتا ہے۔ یہی تمییز ہے: نکرہ منصوب جو وضاحت کرے (19:4)۔"
       }
     },
     {
-      "id": "ch71l03ex3",
+      "type": "TRUE_FALSE",
+      "id": "ch71-l03-ex02",
+      "statement": {
+        "en": "A تَمْيِيز answers 'in what state?', just like a حَال.",
+        "ur": "تمییز بھی حال کی طرح 'کس حال میں؟' کا جواب دیتا ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. A حَال answers 'in what state?'. A تَمْيِيز answers 'of what? / in what respect?' — it removes vagueness from a number, a measure, or a whole statement.",
+        "ur": "غلط۔ 'کس حال میں؟' کا جواب حال دیتا ہے۔ تمییز 'کس چیز کا؟ / کس لحاظ سے؟' کا جواب دیتا ہے — یہ عدد، پیمانے یا پورے جملے کا ابہام دور کرتا ہے۔"
+      }
+    },
+    {
       "type": "FILL_BLANK",
+      "id": "ch71-l03-ex03",
       "mode": "TAP",
-      "sentence_ar": "اشْتَرَيْتُ خَمْسَةَ ___",
+      "sentence_ar": "اشْتَرَيْتُ رِطْلًا ___",
       "hint": {
-        "en": "What's being bought? And what number?",
-        "ur": "کیا خریدا جا رہا ہے؟ اور کون سا نمبر؟"
+        "en": "'I bought a pound of oil.' A measure is vague until a تَمْيِيز says what was measured.",
+        "ur": "'میں نے ایک رطل تیل خریدا۔' پیمانہ مبہم رہتا ہے جب تک تمییز نہ بتائے کہ کیا ناپا گیا۔"
       },
       "options": [
         {
-          "ar": "كتب",
-          "ar_plain": "كتب",
-          "translit": "kutub",
-          "en": "books",
-          "ur": "کتابیں"
+          "ar": "زَيْتًا",
+          "ar_plain": "زيتا",
+          "translit": "zaytan",
+          "en": "oil (accusative)",
+          "ur": "تیل (منصوب)"
         },
         {
-          "ar": "قلم",
-          "ar_plain": "قلم",
-          "translit": "qalam",
-          "en": "pens",
-          "ur": "قلم"
+          "ar": "الزَّيْتُ",
+          "ar_plain": "الزيت",
+          "translit": "az-zaytu",
+          "en": "the oil (nominative)",
+          "ur": "تیل (مرفوع)"
         },
         {
-          "ar": "مصحف",
-          "ar_plain": "مصحف",
-          "translit": "mushaf",
-          "en": "Qurans",
-          "ur": "قرآن"
+          "ar": "زَيْتٌ",
+          "ar_plain": "زيت",
+          "translit": "zaytun",
+          "en": "oil (nominative)",
+          "ur": "تیل (مرفوع)"
         },
         {
-          "ar": "دفتر",
-          "ar_plain": "دفتر",
-          "translit": "daftar",
-          "en": "notebooks",
-          "ur": "نوٹ بک"
+          "ar": "بِزَيْتٍ",
+          "ar_plain": "بزيت",
+          "translit": "bi-zaytin",
+          "en": "with oil",
+          "ur": "تیل کے ساتھ"
         }
       ],
       "correct_answer": {
-        "ar": "كتب",
-        "ar_plain": "كتب",
-        "translit": "kutub",
-        "en": "books",
-        "ur": "کتابیں"
-      }
+        "ar": "زَيْتًا",
+        "ar_plain": "زيتا",
+        "translit": "zaytan",
+        "en": "oil (accusative)",
+        "ur": "تیل (منصوب)"
+      },
+      "xp_value": 1
     },
     {
-      "id": "ch71l03ex4",
-      "type": "GRAMMAR_PARSE",
-      "sentence_ar": "خَمْسَةٌ وَعِشْرُونَ يَوْمًا",
-      "words": [
-        {
-          "ar": "خَمْسَةٌ",
-          "ar_plain": "خمسة",
-          "translit": "khamsa",
-          "en": "five",
-          "ur": "پانچ"
-        },
-        {
-          "ar": "وَعِشْرُونَ",
-          "ar_plain": "وعشرون",
-          "translit": "wa-ishrun",
-          "en": "and twenty",
-          "ur": "اور بیس"
-        },
-        {
-          "ar": "يَوْمًا",
-          "ar_plain": "يوما",
-          "translit": "yawman",
-          "en": "days",
-          "ur": "دن"
-        }
-      ],
-      "available_roles": [
-        "SUBJECT",
-        "VERB",
-        "OBJECT",
-        "PARTICLE",
-        "PREPOSITION",
-        "ADJECTIVE",
-        "NOUN",
-        "TIME_ZARF"
-      ],
-      "correct_roles": [
-        "OBJECT",
-        "OBJECT",
-        "ADJECTIVE"
-      ]
-    },
-    {
-      "id": "ch71l03ex5",
       "type": "MATCHING",
+      "id": "ch71-l03-ex04",
       "left_column": [
         {
-          "ar": "ثَلَاثَةٌ أَفْرَادٍ",
-          "ar_plain": "ثلاثة أفراد",
-          "translit": "thalaathatu afraadin",
-          "en": "three individuals",
-          "ur": "تین افراد"
+          "ar": "عِشْرُونَ يَوْمًا",
+          "ar_plain": "عشرون يوما",
+          "translit": "'ishruuna yawman",
+          "en": "twenty days",
+          "ur": "بیس دن"
         },
         {
-          "ar": "خَمْسَةٌ وَعِشْرُونَ يَوْمًا",
-          "ar_plain": "خمسة وعشرون يومًا",
-          "translit": "khamsata wa-ishrun yawman",
-          "en": "twenty-five days",
-          "ur": "پچیس دن"
+          "ar": "رِطْلٌ زَيْتًا",
+          "ar_plain": "رطل زيتا",
+          "translit": "ratlun zaytan",
+          "en": "a pound of oil",
+          "ur": "ایک رطل تیل"
         },
         {
-          "ar": "عِشْرُونَ كِتَابًا",
-          "ar_plain": "عشرين كتابًا",
-          "translit": "ishriina kitaaban",
-          "en": "twenty books",
-          "ur": "بیس کتابیں"
-        },
-        {
-          "ar": "احْتَلَمْتُ لَيْلَةً",
-          "ar_plain": "احتلمت ليلة",
-          "translit": "ihtalimtu laylatan",
-          "en": "I dreamed one night",
-          "ur": "میں نے ایک رات خواب دیکھا"
+          "ar": "وَاشْتَعَلَ الرَّأْسُ شَيْبًا",
+          "ar_plain": "واشتعل الرأس شيبا",
+          "translit": "wa-shta'ala ar-ra'su shayban",
+          "en": "the head blazed with white",
+          "ur": "سر سفیدی سے بھڑک اٹھا"
         }
       ],
       "right_column": [
         {
-          "en": "تمييز عدد: مفرد منصوب",
-          "ur": "تمييز عدد: مفرد منصوب"
+          "en": "تَمْيِيز of a number",
+          "ur": "عدد کی تمییز"
         },
         {
-          "en": "تمييز عدد: معطوف (مضاف إليه)",
-          "ur": "تمييز عدد: معطوف (مضاف إليه)"
+          "en": "تَمْيِيز of a measure",
+          "ur": "پیمانے کی تمییز"
         },
         {
-          "en": "تمييز نكرة",
-          "ur": "تمييز نكرة"
-        },
-        {
-          "en": "تمييزعدد: مفرد منصوب (alt)",
-          "ur": "تمييزعدد: مفرد منصوب (alt)"
+          "en": "تَمْيِيز of a whole statement",
+          "ur": "پورے جملے کی تمییز"
         }
       ],
       "correct_pairs": [
@@ -311,166 +229,120 @@
         ],
         [
           2,
-          3
-        ],
-        [
-          3,
           2
         ]
-      ]
+      ],
+      "xp_value": 1
     },
     {
-      "id": "ch71l03ex6",
+      "type": "TAP_TRANSLATION",
+      "id": "ch71-l03-ex05",
+      "prompt": {
+        "ar": "وَفَجَّرْنَا الْأَرْضَ عُيُونًا",
+        "ar_plain": "وفجرنا الأرض عيونا",
+        "translit": "wa-fajjarnaa al-arda 'uyuunan",
+        "en": "And We caused the earth to burst with springs.",
+        "ur": "اور ہم نے زمین سے چشمے جاری کر دیے۔"
+      },
+      "options": [
+        {
+          "en": "And We caused the earth to burst with springs.",
+          "ur": "اور ہم نے زمین سے چشمے جاری کر دیے۔"
+        },
+        {
+          "en": "And We burst the springs of the earth.",
+          "ur": "اور ہم نے زمین کے چشمے پھاڑ دیے۔"
+        },
+        {
+          "en": "And We saw the earth and its springs.",
+          "ur": "اور ہم نے زمین اور اس کے چشمے دیکھے۔"
+        },
+        {
+          "en": "And the earth burst Our springs.",
+          "ur": "اور زمین نے ہمارے چشمے پھاڑ دیے۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "'We made the earth burst' is vague — burst with what? عُيُونًا ('with springs') is the تَمْيِيز: the whole earth became springs (54:12).",
+        "ur": "'ہم نے زمین کو پھاڑ دیا' مبہم ہے — کس چیز سے؟ عُيُونًا ('چشموں سے') تمییز ہے: گویا پوری زمین چشمے بن گئی (54:12)۔"
+      }
+    },
+    {
       "type": "BUILD_SENTENCE",
+      "id": "ch71-l03-ex06",
       "target_translation": {
-        "en": "Seven students entered the mosque",
-        "ur": "سات طلبہ مسجد میں داخل ہوئے۔"
+        "en": "The head blazed with white.",
+        "ur": "سر سفیدی سے بھڑک اٹھا۔"
       },
       "tiles": [
         {
-          "ar": "سبعة",
-          "ar_plain": "سبعة",
-          "translit": "sab'a",
-          "en": "seven",
-          "ur": "سات"
+          "ar": "اشْتَعَلَ",
+          "ar_plain": "اشتعل",
+          "translit": "ishta'ala",
+          "en": "blazed",
+          "ur": "بھڑک اٹھا"
         },
         {
-          "ar": "تلاميذ",
-          "ar_plain": "تلاميذ",
-          "translit": "tulaamiz",
-          "en": "students",
-          "ur": "طلباء"
+          "ar": "الرَّأْسُ",
+          "ar_plain": "الرأس",
+          "translit": "ar-ra'su",
+          "en": "the head",
+          "ur": "سر"
         },
         {
-          "ar": "دخلوا",
-          "ar_plain": "دخلوا",
-          "translit": "dakhaluu",
-          "en": "entered",
-          "ur": "داخل ہوا"
+          "ar": "شَيْبًا",
+          "ar_plain": "شيبا",
+          "translit": "shayban",
+          "en": "with white (hair)",
+          "ur": "سفیدی سے"
         },
         {
-          "ar": "المسجد",
-          "ar_plain": "المسجد",
-          "translit": "al-masjid",
-          "en": "the mosque",
-          "ur": "مسجد"
+          "ar": "الشَّيْبُ",
+          "ar_plain": "الشيب",
+          "translit": "ash-shaybu",
+          "en": "the white hair",
+          "ur": "سفیدی"
         }
       ],
       "correct_order": [
-        1,
         0,
-        2,
-        3
-      ]
-    },
-    {
-      "id": "ch71l03ex7",
-      "type": "TAP_TRANSLATION",
-      "prompt": {
-        "ar": "ثَلَاثُونَ يَوْمًا",
-        "ar_plain": "ثلاثون يومًا",
-        "translit": "thalaathuuna yawman",
-        "en": "Thirty days",
-        "ur": "تیس دن"
-      },
-      "options": [
-        {
-          "en": "Three days",
-          "ur": "تین دن"
-        },
-        {
-          "en": "Thirty days",
-          "ur": "تیس دن"
-        },
-        {
-          "en": "Third day",
-          "ur": "تیسرا دن"
-        },
-        {
-          "en": "Thirty nights",
-          "ur": "تیس راتیں۔"
-        }
+        1,
+        2
       ],
-      "correct_index": 1
-    },
-    {
-      "id": "ch71l03ex8",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "من العدد ___ إلى ___ التمييز مفرد",
-      "hint": {
-        "en": "From number ___ to ___ the تمييز is مفرد",
-        "ur": "نمبر ___ سے ___ تک تمييز ہے مفرد"
-      },
-      "options": [
-        {
-          "ar": "3",
-          "ar_plain": "3",
-          "translit": "3",
-          "en": "3",
-          "ur": "3"
-        },
-        {
-          "ar": "10",
-          "ar_plain": "10",
-          "translit": "10",
-          "en": "10",
-          "ur": "10"
-        },
-        {
-          "ar": "5",
-          "ar_plain": "5",
-          "translit": "5",
-          "en": "5",
-          "ur": "5"
-        },
-        {
-          "ar": "11",
-          "ar_plain": "11",
-          "translit": "11",
-          "en": "11",
-          "ur": "11"
-        }
-      ],
-      "correct_answer": {
-        "ar": "3",
-        "ar_plain": "3",
-        "translit": "3",
-        "en": "3",
-        "ur": "3"
-      }
+      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "ar": "التمييز — التوضيح والتخصيص",
-      "en": "التمييز — Clarification and Specification",
-      "ur": "التمييز — وضاحت اور خاص کرنے والا"
+      "en": "التَّمْيِيز — clarification",
+      "ar": "التَّمْيِيزُ — رَفْعُ الْإِبْهَامِ",
+      "ur": "تمییز — ابہام دور کرنا"
     },
     "ayah": {
-      "surah": 2,
-      "ayah": 184,
-      "label": "Al-Baqarah 2:184",
-      "ar": "فَمَنْ كَانَ مِنْكُمْ مَرِيضًا أَوْ عَلَىٰ سَفَرٍ فَعِدَّةٌ مِنْ أَيَّامٍ أُخَرَ",
-      "en": "So whoever among you is ill or traveling, then a number of other days. For those who are able, fasting a consecutive number of days is upon them.",
-      "ur": "پس جو تم میں سے بیمار ہو یا سفر پر ہو تو کچھ دوسرے دنوں کی تعداد۔ اور جو اس کی طاقت رکھتے ہیں، مسلسل دنوں کے روزے ان پر فرض ہیں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002184.mp3"
+      "surah": 54,
+      "ayah": 12,
+      "label": "Al-Qamar 54:12",
+      "ar": "وَفَجَّرْنَا الْأَرْضَ عُيُونًا فَالْتَقَى الْمَاءُ عَلَىٰ أَمْرٍ قَدْ قُدِرَ",
+      "en": "And caused the earth to burst with springs, and the waters met for a matter already predestined.",
+      "ur": "اور ہم نے زمین سے چشمے جاری کر دیے، تو پانی اس کام کے لیے مل گیا جو مقدر ہو چکا تھا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/054012.mp3"
     },
     "highlighted_word_indices": [
-      4
+      0,
+      1,
+      2
     ],
     "noor_explanation": {
-      "ar": "في \"عِدَّةٌ مِنْ أَيَّامٍ أُخَرَ\" — أَيَّامٍ هو تمييز للعدد (مضاف إليه). لم يقل 'عددا' فقط، بل ميزده بأيام. التمييز يحول عددًا مبهمًا إلى كمية محددة من شيء معروف.",
-      "en": "In 'a number of other days' — أَيَّامٍ is the تمييز of the number (مضاف إليه). Not just 'a number' but 'a number of days.' The تمييز converts a vague number into a specific quantity of a known thing. This is the power of التمييز — it turns abstraction into precision.",
-      "ur": "'کچھ دوسرے دنوں کی تعداد' میں — 'أیام' عدد کی تمييز ہے (مضاف الیہ)۔ صرف 'تعداد' نہیں بلکہ 'دنوں کی تعداد'۔ تمييز مبہم تعداد کو کسی معروف چیز کی متعین مقدار میں تبدیل کرتی ہے۔"
+      "en": "وَفَجَّرْنَا الْأَرْضَ عُيُونًا — at the Flood of Nuh, 'We made the earth burst — with springs'. عُيُونًا is the تَمْيِيز of the statement: it is as if the whole earth turned into springs, a stronger picture than 'We made springs burst from the earth'.",
+      "ur": "وَفَجَّرْنَا الْأَرْضَ عُيُونًا — نوح علیہ السلام کے طوفان میں 'ہم نے زمین کو پھاڑ دیا — چشموں سے'۔ عُيُونًا جملے کی تمییز ہے: گویا پوری زمین چشمے بن گئی، جو 'ہم نے زمین سے چشمے نکالے' سے زیادہ زوردار تصویر ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "ar": "التمييز transforms vague numbers and indefinite nouns into precise statements. ثَلَاثُونَ يَوْمًا tells you exactly what is being counted. Without it, you only know a number. With it, you know everything. Tomorrow we see it in the Quran.",
-      "en": "التمييز transforms vague numbers and indefinite nouns into precise statements. ثَلَاثُونَ يَوْمًا tells you exactly what is being counted. Without it, you only know a number. With it, you know everything. Tomorrow we see it in the Quran.",
-      "ur": "التمييز مبہم تعداد اور نامعین اسم کو درست بیانات میں تبدیل کرتی ہے۔ 'تیس دن' آپ کو بتاتی ہے کہ کیا گنا جا رہا ہے۔ اس کے بغیر، آپ صرف ایک عدد جانتے ہیں۔ اس کے ساتھ، آپ سب کچھ جانتے ہیں۔ کل ہم اسے قرآن میں دیکھیں گے۔"
+      "en": "A تَمْيِيز is an indefinite accusative that answers 'of what?' — after a number or measure (عِشْرُونَ يَوْمًا, رِطْلٌ زَيْتًا) or after a vague statement (اشْتَعَلَ الرَّأْسُ شَيْبًا). Next: numbers and their تَمْيِيز.",
+      "ur": "تمییز نکرہ منصوب ہے جو 'کس چیز کا؟' کا جواب دیتی ہے — عدد یا پیمانے کے بعد (عِشْرُونَ يَوْمًا، رِطْلٌ زَيْتًا) یا مبہم جملے کے بعد (اشْتَعَلَ الرَّأْسُ شَيْبًا)۔ آگے: اعداد اور ان کی تمییز۔"
     }
-  },
-  "template": "STANDARD"
+  }
 }

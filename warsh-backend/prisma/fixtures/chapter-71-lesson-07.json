@@ -1,11 +1,13 @@
 {
   "schema_version": "1.0",
+  "template": "REVIEW",
   "_meta": {
+    "_note": "Chapter 71, Lesson 7 — REVIEW lesson for الحال والتمييز.",
     "chapter_order": 71,
     "lesson_order": 7,
     "chapter_title": "الحال والتمييز",
-    "title": "REVIEW — الحال والتمييز Ch. 71",
-    "titleAr": "مراجعة — الحال والتمييز",
+    "title": "Review: الحال and التمييز",
+    "titleAr": "مُرَاجَعَةٌ: الْحَالُ وَالتَّمْيِيزُ",
     "source": "arabai-backend/prisma/fixtures",
     "estimated_minutes": 10,
     "xp_reward": 5
@@ -21,9 +23,8 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/048029.mp3"
     },
     "noor_intro": {
-      "ar": "Chapter 71 review — اليوم نجمع كل ما تعلمناه عن الحال والتمييز. You'll identify, parse, distinguish, and translate both concepts from Quranic examples.",
-      "en": "Chapter 71 review — today we consolidate everything we've learned about الحال and التمييز. You'll identify, parse, distinguish, and translate both concepts from Quranic examples.",
-      "ur": "باب 71 کا جائزہ — آج ہم الحال اور التمييز کے بارے میں سب کچھ ملا کر دیکھتے ہیں۔ آپ شناخت، تجزیہ، تمییز، اور ترجمہ کریں گے۔"
+      "en": "Chapter 71 review: تَرَاهُمْ رُكَّعًا سُجَّدًا — two حَال for one group. Today we consolidate the حَال, the تَمْيِيز, and the counted noun after numbers.",
+      "ur": "باب 71 کا جائزہ: تَرَاهُمْ رُكَّعًا سُجَّدًا — ایک گروہ کے دو حال۔ آج ہم حال، تمییز اور اعداد کے بعد گنی جانے والی چیز کو یکجا کرتے ہیں۔"
     },
     "autoplay": true
   },
@@ -31,111 +32,90 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "ar": "مراجعة: الحال vs. التمييز",
-        "en": "Review: الحال vs. التمييز",
-        "ur": "جائزہ: الحال بمقابلہ التمييز"
+        "en": "Review: حَال vs تَمْيِيز",
+        "ar": "مُرَاجَعَةٌ: الْحَالُ وَالتَّمْيِيزُ",
+        "ur": "جائزہ: حال اور تمییز"
       },
       "explanation": {
-        "en": "الحال: describes the state/manner of صاحب الحال during the action (HOW). التمييز: clarifies and specifies what precedes it (WHICH/HOW MANY)",
-        "ar": "الحال: يصف هيئة صاحب الحال عند الفعل (HOW). التمييز: يوضح ويخصص ما قبله (WHICH/HOW MANY)",
-        "example_ar": "خَرَجَ ضَاحِكًا — حال. ثَلَاثُونَ يَوْمًا — تمييز",
-        "ur": "الحال: کارروائی کے دوران صاحب الحال کی حالت/طریقہ کو بیان کرتا ہے (HOW)۔ التمييز: واضح کرتا ہے اور بتاتا ہے کہ اس سے پہلے کیا ہے (WHICH/HOW MANY)"
-      },
-      "highlight": true
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "ar": "أنواع التمييز",
-        "en": "Types of تمييز",
-        "ur": "تمييز کی اقسام"
-      },
-      "explanation": {
-        "en": "Number تمييز (3-10: مفرد منصوب, 11-99: مضاف إليه). Indefinite noun تمييز. Transposed تمييز (derived from same root as verb).",
-        "ar": "تمييز عدد (3-10: مفرد منصوب، 11-99: مضاف إليه). تمييز نكرة. تمييز نقالي (مشتق من نفس جذر الفعل)",
-        "example_ar": "ثلاثة أيام (مفرد). خمس وعشرون ليلة (مضاف إليه). اشتد شيبًا (نقالي)",
-        "ur": "نمبر تمييز (3-10: مفرد منصوب, 11-99: مضاف إليه)۔ غیر معینہ اسم تمييز۔ ٹرانسپوزڈ تمييز (فعل کے طور پر ایک ہی جڑ سے ماخوذ)۔"
+        "en": "الْحَال answers 'in what state?' and describes its صَاحِب during the action (خَرَجَ خَائِفًا). التَّمْيِيز answers 'of what? in what respect?' and removes vagueness (عِشْرُونَ يَوْمًا، اشْتَعَلَ الرَّأْسُ شَيْبًا). Both are indefinite accusatives.",
+        "ur": "حال 'کس حال میں؟' کا جواب دیتا ہے اور کام کے وقت اپنے صاحب کی حالت بتاتا ہے (خَرَجَ خَائِفًا)۔ تمییز 'کس چیز کا؟ کس لحاظ سے؟' کا جواب دیتی ہے اور ابہام دور کرتی ہے (عِشْرُونَ يَوْمًا، اشْتَعَلَ الرَّأْسُ شَيْبًا)۔ دونوں نکرہ منصوب ہیں۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "ar": "الحال المؤكد والمشبه",
-        "en": "Emphatic and Resembled حال",
-        "ur": "زور دار اور مشابہہ حال"
+        "en": "Numbers",
+        "ar": "الْعَدَدُ",
+        "ur": "اعداد"
       },
       "explanation": {
-        "en": "Emphatic: confirms the manner of the action. Resembled: compares one state to another in description.",
-        "ar": "المؤكد: يؤكد هيئة الفعل. المشبه: يشبه حالة أخرى في الوصف",
-        "example_ar": "مؤكد: خرج مستعمرًا (في حالة الاستيلاء). مشبه: came like a ghost",
-        "ur": "زور دار: عمل کے انداز کی تصدیق کرتا ہے۔ مشابہہ: تفصیل میں ایک ریاست کا دوسری حالت سے موازنہ کرتا ہے۔"
+        "en": "3–10: plural genitive (ثَلَاثَةُ أَيَّامٍ). 11–99: singular accusative (أَحَدَ عَشَرَ كَوْكَبًا، أَرْبَعِينَ لَيْلَةً). 100 and 1000: singular genitive (مِائَةَ عَامٍ، أَلْفَ سَنَةٍ).",
+        "ur": "3 تا 10: جمع مجرور (ثَلَاثَةُ أَيَّامٍ)۔ 11 تا 99: واحد منصوب (أَحَدَ عَشَرَ كَوْكَبًا، أَرْبَعِينَ لَيْلَةً)۔ 100 اور 1000: واحد مجرور (مِائَةَ عَامٍ، أَلْفَ سَنَةٍ)۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "ar": "المفعول المطلق",
-        "en": "Absolute Object",
-        "ur": "مطلق آبجیکٹ"
+        "en": "Look-alikes",
+        "ar": "مَا يُشْبِهُ الْحَالَ",
+        "ur": "ملتی جلتی چیزیں"
       },
       "explanation": {
-        "en": "The مفعول مطلق is mentioned to emphasize or clarify the verb's type. Not a حال.",
-        "ar": "المفعول المطلق يذكر لتأكيد الفعل أو بيان نوعه، ليس حال",
-        "example_ar": "في \"قامَ زيدٌ قِيَامًا\" — قِيَامًا is مفعول مطلق, not حال",
-        "ur": "مفعول مطلق کا ذکر فعل کی قسم پر زور دینے یا واضح کرنے کے لیے کیا گیا ہے۔ حال نہیں ہے۔"
+        "en": "An adjective matches its noun (الرَّجُلُ الضَّاحِكُ). A مَفْعُول مُطْلَق is the verb's own noun (قَامَ قِيَامًا). A nominative is never a حَال (أَشِدَّاءُ in 48:29 is a خَبَر).",
+        "ur": "صفت اپنے موصوف کے مطابق ہوتی ہے (الرَّجُلُ الضَّاحِكُ)۔ مفعولِ مطلق فعل کا اپنا مصدر ہے (قَامَ قِيَامًا)۔ مرفوع لفظ کبھی حال نہیں ہوتا (48:29 میں أَشِدَّاءُ خبر ہے)۔"
       }
     }
   ],
   "exercises": [
     {
-      "id": "ch71l07ex1",
       "type": "MATCHING",
+      "id": "ch71-l07-ex01",
       "left_column": [
         {
-          "ar": "جلسَ زيدٌ وَحْدَهُ",
-          "ar_plain": "jalasa zaydun wahdahu",
+          "ar": "جَلَسَ زَيْدٌ وَحْدَهُ",
+          "ar_plain": "جلس زيد وحده",
           "translit": "jalasa zaydun wahdahu",
           "en": "Zayd sat alone",
-          "ur": "زید اکیلا بیٹھ گیا۔"
+          "ur": "زید اکیلا بیٹھا"
         },
         {
           "ar": "عِشْرُونَ كِتَابًا",
-          "ar_plain": "ishriina kitaaban",
-          "translit": "ishriina kitaaban",
+          "ar_plain": "عشرون كتابا",
+          "translit": "'ishruuna kitaaban",
           "en": "twenty books",
           "ur": "بیس کتابیں"
         },
         {
-          "ar": "خَرَجَ مُسْتَعْمِرًا",
-          "ar_plain": "kharaja mustaghiran",
-          "translit": "kharaja mustaghiran",
-          "en": "left as a conqueror",
-          "ur": "ایک فاتح کے طور پر چھوڑ دیا"
+          "ar": "ثَلَاثَةُ أَيَّامٍ",
+          "ar_plain": "ثلاثة أيام",
+          "translit": "thalaathatu ayyaamin",
+          "en": "three days",
+          "ur": "تین دن"
         },
         {
-          "ar": "خَمْسَةٌ وَعِشْرُونَ يَوْمًا",
-          "ar_plain": "khamsa wa-ishrun yawman",
-          "translit": "khamsa wa-ishrun yawman",
-          "en": "twenty-five days",
-          "ur": "پچیس دن"
+          "ar": "أَكْثَرُ مِنْكَ مَالًا",
+          "ar_plain": "أكثر منك مالا",
+          "translit": "aktharu minka maalan",
+          "en": "more than you in wealth",
+          "ur": "مال میں تجھ سے زیادہ"
         }
       ],
       "right_column": [
         {
-          "en": "حال",
+          "en": "حَال",
           "ur": "حال"
         },
         {
-          "en": "تمييز عدد: مفرد منصوب",
-          "ur": "تمييز عدد: مفرد منصوب"
+          "en": "تَمْيِيز after 20–99: singular accusative",
+          "ur": "20 تا 99 کے بعد تمییز: واحد منصوب"
         },
         {
-          "en": "تمييز عدد: مفرد منصوب",
-          "ur": "تمييز عدد: مفرد منصوب"
+          "en": "after 3–10: plural genitive",
+          "ur": "3 تا 10 کے بعد: جمع مجرور"
         },
         {
-          "en": "حال",
-          "ur": "حال"
+          "en": "تَمْيِيز after a comparison",
+          "ur": "موازنے کے بعد تمییز"
         }
       ],
       "correct_pairs": [
@@ -149,313 +129,271 @@
         ],
         [
           2,
-          3
+          2
         ],
         [
           3,
-          2
+          3
         ]
-      ]
-    },
-    {
-      "id": "ch71l07ex2",
-      "type": "GRAMMAR_PARSE",
-      "sentence_ar": "تَرَاهُمْ رُكَّعًا سُجَّدًا يَبْتَغُونَ فَضْلًا مِنَ اللَّهِ وَرِضْوَانًا",
-      "words": [
-        {
-          "ar": "تَرَاهُمْ",
-          "ar_plain": "تراهم",
-          "translit": "tarahum",
-          "en": "you see them",
-          "ur": "آپ انہیں دیکھتے ہیں"
-        },
-        {
-          "ar": "رُكَّعًا",
-          "ar_plain": "ركعا",
-          "translit": "ruka an",
-          "en": "bowing",
-          "ur": "جھکنا"
-        },
-        {
-          "ar": "سُجَّدًا",
-          "ar_plain": "سجدا",
-          "translit": "sujudan",
-          "en": "prostrating",
-          "ur": "سجدہ کرنا"
-        },
-        {
-          "ar": "يَبْتَغُونَ",
-          "ar_plain": "يبتغون",
-          "translit": "yabtaghun",
-          "en": "seeking",
-          "ur": "تلاش کرنا"
-        }
       ],
-      "available_roles": [
-        "SUBJECT",
-        "VERB",
-        "OBJECT",
-        "PARTICLE",
-        "PREPOSITION",
-        "POSSESSIVE",
-        "ADJECTIVE",
-        "DEMONSTRATIVE",
-        "RELATIVE_PRONOUN",
-        "PRONOUN",
-        "NOUN",
-        "TIME_ZARF",
-        "LITERARY_DEVICE"
-      ],
-      "correct_roles": [
-        "VERB",
-        "ADJECTIVE",
-        "ADJECTIVE",
-        "VERB"
-      ]
+      "xp_value": 1
     },
     {
-      "id": "ch71l07ex3",
-      "type": "TRUE_FALSE",
-      "statement": {
-        "ar": "الحال يصف هيئة صاحب الحال عند حدوث الفعل، والتمييز يوضح ويخصص ما قبله",
-        "en": "الحال describes the state of صاحب الحال at the time of the action, and التمييز clarifies what precedes it",
-        "ur": "الحال ایکشن کے وقت صاحب الحال کی حالت کو بیان کرتا ہے، اور التمييز وضاحت کرتا ہے کہ اس سے پہلے کیا ہے"
-      },
-      "correct_answer": true
-    },
-    {
-      "id": "ch71l07ex4",
-      "type": "TRUE_FALSE",
-      "statement": {
-        "ar": "في \"خَمْسَةٌ وَعِشْرُونَ يَوْمًا\" — يومًا منصوب بالكسرة لأنه مضاف إليه",
-        "en": "In twenty-five days — يومًا is genitive (كسرة) because it is مضاف إليه",
-        "ur": "پچیس دنوں میں — يومًا جینیاتی ہے (كسرة) کیونکہ یہ مضاف إليه ہے"
-      },
-      "correct_answer": false,
-      "explanation_on_wrong": {
-        "en": "Even مضاف إليه numbers use فتحة for the explicit accusative marker on the noun.",
-        "ar": "حتى الأعداد المضاف إليها تستخدم فتحہ للعلامة النصبية الصريحة على الاسم.",
-        "ur": "یہاں تک کہ مضاف إليه نمبر بھی اسم پر واضح الزامی مارکر کے لئے فتحة استعمال کرتے ہیں۔"
-      }
-    },
-    {
-      "id": "ch71l07ex5",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "ثَلَاثَةُ ___ — three individuals",
-      "hint": {
-        "en": "Three individuals (تمييز مفرد)",
-        "ur": "تین افراد (تمييز مفرد)"
+      "type": "TAP_TRANSLATION",
+      "id": "ch71-l07-ex02",
+      "prompt": {
+        "ar": "تَرَاهُمْ رُكَّعًا سُجَّدًا",
+        "ar_plain": "تراهم ركعا سجدا",
+        "translit": "taraahum rukka'an sujjadan",
+        "en": "You see them bowing and prostrating.",
+        "ur": "تم انہیں رکوع اور سجدے میں دیکھو گے۔"
       },
       "options": [
         {
-          "ar": "أفراد",
-          "ar_plain": "أفراد",
-          "translit": "afraad",
-          "en": "individuals",
-          "ur": "افراد"
+          "en": "two حَال for the same people",
+          "ur": "ایک ہی لوگوں کے دو حال"
         },
         {
-          "ar": "كتب",
-          "ar_plain": "كتب",
-          "translit": "kutub",
-          "en": "books",
-          "ur": "کتابیں"
+          "en": "two تَمْيِيز of a number",
+          "ur": "عدد کی دو تمییزیں"
         },
         {
-          "ar": "أيام",
-          "ar_plain": "أيام",
-          "translit": "ayyaam",
-          "en": "days",
-          "ur": "دن"
+          "en": "two adjectives",
+          "ur": "دو صفتیں"
         },
         {
-          "ar": "رجال",
-          "ar_plain": "رجال",
-          "translit": "rijjal",
-          "en": "men",
-          "ur": "مرد"
+          "en": "two objects of تَرَى",
+          "ur": "تَرَى کے دو مفعول"
         }
       ],
-      "correct_answer": {
-        "ar": "أفراد",
-        "ar_plain": "أفراد",
-        "translit": "afraad",
-        "en": "individuals",
-        "ur": "افراد"
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "رُكَّعًا and سُجَّدًا both describe the state of هُمْ as you see them — two حَال.",
+        "ur": "رُكَّعًا اور سُجَّدًا دونوں دیکھتے وقت هُمْ کی حالت بتاتے ہیں — دو حال۔"
       }
     },
     {
-      "id": "ch71l07ex6",
+      "type": "TRUE_FALSE",
+      "id": "ch71-l07-ex03",
+      "statement": {
+        "en": "الْحَال describes the state of its صَاحِب at the time of the action, and التَّمْيِيز removes vagueness from what comes before it.",
+        "ur": "حال کام کے وقت اپنے صاحب کی حالت بتاتا ہے، اور تمییز اپنے سے پہلے کا ابہام دور کرتی ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch71-l07-ex04",
+      "statement": {
+        "en": "In خَمْسَةٌ وَعِشْرُونَ يَوْمًا, يَوْمًا is genitive.",
+        "ur": "خَمْسَةٌ وَعِشْرُونَ يَوْمًا میں يَوْمًا مجرور ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. After 11–99 the counted noun is singular and accusative: يَوْمًا. A genitive comes after 3–10 (ثَلَاثَةِ أَيَّامٍ) and after 100 / 1000 (مِائَةِ يَوْمٍ).",
+        "ur": "غلط۔ 11 سے 99 کے بعد گنی جانے والی چیز واحد اور منصوب ہوتی ہے: يَوْمًا۔ مجرور 3 تا 10 کے بعد (ثَلَاثَةِ أَيَّامٍ) اور 100 / 1000 کے بعد (مِائَةِ يَوْمٍ) آتا ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch71-l07-ex05",
+      "mode": "TAP",
+      "sentence_ar": "ثَلَاثَةُ ___",
+      "hint": {
+        "en": "'Three men.' After 3–10 the counted noun is plural and genitive.",
+        "ur": "'تین آدمی۔' 3 تا 10 کے بعد گنی جانے والی چیز جمع اور مجرور ہوتی ہے۔"
+      },
+      "options": [
+        {
+          "ar": "رِجَالٍ",
+          "ar_plain": "رجال",
+          "translit": "rijaalin",
+          "en": "men (plural, genitive)",
+          "ur": "آدمی (جمع، مجرور)"
+        },
+        {
+          "ar": "رَجُلًا",
+          "ar_plain": "رجلا",
+          "translit": "rajulan",
+          "en": "man (singular, accusative)",
+          "ur": "آدمی (واحد، منصوب)"
+        },
+        {
+          "ar": "رِجَالًا",
+          "ar_plain": "رجالا",
+          "translit": "rijaalan",
+          "en": "men (accusative)",
+          "ur": "آدمی (منصوب)"
+        },
+        {
+          "ar": "رَجُلٍ",
+          "ar_plain": "رجل",
+          "translit": "rajulin",
+          "en": "man (singular, genitive)",
+          "ur": "آدمی (واحد، مجرور)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "رِجَالٍ",
+        "ar_plain": "رجال",
+        "translit": "rijaalin",
+        "en": "men (plural, genitive)",
+        "ur": "آدمی (جمع، مجرور)"
+      },
+      "xp_value": 1
+    },
+    {
       "type": "BUILD_SENTENCE",
+      "id": "ch71-l07-ex06",
       "target_translation": {
-        "en": "The Muslim fasted 27 days",
-        "ur": "مسلمان نے 27 روزے رکھے"
+        "en": "The Muslim fasted twenty-seven days.",
+        "ur": "مسلمان نے ستائیس دن روزے رکھے۔"
       },
       "tiles": [
         {
-          "ar": "سبعة",
+          "ar": "صَامَ",
+          "ar_plain": "صام",
+          "translit": "saama",
+          "en": "fasted",
+          "ur": "روزے رکھے"
+        },
+        {
+          "ar": "الْمُسْلِمُ",
+          "ar_plain": "المسلم",
+          "translit": "al-muslimu",
+          "en": "the Muslim",
+          "ur": "مسلمان"
+        },
+        {
+          "ar": "سَبْعَةً",
           "ar_plain": "سبعة",
-          "translit": "sab a",
+          "translit": "sab'atan",
           "en": "seven",
           "ur": "سات"
         },
         {
-          "ar": "وعشرون",
-          "ar_plain": "وعشرون",
-          "translit": "wa-ishrun",
+          "ar": "وَعِشْرِينَ",
+          "ar_plain": "وعشرين",
+          "translit": "wa-'ishriina",
           "en": "and twenty",
           "ur": "اور بیس"
         },
         {
-          "ar": "يوما",
+          "ar": "يَوْمًا",
           "ar_plain": "يوما",
           "translit": "yawman",
-          "en": "days",
+          "en": "day",
           "ur": "دن"
         },
         {
-          "ar": "صام",
-          "ar_plain": "صام",
-          "translit": "saam",
-          "en": "fasted",
-          "ur": "روزہ رکھا"
-        },
-        {
-          "ar": "المسلم",
-          "ar_plain": "المسلم",
-          "translit": "al-muslim",
-          "en": "the Muslim",
-          "ur": "مسلمان"
+          "ar": "أَيَّامٍ",
+          "ar_plain": "أيام",
+          "translit": "ayyaamin",
+          "en": "days (genitive)",
+          "ur": "دن (مجرور)"
         }
       ],
       "correct_order": [
-        4,
-        3,
         0,
         1,
-        2
-      ]
+        2,
+        3,
+        4
+      ],
+      "xp_value": 1
     },
     {
-      "id": "ch71l07ex7",
       "type": "TAP_TRANSLATION",
+      "id": "ch71-l07-ex07",
       "prompt": {
-        "ar": "اشتدَّ شَيْبًا",
-        "ar_plain": "ishtadda shayban",
-        "translit": "ishtadda shayban",
-        "en": "The whiteness intensified",
-        "ur": "سفیدی تیز ہو گئی۔"
+        "ar": "وَاشْتَعَلَ الرَّأْسُ شَيْبًا",
+        "ar_plain": "واشتعل الرأس شيبا",
+        "translit": "wa-shta'ala ar-ra'su shayban",
+        "en": "And my head has filled with white.",
+        "ur": "اور سر سفیدی سے بھڑک اٹھا۔"
       },
       "options": [
         {
-          "en": "HOW the intensifying happened",
-          "ur": "شدت کیسے ہوئی؟"
+          "en": "تَمْيِيز of the statement — 'blazed with what?'",
+          "ur": "جملے کی تمییز — 'کس چیز سے بھڑکا؟'"
         },
         {
-          "en": "Transposed تمييز - noun from same root as verb",
-          "ur": "فعل کے طور پر ایک ہی جڑ سے تمييز - noun کو منتقل کیا گیا۔"
+          "en": "حَال — 'in what state?'",
+          "ur": "حال — 'کس حال میں؟'"
         },
         {
-          "en": "Absolute object",
-          "ur": "مطلق اعتراض"
+          "en": "مَفْعُول مُطْلَق",
+          "ur": "مفعولِ مطلق"
         },
         {
-          "en": "Adjective",
-          "ur": "صفت"
+          "en": "an adjective of الرَّأْسُ",
+          "ur": "الرَّأْسُ کی صفت"
         }
       ],
-      "correct_index": 1
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "شَيْبًا removes the vagueness of 'the head blazed' — with white hair. It is a plain noun, not a describing word, so it is a تَمْيِيز.",
+        "ur": "شَيْبًا 'سر بھڑک اٹھا' کا ابہام دور کرتا ہے — سفید بالوں سے۔ یہ سادہ اسم ہے، صفت جیسا لفظ نہیں، اس لیے تمییز ہے۔"
+      }
     },
     {
-      "id": "ch71l07ex8",
-      "type": "CONVERSATION_BUILDER",
-      "prompt_line": {
-        "ar": "ما الفرق بين الحال والتمييز؟",
-        "ar_plain": "maa al-farq bayna al-haal wa-at-tamyeez",
-        "translit": "maa al-farq bayna al-haal wa-at-tamyeez",
-        "en": "What is the difference between الحال and التمييز?",
-        "ur": "الحال اور التمييز? میں کیا فرق ہے"
-      },
-      "response_mode": "PICK",
-      "options": [
-        {
-          "ar": "الحال يصف هيئة صاحب الحال عند الفعل، والتمييز يوضح ويخصص ما قبله",
-          "ar_plain": "al-haal yasifu hayyat sahib al-haal",
-          "translit": "al-haal yasifu hayyat sahib al-haal",
-          "en": "الحال describes how the subject was during the action, and التمييز clarifies the number or kind",
-          "ur": "الحال بیان کرتا ہے کہ کارروائی کے دوران موضوع کیسا تھا، اور التمييز نمبر یا قسم کو واضح کرتا ہے"
-        },
-        {
-          "ar": "كلاهما حال",
-          "ar_plain": "kullahuma haal",
-          "translit": "kullahuma haal",
-          "en": "Both are حال",
-          "ur": "دونوں حال ہیں"
-        },
-        {
-          "ar": "التمييز فقط يصف الحالة",
-          "ar_plain": "at-tamyeez faqat",
-          "translit": "at-tamyeez faqat",
-          "en": "Only تمييز describes state",
-          "ur": "صرف تمييز ریاست کی وضاحت کرتا ہے۔"
-        }
-      ],
-      "correct_option_index": 0
-    },
-    {
-      "id": "ch71l07ex9",
       "type": "FILL_BLANK",
+      "id": "ch71-l07-ex08",
       "mode": "TAP",
-      "sentence_ar": "العدد المركب (11-99) ياخذ تمييز ___",
+      "sentence_ar": "جَاءَ الضَّيْفُ ___",
       "hint": {
-        "en": "Compound number (11-99) takes تمييز ___",
-        "ur": "کمپاؤنڈ نمبر (11-99) تمييز ___ لیتا ہے"
+        "en": "'The guest came smiling.' Choose the حَال.",
+        "ur": "'مہمان مسکراتا ہوا آیا۔' حال چنیے۔"
       },
       "options": [
         {
-          "ar": "مضافا إليه",
-          "ar_plain": "مضافا إليه",
-          "translit": "mazufan ilayhi",
-          "en": "genitive (مضاف إليه)",
-          "ur": "جینیاتی (مضاف إليه)"
+          "ar": "مُبْتَسِمًا",
+          "ar_plain": "مبتسما",
+          "translit": "mubtasiman",
+          "en": "smiling (حَال)",
+          "ur": "مسکراتا ہوا (حال)"
         },
         {
-          "ar": "منصوبا",
-          "ar_plain": "منصوب",
-          "translit": "mansub",
-          "en": "accusative",
-          "ur": "الزام لگانے والا"
+          "ar": "الْمُبْتَسِمُ",
+          "ar_plain": "المبتسم",
+          "translit": "al-mubtasimu",
+          "en": "the smiling one",
+          "ur": "مسکرانے والا"
         },
         {
-          "ar": "مرفوعا",
-          "ar_plain": "مرفوع",
-          "translit": "marfu",
-          "en": "nominative",
-          "ur": "نامزد"
+          "ar": "ابْتِسَامٌ",
+          "ar_plain": "ابتسام",
+          "translit": "ibtisaamun",
+          "en": "a smile (nominative)",
+          "ur": "مسکراہٹ (مرفوع)"
         },
         {
-          "ar": "مجرورا",
-          "ar_plain": "مجرور",
-          "translit": "majrur",
-          "en": "genitive",
-          "ur": "جینیاتی"
+          "ar": "مُبْتَسِمٍ",
+          "ar_plain": "مبتسم",
+          "translit": "mubtasimin",
+          "en": "smiling (genitive)",
+          "ur": "مسکراتا (مجرور)"
         }
       ],
       "correct_answer": {
-        "ar": "مضافا إليه",
-        "ar_plain": "مضافا إليه",
-        "translit": "mazufan ilayhi",
-        "en": "genitive (مضاف إليه)",
-        "ur": "جینیاتی (مضاف إليه)"
-      }
+        "ar": "مُبْتَسِمًا",
+        "ar_plain": "مبتسما",
+        "translit": "mubtasiman",
+        "en": "smiling (حَال)",
+        "ur": "مسکراتا ہوا (حال)"
+      },
+      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "ar": "الحال والتمييز — mastery complete",
-      "en": "الحال and التمييز — mastery complete",
-      "ur": "الحال اور التمييز — مکمل عبور"
+      "en": "الْحَال and التَّمْيِيز — review",
+      "ar": "الْحَالُ وَالتَّمْيِيزُ — مُرَاجَعَةٌ",
+      "ur": "حال اور تمییز — جائزہ"
     },
     "ayah": {
       "surah": 2,
@@ -467,20 +405,17 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002185.mp3"
     },
     "highlighted_word_indices": [
-      0
+      6
     ],
     "noor_explanation": {
-      "ar": "في \"شَهْرُ رَمَضَانَ\" — شهر here is مبتدأ مرفوع and ramadan is بدل (appellative). ليس تمييز. لاحظ: ليس كل اسم يتبع عددًا هو تمييز — بعضها يكون بدلًا أو صفة.",
-      "en": "In 'the month of Ramadan' — شهر is مبتدأ (subject) and ramadan is بدل (appellative), not تمييز. Note: not every noun following a number is تمييز — some are بدل or صفة. This is why the golden rule (HOW vs. WHICH/HOW MANY) is so important for correct identification.",
-      "ur": "'رمضان کا مہینہ' میں — مہینہ مبتدأ ہے اور رمضان بدل ہے، تمييز نہیں۔ نوٹ: ہر عدد کے بعد آنے والا ہر اسم تمييز نہیں ہوتا — کچھ بدل یا صفت ہوتے ہیں۔ یہیں سے Sadqa rule (کیسے بمقابل کون/کتنا) شناخت کے لیے اتنا اہم ہے۔"
+      "en": "أُنْزِلَ فِيهِ الْقُرْآنُ هُدًى لِلنَّاسِ — 'in which the Quran was revealed, as guidance for mankind'. هُدًى is a حَال of الْقُرْآنُ: the state in which it was sent down. Its accusative does not show, because هُدًى ends in alif — the ending is hidden, the job is the same.",
+      "ur": "أُنْزِلَ فِيهِ الْقُرْآنُ هُدًى لِلنَّاسِ — 'جس میں قرآن اتارا گیا، لوگوں کے لیے ہدایت بن کر'۔ هُدًى، الْقُرْآنُ کا حال ہے: وہ حالت جس میں یہ نازل ہوا۔ اس کا نصب ظاہر نہیں ہوتا کیونکہ هُدًى کے آخر میں الف ہے — حرکت چھپی ہے، کام وہی ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "ar": "Chapter 71 is complete. You now know the difference between الحال and التمييز, when to use each, and how they appear in Quranic text. This is sophisticated grammar — you should be proud. Chapter 72 — النِّدَاء — is the grand finale.",
-      "en": "Chapter 71 is complete. You now know the difference between الحال and التمييز, when to use each, and how they appear in Quranic text. This is sophisticated grammar — you should be proud. Chapter 72 — النِّدَاء — is the grand finale.",
-      "ur": "باب 71 مکمل ہو گیا۔ اب آپ الحال اور التمييز کے درمیان فرق جانتے ہیں، کب استعمال کرنا ہے، اور قرآنی متن میں کیسے ظاہر ہوتے ہیں۔ یہ گرامر کا اعلیٰ درجہ ہے — آپ کو فخر ہونا چاہیے۔ باب 72 — النِّدَاء — grand finale ہے۔"
+      "en": "Chapter 71 is complete. You can tell a حَال from a تَمْيِيز, handle the counted noun after any number, and avoid the look-alikes. Chapter 72 — النِّدَاء — is the grand finale.",
+      "ur": "باب 71 مکمل۔ اب آپ حال اور تمییز میں فرق کر سکتے ہیں، کسی بھی عدد کے بعد گنی جانے والی چیز سنبھال سکتے ہیں، اور ملتی جلتی چیزوں سے بچ سکتے ہیں۔ باب 72 — نداء — آخری باب ہے۔"
     }
-  },
-  "template": "REVIEW"
+  }
 }

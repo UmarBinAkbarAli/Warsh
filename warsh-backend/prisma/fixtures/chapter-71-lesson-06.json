@@ -1,316 +1,230 @@
 {
   "schema_version": "1.0",
+  "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 71, Lesson 6 — Advanced الحال: clause and phrase as حال; حال vs adjective vs مفعول مطلق.",
     "chapter_order": 71,
     "lesson_order": 6,
     "chapter_title": "الحال والتمييز",
-    "title": "Advanced الحال/التمييز Constructions",
-    "titleAr": "التراكيب المتقدمة في الحال والتمييز",
+    "title": "Advanced الْحَال: Clauses, Phrases and Look-alikes",
+    "titleAr": "صُوَرُ الْحَالِ وَمَا يُشْبِهُهُ",
     "source": "arabai-backend/prisma/fixtures",
     "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 55,
-      "ayah": 60,
-      "label": "Ar-Rahman 55:60",
-      "ar": "هَلْ جَزَاءُ الْإِحْسَانِ إِلَّا الْإِحْسَانُ",
-      "en": "Is the reward for good [anything] but good?",
-      "ur": "نیکی کا بدلہ نیکی کے سوا کچھ نہیں ہے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/055060.mp3"
+      "surah": 4,
+      "ayah": 28,
+      "label": "An-Nisa 4:28",
+      "ar": "يُرِيدُ اللَّهُ أَن يُخَفِّفَ عَنكُمْ ۚ وَخُلِقَ الْإِنسَانُ ضَعِيفًا",
+      "en": "Allah wants to lighten for you [your difficulties]; and mankind was created weak.",
+      "ur": "اللہ چاہتا ہے کہ تم پر سے بوجھ ہلکا کرے، اور انسان کمزور پیدا کیا گیا ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/004028.mp3"
     },
     "noor_intro": {
-      "ar": "Real Arabic text rarely uses الحال or التمييز in isolation. They appear in complex sentences with multiple grammatical layers. Today we put everything together.",
-      "en": "Real Arabic text rarely uses الحال or التمييز in isolation. They appear in complex sentences with multiple grammatical layers. Today we put everything together.",
-      "ur": "حقیقی عربی متن میں حال اور تمییز الگ تھلگ کم ہی نظر آتے ہیں۔ وہ اکثر کئی گرامر کی تہوں والے جملوں میں آتے ہیں۔ آج ہم سب کو ملا کر دیکھتے ہیں۔"
+      "en": "وَخُلِقَ الْإِنْسَانُ ضَعِيفًا — 'and mankind was created weak'. ضَعِيفًا is a حَال: the state in which man was created. Today we meet the حَال as a clause and as a phrase, and three look-alikes to tell it from.",
+      "ur": "وَخُلِقَ الْإِنْسَانُ ضَعِيفًا — 'اور انسان کمزور پیدا کیا گیا'۔ ضَعِيفًا حال ہے: وہ حالت جس میں انسان پیدا کیا گیا۔ آج ہم جملے اور جار مجرور کی شکل میں حال دیکھیں گے، اور تین ملتی جلتی چیزیں جن سے اسے الگ کرنا ہے۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "WORD",
-      "text": {
-        "ar": "جملة حالية متعددة",
-        "ar_plain": "جملة حالية متعددة",
-        "translit": "jumla haaliya multi",
-        "en": "Multiple-state Describing Sentence",
-        "ur": "متعدد ریاستوں کا بیان کرنے والا جملہ"
-      },
-      "definition_ar": "جملة واحدة قد تحتوي على حالين أو أكثر لصاحب حال واحد",
-      "definition_en": "A single sentence may contain two or more حالة for one صاحب الحال",
-      "example_ar": "تَرَاهُمْ رُكَّعًا سُجَّدًا — contains two حالة: ركوع and سجود",
-      "highlight": true
-    },
-    {
       "type": "CONCEPT",
       "concept": {
-        "ar": "الحال وصفة",
-        "en": "حال with descriptive صفة",
-        "ur": "حال وضاحتی صفة کے ساتھ"
+        "en": "A clause as حَال",
+        "ar": "الْحَالُ جُمْلَةً",
+        "ur": "جملہ بطور حال"
       },
       "explanation": {
-        "en": "The حال itself can be described by an adjective (صفة)",
-        "ar": "الحال may be modified by صفة",
-        "example_ar": "خَرَجَ زيدٌ ضَاحِكًا جَدًّا — Zayd left very happily",
-        "ur": "حال خود کو ایک صفت (صفة) سے بیان کیا جا سکتا ہے"
+        "en": "A حَال can be a whole clause. A verb clause can stand alone (وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ, 12:16); a clause that starts with a noun is usually joined by وَ — the وَاوُ الْحَالِ: فَقَالَ لِصَاحِبِهِ وَهُوَ يُحَاوِرُهُ (18:34).",
+        "ur": "حال پورا جملہ ہو سکتا ہے۔ فعلیہ جملہ اکیلا آ سکتا ہے (وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ، 12:16)؛ جو جملہ اسم سے شروع ہو وہ عموماً وَ سے جڑتا ہے — واوِ حالیہ: فَقَالَ لِصَاحِبِهِ وَهُوَ يُحَاوِرُهُ (18:34)۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "ar": "تمييز معطوف",
-        "en": "Coordinated تمييز",
-        "ur": "مربوط تمييز"
+        "en": "A preposition phrase as حَال",
+        "ar": "الْحَالُ شِبْهَ جُمْلَةٍ",
+        "ur": "جار مجرور بطور حال"
       },
       "explanation": {
-        "en": "The تمييز can have a coordinated element (معطوف)",
-        "ar": "قد يكون للتمييز معطوف",
-        "example_ar": "ثَلَاثُونَ يَوْمًا وَلَيْلَةً — thirty days and nights",
-        "ur": "تمييز میں ایک مربوط عنصر ہوسکتا ہے (معطوف)"
+        "en": "A preposition phrase can also give the state: فَخَرَجَ عَلَىٰ قَوْمِهِ فِي زِينَتِهِ — 'he came out before his people in his adornment' (28:79).",
+        "ur": "جار مجرور بھی حالت بتا سکتا ہے: فَخَرَجَ عَلَىٰ قَوْمِهِ فِي زِينَتِهِ — 'وہ اپنی قوم کے سامنے اپنی آرائش میں نکلا' (28:79)۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "ar": "تمييز عدد مركب",
-        "en": "Compound Number تمييز",
-        "ur": "کمپاؤنڈ نمبر تمييز"
+        "en": "حَال vs adjective",
+        "ar": "الْحَالُ وَالنَّعْتُ",
+        "ur": "حال اور صفت"
       },
       "explanation": {
-        "en": "Compound numbers need تمييز in genitive (مضاف)",
-        "ar": "أعداد مركبة تحتاج تمييز مضاف",
-        "example_ar": "خَمْسَةٌ وَعِشْرُونَ يَوْمًا — 25 days",
-        "ur": "مرکب نمبروں کی ضرورت ہے تمييز genitive میں (مضاف)"
+        "en": "An adjective agrees with its noun in case and definiteness: جَاءَ الرَّجُلُ الضَّاحِكُ. A حَال is indefinite and accusative: جَاءَ الرَّجُلُ ضَاحِكًا. If the word does not match its noun, it is not an adjective.",
+        "ur": "صفت اپنے موصوف سے اعراب اور تعریف میں مطابقت رکھتی ہے: جَاءَ الرَّجُلُ الضَّاحِكُ۔ حال نکرہ اور منصوب ہوتا ہے: جَاءَ الرَّجُلُ ضَاحِكًا۔ اگر لفظ اپنے اسم سے مطابقت نہ رکھے تو صفت نہیں۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "ar": "حال مشبه بالمصدر",
-        "en": "Resembled حال (مشبه بالمصدر)",
-        "ur": "مشابہ حال (مشبه بالمصدر)"
+        "en": "حَال vs مَفْعُول مُطْلَق",
+        "ar": "الْحَالُ وَالْمَفْعُولُ الْمُطْلَقُ",
+        "ur": "حال اور مفعولِ مطلق"
       },
       "explanation": {
-        "en": "The حال can be a word resembling a masdar in meaning",
-        "ar": "الحال قد يكون مشبهًا بالمصدر من حيث الدلالة على الحدث",
-        "example_ar": "جَلَسَ زيدٌ اسْتِرَاحَةً — Zayd sat in a resting state",
-        "ur": "حال معنی میں مصدر سے مشابہہ لفظ ہوسکتا ہے۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "ar": "الحال والمفعول المطلق",
-        "en": "حال vs. المفعول المطلق",
-        "ur": "حال بمقابلہ المفعول المطلق"
-      },
-      "explanation": {
-        "en": "Don't confuse حال with مفعول مطلق (absolute object)",
-        "ar": "لا تخلط بين الحال والمفعول المطلق",
-        "example_ar": "في \"قامَ زيدٌ قِيَامًا\" — قِيَامًا is مفعول مطلق not حال",
-        "ur": "حال کے ساتھ مفعول مطلق (مطلق آبجیکٹ) کو الجھائیں مت"
+        "en": "A مَفْعُول مُطْلَق is the verb's own verbal noun, used for emphasis or to describe the action: قَامَ زَيْدٌ قِيَامًا. A حَال describes the doer's state, usually with a describing word: قَامَ زَيْدٌ مُبْتَسِمًا — 'Zayd stood smiling'.",
+        "ur": "مفعولِ مطلق فعل کا اپنا مصدر ہے، تاکید یا کام کی کیفیت کے لیے: قَامَ زَيْدٌ قِيَامًا۔ حال فاعل کی حالت بتاتا ہے، عموماً صفت جیسے لفظ سے: قَامَ زَيْدٌ مُبْتَسِمًا — 'زید مسکراتا ہوا کھڑا ہوا'۔"
       }
     }
   ],
   "exercises": [
     {
-      "id": "ch71l06ex1",
       "type": "TAP_TRANSLATION",
+      "id": "ch71-l06-ex01",
       "prompt": {
-        "ar": "خَمْسَةٌ وَعِشْرُونَ يَوْمًا",
-        "ar_plain": "adobe",
-        "translit": "khamsa wa-ishrun yawman",
-        "en": "Twenty-five days",
-        "ur": "پچیس دن"
+        "ar": "وَخُلِقَ الْإِنْسَانُ ضَعِيفًا",
+        "ar_plain": "وخلق الإنسان ضعيفا",
+        "translit": "wa-khuliqa al-insaanu da'iifan",
+        "en": "And mankind was created weak.",
+        "ur": "اور انسان کمزور پیدا کیا گیا۔"
       },
       "options": [
         {
-          "en": "Singular منصوب تمييز (3-10)",
-          "ur": "واحد منصوب تمييز (3-10)"
+          "en": "ضَعِيفًا — a حَال of الْإِنْسَانُ",
+          "ur": "ضَعِيفًا — الْإِنْسَانُ کا حال"
         },
         {
-          "en": "Coordinated تمييز (مضاف إليه) (11-99)",
-          "ur": "مربوط تمييز (مضاف إليه) (11-99)"
+          "en": "ضَعِيفًا — a تَمْيِيز",
+          "ur": "ضَعِيفًا — تمییز"
         },
         {
-          "en": "Indefinite noun تمييز",
-          "ur": "غیر معینہ اسم تمييز"
+          "en": "ضَعِيفًا — an adjective of الْإِنْسَانُ",
+          "ur": "ضَعِيفًا — الْإِنْسَانُ کی صفت"
         },
         {
-          "en": "Emphatic حال",
-          "ur": "زور دار حال"
+          "en": "ضَعِيفًا — the object of خُلِقَ",
+          "ur": "ضَعِيفًا — خُلِقَ کا مفعول"
         }
       ],
-      "correct_index": 1
-    },
-    {
-      "id": "ch71l06ex2",
-      "type": "TRUE_FALSE",
-      "statement": {
-        "ar": "في \"قامَ زيدٌ قِيَامًا\" — قِيَامًا هو حال",
-        "en": "In 'Zayd stood a standing' — قِيَامًا is a حال",
-        "ur": "زید کھڑے کھڑے تھے - قِيَامًا ایک حال ہے"
-      },
-      "correct_answer": false,
+      "correct_index": 0,
+      "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "قِيَامًا is مفعول مطلق, not حال. The مفعول مطلق emphasizes the verb, while the حال describes the subject's state.",
-        "ar": "قیام مفعول مطلق ہے، حال نہیں۔",
-        "ur": "قِيَامًا ہے مفعول مطلق، نہیں حال۔ مفعول مطلق فعل پر زور دیتا ہے، جبکہ حال موضوع کی حالت کو بیان کرتا ہے۔"
+        "en": "ضَعِيفًا describes the state in which man was created — a حَال of الْإِنْسَانُ (the subject of a passive verb). It cannot be an adjective: الْإِنْسَانُ is definite and nominative, ضَعِيفًا is neither.",
+        "ur": "ضَعِيفًا بتاتا ہے کہ انسان کس حالت میں پیدا کیا گیا — الْإِنْسَانُ کا حال (فعل مجہول کا نائب فاعل)۔ یہ صفت نہیں ہو سکتا: الْإِنْسَانُ معرفہ اور مرفوع ہے، ضَعِيفًا دونوں نہیں۔"
       }
     },
     {
-      "id": "ch71l06ex3",
+      "type": "TRUE_FALSE",
+      "id": "ch71-l06-ex02",
+      "statement": {
+        "en": "In قَامَ زَيْدٌ قِيَامًا, قِيَامًا is a حَال.",
+        "ur": "قَامَ زَيْدٌ قِيَامًا میں قِيَامًا حال ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. قِيَامًا is the verbal noun of the same verb, repeated for emphasis: a مَفْعُول مُطْلَق. It describes the action itself, not the state of Zayd.",
+        "ur": "غلط۔ قِيَامًا اسی فعل کا مصدر ہے جو تاکید کے لیے دہرایا گیا: مفعولِ مطلق۔ یہ خود کام کو بیان کرتا ہے، زید کی حالت کو نہیں۔"
+      }
+    },
+    {
       "type": "FILL_BLANK",
+      "id": "ch71-l06-ex03",
       "mode": "TAP",
-      "sentence_ar": "تَرَاهُمْ رُكَّعًا ___ سُجَّدًا",
+      "sentence_ar": "فَقَالَ لِصَاحِبِهِ ___ يُحَاوِرُهُ",
       "hint": {
-        "en": "This joins two حالة for the same صاحب الحال",
-        "ur": "یہ ایک ہی صاحب الحال کے لیے دو حالة کو جوڑتا ہے"
+        "en": "18:34 — 'he said to his companion while he was conversing with him'. A حَال clause that starts with a noun is joined by وَ.",
+        "ur": "18:34 — 'اس نے اپنے ساتھی سے باتیں کرتے ہوئے کہا'۔ جو حالیہ جملہ اسم سے شروع ہو وہ وَ سے جڑتا ہے۔"
       },
       "options": [
         {
-          "ar": "و",
-          "ar_plain": "و",
-          "translit": "wa",
-          "en": "and",
-          "ur": "اور"
+          "ar": "وَهُوَ",
+          "ar_plain": "وهو",
+          "translit": "wa-huwa",
+          "en": "while he",
+          "ur": "جبکہ وہ"
         },
         {
-          "ar": "ثم",
-          "ar_plain": "ثم",
-          "translit": "thumma",
-          "en": "then",
-          "ur": "پھر"
+          "ar": "فَهُوَ",
+          "ar_plain": "فهو",
+          "translit": "fa-huwa",
+          "en": "so he",
+          "ur": "تو وہ"
         },
         {
-          "ar": "لكن",
-          "ar_plain": "لكن",
-          "translit": "laakin",
-          "en": "but",
-          "ur": "لیکن"
+          "ar": "ثُمَّ هُوَ",
+          "ar_plain": "ثم هو",
+          "translit": "thumma huwa",
+          "en": "then he",
+          "ur": "پھر وہ"
         },
         {
-          "ar": "أو",
-          "ar_plain": "أو",
-          "translit": "aw",
-          "en": "or",
-          "ur": "یا"
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "he",
+          "ur": "وہ"
         }
       ],
       "correct_answer": {
-        "ar": "و",
-        "ar_plain": "و",
-        "translit": "wa",
-        "en": "and",
-        "ur": "اور"
-      }
+        "ar": "وَهُوَ",
+        "ar_plain": "وهو",
+        "translit": "wa-huwa",
+        "en": "while he",
+        "ur": "جبکہ وہ"
+      },
+      "xp_value": 1
     },
     {
-      "id": "ch71l06ex4",
-      "type": "GRAMMAR_PARSE",
-      "sentence_ar": "تَرَاهُمْ رُكَّعًا سُجَّدًا يَبْتَغُونَ فَضْلًا مِنَ اللَّهِ وَرِضْوَانًا",
-      "words": [
-        {
-          "ar": "تَرَاهُمْ",
-          "ar_plain": "تراهم",
-          "translit": "tarahum",
-          "en": "you see them",
-          "ur": "آپ انہیں دیکھتے ہیں"
-        },
-        {
-          "ar": "رُكَّعًا",
-          "ar_plain": "ركعا",
-          "translit": "ruka an",
-          "en": "bowing",
-          "ur": "جھکنا"
-        },
-        {
-          "ar": "سُجَّدًا",
-          "ar_plain": "سجدا",
-          "translit": "sujudan",
-          "en": "prostrating",
-          "ur": "سجدہ کرنا"
-        },
-        {
-          "ar": "يَبْتَغُونَ",
-          "ar_plain": "يبتغون",
-          "translit": "yabtaghun",
-          "en": "seeking",
-          "ur": "تلاش کرنا"
-        }
-      ],
-      "available_roles": [
-        "SUBJECT",
-        "VERB",
-        "OBJECT",
-        "PARTICLE",
-        "PREPOSITION",
-        "POSSESSIVE",
-        "ADJECTIVE",
-        "DEMONSTRATIVE",
-        "RELATIVE_PRONOUN",
-        "PRONOUN",
-        "NOUN",
-        "TIME_ZARF",
-        "LITERARY_DEVICE"
-      ],
-      "correct_roles": [
-        "VERB",
-        "ADJECTIVE",
-        "ADJECTIVE",
-        "VERB"
-      ]
-    },
-    {
-      "id": "ch71l06ex5",
       "type": "MATCHING",
+      "id": "ch71-l06-ex04",
       "left_column": [
         {
-          "ar": "خمس وعشرون يومًا",
-          "ar_plain": "adobe",
-          "translit": "khamsa wa-ishrun yawman",
-          "en": "twenty-five days",
-          "ur": "پچیس دن"
+          "ar": "جَاءَ الرَّجُلُ الضَّاحِكُ",
+          "ar_plain": "جاء الرجل الضاحك",
+          "translit": "jaa'a ar-rajulu ad-daahiku",
+          "en": "the laughing man came",
+          "ur": "ہنسنے والا آدمی آیا"
         },
         {
-          "ar": "جلسَ متأملًا",
-          "ar_plain": "adobe",
-          "translit": "jalasa mutaammilan",
-          "en": "sat contemplating",
-          "ur": "سوچنے بیٹھا"
+          "ar": "جَاءَ الرَّجُلُ ضَاحِكًا",
+          "ar_plain": "جاء الرجل ضاحكا",
+          "translit": "jaa'a ar-rajulu daahikan",
+          "en": "the man came laughing",
+          "ur": "آدمی ہنستا ہوا آیا"
         },
         {
-          "ar": "رجع وحده",
-          "ar_plain": "adobe",
-          "translit": "raj a wahdahu",
-          "en": "returned alone",
-          "ur": "اکیلے واپس آئے"
+          "ar": "ضَحِكَ الرَّجُلُ ضَحِكًا",
+          "ar_plain": "ضحك الرجل ضحكا",
+          "translit": "dahika ar-rajulu dahikan",
+          "en": "the man laughed heartily",
+          "ur": "آدمی خوب ہنسا"
         },
         {
-          "ar": "ثلاثة أفراد",
-          "ar_plain": "adobe",
-          "translit": "thalaatha afraadin",
-          "en": "three individuals",
-          "ur": "تین افراد"
+          "ar": "فَخَرَجَ عَلَىٰ قَوْمِهِ فِي زِينَتِهِ",
+          "ar_plain": "فخرج على قومه في زينته",
+          "translit": "fa-kharaja 'alaa qawmihi fii ziinatihi",
+          "en": "he came out in his adornment",
+          "ur": "وہ اپنی آرائش میں نکلا"
         }
       ],
       "right_column": [
         {
-          "en": "تمييز عدد: مفرد منصوب",
-          "ur": "تمييز عدد: مفرد منصوب"
+          "en": "adjective — matches its noun",
+          "ur": "صفت — موصوف کے مطابق"
         },
         {
-          "en": "حال — يصف هيئة",
-          "ur": "حال — يصف هيئة"
+          "en": "حَال — a single word",
+          "ur": "حال — ایک لفظ"
         },
         {
-          "en": "حال — يصف هيئة",
-          "ur": "حال — يصف هيئة"
+          "en": "مَفْعُول مُطْلَق — the verb's own noun",
+          "ur": "مفعولِ مطلق — فعل کا اپنا مصدر"
         },
         {
-          "en": "تمييز عدد: جمع مجرور (مضاف إليه)",
-          "ur": "تمييز عدد: جمع مجرور (مضاف إليه)"
+          "en": "حَال — a preposition phrase",
+          "ur": "حال — جار مجرور"
         }
       ],
       "correct_pairs": [
@@ -330,160 +244,117 @@
           3,
           3
         ]
-      ]
+      ],
+      "xp_value": 1
     },
     {
-      "id": "ch71l06ex6",
       "type": "BUILD_SENTENCE",
+      "id": "ch71-l06-ex05",
       "target_translation": {
-        "en": "Zayd returned very happily",
-        "ur": "زید بہت خوش ہو کر واپس آیا"
+        "en": "Zayd returned happy.",
+        "ur": "زید خوش لوٹا۔"
       },
       "tiles": [
         {
-          "ar": "عاد",
+          "ar": "عَادَ",
           "ar_plain": "عاد",
-          "translit": "aada",
+          "translit": "'aada",
           "en": "returned",
-          "ur": "واپس"
+          "ur": "لوٹا"
         },
         {
-          "ar": "زيد",
+          "ar": "زَيْدٌ",
           "ar_plain": "زيد",
-          "translit": "zayd",
+          "translit": "zaydun",
           "en": "Zayd",
           "ur": "زید"
         },
         {
-          "ar": "فرحًا",
-          "ar_plain": "فرح",
+          "ar": "فَرِحًا",
+          "ar_plain": "فرحا",
           "translit": "farihan",
-          "en": "happily",
-          "ur": "خوشی سے"
+          "en": "happy",
+          "ur": "خوش"
         },
         {
-          "ar": "جدًا",
-          "ar_plain": "جدا",
-          "translit": "jaddan",
-          "en": "very",
-          "ur": "بہت"
+          "ar": "الْفَرِحُ",
+          "ar_plain": "الفرح",
+          "translit": "al-farihu",
+          "en": "the happy one",
+          "ur": "خوش والا"
         }
       ],
       "correct_order": [
-        1,
         0,
-        2,
-        3
-      ]
+        1,
+        2
+      ],
+      "xp_value": 1
     },
     {
-      "id": "ch71l06ex7",
       "type": "TAP_TRANSLATION",
+      "id": "ch71-l06-ex06",
       "prompt": {
-        "ar": "جلسَ زيدٌ وَحْدَهُ",
-        "ar_plain": "adobe",
-        "translit": "jalasa zaydun wahdahu",
-        "en": "Zayd sat by himself",
-        "ur": "زید خود ہی بیٹھ گیا۔"
+        "ar": "فَخَرَجَ عَلَىٰ قَوْمِهِ فِي زِينَتِهِ",
+        "ar_plain": "فخرج على قومه في زينته",
+        "translit": "fa-kharaja 'alaa qawmihi fii ziinatihi",
+        "en": "So he came out before his people in his adornment.",
+        "ur": "پھر وہ اپنی قوم کے سامنے پوری آرائش کے ساتھ نکلا۔"
       },
       "options": [
         {
-          "en": "No difference — both are حال",
-          "ur": "کوئی فرق نہیں - دونوں حال ہیں"
+          "en": "فِي زِينَتِهِ — how he came out (a حَال)",
+          "ur": "فِي زِينَتِهِ — کس حال میں نکلا (حال)"
         },
         {
-          "en": "First is مفعول مطلق, second is حال",
-          "ur": "پہلا ہے مفعول مطلق، دوسرا ہے حال"
+          "en": "عَلَىٰ قَوْمِهِ — how he came out",
+          "ur": "عَلَىٰ قَوْمِهِ — کس حال میں نکلا"
         },
         {
-          "en": "First is حال, second is صفة",
-          "ur": "پہلا ہے حال، دوسرا ہے صفة"
+          "en": "خَرَجَ — the حَال",
+          "ur": "خَرَجَ — حال"
         },
         {
-          "en": "Both are مفعول مطلق",
-          "ur": "دونوں مفعول مطلق ہیں"
+          "en": "There is no حَال",
+          "ur": "کوئی حال نہیں"
         }
       ],
-      "correct_index": 1
-    },
-    {
-      "id": "ch71l06ex8",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "في الأعداد المركبة (11-99) التمييز يكون ___",
-      "hint": {
-        "en": "In compound numbers (11-99) the تمييز is ___",
-        "ur": "مرکب نمبروں میں (11-99) تمييز is ___"
-      },
-      "options": [
-        {
-          "ar": "مضافا إليه",
-          "ar_plain": "مضافا إليه",
-          "translit": "mazufan ilayhi",
-          "en": "genitive (مضاف إليه)",
-          "ur": "جینیاتی (مضاف إليه)"
-        },
-        {
-          "ar": "منصوبا",
-          "ar_plain": "منصوب",
-          "translit": "mansub",
-          "en": "accusative",
-          "ur": "الزام لگانے والا"
-        },
-        {
-          "ar": "مرفوعا",
-          "ar_plain": "مرفوع",
-          "translit": "marfu",
-          "en": "nominative",
-          "ur": "نامزد"
-        },
-        {
-          "ar": "مجرورا",
-          "ar_plain": "مجرور",
-          "translit": "majrur",
-          "en": "genitive",
-          "ur": "جینیاتی"
-        }
-      ],
-      "correct_answer": {
-        "ar": "مضافا إليه",
-        "ar_plain": "مضافا إليه",
-        "translit": "mazufan ilayhi",
-        "en": "genitive (مضاف إليه)",
-        "ur": "جینیاتی (مضاف إليه)"
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "فِي زِينَتِهِ ('in his adornment') is a preposition phrase acting as a حَال: Qarun came out in that state, showing off (28:79).",
+        "ur": "فِي زِينَتِهِ ('اپنی آرائش میں') جار مجرور ہے جو حال کا کام کر رہا ہے: قارون اسی حالت میں، دکھاوا کرتے ہوئے نکلا (28:79)۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "ar": "التراكيب المتقدمة — المزج بين الحال والتمييز",
-      "en": "Advanced Constructions — Mixing حال and تمييز",
-      "ur": "جدید ساختیں — الحال اور التمييز کا امتزاج"
+      "en": "Advanced الْحَال — clause, phrase, and look-alikes",
+      "ar": "صُوَرُ الْحَالِ",
+      "ur": "حال کی صورتیں"
     },
     "ayah": {
-      "surah": 89,
-      "ayah": 6,
-      "label": "Al-Fajr 89:6",
-      "ar": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِعَادٍ",
-      "en": "Have you not considered how your Lord dealt with ʿAad -",
-      "ur": "کیا تم نے نہیں دیکھا کہ تمہارے پروردگار نے عاد کے ساتھ کیا کیا",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/089006.mp3"
+      "surah": 28,
+      "ayah": 79,
+      "label": "Al-Qasas 28:79",
+      "ar": "فَخَرَجَ عَلَىٰ قَوْمِهِ فِي زِينَتِهِ",
+      "en": "So he came out before his people in his adornment.",
+      "ur": "پھر وہ اپنی قوم کے سامنے پوری آرائش کے ساتھ نکلا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/028079.mp3"
     },
     "highlighted_word_indices": [
-      0
+      3,
+      4
     ],
     "noor_explanation": {
-      "ar": "في \"وَاللَّيْلِ إِذَا يَسْرِ\" — يَسْرِ not here as حال but as فعل مضارع related to the oath structure. لاحظ كيف يستعمل القرآن الأفعال والأسماء في مواضع مختلفة — ليست كل حالة مفعول مطلق أو حال.",
-      "en": "In 'By the night when it passes' — يَسْرِ is not a حال here but a verb in the oath construction. Notice how the Quran uses verbs and nouns in different positions — not every verbal state is a مفعول مطلق or حال.",
-      "ur": "'رات کی قسم جب وہ گزر جاتی ہے' میں — 'یسری' یہاں حال نہیں بلکہ قسم کی ساخت میں فعل ہے۔ دیکھیں کہ قرآن افعال اور اسماء کو مختلف مقامات پر کیسے استعمال کرتا ہے — ہر verbal state مفعول مطلق یا حال نہیں ہوتی۔"
+      "en": "فَخَرَجَ عَلَىٰ قَوْمِهِ فِي زِينَتِهِ — Qarun came out 'in his adornment'. The phrase فِي زِينَتِهِ is a حَال: it shows the state in which he displayed himself. Some of his people wished for what he had; those given knowledge said Allah's reward is better (28:79–80).",
+      "ur": "فَخَرَجَ عَلَىٰ قَوْمِهِ فِي زِينَتِهِ — قارون 'اپنی آرائش میں' نکلا۔ فِي زِينَتِهِ حال ہے: یہ وہ حالت دکھاتا ہے جس میں اس نے خود کو پیش کیا۔ اس کی قوم کے کچھ لوگوں نے اس جیسا چاہا؛ علم والوں نے کہا کہ اللہ کا ثواب بہتر ہے (28:79–80)۔"
     }
   },
   "close": {
     "noor_message": {
-      "ar": "Advanced constructions are now within your grasp. You've seen multiple حالة, coordinated تمييز, compound numbers, and the critical distinction between الحال and المفعول المطلق. Tomorrow's REVIEW will consolidate everything from this chapter. You are building a sophisticated understanding.",
-      "en": "Advanced constructions are now within your grasp. You've seen multiple حالة, coordinated تمييز, compound numbers, and the critical distinction between الحال and المفعول المطلق. You are building a sophisticated understanding.",
-      "ur": "جدید ساختیں اب آپ کی پہنچ میں ہیں۔ آپ نے متعدد حالة، معطوف تمييز، مرکب اعداد، اور الحال اور المفعول المطلق کے درمیان اہم فرق دیکھ لیا ہے۔ آپ ایک اعلیٰ سمجھ بنا رہے ہیں۔"
+      "en": "A حَال can be one word, a clause (often with وَاوُ الْحَالِ), or a preposition phrase. It differs from an adjective (which matches its noun) and from a مَفْعُول مُطْلَق (the verb's own noun). The review comes next.",
+      "ur": "حال ایک لفظ، ایک جملہ (اکثر واوِ حالیہ کے ساتھ)، یا جار مجرور ہو سکتا ہے۔ یہ صفت سے مختلف ہے (جو موصوف کے مطابق ہوتی ہے) اور مفعولِ مطلق سے بھی (جو فعل کا اپنا مصدر ہے)۔ آگے جائزہ ہے۔"
     }
-  },
-  "template": "STANDARD"
+  }
 }

@@ -1,294 +1,284 @@
 {
   "schema_version": "1.0",
+  "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 71, Lesson 4 — Numbers and the counted noun (تمييز العدد).",
     "chapter_order": 71,
     "lesson_order": 4,
     "chapter_title": "الحال والتمييز",
-    "title": "التَّمْيِيز in the Quran — ثَلَاثُونَ يَوْمًا",
-    "titleAr": "التمييز في القرآن — ثلاثون يومًا",
+    "title": "Numbers and Their تمييز",
+    "titleAr": "تَمْيِيزُ الْعَدَدِ",
     "source": "arabai-backend/prisma/fixtures",
     "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 2,
-      "ayah": 184,
-      "label": "Al-Baqarah 2:184",
-      "ar": "أَيَّامًا مَعْدُودَاتٍ فَمَنْ كَانَ مِنْكُمْ مَرِيضًا أَوْ عَلَىٰ سَفَرٍ فَعِدَّةٌ مِنْ أَيَّامٍ أُخَرَ وَعَلَى الَّذِينَ يُطِيقُونَهُ فِدْيَةٌ طَعَامُ مِسْكِينٍ",
-      "en": "A specific number of days. So whoever among you is ill or traveling, then a number of other days. And for those who are able, a compensation of feeding a poor person.",
-      "ur": "معمور دنوں کی ایک متعین تعداد۔ پس جو تم میں سے بیمار ہو یا سفر پر ہو تو دوسرے دنوں کی تعداد۔ اور جو اس کی طاقت رکھتے ہیں ان پر ایک مسکین کو کھانا کھلانا فدیہ ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002184.mp3"
+      "surah": 12,
+      "ayah": 4,
+      "label": "Yusuf 12:4",
+      "ar": "إِذْ قَالَ يُوسُفُ لِأَبِيهِ يَا أَبَتِ إِنِّي رَأَيْتُ أَحَدَ عَشَرَ كَوْكَبًا وَالشَّمْسَ وَالْقَمَرَ رَأَيْتُهُمْ لِي سَاجِدِينَ",
+      "en": "When Joseph said to his father, 'O my father, indeed I have seen [in a dream] eleven stars and the sun and the moon; I saw them prostrating to me.'",
+      "ur": "جب یوسف نے اپنے باپ سے کہا: ابا جان! میں نے (خواب میں) گیارہ ستاروں اور سورج اور چاند کو دیکھا، میں نے انہیں اپنے آگے سجدہ کرتے دیکھا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012004.mp3"
     },
     "noor_intro": {
-      "ar": "The Quran uses التمييز extensively to specify numbers, quantities, and qualities. Today we'll examine key examples — from fasting rules to descriptions of how Prophet Dawud's hair turned white.",
-      "en": "The Quran uses التمييز extensively to specify numbers, quantities, and qualities. Today we'll examine key examples — from fasting rules to descriptions of how Prophet Dawud's hair turned white.",
-      "ur": "قرآن التمييز کو بہت زیادہ استعمال کرتا ہے تاکہ تعداد، مقدار، اور صفات کو متعین کرے۔ آج ہم اہم مثالیں دیکھیں گے — روزے کے قواعد سے لے کر Prophet داؤد کے بال کیسے سفید ہوئے۔"
+      "en": "إِنِّي رَأَيْتُ أَحَدَ عَشَرَ كَوْكَبًا — Yusuf saw 'eleven stars'. كَوْكَبًا is singular and accusative, even though there are eleven. The rule for the counted noun depends on the number — today you learn all three cases.",
+      "ur": "إِنِّي رَأَيْتُ أَحَدَ عَشَرَ كَوْكَبًا — یوسف علیہ السلام نے 'گیارہ ستارے' دیکھے۔ كَوْكَبًا واحد اور منصوب ہے، حالانکہ ستارے گیارہ ہیں۔ گنی جانے والی چیز کا قاعدہ عدد پر منحصر ہے — آج تینوں صورتیں سیکھیں گے۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "WORD",
-      "text": {
-        "ar": "أَيَّامًا مَعْدُودَاتٍ",
-        "ar_plain": "أيام معدودات",
-        "translit": "ayyaaman ma'dudatin",
-        "en": "A Specific Number of Days",
-        "ur": "دنوں کی ایک مخصوص تعداد"
-      },
-      "definition_ar": "تمييز يوضح العدد في سياق الصيام",
-      "definition_en": "A number تمييز clarifying the count in the context of fasting",
-      "example_ar": "أَيَّامًا is the تمييز for the implied عدد",
-      "highlight": true
-    },
-    {
       "type": "CONCEPT",
       "concept": {
-        "ar": "عِدَّةٌ مِنْ أَيَّامٍ",
-        "en": "A Number of Days",
-        "ur": "دنوں کی تعداد"
+        "en": "3 to 10: plural, genitive",
+        "ar": "مِنْ ثَلَاثَةٍ إِلَى عَشَرَةٍ: جَمْعٌ مَجْرُورٌ",
+        "ur": "3 تا 10: جمع، مجرور"
       },
       "explanation": {
-        "en": "عِدَّةٌ is the المُبَيَّن and أَيَّامٍ is the تمييز",
-        "ar": "عِدَّةٌ هو المُبَيَّن و أَيَّامٍ هو التمييز",
-        "example_ar": "فدية طعام مسكين",
-        "ur": "عِدَّةٌ ہے المُبَيَّن اور أَيَّامٍ ہے تمييز"
+        "en": "After 3–10 the counted noun is plural and genitive, as the second term of an إضافة: ثَلَاثَةَ أَيَّامٍ (3:41), سَبْعَ سَمَاوَاتٍ, عَشْرُ لَيَالٍ.",
+        "ur": "3 سے 10 کے بعد گنی جانے والی چیز جمع اور مجرور ہوتی ہے، اضافت کے دوسرے جز کے طور پر: ثَلَاثَةَ أَيَّامٍ (3:41)، سَبْعَ سَمَاوَاتٍ، عَشْرُ لَيَالٍ۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "ar": "اشتدَّ شَيْبًا",
-        "en": "Hair Turned White",
-        "ur": "بال سفید ہو گئے۔"
+        "en": "11 to 99: singular, accusative",
+        "ar": "مِنْ أَحَدَ عَشَرَ إِلَى تِسْعَةٍ وَتِسْعِينَ: مُفْرَدٌ مَنْصُوبٌ",
+        "ur": "11 تا 99: واحد، منصوب"
       },
       "explanation": {
-        "en": "شَيْبًا is a تمييز specifying the noun derived from the same root as the verb",
-        "ar": "شَيْبًا is تمييز specifying the noun derived from the same root as the verb",
-        "example_ar": "اشتدَّ شَيْبًا — the whiteness intensified",
-        "ur": "شَيْبًا ایک تمييز ہے جو فعل کے اسی جڑ سے ماخوذ اسم کی وضاحت کرتا ہے"
+        "en": "After 11–99 the counted noun is a true تَمْيِيز: singular and accusative. أَحَدَ عَشَرَ كَوْكَبًا (12:4), ثَلَاثِينَ لَيْلَةً (7:142), تِسْعٌ وَتِسْعُونَ نَعْجَةً (38:23).",
+        "ur": "11 سے 99 کے بعد گنی جانے والی چیز اصل تمییز ہوتی ہے: واحد اور منصوب۔ أَحَدَ عَشَرَ كَوْكَبًا (12:4)، ثَلَاثِينَ لَيْلَةً (7:142)، تِسْعٌ وَتِسْعُونَ نَعْجَةً (38:23)۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "ar": "طَعَامُ مِسْكِينٍ",
-        "en": "Food of a Poor Person",
-        "ur": "غریب آدمی کا کھانا"
+        "en": "100 and 1000: singular, genitive",
+        "ar": "الْمِائَةُ وَالْأَلْفُ: مُفْرَدٌ مَجْرُورٌ",
+        "ur": "100 اور 1000: واحد، مجرور"
       },
       "explanation": {
-        "en": "مِسْكِينٍ is a تمييز specifying the category/quality of طَعَام",
-        "ar": "مِسْكِينٍ is تمييز specifying the type of طَعَام",
-        "example_ar": "compensation must be طعام مسكين",
-        "ur": "مِسْكِينٍ ایک تمييز ہے جو طَعَام کے زمرے/معیار کی وضاحت کرتا ہے"
+        "en": "After مِائَة and أَلْف the counted noun is singular and genitive: مِائَةَ عَامٍ (2:259), أَلْفَ سَنَةٍ (2:96).",
+        "ur": "مِائَة اور أَلْف کے بعد گنی جانے والی چیز واحد اور مجرور ہوتی ہے: مِائَةَ عَامٍ (2:259)، أَلْفَ سَنَةٍ (2:96)۔"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "ar": "ماء كثيفًا",
-        "en": "Water as Molten Copper",
-        "ur": "پگھلے ہوئے تانبے کی طرح پانی"
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Quick check",
+        "ur": "فوری جانچ"
       },
-      "explanation": {
-        "en": "كثيفًا is a تمييز describing the quality/state of water in a punishment context",
-        "ar": "كثيفًا is تمييز specifying the state/quality of ماء",
-        "example_ar": "In the description of hell's water being like molten copper",
-        "ur": "كثيفًا ایک تمييز ہے جو سزا کے تناظر میں پانی کے معیار/ کیفیت کو بیان کرتا ہے"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "ar": "قَمَرٌ بَدْرًا",
-        "en": "Moon as Full Moon",
-        "ur": "مکمل چاند کے طور پر چاند"
-      },
-      "explanation": {
-        "en": "بَدْرًا is a تمييز describing the full/perfect state of قَمَر",
-        "ar": "بَدْرًا is تمييز specifying the state/quality of قَمَر",
-        "example_ar": "ضَرَبَ اللَّهُ مَثَلًا قَمَرٌ بَدْرًا",
-        "ur": "بَدْرًا ایک تمييز ہے جو قَمَر کی مکمل/ کامل حالت کو بیان کرتا ہے"
+      "body": {
+        "en": "3–10 → أَيَّامٍ (plural, genitive). 11–99 → يَوْمًا (singular, accusative). 100 / 1000 → يَوْمٍ (singular, genitive).",
+        "ur": "3 تا 10 → أَيَّامٍ (جمع، مجرور)۔ 11 تا 99 → يَوْمًا (واحد، منصوب)۔ 100 / 1000 → يَوْمٍ (واحد، مجرور)۔"
       }
     }
   ],
   "exercises": [
     {
-      "id": "ch71l04ex1",
       "type": "TAP_TRANSLATION",
+      "id": "ch71-l04-ex01",
       "prompt": {
-        "ar": "عِدَّةٌ مِنْ أَيَّامٍ أُخَرَ",
-        "ar_plain": "adobe",
-        "translit": "iddatu min ayyaamin ukhra",
-        "en": "A number of other days",
-        "ur": "دوسرے دنوں کی ایک بڑی تعداد"
+        "ar": "أَحَدَ عَشَرَ كَوْكَبًا",
+        "ar_plain": "أحد عشر كوكبا",
+        "translit": "ahada 'ashara kawkaban",
+        "en": "eleven stars",
+        "ur": "گیارہ ستارے"
       },
       "options": [
         {
-          "en": "عدّة (the number being specified)",
-          "ur": "عدّة (نمبر بیان کیا جا رہا ہے)"
+          "en": "eleven stars",
+          "ur": "گیارہ ستارے"
         },
         {
-          "en": "أيّام (the تمييز clarifying the number)",
-          "ur": "أيّام (تمييز نمبر کو واضح کرتا ہے)"
+          "en": "one star",
+          "ur": "ایک ستارہ"
         },
         {
-          "en": "أُخَر (other)",
-          "ur": "أُخَر (دیگر)"
+          "en": "the eleventh star",
+          "ur": "گیارہواں ستارہ"
         },
         {
-          "en": "الله (God)",
-          "ur": "الله (خدا)"
+          "en": "ten stars and one more",
+          "ur": "دس ستارے اور ایک"
         }
       ],
-      "correct_index": 1
-    },
-    {
-      "id": "ch71l04ex2",
-      "type": "TRUE_FALSE",
-      "statement": {
-        "ar": "في \"اشتدَّ شَيْبًا\" — شَيْبًا هو تمييز منصوب",
-        "en": "In \"the whiteness intensified\" — شَيْبًا is منصوب (accusative) as a تمييز",
-        "ur": "\"سفیدیت تیز\" میں — شَيْبًا is منصوب (الزام لگانے والا) بطور تمييز"
-      },
-      "correct_answer": true,
+      "correct_index": 0,
+      "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "شَيْبًا is منصوب with fatha as a تمييز clarifying what intensified.",
-        "ar": "شیب فتحے کے ساتھ منصوب ہے، تمييز کی حیثیت سے۔",
-        "ur": "شَيْبًا is منصوب with fatha as a تمييز واضح کر رہا ہے کہ کیا شدت ہے۔"
+        "en": "From 12:4. With 11–99 the counted noun is a singular accusative تَمْيِيز: كَوْكَبًا ('star'), even though the meaning is plural.",
+        "ur": "12:4 سے۔ 11 سے 99 تک گنی جانے والی چیز واحد منصوب تمییز ہوتی ہے: كَوْكَبًا ('ستارہ')، اگرچہ معنی جمع کا ہے۔"
       }
     },
     {
-      "id": "ch71l04ex3",
+      "type": "TRUE_FALSE",
+      "id": "ch71-l04-ex02",
+      "statement": {
+        "en": "With the numbers 3 to 10, the counted noun is a singular accusative.",
+        "ur": "3 سے 10 تک کے اعداد کے ساتھ گنی جانے والی چیز واحد منصوب ہوتی ہے۔",
+        "ar_example": {
+          "ar": "ثَلَاثَةَ أَيَّامٍ",
+          "ar_plain": "ثلاثة أيام",
+          "translit": "thalaathata ayyaamin",
+          "en": "three days",
+          "ur": "تین دن"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. With 3–10 the counted noun is plural and genitive: ثَلَاثَةَ أَيَّامٍ (3:41). The singular accusative belongs to 11–99: أَحَدَ عَشَرَ كَوْكَبًا, ثَلَاثِينَ لَيْلَةً.",
+        "ur": "غلط۔ 3 سے 10 تک گنی جانے والی چیز جمع اور مجرور ہوتی ہے: ثَلَاثَةَ أَيَّامٍ (3:41)۔ واحد منصوب 11 سے 99 تک کے لیے ہے: أَحَدَ عَشَرَ كَوْكَبًا، ثَلَاثِينَ لَيْلَةً۔"
+      }
+    },
+    {
       "type": "FILL_BLANK",
+      "id": "ch71-l04-ex03",
       "mode": "TAP",
-      "sentence_ar": "فَمَنْ لَمْ يَسْتَطِعْ فَلْيُطْعِمْ ___ طَعَامَ ___",
+      "sentence_ar": "وَوَاعَدْنَا مُوسَىٰ ثَلَاثِينَ ___",
       "hint": {
-        "en": "Whoever cannot [fast] should feed ___ of a ___",
-        "ur": "جو روزہ نہیں رکھ سکتا اسے ایک ___ کا کھانا کھلانا چاہیے"
+        "en": "7:142 — 'And We made an appointment with Musa for thirty nights.' After 11–99: singular accusative.",
+        "ur": "7:142 — 'اور ہم نے موسیٰ سے تیس راتوں کا وعدہ کیا۔' 11 سے 99 کے بعد: واحد منصوب۔"
       },
       "options": [
         {
-          "ar": "مستطيع",
-          "ar_plain": "مستطيع",
-          "translit": "mustati",
-          "en": "able",
-          "ur": "قابل"
+          "ar": "لَيْلَةً",
+          "ar_plain": "ليلة",
+          "translit": "laylatan",
+          "en": "night (singular, accusative)",
+          "ur": "رات (واحد، منصوب)"
         },
         {
-          "ar": "مسكينا",
-          "ar_plain": "مسكين",
-          "translit": "miskiin",
-          "en": "a poor person",
-          "ur": "ایک غریب آدمی"
+          "ar": "لَيَالٍ",
+          "ar_plain": "ليال",
+          "translit": "layaalin",
+          "en": "nights (plural)",
+          "ur": "راتیں (جمع)"
         },
         {
-          "ar": "غنيا",
-          "ar_plain": "غني",
-          "translit": "ghaniy",
-          "en": "a rich person",
-          "ur": "ایک امیر شخص"
+          "ar": "لَيْلَةٍ",
+          "ar_plain": "ليلة",
+          "translit": "laylatin",
+          "en": "night (genitive)",
+          "ur": "رات (مجرور)"
         },
         {
-          "ar": "مسلما",
-          "ar_plain": "مسلم",
-          "translit": "muslim",
-          "en": "a Muslim",
-          "ur": "ایک مسلمان"
+          "ar": "اللَّيْلَةَ",
+          "ar_plain": "الليلة",
+          "translit": "al-laylata",
+          "en": "tonight",
+          "ur": "آج رات"
         }
       ],
       "correct_answer": {
-        "ar": "مستطيع",
-        "ar_plain": "مستطيع",
-        "translit": "mustati",
-        "en": "able",
-        "ur": "قابل"
-      }
+        "ar": "لَيْلَةً",
+        "ar_plain": "ليلة",
+        "translit": "laylatan",
+        "en": "night (singular, accusative)",
+        "ur": "رات (واحد، منصوب)"
+      },
+      "xp_value": 1
     },
     {
-      "id": "ch71l04ex4",
-      "type": "GRAMMAR_PARSE",
-      "sentence_ar": "اشتدَّ شَيْبًا",
-      "words": [
+      "type": "FILL_BLANK",
+      "id": "ch71-l04-ex04",
+      "mode": "TAP",
+      "sentence_ar": "آيَتُكَ أَلَّا تُكَلِّمَ النَّاسَ ثَلَاثَةَ ___",
+      "hint": {
+        "en": "3:41 — 'that you will not speak to the people for three days'. After 3–10: plural genitive.",
+        "ur": "3:41 — 'کہ تم تین دن لوگوں سے بات نہ کرو گے'۔ 3 سے 10 کے بعد: جمع مجرور۔"
+      },
+      "options": [
         {
-          "ar": "اشتدَّ",
-          "ar_plain": "اشتد",
-          "translit": "ishtadda",
-          "en": "intensified",
-          "ur": "شدت"
+          "ar": "أَيَّامٍ",
+          "ar_plain": "أيام",
+          "translit": "ayyaamin",
+          "en": "days (plural, genitive)",
+          "ur": "دن (جمع، مجرور)"
         },
         {
-          "ar": "شَيْبًا",
-          "ar_plain": "شيب",
-          "translit": "shayban",
-          "en": "whiteness",
-          "ur": "سفیدی"
+          "ar": "يَوْمًا",
+          "ar_plain": "يوما",
+          "translit": "yawman",
+          "en": "day (singular, accusative)",
+          "ur": "دن (واحد، منصوب)"
+        },
+        {
+          "ar": "أَيَّامًا",
+          "ar_plain": "أياما",
+          "translit": "ayyaaman",
+          "en": "days (accusative)",
+          "ur": "دن (منصوب)"
+        },
+        {
+          "ar": "يَوْمٍ",
+          "ar_plain": "يوم",
+          "translit": "yawmin",
+          "en": "day (singular, genitive)",
+          "ur": "دن (واحد، مجرور)"
         }
       ],
-      "available_roles": [
-        "SUBJECT",
-        "VERB",
-        "OBJECT",
-        "PARTICLE",
-        "PREPOSITION",
-        "ADJECTIVE",
-        "NOUN"
-      ],
-      "correct_roles": [
-        "VERB",
-        "OBJECT"
-      ]
+      "correct_answer": {
+        "ar": "أَيَّامٍ",
+        "ar_plain": "أيام",
+        "translit": "ayyaamin",
+        "en": "days (plural, genitive)",
+        "ur": "دن (جمع، مجرور)"
+      },
+      "xp_value": 1
     },
     {
-      "id": "ch71l04ex5",
       "type": "MATCHING",
+      "id": "ch71-l04-ex05",
       "left_column": [
         {
-          "ar": "عِدَّةٌ مِنْ أَيَّامٍ",
-          "ar_plain": "adobe",
-          "translit": "iddatu min ayyaam",
-          "en": "a number of days",
-          "ur": "دنوں کی ایک بڑی تعداد"
+          "ar": "ثَلَاثَةُ أَيَّامٍ",
+          "ar_plain": "ثلاثة أيام",
+          "translit": "thalaathatu ayyaamin",
+          "en": "three days",
+          "ur": "تین دن"
         },
         {
-          "ar": "اشتدَّ شَيْبًا",
-          "ar_plain": "adobe",
-          "translit": "ishtadda shayban",
-          "en": "the whiteness intensified",
-          "ur": "سفیدی تیز ہو گئی"
+          "ar": "أَحَدَ عَشَرَ كَوْكَبًا",
+          "ar_plain": "أحد عشر كوكبا",
+          "translit": "ahada 'ashara kawkaban",
+          "en": "eleven stars",
+          "ur": "گیارہ ستارے"
         },
         {
-          "ar": "طَعَامُ مِسْكِينٍ",
-          "ar_plain": "ta aamu miskiin",
-          "translit": "ta aamu miskiin",
-          "en": "food of a poor person",
-          "ur": "غریب کا کھانا"
+          "ar": "مِائَةَ عَامٍ",
+          "ar_plain": "مائة عام",
+          "translit": "mi'ata 'aamin",
+          "en": "a hundred years",
+          "ur": "سو سال"
         },
         {
-          "ar": "قَمَرٌ بَدْرًا",
-          "ar_plain": "qamarun badran",
-          "translit": "qamarun badran",
-          "en": "moon as full moon",
-          "ur": "مکمل چاند کے طور پر چاند"
+          "ar": "أَرْبَعِينَ لَيْلَةً",
+          "ar_plain": "أربعين ليلة",
+          "translit": "arba'iina laylatan",
+          "en": "forty nights",
+          "ur": "چالیس راتیں"
         }
       ],
       "right_column": [
         {
-          "en": "تمييز عدد (مضاف إليه)",
-          "ur": "تمييز عدد (مضاف إليه)"
+          "en": "3–10: plural, genitive",
+          "ur": "3 تا 10: جمع، مجرور"
         },
         {
-          "en": "تمييز نقالي",
-          "ur": "تمييز نقالي"
+          "en": "11–19: singular accusative",
+          "ur": "11 تا 19: واحد منصوب"
         },
         {
-          "en": "تمييز صفة",
-          "ur": "تمييز صفة"
+          "en": "100 and 1000: singular, genitive",
+          "ur": "100 اور 1000: واحد، مجرور"
         },
         {
-          "en": "تمييز تشبيه",
-          "ur": "تمييز تشبيه"
+          "en": "20–99: singular accusative",
+          "ur": "20 تا 99: واحد منصوب"
         }
       ],
       "correct_pairs": [
@@ -308,160 +298,126 @@
           3,
           3
         ]
-      ]
+      ],
+      "xp_value": 1
     },
     {
-      "id": "ch71l04ex6",
       "type": "BUILD_SENTENCE",
+      "id": "ch71-l04-ex06",
       "target_translation": {
-        "en": "The Muslim fasted forty nights",
-        "ur": "مسلمان نے چالیس راتوں کے روزے رکھے"
+        "en": "Musa completed forty nights.",
+        "ur": "موسیٰ نے چالیس راتیں پوری کیں۔"
       },
       "tiles": [
         {
-          "ar": "أربعين",
+          "ar": "أَتَمَّ",
+          "ar_plain": "أتم",
+          "translit": "atamma",
+          "en": "completed",
+          "ur": "پوری کیں"
+        },
+        {
+          "ar": "مُوسَىٰ",
+          "ar_plain": "موسى",
+          "translit": "muusaa",
+          "en": "Musa",
+          "ur": "موسیٰ"
+        },
+        {
+          "ar": "أَرْبَعِينَ",
           "ar_plain": "أربعين",
-          "translit": "arba iin",
+          "translit": "arba'iina",
           "en": "forty",
           "ur": "چالیس"
         },
         {
-          "ar": "ليلة",
+          "ar": "لَيْلَةً",
           "ar_plain": "ليلة",
-          "translit": "layla",
+          "translit": "laylatan",
+          "en": "night",
+          "ur": "رات"
+        },
+        {
+          "ar": "لَيَالٍ",
+          "ar_plain": "ليال",
+          "translit": "layaalin",
           "en": "nights",
           "ur": "راتیں"
-        },
-        {
-          "ar": "صام",
-          "ar_plain": "صام",
-          "translit": "saam",
-          "en": "fasted",
-          "ur": "روزہ رکھا"
-        },
-        {
-          "ar": "المسلم",
-          "ar_plain": "المسلم",
-          "translit": "al-muslim",
-          "en": "the Muslim",
-          "ur": "مسلمان"
         }
       ],
       "correct_order": [
-        3,
-        2,
         0,
-        1
-      ]
+        1,
+        2,
+        3
+      ],
+      "xp_value": 1
     },
     {
-      "id": "ch71l04ex7",
       "type": "TAP_TRANSLATION",
+      "id": "ch71-l04-ex07",
       "prompt": {
-        "ar": "طَعَامُ مِسْكِينٍ",
-        "ar_plain": "ta aamu miskiin",
-        "translit": "ta aamu miskiin",
-        "en": "Food of a poor person",
-        "ur": "غریب کا کھانا"
+        "ar": "فَأَمَاتَهُ اللَّهُ مِائَةَ عَامٍ",
+        "ar_plain": "فأماته الله مائة عام",
+        "translit": "fa-amaatahu allaahu mi'ata 'aamin",
+        "en": "So Allah caused him to die for a hundred years.",
+        "ur": "تو اللہ نے اسے سو برس تک مردہ رکھا۔"
       },
       "options": [
         {
-          "en": "Food from the poor person",
-          "ur": "غریب سے کھانا"
+          "en": "So Allah caused him to die for a hundred years.",
+          "ur": "تو اللہ نے اسے سو برس تک مردہ رکھا۔"
         },
         {
-          "en": "Food equal to what a poor person eats",
-          "ur": "ایک غریب کے کھانے کے برابر کھانا"
+          "en": "So Allah gave him a hundred years of life.",
+          "ur": "تو اللہ نے اسے سو برس کی زندگی دی۔"
         },
         {
-          "en": "Food for poor people",
-          "ur": "غریب لوگوں کے لیے کھانا"
+          "en": "A hundred years later he died.",
+          "ur": "سو برس بعد وہ مر گیا۔"
         },
         {
-          "en": "Food in the mosque",
-          "ur": "مسجد میں کھانا"
+          "en": "Allah caused a hundred to die in one year.",
+          "ur": "اللہ نے ایک سال میں سو کو موت دی۔"
         }
       ],
-      "correct_index": 1
-    },
-    {
-      "id": "ch71l04ex8",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "اشتدَّ ___",
-      "hint": {
-        "en": "Related to whiteness of hair",
-        "ur": "بالوں کی سفیدی سے متعلق"
-      },
-      "options": [
-        {
-          "ar": "شيبا",
-          "ar_plain": "شيب",
-          "translit": "shayban",
-          "en": "whiteness",
-          "ur": "سفیدی"
-        },
-        {
-          "ar": "ضعفا",
-          "ar_plain": "ضعف",
-          "translit": "da f",
-          "en": "weakness",
-          "ur": "کمزوری"
-        },
-        {
-          "ar": "عمرا",
-          "ar_plain": "عمر",
-          "translit": "umr",
-          "en": "age",
-          "ur": "عمر"
-        },
-        {
-          "ar": "نورا",
-          "ar_plain": "نور",
-          "translit": "noor",
-          "en": "light",
-          "ur": "روشنی"
-        }
-      ],
-      "correct_answer": {
-        "ar": "شيبا",
-        "ar_plain": "شيب",
-        "translit": "shayban",
-        "en": "whiteness",
-        "ur": "سفیدی"
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "From 2:259. With مِائَة and أَلْف the counted noun is singular and genitive: مِائَةَ عَامٍ, أَلْفَ سَنَةٍ.",
+        "ur": "2:259 سے۔ مِائَة اور أَلْف کے ساتھ گنی جانے والی چیز واحد اور مجرور ہوتی ہے: مِائَةَ عَامٍ، أَلْفَ سَنَةٍ۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "ar": "التمييز في القرآن — وضوح وتحديد",
-      "en": "التمييز in the Quran — Clarity and Precision",
-      "ur": "قرآن میں تمييز — وضاحت اور درستگی"
+      "en": "Numbers and the counted noun",
+      "ar": "الْعَدَدُ وَتَمْيِيزُهُ",
+      "ur": "عدد اور اس کی تمییز"
     },
     "ayah": {
-      "surah": 38,
-      "ayah": 28,
-      "label": "Sad 38:28",
-      "ar": "أَمْ نَجْعَلُ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ كَالْمُفْسِدِينَ فِي الْأَرْضِ أَمْ نَجْعَلُ الْمُتَّقِينَ كَالْفُجَّارِ",
-      "en": "Or should We treat those who believe and do righteous deeds like corrupters in the land? Or should We treat those who fear Allāh like the wicked?",
-      "ur": "جو لوگ ایمان لائے اور عمل نیک کرتے رہے۔ کیا ان کو ہم ان کی طرح کر دیں گے جو ملک میں فساد کرتے ہیں۔ یا پرہیزگاروں کو بدکاروں کی طرح کر دیں گے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/038028.mp3"
+      "surah": 7,
+      "ayah": 142,
+      "label": "Al-A'raf 7:142",
+      "ar": "وَوَاعَدْنَا مُوسَىٰ ثَلَاثِينَ لَيْلَةً وَأَتْمَمْنَاهَا بِعَشْرٍ فَتَمَّ مِيقَاتُ رَبِّهِ أَرْبَعِينَ لَيْلَةً",
+      "en": "And We made an appointment with Moses for thirty nights and perfected them by [the addition of] ten; so the term of his Lord was completed as forty nights.",
+      "ur": "اور ہم نے موسیٰ سے تیس راتوں کا وعدہ کیا اور دس (راتیں) ملا کر اسے پورا کیا، تو ان کے رب کی مقررہ مدت چالیس راتیں پوری ہوئی",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/007142.mp3"
     },
     "highlighted_word_indices": [
-      4
+      2,
+      3,
+      9
     ],
     "noor_explanation": {
-      "ar": "في \"وَلَا أَنْتُمْ بِمُسْتَمْدٍّ\" — مُسْتَمْدٍّ is not a تمييز but rather اسم فاعل from استمداد. المعنى هنا: 'nor are you ones who seek help.' ليس كل وصف تابعًا هو تمييز — بعضها يكون اسم فاعل أو صفة مستقلة.",
-      "en": "In 'nor are you ones seeking help' — مُسْتَمْدٍّ is not a تمييز but rather a اسم فاعل (active participle) from استمداد. The meaning is: 'nor are you ones who seek help.' Not every descriptive word following a noun is a تمييز — some are اسم فاعل or independent صفة.",
-      "ur": "'نہ تم مدد مانگنے والے ہو' میں — مُسْتَمْدٍّ تمييز نہیں بلکہ اسم فاعل (فاعل کا صیغہ) ہے استمداد سے۔ مطلب: 'نہ تم وہ ہو جو مدد چاہتا ہو'۔ ہر توصیفی لفظ تمييز نہیں ہوتا — کچھ اسم فاعل یا آزاد صفت ہوتے ہیں۔"
+      "en": "ثَلَاثِينَ لَيْلَةً … أَرْبَعِينَ لَيْلَةً — thirty nights, completed to forty. Both times لَيْلَةً is singular and accusative, the تَمْيِيز of a number between 11 and 99. The appointment of Musa with his Lord is counted in the grammar of number.",
+      "ur": "ثَلَاثِينَ لَيْلَةً … أَرْبَعِينَ لَيْلَةً — تیس راتیں، چالیس تک پوری کی گئیں۔ دونوں بار لَيْلَةً واحد اور منصوب ہے، 11 اور 99 کے بیچ کے عدد کی تمییز۔ موسیٰ علیہ السلام کی اپنے رب سے ملاقات کی مدت عدد کی ترکیب میں گنی گئی ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "ar": "التمييز appears throughout the Quran — specifying numbers of days, qualities of food, and states of being. It transforms vague generalities into precise statements. You've learned to recognize it in all its forms. Tomorrow we tackle the distinction between الحال and التمييز.",
-      "en": "التمييز appears throughout the Quran — specifying numbers of days, qualities of food, and states of being. It transforms vague generalities into precise statements. You've learned to recognize it in all its forms. Tomorrow we tackle the distinction between الحال and التمييز.",
-      "ur": "التمييز قرآن میں ہر جگہ نظر آتی ہے — دنوں کی تعداد، کھانے کی خاصیت، اور وجود کی حالتیں۔ یہ مبہم عمومیات کو درست بیانات میں تبدیل کرتی ہے۔ آپ نے اسے ہر شکل میں پہچاننا سیکھ لیا ہے۔ کل ہم الحال اور التمييز کے درمیان فرق کریں گے۔"
+      "en": "The counted noun follows the number: 3–10 plural genitive, 11–99 singular accusative, 100 and 1000 singular genitive. Next: telling a حَال from a تَمْيِيز.",
+      "ur": "گنی جانے والی چیز عدد کے تابع ہے: 3 تا 10 جمع مجرور، 11 تا 99 واحد منصوب، 100 اور 1000 واحد مجرور۔ آگے: حال اور تمییز میں فرق۔"
     }
-  },
-  "template": "STANDARD"
+  }
 }
