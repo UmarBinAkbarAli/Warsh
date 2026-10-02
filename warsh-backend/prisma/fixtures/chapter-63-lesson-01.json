@@ -32,7 +32,7 @@
       "type": "CONCEPT",
       "concept": {
         "en": "إضافة — the construct state (idafa)",
-        "ar": "الْإِضَافَةُ — حَالَةُ الْمَجْرُورِ",
+        "ar": "الْإِضَافَةُ — ضَمُّ اسْمٍ إِلَى اسْمٍ",
         "ur": "إضافہ — مضاف حالت"
       },
       "explanation": {
@@ -314,11 +314,11 @@
           "ur": "اللہ کا"
         },
         {
-          "ar": "مُسْتَمِيعٌ",
-          "ar_plain": "مستميع",
-          "translit": "mustami'un",
+          "ar": "مُتَوَاضِعٌ",
+          "ar_plain": "متواضع",
+          "translit": "mutawaaDi'un",
           "en": "humble",
-          "ur": "عاجز"
+          "ur": "عاجز، منکسر"
         }
       ],
       "correct_order": [
@@ -332,11 +332,15 @@
       "type": "TRUE_FALSE",
       "id": "ch63-l01-ex06",
       "statement": {
-        "en": "كِتَابُ اللَّهِ is an example of إضافة where the ال on اللَّه is dropped because اللَّه is مضاف إليه.",
-        "ur": "كِتَابُ اللَّهِ إضافہ کی ایک مثال ہے جہاں اللَّه پر ال چھوڑ دی گئی ہے کیونکہ اللَّه مضاف الیہ ہے۔"
+        "en": "In كِتَابُ اللَّهِ, the الْ of اللَّه is dropped because it is the مُضَافٌ إِلَيْهِ.",
+        "ur": "كِتَابُ اللَّهِ میں اللَّه کا الْ اس لیے گر گیا کہ وہ مضاف الیہ ہے۔"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. The second noun keeps its الْ (اللَّهِ، الْكِتَابِ). It is the first noun, the مُضَاف, that never takes الْ or tanwīn: كِتَابُ, not الْكِتَابُ.",
+        "ur": "غلط۔ دوسرا اسم اپنا الْ رکھتا ہے (اللَّهِ، الْكِتَابِ)۔ پہلا اسم، مضاف، کبھی الْ یا تنوین نہیں لیتا: كِتَابُ، نہ کہ الْكِتَابُ۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
@@ -377,7 +381,7 @@
       "type": "FILL_BLANK",
       "id": "ch63-l01-ex08",
       "mode": "TYPE",
-      "sentence_ar": "عِبَادُ ___ is 'the servants of Allah'",
+      "sentence_ar": "عِبَادُ ___",
       "hint": {
         "en": "عِبَادُ اللَّهِ = 'the servants of Allah.'",
         "ur": "عِبَادُ اللَّهِ = 'اللہ کے بندے'۔"
@@ -408,11 +412,13 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/049001.mp3"
     },
     "highlighted_word_indices": [
-      3
+      7,
+      8,
+      9
     ],
     "noor_explanation": {
-      "en": "أَنفُسَكُمْ — 'yourselves'. This is إضافة: أَنْفُسَ (selves) + كُمْ (your, plural). كُمْ is the مضاف إليه; as a fixed pronoun it is genitive by position. أَنْفُسَ is the مضاف.",
-      "ur": "أَنفُسَكُمْ — 'اپنے آپ کو'۔ یہ إضافہ ہے: أَنْفُسَ (جانیں) + كُمْ (تمہاری)۔ كُمْ مضاف الیہ ہے اور مبنی ضمیر ہونے کی وجہ سے محلاً مجرور ہے۔ أَنْفُسَ مضاف ہے۔"
+      "en": "بَيْنَ يَدَيِ اللَّهِ وَرَسُولِهِ — \"before Allah and His Messenger\" (literally \"between the two hands of\"). يَدَيِ اللَّهِ is an iḍāfa: the dual يَدَيْنِ has lost its ن because it is the first noun. وَرَسُولِهِ = رَسُول + هِ (\"His\"), another iḍāfa.",
+      "ur": "بَيْنَ يَدَيِ اللَّهِ وَرَسُولِهِ — \"اللہ اور اس کے رسول سے آگے\" (لفظی: \"دونوں ہاتھوں کے درمیان\")۔ يَدَيِ اللَّهِ اضافت ہے: تثنیہ يَدَيْنِ کا ن گر گیا کیونکہ وہ مضاف ہے۔ وَرَسُولِهِ = رَسُول + هِ (\"اس کا\")، ایک اور اضافت۔"
     }
   },
   "close": {
