@@ -14,13 +14,13 @@
   },
   "hook": {
     "ayah": {
-      "surah": 2,
-      "ayah": 222,
-      "label": "Al-Baqarah 2:222",
-      "ar": "وَيَسْأَلُونَكَ عَنِ الْمَحِيضِ",
-      "en": "And they ask you about menstruation.",
-      "ur": "اور وہ تم سے حیض کے بارے میں پوچھتے ہیں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002222.mp3"
+      "surah": 18,
+      "ayah": 19,
+      "label": "Al-Kahf 18:19",
+      "ar": "قَالَ قَائِلٌ مِنْهُمْ كَمْ لَبِثْتُمْ ۖ قَالُوا لَبِثْنَا يَوْمًا أَوْ بَعْضَ يَوْمٍ",
+      "en": "One of them said, 'How long have you stayed?' They said, 'We stayed a day or part of a day.'",
+      "ur": "ان میں سے ایک نے کہا: 'تم کتنی دیر ٹھہرے؟' انہوں نے کہا: 'ہم ایک دن یا دن کا کچھ حصہ ٹھہرے۔'",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/018019.mp3"
     },
     "noor_intro": {
       "en": "Arabic has different ways to ask why, when, and how much. Today: كَمْ — how much? or how many?",
@@ -51,8 +51,8 @@
         "ur": "تم کے پاس کتنی کتابیں ہیں؟"
       },
       "explanation": {
-        "en": "كَمْ asks. كِتَابًا is accusative (indefinite object). لَدَيْكَ means in your possession.",
-        "ur": "كَمْ پوچھتا ہے۔ كِتَابًا نصب میں (نکرہ مفعول) ہے۔ لَدَيْكَ کا مطلب ہے تمہارے پاس۔"
+        "en": "كَمْ asks \"how many\". كِتَابًا is the thing being counted: after a question كَمْ it is singular and ends in ـًا. لَدَيْكَ means \"with you / in your possession\".",
+        "ur": "كَمْ \"کتنے\" پوچھتا ہے۔ كِتَابًا وہ چیز ہے جو گنی جا رہی ہے: سوالیہ كَمْ کے بعد یہ واحد اور ـًا پر ختم ہوتی ہے۔ لَدَيْكَ = \"تمہارے پاس\"۔"
       }
     },
     {
@@ -77,8 +77,8 @@
         "ur": "كَمْ + اسم مجرور"
       },
       "explanation": {
-        "en": "After كَمْ, the noun that follows is always in the genitive case (مجرور), regardless of whether it is the subject or object. Example: كَمْ رَجُلًا رَأَيْتَ؟ — how many men did you see?",
-        "ur": "كَمْ کے بعد جو اسم آتا ہے وہ ہمیشہ مجرور میں ہوتا ہے، چاہے وہ فاعل ہو یا مفعول۔ مثال: كَمْ رَجُلًا رَأَيْتَ؟ — تم نے کتنے آدمی دیکھے؟"
+        "en": "In a question, كَمْ is followed by a singular noun ending in ـًا: كَمْ كِتَابًا قَرَأْتَ؟ (\"how many books did you read?\"), كَمْ رَجُلًا رَأَيْتَ؟ Think of that noun as \"the thing being counted\"; its formal grammar name comes in Chapter 71.",
+        "ur": "سوال میں كَمْ کے بعد ـًا والا واحد اسم آتا ہے: كَمْ كِتَابًا قَرَأْتَ؟ (\"تم نے کتنی کتابیں پڑھیں؟\")، كَمْ رَجُلًا رَأَيْتَ؟ اس اسم کو \"گنی جانے والی چیز\" سمجھیں؛ اس کا گرامری نام باب 71 میں آئے گا۔"
       }
     },
     {
@@ -277,11 +277,11 @@
           "ur": "کتنے"
         },
         {
-          "ar": "طُلَّابًا",
-          "ar_plain": "طلابا",
-          "translit": "tullaaban",
-          "en": "students",
-          "ur": "طلبہ"
+          "ar": "طَالِبًا",
+          "ar_plain": "طالبا",
+          "translit": "taaliban",
+          "en": "student (counted)",
+          "ur": "طالب علم (گنتی میں)"
         },
         {
           "ar": "فُي",
@@ -310,8 +310,8 @@
       "type": "TRUE_FALSE",
       "id": "ch42-l01-ex06",
       "statement": {
-        "en": "كَمْ is always followed by a noun in the genitive case.",
-        "ur": "كَمْ کے بعد ہمیشہ اسم مجرور آتا ہے۔"
+        "en": "In a question, كَمْ is followed by a singular noun ending in ـًا, as in كَمْ كِتَابًا؟",
+        "ur": "سوال میں كَمْ کے بعد ـًا والا واحد اسم آتا ہے، جیسے كَمْ كِتَابًا؟"
       },
       "correct_answer": true,
       "xp_value": 1
@@ -350,25 +350,30 @@
   ],
   "reveal": {
     "concept_name": {
-      "en": "How much / how many — كَمْ",
-      "ar": "كَمْ — كَمْ؟",
-      "ur": "کتنا / کتنے — كَمْ"
+      "en": "كَمْ — how many / how long",
+      "ar": "كَمْ",
+      "ur": "كَمْ — کتنا / کتنی دیر"
     },
     "ayah": {
-      "surah": 2,
-      "ayah": 222,
-      "label": "Al-Baqarah 2:222",
-      "ar": "وَيَسْأَلُونَكَ عَنِ الْمَحِيضِ",
-      "en": "And they ask you about menstruation.",
-      "ur": "اور وہ تم سے حیض کے بارے میں پوچھتے ہیں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002222.mp3"
+      "surah": 18,
+      "ayah": 19,
+      "label": "Al-Kahf 18:19",
+      "ar": "قَالَ قَائِلٌ مِنْهُمْ كَمْ لَبِثْتُمْ ۖ قَالُوا لَبِثْنَا يَوْمًا أَوْ بَعْضَ يَوْمٍ",
+      "en": "One of them said, 'How long have you stayed?' They said, 'We stayed a day or part of a day.'",
+      "ur": "ان میں سے ایک نے کہا: 'تم کتنی دیر ٹھہرے؟' انہوں نے کہا: 'ہم ایک دن یا دن کا کچھ حصہ ٹھہرے۔'",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/018019.mp3"
     },
     "highlighted_word_indices": [
-      2
+      3,
+      4
+    ],
+    "highlighted_words": [
+      "كَمْ",
+      "لَبِثْتُمْ"
     ],
     "noor_explanation": {
-      "en": "وَيَسْأَلُونَكَ means they ask you. The verb سَأَلَ follows the same past tense pattern as كَتَبَ — same root pattern, different meaning.",
-      "ur": "وَيَسْأَلُونَكَ کا مطلب ہے وہ تم سے پوچھتے ہیں۔ فعل سَأَلَ ماضی کے وزن پر چلتا ہے جیسے كَتَبَ — ایک جیسا وزن، مختلف معنی۔"
+      "en": "كَمْ لَبِثْتُمْ — \"how long have you stayed?\" The answer gives the amount: يَوْمًا أَوْ بَعْضَ يَوْمٍ, \"a day or part of a day\".",
+      "ur": "كَمْ لَبِثْتُمْ — \"تم کتنی دیر ٹھہرے؟\" جواب مقدار بتاتا ہے: يَوْمًا أَوْ بَعْضَ يَوْمٍ، \"ایک دن یا دن کا کچھ حصہ\"۔"
     }
   },
   "close": {

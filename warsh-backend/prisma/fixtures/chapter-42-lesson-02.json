@@ -15,12 +15,12 @@
   "hook": {
     "ayah": {
       "surah": 2,
-      "ayah": 222,
-      "label": "Al-Baqarah 2:222",
-      "ar": "وَيَسْأَلُونَكَ عَنِ الْمَحِيضِ",
-      "en": "And they ask you about menstruation.",
-      "ur": "اور وہ تم سے حیض کے بارے میں پوچھتے ہیں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002222.mp3"
+      "ayah": 214,
+      "label": "Al-Baqarah 2:214",
+      "ar": "مَتَىٰ نَصْرُ اللَّهِ ۗ أَلَا إِنَّ نَصْرَ اللَّهِ قَرِيبٌ",
+      "en": "'When is the help of Allah?' Surely the help of Allah is near.",
+      "ur": "'اللہ کی مدد کب آئے گی؟' سن لو، اللہ کی مدد قریب ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002214.mp3"
     },
     "noor_intro": {
       "en": "مَتَى asks one specific question: when? It is used for time — a moment, a day, a year.",
@@ -37,8 +37,8 @@
         "ur": "کب؟ — مَتَى"
       },
       "explanation": {
-        "en": "مَتَى asks about time. The answer is always a noun or phrase indicating when: tomorrow, yesterday, a specific day, in the morning.",
-        "ur": "مَتَى وقت کے بارے میں پوچھتا ہے۔ جواب ہمیشہ ایک اسم یا جملہ ہوتا ہے جس سے وقت کا پتہ چلے: کل، کل پروش، ایک خاص دن، صبح۔"
+        "en": "مَتَى asks about time. The answer names a time: غَدًا (tomorrow), أَمْسِ (yesterday), a day, in the morning.",
+        "ur": "مَتَى وقت کے بارے میں پوچھتا ہے۔ جواب ایک وقت بتاتا ہے: غَدًا (آنے والا کل)، أَمْسِ (گزرا ہوا کل)، کوئی دن، صبح میں۔"
       }
     },
     {
@@ -58,15 +58,15 @@
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "ذَهَبْتُ غَدًا",
-        "ar_plain": "ذهت غدا",
-        "translit": "dhahabtu ghadan",
-        "en": "I went yesterday",
-        "ur": "میں کل گیا"
+        "ar": "ذَهَبْتُ أَمْسِ — سَأَذْهَبُ غَدًا",
+        "ar_plain": "ذهبت امس ساذهب غدا",
+        "translit": "dhahabtu amsi — sa-adh-habu ghadan",
+        "en": "I went yesterday — I will go tomorrow",
+        "ur": "میں کل (گزشتہ) گیا — میں کل (آئندہ) جاؤں گا"
       },
       "explanation": {
-        "en": "غَدًا means yesterday. The answer gives a specific time point.",
-        "ur": "غَدًا کا مطلب کل پروش ہے۔ جواب ایک خاص وقت کا نقطہ بتاتا ہے۔"
+        "en": "أَمْسِ = yesterday, with a past verb (ذَهَبْتُ). غَدًا = tomorrow, with a future verb (سَأَذْهَبُ). The time word and the verb agree.",
+        "ur": "أَمْسِ = گزرا ہوا کل، ماضی کے فعل کے ساتھ (ذَهَبْتُ)۔ غَدًا = آنے والا کل، مستقبل کے فعل کے ساتھ (سَأَذْهَبُ)۔ وقت کا لفظ اور فعل ہم آہنگ ہیں۔"
       }
     },
     {
@@ -98,15 +98,15 @@
     {
       "type": "WORD",
       "text": {
-        "ar": "غَدٌ",
-        "ar_plain": "غد",
-        "translit": "ghadun",
-        "en": "tomorrow / yesterday (context-dependent)",
-        "ur": "کل / کل پروش (سیاق و سباق پر منحصر ہے)"
+        "ar": "غَدًا",
+        "ar_plain": "غدا",
+        "translit": "ghadan",
+        "en": "tomorrow",
+        "ur": "آنے والا کل"
       },
       "explanation": {
-        "en": "غَدٌ in Arabic means tomorrow. غَدًا in the accusative means yesterday in some contexts. Root ع-د-و.",
-        "ur": "غَدٌ عربی میں کل پروش کا مطلب ہے۔ غَدًا نصب میں بعض سیاق و سباق میں کل پروش کا مطلب ہے۔ مادہ ع-د-و۔"
+        "en": "غَدًا always means \"tomorrow\". \"Yesterday\" is a different word: أَمْسِ.",
+        "ur": "غَدًا کا مطلب ہمیشہ \"آنے والا کل\" ہے۔ \"گزرا ہوا کل\" الگ لفظ ہے: أَمْسِ۔"
       }
     }
   ],
@@ -362,25 +362,30 @@
   ],
   "reveal": {
     "concept_name": {
-      "en": "When? — مَتَى",
-      "ar": "مَتَى — كَب؟",
-      "ur": "کب؟ — مَتَى"
+      "en": "مَتَى — when?",
+      "ar": "مَتَى",
+      "ur": "مَتَى — کب؟"
     },
     "ayah": {
       "surah": 2,
-      "ayah": 222,
-      "label": "Al-Baqarah 2:222",
-      "ar": "وَيَسْأَلُونَكَ عَنِ الْمَحِيضِ",
-      "en": "And they ask you about menstruation.",
-      "ur": "اور وہ تم سے حیض کے بارے میں پوچھتے ہیں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002222.mp3"
+      "ayah": 214,
+      "label": "Al-Baqarah 2:214",
+      "ar": "مَتَىٰ نَصْرُ اللَّهِ ۗ أَلَا إِنَّ نَصْرَ اللَّهِ قَرِيبٌ",
+      "en": "'When is the help of Allah?' Surely the help of Allah is near.",
+      "ur": "'اللہ کی مدد کب آئے گی؟' سن لو، اللہ کی مدد قریب ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002214.mp3"
     },
     "highlighted_word_indices": [
-      2
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "مَتَىٰ",
+      "نَصْرُ"
     ],
     "noor_explanation": {
-      "en": "وَيَسْأَلُونَكَ — they ask you. The verb سَأَلَ is past tense from the root س-أ-ل. It follows the same pattern as كَتَبَ and ذَهَبَ.",
-      "ur": "وَيَسْأَلُونَكَ — وہ تم سے پوچھتے ہیں۔ فعل سَأَلَ مادہ س-أ-ل سے ماضی ہے۔ یہ كَتَبَ اور ذَهَبَ کے وزن پر چلتا ہے۔"
+      "en": "مَتَىٰ نَصْرُ اللَّهِ — \"when is the help of Allah?\" The answer follows: إِنَّ نَصْرَ اللَّهِ قَرِيبٌ, \"the help of Allah is near\".",
+      "ur": "مَتَىٰ نَصْرُ اللَّهِ — \"اللہ کی مدد کب ہے؟\" جواب آگے ہے: إِنَّ نَصْرَ اللَّهِ قَرِيبٌ، \"اللہ کی مدد قریب ہے\"۔"
     }
   },
   "close": {
