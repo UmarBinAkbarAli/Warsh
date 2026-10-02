@@ -1,0 +1,534 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 26 review (ch26-l06, new, display order 5). Fresh two- and three-noun chains, the middle noun's two links, adjective attachment by ending and gender, a pointer before a chain, and Al-Fatihah 1:4. No new grammar. Rebuilt 2026-10-02 in the proposal harvest (Docs/proposals/proposal-harvest-tracker.md) from Docs/proposals/chapter-26-content-proposal.md and its review amendments: the chapter now teaches layered iḍāfa — three-noun chains, the middle noun's two links, which noun a following adjective describes, a pointer before a whole chain, and Al-Fatihah 1:4. Removed: 'رَبُّ رَبِّكُمْ — the Lord of your Lord', the Al-Kawthar hook that showed no chain, the claim that Ayat al-Kursi contains لَيْسَ, and the إِنَّ/لَيْسَ re-teaching (Chapters 24–25 own those). The proposal's separate transfer lesson (l05) was not built; the review covers it.",
+    "title": "Chapter 26 Review",
+    "titleAr": "مُرَاجَعَةُ الْفَصْلِ السَّادِسِ وَالْعِشْرِينَ",
+    "titleUr": "باب 26 کی دہرائی",
+    "chapter_order": 26,
+    "lesson_order": 5,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 1,
+      "ayah": 4,
+      "label": "Al-Fatihah 1:4",
+      "ar": "مَالِكِ يَوْمِ الدِّينِ",
+      "en": "Master of the Day of Judgement.",
+      "ur": "روزِ جزا کا مالک۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001004.mp3"
+    },
+    "noor_intro": {
+      "en": "One more listen to the chain from Al-Fatihah before the review.",
+      "ur": "دہرائی سے پہلے الفاتحہ کی زنجیر ایک بار پھر سنیں۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Read a chain link by link",
+        "ar": "بَابُ غُرْفَةِ الْأُسْتَاذِ",
+        "ur": "زنجیر کڑی کڑی پڑھیں"
+      },
+      "explanation": {
+        "en": "Start with the thing owned, end with the owner that carries الـ. Every middle noun is owned and owner.",
+        "ur": "مملوک سے شروع کریں، الـ والے مالک پر ختم کریں۔ ہر درمیانی اسم مملوک بھی ہے اور مالک بھی۔"
+      },
+      "examples": [
+        {
+          "ar": "بَابُ غُرْفَةِ الْأُسْتَاذِ",
+          "ar_plain": "باب غرفة الأستاذ",
+          "translit": "bābu ghurfati l-ustādhi",
+          "en": "the door of the teacher's room",
+          "ur": "استاد کے کمرے کا دروازہ"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "An adjective copies its noun",
+        "ar": "الْجَدِيدُ / الْجَدِيدِ",
+        "ur": "صفت اپنے اسم کی پیروی کرتی ہے"
+      },
+      "explanation": {
+        "en": "After the chain, an adjective's ending and gender show which noun it describes.",
+        "ur": "زنجیر کے بعد صفت کا اعراب اور جنس بتاتے ہیں کہ وہ کس اسم کی صفت ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "كِتَابُ الطَّالِبِ الْجَدِيدُ",
+          "ar_plain": "كتاب الطالب الجديد",
+          "translit": "kitābu ṭ-ṭālibi l-jadīdu",
+          "en": "the student's new book",
+          "ur": "طالب علم کی نئی کتاب"
+        },
+        {
+          "ar": "كِتَابُ الطَّالِبِ الْجَدِيدِ",
+          "ar_plain": "كتاب الطالب الجديد",
+          "translit": "kitābu ṭ-ṭālibi l-jadīdi",
+          "en": "the new student's book",
+          "ur": "نئے طالب علم کی کتاب"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "A pointer covers the whole chain",
+        "ar": "هَذِهِ غُرْفَةُ الْأُسْتَاذِ",
+        "ur": "اشارہ پوری زنجیر پر ہوتا ہے"
+      },
+      "explanation": {
+        "en": "The pointer matches the first noun of the chain.",
+        "ur": "اشارہ زنجیر کے پہلے اسم کے مطابق ہوتا ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "هَذِهِ غُرْفَةُ الْأُسْتَاذِ",
+          "ar_plain": "هذه غرفة الأستاذ",
+          "translit": "hādhihi ghurfatu l-ustādhi",
+          "en": "This is the teacher's room.",
+          "ur": "یہ استاد کا کمرہ ہے۔"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch26-l06-ex01",
+      "prompt": {
+        "ar": "سَيَّارَةُ أُخْتِ الْمُدَرِّسِ",
+        "ar_plain": "سيارة أخت المدرس",
+        "translit": "sayyāratu ukhti l-mudarrisi",
+        "en": "the car of the teacher's sister",
+        "ur": "استاد کی بہن کی گاڑی"
+      },
+      "options": [
+        {
+          "en": "the teacher's car",
+          "ur": "استاد کی گاڑی"
+        },
+        {
+          "en": "the car of the teacher's sister",
+          "ur": "استاد کی بہن کی گاڑی"
+        },
+        {
+          "en": "the teacher of the sister's car",
+          "ur": "بہن کی گاڑی کا استاد"
+        },
+        {
+          "en": "the sister's teacher",
+          "ur": "بہن کا استاد"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "سَيَّارَةُ the car → أُخْتِ of the sister → الْمُدَرِّسِ of the teacher.",
+        "ur": "سَيَّارَةُ گاڑی ← أُخْتِ بہن کی ← الْمُدَرِّسِ استاد کی۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch26-l06-ex02",
+      "statement": {
+        "en": "أُخْتِ is the middle noun: it is owned and it is an owner.",
+        "ur": "أُخْتِ درمیانی اسم ہے: یہ مملوک بھی ہے اور مالک بھی۔",
+        "ar_example": {
+          "ar": "سَيَّارَةُ أُخْتِ الْمُدَرِّسِ",
+          "ar_plain": "سيارة أخت المدرس",
+          "translit": "sayyāratu ukhti l-mudarrisi",
+          "en": "the car of the teacher's sister",
+          "ur": "استاد کی بہن کی گاڑی"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The car belongs to the sister, and the sister belongs to (is the sister of) the teacher.",
+        "ur": "گاڑی بہن کی ہے، اور بہن استاد کی بہن ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch26-l06-ex03",
+      "mode": "TAP",
+      "sentence_ar": "بَابُ الْغُرْفَةِ ___",
+      "hint": {
+        "en": "Say: the room's big door — the door is big.",
+        "ur": "کہیں: کمرے کا بڑا دروازہ — دروازہ بڑا ہے۔"
+      },
+      "options": [
+        {
+          "ar": "الْكَبِيرَةِ",
+          "ar_plain": "الكبيرة",
+          "translit": "al-kabīrati",
+          "en": "big (f., kasra)",
+          "ur": "بڑا (مؤنث، زیر)"
+        },
+        {
+          "ar": "الْكَبِيرُ",
+          "ar_plain": "الكبير",
+          "translit": "al-kabīru",
+          "en": "big (m., ḍamma)",
+          "ur": "بڑا (مذکر، پیش)"
+        },
+        {
+          "ar": "كَبِيرٌ",
+          "ar_plain": "كبير",
+          "translit": "kabīrun",
+          "en": "big (tanwīn)",
+          "ur": "بڑا (تنوین)"
+        },
+        {
+          "ar": "الْكَبِيرِ",
+          "ar_plain": "الكبير",
+          "translit": "al-kabīri",
+          "en": "big (m., kasra)",
+          "ur": "بڑا (مذکر، زیر)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الْكَبِيرُ",
+        "ar_plain": "الكبير",
+        "translit": "al-kabīru",
+        "en": "big (m., ḍamma)",
+        "ur": "بڑا (مذکر، پیش)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "To describe بَابُ, copy its ḍamma, its gender and its definiteness: الْكَبِيرُ.",
+        "ur": "بَابُ کی صفت کے لیے اس کا پیش، جنس اور معرفہ ہونا لیں: الْكَبِيرُ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch26-l06-ex04",
+      "prompt": {
+        "ar": "بَيْتُ الْإِمَامِ الْجَدِيدِ",
+        "ar_plain": "بيت الإمام الجديد",
+        "translit": "baytu l-imāmi l-jadīdi",
+        "en": "the new imam's house",
+        "ur": "نئے امام کا گھر"
+      },
+      "options": [
+        {
+          "en": "the imam's new house",
+          "ur": "امام کا نیا گھر"
+        },
+        {
+          "en": "the new house",
+          "ur": "نیا گھر"
+        },
+        {
+          "en": "the house is new",
+          "ur": "گھر نیا ہے"
+        },
+        {
+          "en": "the new imam's house",
+          "ur": "نئے امام کا گھر"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْجَدِيدِ has a kasra like الْإِمَامِ: the imam is new.",
+        "ur": "الْجَدِيدِ پر الْإِمَامِ کی طرح زیر ہے: امام نیا ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch26-l06-ex05",
+      "mode": "TAP",
+      "sentence_ar": "___ سَيَّارَةُ مُدَرِّسِ الْمَدْرَسَةِ",
+      "hint": {
+        "en": "Far, and the first noun سَيَّارَةُ is feminine.",
+        "ur": "دور، اور پہلا اسم سَيَّارَةُ مؤنث ہے۔"
+      },
+      "options": [
+        {
+          "ar": "ذَلِكَ",
+          "ar_plain": "ذلك",
+          "translit": "dhālika",
+          "en": "that (m.)",
+          "ur": "وہ (مذکر)"
+        },
+        {
+          "ar": "هَذَا",
+          "ar_plain": "هذا",
+          "translit": "hādhā",
+          "en": "this (m.)",
+          "ur": "یہ (مذکر)"
+        },
+        {
+          "ar": "تِلْكَ",
+          "ar_plain": "تلك",
+          "translit": "tilka",
+          "en": "that (f.)",
+          "ur": "وہ (مؤنث)"
+        },
+        {
+          "ar": "أُولَئِكَ",
+          "ar_plain": "أولئك",
+          "translit": "ulāʾika",
+          "en": "those (people)",
+          "ur": "وہ (لوگ)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "تِلْكَ",
+        "ar_plain": "تلك",
+        "translit": "tilka",
+        "en": "that (f.)",
+        "ur": "وہ (مؤنث)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Far + feminine first noun = تِلْكَ.",
+        "ur": "دور + مؤنث پہلا اسم = تِلْكَ۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch26-l06-ex06",
+      "left_column": [
+        {
+          "ar": "مَالِكِ",
+          "ar_plain": "مالك",
+          "translit": "māliki",
+          "en": "Master",
+          "ur": "مالک"
+        },
+        {
+          "ar": "يَوْمِ",
+          "ar_plain": "يوم",
+          "translit": "yawmi",
+          "en": "Day",
+          "ur": "دن"
+        },
+        {
+          "ar": "الدِّينِ",
+          "ar_plain": "الدين",
+          "translit": "ad-dīni",
+          "en": "Judgement",
+          "ur": "جزا"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "Master (of)",
+          "ur": "مالک"
+        },
+        {
+          "en": "the Day (of)",
+          "ur": "دن"
+        },
+        {
+          "en": "Judgement",
+          "ur": "جزا"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "مَالِكِ يَوْمِ الدِّينِ: Master of the Day of Judgement.",
+        "ur": "مَالِكِ يَوْمِ الدِّينِ: روزِ جزا کا مالک۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch26-l06-ex07",
+      "ayah_fragment": {
+        "ar": "مَالِكِ يَوْمِ الدِّينِ",
+        "surah_ref": "Al-Fatihah 1:4"
+      },
+      "options": [
+        {
+          "en": "Which word is the middle link? الدِّينِ",
+          "ur": "درمیانی کڑی کون سی ہے؟ الدِّينِ"
+        },
+        {
+          "en": "Which word is the middle link? مَالِكِ",
+          "ur": "درمیانی کڑی کون سی ہے؟ مَالِكِ"
+        },
+        {
+          "en": "Which word is the middle link? يَوْمِ",
+          "ur": "درمیانی کڑی کون سی ہے؟ يَوْمِ"
+        },
+        {
+          "en": "There is no middle link.",
+          "ur": "کوئی درمیانی کڑی نہیں۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يَوْمِ sits between مَالِكِ and الدِّينِ: owned by the first, owner of the last.",
+        "ur": "يَوْمِ، مَالِكِ اور الدِّينِ کے بیچ ہے: پہلے کا مملوک، آخری کا مالک۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch26-l06-ex08",
+      "target_translation": {
+        "en": "This is the book of the school's teacher.",
+        "ur": "یہ اسکول کے استاد کی کتاب ہے۔"
+      },
+      "tiles": [
+        {
+          "ar": "أُسْتَاذِ",
+          "ar_plain": "أستاذ",
+          "translit": "ustādhi",
+          "en": "teacher (of)",
+          "ur": "استاد"
+        },
+        {
+          "ar": "الْمَدْرَسَةِ",
+          "ar_plain": "المدرسة",
+          "translit": "al-madrasati",
+          "en": "the school",
+          "ur": "اسکول"
+        },
+        {
+          "ar": "هَذَا",
+          "ar_plain": "هذا",
+          "translit": "hādhā",
+          "en": "this",
+          "ur": "یہ"
+        },
+        {
+          "ar": "كِتَابُ",
+          "ar_plain": "كتاب",
+          "translit": "kitābu",
+          "en": "book",
+          "ur": "کتاب"
+        }
+      ],
+      "correct_order": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "Pointer, then the chain: هَذَا كِتَابُ أُسْتَاذِ الْمَدْرَسَةِ.",
+        "ur": "پہلے اشارہ، پھر زنجیر: هَذَا كِتَابُ أُسْتَاذِ الْمَدْرَسَةِ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch26-l06-ex09",
+      "statement": {
+        "en": "In Yusuf 12:1, الْمُبِينِ describes the verses.",
+        "ur": "یوسف 12:1 میں الْمُبِينِ آیتوں کی صفت ہے۔",
+        "ar_example": {
+          "ar": "تِلْكَ آيَاتُ الْكِتَابِ الْمُبِينِ",
+          "ar_plain": "تلك آيات الكتاب المبين",
+          "translit": "tilka āyātu l-kitābi l-mubīni",
+          "en": "Those are the verses of the clear Book.",
+          "ur": "یہ روشن کتاب کی آیتیں ہیں۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْمُبِينِ matches الْكِتَابِ — masculine, singular, kasra: the clear Book.",
+        "ur": "الْمُبِينِ، الْكِتَابِ سے ملتا ہے — مذکر، واحد، زیر: روشن کتاب۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch26-l06-ex10",
+      "prompt_line": {
+        "ar": "لِمَنْ هَذَا الْكِتَابُ؟",
+        "ar_plain": "لمن هذا الكتاب؟",
+        "translit": "li-man hādhā l-kitābu?",
+        "en": "Whose is this book?",
+        "ur": "یہ کتاب کس کی ہے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "هَذَا كِتَابُ أُخْتِ الطَّالِبِ",
+          "ar_plain": "هذا كتاب أخت الطالب",
+          "translit": "hādhā kitābu ukhti ṭ-ṭālibi",
+          "en": "This is the book of the student's sister.",
+          "ur": "یہ طالب علم کی بہن کی کتاب ہے۔"
+        },
+        {
+          "ar": "هَذِهِ غُرْفَةٌ كَبِيرَةٌ",
+          "ar_plain": "هذه غرفة كبيرة",
+          "translit": "hādhihi ghurfatun kabīratun",
+          "en": "This is a big room.",
+          "ur": "یہ ایک بڑا کمرہ ہے۔"
+        },
+        {
+          "ar": "الْكِتَابُ جَدِيدٌ",
+          "ar_plain": "الكتاب جديد",
+          "translit": "al-kitābu jadīdun",
+          "en": "The book is new.",
+          "ur": "کتاب نئی ہے۔"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "The question asks whose; the answer names the owner with a chain: the book of the student's sister.",
+        "ur": "سوال 'کس کی' ہے؛ جواب زنجیر سے مالک بتاتا ہے: طالب علم کی بہن کی کتاب۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 26 — chains of possession",
+      "ar": "سِلْسِلَةُ الْإِضَافَةِ",
+      "ur": "باب 26 — اضافت کی زنجیریں"
+    },
+    "ayah": {
+      "surah": 1,
+      "ayah": 4,
+      "label": "Al-Fatihah 1:4",
+      "ar": "مَالِكِ يَوْمِ الدِّينِ",
+      "en": "Master of the Day of Judgement.",
+      "ur": "روزِ جزا کا مالک۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001004.mp3"
+    },
+    "highlighted_word_indices": [
+      1
+    ],
+    "highlighted_words": [
+      "يَوْمِ"
+    ],
+    "noor_explanation": {
+      "en": "يَوْمِ: the middle link — owned by مَالِكِ, owner of الدِّينِ. You can read chains, their adjectives and their pointers.",
+      "ur": "يَوْمِ: درمیانی کڑی — مَالِكِ کا مملوک، الدِّينِ کا مالک۔ آپ زنجیریں، ان کی صفات اور ان کے اشارے پڑھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Review done. Next: the Chapter 26 final test.",
+      "ur": "دہرائی مکمل۔ آگے: باب 26 کا آخری امتحان۔"
+    }
+  }
+}

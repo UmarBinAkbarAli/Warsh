@@ -2,29 +2,28 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 27, Lesson 1 - Prepositions فِي (in) and إِلَى (to/toward).",
+    "_note": "Chapter 27, Lesson 1 (ch27-l01) — فِي، عَلَى، مِنْ، إِلَى chosen from a whole sentence (retrieval from Chapters 2, 16, 21), plus the new local model: the noun after a preposition is مَجْرُور and shows a kasra (or kasra tanwīn); a kasra from a preposition is told apart from a kasra in a chain. Quran: Al-Isra 17:1 excerpt. Rebuilt 2026-10-02 in the proposal harvest (Docs/proposals/proposal-harvest-tracker.md) from Docs/proposals/chapter-27-content-proposal.md and its review amendments: eight common prepositions in context — فِي، عَلَى، مِنْ، إِلَى retrieved from Chapters 2/21 with a local model of the genitive after a preposition; joined بِـ / لِـ with the real spelling (لِـ + الـ → لِلْـ, لِلَّهِ; بِالْقَلَمِ keeps the alif); عَنْ and joined كَـ; prepositions with attached pronouns. Every hook now contains its lesson's preposition (Al-Kawthar and Al-Kafirun removed; the false hidden لِـ in رَبِّ removed; 'every preposition merges with الـ' removed). Not built: the proposal's separate Quran-reading lesson — its 5:11 excerpt sits in Lesson 4 — so ch27-l05 stays the review.",
+    "title": "Where, From Where, To Where?",
+    "titleAr": "فِي، عَلَى، مِنْ، إِلَى",
+    "titleUr": "کہاں، کہاں سے، کہاں تک؟",
     "chapter_order": 27,
     "lesson_order": 1,
-    "chapter_title": "Prepositions and Everyday Expressions",
-    "title": "In and To",
-    "titleAr": "فِي وَ إِلَى",
-    "source": "madinah_reader_book3_lesson4_prepositions",
-    "estimated_minutes": 8,
+    "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 1,
+      "surah": 17,
       "ayah": 1,
-      "label": "Al-Fatiha 1:1",
-      "ar": "بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ",
-      "en": "In the name of Allah, the Most Gracious, the Most Merciful.",
-      "ur": "اللہ کے نام سے جو بڑا مہربان نہایت رحم والا ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001001.mp3"
+      "label": "Al-Isra 17:1",
+      "ar": "مِنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى",
+      "en": "from al-Masjid al-Haram to al-Masjid al-Aqsa",
+      "ur": "مسجدِ حرام سے مسجدِ اقصیٰ تک",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/017001.mp3"
     },
     "noor_intro": {
-      "en": "Every journey in Arabic starts here — with بِسْمِ اللَّهِ. The بِ at the beginning is a preposition, just like 'in' or 'to' in English. Today we learn our first two Arabic prepositions: فِي (in) and إِلَى (to/toward).",
-      "ur": "عربی میں ہر سفر یہاں سے شروع ہوتا ہے — بِسْمِ اللَّهِ سے۔ بِ ابتدا میں ایک حرف جر ہے، بالکل انگریزی میں 'in' یا 'to' کی طرح۔ آج ہم سیکھتے ہیں پہلے دو عربی حروف جر: فِي (میں) اور إِلَى (تک/کی طرف)۔"
+      "en": "Two prepositions you know, in one journey: مِنَ, from, and إِلَى, to.",
+      "ur": "دو حروفِ جر جو آپ جانتے ہیں، ایک ہی سفر میں: مِنَ، سے، اور إِلَى، تک۔"
     },
     "autoplay": true
   },
@@ -32,79 +31,132 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Preposition فِي (in)",
-        "ar": "حرف الجر فِي (في)",
-        "ur": "حرف جر فِي (میں)"
+        "en": "Four prepositions you know",
+        "ar": "فِي · عَلَى · مِنْ · إِلَى",
+        "ur": "چار حروفِ جر جو آپ جانتے ہیں"
       },
       "explanation": {
-        "en": "فِي means 'in' or 'inside.' It shows that something is located within something else. فِي is always followed by a noun in the genitive case (مجرور).",
-        "ur": "فِي کا مطلب ہے 'میں' یا 'اندر'۔ یہ بتاتا ہے کہ کوئی چیز کسی اور چیز کے اندر ہے۔ فِي کے بعد ہمیشہ مجرور حالت میں اسم آتا ہے۔"
+        "en": "فِي in, عَلَى on, مِنْ from, إِلَى to. You met them in Chapters 2 and 21. This chapter asks you to choose them from the whole sentence.",
+        "ur": "فِي میں، عَلَى پر، مِنْ سے، إِلَى تک۔ یہ آپ باب 2 اور 21 میں پڑھ چکے ہیں۔ اس باب میں آپ پورے جملے سے انہیں چنیں گے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "فِي الْبَيْتِ",
-        "ar_plain": "في البيت",
-        "translit": "fii al-bayti",
-        "en": "in the house",
-        "ur": "گھر میں"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "In or on?",
+        "ar": "فِي / عَلَى",
+        "ur": "میں یا پر؟"
       },
       "explanation": {
-        "en": "فِي is attached to الْبَيْتِ (the house). The word after فِي is in the genitive case — this is called مجرور. In translation, 'in' connects to 'the house' to make 'in the house.'",
-        "ur": "فِي الْبَيْتِ (گھر) سے جُڑا ہوا ہے۔ فِي کے بعد والا لفظ مجرور حالت میں ہے۔ ترجمے میں 'in' اور 'house' مل کر 'in the house' بنتا ہے۔"
-      }
+        "en": "Same book, two places: inside the bag, or on top of the desk.",
+        "ur": "ایک ہی کتاب، دو جگہیں: بستے کے اندر، یا میز کے اوپر۔"
+      },
+      "examples": [
+        {
+          "ar": "الْكِتَابُ فِي الْحَقِيبَةِ",
+          "ar_plain": "الكتاب في الحقيبة",
+          "translit": "al-kitābu fī l-ḥaqībati",
+          "en": "The book is in the bag.",
+          "ur": "کتاب بستے میں ہے۔"
+        },
+        {
+          "ar": "الْكِتَابُ عَلَى الْمَكْتَبِ",
+          "ar_plain": "الكتاب على المكتب",
+          "translit": "al-kitābu ʿalā l-maktabi",
+          "en": "The book is on the desk.",
+          "ur": "کتاب میز پر ہے۔"
+        }
+      ]
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "فِي الْمَسْجِدِ",
-        "ar_plain": "في المسجد",
-        "translit": "fii al-masjidi",
-        "en": "in the mosque",
-        "ur": "مسجد میں"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "From or to?",
+        "ar": "مِنَ / إِلَى",
+        "ur": "سے یا تک؟"
       },
       "explanation": {
-        "en": "فِي الْمَسْجِدِ — the person is inside the mosque. The preposition فِي tells us the location.",
-        "ur": "فِي الْمَسْجِدِ — وہ شخص مسجد کے اندر ہے۔ حرف جر فِي مقام بتاتا ہے۔"
-      }
+        "en": "The verb helps: خَرَجَ, went out, comes with مِنْ; ذَهَبَ, went, with إِلَى. مِنْ becomes مِنَ before الـ.",
+        "ur": "فعل مدد کرتا ہے: خَرَجَ، نکلا، کے ساتھ مِنْ؛ ذَهَبَ، گیا، کے ساتھ إِلَى۔ الـ سے پہلے مِنْ، مِنَ بن جاتا ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "خَرَجَ الْإِمَامُ مِنَ الْمَسْجِدِ",
+          "ar_plain": "خرج الإمام من المسجد",
+          "translit": "kharaja l-imāmu mina l-masjidi",
+          "en": "The imam went out of the mosque.",
+          "ur": "امام مسجد سے نکلا۔"
+        },
+        {
+          "ar": "ذَهَبَ الْإِمَامُ إِلَى الْمَسْجِدِ",
+          "ar_plain": "ذهب الإمام إلى المسجد",
+          "translit": "dhahaba l-imāmu ilā l-masjidi",
+          "en": "The imam went to the mosque.",
+          "ur": "امام مسجد گیا۔"
+        }
+      ]
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Preposition إِلَى (to/toward)",
-        "ar": "حرف الجر إِلَى (إلى)",
-        "ur": "حرف جر إِلَى (تک/کی طرف)"
+        "en": "The noun after a preposition takes a kasra",
+        "ar": "فِي الْبَيْتِ · فِي بَيْتٍ",
+        "ur": "حرفِ جر کے بعد والا اسم زیر لیتا ہے"
       },
       "explanation": {
-        "en": "إِلَى means 'to' or 'toward.' It shows direction — someone is going toward a place. Like فِي, it also puts the following noun in the genitive case (مجرور).",
-        "ur": "إِلَى کا مطلب ہے 'تک' یا 'کی طرف'۔ یہ سمت بتاتا ہے — کوئی کسی جگہ کی طرف جا رہا ہے۔ فِي کی طرح، اس کے بعد بھی اسم مجرور میں آتا ہے۔"
-      }
+        "en": "A preposition pulls the next noun into the genitive, called مَجْرُور. You see it as a kasra: فِي الْبَيْتِ, in the house — or kasra tanwīn: فِي بَيْتٍ, in a house.",
+        "ur": "حرفِ جر اگلے اسم کو مجرور کر دیتا ہے۔ یہ زیر سے نظر آتا ہے: فِي الْبَيْتِ، گھر میں — یا دو زیر سے: فِي بَيْتٍ، ایک گھر میں۔"
+      },
+      "examples": [
+        {
+          "ar": "فِي الْبَيْتِ",
+          "ar_plain": "في البيت",
+          "translit": "fī l-bayti",
+          "en": "in the house",
+          "ur": "گھر میں"
+        },
+        {
+          "ar": "فِي بَيْتٍ",
+          "ar_plain": "في بيت",
+          "translit": "fī baytin",
+          "en": "in a house",
+          "ur": "ایک گھر میں"
+        }
+      ]
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "إِلَى الْمَسْجِدِ",
-        "ar_plain": "إلى المسجد",
-        "translit": "ilaa al-masjidi",
-        "en": "to the mosque / toward the mosque",
-        "ur": "مسجد کی طرف"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Two kasras, two reasons",
+        "ar": "فِي بَيْتِ الْإِمَامِ",
+        "ur": "دو زیر، دو وجہیں"
       },
       "explanation": {
-        "en": "إِلَى الْمَسْجِدِ — someone is going toward the mosque. The direction is away from the speaker and toward the mosque.",
-        "ur": "إِلَى الْمَسْجِدِ — کوئی مسجد کی طرف جا رہا ہے۔ سمت بگوں سے دور اور مسجد کی طرف ہے۔"
-      }
+        "en": "فِي بَيْتِ الْإِمَامِ, in the imam's house: بَيْتِ has a kasra because of فِي; الْإِمَامِ has a kasra because it is the owner in a chain.",
+        "ur": "فِي بَيْتِ الْإِمَامِ، امام کے گھر میں: بَيْتِ پر زیر فِي کی وجہ سے ہے؛ الْإِمَامِ پر زیر اس لیے کہ وہ زنجیر میں مالک ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "فِي بَيْتِ الْإِمَامِ",
+          "ar_plain": "في بيت الإمام",
+          "translit": "fī bayti l-imāmi",
+          "en": "in the imam's house",
+          "ur": "امام کے گھر میں"
+        }
+      ]
     },
     {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "فِي vs إِلَى",
-        "ur": "فِي اور إِلَى میں فرق"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Isra 17:1 (excerpt): from al-Masjid al-Haram to al-Masjid al-Aqsa.",
+        "ar": "مِنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى",
+        "ur": "الاسراء 17:1 (اقتباس): مسجدِ حرام سے مسجدِ اقصیٰ تک۔"
       },
-      "body": {
-        "en": "فِي = in (location, inside) → فِي الْبَيْتِ (in the house). إِلَى = to/toward (direction, destination) → إِلَى الْمَسْجِدِ (to the mosque). Both take مجرور (genitive) after them.",
-        "ur": "فِي = میں (مقام، اندر) → فِي الْبَيْتِ (گھر میں)۔ إِلَى = تک/کی طرف (سمت، منزل) → إِلَى الْمَسْجِدِ (مسجد کی طرف)۔ دونوں کے بعد مجرور آتا ہے۔"
-      }
+      "explanation": {
+        "en": "مِنَ marks where the night journey started, إِلَى where it ended. Both nouns after them, الْمَسْجِدِ, end in a kasra.",
+        "ur": "مِنَ بتاتا ہے کہ رات کا سفر کہاں سے شروع ہوا، إِلَى کہ کہاں ختم ہوا۔ دونوں کے بعد والا اسم، الْمَسْجِدِ، زیر پر ختم ہوتا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/017001.mp3"
     }
   ],
   "exercises": [
@@ -112,151 +164,242 @@
       "type": "TAP_TRANSLATION",
       "id": "ch27-l01-ex01",
       "prompt": {
-        "ar": "فِي الْبَيْتِ",
-        "ar_plain": "في البيت",
-        "translit": "fii al-bayti",
-        "en": "in the house",
-        "ur": "گھر میں"
+        "ar": "الْكِتَابُ عَلَى الْمَكْتَبِ",
+        "ar_plain": "الكتاب على المكتب",
+        "translit": "al-kitābu ʿalā l-maktabi",
+        "en": "The book is on the desk.",
+        "ur": "کتاب میز پر ہے۔"
       },
       "options": [
         {
-          "en": "in the house",
-          "ur": "گھر میں"
+          "en": "The book is in the desk.",
+          "ur": "کتاب میز کے اندر ہے۔"
         },
         {
-          "en": "to the house",
-          "ur": "گھر کی طرف"
+          "en": "The book is on the desk.",
+          "ur": "کتاب میز پر ہے۔"
         },
         {
-          "en": "from the house",
-          "ur": "گھر سے"
+          "en": "The book is from the desk.",
+          "ur": "کتاب میز سے ہے۔"
         },
         {
-          "en": "in the school",
-          "ur": "سکول میں"
+          "en": "The desk is on the book.",
+          "ur": "میز کتاب پر ہے۔"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "فِي means 'in' — the person is inside the house.",
-        "ur": "فِي کا مطلب ہے 'میں' — وہ شخص گھر کے اندر ہے۔"
+        "en": "عَلَى means on: الْكِتَابُ عَلَى الْمَكْتَبِ.",
+        "ur": "عَلَى کا مطلب ہے پر: الْكِتَابُ عَلَى الْمَكْتَبِ۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch27-l01-ex02",
-      "statement": {
-        "en": "إِلَى shows direction — someone is going toward a place.",
-        "ur": "إِلَى سمت بتاتا ہے — کوئی کسی جگہ کی طرف جا رہا ہے۔",
-        "ar_example": {
-          "ar": "إِلَى الْمَدْرَسَةِ",
-          "ar_plain": "إلى المدرسة",
-          "translit": "ilaa al-madrast",
-          "en": "to the school",
-          "ur": "سکول کی طرف"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
       "type": "FILL_BLANK",
-      "id": "ch27-l01-ex03",
+      "id": "ch27-l01-ex02",
       "mode": "TAP",
-      "sentence_ar": "هُوَ ذَهَبَ ___ الْمَسْجِدِ",
+      "sentence_ar": "خَرَجَ الطَّالِبُ ___ الْمَدْرَسَةِ",
       "hint": {
-        "en": "He went to the mosque.",
-        "ur": "وہ مسجد کی طرف گیا۔"
+        "en": "He went out — out of the school.",
+        "ur": "وہ نکلا — اسکول سے۔"
       },
       "options": [
         {
           "ar": "إِلَى",
           "ar_plain": "إلى",
-          "translit": "ilaa",
-          "en": "to/toward",
-          "ur": "تک/کی طرف"
+          "translit": "ilā",
+          "en": "to",
+          "ur": "تک"
         },
         {
           "ar": "فِي",
           "ar_plain": "في",
-          "translit": "fii",
+          "translit": "fī",
           "en": "in",
           "ur": "میں"
         },
         {
-          "ar": "مِنْ",
+          "ar": "مِنَ",
           "ar_plain": "من",
-          "translit": "min",
+          "translit": "mina",
           "en": "from",
           "ur": "سے"
         },
         {
           "ar": "عَلَى",
           "ar_plain": "على",
-          "translit": "alaa",
-          "en": "on/upon",
+          "translit": "ʿalā",
+          "en": "on",
           "ur": "پر"
+        }
+      ],
+      "correct_answer": {
+        "ar": "مِنَ",
+        "ar_plain": "من",
+        "translit": "mina",
+        "en": "from",
+        "ur": "سے"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Going out of a place uses مِنْ, written مِنَ before الـ.",
+        "ur": "کسی جگہ سے نکلنے کے لیے مِنْ آتا ہے، جو الـ سے پہلے مِنَ لکھا جاتا ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch27-l01-ex03",
+      "mode": "TAP",
+      "sentence_ar": "ذَهَبَ الْأُسْتَاذُ ___ السُّوقِ",
+      "hint": {
+        "en": "He went — toward the market.",
+        "ur": "وہ گیا — بازار کی طرف۔"
+      },
+      "options": [
+        {
+          "ar": "إِلَى",
+          "ar_plain": "إلى",
+          "translit": "ilā",
+          "en": "to",
+          "ur": "تک"
+        },
+        {
+          "ar": "مِنَ",
+          "ar_plain": "من",
+          "translit": "mina",
+          "en": "from",
+          "ur": "سے"
+        },
+        {
+          "ar": "عَلَى",
+          "ar_plain": "على",
+          "translit": "ʿalā",
+          "en": "on",
+          "ur": "پر"
+        },
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
         }
       ],
       "correct_answer": {
         "ar": "إِلَى",
         "ar_plain": "إلى",
-        "translit": "ilaa",
-        "en": "to/toward",
-        "ur": "تک/کی طرف"
+        "translit": "ilā",
+        "en": "to",
+        "ur": "تک"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ذَهَبَ ... إِلَى: went to a place.",
+        "ur": "ذَهَبَ ... إِلَى: کسی جگہ گیا۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch27-l01-ex04",
+      "mode": "TAP",
+      "sentence_ar": "الطَّالِبُ فِي ___",
+      "hint": {
+        "en": "After فِي the noun takes a kasra.",
+        "ur": "فِي کے بعد اسم زیر لیتا ہے۔"
+      },
+      "options": [
+        {
+          "ar": "الْمَسْجِدُ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjidu",
+          "en": "the mosque (ḍamma)",
+          "ur": "مسجد (پیش)"
+        },
+        {
+          "ar": "الْمَسْجِدَ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjida",
+          "en": "the mosque (fatḥa)",
+          "ur": "مسجد (زبر)"
+        },
+        {
+          "ar": "مَسْجِدٌ",
+          "ar_plain": "مسجد",
+          "translit": "masjidun",
+          "en": "a mosque (ḍamma tanwīn)",
+          "ur": "ایک مسجد (دو پیش)"
+        },
+        {
+          "ar": "الْمَسْجِدِ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjidi",
+          "en": "the mosque (kasra)",
+          "ur": "مسجد (زیر)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الْمَسْجِدِ",
+        "ar_plain": "المسجد",
+        "translit": "al-masjidi",
+        "en": "the mosque (kasra)",
+        "ur": "مسجد (زیر)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A preposition makes the next noun مَجْرُور: فِي الْمَسْجِدِ.",
+        "ur": "حرفِ جر اگلے اسم کو مجرور کرتا ہے: فِي الْمَسْجِدِ۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch27-l01-ex04",
+      "id": "ch27-l01-ex05",
       "left_column": [
         {
-          "ar": "فِي الْبَيْتِ",
-          "ar_plain": "في البيت",
-          "translit": "fii al-bayti",
-          "en": "in the house",
-          "ur": "گھر میں"
+          "ar": "الْكِتَابُ فِي الْحَقِيبَةِ",
+          "ar_plain": "الكتاب في الحقيبة",
+          "translit": "al-kitābu fī l-ḥaqībati",
+          "en": "The book is in the bag.",
+          "ur": "کتاب بستے میں ہے۔"
         },
         {
-          "ar": "فِي الْمَسْجِدِ",
-          "ar_plain": "في المسجد",
-          "translit": "fii al-masjidi",
-          "en": "in the mosque",
-          "ur": "مسجد میں"
+          "ar": "الْكِتَابُ عَلَى الْمَكْتَبِ",
+          "ar_plain": "الكتاب على المكتب",
+          "translit": "al-kitābu ʿalā l-maktabi",
+          "en": "The book is on the desk.",
+          "ur": "کتاب میز پر ہے۔"
         },
         {
-          "ar": "إِلَى الْمَسْجِدِ",
-          "ar_plain": "إلى المسجد",
-          "translit": "ilaa al-masjidi",
-          "en": "to the mosque",
-          "ur": "مسجد کی طرف"
+          "ar": "خَرَجَ الْإِمَامُ مِنَ الْمَسْجِدِ",
+          "ar_plain": "خرج الإمام من المسجد",
+          "translit": "kharaja l-imāmu mina l-masjidi",
+          "en": "The imam went out of the mosque.",
+          "ur": "امام مسجد سے نکلا۔"
         },
         {
-          "ar": "إِلَى الْمَدْرَسَةِ",
-          "ar_plain": "إلى المدرسة",
-          "translit": "ilaa al-madrast",
-          "en": "to the school",
-          "ur": "سکول کی طرف"
+          "ar": "ذَهَبَ الْإِمَامُ إِلَى الْمَسْجِدِ",
+          "ar_plain": "ذهب الإمام إلى المسجد",
+          "translit": "dhahaba l-imāmu ilā l-masjidi",
+          "en": "The imam went to the mosque.",
+          "ur": "امام مسجد گیا۔"
         }
       ],
       "right_column": [
         {
-          "en": "in the house",
-          "ur": "گھر میں"
+          "en": "The book is in the bag.",
+          "ur": "کتاب بستے میں ہے۔"
         },
         {
-          "en": "in the mosque",
-          "ur": "مسجد میں"
+          "en": "The book is on the desk.",
+          "ur": "کتاب میز پر ہے۔"
         },
         {
-          "en": "to the mosque",
-          "ur": "مسجد کی طرف"
+          "en": "The imam went out of the mosque.",
+          "ur": "امام مسجد سے نکلا۔"
         },
         {
-          "en": "to the school",
-          "ur": "سکول کی طرف"
+          "en": "The imam went to the mosque.",
+          "ur": "امام مسجد گیا۔"
         }
       ],
       "correct_pairs": [
@@ -277,183 +420,147 @@
           3
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch27-l01-ex05",
-      "target_translation": {
-        "en": "The student is in the school.",
-        "ur": "طالب علم سکول میں ہے۔"
-      },
-      "tiles": [
-        {
-          "ar": "الطَّالِبُ",
-          "ar_plain": "الطالب",
-          "translit": "at-taalibu",
-          "en": "the student",
-          "ur": "طالب علم"
-        },
-        {
-          "ar": "فِي",
-          "ar_plain": "في",
-          "translit": "fii",
-          "en": "in",
-          "ur": "میں"
-        },
-        {
-          "ar": "إِلَى",
-          "ar_plain": "إلى",
-          "translit": "ilaa",
-          "en": "to",
-          "ur": "تک"
-        },
-        {
-          "ar": "الْمَدْرَسَةِ",
-          "ar_plain": "المدرسة",
-          "translit": "al-madrast",
-          "en": "the school",
-          "ur": "سکول"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        3
-      ],
-      "xp_value": 1
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "Read each preposition with its verb and noun.",
+        "ur": "ہر حرفِ جر کو اس کے فعل اور اسم کے ساتھ پڑھیں۔"
+      }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch27-l01-ex06",
       "statement": {
-        "en": "Both فِي and إِلَى put the following noun in the genitive case (مجرور).",
-        "ur": "فِي اور إِلَى دونوں اپنے بعد والے اسم کو مجرور بناتے ہیں۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch27-l01-ex07",
-      "prompt": {
-        "ar": "إِلَى الْبَيْتِ",
-        "ar_plain": "إلى البيت",
-        "translit": "ilaa al-bayti",
-        "en": "to the house",
-        "ur": "گھر کی طرف"
-      },
-      "options": [
-        {
-          "en": "to the house",
-          "ur": "گھر کی طرف"
-        },
-        {
-          "en": "in the house",
-          "ur": "گھر میں"
-        },
-        {
-          "en": "from the house",
-          "ur": "گھر سے"
-        },
-        {
-          "en": "on the house",
-          "ur": "گھر پر"
+        "en": "In this phrase, بَيْتِ and الْإِمَامِ have a kasra for the same reason.",
+        "ur": "اس ترکیب میں بَيْتِ اور الْإِمَامِ پر زیر ایک ہی وجہ سے ہے۔",
+        "ar_example": {
+          "ar": "فِي بَيْتِ الْإِمَامِ",
+          "ar_plain": "في بيت الإمام",
+          "translit": "fī bayti l-imāmi",
+          "en": "in the imam's house",
+          "ur": "امام کے گھر میں"
         }
-      ],
-      "correct_index": 0,
+      },
+      "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "إِلَى means 'to/toward' — going in the direction of the house.",
-        "ur": "إِلَى کا مطلب ہے 'تک/کی طرف' — گھر کی سمت جا رہا ہے۔"
+        "en": "بَيْتِ: because of فِي. الْإِمَامِ: because it is the owner in the chain بَيْتِ الْإِمَامِ.",
+        "ur": "بَيْتِ: فِي کی وجہ سے۔ الْإِمَامِ: کیونکہ وہ زنجیر بَيْتِ الْإِمَامِ میں مالک ہے۔"
       }
     },
     {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch27-l01-ex08",
-      "prompt": {
-        "ar": "فِي الْمَسْجِدِ",
-        "ar_plain": "في المسجد",
-        "translit": "fii al-masjidi",
-        "en": "in the mosque",
-        "ur": "مسجد میں"
+      "type": "BUILD_SENTENCE",
+      "id": "ch27-l01-ex07",
+      "target_translation": {
+        "en": "The teacher went to the mosque.",
+        "ur": "استاد مسجد گیا۔"
       },
-      "tokens": [
-        {
-          "ar": "فِي",
-          "ar_plain": "في",
-          "translit": "fii",
-          "role": "PREPOSITION",
-          "en": "in",
-          "ur": "میں"
-        },
+      "tiles": [
         {
           "ar": "الْمَسْجِدِ",
           "ar_plain": "المسجد",
-          "translit": "al-masjid",
-          "role": "NOUN_GENITIVE",
-          "en": "the mosque (genitive)",
-          "ur": "مسجد (مجرور)"
+          "translit": "al-masjidi",
+          "en": "the mosque",
+          "ur": "مسجد"
+        },
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "went",
+          "ur": "گیا"
+        },
+        {
+          "ar": "إِلَى",
+          "ar_plain": "إلى",
+          "translit": "ilā",
+          "en": "to",
+          "ur": "تک"
+        },
+        {
+          "ar": "الْأُسْتَاذُ",
+          "ar_plain": "الأستاذ",
+          "translit": "al-ustādhu",
+          "en": "the teacher",
+          "ur": "استاد"
         }
       ],
-      "correct_roles": [
-        "PREPOSITION",
-        "NOUN"
+      "correct_order": [
+        1,
+        3,
+        2,
+        0
       ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "Verb, doer, then the preposition and its noun: ذَهَبَ الْأُسْتَاذُ إِلَى الْمَسْجِدِ.",
+        "ur": "فعل، فاعل، پھر حرفِ جر اور اس کا اسم: ذَهَبَ الْأُسْتَاذُ إِلَى الْمَسْجِدِ۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch27-l01-ex08",
+      "ayah_fragment": {
+        "ar": "مِنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى",
+        "surah_ref": "Al-Isra 17:1"
+      },
+      "options": [
+        {
+          "en": "in al-Masjid al-Haram and al-Masjid al-Aqsa",
+          "ur": "مسجدِ حرام اور مسجدِ اقصیٰ میں"
+        },
+        {
+          "en": "to al-Masjid al-Haram from al-Masjid al-Aqsa",
+          "ur": "مسجدِ اقصیٰ سے مسجدِ حرام تک"
+        },
+        {
+          "en": "from al-Masjid al-Haram to al-Masjid al-Aqsa",
+          "ur": "مسجدِ حرام سے مسجدِ اقصیٰ تک"
+        },
+        {
+          "en": "on al-Masjid al-Haram",
+          "ur": "مسجدِ حرام پر"
+        }
+      ],
+      "correct_index": 2,
       "xp_value": 1,
-      "available_roles": [
-        "PREPOSITION",
-        "NOUN",
-        "RELATIVE_PRONOUN"
-      ],
-      "words": [
-        {
-          "ar": "فِي",
-          "ar_plain": "في",
-          "translit": "fii",
-          "role": "PREPOSITION",
-          "en": "in",
-          "ur": "میں"
-        },
-        {
-          "ar": "الْمَسْجِدِ",
-          "ar_plain": "المسجد",
-          "translit": "al-masjid",
-          "role": "NOUN_GENITIVE",
-          "en": "the mosque (genitive)",
-          "ur": "مسجد (مجرور)"
-        }
-      ],
-      "sentence_ar": "فِي الْمَسْجِدِ"
+      "explanation_on_wrong": {
+        "en": "مِنَ marks the start, إِلَى the end: from al-Masjid al-Haram to al-Masjid al-Aqsa.",
+        "ur": "مِنَ ابتدا بتاتا ہے، إِلَى انتہا: مسجدِ حرام سے مسجدِ اقصیٰ تک۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "فِي (in) and إِلَى (to/toward)",
-      "ar": "حرفا الجر: فِي وَ إِلَى",
-      "ur": "فِي (میں) اور إِلَى (تک/کی طرف)"
+      "en": "From where, to where",
+      "ar": "مِنْ وَإِلَى",
+      "ur": "کہاں سے، کہاں تک"
     },
     "ayah": {
-      "surah": 1,
+      "surah": 17,
       "ayah": 1,
-      "label": "Al-Fatiha 1:1",
-      "ar": "بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ",
-      "en": "In the name of Allah, the Most Gracious, the Most Merciful.",
-      "ur": "اللہ کے نام سے جو بڑا مہربان نہایت رحم والا ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001001.mp3"
+      "label": "Al-Isra 17:1",
+      "ar": "مِنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى",
+      "en": "from al-Masjid al-Haram to al-Masjid al-Aqsa",
+      "ur": "مسجدِ حرام سے مسجدِ اقصیٰ تک",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/017001.mp3"
     },
     "highlighted_word_indices": [
-      1
+      0,
+      3
+    ],
+    "highlighted_words": [
+      "مِنَ",
+      "إِلَى"
     ],
     "noor_explanation": {
-      "en": "بِ is the preposition 'with/by.' Notice it sits before اللَّهِ. That is how prepositions work in Arabic — they attach to the noun that follows them, changing its case to مجرور (genitive). فِي and إِلَى work the same way.",
-      "ur": "بِ حرف جر ہے 'ساتھ/ذریعے'۔ دیکھیں یہ اللَّهِ سے پہلے آتا ہے۔ عربی میں حروف جر اسی طرح کام کرتے ہیں — وہ اپنے بعد والے اسم سے جُڑ کر اسے مجرور بناتے ہیں۔ فِي اور إِلَى بھی یہی کام کرتے ہیں۔"
+      "en": "مِنَ … إِلَى: from … to. Each noun after them ends in a kasra because a preposition governs it.",
+      "ur": "مِنَ … إِلَى: سے … تک۔ ان کے بعد ہر اسم زیر پر ختم ہوتا ہے کیونکہ حرفِ جر اس پر عمل کرتا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "فِي for location (in), إِلَى for direction (to). Every time you see a preposition in Arabic, the noun after it is always in the genitive case. Remember this rule — it applies to all prepositions!",
-      "ur": "فِي مقام کے لیے (میں)، إِلَى سمت کے لیے (تک)۔ ہر بار جب آپ عربی میں حرف جر دیکھیں، اس کے بعد والا اسم ہمیشہ مجرور ہوتا ہے۔ یہ قاعدہ یاد رکھیں — یہ سب حروف جر پر لاگو ہوتا ہے!"
+      "en": "You choose a preposition from the sentence. Next: prepositions that join the next word.",
+      "ur": "آپ جملے سے حرفِ جر چنتے ہیں۔ آگے: وہ حروفِ جر جو اگلے لفظ سے جڑتے ہیں۔"
     }
   }
 }

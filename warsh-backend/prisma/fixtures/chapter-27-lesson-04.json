@@ -2,29 +2,28 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 27, Lesson 4 - Prepositions عَنْ (about/from) and كَ (like/as).",
+    "_note": "Chapter 27, Lesson 4 (ch27-l04) — starts from the known لَهُ (Chapter 5) and فِيهِ (Chapter 11) and extends to بِهِ، مِنْهُ، إِلَيْهِ، عَلَيْهِ، عَنْهُ: إِلَى / عَلَى become إِلَيْـ / عَلَيْـ, and ـهُ is heard ـهِ after i or y. The suffix after a preposition is what the preposition points to, not an owner. Referent tracking in a two-sentence text. Quran: Al-Baqarah 2:2 (فِيهِ, لِلْمُتَّقِينَ) and the bounded Al-Ma'idah 5:11 excerpt (عَنْكُمْ). Rebuilt 2026-10-02 in the proposal harvest (Docs/proposals/proposal-harvest-tracker.md) from Docs/proposals/chapter-27-content-proposal.md and its review amendments: eight common prepositions in context — فِي، عَلَى، مِنْ، إِلَى retrieved from Chapters 2/21 with a local model of the genitive after a preposition; joined بِـ / لِـ with the real spelling (لِـ + الـ → لِلْـ, لِلَّهِ; بِالْقَلَمِ keeps the alif); عَنْ and joined كَـ; prepositions with attached pronouns. Every hook now contains its lesson's preposition (Al-Kawthar and Al-Kafirun removed; the false hidden لِـ in رَبِّ removed; 'every preposition merges with الـ' removed). Not built: the proposal's separate Quran-reading lesson — its 5:11 excerpt sits in Lesson 4 — so ch27-l05 stays the review.",
+    "title": "A Pronoun After a Preposition",
+    "titleAr": "لَهُ، مِنْهُ، إِلَيْهِ",
+    "titleUr": "حرفِ جر کے بعد ضمیر",
     "chapter_order": 27,
     "lesson_order": 4,
-    "chapter_title": "Prepositions and Everyday Expressions",
-    "title": "About and Like",
-    "titleAr": "عَنْ وَ كَ",
-    "source": "madinah_reader_book3_lesson4_prepositions",
-    "estimated_minutes": 8,
+    "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 109,
-      "ayah": 1,
-      "label": "Al-Kafirun 109:1",
-      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
-      "en": "Say, O disbelievers.",
-      "ur": "کہہ دیجیے، اے کافرو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
+      "surah": 2,
+      "ayah": 2,
+      "label": "Al-Baqarah 2:2",
+      "ar": "ذَلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ هُدًى لِلْمُتَّقِينَ",
+      "en": "That is the Book: there is no doubt in it, a guidance for those mindful of Allah.",
+      "ur": "یہ وہ کتاب ہے جس میں کوئی شک نہیں، پرہیزگاروں کے لیے ہدایت ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002002.mp3"
     },
     "noor_intro": {
-      "en": "In Al-Kafirun, the ayah addresses disbelievers directly. The word يَا أَيُّهَا calls out 'O' to them. Today we learn two final prepositions: عَنْ (about/from) and كَ (like/as). These are used in many Quranic expressions!",
-      "ur": "الکافرون میں آیت کافروں کو براہ راست مخاطب کرتی ہے۔ یَا أَيُّهَا انہیں 'اے' کہہ کر پکارتی ہے۔ آج ہم سیکھتے ہیں دو حروف جر: عَنْ (کے بارے میں/سے) اور كَ (جیسا/کی طرح)۔ یہ بہت سی قرآنی تعبیروں میں آتے ہیں!"
+      "en": "لَا رَيْبَ فِيهِ: no doubt in it. Who or what is 'it'?",
+      "ur": "لَا رَيْبَ فِيهِ: اس میں کوئی شک نہیں۔ 'اس' سے مراد کون یا کیا ہے؟"
     },
     "autoplay": true
   },
@@ -32,79 +31,94 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Preposition عَنْ (about/from)",
-        "ar": "حرف الجر عَنْ (عن)",
-        "ur": "حرف جر عَنْ (کے بارے میں/سے)"
+        "en": "You already know two",
+        "ar": "لَهُ · فِيهِ",
+        "ur": "دو آپ پہلے سے جانتے ہیں"
       },
       "explanation": {
-        "en": "عَنْ means 'about,' 'concerning,' or 'from.' It is used when talking about a topic (about) or moving away from something (from). Like all prepositions, it puts the following noun in the genitive case (مجرور).",
-        "ur": "عَنْ کا مطلب ہے 'کے بارے میں' یا 'سے'۔ یہ کسی موضوع کے بارے میں بات کرنے (about) یا کسی چیز سے دور ہونے (from) کے لیے استعمال ہوتا ہے۔ تمام حروف جر کی طرح، یہ بھی اپنے بعد والے اسم کو مجرور بناتا ہے۔"
+        "en": "لَهُ, for him / he has (Chapter 5), and فِيهِ, in it (Chapter 11), are a preposition with ـهُ on it.",
+        "ur": "لَهُ، اس کے لیے / اس کے پاس (باب 5)، اور فِيهِ، اس میں (باب 11)، ایک حرفِ جر ہیں جن پر ـهُ لگا ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "عَنِ الْكِتَابِ",
-        "ar_plain": "عن الكتاب",
-        "translit": "ani al-kitaabi",
-        "en": "about the book",
-        "ur": "کتاب کے بارے میں"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "ـهُ on a noun or after a preposition",
+        "ar": "كِتَابُهُ / مِنْهُ",
+        "ur": "ـهُ اسم پر یا حرفِ جر کے بعد"
       },
       "explanation": {
-        "en": "عَنِ الْكِتَابِ — we are talking about the book. The topic of discussion is the book.",
-        "ur": "عَنِ الْكِتَابِ — ہم کتاب کے بارے میں بات کر رہے ہیں۔ بحث کا موضوع کتاب ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "عَنِ الدَّرْسِ",
-        "ar_plain": "عن الدرس",
-        "translit": "ani ad-darsi",
-        "en": "about the lesson",
-        "ur": " سبق کے بارے میں"
+        "en": "On a noun, ـهُ is the owner: كِتَابُهُ, his book. After a preposition, ـهُ is what the preposition points to: مِنْهُ, from him.",
+        "ur": "اسم پر ـهُ مالک ہوتا ہے: كِتَابُهُ، اس کی کتاب۔ حرفِ جر کے بعد ـهُ وہ ہے جس کی طرف حرفِ جر اشارہ کرتا ہے: مِنْهُ، اس سے۔"
       },
-      "explanation": {
-        "en": "عَنِ الدَّرْسِ — talking about or concerning the lesson. عَنْ introduces the subject being discussed.",
-        "ur": "عَنِ الدَّرْسِ — سبق کے بارے میں بات کر رہے ہیں۔ عَنْ بحث کے موضوع کو متعارف کراتا ہے۔"
-      }
+      "examples": [
+        {
+          "ar": "كِتَابُهُ",
+          "ar_plain": "كتابه",
+          "translit": "kitābuhu",
+          "en": "his book",
+          "ur": "اس کی کتاب"
+        },
+        {
+          "ar": "مِنْهُ",
+          "ar_plain": "منه",
+          "translit": "minhu",
+          "en": "from him",
+          "ur": "اس سے"
+        }
+      ]
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Preposition كَ (like/as)",
-        "ar": "حرف الجر كَ (ك)",
-        "ur": "حرف جر كَ (جیسا/کی طرح)"
+        "en": "Five more forms",
+        "ar": "بِهِ · مِنْهُ · إِلَيْهِ · عَلَيْهِ · عَنْهُ",
+        "ur": "پانچ اور صورتیں"
       },
       "explanation": {
-        "en": "كَ means 'like,' 'as,' or 'similar to.' It compares one thing to another. Like all prepositions, it puts the following noun in the genitive case (مجرور). كَ is one of the most frequent words in the Quran.",
-        "ur": "كَ کا مطلب ہے 'جیسا'، 'کی طرح'۔ یہ ایک چیز کو دوسری سے موازنہ کرتا ہے۔ تمام حروف جر کی طرح، یہ بھی اپنے بعد والے اسم کو مجرور بناتا ہے۔ كَ قرآن میں سب سے زیادہ آنے والے الفاظ میں سے ایک ہے۔"
+        "en": "بِهِ with it, مِنْهُ from him, إِلَيْهِ to him, عَلَيْهِ on him, عَنْهُ about him. إِلَى and عَلَى change to إِلَيْـ and عَلَيْـ, and after i or y the ـهُ is said ـهِ.",
+        "ur": "بِهِ اس سے، مِنْهُ اس سے، إِلَيْهِ اس کی طرف، عَلَيْهِ اس پر، عَنْهُ اس کے بارے میں۔ إِلَى اور عَلَى بدل کر إِلَيْـ اور عَلَيْـ بن جاتے ہیں، اور زیر یا ی کے بعد ـهُ کو ـهِ پڑھا جاتا ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "كَالْأَسَدِ",
-        "ar_plain": "كالأسد",
-        "translit": "ka-l-asadi",
-        "en": "like the lion",
-        "ur": "شیر کی طرح"
+        "ar": "هَذَا الْأُسْتَاذُ، وَذَهَبَ الطَّالِبُ إِلَيْهِ",
+        "ar_plain": "هذا الأستاذ، وذهب الطالب إليه",
+        "translit": "hādhā l-ustādhu, wa-dhahaba ṭ-ṭālibu ilayhi",
+        "en": "This is the teacher, and the student went to him.",
+        "ur": "یہ استاد ہیں، اور طالب علم ان کے پاس گیا۔"
       },
       "explanation": {
-        "en": "كَ + الْأَسَدِ = كَالْأَسَدِ. The alif-lam of الْأَسَدِ merges with كَ, just like we saw with بِ and لِ. Someone is being compared to a lion — brave and strong.",
-        "ur": "كَ + الْأَسَدِ = كَالْأَسَدِ۔ الْأَسَدِ کا الف لام كَ کے ساتھ مل گیا، بالکل جیسے ہم نے بِ اور لِ کے ساتھ دیکھا۔ کسی کا موازنہ شیر سے ہو رہا ہے — بہادر اور مضبوط۔"
+        "en": "إِلَيْهِ, to him: 'him' is the teacher named just before.",
+        "ur": "إِلَيْهِ، اس کی طرف: 'اس' سے مراد وہی استاد ہیں جن کا ذکر ابھی ہوا۔"
       }
     },
     {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "عَنْ and كَ also follow the same merging rule",
-        "ur": "عَنْ اور كَ بھی اسی ملنے کے قاعدے کی پیروی کرتے ہیں"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Baqarah 2:2: That is the Book: there is no doubt in it, a guidance for those mindful of Allah.",
+        "ar": "ذَلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ هُدًى لِلْمُتَّقِينَ",
+        "ur": "البقرہ 2:2: یہ وہ کتاب ہے جس میں کوئی شک نہیں، پرہیزگاروں کے لیے ہدایت ہے۔"
       },
-      "body": {
-        "en": "كَ + الْ = كَالْ (like the). عَنْ also takes مجرور. Remember all eight prepositions: فِي إِلَى مِنْ عَلَى بِ لِ عَنْ كَ — all put the noun after them in genitive case.",
-        "ur": "كَ + الْ = كَالْ (جیسا/کی طرح)۔ عَنْ بھی مجرور لیتا ہے۔ آٹھوں حروف جر یاد رکھیں: فِي إِلَى مِنْ عَلَى بِ لِ عَنْ كَ — سب اپنے بعد والے اسم کو مجرور بناتے ہیں۔"
-      }
+      "explanation": {
+        "en": "فِيهِ = فِي + ـهِ: in it — 'it' is الْكِتَابُ. And لِلْمُتَّقِينَ = لِـ + الْمُتَّقِينَ, written without the alif, as in Lesson 2.",
+        "ur": "فِيهِ = فِي + ـهِ: اس میں — 'اس' سے مراد الْكِتَابُ ہے۔ اور لِلْمُتَّقِينَ = لِـ + الْمُتَّقِينَ، الف کے بغیر، جیسا سبق 2 میں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002002.mp3"
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Ma'idah 5:11 (excerpt): but He held back their hands from you.",
+        "ar": "فَكَفَّ أَيْدِيَهُمْ عَنْكُمْ",
+        "ur": "المائدہ 5:11 (اقتباس): تو اس نے ان کے ہاتھ تم سے روک دیے۔"
+      },
+      "explanation": {
+        "en": "عَنْكُمْ = عَنْ + كُمْ: from you (a group). The ayah speaks to the believers about people who meant to harm them.",
+        "ur": "عَنْكُمْ = عَنْ + كُمْ: تم سے (جماعت)۔ آیت مومنوں سے ان لوگوں کے بارے میں بات کرتی ہے جو انہیں نقصان پہنچانا چاہتے تھے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/005011.mp3"
     }
   ],
   "exercises": [
@@ -112,151 +126,86 @@
       "type": "TAP_TRANSLATION",
       "id": "ch27-l04-ex01",
       "prompt": {
-        "ar": "عَنِ الْكِتَابِ",
-        "ar_plain": "عن الكتاب",
-        "translit": "ani al-kitaabi",
-        "en": "about the book",
-        "ur": "کتاب کے بارے میں"
+        "ar": "ذَهَبَ الطَّالِبُ إِلَيْهِ",
+        "ar_plain": "ذهب الطالب إليه",
+        "translit": "dhahaba ṭ-ṭālibu ilayhi",
+        "en": "The student went to him.",
+        "ur": "طالب علم اس کے پاس گیا۔"
       },
       "options": [
         {
-          "en": "about the book",
-          "ur": "کتاب کے بارے میں"
+          "en": "The student went to him.",
+          "ur": "طالب علم اس کے پاس گیا۔"
         },
         {
-          "en": "from the book",
-          "ur": "کتاب سے"
+          "en": "The student went out of it.",
+          "ur": "طالب علم اس سے نکلا۔"
         },
         {
-          "en": "with the book",
-          "ur": "کتاب سے"
+          "en": "His student went.",
+          "ur": "اس کا طالب علم گیا۔"
         },
         {
-          "en": "for the book",
-          "ur": "کتاب کے لیے"
+          "en": "The student asked about him.",
+          "ur": "طالب علم نے اس کے بارے میں پوچھا۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "عَنْ means 'about' when talking about a topic — we are discussing the book.",
-        "ur": "عَنْ کا مطلب 'کے بارے میں' ہے جب کسی موضوع کے بارے میں بات ہو — ہم کتاب پر بحث کر رہے ہیں۔"
+        "en": "إِلَيْهِ = إِلَى + ـهِ: to him.",
+        "ur": "إِلَيْهِ = إِلَى + ـهِ: اس کی طرف۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch27-l04-ex02",
-      "statement": {
-        "en": "كَالْأَسَدِ means 'like the lion' — it compares something to a lion.",
-        "ur": "كَالْأَسَدِ کا مطلب ہے 'شیر کی طرح' — یہ کسی کا موازنہ شیر سے کرتا ہے۔",
-        "ar_example": {
-          "ar": "كَالْأَسَدِ",
-          "ar_plain": "كالأسد",
-          "translit": "ka-l-asadi",
-          "en": "like the lion",
-          "ur": "شیر کی طرح"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch27-l04-ex03",
-      "mode": "TAP",
-      "sentence_ar": "هُوَ شَجِيعٌ ___ الْأَسَدِ",
-      "hint": {
-        "en": "He is brave like the lion.",
-        "ur": "وہ شیر کی طرح بہادر ہے۔"
-      },
-      "options": [
-        {
-          "ar": "كَ",
-          "ar_plain": "ك",
-          "translit": "ka",
-          "en": "like/as",
-          "ur": "جیسا/کی طرح"
-        },
-        {
-          "ar": "عَنْ",
-          "ar_plain": "عن",
-          "translit": "an",
-          "en": "about/from",
-          "ur": "کے بارے میں/سے"
-        },
-        {
-          "ar": "بِ",
-          "ar_plain": "ب",
-          "translit": "bi",
-          "en": "with/by",
-          "ur": "ساتھ/ذریعے"
-        },
-        {
-          "ar": "لِ",
-          "ar_plain": "ل",
-          "translit": "li",
-          "en": "for/to",
-          "ur": "کے لیے"
-        }
-      ],
-      "correct_answer": {
-        "ar": "كَ",
-        "ar_plain": "ك",
-        "translit": "ka",
-        "en": "like/as",
-        "ur": "جیسا/کی طرح"
-      },
-      "xp_value": 1
-    },
-    {
       "type": "MATCHING",
-      "id": "ch27-l04-ex04",
+      "id": "ch27-l04-ex02",
       "left_column": [
         {
-          "ar": "عَنِ الْكِتَابِ",
-          "ar_plain": "عن الكتاب",
-          "translit": "ani al-kitaabi",
-          "en": "about the book",
-          "ur": "کتاب کے بارے میں"
+          "ar": "مِنْهُ",
+          "ar_plain": "منه",
+          "translit": "minhu",
+          "en": "from him",
+          "ur": "اس سے"
         },
         {
-          "ar": "عَنِ الْإِسْلَامِ",
-          "ar_plain": "عن الإسلام",
-          "translit": "ani al-islaami",
-          "en": "about Islam",
-          "ur": "اسلام کے بارے میں"
+          "ar": "عَلَيْهِ",
+          "ar_plain": "عليه",
+          "translit": "ʿalayhi",
+          "en": "on him / on it",
+          "ur": "اس پر"
         },
         {
-          "ar": "كَالْأَسَدِ",
-          "ar_plain": "كالأسد",
-          "translit": "ka-l-asadi",
-          "en": "like the lion",
-          "ur": "شیر کی طرح"
+          "ar": "عَنْهُ",
+          "ar_plain": "عنه",
+          "translit": "ʿanhu",
+          "en": "about him",
+          "ur": "اس کے بارے میں"
         },
         {
-          "ar": "كَالنَّجْمِ",
-          "ar_plain": "كالنجم",
-          "translit": "ka-n-najmi",
-          "en": "like the star",
-          "ur": "ستارے کی طرح"
+          "ar": "لَهُ",
+          "ar_plain": "له",
+          "translit": "lahu",
+          "en": "for him",
+          "ur": "اس کے لیے"
         }
       ],
       "right_column": [
         {
-          "en": "about the book",
-          "ur": "کتاب کے بارے میں"
+          "en": "from him",
+          "ur": "اس سے"
         },
         {
-          "en": "about Islam",
-          "ur": "اسلام کے بارے میں"
+          "en": "on it",
+          "ur": "اس پر"
         },
         {
-          "en": "like the lion",
-          "ur": "شیر کی طرح"
+          "en": "about him",
+          "ur": "اس کے بارے میں"
         },
         {
-          "en": "like the star",
-          "ur": "ستارے کی طرح"
+          "en": "for him",
+          "ur": "اس کے لیے"
         }
       ],
       "correct_pairs": [
@@ -277,150 +226,255 @@
           3
         ]
       ],
-      "xp_value": 1
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "Read the preposition first, then the pronoun.",
+        "ur": "پہلے حرفِ جر پڑھیں، پھر ضمیر۔"
+      }
     },
     {
-      "type": "BUILD_SENTENCE",
-      "id": "ch27-l04-ex05",
-      "target_translation": {
-        "en": "We are talking about the lesson.",
-        "ur": "ہم سبق کے بارے میں بات کر رہے ہیں۔"
-      },
-      "tiles": [
-        {
-          "ar": "نَحْنُ",
-          "ar_plain": "نحن",
-          "translit": "nahnu",
-          "en": "we",
-          "ur": "ہم"
-        },
-        {
-          "ar": "نَتَكَلَّمُ",
-          "ar_plain": "نتكلم",
-          "translit": "natakallamu",
-          "en": "are talking",
-          "ur": "بات کر رہے ہیں"
-        },
-        {
-          "ar": "عَنِ",
-          "ar_plain": "عن",
-          "translit": "ani",
-          "en": "about",
-          "ur": "کے بارے میں"
-        },
-        {
-          "ar": "الدَّرْسِ",
-          "ar_plain": "الدرس",
-          "translit": "ad-darsi",
-          "en": "the lesson",
-          "ur": "سبق"
-        },
-        {
-          "ar": "فِي",
-          "ar_plain": "في",
-          "translit": "fii",
-          "en": "in",
-          "ur": "میں"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch27-l04-ex06",
-      "statement": {
-        "en": "All eight prepositions — فِي إِلَى مِنْ عَلَى بِ لِ عَنْ كَ — put the noun after them in the genitive case (مجرور).",
-        "ur": "آٹھوں حروف جر — فِي إِلَى مِنْ عَلَى بِ لِ عَنْ كَ — اپنے بعد والے اسم کو مجرور بناتے ہیں۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch27-l04-ex07",
-      "prompt": {
-        "ar": "عَنِ الْإِسْلَامِ",
-        "ar_plain": "عن الإسلام",
-        "translit": "ani al-islaami",
-        "en": "about Islam",
-        "ur": "اسلام کے بارے میں"
+      "type": "FILL_BLANK",
+      "id": "ch27-l04-ex03",
+      "mode": "TAP",
+      "sentence_ar": "هَذَا بَيْتٌ، وَالْإِمَامُ ___",
+      "hint": {
+        "en": "The imam is in it (in the house).",
+        "ur": "امام اس میں ہے (گھر میں)۔"
       },
       "options": [
         {
-          "en": "about Islam",
-          "ur": "اسلام کے بارے میں"
+          "ar": "مِنْهُ",
+          "ar_plain": "منه",
+          "translit": "minhu",
+          "en": "from it",
+          "ur": "اس سے"
         },
         {
-          "en": "from Islam",
-          "ur": "اسلام سے"
+          "ar": "لَهُ",
+          "ar_plain": "له",
+          "translit": "lahu",
+          "en": "for it",
+          "ur": "اس کے لیے"
         },
         {
-          "en": "like Islam",
-          "ur": "اسلام کی طرح"
+          "ar": "عَلَيْهِ",
+          "ar_plain": "عليه",
+          "translit": "ʿalayhi",
+          "en": "on it",
+          "ur": "اس پر"
         },
         {
-          "en": "for Islam",
-          "ur": "اسلام کے لیے"
+          "ar": "فِيهِ",
+          "ar_plain": "فيه",
+          "translit": "fīhi",
+          "en": "in it",
+          "ur": "اس میں"
+        }
+      ],
+      "correct_answer": {
+        "ar": "فِيهِ",
+        "ar_plain": "فيه",
+        "translit": "fīhi",
+        "en": "in it",
+        "ur": "اس میں"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "In it = فِي + ـهِ = فِيهِ.",
+        "ur": "اس میں = فِي + ـهِ = فِيهِ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch27-l04-ex04",
+      "statement": {
+        "en": "In كِتَابُهُ and مِنْهُ, the ـهُ does the same job.",
+        "ur": "كِتَابُهُ اور مِنْهُ میں ـهُ ایک ہی کام کرتا ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "On a noun, ـهُ is the owner (his book). After a preposition, it is what the preposition points to (from him).",
+        "ur": "اسم پر ـهُ مالک ہے (اس کی کتاب)۔ حرفِ جر کے بعد یہ وہ ہے جس کی طرف حرفِ جر اشارہ کرتا ہے (اس سے)۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch27-l04-ex05",
+      "ayah_fragment": {
+        "ar": "ذَلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ",
+        "surah_ref": "Al-Baqarah 2:2"
+      },
+      "options": [
+        {
+          "en": "In فِيهِ, 'it' is the Book.",
+          "ur": "فِيهِ میں 'اس' سے مراد کتاب ہے۔"
+        },
+        {
+          "en": "In فِيهِ, 'it' is the doubt.",
+          "ur": "فِيهِ میں 'اس' سے مراد شک ہے۔"
+        },
+        {
+          "en": "فِيهِ means his book.",
+          "ur": "فِيهِ کا مطلب ہے اس کی کتاب۔"
+        },
+        {
+          "en": "فِيهِ means from it.",
+          "ur": "فِيهِ کا مطلب ہے اس سے۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "عَنْ here introduces the topic of discussion — we are talking about Islam.",
-        "ur": "عَنْ یہاں بحث کا موضوع متعارف کراتا ہے — ہم اسلام کے بارے میں بات کر رہے ہیں۔"
+        "en": "فِيهِ: in it — no doubt in the Book.",
+        "ur": "فِيهِ: اس میں — کتاب میں کوئی شک نہیں۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch27-l04-ex08",
-      "statement": {
-        "en": "like the house",
-        "ar_example": {
-          "ar": "كَالْبَيْتِ",
-          "en": "like the house",
-          "ar_plain": "كالبيت",
-          "translit": "—",
-          "ur": "گھر کی طرح"
-        },
-        "ur": "گھر کی طرح"
+      "type": "MATCH_AYAH",
+      "id": "ch27-l04-ex06",
+      "ayah_fragment": {
+        "ar": "فَكَفَّ أَيْدِيَهُمْ عَنْكُمْ",
+        "surah_ref": "Al-Ma'idah 5:11"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "options": [
+        {
+          "en": "عَنْكُمْ: to you",
+          "ur": "عَنْكُمْ: تمہاری طرف"
+        },
+        {
+          "en": "عَنْكُمْ: your hands",
+          "ur": "عَنْكُمْ: تمہارے ہاتھ"
+        },
+        {
+          "en": "عَنْكُمْ: from you",
+          "ur": "عَنْكُمْ: تم سے"
+        },
+        {
+          "en": "عَنْكُمْ: like you",
+          "ur": "عَنْكُمْ: تمہاری طرح"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "عَنْ + كُمْ: from you — He held their hands back from you.",
+        "ur": "عَنْ + كُمْ: تم سے — اس نے ان کے ہاتھ تم سے روک دیے۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch27-l04-ex07",
+      "prompt_line": {
+        "ar": "هَلْ هَذَا الْقَلَمُ لَكَ؟",
+        "ar_plain": "هل هذا القلم لك؟",
+        "translit": "hal hādhā l-qalamu laka?",
+        "en": "Is this pen yours?",
+        "ur": "کیا یہ قلم تمہارا ہے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "نَعَمْ، هُوَ لِي",
+          "ar_plain": "نعم، هو لي",
+          "translit": "naʿam, huwa lī",
+          "en": "Yes, it is mine.",
+          "ur": "جی ہاں، یہ میرا ہے۔"
+        },
+        {
+          "ar": "نَعَمْ، هُوَ فِيهِ",
+          "ar_plain": "نعم، هو فيه",
+          "translit": "naʿam, huwa fīhi",
+          "en": "Yes, it is in it.",
+          "ur": "جی ہاں، یہ اس میں ہے۔"
+        },
+        {
+          "ar": "الْقَلَمُ كَالْأَسَدِ",
+          "ar_plain": "القلم كالأسد",
+          "translit": "al-qalamu ka-l-asadi",
+          "en": "The pen is like a lion.",
+          "ur": "قلم شیر کی طرح ہے۔"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "لَكَ asks 'for you / yours'; the answer uses لِي, mine.",
+        "ur": "لَكَ کا مطلب 'تمہارا' ہے؛ جواب لِي، میرا، سے ہوتا ہے۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch27-l04-ex08",
+      "target_translation": {
+        "en": "The student asked about him.",
+        "ur": "طالب علم نے اس کے بارے میں پوچھا۔"
+      },
+      "tiles": [
+        {
+          "ar": "عَنْهُ",
+          "ar_plain": "عنه",
+          "translit": "ʿanhu",
+          "en": "about him",
+          "ur": "اس کے بارے میں"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibu",
+          "en": "the student",
+          "ur": "طالب علم"
+        },
+        {
+          "ar": "سَأَلَ",
+          "ar_plain": "سأل",
+          "translit": "saʾala",
+          "en": "asked",
+          "ur": "پوچھا"
+        }
+      ],
+      "correct_order": [
+        2,
+        1,
+        0
+      ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "سَأَلَ الطَّالِبُ عَنْهُ.",
+        "ur": "سَأَلَ الطَّالِبُ عَنْهُ۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "عَنْ (about/from) and كَ (like/as)",
-      "ar": "حرفا الجر: عَنْ وَ كَ",
-      "ur": "عَنْ (کے بارے میں) اور كَ (جیسا)"
+      "en": "A pronoun after a preposition",
+      "ar": "الضَّمِيرُ بَعْدَ حَرْفِ الْجَرِّ",
+      "ur": "حرفِ جر کے بعد ضمیر"
     },
     "ayah": {
-      "surah": 109,
-      "ayah": 1,
-      "label": "Al-Kafirun 109:1",
-      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
-      "en": "Say, O disbelievers.",
-      "ur": "کہہ دیجیے، اے کافرو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
+      "surah": 2,
+      "ayah": 2,
+      "label": "Al-Baqarah 2:2",
+      "ar": "ذَلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ هُدًى لِلْمُتَّقِينَ",
+      "en": "That is the Book: there is no doubt in it, a guidance for those mindful of Allah.",
+      "ur": "یہ وہ کتاب ہے جس میں کوئی شک نہیں، پرہیزگاروں کے لیے ہدایت ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002002.mp3"
     },
     "highlighted_word_indices": [
-      3
+      4
+    ],
+    "highlighted_words": [
+      "فِيهِ"
     ],
     "noor_explanation": {
-      "en": "الْكَافِرُونَ is the direct address — the noun being spoken to. يَا أَيُّهَا is the calling particle 'O.' The word الْكَافِرُونَ is plural (plural of كَافِر), which we learned in our describing plurals chapter. Notice how the preposition كَ could be used to say something like 'like the disbelievers' — but we choose to be like the believers instead!",
-      "ur": "الْكَافِرُونَ براہ راست مخاطب ہے — جس سے بات ہو رہی ہے۔ يَا أَيُّهَا پکارنے کا حرف ہے 'اے'۔ الْكَافِرُونَ جمع ہے (کَافِر کی جمع)۔ دیکھیں حرف جر كَ کس طرح 'کافروں کی طرح' کہنے کے لیے استعمال ہو سکتا ہے — لیکن ہم مومنین کی طرح ہونے کا انتخاب کرتے ہیں!"
+      "en": "فِيهِ: in it — the 'it' is the Book. A pronoun after a preposition points back to something already named.",
+      "ur": "فِيهِ: اس میں — 'اس' سے مراد کتاب ہے۔ حرفِ جر کے بعد ضمیر پہلے ذکر کی گئی چیز کی طرف لوٹتی ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Eight prepositions complete! فِي إِلَى مِنْ عَلَى بِ لِ عَنْ كَ — every one of them puts the noun in genitive (مجرور). And when they meet ال, they merge! Use these well, and your Quranic Arabic will flourish.",
-      "ur": "آٹھ حروف جر مکمل! فِي إِلَى مِنْ عَلَى بِ لِ عَنْ كَ — ہر ایک اپنے بعد والے اسم کو مجرور بناتا ہے۔ اور جب ال سے ملتے ہیں تو مِل جاتے ہیں! انہیں اچھی طرح استعمال کریں، اور آپ کی قرآنی عربی پروان چڑھے گی۔"
+      "en": "You can follow a pronoun after a preposition. Next: the Chapter 27 review.",
+      "ur": "آپ حرفِ جر کے بعد ضمیر سمجھ سکتے ہیں۔ آگے: باب 27 کی دہرائی۔"
     }
   }
 }

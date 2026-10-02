@@ -2,28 +2,28 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 30, Lesson 3 (ch30-l03) — a six-turn dialogue built on Chapter 22: stable speakers, a question, an answer, a clarification (عَفْوًا، أَيْنَ؟ — asking again) and a follow-up whose pronouns (مِنْهُ، فِيهِ) point back to الْمَسْجِدِ. قَالَ / سَأَلَ / أَجَابَ are retrieval; أَجَابَ's root is ج-و-ب. A comprehension text, not a Conversation Lab (review amendment 3). Rebuilt 2026-10-02 in the proposal harvest (Docs/proposals/proposal-harvest-tracker.md) from Docs/proposals/chapter-30-content-proposal.md and its review amendments: reading across sentences (pronoun back to its noun, وَ / فَ in context), following a short story, following a dialogue with a clarification, relative مَا ('what') with the whole clause as the thing not worshipped, and the one complete reading of Al-Kafirun 109:1–6. Removed: أَجَابَ under root ء-ج-ب (it is ج-و-ب), 'both words are definite' for الْكِتَابُ جَدِيدٌ, the إِنَّ-sentence called verbal, لَكُمْ / لِي called possessives, and the 'complete surah' lesson that skipped 109:3. The proposal's separate unseen-text lesson (l06) was not built; its job is in the review.",
+    "title": "Following a Dialogue",
+    "titleAr": "تَتَبُّعُ الْحِوَارِ",
+    "titleUr": "مکالمے کی پیروی",
     "chapter_order": 30,
     "lesson_order": 3,
-    "chapter_title": "Reading Comprehension and Dialogue",
-    "title": "Integrated Reading Passage",
-    "titleAr": "النَّصُّ الْمَقْرُوءُ الْمُتَكَامِلُ",
-    "source": "book3_lesson7_reading_comprehension.md",
     "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
       "surah": 109,
-      "ayah": 5,
-      "label": "Al-Kafirun 109:5",
-      "ar": "وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ",
-      "en": "Nor will you be worshippers of what I worship.",
-      "ur": "اور نہ تم اس کی بندگی کرنے والے (معلوم ہوتے) ہو جس کی میں بندگی کرتا ہوں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109005.mp3"
+      "ayah": 1,
+      "label": "Al-Kafirun 109:1",
+      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
+      "en": "Say, O disbelievers,",
+      "ur": "کہہ دیجیے: اے کافرو!",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
     },
     "noor_intro": {
-      "en": "Let's read a full passage that uses nominal sentences, verbal sentences, and إِنَّ all together. This is what real Arabic looks like.",
-      "ur": "آئیے ایک مکمل passage پڑھیں جو nominal sentences، verbal sentences، اور إِنَّ سب اکٹھے استعمال کرتی ہے۔ یہ اصل عربی ہے۔"
+      "en": "يَا أَيُّهَا: someone is being spoken to. Today you follow who says what in a conversation.",
+      "ur": "يَا أَيُّهَا: کسی سے بات کی جا رہی ہے۔ آج آپ ایک گفتگو میں دیکھیں گے کہ کون کیا کہتا ہے۔"
     },
     "autoplay": true
   },
@@ -31,235 +31,236 @@
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "جَاءَ الطَّالِبُ إِلَى الْمَدْرَسَةِ وَالْكِتَابُ جَدِيدٌ",
-        "ar_plain": "جاء الطالب إلى المدرسة والكتاب جديد",
-        "translit": "jaa'a at-taalibu ilaa al-madrasati wal-kitaabu jadiidun",
-        "en": "The student came to the school and the book is new.",
-        "ur": "طالب علم school میں آیا اور کتاب نئی ہے۔"
+        "ar": "أَحْمَدُ: أَيْنَ الْأُسْتَاذُ؟",
+        "ar_plain": "أحمد: أين الأستاذ؟",
+        "translit": "aḥmadu: ayna l-ustādhu?",
+        "en": "Ahmad: Where is the teacher?",
+        "ur": "احمد: استاد کہاں ہیں؟"
       },
       "explanation": {
-        "en": "Two sentences joined by وَ. First: verbal (جَاءَ). Second: nominal (الْكِتَابُ جَدِيدٌ).",
-        "ur": "وَ سے جُڑے دو sentences۔ پہلا: verbal (جَاءَ)۔ دوسرا: nominal (الْكِتَابُ جَدِيدٌ)۔"
+        "en": "Ahmad asks a question.",
+        "ur": "احمد ایک سوال کرتا ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "إِنَّ الْمُسْلِمَ يَعْبُدُ اللَّهَ وَإِنَّهُ مُؤْمِنٌ",
-        "ar_plain": "إن المسلم يعبد الله وإنه مؤمن",
-        "translit": "inna al-muslima ya'budullaaa wal-innahu mu'minun",
-        "en": "Truly, the Muslim worships Allah and truly he is a believer.",
-        "ur": "بے شک، مسلمان اللہ کی عبادت کرتا ہے اور بے شک وہ مومن ہے۔"
+        "ar": "زَيْنَبُ: هُوَ فِي الْمَسْجِدِ.",
+        "ar_plain": "زينب: هو في المسجد.",
+        "translit": "zaynabu: huwa fī l-masjidi.",
+        "en": "Zaynab: He is in the mosque.",
+        "ur": "زینب: وہ مسجد میں ہیں۔"
       },
       "explanation": {
-        "en": "Two إِنَّ sentences connected by وَ. First: verbal inside إِنَّ. Second: nominal inside إِنَّ.",
-        "ur": "وَ سے جُڑے دو إِنَّ sentences۔ پہلا: إِنَّ کے اندر verbal۔ دوسرا: إِنَّ کے اندر nominal۔"
+        "en": "Zaynab answers. هُوَ is the teacher.",
+        "ur": "زینب جواب دیتی ہے۔ هُوَ سے مراد استاد ہیں۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "جَاءَ",
-        "ar_plain": "جاء",
-        "translit": "jaa'a",
-        "en": "he came",
-        "ur": "وہ آیا"
+        "ar": "أَحْمَدُ: عَفْوًا، أَيْنَ؟",
+        "ar_plain": "أحمد: عفوا، أين؟",
+        "translit": "aḥmadu: ʿafwan, ayna?",
+        "en": "Ahmad: Sorry, where?",
+        "ur": "احمد: معاف کیجیے، کہاں؟"
       },
       "explanation": {
-        "en": "Past tense verb from ج-ء-ي. جَاءَ إِلَى = he came to.",
-        "ur": "ج-ء-ي root سے ماضی verb۔ جَاءَ إِلَى = وہ ... میں آیا۔"
+        "en": "Ahmad did not catch it, so he asks again: عَفْوًا, sorry.",
+        "ur": "احمد نے بات نہیں سنی، اس لیے دوبارہ پوچھتا ہے: عَفْوًا، معاف کیجیے۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "وَإِنَّهُ",
-        "ar_plain": "وإنه",
-        "translit": "wa-innahu",
-        "en": "and truly he",
-        "ur": "اور بے شک وہ"
+        "ar": "زَيْنَبُ: فِي الْمَسْجِدِ، قَرِيبٌ مِنَ الْمَدْرَسَةِ.",
+        "ar_plain": "زينب: في المسجد، قريب من المدرسة.",
+        "translit": "zaynabu: fī l-masjidi, qarībun mina l-madrasati.",
+        "en": "Zaynab: In the mosque, near the school.",
+        "ur": "زینب: مسجد میں، اسکول کے قریب۔"
       },
       "explanation": {
-        "en": "وَ + إِنَّ + هُ (attached pronoun = he). Combines two إِنَّ sentences smoothly.",
-        "ur": "وَ + إِنَّ + هُ (attached pronoun = وہ)۔ دو إِنَّ sentences کو smoothly جوڑتا ہے۔"
+        "en": "Zaynab repeats and adds a detail: near the school.",
+        "ur": "زینب دہراتی ہے اور ایک بات بڑھاتی ہے: اسکول کے قریب۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "اللَّهَ",
-        "ar_plain": "الله",
-        "translit": "allaahu",
-        "en": "Allah",
-        "ur": "اللہ"
+        "ar": "أَحْمَدُ: هَلْ خَرَجَ مِنْهُ؟",
+        "ar_plain": "أحمد: هل خرج منه؟",
+        "translit": "aḥmadu: hal kharaja minhu?",
+        "en": "Ahmad: Has he come out of it?",
+        "ur": "احمد: کیا وہ اس سے نکل آئے؟"
       },
       "explanation": {
-        "en": "The proper name of God in Arabic. Always definite (ال). Object of يَعْبُدُ.",
-        "ur": "عربی میں اللہ کا صحیح نام۔ ہمیشہ معرفہ (ال)۔ يَعْبُدُ کا مفعول۔"
+        "en": "مِنْهُ, out of it: the mosque.",
+        "ur": "مِنْهُ، اس سے: مسجد۔"
       }
     },
     {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Reading connected text: look for sentence boundaries",
-        "ur": "مربوط text پڑھنا: sentence boundaries دیکھیں"
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "زَيْنَبُ: لَا، هُوَ فِيهِ الْآنَ.",
+        "ar_plain": "زينب: لا، هو فيه الآن.",
+        "translit": "zaynabu: lā, huwa fīhi l-āna.",
+        "en": "Zaynab: No, he is in it now.",
+        "ur": "زینب: نہیں، وہ ابھی اس میں ہیں۔"
       },
-      "body": {
-        "en": "In Arabic, sentences are often joined with وَ. Each unit after وَ is a complete sentence. Find the verb or the equational predicate to identify sentence type.",
-        "ur": "عربی میں، sentences اکثر وَ سے جُڑے ہوتے ہیں۔ وَ کے بعد ہر unit ایک مکمل sentence ہے۔ Verb یا equational predicate تلاش کریں sentence type پہچاننے کے لیے۔"
+      "explanation": {
+        "en": "فِيهِ, in it: still the mosque.",
+        "ur": "فِيهِ، اس میں: اب بھی مسجد۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Words for talking",
+        "ar": "قَالَ · سَأَلَ · أَجَابَ",
+        "ur": "گفتگو کے الفاظ"
+      },
+      "explanation": {
+        "en": "قَالَ said, سَأَلَ asked, أَجَابَ answered (root ج و ب, as in جَوَابٌ, an answer). So: سَأَلَ أَحْمَدُ، وَأَجَابَتْ زَيْنَبُ.",
+        "ur": "قَالَ کہا، سَأَلَ پوچھا، أَجَابَ جواب دیا (مادہ ج و ب، جیسے جَوَابٌ، جواب)۔ یعنی: سَأَلَ أَحْمَدُ، وَأَجَابَتْ زَيْنَبُ۔"
       }
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
+      "type": "TRUE_FALSE",
       "id": "ch30-l03-ex01",
-      "prompt": {
-        "ar": "إِنَّ الْمُسْلِمَ يَعْبُدُ اللَّهَ وَإِنَّهُ مُؤْمِنٌ",
-        "ar_plain": "إن المسلم يعبد الله وإنه مؤمن",
-        "translit": "inna al-muslima ya'budullaaha wal-innahu mu'minun",
-        "en": "Truly, the Muslim worships Allah and truly he is a believer.",
-        "ur": "بے شک، مسلمان اللہ کی عبادت کرتا ہے اور بے شک وہ مومن ہے۔"
-      },
-      "options": [
-        {
-          "en": "Truly, the Muslim worships Allah and truly he is a believer.",
-          "ur": "بے شک، مسلمان اللہ کی عبادت کرتا ہے اور بے شک وہ مومن ہے۔"
-        },
-        {
-          "en": "The Muslim worships Allah and he is a believer.",
-          "ur": "مسلمان اللہ کی عبادت کرتا ہے اور وہ مومن ہے۔"
-        },
-        {
-          "en": "Truly, the Muslim is worshipping Allah.",
-          "ur": "بے شک، مسلمان اللہ کی عبادت کر رہا ہے۔"
-        },
-        {
-          "en": "The Muslim is a believer and he worships.",
-          "ur": "مسلمان مومن ہے اور وہ عبادت کرتا ہے۔"
+      "statement": {
+        "en": "Zaynab asked where the teacher is.",
+        "ur": "زینب نے پوچھا کہ استاد کہاں ہیں۔",
+        "ar_example": {
+          "ar": "أَحْمَدُ: أَيْنَ الْأُسْتَاذُ؟",
+          "ar_plain": "أحمد: أين الأستاذ؟",
+          "translit": "aḥmadu: ayna l-ustādhu?",
+          "en": "Ahmad: Where is the teacher?",
+          "ur": "احمد: استاد کہاں ہیں؟"
         }
-      ],
-      "correct_index": 0,
+      },
+      "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "This has two إِنَّ sentences joined by وَ. يَعْبُدُ is a present tense verb; مُؤْمِنٌ is the predicate of إِنَّهُ.",
-        "ur": "اس میں وَ سے جُڑے دو إِنَّ sentences ہیں۔ يَعْبُدُ present tense verb ہے؛ مُؤْمِنٌ إِنَّهُ کا predicate ہے۔"
+        "en": "Ahmad asked; Zaynab answered.",
+        "ur": "احمد نے پوچھا؛ زینب نے جواب دیا۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "CONVERSATION_BUILDER",
       "id": "ch30-l03-ex02",
-      "statement": {
-        "en": "In the sentence وَإِنَّهُ مُؤْمِنٌ, the word هُ is a separate pronoun meaning 'he' attached to إِنَّ.",
-        "ur": "جملے وَإِنَّهُ مُؤْمِنٌ میں، word هُ ایک الگ pronoun ہے جس کا مطلب 'وہ' ہے جو إِنَّ سے جُڑا ہوا ہے۔",
-        "ar_example": {
-          "ar": "وَإِنَّهُ مُؤْمِنٌ",
-          "ar_plain": "وإنه مؤمن",
-          "translit": "wa-innahu mu'minun",
-          "en": "and truly he is a believer",
-          "ur": "اور بے شک وہ مومن ہے"
-        }
+      "prompt_line": {
+        "ar": "أَحْمَدُ: أَيْنَ الْأُسْتَاذُ؟",
+        "ar_plain": "أحمد: أين الأستاذ؟",
+        "translit": "aḥmadu: ayna l-ustādhu?",
+        "en": "Ahmad: Where is the teacher?",
+        "ur": "احمد: استاد کہاں ہیں؟"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "هُوَ فِي الْمَسْجِدِ",
+          "ar_plain": "هو في المسجد",
+          "translit": "huwa fī l-masjidi",
+          "en": "He is in the mosque.",
+          "ur": "وہ مسجد میں ہیں۔"
+        },
+        {
+          "ar": "هُوَ أُسْتَاذٌ",
+          "ar_plain": "هو أستاذ",
+          "translit": "huwa ustādhun",
+          "en": "He is a teacher.",
+          "ur": "وہ استاد ہیں۔"
+        },
+        {
+          "ar": "الْمَسْجِدُ كَبِيرٌ",
+          "ar_plain": "المسجد كبير",
+          "translit": "al-masjidu kabīrun",
+          "en": "The mosque is big.",
+          "ur": "مسجد بڑی ہے۔"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "أَيْنَ asks where; the answer is a place.",
+        "ur": "أَيْنَ جگہ پوچھتا ہے؛ جواب ایک جگہ ہے۔"
+      }
     },
     {
-      "type": "FILL_BLANK",
+      "type": "TAP_TRANSLATION",
       "id": "ch30-l03-ex03",
-      "mode": "TAP",
-      "sentence_ar": "جَاءَ الطَّالِبُ إِلَى الْمَدْرَسَةِ وَالْكِتَابُ ___",
-      "hint": {
-        "en": "The student came to the school and the book is new.",
-        "ur": "طالب علم school میں آیا اور کتاب نئی ہے۔"
+      "prompt": {
+        "ar": "أَحْمَدُ: عَفْوًا، أَيْنَ؟",
+        "ar_plain": "أحمد: عفوا، أين؟",
+        "translit": "aḥmadu: ʿafwan, ayna?",
+        "en": "Ahmad: Sorry, where?",
+        "ur": "احمد: معاف کیجیے، کہاں؟"
       },
       "options": [
         {
-          "ar": "جَدِيدٌ",
-          "ar_plain": "جديد",
-          "translit": "jadiidun",
-          "en": "new",
-          "ur": "نئی"
+          "en": "Ahmad says thank you.",
+          "ur": "احمد شکریہ کہتا ہے۔"
         },
         {
-          "ar": "جَدِيدَةٌ",
-          "ar_plain": "جديدة",
-          "translit": "jadiidatan",
-          "en": "new (fem. sg.)",
-          "ur": "نئی (مؤنث واحد)"
+          "en": "Ahmad asks Zaynab to say the place again.",
+          "ur": "احمد زینب سے جگہ دوبارہ بتانے کو کہتا ہے۔"
         },
         {
-          "ar": "جَدِيدُونَ",
-          "ar_plain": "جديدون",
-          "translit": "jadiidoona",
-          "en": "new (pl.)",
-          "ur": "نئے (جمع)"
+          "en": "Ahmad says goodbye.",
+          "ur": "احمد خدا حافظ کہتا ہے۔"
         },
         {
-          "ar": "قَدِيمٌ",
-          "ar_plain": "قديم",
-          "translit": "qadiimun",
-          "en": "old",
-          "ur": "پرانی"
+          "en": "Ahmad answers the question.",
+          "ur": "احمد سوال کا جواب دیتا ہے۔"
         }
       ],
-      "correct_answer": {
-        "ar": "جَدِيدٌ",
-        "ar_plain": "جديد",
-        "translit": "jadiidun",
-        "en": "new",
-        "ur": "نئی"
-      },
-      "xp_value": 1
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "عَفْوًا، أَيْنَ؟ — sorry, where? He asks again.",
+        "ur": "عَفْوًا، أَيْنَ؟ — معاف کیجیے، کہاں؟ وہ دوبارہ پوچھتا ہے۔"
+      }
     },
     {
       "type": "MATCHING",
       "id": "ch30-l03-ex04",
       "left_column": [
         {
-          "ar": "جَاءَ الطَّالِبُ",
-          "ar_plain": "جاء الطالب",
-          "translit": "jaa'a at-taalibu",
-          "en": "The student came",
-          "ur": "طالب علم آیا"
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "he",
+          "ur": "وہ"
         },
         {
-          "ar": "الْكِتَابُ جَدِيدٌ",
-          "ar_plain": "الكتاب جديد",
-          "translit": "al-kitaabu jadiidun",
-          "en": "The book is new",
-          "ur": "کتاب نئی ہے"
+          "ar": "مِنْهُ",
+          "ar_plain": "منه",
+          "translit": "minhu",
+          "en": "out of it",
+          "ur": "اس سے"
         },
         {
-          "ar": "إِنَّهُ مُؤْمِنٌ",
-          "ar_plain": "إنه مؤمن",
-          "translit": "innahu mu'minun",
-          "en": "Truly he is a believer",
-          "ur": "بے شک وہ مومن ہے"
-        },
-        {
-          "ar": "يَعْبُدُ اللَّهَ",
-          "ar_plain": "يعبد الله",
-          "translit": "ya'budullaaha",
-          "en": "worships Allah",
-          "ur": "اللہ کی عبادت کرتا ہے"
+          "ar": "فِيهِ",
+          "ar_plain": "فيه",
+          "translit": "fīhi",
+          "en": "in it",
+          "ur": "اس میں"
         }
       ],
       "right_column": [
         {
-          "en": "Verbal sentence (past)",
-          "ur": "فعلی جملہ (ماضی)"
+          "en": "the teacher",
+          "ur": "استاد"
         },
         {
-          "en": "Nominal sentence",
-          "ur": "اسمی جملہ"
+          "en": "the mosque (out of)",
+          "ur": "مسجد (سے)"
         },
         {
-          "en": "إِنَّ sentence",
-          "ur": "إِنَّ والا جملہ"
-        },
-        {
-          "en": "Verbal sentence (present)",
-          "ur": "فعلی جملہ (حال)"
+          "en": "the mosque (in)",
+          "ur": "مسجد (میں)"
         }
       ],
       "correct_pairs": [
@@ -274,155 +275,175 @@
         [
           2,
           2
-        ],
-        [
-          3,
-          3
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch30-l03-ex05",
-      "target_translation": {
-        "en": "Truly, the Muslim worships Allah.",
-        "ur": "بے شک، مسلمان اللہ کی عبادت کرتا ہے۔"
-      },
-      "tiles": [
-        {
-          "ar": "إِنَّ",
-          "ar_plain": "إن",
-          "translit": "inna",
-          "en": "truly",
-          "ur": "بے شک"
-        },
-        {
-          "ar": "الْمُسْلِمَ",
-          "ar_plain": "المسلم",
-          "translit": "al-muslima",
-          "en": "the Muslim",
-          "ur": "مسلمان"
-        },
-        {
-          "ar": "يَعْبُدُ",
-          "ar_plain": "يعبد",
-          "translit": "ya'budu",
-          "en": "worships",
-          "ur": "عبادت کرتا ہے"
-        },
-        {
-          "ar": "اللَّهَ",
-          "ar_plain": "الله",
-          "translit": "allaaha",
-          "en": "Allah",
-          "ur": "اللہ"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch30-l03-ex06",
-      "prompt": {
-        "ar": "وَلَكُمْ دِينُكُمْ وَلِيَ دِينِ",
-        "ar_plain": "ولكم دينكم ولي ديني",
-        "translit": "walakum diinakum waliya diini",
-        "en": "And for you is your way, and for me is my way.",
-        "ur": "اور تمہارا طریقہ تمہارا ہے اور میرا طریقہ میرا ہے۔"
-      },
-      "options": [
-        {
-          "en": "And for you is your way, and for me is my way.",
-          "ur": "اور تمہارا طریقہ تمہارا ہے اور میرا طریقہ میرا ہے۔"
-        },
-        {
-          "en": "You have your religion and I have my religion.",
-          "ur": "تمہارا تمہارا دین ہے اور میرا میرا دین ہے۔"
-        },
-        {
-          "en": "Your way is yours and my way is mine.",
-          "ur": "تمہارا راستہ تمہارا ہے اور میرا راستہ میرا ہے۔"
-        },
-        {
-          "en": "All of you have a way and I have a way.",
-          "ur": "تم سب کا ایک طریقہ ہے اور میرا ایک طریقہ ہے۔"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
+      "xp_value": 2,
       "explanation_on_wrong": {
-        "en": "دِينُكُمْ = your way/religion (دِينٌ + كُم). لِي = for me. دِينِ = my way/religion (دِينٌ + ي).",
-        "ur": "دِينُكُمْ = تمہارا طریقہ/دین (دِينٌ + كُم)۔ لِي = میرے لیے۔ دِينِ = میرا طریقہ/دین (دِينٌ + ي)۔"
+        "en": "هُوَ is the teacher; مِنْهُ and فِيهِ both point to الْمَسْجِدِ.",
+        "ur": "هُوَ استاد ہیں؛ مِنْهُ اور فِيهِ دونوں الْمَسْجِدِ کی طرف لوٹتے ہیں۔"
       }
     },
     {
-      "type": "TAP_TRANSLATION",
-      "id": "ch30-l03-ex07",
-      "prompt": {
-        "ar": "إِنَّ الْمُسْلِمَ يَعْبُدُ اللَّهَ",
-        "ar_plain": "ان المسلم يعبد الله",
-        "translit": "inna al-muslima ya'budu allaah",
-        "en": "Indeed, the Muslim worships Allah.",
-        "ur": "بے شک مسلمان اللہ کی عبادت کرتا ہے۔"
+      "type": "TRUE_FALSE",
+      "id": "ch30-l03-ex05",
+      "statement": {
+        "en": "At the end, the teacher is still in the mosque.",
+        "ur": "آخر میں استاد اب بھی مسجد میں ہیں۔",
+        "ar_example": {
+          "ar": "زَيْنَبُ: لَا، هُوَ فِيهِ الْآنَ.",
+          "ar_plain": "زينب: لا، هو فيه الآن.",
+          "translit": "zaynabu: lā, huwa fīhi l-āna.",
+          "en": "Zaynab: No, he is in it now.",
+          "ur": "زینب: نہیں، وہ ابھی اس میں ہیں۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَا، هُوَ فِيهِ الْآنَ: no, he is in it now.",
+        "ur": "لَا، هُوَ فِيهِ الْآنَ: نہیں، وہ ابھی اس میں ہیں۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch30-l03-ex06",
+      "mode": "TAP",
+      "sentence_ar": "سَأَلَ أَحْمَدُ، وَ___ زَيْنَبُ",
+      "hint": {
+        "en": "and Zaynab answered",
+        "ur": "اور زینب نے جواب دیا"
       },
       "options": [
         {
-          "en": "The Muslim worshipped Allah.",
-          "ur": "مسلمان نے اللہ کی عبادت کی۔"
+          "ar": "سَأَلَتْ",
+          "ar_plain": "سألت",
+          "translit": "saʾalat",
+          "en": "asked (she)",
+          "ur": "پوچھا"
         },
         {
-          "en": "Worship Allah, O Muslim.",
-          "ur": "اے مسلمان، اللہ کی عبادت کرو۔"
+          "ar": "أَجَابَتْ",
+          "ar_plain": "أجابت",
+          "translit": "ajābat",
+          "en": "answered (she)",
+          "ur": "جواب دیا"
         },
         {
-          "en": "Indeed, the Muslim worships Allah.",
-          "ur": "بے شک مسلمان اللہ کی عبادت کرتا ہے۔"
+          "ar": "خَرَجَتْ",
+          "ar_plain": "خرجت",
+          "translit": "kharajat",
+          "en": "went out (she)",
+          "ur": "نکلی"
         },
         {
-          "en": "Does the Muslim worship Allah?",
-          "ur": "کیا مسلمان اللہ کی عبادت کرتا ہے؟"
+          "ar": "أَجَابَ",
+          "ar_plain": "أجاب",
+          "translit": "ajāba",
+          "en": "answered (he)",
+          "ur": "جواب دیا (مذکر)"
         }
       ],
-      "correct_index": 2,
-      "xp_value": 1
+      "correct_answer": {
+        "ar": "أَجَابَتْ",
+        "ar_plain": "أجابت",
+        "translit": "ajābat",
+        "en": "answered (she)",
+        "ur": "جواب دیا"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Zaynab is a woman, and she answered: أَجَابَتْ.",
+        "ur": "زینب عورت ہے، اور اس نے جواب دیا: أَجَابَتْ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch30-l03-ex07",
+      "statement": {
+        "en": "The root letters of أَجَابَ are ج و ب.",
+        "ur": "أَجَابَ کے مادے کے حروف ج و ب ہیں۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَجَابَ is from ج و ب, like جَوَابٌ.",
+        "ur": "أَجَابَ، ج و ب سے ہے، جیسے جَوَابٌ۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch30-l03-ex08",
+      "prompt_line": {
+        "ar": "أَحْمَدُ: هَلْ خَرَجَ مِنْهُ؟",
+        "ar_plain": "أحمد: هل خرج منه؟",
+        "translit": "aḥmadu: hal kharaja minhu?",
+        "en": "Ahmad: Has he come out of it?",
+        "ur": "احمد: کیا وہ اس سے نکل آئے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "نَعَمْ، هُوَ فِي الْفَصْلِ",
+          "ar_plain": "نعم، هو في الفصل",
+          "translit": "naʿam, huwa fī l-faṣli",
+          "en": "Yes, he is in the classroom.",
+          "ur": "جی ہاں، وہ کلاس میں ہیں۔"
+        },
+        {
+          "ar": "هُوَ أُسْتَاذٌ",
+          "ar_plain": "هو أستاذ",
+          "translit": "huwa ustādhun",
+          "en": "He is a teacher.",
+          "ur": "وہ استاد ہیں۔"
+        },
+        {
+          "ar": "لَا، هُوَ فِيهِ الْآنَ",
+          "ar_plain": "لا، هو فيه الآن",
+          "translit": "lā, huwa fīhi l-āna",
+          "en": "No, he is in it now.",
+          "ur": "نہیں، وہ ابھی اس میں ہیں۔"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "هَلْ asks yes or no; Zaynab's answer: لَا، هُوَ فِيهِ الْآنَ.",
+        "ur": "هَلْ ہاں یا نہیں پوچھتا ہے؛ زینب کا جواب: لَا، هُوَ فِيهِ الْآنَ۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Integrated passage reading",
-      "ar": "قِرَاءَةُ النَّصِّ الْمُتَكَامِلِ",
-      "ur": "مکمل passage پڑھنا"
+      "en": "Following a dialogue",
+      "ar": "تَتَبُّعُ الْحِوَارِ",
+      "ur": "مکالمے کی پیروی"
     },
     "ayah": {
       "surah": 109,
-      "ayah": 5,
-      "label": "Al-Kafirun 109:5",
-      "ar": "وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ",
-      "en": "Nor will you be worshippers of what I worship.",
-      "ur": "اور نہ تم اس کی بندگی کرنے والے (معلوم ہوتے) ہو جس کی میں بندگی کرتا ہوں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109005.mp3"
+      "ayah": 1,
+      "label": "Al-Kafirun 109:1",
+      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
+      "en": "Say, O disbelievers,",
+      "ur": "کہہ دیجیے: اے کافرو!",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
     },
     "highlighted_word_indices": [
-      0,
-      2,
-      4
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "يَا",
+      "أَيُّهَا"
     ],
     "noor_explanation": {
-      "en": "This ayah from Al-Kafirun contains two nominal sentences: لَكُمْ دِينُكُمْ (for you is your way) and لِيَ دِينِ (for me is my way). No verb — pure equational sentences.",
-      "ur": "الکافروں کی یہ آیت دو nominal sentences پر مشتمل ہے: لَكُمْ دِينُكُمْ (تمہارا طریقہ تمہارا ہے) اور لِيَ دِينِ (میرا طریقہ میرا ہے)۔ کوئی verb نہیں — خالص equational sentences۔"
+      "en": "يَا أَيُّهَا: O — a call to the ones addressed. In a dialogue, always ask who is speaking to whom.",
+      "ur": "يَا أَيُّهَا: اے — مخاطب کو پکار۔ مکالمے میں ہمیشہ پوچھیں کہ کون کس سے بات کر رہا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Real Arabic passages mix sentence types freely. The key is to identify each sentence unit and its type. With practice, you'll read Arabic passages faster and with deeper understanding.",
-      "ur": "اصل عربی passages sentence types کو آزادانہ ملاتے ہیں۔ کلید یہ ہے کہ ہر sentence unit اور اس کی type پہچانیں۔ مشق سے، آپ عربی passages تیزی سے اور گہرائی سے پڑھ سکیں گے۔"
+      "en": "You can follow a dialogue. Next: مَا meaning 'what' inside a sentence.",
+      "ur": "آپ مکالمہ سمجھ سکتے ہیں۔ آگے: جملے کے اندر مَا بمعنی 'جو'۔"
     }
   }
 }

@@ -1,0 +1,443 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 29 final test (ch29-test, new). Twelve multiple-choice questions on the 4/2/2/2/2 allocation: nominal vs verbal core incl. a noun-led action comment (4), verb and doer (2), a prefix before the core (2), إِنَّ / لَيْسَ endings (2), Quran (2). No لَيْسَ-first sentence is classified. Pass mark 80 %: 9/12 fails, 10/12 passes. Rebuilt 2026-10-02 in the proposal harvest (Docs/proposals/proposal-harvest-tracker.md) from Docs/proposals/chapter-29-content-proposal.md and its review amendments: nominal sentence (topic + comment) vs verbal sentence (verb + doer), the noun-led sentence whose comment is a verbal clause, finding the core after a prefix such as وَ / قُلْ / لَا, and retrieval of Chapter 24's إِنَّ (اسم منصوب، خبر مرفوع) and Chapter 25's لَيْسَ. Removed: the reversed إِنَّ rule (خبر إنّ marked accusative, كَبِيرًا), 'a nominal sentence never contains a verb', عَابِدُونَ parsed as a verb, وَلَكُمْ called a subject, and the repeated Al-Kafirun parsing/Tadabbur lesson (Chapter 30 owns the full surah). Al-Kafirun's verbs stay glossed chunks (S11).",
+    "title": "Chapter 29 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ التَّاسِعِ وَالْعِشْرِينَ",
+    "titleUr": "باب 29 کا آخری امتحان",
+    "chapter_order": 29,
+    "lesson_order": 7,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 112,
+      "ayah": 1,
+      "label": "Al-Ikhlas 112:1",
+      "ar": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+      "en": "Say, He is Allah, One.",
+      "ur": "کہہ دیجیے: وہ اللہ ایک ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/112001.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 29.",
+      "ur": "باب 29 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 29,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch29-test-q01",
+        "topic": {
+          "en": "Nominal or verbal",
+          "ur": "اسمیہ یا فعلیہ"
+        },
+        "prompt": {
+          "en": "Which kind of sentence is this?",
+          "ur": "یہ کس قسم کا جملہ ہے؟"
+        },
+        "arabic": "الْفَصْلُ كَبِيرٌ",
+        "options": [
+          {
+            "en": "nominal",
+            "ur": "اسمیہ"
+          },
+          {
+            "en": "verbal",
+            "ur": "فعلیہ"
+          },
+          {
+            "en": "not a sentence",
+            "ur": "جملہ نہیں"
+          },
+          {
+            "en": "a question",
+            "ur": "سوال"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch29-test-q02",
+        "topic": {
+          "en": "Nominal or verbal",
+          "ur": "اسمیہ یا فعلیہ"
+        },
+        "prompt": {
+          "en": "Which kind of sentence is this?",
+          "ur": "یہ کس قسم کا جملہ ہے؟"
+        },
+        "arabic": "خَرَجَتِ الْبِنْتُ مِنَ الْبَيْتِ",
+        "options": [
+          {
+            "en": "nominal",
+            "ur": "اسمیہ"
+          },
+          {
+            "en": "verbal",
+            "ur": "فعلیہ"
+          },
+          {
+            "en": "not a sentence",
+            "ur": "جملہ نہیں"
+          },
+          {
+            "en": "a question",
+            "ur": "سوال"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch29-test-q03",
+        "topic": {
+          "en": "Nominal or verbal",
+          "ur": "اسمیہ یا فعلیہ"
+        },
+        "prompt": {
+          "en": "Which kind of sentence is this?",
+          "ur": "یہ کس قسم کا جملہ ہے؟"
+        },
+        "arabic": "الْإِمَامُ دَخَلَ الْمَسْجِدَ",
+        "options": [
+          {
+            "en": "verbal",
+            "ur": "فعلیہ"
+          },
+          {
+            "en": "not a sentence",
+            "ur": "جملہ نہیں"
+          },
+          {
+            "en": "nominal",
+            "ur": "اسمیہ"
+          },
+          {
+            "en": "a question",
+            "ur": "سوال"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch29-test-q04",
+        "topic": {
+          "en": "Nominal or verbal",
+          "ur": "اسمیہ یا فعلیہ"
+        },
+        "prompt": {
+          "en": "Why is الطَّالِبُ كَتَبَ الدَّرْسَ nominal?",
+          "ur": "الطَّالِبُ كَتَبَ الدَّرْسَ اسمیہ کیوں ہے؟"
+        },
+        "options": [
+          {
+            "en": "It has no verb.",
+            "ur": "اس میں فعل نہیں۔"
+          },
+          {
+            "en": "Its core opens with الطَّالِبُ; كَتَبَ الدَّرْسَ is the comment.",
+            "ur": "اس کی بنیاد الطَّالِبُ سے شروع ہوتی ہے؛ كَتَبَ الدَّرْسَ خبر ہے۔"
+          },
+          {
+            "en": "الدَّرْسَ is the topic.",
+            "ur": "الدَّرْسَ مبتدا ہے۔"
+          },
+          {
+            "en": "It is not nominal.",
+            "ur": "یہ اسمیہ نہیں ہے۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch29-test-q05",
+        "topic": {
+          "en": "Verb and doer",
+          "ur": "فعل اور فاعل"
+        },
+        "prompt": {
+          "en": "Who is the doer?",
+          "ur": "فاعل کون ہے؟"
+        },
+        "arabic": "سَأَلَ الْأُسْتَاذُ الطَّالِبَ",
+        "options": [
+          {
+            "en": "سَأَلَ",
+            "ur": "سَأَلَ"
+          },
+          {
+            "en": "الطَّالِبَ",
+            "ur": "الطَّالِبَ"
+          },
+          {
+            "en": "الْأُسْتَاذُ",
+            "ur": "الْأُسْتَاذُ"
+          },
+          {
+            "en": "nobody",
+            "ur": "کوئی نہیں"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch29-test-q06",
+        "topic": {
+          "en": "Verb and doer",
+          "ur": "فعل اور فاعل"
+        },
+        "prompt": {
+          "en": "Which word is the verb?",
+          "ur": "فعل کون سا لفظ ہے؟"
+        },
+        "arabic": "حَفِظَ الْوَلَدُ السُّورَةَ",
+        "options": [
+          {
+            "en": "السُّورَةَ",
+            "ur": "السُّورَةَ"
+          },
+          {
+            "en": "الْوَلَدُ",
+            "ur": "الْوَلَدُ"
+          },
+          {
+            "en": "none",
+            "ur": "کوئی نہیں"
+          },
+          {
+            "en": "حَفِظَ",
+            "ur": "حَفِظَ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch29-test-q07",
+        "topic": {
+          "en": "A prefix before the core",
+          "ur": "بنیاد سے پہلے سابقہ"
+        },
+        "prompt": {
+          "en": "Which kind of sentence is this?",
+          "ur": "یہ کس قسم کا جملہ ہے؟"
+        },
+        "arabic": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+        "options": [
+          {
+            "en": "nominal: after قُلْ the core opens with هُوَ",
+            "ur": "اسمیہ: قُلْ کے بعد بنیاد هُوَ سے شروع ہوتی ہے"
+          },
+          {
+            "en": "verbal: it opens with قُلْ",
+            "ur": "فعلیہ: یہ قُلْ سے شروع ہوتی ہے"
+          },
+          {
+            "en": "not a sentence",
+            "ur": "جملہ نہیں"
+          },
+          {
+            "en": "verbal: أَحَدٌ is a verb",
+            "ur": "فعلیہ: أَحَدٌ فعل ہے"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch29-test-q08",
+        "topic": {
+          "en": "A prefix before the core",
+          "ur": "بنیاد سے پہلے سابقہ"
+        },
+        "prompt": {
+          "en": "Which kind of sentence is this?",
+          "ur": "یہ کس قسم کا جملہ ہے؟"
+        },
+        "arabic": "وَرَجَعَ الْأَبُ",
+        "options": [
+          {
+            "en": "nominal: it opens with وَ",
+            "ur": "اسمیہ: یہ وَ سے شروع ہوتا ہے"
+          },
+          {
+            "en": "nominal: الْأَبُ is the topic",
+            "ur": "اسمیہ: الْأَبُ مبتدا ہے"
+          },
+          {
+            "en": "verbal: after وَ, the core opens with رَجَعَ",
+            "ur": "فعلیہ: وَ کے بعد بنیاد رَجَعَ سے شروع ہوتی ہے"
+          },
+          {
+            "en": "not a sentence",
+            "ur": "جملہ نہیں"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch29-test-q09",
+        "topic": {
+          "en": "إِنَّ and لَيْسَ",
+          "ur": "إِنَّ اور لَيْسَ"
+        },
+        "prompt": {
+          "en": "Which is correct?",
+          "ur": "کون سا درست ہے؟"
+        },
+        "options": [
+          {
+            "en": "إِنَّ الْبَيْتُ كَبِيرًا",
+            "ur": "إِنَّ الْبَيْتُ كَبِيرًا"
+          },
+          {
+            "en": "إِنَّ الْبَيْتَ كَبِيرًا",
+            "ur": "إِنَّ الْبَيْتَ كَبِيرًا"
+          },
+          {
+            "en": "إِنَّ الْبَيْتُ كَبِيرٌ",
+            "ur": "إِنَّ الْبَيْتُ كَبِيرٌ"
+          },
+          {
+            "en": "إِنَّ الْبَيْتَ كَبِيرٌ",
+            "ur": "إِنَّ الْبَيْتَ كَبِيرٌ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch29-test-q10",
+        "topic": {
+          "en": "إِنَّ and لَيْسَ",
+          "ur": "إِنَّ اور لَيْسَ"
+        },
+        "prompt": {
+          "en": "Which is correct?",
+          "ur": "کون سا درست ہے؟"
+        },
+        "options": [
+          {
+            "en": "لَيْسَ الْبَيْتُ كَبِيرًا",
+            "ur": "لَيْسَ الْبَيْتُ كَبِيرًا"
+          },
+          {
+            "en": "لَيْسَ الْبَيْتَ كَبِيرٌ",
+            "ur": "لَيْسَ الْبَيْتَ كَبِيرٌ"
+          },
+          {
+            "en": "لَيْسَ الْبَيْتُ كَبِيرٌ",
+            "ur": "لَيْسَ الْبَيْتُ كَبِيرٌ"
+          },
+          {
+            "en": "لَيْسَ الْبَيْتَ كَبِيرًا",
+            "ur": "لَيْسَ الْبَيْتَ كَبِيرًا"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch29-test-q11",
+        "topic": {
+          "en": "Quran",
+          "ur": "قرآن"
+        },
+        "prompt": {
+          "en": "Which kind of sentence is this?",
+          "ur": "یہ کس قسم کا جملہ ہے؟"
+        },
+        "arabic": "أَتَى أَمْرُ اللَّهِ",
+        "options": [
+          {
+            "en": "verbal",
+            "ur": "فعلیہ"
+          },
+          {
+            "en": "not a sentence",
+            "ur": "جملہ نہیں"
+          },
+          {
+            "en": "nominal",
+            "ur": "اسمیہ"
+          },
+          {
+            "en": "a question",
+            "ur": "سوال"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch29-test-q12",
+        "topic": {
+          "en": "Quran",
+          "ur": "قرآن"
+        },
+        "prompt": {
+          "en": "In 109:3, what is عَابِدُونَ?",
+          "ur": "109:3 میں عَابِدُونَ کیا ہے؟"
+        },
+        "arabic": "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ",
+        "options": [
+          {
+            "en": "a verb: they worshipped",
+            "ur": "فعل: انہوں نے عبادت کی"
+          },
+          {
+            "en": "a noun: worshippers",
+            "ur": "اسم: عبادت کرنے والے"
+          },
+          {
+            "en": "a preposition",
+            "ur": "حرفِ جر"
+          },
+          {
+            "en": "the doer of أَعْبُدُ",
+            "ur": "أَعْبُدُ کا فاعل"
+          }
+        ],
+        "correct_index": 1
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 29 — two kinds of sentence",
+      "ar": "الْجُمْلَةُ الِاسْمِيَّةُ وَالْفِعْلِيَّةُ",
+      "ur": "باب 29 — جملوں کی دو قسمیں"
+    },
+    "ayah": {
+      "surah": 112,
+      "ayah": 1,
+      "label": "Al-Ikhlas 112:1",
+      "ar": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+      "en": "Say, He is Allah, One.",
+      "ur": "کہہ دیجیے: وہ اللہ ایک ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/112001.mp3"
+    },
+    "highlighted_word_indices": [
+      1,
+      2,
+      3
+    ],
+    "highlighted_words": [
+      "هُوَ",
+      "اللَّهُ",
+      "أَحَدٌ"
+    ],
+    "noor_explanation": {
+      "en": "هُوَ اللَّهُ أَحَدٌ: you finish Chapter 29 able to find a sentence's core and tell nominal from verbal.",
+      "ur": "هُوَ اللَّهُ أَحَدٌ: آپ باب 29 اس حال میں مکمل کرتے ہیں کہ جملے کی بنیاد تلاش کر کے اسمیہ اور فعلیہ پہچان سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 29 complete. Chapter 30: reading connected texts.",
+      "ur": "باب 29 مکمل۔ باب 30: مربوط عبارتیں پڑھنا۔"
+    }
+  }
+}

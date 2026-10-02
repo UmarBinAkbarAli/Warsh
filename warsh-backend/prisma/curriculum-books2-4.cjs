@@ -531,13 +531,15 @@ const specs = [
   // ── Ch26 ── Demonstratives and Possession Spiral ─────────────────────────
   {
     order: 26,
-    sourceFile: "reader_lecture_26_demonstratives_possession_spiral.md",
-    title: "Demonstratives and Possession Spiral",
-    titleAr: "الإِشَارَة وَالإِضَافَة الْمُرَكَّبَة",
-    description: "Three-word idafa chains and demonstratives combined with possession.",
-    hook: { ayahAr: "ذٰلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ", ayahRef: "Al-Baqarah 2:2", highlightedWord: "ذٰلِكَ الْكِتَابُ" },
+    sourceFile: "Docs/proposals/chapter-26-content-proposal.md",
+    title: "Layered Idafa: Chains of Possession",
+    titleAr: "سِلْسِلَةُ الْإِضَافَةِ",
+    titleUr: "تہ در تہ اضافت: ملکیت کی زنجیریں",
+    description: "Three-noun possession chains, the middle noun's two links, which noun an adjective describes, a pointer before a whole chain, and Al-Fatihah 1:4.",
+    descriptionUr: "تین اسموں کی اضافت کی زنجیریں، درمیانی اسم کی دو کڑیاں، صفت کس اسم کی ہے، پوری زنجیر سے پہلے اشارہ، اور الفاتحہ 1:4۔",
+    hook: { ayahAr: "مَالِكِ يَوْمِ الدِّينِ", ayahRef: "Al-Fatihah 1:4", highlightedWord: "يَوْمِ" },
     examples: [
-      card("كِتَابُ الطَّالِبِ الْجَدِيدِ مُفِيدٌ", "The student's new book is useful", "kitaabut-taalibil-jadeed mufeed"),
+      card("كِتَابُ الطَّالِبِ الْجَدِيدُ مُفِيدٌ", "The student's new book is useful", "kitaabut-taalibil-jadeed mufeed"),
       card("بَابُ غُرْفَةِ الأُسْتَاذِ مَفْتُوحٌ", "The door of the teacher's room is open", "baabu ghurfatil-ustaadhi maftooh"),
       card("هٰذَا كِتَابُ الطَّالِبِ الْمُجْتَهِدِ", "This is the book of the diligent student", "haadha kitaabut-taalibil-mujtahid"),
       card("ذٰلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ", "That is the Book, no doubt in it", "dhaalika al-kitaabu laa rayba feeh"),
@@ -561,11 +563,13 @@ const specs = [
   // ── Ch27 ── Prepositions in Depth ─────────────────────────────────────────
   {
     order: 27,
-    sourceFile: "reader_lecture_27_prepositions_depth.md",
-    title: "Prepositions in Depth",
-    titleAr: "حُرُوف الْجَر تَفْصِيلًا",
-    description: "All major prepositions — meanings, usage patterns, and Quranic examples.",
-    hook: { ayahAr: "وَعَلَى اللَّهِ فَتَوَكَّلُوا", ayahRef: "Al-Ma'idah 5:11", highlightedWord: "عَلَى" },
+    sourceFile: "Docs/proposals/chapter-27-content-proposal.md",
+    title: "Common Prepositions in Context",
+    titleAr: "حُرُوفُ الْجَرِّ فِي السِّيَاقِ",
+    titleUr: "سیاق میں عام حروفِ جر",
+    description: "Eight common prepositions chosen from context: separate and joined forms, the genitive after a preposition, and prepositions with attached pronouns.",
+    descriptionUr: "سیاق سے چنے گئے آٹھ عام حروفِ جر: الگ اور جڑی صورتیں، حرفِ جر کے بعد مجرور اسم، اور ضمیر کے ساتھ حروفِ جر۔",
+    hook: { ayahAr: "مِنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى", ayahRef: "Al-Isra 17:1", highlightedWord: "إِلَى" },
     examples: [
       card("تَوَكَّلْتُ عَلَى اللَّهِ", "I placed my trust in Allah", "tawakkaltu alal-laah"),
       card("ذَهَبَ إِلَى الْمَسْجِدِ", "He went to the mosque", "dhahaba ilal-masjid"),
@@ -573,7 +577,7 @@ const specs = [
       card("الْكِتَابُ فِي الْحَقِيبَةِ بِيَدِهِ", "The book is in the bag in his hand", "al-kitaabu fil-haqeebati biyadih"),
     ],
     parseText: "تَوَكَّلْتُ عَلَى اللَّهِ",
-    parseTokens: [token("تَوَكَّلْتُ", "فعل", "I trusted"), token("عَلَى", "حرف جر", "upon"), token("اللَّهِ", "مضاف إليه", "Allah")],
+    parseTokens: [token("تَوَكَّلْتُ", "فعل", "I trusted"), token("عَلَى", "حرف جر", "upon"), token("اللَّهِ", "اسم مجرور", "Allah")],
     conversation: ["عَلَى مَنْ تَتَوَكَّلُ؟", "أَتَوَكَّلُ عَلَى اللَّهِ"],
     conversationDistractor: "بَابُ غُرْفَةِ الأُسْتَاذِ مَفْتُوحٌ",
     distractor: "The teacher's room door is open",
@@ -591,11 +595,13 @@ const specs = [
   // ── Ch28 ── Verb Usage and Action Vocabulary ──────────────────────────────
   {
     order: 28,
-    sourceFile: "reader_lecture_28_verb_action_vocabulary.md",
-    title: "Verb Usage and Action Vocabulary",
-    titleAr: "الأَفْعَال الشَّائِعَة",
-    description: "Common high-frequency past tense verbs in Quranic context.",
-    hook: { ayahAr: "أَفَلَا يَتَدَبَّرُونَ الْقُرْآنَ", ayahRef: "An-Nisa 4:82", highlightedWord: "يَتَدَبَّرُونَ" },
+    sourceFile: "Docs/proposals/chapter-28-content-proposal.md",
+    title: "Past Verbs and What Follows Them",
+    titleAr: "الْفِعْلُ الْمَاضِي وَمَا بَعْدَهُ",
+    titleUr: "ماضی کے افعال اور ان کے بعد",
+    description: "Eight past verbs with their objects, preposition phrases and giver–receiver–gift patterns, plus the feminine forms.",
+    descriptionUr: "آٹھ ماضی کے افعال، ان کے مفعول، حرفِ جر والی ترکیبیں اور دینے والا–لینے والا–تحفہ، اور مؤنث صیغے۔",
+    hook: { ayahAr: "الَّذِي جَمَعَ مَالًا وَعَدَّدَهُ", ayahRef: "Al-Humazah 104:2", highlightedWord: "جَمَعَ" },
     examples: [
       card("فَعَلَ مَا أُمِرَ بِهِ", "He did what he was commanded", "fa'ala maa umira bih"),
       card("جَاءَ الرَّسُولُ بِالْحَقِّ", "The messenger came with the truth", "jaa'ar-rasoolu bil-haqq"),
@@ -621,11 +627,13 @@ const specs = [
   // ── Ch29 ── Nominal vs Verbal Sentences ───────────────────────────────────
   {
     order: 29,
-    sourceFile: "reader_lecture_29_nominal_vs_verbal_sentences.md",
+    sourceFile: "Docs/proposals/chapter-29-content-proposal.md",
     title: "Nominal vs Verbal Sentences",
+    titleUr: "جملہ اسمیہ اور جملہ فعلیہ",
+    descriptionUr: "جملے کی بنیاد سے اسمیہ اور فعلیہ کی پہچان، شروع کے وَ / قُلْ / لَا کے بعد، اور إِنَّ و لَيْسَ کی دہرائی۔",
     titleAr: "الْجُمْلَة الِاسْمِيَّة وَالْفِعْلِيَّة",
-    description: "Formal distinction between the two sentence types in Arabic.",
-    hook: { ayahAr: "قُلْ يَا أَيُّهَا الْكَافِرُونَ", ayahRef: "Al-Kafirun 109:1", highlightedWord: "قُلْ" },
+    description: "Tell nominal from verbal sentences by their core — after a وَ, قُلْ or لَا — with إِنَّ and لَيْسَ retrieved.",
+    hook: { ayahAr: "قُلْ هُوَ اللَّهُ أَحَدٌ", ayahRef: "Al-Ikhlas 112:1", highlightedWord: "هُوَ" },
     examples: [
       card("الْمُؤْمِنُ يَذْكُرُ اللَّهَ كَثِيرًا", "The believer remembers Allah often (nominal)", "al-mu'minu yadhkuru allaaha katheeran"),
       card("يَذْكُرُ الْمُؤْمِنُ اللَّهَ كَثِيرًا", "The believer remembers Allah often (verbal)", "yadhkurul-mu'minu allaaha katheeran"),
@@ -651,11 +659,13 @@ const specs = [
   // ── Ch30 ── Reading Comprehension and Dialogue ────────────────────────────
   {
     order: 30,
-    sourceFile: "reader_lecture_30_reading_comprehension.md",
-    title: "Reading Comprehension and Dialogue",
-    titleAr: "الْقِرَاءَة وَالْفَهْم",
-    description: "Longer connected passages applying nominal and verbal sentence patterns.",
-    hook: { ayahAr: "فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ", ayahRef: "Ar-Rahman 55:13", highlightedWord: "آلَاءِ" },
+    sourceFile: "Docs/proposals/chapter-30-content-proposal.md",
+    title: "Reading Connected Texts",
+    titleAr: "الْقِرَاءَةُ الْمُتَّصِلَةُ",
+    titleUr: "مربوط عبارتیں پڑھنا",
+    description: "Follow pronouns, a short story and a dialogue across sentences, read مَا as 'what', and read all of Surah Al-Kafirun.",
+    descriptionUr: "جملوں کے پار ضمیر، مختصر کہانی اور مکالمہ سمجھنا، مَا کو 'جو' کے معنی میں پڑھنا، اور پوری سورۃ الکافرون پڑھنا۔",
+    hook: { ayahAr: "لَكُمْ دِينُكُمْ وَلِيَ دِينِ", ayahRef: "Al-Kafirun 109:6", highlightedWord: "لَكُمْ" },
     examples: [
       card("قَرَأَ الأُسْتَاذُ قِصَّةً وَفَهِمَ الطُّلَّابُ", "The teacher read a story and the students understood", "qara'al-ustaadhu qissatan wa fahimal-tullaab"),
       card("دَخَلَ الرَّجُلُ الْمَسْجِدَ وَصَلَّى رَكْعَتَيْنِ", "The man entered the mosque and prayed two raka'at", "dakhalr-rajulul-masjida wa sallaa rak'atain"),

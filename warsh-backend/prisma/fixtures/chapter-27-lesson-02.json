@@ -2,29 +2,28 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 27, Lesson 2 - Prepositions مِنْ (from) and عَلَى (upon/on).",
+    "_note": "Chapter 27, Lesson 2 (ch27-l02) — one-letter prepositions join the next word. Real spelling (review amendment 2): بِـ + الـ keeps the alif (بِالْقَلَمِ); لِـ + الـ drops it (لِلطَّالِبِ); لِـ + اللَّه → لِلَّهِ. In 1:2, لِلَّهِ has لِـ, while رَبِّ الْعَالَمِينَ is a chain with no hidden لِـ. Meanings taught: بِـ with (a tool) / by; لِـ for / belongs to (Chapter 5). Rebuilt 2026-10-02 in the proposal harvest (Docs/proposals/proposal-harvest-tracker.md) from Docs/proposals/chapter-27-content-proposal.md and its review amendments: eight common prepositions in context — فِي، عَلَى، مِنْ، إِلَى retrieved from Chapters 2/21 with a local model of the genitive after a preposition; joined بِـ / لِـ with the real spelling (لِـ + الـ → لِلْـ, لِلَّهِ; بِالْقَلَمِ keeps the alif); عَنْ and joined كَـ; prepositions with attached pronouns. Every hook now contains its lesson's preposition (Al-Kawthar and Al-Kafirun removed; the false hidden لِـ in رَبِّ removed; 'every preposition merges with الـ' removed). Not built: the proposal's separate Quran-reading lesson — its 5:11 excerpt sits in Lesson 4 — so ch27-l05 stays the review.",
+    "title": "Joined Prepositions: بِـ and لِـ",
+    "titleAr": "بِالْقَلَمِ، لِلَّهِ",
+    "titleUr": "جڑنے والے حروفِ جر: بِـ اور لِـ",
     "chapter_order": 27,
     "lesson_order": 2,
-    "chapter_title": "Prepositions and Everyday Expressions",
-    "title": "From and Upon",
-    "titleAr": "مِنْ وَ عَلَى",
-    "source": "madinah_reader_book3_lesson4_prepositions",
-    "estimated_minutes": 8,
+    "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 108,
-      "ayah": 1,
-      "label": "Al-Kawthar 108:1",
-      "ar": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ",
-      "en": "Indeed, We have granted you Al-Kawthar.",
-      "ur": "بے شک ہم نے تمہیں کوثر عطا کیا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/108001.mp3"
+      "surah": 1,
+      "ayah": 2,
+      "label": "Al-Fatihah 1:2",
+      "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+      "en": "All praise is for Allah, Lord of the worlds.",
+      "ur": "سب تعریف اللہ کے لیے ہے جو تمام جہانوں کا رب ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001002.mp3"
     },
     "noor_intro": {
-      "en": "In Al-Kawthar, the word الْكَوْثَرَ is the direct object — something given TO someone. Today we learn two more prepositions: مِنْ (from) and عَلَى (upon/on). Together with فِي and إِلَى from our last lesson, we now know four prepositions!",
-      "ur": "الْكَوْثَرَ کوثر ہے — یہ مفعول ہے کسی کو دیا گیا ہے۔ آج ہم سیکھتے ہیں دو اور حروف جر: مِنْ (سے) اور عَلَى (پر/پرے)۔ پچھلے سبق کے فِي اور إِلَى کے ساتھ، ہم اب چار حروف جر جانتے ہیں!"
+      "en": "لِلَّهِ, for Allah: a one-letter preposition joined to the next word.",
+      "ur": "لِلَّهِ، اللہ کے لیے: ایک حرف والا حرفِ جر جو اگلے لفظ سے جڑا ہے۔"
     },
     "autoplay": true
   },
@@ -32,78 +31,110 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Preposition مِنْ (from)",
-        "ar": "حرف الجر مِنْ (من)",
-        "ur": "حرف جر مِنْ (سے)"
+        "en": "Some prepositions are one letter",
+        "ar": "بِـ · لِـ · كَـ",
+        "ur": "کچھ حروفِ جر ایک حرف کے ہیں"
       },
       "explanation": {
-        "en": "مِنْ means 'from.' It shows the point of origin — where something comes from. Like all prepositions, it puts the following noun in the genitive case (مجرور).",
-        "ur": "مِنْ کا مطلب ہے 'سے'۔ یہ Origin بتاتا ہے — کہ کوئی چیز کہاں سے آئی ہے۔ تمام حروف جر کی طرح، یہ بھی اپنے بعد والے اسم کو مجرور بناتا ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "مِنَ الْبَيْتِ",
-        "ar_plain": "من البيت",
-        "translit": "mina al-bayti",
-        "en": "from the house",
-        "ur": "گھر سے"
-      },
-      "explanation": {
-        "en": "مِنَ الْبَيْتِ — someone is leaving the house and coming from inside it. The origin is the house.",
-        "ur": "مِنَ الْبَيْتِ — کوئی گھر سے باہر آ رہا ہے۔ Origin گھر ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "مِنَ الْمَسْجِدِ",
-        "ar_plain": "من المسجد",
-        "translit": "mina al-masjidi",
-        "en": "from the mosque",
-        "ur": "مسجد سے"
-      },
-      "explanation": {
-        "en": "مِنَ الْمَسْجِدِ — coming away from the mosque. مِنْ marks the starting point of movement.",
-        "ur": "مِنَ الْمَسْجِدِ — مسجد سے واپس آ رہا ہے۔ مِنْ حرکت کا Origin بتاتا ہے۔"
+        "en": "فِي and عَلَى are written as separate words. بِـ, لِـ and كَـ are a single letter, so they are written joined to the next word.",
+        "ur": "فِي اور عَلَى الگ الفاظ کی طرح لکھے جاتے ہیں۔ بِـ، لِـ اور كَـ ایک ہی حرف ہیں، اس لیے اگلے لفظ سے جوڑ کر لکھے جاتے ہیں۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Preposition عَلَى (upon/on)",
-        "ar": "حرف الجر عَلَى (على)",
-        "ur": "حرف جر عَلَى (پر/پرے)"
+        "en": "بِـ keeps the alif of الـ",
+        "ar": "بِالْقَلَمِ",
+        "ur": "بِـ، الـ کا الف رکھتا ہے"
       },
       "explanation": {
-        "en": "عَلَى means 'upon' or 'on.' It shows that something is on top of or supported by another thing. Like all prepositions, it also puts the following noun in the genitive case (مجرور).",
-        "ur": "عَلَى کا مطلب ہے 'پر' یا 'پرے'۔ یہ بتاتا ہے کہ کوئی چیز کسی اور چیز کے اوپر یا اس پر واقع ہے۔ تمام حروف جر کی طرح، یہ بھی اپنے بعد والے اسم کو مجرور بناتا ہے۔"
-      }
+        "en": "بِـ + الْقَلَمِ = بِالْقَلَمِ, with the pen. The alif stays in writing but is not pronounced: bi-l-qalami. Here بِـ means with, as a tool.",
+        "ur": "بِـ + الْقَلَمِ = بِالْقَلَمِ، قلم سے۔ الف لکھا جاتا ہے مگر پڑھا نہیں جاتا: بِلْقَلَمِ۔ یہاں بِـ کا مطلب ہے کسی آلے سے۔"
+      },
+      "examples": [
+        {
+          "ar": "كَتَبَ الطَّالِبُ بِالْقَلَمِ",
+          "ar_plain": "كتب الطالب بالقلم",
+          "translit": "kataba ṭ-ṭālibu bi-l-qalami",
+          "en": "The student wrote with the pen.",
+          "ur": "طالب علم نے قلم سے لکھا۔"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "لِـ drops the alif of الـ",
+        "ar": "لِلطَّالِبِ · لِلَّهِ",
+        "ur": "لِـ، الـ کا الف گرا دیتا ہے"
+      },
+      "explanation": {
+        "en": "لِـ + الطَّالِبِ = لِلطَّالِبِ, for the student — the alif is not written. لِـ + اللَّهِ = لِلَّهِ, for Allah.",
+        "ur": "لِـ + الطَّالِبِ = لِلطَّالِبِ، طالب علم کے لیے — الف نہیں لکھا جاتا۔ لِـ + اللَّهِ = لِلَّهِ، اللہ کے لیے۔"
+      },
+      "examples": [
+        {
+          "ar": "الْكِتَابُ لِلطَّالِبِ",
+          "ar_plain": "الكتاب للطالب",
+          "translit": "al-kitābu li-ṭ-ṭālibi",
+          "en": "The book is for the student.",
+          "ur": "کتاب طالب علم کے لیے ہے۔"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "لِـ or a chain?",
+        "ar": "الْكِتَابُ لِلطَّالِبِ / كِتَابُ الطَّالِبِ",
+        "ur": "لِـ یا زنجیر؟"
+      },
+      "explanation": {
+        "en": "الْكِتَابُ لِلطَّالِبِ is a sentence: the book is for (belongs to) the student. كِتَابُ الطَّالِبِ is a phrase: the student's book. No لِـ is hidden in a chain.",
+        "ur": "الْكِتَابُ لِلطَّالِبِ ایک جملہ ہے: کتاب طالب علم کی ہے۔ كِتَابُ الطَّالِبِ ایک ترکیب ہے: طالب علم کی کتاب۔ زنجیر میں کوئی لِـ چھپا نہیں ہوتا۔"
+      },
+      "examples": [
+        {
+          "ar": "الْكِتَابُ لِلطَّالِبِ",
+          "ar_plain": "الكتاب للطالب",
+          "translit": "al-kitābu li-ṭ-ṭālibi",
+          "en": "The book is for the student.",
+          "ur": "کتاب طالب علم کے لیے ہے۔"
+        },
+        {
+          "ar": "كِتَابُ الطَّالِبِ",
+          "ar_plain": "كتاب الطالب",
+          "translit": "kitābu ṭ-ṭālibi",
+          "en": "the student's book",
+          "ur": "طالب علم کی کتاب"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Fatihah 1:2: All praise is for Allah, Lord of the worlds.",
+        "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+        "ur": "الفاتحہ 1:2: سب تعریف اللہ کے لیے ہے جو تمام جہانوں کا رب ہے۔"
+      },
+      "explanation": {
+        "en": "لِلَّهِ = لِـ + اللَّهِ: for Allah. Then رَبِّ الْعَالَمِينَ is a chain — Lord of the worlds — with no لِـ in it.",
+        "ur": "لِلَّهِ = لِـ + اللَّهِ: اللہ کے لیے۔ پھر رَبِّ الْعَالَمِينَ ایک زنجیر ہے — جہانوں کا رب — اس میں کوئی لِـ نہیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001002.mp3"
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "عَلَى الْمَكْتَبِ",
-        "ar_plain": "على المكتب",
-        "translit": "alaa al-maktabi",
-        "en": "on the desk",
-        "ur": "میز پر"
+        "ar": "ذَهَبَ الْأُسْتَاذُ بِالسَّيَّارَةِ",
+        "ar_plain": "ذهب الأستاذ بالسيارة",
+        "translit": "dhahaba l-ustādhu bi-s-sayyārati",
+        "en": "The teacher went by car.",
+        "ur": "استاد گاڑی سے گیا۔"
       },
       "explanation": {
-        "en": "عَلَى الْمَكْتَبِ — something is on top of the desk. The surface contact is shown by عَلَى.",
-        "ur": "عَلَى الْمَكْتَبِ — کوئی چیز میز کے اوپر ہے۔ عَلَى سطح کے تماس کو بتاتا ہے۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "مِنْ vs عَلَى vs فِي",
-        "ur": "مِنْ اور عَلَى اور فِي میں فرق"
-      },
-      "body": {
-        "en": "مِنْ = from (origin). عَلَى = on (surface). فِي = in (inside). Think of them as layers: from → on → in. All three put the noun in genitive (مجرور).",
-        "ur": "مِنْ = سے (Origin)۔ عَلَى = پر (سطح)۔ فِي = میں (اندر)۔ انہیں تہوں کی طرح سمجھیں: سے → پر → میں۔ تینوں اسم کو مجرور بناتے ہیں۔"
+        "en": "بِـ can also mean by, for a way of travelling: by car.",
+        "ur": "بِـ کا مطلب ذریعہ بھی ہو سکتا ہے، جیسے سفر کا طریقہ: گاڑی سے۔"
       }
     }
   ],
@@ -112,151 +143,152 @@
       "type": "TAP_TRANSLATION",
       "id": "ch27-l02-ex01",
       "prompt": {
-        "ar": "مِنَ الْبَيْتِ",
-        "ar_plain": "من البيت",
-        "translit": "mina al-bayti",
-        "en": "from the house",
-        "ur": "گھر سے"
+        "ar": "كَتَبَ الطَّالِبُ بِالْقَلَمِ",
+        "ar_plain": "كتب الطالب بالقلم",
+        "translit": "kataba ṭ-ṭālibu bi-l-qalami",
+        "en": "The student wrote with the pen.",
+        "ur": "طالب علم نے قلم سے لکھا۔"
       },
       "options": [
         {
-          "en": "from the house",
-          "ur": "گھر سے"
+          "en": "The student wrote with the pen.",
+          "ur": "طالب علم نے قلم سے لکھا۔"
         },
         {
-          "en": "in the house",
-          "ur": "گھر میں"
+          "en": "The student wrote to the pen.",
+          "ur": "طالب علم نے قلم کو لکھا۔"
         },
         {
-          "en": "to the house",
-          "ur": "گھر کی طرف"
+          "en": "The pen is for the student.",
+          "ur": "قلم طالب علم کے لیے ہے۔"
         },
         {
-          "en": "on the house",
-          "ur": "گھر پر"
+          "en": "The student wrote about the pen.",
+          "ur": "طالب علم نے قلم کے بارے میں لکھا۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "مِنْ means 'from' — it marks the starting point or origin of movement.",
-        "ur": "مِنْ کا مطلب ہے 'سے' — یہ حرکت کا Origin یا starting point بتاتا ہے۔"
+        "en": "بِالْقَلَمِ: with the pen, as a tool.",
+        "ur": "بِالْقَلَمِ: قلم سے، بطور آلہ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch27-l02-ex02",
+      "mode": "TAP",
+      "sentence_ar": "الْهَدِيَّةُ ___",
+      "hint": {
+        "en": "Write: for the teacher (لِـ + الْمُدَرِّسِ).",
+        "ur": "لکھیں: استاد کے لیے (لِـ + الْمُدَرِّسِ)۔"
+      },
+      "options": [
+        {
+          "ar": "لِالْمُدَرِّسِ",
+          "ar_plain": "لالمدرس",
+          "translit": "li-al-mudarrisi",
+          "en": "(misspelt)",
+          "ur": "(غلط املا)"
+        },
+        {
+          "ar": "لِلْمُدَرِّسِ",
+          "ar_plain": "للمدرس",
+          "translit": "li-l-mudarrisi",
+          "en": "for the teacher",
+          "ur": "استاد کے لیے"
+        },
+        {
+          "ar": "بِالْمُدَرِّسِ",
+          "ar_plain": "بالمدرس",
+          "translit": "bi-l-mudarrisi",
+          "en": "with the teacher",
+          "ur": "استاد کے ساتھ"
+        },
+        {
+          "ar": "لِمُدَرِّسٍ",
+          "ar_plain": "لمدرس",
+          "translit": "li-mudarrisin",
+          "en": "for a teacher",
+          "ur": "ایک استاد کے لیے"
+        }
+      ],
+      "correct_answer": {
+        "ar": "لِلْمُدَرِّسِ",
+        "ar_plain": "للمدرس",
+        "translit": "li-l-mudarrisi",
+        "en": "for the teacher",
+        "ur": "استاد کے لیے"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لِـ + الـ drops the alif: لِلْمُدَرِّسِ.",
+        "ur": "لِـ + الـ میں الف گر جاتا ہے: لِلْمُدَرِّسِ۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch27-l02-ex02",
-      "statement": {
-        "en": "عَلَى means 'on' or 'upon' — something is resting on top of a surface.",
-        "ur": "عَلَى کا مطلب ہے 'پر' — کوئی چیز کسی سطح کے اوپر ہے۔",
-        "ar_example": {
-          "ar": "عَلَى الطَّاوِلَةِ",
-          "ar_plain": "على الطاولة",
-          "translit": "alaa at-taawilati",
-          "en": "on the table",
-          "ur": "ٹیبل پر"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
       "id": "ch27-l02-ex03",
-      "mode": "TAP",
-      "sentence_ar": "هِيَ جَلَسَتْ ___ الْمَقْعَدِ",
-      "hint": {
-        "en": "She sat on the chair.",
-        "ur": "وہ کرسی پر بیٹھی۔"
+      "statement": {
+        "en": "بِـ + الْقَلَمِ is written بِلْقَلَمِ, without the alif.",
+        "ur": "بِـ + الْقَلَمِ کو الف کے بغیر بِلْقَلَمِ لکھا جاتا ہے۔"
       },
-      "options": [
-        {
-          "ar": "عَلَى",
-          "ar_plain": "على",
-          "translit": "alaa",
-          "en": "on",
-          "ur": "پر"
-        },
-        {
-          "ar": "مِنْ",
-          "ar_plain": "من",
-          "translit": "min",
-          "en": "from",
-          "ur": "سے"
-        },
-        {
-          "ar": "فِي",
-          "ar_plain": "في",
-          "translit": "fii",
-          "en": "in",
-          "ur": "میں"
-        },
-        {
-          "ar": "إِلَى",
-          "ar_plain": "إلى",
-          "translit": "ilaa",
-          "en": "to",
-          "ur": "تک"
-        }
-      ],
-      "correct_answer": {
-        "ar": "عَلَى",
-        "ar_plain": "على",
-        "translit": "alaa",
-        "en": "on",
-        "ur": "پر"
-      },
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "بِـ keeps the alif in writing: بِالْقَلَمِ. Only لِـ drops it.",
+        "ur": "بِـ لکھنے میں الف رکھتا ہے: بِالْقَلَمِ۔ صرف لِـ اسے گراتا ہے۔"
+      }
     },
     {
       "type": "MATCHING",
       "id": "ch27-l02-ex04",
       "left_column": [
         {
-          "ar": "مِنَ الْبَيْتِ",
-          "ar_plain": "من البيت",
-          "translit": "mina al-bayti",
-          "en": "from the house",
-          "ur": "گھر سے"
+          "ar": "بِالْقَلَمِ",
+          "ar_plain": "بالقلم",
+          "translit": "bi-l-qalami",
+          "en": "with the pen",
+          "ur": "قلم سے"
         },
         {
-          "ar": "مِنَ الْمَسْجِدِ",
-          "ar_plain": "من المسجد",
-          "translit": "mina al-masjidi",
-          "en": "from the mosque",
-          "ur": "مسجد سے"
+          "ar": "لِلْمُدَرِّسِ",
+          "ar_plain": "للمدرس",
+          "translit": "li-l-mudarrisi",
+          "en": "for the teacher",
+          "ur": "استاد کے لیے"
         },
         {
-          "ar": "عَلَى الْمَكْتَبِ",
-          "ar_plain": "على المكتب",
-          "translit": "alaa al-maktabi",
-          "en": "on the desk",
-          "ur": "میز پر"
+          "ar": "لِلَّهِ",
+          "ar_plain": "لله",
+          "translit": "lillāhi",
+          "en": "for Allah",
+          "ur": "اللہ کے لیے"
         },
         {
-          "ar": "عَلَى الْمَقْعَدِ",
-          "ar_plain": "على المقعد",
-          "translit": "alaa al-maqadi",
-          "en": "on the chair",
-          "ur": "کرسی پر"
+          "ar": "بِالسَّيَّارَةِ",
+          "ar_plain": "بالسيارة",
+          "translit": "bi-s-sayyārati",
+          "en": "by car",
+          "ur": "گاڑی کے ذریعے"
         }
       ],
       "right_column": [
         {
-          "en": "from the house",
-          "ur": "گھر سے"
+          "en": "with the pen",
+          "ur": "قلم سے"
         },
         {
-          "en": "from the mosque",
-          "ur": "مسجد سے"
+          "en": "for the teacher",
+          "ur": "استاد کے لیے"
         },
         {
-          "en": "on the desk",
-          "ur": "میز پر"
+          "en": "for Allah",
+          "ur": "اللہ کے لیے"
         },
         {
-          "en": "on the chair",
-          "ur": "کرسی پر"
+          "en": "by car",
+          "ur": "گاڑی کے ذریعے"
         }
       ],
       "correct_pairs": [
@@ -277,150 +309,172 @@
           3
         ]
       ],
-      "xp_value": 1
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "بِـ: with / by. لِـ: for.",
+        "ur": "بِـ: سے / ذریعے۔ لِـ: کے لیے۔"
+      }
     },
     {
-      "type": "BUILD_SENTENCE",
+      "type": "MATCH_AYAH",
       "id": "ch27-l02-ex05",
-      "target_translation": {
-        "en": "The student came from the school.",
-        "ur": "طالب علم سکول سے آیا۔"
-      },
-      "tiles": [
-        {
-          "ar": "الطَّالِبُ",
-          "ar_plain": "الطالب",
-          "translit": "at-taalibu",
-          "en": "the student",
-          "ur": "طالب علم"
-        },
-        {
-          "ar": "أَتَى",
-          "ar_plain": "أتى",
-          "translit": "ataa",
-          "en": "came",
-          "ur": "آیا"
-        },
-        {
-          "ar": "مِنَ",
-          "ar_plain": "من",
-          "translit": "mina",
-          "en": "from",
-          "ur": "سے"
-        },
-        {
-          "ar": "الْمَدْرَسَةِ",
-          "ar_plain": "المدرسة",
-          "translit": "al-madrast",
-          "en": "the school",
-          "ur": "سکول"
-        },
-        {
-          "ar": "إِلَى",
-          "ar_plain": "إلى",
-          "translit": "ilaa",
-          "en": "to",
-          "ur": "تک"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch27-l02-ex06",
-      "statement": {
-        "en": "مِنَ الْمَسْجِدِ and عَلَى الْمَكْتَبِ both have the noun in the genitive case (مجرور).",
-        "ur": "مِنَ الْمَسْجِدِ اور عَلَى الْمَكْتَبِ دونوں میں اسم مجرور ہے۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch27-l02-ex07",
-      "prompt": {
-        "ar": "عَلَى الطَّاوِلَةِ",
-        "ar_plain": "على الطاولة",
-        "translit": "alaa at-taawilati",
-        "en": "on the table",
-        "ur": "ٹیبل پر"
+      "ayah_fragment": {
+        "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+        "surah_ref": "Al-Fatihah 1:2"
       },
       "options": [
         {
-          "en": "on the table",
-          "ur": "ٹیبل پر"
+          "en": "لِلَّهِ = لِـ + اللَّهِ, for Allah",
+          "ur": "لِلَّهِ = لِـ + اللَّهِ، اللہ کے لیے"
         },
         {
-          "en": "from the table",
-          "ur": "ٹیبل سے"
+          "en": "رَبِّ = لِـ + رَبّ",
+          "ur": "رَبِّ = لِـ + رَبّ"
         },
         {
-          "en": "in the table",
-          "ur": "ٹیبل میں"
+          "en": "الْحَمْدُ = لِـ + حَمْد",
+          "ur": "الْحَمْدُ = لِـ + حَمْد"
         },
         {
-          "en": "to the table",
-          "ur": "ٹیبل کی طرف"
+          "en": "There is no preposition in this ayah.",
+          "ur": "اس آیت میں کوئی حرفِ جر نہیں۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "عَلَى means 'on' — something is resting on the surface of the table.",
-        "ur": "عَلَى کا مطلب ہے 'پر' — کوئی چیز ٹیبل کی سطح پر ہے۔"
+        "en": "Only لِلَّهِ has the preposition لِـ. رَبِّ الْعَالَمِينَ is a chain.",
+        "ur": "صرف لِلَّهِ میں حرفِ جر لِـ ہے۔ رَبِّ الْعَالَمِينَ ایک زنجیر ہے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch27-l02-ex08",
+      "id": "ch27-l02-ex06",
       "statement": {
-        "en": "from the mosque",
+        "en": "This is a sentence: the book belongs to the student.",
+        "ur": "یہ ایک جملہ ہے: کتاب طالب علم کی ہے۔",
         "ar_example": {
-          "ar": "مِنَ الْمَسْجِدِ",
-          "en": "from the mosque",
-          "ar_plain": "من المسجد",
-          "translit": "—",
-          "ur": "مسجد سے"
-        },
-        "ur": "مسجد سے"
+          "ar": "الْكِتَابُ لِلطَّالِبِ",
+          "ar_plain": "الكتاب للطالب",
+          "translit": "al-kitābu li-ṭ-ṭālibi",
+          "en": "The book is for the student.",
+          "ur": "کتاب طالب علم کے لیے ہے۔"
+        }
       },
       "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لِلطَّالِبِ after الْكِتَابُ makes a full sentence: the book is for the student.",
+        "ur": "الْكِتَابُ کے بعد لِلطَّالِبِ ایک مکمل جملہ بناتا ہے: کتاب طالب علم کی ہے۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch27-l02-ex07",
+      "target_translation": {
+        "en": "The teacher went by car.",
+        "ur": "استاد گاڑی سے گیا۔"
+      },
+      "tiles": [
+        {
+          "ar": "بِالسَّيَّارَةِ",
+          "ar_plain": "بالسيارة",
+          "translit": "bi-s-sayyārati",
+          "en": "by car",
+          "ur": "گاڑی سے"
+        },
+        {
+          "ar": "الْأُسْتَاذُ",
+          "ar_plain": "الأستاذ",
+          "translit": "al-ustādhu",
+          "en": "the teacher",
+          "ur": "استاد"
+        },
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "went",
+          "ur": "گیا"
+        }
+      ],
+      "correct_order": [
+        2,
+        1,
+        0
+      ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "ذَهَبَ الْأُسْتَاذُ بِالسَّيَّارَةِ — the joined بِـ stays on its noun.",
+        "ur": "ذَهَبَ الْأُسْتَاذُ بِالسَّيَّارَةِ — جڑا ہوا بِـ اپنے اسم کے ساتھ رہتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch27-l02-ex08",
+      "prompt": {
+        "ar": "الْبَيْتُ لِلْإِمَامِ",
+        "ar_plain": "البيت للإمام",
+        "translit": "al-baytu li-l-imāmi",
+        "en": "The house belongs to the imam.",
+        "ur": "گھر امام کا ہے۔"
+      },
+      "options": [
+        {
+          "en": "the imam's house is big",
+          "ur": "امام کا گھر بڑا ہے"
+        },
+        {
+          "en": "The imam went to the house.",
+          "ur": "امام گھر گیا۔"
+        },
+        {
+          "en": "The house belongs to the imam.",
+          "ur": "گھر امام کا ہے۔"
+        },
+        {
+          "en": "The imam is in the house.",
+          "ur": "امام گھر میں ہے۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لِلْإِمَامِ: for / belonging to the imam.",
+        "ur": "لِلْإِمَامِ: امام کے لیے / امام کا۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "مِنْ (from) and عَلَى (upon/on)",
-      "ar": "حرفا الجر: مِنْ وَ عَلَى",
-      "ur": "مِنْ (سے) اور عَلَى (پر)"
+      "en": "Joined prepositions",
+      "ar": "حُرُوفُ الْجَرِّ الْمُتَّصِلَةُ",
+      "ur": "جڑنے والے حروفِ جر"
     },
     "ayah": {
-      "surah": 108,
-      "ayah": 1,
-      "label": "Al-Kawthar 108:1",
-      "ar": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ",
-      "en": "Indeed, We have granted you Al-Kawthar.",
-      "ur": "بے شک ہم نے تمہیں کوثر عطا کیا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/108001.mp3"
+      "surah": 1,
+      "ayah": 2,
+      "label": "Al-Fatihah 1:2",
+      "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+      "en": "All praise is for Allah, Lord of the worlds.",
+      "ur": "سب تعریف اللہ کے لیے ہے جو تمام جہانوں کا رب ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001002.mp3"
     },
     "highlighted_word_indices": [
-      3
+      1
+    ],
+    "highlighted_words": [
+      "لِلَّهِ"
     ],
     "noor_explanation": {
-      "en": "In this ayah, الْكَوْثَرَ is the direct object (مفعول به) of أَعْطَيْنَاكَ — 'We gave you.' The alif-lam ال shows it is definite. Notice how the meaning is complete without any preposition — this is the Khabar (predicate) of إنَّ.",
-      "ur": "اس آیت میں الْكَوْثَرَ کوثر أَعْطَيْنَاكَ کا مفعول ہے — 'ہم نے تمہیں دیا'۔ ال اسے معرفہ بناتا ہے۔ دیکھیں کس طرح بغیر کسی حرف جر کے مطلب مکمل ہے — یہ إنَّ کا خبر ہے۔"
+      "en": "لِلَّهِ: لِـ joined to اللَّهِ — for Allah. You can now read بِـ and لِـ when they join the next word.",
+      "ur": "لِلَّهِ: لِـ، اللَّهِ سے جڑا ہوا — اللہ کے لیے۔ اب آپ بِـ اور لِـ کو اگلے لفظ سے جڑا ہوا پڑھ سکتے ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Four prepositions now! مِنْ (from), عَلَى (on), فِي (in), إِلَى (to). Each one puts the noun in genitive — but they each give a different relationship: origin, surface, inside, or direction. Which one will you use today?",
-      "ur": "اب چار حروف جر آ گئے! مِنْ (سے)، عَلَى (پر)، فِي (میں)، إِلَى (تک)۔ ہر ایک اسم کو مجرور بناتا ہے — لیکن ہر ایک مختلف تعلق دیتا ہے: Origin، سطح، اندر، یا سمت۔ آج آپ کسے استعمال کریں گے؟"
+      "en": "You can read بِـ and لِـ. Next: عَنْ, about, and كَـ, like.",
+      "ur": "آپ بِـ اور لِـ پڑھ سکتے ہیں۔ آگے: عَنْ، کے بارے میں، اور كَـ، کی طرح۔"
     }
   }
 }

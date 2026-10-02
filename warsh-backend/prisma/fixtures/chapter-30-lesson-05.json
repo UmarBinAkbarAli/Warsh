@@ -2,266 +2,210 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 30, Lesson 5 (ch30-l05) — the course's one complete reading of Al-Kafirun (review amendment 4): all six ayat in order, each with its meaning; 109:3 and 109:5 repeat; عَابِدُونَ / عَابِدٌ are describing nouns (Chapter 29); 109:6 لَكُمْ / لِيَ are preposition + pronoun (for you / for me) and دِينُكُمْ / دِينِ are nouns with possessive suffixes (the yā of دِينِي is not written). يَا أَيُّهَا and the verbs stay glossed. No tafsir claims. Rebuilt 2026-10-02 in the proposal harvest (Docs/proposals/proposal-harvest-tracker.md) from Docs/proposals/chapter-30-content-proposal.md and its review amendments: reading across sentences (pronoun back to its noun, وَ / فَ in context), following a short story, following a dialogue with a clarification, relative مَا ('what') with the whole clause as the thing not worshipped, and the one complete reading of Al-Kafirun 109:1–6. Removed: أَجَابَ under root ء-ج-ب (it is ج-و-ب), 'both words are definite' for الْكِتَابُ جَدِيدٌ, the إِنَّ-sentence called verbal, لَكُمْ / لِي called possessives, and the 'complete surah' lesson that skipped 109:3. The proposal's separate unseen-text lesson (l06) was not built; its job is in the review.",
+    "title": "All of Surah Al-Kafirun",
+    "titleAr": "سُورَةُ الْكَافِرُونَ",
+    "titleUr": "پوری سورۃ الکافرون",
     "chapter_order": 30,
     "lesson_order": 5,
-    "chapter_title": "Reading Comprehension and Dialogue",
-    "title": "Al-Kafirun Reading Integration",
-    "titleAr": "تَمْكِينُ قِرَاءَةِ سُورَةِ الْكَافِرُون",
-    "source": "book3_lesson7_reading_comprehension.md",
-    "estimated_minutes": 10,
+    "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
       "surah": 109,
-      "ayah": 6,
-      "label": "Al-Kafirun 109:6",
-      "ar": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
-      "en": "For you is your way, and for me is my way.",
-      "ur": "تمہارا تمہارا طریقہ اور میرا میرا طریقہ۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109006.mp3"
+      "ayah": 1,
+      "label": "Al-Kafirun 109:1",
+      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
+      "en": "Say, O disbelievers,",
+      "ur": "کہہ دیجیے: اے کافرو!",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
     },
     "noor_intro": {
-      "en": "Now let's read Surah Al-Kafirun as a complete passage. Every sentence type we've learned appears here. This is your first full Quranic passage reading.",
-      "ur": "اب آئیے سورۃ الکافرون کو مکمل passage کے طور پر پڑھیں۔ ہر sentence type جو ہم نے سیکھی ہے یہاں موجود ہے۔ یہ آپ کا پہلا مکمل قرآنی passage reading ہے۔"
+      "en": "Six ayat. Listen to the opening, then read them all in order.",
+      "ur": "چھ آیات۔ آغاز سنیں، پھر سب ترتیب سے پڑھیں۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "CONCEPT",
+      "type": "AYAH_PREVIEW",
       "concept": {
-        "en": "Surah Al-Kafirun as a reading passage",
-        "ar": "سُورَةُ الْكَافِرُون كَنَصٍّ قِرَائِيٍّ",
-        "ur": "سورۃ الکافرون کو reading passage کے طور پر"
+        "en": "109:1: Say, O disbelievers,",
+        "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
+        "ur": "109:1: کہہ دیجیے: اے کافرو!"
       },
       "explanation": {
-        "en": "Al-Kafirun uses both sentence types throughout. قُلْ is a verb in ayah 1. لَا أَعْبُدُ is negated verbal. لَكُمْ دِينُكُمْ is nominal with possession. Reading the whole Surah integrates all your skills.",
-        "ur": "الکافرون میں دونوں sentence types throughout استعمال ہوتے ہیں۔ قُلْ ayah 1 میں verb ہے۔ لَا أَعْبُدُ negated verbal ہے۔ لَكُمْ دِينُكُمْ possession کے ساتھ nominal ہے۔ پوری Surah پڑھنے سے آپ کی تمام skills integrate ہوتی ہیں۔"
-      }
+        "en": "قُلْ, say. Then the call: يَا أَيُّهَا الْكَافِرُونَ, O disbelievers. These are the people addressed.",
+        "ur": "قُلْ، کہہ دیجیے۔ پھر پکار: يَا أَيُّهَا الْكَافِرُونَ، اے کافرو۔ یہی مخاطب ہیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "دِينُكُمْ",
-        "ar_plain": "دينكم",
-        "translit": "diinakum",
-        "en": "your way/religion",
-        "ur": "تمہارا طریقہ/دین"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "109:2: I do not worship what you worship.",
+        "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
+        "ur": "109:2: میں اس کی عبادت نہیں کرتا جس کی تم عبادت کرتے ہو۔"
       },
       "explanation": {
-        "en": "دِينٌ (way/religion) + كُمْ (your plural) = your way. Possession expressed through attached pronoun.",
-        "ur": "دِينٌ (طریقہ/دین) + كُمْ (تمہارا جمع) = تمہارا طریقہ۔ Possession attached pronoun سے ظاہر۔"
-      }
+        "en": "Lesson 4: لَا أَعْبُدُ | مَا تَعْبُدُونَ.",
+        "ur": "سبق 4: لَا أَعْبُدُ | مَا تَعْبُدُونَ۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109002.mp3"
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "دِينِ",
-        "ar_plain": "ديني",
-        "translit": "diini",
-        "en": "my way/religion",
-        "ur": "میرا طریقہ/دین"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "109:3: Nor are you worshippers of what I worship.",
+        "ar": "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ",
+        "ur": "109:3: اور نہ تم اس کی عبادت کرنے والے ہو جس کی میں عبادت کرتا ہوں۔"
       },
       "explanation": {
-        "en": "دِينٌ (way/religion) + ي (my) = my way. ي is the first person singular attached pronoun.",
-        "ur": "دِينٌ (طریقہ/دین) + ي (میرا) = میرا طریقہ۔ ي first person singular attached pronoun ہے۔"
-      }
+        "en": "Now the other side: أَنْتُمْ, you, and عَابِدُونَ, worshippers — a describing noun.",
+        "ur": "اب دوسری طرف: أَنْتُمْ، تم، اور عَابِدُونَ، عبادت کرنے والے — صفت والا اسم۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109003.mp3"
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "لَكُمْ دِينُكُمْ",
-        "ar_plain": "لكم دينكم",
-        "translit": "lakum diinakum",
-        "en": "For you is your way.",
-        "ur": "تمہارے لیے ہے تمہارا طریقہ۔"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "109:4: Nor will I be a worshipper of what you worship.",
+        "ar": "وَلَا أَنَا عَابِدٌ مَا عَبَدْتُمْ",
+        "ur": "109:4: اور نہ میں اس کی عبادت کرنے والا ہوں جس کی تم نے عبادت کی۔"
       },
       "explanation": {
-        "en": "لَكُمْ = for you (لْ + كُمْ). دِينُكُمْ = your way (دِينٌ + كُمْ). This is a nominal sentence: لَكُمْ is the particle + possessor, دِينُكُمْ is the possessor + possessed.",
-        "ur": "لَكُمْ = تمہارے لیے (لْ + كُمْ)۔ دِينُكُمْ = تمہارا طریقہ (دِينٌ + كُمْ)۔ یہ ایک nominal sentence ہے: لَكُمْ particle + possessor ہے، دِينُكُمْ possessor + possessed ہے۔"
-      }
+        "en": "Back to the speaker: أَنَا, I, and عَابِدٌ, a worshipper — the singular of عَابِدُونَ.",
+        "ur": "پھر کہنے والے کی طرف: أَنَا، میں، اور عَابِدٌ، عبادت کرنے والا — عَابِدُونَ کا واحد۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109004.mp3"
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "لِي",
-        "ar_plain": "لي",
-        "translit": "lii",
-        "en": "for me",
-        "ur": "میرے لیے"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "109:5: Nor will you be worshippers of what I worship.",
+        "ar": "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ",
+        "ur": "109:5: اور نہ تم اس کی عبادت کرنے والے ہو جس کی میں عبادت کرتا ہوں۔"
       },
       "explanation": {
-        "en": "لْ + ي = for me. The ل indicates possession/belonging. ي is the first person singular attached pronoun.",
-        "ur": "لْ + ي = میرے لیے۔ ل possession/belonging indicate کرتا ہے۔ ي first person singular attached pronoun ہے۔"
-      }
+        "en": "The same words as 109:3, repeated.",
+        "ur": "بالکل 109:3 والے الفاظ، دہرائے گئے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109005.mp3"
     },
     {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "The complete Surah Al-Kafirun sentence by sentence",
-        "ur": "مکمل سورۃ الکافرون sentence by sentence"
-      },
-      "body": {
-        "en": "Ayah 1: قُلْ يَا أَيُّهَا الْكَافِرُونَ (verbal — command) | Ayah 2: لَا أَعْبُدُ مَا تَعْبُدُونَ (verbal — negated present) | Ayah 3: لَا أَعْبُدُ مَا أَعْبُدُ (verbal — negated present) | Ayah 4: وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ (verbal + nominal relative clause) | Ayah 5: لَكُمْ دِينُكُمْ وَلِيَ دِينِ (nominal — possession) | Ayah 6: لَكُمْ دِينُكُمْ وَلِيَ دِينِ (nominal — possession, identical to 5)",
-        "ur": "Ayah 1: قُلْ يَا أَيُّهَا الْكَافِرُونَ (verbal — حکم) | Ayah 2: لَا أَعْبُدُ مَا تَعْبُدُونَ (verbal — negated present) | Ayah 3: لَا أَعْبُدُ مَا أَعْبُدُ (verbal — negated present) | Ayah 4: وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ (verbal + nominal relative clause) | Ayah 5: لَكُمْ دِينُكُمْ وَلِيَ دِينِ (nominal — possession) | Ayah 6: لَكُمْ دِينُكُمْ وَلِيَ دِينِ (nominal — possession, 5 کی طرح)"
-      }
-    }
-  ],
-  "exercises": [
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch30-l05-ex01",
-      "prompt": {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "109:6: For you is your religion, and for me is my religion.",
         "ar": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
-        "ar_plain": "لكم دينكم ولي ديني",
-        "translit": "lakum diinakum waliya diini",
-        "en": "For you is your way, and for me is my way.",
-        "ur": "تمہارے لیے ہے تمہارا طریقہ، اور میرے لیے ہے میرا طریقہ۔"
+        "ur": "109:6: تمہارے لیے تمہارا دین ہے اور میرے لیے میرا دین۔"
       },
-      "options": [
-        {
-          "en": "For you is your way, and for me is my way.",
-          "ur": "تمہارے لیے ہے تمہارا طریقہ، اور میرے لیے ہے میرا طریقہ۔"
-        },
-        {
-          "en": "Your religion is yours and my religion is mine.",
-          "ur": "تمہارا دین تمہارا ہے اور میرا دین میرا ہے۔"
-        },
-        {
-          "en": "You have your way and I have my way.",
-          "ur": "تمہارا طریقہ ہے اور میرا طریقہ ہے۔"
-        },
-        {
-          "en": "All of the above meanings.",
-          "ur": "مندرجہ بالا تمام معنی۔"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "This is two nominal sentences joined by وَ. لَكُمْ دِينُكُمْ (for you is your way) + لِيَ دِينِ (for me is my way). Both are pure equational nominal sentences.",
-        "ur": "یہ وَ سے جُڑی دو nominal sentences ہیں۔ لَكُمْ دِينُكُمْ (تمہارے لیے ہے تمہارا طریقہ) + لِيَ دِينِ (میرے لیے ہے میرا طریقہ)۔ دونوں خالص equational nominal sentences ہیں۔"
-      }
+      "explanation": {
+        "en": "لَكُمْ = لِـ + كُمْ, for you; دِينُكُمْ = دِينُ + كُمْ, your religion. وَلِيَ = وَ + لِـ + ي, and for me; دِينِ, my religion (the ي of دِينِي is not written).",
+        "ur": "لَكُمْ = لِـ + كُمْ، تمہارے لیے؛ دِينُكُمْ = دِينُ + كُمْ، تمہارا دین۔ وَلِيَ = وَ + لِـ + ي، اور میرے لیے؛ دِينِ، میرا دین (دِينِي کی ی لکھی نہیں جاتی)۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109006.mp3"
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch30-l05-ex02",
-      "statement": {
-        "en": "In لَكُمْ دِينُكُمْ, the word كُمْ is a first person singular attached pronoun meaning 'my'.",
-        "ur": "لَكُمْ دِينُكُمْ میں، word كُمْ first person singular attached pronoun ہے جس کا مطلب 'میرا' ہے۔",
-        "ar_example": {
-          "ar": "لَكُمْ دِينُكُمْ",
-          "ar_plain": "لكم دينكم",
-          "translit": "lakum diinakum",
-          "en": "For you is your way.",
-          "ur": "تمہارے لیے ہے تمہارا طریقہ۔"
-        }
+      "type": "CONTRAST",
+      "concept": {
+        "en": "For you / your",
+        "ar": "لَكُمْ / دِينُكُمْ",
+        "ur": "تمہارے لیے / تمہارا"
       },
-      "correct_answer": false,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "كُمْ is the second person plural attached pronoun (your pl.). First person is ي (my). So دِينُكُمْ = your (pl.) way, not my way.",
-        "ur": "كُمْ second person plural attached pronoun ہے (تمہارا جمع)۔ First person ي ہے (میرا)۔ تو دِينُكُمْ = تمہارا (جمع) طریقہ، میرا نہیں۔"
-      }
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch30-l05-ex03",
-      "mode": "TAP",
-      "sentence_ar": "دِينُ ___ جَدِيدٌ",
-      "hint": {
-        "en": "My way/religion is new.",
-        "ur": "میرا طریقہ/دین نیا ہے۔"
+      "explanation": {
+        "en": "The same ـكُمْ, two jobs: after the preposition لِـ it means for you; on the noun دِينُ it means your.",
+        "ur": "ایک ہی ـكُمْ، دو کام: حرفِ جر لِـ کے بعد اس کا مطلب ہے تمہارے لیے؛ اسم دِينُ پر اس کا مطلب ہے تمہارا۔"
       },
-      "options": [
+      "examples": [
         {
-          "ar": "ي",
-          "ar_plain": "ي",
-          "translit": "ya",
-          "en": "my",
-          "ur": "میرا"
-        },
-        {
-          "ar": "كَ",
-          "ar_plain": "ك",
-          "translit": "ka",
-          "en": "your (sg.)",
-          "ur": "تمہارا (واحد)"
-        },
-        {
-          "ar": "نَا",
-          "ar_plain": "نا",
-          "translit": "naa",
-          "en": "our",
-          "ur": "ہمارا"
-        },
-        {
-          "ar": "هُمْ",
-          "ar_plain": "هم",
-          "translit": "hum",
-          "en": "their",
-          "ur": "ان کا"
-        }
-      ],
-      "correct_answer": {
-        "ar": "ي",
-        "ar_plain": "ي",
-        "translit": "ya",
-        "en": "my",
-        "ur": "میرا"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch30-l05-ex04",
-      "left_column": [
-        {
-          "ar": "قُلْ",
-          "ar_plain": "قل",
-          "translit": "qul",
-          "en": "Say!",
-          "ur": "کہو!"
-        },
-        {
-          "ar": "لَا أَعْبُدُ",
-          "ar_plain": "لا أعبد",
-          "translit": "laa a'budu",
-          "en": "I do not worship",
-          "ur": "میں عبادت نہیں کرواؤں"
+          "ar": "لَكُمْ",
+          "ar_plain": "لكم",
+          "translit": "lakum",
+          "en": "for you",
+          "ur": "تمہارے لیے"
         },
         {
           "ar": "دِينُكُمْ",
           "ar_plain": "دينكم",
-          "translit": "diinakum",
-          "en": "your way",
-          "ur": "تمہارا طریقہ"
+          "translit": "dīnukum",
+          "en": "your religion",
+          "ur": "تمہارا دین"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch30-l05-ex01",
+      "ayah_fragment": {
+        "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
+        "surah_ref": "Al-Kafirun 109:1"
+      },
+      "options": [
+        {
+          "en": "Who is addressed? the believers",
+          "ur": "مخاطب کون ہیں؟ مومن"
         },
         {
-          "ar": "دِينِ",
-          "ar_plain": "ديني",
-          "translit": "diini",
-          "en": "my way",
-          "ur": "میرا طریقہ"
+          "en": "Who is addressed? the disbelievers",
+          "ur": "مخاطب کون ہیں؟ کافر"
+        },
+        {
+          "en": "Who is addressed? the worshippers in the mosque",
+          "ur": "مخاطب کون ہیں؟ مسجد کے نمازی"
+        },
+        {
+          "en": "Who is addressed? nobody",
+          "ur": "مخاطب کون ہیں؟ کوئی نہیں"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يَا أَيُّهَا الْكَافِرُونَ: O disbelievers.",
+        "ur": "يَا أَيُّهَا الْكَافِرُونَ: اے کافرو۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch30-l05-ex02",
+      "left_column": [
+        {
+          "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
+          "ar_plain": "لا أعبد ما تعبدون",
+          "translit": "lā aʿbudu mā taʿbudūna",
+          "en": "I do not worship what you worship.",
+          "ur": "میں اس کی عبادت نہیں کرتا جس کی تم عبادت کرتے ہو۔"
+        },
+        {
+          "ar": "وَلَا أَنَا عَابِدٌ مَا عَبَدْتُمْ",
+          "ar_plain": "ولا أنا عابد ما عبدتم",
+          "translit": "wa-lā ana ʿābidun mā ʿabadtum",
+          "en": "Nor will I be a worshipper of what you worship.",
+          "ur": "اور نہ میں اس کی عبادت کرنے والا ہوں جس کی تم نے عبادت کی۔"
+        },
+        {
+          "ar": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+          "ar_plain": "لكم دينكم ولي دين",
+          "translit": "lakum dīnukum wa-liya dīni",
+          "en": "For you is your religion, and for me is my religion.",
+          "ur": "تمہارے لیے تمہارا دین ہے اور میرے لیے میرا دین۔"
         }
       ],
       "right_column": [
         {
-          "en": "Verb — command (fi'l amr)",
-          "ur": "Verb — حکم (فعل امر)"
+          "en": "109:2",
+          "ur": "109:2"
         },
         {
-          "en": "Verbal sentence — negated present",
-          "ur": "فعلی جملہ — نفی شدہ حال"
+          "en": "109:4",
+          "ur": "109:4"
         },
         {
-          "en": "Nominal — possession (2nd pl.)",
-          "ur": "اسمی — ملکیت (دوسرا جمع)"
-        },
-        {
-          "en": "Nominal — possession (1st sg.)",
-          "ur": "اسمی — ملکیت (پہلا واحد)"
+          "en": "109:6",
+          "ur": "109:6"
         }
       ],
       "correct_pairs": [
@@ -276,137 +220,183 @@
         [
           2,
           2
-        ],
-        [
-          3,
-          3
         ]
       ],
-      "xp_value": 1
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "Read the six ayat in order again.",
+        "ur": "چھ آیات دوبارہ ترتیب سے پڑھیں۔"
+      }
     },
     {
-      "type": "BUILD_SENTENCE",
-      "id": "ch30-l05-ex05",
-      "target_translation": {
-        "en": "For me is my way.",
-        "ur": "میرے لیے ہے میرا طریقہ۔"
-      },
-      "tiles": [
-        {
-          "ar": "لِي",
-          "ar_plain": "لي",
-          "translit": "lii",
-          "en": "for me",
-          "ur": "میرے لیے"
-        },
-        {
-          "ar": "دِينِي",
-          "ar_plain": "ديني",
-          "translit": "diinii",
-          "en": "my way",
-          "ur": "میرا طریقہ"
-        },
-        {
-          "ar": "لَكُمْ",
-          "ar_plain": "لكم",
-          "translit": "lakum",
-          "en": "for you (pl.)",
-          "ur": "تمہارے لیے"
-        },
-        {
-          "ar": "دِينُكُمْ",
-          "ar_plain": "دينكم",
-          "translit": "diinakum",
-          "en": "your way",
-          "ur": "تمہارا طریقہ"
+      "type": "TRUE_FALSE",
+      "id": "ch30-l05-ex03",
+      "statement": {
+        "en": "109:3 and 109:5 have the same words.",
+        "ur": "109:3 اور 109:5 کے الفاظ ایک جیسے ہیں۔",
+        "ar_example": {
+          "ar": "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ",
+          "ar_plain": "ولا أنتم عابدون ما أعبد",
+          "translit": "wa-lā antum ʿābidūna mā aʿbudu",
+          "en": "Nor are you worshippers of what I worship.",
+          "ur": "اور نہ تم اس کی عبادت کرنے والے ہو جس کی میں عبادت کرتا ہوں۔"
         }
-      ],
-      "correct_order": [
-        0,
-        1
-      ],
-      "xp_value": 1
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Both read: وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ.",
+        "ur": "دونوں میں ہے: وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ۔"
+      }
     },
     {
-      "type": "TAP_TRANSLATION",
-      "id": "ch30-l05-ex06",
-      "prompt": {
-        "ar": "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ",
-        "ar_plain": "ولا أنتم عابدون ما أعبد",
-        "translit": "walaa antum 'aabidoona maa a'budu",
-        "en": "Nor are you those who worship what I worship.",
-        "ur": "اور نہ ہی تم وہ ہو جو میں پوجتا ہوں۔"
+      "type": "MATCH_AYAH",
+      "id": "ch30-l05-ex04",
+      "ayah_fragment": {
+        "ar": "وَلَا أَنَا عَابِدٌ مَا عَبَدْتُمْ",
+        "surah_ref": "Al-Kafirun 109:4"
       },
       "options": [
         {
-          "en": "Nor are you those who worship what I worship.",
-          "ur": "اور نہ ہی تم وہ ہو جو میں پوجتا ہوں۔"
+          "en": "Who speaks of himself here? أَنَا, I — the speaker",
+          "ur": "یہاں کون اپنی بات کرتا ہے؟ أَنَا، میں — کہنے والا"
         },
         {
-          "en": "And you do not worship what I worship.",
-          "ur": "اور تم میں جس کی پوجائی کرتا ہوں اس کی پوجائی نہیں کرتے۔"
+          "en": "Who speaks of himself here? the disbelievers",
+          "ur": "یہاں کون اپنی بات کرتا ہے؟ کافر"
         },
         {
-          "en": "And I am not worshipping what you worship.",
-          "ur": "اور میں تمہاری پوجائی نہیں کر رہا۔"
+          "en": "Who speaks of himself here? nobody",
+          "ur": "یہاں کون اپنی بات کرتا ہے؟ کوئی نہیں"
         },
         {
-          "en": "You are not my worshippers.",
-          "ur": "تم میرے پوجنے والے نہیں ہو۔"
+          "en": "Who speaks of himself here? the worshippers",
+          "ur": "یہاں کون اپنی بات کرتا ہے؟ عبادت کرنے والے"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "عَابِدُونَ is a noun meaning 'those who worship'. مَا أَعْبُدُ is the relative clause. The structure is: nor are you (عَابِدُونَ) those who worship what I worship.",
-        "ur": "عَابِدُونَ ایک noun ہے جس کا مطلب 'وہ لوگ جو پوجتے ہیں'۔ مَا أَعْبُدُ relative clause ہے۔ Structure ہے: nor are you (عَابِدُونَ) وہ لوگ جو میں پوجتا ہوں اس کی پوجائی کرتے ہیں۔"
+        "en": "أَنَا عَابِدٌ: I … a worshipper — the speaker who was told قُلْ.",
+        "ur": "أَنَا عَابِدٌ: میں … عبادت کرنے والا — وہ کہنے والا جسے قُلْ کہا گیا۔"
       }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch30-l05-ex07",
+      "id": "ch30-l05-ex05",
       "prompt": {
-        "ar": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
-        "ar_plain": "لكم دينكم ولي دين",
-        "translit": "lakum diinukum wa liya diin",
-        "en": "For you is your religion, and for me is my religion.",
-        "ur": "تمہارے لیے تمہارا دین اور میرے لیے میرا دین۔"
+        "ar": "لَكُمْ",
+        "ar_plain": "لكم",
+        "translit": "lakum",
+        "en": "for you",
+        "ur": "تمہارے لیے"
       },
       "options": [
         {
-          "en": "For you is your religion, and for me is my religion.",
-          "ur": "تمہارے لیے تمہارا دین اور میرے لیے میرا دین۔"
+          "en": "your religion",
+          "ur": "تمہارا دین"
         },
         {
-          "en": "For me is your religion, and for you is mine.",
-          "ur": "میرے لیے تمہارا دین اور تمہارے لیے میرا۔"
+          "en": "for me",
+          "ur": "میرے لیے"
         },
         {
-          "en": "We all share one religion.",
-          "ur": "ہم سب کا ایک ہی دین ہے۔"
+          "en": "from you",
+          "ur": "تم سے"
         },
         {
-          "en": "Leave your religion for mine.",
-          "ur": "اپنا دین چھوڑ کر میرا اپناؤ۔"
+          "en": "for you",
+          "ur": "تمہارے لیے"
         }
       ],
-      "correct_index": 0,
-      "xp_value": 1
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَكُمْ = لِـ + كُمْ: for you.",
+        "ur": "لَكُمْ = لِـ + كُمْ: تمہارے لیے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch30-l05-ex06",
+      "statement": {
+        "en": "In 109:6, لَكُمْ and دِينُكُمْ both mean your.",
+        "ur": "109:6 میں لَكُمْ اور دِينُكُمْ دونوں کا مطلب 'تمہارا' ہے۔",
+        "ar_example": {
+          "ar": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+          "ar_plain": "لكم دينكم ولي دين",
+          "translit": "lakum dīnukum wa-liya dīni",
+          "en": "For you is your religion, and for me is my religion.",
+          "ur": "تمہارے لیے تمہارا دین ہے اور میرے لیے میرا دین۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَكُمْ: for you (preposition + pronoun). دِينُكُمْ: your religion (noun + possessive).",
+        "ur": "لَكُمْ: تمہارے لیے (حرفِ جر + ضمیر)۔ دِينُكُمْ: تمہارا دین (اسم + ملکیت)۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch30-l05-ex07",
+      "ayah_fragment": {
+        "ar": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+        "surah_ref": "Al-Kafirun 109:6"
+      },
+      "options": [
+        {
+          "en": "What does the surah end with? a question",
+          "ur": "سورت کس پر ختم ہوتی ہے؟ ایک سوال"
+        },
+        {
+          "en": "What does the surah end with? a call: O disbelievers",
+          "ur": "سورت کس پر ختم ہوتی ہے؟ پکار: اے کافرو"
+        },
+        {
+          "en": "What does the surah end with? your religion is yours, and mine is mine",
+          "ur": "سورت کس پر ختم ہوتی ہے؟ تمہارا دین تمہارے لیے، میرا میرے لیے"
+        },
+        {
+          "en": "What does the surah end with? I worship what you worship",
+          "ur": "سورت کس پر ختم ہوتی ہے؟ میں اس کی عبادت کرتا ہوں جس کی تم کرتے ہو"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "109:6: for you your religion, and for me my religion.",
+        "ur": "109:6: تمہارے لیے تمہارا دین، اور میرے لیے میرا دین۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch30-l05-ex08",
+      "statement": {
+        "en": "Across the surah, the speaker never says he worships what they worship.",
+        "ur": "پوری سورت میں کہنے والا کبھی نہیں کہتا کہ وہ اس کی عبادت کرتا ہے جس کی وہ کرتے ہیں۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "109:2 and 109:4 both say the opposite: I do not worship it / I am not a worshipper of it.",
+        "ur": "109:2 اور 109:4 دونوں اس کے الٹ کہتی ہیں: میں اس کی عبادت نہیں کرتا / میں اس کی عبادت کرنے والا نہیں۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Surah Al-Kafirun: full passage reading",
-      "ar": "سُورَةُ الْكَافِرُون: مَقْرُوءٌ تَامٌ",
-      "ur": "سورۃ الکافرون: مکمل passage reading"
+      "en": "Surah Al-Kafirun, complete",
+      "ar": "سُورَةُ الْكَافِرُونَ",
+      "ur": "پوری سورۃ الکافرون"
     },
     "ayah": {
       "surah": 109,
       "ayah": 6,
       "label": "Al-Kafirun 109:6",
       "ar": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
-      "en": "For you is your way, and for me is my way.",
-      "ur": "تمہارا تمہارا طریقہ اور میرا میرا طریقہ۔",
+      "en": "For you is your religion, and for me is my religion.",
+      "ur": "تمہارے لیے تمہارا دین ہے اور میرے لیے میرا دین۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109006.mp3"
     },
     "highlighted_word_indices": [
@@ -415,15 +405,21 @@
       2,
       3
     ],
+    "highlighted_words": [
+      "لَكُمْ",
+      "دِينُكُمْ",
+      "وَلِيَ",
+      "دِينِ"
+    ],
     "noor_explanation": {
-      "en": "This ayah completes the Surah's message of mutual freedom from worship. No judgment, no hostility — just: our paths are separate. This is the wisdom of الْكَافِرُون.",
-      "ur": "یہ ayah Surah کے پیغام کو مکمل کرتا ہے — worship سے باہمی آزادی۔ کوئی فیصلہ نہیں، کوئی دشمنی نہیں — صرف: ہمارے راستے الگ ہیں۔ یہ الْكَافِرُون کی حکمت ہے۔"
+      "en": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ: you have now read all six ayat of Al-Kafirun and can say what each one means.",
+      "ur": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ: آپ نے سورۃ الکافرون کی چھ آیات پڑھ لیں اور ہر ایک کا مطلب بتا سکتے ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You have now read a complete Surah from Al-Kafirun using the grammar you've learned. Nominal sentences, verbal sentences, إِنَّ, لَا negation, and possession structures — all appear in just 6 ayahs. Keep building!",
-      "ur": "اب آپ نے Al-Kafirun کی مکمل Surah گرامر کے ساتھ پڑھ لی ہے۔ Nominal sentences، verbal sentences، إِنَّ، لَا negation، اور possession structures — سب صرف 6 ayahs میں موجود ہیں۔ جاری رکھیں!"
+      "en": "Surah Al-Kafirun read in full. Next: the Chapter 30 review.",
+      "ur": "سورۃ الکافرون مکمل پڑھ لی۔ آگے: باب 30 کی دہرائی۔"
     }
   }
 }

@@ -1,0 +1,455 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 27 review (ch27-l05, rebuilt in place, REVIEW). Separate vs joined forms, contextual meanings of the eight prepositions, preposition + pronoun with referents, and the 17:1, 1:2, 101:4 and 2:2 anchors. The old review's false rule that every preposition merges with الـ is gone. Rebuilt 2026-10-02 in the proposal harvest (Docs/proposals/proposal-harvest-tracker.md) from Docs/proposals/chapter-27-content-proposal.md and its review amendments: eight common prepositions in context — فِي، عَلَى، مِنْ، إِلَى retrieved from Chapters 2/21 with a local model of the genitive after a preposition; joined بِـ / لِـ with the real spelling (لِـ + الـ → لِلْـ, لِلَّهِ; بِالْقَلَمِ keeps the alif); عَنْ and joined كَـ; prepositions with attached pronouns. Every hook now contains its lesson's preposition (Al-Kawthar and Al-Kafirun removed; the false hidden لِـ in رَبِّ removed; 'every preposition merges with الـ' removed). Not built: the proposal's separate Quran-reading lesson — its 5:11 excerpt sits in Lesson 4 — so ch27-l05 stays the review.",
+    "title": "Chapter 27 Review",
+    "titleAr": "مُرَاجَعَةُ الْفَصْلِ السَّابِعِ وَالْعِشْرِينَ",
+    "titleUr": "باب 27 کی دہرائی",
+    "chapter_order": 27,
+    "lesson_order": 5,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 17,
+      "ayah": 1,
+      "label": "Al-Isra 17:1",
+      "ar": "مِنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى",
+      "en": "from al-Masjid al-Haram to al-Masjid al-Aqsa",
+      "ur": "مسجدِ حرام سے مسجدِ اقصیٰ تک",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/017001.mp3"
+    },
+    "noor_intro": {
+      "en": "One journey, two prepositions. Listen once more before the review.",
+      "ur": "ایک سفر، دو حروفِ جر۔ دہرائی سے پہلے ایک بار پھر سنیں۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Separate and joined",
+        "ar": "فِي · عَلَى · مِنْ · إِلَى · عَنْ / بِـ · لِـ · كَـ",
+        "ur": "الگ اور جڑے ہوئے"
+      },
+      "explanation": {
+        "en": "Five are written as separate words. The three one-letter prepositions join the next word; لِـ drops the alif of الـ, بِـ and كَـ keep it.",
+        "ur": "پانچ الگ الفاظ کی طرح لکھے جاتے ہیں۔ ایک حرف والے تین حروفِ جر اگلے لفظ سے جڑتے ہیں؛ لِـ، الـ کا الف گراتا ہے، بِـ اور كَـ اسے رکھتے ہیں۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "After every preposition, a kasra",
+        "ar": "فِي الْبَيْتِ · كَالْأَسَدِ",
+        "ur": "ہر حرفِ جر کے بعد زیر"
+      },
+      "explanation": {
+        "en": "The noun after a preposition is مَجْرُور. A pronoun after it points back to something already named.",
+        "ur": "حرفِ جر کے بعد والا اسم مجرور ہوتا ہے۔ اس کے بعد ضمیر پہلے ذکر شدہ چیز کی طرف لوٹتی ہے۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "FILL_BLANK",
+      "id": "ch27-l05-ex01",
+      "mode": "TAP",
+      "sentence_ar": "الْقَلَمُ ___ الْحَقِيبَةِ",
+      "hint": {
+        "en": "The pen is inside the bag.",
+        "ur": "قلم بستے کے اندر ہے۔"
+      },
+      "options": [
+        {
+          "ar": "عَلَى",
+          "ar_plain": "على",
+          "translit": "ʿalā",
+          "en": "on",
+          "ur": "پر"
+        },
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "عَنِ",
+          "ar_plain": "عن",
+          "translit": "ʿani",
+          "en": "about",
+          "ur": "کے بارے میں"
+        },
+        {
+          "ar": "إِلَى",
+          "ar_plain": "إلى",
+          "translit": "ilā",
+          "en": "to",
+          "ur": "تک"
+        }
+      ],
+      "correct_answer": {
+        "ar": "فِي",
+        "ar_plain": "في",
+        "translit": "fī",
+        "en": "in",
+        "ur": "میں"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Inside = فِي.",
+        "ur": "اندر = فِي۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch27-l05-ex02",
+      "prompt": {
+        "ar": "رَجَعَ الْأَبُ مِنَ السُّوقِ",
+        "ar_plain": "رجع الأب من السوق",
+        "translit": "rajaʿa l-abu mina s-sūqi",
+        "en": "The father came back from the market.",
+        "ur": "والد بازار سے واپس آئے۔"
+      },
+      "options": [
+        {
+          "en": "The father went to the market.",
+          "ur": "والد بازار گئے۔"
+        },
+        {
+          "en": "The father is in the market.",
+          "ur": "والد بازار میں ہیں۔"
+        },
+        {
+          "en": "The father came back from the market.",
+          "ur": "والد بازار سے واپس آئے۔"
+        },
+        {
+          "en": "The father asked about the market.",
+          "ur": "والد نے بازار کے بارے میں پوچھا۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "رَجَعَ مِنَ: came back from.",
+        "ur": "رَجَعَ مِنَ: سے واپس آیا۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch27-l05-ex03",
+      "statement": {
+        "en": "لِـ + الْبَيْتِ is written لِلْبَيْتِ.",
+        "ur": "لِـ + الْبَيْتِ کو لِلْبَيْتِ لکھا جاتا ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لِـ drops the alif of الـ: لِلْبَيْتِ.",
+        "ur": "لِـ، الـ کا الف گرا دیتا ہے: لِلْبَيْتِ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch27-l05-ex04",
+      "statement": {
+        "en": "فِي + الْبَيْتِ is written as one word: فِلْبَيْتِ.",
+        "ur": "فِي + الْبَيْتِ کو ایک لفظ فِلْبَيْتِ لکھا جاتا ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "فِي is a separate word: فِي الْبَيْتِ.",
+        "ur": "فِي الگ لفظ ہے: فِي الْبَيْتِ۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch27-l05-ex05",
+      "left_column": [
+        {
+          "ar": "عَلَيْهِ",
+          "ar_plain": "عليه",
+          "translit": "ʿalayhi",
+          "en": "on it",
+          "ur": "اس پر"
+        },
+        {
+          "ar": "إِلَيْهِ",
+          "ar_plain": "إليه",
+          "translit": "ilayhi",
+          "en": "to him",
+          "ur": "اس کی طرف"
+        },
+        {
+          "ar": "بِهِ",
+          "ar_plain": "به",
+          "translit": "bihi",
+          "en": "with it",
+          "ur": "اس کے ذریعے"
+        },
+        {
+          "ar": "عَنْهُ",
+          "ar_plain": "عنه",
+          "translit": "ʿanhu",
+          "en": "about him",
+          "ur": "اس کے بارے میں"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "on it",
+          "ur": "اس پر"
+        },
+        {
+          "en": "to him",
+          "ur": "اس کی طرف"
+        },
+        {
+          "en": "with it",
+          "ur": "اس کے ذریعے"
+        },
+        {
+          "en": "about him",
+          "ur": "اس کے بارے میں"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "Each form is a preposition plus ـهُ / ـهِ.",
+        "ur": "ہر صورت ایک حرفِ جر اور ـهُ / ـهِ ہے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch27-l05-ex06",
+      "ayah_fragment": {
+        "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+        "surah_ref": "Al-Fatihah 1:2"
+      },
+      "options": [
+        {
+          "en": "for Allah",
+          "ur": "اللہ کے لیے"
+        },
+        {
+          "en": "with Allah",
+          "ur": "اللہ کے ساتھ"
+        },
+        {
+          "en": "from Allah",
+          "ur": "اللہ کی طرف سے"
+        },
+        {
+          "en": "like Allah",
+          "ur": "اللہ کی طرح"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لِلَّهِ = لِـ + اللَّهِ: for Allah.",
+        "ur": "لِلَّهِ = لِـ + اللَّهِ: اللہ کے لیے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch27-l05-ex07",
+      "ayah_fragment": {
+        "ar": "يَوْمَ يَكُونُ النَّاسُ كَالْفَرَاشِ الْمَبْثُوثِ",
+        "surah_ref": "Al-Qari'ah 101:4"
+      },
+      "options": [
+        {
+          "en": "What does كَـ add? about",
+          "ur": "كَـ کیا اضافہ کرتا ہے؟ کے بارے میں"
+        },
+        {
+          "en": "What does كَـ add? from",
+          "ur": "كَـ کیا اضافہ کرتا ہے؟ سے"
+        },
+        {
+          "en": "What does كَـ add? for",
+          "ur": "كَـ کیا اضافہ کرتا ہے؟ کے لیے"
+        },
+        {
+          "en": "What does كَـ add? like",
+          "ur": "كَـ کیا اضافہ کرتا ہے؟ کی طرح"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كَالْفَرَاشِ: like moths.",
+        "ur": "كَالْفَرَاشِ: پتنگوں کی طرح۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch27-l05-ex08",
+      "prompt": {
+        "ar": "هَذِهِ الْمَدْرَسَةُ، وَخَرَجَ الْأُسْتَاذُ مِنْهَا",
+        "ar_plain": "هذه المدرسة، وخرج الأستاذ منها",
+        "translit": "hādhihi l-madrasatu, wa-kharaja l-ustādhu minhā",
+        "en": "This is the school, and the teacher went out of it.",
+        "ur": "یہ اسکول ہے، اور استاد اس سے نکلے۔"
+      },
+      "options": [
+        {
+          "en": "This is the school, and the teacher went to it.",
+          "ur": "یہ اسکول ہے، اور استاد اس کی طرف گئے۔"
+        },
+        {
+          "en": "This is the school, and the teacher went out of it.",
+          "ur": "یہ اسکول ہے، اور استاد اس سے نکلے۔"
+        },
+        {
+          "en": "This is the teacher's school.",
+          "ur": "یہ استاد کا اسکول ہے۔"
+        },
+        {
+          "en": "The teacher is in this school.",
+          "ur": "استاد اس اسکول میں ہیں۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مِنْهَا = مِنْ + هَا: from it — 'it' is the school (feminine).",
+        "ur": "مِنْهَا = مِنْ + هَا: اس سے — 'اس' سے مراد اسکول ہے (مؤنث)۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch27-l05-ex09",
+      "target_translation": {
+        "en": "The book is for the student.",
+        "ur": "کتاب طالب علم کے لیے ہے۔"
+      },
+      "tiles": [
+        {
+          "ar": "لِلطَّالِبِ",
+          "ar_plain": "للطالب",
+          "translit": "li-ṭ-ṭālibi",
+          "en": "for the student",
+          "ur": "طالب علم کے لیے"
+        },
+        {
+          "ar": "الْكِتَابُ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitābu",
+          "en": "the book",
+          "ur": "کتاب"
+        }
+      ],
+      "correct_order": [
+        1,
+        0
+      ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "الْكِتَابُ لِلطَّالِبِ.",
+        "ur": "الْكِتَابُ لِلطَّالِبِ۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch27-l05-ex10",
+      "prompt_line": {
+        "ar": "أَيْنَ الْكِتَابُ؟",
+        "ar_plain": "أين الكتاب؟",
+        "translit": "ayna l-kitābu?",
+        "en": "Where is the book?",
+        "ur": "کتاب کہاں ہے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "الْكِتَابُ لِلطَّالِبِ",
+          "ar_plain": "الكتاب للطالب",
+          "translit": "al-kitābu li-ṭ-ṭālibi",
+          "en": "The book is for the student.",
+          "ur": "کتاب طالب علم کے لیے ہے۔"
+        },
+        {
+          "ar": "الْكِتَابُ عَلَى الْمَكْتَبِ",
+          "ar_plain": "الكتاب على المكتب",
+          "translit": "al-kitābu ʿalā l-maktabi",
+          "en": "The book is on the desk.",
+          "ur": "کتاب میز پر ہے۔"
+        },
+        {
+          "ar": "سَأَلَ عَنِ الْكِتَابِ",
+          "ar_plain": "سأل عن الكتاب",
+          "translit": "saʾala ʿani l-kitābi",
+          "en": "He asked about the book.",
+          "ur": "اس نے کتاب کے بارے میں پوچھا۔"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "أَيْنَ asks where; answer with a place: عَلَى الْمَكْتَبِ.",
+        "ur": "أَيْنَ جگہ پوچھتا ہے؛ جواب جگہ سے دیں: عَلَى الْمَكْتَبِ۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 27 — prepositions in context",
+      "ar": "حُرُوفُ الْجَرِّ فِي السِّيَاقِ",
+      "ur": "باب 27 — سیاق میں حروفِ جر"
+    },
+    "ayah": {
+      "surah": 2,
+      "ayah": 2,
+      "label": "Al-Baqarah 2:2",
+      "ar": "ذَلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ هُدًى لِلْمُتَّقِينَ",
+      "en": "That is the Book: there is no doubt in it, a guidance for those mindful of Allah.",
+      "ur": "یہ وہ کتاب ہے جس میں کوئی شک نہیں، پرہیزگاروں کے لیے ہدایت ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002002.mp3"
+    },
+    "highlighted_word_indices": [
+      4,
+      6
+    ],
+    "highlighted_words": [
+      "فِيهِ",
+      "لِلْمُتَّقِينَ"
+    ],
+    "noor_explanation": {
+      "en": "فِيهِ, in it, and لِلْمُتَّقِينَ, for those mindful of Allah: a preposition with a pronoun, and a joined لِـ. You can read both.",
+      "ur": "فِيهِ، اس میں، اور لِلْمُتَّقِينَ، پرہیزگاروں کے لیے: ضمیر کے ساتھ حرفِ جر، اور جڑا ہوا لِـ۔ آپ دونوں پڑھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Review done. Next: the Chapter 27 final test.",
+      "ur": "دہرائی مکمل۔ آگے: باب 27 کا آخری امتحان۔"
+    }
+  }
+}

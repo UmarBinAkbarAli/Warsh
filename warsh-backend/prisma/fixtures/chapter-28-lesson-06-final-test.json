@@ -1,0 +1,444 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 28 final test (ch28-test, new). Twelve multiple-choice questions, two per strand: verb meaning, doer/object, object vs preposition phrase, giver/receiver/gift, selected feminine forms (incl. أَتَتْ), Quran targets (104:2, 32:7). Pass mark 80 %: 9/12 fails, 10/12 passes. Rebuilt 2026-10-02 in the proposal harvest (Docs/proposals/proposal-harvest-tracker.md) from Docs/proposals/chapter-28-content-proposal.md and its review amendments: eight past verbs (عَلِمَ، فَهِمَ، حَفِظَ، رَضِيَ، أَتَى، أَعْطَى، جَمَعَ، بَدَأَ) with what follows each — a direct object, a preposition phrase (رَضِيَ عَنْ), or giver/recipient/gift (أَعْطَى). Every hook now contains its verb (2:60, 9:100, 16:1, 104:2, 32:7, 108:1); the wrong root of فَهِمَ, the 87:1 'begin praising' link, the 'all feminine pasts add تْ' rule and the off-topic Al-Kafirun close are gone. The selected feminine forms (incl. أَتَتْ, أَعْطَتْ) are taught inside each lesson instead of the proposal's separate l07, so ch28-l05 becomes the REVIEW it was titled as.",
+    "title": "Chapter 28 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الثَّامِنِ وَالْعِشْرِينَ",
+    "titleUr": "باب 28 کا آخری امتحان",
+    "chapter_order": 28,
+    "lesson_order": 6,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 32,
+      "ayah": 7,
+      "label": "As-Sajdah 32:7",
+      "ar": "وَبَدَأَ خَلْقَ الْإِنْسَانِ مِنْ طِينٍ",
+      "en": "and He began the creation of man from clay",
+      "ur": "اور اس نے انسان کی پیدائش مٹی سے شروع کی",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/032007.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 28.",
+      "ur": "باب 28 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 28,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch28-test-q01",
+        "topic": {
+          "en": "Verb meaning",
+          "ur": "فعل کا مطلب"
+        },
+        "prompt": {
+          "en": "What does this mean?",
+          "ur": "اس کا کیا مطلب ہے؟"
+        },
+        "arabic": "حَفِظَ الْوَلَدُ الْآيَةَ",
+        "options": [
+          {
+            "en": "The boy understood the ayah.",
+            "ur": "لڑکے نے آیت سمجھ لی۔"
+          },
+          {
+            "en": "The boy memorised the ayah.",
+            "ur": "لڑکے نے آیت یاد کر لی۔"
+          },
+          {
+            "en": "The boy began the ayah.",
+            "ur": "لڑکے نے آیت شروع کی۔"
+          },
+          {
+            "en": "The boy gathered the ayat.",
+            "ur": "لڑکے نے آیات جمع کیں۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch28-test-q02",
+        "topic": {
+          "en": "Verb meaning",
+          "ur": "فعل کا مطلب"
+        },
+        "prompt": {
+          "en": "What does this mean?",
+          "ur": "اس کا کیا مطلب ہے؟"
+        },
+        "arabic": "فَهِمَتِ الطَّالِبَةُ السُّؤَالَ",
+        "options": [
+          {
+            "en": "The student (f.) understood the question.",
+            "ur": "طالبہ نے سوال سمجھ لیا۔"
+          },
+          {
+            "en": "The student (f.) asked a question.",
+            "ur": "طالبہ نے سوال پوچھا۔"
+          },
+          {
+            "en": "The student (f.) knew the answer.",
+            "ur": "طالبہ کو جواب معلوم تھا۔"
+          },
+          {
+            "en": "The question understood the student.",
+            "ur": "سوال نے طالبہ کو سمجھا۔"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch28-test-q03",
+        "topic": {
+          "en": "Doer and object",
+          "ur": "فاعل اور مفعول"
+        },
+        "prompt": {
+          "en": "Who is the doer?",
+          "ur": "فاعل کون ہے؟"
+        },
+        "arabic": "جَمَعَ الْإِمَامُ النَّاسَ",
+        "options": [
+          {
+            "en": "النَّاسَ, the people",
+            "ur": "النَّاسَ، لوگ"
+          },
+          {
+            "en": "nobody",
+            "ur": "کوئی نہیں"
+          },
+          {
+            "en": "الْإِمَامُ, the imam",
+            "ur": "الْإِمَامُ، امام"
+          },
+          {
+            "en": "جَمَعَ, gathered",
+            "ur": "جَمَعَ، جمع کیا"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch28-test-q04",
+        "topic": {
+          "en": "Doer and object",
+          "ur": "فاعل اور مفعول"
+        },
+        "prompt": {
+          "en": "What was begun?",
+          "ur": "کیا شروع کیا گیا؟"
+        },
+        "arabic": "بَدَأَ الطُّلَّابُ الدَّرْسَ",
+        "options": [
+          {
+            "en": "the students",
+            "ur": "طلبہ"
+          },
+          {
+            "en": "the teacher",
+            "ur": "استاد"
+          },
+          {
+            "en": "the school",
+            "ur": "اسکول"
+          },
+          {
+            "en": "the lesson",
+            "ur": "سبق"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch28-test-q05",
+        "topic": {
+          "en": "Object or preposition phrase",
+          "ur": "مفعول یا حرفِ جر والی ترکیب"
+        },
+        "prompt": {
+          "en": "What follows رَضِيَ before the person?",
+          "ur": "رَضِيَ کے بعد شخص سے پہلے کیا آتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "عَنْ, then a noun with a kasra",
+            "ur": "عَنْ، پھر زیر والا اسم"
+          },
+          {
+            "en": "the person straight away, with a fatḥa",
+            "ur": "شخص سیدھا، زبر کے ساتھ"
+          },
+          {
+            "en": "إِلَى, then a noun with a ḍamma",
+            "ur": "إِلَى، پھر پیش والا اسم"
+          },
+          {
+            "en": "nothing ever follows it",
+            "ur": "اس کے بعد کبھی کچھ نہیں آتا"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch28-test-q06",
+        "topic": {
+          "en": "Object or preposition phrase",
+          "ur": "مفعول یا حرفِ جر والی ترکیب"
+        },
+        "prompt": {
+          "en": "Which noun is a direct object?",
+          "ur": "کون سا اسم براہِ راست مفعول ہے؟"
+        },
+        "arabic": "حَفِظَ الطَّالِبُ الدَّرْسَ، وَرَضِيَ عَنْهُ الْأُسْتَاذُ",
+        "options": [
+          {
+            "en": "الطَّالِبُ",
+            "ur": "الطَّالِبُ"
+          },
+          {
+            "en": "الْأُسْتَاذُ",
+            "ur": "الْأُسْتَاذُ"
+          },
+          {
+            "en": "الدَّرْسَ",
+            "ur": "الدَّرْسَ"
+          },
+          {
+            "en": "ـهُ in عَنْهُ",
+            "ur": "عَنْهُ میں ـهُ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch28-test-q07",
+        "topic": {
+          "en": "Giver, receiver, gift",
+          "ur": "دینے والا، لینے والا، تحفہ"
+        },
+        "prompt": {
+          "en": "Who received the gift?",
+          "ur": "تحفہ کس نے لیا؟"
+        },
+        "arabic": "أَعْطَتِ الْأُمُّ الْوَلَدَ قَلَمًا",
+        "options": [
+          {
+            "en": "the mother",
+            "ur": "والدہ"
+          },
+          {
+            "en": "the boy",
+            "ur": "لڑکا"
+          },
+          {
+            "en": "the pen",
+            "ur": "قلم"
+          },
+          {
+            "en": "the father",
+            "ur": "والد"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch28-test-q08",
+        "topic": {
+          "en": "Giver, receiver, gift",
+          "ur": "دینے والا، لینے والا، تحفہ"
+        },
+        "prompt": {
+          "en": "What was given?",
+          "ur": "کیا دیا گیا؟"
+        },
+        "arabic": "أَعْطَى الْإِمَامُ الضَّيْفَ كِتَابًا",
+        "options": [
+          {
+            "en": "the imam",
+            "ur": "امام"
+          },
+          {
+            "en": "the guest",
+            "ur": "مہمان"
+          },
+          {
+            "en": "the mosque",
+            "ur": "مسجد"
+          },
+          {
+            "en": "a book",
+            "ur": "ایک کتاب"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch28-test-q09",
+        "topic": {
+          "en": "Feminine forms",
+          "ur": "مؤنث صیغے"
+        },
+        "prompt": {
+          "en": "Which form fits? ___ الْبِنْتُ (The girl came.)",
+          "ur": "کون سا صیغہ درست ہے؟ ___ الْبِنْتُ (لڑکی آئی۔)"
+        },
+        "options": [
+          {
+            "en": "أَتَى",
+            "ur": "أَتَى"
+          },
+          {
+            "en": "أَتَاتِ",
+            "ur": "أَتَاتِ"
+          },
+          {
+            "en": "أَتَتِ",
+            "ur": "أَتَتِ"
+          },
+          {
+            "en": "أَعْطَتِ",
+            "ur": "أَعْطَتِ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch28-test-q10",
+        "topic": {
+          "en": "Feminine forms",
+          "ur": "مؤنث صیغے"
+        },
+        "prompt": {
+          "en": "Who did the action?",
+          "ur": "کام کس نے کیا؟"
+        },
+        "arabic": "عَلِمَتْ",
+        "options": [
+          {
+            "en": "a man",
+            "ur": "ایک مرد"
+          },
+          {
+            "en": "a woman or girl",
+            "ur": "ایک عورت یا لڑکی"
+          },
+          {
+            "en": "I",
+            "ur": "میں"
+          },
+          {
+            "en": "we",
+            "ur": "ہم"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch28-test-q11",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآن پڑھنا"
+        },
+        "prompt": {
+          "en": "What does this mean?",
+          "ur": "اس کا کیا مطلب ہے؟"
+        },
+        "arabic": "الَّذِي جَمَعَ مَالًا وَعَدَّدَهُ",
+        "options": [
+          {
+            "en": "who gathered wealth and counted it",
+            "ur": "جس نے مال جمع کیا اور اسے گن گن کر رکھا"
+          },
+          {
+            "en": "who gave wealth away",
+            "ur": "جس نے مال دے دیا"
+          },
+          {
+            "en": "who memorised the wealth",
+            "ur": "جس نے مال یاد کیا"
+          },
+          {
+            "en": "who was pleased with wealth",
+            "ur": "جو مال سے راضی ہوا"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch28-test-q12",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآن پڑھنا"
+        },
+        "prompt": {
+          "en": "What did He begin?",
+          "ur": "اس نے کیا شروع کیا؟"
+        },
+        "arabic": "وَبَدَأَ خَلْقَ الْإِنْسَانِ مِنْ طِينٍ",
+        "options": [
+          {
+            "en": "clay",
+            "ur": "مٹی"
+          },
+          {
+            "en": "the lesson",
+            "ur": "سبق"
+          },
+          {
+            "en": "a journey",
+            "ur": "سفر"
+          },
+          {
+            "en": "the creation of man",
+            "ur": "انسان کی پیدائش"
+          }
+        ],
+        "correct_index": 3
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 28 — past verbs and what follows them",
+      "ar": "الْفِعْلُ الْمَاضِي وَمَا بَعْدَهُ",
+      "ur": "باب 28 — ماضی کے افعال اور ان کے بعد"
+    },
+    "ayah": {
+      "surah": 32,
+      "ayah": 7,
+      "label": "As-Sajdah 32:7",
+      "ar": "وَبَدَأَ خَلْقَ الْإِنْسَانِ مِنْ طِينٍ",
+      "en": "and He began the creation of man from clay",
+      "ur": "اور اس نے انسان کی پیدائش مٹی سے شروع کی",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/032007.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "وَبَدَأَ",
+      "خَلْقَ",
+      "الْإِنْسَانِ"
+    ],
+    "noor_explanation": {
+      "en": "وَبَدَأَ خَلْقَ الْإِنْسَانِ: and He began the creation of man. You finish Chapter 28 able to read eight past verbs and what follows each.",
+      "ur": "وَبَدَأَ خَلْقَ الْإِنْسَانِ: اور اس نے انسان کی پیدائش شروع کی۔ آپ باب 28 اس حال میں مکمل کرتے ہیں کہ آٹھ ماضی کے افعال اور ان کے بعد آنے والی چیزیں پڑھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 28 complete. Chapter 29: nominal and verbal sentences.",
+      "ur": "باب 28 مکمل۔ باب 29: جملہ اسمیہ اور جملہ فعلیہ۔"
+    }
+  }
+}

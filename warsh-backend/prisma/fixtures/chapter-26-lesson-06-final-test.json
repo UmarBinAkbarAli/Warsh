@@ -1,0 +1,443 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 26 final test (ch26-test, new). Twelve multiple-choice questions on the proposal blueprint: chain meaning (3), the middle noun's two links (2), adjective target by ending/gender (3), a pointer before a chain (2), Al-Fatihah 1:4 (2). Pass mark 80 %: 9/12 fails, 10/12 passes. Rebuilt 2026-10-02 in the proposal harvest (Docs/proposals/proposal-harvest-tracker.md) from Docs/proposals/chapter-26-content-proposal.md and its review amendments: the chapter now teaches layered iḍāfa — three-noun chains, the middle noun's two links, which noun a following adjective describes, a pointer before a whole chain, and Al-Fatihah 1:4. Removed: 'رَبُّ رَبِّكُمْ — the Lord of your Lord', the Al-Kawthar hook that showed no chain, the claim that Ayat al-Kursi contains لَيْسَ, and the إِنَّ/لَيْسَ re-teaching (Chapters 24–25 own those). The proposal's separate transfer lesson (l05) was not built; the review covers it.",
+    "title": "Chapter 26 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ السَّادِسِ وَالْعِشْرِينَ",
+    "titleUr": "باب 26 کا آخری امتحان",
+    "chapter_order": 26,
+    "lesson_order": 6,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 1,
+      "ayah": 4,
+      "label": "Al-Fatihah 1:4",
+      "ar": "مَالِكِ يَوْمِ الدِّينِ",
+      "en": "Master of the Day of Judgement.",
+      "ur": "روزِ جزا کا مالک۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001004.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 26.",
+      "ur": "باب 26 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 26,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch26-test-q01",
+        "topic": {
+          "en": "Reading a chain",
+          "ur": "زنجیر پڑھنا"
+        },
+        "prompt": {
+          "en": "What does this mean?",
+          "ur": "اس کا کیا مطلب ہے؟"
+        },
+        "arabic": "بَابُ مَسْجِدِ الْمَدِينَةِ",
+        "options": [
+          {
+            "en": "the city's mosque",
+            "ur": "شہر کی مسجد"
+          },
+          {
+            "en": "the door of the city's mosque",
+            "ur": "شہر کی مسجد کا دروازہ"
+          },
+          {
+            "en": "the mosque of the city's door",
+            "ur": "شہر کے دروازے کی مسجد"
+          },
+          {
+            "en": "the city's door",
+            "ur": "شہر کا دروازہ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch26-test-q02",
+        "topic": {
+          "en": "Reading a chain",
+          "ur": "زنجیر پڑھنا"
+        },
+        "prompt": {
+          "en": "What does this mean?",
+          "ur": "اس کا کیا مطلب ہے؟"
+        },
+        "arabic": "قَلَمُ ابْنِ الْإِمَامِ",
+        "options": [
+          {
+            "en": "the son of the imam's pen",
+            "ur": "امام کے قلم کا بیٹا"
+          },
+          {
+            "en": "the imam's pen",
+            "ur": "امام کا قلم"
+          },
+          {
+            "en": "the imam's son",
+            "ur": "امام کا بیٹا"
+          },
+          {
+            "en": "the pen of the imam's son",
+            "ur": "امام کے بیٹے کا قلم"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch26-test-q03",
+        "topic": {
+          "en": "Reading a chain",
+          "ur": "زنجیر پڑھنا"
+        },
+        "prompt": {
+          "en": "Who owns the house?",
+          "ur": "گھر کس کا ہے؟"
+        },
+        "arabic": "بَيْتُ أُسْتَاذِ الطَّالِبِ",
+        "options": [
+          {
+            "en": "the student's teacher",
+            "ur": "طالب علم کا استاد"
+          },
+          {
+            "en": "the student",
+            "ur": "طالب علم"
+          },
+          {
+            "en": "the teacher's student",
+            "ur": "استاد کا طالب علم"
+          },
+          {
+            "en": "nobody: it is a new house",
+            "ur": "کسی کا نہیں: یہ نیا گھر ہے"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch26-test-q04",
+        "topic": {
+          "en": "The middle noun",
+          "ur": "درمیانی اسم"
+        },
+        "prompt": {
+          "en": "Which word is owned and also an owner?",
+          "ur": "کون سا لفظ مملوک بھی ہے اور مالک بھی؟"
+        },
+        "arabic": "بَابُ غُرْفَةِ الْمُدِيرِ",
+        "options": [
+          {
+            "en": "بَابُ",
+            "ur": "بَابُ"
+          },
+          {
+            "en": "الْمُدِيرِ",
+            "ur": "الْمُدِيرِ"
+          },
+          {
+            "en": "غُرْفَةِ",
+            "ur": "غُرْفَةِ"
+          },
+          {
+            "en": "none of them",
+            "ur": "کوئی نہیں"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch26-test-q05",
+        "topic": {
+          "en": "The middle noun",
+          "ur": "درمیانی اسم"
+        },
+        "prompt": {
+          "en": "How is the middle noun of a chain written?",
+          "ur": "زنجیر کا درمیانی اسم کیسے لکھا جاتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "with الـ and a ḍamma",
+            "ur": "الـ اور پیش کے ساتھ"
+          },
+          {
+            "en": "with tanwīn",
+            "ur": "تنوین کے ساتھ"
+          },
+          {
+            "en": "with الـ and a kasra",
+            "ur": "الـ اور زیر کے ساتھ"
+          },
+          {
+            "en": "no الـ, no tanwīn, a kasra",
+            "ur": "نہ الـ، نہ تنوین، زیر"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch26-test-q06",
+        "topic": {
+          "en": "Which noun is described",
+          "ur": "صفت کس اسم کی ہے"
+        },
+        "prompt": {
+          "en": "Here, what is new?",
+          "ur": "یہاں نیا کیا ہے؟"
+        },
+        "arabic": "كِتَابُ الطَّالِبِ الْجَدِيدُ",
+        "options": [
+          {
+            "en": "the book",
+            "ur": "کتاب"
+          },
+          {
+            "en": "the student",
+            "ur": "طالب علم"
+          },
+          {
+            "en": "both",
+            "ur": "دونوں"
+          },
+          {
+            "en": "neither",
+            "ur": "کوئی نہیں"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch26-test-q07",
+        "topic": {
+          "en": "Which noun is described",
+          "ur": "صفت کس اسم کی ہے"
+        },
+        "prompt": {
+          "en": "Here, what is big?",
+          "ur": "یہاں بڑا کیا ہے؟"
+        },
+        "arabic": "بَابُ الْمَدْرَسَةِ الْكَبِيرَةِ",
+        "options": [
+          {
+            "en": "the door",
+            "ur": "دروازہ"
+          },
+          {
+            "en": "neither",
+            "ur": "کوئی نہیں"
+          },
+          {
+            "en": "the school",
+            "ur": "اسکول"
+          },
+          {
+            "en": "both",
+            "ur": "دونوں"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch26-test-q08",
+        "topic": {
+          "en": "Which noun is described",
+          "ur": "صفت کس اسم کی ہے"
+        },
+        "prompt": {
+          "en": "Here, who or what is beautiful?",
+          "ur": "یہاں خوب صورت کون یا کیا ہے؟"
+        },
+        "arabic": "بَيْتُ الْإِمَامِ الْجَمِيلُ",
+        "options": [
+          {
+            "en": "the imam",
+            "ur": "امام"
+          },
+          {
+            "en": "the house",
+            "ur": "گھر"
+          },
+          {
+            "en": "the mosque",
+            "ur": "مسجد"
+          },
+          {
+            "en": "the imam's son",
+            "ur": "امام کا بیٹا"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch26-test-q09",
+        "topic": {
+          "en": "A pointer before a chain",
+          "ur": "زنجیر سے پہلے اشارہ"
+        },
+        "prompt": {
+          "en": "What does this mean?",
+          "ur": "اس کا کیا مطلب ہے؟"
+        },
+        "arabic": "هَذِهِ سَيَّارَةُ أُخْتِ الْمُدِيرِ",
+        "options": [
+          {
+            "en": "This is the principal's sister.",
+            "ur": "یہ پرنسپل کی بہن ہے۔"
+          },
+          {
+            "en": "This car is the principal's.",
+            "ur": "یہ گاڑی پرنسپل کی ہے۔"
+          },
+          {
+            "en": "This is the principal's car.",
+            "ur": "یہ پرنسپل کی گاڑی ہے۔"
+          },
+          {
+            "en": "This is the car of the principal's sister.",
+            "ur": "یہ پرنسپل کی بہن کی گاڑی ہے۔"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch26-test-q10",
+        "topic": {
+          "en": "A pointer before a chain",
+          "ur": "زنجیر سے پہلے اشارہ"
+        },
+        "prompt": {
+          "en": "Which pointer fits? ___ بَابُ بَيْتِ الْإِمَامِ (near)",
+          "ur": "کون سا اشارہ درست ہے؟ ___ بَابُ بَيْتِ الْإِمَامِ (قریب)"
+        },
+        "options": [
+          {
+            "en": "هَذِهِ",
+            "ur": "هَذِهِ"
+          },
+          {
+            "en": "هَذَا",
+            "ur": "هَذَا"
+          },
+          {
+            "en": "تِلْكَ",
+            "ur": "تِلْكَ"
+          },
+          {
+            "en": "هَؤُلَاءِ",
+            "ur": "هَؤُلَاءِ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch26-test-q11",
+        "topic": {
+          "en": "Al-Fatihah 1:4",
+          "ur": "الفاتحہ 1:4"
+        },
+        "prompt": {
+          "en": "What does this mean?",
+          "ur": "اس کا کیا مطلب ہے؟"
+        },
+        "arabic": "مَالِكِ يَوْمِ الدِّينِ",
+        "options": [
+          {
+            "en": "Master of the Day of Judgement",
+            "ur": "روزِ جزا کا مالک"
+          },
+          {
+            "en": "The Day of Judgement is near.",
+            "ur": "روزِ جزا قریب ہے۔"
+          },
+          {
+            "en": "Lord of the worlds",
+            "ur": "تمام جہانوں کا رب"
+          },
+          {
+            "en": "The Master's day",
+            "ur": "مالک کا دن"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch26-test-q12",
+        "topic": {
+          "en": "Al-Fatihah 1:4",
+          "ur": "الفاتحہ 1:4"
+        },
+        "prompt": {
+          "en": "In مَالِكِ يَوْمِ الدِّينِ, which word carries الـ?",
+          "ur": "مَالِكِ يَوْمِ الدِّينِ میں کس لفظ پر الـ ہے؟"
+        },
+        "options": [
+          {
+            "en": "مَالِكِ — the first link",
+            "ur": "مَالِكِ — پہلی کڑی"
+          },
+          {
+            "en": "يَوْمِ — the middle link",
+            "ur": "يَوْمِ — درمیانی کڑی"
+          },
+          {
+            "en": "الدِّينِ — the last link",
+            "ur": "الدِّينِ — آخری کڑی"
+          },
+          {
+            "en": "all three",
+            "ur": "تینوں"
+          }
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 26 — chains of possession",
+      "ar": "سِلْسِلَةُ الْإِضَافَةِ",
+      "ur": "باب 26 — اضافت کی زنجیریں"
+    },
+    "ayah": {
+      "surah": 1,
+      "ayah": 4,
+      "label": "Al-Fatihah 1:4",
+      "ar": "مَالِكِ يَوْمِ الدِّينِ",
+      "en": "Master of the Day of Judgement.",
+      "ur": "روزِ جزا کا مالک۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001004.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "مَالِكِ",
+      "يَوْمِ",
+      "الدِّينِ"
+    ],
+    "noor_explanation": {
+      "en": "مَالِكِ يَوْمِ الدِّينِ: you finish Chapter 26 able to read a chain link by link, find the noun an adjective describes, and point at a whole chain.",
+      "ur": "مَالِكِ يَوْمِ الدِّينِ: آپ باب 26 اس حال میں مکمل کرتے ہیں کہ زنجیر کڑی کڑی پڑھ سکتے ہیں، صفت کا اسم پہچان سکتے ہیں، اور پوری زنجیر کی طرف اشارہ کر سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 26 complete. Chapter 27: common prepositions in context.",
+      "ur": "باب 26 مکمل۔ باب 27: سیاق میں عام حروفِ جر۔"
+    }
+  }
+}

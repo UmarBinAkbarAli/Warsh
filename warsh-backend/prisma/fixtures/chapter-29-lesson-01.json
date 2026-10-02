@@ -2,29 +2,28 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 29, Lesson 1 - What is a nominal sentence? It begins with a noun or pronoun — no verb at the start.",
+    "_note": "Chapter 29, Lesson 1 (ch29-l01) — the nominal sentence (جملہ اسمیہ): a core that opens with a noun or pronoun, the topic (مُبْتَدَأ), followed by the comment (خَبَر). The comment may be a word, a preposition phrase or, later in this chapter, a whole verbal clause, so no 'never a verb' rule. Quran: 1:2, الْحَمْدُ (topic) + لِلَّهِ (comment). Rebuilt 2026-10-02 in the proposal harvest (Docs/proposals/proposal-harvest-tracker.md) from Docs/proposals/chapter-29-content-proposal.md and its review amendments: nominal sentence (topic + comment) vs verbal sentence (verb + doer), the noun-led sentence whose comment is a verbal clause, finding the core after a prefix such as وَ / قُلْ / لَا, and retrieval of Chapter 24's إِنَّ (اسم منصوب، خبر مرفوع) and Chapter 25's لَيْسَ. Removed: the reversed إِنَّ rule (خبر إنّ marked accusative, كَبِيرًا), 'a nominal sentence never contains a verb', عَابِدُونَ parsed as a verb, وَلَكُمْ called a subject, and the repeated Al-Kafirun parsing/Tadabbur lesson (Chapter 30 owns the full surah). Al-Kafirun's verbs stay glossed chunks (S11).",
+    "title": "A Statement About Something",
+    "titleAr": "الْجُمْلَةُ الِاسْمِيَّةُ",
+    "titleUr": "کسی چیز کے بارے میں خبر",
     "chapter_order": 29,
     "lesson_order": 1,
-    "chapter_title": "Nominal vs. Verbal Sentences",
-    "title": "What Is a Nominal Sentence?",
-    "titleAr": "مَا الْجُمْلَة الِاسْمِيَّة؟",
-    "source": "madina_book3_lesson6_nominal_verbal",
-    "estimated_minutes": 8,
+    "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 109,
-      "ayah": 5,
-      "label": "Al-Kafirun 109:5",
-      "ar": "وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ",
-      "en": "Nor will you be worshippers of what I worship.",
-      "ur": "اور نہ تم اس کی بندگی کرنے والے (معلوم ہوتے) ہو جس کی میں بندگی کرتا ہوں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109005.mp3"
+      "surah": 1,
+      "ayah": 2,
+      "label": "Al-Fatihah 1:2",
+      "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+      "en": "All praise is for Allah, Lord of the worlds.",
+      "ur": "سب تعریف اللہ کے لیے ہے جو تمام جہانوں کا رب ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001002.mp3"
     },
     "noor_intro": {
-      "en": "This ayah from Al-Kafirun has no verb at the start. Today you will learn what kind of sentence this is and why it matters.",
-      "ur": "سورۃ کافروں کی یہ آیت شروع میں کوئی فعل نہیں رکھتی۔ آج آپ سیکھیں گے کہ یہ کس قسم کا جملہ ہے اور اس کا کیا فائدہ ہے۔"
+      "en": "الْحَمْدُ لِلَّهِ: a statement about praise. What is said about it?",
+      "ur": "الْحَمْدُ لِلَّهِ: تعریف کے بارے میں ایک بات۔ اس کے بارے میں کیا کہا گیا؟"
     },
     "autoplay": true
   },
@@ -32,229 +31,292 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Nominal sentence — starts with a noun or pronoun",
-        "ar": "الْجُمْلَة الِاسْمِيَّة — مُبْتَدَأ سے شروع ہوتی ہے",
-        "ur": "اسمی جملہ — مبتدأ سے شروع ہوتی ہے"
+        "en": "A sentence about something",
+        "ar": "الْجُمْلَةُ الِاسْمِيَّةُ",
+        "ur": "کسی چیز کے بارے میں جملہ"
       },
       "explanation": {
-        "en": "A nominal sentence (جُمْلَة اِسْمِيَّة) does NOT begin with a verb. Instead, it begins with a noun or pronoun. This is the first pillar of Arabic sentence structure.",
-        "ur": "اسمی جملہ (جُمْلَة اِسْمِيَّة) کا پہلا لفظ فعل نہیں ہوتا۔ اس کی جگہ یہ اسم یا ضمیر سے شروع ہوتی ہے۔ یہ عربی جملے کی ساخت کا پہلا ستون ہے۔"
+        "en": "Many sentences you know open with a noun and then say something about it: الْكِتَابُ كَبِيرٌ, the book is big. Arabic calls this a nominal sentence.",
+        "ur": "آپ کے جانے پہچانے بہت سے جملے کسی اسم سے شروع ہوتے ہیں اور پھر اس کے بارے میں کچھ کہتے ہیں: الْكِتَابُ كَبِيرٌ، کتاب بڑی ہے۔ عربی میں اسے جملہ اسمیہ کہتے ہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "الْكِتَابُ كَبِيرٌ",
+          "ar_plain": "الكتاب كبير",
+          "translit": "al-kitābu kabīrun",
+          "en": "The book is big.",
+          "ur": "کتاب بڑی ہے۔"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Topic and comment",
+        "ar": "مُبْتَدَأٌ + خَبَرٌ",
+        "ur": "مبتدا اور خبر"
+      },
+      "explanation": {
+        "en": "The noun the sentence is about is the مُبْتَدَأ, the topic. What is said about it is the خَبَر, the comment. Both usually end in a ḍamma.",
+        "ur": "جس اسم کے بارے میں جملہ ہے وہ مُبْتَدَأ ہے۔ جو اس کے بارے میں کہا گیا وہ خَبَر ہے۔ دونوں عموماً پیش پر ختم ہوتے ہیں۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "هَذَا كِتَابٌ",
-        "ar_plain": "هذا كتاب",
-        "translit": "haadhaa kitaabun",
-        "en": "This is a book",
-        "ur": "یہ کتاب ہے"
+        "ar": "هُوَ مُدَرِّسٌ",
+        "ar_plain": "هو مدرس",
+        "translit": "huwa mudarrisun",
+        "en": "He is a teacher.",
+        "ur": "وہ استاد ہے۔"
       },
       "explanation": {
-        "en": "هَذَا is a pronoun (this) — it is the مبتدأ (mubtada, subject/topic). كِتَابٌ is the خبر (khabr, predicate/comment). There is no verb here.",
-        "ur": "هَذَا ایک ضمیر ہے (یہ) — یہ مُبْتَدَأ (موضوع) ہے۔ كِتَابٌ خَبَر (تفصیل) ہے۔ یہاں کوئی فعل نہیں ہے۔"
+        "en": "A pronoun can be the topic too: هُوَ, he.",
+        "ur": "ضمیر بھی مبتدا ہو سکتی ہے: هُوَ، وہ۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "الْكِتَابُ كَبِيرٌ",
-        "ar_plain": "الكتاب كبير",
-        "translit": "al-kitaabu kabiirun",
-        "en": "The book is big",
-        "ur": "کتاب بڑی ہے"
+        "ar": "الطَّالِبُ فِي الْفَصْلِ",
+        "ar_plain": "الطالب في الفصل",
+        "translit": "aṭ-ṭālibu fī l-faṣli",
+        "en": "The student is in the classroom.",
+        "ur": "طالب علم کلاس میں ہے۔"
       },
       "explanation": {
-        "en": "الْكِتَابُ (noun) is the مبتدأ. كَبِيرٌ is the خبر. No verb. The sentence simply links a topic to its description.",
-        "ur": "الْكِتَابُ (اسم) مُبْتَدَأ ہے۔ كَبِيرٌ خَبَر ہے۔ کوئی فعل نہیں۔ جملہ صرف ایک موضوع کو اس کی تفصیل سے جوڑتا ہے۔"
+        "en": "The comment can be a preposition phrase: فِي الْفَصْلِ, in the classroom.",
+        "ur": "خبر حرفِ جر والی ترکیب بھی ہو سکتی ہے: فِي الْفَصْلِ، کلاس میں۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "الطَّالِبُ مُجْتَهِدٌ",
-        "ar_plain": "الطالب مجتهد",
-        "translit": "at-taalibu mujtahidun",
-        "en": "The student is diligent",
-        "ur": "طالب علم محنتی ہے"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Fatihah 1:2: All praise is for Allah, Lord of the worlds.",
+        "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+        "ur": "الفاتحہ 1:2: سب تعریف اللہ کے لیے ہے جو تمام جہانوں کا رب ہے۔"
       },
       "explanation": {
-        "en": "الطَّالِبُ is the مبتدأ. مُجْتَهِدٌ is the خبر. This is the basic pattern: مبتدأ + خبر.",
-        "ur": "الطَّالِبُ مُبْتَدَأ ہے۔ مُجْتَهِدٌ خَبَر ہے۔ یہ بنیادی فارمولا ہے: مُبْتَدَأ + خَبَر۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "The pattern: مبتدأ + خبر",
-        "ur": "فارمولا: مُبْتَدَأ + خَبَر"
+        "en": "الْحَمْدُ, praise, is the topic. لِلَّهِ, for Allah, is the comment: what is said about praise.",
+        "ur": "الْحَمْدُ، تعریف، مبتدا ہے۔ لِلَّهِ، اللہ کے لیے، خبر ہے: تعریف کے بارے میں کہی گئی بات۔"
       },
-      "body": {
-        "en": "A nominal sentence follows: مبتدأ (subject/topic) + خبر (predicate/comment). The first word is NEVER a verb. هَذَا, الْكِتَابُ, الرَّجُلُ — all nouns or pronouns.",
-        "ur": "اسمی جملے کا فارمولا: مُبْتَدَأ (موضوع) + خَبَر (تفصیل)۔ پہلا لفظ کبھی فعل نہیں ہوتا۔ هَذَا، الْكِتَابُ، الرَّجُلُ — سب اسم یا ضمیر ہیں۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "جُمْلَة",
-        "ar_plain": "جملة",
-        "translit": "jumla",
-        "en": "sentence",
-        "ur": "جملہ"
-      }
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001002.mp3"
     }
   ],
   "exercises": [
     {
-      "type": "TRUE_FALSE",
+      "type": "GRAMMAR_PARSE",
       "id": "ch29-l01-ex01",
-      "statement": {
-        "en": "A nominal sentence starts with a verb.",
-        "ur": "اسمی جملہ فعل سے شروع ہوتی ہے۔",
-        "ar_example": {
-          "ar": "الْكِتَابُ كَبِيرٌ",
-          "ar_plain": "الكتاب كبير",
-          "translit": "al-kitaabu kabiirun",
-          "en": "The book is big",
-          "ur": "کتاب بڑی ہے"
+      "sentence_ar": "الْكِتَابُ كَبِيرٌ",
+      "words": [
+        {
+          "ar": "الْكِتَابُ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitābu",
+          "en": "the book",
+          "ur": "کتاب"
+        },
+        {
+          "ar": "كَبِيرٌ",
+          "ar_plain": "كبير",
+          "translit": "kabīrun",
+          "en": "big",
+          "ur": "بڑی"
         }
-      },
-      "correct_answer": false,
-      "xp_value": 1
+      ],
+      "available_roles": [
+        "SUBJECT",
+        "PREDICATE",
+        "VERB"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "PREDICATE"
+      ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "الْكِتَابُ is the topic (subject); كَبِيرٌ is the comment (predicate).",
+        "ur": "الْكِتَابُ مبتدا ہے؛ كَبِيرٌ خبر ہے۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch29-l01-ex02",
       "prompt": {
-        "ar": "هَذَا كِتَابٌ",
-        "ar_plain": "هذا كتاب",
-        "translit": "haadhaa kitaabun",
-        "en": "This is a book",
-        "ur": "یہ کتاب ہے"
+        "ar": "الْمَسْجِدُ قَرِيبٌ",
+        "ar_plain": "المسجد قريب",
+        "translit": "al-masjidu qarībun",
+        "en": "The mosque is near.",
+        "ur": "مسجد قریب ہے۔"
       },
       "options": [
         {
-          "en": "This is a book",
-          "ur": "یہ کتاب ہے"
+          "en": "the near mosque",
+          "ur": "قریبی مسجد"
         },
         {
-          "en": "That is a book",
-          "ur": "وہ کتاب ہے"
+          "en": "The mosque is near.",
+          "ur": "مسجد قریب ہے۔"
         },
         {
-          "en": "This book is big",
-          "ur": "یہ کتاب بڑی ہے"
+          "en": "Is the mosque near?",
+          "ur": "کیا مسجد قریب ہے؟"
         },
         {
-          "en": "A book is here",
-          "ur": "ایک کتاب یہاں ہے"
+          "en": "The mosque went near.",
+          "ur": "مسجد قریب گئی۔"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "هَذَا is a pronoun (this). There is no verb in this sentence — it is nominal: مبتدأ (هَذَا) + خبر (كِتَابٌ).",
-        "ur": "هَذَا ایک ضمیر ہے (یہ)۔ اس جملے میں کوئی فعل نہیں — یہ اسمی ہے: مُبْتَدَأ (هَذَا) + خَبَر (كِتَابٌ)۔"
+        "en": "Topic الْمَسْجِدُ + comment قَرِيبٌ: the mosque is near.",
+        "ur": "مبتدا الْمَسْجِدُ + خبر قَرِيبٌ: مسجد قریب ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch29-l01-ex03",
+      "statement": {
+        "en": "This is a nominal sentence: it opens with a noun and says something about it.",
+        "ur": "یہ جملہ اسمیہ ہے: یہ اسم سے شروع ہو کر اس کے بارے میں بات کرتا ہے۔",
+        "ar_example": {
+          "ar": "الطَّالِبُ فِي الْفَصْلِ",
+          "ar_plain": "الطالب في الفصل",
+          "translit": "aṭ-ṭālibu fī l-faṣli",
+          "en": "The student is in the classroom.",
+          "ur": "طالب علم کلاس میں ہے۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الطَّالِبُ is the topic; فِي الْفَصْلِ is the comment.",
+        "ur": "الطَّالِبُ مبتدا ہے؛ فِي الْفَصْلِ خبر ہے۔"
       }
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch29-l01-ex03",
+      "id": "ch29-l01-ex04",
       "mode": "TAP",
-      "sentence_ar": "___ كَبِيرٌ",
+      "sentence_ar": "الْبَيْتُ ___",
       "hint": {
-        "en": "The book is big",
-        "ur": "کتاب بڑی ہے"
+        "en": "Complete the statement: the house is beautiful.",
+        "ur": "جملہ مکمل کریں: گھر خوب صورت ہے۔"
       },
       "options": [
         {
-          "ar": "الْكِتَابُ",
-          "ar_plain": "الكتاب",
-          "translit": "al-kitaabu",
-          "en": "the book",
-          "ur": "کتاب"
+          "ar": "الْجَمِيلُ",
+          "ar_plain": "الجميل",
+          "translit": "al-jamīlu",
+          "en": "the beautiful",
+          "ur": "خوب صورت (معرفہ)"
         },
         {
-          "ar": "ذَهَبَ",
-          "ar_plain": "ذهب",
-          "translit": "dhahaba",
-          "en": "went",
-          "ur": "گیا"
+          "ar": "جَمِيلٌ",
+          "ar_plain": "جميل",
+          "translit": "jamīlun",
+          "en": "beautiful",
+          "ur": "خوب صورت"
         },
         {
-          "ar": "كِتَابٌ",
-          "ar_plain": "كتاب",
-          "translit": "kitaabun",
-          "en": "a book",
-          "ur": "ایک کتاب"
+          "ar": "جَمِيلًا",
+          "ar_plain": "جميلا",
+          "translit": "jamīlan",
+          "en": "beautiful (fatḥa)",
+          "ur": "خوب صورت (زبر)"
         },
         {
-          "ar": "مُسْلِمٌ",
-          "ar_plain": "مسلم",
-          "translit": "muslimun",
-          "en": "a Muslim",
-          "ur": "مسلمان"
+          "ar": "جَمِيلٍ",
+          "ar_plain": "جميل",
+          "translit": "jamīlin",
+          "en": "beautiful (kasra)",
+          "ur": "خوب صورت (زیر)"
         }
       ],
       "correct_answer": {
-        "ar": "الْكِتَابُ",
-        "ar_plain": "الكتاب",
-        "translit": "al-kitaabu",
-        "en": "the book",
-        "ur": "کتاب"
+        "ar": "جَمِيلٌ",
+        "ar_plain": "جميل",
+        "translit": "jamīlun",
+        "en": "beautiful",
+        "ur": "خوب صورت"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The comment here is indefinite with a ḍamma: جَمِيلٌ. الْبَيْتُ الْجَمِيلُ would be a phrase, the beautiful house.",
+        "ur": "یہاں خبر نکرہ ہے، پیش کے ساتھ: جَمِيلٌ۔ الْبَيْتُ الْجَمِيلُ ایک ترکیب ہوتی: خوب صورت گھر۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch29-l01-ex05",
+      "ayah_fragment": {
+        "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+        "surah_ref": "Al-Fatihah 1:2"
+      },
+      "options": [
+        {
+          "en": "What is the topic? لِلَّهِ",
+          "ur": "مبتدا کیا ہے؟ لِلَّهِ"
+        },
+        {
+          "en": "What is the topic? الْعَالَمِينَ",
+          "ur": "مبتدا کیا ہے؟ الْعَالَمِينَ"
+        },
+        {
+          "en": "What is the topic? الْحَمْدُ, praise",
+          "ur": "مبتدا کیا ہے؟ الْحَمْدُ، تعریف"
+        },
+        {
+          "en": "There is no topic.",
+          "ur": "کوئی مبتدا نہیں۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The sentence is about الْحَمْدُ; لِلَّهِ is what is said about it.",
+        "ur": "جملہ الْحَمْدُ کے بارے میں ہے؛ لِلَّهِ اس کے بارے میں کہی گئی بات ہے۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch29-l01-ex04",
+      "id": "ch29-l01-ex06",
       "left_column": [
         {
-          "ar": "هَذَا كِتَابٌ",
-          "ar_plain": "هذا كتاب",
-          "translit": "haadhaa kitaabun",
-          "en": "This is a book",
-          "ur": "یہ کتاب ہے"
+          "ar": "هُوَ مُدَرِّسٌ",
+          "ar_plain": "هو مدرس",
+          "translit": "huwa mudarrisun",
+          "en": "He is a teacher.",
+          "ur": "وہ استاد ہے۔"
         },
         {
-          "ar": "الْكِتَابُ كَبِيرٌ",
-          "ar_plain": "الكتاب كبير",
-          "translit": "al-kitaabu kabiirun",
-          "en": "The book is big",
-          "ur": "کتاب بڑی ہے"
+          "ar": "الْكِتَابُ جَدِيدٌ",
+          "ar_plain": "الكتاب جديد",
+          "translit": "al-kitābu jadīdun",
+          "en": "The book is new.",
+          "ur": "کتاب نئی ہے۔"
         },
         {
-          "ar": "الطَّالِبُ مُجْتَهِدٌ",
-          "ar_plain": "الطالب مجتهد",
-          "translit": "at-taalibu mujtahidun",
-          "en": "The student is diligent",
-          "ur": "طالب علم محنتی ہے"
-        },
-        {
-          "ar": "رَجُلٌ صَالِحٌ",
-          "ar_plain": "رجل صالح",
-          "translit": "rajulun saalihun",
-          "en": "A righteous man",
-          "ur": "ایک نیک آدمی"
+          "ar": "الْبِنْتُ فِي الْبَيْتِ",
+          "ar_plain": "البنت في البيت",
+          "translit": "al-bintu fī l-bayti",
+          "en": "The girl is in the house.",
+          "ur": "لڑکی گھر میں ہے۔"
         }
       ],
       "right_column": [
         {
-          "en": "مبتدأ + خبر (nominal)",
-          "ur": "مُبْتَدَأ + خَبَر (اسمی)"
+          "en": "He is a teacher.",
+          "ur": "وہ استاد ہے۔"
         },
         {
-          "en": "مبتدأ + خبر (nominal)",
-          "ur": "مُبْتَدَأ + خَبَر (اسمی)"
+          "en": "The book is new.",
+          "ur": "کتاب نئی ہے۔"
         },
         {
-          "en": "مبتدأ + خبر (nominal)",
-          "ur": "مُبْتَدَأ + خَبَر (اسمی)"
-        },
-        {
-          "en": "مبتدأ + خبر (nominal)",
-          "ur": "مُبْتَدَأ + خَبَر (اسمی)"
+          "en": "The girl is in the house.",
+          "ur": "لڑکی گھر میں ہے۔"
         }
       ],
       "correct_pairs": [
@@ -269,169 +331,102 @@
         [
           2,
           2
-        ],
-        [
-          3,
-          3
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch29-l01-ex05",
-      "prompt": {
-        "ar": "الطَّالِبُ مُجْتَهِدٌ",
-        "ar_plain": "الطالب مجتهد",
-        "translit": "at-taalibu mujtahidun",
-        "en": "The student is diligent",
-        "ur": "طالب علم محنتی ہے"
-      },
-      "options": [
-        {
-          "en": "The student is diligent",
-          "ur": "طالب علم محنتی ہے"
-        },
-        {
-          "en": "The diligent student",
-          "ur": "محنتی طالب علم"
-        },
-        {
-          "en": "A student went",
-          "ur": "ایک طالب علم گیا"
-        },
-        {
-          "en": "The student studied",
-          "ur": "طالب علم نے پڑھا"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
+      "xp_value": 2,
       "explanation_on_wrong": {
-        "en": "الطَّالِبُ is the مبتدأ (subject) and مُجْتَهِدٌ is the خبر (predicate). There is no verb — this is a nominal sentence.",
-        "ur": "الطَّالِبُ مُبْتَدَأ ہے اور مُجْتَهِدٌ خَبَر ہے۔ کوئی فعل نہیں — یہ ایک اسمی جملہ ہے۔"
+        "en": "Each is a topic + comment.",
+        "ur": "ہر ایک مبتدا + خبر ہے۔"
       }
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch29-l01-ex06",
-      "statement": {
-        "en": "In هَذَا كِتَابٌ, the word كِتَابٌ is the مبتدأ (subject).",
-        "ur": "هَذَا كِتَابٌ میں، لفظ كِتَابٌ مُبْتَدَأ (موضوع) ہے۔",
-        "ar_example": {
-          "ar": "هَذَا كِتَابٌ",
-          "ar_plain": "هذا كتاب",
-          "translit": "haadhaa kitaabun",
-          "en": "This is a book",
-          "ur": "یہ کتاب ہے"
-        }
-      },
-      "correct_answer": false,
-      "xp_value": 1
     },
     {
       "type": "BUILD_SENTENCE",
       "id": "ch29-l01-ex07",
       "target_translation": {
-        "en": "This is a student",
-        "ur": "یہ طالب علم ہے"
+        "en": "The teacher is in the mosque.",
+        "ur": "استاد مسجد میں ہیں۔"
       },
       "tiles": [
         {
-          "ar": "هَذَا",
-          "ar_plain": "هذا",
-          "translit": "haadhaa",
-          "en": "this",
-          "ur": "یہ"
+          "ar": "الْمَسْجِدِ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjidi",
+          "en": "the mosque",
+          "ur": "مسجد"
         },
         {
-          "ar": "الطَّالِبُ",
-          "ar_plain": "الطالب",
-          "translit": "at-taalibu",
-          "en": "the student",
-          "ur": "طالب علم"
+          "ar": "الْأُسْتَاذُ",
+          "ar_plain": "الأستاذ",
+          "translit": "al-ustādhu",
+          "en": "the teacher",
+          "ur": "استاد"
         },
         {
-          "ar": "كِتَابٌ",
-          "ar_plain": "كتاب",
-          "translit": "kitaabun",
-          "en": "a book",
-          "ur": "ایک کتاب"
-        },
-        {
-          "ar": "مُسْلِمٌ",
-          "ar_plain": "مسلم",
-          "translit": "muslimun",
-          "en": "a Muslim",
-          "ur": "مسلمان"
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
         }
       ],
       "correct_order": [
-        0,
-        1
+        1,
+        2,
+        0
       ],
-      "xp_value": 1
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "Topic first, then the comment: الْأُسْتَاذُ فِي الْمَسْجِدِ.",
+        "ur": "پہلے مبتدا، پھر خبر: الْأُسْتَاذُ فِي الْمَسْجِدِ۔"
+      }
     },
     {
-      "type": "GRAMMAR_PARSE",
+      "type": "TRUE_FALSE",
       "id": "ch29-l01-ex08",
-      "sentence_ar": "هَذَا كِتَابٌ",
-      "words": [
-        {
-          "ar": "هَذَا",
-          "ar_plain": "هذا",
-          "translit": "haadhaa",
-          "en": "this",
-          "ur": "یہ"
-        },
-        {
-          "ar": "كِتَابٌ",
-          "ar_plain": "كتاب",
-          "translit": "kitaabun",
-          "en": "a book",
-          "ur": "ایک کتاب"
-        }
-      ],
-      "available_roles": [
-        "SUBJECT",
-        "PREDICATE",
-        "VERB",
-        "POSSESSIVE"
-      ],
-      "correct_roles": [
-        "SUBJECT",
-        "PREDICATE"
-      ],
-      "xp_value": 1
+      "statement": {
+        "en": "In هُوَ مُدَرِّسٌ, the topic is مُدَرِّسٌ.",
+        "ur": "هُوَ مُدَرِّسٌ میں مبتدا مُدَرِّسٌ ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The sentence is about هُوَ, he; مُدَرِّسٌ, a teacher, is the comment.",
+        "ur": "جملہ هُوَ، وہ، کے بارے میں ہے؛ مُدَرِّسٌ، استاد، خبر ہے۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Nominal Sentence — مبتدأ + خبر",
-      "ar": "الْجُمْلَة الِاسْمِيَّة — مُبْتَدَأ + خَبَر",
-      "ur": "اسمی جملہ — مُبْتَدَأ + خَبَر"
+      "en": "The nominal sentence",
+      "ar": "الْجُمْلَةُ الِاسْمِيَّةُ",
+      "ur": "جملہ اسمیہ"
     },
     "ayah": {
-      "surah": 109,
-      "ayah": 5,
-      "label": "Al-Kafirun 109:5",
-      "ar": "وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ",
-      "en": "Nor will you be worshippers of what I worship.",
-      "ur": "اور نہ تم اس کی بندگی کرنے والے (معلوم ہوتے) ہو جس کی میں بندگی کرتا ہوں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109005.mp3"
+      "surah": 1,
+      "ayah": 2,
+      "label": "Al-Fatihah 1:2",
+      "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+      "en": "All praise is for Allah, Lord of the worlds.",
+      "ur": "سب تعریف اللہ کے لیے ہے جو تمام جہانوں کا رب ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001002.mp3"
     },
     "highlighted_word_indices": [
-      0
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "الْحَمْدُ",
+      "لِلَّهِ"
     ],
     "noor_explanation": {
-      "en": "وَلَكُمْ دِينُكُمْ has no verb at the start — it is a nominal sentence! وَلَكُمْ starts with the particle وَ (and) + لَكُمْ (to you, a pronoun) + دِينُكُمْ (your religion, a noun). No verb. This is مبتدأ + خبر.",
-      "ur": "وَلَكُمْ دِينُكُمْ شروع میں کوئی فعل نہیں — یہ ایک اسمی جملہ ہے! وَلَكُمْ کا آغاز وَ (اور) + لَكُمْ (تمہارے لیے، ایک ضمیر) + دِينُكُمْ (تمہارا دین، ایک اسم) سے ہوتا ہے۔ کوئی فعل نہیں۔ یہ مُبْتَدَأ + خَبَر ہے۔"
+      "en": "الْحَمْدُ لِلَّهِ: topic and comment — praise, and what is said about it: it is for Allah.",
+      "ur": "الْحَمْدُ لِلَّهِ: مبتدا اور خبر — تعریف، اور اس کے بارے میں بات: یہ اللہ کے لیے ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "A nominal sentence has no verb at its start. It opens with a noun or pronoun — the مبتدأ — and the خبر tells us something about it. هَذَا كِتَابٌ, الْكِتَابُ كَبِيرٌ, وَلَكُمْ دِينُكُمْ — all nominal sentences.",
-      "ur": "اسمی جملے کا آغاز فعل سے نہیں ہوتا۔ یہ اسم یا ضمیر — مُبْتَدَأ — سے کھلتی ہے اور خَبَر اس کے بارے میں کچھ بتاتا ہے۔ هَذَا كِتَابٌ، الْكِتَابُ كَبِيرٌ، وَلَكُمْ دِينُكُمْ — سب اسمی جملے ہیں۔"
+      "en": "You can find a topic and its comment. Next: sentences that open with an action.",
+      "ur": "آپ مبتدا اور خبر پہچان سکتے ہیں۔ آگے: وہ جملے جو کسی کام سے شروع ہوتے ہیں۔"
     }
   }
 }

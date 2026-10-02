@@ -1,0 +1,483 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 29 review (ch29-l06, rebuilt in place as REVIEW; the 'Tadabbur unlock #5' lesson and its claims about the surah's design are gone). Fresh nominal and verbal examples, prefixed cores, a noun-led action comment, and the إِنَّ / لَيْسَ endings. Rebuilt 2026-10-02 in the proposal harvest (Docs/proposals/proposal-harvest-tracker.md) from Docs/proposals/chapter-29-content-proposal.md and its review amendments: nominal sentence (topic + comment) vs verbal sentence (verb + doer), the noun-led sentence whose comment is a verbal clause, finding the core after a prefix such as وَ / قُلْ / لَا, and retrieval of Chapter 24's إِنَّ (اسم منصوب، خبر مرفوع) and Chapter 25's لَيْسَ. Removed: the reversed إِنَّ rule (خبر إنّ marked accusative, كَبِيرًا), 'a nominal sentence never contains a verb', عَابِدُونَ parsed as a verb, وَلَكُمْ called a subject, and the repeated Al-Kafirun parsing/Tadabbur lesson (Chapter 30 owns the full surah). Al-Kafirun's verbs stay glossed chunks (S11).",
+    "title": "Chapter 29 Review",
+    "titleAr": "مُرَاجَعَةُ الْفَصْلِ التَّاسِعِ وَالْعِشْرِينَ",
+    "titleUr": "باب 29 کی دہرائی",
+    "chapter_order": 29,
+    "lesson_order": 6,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 1,
+      "ayah": 2,
+      "label": "Al-Fatihah 1:2",
+      "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+      "en": "All praise is for Allah, Lord of the worlds.",
+      "ur": "سب تعریف اللہ کے لیے ہے جو تمام جہانوں کا رب ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001002.mp3"
+    },
+    "noor_intro": {
+      "en": "A nominal sentence you know well. One more listen before the review.",
+      "ur": "ایک جملہ اسمیہ جو آپ خوب جانتے ہیں۔ دہرائی سے پہلے ایک بار پھر سنیں۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Two kinds of sentence",
+        "ar": "اسْمِيَّةٌ · فِعْلِيَّةٌ",
+        "ur": "جملوں کی دو قسمیں"
+      },
+      "explanation": {
+        "en": "Nominal: the core opens with a noun or pronoun (topic + comment). Verbal: the core opens with a verb (verb + doer).",
+        "ur": "اسمیہ: بنیاد اسم یا ضمیر سے شروع ہوتی ہے (مبتدا + خبر)۔ فعلیہ: بنیاد فعل سے شروع ہوتی ہے (فعل + فاعل)۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "What إِنَّ and لَيْسَ change",
+        "ar": "إِنَّ الْبَيْتَ كَبِيرٌ · لَيْسَ الْبَيْتُ كَبِيرًا",
+        "ur": "إِنَّ اور لَيْسَ کیا بدلتے ہیں"
+      },
+      "explanation": {
+        "en": "إِنَّ gives its noun a fatḥa and leaves the news with a ḍamma. لَيْسَ leaves its noun with a ḍamma and gives the news a fatḥa.",
+        "ur": "إِنَّ اپنے اسم کو زبر دیتا ہے اور خبر کو پیش پر رہنے دیتا ہے۔ لَيْسَ اپنے اسم کو پیش پر رہنے دیتا ہے اور خبر کو زبر دیتا ہے۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch29-l06-ex01",
+      "statement": {
+        "en": "This sentence is verbal.",
+        "ur": "یہ جملہ فعلیہ ہے۔",
+        "ar_example": {
+          "ar": "رَجَعَ الْأَبُ مِنَ السُّوقِ",
+          "ar_plain": "رجع الأب من السوق",
+          "translit": "rajaʿa l-abu mina s-sūqi",
+          "en": "The father came back from the market.",
+          "ur": "والد بازار سے واپس آئے۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "It opens with the verb رَجَعَ.",
+        "ur": "یہ فعل رَجَعَ سے شروع ہوتا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch29-l06-ex02",
+      "statement": {
+        "en": "This sentence is verbal because it contains a verb.",
+        "ur": "یہ جملہ فعلیہ ہے کیونکہ اس میں فعل ہے۔",
+        "ar_example": {
+          "ar": "الْأَبُ رَجَعَ مِنَ السُّوقِ",
+          "ar_plain": "الأب رجع من السوق",
+          "translit": "al-abu rajaʿa mina s-sūqi",
+          "en": "The father — he came back from the market.",
+          "ur": "والد — وہ بازار سے واپس آئے۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Its core opens with الْأَبُ, so it is nominal; رَجَعَ … is the comment.",
+        "ur": "اس کی بنیاد الْأَبُ سے شروع ہوتی ہے، اس لیے اسمیہ ہے؛ رَجَعَ … خبر ہے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch29-l06-ex03",
+      "sentence_ar": "فَهِمَتِ الْبِنْتُ الدَّرْسَ",
+      "words": [
+        {
+          "ar": "فَهِمَتِ",
+          "ar_plain": "فهمت",
+          "translit": "fahimati",
+          "en": "understood (she)",
+          "ur": "سمجھ گئی"
+        },
+        {
+          "ar": "الْبِنْتُ",
+          "ar_plain": "البنت",
+          "translit": "al-bintu",
+          "en": "the girl",
+          "ur": "لڑکی"
+        },
+        {
+          "ar": "الدَّرْسَ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsa",
+          "en": "the lesson",
+          "ur": "سبق"
+        }
+      ],
+      "available_roles": [
+        "VERB",
+        "SUBJECT",
+        "OBJECT",
+        "PREDICATE"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT",
+        "OBJECT"
+      ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "Verb, doer, object.",
+        "ur": "فعل، فاعل، مفعول۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch29-l06-ex04",
+      "sentence_ar": "الْمَدْرَسَةُ قَرِيبَةٌ",
+      "words": [
+        {
+          "ar": "الْمَدْرَسَةُ",
+          "ar_plain": "المدرسة",
+          "translit": "al-madrasatu",
+          "en": "the school",
+          "ur": "اسکول"
+        },
+        {
+          "ar": "قَرِيبَةٌ",
+          "ar_plain": "قريبة",
+          "translit": "qarībatun",
+          "en": "near",
+          "ur": "قریب"
+        }
+      ],
+      "available_roles": [
+        "SUBJECT",
+        "PREDICATE",
+        "VERB",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "PREDICATE"
+      ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "Topic + comment.",
+        "ur": "مبتدا + خبر۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch29-l06-ex05",
+      "mode": "TAP",
+      "sentence_ar": "إِنَّ الْمَدْرَسَةَ ___",
+      "hint": {
+        "en": "The news of إِنَّ keeps its ḍamma.",
+        "ur": "إِنَّ کی خبر پیش پر رہتی ہے۔"
+      },
+      "options": [
+        {
+          "ar": "قَرِيبَةً",
+          "ar_plain": "قريبة",
+          "translit": "qarībatan",
+          "en": "near (fatḥa)",
+          "ur": "قریب (زبر)"
+        },
+        {
+          "ar": "الْقَرِيبَةَ",
+          "ar_plain": "القريبة",
+          "translit": "al-qarībata",
+          "en": "the near",
+          "ur": "قریبی"
+        },
+        {
+          "ar": "قَرِيبَةٌ",
+          "ar_plain": "قريبة",
+          "translit": "qarībatun",
+          "en": "near (ḍamma)",
+          "ur": "قریب (پیش)"
+        },
+        {
+          "ar": "قَرِيبَةٍ",
+          "ar_plain": "قريبة",
+          "translit": "qarībatin",
+          "en": "near (kasra)",
+          "ur": "قریب (زیر)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "قَرِيبَةٌ",
+        "ar_plain": "قريبة",
+        "translit": "qarībatun",
+        "en": "near (ḍamma)",
+        "ur": "قریب (پیش)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "إِنَّ الْمَدْرَسَةَ قَرِيبَةٌ.",
+        "ur": "إِنَّ الْمَدْرَسَةَ قَرِيبَةٌ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch29-l06-ex06",
+      "mode": "TAP",
+      "sentence_ar": "لَيْسَتِ الْمَدْرَسَةُ ___",
+      "hint": {
+        "en": "The news of لَيْسَ takes a fatḥa.",
+        "ur": "لَيْسَ کی خبر زبر لیتی ہے۔"
+      },
+      "options": [
+        {
+          "ar": "بَعِيدَةً",
+          "ar_plain": "بعيدة",
+          "translit": "baʿīdatan",
+          "en": "far (fatḥa)",
+          "ur": "دور (زبر)"
+        },
+        {
+          "ar": "بَعِيدَةٌ",
+          "ar_plain": "بعيدة",
+          "translit": "baʿīdatun",
+          "en": "far (ḍamma)",
+          "ur": "دور (پیش)"
+        },
+        {
+          "ar": "الْبَعِيدَةُ",
+          "ar_plain": "البعيدة",
+          "translit": "al-baʿīdatu",
+          "en": "the far",
+          "ur": "دور والی"
+        },
+        {
+          "ar": "بَعِيدَةٍ",
+          "ar_plain": "بعيدة",
+          "translit": "baʿīdatin",
+          "en": "far (kasra)",
+          "ur": "دور (زیر)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "بَعِيدَةً",
+        "ar_plain": "بعيدة",
+        "translit": "baʿīdatan",
+        "en": "far (fatḥa)",
+        "ur": "دور (زبر)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَيْسَتِ الْمَدْرَسَةُ بَعِيدَةً.",
+        "ur": "لَيْسَتِ الْمَدْرَسَةُ بَعِيدَةً۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch29-l06-ex07",
+      "ayah_fragment": {
+        "ar": "وَجَاءَ السَّحَرَةُ فِرْعَوْنَ",
+        "surah_ref": "Al-A'raf 7:113"
+      },
+      "options": [
+        {
+          "en": "nominal: it opens with وَ",
+          "ur": "اسمیہ: یہ وَ سے شروع ہوتی ہے"
+        },
+        {
+          "en": "nominal: السَّحَرَةُ is the topic",
+          "ur": "اسمیہ: السَّحَرَةُ مبتدا ہے"
+        },
+        {
+          "en": "neither",
+          "ur": "کوئی نہیں"
+        },
+        {
+          "en": "verbal: after وَ, it opens with جَاءَ",
+          "ur": "فعلیہ: وَ کے بعد یہ جَاءَ سے شروع ہوتی ہے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Skip وَ; جَاءَ, came, opens the core.",
+        "ur": "وَ کو چھوڑیں؛ جَاءَ، آئے، بنیاد شروع کرتا ہے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch29-l06-ex08",
+      "ayah_fragment": {
+        "ar": "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ",
+        "surah_ref": "Al-Kafirun 109:3"
+      },
+      "options": [
+        {
+          "en": "What is عَابِدُونَ? a verb: they worshipped",
+          "ur": "عَابِدُونَ کیا ہے؟ فعل: انہوں نے عبادت کی"
+        },
+        {
+          "en": "What is عَابِدُونَ? a noun: worshippers",
+          "ur": "عَابِدُونَ کیا ہے؟ اسم: عبادت کرنے والے"
+        },
+        {
+          "en": "What is عَابِدُونَ? a preposition",
+          "ur": "عَابِدُونَ کیا ہے؟ حرفِ جر"
+        },
+        {
+          "en": "What is عَابِدُونَ? the topic",
+          "ur": "عَابِدُونَ کیا ہے؟ مبتدا"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "عَابِدُونَ names the people who worship: a noun.",
+        "ur": "عَابِدُونَ عبادت کرنے والوں کا نام ہے: اسم۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch29-l06-ex09",
+      "target_translation": {
+        "en": "The imam entered the mosque. (verb first)",
+        "ur": "امام مسجد میں داخل ہوئے۔ (پہلے فعل)"
+      },
+      "tiles": [
+        {
+          "ar": "الْمَسْجِدَ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjida",
+          "en": "the mosque",
+          "ur": "مسجد"
+        },
+        {
+          "ar": "دَخَلَ",
+          "ar_plain": "دخل",
+          "translit": "dakhala",
+          "en": "entered",
+          "ur": "داخل ہوا"
+        },
+        {
+          "ar": "الْإِمَامُ",
+          "ar_plain": "الإمام",
+          "translit": "al-imāmu",
+          "en": "the imam",
+          "ur": "امام"
+        }
+      ],
+      "correct_order": [
+        1,
+        2,
+        0
+      ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "دَخَلَ الْإِمَامُ الْمَسْجِدَ.",
+        "ur": "دَخَلَ الْإِمَامُ الْمَسْجِدَ۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch29-l06-ex10",
+      "left_column": [
+        {
+          "ar": "إِنَّ الطَّالِبَ مُجْتَهِدٌ",
+          "ar_plain": "إن الطالب مجتهد",
+          "translit": "inna ṭ-ṭāliba mujtahidun",
+          "en": "Indeed, the student is hardworking.",
+          "ur": "بے شک طالب علم محنتی ہے۔"
+        },
+        {
+          "ar": "لَيْسَ الطَّالِبُ مُجْتَهِدًا",
+          "ar_plain": "ليس الطالب مجتهدا",
+          "translit": "laysa ṭ-ṭālibu mujtahidan",
+          "en": "The student is not hardworking.",
+          "ur": "طالب علم محنتی نہیں ہے۔"
+        },
+        {
+          "ar": "الطَّالِبُ مُجْتَهِدٌ",
+          "ar_plain": "الطالب مجتهد",
+          "translit": "aṭ-ṭālibu mujtahidun",
+          "en": "The student is hardworking.",
+          "ur": "طالب علم محنتی ہے۔"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "Indeed, the student is hardworking.",
+          "ur": "بے شک طالب علم محنتی ہے۔"
+        },
+        {
+          "en": "The student is not hardworking.",
+          "ur": "طالب علم محنتی نہیں ہے۔"
+        },
+        {
+          "en": "The student is hardworking.",
+          "ur": "طالب علم محنتی ہے۔"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "إِنَّ: indeed; لَيْسَ: not.",
+        "ur": "إِنَّ: بے شک؛ لَيْسَ: نہیں۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 29 — two kinds of sentence",
+      "ar": "الْجُمْلَةُ الِاسْمِيَّةُ وَالْفِعْلِيَّةُ",
+      "ur": "باب 29 — جملوں کی دو قسمیں"
+    },
+    "ayah": {
+      "surah": 1,
+      "ayah": 2,
+      "label": "Al-Fatihah 1:2",
+      "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+      "en": "All praise is for Allah, Lord of the worlds.",
+      "ur": "سب تعریف اللہ کے لیے ہے جو تمام جہانوں کا رب ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001002.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "الْحَمْدُ",
+      "لِلَّهِ"
+    ],
+    "noor_explanation": {
+      "en": "الْحَمْدُ لِلَّهِ: a nominal core. You can now tell it apart from a verbal one.",
+      "ur": "الْحَمْدُ لِلَّهِ: اسمیہ بنیاد۔ اب آپ اسے فعلیہ سے الگ پہچان سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Review done. Next: the Chapter 29 final test.",
+      "ur": "دہرائی مکمل۔ آگے: باب 29 کا آخری امتحان۔"
+    }
+  }
+}

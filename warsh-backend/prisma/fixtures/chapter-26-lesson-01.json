@@ -2,29 +2,28 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 26, Lesson 1 - demonstratives هَذَا/ذَلِكَ with basic idafa chains.",
+    "_note": "Chapter 26, Lesson 1 (ch26-l01) — a two-noun iḍāfa (Chapter 3) grows into a three-noun chain: بَابُ غُرْفَةِ الْأُسْتَاذِ. The middle noun has two links: owned by the noun before it, owner of the noun after it. Hook 1:2 is retrieval of a known two-noun chain. Rebuilt 2026-10-02 in the proposal harvest (Docs/proposals/proposal-harvest-tracker.md) from Docs/proposals/chapter-26-content-proposal.md and its review amendments: the chapter now teaches layered iḍāfa — three-noun chains, the middle noun's two links, which noun a following adjective describes, a pointer before a whole chain, and Al-Fatihah 1:4. Removed: 'رَبُّ رَبِّكُمْ — the Lord of your Lord', the Al-Kawthar hook that showed no chain, the claim that Ayat al-Kursi contains لَيْسَ, and the إِنَّ/لَيْسَ re-teaching (Chapters 24–25 own those). The proposal's separate transfer lesson (l05) was not built; the review covers it.",
+    "title": "Unpack a Three-Noun Chain",
+    "titleAr": "بَابُ غُرْفَةِ الْأُسْتَاذِ",
+    "titleUr": "تین اسموں کی زنجیر کھولیں",
     "chapter_order": 26,
     "lesson_order": 1,
-    "chapter_title": "Demonstratives and Possession — Spiral",
-    "title": "هَذَا and ذَلِكَ with Idafa",
-    "titleAr": "هَذَا وَّذَلِكَ مَعَ الْإِضَافَة",
-    "source": "reader_book3_lesson3_demonstratives",
-    "estimated_minutes": 8,
+    "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 108,
-      "ayah": 1,
-      "label": "Al-Kawthar 108:1",
-      "ar": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ",
-      "en": "Indeed, We have granted you Al-Kawthar.",
-      "ur": "بے شک ہم نے تمہیں کوثر عطا کیا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/108001.mp3"
+      "surah": 1,
+      "ayah": 2,
+      "label": "Al-Fatihah 1:2",
+      "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+      "en": "All praise is for Allah, Lord of the worlds.",
+      "ur": "سب تعریف اللہ کے لیے ہے جو تمام جہانوں کا رب ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001002.mp3"
     },
     "noor_intro": {
-      "en": "This chapter brings together two structures you already know: demonstratives (هَذَا, ذَلِكَ) and idafa (possession). When combined, they create richer expressions of meaning.",
-      "ur": "یہ باب آپ کی پہلے سے واقف دو ساختیں ملا رہی ہے: اشاریے (هَذَا, ذَلِكَ) اور اضافت (ملکیت)۔ جب ملایا جائے تو زیادہ بھرپور اظہار بنتا ہے۔"
+      "en": "رَبِّ الْعَالَمِينَ, Lord of the worlds, is a two-noun chain you met in Chapter 3. Today chains get one link longer.",
+      "ur": "رَبِّ الْعَالَمِينَ، تمام جہانوں کا رب، دو اسموں کی زنجیر ہے جو آپ باب 3 میں پڑھ چکے ہیں۔ آج زنجیر ایک کڑی لمبی ہوگی۔"
     },
     "autoplay": true
   },
@@ -32,93 +31,105 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Demonstratives: near (هَذَا/هَذِهِ) and far (ذَلِكَ/تِلْكَ)",
-        "ar": "أَسْمَاءُ الْإِشَارَة: قَرِيب (هَذَا/هَذِهِ) وَبَعِيد (ذَلِكَ/تِلْكَ)",
-        "ur": "اشاریے: قریب (هَذَا/هَذِهِ) اور دور (ذَلِكَ/تِلْكَ)"
+        "en": "Recall: two nouns, one owner",
+        "ar": "كِتَابُ الطَّالِبِ",
+        "ur": "یاد کریں: دو اسم، ایک مالک"
       },
       "explanation": {
-        "en": "هَذَا (this, m.) and هَذِهِ (this, f.) refer to something near. ذَلِكَ (that, m.) and تِلْكَ (that, f.) refer to something distant. They are the first item in a sentence and do not take ال.",
-        "ur": "هَذَا (یہ، مذکر) اور هَذِهِ (یہ، مؤنث) قریب کی چیز کو بتلاتے ہیں۔ ذَلِكَ (وہ، مذکر) اور تِلْكَ (وہ، مؤنث) دور کی چیز کو بتلاتے ہیں۔ یہ جملے کا پہلا لفظ ہوتے ہیں اور ال نہیں لیتے۔"
-      }
+        "en": "The first noun is the thing owned; the second is its owner. The first has no الـ and no tanwīn. The second ends in a kasra: كِتَابُ الطَّالِبِ, the student's book.",
+        "ur": "پہلا اسم وہ چیز ہے جس کی ملکیت ہے؛ دوسرا اس کا مالک۔ پہلے پر نہ الـ ہوتا ہے نہ تنوین۔ دوسرے کے آخر میں زیر ہوتی ہے: كِتَابُ الطَّالِبِ، طالب علم کی کتاب۔"
+      },
+      "examples": [
+        {
+          "ar": "كِتَابُ الطَّالِبِ",
+          "ar_plain": "كتاب الطالب",
+          "translit": "kitābu ṭ-ṭālibi",
+          "en": "the student's book",
+          "ur": "طالب علم کی کتاب"
+        }
+      ]
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "هَذَا كِتَابٌ",
-        "ar_plain": "هذا كتاب",
-        "translit": "haadhaa kitaabun",
-        "en": "This is a book.",
-        "ur": "یہ ایک کتاب ہے۔"
+        "ar": "غُرْفَةُ الْأُسْتَاذِ",
+        "ar_plain": "غرفة الأستاذ",
+        "translit": "ghurfatu l-ustādhi",
+        "en": "the teacher's room",
+        "ur": "استاد کا کمرہ"
       },
       "explanation": {
-        "en": "هَذَا is the demonstrative pronoun 'this.' It stands independently and is followed by a predicate noun in the nominative (كِتَابٌ). No idafa here — just a simple sentence.",
-        "ur": "هَذَا اشاریہ ضمیر 'یہ' ہے۔ یہ آزادانہ آتا ہے اور اس کے بعد حالت رفع میں بتیا ہوتا ہے (كِتَابٌ)۔ یہاں اضافت نہیں، صرف ایک سادہ جملہ۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "ذَلِكَ بَيْتٌ",
-        "ar_plain": "ذلك بيت",
-        "translit": "dhaalika baytun",
-        "en": "That is a house.",
-        "ur": "وہ ایک گھر ہے۔"
-      },
-      "explanation": {
-        "en": "ذَلِكَ is the far demonstrative 'that (m.).' It is followed by a predicate noun also in nominative. The far demonstrative tells us the object is at a distance.",
-        "ur": "ذَلِكَ دور کا اشاریہ 'وہ (مذکر)' ہے۔ اس کے بعد بھی حالت رفع میں بتیا آتا ہے۔ دور کا اشاریہ بتاتا ہے کہ شے دور ہے۔"
+        "en": "Another two-noun chain: the room belongs to the teacher.",
+        "ur": "دو اسموں کی ایک اور زنجیر: کمرہ استاد کا ہے۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Idafa: the possessive construction",
-        "ar": "الْإِضَافَة: صِيغَةُ الْمِلْكِيَّة",
-        "ur": "اضافت: ملکیت کی ساخت"
+        "en": "Add one more link",
+        "ar": "بَابُ غُرْفَةِ الْأُسْتَاذِ",
+        "ur": "ایک کڑی اور لگائیں"
       },
       "explanation": {
-        "en": "Idafa links two nouns to show possession. The possessed noun comes first and takes the case of the sentence. The possessor comes second and is always in the genitive (no tanween). A chain can have 2 or more nouns: كِتَابُ + الطَّالِبِ = the student's book.",
-        "ur": "اضافت دو اسمیں جوڑ کر ملکیت دکھاتی ہے۔ ملکیت والی چیز پہلے آتی ہے اور جملے کے مطابق حالت اختیار کرتی ہے۔ مالک دوسرا آتا ہے اور ہمیشہ حالت اضافی میں ہوتا ہے (تنوین نہیں)۔ زنجیر میں 2 یا زیادہ اسمیں ہو سکتی ہیں۔"
+        "en": "Put بَابُ, door, in front: بَابُ غُرْفَةِ الْأُسْتَاذِ, the door of the teacher's room. Read it link by link: the door → of the room → of the teacher.",
+        "ur": "آگے بَابُ، دروازہ، لگائیں: بَابُ غُرْفَةِ الْأُسْتَاذِ، استاد کے کمرے کا دروازہ۔ کڑی کڑی پڑھیں: دروازہ ← کمرے کا ← استاد کے۔"
+      },
+      "examples": [
+        {
+          "ar": "بَابُ غُرْفَةِ الْأُسْتَاذِ",
+          "ar_plain": "باب غرفة الأستاذ",
+          "translit": "bābu ghurfati l-ustādhi",
+          "en": "the door of the teacher's room",
+          "ur": "استاد کے کمرے کا دروازہ"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The middle noun has two jobs",
+        "ar": "غُرْفَةِ",
+        "ur": "درمیانی اسم کے دو کام"
+      },
+      "explanation": {
+        "en": "غُرْفَةِ is owned and owner at once: the door belongs to the room, and the room belongs to the teacher. Because it is owned, it has no الـ and no tanwīn; because it follows بَابُ, it ends in a kasra.",
+        "ur": "غُرْفَةِ ایک ساتھ مملوک بھی ہے اور مالک بھی: دروازہ کمرے کا ہے، اور کمرہ استاد کا۔ چونکہ یہ کسی کی ملکیت ہے، اس پر نہ الـ ہے نہ تنوین؛ چونکہ یہ بَابُ کے بعد آیا ہے، اس کے آخر میں زیر ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "كِتَابُ الطَّالِبِ",
-        "ar_plain": "كتاب الطالب",
-        "translit": "kitaabu at-tullaabi",
-        "en": "The student's book",
-        "ur": "طالب علم کی کتاب"
+        "ar": "بَابُ بَيْتِ الْإِمَامِ",
+        "ar_plain": "باب بيت الإمام",
+        "translit": "bābu bayti l-imāmi",
+        "en": "the door of the imam's house",
+        "ur": "امام کے گھر کا دروازہ"
       },
       "explanation": {
-        "en": "كِتَابُ (book, subject/possessed) + الطَّالِبِ (the student, possessor in genitive). The possessor الطَّالِبِ has no tanween because it is in the genitive of idafa.",
-        "ur": "كِتَابُ (کتاب، حالت رفع/ملکیت شدہ) + الطَّالِبِ (طالب علم، حالت اضافی)۔ مالک الطَّالِبِ کا تنوین نہیں کیونکہ وہ اضافت کی حالت میں ہے۔"
+        "en": "بَابُ → بَيْتِ → الْإِمَامِ: the door belongs to the house, the house to the imam.",
+        "ur": "بَابُ ← بَيْتِ ← الْإِمَامِ: دروازہ گھر کا، گھر امام کا۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "بَيْتُ اللَّهِ",
-        "ar_plain": "بيت الله",
-        "translit": "baytu laahi",
-        "en": "The House of Allah (the Kabah)",
-        "ur": "اللہ کا گھر (کعبہ)"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Only the last noun carries الـ",
+        "ar": "اسْمُ مُدَرِّسِ الْمَدْرَسَةِ",
+        "ur": "صرف آخری اسم پر الـ آتا ہے"
       },
       "explanation": {
-        "en": "بَيْتُ (house) + اللَّهِ (Allah, genitive). This is the legal idafa name of the Kabah in the Quran. The possessor is always Allah's name in the genitive without ال.",
-        "ur": "بَيْتُ (گھر) + اللَّهِ (اللہ، اضافی)۔ یہ قرآن میں کعبہ کا معروف اضافتی نام ہے۔ مالک کا نام ہمیشہ اللہ کا ہوتا ہے، اضافی حالت میں، ال کےبغیر۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Demonstrative + idafa chain",
-        "ur": "اشاریہ + اضافت کی زنجیر"
+        "en": "The final owner is the only noun with الـ (or a name like اللَّهِ). The nouns before it are made definite by the chain itself: اسْمُ مُدَرِّسِ الْمَدْرَسَةِ, the name of the school's teacher.",
+        "ur": "آخری مالک ہی وہ اسم ہے جس پر الـ آتا ہے (یا اللَّهِ جیسا نام)۔ اس سے پہلے والے اسم زنجیر ہی سے معرفہ بن جاتے ہیں: اسْمُ مُدَرِّسِ الْمَدْرَسَةِ، اسکول کے استاد کا نام۔"
       },
-      "body": {
-        "en": "When a demonstrative introduces an idafa phrase, the demonstrative modifies the entire possessed noun chain. هَذَا كِتَابُ الطَّالِبِ = This (is) the student's book. The demonstrative is not part of the idafa — it precedes it.",
-        "ur": "جب کوئی اشاریہ اضافتی زنجیر سے پہلے آتا ہے، تو اشاریہ پوری ملکیت والی زنجیر کو بتلاتا ہے۔ هَذَا كِتَابُ الطَّالِبِ = یہ (ہے) طالب علم کی کتاب۔ اشاریہ اضافت کا حصہ نہیں، وہ اس سے پہلے آتا ہے۔"
-      }
+      "examples": [
+        {
+          "ar": "اسْمُ مُدَرِّسِ الْمَدْرَسَةِ",
+          "ar_plain": "اسم مدرس المدرسة",
+          "translit": "ismu mudarrisi l-madrasati",
+          "en": "the name of the school's teacher",
+          "ur": "اسکول کے استاد کا نام"
+        }
+      ]
     }
   ],
   "exercises": [
@@ -126,144 +137,117 @@
       "type": "TAP_TRANSLATION",
       "id": "ch26-l01-ex01",
       "prompt": {
-        "ar": "هَذَا كِتَابٌ",
-        "ar_plain": "هذا كتاب",
-        "translit": "haadhaa kitaabun",
-        "en": "This is a book.",
-        "ur": "یہ ایک کتاب ہے۔"
+        "ar": "بَابُ غُرْفَةِ الْأُسْتَاذِ",
+        "ar_plain": "باب غرفة الأستاذ",
+        "translit": "bābu ghurfati l-ustādhi",
+        "en": "the door of the teacher's room",
+        "ur": "استاد کے کمرے کا دروازہ"
       },
       "options": [
         {
-          "en": "This is a book.",
-          "ur": "یہ ایک کتاب ہے۔"
+          "en": "the teacher's room door is open",
+          "ur": "استاد کے کمرے کا دروازہ کھلا ہے"
         },
         {
-          "en": "That is a book.",
-          "ur": "وہ ایک کتاب ہے۔"
+          "en": "the room of the teacher's door",
+          "ur": "استاد کے دروازے کا کمرہ"
         },
         {
-          "en": "This is a house.",
-          "ur": "یہ ایک گھر ہے۔"
+          "en": "the door of the teacher's room",
+          "ur": "استاد کے کمرے کا دروازہ"
         },
         {
-          "en": "That is a house.",
-          "ur": "وہ ایک گھر ہے۔"
+          "en": "the teacher of the room's door",
+          "ur": "کمرے کے دروازے کا استاد"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "هَذَا means 'this (near).' ذَلِكَ means 'that (far).' Here we see هَذَا with كِتَابٌ (book) — the near demonstrative with the predicate noun.",
-        "ur": "هَذَا کا مطلب 'یہ (قریب)'۔ ذَلِكَ کا مطلب 'وہ (دور)'۔ یہاں هَذَا کو كِتَابٌ (کتاب) کے ساتھ دیکھ رہے ہیں — قریب کا اشاریہ بتیا کے ساتھ۔"
+        "en": "Read link by link from the start: بَابُ the door → غُرْفَةِ of the room → الْأُسْتَاذِ of the teacher.",
+        "ur": "شروع سے کڑی کڑی پڑھیں: بَابُ دروازہ ← غُرْفَةِ کمرے کا ← الْأُسْتَاذِ استاد کے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch26-l01-ex02",
       "statement": {
-        "en": "In بَيْتُ اللَّهِ, the word اللَّهِ is in the genitive case because it is the possessor in an idafa construction.",
-        "ur": "بَيْتُ اللَّهِ میں اللَّهِ حالت اضافی میں ہے کیونکہ وہ اضافت میں مالک ہے۔"
+        "en": "In this chain, the room belongs to the teacher.",
+        "ur": "اس زنجیر میں کمرہ استاد کا ہے۔",
+        "ar_example": {
+          "ar": "بَابُ غُرْفَةِ الْأُسْتَاذِ",
+          "ar_plain": "باب غرفة الأستاذ",
+          "translit": "bābu ghurfati l-ustādhi",
+          "en": "the door of the teacher's room",
+          "ur": "استاد کے کمرے کا دروازہ"
+        }
       },
       "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "غُرْفَةِ الْأُسْتَاذِ is the second link: the room of the teacher.",
+        "ur": "غُرْفَةِ الْأُسْتَاذِ دوسری کڑی ہے: استاد کا کمرہ۔"
+      }
     },
     {
-      "type": "FILL_BLANK",
+      "type": "TRUE_FALSE",
       "id": "ch26-l01-ex03",
-      "mode": "TAP",
-      "sentence_ar": "هَذَا ___",
-      "hint": {
-        "en": "This is the student's book.",
-        "ur": "یہ طالب علم کی کتاب ہے۔"
-      },
-      "options": [
-        {
-          "ar": "كِتَابُ الطَّالِبِ",
-          "ar_plain": "كتاب الطالب",
-          "translit": "kitaabu at-tullaabi",
-          "en": "the student's book",
-          "ur": "طالب علم کی کتاب"
-        },
-        {
-          "ar": "كِتَابٌ",
-          "ar_plain": "كتاب",
-          "translit": "kitaabun",
-          "en": "a book",
-          "ur": "ایک کتاب"
-        },
-        {
-          "ar": "الْكِتَابُ",
-          "ar_plain": "الكتاب",
-          "translit": "al-kitaabu",
-          "en": "the book",
-          "ur": "کتاب"
-        },
-        {
-          "ar": "بَيْتُ الطَّالِبِ",
-          "ar_plain": "بيت الطالب",
-          "translit": "baytu at-tullaabi",
-          "en": "the student's house",
-          "ur": "طالب علم کا گھر"
+      "statement": {
+        "en": "In this chain, the imam belongs to the house.",
+        "ur": "اس زنجیر میں امام گھر کا ہے۔",
+        "ar_example": {
+          "ar": "بَابُ بَيْتِ الْإِمَامِ",
+          "ar_plain": "باب بيت الإمام",
+          "translit": "bābu bayti l-imāmi",
+          "en": "the door of the imam's house",
+          "ur": "امام کے گھر کا دروازہ"
         }
-      ],
-      "correct_answer": {
-        "ar": "كِتَابُ الطَّالِبِ",
-        "ar_plain": "كتاب الطالب",
-        "translit": "kitaabu at-tullaabi",
-        "en": "the student's book",
-        "ur": "طالب علم کی کتاب"
       },
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The owner comes after the thing owned: بَيْتِ الْإِمَامِ is the imam's house, so the house belongs to the imam.",
+        "ur": "مالک، مملوک کے بعد آتا ہے: بَيْتِ الْإِمَامِ امام کا گھر ہے، یعنی گھر امام کا ہے۔"
+      }
     },
     {
       "type": "MATCHING",
       "id": "ch26-l01-ex04",
       "left_column": [
         {
-          "ar": "هَذَا كِتَابٌ",
-          "ar_plain": "هذا كتاب",
-          "translit": "haadhaa kitaabun",
-          "en": "This is a book.",
-          "ur": "یہ ایک کتاب ہے۔"
+          "ar": "بَابُ",
+          "ar_plain": "باب",
+          "translit": "bābu",
+          "en": "door",
+          "ur": "دروازہ"
         },
         {
-          "ar": "ذَلِكَ بَيْتٌ",
-          "ar_plain": "ذلك بيت",
-          "translit": "dhaalika baytun",
-          "en": "That is a house.",
-          "ur": "وہ ایک گھر ہے۔"
+          "ar": "بَيْتِ",
+          "ar_plain": "بيت",
+          "translit": "bayti",
+          "en": "house",
+          "ur": "گھر"
         },
         {
-          "ar": "كِتَابُ الطَّالِبِ",
-          "ar_plain": "كتاب الطالب",
-          "translit": "kitaabu at-tullaabi",
-          "en": "the student's book",
-          "ur": "طالب علم کی کتاب"
-        },
-        {
-          "ar": "بَيْتُ اللَّهِ",
-          "ar_plain": "بيت الله",
-          "translit": "baytu laahi",
-          "en": "the House of Allah",
-          "ur": "اللہ کا گھر"
+          "ar": "الْإِمَامِ",
+          "ar_plain": "الإمام",
+          "translit": "al-imāmi",
+          "en": "the imam",
+          "ur": "امام"
         }
       ],
       "right_column": [
         {
-          "en": "This is a book.",
-          "ur": "یہ ایک کتاب ہے۔"
+          "en": "owned only — the first noun",
+          "ur": "صرف مملوک — پہلا اسم"
         },
         {
-          "en": "That is a house.",
-          "ur": "وہ ایک گھر ہے۔"
+          "en": "owned and owner — the middle noun",
+          "ur": "مملوک بھی، مالک بھی — درمیانی اسم"
         },
         {
-          "en": "the student's book",
-          "ur": "طالب علم کی کتاب"
-        },
-        {
-          "en": "the House of Allah",
-          "ur": "اللہ کا گھر"
+          "en": "the final owner — it carries الـ",
+          "ur": "آخری مالک — اس پر الـ ہے"
         }
       ],
       "correct_pairs": [
@@ -278,162 +262,207 @@
         [
           2,
           2
-        ],
-        [
-          3,
-          3
         ]
       ],
-      "xp_value": 1
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "In بَابُ بَيْتِ الْإِمَامِ the first noun is only owned, the middle is both, and the last, with الـ, is the final owner.",
+        "ur": "بَابُ بَيْتِ الْإِمَامِ میں پہلا اسم صرف مملوک ہے، درمیانی دونوں، اور آخری، الـ کے ساتھ، آخری مالک ہے۔"
+      }
     },
     {
-      "type": "BUILD_SENTENCE",
+      "type": "FILL_BLANK",
       "id": "ch26-l01-ex05",
-      "target_translation": {
-        "en": "That is the student's book.",
-        "ur": "وہ طالب علم کی کتاب ہے۔"
-      },
-      "tiles": [
-        {
-          "ar": "ذَلِكَ",
-          "ar_plain": "ذلك",
-          "translit": "dhaalika",
-          "en": "that",
-          "ur": "وہ (دور)"
-        },
-        {
-          "ar": "كِتَابُ",
-          "ar_plain": "كتاب",
-          "translit": "kitaabu",
-          "en": "book (possessed)",
-          "ur": "کتاب (ملکیت شدہ)"
-        },
-        {
-          "ar": "الطَّالِبِ",
-          "ar_plain": "الطالب",
-          "translit": "at-tullaabi",
-          "en": "the student (gen.)",
-          "ur": "طالب علم (اضافی)"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch26-l01-ex06",
-      "prompt": {
-        "ar": "رَبُّ الْعَالَمِينَ",
-        "ar_plain": "رب العالمين",
-        "translit": "rabbu al-'aalamiin",
-        "en": "Lord of all worlds",
-        "ur": "تمام جہانوں کا رب"
+      "mode": "TAP",
+      "sentence_ar": "بَابُ ___ الْأُسْتَاذِ",
+      "hint": {
+        "en": "The middle noun: no الـ, no tanwīn, and a kasra.",
+        "ur": "درمیانی اسم: نہ الـ، نہ تنوین، اور آخر میں زیر۔"
       },
       "options": [
         {
-          "en": "Lord of all worlds",
-          "ur": "تمام جہانوں کا رب"
+          "ar": "الْغُرْفَةِ",
+          "ar_plain": "الغرفة",
+          "translit": "al-ghurfati",
+          "en": "the room",
+          "ur": "کمرہ"
         },
         {
-          "en": "The great Lord",
-          "ur": "بڑا رب"
+          "ar": "غُرْفَةِ",
+          "ar_plain": "غرفة",
+          "translit": "ghurfati",
+          "en": "room (of)",
+          "ur": "کمرے"
         },
         {
-          "en": "Lord of the house",
-          "ur": "گھر کا رب"
+          "ar": "غُرْفَةٌ",
+          "ar_plain": "غرفة",
+          "translit": "ghurfatun",
+          "en": "a room",
+          "ur": "ایک کمرہ"
         },
         {
-          "en": "The owner of the worlds",
-          "ur": "عالمین کا مالک"
+          "ar": "غُرْفَةً",
+          "ar_plain": "غرفة",
+          "translit": "ghurfatan",
+          "en": "a room (accusative)",
+          "ur": "ایک کمرہ (منصوب)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "غُرْفَةِ",
+        "ar_plain": "غرفة",
+        "translit": "ghurfati",
+        "en": "room (of)",
+        "ur": "کمرے"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A middle noun is owned, so it drops الـ and tanwīn, and it follows بَابُ, so it ends in a kasra: غُرْفَةِ.",
+        "ur": "درمیانی اسم مملوک ہے، اس لیے الـ اور تنوین نہیں لیتا، اور بَابُ کے بعد ہے، اس لیے زیر: غُرْفَةِ۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch26-l01-ex06",
+      "target_translation": {
+        "en": "the door of the imam's house",
+        "ur": "امام کے گھر کا دروازہ"
+      },
+      "tiles": [
+        {
+          "ar": "الْإِمَامِ",
+          "ar_plain": "الإمام",
+          "translit": "al-imāmi",
+          "en": "the imam",
+          "ur": "امام"
+        },
+        {
+          "ar": "بَابُ",
+          "ar_plain": "باب",
+          "translit": "bābu",
+          "en": "door",
+          "ur": "دروازہ"
+        },
+        {
+          "ar": "بَيْتِ",
+          "ar_plain": "بيت",
+          "translit": "bayti",
+          "en": "house",
+          "ur": "گھر"
+        }
+      ],
+      "correct_order": [
+        1,
+        2,
+        0
+      ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "Start with the thing owned and end with the final owner: بَابُ بَيْتِ الْإِمَامِ.",
+        "ur": "مملوک سے شروع کریں اور آخری مالک پر ختم کریں: بَابُ بَيْتِ الْإِمَامِ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch26-l01-ex07",
+      "prompt": {
+        "ar": "اسْمُ مُدَرِّسِ الْمَدْرَسَةِ",
+        "ar_plain": "اسم مدرس المدرسة",
+        "translit": "ismu mudarrisi l-madrasati",
+        "en": "the name of the school's teacher",
+        "ur": "اسکول کے استاد کا نام"
+      },
+      "options": [
+        {
+          "en": "the school's name",
+          "ur": "اسکول کا نام"
+        },
+        {
+          "en": "the name of the school's teacher",
+          "ur": "اسکول کے استاد کا نام"
+        },
+        {
+          "en": "the teacher of the school's name",
+          "ur": "اسکول کے نام کا استاد"
+        },
+        {
+          "en": "the teacher's school",
+          "ur": "استاد کا اسکول"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "اسْمُ the name → مُدَرِّسِ of the teacher → الْمَدْرَسَةِ of the school.",
+        "ur": "اسْمُ نام ← مُدَرِّسِ استاد کا ← الْمَدْرَسَةِ اسکول کے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch26-l01-ex08",
+      "ayah_fragment": {
+        "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+        "surah_ref": "Al-Fatihah 1:2"
+      },
+      "options": [
+        {
+          "en": "How many nouns are in the chain رَبِّ الْعَالَمِينَ? Two: Lord + of the worlds",
+          "ur": "رَبِّ الْعَالَمِينَ کی زنجیر میں کتنے اسم ہیں؟ دو: رب + جہانوں کا"
+        },
+        {
+          "en": "Three: praise + Lord + worlds",
+          "ur": "تین: تعریف + رب + جہان"
+        },
+        {
+          "en": "One: it is a single word",
+          "ur": "ایک: یہ ایک ہی لفظ ہے"
+        },
+        {
+          "en": "Four: every word in the ayah",
+          "ur": "چار: آیت کا ہر لفظ"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "رَبُّ الْعَالَمِينَ is a three-word idafa chain: رَبُّ (Lord, possessed) + الْعَالَمِينَ (all worlds, possessor in genitive). This is how Arabic expresses 'Lord of.'",
-        "ur": "رَبُّ الْعَالَمِينَ تین لفظوں کی اضافتی زنجیر ہے: رَبُّ (رب، ملکیت شدہ) + الْعَالَمِينَ (تمام عالمین، اضافی حالت)۔ عربی میں 'رب' کا اظہار اسی طرح ہوتا ہے۔"
+        "en": "رَبِّ الْعَالَمِينَ is a two-noun chain: رَبِّ, Lord (owned), الْعَالَمِينَ, of the worlds (owner).",
+        "ur": "رَبِّ الْعَالَمِينَ دو اسموں کی زنجیر ہے: رَبِّ، رب (مملوک)، الْعَالَمِينَ، جہانوں کا (مالک)۔"
       }
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch26-l01-ex07",
-      "statement": {
-        "en": "هَذَا and ذَلِكَ can take ال (e.g. الْهَذَا).",
-        "ur": "هَذَا اور ذَلِكَ پر ال لگ سکتا ہے (مثلاً الْهَذَا)۔"
-      },
-      "correct_answer": false,
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch26-l01-ex08",
-      "target_translation": {
-        "en": "This is the House of Allah.",
-        "ur": "یہ اللہ کا گھر ہے۔"
-      },
-      "tiles": [
-        {
-          "ar": "هَذَا",
-          "ar_plain": "هذا",
-          "translit": "haadhaa",
-          "en": "this",
-          "ur": "یہ (قریب)"
-        },
-        {
-          "ar": "بَيْتُ",
-          "ar_plain": "بيت",
-          "translit": "baytu",
-          "en": "house (possessed)",
-          "ur": "گھر (ملکیت شدہ)"
-        },
-        {
-          "ar": "اللَّهِ",
-          "ar_plain": "الله",
-          "translit": "laahi",
-          "en": "Allah (gen.)",
-          "ur": "اللہ (اضافی)"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Demonstratives + Idafa",
-      "ar": "أَسْمَاءُ الْإِشَارَة مَعَ الْإِضَافَة",
-      "ur": "اشاریے + اضافت"
+      "en": "A chain of possession",
+      "ar": "سِلْسِلَةُ الْإِضَافَةِ",
+      "ur": "اضافت کی زنجیر"
     },
     "ayah": {
-      "surah": 108,
-      "ayah": 1,
-      "label": "Al-Kawthar 108:1",
-      "ar": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ",
-      "en": "Indeed, We have granted you Al-Kawthar.",
-      "ur": "بے شک ہم نے تمہیں کوثر عطا کیا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/108001.mp3"
+      "surah": 1,
+      "ayah": 2,
+      "label": "Al-Fatihah 1:2",
+      "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+      "en": "All praise is for Allah, Lord of the worlds.",
+      "ur": "سب تعریف اللہ کے لیے ہے جو تمام جہانوں کا رب ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001002.mp3"
     },
     "highlighted_word_indices": [
-      0,
-      2
+      2,
+      3
+    ],
+    "highlighted_words": [
+      "رَبِّ",
+      "الْعَالَمِينَ"
     ],
     "noor_explanation": {
-      "en": "هَذَا and ذَلِكَ are demonstratives. They point to something near or far. When followed by an idafa, they point to the entire possession chain. هَذَا كِتَابُ الطَّالِبِ = This (is) the student's book.",
-      "ur": "هَذَا اور ذَلِكَ اشاریے ہیں۔ یہ قریب یا دور کی چیز کو بتلاتے ہیں۔ جب اضافت کے ساتھ آئیں تو پوری ملکیت کی زنجیر کو بتلاتے ہیں۔ هَذَا كِتَابُ الطَّالِبِ = یہ (ہے) طالب علم کی کتاب۔"
+      "en": "رَبِّ الْعَالَمِينَ: Lord of the worlds — a two-noun chain. You can now add a third link and read the middle noun's two jobs.",
+      "ur": "رَبِّ الْعَالَمِينَ: تمام جہانوں کا رب — دو اسموں کی زنجیر۔ اب آپ تیسری کڑی لگا کر درمیانی اسم کے دونوں کام پہچان سکتے ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Demonstratives and idafa are powerful tools. Combine them and you can express 'this student's book' or 'that house of Allah.' Practice the pattern: demonstrative + possessed noun + possessor in genitive.",
-      "ur": "اشاریے اور اضافت طاقتور اوزار ہیں۔ انہیں ملا کر 'اس طالب علم کی کتاب' یا 'وہ اللہ کا گھر' کہہ سکتے ہیں۔ اس نمونے کی مشق کریں: اشاریہ + ملکیت والی چیز + مالک حالت اضافی میں۔"
+      "en": "You can read a three-noun chain. Next: pointing at the whole chain with هَذَا.",
+      "ur": "آپ تین اسموں کی زنجیر پڑھ سکتے ہیں۔ آگے: هَذَا سے پوری زنجیر کی طرف اشارہ۔"
     }
   }
 }

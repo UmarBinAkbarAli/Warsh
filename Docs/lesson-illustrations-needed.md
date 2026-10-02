@@ -557,6 +557,119 @@ Chapter 25 (لَيْسَ) was corrected and promoted 2026-09-24: 36 discover car
 | `ch25-forgiving-dawn.png` | `ch25-l05` card 5 | إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ | Soft dawn light spreading over a calm landscape after rain; no figures |
 | `ch25-teacher-not-far.png` | `ch25-l06` card 2 | الْمُعَلِّمَةُ لَيْسَتْ بَعِيدَةً | A woman teacher in modest dress standing just beside a pupil's desk, close enough to help |
 
+### Chapters 26–30
+
+Chapters 26–30 were rebuilt in the proposal harvest and promoted 2026-10-02: 133 discover cards, **106 new scenes**. Same rules: Quran cards stay symbolic, no figures; every person is faceless or seen from behind.
+
+| Filename | Cards | Arabic on the card | Scene |
+|---|---|---|---|
+| `ch26-three-chain-links.png` | `ch26-l01` card 1 · `ch26-l01` card 4 · `ch26-l04` card 2 · `ch26-l04` card 3 · `ch26-l04` card 5 · `ch26-l06` card 1 | كِتَابُ الطَّالِبِ · غُرْفَةِ | Three large metal chain links in a row, the middle one lit from both sides; plain parchment background |
+| `ch26-teachers-room.png` | `ch26-l01` card 2 | غُرْفَةُ الْأُسْتَاذِ | A tidy teacher's room: desk, bookshelf, a framed certificate; empty chair; no figures |
+| `ch26-door-of-teachers-room.png` | `ch26-l01` card 3 | بَابُ غُرْفَةِ الْأُسْتَاذِ | A school corridor: a teacher's room with its wooden door, a small sign-plate on the room and a matching plate on the door, linked by a thin dotted line; no figures |
+| `ch26-door-of-imams-house.png` | `ch26-l01` card 5 · `ch27-l01` card 5 | بَابُ بَيْتِ الْإِمَامِ · فِي بَيْتِ الْإِمَامِ | A modest house beside a mosque: the house's front door highlighted, a faceless imam figure in white walking towards it, seen from behind |
+| `ch26-school-teacher-name.png` | `ch26-l01` card 6 | اسْمُ مُدَرِّسِ الْمَدْرَسَةِ | A school noticeboard with a teacher's name card pinned to it (blank lines, no letters), school building behind |
+| `ch26-pointing-at-door.png` | `ch26-l02` card 1 · `ch26-l02` card 2 · `ch26-l06` card 3 | هَذَا + بَابُ غُرْفَةِ الْأُسْتَاذِ · هَذَا بَابُ … / هَذِهِ غُرْفَةُ … | A hand pointing (index finger only, no face) at a classroom door at the end of a corridor |
+| `ch26-imam-house-far.png` | `ch26-l02` card 3 | ذَلِكَ بَيْتُ إِمَامِ الْمَسْجِدِ | Far view across a street: a house next to a mosque minaret, an arrow-like path pointing to the house |
+| `ch26-teachers-car-far.png` | `ch26-l02` card 4 | تِلْكَ سَيَّارَةُ مُدَرِّسِ الْمَدْرَسَةِ | A small car parked far away in a school car park, school building behind |
+| `ch26-open-mushaf-verses.png` | `ch26-l02` card 5 · `ch26-l03` card 6 · `ch27-l04` card 5 | تِلْكَ آيَاتُ الْكِتَابِ الْحَكِيمِ · تِلْكَ آيَاتُ الْكِتَابِ الْمُبِينِ | An open Mushaf on a wooden stand, a row of softly glowing verse markers across the page; no figures |
+| `ch26-door-open.png` | `ch26-l02` card 6 | بَابُ غُرْفَةِ الْأُسْتَاذِ / مَفْتُوحٌ | The teacher's room door standing open, light coming through; no figures |
+| `ch26-matching-tags.png` | `ch26-l03` card 1 · `ch26-l03` card 2 | كِتَابُ الطَّالِبِ + الْجَدِيدُ · الصِّفَةُ تَتْبَعُ مَوْصُوفَهَا | Two cards with identical coloured corner tags lying side by side, a thin line joining the matching tags |
+| `ch26-new-book-or-new-student.png` | `ch26-l03` card 3 · `ch26-l06` card 2 | الْجَدِيدُ / الْجَدِيدِ | Split panel: left, a shiny brand-new book in the hands of a student seen from behind; right, a new student just arriving at the classroom door, from behind, holding an old book |
+| `ch26-big-door-or-big-room.png` | `ch26-l03` card 4 | الْكَبِيرُ / الْكَبِيرَةِ | Split panel: left, a small room with an oversized grand door; right, a vast hall with an ordinary small door |
+| `ch26-imams-beautiful-house.png` | `ch26-l03` card 5 | بَيْتُ الْإِمَامِ الْجَمِيلُ | A beautiful small house with a garden and arched windows, a mosque dome behind it |
+| `ch26-day-of-judgement-symbolic.png` | `ch26-l04` card 1 | مَالِكِ يَوْمِ الدِّينِ | Symbolic: a vast horizon at dawn with a balanced scale silhouetted against the light; no figures, nothing depicting Allah |
+| `ch26-fatiha-opening-page.png` | `ch26-l04` card 4 | لِلَّهِ … مَالِكِ | The opening page of a Mushaf with its ornamented frame, closed lines of text as soft blurred bands; no figures |
+| `ch26-book-of-school-teacher.png` | `ch26-l04` card 6 | كِتَابُ أُسْتَاذِ الْمَدْرَسَةِ | A teacher's book lying on a desk in front of a school whiteboard; no figures |
+| `ch27-four-prepositions.png` | `ch27-l01` card 1 | فِي · عَلَى · مِنْ · إِلَى | Four small panels: a ball in a box, a ball on a box, a ball rolling away from a box, a ball rolling towards a box |
+| `ch27-book-in-bag-on-desk.png` | `ch27-l01` card 2 | فِي / عَلَى | Split panel: a book inside an open school bag; the same book on top of a desk |
+| `ch27-out-of-and-to-mosque.png` | `ch27-l01` card 3 | مِنَ / إِلَى | Split panel: a faceless figure, seen from behind, walking out of a mosque door; the same figure walking towards a mosque |
+| `ch27-house-kasra.png` | `ch27-l01` card 4 · `ch27-l05` card 2 | فِي الْبَيْتِ · فِي بَيْتٍ · فِي الْبَيْتِ · كَالْأَسَدِ | A small house with a tiny ribbon hanging below its doorstep, the ribbon curled like a kasra; no letters |
+| `ch27-isra-two-mosques.png` | `ch27-l01` card 6 | مِنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى | Symbolic night journey: a starry night sky with a line of light arching from the Kaaba's silhouette to the Dome of the Rock's silhouette; no figures |
+| `ch27-one-letter-joins.png` | `ch27-l02` card 1 | بِـ · لِـ · كَـ | Three single letter-tiles each snapping onto a longer word-tile like puzzle pieces; no actual letters, plain shapes |
+| `ch27-writing-with-pen.png` | `ch27-l02` card 2 | بِالْقَلَمِ | A hand writing with a pen in a notebook; no face |
+| `ch27-gift-for-student.png` | `ch27-l02` card 3 | لِلطَّالِبِ · لِلَّهِ | A wrapped book with a gift tag on a student's desk; no figures |
+| `ch27-for-student-vs-students-book.png` | `ch27-l02` card 4 | الْكِتَابُ لِلطَّالِبِ / كِتَابُ الطَّالِبِ | Split panel: a book with a gift tag being handed over; the same book already on its owner's desk |
+| `ch27-praise-symbolic.png` | `ch27-l02` card 5 | الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ | Symbolic: an open Mushaf at the first page under soft light, prayer beads beside it; no figures |
+| `ch27-teacher-by-car.png` | `ch27-l02` card 6 | ذَهَبَ الْأُسْتَاذُ بِالسَّيَّارَةِ | A small car driving along a road towards a school, seen from behind |
+| `ch27-asking-about-lesson.png` | `ch27-l03` card 1 | سَأَلَ عَنِ الدَّرْسِ | A raised hand in a classroom, seen from behind the student, the whiteboard full of lesson notes |
+| `ch27-girl-asking-about-mosque.png` | `ch27-l03` card 2 | سَأَلَتِ الْبِنْتُ عَنِ الْمَسْجِدِ | A girl in hijab seen from behind pointing towards a mosque in the distance |
+| `ch27-brave-like-lion.png` | `ch27-l03` card 3 | كَالْأَسَدِ | A young boy seen from behind standing tall on a hill, his shadow on the ground shaped like a lion |
+| `ch27-separate-vs-joined-tiles.png` | `ch27-l03` card 4 · `ch27-l05` card 1 | عَنِ الدَّرْسِ / كَالدَّرْسِ · فِي · عَلَى · مِنْ · إِلَى · عَنْ / بِـ · لِـ · كَـ | Two word-tiles with a gap between them, beside two tiles fused into one |
+| `ch27-scattered-moths.png` | `ch27-l03` card 5 | يَوْمَ يَكُونُ النَّاسُ كَالْفَرَاشِ الْمَبْثُوثِ | Symbolic: countless small moths scattered across a dim evening sky; no human figures |
+| `ch27-fluffed-wool-mountains.png` | `ch27-l03` card 6 | وَتَكُونُ الْجِبَالُ كَالْعِهْنِ الْمَنْفُوشِ | Symbolic: mountain peaks dissolving into soft tufts of coloured wool drifting in the air |
+| `ch27-in-it-box.png` | `ch27-l04` card 1 | لَهُ · فِيهِ | An open wooden box with a pen inside it |
+| `ch27-his-book-from-him.png` | `ch27-l04` card 2 | كِتَابُهُ / مِنْهُ | Split panel: a book resting by its owner's hand (no face); the same book being handed from that hand to another |
+| `ch27-five-directions.png` | `ch27-l04` card 3 | بِهِ · مِنْهُ · إِلَيْهِ · عَلَيْهِ · عَنْهُ | A small cube with five arrows: one pointing into it, one away, one towards, one resting on top, one curving around it |
+| `ch27-student-goes-to-teacher.png` | `ch27-l04` card 4 | هَذَا الْأُسْتَاذُ، وَذَهَبَ الطَّالِبُ إِلَيْهِ | A student seen from behind walking towards a teacher standing at the front of a classroom, both faceless |
+| `ch27-hands-held-back-symbolic.png` | `ch27-l04` card 6 | فَكَفَّ أَيْدِيَهُمْ عَنْكُمْ | Symbolic: a protective dome of light over a small tent camp in a desert at dusk; no figures |
+| `ch28-knew-the-news.png` | `ch28-l01` card 1 | عَلِمَ | A father seen from behind reading a letter by a window |
+| `ch28-understood-lesson.png` | `ch28-l01` card 2 | فَهِمَ | A student seen from behind at a desk, a lit light-bulb icon floating over the open notebook |
+| `ch28-knew-vs-understood.png` | `ch28-l01` card 3 | عَلِمَ / فَهِمَ | Split panel: a rule written on a card pinned to a board; the same card with its gears visible, turning |
+| `ch28-verb-doer-object.png` | `ch28-l01` card 4 · `ch28-l05` card 2 | فَهِمَ + الطَّالِبُ + الدَّرْسَ · حَفِظَ الدَّرْسَ · رَضِيَ عَنْهُ · أَعْطَاهُ كِتَابًا | Three blank tiles in a row: an action arrow tile, a person-silhouette tile, a book tile |
+| `ch28-girl-understood.png` | `ch28-l01` card 5 | عَلِمَتْ · فَهِمَتْ | A girl in hijab seen from behind raising her hand happily at a whiteboard |
+| `ch28-twelve-springs-symbolic.png` | `ch28-l01` card 6 | قَدْ عَلِمَ كُلُّ أُنَاسٍ مَشْرَبَهُمْ | Symbolic: a large rock in the desert with twelve small streams of water flowing from it; no figures |
+| `ch28-memorising-surah.png` | `ch28-l02` card 1 | حَفِظَ | A boy seen from behind sitting cross-legged with a small Mushaf on a wooden stand |
+| `ch28-teacher-pleased.png` | `ch28-l02` card 2 | رَضِيَ عَنْ | A teacher seen from behind placing a gold star sticker on a student's notebook |
+| `ch28-object-vs-preposition.png` | `ch28-l02` card 3 | حَفِظَ الدَّرْسَ / رَضِيَ عَنِ الدَّرْسِ | Two tiles linked directly vs two tiles linked through a small bridge tile |
+| `ch28-girl-memorised.png` | `ch28-l02` card 4 | حَفِظَتْ · رَضِيَتْ | A girl in hijab seen from behind holding a small Mushaf against her chest |
+| `ch28-pleased-symbolic.png` | `ch28-l02` card 5 | رَضِيَ اللَّهُ عَنْهُمْ وَرَضُوا عَنْهُ | Symbolic: a green garden with flowing streams under a calm sky; no figures |
+| `ch28-guest-came.png` | `ch28-l03` card 1 | أَتَى | A guest seen from behind arriving at an open front door with a small gift box |
+| `ch28-command-came-symbolic.png` | `ch28-l03` card 2 · `ch29-l05` card 3 | أَتَى أَمْرُ اللَّهِ | Symbolic: dark clouds parting with a single beam of light reaching the earth; no figures |
+| `ch28-giver-receiver-gift.png` | `ch28-l03` card 3 | أَعْطَى + مُعْطٍ + آخِذٌ + عَطِيَّةٌ | Two hands (no faces): one handing a book to the other, a soft arrow showing the direction |
+| `ch28-kawthar-river-symbolic.png` | `ch28-l03` card 4 | إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ | Symbolic: a radiant river winding through a garden of light; no figures |
+| `ch28-mother-gives-pen.png` | `ch28-l03` card 5 | أَتَتْ · أَعْطَتْ | A mother in hijab seen from behind handing a pen to her daughter |
+| `ch28-gathered-books.png` | `ch28-l04` card 1 | جَمَعَ | A neat stack of books being gathered together by two hands on a table |
+| `ch28-counting-coins-symbolic.png` | `ch28-l04` card 2 | الَّذِي جَمَعَ مَالًا وَعَدَّدَهُ | A pile of coins and a ledger on a table, one stack being counted; hands only, no faces |
+| `ch28-lesson-begins.png` | `ch28-l04` card 3 | بَدَأَ | A whiteboard with the first line just written and a teacher's hand still holding the marker |
+| `ch28-clay-symbolic.png` | `ch28-l04` card 4 | وَبَدَأَ خَلْقَ الْإِنْسَانِ مِنْ طِينٍ | Symbolic: a mound of wet clay on the earth under soft morning light; no figures |
+| `ch28-girl-gathers-pens.png` | `ch28-l04` card 5 | جَمَعَتْ · بَدَأَتْ | A girl in hijab seen from behind gathering colourful pens into a pencil case |
+| `ch28-classroom-sequence.png` | `ch28-l05` card 1 | بَدَأَ الْأُسْتَاذُ الدَّرْسَ، وَفَهِمَ الطُّلَّابُ الْقَاعِدَةَ، وَأَعْطَى الْأُسْتَاذُ الطَّالِبَ الْمُجْتَهِدَ كِتَابًا | Three small panels: a teacher at the whiteboard starting, students raising hands, a teacher handing a book to a student — all faceless or from behind |
+| `ch29-noun-first-tile.png` | `ch29-l01` card 1 | الْجُمْلَةُ الِاسْمِيَّةُ | A sentence strip whose first tile is a book icon, followed by a speech-bubble tile |
+| `ch29-topic-comment.png` | `ch29-l01` card 2 | مُبْتَدَأٌ + خَبَرٌ | A book with a spotlight on it and a speech bubble beside it describing it (empty bubble) |
+| `ch29-he-is-teacher.png` | `ch29-l01` card 3 | هُوَ مُدَرِّسٌ | A teacher seen from behind standing at a whiteboard |
+| `ch29-student-in-classroom.png` | `ch29-l01` card 4 | الطَّالِبُ فِي الْفَصْلِ | A student seen from behind sitting in a classroom |
+| `ch29-praise-symbolic.png` | `ch29-l01` card 5 | الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ | Symbolic: an open Mushaf at the first page under soft light; no figures |
+| `ch29-verb-first-tile.png` | `ch29-l02` card 1 | الْجُمْلَةُ الْفِعْلِيَّةُ | A sentence strip whose first tile is a motion-arrow icon, followed by a person-silhouette tile |
+| `ch29-verb-doer-object.png` | `ch29-l02` card 2 | فِعْلٌ + فَاعِلٌ + مَفْعُولٌ | Three tiles: an action arrow, a person silhouette, a notebook |
+| `ch29-girl-enters-classroom.png` | `ch29-l02` card 3 | دَخَلَتِ الْبِنْتُ الْفَصْلَ | A girl in hijab seen from behind stepping through a classroom doorway |
+| `ch29-joining-wa.png` | `ch29-l02` card 4 · `ch30-l02` card 4 | وَ + جَاءَ · وَ / فَ | A small connector clip joining two sentence strips |
+| `ch29-magicians-symbolic.png` | `ch29-l02` card 5 | وَجَاءَ السَّحَرَةُ فِرْعَوْنَ | Symbolic: an ancient Egyptian palace hall with tall columns and scattered staffs and ropes on the floor; no figures |
+| `ch29-two-orders.png` | `ch29-l03` card 1 · `ch29-l06` card 1 | ذَهَبَ الطَّالِبُ / الطَّالِبُ ذَهَبَ · اسْمِيَّةٌ · فِعْلِيَّةٌ | Two sentence strips with the same two tiles swapped: action-arrow first vs person first |
+| `ch29-sentence-inside-sentence.png` | `ch29-l03` card 2 | الطَّالِبُ / ذَهَبَ إِلَى الْمَدْرَسَةِ | A large speech bubble containing a smaller sentence strip |
+| `ch29-skip-opening-word.png` | `ch29-l03` card 3 | قُلْ · وَ · لَا | A sentence strip whose first small tile is greyed out and lifted aside |
+| `ch29-oneness-symbolic.png` | `ch29-l03` card 4 | قُلْ هُوَ اللَّهُ أَحَدٌ | Symbolic: a single bright star above a calm, empty desert at night; no figures |
+| `ch29-kafirun-symbolic.png` | `ch29-l03` card 5 · `ch29-l05` card 4 · `ch30-l04` card 4 · `ch30-l05` card 2 | لَا أَعْبُدُ مَا تَعْبُدُونَ · وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ | Symbolic: two separate paths diverging across an open plain at sunrise; no figures |
+| `ch29-big-house-emphasis.png` | `ch29-l04` card 1 | الْبَيْتُ كَبِيرٌ / إِنَّ الْبَيْتَ كَبِيرٌ | A big house with a bold underline beneath it, as if stressed |
+| `ch29-big-house-crossed.png` | `ch29-l04` card 2 | الْبَيْتُ كَبِيرٌ / لَيْسَ الْبَيْتُ كَبِيرًا | A modest house with a faint outline of a bigger house crossed out above it |
+| `ch29-which-part-changes.png` | `ch29-l04` card 3 · `ch29-l06` card 2 | إِنَّ: الِاسْمُ ـَ · لَيْسَ: الْخَبَرُ ـً · إِنَّ الْبَيْتَ كَبِيرٌ · لَيْسَ الْبَيْتُ كَبِيرًا | Two sentence strips: in the first the first tile is highlighted, in the second the last tile is highlighted |
+| `ch29-forgiving-symbolic.png` | `ch29-l04` card 4 | إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ | Symbolic: gentle rain falling on green fields under a soft sky; no figures |
+| `ch29-nothing-like-him-symbolic.png` | `ch29-l04` card 5 | لَيْسَ كَمِثْلِهِ شَيْءٌ | Symbolic: a vast clear night sky over an empty desert horizon with one soft band of light; no figures |
+| `ch29-three-steps.png` | `ch29-l05` card 1 | ١ تَجَاوَزْ ٢ انْظُرْ ٣ احْكُمْ | Three numbered blank cards in a row with arrows between them: an eraser, a magnifying glass, a tick |
+| `ch29-book-symbolic.png` | `ch29-l05` card 2 · `ch30-l01` card 5 | ذَلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ | An open Mushaf on a wooden stand under soft light; no figures |
+| `ch29-doer-noun-vs-verb.png` | `ch29-l05` card 5 | عَابِدُونَ / عَبَدَ | Split panel: an action arrow tile; a name-badge tile on a person silhouette (no face) |
+| `ch30-ahmad-family-text.png` | `ch30-l01` card 1 | هَذَا أَحْمَدُ. هُوَ طَالِبٌ. بَيْتُهُ قَرِيبٌ مِنَ الْمَدْرَسَةِ، وَأُخْتُهُ فَاطِمَةُ مُدَرِّسَةٌ فِيهَا. | A school next to a small house; a boy and his older sister in hijab seen from behind walking towards the school |
+| `ch30-sentence-breaks.png` | `ch30-l01` card 2 | هَذَا أَحْمَدُ. / هُوَ طَالِبٌ. | A paragraph strip cut into four separate pieces with small scissors |
+| `ch30-pronoun-arrows.png` | `ch30-l01` card 3 · `ch30-l07` card 2 | هُوَ · بَيْتُهُ · أُخْتُهُ ← أَحْمَدُ · مَنْ؟ مَاذَا؟ ثُمَّ مَاذَا؟ | Small tiles with curved arrows all pointing back to one name-badge tile |
+| `ch30-teacher-in-school.png` | `ch30-l01` card 4 | فِيهَا ← الْمَدْرَسَةِ | A female teacher in hijab seen from behind at the front of a classroom |
+| `ch30-ahmad-day-story.png` | `ch30-l02` card 1 | خَرَجَ أَحْمَدُ مِنَ الْبَيْتِ وَذَهَبَ إِلَى الْمَدْرَسَةِ، فَدَخَلَ الْفَصْلَ وَبَدَأَ الْأُسْتَاذُ الدَّرْسَ. فَهِمَ أَحْمَدُ الدَّرْسَ فَرَجَعَ إِلَى الْبَيْتِ. | Five small comic panels, all faceless/from behind: leaving a house, walking to school, entering a classroom, teacher starting a lesson, walking home |
+| `ch30-five-steps.png` | `ch30-l02` card 2 | ١ خَرَجَ ٢ ذَهَبَ ٣ دَخَلَ ٤ بَدَأَ ٥ فَهِمَ … رَجَعَ | Five numbered stepping stones across a stream |
+| `ch30-new-doer.png` | `ch30-l02` card 3 | وَبَدَأَ الْأُسْتَاذُ | A relay baton passing from a student's hand to a teacher's hand (hands only) |
+| `ch30-dialogue-question.png` | `ch30-l03` card 1 · `ch30-l03` card 5 | أَحْمَدُ: أَيْنَ الْأُسْتَاذُ؟ · أَحْمَدُ: هَلْ خَرَجَ مِنْهُ؟ | Two speech bubbles: one with a question mark, a boy seen from behind beside it |
+| `ch30-dialogue-answer-mosque.png` | `ch30-l03` card 2 | زَيْنَبُ: هُوَ فِي الْمَسْجِدِ. | A girl in hijab seen from behind pointing towards a mosque |
+| `ch30-dialogue-sorry-where.png` | `ch30-l03` card 3 | أَحْمَدُ: عَفْوًا، أَيْنَ؟ | A boy seen from behind cupping a hand behind his ear |
+| `ch30-mosque-near-school.png` | `ch30-l03` card 4 | زَيْنَبُ: فِي الْمَسْجِدِ، قَرِيبٌ مِنَ الْمَدْرَسَةِ. | A mosque next to a school on the same street |
+| `ch30-teacher-inside-mosque.png` | `ch30-l03` card 6 | زَيْنَبُ: لَا، هُوَ فِيهِ الْآنَ. | View through an open mosque door: a faceless teacher seated on the carpet inside |
+| `ch30-said-asked-answered.png` | `ch30-l03` card 7 | قَالَ · سَأَلَ · أَجَابَ | Three speech bubbles: plain, with a question mark, with a tick |
+| `ch30-what-is-this.png` | `ch30-l04` card 1 | مَا هَذَا؟ | A hand (no face) holding up an unfamiliar object with a question-mark tag |
+| `ch30-understood-what-said.png` | `ch30-l04` card 2 | فَهِمْتُ مَا قَالَ الْأُسْتَاذُ | A student seen from behind nodding, with a speech bubble from the teacher flowing into the student's notebook |
+| `ch30-wrote-what-said.png` | `ch30-l04` card 3 | كَتَبَ الطَّالِبُ مَا قَالَ الْأُسْتَاذُ | A notebook page being filled as a teacher's speech bubble flows into it; hands only |
+| `ch30-two-ma.png` | `ch30-l04` card 5 | مَا هَذَا؟ / مَا تَعْبُدُونَ | Split panel: a question-mark tag; a frame around a group of tiles |
+| `ch30-kafirun-1.png` | `ch30-l05` card 1 | قُلْ يَا أَيُّهَا الْكَافِرُونَ | Symbolic: an open Mushaf at Surah Al-Kafirun's page under lamp light; no figures |
+| `ch30-kafirun-two-sides.png` | `ch30-l05` card 3 · `ch30-l05` card 4 · `ch30-l05` card 5 | وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ · وَلَا أَنَا عَابِدٌ مَا عَبَدْتُمْ | Symbolic: two separate lamps lit on two sides of a dividing line; no figures |
+| `ch30-kafirun-6.png` | `ch30-l05` card 6 | لَكُمْ دِينُكُمْ وَلِيَ دِينِ | Symbolic: two separate paths across an open plain, each ending at its own lit doorway; no figures |
+| `ch30-for-you-your.png` | `ch30-l05` card 7 | لَكُمْ / دِينُكُمْ | Split panel: a gift box with an arrow towards a group; a name tag on a book |
+| `ch30-maryam-market.png` | `ch30-l07` card 1 | ذَهَبَتْ مَرْيَمُ إِلَى السُّوقِ مَعَ أُمِّهَا، فَأَعْطَتْهَا أُمُّهَا قَلَمًا جَدِيدًا. وَرَجَعَتْ مَرْيَمُ إِلَى الْبَيْتِ، فَكَتَبَتْ بِهِ الدَّرْسَ. | A girl in hijab and her mother, both seen from behind, at a market stall; then the girl writing with a new pen at home |
+
 ### ✅ Chapters 20–23 — reused, nothing to draw (wired 2026-09-24)
 
 | Card | Arabic | Existing picture |

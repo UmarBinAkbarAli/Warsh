@@ -790,6 +790,25 @@ Everything below this list is either done and verified, or one of these:
    regenerated. `ch03-l07` (display order 4) differed only in
    `_meta.lesson_order` and was synced too. Not done: scholarly review of the Arabic/Urdu and
    an Android emulator pass; the full proposals above still await approval.
+   **Correction (2026-10-02):** Chapters 26–29 had only received the earlier
+   player-blocker hotfix (`8aaf06d`), not the per-chapter rebuild; Ch 26 still
+   taught "رَبُّ رَبِّكُمْ — the Lord of your Lord" and Ch 29 the reversed إِنَّ
+   rule. Both are fixed by the harvest below.
+   **Proposal harvest, batch 1 (Chapters 26–30): live in production
+   2026-10-02** on the owner's instruction to take what is unique and important
+   from each proposal and discard the rest, five chapters per session
+   (`Docs/proposals/proposal-harvest-tracker.md` holds the instructions and the
+   per-batch results). Every lesson in Ch 26–30 was rebuilt to its proposal;
+   each chapter gained a REVIEW and a 12-question `chNN-test` (80 %); new rows
+   `ch26-l06`, `ch30-l07` and the five tests; `ch27-l05`, `ch28-l05`,
+   `ch29-l06` became REVIEWs in place. Published with
+   `scripts/promote-chapters-26-30.cjs` (staging first: 9/12 fails, 10/12
+   passes and unlocks the next chapter, keys stripped, replay 0 XP), then
+   `content:baseline` (459/459) and 161 catalogue clips (R2 3778/3778).
+   106 new scenes requested in `Docs/lesson-illustrations-needed.md`.
+   Discarded: the proposals' extra transfer/reading lessons (their jobs sit in
+   the reviews), the separate Ch 28 feminine-forms lesson (taught inside each
+   lesson), and all process text. Not done: scholarly review, Android pass.
    **Chapter 25 (`Docs/proposals/chapter-25-content-correction.md`) is
    corrected, staging-verified and promoted to production 2026-09-24** on the
    owner's instruction. The first rewrite was reviewed and fixed before

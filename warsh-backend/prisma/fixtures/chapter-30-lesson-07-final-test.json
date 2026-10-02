@@ -1,0 +1,446 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 30 final test (ch30-test, new). Twelve multiple-choice questions on the 3/2/2/2/2/1 allocation: meaning of an unseen text (3), event order (2), pronoun reference (2), dialogue (2), relative مَا (2), Al-Kafirun (1). The unseen text uses known past verbs; قَرَأَهُ is read with ـهُ = the book. Pass mark 80 %: 9/12 fails, 10/12 passes. Rebuilt 2026-10-02 in the proposal harvest (Docs/proposals/proposal-harvest-tracker.md) from Docs/proposals/chapter-30-content-proposal.md and its review amendments: reading across sentences (pronoun back to its noun, وَ / فَ in context), following a short story, following a dialogue with a clarification, relative مَا ('what') with the whole clause as the thing not worshipped, and the one complete reading of Al-Kafirun 109:1–6. Removed: أَجَابَ under root ء-ج-ب (it is ج-و-ب), 'both words are definite' for الْكِتَابُ جَدِيدٌ, the إِنَّ-sentence called verbal, لَكُمْ / لِي called possessives, and the 'complete surah' lesson that skipped 109:3. The proposal's separate unseen-text lesson (l06) was not built; its job is in the review.",
+    "title": "Chapter 30 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الثَّلَاثِينَ",
+    "titleUr": "باب 30 کا آخری امتحان",
+    "chapter_order": 30,
+    "lesson_order": 7,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 109,
+      "ayah": 1,
+      "label": "Al-Kafirun 109:1",
+      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
+      "en": "Say, O disbelievers,",
+      "ur": "کہہ دیجیے: اے کافرو!",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 30.",
+      "ur": "باب 30 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 30,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch30-test-q01",
+        "topic": {
+          "en": "Meaning of a text",
+          "ur": "عبارت کا مطلب"
+        },
+        "prompt": {
+          "en": "Read the text. Where did Yusuf go after the mosque?",
+          "ur": "عبارت پڑھیں۔ یوسف مسجد کے بعد کہاں گیا؟"
+        },
+        "arabic": "خَرَجَ يُوسُفُ مِنَ الْمَسْجِدِ وَذَهَبَ إِلَى السُّوقِ، فَأَعْطَاهُ الْإِمَامُ كِتَابًا. فَرَجَعَ يُوسُفُ إِلَى الْبَيْتِ وَقَرَأَهُ.",
+        "options": [
+          {
+            "en": "to school",
+            "ur": "اسکول"
+          },
+          {
+            "en": "to the market",
+            "ur": "بازار"
+          },
+          {
+            "en": "home",
+            "ur": "گھر"
+          },
+          {
+            "en": "to the mosque again",
+            "ur": "دوبارہ مسجد"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch30-test-q02",
+        "topic": {
+          "en": "Meaning of a text",
+          "ur": "عبارت کا مطلب"
+        },
+        "prompt": {
+          "en": "Read the text. Who gave the book?",
+          "ur": "عبارت پڑھیں۔ کتاب کس نے دی؟"
+        },
+        "arabic": "خَرَجَ يُوسُفُ مِنَ الْمَسْجِدِ وَذَهَبَ إِلَى السُّوقِ، فَأَعْطَاهُ الْإِمَامُ كِتَابًا. فَرَجَعَ يُوسُفُ إِلَى الْبَيْتِ وَقَرَأَهُ.",
+        "options": [
+          {
+            "en": "the imam",
+            "ur": "امام"
+          },
+          {
+            "en": "Yusuf",
+            "ur": "یوسف"
+          },
+          {
+            "en": "his father",
+            "ur": "اس کے والد"
+          },
+          {
+            "en": "the teacher",
+            "ur": "استاد"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch30-test-q03",
+        "topic": {
+          "en": "Meaning of a text",
+          "ur": "عبارت کا مطلب"
+        },
+        "prompt": {
+          "en": "Read the text. What did Yusuf do at home?",
+          "ur": "عبارت پڑھیں۔ یوسف نے گھر پر کیا کیا؟"
+        },
+        "arabic": "خَرَجَ يُوسُفُ مِنَ الْمَسْجِدِ وَذَهَبَ إِلَى السُّوقِ، فَأَعْطَاهُ الْإِمَامُ كِتَابًا. فَرَجَعَ يُوسُفُ إِلَى الْبَيْتِ وَقَرَأَهُ.",
+        "options": [
+          {
+            "en": "He wrote a lesson.",
+            "ur": "اس نے سبق لکھا۔"
+          },
+          {
+            "en": "He gave the book away.",
+            "ur": "اس نے کتاب دے دی۔"
+          },
+          {
+            "en": "He went out again.",
+            "ur": "وہ پھر نکل گیا۔"
+          },
+          {
+            "en": "He read the book.",
+            "ur": "اس نے کتاب پڑھی۔"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch30-test-q04",
+        "topic": {
+          "en": "Order of events",
+          "ur": "واقعات کی ترتیب"
+        },
+        "prompt": {
+          "en": "What happened first?",
+          "ur": "پہلے کیا ہوا؟"
+        },
+        "arabic": "خَرَجَ يُوسُفُ مِنَ الْمَسْجِدِ وَذَهَبَ إِلَى السُّوقِ، فَأَعْطَاهُ الْإِمَامُ كِتَابًا. فَرَجَعَ يُوسُفُ إِلَى الْبَيْتِ وَقَرَأَهُ.",
+        "options": [
+          {
+            "en": "He went back home.",
+            "ur": "وہ گھر واپس آیا۔"
+          },
+          {
+            "en": "The imam gave him a book.",
+            "ur": "امام نے اسے کتاب دی۔"
+          },
+          {
+            "en": "He went out of the mosque.",
+            "ur": "وہ مسجد سے نکلا۔"
+          },
+          {
+            "en": "He read the book.",
+            "ur": "اس نے کتاب پڑھی۔"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch30-test-q05",
+        "topic": {
+          "en": "Order of events",
+          "ur": "واقعات کی ترتیب"
+        },
+        "prompt": {
+          "en": "What happened last?",
+          "ur": "آخر میں کیا ہوا؟"
+        },
+        "arabic": "خَرَجَ يُوسُفُ مِنَ الْمَسْجِدِ وَذَهَبَ إِلَى السُّوقِ، فَأَعْطَاهُ الْإِمَامُ كِتَابًا. فَرَجَعَ يُوسُفُ إِلَى الْبَيْتِ وَقَرَأَهُ.",
+        "options": [
+          {
+            "en": "He read the book.",
+            "ur": "اس نے کتاب پڑھی۔"
+          },
+          {
+            "en": "He went to the market.",
+            "ur": "وہ بازار گیا۔"
+          },
+          {
+            "en": "He went out of the mosque.",
+            "ur": "وہ مسجد سے نکلا۔"
+          },
+          {
+            "en": "The imam gave him a book.",
+            "ur": "امام نے اسے کتاب دی۔"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch30-test-q06",
+        "topic": {
+          "en": "Who or what a pronoun means",
+          "ur": "ضمیر سے کون مراد ہے"
+        },
+        "prompt": {
+          "en": "In فَأَعْطَاهُ, who is ـهُ?",
+          "ur": "فَأَعْطَاهُ میں ـهُ کون ہے؟"
+        },
+        "arabic": "خَرَجَ يُوسُفُ مِنَ الْمَسْجِدِ وَذَهَبَ إِلَى السُّوقِ، فَأَعْطَاهُ الْإِمَامُ كِتَابًا. فَرَجَعَ يُوسُفُ إِلَى الْبَيْتِ وَقَرَأَهُ.",
+        "options": [
+          {
+            "en": "the imam",
+            "ur": "امام"
+          },
+          {
+            "en": "Yusuf",
+            "ur": "یوسف"
+          },
+          {
+            "en": "the book",
+            "ur": "کتاب"
+          },
+          {
+            "en": "the market",
+            "ur": "بازار"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch30-test-q07",
+        "topic": {
+          "en": "Who or what a pronoun means",
+          "ur": "ضمیر سے کون مراد ہے"
+        },
+        "prompt": {
+          "en": "In وَقَرَأَهُ, what is ـهُ?",
+          "ur": "وَقَرَأَهُ میں ـهُ کیا ہے؟"
+        },
+        "arabic": "خَرَجَ يُوسُفُ مِنَ الْمَسْجِدِ وَذَهَبَ إِلَى السُّوقِ، فَأَعْطَاهُ الْإِمَامُ كِتَابًا. فَرَجَعَ يُوسُفُ إِلَى الْبَيْتِ وَقَرَأَهُ.",
+        "options": [
+          {
+            "en": "the house",
+            "ur": "گھر"
+          },
+          {
+            "en": "the imam",
+            "ur": "امام"
+          },
+          {
+            "en": "the mosque",
+            "ur": "مسجد"
+          },
+          {
+            "en": "the book",
+            "ur": "کتاب"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch30-test-q08",
+        "topic": {
+          "en": "Dialogue",
+          "ur": "مکالمہ"
+        },
+        "prompt": {
+          "en": "What does the second speaker want?",
+          "ur": "دوسرا بولنے والا کیا چاہتا ہے؟"
+        },
+        "arabic": "أ: الدَّرْسُ فِي الْفَصْلِ الْكَبِيرِ. ب: عَفْوًا، أَيْنَ؟",
+        "options": [
+          {
+            "en": "to say thank you",
+            "ur": "شکریہ ادا کرنا"
+          },
+          {
+            "en": "to say goodbye",
+            "ur": "خدا حافظ کہنا"
+          },
+          {
+            "en": "to hear the place again",
+            "ur": "جگہ دوبارہ سننا"
+          },
+          {
+            "en": "to answer a question",
+            "ur": "سوال کا جواب دینا"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch30-test-q09",
+        "topic": {
+          "en": "Dialogue",
+          "ur": "مکالمہ"
+        },
+        "prompt": {
+          "en": "Which reply fits? أَيْنَ الْأُسْتَاذُ؟",
+          "ur": "کون سا جواب درست ہے؟ أَيْنَ الْأُسْتَاذُ؟"
+        },
+        "options": [
+          {
+            "en": "هُوَ فِي الْمَسْجِدِ",
+            "ur": "هُوَ فِي الْمَسْجِدِ"
+          },
+          {
+            "en": "هُوَ كِتَابٌ",
+            "ur": "هُوَ كِتَابٌ"
+          },
+          {
+            "en": "نَعَمْ",
+            "ur": "نَعَمْ"
+          },
+          {
+            "en": "لَكُمْ دِينُكُمْ",
+            "ur": "لَكُمْ دِينُكُمْ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch30-test-q10",
+        "topic": {
+          "en": "مَا: what",
+          "ur": "مَا: جو"
+        },
+        "prompt": {
+          "en": "What does this mean?",
+          "ur": "اس کا کیا مطلب ہے؟"
+        },
+        "arabic": "فَهِمَ الطَّالِبُ مَا قَالَ الْأُسْتَاذُ",
+        "options": [
+          {
+            "en": "What did the teacher say?",
+            "ur": "استاد نے کیا کہا؟"
+          },
+          {
+            "en": "The student understood what the teacher said.",
+            "ur": "طالب علم نے سمجھ لیا جو استاد نے کہا۔"
+          },
+          {
+            "en": "The teacher did not speak.",
+            "ur": "استاد نہیں بولے۔"
+          },
+          {
+            "en": "The student said something.",
+            "ur": "طالب علم نے کچھ کہا۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch30-test-q11",
+        "topic": {
+          "en": "مَا: what",
+          "ur": "مَا: جو"
+        },
+        "prompt": {
+          "en": "In لَا أَعْبُدُ مَا تَعْبُدُونَ, what is not worshipped?",
+          "ur": "لَا أَعْبُدُ مَا تَعْبُدُونَ میں کس کی عبادت نہیں کی جاتی؟"
+        },
+        "options": [
+          {
+            "en": "مَا alone",
+            "ur": "صرف مَا"
+          },
+          {
+            "en": "لَا",
+            "ur": "لَا"
+          },
+          {
+            "en": "the speaker",
+            "ur": "کہنے والا"
+          },
+          {
+            "en": "مَا تَعْبُدُونَ — what you worship",
+            "ur": "مَا تَعْبُدُونَ — جس کی تم عبادت کرتے ہو"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch30-test-q12",
+        "topic": {
+          "en": "Al-Kafirun",
+          "ur": "الکافرون"
+        },
+        "prompt": {
+          "en": "What does 109:6 mean?",
+          "ur": "109:6 کا کیا مطلب ہے؟"
+        },
+        "arabic": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+        "options": [
+          {
+            "en": "For you is your religion, and for me is my religion.",
+            "ur": "تمہارے لیے تمہارا دین ہے اور میرے لیے میرا دین۔"
+          },
+          {
+            "en": "Your religion is for me.",
+            "ur": "تمہارا دین میرے لیے ہے۔"
+          },
+          {
+            "en": "We have one religion.",
+            "ur": "ہمارا ایک دین ہے۔"
+          },
+          {
+            "en": "O disbelievers!",
+            "ur": "اے کافرو!"
+          }
+        ],
+        "correct_index": 0
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 30 — connected reading",
+      "ar": "الْقِرَاءَةُ الْمُتَّصِلَةُ",
+      "ur": "باب 30 — مربوط پڑھائی"
+    },
+    "ayah": {
+      "surah": 109,
+      "ayah": 1,
+      "label": "Al-Kafirun 109:1",
+      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
+      "en": "Say, O disbelievers,",
+      "ur": "کہہ دیجیے: اے کافرو!",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "highlighted_words": [
+      "قُلْ",
+      "يَا",
+      "أَيُّهَا",
+      "الْكَافِرُونَ"
+    ],
+    "noor_explanation": {
+      "en": "قُلْ يَا أَيُّهَا الْكَافِرُونَ: you finish Chapter 30 able to follow a text, a story, a dialogue — and all of Al-Kafirun.",
+      "ur": "قُلْ يَا أَيُّهَا الْكَافِرُونَ: آپ باب 30 اس حال میں مکمل کرتے ہیں کہ عبارت، کہانی، مکالمہ — اور پوری سورۃ الکافرون سمجھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 30 complete. Chapter 31: questions in context.",
+      "ur": "باب 30 مکمل۔ باب 31: سیاق میں سوالات۔"
+    }
+  }
+}

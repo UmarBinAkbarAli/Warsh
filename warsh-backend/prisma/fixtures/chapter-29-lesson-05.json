@@ -2,29 +2,28 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 29, Lesson 5 - GRAMMAR_PARSE on Al-Kafirun ayat: identify verbal vs nominal sentence types.",
+    "_note": "Chapter 29, Lesson 5 (ch29-l05) — guided classification of short ayat: 2:2 and 112:1 (nominal), 16:1 and 7:113 (verbal), and one Al-Kafirun line, 109:3, taught as nominal: after وَلَا, أَنْتُمْ is the topic and عَابِدُونَ, worshippers, is a describing noun — not a verb (its formation is Chapter 36). Rebuilt 2026-10-02 in the proposal harvest (Docs/proposals/proposal-harvest-tracker.md) from Docs/proposals/chapter-29-content-proposal.md and its review amendments: nominal sentence (topic + comment) vs verbal sentence (verb + doer), the noun-led sentence whose comment is a verbal clause, finding the core after a prefix such as وَ / قُلْ / لَا, and retrieval of Chapter 24's إِنَّ (اسم منصوب، خبر مرفوع) and Chapter 25's لَيْسَ. Removed: the reversed إِنَّ rule (خبر إنّ marked accusative, كَبِيرًا), 'a nominal sentence never contains a verb', عَابِدُونَ parsed as a verb, وَلَكُمْ called a subject, and the repeated Al-Kafirun parsing/Tadabbur lesson (Chapter 30 owns the full surah). Al-Kafirun's verbs stay glossed chunks (S11).",
+    "title": "Classifying Ayat",
+    "titleAr": "تَصْنِيفُ الْجُمَلِ",
+    "titleUr": "قرآن میں جملوں کی پہچان",
     "chapter_order": 29,
     "lesson_order": 5,
-    "chapter_title": "Nominal vs. Verbal Sentences",
-    "title": "Parsing Al-Kafirun Sentences",
-    "titleAr": "تحلیل جُمَلِ سُورَةِ الْكَافِرُونَ",
-    "source": "madina_book3_lesson6_nominal_verbal",
     "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
       "surah": 109,
-      "ayah": 1,
-      "label": "Al-Kafirun 109:1",
-      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
-      "en": "Say, O disbelievers.",
-      "ur": "کہہ دیجیے، اے کافرو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
+      "ayah": 3,
+      "label": "Al-Kafirun 109:3",
+      "ar": "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ",
+      "en": "Nor are you worshippers of what I worship.",
+      "ur": "اور نہ تم اس کی عبادت کرنے والے ہو جس کی میں عبادت کرتا ہوں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109003.mp3"
     },
     "noor_intro": {
-      "en": "Now you know the rule. Let us apply it to every ayah of Al-Kafirun. You will identify whether each ayah is verbal or nominal — using GRAMMAR_PARSE.",
-      "ur": "اب آپ کو قاعدہ معلوم ہے۔ آئیے اسے سورۃ کافروں کی ہر آیت پر لاگو کرتے ہیں۔ آپ ہر آیت کی قسم پہچانیں گے — GRAMMAR_PARSE استعمال کر کے۔"
+      "en": "عَابِدُونَ: worshippers. Is it an action word, or a describing noun?",
+      "ur": "عَابِدُونَ: عبادت کرنے والے۔ کیا یہ کام کا لفظ ہے یا صفت والا اسم؟"
     },
     "autoplay": true
   },
@@ -32,356 +31,282 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Identifying sentence type in Quranic text",
-        "ar": "قرآنی متن میں جملے کی قسم کی شناخت",
-        "ur": "قرآنی متن میں جملے کی قسم کی شناخت"
+        "en": "The steps",
+        "ar": "١ تَجَاوَزْ ٢ انْظُرْ ٣ احْكُمْ",
+        "ur": "طریقہ"
       },
       "explanation": {
-        "en": "Apply the first-word rule: if the first content word is a verb → verbal sentence; if it is a noun/pronoun → nominal sentence. إِنَّ does NOT change this rule — it still opens a nominal sentence.",
-        "ur": "پہلے لفظ کے قاعدے کو لاگو کریں: اگر پہلا اہم لفظ فعل ہے → فعلی جملہ؛ اگر یہ اسم/ضمیر ہے → اسمی جملہ۔ إِنَّ اس قاعدے کو تبدیل نہیں کرتا — یہ پھر بھی ایک اسمی جملہ کھولتا ہے۔"
+        "en": "1. Skip وَ / قُلْ / لَا. 2. Look at the first word of the core. 3. A verb → verbal; a noun or pronoun → nominal.",
+        "ur": "1۔ وَ / قُلْ / لَا چھوڑ دیں۔ 2۔ بنیاد کا پہلا لفظ دیکھیں۔ 3۔ فعل ← فعلیہ؛ اسم یا ضمیر ← اسمیہ۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
-        "ar_plain": "قل يا أيها الكافرون",
-        "translit": "qul yaa ayyuhaa al-kaafiroon",
-        "en": "Say, O disbelievers (verbal — قُلْ is a verb first)",
-        "ur": "کہہ دیجیے، اے کافرو (فعلي — قُلْ پہلے فعل ہے)"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Baqarah 2:2 (opening): That is the Book: there is no doubt in it.",
+        "ar": "ذَلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ",
+        "ur": "البقرہ 2:2 (آغاز): یہ وہ کتاب ہے جس میں کوئی شک نہیں۔"
       },
       "explanation": {
-        "en": "قُلْ is the first word — it is an imperative verb (قول: say!). يَا أَيُّهَا الْكَافِرُونَ is vocative (address). This is a verbal sentence.",
-        "ur": "قُلْ پہلا لفظ ہے — یہ ایک امری فعل ہے (کہہ!)۔ يَا أَيُّهَا الْكَافِرُونَ مخاطب ہے۔ یہ ایک فعلی جملہ ہے۔"
-      }
+        "en": "It opens with ذَلِكَ, that — a pointer, which is a noun. Nominal.",
+        "ur": "یہ ذَلِكَ، وہ، سے شروع ہوتی ہے — اسمِ اشارہ، جو اسم ہے۔ اسمیہ۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002002.mp3"
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
-        "ar_plain": "لا أعبد ما تعبدون",
-        "translit": "laa a'budu maa ta'budoon",
-        "en": "I do not worship what you worship (verbal — أَعْبُدُ is a verb first)",
-        "ur": "میں اس کی عبادت نہیں کرتا جو تم عبادت کرتے ہو (فعلي — أَعْبُدُ پہلا فعل ہے)"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "An-Nahl 16:1 (opening): The command of Allah has come.",
+        "ar": "أَتَى أَمْرُ اللَّهِ",
+        "ur": "النحل 16:1 (آغاز): اللہ کا حکم آ پہنچا۔"
       },
       "explanation": {
-        "en": "أَعْبُدُ is a verb (imperfect, first person) — it is the first content word. لَا is just negation. This is a verbal sentence.",
-        "ur": "أَعْبُدُ ایک فعل ہے (مضارع، اول شخص) — یہ پہلا اہم لفظ ہے۔ لَا صرف نفی ہے۔ یہ ایک فعلی جملہ ہے۔"
-      }
+        "en": "It opens with أَتَى, came — a verb. Verbal.",
+        "ur": "یہ أَتَى، آیا، سے شروع ہوتی ہے — فعل۔ فعلیہ۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/016001.mp3"
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "وَلَكُمْ دِينُكُمْ وَلِيَ دِينِ",
-        "ar_plain": "ولكم دينكم ولي دين",
-        "translit": "wa lakum diinakum wa liya diini",
-        "en": "And to you is your religion, and to me is my religion (nominal — وَلَكُمْ starts with pronoun + noun)",
-        "ur": "اور تمہارا تمہارا دین ہے اور میرا میرا دین ہے (اسمی — وَلَكُمْ ضمیر + اسم سے شروع ہوتا ہے)"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Kafirun 109:3: Nor are you worshippers of what I worship.",
+        "ar": "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ",
+        "ur": "الکافرون 109:3: اور نہ تم اس کی عبادت کرنے والے ہو جس کی میں عبادت کرتا ہوں۔"
       },
       "explanation": {
-        "en": "وَلَكُمْ starts with وَ (conjunction) + لَكُمْ (pronoun 'to you') + دِينُكُمْ (noun). No verb at the start. This is a nominal sentence.",
-        "ur": "وَلَكُمْ وَ (حرف عطف) + لَكُمْ (ضمیر 'تمہارے لیے') + دِينُكُمْ (اسم) سے شروع ہوتا ہے۔ شروع میں کوئی فعل نہیں۔ یہ ایک اسمی جملہ ہے۔"
-      }
+        "en": "Skip وَلَا. The core opens with أَنْتُمْ, you — a pronoun. عَابِدُونَ, worshippers, describes them; it is a noun, not a verb. Nominal.",
+        "ur": "وَلَا کو چھوڑیں۔ بنیاد أَنْتُمْ، تم، سے شروع ہوتی ہے — ضمیر۔ عَابِدُونَ، عبادت کرنے والے، ان کی صفت ہے؛ یہ اسم ہے، فعل نہیں۔ اسمیہ۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109003.mp3"
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "قُلْ",
-        "ar_plain": "قل",
-        "translit": "qul",
-        "en": "say! (imperative verb)",
-        "ur": "کہہ! (امری فعل)"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "أَعْبُدُ",
-        "ar_plain": "أعبد",
-        "translit": "a'budu",
-        "en": "I worship (verb)",
-        "ur": "میں عبادت کرتا ہوں (فعل)"
-      }
+      "type": "CONTRAST",
+      "concept": {
+        "en": "A doer-noun or a verb?",
+        "ar": "عَابِدُونَ / عَبَدَ",
+        "ur": "کرنے والا اسم یا فعل؟"
+      },
+      "explanation": {
+        "en": "عَبَدَ, he worshipped, is a verb. عَابِدُونَ, worshippers, is a noun that names the people who do it — like طُلَّابٌ, students.",
+        "ur": "عَبَدَ، اس نے عبادت کی، فعل ہے۔ عَابِدُونَ، عبادت کرنے والے، ایک اسم ہے جو یہ کام کرنے والوں کا نام ہے — جیسے طُلَّابٌ، طلبہ۔"
+      },
+      "examples": [
+        {
+          "ar": "عَبَدَ",
+          "ar_plain": "عبد",
+          "translit": "ʿabada",
+          "en": "he worshipped",
+          "ur": "اس نے عبادت کی"
+        },
+        {
+          "ar": "عَابِدُونَ",
+          "ar_plain": "عابدون",
+          "translit": "ʿābidūna",
+          "en": "worshippers",
+          "ur": "عبادت کرنے والے"
+        }
+      ]
     }
   ],
   "exercises": [
     {
-      "type": "GRAMMAR_PARSE",
+      "type": "MATCH_AYAH",
       "id": "ch29-l05-ex01",
-      "sentence_ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
-      "words": [
-        {
-          "ar": "قُلْ",
-          "ar_plain": "قل",
-          "translit": "qul",
-          "en": "say!",
-          "ur": "کہہ!"
-        },
-        {
-          "ar": "يَا",
-          "ar_plain": "يا",
-          "translit": "yaa",
-          "en": "O",
-          "ur": "اے"
-        },
-        {
-          "ar": "أَيُّهَا",
-          "ar_plain": "أيها",
-          "translit": "ayyuhaa",
-          "en": "O ( vocative)",
-          "ur": "اے (مخاطب)"
-        },
-        {
-          "ar": "الْكَافِرُونَ",
-          "ar_plain": "الكافرون",
-          "translit": "al-kaafiroon",
-          "en": "the disbelievers",
-          "ur": "کافرو"
-        }
-      ],
-      "available_roles": [
-        "VERB",
-        "PARTICLE",
-        "SUBJECT",
-        "INTERJECTION"
-      ],
-      "correct_roles": [
-        "VERB",
-        "INTERJECTION",
-        "INTERJECTION",
-        "PARTICLE"
-      ],
-      "xp_value": 1,
-      "options": [
-        {
-          "en": "verbal — starts with a verb",
-          "ur": "فعلي"
-        },
-        {
-          "en": "nominal — starts with a noun",
-          "ur": "اسمی"
-        },
-        {
-          "en": "imperative — starts with command",
-          "ur": "امریہ"
-        },
-        {
-          "en": "interrogative — starts with question",
-          "ur": "سوالیہ"
-        }
-      ]
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch29-l05-ex02",
-      "sentence_ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
-      "words": [
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "not",
-          "ur": "نہیں"
-        },
-        {
-          "ar": "أَعْبُدُ",
-          "ar_plain": "أعبد",
-          "translit": "a'budu",
-          "en": "I worship",
-          "ur": "میں عبادت کرتا ہوں"
-        },
-        {
-          "ar": "مَا",
-          "ar_plain": "ما",
-          "translit": "maa",
-          "en": "what",
-          "ur": "جو"
-        },
-        {
-          "ar": "تَعْبُدُونَ",
-          "ar_plain": "تعبدون",
-          "translit": "ta'budoona",
-          "en": "you worship",
-          "ur": "تم عبادت کرو"
-        }
-      ],
-      "available_roles": [
-        "PARTICLE",
-        "VERB",
-        "OBJECT",
-        "VERB"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "VERB",
-        "OBJECT",
-        "VERB"
-      ],
-      "xp_value": 1,
-      "options": [
-        {
-          "en": "nominal — starts with a noun",
-          "ur": "اسمی"
-        },
-        {
-          "en": "verbal — starts with a verb",
-          "ur": "فعلي"
-        },
-        {
-          "en": "exclamatory — expresses wonder",
-          "ur": "ندا"
-        },
-        {
-          "en": "conditional — starts with if",
-          "ur": "شرطیہ"
-        }
-      ]
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch29-l05-ex03",
-      "prompt": {
-        "ar": "وَلَكُمْ دِينُكُمْ",
-        "ar_plain": "ولكم دينكم",
-        "translit": "wa lakum diinakum",
-        "en": "And to you is your religion",
-        "ur": "اور تمہارا تمہارا دین ہے"
+      "ayah_fragment": {
+        "ar": "ذَلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ",
+        "surah_ref": "Al-Baqarah 2:2"
       },
       "options": [
         {
-          "en": "nominal (no verb first)",
-          "ur": "اسمی (پہلے کوئی فعل نہیں)"
+          "en": "verbal",
+          "ur": "فعلیہ"
         },
         {
-          "en": "verbal (starts with a verb)",
-          "ur": "فعلي (فعل سے شروع)"
+          "en": "nominal: it opens with ذَلِكَ",
+          "ur": "اسمیہ: یہ ذَلِكَ سے شروع ہوتی ہے"
         },
         {
-          "en": "either is acceptable",
-          "ur": "کوئی بھی قابل قبول"
+          "en": "neither",
+          "ur": "کوئی نہیں"
         },
         {
-          "en": "depends on context",
-          "ur": "سیاق و سباق پر منحصر"
+          "en": "verbal: لَا is a verb",
+          "ur": "فعلیہ: لَا فعل ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ذَلِكَ is a pointer, a noun: nominal.",
+        "ur": "ذَلِكَ اسمِ اشارہ ہے، یعنی اسم: اسمیہ۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch29-l05-ex02",
+      "ayah_fragment": {
+        "ar": "أَتَى أَمْرُ اللَّهِ",
+        "surah_ref": "An-Nahl 16:1"
+      },
+      "options": [
+        {
+          "en": "nominal: it opens with أَمْرُ",
+          "ur": "اسمیہ: یہ أَمْرُ سے شروع ہوتی ہے"
+        },
+        {
+          "en": "nominal: اللَّهِ is the topic",
+          "ur": "اسمیہ: اللَّهِ مبتدا ہے"
+        },
+        {
+          "en": "verbal: it opens with أَتَى",
+          "ur": "فعلیہ: یہ أَتَى سے شروع ہوتی ہے"
+        },
+        {
+          "en": "neither",
+          "ur": "کوئی نہیں"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَتَى, came, is a verb: verbal.",
+        "ur": "أَتَى، آیا، فعل ہے: فعلیہ۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch29-l05-ex03",
+      "ayah_fragment": {
+        "ar": "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ",
+        "surah_ref": "Al-Kafirun 109:3"
+      },
+      "options": [
+        {
+          "en": "nominal: after وَلَا, the core opens with أَنْتُمْ",
+          "ur": "اسمیہ: وَلَا کے بعد بنیاد أَنْتُمْ سے شروع ہوتی ہے"
+        },
+        {
+          "en": "verbal: عَابِدُونَ is a verb",
+          "ur": "فعلیہ: عَابِدُونَ فعل ہے"
+        },
+        {
+          "en": "verbal: وَلَا is a verb",
+          "ur": "فعلیہ: وَلَا فعل ہے"
+        },
+        {
+          "en": "neither",
+          "ur": "کوئی نہیں"
         }
       ],
       "correct_index": 0,
-      "xp_value": 1
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch29-l05-ex04",
-      "sentence_ar": "وَلَكُمْ دِينُكُمْ وَلِيَ دِينِ",
-      "words": [
-        {
-          "ar": "وَلَكُمْ",
-          "ar_plain": "ولكم",
-          "translit": "wa lakum",
-          "en": "and to you",
-          "ur": "اور تمہارے لیے"
-        },
-        {
-          "ar": "دِينُكُمْ",
-          "ar_plain": "دينكم",
-          "translit": "diinakum",
-          "en": "your religion",
-          "ur": "تمہارا دین"
-        },
-        {
-          "ar": "وَلِيَ",
-          "ar_plain": "ولي",
-          "translit": "wa liya",
-          "en": "and to me",
-          "ur": "اور میرے لیے"
-        },
-        {
-          "ar": "دِينِ",
-          "ar_plain": "ديني",
-          "translit": "diini",
-          "en": "my religion",
-          "ur": "میرا دین"
-        }
-      ],
-      "available_roles": [
-        "SUBJECT",
-        "PREDICATE",
-        "CONJUNCTION",
-        "POSSESSIVE"
-      ],
-      "correct_roles": [
-        "SUBJECT",
-        "PREDICATE",
-        "CONJUNCTION",
-        "POSSESSIVE"
-      ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَنْتُمْ is the topic; عَابِدُونَ, worshippers, is a noun describing them.",
+        "ur": "أَنْتُمْ مبتدا ہے؛ عَابِدُونَ، عبادت کرنے والے، ان کی صفت بیان کرنے والا اسم ہے۔"
+      }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch29-l05-ex05",
+      "id": "ch29-l05-ex04",
       "statement": {
-        "en": "وَلَكُمْ دِينُكُمْ is a nominal sentence because it has no verb at the start.",
-        "ur": "وَلَكُمْ دِينُكُمْ ایک اسمی جملہ ہے کیونکہ اس کا آغاز فعل سے نہیں ہوتا۔",
+        "en": "عَابِدُونَ is a verb meaning they worshipped.",
+        "ur": "عَابِدُونَ فعل ہے جس کا مطلب ہے انہوں نے عبادت کی۔",
         "ar_example": {
-          "ar": "وَلَكُمْ دِينُكُمْ وَلِيَ دِينِ",
-          "ar_plain": "ولكم دينكم ولي دين",
-          "translit": "wa lakum diinakum wa liya diini",
-          "en": "And to you is your religion, and to me is my religion",
-          "ur": "اور تمہارا تمہارا دین ہے اور میرا میرا دین ہے"
+          "ar": "عَابِدُونَ",
+          "ar_plain": "عابدون",
+          "translit": "ʿābidūna",
+          "en": "worshippers",
+          "ur": "عبادت کرنے والے"
         }
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "عَابِدُونَ is a noun: worshippers, the people who worship.",
+        "ur": "عَابِدُونَ اسم ہے: عبادت کرنے والے لوگ۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch29-l05-ex05",
+      "ayah_fragment": {
+        "ar": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+        "surah_ref": "Al-Ikhlas 112:1"
+      },
+      "options": [
+        {
+          "en": "What is the topic of the core? أَحَدٌ",
+          "ur": "بنیاد کا مبتدا کیا ہے؟ أَحَدٌ"
+        },
+        {
+          "en": "What is the topic of the core? قُلْ",
+          "ur": "بنیاد کا مبتدا کیا ہے؟ قُلْ"
+        },
+        {
+          "en": "What is the topic of the core? Nothing",
+          "ur": "بنیاد کا مبتدا کیا ہے؟ کچھ نہیں"
+        },
+        {
+          "en": "What is the topic of the core? هُوَ",
+          "ur": "بنیاد کا مبتدا کیا ہے؟ هُوَ"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After قُلْ, the core is about هُوَ, He.",
+        "ur": "قُلْ کے بعد بنیاد هُوَ، وہ، کے بارے میں ہے۔"
+      }
     },
     {
       "type": "MATCHING",
       "id": "ch29-l05-ex06",
       "left_column": [
         {
-          "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
-          "ar_plain": "قل يا أيها الكافرون",
-          "en": "Say, O disbelievers",
-          "ur": "کہہ دیجیے، اے کافرو",
-          "translit": "—"
+          "ar": "ذَلِكَ الْكِتَابُ",
+          "ar_plain": "ذلك الكتاب",
+          "translit": "dhālika l-kitābu",
+          "en": "That is the Book.",
+          "ur": "یہ وہ کتاب ہے۔"
         },
         {
-          "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
-          "ar_plain": "لا أعبد ما تعبدون",
-          "en": "I do not worship what you worship",
-          "ur": "میں اس کی عبادت نہیں کرتا جو تم عبادت کرتے ہو",
-          "translit": "—"
+          "ar": "أَتَى أَمْرُ اللَّهِ",
+          "ar_plain": "أتى أمر الله",
+          "translit": "atā amru llāhi",
+          "en": "The command of Allah has come.",
+          "ur": "اللہ کا حکم آ پہنچا۔"
         },
         {
-          "ar": "وَلَكُمْ دِينُكُمْ وَلِيَ دِينِ",
-          "ar_plain": "ولكم دينكم ولي دين",
-          "en": "And to you is your religion, and to me is my religion",
-          "ur": "اور تمہارا تمہارا دین ہے اور میرا میرا دین ہے",
-          "translit": "—"
+          "ar": "وَجَاءَ السَّحَرَةُ",
+          "ar_plain": "وجاء السحرة",
+          "translit": "wa-jāʾa s-saḥaratu",
+          "en": "And the magicians came.",
+          "ur": "اور جادوگر آئے۔"
         },
         {
-          "ar": "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ",
-          "ar_plain": "ولا أنتم عابدون ما أعبد",
-          "en": "Nor are you worshippers of what I worship",
-          "ur": "اور نہ تم اس کی عبادت کرنے والے ہو جو میں عبادت کرتا ہوں",
-          "translit": "—"
+          "ar": "هُوَ اللَّهُ أَحَدٌ",
+          "ar_plain": "هو الله أحد",
+          "translit": "huwa llāhu aḥadun",
+          "en": "He is Allah, One.",
+          "ur": "وہ اللہ ایک ہے۔"
         }
       ],
       "right_column": [
         {
-          "en": "verbal",
-          "ur": "فعلي"
+          "en": "nominal — a pointer first",
+          "ur": "اسمیہ — پہلے اسمِ اشارہ"
         },
         {
-          "en": "verbal",
-          "ur": "فعلي"
+          "en": "verbal — أَتَى first",
+          "ur": "فعلیہ — پہلے أَتَى"
         },
         {
-          "en": "nominal",
-          "ur": "اسمی"
+          "en": "verbal — after وَ",
+          "ur": "فعلیہ — وَ کے بعد"
         },
         {
-          "en": "verbal",
-          "ur": "فعلي"
+          "en": "nominal — a pronoun first",
+          "ur": "اسمیہ — پہلے ضمیر"
         }
       ],
       "correct_pairs": [
@@ -402,138 +327,100 @@
           3
         ]
       ],
-      "xp_value": 1
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "Skip the prefix and look at the first word of the core.",
+        "ur": "سابقہ چھوڑ کر بنیاد کا پہلا لفظ دیکھیں۔"
+      }
     },
     {
-      "type": "GRAMMAR_PARSE",
+      "type": "TRUE_FALSE",
       "id": "ch29-l05-ex07",
-      "sentence_ar": "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ",
-      "words": [
-        {
-          "ar": "وَلَا",
-          "ar_plain": "ولا",
-          "translit": "wa laa",
-          "en": "and not",
-          "ur": "اور نہیں"
-        },
-        {
-          "ar": "أَنْتُمْ",
-          "ar_plain": "أنتم",
-          "translit": "antum",
-          "en": "you",
-          "ur": "تم"
-        },
-        {
-          "ar": "عَابِدُونَ",
-          "ar_plain": "عابدون",
-          "translit": "aabidoona",
-          "en": "worshippers (active participle)",
-          "ur": "عبادت کرنے والے"
-        },
-        {
-          "ar": "مَا",
-          "ar_plain": "ما",
-          "translit": "maa",
-          "en": "what",
-          "ur": "جو"
-        },
-        {
-          "ar": "أَعْبُدُ",
-          "ar_plain": "أعبد",
-          "translit": "a'budu",
-          "en": "I worship",
-          "ur": "میں عبادت کرتا ہوں"
-        }
-      ],
-      "available_roles": [
-        "CONJUNCTION",
-        "SUBJECT",
-        "VERB",
-        "OBJECT",
-        "VERB"
-      ],
-      "correct_roles": [
-        "CONJUNCTION",
-        "SUBJECT",
-        "VERB",
-        "OBJECT",
-        "VERB"
-      ],
-      "xp_value": 1
+      "statement": {
+        "en": "To classify a sentence, look at the core after any وَ, قُلْ or لَا.",
+        "ur": "جملہ پہچاننے کے لیے کسی بھی وَ، قُلْ یا لَا کے بعد بنیاد دیکھیں۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "These come before the core; the core decides.",
+        "ur": "یہ بنیاد سے پہلے آتے ہیں؛ فیصلہ بنیاد کرتی ہے۔"
+      }
     },
     {
-      "type": "BUILD_SENTENCE",
+      "type": "CONVERSATION_BUILDER",
       "id": "ch29-l05-ex08",
-      "target_translation": {
-        "en": "Say, O disbelievers",
-        "ur": "کہہ دیجیے، اے کافرو"
+      "prompt_line": {
+        "ar": "هَلْ هَذِهِ الْجُمْلَةُ اسْمِيَّةٌ: الْإِمَامُ فِي الْمَسْجِدِ؟",
+        "ar_plain": "هل هذه الجملة اسمية: الإمام في المسجد؟",
+        "translit": "hal hādhihi l-jumlatu ismiyyatun: al-imāmu fī l-masjidi?",
+        "en": "Is this sentence nominal: the imam is in the mosque?",
+        "ur": "کیا یہ جملہ اسمیہ ہے: امام مسجد میں ہیں؟"
       },
-      "tiles": [
+      "response_mode": "PICK",
+      "options": [
         {
-          "ar": "الْكَافِرُونَ",
-          "ar_plain": "الكافرون",
-          "translit": "al-kaafiroon",
-          "en": "the disbelievers",
-          "ur": "کافرو"
+          "ar": "نَعَمْ، هِيَ اسْمِيَّةٌ",
+          "ar_plain": "نعم، هي اسمية",
+          "translit": "naʿam, hiya ismiyyatun",
+          "en": "Yes, it is nominal.",
+          "ur": "جی ہاں، یہ اسمیہ ہے۔"
         },
         {
-          "ar": "يَا",
-          "ar_plain": "يا",
-          "translit": "yaa",
-          "en": "O",
-          "ur": "اے"
+          "ar": "لَا، هِيَ فِعْلِيَّةٌ",
+          "ar_plain": "لا، هي فعلية",
+          "translit": "lā, hiya fiʿliyyatun",
+          "en": "No, it is verbal.",
+          "ur": "نہیں، یہ فعلیہ ہے۔"
         },
         {
-          "ar": "أَيُّهَا",
-          "ar_plain": "أيها",
-          "translit": "ayyuhaa",
-          "en": "O (vocative)",
-          "ur": "اے (مخاطب)"
-        },
-        {
-          "ar": "قُلْ",
-          "ar_plain": "قل",
-          "translit": "qul",
-          "en": "say!",
-          "ur": "کہہ!"
+          "ar": "لَيْسَتْ جُمْلَةً",
+          "ar_plain": "ليست جملة",
+          "translit": "laysat jumlatan",
+          "en": "It is not a sentence.",
+          "ur": "یہ جملہ نہیں ہے۔"
         }
       ],
-      "correct_order": [
-        3,
-        1,
-        2,
-        0
-      ],
-      "xp_value": 1
+      "correct_option_index": 0,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "الْإِمَامُ opens the core: nominal.",
+        "ur": "الْإِمَامُ بنیاد شروع کرتا ہے: اسمیہ۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Al-Kafirun — verbal vs nominal ayahs",
-      "ar": "سورۃ الْكَافِرُون — آیاتِ فعلیہ واسمیہ",
-      "ur": "سورۃ کافروں — فعلی بمقابلہ اسمی آیات"
+      "en": "Classifying ayat",
+      "ar": "تَصْنِيفُ الْجُمَلِ",
+      "ur": "آیات میں جملوں کی پہچان"
     },
     "ayah": {
       "surah": 109,
-      "ayah": 1,
-      "label": "Al-Kafirun 109:1",
-      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
-      "en": "Say, O disbelievers.",
-      "ur": "کہہ دیجیے، اے کافرو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
+      "ayah": 3,
+      "label": "Al-Kafirun 109:3",
+      "ar": "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ",
+      "en": "Nor are you worshippers of what I worship.",
+      "ur": "اور نہ تم اس کی عبادت کرنے والے ہو جس کی میں عبادت کرتا ہوں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109003.mp3"
     },
     "highlighted_word_indices": [
-      0
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "أَنْتُمْ",
+      "عَابِدُونَ"
     ],
     "noor_explanation": {
-      "en": "Al-Kafirun is beautifully constructed: قُلْ (verbal), لَا أَعْبُدُ (verbal), وَلَا أَنْتُمْ عَابِدُونَ (verbal — عَابِدُونَ is a participle used as a verb), but وَلَكُمْ دِينُكُمْ (nominal — no verb). The surah deliberately contrasts the two sentence types.",
-      "ur": "سورۃ کافروں خوبصورتی سے بنا ہے: قُلْ (فعلي)، لَا أَعْبُدُ (فعلي)، وَلَا أَنْتُمْ عَابِدُونَ (فعلي — عَابِدُونَ ایک اسم فاعل ہے جو فعل کے طور پر استعمال ہوا)، لیکن وَلَكُمْ دِينُكُمْ (اسمی — کوئی فعل نہیں)۔ سورہ جان بوجھ کر دونوں جملے کی قسموں کا موازنہ کرتی ہے۔"
+      "en": "أَنْتُمْ عَابِدُونَ: you … worshippers — a pronoun topic and a describing noun. A nominal core.",
+      "ur": "أَنْتُمْ عَابِدُونَ: تم … عبادت کرنے والے — ضمیر مبتدا اور صفت والا اسم۔ اسمیہ بنیاد۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Al-Kafirun is your first GRAMMAR_PARSE surah. Most of its ayahs are verbal (قُلْ, لَا أَعْبُدُ, عَابِدُونَ), but وَلَكُمْ دِينُكُمْ is nominal. Spot the first content word: verb or not — that is the test.",
-      "ur": "سورۃ کافروں آپ کی پہلی GRAMMAR_PARSE سورہ ہے۔ اس کی اکثر آیات فعلی ہیں (قُلْ، لَا أَعْبُدُ، عَابِدُونَ)، لیکن وَلَكُمْ دِينُكُمْ اسمی ہے۔ پہلا اہم لفظ پہچانیں: فعل ہے یا نہیں — یہی امتحان ہے۔"
+      "en": "You can classify short ayat. Next: the Chapter 29 review.",
+      "ur": "آپ مختصر آیات میں جملے پہچان سکتے ہیں۔ آگے: باب 29 کی دہرائی۔"
     }
   }
 }

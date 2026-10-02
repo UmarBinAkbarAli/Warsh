@@ -2,268 +2,195 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 26, Lesson 4 - mixed review: demonstratives + idafa + إِنَّ/لَيْسَ.",
+    "_note": "Chapter 26, Lesson 4 (ch26-l04) — Al-Fatihah 1:4 مَالِكِ يَوْمِ الدِّينِ as a three-noun chain: يَوْمِ is the middle noun with two links. The kasra on مَالِكِ is explained only as continuing the description of Allah from 1:2 (no نعت/بدل labels, review amendment 2). Replaces the old إِنَّ/لَيْسَ mixed lesson, whose Ayat al-Kursi hook was said to contain لَيْسَ and called هُوَ a demonstrative. Rebuilt 2026-10-02 in the proposal harvest (Docs/proposals/proposal-harvest-tracker.md) from Docs/proposals/chapter-26-content-proposal.md and its review amendments: the chapter now teaches layered iḍāfa — three-noun chains, the middle noun's two links, which noun a following adjective describes, a pointer before a whole chain, and Al-Fatihah 1:4. Removed: 'رَبُّ رَبِّكُمْ — the Lord of your Lord', the Al-Kawthar hook that showed no chain, the claim that Ayat al-Kursi contains لَيْسَ, and the إِنَّ/لَيْسَ re-teaching (Chapters 24–25 own those). The proposal's separate transfer lesson (l05) was not built; the review covers it.",
+    "title": "A Three-Noun Chain in Al-Fatihah",
+    "titleAr": "مَالِكِ يَوْمِ الدِّينِ",
+    "titleUr": "قرآن میں تین اسموں کی زنجیر",
     "chapter_order": 26,
     "lesson_order": 4,
-    "chapter_title": "Demonstratives and Possession — Spiral",
-    "title": "Mixed Review: إِنَّ and لَيْسَ",
-    "titleAr": "مُرَاجَعَةُ الْكُلِّ: إِنَّ وَلَيْسَ",
-    "source": "reader_book3_lesson3_demonstratives",
-    "estimated_minutes": 8,
+    "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 2,
-      "ayah": 255,
-      "label": "Ayat al-Kursi 2:255",
-      "ar": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ",
-      "en": "Allāh - there is no deity except Him, the Ever-Living, the Self-Sustaining. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that can intercede with Him except by His permission? He knows what is [presently] before them and what will be after them, and they encompass not a thing of His knowledge except for what He wills. His Kursī extends over the heavens and the earth, and their preservation tires Him not. And He is the Most High, the Most Great.",
-      "ur": "خدا (وہ معبود برحق ہے کہ) اس کے سوا کوئی عبادت کے لائق نہیں زندہ ہمیشہ رہنے والا اسے نہ اونگھ آتی ہے نہ نیند جو کچھ آسمانوں میں اور جو کچھ زمین میں ہیں سب اسی کا ہے کون ہے جو اس کی اجازت کے بغیر اس سے (کسی کی) سفارش کر سکے جو کچھ لوگوں کے روبرو ہو رہا ہے اور جو کچھ ان کے پیچھے ہوچکا ہے اسے سب معلوم ہے اور وہ اس کی معلومات میں سے کسی چیز پر دسترس حاصل نہیں کر سکتے ہاں جس قدر وہ چاہتا ہے (اسی قدر معلوم کرا دیتا ہے) اس کی بادشاہی (اور علم) آسمان اور زمین سب پر حاوی ہے اور اسے ان کی حفاظت کچھ بھی دشوار نہیں وہ بڑا عالی رتبہ اور جلیل القدر ہے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002255.mp3"
+      "surah": 1,
+      "ayah": 4,
+      "label": "Al-Fatihah 1:4",
+      "ar": "مَالِكِ يَوْمِ الدِّينِ",
+      "en": "Master of the Day of Judgement.",
+      "ur": "روزِ جزا کا مالک۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001004.mp3"
     },
     "noor_intro": {
-      "en": "لَا إِلَٰهَ إِلَّا هُوَ — 'there is no god except Him.' This sentence uses لَيْسَ (to not be) and a demonstrative (هُوَ). Today we bring everything together: demonstratives, idafa, إِنَّ, and لَيْسَ.",
-      "ur": "لَا إِلَٰهَ إِلَّا هُوَ — 'اس کے سوا کوئی معبود نہیں۔' یہ جملہ لَيْسَ (نہیں ہونا) اور ایک اشاریہ (هُوَ) استعمال کرتا ہے۔ آج ہم سب کو ملا رہے ہیں: اشاریے، اضافت، إِنَّ، اور لَيْسَ۔"
+      "en": "A whole ayah that is one three-noun chain. Listen for the three links.",
+      "ur": "ایک پوری آیت جو تین اسموں کی ایک زنجیر ہے۔ تینوں کڑیاں سنیں۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Fatihah 1:4: Master of the Day of Judgement.",
+        "ar": "مَالِكِ يَوْمِ الدِّينِ",
+        "ur": "الفاتحہ 1:4: روزِ جزا کا مالک۔"
+      },
+      "explanation": {
+        "en": "Three nouns, one chain: مَالِكِ, Master → يَوْمِ, of the Day → الدِّينِ, of Judgement.",
+        "ur": "تین اسم، ایک زنجیر: مَالِكِ، مالک ← يَوْمِ، دن کا ← الدِّينِ، جزا کے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001004.mp3"
+    },
+    {
       "type": "CONCEPT",
       "concept": {
-        "en": "إِنَّ — emphasis particle (makes noun accusative)",
-        "ar": "إِنَّ — حَرْفُ التَّوْكِيد (يُعْمَلُ مَا بَعْدَهُ)",
-        "ur": "إِنَّ — تاکید کا حرف (اگلا اسم نصب میں ہوتا ہے)"
+        "en": "The middle link: يَوْمِ",
+        "ar": "يَوْمِ",
+        "ur": "درمیانی کڑی: يَوْمِ"
       },
       "explanation": {
-        "en": "إِنَّ is an emphatic particle meaning 'indeed, surely.' It always takes a noun in the accusative (منصوب) as its subject. إِنَّ الْكِتَابَ حَسَنٌ = Indeed, the book is good. The predicate (حَسَنٌ) is still nominative — only the subject after إِنَّ becomes accusative.",
-        "ur": "إِنَّ ایک تاکیدی حرف ہے جس کا مطلب 'بے شک، یقیناً'۔ یہ ہمیشہ اپنے فاعل کو حالت نصب میں رکھتا ہے۔ إِنَّ الْكِتَابَ حَسَنٌ = بے شک، کتاب اچھی ہے۔ بتیا (حَسَنٌ) پھر بھی رفع میں ہے — صرف إِنَّ کے بعد والا اسم نصب ہوتا ہے۔"
+        "en": "يَوْمِ is owned and owner: He is the Master of the Day, and it is the Day of Judgement. It has no الـ and no tanwīn, and its kasra comes from following مَالِكِ.",
+        "ur": "يَوْمِ مملوک بھی ہے اور مالک بھی: وہ دن کا مالک ہے، اور یہ جزا کا دن ہے۔ اس پر نہ الـ ہے نہ تنوین، اور اس کا زیر مَالِكِ کے بعد آنے سے ہے۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "لَيْسَ — negation of equality (makes noun nominative)",
-        "ar": "لَيْسَ — نَفْيُ الْمُسَاوَاة (يُرْفَعُ الْمُسَمَّى بِهِ)",
-        "ur": "لَيْسَ — برابری کی نفی (بتیا رفع میں ہوتا ہے)"
+        "en": "The last link carries الـ",
+        "ar": "الدِّينِ",
+        "ur": "آخری کڑی پر الـ ہے"
       },
       "explanation": {
-        "en": "لَيْسَ negates equality — it says something 'is not' something else. Unlike regular negation (لَا), لَيْسَ makes the predicate nominative. لَيْسَ الْكِتَابُ بَيْتًا = The book is not a house. The predicate (بَيْتًا) is accusative here because لَيْسَ governs it.",
-        "ur": "لَيْسَ برابری کی نفی کرتا ہے — یہ کہتا ہے کوئی چیز 'نہیں' دوسری چیز ہے۔ سادہ نفی (لَا) سے مختلف، لَيْسَ بتیا کو رفع میں رکھتا ہے۔ لَيْسَ الْكِتَابُ بَيْتًا = کتاب گھر نہیں ہے۔"
+        "en": "الدِّينِ, the Judgement or Recompense, is the final owner. It is the only noun in the chain with الـ.",
+        "ur": "الدِّينِ، جزا یا بدلہ، آخری مالک ہے۔ زنجیر میں صرف اسی پر الـ ہے۔"
       }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Why does مَالِكِ end in a kasra?",
+        "ar": "لِلَّهِ … مَالِكِ",
+        "ur": "مَالِكِ پر زیر کیوں ہے؟"
+      },
+      "explanation": {
+        "en": "Not because of the chain — مَالِكِ is its first noun. Al-Fatihah 1:2 begins لِلَّهِ, for Allah; 1:3 and 1:4 keep describing Allah, so they keep the same kasra ending. The chain itself starts after it.",
+        "ur": "زنجیر کی وجہ سے نہیں — مَالِكِ تو اس کا پہلا اسم ہے۔ الفاتحہ 1:2 لِلَّهِ، اللہ کے لیے، سے شروع ہوتی ہے؛ 1:3 اور 1:4 اللہ ہی کی صفات بیان کرتی ہیں، اس لیے وہی زیر قائم رہتا ہے۔ زنجیر اس کے بعد شروع ہوتی ہے۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Two chains you know, one new",
+        "ar": "رَبِّ الْعَالَمِينَ / مَالِكِ يَوْمِ الدِّينِ",
+        "ur": "دو جانی پہچانی زنجیریں، ایک نئی"
+      },
+      "explanation": {
+        "en": "رَبِّ الْعَالَمِينَ has two links. مَالِكِ يَوْمِ الدِّينِ has three — the same pattern with one more link.",
+        "ur": "رَبِّ الْعَالَمِينَ میں دو کڑیاں ہیں۔ مَالِكِ يَوْمِ الدِّينِ میں تین — وہی طریقہ، ایک کڑی زیادہ۔"
+      },
+      "examples": [
+        {
+          "ar": "رَبِّ الْعَالَمِينَ",
+          "ar_plain": "رب العالمين",
+          "translit": "rabbi l-ʿālamīna",
+          "en": "Lord of the worlds",
+          "ur": "تمام جہانوں کا رب"
+        },
+        {
+          "ar": "مَالِكِ يَوْمِ الدِّينِ",
+          "ar_plain": "مالك يوم الدين",
+          "translit": "māliki yawmi d-dīni",
+          "en": "Master of the Day of Judgement",
+          "ur": "روزِ جزا کا مالک"
+        }
+      ]
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "إِنَّ هَذَا كِتَابٌ",
-        "ar_plain": "إن هذا كتاب",
-        "translit": "inna haadhaa kitaabun",
-        "en": "Indeed, this is a book.",
-        "ur": "بے شک، یہ ایک کتاب ہے۔"
+        "ar": "كِتَابُ أُسْتَاذِ الْمَدْرَسَةِ",
+        "ar_plain": "كتاب أستاذ المدرسة",
+        "translit": "kitābu ustādhi l-madrasati",
+        "en": "the book of the school's teacher",
+        "ur": "اسکول کے استاد کی کتاب"
       },
       "explanation": {
-        "en": "إِنَّ + هَذَا (accusative — demonstrative changes case after إِنَّ) + كِتَابٌ (nominative predicate). إِنَّ forces the following noun into the accusative. Here هَذَا becomes هَذَا in the accusative form (same shape in Arabic but understood as accusative by position).",
-        "ur": "إِنَّ + هَذَا (نصب — اشاریہ کی حالت إِنَّ کے بعد بدل جاتی ہے) + كِتَابٌ (بیتا کا اسم، رفع)۔ إِنَّ اگلے اسم کو نصب میں ڈالتا ہے۔ یہاں هَذَا کی شکل عربی میں وہی رہتی ہے مگر حالت نصب سمجھی جاتی ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "إِنَّ ذَلِكَ بَيْتٌ",
-        "ar_plain": "إن ذلك بيت",
-        "translit": "inna dhaalika baytun",
-        "en": "Indeed, that is a house.",
-        "ur": "بے شک، وہ ایک گھر ہے۔"
-      },
-      "explanation": {
-        "en": "إِنَّ + ذَلِكَ (accusative) + بَيْتٌ (nominative predicate). The demonstrative ذَلِكَ is now the subject of إِنَّ and is understood as accusative. The predicate remains nominative.",
-        "ur": "إِنَّ + ذَلِكَ (نصب) + بَيْتٌ (رفع بتیا)۔ اشاریہ ذَلِكَ اب إِنَّ کا فاعل ہے اور حالت نصب میں سمجھا جاتا ہے۔ بتیا رفع میں رہتا ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "لَيْسَ هَذَا بَيْتًا",
-        "ar_plain": "ليس هذا بيتا",
-        "translit": "laysa haadhaa baytan",
-        "en": "This is not a house.",
-        "ur": "یہ گھر نہیں ہے۔"
-      },
-      "explanation": {
-        "en": "لَيْسَ + هَذَا (nominative subject — demonstrative stays nominative after لَيْسَ) + بَيْتًا (accusative predicate). Unlike إِنَّ, لَيْسَ puts the predicate in the accusative. The subject remains nominative.",
-        "ur": "لَيْسَ + هَذَا (رفع فاعل — اشاریہ لَيْسَ کے بعد رفع ہی رہتا ہے) + بَيْتًا (نصب بتیا)۔ إِنَّ سے مختلف، لَيْسَ بتیا کو نصب میں رکھتا ہے۔ فاعل رفع میں رہتا ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "إِنَّ رَبَّكُمْ حَفِيظٌ",
-        "ar_plain": "إن ربكم حفيظ",
-        "translit": "inna rabbakum hafiizhun",
-        "en": "Indeed, your Lord is Preserver.",
-        "ur": "بے شک، تمہارا رب حافظ ہے۔"
-      },
-      "explanation": {
-        "en": "إِنَّ + رَبَّكُمْ (accusative — the idafa phrase رَبُّ + كُمْ becomes رَبَّكُمْ in the accusative) + حَفِيظٌ (nominative predicate). Notice how the entire idafa chain رَبَّكُمْ takes the accusative after إِنَّ.",
-        "ur": "إِنَّ + رَبَّكُمْ (نصب — اضافتی زنجیر رَبُّ + كُمْ حالت نصب میں رَبَّكُمْ بن جاتی ہے) + حَفِيظٌ (رفع بتیا)۔ دیکھیں کیسے پوری اضافتی زنجیر رَبَّكُمْ إِنَّ کے بعد نصب میں آ جاتی ہے۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "إِنَّ vs لَيْسَ — key difference",
-        "ur": "إِنَّ بمقابل لَيْسَ — بنیادی فرق"
-      },
-      "body": {
-        "en": "إِنَّ (indeed) → subject is accusative, predicate is nominative. لَيْسَ (is not) → subject is nominative, predicate is accusative. Both involve case change. With demonstratives, إِنَّ هَذَا = indeed this is... (accusative subject). لَيْسَ هَذَا = this is not... (nominative subject, accusative predicate).",
-        "ur": "إِنَّ (بے شک) → فاعل نصب میں، بتیا رفع میں۔ لَيْسَ (نہیں ہے) → فاعل رفع میں، بتیا نصب میں۔ دونوں حالت کی تبدیلی سے جڑے ہیں۔ اشاریوں کے ساتھ: إِنَّ هَذَا = بے شک یہ ہے... (نصب فاعل)۔ لَيْسَ هَذَا = یہ نہیں ہے... (رفع فاعل، نصب بتیا)۔"
+        "en": "The same three-link pattern in a sentence of your own: the book → of the teacher → of the school.",
+        "ur": "یہی تین کڑیوں والا طریقہ ایک عام جملے میں: کتاب ← استاد کی ← اسکول کے۔"
       }
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
+      "type": "MATCH_AYAH",
       "id": "ch26-l04-ex01",
-      "prompt": {
-        "ar": "إِنَّ هَذَا كِتَابٌ",
-        "ar_plain": "إن هذا كتاب",
-        "translit": "inna haadhaa kitaabun",
-        "en": "Indeed, this is a book.",
-        "ur": "بے شک، یہ ایک کتاب ہے۔"
+      "ayah_fragment": {
+        "ar": "مَالِكِ يَوْمِ الدِّينِ",
+        "surah_ref": "Al-Fatihah 1:4"
       },
       "options": [
         {
-          "en": "Indeed, this is a book.",
-          "ur": "بے شک، یہ ایک کتاب ہے۔"
+          "en": "The Day of Judgement is near.",
+          "ur": "روزِ جزا قریب ہے۔"
         },
         {
-          "en": "This is not a book.",
-          "ur": "یہ کتاب نہیں ہے۔"
+          "en": "Master of the Day of Judgement",
+          "ur": "روزِ جزا کا مالک"
         },
         {
-          "en": "Indeed, that is a house.",
-          "ur": "بے شک، وہ گھر ہے۔"
+          "en": "The Master's day of religion",
+          "ur": "مالک کا دینی دن"
         },
         {
-          "en": "This book is not a house.",
-          "ur": "یہ کتاب گھر نہیں ہے۔"
+          "en": "Every day is a day of judgement.",
+          "ur": "ہر دن جزا کا دن ہے۔"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "إِنَّ means 'indeed/surely.' It takes the subject in the accusative. Here: إِنَّ + هَذَا (subject, accusative) + كِتَابٌ (predicate, nominative). This is an affirmative emphasis sentence, not a negation.",
-        "ur": "إِنَّ کا مطلب 'بے شک/یقیناً'۔ یہ فاعل کو نصب میں رکھتا ہے۔ یہاں: إِنَّ + هَذَا (فاعل، نصب) + كِتَابٌ (بیتا، رفع)۔ یہ تاکیدی جملہ ہے، نفی نہیں۔"
+        "en": "Read the three links in order: مَالِكِ Master → يَوْمِ of the Day → الدِّينِ of Judgement.",
+        "ur": "تینوں کڑیاں ترتیب سے پڑھیں: مَالِكِ مالک ← يَوْمِ دن کا ← الدِّينِ جزا کے۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch26-l04-ex02",
-      "statement": {
-        "en": "In لَيْسَ هَذَا بَيْتًا, the predicate بَيْتًا is in the accusative case.",
-        "ur": "لَيْسَ هَذَا بَيْتًا میں بتیا بَيْتًا حالت نصب میں ہے۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch26-l04-ex03",
-      "mode": "TAP",
-      "sentence_ar": "لَيْسَ ___ بَيْتًا",
-      "hint": {
-        "en": "That is not a house.",
-        "ur": "وہ گھر نہیں ہے۔"
-      },
-      "options": [
-        {
-          "ar": "ذَلِكَ",
-          "ar_plain": "ذلك",
-          "translit": "dhaalika",
-          "en": "that",
-          "ur": "وہ"
-        },
-        {
-          "ar": "هَذَا",
-          "ar_plain": "هذا",
-          "translit": "haadhaa",
-          "en": "this",
-          "ur": "یہ"
-        },
-        {
-          "ar": "بَيْتٌ",
-          "ar_plain": "بيت",
-          "translit": "baytun",
-          "en": "a house",
-          "ur": "ایک گھر"
-        },
-        {
-          "ar": "بَيْتُ",
-          "ar_plain": "بيت",
-          "translit": "baytu",
-          "en": "house (possessed)",
-          "ur": "گھر (ملکیت شدہ)"
-        }
-      ],
-      "correct_answer": {
-        "ar": "ذَلِكَ",
-        "ar_plain": "ذلك",
-        "translit": "dhaalika",
-        "en": "that",
-        "ur": "وہ"
-      },
-      "xp_value": 1
-    },
-    {
       "type": "MATCHING",
-      "id": "ch26-l04-ex04",
+      "id": "ch26-l04-ex02",
       "left_column": [
         {
-          "ar": "إِنَّ هَذَا كِتَابٌ",
-          "ar_plain": "إن هذا كتاب",
-          "translit": "inna haadhaa kitaabun",
-          "en": "Indeed, this is a book.",
-          "ur": "بے شک، یہ ایک کتاب ہے۔"
+          "ar": "مَالِكِ",
+          "ar_plain": "مالك",
+          "translit": "māliki",
+          "en": "Master",
+          "ur": "مالک"
         },
         {
-          "ar": "لَيْسَ ذَلِكَ بَيْتًا",
-          "ar_plain": "ليس ذلك بيتا",
-          "translit": "laysa dhaalika baytan",
-          "en": "That is not a house.",
-          "ur": "وہ گھر نہیں ہے۔"
+          "ar": "يَوْمِ",
+          "ar_plain": "يوم",
+          "translit": "yawmi",
+          "en": "Day",
+          "ur": "دن"
         },
         {
-          "ar": "إِنَّ رَبَّكُمْ حَفِيظٌ",
-          "ar_plain": "إن ربكم حفيظ",
-          "translit": "inna rabbakum hafiizhun",
-          "en": "Indeed, your Lord is Preserver.",
-          "ur": "بے شک، تمہارا رب حافظ ہے۔"
-        },
-        {
-          "ar": "كِتَابُ الطَّالِبِ الْجَدِيدِ",
-          "ar_plain": "كتاب الطالب الجديد",
-          "translit": "kitaabu at-tullaabi al-jadiidi",
-          "en": "the new student's book",
-          "ur": "نئے طالب علم کی کتاب"
+          "ar": "الدِّينِ",
+          "ar_plain": "الدين",
+          "translit": "ad-dīni",
+          "en": "Judgement",
+          "ur": "جزا"
         }
       ],
       "right_column": [
         {
-          "en": "Indeed, this is a book.",
-          "ur": "بے شک، یہ ایک کتاب ہے۔"
+          "en": "first link — the Master",
+          "ur": "پہلی کڑی — مالک"
         },
         {
-          "en": "That is not a house.",
-          "ur": "وہ گھر نہیں ہے۔"
+          "en": "middle link — the Day, owned and owner",
+          "ur": "درمیانی کڑی — دن، مملوک بھی مالک بھی"
         },
         {
-          "en": "Indeed, your Lord is Preserver.",
-          "ur": "بے شک، تمہارا رب حافظ ہے۔"
-        },
-        {
-          "en": "the new student's book",
-          "ur": "نئے طالب علم کی کتاب"
+          "en": "last link — Judgement, with الـ",
+          "ur": "آخری کڑی — جزا، الـ کے ساتھ"
         }
       ],
       "correct_pairs": [
@@ -278,179 +205,233 @@
         [
           2,
           2
-        ],
-        [
-          3,
-          3
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch26-l04-ex05",
-      "target_translation": {
-        "en": "Indeed, that is the student's book.",
-        "ur": "بے شک، وہ طالب علم کی کتاب ہے۔"
-      },
-      "tiles": [
-        {
-          "ar": "إِنَّ",
-          "ar_plain": "إن",
-          "translit": "inna",
-          "en": "indeed",
-          "ur": "بے شک"
-        },
-        {
-          "ar": "ذَلِكَ",
-          "ar_plain": "ذلك",
-          "translit": "dhaalika",
-          "en": "that (acc.)",
-          "ur": "وہ (نصب)"
-        },
-        {
-          "ar": "كِتَابَ",
-          "ar_plain": "كتابا",
-          "translit": "kitaaba",
-          "en": "book (acc.)",
-          "ur": "کتاب (نصب)"
-        },
-        {
-          "ar": "الطَّالِبِ",
-          "ar_plain": "الطالب",
-          "translit": "at-tullaabi",
-          "en": "the student (gen.)",
-          "ur": "طالب علم (اضافی)"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch26-l04-ex06",
-      "prompt": {
-        "ar": "لَا إِلَٰهَ إِلَّا هُوَ",
-        "ar_plain": "لا إله إلا هو",
-        "translit": "laa ilaaha illaa huwa",
-        "en": "There is no god except Him.",
-        "ur": "اس کے سوا کوئی معبود نہیں۔"
-      },
-      "options": [
-        {
-          "en": "There is no god except Him.",
-          "ur": "اس کے سوا کوئی معبود نہیں۔"
-        },
-        {
-          "en": "Indeed, He is the only god.",
-          "ur": "بے شک، وہ واحد معبود ہے۔"
-        },
-        {
-          "en": "God is great.",
-          "ur": "اللہ بڑا ہے۔"
-        },
-        {
-          "en": "There is no house except this.",
-          "ur": "اس کے سوا کوئی گھر نہیں۔"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
+      "xp_value": 2,
       "explanation_on_wrong": {
-        "en": "لَا إِلَٰهَ إِلَّا هُوَ is a negation of existence using لَا... إِلَّا — 'no god except Him.' This is from Ayat al-Kursi. هُوَ is a pronoun (he/him) — a demonstrative-like pronoun meaning 'He, the One.'",
-        "ur": "لَا إِلَٰهَ إِلَّا هُوَ لَا... إِلَّا سے وجود کی نفی ہے — 'اس کے سوا کوئی معبود نہیں'۔ یہ آیت الکرسی سے ہے۔ هُوَ ایک ضمیر ہے (وہ/اسے) — اشاریہ کی طرح کا ضمیر جس کا مطلب 'وہ، اکیلا'۔"
+        "en": "مَالِكِ starts the chain, يَوْمِ is in the middle, and الدِّينِ with الـ ends it.",
+        "ur": "مَالِكِ زنجیر شروع کرتا ہے، يَوْمِ درمیان میں ہے، اور الدِّينِ، الـ کے ساتھ، اسے ختم کرتا ہے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch26-l04-ex07",
+      "id": "ch26-l04-ex03",
       "statement": {
-        "en": "After إِنَّ, the subject noun is in the accusative. After لَيْسَ, the subject noun is in the nominative.",
-        "ur": "إِنَّ کے بعد فاعل نصب میں ہوتا ہے۔ لَيْسَ کے بعد فاعل رفع میں ہوتا ہے۔"
+        "en": "يَوْمِ is both owned (Master of the Day) and owner (Day of Judgement).",
+        "ur": "يَوْمِ مملوک بھی ہے (دن کا مالک) اور مالک بھی (جزا کا دن)۔",
+        "ar_example": {
+          "ar": "مَالِكِ يَوْمِ الدِّينِ",
+          "ar_plain": "مالك يوم الدين",
+          "translit": "māliki yawmi d-dīni",
+          "en": "Master of the Day of Judgement",
+          "ur": "روزِ جزا کا مالک"
+        }
       },
       "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يَوْمِ is the middle link, so it has both jobs.",
+        "ur": "يَوْمِ درمیانی کڑی ہے، اس لیے اس کے دونوں کام ہیں۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch26-l04-ex04",
+      "statement": {
+        "en": "مَالِكِ ends in a kasra because it is the owner in the chain.",
+        "ur": "مَالِكِ پر زیر اس لیے ہے کہ وہ زنجیر میں مالک ہے۔",
+        "ar_example": {
+          "ar": "مَالِكِ يَوْمِ الدِّينِ",
+          "ar_plain": "مالك يوم الدين",
+          "translit": "māliki yawmi d-dīni",
+          "en": "Master of the Day of Judgement",
+          "ur": "روزِ جزا کا مالک"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَالِكِ is the first noun of the chain. Its kasra continues the description of Allah from لِلَّهِ in 1:2.",
+        "ur": "مَالِكِ زنجیر کا پہلا اسم ہے۔ اس کا زیر 1:2 کے لِلَّهِ سے چلی آ رہی اللہ کی صفات کا تسلسل ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch26-l04-ex05",
+      "mode": "TAP",
+      "sentence_ar": "مَالِكِ ___ الدِّينِ",
+      "hint": {
+        "en": "The middle link: no الـ, no tanwīn, a kasra.",
+        "ur": "درمیانی کڑی: نہ الـ، نہ تنوین، زیر۔"
+      },
+      "options": [
+        {
+          "ar": "يَوْمٌ",
+          "ar_plain": "يوم",
+          "translit": "yawmun",
+          "en": "a day",
+          "ur": "ایک دن"
+        },
+        {
+          "ar": "الْيَوْمِ",
+          "ar_plain": "اليوم",
+          "translit": "al-yawmi",
+          "en": "the day",
+          "ur": "یہ دن"
+        },
+        {
+          "ar": "يَوْمَ",
+          "ar_plain": "يوم",
+          "translit": "yawma",
+          "en": "day (fatḥa)",
+          "ur": "دن (زبر)"
+        },
+        {
+          "ar": "يَوْمِ",
+          "ar_plain": "يوم",
+          "translit": "yawmi",
+          "en": "Day (of)",
+          "ur": "دن (کا)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يَوْمِ",
+        "ar_plain": "يوم",
+        "translit": "yawmi",
+        "en": "Day (of)",
+        "ur": "دن (کا)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A middle noun drops الـ and tanwīn and ends in a kasra: يَوْمِ.",
+        "ur": "درمیانی اسم الـ اور تنوین چھوڑ دیتا ہے اور زیر لیتا ہے: يَوْمِ۔"
+      }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch26-l04-ex08",
+      "id": "ch26-l04-ex06",
       "target_translation": {
-        "en": "These are not the students of the school.",
-        "ur": "یہ اسکول کے طالب علم نہیں ہیں۔"
+        "en": "Master of the Day of Judgement",
+        "ur": "روزِ جزا کا مالک"
       },
       "tiles": [
         {
-          "ar": "لَيْسَ",
-          "ar_plain": "ليس",
-          "translit": "laysa",
-          "en": "is not",
-          "ur": "نہیں ہے"
+          "ar": "الدِّينِ",
+          "ar_plain": "الدين",
+          "translit": "ad-dīni",
+          "en": "Judgement",
+          "ur": "جزا"
         },
         {
-          "ar": "هَؤُلَاءِ",
-          "ar_plain": "هولاء",
-          "translit": "haa'ulaa'i",
-          "en": "these (nom.)",
-          "ur": "یہ (رفع)"
+          "ar": "يَوْمِ",
+          "ar_plain": "يوم",
+          "translit": "yawmi",
+          "en": "Day",
+          "ur": "دن"
         },
         {
-          "ar": "طُلَّابَ",
-          "ar_plain": "طلاب",
-          "translit": "tullaaba",
-          "en": "students (acc.)",
-          "ur": "طالب علم (نصب)"
-        },
-        {
-          "ar": "الْمَدْرَسَةِ",
-          "ar_plain": "المدرسة",
-          "translit": "al-madrasati",
-          "en": "the school (gen.)",
-          "ur": "اسکول (اضافی)"
+          "ar": "مَالِكِ",
+          "ar_plain": "مالك",
+          "translit": "māliki",
+          "en": "Master",
+          "ur": "مالک"
         }
       ],
       "correct_order": [
-        0,
-        1,
         2,
-        3
+        1,
+        0
       ],
-      "xp_value": 1
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "The chain runs from the first link to the owner with الـ: مَالِكِ يَوْمِ الدِّينِ.",
+        "ur": "زنجیر پہلی کڑی سے الـ والے مالک تک چلتی ہے: مَالِكِ يَوْمِ الدِّينِ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch26-l04-ex07",
+      "prompt": {
+        "ar": "كِتَابُ أُسْتَاذِ الْمَدْرَسَةِ",
+        "ar_plain": "كتاب أستاذ المدرسة",
+        "translit": "kitābu ustādhi l-madrasati",
+        "en": "the book of the school's teacher",
+        "ur": "اسکول کے استاد کی کتاب"
+      },
+      "options": [
+        {
+          "en": "the school's book",
+          "ur": "اسکول کی کتاب"
+        },
+        {
+          "en": "the teacher of the school's book",
+          "ur": "اسکول کی کتاب کا استاد"
+        },
+        {
+          "en": "the school teacher's room",
+          "ur": "اسکول کے استاد کا کمرہ"
+        },
+        {
+          "en": "the book of the school's teacher",
+          "ur": "اسکول کے استاد کی کتاب"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كِتَابُ the book → أُسْتَاذِ of the teacher → الْمَدْرَسَةِ of the school.",
+        "ur": "كِتَابُ کتاب ← أُسْتَاذِ استاد کی ← الْمَدْرَسَةِ اسکول کے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch26-l04-ex08",
+      "statement": {
+        "en": "رَبِّ الْعَالَمِينَ and مَالِكِ يَوْمِ الدِّينِ are both chains of possession.",
+        "ur": "رَبِّ الْعَالَمِينَ اور مَالِكِ يَوْمِ الدِّينِ دونوں اضافت کی زنجیریں ہیں۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Both are chains: the first has two links, the second has three.",
+        "ur": "دونوں زنجیریں ہیں: پہلی میں دو کڑیاں، دوسری میں تین۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "إِنَّ and لَيْسَ — Emphasis and Negation",
-      "ar": "إِنَّ وَلَيْسَ — التَّوْكِيدُ وَالنَّفْيُ",
-      "ur": "إِنَّ اور لَيْسَ — تاکید اور نفی"
+      "en": "A three-noun chain in Al-Fatihah",
+      "ar": "مَالِكِ يَوْمِ الدِّينِ",
+      "ur": "الفاتحہ میں تین اسموں کی زنجیر"
     },
     "ayah": {
-      "surah": 2,
-      "ayah": 255,
-      "label": "Ayat al-Kursi 2:255",
-      "ar": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ",
-      "en": "Allāh - there is no deity except Him, the Ever-Living, the Self-Sustaining. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that can intercede with Him except by His permission? He knows what is [presently] before them and what will be after them, and they encompass not a thing of His knowledge except for what He wills. His Kursī extends over the heavens and the earth, and their preservation tires Him not. And He is the Most High, the Most Great.",
-      "ur": "خدا (وہ معبود برحق ہے کہ) اس کے سوا کوئی عبادت کے لائق نہیں زندہ ہمیشہ رہنے والا اسے نہ اونگھ آتی ہے نہ نیند جو کچھ آسمانوں میں اور جو کچھ زمین میں ہیں سب اسی کا ہے کون ہے جو اس کی اجازت کے بغیر اس سے (کسی کی) سفارش کر سکے جو کچھ لوگوں کے روبرو ہو رہا ہے اور جو کچھ ان کے پیچھے ہوچکا ہے اسے سب معلوم ہے اور وہ اس کی معلومات میں سے کسی چیز پر دسترس حاصل نہیں کر سکتے ہاں جس قدر وہ چاہتا ہے (اسی قدر معلوم کرا دیتا ہے) اس کی بادشاہی (اور علم) آسمان اور زمین سب پر حاوی ہے اور اسے ان کی حفاظت کچھ بھی دشوار نہیں وہ بڑا عالی رتبہ اور جلیل القدر ہے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002255.mp3"
+      "surah": 1,
+      "ayah": 4,
+      "label": "Al-Fatihah 1:4",
+      "ar": "مَالِكِ يَوْمِ الدِّينِ",
+      "en": "Master of the Day of Judgement.",
+      "ur": "روزِ جزا کا مالک۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001004.mp3"
     },
     "highlighted_word_indices": [
-      2,
-      4,
-      5
+      0,
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "مَالِكِ",
+      "يَوْمِ",
+      "الدِّينِ"
     ],
     "noor_explanation": {
-      "en": "لَا إِلَٰهَ إِلَّا هُوَ — 'There is no god except Him.' إِنَّ and لَيْسَ are complementary: إِنَّ affirms and emphasizes (subject accusative), لَيْسَ negates equality (subject nominative, predicate accusative). Today you reviewed demonstratives, idafa, and these two critical particles together.",
-      "ur": "لَا إِلَٰهَ إِلَّا هُوَ — 'اس کے سوا کوئی معبود نہیں۔' إِنَّ اور لَيْسَ مکمل ہیں: إِنَّ ثابت اور تاکید کرتا ہے (فاعل نصب)، لَيْسَ برابری کی نفی کرتا ہے (فاعل رفع، بتیا نصب)۔ آج آپ نے اشاریوں، اضافت، اور ان دو اہم حروف کو ملا کر دیکھا۔"
+      "en": "مَالِكِ يَوْمِ الدِّينِ: Master → of the Day → of Judgement. You can now read every link of this ayah.",
+      "ur": "مَالِكِ يَوْمِ الدِّينِ: مالک ← دن کا ← جزا کے۔ اب آپ اس آیت کی ہر کڑی پڑھ سکتے ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Chapter 26 is a consolidation. You now know all the demonstratives (هَذَا, هَذِهِ, ذَلِكَ, تِلْكَ, هَؤُلَاء, أُولَئِكَ), idafa chains at every complexity, and the difference between إِنَّ (emphasis) and لَيْسَ (negation). Well done.",
-      "ur": "باب 26 ایک مستحکم کرنے والا سبق ہے۔ آپ اب سب اشاریے جانتے ہیں (هَذَا, هَذِهِ, ذَلِكَ, تِلْكَ, هَؤُلَاء, أُولَئِكَ)، ہر پیچیدگی کی اضافتی زنجیریں، اور إِنَّ (تاکید) اور لَيْسَ (نفی) کا فرق۔ بہت اچھا۔"
+      "en": "You read a three-link chain in the Quran. Next: the Chapter 26 review.",
+      "ur": "آپ نے قرآن میں تین کڑیوں والی زنجیر پڑھی۔ آگے: باب 26 کی دہرائی۔"
     }
   }
 }

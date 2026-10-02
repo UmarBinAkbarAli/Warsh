@@ -2,282 +2,159 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 30, Lesson 2 (ch30-l02) — a five-step story in known past verbs. Taught: who did each action (the doer can change: الْأُسْتَاذُ in step 4), and the joining words in context — وَ adds the next detail (it does not by itself prove order), فَ links the next step closely, often 'then' or 'so'. No new connector list. Quran: 109:1 as a pointer to Lesson 5. Rebuilt 2026-10-02 in the proposal harvest (Docs/proposals/proposal-harvest-tracker.md) from Docs/proposals/chapter-30-content-proposal.md and its review amendments: reading across sentences (pronoun back to its noun, وَ / فَ in context), following a short story, following a dialogue with a clarification, relative مَا ('what') with the whole clause as the thing not worshipped, and the one complete reading of Al-Kafirun 109:1–6. Removed: أَجَابَ under root ء-ج-ب (it is ج-و-ب), 'both words are definite' for الْكِتَابُ جَدِيدٌ, the إِنَّ-sentence called verbal, لَكُمْ / لِي called possessives, and the 'complete surah' lesson that skipped 109:3. The proposal's separate unseen-text lesson (l06) was not built; its job is in the review.",
+    "title": "A Short Story in Order",
+    "titleAr": "قِصَّةٌ قَصِيرَةٌ",
+    "titleUr": "مختصر کہانی ترتیب سے",
     "chapter_order": 30,
     "lesson_order": 2,
-    "chapter_title": "Reading Comprehension and Dialogue",
-    "title": "Dialogue in Arabic",
-    "titleAr": "الْحِوَارُ بِاللُّغَةِ الْعَرَبِيَّةِ",
-    "source": "book3_lesson7_reading_comprehension.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 12,
-      "ayah": 76,
-      "label": "Yusuf 12:76",
-      "ar": "وَفَوْقَ كُلِّ ذِي عِلْمٍ عَلِيمٌ",
-      "en": "And above every possessor of knowledge is one more knowing.",
-      "ur": "اور ہر علم والے سے اوپر ایک اور زیادہ جاننے والا ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012076.mp3"
+      "surah": 109,
+      "ayah": 1,
+      "label": "Al-Kafirun 109:1",
+      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
+      "en": "Say, O disbelievers,",
+      "ur": "کہہ دیجیے: اے کافرو!",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
     },
     "noor_intro": {
-      "en": "Arabic dialogue uses both sentence types. قَالَ (he said) and سَأَلَ (he asked) are common dialogue verbs. Let's practice reading conversations in Arabic.",
-      "ur": "عربی میں dialogue دونوں sentence types استعمال کرتا ہے۔ قَالَ (اس نے کہا) اور سَأَلَ (اس نے پوچھا) عام dialogue verbs ہیں۔ آئیے عربی میں conversations پڑھنے کی مشق کریں۔"
+      "en": "A surah you will read in full this chapter. First, a short story.",
+      "ur": "ایک سورت جو آپ اس باب میں پوری پڑھیں گے۔ پہلے ایک مختصر کہانی۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "WORD",
-      "text": {
-        "ar": "قَالَ",
-        "ar_plain": "قال",
-        "translit": "qaala",
-        "en": "he said",
-        "ur": "اس نے کہا"
-      },
-      "explanation": {
-        "en": "Past tense verb from ق-و-ل. قَالَ مُحَمَّدٌ = Muhammad said. Used to introduce direct speech.",
-        "ur": "ق-و-ل root سے ماضی verb۔ قَالَ مُحَمَّدٌ = محمد نے کہا۔ براہ راست speech متعارف کرانے کے لیے استعمال ہوتا ہے۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "سَأَلَ",
-        "ar_plain": "سأل",
-        "translit": "sa'ala",
-        "en": "he asked",
-        "ur": "اس نے پوچھا"
-      },
-      "explanation": {
-        "en": "Past tense verb from س-أ-ل. سَأَلَ الطَّالِبُ = the student asked. Often introduces questions.",
-        "ur": "س-أ-ل root سے ماضی verb۔ سَأَلَ الطَّالِبُ = طالب علم نے پوچھا۔ اکثر سوالات متعارف کراتا ہے۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "أَجَابَ",
-        "ar_plain": "أجاب",
-        "translit": "aajaaba",
-        "en": "he answered",
-        "ur": "اس نے جواب دیا"
-      },
-      "explanation": {
-        "en": "Past tense verb from ء-ج-ب. أَجَابَ عَلَى السُّؤَالِ = he answered the question.",
-        "ur": "ء-ج-ب root سے ماضی verb۔ أَجَابَ عَلَى السُّؤَالِ = اس نے سوال کا جواب دیا۔"
-      }
-    },
-    {
       "type": "EXAMPLE",
       "text": {
-        "ar": "قَالَ الْأَسْتَاذُ: إِنَّ الطَّالِبَ مُجْتَهِدٌ",
-        "ar_plain": "قال الأستاذ: إن الطالب مجتهد",
-        "translit": "qaala al-ustaazu: inna at-taalibi mujtahidun",
-        "en": "The teacher said: Truly, the student is diligent.",
-        "ur": "استاد نے کہا: بے شک، طالب علم محنتی ہے۔"
+        "ar": "خَرَجَ أَحْمَدُ مِنَ الْبَيْتِ وَذَهَبَ إِلَى الْمَدْرَسَةِ، فَدَخَلَ الْفَصْلَ وَبَدَأَ الْأُسْتَاذُ الدَّرْسَ. فَهِمَ أَحْمَدُ الدَّرْسَ فَرَجَعَ إِلَى الْبَيْتِ.",
+        "ar_plain": "خرج أحمد من البيت وذهب إلى المدرسة، فدخل الفصل وبدأ الأستاذ الدرس. فهم أحمد الدرس فرجع إلى البيت.",
+        "translit": "kharaja aḥmadu mina l-bayti wa-dhahaba ilā l-madrasati, fa-dakhala l-faṣla wa-badaʾa l-ustādhu d-darsa. fahima aḥmadu d-darsa fa-rajaʿa ilā l-bayti.",
+        "en": "Ahmad went out of the house and went to school; then he entered the classroom, and the teacher began the lesson. Ahmad understood the lesson, so he went back home.",
+        "ur": "احمد گھر سے نکلا اور اسکول گیا، پھر کلاس میں داخل ہوا اور استاد نے سبق شروع کیا۔ احمد نے سبق سمجھ لیا، تو وہ گھر واپس آیا۔"
       },
       "explanation": {
-        "en": "قَالَ introduces the speaker. Inside the quote is an إِنَّ sentence — nominal with إِنَّ.",
-        "ur": "قَالَ speaker متعارف کراتا ہےہے۔ quote کے اندر إِنَّ sentence ہے — إِنَّ کے ساتھ nominal۔"
+        "en": "Read the whole story. Who does what, and in what order?",
+        "ur": "پوری کہانی پڑھیں۔ کون کیا کرتا ہے، اور کس ترتیب سے؟"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "سَأَلَ الطَّالِبُ: هَلِ الْكِتَابُ جَدِيدٌ؟",
-        "ar_plain": "سأل الطالب: هل الكتاب جديد؟",
-        "translit": "sa'ala at-taalibu: hal al-kitaabu jadiidun?",
-        "en": "The student asked: Is the book new?",
-        "ur": "طالب علم نے پوچھا: کیا کتاب نئی ہے؟"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Five steps",
+        "ar": "١ خَرَجَ ٢ ذَهَبَ ٣ دَخَلَ ٤ بَدَأَ ٥ فَهِمَ … رَجَعَ",
+        "ur": "پانچ مرحلے"
       },
       "explanation": {
-        "en": "سَأَلَ introduces the question. هَل is the interrogative particle. The question is a nominal sentence (الْكِتَابُ جَدِيدٌ).",
-        "ur": "سَأَلَ question متعارف کراتا ہے۔ هَل interrogative particle ہے۔ سوال ایک nominal sentence ہے (الْكِتَابُ جَدِيدٌ)۔"
+        "en": "Went out, went to school, entered the classroom, the lesson began, he understood and went back.",
+        "ur": "نکلا، اسکول گیا، کلاس میں داخل ہوا، سبق شروع ہوا، وہ سمجھ گیا اور واپس آیا۔"
       }
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "عَلَى",
-        "ar_plain": "على",
-        "translit": "alaa",
-        "en": "on / upon",
-        "ur": "پر / اوپر"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The doer can change",
+        "ar": "وَبَدَأَ الْأُسْتَاذُ",
+        "ur": "فاعل بدل سکتا ہے"
       },
       "explanation": {
-        "en": "Preposition. عَلَى السُّؤَالِ = on the question (answering a question).",
-        "ur": "حرف جر۔ عَلَى السُّؤَالِ = سوال پر (سوال کا جواب دینا)۔"
+        "en": "Most verbs have أَحْمَدُ as doer — named once, then understood. In step 4 a new doer is named: الْأُسْتَاذُ began the lesson.",
+        "ur": "زیادہ تر افعال کا فاعل أَحْمَدُ ہے — ایک بار نام لیا، پھر سمجھا گیا۔ چوتھے مرحلے میں نیا فاعل آتا ہے: الْأُسْتَاذُ نے سبق شروع کیا۔"
       }
     },
     {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Dialogue structure in Arabic",
-        "ur": "عربی میں dialogue کی ساخت"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "وَ and فَ",
+        "ar": "وَ / فَ",
+        "ur": "وَ اور فَ"
       },
-      "body": {
-        "en": "Arabic dialogue typically follows: Speaker verb + subject + colon + quoted speech. The quoted speech can be any sentence type.",
-        "ur": "عربی dialogue عموماً یہ follows: Speaker verb + subject + colon + quoted speech۔ Quoted speech کوئی بھی sentence type ہو سکتا ہے۔"
-      }
+      "explanation": {
+        "en": "وَ, and, adds the next detail. فَ ties the next step closely to the one before — then, or so. In فَهِمَ … فَرَجَعَ, he understood, so he went back.",
+        "ur": "وَ، اور، اگلی بات جوڑتا ہے۔ فَ اگلے مرحلے کو پچھلے سے قریب سے جوڑتا ہے — پھر، یا تو۔ فَهِمَ … فَرَجَعَ میں: وہ سمجھ گیا، تو واپس آیا۔"
+      },
+      "examples": [
+        {
+          "ar": "وَذَهَبَ إِلَى الْمَدْرَسَةِ",
+          "ar_plain": "وذهب إلى المدرسة",
+          "translit": "wa-dhahaba ilā l-madrasati",
+          "en": "and went to school",
+          "ur": "اور اسکول گیا"
+        },
+        {
+          "ar": "فَهِمَ أَحْمَدُ الدَّرْسَ فَرَجَعَ إِلَى الْبَيْتِ",
+          "ar_plain": "فهم أحمد الدرس فرجع إلى البيت",
+          "translit": "fahima aḥmadu d-darsa fa-rajaʿa ilā l-bayti",
+          "en": "Ahmad understood the lesson, so he went back home",
+          "ur": "احمد نے سبق سمجھ لیا، تو وہ گھر واپس آیا"
+        }
+      ]
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
-      "id": "ch30-l02-ex01",
-      "prompt": {
-        "ar": "قَالَ الْأَسْتَاذُ: إِنَّ الطَّالِبَ مُجْتَهِدٌ",
-        "ar_plain": "قال الأستاذ: إن الطالب مجتهد",
-        "translit": "qaala al-ustaazu: inna at-taalibi mujtahidun",
-        "en": "The teacher said: Truly, the student is diligent.",
-        "ur": "استاد نے کہا: بے شک، طالب علم محنتی ہے۔"
-      },
-      "options": [
-        {
-          "en": "The teacher said: Truly, the student is diligent.",
-          "ur": "استاد نے کہا: بے شک، طالب علم محنتی ہے۔"
-        },
-        {
-          "en": "The teacher asked: Is the student diligent?",
-          "ur": "استاد نے پوچھا: کیا طالب علم محنتی ہے؟"
-        },
-        {
-          "en": "The student said: Truly, the teacher is diligent.",
-          "ur": "طالب علم نے کہا: بے شک، استاد محنتی ہے۔"
-        },
-        {
-          "en": "The teacher is diligent.",
-          "ur": "استاد محنتی ہے۔"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "قَالَ = he said. The speaker is الْأَسْتَاذُ (the teacher). Inside is an إِنَّ sentence.",
-        "ur": "قَالَ = اس نے کہا۔ Speaker الْأَسْتَاذُ (استاد) ہے۔ اندر إِنَّ sentence ہے۔"
-      }
-    },
-    {
       "type": "TRUE_FALSE",
-      "id": "ch30-l02-ex02",
+      "id": "ch30-l02-ex01",
       "statement": {
-        "en": "In سَأَلَ الطَّالِبُ: هَلِ الْكِتَابُ جَدِيدٌ؟, the question uses a verbal sentence.",
-        "ur": "سَأَلَ الطَّالِبُ: هَلِ الْكِتَابُ جَدِيدٌ؟ میں، سوال verbal sentence استعمال کرتا ہے۔",
+        "en": "Ahmad began the lesson.",
+        "ur": "احمد نے سبق شروع کیا۔",
         "ar_example": {
-          "ar": "سَأَلَ الطَّالِبُ: هَلِ الْكِتَابُ جَدِيدٌ؟",
-          "ar_plain": "سأل الطالب: هل الكتاب جديد؟",
-          "translit": "sa'ala at-taalibu: hal al-kitaabu jadiidun?",
-          "en": "The student asked: Is the book new?",
-          "ur": "طالب علم نے پوچھا: کیا کتاب نئی ہے؟"
+          "ar": "وَبَدَأَ الْأُسْتَاذُ الدَّرْسَ",
+          "ar_plain": "وبدأ الأستاذ الدرس",
+          "translit": "wa-badaʾa l-ustādhu d-darsa",
+          "en": "and the teacher began the lesson",
+          "ur": "اور استاد نے سبق شروع کیا"
         }
       },
       "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "The question الْكِتَابُ جَدِيدٌ is a nominal sentence (no verb). هَل is just the question marker — it doesn't change the sentence type.",
-        "ur": "سوال الْكِتَابُ جَدِيدٌ ایک nominal sentence ہے (کوئی verb نہیں)۔ هَل صرف question marker ہے — یہ sentence type نہیں بدلتی۔"
+        "en": "وَبَدَأَ الْأُسْتَاذُ الدَّرْسَ: the teacher began it.",
+        "ur": "وَبَدَأَ الْأُسْتَاذُ الدَّرْسَ: استاد نے شروع کیا۔"
       }
     },
     {
-      "type": "FILL_BLANK",
-      "id": "ch30-l02-ex03",
-      "mode": "TAP",
-      "sentence_ar": "___ الْمُسْلِمُونَ صَالِحُونَ",
-      "hint": {
-        "en": "The Muslims said: The Muslims are righteous.",
-        "ur": "مسلمانوں نے کہا: مسلمان نیک ہیں۔"
-      },
-      "options": [
-        {
-          "ar": "قَالُوا",
-          "ar_plain": "قالوا",
-          "translit": "qaaloo",
-          "en": "they said",
-          "ur": "انہوں نے کہا"
-        },
-        {
-          "ar": "قَالَ",
-          "ar_plain": "قال",
-          "translit": "qaala",
-          "en": "he said",
-          "ur": "اس نے کہا"
-        },
-        {
-          "ar": "سَأَلَ",
-          "ar_plain": "سأل",
-          "translit": "sa'ala",
-          "en": "he asked",
-          "ur": "اس نے پوچھا"
-        },
-        {
-          "ar": "أَجَابَ",
-          "ar_plain": "أجاب",
-          "translit": "aajaaba",
-          "en": "he answered",
-          "ur": "اس نے جواب دیا"
-        }
-      ],
-      "correct_answer": {
-        "ar": "قَالُوا",
-        "ar_plain": "قالوا",
-        "translit": "qaaloo",
-        "en": "they said",
-        "ur": "انہوں نے کہا"
-      },
-      "xp_value": 1
-    },
-    {
       "type": "MATCHING",
-      "id": "ch30-l02-ex04",
+      "id": "ch30-l02-ex02",
       "left_column": [
         {
-          "ar": "قَالَ",
-          "ar_plain": "قال",
-          "translit": "qaala",
-          "en": "he said",
-          "ur": "اس نے کہا"
+          "ar": "خَرَجَ أَحْمَدُ مِنَ الْبَيْتِ",
+          "ar_plain": "خرج أحمد من البيت",
+          "translit": "kharaja aḥmadu mina l-bayti",
+          "en": "Ahmad went out of the house",
+          "ur": "احمد گھر سے نکلا"
         },
         {
-          "ar": "سَأَلَ",
-          "ar_plain": "سأل",
-          "translit": "sa'ala",
-          "en": "he asked",
-          "ur": "اس نے پوچھا"
+          "ar": "فَدَخَلَ الْفَصْلَ",
+          "ar_plain": "فدخل الفصل",
+          "translit": "fa-dakhala l-faṣla",
+          "en": "then he entered the classroom",
+          "ur": "پھر وہ کلاس میں داخل ہوا"
         },
         {
-          "ar": "أَجَابَ",
-          "ar_plain": "أجاب",
-          "translit": "aajaaba",
-          "en": "he answered",
-          "ur": "اس نے جواب دیا"
-        },
-        {
-          "ar": "هَلْ",
-          "ar_plain": "هل",
-          "translit": "hal",
-          "en": "question particle",
-          "ur": "سوال کرنے والا لفظ"
+          "ar": "فَهِمَ أَحْمَدُ الدَّرْسَ فَرَجَعَ إِلَى الْبَيْتِ",
+          "ar_plain": "فهم أحمد الدرس فرجع إلى البيت",
+          "translit": "fahima aḥmadu d-darsa fa-rajaʿa ilā l-bayti",
+          "en": "Ahmad understood the lesson, so he went back home",
+          "ur": "احمد نے سبق سمجھ لیا، تو وہ گھر واپس آیا"
         }
       ],
       "right_column": [
         {
-          "en": " Dialogue verb — speaking",
-          "ur": "Dialogue verb — بات کہنا"
+          "en": "first",
+          "ur": "پہلے"
         },
         {
-          "en": " Dialogue verb — asking",
-          "ur": "Dialogue verb — پوچھنا"
+          "en": "third",
+          "ur": "تیسرے"
         },
         {
-          "en": " Dialogue verb — answering",
-          "ur": "Dialogue verb — جواب دینا"
-        },
-        {
-          "en": " Question marker",
-          "ur": "سوال کا نشان"
+          "en": "last",
+          "ur": "آخر میں"
         }
       ],
       "correct_pairs": [
@@ -292,154 +169,257 @@
         [
           2,
           2
-        ],
-        [
-          3,
-          3
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch30-l02-ex05",
-      "target_translation": {
-        "en": "The student answered: The book is new.",
-        "ur": "طالب علم نے جواب دیا: کتاب نئی ہے۔"
-      },
-      "tiles": [
-        {
-          "ar": "أَجَابَ",
-          "ar_plain": "أجاب",
-          "translit": "aajaaba",
-          "en": "he answered",
-          "ur": "اس نے جواب دیا"
-        },
-        {
-          "ar": "الطَّالِبُ",
-          "ar_plain": "الطالب",
-          "translit": "at-taalibu",
-          "en": "the student",
-          "ur": "طالب علم"
-        },
-        {
-          "ar": "الْكِتَابُ",
-          "ar_plain": "الكتاب",
-          "translit": "al-kitaabu",
-          "en": "the book",
-          "ur": "کتاب"
-        },
-        {
-          "ar": "جَدِيدٌ",
-          "ar_plain": "جديد",
-          "translit": "jadiidun",
-          "en": "new",
-          "ur": "نئی"
-        }
-      ],
-      "correct_order": [
-        1,
-        0,
-        2,
-        3
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch30-l02-ex06",
-      "prompt": {
-        "ar": "سَأَلَ الرَّجُلُ: هَلِ الْمَسْجِدُ كَبِيرٌ؟",
-        "ar_plain": "سأل الرجل: هل المسجد كبير؟",
-        "translit": "sa'ala ar-rajulu: hal al-masjidu kabirun?",
-        "en": "The man asked: Is the mosque big?",
-        "ur": "آدمی نے پوچھا: کیا مسجد بڑی ہے؟"
-      },
-      "options": [
-        {
-          "en": "The man asked: Is the mosque big?",
-          "ur": "آدمی نے پوچھا: کیا مسجد بڑی ہے؟"
-        },
-        {
-          "en": "The man said: The mosque is big.",
-          "ur": "آدمی نے کہا: مسجد بڑی ہے۔"
-        },
-        {
-          "en": "The man answered: The mosque is big.",
-          "ur": "آدمی نے جواب دیا: مسجد بڑی ہے۔"
-        },
-        {
-          "en": "The mosque is big.",
-          "ur": "مسجد بڑی ہے۔"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
+      "xp_value": 2,
       "explanation_on_wrong": {
-        "en": "سَأَلَ = he asked. The question uses هَل + nominal sentence الْمَسْجِدُ كَبِيرٌ.",
-        "ur": "سَأَلَ = اس نے پوچھا۔ سوال میں هَل + nominal sentence الْمَسْجِدُ كَبِيرٌ ہے۔"
+        "en": "Out of the house → school → classroom → lesson → home.",
+        "ur": "گھر سے ← اسکول ← کلاس ← سبق ← گھر۔"
       }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch30-l02-ex07",
+      "id": "ch30-l02-ex03",
       "prompt": {
-        "ar": "قَالَ مُحَمَّدٌ إِنَّ الْكِتَابَ جَدِيدٌ",
-        "ar_plain": "قال محمد ان الكتاب جديد",
-        "translit": "qaala muhammadun inna al-kitaaba jadiid",
-        "en": "Muhammad said that the book is new.",
-        "ur": "محمد نے کہا کہ کتاب نئی ہے۔"
+        "ar": "فَهِمَ أَحْمَدُ الدَّرْسَ فَرَجَعَ إِلَى الْبَيْتِ",
+        "ar_plain": "فهم أحمد الدرس فرجع إلى البيت",
+        "translit": "fahima aḥmadu d-darsa fa-rajaʿa ilā l-bayti",
+        "en": "Ahmad understood the lesson, so he went back home",
+        "ur": "احمد نے سبق سمجھ لیا، تو وہ گھر واپس آیا"
       },
       "options": [
         {
-          "en": "Muhammad has a new book.",
-          "ur": "محمد کے پاس نئی کتاب ہے۔"
+          "en": "Ahmad went back, then understood.",
+          "ur": "احمد واپس آیا، پھر سمجھا۔"
         },
         {
-          "en": "Muhammad said that the book is new.",
-          "ur": "محمد نے کہا کہ کتاب نئی ہے۔"
+          "en": "Ahmad did not understand.",
+          "ur": "احمد نہیں سمجھا۔"
         },
         {
-          "en": "Is the book new, Muhammad?",
-          "ur": "محمد، کیا کتاب نئی ہے؟"
+          "en": "The teacher went home.",
+          "ur": "استاد گھر گئے۔"
         },
         {
-          "en": "Muhammad said the book is old.",
-          "ur": "محمد نے کہا کہ کتاب پرانی ہے۔"
+          "en": "Ahmad understood the lesson, so he went back home.",
+          "ur": "احمد نے سبق سمجھ لیا، تو وہ گھر واپس آیا۔"
         }
       ],
-      "correct_index": 1,
-      "xp_value": 1
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "فَ links the next step: understood, so went back.",
+        "ur": "فَ اگلا مرحلہ جوڑتا ہے: سمجھ گیا، تو واپس آیا۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch30-l02-ex04",
+      "prompt_line": {
+        "ar": "أَيْنَ ذَهَبَ أَحْمَدُ بَعْدَ الْبَيْتِ؟",
+        "ar_plain": "أين ذهب أحمد بعد البيت؟",
+        "translit": "ayna dhahaba aḥmadu baʿda l-bayti?",
+        "en": "Where did Ahmad go after the house?",
+        "ur": "احمد گھر کے بعد کہاں گیا؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "إِلَى السُّوقِ",
+          "ar_plain": "إلى السوق",
+          "translit": "ilā s-sūqi",
+          "en": "to the market",
+          "ur": "بازار"
+        },
+        {
+          "ar": "إِلَى الْمَسْجِدِ",
+          "ar_plain": "إلى المسجد",
+          "translit": "ilā l-masjidi",
+          "en": "to the mosque",
+          "ur": "مسجد"
+        },
+        {
+          "ar": "إِلَى الْمَدْرَسَةِ",
+          "ar_plain": "إلى المدرسة",
+          "translit": "ilā l-madrasati",
+          "en": "to school",
+          "ur": "اسکول"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "وَذَهَبَ إِلَى الْمَدْرَسَةِ.",
+        "ur": "وَذَهَبَ إِلَى الْمَدْرَسَةِ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch30-l02-ex05",
+      "mode": "TAP",
+      "sentence_ar": "فَهِمَ أَحْمَدُ الدَّرْسَ ___ إِلَى الْبَيْتِ",
+      "hint": {
+        "en": "so he went back",
+        "ur": "تو وہ واپس آیا"
+      },
+      "options": [
+        {
+          "ar": "فَرَجَعَ",
+          "ar_plain": "فرجع",
+          "translit": "fa-rajaʿa",
+          "en": "so he went back",
+          "ur": "تو وہ واپس آیا"
+        },
+        {
+          "ar": "فَخَرَجَ",
+          "ar_plain": "فخرج",
+          "translit": "fa-kharaja",
+          "en": "so he went out",
+          "ur": "تو وہ نکلا"
+        },
+        {
+          "ar": "فَدَخَلَ",
+          "ar_plain": "فدخل",
+          "translit": "fa-dakhala",
+          "en": "so he entered",
+          "ur": "تو وہ داخل ہوا"
+        },
+        {
+          "ar": "فَبَدَأَ",
+          "ar_plain": "فبدأ",
+          "translit": "fa-badaʾa",
+          "en": "so he began",
+          "ur": "تو اس نے شروع کیا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "فَرَجَعَ",
+        "ar_plain": "فرجع",
+        "translit": "fa-rajaʿa",
+        "en": "so he went back",
+        "ur": "تو وہ واپس آیا"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Back home: رَجَعَ, joined with فَ: فَرَجَعَ.",
+        "ur": "گھر واپس: رَجَعَ، فَ کے ساتھ: فَرَجَعَ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch30-l02-ex06",
+      "statement": {
+        "en": "In فَدَخَلَ الْفَصْلَ, the doer is Ahmad, named earlier.",
+        "ur": "فَدَخَلَ الْفَصْلَ میں فاعل احمد ہے، جس کا نام پہلے آیا۔",
+        "ar_example": {
+          "ar": "فَدَخَلَ الْفَصْلَ",
+          "ar_plain": "فدخل الفصل",
+          "translit": "fa-dakhala l-faṣla",
+          "en": "then he entered the classroom",
+          "ur": "پھر وہ کلاس میں داخل ہوا"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "No new doer is named, so it is still أَحْمَدُ.",
+        "ur": "کوئی نیا فاعل نہیں آیا، اس لیے یہ اب بھی أَحْمَدُ ہے۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch30-l02-ex07",
+      "target_translation": {
+        "en": "Ahmad went out of the house.",
+        "ur": "احمد گھر سے نکلا۔"
+      },
+      "tiles": [
+        {
+          "ar": "الْبَيْتِ",
+          "ar_plain": "البيت",
+          "translit": "al-bayti",
+          "en": "the house",
+          "ur": "گھر"
+        },
+        {
+          "ar": "خَرَجَ",
+          "ar_plain": "خرج",
+          "translit": "kharaja",
+          "en": "went out",
+          "ur": "نکلا"
+        },
+        {
+          "ar": "مِنَ",
+          "ar_plain": "من",
+          "translit": "mina",
+          "en": "from",
+          "ur": "سے"
+        },
+        {
+          "ar": "أَحْمَدُ",
+          "ar_plain": "أحمد",
+          "translit": "aḥmadu",
+          "en": "Ahmad",
+          "ur": "احمد"
+        }
+      ],
+      "correct_order": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "خَرَجَ أَحْمَدُ مِنَ الْبَيْتِ.",
+        "ur": "خَرَجَ أَحْمَدُ مِنَ الْبَيْتِ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch30-l02-ex08",
+      "statement": {
+        "en": "وَ always means the next thing happened later.",
+        "ur": "وَ کا مطلب ہمیشہ یہ ہے کہ اگلی بات بعد میں ہوئی۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "وَ adds a detail; the order comes from the story itself, not from وَ alone.",
+        "ur": "وَ ایک بات جوڑتا ہے؛ ترتیب کہانی سے سمجھ آتی ہے، صرف وَ سے نہیں۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Arabic dialogue structure",
-      "ar": "بِناءُ الْحِوَارِ بِاللُّغَةِ الْعَرَبِيَّةِ",
-      "ur": "عربی dialogue کی ساخت"
+      "en": "Following a story",
+      "ar": "تَتَبُّعُ الْقِصَّةِ",
+      "ur": "کہانی کی پیروی"
     },
     "ayah": {
-      "surah": 12,
-      "ayah": 76,
-      "label": "Yusuf 12:76",
-      "ar": "وَفَوْقَ كُلِّ ذِي عِلْمٍ عَلِيمٌ",
-      "en": "And above every possessor of knowledge is one more knowing.",
-      "ur": "اور ہر علم والے سے اوپر ایک اور زیادہ جاننے والا ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012076.mp3"
+      "surah": 109,
+      "ayah": 1,
+      "label": "Al-Kafirun 109:1",
+      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
+      "en": "Say, O disbelievers,",
+      "ur": "کہہ دیجیے: اے کافرو!",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
     },
     "highlighted_word_indices": [
-      1,
-      3
+      0
+    ],
+    "highlighted_words": [
+      "قُلْ"
     ],
     "noor_explanation": {
-      "en": "قَالَ is a dialogue verb. In Arabic, dialogue verbs introduce quoted speech. The type of speech (nominal, verbal, or إِنَّ) depends on what was said.",
-      "ur": "قَالَ ایک dialogue verb ہے۔ عربی میں، dialogue verbs quoted speech متعارف کراتے ہیں۔ Speech کی type (nominal، verbal، یا إِنَّ) اس پر منحصر ہے کہ کیا کہا گیا۔"
+      "en": "قُلْ, say: in Lesson 5 you will read everything that follows this word, ayah by ayah.",
+      "ur": "قُلْ، کہہ دیجیے: سبق 5 میں آپ اس لفظ کے بعد کی ہر آیت پڑھیں گے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Dialogue in Arabic flows naturally once you know the verbs: قَالَ for saying, سَأَلَ for asking, أَجَابَ for answering. The rest is just sentence types!",
-      "ur": "عربی میں dialogue آپ کو verbs معلوم ہوں تو قدرتی طور پر flow کرتا ہے: قَالَ کہنے کے لیے، سَأَلَ پوچھنے کے لیے، أَجَابَ جواب دینے کے لیے۔ باقی صرف sentence types ہیں!"
+      "en": "You can follow a story in order. Next: a dialogue.",
+      "ur": "آپ ترتیب سے کہانی سمجھ سکتے ہیں۔ آگے: ایک مکالمہ۔"
     }
   }
 }

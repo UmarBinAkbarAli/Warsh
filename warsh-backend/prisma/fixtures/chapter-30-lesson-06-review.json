@@ -1,0 +1,452 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 30 review (ch30-l07, new, display order 6). An unseen four-step text (events, doers, pronouns ـهَا / بِهِ back to their nouns), dialogue repair, relative مَا, and Al-Kafirun recognition. Carries the job of the proposal's unbuilt transfer lesson. Rebuilt 2026-10-02 in the proposal harvest (Docs/proposals/proposal-harvest-tracker.md) from Docs/proposals/chapter-30-content-proposal.md and its review amendments: reading across sentences (pronoun back to its noun, وَ / فَ in context), following a short story, following a dialogue with a clarification, relative مَا ('what') with the whole clause as the thing not worshipped, and the one complete reading of Al-Kafirun 109:1–6. Removed: أَجَابَ under root ء-ج-ب (it is ج-و-ب), 'both words are definite' for الْكِتَابُ جَدِيدٌ, the إِنَّ-sentence called verbal, لَكُمْ / لِي called possessives, and the 'complete surah' lesson that skipped 109:3. The proposal's separate unseen-text lesson (l06) was not built; its job is in the review.",
+    "title": "Chapter 30 Review",
+    "titleAr": "مُرَاجَعَةُ الْفَصْلِ الثَّلَاثِينَ",
+    "titleUr": "باب 30 کی دہرائی",
+    "chapter_order": 30,
+    "lesson_order": 6,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 109,
+      "ayah": 6,
+      "label": "Al-Kafirun 109:6",
+      "ar": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+      "en": "For you is your religion, and for me is my religion.",
+      "ur": "تمہارے لیے تمہارا دین ہے اور میرے لیے میرا دین۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109006.mp3"
+    },
+    "noor_intro": {
+      "en": "The last ayah of the surah you read. One more listen before the review.",
+      "ur": "اس سورت کی آخری آیت جو آپ نے پڑھی۔ دہرائی سے پہلے ایک بار پھر سنیں۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "ذَهَبَتْ مَرْيَمُ إِلَى السُّوقِ مَعَ أُمِّهَا، فَأَعْطَتْهَا أُمُّهَا قَلَمًا جَدِيدًا. وَرَجَعَتْ مَرْيَمُ إِلَى الْبَيْتِ، فَكَتَبَتْ بِهِ الدَّرْسَ.",
+        "ar_plain": "ذهبت مريم إلى السوق مع أمها، فأعطتها أمها قلما جديدا. ورجعت مريم إلى البيت، فكتبت به الدرس.",
+        "translit": "dhahabat maryamu ilā s-sūqi maʿa ummihā, fa-aʿṭathā ummuhā qalaman jadīdan. wa-rajaʿat maryamu ilā l-bayti, fa-katabat bihi d-darsa.",
+        "en": "Maryam went to the market with her mother, and her mother gave her a new pen. Maryam went back home and wrote the lesson with it.",
+        "ur": "مریم اپنی والدہ کے ساتھ بازار گئی، اور اس کی والدہ نے اسے ایک نیا قلم دیا۔ مریم گھر واپس آئی، اور اس سے سبق لکھا۔"
+      },
+      "explanation": {
+        "en": "A new text. Read it, then answer from the text.",
+        "ur": "ایک نئی عبارت۔ پڑھیں، پھر عبارت سے جواب دیں۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "How to read it",
+        "ar": "مَنْ؟ مَاذَا؟ ثُمَّ مَاذَا؟",
+        "ur": "اسے کیسے پڑھیں"
+      },
+      "explanation": {
+        "en": "Who acts in each step? What happens next? Which noun does each pronoun point back to?",
+        "ur": "ہر مرحلے میں کون کام کرتا ہے؟ آگے کیا ہوتا ہے؟ ہر ضمیر کس اسم کی طرف لوٹتی ہے؟"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch30-l07-ex01",
+      "statement": {
+        "en": "Maryam gave her mother a pen.",
+        "ur": "مریم نے اپنی والدہ کو قلم دیا۔",
+        "ar_example": {
+          "ar": "ذَهَبَتْ مَرْيَمُ إِلَى السُّوقِ مَعَ أُمِّهَا، فَأَعْطَتْهَا أُمُّهَا قَلَمًا جَدِيدًا. وَرَجَعَتْ مَرْيَمُ إِلَى الْبَيْتِ، فَكَتَبَتْ بِهِ الدَّرْسَ.",
+          "ar_plain": "ذهبت مريم إلى السوق مع أمها، فأعطتها أمها قلما جديدا. ورجعت مريم إلى البيت، فكتبت به الدرس.",
+          "translit": "dhahabat maryamu ilā s-sūqi maʿa ummihā, fa-aʿṭathā ummuhā qalaman jadīdan. wa-rajaʿat maryamu ilā l-bayti, fa-katabat bihi d-darsa.",
+          "en": "Maryam went to the market with her mother, and her mother gave her a new pen. Maryam went back home and wrote the lesson with it.",
+          "ur": "مریم اپنی والدہ کے ساتھ بازار گئی، اور اس کی والدہ نے اسے ایک نیا قلم دیا۔ مریم گھر واپس آئی، اور اس سے سبق لکھا۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "فَأَعْطَتْهَا أُمُّهَا قَلَمًا: her mother gave her the pen.",
+        "ur": "فَأَعْطَتْهَا أُمُّهَا قَلَمًا: اس کی والدہ نے اسے قلم دیا۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch30-l07-ex02",
+      "prompt_line": {
+        "ar": "أَيْنَ ذَهَبَتْ مَرْيَمُ؟",
+        "ar_plain": "أين ذهبت مريم؟",
+        "translit": "ayna dhahabat maryamu?",
+        "en": "Where did Maryam go?",
+        "ur": "مریم کہاں گئی؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "إِلَى الْمَدْرَسَةِ",
+          "ar_plain": "إلى المدرسة",
+          "translit": "ilā l-madrasati",
+          "en": "to school",
+          "ur": "اسکول"
+        },
+        {
+          "ar": "إِلَى السُّوقِ",
+          "ar_plain": "إلى السوق",
+          "translit": "ilā s-sūqi",
+          "en": "to the market",
+          "ur": "بازار"
+        },
+        {
+          "ar": "إِلَى الْمَسْجِدِ",
+          "ar_plain": "إلى المسجد",
+          "translit": "ilā l-masjidi",
+          "en": "to the mosque",
+          "ur": "مسجد"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "ذَهَبَتْ مَرْيَمُ إِلَى السُّوقِ.",
+        "ur": "ذَهَبَتْ مَرْيَمُ إِلَى السُّوقِ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch30-l07-ex03",
+      "prompt": {
+        "ar": "فَكَتَبَتْ بِهِ الدَّرْسَ",
+        "ar_plain": "فكتبت به الدرس",
+        "translit": "fa-katabat bihi d-darsa",
+        "en": "and she wrote the lesson with it",
+        "ur": "اور اس نے اس سے سبق لکھا"
+      },
+      "options": [
+        {
+          "en": "with it = with the market",
+          "ur": "اس سے = بازار سے"
+        },
+        {
+          "en": "with it = with her mother",
+          "ur": "اس سے = والدہ سے"
+        },
+        {
+          "en": "with it = with the house",
+          "ur": "اس سے = گھر سے"
+        },
+        {
+          "en": "with it = with the new pen",
+          "ur": "اس سے = نئے قلم سے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "بِهِ points back to قَلَمًا جَدِيدًا, the new pen.",
+        "ur": "بِهِ، قَلَمًا جَدِيدًا، نئے قلم، کی طرف لوٹتا ہے۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch30-l07-ex04",
+      "left_column": [
+        {
+          "ar": "ذَهَبَتْ",
+          "ar_plain": "ذهبت",
+          "translit": "dhahabat",
+          "en": "went",
+          "ur": "گئی"
+        },
+        {
+          "ar": "فَأَعْطَتْهَا",
+          "ar_plain": "فأعطتها",
+          "translit": "fa-aʿṭathā",
+          "en": "and gave her",
+          "ur": "اور اسے دیا"
+        },
+        {
+          "ar": "فَكَتَبَتْ",
+          "ar_plain": "فكتبت",
+          "translit": "fa-katabat",
+          "en": "and wrote",
+          "ur": "اور لکھا"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "first",
+          "ur": "پہلے"
+        },
+        {
+          "en": "second",
+          "ur": "دوسرے"
+        },
+        {
+          "en": "last",
+          "ur": "آخر میں"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "Market → the gift → home → writing.",
+        "ur": "بازار ← تحفہ ← گھر ← لکھنا۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch30-l07-ex05",
+      "mode": "TAP",
+      "sentence_ar": "سَأَلَ أَحْمَدُ: أَيْنَ الْكِتَابُ؟ فَقَالَتْ زَيْنَبُ: عَلَى الْمَكْتَبِ. فَقَالَ: ___، أَيْنَ؟",
+      "hint": {
+        "en": "He did not hear: sorry, where?",
+        "ur": "اس نے نہیں سنا: معاف کیجیے، کہاں؟"
+      },
+      "options": [
+        {
+          "ar": "نَعَمْ",
+          "ar_plain": "نعم",
+          "translit": "naʿam",
+          "en": "yes",
+          "ur": "جی ہاں"
+        },
+        {
+          "ar": "عَفْوًا",
+          "ar_plain": "عفوا",
+          "translit": "ʿafwan",
+          "en": "sorry",
+          "ur": "معاف کیجیے"
+        },
+        {
+          "ar": "هَذَا",
+          "ar_plain": "هذا",
+          "translit": "hādhā",
+          "en": "this",
+          "ur": "یہ"
+        },
+        {
+          "ar": "لَكُمْ",
+          "ar_plain": "لكم",
+          "translit": "lakum",
+          "en": "for you",
+          "ur": "تمہارے لیے"
+        }
+      ],
+      "correct_answer": {
+        "ar": "عَفْوًا",
+        "ar_plain": "عفوا",
+        "translit": "ʿafwan",
+        "en": "sorry",
+        "ur": "معاف کیجیے"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "عَفْوًا، أَيْنَ؟ asks for the place again.",
+        "ur": "عَفْوًا، أَيْنَ؟ جگہ دوبارہ پوچھتا ہے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch30-l07-ex06",
+      "ayah_fragment": {
+        "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
+        "surah_ref": "Al-Kafirun 109:2"
+      },
+      "options": [
+        {
+          "en": "مَا here asks a question.",
+          "ur": "یہاں مَا سوال پوچھتا ہے۔"
+        },
+        {
+          "en": "مَا here means not.",
+          "ur": "یہاں مَا کا مطلب ہے نہیں۔"
+        },
+        {
+          "en": "مَا here means what: what you worship.",
+          "ur": "یہاں مَا کا مطلب ہے جو: جس کی تم عبادت کرتے ہو۔"
+        },
+        {
+          "en": "مَا here means who.",
+          "ur": "یہاں مَا کا مطلب ہے کون۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Inside a statement, مَا means what, that which.",
+        "ur": "بیان کے اندر مَا کا مطلب ہے جو۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch30-l07-ex07",
+      "ayah_fragment": {
+        "ar": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+        "surah_ref": "Al-Kafirun 109:6"
+      },
+      "options": [
+        {
+          "en": "For you is your religion, and for me is my religion.",
+          "ur": "تمہارے لیے تمہارا دین ہے اور میرے لیے میرا دین۔"
+        },
+        {
+          "en": "Your religion is my religion.",
+          "ur": "تمہارا دین میرا دین ہے۔"
+        },
+        {
+          "en": "I worship what you worship.",
+          "ur": "میں اس کی عبادت کرتا ہوں جس کی تم کرتے ہو۔"
+        },
+        {
+          "en": "O disbelievers!",
+          "ur": "اے کافرو!"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَكُمْ دِينُكُمْ: for you your religion; وَلِيَ دِينِ: and for me my religion.",
+        "ur": "لَكُمْ دِينُكُمْ: تمہارے لیے تمہارا دین؛ وَلِيَ دِينِ: اور میرے لیے میرا دین۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch30-l07-ex08",
+      "statement": {
+        "en": "In أُمِّهَا and فَأَعْطَتْهَا, ـهَا points back to Maryam.",
+        "ur": "أُمِّهَا اور فَأَعْطَتْهَا میں ـهَا، مریم کی طرف لوٹتا ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Her mother, gave her: both ـهَا are Maryam.",
+        "ur": "اس کی والدہ، اسے دیا: دونوں ـهَا مریم ہیں۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch30-l07-ex09",
+      "target_translation": {
+        "en": "The student wrote what the teacher said.",
+        "ur": "طالب علم نے لکھ لیا جو استاد نے کہا۔"
+      },
+      "tiles": [
+        {
+          "ar": "مَا",
+          "ar_plain": "ما",
+          "translit": "mā",
+          "en": "what",
+          "ur": "جو"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibu",
+          "en": "the student",
+          "ur": "طالب علم"
+        },
+        {
+          "ar": "الْأُسْتَاذُ",
+          "ar_plain": "الأستاذ",
+          "translit": "al-ustādhu",
+          "en": "the teacher",
+          "ur": "استاد"
+        },
+        {
+          "ar": "كَتَبَ",
+          "ar_plain": "كتب",
+          "translit": "kataba",
+          "en": "wrote",
+          "ur": "لکھا"
+        },
+        {
+          "ar": "قَالَ",
+          "ar_plain": "قال",
+          "translit": "qāla",
+          "en": "said",
+          "ur": "کہا"
+        }
+      ],
+      "correct_order": [
+        3,
+        1,
+        0,
+        4,
+        2
+      ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "كَتَبَ الطَّالِبُ مَا قَالَ الْأُسْتَاذُ.",
+        "ur": "كَتَبَ الطَّالِبُ مَا قَالَ الْأُسْتَاذُ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch30-l07-ex10",
+      "statement": {
+        "en": "Maryam went to the market alone.",
+        "ur": "مریم اکیلی بازار گئی۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَعَ أُمِّهَا: with her mother.",
+        "ur": "مَعَ أُمِّهَا: اپنی والدہ کے ساتھ۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 30 — connected reading",
+      "ar": "الْقِرَاءَةُ الْمُتَّصِلَةُ",
+      "ur": "باب 30 — مربوط پڑھائی"
+    },
+    "ayah": {
+      "surah": 109,
+      "ayah": 6,
+      "label": "Al-Kafirun 109:6",
+      "ar": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+      "en": "For you is your religion, and for me is my religion.",
+      "ur": "تمہارے لیے تمہارا دین ہے اور میرے لیے میرا دین۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109006.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "لَكُمْ",
+      "دِينُكُمْ"
+    ],
+    "noor_explanation": {
+      "en": "لَكُمْ دِينُكُمْ: for you, your religion — two kinds of ـكُمْ, read in context.",
+      "ur": "لَكُمْ دِينُكُمْ: تمہارے لیے، تمہارا دین — ـكُمْ کی دو صورتیں، سیاق میں پڑھی گئیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Review done. Next: the Chapter 30 final test.",
+      "ur": "دہرائی مکمل۔ آگے: باب 30 کا آخری امتحان۔"
+    }
+  }
+}

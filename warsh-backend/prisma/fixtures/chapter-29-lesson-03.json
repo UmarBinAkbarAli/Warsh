@@ -2,231 +2,203 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 29, Lesson 3 - Contrast nominal vs. verbal sentences side by side.",
+    "_note": "Chapter 29, Lesson 3 (ch29-l03) — classify by the core: verb-first vs noun-first. A noun-first sentence whose comment is a whole verbal clause (الطَّالِبُ ذَهَبَ …) is nominal at the top level; past verbs only, so no imperfect is taught (S11). Prefixes such as وَ, قُلْ, لَا are looked past: 112:1 after قُلْ is nominal; 109:2 after لَا opens with a verb (أَعْبُدُ, glossed). Rebuilt 2026-10-02 in the proposal harvest (Docs/proposals/proposal-harvest-tracker.md) from Docs/proposals/chapter-29-content-proposal.md and its review amendments: nominal sentence (topic + comment) vs verbal sentence (verb + doer), the noun-led sentence whose comment is a verbal clause, finding the core after a prefix such as وَ / قُلْ / لَا, and retrieval of Chapter 24's إِنَّ (اسم منصوب، خبر مرفوع) and Chapter 25's لَيْسَ. Removed: the reversed إِنَّ rule (خبر إنّ marked accusative, كَبِيرًا), 'a nominal sentence never contains a verb', عَابِدُونَ parsed as a verb, وَلَكُمْ called a subject, and the repeated Al-Kafirun parsing/Tadabbur lesson (Chapter 30 owns the full surah). Al-Kafirun's verbs stay glossed chunks (S11).",
+    "title": "Compare the Two Cores",
+    "titleAr": "رُكْنُ الْجُمْلَةِ",
+    "titleUr": "دونوں جملوں کا موازنہ",
     "chapter_order": 29,
     "lesson_order": 3,
-    "chapter_title": "Nominal vs. Verbal Sentences",
-    "title": "Contrasting Nominal and Verbal Sentences",
-    "titleAr": "فَرْقُ الْجُمْلَة الِاسْمِيَّة وَالْفِعْلِيَّة",
-    "source": "madina_book3_lesson6_nominal_verbal",
-    "estimated_minutes": 8,
+    "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 109,
-      "ayah": 2,
-      "label": "Al-Kafirun 109:2",
-      "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
-      "en": "I do not worship what you worship.",
-      "ur": "میں اس کی عبادت نہیں کرتا جو تم عبادت کرتے ہو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109002.mp3"
+      "surah": 112,
+      "ayah": 1,
+      "label": "Al-Ikhlas 112:1",
+      "ar": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+      "en": "Say, He is Allah, One.",
+      "ur": "کہہ دیجیے: وہ اللہ ایک ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/112001.mp3"
     },
     "noor_intro": {
-      "en": "لَا أَعْبُدُ starts with أَعْبُدُ — a verb. This ayah is a verbal sentence. Now compare it with the nominal sentence we saw in the last lesson.",
-      "ur": "لَا أَعْبُدُ أَعْبُدُ سے شروع ہوتا ہے — ایک فعل۔ یہ آیت ایک فعلی جملہ ہے۔ اب اس کا موازنہ پچھلے سبق میں دیکھی گئی اسمی جملے سے کریں۔"
+      "en": "قُلْ, say, comes first. What follows it — a verb or a noun?",
+      "ur": "قُلْ، کہہ دیجیے، پہلے آتا ہے۔ اس کے بعد کیا ہے — فعل یا اسم؟"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Same news, two orders",
+        "ar": "ذَهَبَ الطَّالِبُ / الطَّالِبُ ذَهَبَ",
+        "ur": "ایک خبر، دو ترتیبیں"
+      },
+      "explanation": {
+        "en": "ذَهَبَ الطَّالِبُ … opens with the verb: a verbal sentence. الطَّالِبُ ذَهَبَ … opens with the noun: a nominal sentence — the student is the topic, and ذَهَبَ … is what is said about him.",
+        "ur": "ذَهَبَ الطَّالِبُ … فعل سے شروع ہوتا ہے: جملہ فعلیہ۔ الطَّالِبُ ذَهَبَ … اسم سے شروع ہوتا ہے: جملہ اسمیہ — طالب علم مبتدا ہے، اور ذَهَبَ … اس کے بارے میں خبر ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ",
+          "ar_plain": "ذهب الطالب إلى المدرسة",
+          "translit": "dhahaba ṭ-ṭālibu ilā l-madrasati",
+          "en": "The student went to school.",
+          "ur": "طالب علم اسکول گیا۔"
+        },
+        {
+          "ar": "الطَّالِبُ ذَهَبَ إِلَى الْمَدْرَسَةِ",
+          "ar_plain": "الطالب ذهب إلى المدرسة",
+          "translit": "aṭ-ṭālibu dhahaba ilā l-madrasati",
+          "en": "The student — he went to school.",
+          "ur": "طالب علم — وہ اسکول گیا۔"
+        }
+      ]
+    },
+    {
       "type": "CONCEPT",
       "concept": {
-        "en": "The fundamental contrast",
-        "ar": "بنیادی فرق",
-        "ur": "بنیادی فرق"
+        "en": "A comment can be a whole action",
+        "ar": "الطَّالِبُ | ذَهَبَ إِلَى الْمَدْرَسَةِ",
+        "ur": "خبر پورا کام بھی ہو سکتی ہے"
       },
       "explanation": {
-        "en": "Nominal sentence: starts with noun/pronoun (no verb first) → pattern: مبتدأ + خبر. Verbal sentence: starts with a verb (verb IS first) → pattern: فِعْل + فاعل.",
-        "ur": "اسمی جملہ: اسم/ضمیر سے شروع (پہلے فعل نہیں) → فارمولا: مُبْتَدَأ + خَبَر۔ فعلی جملہ: فعل سے شروع (فعل پہلے ہے) → فارمولا: فِعْل + فَاعِل۔"
+        "en": "In الطَّالِبُ ذَهَبَ إِلَى الْمَدْرَسَةِ the comment is a small verbal sentence: (he) went to school. The whole sentence is still nominal, because its core opens with الطَّالِبُ.",
+        "ur": "الطَّالِبُ ذَهَبَ إِلَى الْمَدْرَسَةِ میں خبر ایک چھوٹا جملہ فعلیہ ہے: (وہ) اسکول گیا۔ پورا جملہ پھر بھی اسمیہ ہے، کیونکہ اس کی بنیاد الطَّالِبُ سے شروع ہوتی ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "الْكِتَابُ كَبِيرٌ",
-        "ar_plain": "الكتاب كبير",
-        "translit": "al-kitaabu kabiirun",
-        "en": "The book is big (nominal)",
-        "ur": "کتاب بڑی ہے (اسمی)"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Look past the opening word",
+        "ar": "قُلْ · وَ · لَا",
+        "ur": "شروع کے لفظ سے آگے دیکھیں"
       },
       "explanation": {
-        "en": "Starts with الْكِتَابُ (noun) — no verb. Pattern: مبتدأ (topic) + خبر (description). هَذَا كِتَابٌ, الرَّجُلُ مُسْلِمٌ — all follow this pattern.",
-        "ur": "الْكِتَابُ (اسم) سے شروع — کوئی فعل نہیں۔ فارمولا: مُبْتَدَأ (موضوع) + خَبَر (تفصیل)۔ هَذَا كِتَابٌ، الرَّجُلُ مُسْلِمٌ — سب یہی فارمولا اپناتے ہیں۔"
+        "en": "قُلْ (say), وَ (and) or لَا (not) can come before the core. Skip these, then ask: does the core open with a verb or a noun?",
+        "ur": "قُلْ (کہیے)، وَ (اور) یا لَا (نہیں) جملے کی بنیاد سے پہلے آ سکتے ہیں۔ انہیں چھوڑ کر پوچھیں: بنیاد فعل سے شروع ہوتی ہے یا اسم سے؟"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "ذَهَبَ الطَّالِبُ",
-        "ar_plain": "ذهب الطالب",
-        "translit": "dhahaba at-taalibu",
-        "en": "The student went (verbal)",
-        "ur": "طالب علم گیا (فعلي)"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Ikhlas 112:1: Say, He is Allah, One.",
+        "ar": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+        "ur": "الاخلاص 112:1: کہہ دیجیے: وہ اللہ ایک ہے۔"
       },
       "explanation": {
-        "en": "Starts with ذَهَبَ (verb) — the verb comes FIRST. Pattern: فِعْل (action) + فَاعِل (doer). قَامَ الرَّجُلُ, قَرَأَ الْمُسْلِمُ — all follow this pattern.",
-        "ur": "ذَهَبَ (فعل) سے شروع — فعل پہلے آتا ہے۔ فارمولا: فِعْل (عمل) + فَاعِل (کنندہ)۔ قَامَ الرَّجُلُ، قَرَأَ الْمُسْلِمُ — سب یہی فارمولا اپناتے ہیں۔"
-      }
+        "en": "After قُلْ the core is هُوَ اللَّهُ أَحَدٌ: it opens with the pronoun هُوَ, so it is nominal.",
+        "ur": "قُلْ کے بعد بنیاد هُوَ اللَّهُ أَحَدٌ ہے: یہ ضمیر هُوَ سے شروع ہوتی ہے، اس لیے اسمیہ ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/112001.mp3"
     },
     {
-      "type": "EXAMPLE",
-      "text": {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Kafirun 109:2: I do not worship what you worship.",
         "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
-        "ar_plain": "لا أعبد ما تعبدون",
-        "translit": "laa a'budu maa ta'budoon",
-        "en": "I do not worship what you worship (verbal)",
-        "ur": "میں اس کی عبادت نہیں کرتا جو تم عبادت کرتے ہو (فعلي)"
+        "ur": "الکافرون 109:2: میں اس کی عبادت نہیں کرتا جس کی تم عبادت کرتے ہو۔"
       },
       "explanation": {
-        "en": "أَعْبُدُ is a verb (I worship) and it is the FIRST word. This is a verbal sentence. لَا negates it. مَا تَعْبُدُونَ is the object.",
-        "ur": "أَعْبُدُ ایک فعل ہے (میں عبادت کرتا ہوں) اور یہ پہلا لفظ ہے۔ یہ ایک فعلی جملہ ہے۔ لَا اسے منفی کرتا ہے۔ مَا تَعْبُدُونَ مفعول ہے۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "How to tell the difference instantly",
-        "ur": "فرق کیسے پہچانیں"
+        "en": "After لَا, not, the core opens with أَعْبُدُ, I worship — a verb, given here as a whole word. So the core is verbal.",
+        "ur": "لَا، نہیں، کے بعد بنیاد أَعْبُدُ، میں عبادت کرتا ہوں، سے شروع ہوتی ہے — ایک فعل، جو یہاں پورا لفظ دیا گیا ہے۔ اس لیے بنیاد فعلیہ ہے۔"
       },
-      "body": {
-        "en": "Look at the FIRST word: if it is a verb (ذَهَبَ, قَامَ, قَرَأَ, أَعْبُدُ, قُلْ) → verbal. If it is a noun or pronoun (هَذَا, الْكِتَابُ, الرَّجُلُ) → nominal.",
-        "ur": "پہلے لفظ کو دیکھیں: اگر یہ فعل ہے (ذَهَبَ، قَامَ، قَرَأَ، أَعْبُدُ، قُلْ) → فعلی۔ اگر یہ اسم یا ضمیر ہے (هَذَا، الْكِتَابُ، الرَّجُلُ) → اسمی۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "اِسْمِيَّة",
-        "ar_plain": "اسمية",
-        "translit": "ismiyya",
-        "en": "nominal",
-        "ur": "اسمی"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "فِعْلِيَّة",
-        "ar_plain": "فعليه",
-        "translit": "fi'liyya",
-        "en": "verbal",
-        "ur": "فعلي"
-      }
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109002.mp3"
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
+      "type": "TRUE_FALSE",
       "id": "ch29-l03-ex01",
-      "prompt": {
-        "ar": "ذَهَبَ الرَّجُلُ",
-        "ar_plain": "ذهب الرجل",
-        "translit": "dhahaba ar-rajulu",
-        "en": "The man went",
-        "ur": "آدمی گیا"
-      },
-      "options": [
-        {
-          "en": "verbal — starts with a verb",
-          "ur": "فعلي"
-        },
-        {
-          "en": "nominal — starts with a noun/pronoun",
-          "ur": "اسمی"
-        },
-        {
-          "en": "imperative — starts with a command",
-          "ur": "امریہ"
-        },
-        {
-          "en": "interrogative — starts with a question",
-          "ur": "سوالیہ"
+      "statement": {
+        "en": "This sentence is nominal.",
+        "ur": "یہ جملہ اسمیہ ہے۔",
+        "ar_example": {
+          "ar": "الطَّالِبُ ذَهَبَ إِلَى الْمَدْرَسَةِ",
+          "ar_plain": "الطالب ذهب إلى المدرسة",
+          "translit": "aṭ-ṭālibu dhahaba ilā l-madrasati",
+          "en": "The student — he went to school.",
+          "ur": "طالب علم — وہ اسکول گیا۔"
         }
-      ],
-      "correct_index": 0,
-      "xp_value": 1
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Its core opens with الطَّالِبُ; ذَهَبَ … is the comment.",
+        "ur": "اس کی بنیاد الطَّالِبُ سے شروع ہوتی ہے؛ ذَهَبَ … خبر ہے۔"
+      }
     },
     {
-      "type": "TAP_TRANSLATION",
+      "type": "TRUE_FALSE",
       "id": "ch29-l03-ex02",
-      "prompt": {
-        "ar": "الْكِتَابُ كَبِيرٌ",
-        "ar_plain": "الكتاب كبير",
-        "translit": "al-kitaabu kabiirun",
-        "en": "The book is big",
-        "ur": "کتاب بڑی ہے"
-      },
-      "options": [
-        {
-          "en": "nominal — starts with a noun/pronoun",
-          "ur": "اسمی"
-        },
-        {
-          "en": "verbal — starts with a verb",
-          "ur": "فعلي"
-        },
-        {
-          "en": "exclamatory — expresses surprise",
-          "ur": "ندا"
-        },
-        {
-          "en": "conditional — starts with if/when",
-          "ur": "شرطیہ"
+      "statement": {
+        "en": "This sentence is nominal.",
+        "ur": "یہ جملہ اسمیہ ہے۔",
+        "ar_example": {
+          "ar": "ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ",
+          "ar_plain": "ذهب الطالب إلى المدرسة",
+          "translit": "dhahaba ṭ-ṭālibu ilā l-madrasati",
+          "en": "The student went to school.",
+          "ur": "طالب علم اسکول گیا۔"
         }
-      ],
-      "correct_index": 0,
-      "xp_value": 1
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "It opens with the verb ذَهَبَ: a verbal sentence.",
+        "ur": "یہ فعل ذَهَبَ سے شروع ہوتا ہے: جملہ فعلیہ۔"
+      }
     },
     {
       "type": "MATCHING",
       "id": "ch29-l03-ex03",
       "left_column": [
         {
-          "ar": "هَذَا كِتَابٌ",
-          "ar_plain": "هذا كتاب",
-          "translit": "haadhaa kitaabun",
-          "en": "This is a book",
-          "ur": "یہ کتاب ہے"
+          "ar": "الْبَيْتُ كَبِيرٌ",
+          "ar_plain": "البيت كبير",
+          "translit": "al-baytu kabīrun",
+          "en": "The house is big.",
+          "ur": "گھر بڑا ہے۔"
         },
         {
-          "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
-          "ar_plain": "لا أعبد ما تعبدون",
-          "translit": "laa a'budu maa ta'budoon",
-          "en": "I do not worship what you worship",
-          "ur": "میں اس کی عبادت نہیں کرتا جو تم عبادت کرتے ہو"
+          "ar": "فَهِمَ الطَّالِبُ",
+          "ar_plain": "فهم الطالب",
+          "translit": "fahima ṭ-ṭālibu",
+          "en": "The student understood.",
+          "ur": "طالب علم سمجھ گیا۔"
         },
         {
-          "ar": "الطَّالِبُ مُجْتَهِدٌ",
-          "ar_plain": "الطالب مجتهد",
-          "translit": "at-taalibu mujtahidun",
-          "en": "The student is diligent",
-          "ur": "طالب علم محنتی ہے"
+          "ar": "الْبِنْتُ رَجَعَتْ",
+          "ar_plain": "البنت رجعت",
+          "translit": "al-bintu rajaʿat",
+          "en": "The girl — she came back.",
+          "ur": "لڑکی — وہ واپس آئی۔"
         },
         {
-          "ar": "قَامَ الْمُسْلِمُ",
-          "ar_plain": "قام المسلم",
-          "translit": "qaama al-muslimu",
-          "en": "The Muslim stood",
-          "ur": "مسلمان کھڑا ہوا"
+          "ar": "رَجَعَتِ الْبِنْتُ",
+          "ar_plain": "رجعت البنت",
+          "translit": "rajaʿati l-bintu",
+          "en": "The girl came back.",
+          "ur": "لڑکی واپس آئی۔"
         }
       ],
       "right_column": [
         {
-          "en": "nominal",
-          "ur": "اسمی"
+          "en": "nominal — a word as comment",
+          "ur": "اسمیہ — خبر ایک لفظ"
         },
         {
-          "en": "verbal",
-          "ur": "فعلي"
+          "en": "verbal — verb first",
+          "ur": "فعلیہ — پہلے فعل"
         },
         {
-          "en": "nominal",
-          "ur": "اسمی"
+          "en": "nominal — an action as comment",
+          "ur": "اسمیہ — خبر ایک کام"
         },
         {
-          "en": "verbal",
-          "ur": "فعلي"
+          "en": "verbal — a woman did it",
+          "ur": "فعلیہ — کام عورت نے کیا"
         }
       ],
       "correct_pairs": [
@@ -247,94 +219,156 @@
           3
         ]
       ],
-      "xp_value": 1
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "Check what the core opens with.",
+        "ur": "دیکھیں بنیاد کس سے شروع ہوتی ہے۔"
+      }
     },
     {
-      "type": "FILL_BLANK",
+      "type": "MATCH_AYAH",
       "id": "ch29-l03-ex04",
-      "mode": "TAP",
-      "sentence_ar": "A student went — ___ الطَّالِبُ",
-      "hint": {
-        "en": "verbal sentence — verb first",
-        "ur": "فعلی جملہ — فعل پہلے"
+      "ayah_fragment": {
+        "ar": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+        "surah_ref": "Al-Ikhlas 112:1"
       },
       "options": [
         {
-          "ar": "ذَهَبَ",
-          "ar_plain": "ذهب",
-          "translit": "dhahaba",
-          "en": "went",
-          "ur": "گیا"
+          "en": "After قُلْ, the core is verbal.",
+          "ur": "قُلْ کے بعد بنیاد فعلیہ ہے۔"
+        },
+        {
+          "en": "After قُلْ, the core is nominal: هُوَ اللَّهُ أَحَدٌ.",
+          "ur": "قُلْ کے بعد بنیاد اسمیہ ہے: هُوَ اللَّهُ أَحَدٌ۔"
+        },
+        {
+          "en": "There is no core.",
+          "ur": "کوئی بنیاد نہیں۔"
+        },
+        {
+          "en": "أَحَدٌ is the verb.",
+          "ur": "أَحَدٌ فعل ہے۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Skip قُلْ; the core opens with the pronoun هُوَ.",
+        "ur": "قُلْ کو چھوڑیں؛ بنیاد ضمیر هُوَ سے شروع ہوتی ہے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch29-l03-ex05",
+      "ayah_fragment": {
+        "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
+        "surah_ref": "Al-Kafirun 109:2"
+      },
+      "options": [
+        {
+          "en": "After لَا, the core opens with a noun.",
+          "ur": "لَا کے بعد بنیاد اسم سے شروع ہوتی ہے۔"
+        },
+        {
+          "en": "لَا is the verb.",
+          "ur": "لَا فعل ہے۔"
+        },
+        {
+          "en": "After لَا, the core opens with a verb: أَعْبُدُ.",
+          "ur": "لَا کے بعد بنیاد فعل سے شروع ہوتی ہے: أَعْبُدُ۔"
+        },
+        {
+          "en": "مَا is the doer.",
+          "ur": "مَا فاعل ہے۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَا, not, comes before the core; the core opens with أَعْبُدُ, I worship.",
+        "ur": "لَا، نہیں، بنیاد سے پہلے ہے؛ بنیاد أَعْبُدُ، میں عبادت کرتا ہوں، سے شروع ہوتی ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch29-l03-ex06",
+      "mode": "TAP",
+      "sentence_ar": "الْأُسْتَاذُ ___ الدَّرْسَ",
+      "hint": {
+        "en": "Make it nominal with an action comment: the teacher — he began the lesson.",
+        "ur": "اسے جملہ اسمیہ بنائیں جس کی خبر ایک کام ہو: استاد — انہوں نے سبق شروع کیا۔"
+      },
+      "options": [
+        {
+          "ar": "بَدَأَ",
+          "ar_plain": "بدأ",
+          "translit": "badaʾa",
+          "en": "began",
+          "ur": "شروع کیا"
+        },
+        {
+          "ar": "كَبِيرٌ",
+          "ar_plain": "كبير",
+          "translit": "kabīrun",
+          "en": "big",
+          "ur": "بڑا"
+        },
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "الْبِدَايَةُ",
+          "ar_plain": "البداية",
+          "translit": "al-bidāyatu",
+          "en": "the beginning",
+          "ur": "آغاز"
+        }
+      ],
+      "correct_answer": {
+        "ar": "بَدَأَ",
+        "ar_plain": "بدأ",
+        "translit": "badaʾa",
+        "en": "began",
+        "ur": "شروع کیا"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The comment is an action: بَدَأَ الدَّرْسَ, (he) began the lesson.",
+        "ur": "خبر ایک کام ہے: بَدَأَ الدَّرْسَ، (انہوں نے) سبق شروع کیا۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch29-l03-ex07",
+      "target_translation": {
+        "en": "The student went to school. (verb first)",
+        "ur": "طالب علم اسکول گیا۔ (پہلے فعل)"
+      },
+      "tiles": [
+        {
+          "ar": "إِلَى",
+          "ar_plain": "إلى",
+          "translit": "ilā",
+          "en": "to",
+          "ur": "تک"
         },
         {
           "ar": "الطَّالِبُ",
           "ar_plain": "الطالب",
-          "translit": "at-taalibu",
+          "translit": "aṭ-ṭālibu",
           "en": "the student",
           "ur": "طالب علم"
         },
         {
-          "ar": "كِتَابٌ",
-          "ar_plain": "كتاب",
-          "translit": "kitaabun",
-          "en": "a book",
-          "ur": "ایک کتاب"
-        },
-        {
-          "ar": "مُسْلِمٌ",
-          "ar_plain": "مسلم",
-          "translit": "muslimun",
-          "en": "a Muslim",
-          "ur": "مسلمان"
-        }
-      ],
-      "correct_answer": {
-        "ar": "ذَهَبَ",
-        "ar_plain": "ذهب",
-        "translit": "dhahaba",
-        "en": "went",
-        "ur": "گیا"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch29-l03-ex05",
-      "statement": {
-        "en": "If the first word of a sentence is a noun or pronoun, it is a nominal sentence.",
-        "ur": "اگر جملے کا پہلا لفظ اسم یا ضمیر ہو، تو یہ اسمی جملہ ہے۔",
-        "ar_example": {
-          "ar": "الْمُسْلِمُ صَالِحٌ",
-          "ar_plain": "المسلم صالح",
-          "translit": "al-muslimu saalihun",
-          "en": "The Muslim is righteous",
-          "ur": "مسلمان نیک ہے"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch29-l03-ex06",
-      "target_translation": {
-        "en": "The book is big",
-        "ur": "کتاب بڑی ہے"
-      },
-      "tiles": [
-        {
-          "ar": "كَبِيرٌ",
-          "ar_plain": "كبير",
-          "translit": "kabiirun",
-          "en": "big",
-          "ur": "بڑا"
-        },
-        {
-          "ar": "الْكِتَابُ",
-          "ar_plain": "الكتاب",
-          "translit": "al-kitaabu",
-          "en": "the book",
-          "ur": "کتاب"
+          "ar": "الْمَدْرَسَةِ",
+          "ar_plain": "المدرسة",
+          "translit": "al-madrasati",
+          "en": "the school",
+          "ur": "اسکول"
         },
         {
           "ar": "ذَهَبَ",
@@ -342,130 +376,90 @@
           "translit": "dhahaba",
           "en": "went",
           "ur": "گیا"
-        },
-        {
-          "ar": "هَذَا",
-          "ar_plain": "هذا",
-          "translit": "haadhaa",
-          "en": "this",
-          "ur": "یہ"
         }
       ],
       "correct_order": [
+        3,
         1,
-        0
+        0,
+        2
       ],
-      "xp_value": 1
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "Verb first: ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ.",
+        "ur": "پہلے فعل: ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ۔"
+      }
     },
     {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch29-l03-ex07",
-      "sentence_ar": "الْكِتَابُ كَبِيرٌ",
-      "words": [
-        {
-          "ar": "الْكِتَابُ",
-          "ar_plain": "الكتاب",
-          "translit": "al-kitaabu",
-          "en": "the book",
-          "ur": "کتاب"
-        },
-        {
-          "ar": "كَبِيرٌ",
-          "ar_plain": "كبير",
-          "translit": "kabiirun",
-          "en": "big",
-          "ur": "بڑا"
-        }
-      ],
-      "available_roles": [
-        "SUBJECT",
-        "PREDICATE",
-        "VERB",
-        "SUBJECT"
-      ],
-      "correct_roles": [
-        "SUBJECT",
-        "PREDICATE"
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "GRAMMAR_PARSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch29-l03-ex08",
-      "sentence_ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
-      "words": [
+      "prompt": {
+        "ar": "وَالْأُمُّ رَجَعَتْ مِنَ السُّوقِ",
+        "ar_plain": "والأم رجعت من السوق",
+        "translit": "wa-l-ummu rajaʿat mina s-sūqi",
+        "en": "And the mother — she came back from the market.",
+        "ur": "اور والدہ — وہ بازار سے واپس آئیں۔"
+      },
+      "options": [
         {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "not",
-          "ur": "نہیں"
+          "en": "verbal: it opens with وَ",
+          "ur": "فعلیہ: یہ وَ سے شروع ہوتا ہے"
         },
         {
-          "ar": "أَعْبُدُ",
-          "ar_plain": "أعبد",
-          "translit": "a'budu",
-          "en": "I worship",
-          "ur": "میں عبادت کرتا ہوں"
+          "en": "verbal: رَجَعَتْ is first",
+          "ur": "فعلیہ: رَجَعَتْ پہلے ہے"
         },
         {
-          "ar": "مَا",
-          "ar_plain": "ما",
-          "translit": "maa",
-          "en": "what",
-          "ur": "جو"
+          "en": "nominal: after وَ, the core opens with الْأُمُّ",
+          "ur": "اسمیہ: وَ کے بعد بنیاد الْأُمُّ سے شروع ہوتی ہے"
         },
         {
-          "ar": "تَعْبُدُونَ",
-          "ar_plain": "تعبدون",
-          "translit": "ta'budoona",
-          "en": "you worship",
-          "ur": "تم عبادت کرتے ہو"
+          "en": "not a sentence",
+          "ur": "جملہ نہیں"
         }
       ],
-      "available_roles": [
-        "VERB",
-        "SUBJECT",
-        "PREDICATE",
-        "PARTICLE",
-        "OBJECT"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "VERB",
-        "OBJECT",
-        "VERB"
-      ],
-      "xp_value": 1
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Skip وَ; the core opens with the noun الْأُمُّ, and رَجَعَتْ … is its comment.",
+        "ur": "وَ کو چھوڑیں؛ بنیاد اسم الْأُمُّ سے شروع ہوتی ہے، اور رَجَعَتْ … اس کی خبر ہے۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Nominal vs. Verbal — One Rule to Tell Them Apart",
-      "ar": "اسمی بمقابلہ فعلی — ایک قاعدہ",
-      "ur": "اسمی بمقابلہ فعلی — ایک قاعدہ"
+      "en": "Find the core",
+      "ar": "رُكْنُ الْجُمْلَةِ",
+      "ur": "جملے کی بنیاد تلاش کریں"
     },
     "ayah": {
-      "surah": 109,
-      "ayah": 2,
-      "label": "Al-Kafirun 109:2",
-      "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
-      "en": "I do not worship what you worship.",
-      "ur": "میں اس کی عبادت نہیں کرتا جو تم عبادت کرتے ہو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109002.mp3"
+      "surah": 112,
+      "ayah": 1,
+      "label": "Al-Ikhlas 112:1",
+      "ar": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+      "en": "Say, He is Allah, One.",
+      "ur": "کہہ دیجیے: وہ اللہ ایک ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/112001.mp3"
     },
     "highlighted_word_indices": [
-      1
+      1,
+      2,
+      3
+    ],
+    "highlighted_words": [
+      "هُوَ",
+      "اللَّهُ",
+      "أَحَدٌ"
     ],
     "noor_explanation": {
-      "en": "أَعْبُدُ is the first real word of this sentence (لَا is just a negative particle). أَعْبُدُ is a verb — so this is a verbal sentence. Compare: الْكِتَابُ كَبِيرٌ — starts with a noun, no verb → nominal. Look at the first content word to identify the type.",
-      "ur": "أَعْبُدُ اس جملے کا پہلا اصلی لفظ ہے (لَا صرف ایک منفی particle ہے)۔ أَعْبُدُ ایک فعل ہے — تو یہ ایک فعلی جملہ ہے۔ موازنہ کریں: الْكِتَابُ كَبِيرٌ — اسم سے شروع، کوئی فعل نہیں → اسمی۔ پہلے اہم لفظ کو دیکھ کر قسم پہچانیں۔"
+      "en": "هُوَ اللَّهُ أَحَدٌ: after قُلْ, a nominal core — He is Allah, One.",
+      "ur": "هُوَ اللَّهُ أَحَدٌ: قُلْ کے بعد اسمیہ بنیاد — وہ اللہ ایک ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "The key is the first word: verb = verbal, noun/pronoun = nominal. هَذَا كِتَابٌ (nominal) vs قَالَ الرَّجُلُ (verbal). Al-Kafirun uses both — قُلْ and لَا أَعْبُدُ are verbal, وَلَكُمْ دِينُكُمْ is nominal.",
-      "ur": "کلید پہلا لفظ ہے: فعل = فعلی، اسم/ضمیر = اسمی۔ هَذَا كِتَابٌ (اسمی) بمقابلہ قَالَ الرَّجُلُ (فعلي)۔ سورۃ کافروں میں دونوں ہیں — قُلْ اور لَا أَعْبُدُ فعلی ہیں، وَلَكُمْ دِينُكُمْ اسمی ہے۔"
+      "en": "You classify a sentence by its core. Next: إِنَّ and لَيْسَ, which you already know.",
+      "ur": "آپ جملے کو اس کی بنیاد سے پہچانتے ہیں۔ آگے: إِنَّ اور لَيْسَ، جو آپ جانتے ہیں۔"
     }
   }
 }

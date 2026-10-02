@@ -2,311 +2,243 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 30, Lesson 1 (ch30-l01) — a four-sentence text: mark where each sentence ends, find which sentence holds a detail, and follow هُوَ / ـهُ / ـهَا back to the noun they stand for. Retrieves Chapter 29's sentence core briefly. Quran: Al-Baqarah 2:2 opening (فِيهِ points back to الْكِتَابُ). Rebuilt 2026-10-02 in the proposal harvest (Docs/proposals/proposal-harvest-tracker.md) from Docs/proposals/chapter-30-content-proposal.md and its review amendments: reading across sentences (pronoun back to its noun, وَ / فَ in context), following a short story, following a dialogue with a clarification, relative مَا ('what') with the whole clause as the thing not worshipped, and the one complete reading of Al-Kafirun 109:1–6. Removed: أَجَابَ under root ء-ج-ب (it is ج-و-ب), 'both words are definite' for الْكِتَابُ جَدِيدٌ, the إِنَّ-sentence called verbal, لَكُمْ / لِي called possessives, and the 'complete surah' lesson that skipped 109:3. The proposal's separate unseen-text lesson (l06) was not built; its job is in the review.",
+    "title": "Reading Across Sentences",
+    "titleAr": "الْقِرَاءَةُ الْمُتَّصِلَةُ",
+    "titleUr": "جملوں کے پار پڑھنا",
     "chapter_order": 30,
     "lesson_order": 1,
-    "chapter_title": "Reading Comprehension and Dialogue",
-    "title": "Reading Connected Passages",
-    "titleAr": "قِرَاءَةُ النُّصُوصِ الْمُتَّصِلَةِ",
-    "source": "book3_lesson7_reading_comprehension.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 109,
-      "ayah": 1,
-      "label": "Al-Kafirun 109:1",
-      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
-      "en": "Say, O disbelievers.",
-      "ur": "کہہ دیجیے، اے کافرو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
+      "surah": 2,
+      "ayah": 2,
+      "label": "Al-Baqarah 2:2",
+      "ar": "ذَلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ",
+      "en": "That is the Book: there is no doubt in it.",
+      "ur": "یہ وہ کتاب ہے جس میں کوئی شک نہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002002.mp3"
     },
     "noor_intro": {
-      "en": "Now you can tell nominal sentences from verbal ones. Let's read longer passages and apply both structures together. Reading is where grammar becomes real understanding.",
-      "ur": "اب آپ nominal sentences کو verbal sentences سے الگ بتا سکتے ہیں۔ لمبے passages پڑھیں اور دونوں structures کو اکٹھا لایجیں۔ پڑھنا وہ جگہ ہے جہاں گرامر سمجھ بنتا ہے۔"
+      "en": "فِيهِ, in it: the 'it' points back to a noun said before. Which one?",
+      "ur": "فِيهِ، اس میں: 'اس' پہلے ذکر کیے گئے کسی اسم کی طرف لوٹتا ہے۔ کون سا؟"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "هَذَا أَحْمَدُ. هُوَ طَالِبٌ. بَيْتُهُ قَرِيبٌ مِنَ الْمَدْرَسَةِ، وَأُخْتُهُ فَاطِمَةُ مُدَرِّسَةٌ فِيهَا.",
+        "ar_plain": "هذا أحمد. هو طالب. بيته قريب من المدرسة، وأخته فاطمة مدرسة فيها.",
+        "translit": "hādhā aḥmadu. huwa ṭālibun. baytuhu qarībun mina l-madrasati, wa-ukhtuhu fāṭimatu mudarrisatun fīhā.",
+        "en": "This is Ahmad. He is a student. His house is near the school, and his sister Fatimah is a teacher in it.",
+        "ur": "یہ احمد ہے۔ وہ طالب علم ہے۔ اس کا گھر اسکول کے قریب ہے، اور اس کی بہن فاطمہ اس میں استانی ہے۔"
+      },
+      "explanation": {
+        "en": "Read the whole text once. It has four short statements about one family.",
+        "ur": "پوری عبارت ایک بار پڑھیں۔ اس میں ایک خاندان کے بارے میں چار مختصر باتیں ہیں۔"
+      }
+    },
+    {
       "type": "CONCEPT",
       "concept": {
-        "en": "Reading longer Arabic passages",
-        "ar": "قِرَاءَةُ النُّصُوصِ الطَّوِيلَةِ",
-        "ur": "لمبے عربی passages پڑھنا"
+        "en": "One sentence at a time",
+        "ar": "هَذَا أَحْمَدُ. | هُوَ طَالِبٌ.",
+        "ur": "ایک وقت میں ایک جملہ"
       },
       "explanation": {
-        "en": "When reading connected Arabic, look for the sentence type first: does it start with a verb (verbal) or a noun/proven noun (nominal)? This tells you how to parse it.",
-        "ur": "مربوط عربی پڑھتے وقت، پہلے sentence type دیکھیں: کیا یہ verb سے شروع ہوتا ہے (verbal) یا noun/proven noun سے (nominal)? اس سے پتہ چلتا ہے کہ اسے کیسے parse کرنا ہے۔"
+        "en": "A full stop or a وَ often starts a new statement. Find each sentence's core, as in Chapter 29: هَذَا أَحْمَدُ, then هُوَ طَالِبٌ.",
+        "ur": "نقطہ یا وَ اکثر نئی بات شروع کرتا ہے۔ باب 29 کی طرح ہر جملے کی بنیاد تلاش کریں: هَذَا أَحْمَدُ، پھر هُوَ طَالِبٌ۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "الطَّالِبُ يَقْرَأُ الْكِتَابَ",
-        "ar_plain": "الطالب يقرأ الكتاب",
-        "translit": "at-taalibu yaqra'u al-kitaaba",
-        "en": "The student reads the book.",
-        "ur": "طالب علم کتاب پڑھتا ہے۔"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Follow the pronoun back",
+        "ar": "هُوَ · بَيْتُهُ · أُخْتُهُ ← أَحْمَدُ",
+        "ur": "ضمیر کو پیچھے کی طرف تلاش کریں"
       },
       "explanation": {
-        "en": "A verbal sentence (يَقْرَأُ is the verb). The subject الطَّالِبُ comes after the verb. يَقْرَأُ = he reads.",
-        "ur": "ایک verbal sentence (يَقْرَأُ verb ہے)۔ فاعل الطَّالِبُ verb کے بعد آتا ہے۔ يَقْرَأُ = وہ پڑھتا ہے۔"
+        "en": "هُوَ, بَيْتُهُ and أُخْتُهُ all point back to أَحْمَدُ. A pronoun stands for the nearest suitable noun said before it.",
+        "ur": "هُوَ، بَيْتُهُ اور أُخْتُهُ سب أَحْمَدُ کی طرف لوٹتے ہیں۔ ضمیر اپنے سے پہلے آنے والے مناسب اسم کی جگہ آتی ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "الْكِتَابُ جَدِيدٌ",
-        "ar_plain": "الكتاب جديد",
-        "translit": "al-kitaabu jadiidun",
-        "en": "The book is new.",
-        "ur": "کتاب نئی ہے۔"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "ـهَا points to a feminine noun",
+        "ar": "فِيهَا ← الْمَدْرَسَةِ",
+        "ur": "ـهَا مؤنث اسم کی طرف لوٹتا ہے"
       },
       "explanation": {
-        "en": "A nominal sentence (no verb). الْكِتَابُ is the subject, جَدِيدٌ is the predicate. Both are definite.",
-        "ur": "ایک nominal sentence (کوئی verb نہیں)۔ الْكِتَابُ subject ہے، جَدِيدٌ predicate ہے۔ دونوں معرفہ ہیں۔"
+        "en": "In مُدَرِّسَةٌ فِيهَا, a teacher in it, ـهَا is feminine, so it points to الْمَدْرَسَةِ, the school — not to the house.",
+        "ur": "مُدَرِّسَةٌ فِيهَا، اس میں استانی، میں ـهَا مؤنث ہے، اس لیے یہ الْمَدْرَسَةِ، اسکول، کی طرف لوٹتا ہے — گھر کی طرف نہیں۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "إِنَّ الْمُسْلِمَ مُؤْمِنٌ",
-        "ar_plain": "إن المسلم مؤمن",
-        "translit": "inna al-muslima mu'minun",
-        "en": "Truly, the Muslim is a believer.",
-        "ur": "بے شک، مسلمان مومن ہے۔"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Baqarah 2:2 (opening): That is the Book: there is no doubt in it.",
+        "ar": "ذَلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ",
+        "ur": "البقرہ 2:2 (آغاز): یہ وہ کتاب ہے جس میں کوئی شک نہیں۔"
       },
       "explanation": {
-        "en": "إِنَّ creates a nominal sentence. The subject is الْمُسْلِمَ ( mansoob), and the predicate is مُؤْمِنٌ (nominative).",
-        "ur": "إِنَّ nominal sentence بناتی ہے۔ subject الْمُسْلِمَ (منصوب) ہے، اور predicate مُؤْمِنٌ (مرفوع) ہے۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "يَقْرَأُ",
-        "ar_plain": "يقرأ",
-        "translit": "yaqra'u",
-        "en": "he reads",
-        "ur": "وہ پڑھتا ہے"
+        "en": "فِيهِ points back to الْكِتَابُ: no doubt in the Book.",
+        "ur": "فِيهِ، الْكِتَابُ کی طرف لوٹتا ہے: کتاب میں کوئی شک نہیں۔"
       },
-      "explanation": {
-        "en": "Present tense verb from the root ق-ر-أ. Prefix يَ indicates third person masculine singular.",
-        "ur": "ق-ر-أ root سے present tense verb۔ Prefix يَ تیسرے person مذکر singular کو ظاہر کرتا ہے۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "الْكِتَابُ",
-        "ar_plain": "الكتاب",
-        "translit": "al-kitaabu",
-        "en": "the book",
-        "ur": "کتاب"
-      },
-      "explanation": {
-        "en": "Definite noun (with ال). Object of the verb يَقْرَأُ — the thing being read.",
-        "ur": "معرفہ noun (ال کے ساتھ)۔ verb يَقْرَأُ کا مفعول — وہ چیز جو پڑھی جا رہی ہے۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Two sentence types in one passage",
-        "ur": "ایک passage میں دو sentence types"
-      },
-      "body": {
-        "en": "Real Arabic passages mix both sentence types freely. إِنَّ can appear inside a verbal sentence's context. Read for meaning first, then identify structure.",
-        "ur": "اصل عربی passages میں دونوں sentence types آزادانہ ملے ہوتے ہیں۔ إِنَّ verbal sentence کے اندر بھی آ سکتی ہے۔ پہلے meaning کے لیے پڑھیں، پھر structure پہچانیں۔"
-      }
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002002.mp3"
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
+      "type": "TRUE_FALSE",
       "id": "ch30-l01-ex01",
-      "prompt": {
-        "ar": "الطَّالِبُ يَقْرَأُ الْكِتَابَ",
-        "ar_plain": "الطالب يقرأ الكتاب",
-        "translit": "at-taalibu yaqra'u al-kitaaba",
-        "en": "The student reads the book.",
-        "ur": "طالب علم کتاب پڑھتا ہے۔"
-      },
-      "options": [
-        {
-          "en": "The student reads the book.",
-          "ur": "طالب علم کتاب پڑھتا ہے۔"
-        },
-        {
-          "en": "The book reads the student.",
-          "ur": "کتاب طالب علم کو پڑھتی ہے۔"
-        },
-        {
-          "en": "The student is reading.",
-          "ur": "طالب علم پڑھ رہا ہے۔"
-        },
-        {
-          "en": "The book is new.",
-          "ur": "کتاب نئی ہے۔"
+      "statement": {
+        "en": "In the text, Ahmad is a teacher.",
+        "ur": "عبارت میں احمد استاد ہے۔",
+        "ar_example": {
+          "ar": "هَذَا أَحْمَدُ. هُوَ طَالِبٌ. بَيْتُهُ قَرِيبٌ مِنَ الْمَدْرَسَةِ، وَأُخْتُهُ فَاطِمَةُ مُدَرِّسَةٌ فِيهَا.",
+          "ar_plain": "هذا أحمد. هو طالب. بيته قريب من المدرسة، وأخته فاطمة مدرسة فيها.",
+          "translit": "hādhā aḥmadu. huwa ṭālibun. baytuhu qarībun mina l-madrasati, wa-ukhtuhu fāṭimatu mudarrisatun fīhā.",
+          "en": "This is Ahmad. He is a student. His house is near the school, and his sister Fatimah is a teacher in it.",
+          "ur": "یہ احمد ہے۔ وہ طالب علم ہے۔ اس کا گھر اسکول کے قریب ہے، اور اس کی بہن فاطمہ اس میں استانی ہے۔"
         }
-      ],
-      "correct_index": 0,
+      },
+      "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "يَقْرَأُ is a present tense verb. The subject is الطَّالِبُ (comes before the verb in this sentence) and الْكِتَابَ is the object.",
-        "ur": "يَقْرَأُ present tense verb ہے۔ subject الطَّالِبُ ہے (اس sentence میں verb سے پہلے آتا ہے) اور الْكِتَابَ object ہے۔"
+        "en": "هُوَ طَالِبٌ: Ahmad is a student. His sister is the teacher.",
+        "ur": "هُوَ طَالِبٌ: احمد طالب علم ہے۔ استانی اس کی بہن ہے۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch30-l01-ex02",
-      "statement": {
-        "en": "In إِنَّ الْمُسْلِمَ مُؤْمِنٌ, the word مُؤْمِنٌ is in the nominative case (مرفوع).",
-        "ur": "إِنَّ الْمُسْلِمَ مُؤْمِنٌ میں، word مُؤْمِنٌ nominative case (مرفوع) میں ہے۔",
-        "ar_example": {
-          "ar": "إِنَّ الْمُسْلِمَ مُؤْمِنٌ",
-          "ar_plain": "إن المسلم مؤمن",
-          "translit": "inna al-muslima mu'minun",
-          "en": "Truly, the Muslim is a believer.",
-          "ur": "بے شک، مسلمان مومن ہے۔"
-        }
+      "prompt": {
+        "ar": "بَيْتُهُ قَرِيبٌ مِنَ الْمَدْرَسَةِ",
+        "ar_plain": "بيته قريب من المدرسة",
+        "translit": "baytuhu qarībun mina l-madrasati",
+        "en": "His house is near the school.",
+        "ur": "اس کا گھر اسکول کے قریب ہے۔"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "options": [
+        {
+          "en": "Whose house? Fatimah's",
+          "ur": "کس کا گھر؟ فاطمہ کا"
+        },
+        {
+          "en": "Whose house? the teacher's",
+          "ur": "کس کا گھر؟ استاد کا"
+        },
+        {
+          "en": "Whose house? the school's",
+          "ur": "کس کا گھر؟ اسکول کا"
+        },
+        {
+          "en": "Whose house? Ahmad's",
+          "ur": "کس کا گھر؟ احمد کا"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ـهُ in بَيْتُهُ points back to أَحْمَدُ.",
+        "ur": "بَيْتُهُ میں ـهُ، أَحْمَدُ کی طرف لوٹتا ہے۔"
+      }
     },
     {
       "type": "FILL_BLANK",
       "id": "ch30-l01-ex03",
       "mode": "TAP",
-      "sentence_ar": "إِنَّ الطَّالِبَ ___",
+      "sentence_ar": "وَأُخْتُهُ فَاطِمَةُ مُدَرِّسَةٌ ___",
       "hint": {
-        "en": "Truly, the student is diligent.",
-        "ur": "بے شک، طالب علم محنتی ہے۔"
+        "en": "in it — in the school (feminine)",
+        "ur": "اس میں — اسکول میں (مؤنث)"
       },
       "options": [
         {
-          "ar": "مُجْتَهِدٌ",
-          "ar_plain": "مجتهد",
-          "translit": "mujtahidun",
-          "en": "diligent",
-          "ur": "محنتی"
+          "ar": "فِيهِ",
+          "ar_plain": "فيه",
+          "translit": "fīhi",
+          "en": "in it (m.)",
+          "ur": "اس میں (مذکر)"
         },
         {
-          "ar": "مُجْتَهِدٍ",
-          "ar_plain": "مجتهد",
-          "translit": "mujtahidin",
-          "en": "diligent (mansoob)",
-          "ur": "محنتی (منصوب)"
+          "ar": "فِيهَا",
+          "ar_plain": "فيها",
+          "translit": "fīhā",
+          "en": "in it (f.)",
+          "ur": "اس میں (مؤنث)"
         },
         {
-          "ar": "يَقْرَأُ",
-          "ar_plain": "يقرأ",
-          "translit": "yaqra'u",
-          "en": "reads",
-          "ur": "پڑھتا ہے"
+          "ar": "فِيهِمْ",
+          "ar_plain": "فيهم",
+          "translit": "fīhim",
+          "en": "among them",
+          "ur": "ان میں"
         },
         {
-          "ar": "كِبَرٌ",
-          "ar_plain": "كبر",
-          "translit": "kibarun",
-          "en": "big",
-          "ur": "بڑا"
+          "ar": "مِنْهُ",
+          "ar_plain": "منه",
+          "translit": "minhu",
+          "en": "from him",
+          "ur": "اس سے"
         }
       ],
       "correct_answer": {
-        "ar": "مُجْتَهِدٌ",
-        "ar_plain": "مجتهد",
-        "translit": "mujtahidun",
-        "en": "diligent",
-        "ur": "محنتی"
+        "ar": "فِيهَا",
+        "ar_plain": "فيها",
+        "translit": "fīhā",
+        "en": "in it (f.)",
+        "ur": "اس میں (مؤنث)"
       },
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch30-l01-ex04",
-      "prompt": {
-        "ar": "الْكِتَابُ جَدِيدٌ",
-        "ar_plain": "الكتاب جديد",
-        "translit": "al-kitaabu jadiidun",
-        "en": "The book is new.",
-        "ur": "کتاب نئی ہے۔"
-      },
-      "options": [
-        {
-          "en": "The book is new.",
-          "ur": "کتاب نئی ہے۔"
-        },
-        {
-          "en": "The new book.",
-          "ur": "نئی کتاب۔"
-        },
-        {
-          "en": "The books are new.",
-          "ur": "کتابیں نئی ہیں۔"
-        },
-        {
-          "en": "A new book.",
-          "ur": "ایک نئی کتاب۔"
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "Nominal sentence with no verb. الْكِتَابُ is the subject, جَدِيدٌ is the predicate (both nominative).",
-        "ur": "کوئی verb نہیں۔ الْكِتَابُ subject ہے، جَدِيدٌ predicate ہے (دونوں مرفوع)۔"
+        "en": "الْمَدْرَسَةُ is feminine, so the pronoun is ـهَا: فِيهَا.",
+        "ur": "الْمَدْرَسَةُ مؤنث ہے، اس لیے ضمیر ـهَا ہے: فِيهَا۔"
       }
     },
     {
       "type": "MATCHING",
-      "id": "ch30-l01-ex05",
+      "id": "ch30-l01-ex04",
       "left_column": [
         {
-          "ar": "الطَّالِبُ يَقْرَأُ الْكِتَابَ",
-          "ar_plain": "الطالب يقرأ الكتاب",
-          "translit": "at-taalibu yaqra'u al-kitaaba",
-          "en": "The student reads the book.",
-          "ur": "طالب علم کتاب پڑھتا ہے۔"
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "he",
+          "ur": "وہ"
         },
         {
-          "ar": "إِنَّ الطَّالِبَ مُجْتَهِدٌ",
-          "ar_plain": "إن الطالب مجتهد",
-          "translit": "inna at-taalibi mujtahidun",
-          "en": "Truly, the student is diligent.",
-          "ur": "بے شک، طالب علم محنتی ہے۔"
+          "ar": "أُخْتُهُ",
+          "ar_plain": "أخته",
+          "translit": "ukhtuhu",
+          "en": "his sister",
+          "ur": "اس کی بہن"
         },
         {
-          "ar": "الْمُسْلِمُونَ صَالِحُونَ",
-          "ar_plain": "المسلمون صالحون",
-          "translit": "al-muslimoona saalihoona",
-          "en": "The Muslims are righteous.",
-          "ur": "مسلمان نیک ہیں۔"
-        },
-        {
-          "ar": "الْبَيْتُ كَبِيرٌ",
-          "ar_plain": "البيت كبير",
-          "translit": "al-baytu kabirun",
-          "en": "The house is big.",
-          "ur": "گھر بڑا ہے۔"
+          "ar": "فِيهَا",
+          "ar_plain": "فيها",
+          "translit": "fīhā",
+          "en": "in it",
+          "ur": "اس میں"
         }
       ],
       "right_column": [
         {
-          "en": "Verbal sentence",
-          "ur": "فعلی جملہ"
+          "en": "Ahmad",
+          "ur": "احمد"
         },
         {
-          "en": "Nominal with إِنَّ",
-          "ur": "إِنَّ کے ساتھ اسمی"
+          "en": "Fatimah",
+          "ur": "فاطمہ"
         },
         {
-          "en": "Human plural (جَمْع الْعَاقِل)",
-          "ur": "انسانی جمع"
-        },
-        {
-          "en": "Nominal sentence",
-          "ur": "اسمی جملہ"
+          "en": "the school",
+          "ur": "اسکول"
         }
       ],
       "correct_pairs": [
@@ -321,118 +253,176 @@
         [
           2,
           2
-        ],
-        [
-          3,
-          3
         ]
       ],
-      "xp_value": 1
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "Follow each word back to the noun it stands for.",
+        "ur": "ہر لفظ کو اس اسم تک واپس لے جائیں جس کی جگہ وہ آیا ہے۔"
+      }
     },
     {
-      "type": "BUILD_SENTENCE",
-      "id": "ch30-l01-ex06",
-      "target_translation": {
-        "en": "Truly, the house is big.",
-        "ur": "بے شک، گھر بڑا ہے۔"
+      "type": "TRUE_FALSE",
+      "id": "ch30-l01-ex05",
+      "statement": {
+        "en": "The text has four statements.",
+        "ur": "عبارت میں چار باتیں ہیں۔",
+        "ar_example": {
+          "ar": "هَذَا أَحْمَدُ. هُوَ طَالِبٌ. بَيْتُهُ قَرِيبٌ مِنَ الْمَدْرَسَةِ، وَأُخْتُهُ فَاطِمَةُ مُدَرِّسَةٌ فِيهَا.",
+          "ar_plain": "هذا أحمد. هو طالب. بيته قريب من المدرسة، وأخته فاطمة مدرسة فيها.",
+          "translit": "hādhā aḥmadu. huwa ṭālibun. baytuhu qarībun mina l-madrasati, wa-ukhtuhu fāṭimatu mudarrisatun fīhā.",
+          "en": "This is Ahmad. He is a student. His house is near the school, and his sister Fatimah is a teacher in it.",
+          "ur": "یہ احمد ہے۔ وہ طالب علم ہے۔ اس کا گھر اسکول کے قریب ہے، اور اس کی بہن فاطمہ اس میں استانی ہے۔"
+        }
       },
-      "tiles": [
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هَذَا أَحْمَدُ / هُوَ طَالِبٌ / بَيْتُهُ قَرِيبٌ … / وَأُخْتُهُ … مُدَرِّسَةٌ فِيهَا.",
+        "ur": "هَذَا أَحْمَدُ / هُوَ طَالِبٌ / بَيْتُهُ قَرِيبٌ … / وَأُخْتُهُ … مُدَرِّسَةٌ فِيهَا۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch30-l01-ex06",
+      "ayah_fragment": {
+        "ar": "ذَلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ",
+        "surah_ref": "Al-Baqarah 2:2"
+      },
+      "options": [
         {
-          "ar": "إِنَّ",
-          "ar_plain": "إن",
-          "translit": "inna",
-          "en": "truly",
-          "ur": "بے شک"
+          "en": "فِيهِ points back to the Book.",
+          "ur": "فِيهِ کتاب کی طرف لوٹتا ہے۔"
         },
         {
-          "ar": "الْبَيْتَ",
-          "ar_plain": "البيت",
-          "translit": "al-bayta",
-          "en": "the house",
-          "ur": "گھر"
+          "en": "فِيهِ points back to the doubt.",
+          "ur": "فِيهِ شک کی طرف لوٹتا ہے۔"
         },
         {
-          "ar": "كَبِيرٌ",
-          "ar_plain": "كبير",
-          "translit": "kabirun",
-          "en": "big",
-          "ur": "بڑا"
+          "en": "فِيهِ points to a person.",
+          "ur": "فِيهِ کسی شخص کی طرف اشارہ ہے۔"
         },
         {
-          "ar": "كَبِيرَةٌ",
-          "ar_plain": "كبيرة",
-          "translit": "kabiiratan",
-          "en": "big (fem. sg.)",
-          "ur": "بڑی (مؤنث واحد)"
+          "en": "فِيهِ points to nothing.",
+          "ur": "فِيهِ کسی کی طرف نہیں لوٹتا۔"
         }
       ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "No doubt in it — in الْكِتَابُ.",
+        "ur": "اس میں کوئی شک نہیں — الْكِتَابُ میں۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch30-l01-ex07",
       "prompt": {
-        "ar": "الطَّالِبُ يَقْرَأُ الْكِتَابَ",
-        "ar_plain": "الطالب يقرا الكتاب",
-        "translit": "at-taalibu yaqra'u al-kitaab",
-        "en": "The student reads the book.",
-        "ur": "طالب علم کتاب پڑھتا ہے۔"
+        "ar": "الْكِتَابُ جَدِيدٌ، وَهُوَ لِلطَّالِبِ",
+        "ar_plain": "الكتاب جديد، وهو للطالب",
+        "translit": "al-kitābu jadīdun, wa-huwa li-ṭ-ṭālibi",
+        "en": "The book is new, and it is for the student.",
+        "ur": "کتاب نئی ہے، اور یہ طالب علم کے لیے ہے۔"
       },
       "options": [
         {
-          "en": "The student reads the book.",
-          "ur": "طالب علم کتاب پڑھتا ہے۔"
+          "en": "The student is new.",
+          "ur": "طالب علم نیا ہے۔"
         },
         {
-          "en": "The book reads the student.",
-          "ur": "کتاب طالب علم کو پڑھتی ہے۔"
+          "en": "The book is new, and it is for the student.",
+          "ur": "کتاب نئی ہے، اور یہ طالب علم کے لیے ہے۔"
         },
         {
-          "en": "The student wrote a book.",
-          "ur": "طالب علم نے ایک کتاب لکھی۔"
+          "en": "the student's new book",
+          "ur": "طالب علم کی نئی کتاب"
         },
         {
-          "en": "Read the book, student!",
-          "ur": "اے طالب علم، کتاب پڑھو!"
+          "en": "The new student has a book.",
+          "ur": "نئے طالب علم کے پاس کتاب ہے۔"
         }
       ],
-      "correct_index": 0,
-      "xp_value": 1
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Two statements. هُوَ points back to الْكِتَابُ.",
+        "ur": "دو باتیں۔ هُوَ، الْكِتَابُ کی طرف لوٹتا ہے۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch30-l01-ex08",
+      "prompt_line": {
+        "ar": "مَنْ فَاطِمَةُ؟",
+        "ar_plain": "من فاطمة؟",
+        "translit": "man fāṭimatu?",
+        "en": "Who is Fatimah?",
+        "ur": "فاطمہ کون ہے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "هِيَ طَالِبَةٌ",
+          "ar_plain": "هي طالبة",
+          "translit": "hiya ṭālibatun",
+          "en": "She is a student.",
+          "ur": "وہ طالبہ ہے۔"
+        },
+        {
+          "ar": "هِيَ أُخْتُ أَحْمَدَ، مُدَرِّسَةٌ",
+          "ar_plain": "هي أخت أحمد، مدرسة",
+          "translit": "hiya ukhtu aḥmada, mudarrisatun",
+          "en": "She is Ahmad's sister, a teacher.",
+          "ur": "وہ احمد کی بہن ہے، استانی۔"
+        },
+        {
+          "ar": "هِيَ بَيْتُ أَحْمَدَ",
+          "ar_plain": "هي بيت أحمد",
+          "translit": "hiya baytu aḥmada",
+          "en": "She is Ahmad's house.",
+          "ur": "وہ احمد کا گھر ہے۔"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "The text says: وَأُخْتُهُ فَاطِمَةُ مُدَرِّسَةٌ.",
+        "ur": "عبارت کہتی ہے: وَأُخْتُهُ فَاطِمَةُ مُدَرِّسَةٌ۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Reading passages: both sentence types together",
-      "ar": "قِرَاءَةُ النُّصُوصِ: جُمْلَةٌ اسْمِيَّة وَفِعْلِيَّةٌ مَعًا",
-      "ur": "passages پڑھنا: دونوں sentence types اکٹھے"
+      "en": "Reading across sentences",
+      "ar": "الْقِرَاءَةُ الْمُتَّصِلَةُ",
+      "ur": "جملوں کے پار پڑھنا"
     },
     "ayah": {
-      "surah": 109,
-      "ayah": 1,
-      "label": "Al-Kafirun 109:1",
-      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
-      "en": "Say, O disbelievers.",
-      "ur": "کہہ دیجیے، اے کافرو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
+      "surah": 2,
+      "ayah": 2,
+      "label": "Al-Baqarah 2:2",
+      "ar": "ذَلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ",
+      "en": "That is the Book: there is no doubt in it.",
+      "ur": "یہ وہ کتاب ہے جس میں کوئی شک نہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002002.mp3"
     },
     "highlighted_word_indices": [
-      0,
-      2
+      1,
+      4
+    ],
+    "highlighted_words": [
+      "الْكِتَابُ",
+      "فِيهِ"
     ],
     "noor_explanation": {
-      "en": "قُلْ is a verb. يَا أَيُّهَا is a calling expression. الْكَافِرُونَ is the noun being called. This is a verbal sentence where the verb comes first.",
-      "ur": "قُلْ ایک verb ہے۔ يَا أَيُّهَا calling expression ہے۔ الْكَافِرُونَ وہ noun ہے جسے بلایا جا رہا ہے۔ یہ ایک verbal sentence ہے جہاں verb پہلے آتا ہے۔"
+      "en": "الْكِتَابُ … فِيهِ: a noun, and later a pronoun that points back to it. Linking them is how you read a connected text.",
+      "ur": "الْكِتَابُ … فِيهِ: ایک اسم، اور بعد میں ایک ضمیر جو اس کی طرف لوٹتی ہے۔ انہیں جوڑنا ہی مربوط عبارت پڑھنا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Reading real Arabic means reading both sentence types fluently. Nominal sentences, verbal sentences, إِنَّ sentences — they all flow together in the Quran. Keep reading!",
-      "ur": "اصل عربی پڑھنا دونوں sentence types باہر سے پڑھنا ہے۔ Nominal sentences، verbal sentences، إِنَّ sentences — سب قرآن میں اکٹھے بہتے ہیں۔ پڑھتا رہیں!"
+      "en": "You can follow a pronoun across sentences. Next: a short story in order.",
+      "ur": "آپ جملوں کے پار ضمیر سمجھ سکتے ہیں۔ آگے: ترتیب سے ایک مختصر کہانی۔"
     }
   }
 }

@@ -1,0 +1,441 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 27 final test (ch27-test, new). Twelve multiple-choice questions on the proposal blueprint: choosing a preposition in context (2), separate vs joined forms (2), contextual meaning (2), preposition + pronoun with its referent (3), Quran reading (3: 17:1, 2:2, 5:11). Pass mark 80 %: 9/12 fails, 10/12 passes. Rebuilt 2026-10-02 in the proposal harvest (Docs/proposals/proposal-harvest-tracker.md) from Docs/proposals/chapter-27-content-proposal.md and its review amendments: eight common prepositions in context — فِي، عَلَى، مِنْ، إِلَى retrieved from Chapters 2/21 with a local model of the genitive after a preposition; joined بِـ / لِـ with the real spelling (لِـ + الـ → لِلْـ, لِلَّهِ; بِالْقَلَمِ keeps the alif); عَنْ and joined كَـ; prepositions with attached pronouns. Every hook now contains its lesson's preposition (Al-Kawthar and Al-Kafirun removed; the false hidden لِـ in رَبِّ removed; 'every preposition merges with الـ' removed). Not built: the proposal's separate Quran-reading lesson — its 5:11 excerpt sits in Lesson 4 — so ch27-l05 stays the review.",
+    "title": "Chapter 27 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ السَّابِعِ وَالْعِشْرِينَ",
+    "titleUr": "باب 27 کا آخری امتحان",
+    "chapter_order": 27,
+    "lesson_order": 6,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 2,
+      "ayah": 2,
+      "label": "Al-Baqarah 2:2",
+      "ar": "ذَلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ هُدًى لِلْمُتَّقِينَ",
+      "en": "That is the Book: there is no doubt in it, a guidance for those mindful of Allah.",
+      "ur": "یہ وہ کتاب ہے جس میں کوئی شک نہیں، پرہیزگاروں کے لیے ہدایت ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002002.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 27.",
+      "ur": "باب 27 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 27,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch27-test-q01",
+        "topic": {
+          "en": "Choosing a preposition",
+          "ur": "حرفِ جر چننا"
+        },
+        "prompt": {
+          "en": "Which word fits? The student is inside the classroom: الطَّالِبُ ___ الْفَصْلِ",
+          "ur": "کون سا لفظ درست ہے؟ طالب علم کلاس کے اندر ہے: الطَّالِبُ ___ الْفَصْلِ"
+        },
+        "options": [
+          {
+            "en": "مِنَ",
+            "ur": "مِنَ"
+          },
+          {
+            "en": "فِي",
+            "ur": "فِي"
+          },
+          {
+            "en": "عَنِ",
+            "ur": "عَنِ"
+          },
+          {
+            "en": "كَـ",
+            "ur": "كَـ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch27-test-q02",
+        "topic": {
+          "en": "Choosing a preposition",
+          "ur": "حرفِ جر چننا"
+        },
+        "prompt": {
+          "en": "What does this mean?",
+          "ur": "اس کا کیا مطلب ہے؟"
+        },
+        "arabic": "ذَهَبَتِ الْبِنْتُ إِلَى الْمَدْرَسَةِ",
+        "options": [
+          {
+            "en": "The girl came back from school.",
+            "ur": "لڑکی اسکول سے واپس آئی۔"
+          },
+          {
+            "en": "The girl is in the school.",
+            "ur": "لڑکی اسکول میں ہے۔"
+          },
+          {
+            "en": "The girl asked about the school.",
+            "ur": "لڑکی نے اسکول کے بارے میں پوچھا۔"
+          },
+          {
+            "en": "The girl went to school.",
+            "ur": "لڑکی اسکول گئی۔"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch27-test-q03",
+        "topic": {
+          "en": "Separate or joined",
+          "ur": "الگ یا جڑا ہوا"
+        },
+        "prompt": {
+          "en": "Which is spelt correctly: for the student?",
+          "ur": "طالب علم کے لیے — درست املا کون سا ہے؟"
+        },
+        "options": [
+          {
+            "en": "لِالطَّالِبِ",
+            "ur": "لِالطَّالِبِ"
+          },
+          {
+            "en": "لِ الطَّالِبِ",
+            "ur": "لِ الطَّالِبِ"
+          },
+          {
+            "en": "لِلطَّالِبِ",
+            "ur": "لِلطَّالِبِ"
+          },
+          {
+            "en": "لَلطَّالِبِ",
+            "ur": "لَلطَّالِبِ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch27-test-q04",
+        "topic": {
+          "en": "Separate or joined",
+          "ur": "الگ یا جڑا ہوا"
+        },
+        "prompt": {
+          "en": "Which preposition is written joined to the next word?",
+          "ur": "کون سا حرفِ جر اگلے لفظ سے جوڑ کر لکھا جاتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "بِـ",
+            "ur": "بِـ"
+          },
+          {
+            "en": "فِي",
+            "ur": "فِي"
+          },
+          {
+            "en": "عَلَى",
+            "ur": "عَلَى"
+          },
+          {
+            "en": "عَنْ",
+            "ur": "عَنْ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch27-test-q05",
+        "topic": {
+          "en": "Meaning in context",
+          "ur": "سیاق میں مطلب"
+        },
+        "prompt": {
+          "en": "What does this mean?",
+          "ur": "اس کا کیا مطلب ہے؟"
+        },
+        "arabic": "كَتَبَ الْأُسْتَاذُ بِالْقَلَمِ",
+        "options": [
+          {
+            "en": "The teacher wrote about the pen.",
+            "ur": "استاد نے قلم کے بارے میں لکھا۔"
+          },
+          {
+            "en": "The teacher wrote with the pen.",
+            "ur": "استاد نے قلم سے لکھا۔"
+          },
+          {
+            "en": "The pen is for the teacher.",
+            "ur": "قلم استاد کے لیے ہے۔"
+          },
+          {
+            "en": "The teacher is like a pen.",
+            "ur": "استاد قلم کی طرح ہے۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch27-test-q06",
+        "topic": {
+          "en": "Meaning in context",
+          "ur": "سیاق میں مطلب"
+        },
+        "prompt": {
+          "en": "What does this mean?",
+          "ur": "اس کا کیا مطلب ہے؟"
+        },
+        "arabic": "سَأَلَ الْأَبُ عَنِ الْبَيْتِ",
+        "options": [
+          {
+            "en": "The father asked about the house.",
+            "ur": "والد نے گھر کے بارے میں پوچھا۔"
+          },
+          {
+            "en": "The father went to the house.",
+            "ur": "والد گھر گئے۔"
+          },
+          {
+            "en": "The father is like the house.",
+            "ur": "والد گھر کی طرح ہیں۔"
+          },
+          {
+            "en": "The father came out of the house.",
+            "ur": "والد گھر سے نکلے۔"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch27-test-q07",
+        "topic": {
+          "en": "Pronoun after a preposition",
+          "ur": "حرفِ جر کے بعد ضمیر"
+        },
+        "prompt": {
+          "en": "What does this mean?",
+          "ur": "اس کا کیا مطلب ہے؟"
+        },
+        "arabic": "عَلَيْهِ",
+        "options": [
+          {
+            "en": "about him",
+            "ur": "اس کے بارے میں"
+          },
+          {
+            "en": "from him",
+            "ur": "اس سے"
+          },
+          {
+            "en": "to him",
+            "ur": "اس کی طرف"
+          },
+          {
+            "en": "on him / on it",
+            "ur": "اس پر"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch27-test-q08",
+        "topic": {
+          "en": "Pronoun after a preposition",
+          "ur": "حرفِ جر کے بعد ضمیر"
+        },
+        "prompt": {
+          "en": "What does ـهُ refer to in مِنْهُ?",
+          "ur": "مِنْهُ میں ـهُ سے کیا مراد ہے؟"
+        },
+        "arabic": "هَذَا الْمَسْجِدُ، وَخَرَجَ الْإِمَامُ مِنْهُ",
+        "options": [
+          {
+            "en": "the imam",
+            "ur": "امام"
+          },
+          {
+            "en": "the mosque",
+            "ur": "مسجد"
+          },
+          {
+            "en": "the market",
+            "ur": "بازار"
+          },
+          {
+            "en": "nothing",
+            "ur": "کچھ نہیں"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch27-test-q09",
+        "topic": {
+          "en": "Pronoun after a preposition",
+          "ur": "حرفِ جر کے بعد ضمیر"
+        },
+        "prompt": {
+          "en": "What is the difference?",
+          "ur": "فرق کیا ہے؟"
+        },
+        "arabic": "كِتَابُهُ / لَهُ",
+        "options": [
+          {
+            "en": "Both mean his book.",
+            "ur": "دونوں کا مطلب اس کی کتاب ہے۔"
+          },
+          {
+            "en": "كِتَابُهُ is his book; لَهُ is for him.",
+            "ur": "كِتَابُهُ: اس کی کتاب؛ لَهُ: اس کے لیے۔"
+          },
+          {
+            "en": "Both mean for him.",
+            "ur": "دونوں کا مطلب اس کے لیے ہے۔"
+          },
+          {
+            "en": "كِتَابُهُ is from him; لَهُ is his book.",
+            "ur": "كِتَابُهُ: اس سے؛ لَهُ: اس کی کتاب۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch27-test-q10",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآن پڑھنا"
+        },
+        "prompt": {
+          "en": "What does this mean?",
+          "ur": "اس کا کیا مطلب ہے؟"
+        },
+        "arabic": "مِنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى",
+        "options": [
+          {
+            "en": "in al-Masjid al-Haram and al-Masjid al-Aqsa",
+            "ur": "مسجدِ حرام اور مسجدِ اقصیٰ میں"
+          },
+          {
+            "en": "to al-Masjid al-Haram from al-Masjid al-Aqsa",
+            "ur": "مسجدِ اقصیٰ سے مسجدِ حرام تک"
+          },
+          {
+            "en": "about al-Masjid al-Aqsa",
+            "ur": "مسجدِ اقصیٰ کے بارے میں"
+          },
+          {
+            "en": "from al-Masjid al-Haram to al-Masjid al-Aqsa",
+            "ur": "مسجدِ حرام سے مسجدِ اقصیٰ تک"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch27-test-q11",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآن پڑھنا"
+        },
+        "prompt": {
+          "en": "In لَا رَيْبَ فِيهِ, what is 'it'?",
+          "ur": "لَا رَيْبَ فِيهِ میں 'اس' سے کیا مراد ہے؟"
+        },
+        "arabic": "ذَلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ",
+        "options": [
+          {
+            "en": "the doubt",
+            "ur": "شک"
+          },
+          {
+            "en": "the people",
+            "ur": "لوگ"
+          },
+          {
+            "en": "the Book",
+            "ur": "کتاب"
+          },
+          {
+            "en": "the mosque",
+            "ur": "مسجد"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch27-test-q12",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآن پڑھنا"
+        },
+        "prompt": {
+          "en": "What does عَنْكُمْ mean here?",
+          "ur": "یہاں عَنْكُمْ کا کیا مطلب ہے؟"
+        },
+        "arabic": "فَكَفَّ أَيْدِيَهُمْ عَنْكُمْ",
+        "options": [
+          {
+            "en": "from you",
+            "ur": "تم سے"
+          },
+          {
+            "en": "for you",
+            "ur": "تمہارے لیے"
+          },
+          {
+            "en": "your hands",
+            "ur": "تمہارے ہاتھ"
+          },
+          {
+            "en": "like you",
+            "ur": "تمہاری طرح"
+          }
+        ],
+        "correct_index": 0
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 27 — prepositions in context",
+      "ar": "حُرُوفُ الْجَرِّ فِي السِّيَاقِ",
+      "ur": "باب 27 — سیاق میں حروفِ جر"
+    },
+    "ayah": {
+      "surah": 2,
+      "ayah": 2,
+      "label": "Al-Baqarah 2:2",
+      "ar": "ذَلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ هُدًى لِلْمُتَّقِينَ",
+      "en": "That is the Book: there is no doubt in it, a guidance for those mindful of Allah.",
+      "ur": "یہ وہ کتاب ہے جس میں کوئی شک نہیں، پرہیزگاروں کے لیے ہدایت ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002002.mp3"
+    },
+    "highlighted_word_indices": [
+      4,
+      6
+    ],
+    "highlighted_words": [
+      "فِيهِ",
+      "لِلْمُتَّقِينَ"
+    ],
+    "noor_explanation": {
+      "en": "فِيهِ and لِلْمُتَّقِينَ: you finish Chapter 27 able to choose a preposition from context, spell the joined ones and follow a pronoun after them.",
+      "ur": "فِيهِ اور لِلْمُتَّقِينَ: آپ باب 27 اس حال میں مکمل کرتے ہیں کہ سیاق سے حرفِ جر چن سکتے ہیں، جڑے ہوئے حروف کا املا جانتے ہیں اور ان کے بعد ضمیر سمجھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 27 complete. Chapter 28: past verbs and what follows them.",
+      "ur": "باب 27 مکمل۔ باب 28: ماضی کے افعال اور ان کے بعد آنے والے الفاظ۔"
+    }
+  }
+}
