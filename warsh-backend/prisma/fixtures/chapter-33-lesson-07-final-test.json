@@ -1,0 +1,442 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 33 final test (ch33-test, new — not ch33-l06, which is now the An-Nas reading). Twelve multiple-choice questions on the 3/2/2/2/2/1 allocation: one per complete reading (Al-Falaq, An-Nasr, An-Nas), clause/connector (q04–05), the noun of إِنَّ and the predicate of لَيْسَ in simple governor-first sentences (q06–07, three options each — the words of the sentence), questions in context (q08–09), إِذَا and an expressed response (q10–11), a fresh passage decided from text evidence (q12). No imperfect paradigm. Pass mark 80 %: 9/12 fails, 10/12 passes. Rebuilt 2026-10-02 in the proposal harvest, batch 2 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-33-content-proposal.md and its review amendments: a Book 3 reading bridge — Al-Kafirun excerpts retrieved (Chapter 30 owns the full reading); complete, staged readings of Al-Falaq 113:1–5, An-Nasr 110:1–3 (110:2 included) and, new, An-Nas 114:1–6; a mixed lesson on what وَ joins, the noun of إِنَّ, the predicate of لَيْسَ, questions and إِذَا; the old capstone becomes the review; a 12-question readiness test. Unfamiliar Quran forms (أَعُوذُ، رَأَيْتَ، يَدْخُلُونَ، سَبِّحْ، اسْتَغْفِرْهُ، كَانَ، تَوَّابًا، يُوَسْوِسُ) are glossed whole. Removed: 'first complete surah' and 'every word' claims, Al-Fatiha 1:5 and the imperfect preview (Chapter 34), the 2:256 slogan inside Al-Kafirun, revelation chronology and the 'mission complete' inference, 'إِذَا always future/certain', كَانَ 'connecting to present sense', وَ as a sentence-boundary rule, الطَّالِبُ يَقْرَأُ called verbal, the wrong root of نَسْتَعِينُ, many-to-one matching boards, 'Parse:' true/false items and stray foreign words.",
+    "title": "Book 3 Readiness Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الثَّالِثِ وَالثَّلَاثِينَ",
+    "titleUr": "باب 33 کا آخری امتحان",
+    "chapter_order": 33,
+    "lesson_order": 7,
+    "estimated_minutes": 12,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 114,
+      "ayah": 1,
+      "label": "An-Nas 114:1",
+      "ar": "قُلْ أَعُوذُ بِرَبِّ النَّاسِ",
+      "en": "Say: I seek refuge in the Lord of mankind,",
+      "ur": "کہہ دیجیے: میں لوگوں کے رب کی پناہ مانگتا ہوں،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/114001.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 33 and Book 3.",
+      "ur": "باب 33 اور کتاب 3 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "reveal": {
+    "concept_name": {
+      "en": "Book 3 — reading bridge",
+      "ar": "مُرَاجَعَةُ الْقِرَاءَةِ وَالتَّطْبِيقِ",
+      "ur": "کتاب 3 — پڑھائی کا پل"
+    },
+    "ayah": {
+      "surah": 114,
+      "ayah": 1,
+      "label": "An-Nas 114:1",
+      "ar": "قُلْ أَعُوذُ بِرَبِّ النَّاسِ",
+      "en": "Say: I seek refuge in the Lord of mankind,",
+      "ur": "کہہ دیجیے: میں لوگوں کے رب کی پناہ مانگتا ہوں،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/114001.mp3"
+    },
+    "highlighted_word_indices": [
+      1
+    ],
+    "highlighted_words": [
+      "أَعُوذُ"
+    ],
+    "noor_explanation": {
+      "en": "أَعُوذُ: you close Book 3 able to read three whole surahs for meaning. Book 4 begins with the verb that says what is happening now.",
+      "ur": "أَعُوذُ: آپ کتاب 3 اس حال میں ختم کرتے ہیں کہ تین پوری سورتیں مطلب کے ساتھ پڑھ سکتے ہیں۔ کتاب 4 اس فعل سے شروع ہوتی ہے جو بتاتا ہے کہ اب کیا ہو رہا ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 33 complete. Chapter 34: the imperfect verb — what is happening now, or usually.",
+      "ur": "باب 33 مکمل۔ باب 34: فعل مضارع — جو اب ہو رہا ہے، یا عادتاً ہوتا ہے۔"
+    }
+  },
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 33,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch33-test-q01",
+        "topic": {
+          "en": "Al-Falaq",
+          "ur": "سورۃ الفلق"
+        },
+        "prompt": {
+          "en": "Al-Falaq 113:3. What is refuge sought from here?",
+          "ur": "سورۃ الفلق 113:3۔ یہاں کس سے پناہ مانگی گئی ہے؟"
+        },
+        "arabic": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ",
+        "options": [
+          {
+            "en": "the evil of an envier",
+            "ur": "حسد کرنے والے کا شر"
+          },
+          {
+            "en": "the evil of those who blow on knots",
+            "ur": "گرہوں میں پھونکنے والیوں کا شر"
+          },
+          {
+            "en": "the evil of darkness when it settles",
+            "ur": "اندھیری رات کا شر جب وہ چھا جائے"
+          },
+          {
+            "en": "the Lord of daybreak",
+            "ur": "صبح کا رب"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch33-test-q02",
+        "topic": {
+          "en": "An-Nasr",
+          "ur": "سورۃ النصر"
+        },
+        "prompt": {
+          "en": "An-Nasr 110:3 comes after the event in 110:1–2. What is it?",
+          "ur": "سورۃ النصر 110:3، 110:1–2 کے واقعے کے بعد آتی ہے۔ یہ کیا ہے؟"
+        },
+        "arabic": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ ۚ إِنَّهُ كَانَ تَوَّابًا",
+        "options": [
+          {
+            "en": "the response: glorify your Lord and ask His forgiveness",
+            "ur": "جواب: اپنے رب کی تسبیح کیجیے اور اس سے مغفرت مانگیے"
+          },
+          {
+            "en": "a second event",
+            "ur": "دوسرا واقعہ"
+          },
+          {
+            "en": "a question about the victory",
+            "ur": "فتح کے بارے میں سوال"
+          },
+          {
+            "en": "a story about the people",
+            "ur": "لوگوں کے بارے میں قصہ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch33-test-q03",
+        "topic": {
+          "en": "An-Nas",
+          "ur": "سورۃ الناس"
+        },
+        "prompt": {
+          "en": "An-Nas 114:5. Who does الَّذِي refer to?",
+          "ur": "سورۃ الناس 114:5۔ الَّذِي سے کون مراد ہے؟"
+        },
+        "arabic": "الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ",
+        "options": [
+          {
+            "en": "the Lord of 114:1",
+            "ur": "114:1 کا رب"
+          },
+          {
+            "en": "the people",
+            "ur": "لوگ"
+          },
+          {
+            "en": "the King of 114:2",
+            "ur": "114:2 کا بادشاہ"
+          },
+          {
+            "en": "the whisperer of 114:4",
+            "ur": "114:4 کا وسوسہ ڈالنے والا"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch33-test-q04",
+        "topic": {
+          "en": "Clauses and وَ",
+          "ur": "جملے اور وَ"
+        },
+        "prompt": {
+          "en": "What does وَ join here?",
+          "ur": "یہاں وَ کیا جوڑتا ہے؟"
+        },
+        "arabic": "ذَهَبَ عُمَرُ وَزَيْدٌ إِلَى السُّوقِ.",
+        "options": [
+          {
+            "en": "two sentences",
+            "ur": "دو جملے"
+          },
+          {
+            "en": "two names in one sentence",
+            "ur": "ایک جملے میں دو نام"
+          },
+          {
+            "en": "a question and its answer",
+            "ur": "سوال اور اس کا جواب"
+          },
+          {
+            "en": "an event and its response",
+            "ur": "واقعہ اور اس کا جواب"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch33-test-q05",
+        "topic": {
+          "en": "Clauses and وَ",
+          "ur": "جملے اور وَ"
+        },
+        "prompt": {
+          "en": "Who read the book?",
+          "ur": "کتاب کس نے پڑھی؟"
+        },
+        "arabic": "جَلَسَتْ زَيْنَبُ، وَقَرَأَتْ أُمُّهَا الْكِتَابَ.",
+        "options": [
+          {
+            "en": "Zaynab",
+            "ur": "زینب"
+          },
+          {
+            "en": "both of them",
+            "ur": "دونوں"
+          },
+          {
+            "en": "nobody",
+            "ur": "کسی نے نہیں"
+          },
+          {
+            "en": "Zaynab's mother",
+            "ur": "زینب کی امی"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch33-test-q06",
+        "topic": {
+          "en": "The noun of inna",
+          "ur": "إنّ کا اسم"
+        },
+        "prompt": {
+          "en": "Which word is the noun of إِنَّ? (مُجْتَهِدٌ = hard-working)",
+          "ur": "إِنَّ کا اسم کون سا لفظ ہے؟ (مُجْتَهِدٌ = محنتی)"
+        },
+        "arabic": "إِنَّ الطَّالِبَ مُجْتَهِدٌ.",
+        "options": [
+          {
+            "en": "الطَّالِبَ",
+            "ur": "الطَّالِبَ"
+          },
+          {
+            "en": "مُجْتَهِدٌ",
+            "ur": "مُجْتَهِدٌ"
+          },
+          {
+            "en": "إِنَّ",
+            "ur": "إِنَّ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch33-test-q07",
+        "topic": {
+          "en": "The predicate of laysa",
+          "ur": "لیس کی خبر"
+        },
+        "prompt": {
+          "en": "Which word is the predicate of لَيْسَ?",
+          "ur": "لَيْسَ کی خبر کون سا لفظ ہے؟"
+        },
+        "arabic": "لَيْسَ الْبَيْتُ كَبِيرًا.",
+        "options": [
+          {
+            "en": "الْبَيْتُ",
+            "ur": "الْبَيْتُ"
+          },
+          {
+            "en": "لَيْسَ",
+            "ur": "لَيْسَ"
+          },
+          {
+            "en": "كَبِيرًا",
+            "ur": "كَبِيرًا"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch33-test-q08",
+        "topic": {
+          "en": "Questions",
+          "ur": "سوالات"
+        },
+        "prompt": {
+          "en": "Which reply fits?",
+          "ur": "کون سا جواب مناسب ہے؟"
+        },
+        "arabic": "سَأَلَ يُوسُفُ: مَنْ فِي الْفَصْلِ؟",
+        "options": [
+          {
+            "en": "Yesterday.",
+            "ur": "گزشتہ کل۔",
+            "arabic": "أَمْسِ"
+          },
+          {
+            "en": "The teacher and the students.",
+            "ur": "استاد اور طلبہ۔",
+            "arabic": "الْأُسْتَاذُ وَالطُّلَّابُ"
+          },
+          {
+            "en": "By car.",
+            "ur": "گاڑی سے۔",
+            "arabic": "بِالسَّيَّارَةِ"
+          },
+          {
+            "en": "Big.",
+            "ur": "بڑا۔",
+            "arabic": "كَبِيرٌ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch33-test-q09",
+        "topic": {
+          "en": "Questions",
+          "ur": "سوالات"
+        },
+        "prompt": {
+          "en": "Which reply fits?",
+          "ur": "کون سا جواب مناسب ہے؟"
+        },
+        "arabic": "كَمْ كِتَابًا عِنْدَكِ؟",
+        "options": [
+          {
+            "en": "4.",
+            "ur": "4۔",
+            "arabic": "٤"
+          },
+          {
+            "en": "My book.",
+            "ur": "میری کتاب۔",
+            "arabic": "كِتَابِي"
+          },
+          {
+            "en": "On the desk.",
+            "ur": "میز پر۔",
+            "arabic": "عَلَى الْمَكْتَبِ"
+          },
+          {
+            "en": "Yes.",
+            "ur": "جی ہاں۔",
+            "arabic": "نَعَمْ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch33-test-q10",
+        "topic": {
+          "en": "إِذَا",
+          "ur": "إِذَا"
+        },
+        "prompt": {
+          "en": "(الضَّيْفُ = the guest) What is the response?",
+          "ur": "(الضَّيْفُ = مہمان) جواب کیا ہے؟"
+        },
+        "arabic": "إِذَا جَاءَ الضَّيْفُ فَنَحْنُ فِي الْبَيْتِ.",
+        "options": [
+          {
+            "en": "the guest comes",
+            "ur": "مہمان آتا ہے"
+          },
+          {
+            "en": "the guest is at home",
+            "ur": "مہمان گھر میں ہے"
+          },
+          {
+            "en": "there is no response",
+            "ur": "کوئی جواب نہیں"
+          },
+          {
+            "en": "we are at home",
+            "ur": "ہم گھر میں ہوتے ہیں"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch33-test-q11",
+        "topic": {
+          "en": "إِذَا",
+          "ur": "إِذَا"
+        },
+        "prompt": {
+          "en": "An-Nasr 110:1 on its own. What does it show?",
+          "ur": "سورۃ النصر 110:1 اکیلی۔ یہ کیا دکھاتی ہے؟"
+        },
+        "arabic": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ",
+        "options": [
+          {
+            "en": "the event and its response",
+            "ur": "واقعہ اور اس کا جواب"
+          },
+          {
+            "en": "a question",
+            "ur": "سوال"
+          },
+          {
+            "en": "the event; the response comes later, in 110:3",
+            "ur": "واقعہ؛ جواب بعد میں، 110:3 میں آتا ہے"
+          },
+          {
+            "en": "a command",
+            "ur": "حکم"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch33-test-q12",
+        "topic": {
+          "en": "A new passage",
+          "ur": "نئی عبارت"
+        },
+        "prompt": {
+          "en": "Why did Bilal go to the library?",
+          "ur": "بلال لائبریری کیوں گیا؟"
+        },
+        "arabic": "خَرَجَ بِلَالٌ مِنَ الْبَيْتِ وَذَهَبَ إِلَى الْمَكْتَبَةِ. إِنَّ الْمَكْتَبَةَ كَبِيرَةٌ، وَلَيْسَتْ بَعِيدَةً. سَأَلَهُ صَدِيقُهُ: لِمَاذَا أَنْتَ هُنَا؟ قَالَ: لِأَنَّ الِامْتِحَانَ غَدًا.",
+        "options": [
+          {
+            "en": "because the library is big",
+            "ur": "کیونکہ لائبریری بڑی ہے"
+          },
+          {
+            "en": "because the exam is tomorrow",
+            "ur": "کیونکہ امتحان کل ہے"
+          },
+          {
+            "en": "because his friend asked him",
+            "ur": "کیونکہ اس کے دوست نے پوچھا"
+          },
+          {
+            "en": "because the library is far",
+            "ur": "کیونکہ لائبریری دور ہے"
+          }
+        ],
+        "correct_index": 1
+      }
+    ]
+  }
+}

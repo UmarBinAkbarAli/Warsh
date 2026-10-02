@@ -2,430 +2,507 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 33, display lesson 5 (ch33-l04) — tracking meaning across clauses in one coherent authored passage: what وَ joins (two names, or two clauses — never a boundary rule), the noun of إِنَّ (Chapter 24 l02) and the predicate of لَيْسَ (Chapter 25 l02) in simple governor-first sentences, a مَتَى question and reply, an إِذَا event and response, a noun-first sentence that stays nominal, and a fresh passage decided from text evidence. Past verbs only (S11). Rebuilt 2026-10-02 in the proposal harvest, batch 2 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-33-content-proposal.md and its review amendments: a Book 3 reading bridge — Al-Kafirun excerpts retrieved (Chapter 30 owns the full reading); complete, staged readings of Al-Falaq 113:1–5, An-Nasr 110:1–3 (110:2 included) and, new, An-Nas 114:1–6; a mixed lesson on what وَ joins, the noun of إِنَّ, the predicate of لَيْسَ, questions and إِذَا; the old capstone becomes the review; a 12-question readiness test. Unfamiliar Quran forms (أَعُوذُ، رَأَيْتَ، يَدْخُلُونَ، سَبِّحْ، اسْتَغْفِرْهُ، كَانَ، تَوَّابًا، يُوَسْوِسُ) are glossed whole. Removed: 'first complete surah' and 'every word' claims, Al-Fatiha 1:5 and the imperfect preview (Chapter 34), the 2:256 slogan inside Al-Kafirun, revelation chronology and the 'mission complete' inference, 'إِذَا always future/certain', كَانَ 'connecting to present sense', وَ as a sentence-boundary rule, الطَّالِبُ يَقْرَأُ called verbal, the wrong root of نَسْتَعِينُ, many-to-one matching boards, 'Parse:' true/false items and stray foreign words.",
+    "title": "Track Meaning Across Clauses",
+    "titleAr": "تَتَبُّعُ الْمَعْنَى",
+    "titleUr": "جملوں کے پار مطلب کی پیروی",
     "chapter_order": 33,
     "lesson_order": 5,
-    "chapter_title": "Reading Comprehension and Integration",
-    "title": "Book 3 Capstone Integration",
-    "titleAr": "تَمْكِينُ الْكِتَابِ الْثَّالِثِ",
-    "source": "book3_lesson10_closing.md",
     "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 1,
-      "ayah": 5,
-      "label": "Al-Fatiha 1:5",
-      "ar": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
-      "en": "You alone we worship and You alone we seek help.",
-      "ur": "تجھ ہی کو ہم عبادت کرتے ہیں اور تجھ ہی سے ہم مدد مانگتے ہیں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001005.mp3"
+      "surah": 103,
+      "ayah": 2,
+      "label": "Al-'Asr 103:2",
+      "ar": "إِنَّ الْإِنسَانَ لَفِي خُسْرٍ",
+      "en": "Indeed, mankind is in loss,",
+      "ur": "بے شک انسان خسارے میں ہے،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/103002.mp3"
     },
     "noor_intro": {
-      "en": "Al-Fatiha 1:5 brings together grammar from Book 3: نَعْبُدُ and نَسْتَعِينُ (present-tense verbs) and إِيَّاكَ (the object, placed first for emphasis).",
-      "ur": "الفاتحہ 1:5 میں کتاب 3 کی گرامر یکجا ہے: نَعْبُدُ اور نَسْتَعِينُ (مضارع افعال) اور إِيَّاكَ (مفعول، تاکید کے لیے پہلے رکھا گیا)۔"
+      "en": "A short passage with several clauses. Find where each clause starts, what وَ joins, and who each word refers to.",
+      "ur": "کئی جملوں والی ایک مختصر عبارت۔ دیکھیں ہر جملہ کہاں سے شروع ہوتا ہے، وَ کیا جوڑتا ہے، اور ہر لفظ کس کی طرف لوٹتا ہے۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "ذَهَبَ أَحْمَدُ وَيُوسُفُ إِلَى الْمَسْجِدِ. إِنَّ الْمَسْجِدَ قَرِيبٌ، وَلَيْسَ الطَّرِيقُ طَوِيلًا. سَأَلَ يُوسُفُ: مَتَى الدَّرْسُ؟ فَقَالَ أَحْمَدُ: بَعْدَ الصَّلَاةِ. إِذَا جَاءَ الْإِمَامُ بَدَأَ الدَّرْسُ.",
+        "ar_plain": "ذهب أحمد ويوسف إلى المسجد. إن المسجد قريب، وليس الطريق طويلا. سأل يوسف: متى الدرس؟ فقال أحمد: بعد الصلاة. إذا جاء الإمام بدأ الدرس.",
+        "translit": "dhahaba aḥmadu wa-yūsufu ilā l-masjidi. inna l-masjida qarībun, wa-laysa ṭ-ṭarīqu ṭawīlan. saʾala yūsufu: matā d-darsu? fa-qāla aḥmadu: baʿda ṣ-ṣalāti. idhā jāʾa l-imāmu badaʾa d-darsu.",
+        "en": "Ahmad and Yusuf went to the mosque. Indeed, the mosque is near, and the road is not long. Yusuf asked: When is the lesson? Ahmad said: After the prayer. When the imam comes, the lesson begins.",
+        "ur": "احمد اور یوسف مسجد گئے۔ بے شک مسجد قریب ہے، اور راستہ لمبا نہیں۔ یوسف نے پوچھا: سبق کب ہے؟ احمد نے کہا: نماز کے بعد۔ جب امام آتے ہیں تو سبق شروع ہوتا ہے۔"
+      },
+      "explanation": {
+        "en": "A short passage. Read it once for the story.",
+        "ur": "ایک مختصر عبارت۔ کہانی کے لیے ایک بار پڑھیں۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "وَ joins — but what?",
+        "ar": "أَحْمَدُ وَيُوسُفُ / قَرِيبٌ، وَلَيْسَ الطَّرِيقُ طَوِيلًا",
+        "ur": "وَ جوڑتا ہے — مگر کیا؟"
+      },
+      "examples": [
+        {
+          "ar": "أَحْمَدُ وَيُوسُفُ",
+          "ar_plain": "أحمد ويوسف",
+          "translit": "aḥmadu wa-yūsufu",
+          "en": "Ahmad and Yusuf",
+          "ur": "احمد اور یوسف"
+        },
+        {
+          "ar": "الْمَسْجِدُ قَرِيبٌ، وَلَيْسَ الطَّرِيقُ طَوِيلًا",
+          "ar_plain": "المسجد قريب، وليس الطريق طويلا",
+          "translit": "al-masjidu qarībun, wa-laysa ṭ-ṭarīqu ṭawīlan",
+          "en": "the mosque is near, and the road is not long",
+          "ur": "مسجد قریب ہے، اور راستہ لمبا نہیں"
+        }
+      ],
+      "explanation": {
+        "en": "In أَحْمَدُ وَيُوسُفُ, وَ joins two names in one clause. In the second, it joins two clauses. وَ alone does not tell you a sentence has ended; read what it joins.",
+        "ur": "أَحْمَدُ وَيُوسُفُ میں وَ ایک جملے میں دو نام جوڑتا ہے۔ دوسرے میں یہ دو جملے جوڑتا ہے۔ صرف وَ سے پتا نہیں چلتا کہ جملہ ختم ہو گیا؛ دیکھیں وہ کیا جوڑتا ہے۔"
+      }
+    },
+    {
       "type": "CONCEPT",
       "concept": {
-        "en": "Al-Fatiha 1:5: grammatical analysis",
-        "ar": "الْفَاتِحَةُ 1:5: تَحْلِيلٌ نَحْوِيٌّ",
-        "ur": "الفاتحہ 1:5: گرامری تجزیہ"
+        "en": "The noun of إِنَّ",
+        "ar": "إِنَّ الْمَسْجِدَ قَرِيبٌ",
+        "ur": "إِنَّ کا اسم"
       },
       "explanation": {
-        "en": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ: Two verbal sentences connected by وَ. إِيَّاكَ (you — object, addressed directly) + نَعْبُدُ (we worship) + إِيَّاكَ + نَسْتَعِينُ (we seek help).",
-        "ur": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ: وَ سے جُڑے دو verbal sentences۔ إِيَّاكَ (تم — object، براہ راست addressed) + نَعْبُدُ (ہم عبادت کرتے ہیں) + إِيَّاكَ + نَسْتَعِينُ (ہم مدد مانگتے ہیں)۔"
+        "en": "Chapter 24: after إِنَّ, the noun takes fatḥa — الْمَسْجِدَ — and the predicate keeps ḍamma: قَرِيبٌ.",
+        "ur": "باب 24: إِنَّ کے بعد اسم فتحہ لیتا ہے — الْمَسْجِدَ — اور خبر ضمہ پر رہتی ہے: قَرِيبٌ۔"
       }
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "إِيَّاكَ",
-        "ar_plain": "إياك",
-        "translit": "iyyaaka",
-        "en": "You (object)",
-        "ur": "تجھے (مفعول)"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The predicate of لَيْسَ",
+        "ar": "لَيْسَ الطَّرِيقُ طَوِيلًا",
+        "ur": "لَيْسَ کی خبر"
       },
       "explanation": {
-        "en": "Pronoun in the accusative case used as the object of the verb. إِيَّاكَ is always the object — 'you' in the accusative. نَعْبُدُكَ = we worship you; but إِيَّاكَ is the emphatic form used in prayer.",
-        "ur": "Pronoun accusative case میں جو verb کا object ہے۔ إِيَّاكَ ہمیشہ object ہوتا ہے — accusative میں 'تم'۔ نَعْبُدُكَ = ہم تمہاری عبادت کرتے ہیں؛ لیکن إِيَّاكَ prayer میں used ہونے والا emphatic form ہے۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "نَعْبُدُ",
-        "ar_plain": "نعبد",
-        "translit": "na'budu",
-        "en": "we worship",
-        "ur": "ہم عبادت کرتے ہیں"
-      },
-      "explanation": {
-        "en": "Present tense from ع-ب-د (to worship). Prefix نَ- = first person plural. نَعْبُدُ = we worship. The نَ prefix is the key marker of present tense first person plural.",
-        "ur": "ع-ب-د (عبادت کرنا) سے present tense۔ Prefix نَ- = first person plural۔ نَعْبُدُ = ہم عبادت کرتے ہیں۔ نَ prefix present tense first person plural کا key marker ہے۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "نَسْتَعِينُ",
-        "ar_plain": "نستعين",
-        "translit": "nasta'iinu",
-        "en": "we seek help",
-        "ur": "ہم مدد مانگتے ہیں"
-      },
-      "explanation": {
-        "en": "Present tense from the root ع-و-ن (help). Prefix نَ- = \"we\". نَسْتَعِينُ = we ask for help.",
-        "ur": "مادہ ع-و-ن (مدد) سے مضارع۔ سابقہ نَ- = \"ہم\"۔ نَسْتَعِينُ = ہم مدد مانگتے ہیں۔"
+        "en": "Chapter 25: after لَيْسَ, the noun keeps ḍamma — الطَّرِيقُ — and the predicate takes fatḥa: طَوِيلًا (long).",
+        "ur": "باب 25: لَيْسَ کے بعد اسم ضمہ پر رہتا ہے — الطَّرِيقُ — اور خبر فتحہ لیتی ہے: طَوِيلًا (لمبا)۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
-        "ar_plain": "إياك نعبد وإياك نستعين",
-        "translit": "iyyaaka na'budu wa-iyyaaka nasta'iinu",
-        "en": "You alone we worship and You alone we seek help.",
-        "ur": "تجھ ہی کو ہم عبادت کرتے ہیں اور تجھ ہی سے ہم مدد مانگتے ہیں۔"
+        "ar": "سَأَلَ يُوسُفُ: مَتَى الدَّرْسُ؟ فَقَالَ أَحْمَدُ: بَعْدَ الصَّلَاةِ.",
+        "ar_plain": "سأل يوسف: متى الدرس؟ فقال أحمد: بعد الصلاة.",
+        "translit": "saʾala yūsufu: matā d-darsu? fa-qāla aḥmadu: baʿda ṣ-ṣalāti.",
+        "en": "Yusuf asked: When is the lesson? Ahmad said: After the prayer.",
+        "ur": "یوسف نے پوچھا: سبق کب ہے؟ احمد نے کہا: نماز کے بعد۔"
       },
       "explanation": {
-        "en": "إِيَّاكَ appears twice for emphasis — You AND You alone. نَعْبُدُ and نَسْتَعِينُ are both present tense first person plural. وَ joins the two sentences.",
-        "ur": "Emphasis کے لیے إِيَّاكَ دو بار آیا ہے — تم اور صرف تم۔ نَعْبُدُ اور نَسْتَعِينُ دونوں present tense first person plural ہیں۔ وَ دو sentences کو جوڑتا ہے۔"
+        "en": "A question and its reply (Chapter 31): مَتَى → a time.",
+        "ur": "سوال اور جواب (باب 31): مَتَى → وقت۔"
       }
     },
     {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "What 1:5 shows",
-        "ur": "1:5 کیا دکھاتی ہے"
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "إِذَا جَاءَ الْإِمَامُ بَدَأَ الدَّرْسُ.",
+        "ar_plain": "إذا جاء الإمام بدأ الدرس.",
+        "translit": "idhā jāʾa l-imāmu badaʾa d-darsu.",
+        "en": "When the imam comes, the lesson begins.",
+        "ur": "جب امام آتے ہیں تو سبق شروع ہوتا ہے۔"
       },
-      "body": {
-        "en": "In one ayah you can identify two present-tense verbs, an object pronoun placed first for emphasis, and وَ joining two sentences. The remaining ayat of Al-Fatiha use grammar you will keep meeting in Book 4.",
-        "ur": "ایک ہی آیت میں آپ دو مضارع افعال، تاکید کے لیے پہلے رکھا گیا مفعول ضمیر، اور دو جملوں کو جوڑنے والا وَ پہچان سکتے ہیں۔ الفاتحہ کی باقی آیات کی گرامر کتاب 4 میں بار بار آئے گی۔"
+      "explanation": {
+        "en": "Chapter 32: event جَاءَ الْإِمَامُ, response بَدَأَ الدَّرْسُ.",
+        "ur": "باب 32: واقعہ جَاءَ الْإِمَامُ، جواب بَدَأَ الدَّرْسُ۔"
       }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Starts with a noun — still nominal",
+        "ar": "الطَّالِبُ كَتَبَ الدَّرْسَ / كَتَبَ الطَّالِبُ الدَّرْسَ",
+        "ur": "اسم سے شروع — پھر بھی اسمیہ"
+      },
+      "examples": [
+        {
+          "ar": "الطَّالِبُ كَتَبَ الدَّرْسَ.",
+          "ar_plain": "الطالب كتب الدرس.",
+          "translit": "aṭ-ṭālibu kataba d-darsa.",
+          "en": "The student — he wrote the lesson.",
+          "ur": "طالب علم — اس نے سبق لکھا۔"
+        },
+        {
+          "ar": "كَتَبَ الطَّالِبُ الدَّرْسَ.",
+          "ar_plain": "كتب الطالب الدرس.",
+          "translit": "kataba ṭ-ṭālibu d-darsa.",
+          "en": "The student wrote the lesson.",
+          "ur": "طالب علم نے سبق لکھا۔"
+        }
+      ],
+      "explanation": {
+        "en": "Chapter 29: a sentence that opens with a noun is nominal, even when a verb follows inside its predicate. One that opens with the verb is verbal.",
+        "ur": "باب 29: جو جملہ اسم سے شروع ہو وہ اسمیہ ہے، چاہے اس کی خبر میں فعل آئے۔ جو فعل سے شروع ہو وہ فعلیہ ہے۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "103:2: Indeed, mankind is in loss,",
+        "ar": "إِنَّ الْإِنسَانَ لَفِي خُسْرٍ",
+        "ur": "103:2: بے شک انسان خسارے میں ہے،"
+      },
+      "explanation": {
+        "en": "إِنَّ + الْإِنْسَانَ (its noun, with fatḥa) + لَفِي خُسْرٍ, in loss (its predicate).",
+        "ur": "إِنَّ + الْإِنْسَانَ (اس کا اسم، فتحہ کے ساتھ) + لَفِي خُسْرٍ، خسارے میں (اس کی خبر)۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/103002.mp3"
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
-      "id": "ch33-l05-ex01",
-      "prompt": {
-        "ar": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
-        "ar_plain": "إياك نعبد وإياك نستعين",
-        "translit": "iyyaaka na'budu wa-iyyaaka nasta'iinu",
-        "en": "You alone we worship and You alone we seek help.",
-        "ur": "تجھ ہی کو ہم عبادت کرتے ہیں اور تجھ ہی سے ہم مدد مانگتے ہیں۔"
-      },
-      "options": [
-        {
-          "en": "You alone we worship and You alone we seek help.",
-          "ur": "تجھ ہی کو ہم عبادت کرتے ہیں اور تجھ ہی سے ہم مدد مانگتے ہیں۔",
-          "translit": "—",
-          "ar_plain": ""
-        },
-        {
-          "en": "You worship us and You help us.",
-          "ur": "تو ہماری عبادت کرتا ہے اور ہماری مدد کرتا ہے۔"
-        },
-        {
-          "en": "You we worship and help.",
-          "ur": "تمہاری عبادت اور مدد۔",
-          "translit": "—",
-          "ar_plain": ""
-        },
-        {
-          "en": "I worship You and seek Your help.",
-          "ur": "میں تجھے پوجتا ہوں اور تیری مدد مانگتا ہوں۔",
-          "translit": "—",
-          "ar_plain": ""
+      "type": "TRUE_FALSE",
+      "id": "ch33-l04-ex01",
+      "statement": {
+        "en": "Here وَ starts a new sentence.",
+        "ur": "یہاں وَ نیا جملہ شروع کرتا ہے۔",
+        "ar_example": {
+          "ar": "ذَهَبَ أَحْمَدُ وَيُوسُفُ إِلَى الْمَسْجِدِ.",
+          "ar_plain": "ذهب أحمد ويوسف إلى المسجد.",
+          "translit": "dhahaba aḥmadu wa-yūsufu ilā l-masjidi.",
+          "en": "Ahmad and Yusuf went to the mosque.",
+          "ur": "احمد اور یوسف مسجد گئے۔"
         }
-      ],
-      "correct_index": 0,
+      },
+      "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "إِيَّاكَ is the accusative object (you). نَعْبُدُ and نَسْتَعِينُ are first person plural present tense (we). The doubling of إِيَّاكَ shows emphasis: You ALONE.",
-        "ur": "إِيَّاكَ accusative object ہے (تم)۔ نَعْبُدُ اور نَسْتَعِينُ first person plural present tense ہیں (ہم)۔ إِيَّاكَ کا دوبار آنا emphasis دکھاتا ہے: صرف تم۔"
+        "en": "وَ joins two names in one sentence: Ahmad and Yusuf went.",
+        "ur": "وَ ایک ہی جملے میں دو نام جوڑتا ہے: احمد اور یوسف گئے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch33-l05-ex02",
+      "id": "ch33-l04-ex02",
       "statement": {
-        "en": "In نَعْبُدُ, the prefix نَ indicates first person plural present tense (we).",
-        "ur": "نَعْبُدُ میں، prefix نَ first person plural present tense (ہم) indicate کرتا ہے۔",
+        "en": "Here وَ joins two clauses.",
+        "ur": "یہاں وَ دو جملوں کو جوڑتا ہے۔",
         "ar_example": {
-          "ar": "نَعْبُدُ",
-          "ar_plain": "نعبد",
-          "translit": "na'budu",
-          "en": "we worship",
-          "ur": "ہم عبادت کرتے ہیں"
+          "ar": "إِنَّ الْمَسْجِدَ قَرِيبٌ، وَلَيْسَ الطَّرِيقُ طَوِيلًا.",
+          "ar_plain": "إن المسجد قريب، وليس الطريق طويلا.",
+          "translit": "inna l-masjida qarībun, wa-laysa ṭ-ṭarīqu ṭawīlan.",
+          "en": "Indeed, the mosque is near, and the road is not long.",
+          "ur": "بے شک مسجد قریب ہے، اور راستہ لمبا نہیں۔"
         }
       },
       "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "إِنَّ الْمَسْجِدَ قَرِيبٌ is one clause; لَيْسَ الطَّرِيقُ طَوِيلًا is another.",
+        "ur": "إِنَّ الْمَسْجِدَ قَرِيبٌ ایک جملہ ہے؛ لَيْسَ الطَّرِيقُ طَوِيلًا دوسرا۔"
+      }
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch33-l05-ex03",
+      "id": "ch33-l04-ex03",
       "mode": "TAP",
-      "sentence_ar": "إِنَّ الْمُسْلِمَ يَعْبُدُ ___",
+      "sentence_ar": "إِنَّ ___ قَرِيبٌ.",
       "hint": {
-        "en": "Truly, the Muslim worships Allah.",
-        "ur": "بے شک، مسلمان اللہ کی عبادت کرتا ہے۔"
+        "en": "Indeed, the mosque is near.",
+        "ur": "بے شک مسجد قریب ہے۔"
       },
       "options": [
         {
-          "ar": "اللَّهَ",
-          "ar_plain": "الله",
-          "translit": "allaaha",
-          "en": "Allah",
-          "ur": "اللہ"
+          "ar": "الْمَسْجِدُ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjidu",
+          "en": "the mosque (ـُ)",
+          "ur": "مسجد (ـُ)"
         },
         {
-          "ar": "اللَّهِ",
-          "ar_plain": "الله",
-          "translit": "allaahi",
-          "en": "Allah (genitive)",
-          "ur": "اللہ (مجرور)"
+          "ar": "الْمَسْجِدَ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjida",
+          "en": "the mosque (ـَ)",
+          "ur": "مسجد (ـَ)"
         },
         {
-          "ar": "رَبَّنَا",
-          "ar_plain": "ربنا",
-          "translit": "rabbanaa",
-          "en": "our Lord",
-          "ur": "ہمارا رب"
+          "ar": "مَسْجِدٌ",
+          "ar_plain": "مسجد",
+          "translit": "masjidun",
+          "en": "a mosque",
+          "ur": "ایک مسجد"
         },
         {
-          "ar": "الْمُسْلِمِ",
-          "ar_plain": "المسلم",
-          "translit": "al-muslimi",
-          "en": "the Muslim",
-          "ur": "مسلمان"
+          "ar": "الْمَسْجِدِ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjidi",
+          "en": "the mosque (ـِ)",
+          "ur": "مسجد (ـِ)"
         }
       ],
       "correct_answer": {
-        "ar": "اللَّهَ",
-        "ar_plain": "الله",
-        "translit": "allaaha",
-        "en": "Allah",
-        "ur": "اللہ"
+        "ar": "الْمَسْجِدَ",
+        "ar_plain": "المسجد",
+        "translit": "al-masjida",
+        "en": "the mosque (ـَ)",
+        "ur": "مسجد (ـَ)"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The noun of إِنَّ takes fatḥa: إِنَّ الْمَسْجِدَ (Chapter 24).",
+        "ur": "إِنَّ کا اسم فتحہ لیتا ہے: إِنَّ الْمَسْجِدَ (باب 24)۔"
+      }
     },
     {
-      "type": "MATCHING",
-      "id": "ch33-l05-ex04",
-      "left_column": [
-        {
-          "ar": "إِيَّاكَ",
-          "ar_plain": "إياك",
-          "translit": "iyyaaka",
-          "en": "You (obj.)",
-          "ur": "تم (مفعول)"
-        },
-        {
-          "ar": "نَعْبُدُ",
-          "ar_plain": "نعبد",
-          "translit": "na'budu",
-          "en": "we worship",
-          "ur": "ہم عبادت کرتے ہیں"
-        },
-        {
-          "ar": "نَسْتَعِينُ",
-          "ar_plain": "نستعين",
-          "translit": "nasta'iinu",
-          "en": "we seek help",
-          "ur": "ہم مدد مانگتے ہیں"
-        },
-        {
-          "ar": "إِنَّ",
-          "ar_plain": "إن",
-          "translit": "inna",
-          "en": "truly",
-          "ur": "بے شک"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "Accusative pronoun (object)",
-          "ur": "منصوب pronoun (مفعول)"
-        },
-        {
-          "en": "1st person pl. present verb",
-          "ur": "پہلا شخص جمع حال verb"
-        },
-        {
-          "en": "1st person pl. present verb",
-          "ur": "پہلا شخص جمع حال verb"
-        },
-        {
-          "en": "Emphasis particle (nominal)",
-          "ur": "Emphasis particle (اسمی)"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch33-l05-ex05",
-      "target_translation": {
-        "en": "You alone we worship.",
-        "ur": "تجھ ہی کو ہم عبادت کرتے ہیں۔"
-      },
-      "tiles": [
-        {
-          "ar": "إِيَّاكَ",
-          "ar_plain": "إياك",
-          "translit": "iyyaaka",
-          "en": "You",
-          "ur": "تم"
-        },
-        {
-          "ar": "نَعْبُدُ",
-          "ar_plain": "نعبد",
-          "translit": "na'budu",
-          "en": "we worship",
-          "ur": "ہم عبادت کرتے ہیں"
-        },
-        {
-          "ar": "أَعْبُدُ",
-          "ar_plain": "أعبد",
-          "translit": "a'budu",
-          "en": "I worship",
-          "ur": "میں عبادت کروں"
-        },
-        {
-          "ar": "نَسْتَعِينُ",
-          "ar_plain": "نستعين",
-          "translit": "nasta'iinu",
-          "en": "we seek help",
-          "ur": "ہم مدد مانگتے ہیں"
-        }
-      ],
-      "correct_order": [
-        0,
-        1
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch33-l05-ex06",
-      "prompt": {
-        "ar": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
-        "ar_plain": "اهدنا الصراط المستقيم",
-        "translit": "ihdinaa as-siraata al-mustaqiim",
-        "en": "Guide us to the straight path. (Al-Fatiha 1:6)",
-        "ur": "ہمیں سیدھے راستے کی ہدایت دے۔ (الفاتحہ 1:6)"
+      "type": "FILL_BLANK",
+      "id": "ch33-l04-ex04",
+      "mode": "TAP",
+      "sentence_ar": "لَيْسَ الطَّرِيقُ ___.",
+      "hint": {
+        "en": "The road is not long.",
+        "ur": "راستہ لمبا نہیں۔"
       },
       "options": [
         {
-          "en": "We guided them to the straight path.",
-          "ur": "ہم نے انہیں سیدھے راستے کی ہدایت دی۔"
+          "ar": "طَوِيلٌ",
+          "ar_plain": "طويل",
+          "translit": "ṭawīlun",
+          "en": "long (ـٌ)",
+          "ur": "لمبا (ـٌ)"
         },
         {
-          "en": "The straight path guides us.",
-          "ur": "سیدھا راستہ ہماری رہنمائی کرتا ہے۔"
+          "ar": "الطَّوِيلُ",
+          "ar_plain": "الطويل",
+          "translit": "aṭ-ṭawīlu",
+          "en": "the long",
+          "ur": "لمبا والا"
         },
         {
-          "en": "Guide us to the straight path.",
-          "ur": "ہمیں سیدھے راستے کی ہدایت دے۔"
+          "ar": "طَوِيلٍ",
+          "ar_plain": "طويل",
+          "translit": "ṭawīlin",
+          "en": "long (ـٍ)",
+          "ur": "لمبا (ـٍ)"
         },
         {
-          "en": "Is this the straight path?",
-          "ur": "کیا یہ سیدھا راستہ ہے؟"
+          "ar": "طَوِيلًا",
+          "ar_plain": "طويلا",
+          "translit": "ṭawīlan",
+          "en": "long (ـًا)",
+          "ur": "لمبا (ـًا)"
         }
       ],
-      "correct_index": 2,
+      "correct_answer": {
+        "ar": "طَوِيلًا",
+        "ar_plain": "طويلا",
+        "translit": "ṭawīlan",
+        "en": "long (ـًا)",
+        "ur": "لمبا (ـًا)"
+      },
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "اهْدِنَا = guide us (a request in command form, with نَا \"us\" attached). الصِّرَاطَ الْمُسْتَقِيمَ = the straight path (noun + adjective).",
-        "ur": "اهْدِنَا = ہمیں ہدایت دے (امر کی صورت میں دعا، ساتھ نَا \"ہمیں\")۔ الصِّرَاطَ الْمُسْتَقِيمَ = سیدھا راستہ (اسم + صفت)۔"
+        "en": "The predicate of لَيْسَ takes fatḥa: طَوِيلًا (Chapter 25).",
+        "ur": "لَيْسَ کی خبر فتحہ لیتی ہے: طَوِيلًا (باب 25)۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch33-l04-ex05",
+      "prompt_line": {
+        "ar": "يُوسُفُ: مَتَى الدَّرْسُ؟",
+        "ar_plain": "يوسف: متى الدرس؟",
+        "translit": "yūsufu: matā d-darsu?",
+        "en": "Yusuf: When is the lesson?",
+        "ur": "یوسف: سبق کب ہے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "بَعْدَ الصَّلَاةِ.",
+          "ar_plain": "بعد الصلاة.",
+          "translit": "baʿda ṣ-ṣalāti.",
+          "en": "After the prayer.",
+          "ur": "نماز کے بعد۔"
+        },
+        {
+          "ar": "فِي الْمَسْجِدِ.",
+          "ar_plain": "في المسجد.",
+          "translit": "fī l-masjidi.",
+          "en": "In the mosque.",
+          "ur": "مسجد میں۔"
+        },
+        {
+          "ar": "لِأَنَّهُ قَرِيبٌ.",
+          "ar_plain": "لأنه قريب.",
+          "translit": "li-annahu qarībun.",
+          "en": "Because it is near.",
+          "ur": "کیونکہ وہ قریب ہے۔"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "مَتَى asks for a time: بَعْدَ الصَّلَاةِ.",
+        "ur": "مَتَى وقت پوچھتا ہے: بَعْدَ الصَّلَاةِ۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch33-l04-ex06",
+      "prompt_line": {
+        "ar": "إِلَى أَيْنَ ذَهَبَ أَحْمَدُ؟",
+        "ar_plain": "إلى أين ذهب أحمد؟",
+        "translit": "ilā ayna dhahaba aḥmadu?",
+        "en": "Where did Ahmad go?",
+        "ur": "احمد کہاں گیا؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "مَعَ يُوسُفَ.",
+          "ar_plain": "مع يوسف.",
+          "translit": "maʿa yūsufa.",
+          "en": "With Yusuf.",
+          "ur": "یوسف کے ساتھ۔"
+        },
+        {
+          "ar": "بَعْدَ الصَّلَاةِ.",
+          "ar_plain": "بعد الصلاة.",
+          "translit": "baʿda ṣ-ṣalāti.",
+          "en": "After the prayer.",
+          "ur": "نماز کے بعد۔"
+        },
+        {
+          "ar": "إِلَى الْمَسْجِدِ.",
+          "ar_plain": "إلى المسجد.",
+          "translit": "ilā l-masjidi.",
+          "en": "To the mosque.",
+          "ur": "مسجد کی طرف۔"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "إِلَى أَيْنَ asks where to: إِلَى الْمَسْجِدِ.",
+        "ur": "إِلَى أَيْنَ پوچھتا ہے کہاں کو: إِلَى الْمَسْجِدِ۔"
       }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch33-l05-ex07",
+      "id": "ch33-l04-ex07",
       "prompt": {
-        "ar": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
-        "ar_plain": "اياك نعبد واياك نستعين",
-        "translit": "iyyaaka na'budu wa iyyaaka nasta'iin",
-        "en": "You alone we worship, and You alone we ask for help.",
-        "ur": "ہم صرف تیری عبادت کرتے ہیں اور صرف تجھ ہی سے مدد مانگتے ہیں۔"
+        "ar": "إِذَا جَاءَ الْإِمَامُ بَدَأَ الدَّرْسُ.",
+        "ar_plain": "إذا جاء الإمام بدأ الدرس.",
+        "translit": "idhā jāʾa l-imāmu badaʾa d-darsu.",
+        "en": "When the imam comes, the lesson begins.",
+        "ur": "جب امام آتے ہیں تو سبق شروع ہوتا ہے۔"
       },
       "options": [
         {
-          "en": "We worship You and others help us.",
-          "ur": "ہم تیری عبادت کرتے ہیں اور دوسرے ہماری مدد کرتے ہیں۔"
+          "en": "When the lesson begins, the imam comes.",
+          "ur": "جب سبق شروع ہوتا ہے تو امام آتے ہیں۔"
         },
         {
-          "en": "You worship us and help us.",
-          "ur": "تو ہماری عبادت کرتا ہے اور ہماری مدد کرتا ہے۔"
+          "en": "When the imam comes, the lesson begins.",
+          "ur": "جب امام آتے ہیں تو سبق شروع ہوتا ہے۔"
         },
         {
-          "en": "You alone we worship, and You alone we ask for help.",
-          "ur": "ہم صرف تیری عبادت کرتے ہیں اور صرف تجھ ہی سے مدد مانگتے ہیں۔"
+          "en": "When did the imam come? The lesson began.",
+          "ur": "امام کب آئے؟ سبق شروع ہوا۔"
         },
         {
-          "en": "Help us so that we worship You.",
-          "ur": "ہماری مدد کر تاکہ ہم تیری عبادت کریں۔"
+          "en": "The imam began the lesson because he came.",
+          "ur": "امام نے سبق اس لیے شروع کیا کہ وہ آئے۔"
         }
       ],
-      "correct_index": 2,
-      "xp_value": 1
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Event: جَاءَ الْإِمَامُ. Response: بَدَأَ الدَّرْسُ.",
+        "ur": "واقعہ: جَاءَ الْإِمَامُ۔ جواب: بَدَأَ الدَّرْسُ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch33-l04-ex08",
+      "statement": {
+        "en": "The response here is بَدَأَ الدَّرْسُ.",
+        "ur": "یہاں جواب بَدَأَ الدَّرْسُ ہے۔",
+        "ar_example": {
+          "ar": "إِذَا جَاءَ الْإِمَامُ بَدَأَ الدَّرْسُ.",
+          "ar_plain": "إذا جاء الإمام بدأ الدرس.",
+          "translit": "idhā jāʾa l-imāmu badaʾa d-darsu.",
+          "en": "When the imam comes, the lesson begins.",
+          "ur": "جب امام آتے ہیں تو سبق شروع ہوتا ہے۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "إِذَا جَاءَ الْإِمَامُ is the event; بَدَأَ الدَّرْسُ follows it.",
+        "ur": "إِذَا جَاءَ الْإِمَامُ واقعہ ہے؛ بَدَأَ الدَّرْسُ اس کے بعد آتا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch33-l04-ex09",
+      "statement": {
+        "en": "Maryam left the book at the market.",
+        "ur": "مریم کتاب بازار میں چھوڑ آئی۔",
+        "ar_example": {
+          "ar": "رَجَعَتْ مَرْيَمُ مِنَ السُّوقِ، وَلَيْسَ مَعَهَا كِتَابٌ. سَأَلَتْهَا أُمُّهَا: أَيْنَ الْكِتَابُ؟ قَالَتْ: فِي الْمَدْرَسَةِ.",
+          "ar_plain": "رجعت مريم من السوق، وليس معها كتاب. سألتها أمها: أين الكتاب؟ قالت: في المدرسة.",
+          "translit": "rajaʿat maryamu mina s-sūqi, wa-laysa maʿahā kitābun. saʾalat-hā ummuhā: ayna l-kitābu? qālat: fī l-madrasati.",
+          "en": "Maryam came back from the market, and she had no book with her. Her mother asked her: Where is the book? She said: At school.",
+          "ur": "مریم بازار سے واپس آئی، اور اس کے پاس کتاب نہیں تھی۔ اس کی امی نے پوچھا: کتاب کہاں ہے؟ اس نے کہا: اسکول میں۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "قَالَتْ: فِي الْمَدْرَسَةِ — the book is at school.",
+        "ur": "قَالَتْ: فِي الْمَدْرَسَةِ — کتاب اسکول میں ہے۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Book 3 review: reading Al-Fatiha 1:5",
-      "ar": "مُرَاجَعَةُ الْكِتَابِ الثَّالِثِ: الْفَاتِحَةُ 1:5",
-      "ur": "کتاب 3 کا جائزہ: الفاتحہ 1:5 کا مطالعہ"
+      "en": "Meaning across clauses",
+      "ar": "تَتَبُّعُ الْمَعْنَى",
+      "ur": "جملوں کے پار مطلب"
     },
     "ayah": {
-      "surah": 1,
-      "ayah": 5,
-      "label": "Al-Fatiha 1:5",
-      "ar": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
-      "en": "You alone we worship and You alone we seek help.",
-      "ur": "تجھ ہی کو ہم عبادت کرتے ہیں اور تجھ ہی سے ہم مدد مانگتے ہیں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001005.mp3"
+      "surah": 103,
+      "ayah": 2,
+      "label": "Al-'Asr 103:2",
+      "ar": "إِنَّ الْإِنسَانَ لَفِي خُسْرٍ",
+      "en": "Indeed, mankind is in loss,",
+      "ur": "بے شک انسان خسارے میں ہے،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/103002.mp3"
     },
     "highlighted_word_indices": [
       0,
-      1,
-      2,
-      3
+      1
+    ],
+    "highlighted_words": [
+      "إِنَّ",
+      "الْإِنسَانَ"
     ],
     "noor_explanation": {
-      "en": "إِيَّاكَ (object, placed first) → نَعْبُدُ (we worship) → وَإِيَّاكَ (and You) → نَسْتَعِينُ (we ask for help). Putting إِيَّاكَ first gives the meaning \"You alone\".",
-      "ur": "إِيَّاكَ (مفعول، پہلے رکھا گیا) ← نَعْبُدُ (ہم عبادت کرتے ہیں) ← وَإِيَّاكَ (اور تجھ ہی سے) ← نَسْتَعِينُ (ہم مدد مانگتے ہیں)۔ إِيَّاكَ کو پہلے رکھنے سے \"صرف تو\" کا معنی آتا ہے۔"
+      "en": "إِنَّ الْإِنْسَانَ: the noun of إِنَّ, with fatḥa. Every clause has its own core; read each one, then how they link.",
+      "ur": "إِنَّ الْإِنْسَانَ: إِنَّ کا اسم، فتحہ کے ساتھ۔ ہر جملے کا اپنا رکن ہوتا ہے؛ ہر ایک پڑھیں، پھر دیکھیں وہ کیسے جڑتے ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You have completed Book 3: nominal and verbal sentences, إِنَّ and لَيْسَ, questions, and reading short Quranic passages. Book 4 begins the study of verbs.",
-      "ur": "آپ نے کتاب 3 مکمل کر لی: جملہ اسمیہ اور فعلیہ، إِنَّ اور لَيْسَ، سوالات، اور مختصر قرآنی عبارتیں پڑھنا۔ کتاب 4 میں افعال کا مطالعہ شروع ہو گا۔"
+      "en": "You tracked meaning across a whole passage. Next: the Book 3 review.",
+      "ur": "آپ نے پوری عبارت میں مطلب کی پیروی کی۔ آگے: کتاب 3 کی دہرائی۔"
     }
   }
 }

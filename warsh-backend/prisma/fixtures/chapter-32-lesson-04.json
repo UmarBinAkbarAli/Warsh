@@ -2,416 +2,316 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 32, Lesson 4 (ch32-l04) — transfer: 84:1 and 81:1 put a noun straight after إِذَا (السَّمَاءُ، الشَّمْسُ), and the displayed ayah states no response; the key is 'not stated in this ayah', never 'the surah has none' (Chapter 69 reads all of Al-Inshiqaq). انْشَقَّتْ / كُوِّرَتْ are glossed whole — no passive or derived-stem work. A constructed pair contrasts a stated response with an open one. Rebuilt 2026-10-02 in the proposal harvest, batch 2 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-32-content-proposal.md and its review amendments: the chapter now teaches what its map promised — reading an إِذَا clause. مَتَى (Chapter 31) asks; إِذَا introduces an event; the event and its response (جَوَابُ الشَّرْطِ, named only); the two فَ of 94:7 (the first continues, the second marks the response; the command is انْصَبْ, glossed — commands are Chapter 51); transfer to 84:1 and 81:1, whose ayah states no response. Al-Falaq's إِذَا وَقَبَ / إِذَا حَسَدَ are Chapter 19 retrieval; An-Nasr is left to Chapter 33. No إِنْ or jussive (Chapter 68); no tense rule is taught. Removed: the sentence-type / إِنَّ / لَيْسَ re-run of Chapter 29, لَيْسَ with a nominative predicate, إِذَا labelled حرف جر, 'a future event in the past', فَ called an imperative particle, the duplicated An-Nasr parse items, and corrupted strings.",
+    "title": "إِذَا in a New Ayah",
+    "titleAr": "إِذَا السَّمَاءُ انْشَقَّتْ",
+    "titleUr": "نئی آیت میں إِذَا",
     "chapter_order": 32,
     "lesson_order": 4,
-    "chapter_title": "Applied Grammar and Sentence Analysis",
-    "title": "Integration: Full Passage Analysis",
-    "titleAr": "التَّكَامُلُ: تَحْلِيلُ نَصٍّ كَامِلٍ",
-    "source": "book3_lessons9-10_grammar_reinforcement.md",
-    "estimated_minutes": 10,
+    "estimated_minutes": 8,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 110,
-      "ayah": 3,
-      "label": "An-Nasr 110:3",
-      "ar": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ إِنَّهُ كَانَ تَوَّابًا",
-      "en": "So glorify the praises of your Lord and ask His forgiveness. Indeed, He is ever-accepting of repentance.",
-      "ur": "تو اپنے رب کی تعریف کے ساتھ تسبیح کرو اور اس سے بخشش مانگو۔ بے شک وہ توبہ قبول کرنے والا ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/110003.mp3"
+      "surah": 84,
+      "ayah": 1,
+      "label": "Al-Inshiqaq 84:1",
+      "ar": "إِذَا السَّمَاءُ انشَقَّتْ",
+      "en": "When the sky splits open,",
+      "ur": "جب آسمان پھٹ جائے گا،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/084001.mp3"
     },
     "noor_intro": {
-      "en": "This is the final lesson of Chapter 32. Let's analyze the complete Surah An-Nasr as one integrated passage, identifying every sentence type and grammatical role we've learned.",
-      "ur": "یہ Chapter 32 کی آخری lesson ہے۔ آئیے پوری Surah An-Nasr کو ایک integrated passage کے طور پر تجزیہ کریں، ہر sentence type اور گرامری کردار کو پہچانا جو ہم نے سیکھا ہے۔"
+      "en": "A new ayah with إِذَا. Find the event — and notice what this ayah does not say yet.",
+      "ur": "إِذَا والی ایک نئی آیت۔ واقعہ تلاش کریں — اور دیکھیں یہ آیت ابھی کیا نہیں کہتی۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "84:1: When the sky splits open,",
+        "ar": "إِذَا السَّمَاءُ انشَقَّتْ",
+        "ur": "84:1: جب آسمان پھٹ جائے گا،"
+      },
+      "explanation": {
+        "en": "إِذَا + السَّمَاءُ (the sky) + انْشَقَّتْ (splits open — given whole). The event: the sky splits open.",
+        "ur": "إِذَا + السَّمَاءُ (آسمان) + انْشَقَّتْ (پھٹ جائے — پورا دیا گیا ہے)۔ واقعہ: آسمان پھٹ جاتا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/084001.mp3"
+    },
+    {
       "type": "CONCEPT",
       "concept": {
-        "en": "Complete Surah An-Nasr: sentence type map",
-        "ar": "مکمل سورۃ النصر: جملے کی types کا نقشہ",
-        "ur": "مکمل Surah An-Nasr: sentence types کا نقشہ"
+        "en": "A noun right after إِذَا",
+        "ar": "إِذَا السَّمَاءُ انْشَقَّتْ",
+        "ur": "إِذَا کے فوراً بعد اسم"
       },
       "explanation": {
-        "en": "An-Nasr has 3 ayahs: Ayah 1 — conditional verbal clause; Ayah 2 — verbal sentence with perception verb; Ayah 3 — two commands + إِنَّ clause. Each ayah is a distinct grammatical unit.",
-        "ur": "An-Nasr میں 3 ayahs ہیں: Ayah 1 — conditional verbal clause؛ Ayah 2 — perception verb کے ساتھ verbal sentence؛ Ayah 3 — دو commands + إِنَّ clause۔ ہر ayah ایک distinct گرامری unit ہے۔"
+        "en": "Here a noun comes straight after إِذَا, then its action. Still one event: the sky splits open.",
+        "ur": "یہاں إِذَا کے فوراً بعد ایک اسم آتا ہے، پھر اس کا کام۔ پھر بھی ایک ہی واقعہ: آسمان پھٹ جاتا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/084001.mp3"
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "No response in this ayah",
+        "ar": "إِذَا السَّمَاءُ انْشَقَّتْ …",
+        "ur": "اس آیت میں جواب نہیں"
+      },
+      "explanation": {
+        "en": "This ayah shows the event only. 'Not stated in this ayah' does not mean 'the surah has no response' — Chapter 69 reads all of Al-Inshiqaq.",
+        "ur": "یہ آیت صرف واقعہ دکھاتی ہے۔ 'اس آیت میں بیان نہیں' کا مطلب یہ نہیں کہ 'سورت میں جواب نہیں' — باب 69 میں پوری سورۃ الانشقاق پڑھی جائے گی۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/084001.mp3"
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "81:1: When the sun is wrapped up,",
+        "ar": "إِذَا الشَّمْسُ كُوِّرَتْ",
+        "ur": "81:1: جب سورج لپیٹ دیا جائے گا،"
+      },
+      "explanation": {
+        "en": "Same shape: إِذَا + الشَّمْسُ (the sun) + كُوِّرَتْ (is wrapped up — given whole). Again only the event is shown.",
+        "ur": "وہی شکل: إِذَا + الشَّمْسُ (سورج) + كُوِّرَتْ (لپیٹ دیا جائے — پورا دیا گیا ہے)۔ پھر صرف واقعہ دکھایا گیا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/081001.mp3"
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Response stated, or not shown?",
+        "ar": "إِذَا طَلَعَتِ الشَّمْسُ خَرَجْنَا / إِذَا طَلَعَتِ الشَّمْسُ …",
+        "ur": "جواب بیان ہوا یا نہیں؟"
+      },
+      "examples": [
+        {
+          "ar": "إِذَا طَلَعَتِ الشَّمْسُ خَرَجْنَا.",
+          "ar_plain": "إذا طلعت الشمس خرجنا.",
+          "translit": "idhā ṭalaʿati sh-shamsu kharajnā.",
+          "en": "When the sun rises, we go out.",
+          "ur": "جب سورج نکلتا ہے تو ہم نکلتے ہیں۔"
+        },
+        {
+          "ar": "إِذَا طَلَعَتِ الشَّمْسُ …",
+          "ar_plain": "إذا طلعت الشمس …",
+          "translit": "idhā ṭalaʿati sh-shamsu …",
+          "en": "When the sun rises …",
+          "ur": "جب سورج نکلتا ہے…"
+        }
+      ],
+      "explanation": {
+        "en": "Read to the end of what is shown. If a response is there, find it. If the words stop after the event, say so — do not invent one.",
+        "ur": "جو دکھایا گیا ہے آخر تک پڑھیں۔ اگر جواب ہے تو اسے تلاش کریں۔ اگر الفاظ واقعے کے بعد رک جائیں تو یہی کہیں — اپنی طرف سے جواب نہ بنائیں۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ",
-        "ar_plain": "إذا جاء فتح الله والفتح",
-        "translit": "izaa jaa'a nasrullaahi wal-fathu",
-        "en": "When the victory of Allah and the conquest come.",
-        "ur": "جب اللہ کی مدد اور فتح آجائے۔"
+        "ar": "إِذَا طَلَعَتِ الشَّمْسُ خَرَجْنَا إِلَى الْمَدْرَسَةِ.",
+        "ar_plain": "إذا طلعت الشمس خرجنا إلى المدرسة.",
+        "translit": "idhā ṭalaʿati sh-shamsu kharajnā ilā l-madrasati.",
+        "en": "When the sun rises, we go out to school.",
+        "ur": "جب سورج نکلتا ہے تو ہم اسکول کے لیے نکلتے ہیں۔"
       },
       "explanation": {
-        "en": "Ayah 1: Conditional verbal clause. إِذَا = when (conditional particle). جَاءَ = past tense verb. نَصْرُ اللَّهِ = subject with idafa (victory of Allah).",
-        "ur": "Ayah 1: Conditional verbal clause۔ إِذَا = جب (conditional particle)۔ جَاءَ = ماضی verb۔ نَصْرُ اللَّهِ = idafa کے ساتھ subject (اللہ کی مدد)۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا",
-        "ar_plain": "ورأيت الناس يدخلون في دين الله أفواجا",
-        "translit": "wa ra'ayta an-naasa yadkhuloona fii diinillaahi afwaajan",
-        "en": "And you see the people entering into the religion of Allah in crowds.",
-        "ur": "اور تم دیکھو گے کہ لوگ بھیڑوں کے ساتھ اللہ کے دین میں داخل ہو رہے ہیں۔"
-      },
-      "explanation": {
-        "en": "Ayah 2: Verbal sentence with perception verb رَأَيْتَ. يَدْخُلُونَ is present tense inside the perception. أَفْوَاجًا = manner adverb (in crowds).",
-        "ur": "Ayah 2: Perception verb رَأَيْتَ کے ساتھ verbal sentence۔ يَدْخُلُونَ perception کے اندر present tense ہے۔ أَفْوَاجًا = manner adverb (بھیڑوں میں)۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ إِنَّهُ كَانَ تَوَّابًا",
-        "ar_plain": "فسبح بحمد ربك واستغفره إنه كان توابا",
-        "translit": "fa-sabbih bi-hamdi rabbika wastaghfirhu innahu kaana tawwaaban",
-        "en": "So glorify the praises of your Lord and ask His forgiveness. Indeed, He is ever-accepting of repentance.",
-        "ur": "تو اپنے رب کی تعریف کے ساتھ تسبیح کرو اور اس سے بخشش مانگو۔ بے شک وہ توبہ قبول کرنے والا ہے۔"
-      },
-      "explanation": {
-        "en": "Ayah 3: Two command verbs (fi'l amr): فَسَبِّحْ and وَاسْتَغْفِرْهُ. Then an إِنَّ clause with كَانَ as the linking verb and تَوَّابًا as predicate.",
-        "ur": "Ayah 3: دو command verbs (fi'l amr): فَسَبِّحْ اور وَاسْتَغْفِرْهُ۔ پھر ایک إِنَّ clause جس میں كَانَ linking verb ہے اور تَوَّابًا predicate ہے۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "The three ayahs of An-Nasr: one complete message",
-        "ur": "An-Nasr کی تین ayahs: ایک مکمل پیغام"
-      },
-      "body": {
-        "en": "When Allah's victory comes (1) and people enter His religion in crowds (2), then glorify, seek forgiveness, for He accepts repentance (3). Three ayahs, one complete instruction.",
-        "ur": "جب اللہ کی فتح آئے (1) اور لوگ اس کے دین میں بھیڑوں میں داخل ہوں (2)، تو تسبیح کرو، بخشش مانگو، کیونکہ وہ توبہ قبول کرتا ہے (3)۔ تین ayahs، ایک مکمل ہدایت۔"
+        "en": "طَلَعَتْ = rises. Event: the sun rises. Response: we go out.",
+        "ur": "طَلَعَتْ = نکلتا ہے۔ واقعہ: سورج نکلتا ہے۔ جواب: ہم نکلتے ہیں۔"
       }
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
+      "type": "MATCH_AYAH",
       "id": "ch32-l04-ex01",
-      "prompt": {
-        "ar": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ",
-        "ar_plain": "إذا جاء فتح الله والفتح",
-        "translit": "izaa jaa'a nasrullaahi wal-fathu",
-        "en": "When the victory of Allah and the conquest come.",
-        "ur": "جب اللہ کی مدد اور فتح آجائے۔"
+      "ayah_fragment": {
+        "ar": "إِذَا السَّمَاءُ انشَقَّتْ",
+        "surah_ref": "Al-Inshiqaq 84:1"
       },
       "options": [
         {
-          "en": "When the victory of Allah and the conquest come.",
-          "ur": "جب اللہ کی مدد اور فتح آجائے۔"
+          "en": "When the sky splits open — the event; this ayah shows no response.",
+          "ur": "جب آسمان پھٹ جائے — واقعہ؛ اس آیت میں جواب نہیں۔"
         },
         {
-          "en": "The victory of Allah and the conquest came.",
-          "ur": "اللہ کی مدد اور فتح آ گئی۔"
+          "en": "A question: when did the sky split?",
+          "ur": "سوال: آسمان کب پھٹا؟"
         },
         {
-          "en": "Allah gave victory and conquest.",
-          "ur": "اللہ نے فتح اور فتح دی۔"
+          "en": "The sky split because of the sun.",
+          "ur": "آسمان سورج کی وجہ سے پھٹا۔"
         },
         {
-          "en": "When Allah helps and opens.",
-          "ur": "جب اللہ مدد کرے اور کھولے۔"
+          "en": "Event and response: the sky split, so we went home.",
+          "ur": "واقعہ اور جواب: آسمان پھٹا، تو ہم گھر گئے۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "إِذَا is a conditional particle meaning 'when' (time condition, not if). جَاءَ is past tense. The sentence describes when, not if, the events occur.",
-        "ur": "إِذَا ایک conditional particle ہے جس کا مطلب ہے 'جب' (time condition، 'اگر' نہیں)۔ جَاءَ ماضی ہے۔ Sentence بتاتا ہے کہ کب، 'اگر' نہیں، events ہوتے ہیں۔"
+        "en": "إِذَا + السَّمَاءُ + انْشَقَّتْ: the event only.",
+        "ur": "إِذَا + السَّمَاءُ + انْشَقَّتْ: صرف واقعہ۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch32-l04-ex02",
+      "ayah_fragment": {
+        "ar": "إِذَا الشَّمْسُ كُوِّرَتْ",
+        "surah_ref": "At-Takwir 81:1"
+      },
+      "options": [
+        {
+          "en": "When did the sun rise?",
+          "ur": "سورج کب نکلا؟"
+        },
+        {
+          "en": "The sun rose, so we went out.",
+          "ur": "سورج نکلا، تو ہم باہر گئے۔"
+        },
+        {
+          "en": "When the sun is wrapped up",
+          "ur": "جب سورج لپیٹ دیا جائے"
+        },
+        {
+          "en": "Is the sun wrapped up?",
+          "ur": "کیا سورج لپیٹا گیا ہے؟"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "إِذَا الشَّمْسُ كُوِّرَتْ: when the sun is wrapped up — an event, not a question.",
+        "ur": "إِذَا الشَّمْسُ كُوِّرَتْ: جب سورج لپیٹ دیا جائے — واقعہ، سوال نہیں۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch32-l04-ex02",
+      "id": "ch32-l04-ex03",
       "statement": {
-        "en": "In the phrase يَدْخُلُونَ فِي دِينِ اللَّهِ, the word دِينِ is in the genitive case because it is the possessor in an idafa construction.",
-        "ur": "Phrase يَدْخُلُونَ فِي دِينِ اللَّهِ میں، word دِينِ genitive case میں ہے کیونکہ یہ idafa construction میں possessor ہے۔",
+        "en": "Al-Inshiqaq 84:1 shows both the event and its response.",
+        "ur": "سورۃ الانشقاق 84:1 میں واقعہ اور جواب دونوں ہیں۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "It shows only the event: إِذَا السَّمَاءُ انْشَقَّتْ. Not stated in this ayah is not the same as not in the surah.",
+        "ur": "اس میں صرف واقعہ ہے: إِذَا السَّمَاءُ انْشَقَّتْ۔ اس آیت میں نہ ہونا اور سورت میں نہ ہونا ایک بات نہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch32-l04-ex04",
+      "prompt": {
+        "ar": "إِذَا رَجَعَ الْإِمَامُ صَلَّيْنَا.",
+        "ar_plain": "إذا رجع الإمام صلينا.",
+        "translit": "idhā rajaʿa l-imāmu ṣallaynā.",
+        "en": "When the imam comes back, we pray.",
+        "ur": "جب امام واپس آتے ہیں تو ہم نماز پڑھتے ہیں۔"
+      },
+      "options": [
+        {
+          "en": "When we pray, the imam comes back.",
+          "ur": "جب ہم نماز پڑھتے ہیں تو امام واپس آتے ہیں۔"
+        },
+        {
+          "en": "When the imam comes back, we pray.",
+          "ur": "جب امام واپس آتے ہیں تو ہم نماز پڑھتے ہیں۔"
+        },
+        {
+          "en": "When did the imam come back?",
+          "ur": "امام کب واپس آئے؟"
+        },
+        {
+          "en": "The imam came back, but we did not pray.",
+          "ur": "امام واپس آئے، لیکن ہم نے نماز نہیں پڑھی۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Event: رَجَعَ الْإِمَامُ. Response: صَلَّيْنَا, we pray.",
+        "ur": "واقعہ: رَجَعَ الْإِمَامُ۔ جواب: صَلَّيْنَا، ہم نماز پڑھتے ہیں۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch32-l04-ex05",
+      "statement": {
+        "en": "These words state a response.",
+        "ur": "ان الفاظ میں جواب بیان ہوا ہے۔",
         "ar_example": {
-          "ar": "فِي دِينِ اللَّهِ",
-          "ar_plain": "في دين الله",
-          "translit": "fii diinillaahi",
-          "en": "in the religion of Allah",
-          "ur": "اللہ کے دین میں"
+          "ar": "إِذَا جَاءَ الْمَسَاءُ …",
+          "ar_plain": "إذا جاء المساء …",
+          "translit": "idhā jāʾa l-masāʾu …",
+          "en": "When the evening comes …",
+          "ur": "جب شام آتی ہے…"
         }
       },
       "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "دِينِ here is مجرور because it follows فِي, not because of idafa. دِينِ + اللَّهِ would be idafa (religion of Allah = Allah's religion). دِينِ اللَّهِ here is: دِينٌ (religion) modified by اللَّهِ as genitive after فِي.",
-        "ur": "دِينِ یہاں فِي کی Follow کرنے کی وجہ سے مجرور ہے، idafa کی وجہ سے نہیں۔ دِينِ + اللَّهِ idafa ہو گا (اللہ کا دین)۔ دِينِ اللَّهِ یہاں: دِينٌ (دین) جسے فِي کے بعد اللَّهِ نے genitive میں modify کیا۔"
+        "en": "Only the event is shown: when the evening comes …",
+        "ur": "صرف واقعہ دکھایا گیا ہے: جب شام آتی ہے…"
       }
     },
     {
-      "type": "FILL_BLANK",
-      "id": "ch32-l04-ex03",
-      "mode": "TAP",
-      "sentence_ar": "وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ ___",
-      "hint": {
-        "en": "And you see the people entering into the religion of Allah in crowds.",
-        "ur": "اور تم دیکھو گے کہ لوگ بھیڑوں کے ساتھ اللہ کے دین میں داخل ہو رہے ہیں۔"
-      },
-      "options": [
-        {
-          "ar": "أَفْوَاجًا",
-          "ar_plain": "أفواجا",
-          "translit": "afwaajan",
-          "en": "in crowds",
-          "ur": "بھیڑوں میں"
-        },
-        {
-          "ar": "يَوْمَ الْجُمُعَةِ",
-          "ar_plain": "يوم الجمعة",
-          "translit": "yawma al-jumu'ati",
-          "en": "on Friday",
-          "ur": "جمعہ کے دن"
-        },
-        {
-          "ar": "إِلَى الْمَسْجِدِ",
-          "ar_plain": "إلى المسجد",
-          "translit": "ilaa al-masjidi",
-          "en": "to the mosque",
-          "ur": "مسجد میں"
-        },
-        {
-          "ar": "بِالْكِتَابِ",
-          "ar_plain": "بالكتاب",
-          "translit": "bi-l-kitaabi",
-          "en": "with the book",
-          "ur": "کتاب کے ساتھ"
-        }
-      ],
-      "correct_answer": {
-        "ar": "أَفْوَاجًا",
-        "ar_plain": "أفواجا",
-        "translit": "afwaajan",
-        "en": "in crowds",
-        "ur": "بھیڑوں میں"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch32-l04-ex04",
-      "left_column": [
-        {
-          "ar": "إِذَا جَاءَ",
-          "ar_plain": "إذا جاء",
-          "translit": "izaa jaa'a",
-          "en": "when came",
-          "ur": "جب آیا"
-        },
-        {
-          "ar": "رَأَيْتَ النَّاسَ يَدْخُلُونَ",
-          "ar_plain": "رأيت الناس يدخلون",
-          "translit": "ra'ayta an-naasa yadkhuloona",
-          "en": "you saw the people entering",
-          "ur": "تم نے لوگوں کو داخل ہوتے دیکھا"
-        },
-        {
-          "ar": "فَسَبِّحْ بِحَمْدِ رَبِّكَ",
-          "ar_plain": "فسبح بحمد ربك",
-          "translit": "fa-sabbih bi-hamdi rabbika",
-          "en": "so glorify with your Lord's praise",
-          "ur": "تو اپنے رب کی تعریف کے ساتھ تسبیح کرو"
-        },
-        {
-          "ar": "إِنَّهُ كَانَ تَوَّابًا",
-          "ar_plain": "إنه كان توابا",
-          "translit": "innahu kaana tawwaaban",
-          "en": "truly He was ever-accepting of repentance",
-          "ur": "بے شک وہ توبہ قبول کرنے والا تھا"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "Conditional verbal clause",
-          "ur": "شرطی فعلی clause"
-        },
-        {
-          "en": "Verbal sentence with perception",
-          "ur": "Perception کے ساتھ verbal sentence"
-        },
-        {
-          "en": "Command (fi'l amr)",
-          "ur": "Command (فعل امر)"
-        },
-        {
-          "en": "إِنَّ + كَانَ nominal clause",
-          "ur": "إِنَّ + كَانَ nominal clause"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch32-l04-ex05",
-      "target_translation": {
-        "en": "Truly He was ever-accepting of repentance.",
-        "ur": "بے شک وہ توبہ قبول کرنے والا ہے۔"
-      },
-      "tiles": [
-        {
-          "ar": "إِنَّ",
-          "ar_plain": "إن",
-          "translit": "inna",
-          "en": "truly",
-          "ur": "بے شک"
-        },
-        {
-          "ar": "هُ",
-          "ar_plain": "ه",
-          "translit": "hu",
-          "en": "he",
-          "ur": "وہ"
-        },
-        {
-          "ar": "كَانَ",
-          "ar_plain": "كان",
-          "translit": "kaana",
-          "en": "was",
-          "ur": "تھا/ہے"
-        },
-        {
-          "ar": "تَوَّابًا",
-          "ar_plain": "توابا",
-          "translit": "tawwaaban",
-          "en": "ever-accepting of repentance",
-          "ur": "توبہ قبول کرنے والا"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
+      "type": "TRUE_FALSE",
       "id": "ch32-l04-ex06",
-      "prompt": {
-        "ar": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ",
-        "ar_plain": "فسبح بحمد ربك واستغفره",
-        "translit": "fa-sabbih bi-hamdi rabbika wastaghfir-hu",
-        "en": "So glorify with the praise of your Lord and ask His forgiveness.",
-        "ur": "تو اپنے رب کی تعریف کے ساتھ تسبیح کرو اور اس سے بخشش مانگو۔"
-      },
-      "options": [
-        {
-          "en": "So glorify with the praise of your Lord and ask His forgiveness.",
-          "ur": "تو اپنے رب کی تعریف کے ساتھ تسبیح کرو اور اس سے بخشش مانگو۔"
-        },
-        {
-          "en": "Glorify your Lord and ask for forgiveness for yourself.",
-          "ur": "اپنے رب کی تسبیح کرو اور اپنے لیے بخشش مانگو۔"
-        },
-        {
-          "en": "Your Lord is glorifying and seeking forgiveness.",
-          "ur": "آپ کا رب تسبیح کر رہا ہے اور بخشش مانگ رہا ہے۔"
-        },
-        {
-          "en": "Glorify and ask for forgiveness.",
-          "ur": "تسبیح کرو اور بخشش مانگو۔"
+      "statement": {
+        "en": "In this sentence, the response is خَرَجْنَا إِلَى الْمَدْرَسَةِ.",
+        "ur": "اس جملے میں جواب خَرَجْنَا إِلَى الْمَدْرَسَةِ ہے۔",
+        "ar_example": {
+          "ar": "إِذَا طَلَعَتِ الشَّمْسُ خَرَجْنَا إِلَى الْمَدْرَسَةِ.",
+          "ar_plain": "إذا طلعت الشمس خرجنا إلى المدرسة.",
+          "translit": "idhā ṭalaʿati sh-shamsu kharajnā ilā l-madrasati.",
+          "en": "When the sun rises, we go out to school.",
+          "ur": "جب سورج نکلتا ہے تو ہم اسکول کے لیے نکلتے ہیں۔"
         }
-      ],
-      "correct_index": 0,
+      },
+      "correct_answer": true,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "رَبِّكَ = your Lord (رب + ك). هُ in وَاسْتَغْفِرْهُ = his (forgive HIM, meaning Allah). Both commands are addressed to the believer.",
-        "ur": "رَبِّكَ = آپ کا رب (رب + ك)۔ وَاسْتَغْفِرْهُ میں هُ = اس کا (اس سے بخشش مانگو، اللہ سے)۔ دونوں commands believer کو address کرتے ہیں۔"
+        "en": "Event: طَلَعَتِ الشَّمْسُ. Response: خَرَجْنَا, we go out.",
+        "ur": "واقعہ: طَلَعَتِ الشَّمْسُ۔ جواب: خَرَجْنَا، ہم نکلتے ہیں۔"
       }
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch32-l04-ex07",
-      "prompt": {
-        "ar": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ ۚ إِنَّهُ كَانَ تَوَّابًا",
-        "ar_plain": "فسبح بحمد ربك واستغفره انه كان توابا",
-        "translit": "fasabbih bihamdi rabbika wastaghfirh, innahu kaana tawwaabaa",
-        "en": "So glorify the praise of your Lord and ask His forgiveness. Indeed, He is ever-accepting of repentance.",
-        "ur": "تو اپنے رب کی حمد کے ساتھ تسبیح کرو اور اس سے بخشش مانگو۔ بے شک وہ بہت توبہ قبول کرنے والا ہے۔"
-      },
-      "options": [
-        {
-          "en": "Your Lord glorified you and forgave you.",
-          "ur": "تمہارے رب نے تمہاری تعریف کی اور تمہیں بخش دیا۔"
-        },
-        {
-          "en": "So glorify the praise of your Lord and ask His forgiveness. Indeed, He is ever-accepting of repentance.",
-          "ur": "تو اپنے رب کی حمد کے ساتھ تسبیح کرو اور اس سے بخشش مانگو۔ بے شک وہ بہت توبہ قبول کرنے والا ہے۔"
-        },
-        {
-          "en": "Praise your Lord, for He will not forgive.",
-          "ur": "اپنے رب کی تعریف کرو، کیونکہ وہ نہیں بخشے گا۔"
-        },
-        {
-          "en": "They glorified their Lord and repented.",
-          "ur": "انہوں نے اپنے رب کی تسبیح کی اور توبہ کی۔"
-        }
-      ],
-      "correct_index": 1,
-      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Surah An-Nasr: full integration",
-      "ar": "سُورَةُ النَّصْرِ: مُكَمِّلَة",
-      "ur": "Surah An-Nasr: مکمل انضمام"
+      "en": "إِذَا in a new ayah",
+      "ar": "إِذَا السَّمَاءُ انْشَقَّتْ",
+      "ur": "نئی آیت میں إِذَا"
     },
     "ayah": {
-      "surah": 110,
-      "ayah": 3,
-      "label": "An-Nasr 110:3",
-      "ar": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ إِنَّهُ كَانَ تَوَّابًا",
-      "en": "So glorify the praises of your Lord and ask His forgiveness. Indeed, He is ever-accepting of repentance.",
-      "ur": "تو اپنے رب کی تعریف کے ساتھ تسبیح کرو اور اس سے بخشش مانگو۔ بے شک وہ توبہ قبول کرنے والا ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/110003.mp3"
+      "surah": 84,
+      "ayah": 1,
+      "label": "Al-Inshiqaq 84:1",
+      "ar": "إِذَا السَّمَاءُ انشَقَّتْ",
+      "en": "When the sky splits open,",
+      "ur": "جب آسمان پھٹ جائے گا،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/084001.mp3"
     },
     "highlighted_word_indices": [
       0,
-      2,
-      4,
-      6
+      2
+    ],
+    "highlighted_words": [
+      "إِذَا",
+      "انشَقَّتْ"
     ],
     "noor_explanation": {
-      "en": "This completes our study of Surah An-Nasr. Three ayahs, all sentence types practiced: conditional clause, perception verb, commands, and إِنَّ + كَانَ clause. This is Book 3 grammar fully integrated.",
-      "ur": "یہ ہمارے Surah An-Nasr کے study کو مکمل کرتا ہے۔ تین ayahs، تمام sentence types مشق شدہ: conditional clause، perception verb، commands، اور إِنَّ + كَانَ clause۔ یہ Book 3 grammar مکمل طور پر integrated ہے۔"
+      "en": "إِذَا … انْشَقَّتْ: the event, read on its own. You found it in an ayah you had not studied.",
+      "ur": "إِذَا … انْشَقَّتْ: واقعہ، اکیلا پڑھا گیا۔ آپ نے اسے ایسی آیت میں پہچانا جو پہلے نہیں پڑھی تھی۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You have now completed Book 3. You can identify nominal and verbal sentences, use إِنَّ and لَيْسَ, form questions, and read connected Quranic passages. Book 4 begins the great leap into verbs. Are you ready?",
-      "ur": "اب آپ نے Book 3 مکمل کر لیا ہے۔ آپ nominal اور verbal sentences پہچان سکتے ہیں، إِنَّ اور لَيْسَ استعمال کر سکتے ہیں، سوالات بنا سکتے ہیں، اور مربوط قرآنی passages پڑھ سکتے ہیں۔ Book 4 افعال میں بڑا قدم ہے۔ کیا آپ تیار ہیں؟"
+      "en": "You read إِذَا in a new ayah. Next: the Chapter 32 review.",
+      "ur": "آپ نے ایک نئی آیت میں إِذَا پڑھا۔ آگے: باب 32 کی دہرائی۔"
     }
   }
 }

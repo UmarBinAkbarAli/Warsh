@@ -1,0 +1,818 @@
+{
+  "schema_version": "1.0",
+  "template": "SPOKEN_PHRASES",
+  "_meta": {
+    "_note": "Chapter 31, display lesson 7 (ch31-l06, rebuilt in place) — CL10 Asking a Teacher, from Docs/proposals/conversation-labs-curriculum-proposal.md as reconciled with the Chapter 31 proposal: teacher A, learner B; the teacher invites questions, B asks a word's meaning (مَا مَعْنَى هَذِهِ الْكَلِمَةِ؟), A explains صَدِيقٌ, B asks for an example with a question (هَلْ عِنْدَكَ مِثَالٌ؟ — no imperative), A gives one that fits, B thanks him. Three PICK mission turns, seven scored practice exercises; the teacher's explanation, example, وَإِيَّاكَ and the 'correct' reply are heard_only. Language questions only — no rulings, tafsir or hadith grading. Replaces 'SP6 — Questions for a Scholar'. Phrase IDs are new (ch31-cl-pNN) so no stale audio is reused. Rebuilt 2026-10-02 in the proposal harvest, batch 2 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-31-content-proposal.md and its review amendments: common questions, not a 'complete toolkit' — هَلْ / أَ retrieved from Chapters 7 and 12 and extended to past events; مَنْ / مَا / مَاذَا as person, thing, action; أَيْنَ / مِنْ أَيْنَ retrieved, كَيْفَ taught; مَتَى and لِمَاذَا with separate practice; كَمْ + one noun with ـًا, answered with a digit (number words are Chapter 48, تمييز Chapter 71); a context lesson; CL10 Asking a Teacher; review and a 12-question test. Removed: هَلْ labelled a preposition, the 12:77 conditional hook called a question, مَا called a negator in لَا أَعْبُدُ مَا تَعْبُدُونَ, 12:87's command used as a question, the self-contradicting كَمْ rule, يَوْمَ called genitive, فَمَا خَطْبُكُمْ misattributed to 12:79, the scholar phrase bank and its 'most respectful' imperative, and multi-word build tiles.",
+    "title": "Asking a Teacher — Conversation Lab",
+    "titleAr": "سُؤَالُ الْأُسْتَاذِ",
+    "titleUr": "استاد سے پوچھنا — گفتگو لیب",
+    "chapter_order": 31,
+    "lesson_order": 7,
+    "estimated_minutes": 10,
+    "xp_reward": 15
+  },
+  "hook": {
+    "ayah": {
+      "surah": 20,
+      "ayah": 114,
+      "label": "Ta-Ha 20:114",
+      "ar": "وَقُل رَّبِّ زِدْنِي عِلْمًا",
+      "en": "And say: My Lord, increase me in knowledge.",
+      "ur": "اور کہو: اے میرے رب، میرے علم میں اضافہ فرما۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020114.mp3"
+    },
+    "noor_intro": {
+      "en": "Today you ask an Arabic teacher about a word: what it means, an example, and a polite thank-you.",
+      "ur": "آج آپ عربی کے استاد سے ایک لفظ کے بارے میں پوچھیں گے: اس کا مطلب، ایک مثال، اور ادب سے شکریہ۔"
+    },
+    "autoplay": false
+  },
+  "close": {
+    "noor_message": {
+      "en": "You asked a word's meaning, asked for an example, and thanked your teacher.",
+      "ur": "آپ نے لفظ کا مطلب پوچھا، مثال مانگی، اور استاد کا شکریہ ادا کیا۔"
+    }
+  },
+  "spoken_phrases": {
+    "scene": {
+      "en": "After class, a learner (B) asks the Arabic teacher (A) about a word on the board: صَدِيقٌ, in the sentence جَاءَ صَدِيقِي إِلَى الْبَيْتِ.",
+      "ur": "کلاس کے بعد ایک طالب علم (B) عربی کے استاد (A) سے تختے پر لکھے لفظ صَدِيقٌ کے بارے میں پوچھتا ہے، جملہ: جَاءَ صَدِيقِي إِلَى الْبَيْتِ۔"
+    },
+    "phrases": [
+      {
+        "id": "ch31-cl-p01",
+        "phrase": {
+          "ar": "هَلْ عِنْدَكُمْ أَسْئِلَةٌ؟",
+          "ar_plain": "هل عندكم أسئلة؟",
+          "translit": "hal ʿindakum asʾilatun?",
+          "en": "Do you have any questions?",
+          "ur": "کیا آپ لوگوں کے کوئی سوال ہیں؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch31-cl-p01.mp3",
+        "context": {
+          "en": "The teacher invites questions after class (Chapter 12).",
+          "ur": "کلاس کے بعد استاد سوال پوچھنے کو کہتے ہیں (باب 12)۔"
+        }
+      },
+      {
+        "id": "ch31-cl-p02",
+        "phrase": {
+          "ar": "نَعَمْ، مَا مَعْنَى هَذِهِ الْكَلِمَةِ؟",
+          "ar_plain": "نعم، ما معنى هذه الكلمة؟",
+          "translit": "naʿam, mā maʿnā hādhihi l-kalimati?",
+          "en": "Yes: what does this word mean?",
+          "ur": "جی ہاں: اس لفظ کا مطلب کیا ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch31-cl-p02.mp3",
+        "context": {
+          "en": "You point at the word صَدِيقٌ on the board. مَعْنَى = meaning, كَلِمَةٌ = word.",
+          "ur": "آپ تختے پر لفظ صَدِيقٌ کی طرف اشارہ کرتے ہیں۔ مَعْنَى = مطلب، كَلِمَةٌ = لفظ۔"
+        }
+      },
+      {
+        "id": "ch31-cl-p03",
+        "phrase": {
+          "ar": "صَدِيقٌ: أَخٌ لَكَ، وَلَيْسَ مِنْ أُسْرَتِكَ.",
+          "ar_plain": "صديق: أخ لك، وليس من أسرتك.",
+          "translit": "ṣadīqun: akhun laka, wa-laysa min usratika.",
+          "en": "Ṣadīq: like a brother to you, but not from your family.",
+          "ur": "صَدِيقٌ: تمہارے لیے بھائی جیسا، مگر تمہارے خاندان سے نہیں۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch31-cl-p03.mp3",
+        "context": {
+          "en": "The teacher explains the word.",
+          "ur": "استاد لفظ کا مطلب بتاتے ہیں۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch31-cl-p04",
+        "phrase": {
+          "ar": "هَلْ عِنْدَكَ مِثَالٌ، يَا أُسْتَاذُ؟",
+          "ar_plain": "هل عندك مثال، يا أستاذ؟",
+          "translit": "hal ʿindaka mithālun, yā ustādhu?",
+          "en": "Do you have an example, teacher?",
+          "ur": "استاد جی، کیا آپ کے پاس کوئی مثال ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch31-cl-p04.mp3",
+        "context": {
+          "en": "You understood, and now ask for an example. مِثَالٌ = example. A question, not a command.",
+          "ur": "آپ سمجھ گئے، اب مثال مانگتے ہیں۔ مِثَالٌ = مثال۔ یہ سوال ہے، حکم نہیں۔"
+        }
+      },
+      {
+        "id": "ch31-cl-p05",
+        "phrase": {
+          "ar": "نَعَمْ: عُمَرُ صَدِيقُ أَحْمَدَ. جَلَسَ مَعَهُ فِي الْفَصْلِ.",
+          "ar_plain": "نعم: عمر صديق أحمد. جلس معه في الفصل.",
+          "translit": "naʿam: ʿumaru ṣadīqu aḥmada. jalasa maʿahu fī l-faṣli.",
+          "en": "Yes: Umar is Ahmad's friend. He sat with him in class.",
+          "ur": "جی ہاں: عمر احمد کا دوست ہے۔ وہ کلاس میں اس کے ساتھ بیٹھا۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch31-cl-p05.mp3",
+        "context": {
+          "en": "The teacher gives an example that fits the meaning.",
+          "ur": "استاد مطلب کے مطابق مثال دیتے ہیں۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch31-cl-p06",
+        "phrase": {
+          "ar": "شُكْرًا، جَزَاكَ اللَّهُ خَيْرًا.",
+          "ar_plain": "شكرا، جزاك الله خيرا.",
+          "translit": "shukran, jazāka llāhu khayran.",
+          "en": "Thank you, may Allah reward you with good.",
+          "ur": "شکریہ، اللہ آپ کو جزائے خیر دے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch31-cl-p06.mp3",
+        "context": {
+          "en": "You close politely (Chapter 12).",
+          "ur": "آپ ادب سے بات ختم کرتے ہیں (باب 12)۔"
+        }
+      },
+      {
+        "id": "ch31-cl-p07",
+        "phrase": {
+          "ar": "وَإِيَّاكَ.",
+          "ar_plain": "وإياك.",
+          "translit": "wa-iyyāka.",
+          "en": "And you too.",
+          "ur": "اور آپ کو بھی۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch31-cl-p07.mp3",
+        "context": {
+          "en": "The teacher's reply.",
+          "ur": "استاد کا جواب۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch31-cl-p08",
+        "phrase": {
+          "ar": "هَلْ هَذَا صَحِيحٌ؟",
+          "ar_plain": "هل هذا صحيح؟",
+          "translit": "hal hādhā ṣaḥīḥun?",
+          "en": "Is this correct?",
+          "ur": "کیا یہ درست ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch31-cl-p08.mp3",
+        "context": {
+          "en": "You show the teacher a sentence you wrote. صَحِيحٌ = correct.",
+          "ur": "آپ استاد کو اپنا لکھا جملہ دکھاتے ہیں۔ صَحِيحٌ = درست۔"
+        }
+      },
+      {
+        "id": "ch31-cl-p09",
+        "phrase": {
+          "ar": "نَعَمْ، هَذَا صَحِيحٌ.",
+          "ar_plain": "نعم، هذا صحيح.",
+          "translit": "naʿam, hādhā ṣaḥīḥun.",
+          "en": "Yes, this is correct.",
+          "ur": "جی ہاں، یہ درست ہے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch31-cl-p09.mp3",
+        "context": {
+          "en": "The teacher checks it.",
+          "ur": "استاد اسے دیکھتے ہیں۔"
+        }
+      },
+      {
+        "id": "ch31-cl-p10",
+        "phrase": {
+          "ar": "مَرَّةً أُخْرَى، لَوْ سَمَحْتَ.",
+          "ar_plain": "مرة أخرى، لو سمحت.",
+          "translit": "marratan ukhrā, law samaḥta.",
+          "en": "Once again, please.",
+          "ur": "ایک بار پھر، براہِ کرم۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch31-cl-p10.mp3",
+        "context": {
+          "en": "If you missed the explanation (Chapter 22).",
+          "ur": "اگر مطلب سننے سے رہ گیا (باب 22)۔"
+        }
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "A",
+        "phrase_id": "ch31-cl-p01"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch31-cl-p02"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch31-cl-p03"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch31-cl-p04"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch31-cl-p05"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch31-cl-p06"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch31-cl-p07"
+      }
+    ],
+    "lab": {
+      "title": {
+        "en": "Asking a Teacher",
+        "ur": "استاد سے پوچھنا"
+      },
+      "mission": {
+        "en": "Now you are the one asking. The teacher invites questions: ask what the word means, ask for an example, then thank him.",
+        "ur": "اب پوچھنے والے آپ ہیں۔ استاد سوال پوچھنے کو کہتے ہیں: لفظ کا مطلب پوچھیں، مثال مانگیں، پھر شکریہ ادا کریں۔"
+      },
+      "toolkit": [
+        "مَا مَعْنَى",
+        "هَذِهِ الْكَلِمَةِ",
+        "هَلْ عِنْدَكَ",
+        "مِثَالٌ",
+        "شُكْرًا",
+        "جَزَاكَ اللَّهُ خَيْرًا",
+        "هَلْ هَذَا صَحِيحٌ؟"
+      ],
+      "goals": [
+        {
+          "en": "Ask what a word means",
+          "ur": "لفظ کا مطلب پوچھیں"
+        },
+        {
+          "en": "Ask for an example",
+          "ur": "مثال مانگیں"
+        },
+        {
+          "en": "Thank the teacher politely",
+          "ur": "ادب سے استاد کا شکریہ ادا کریں"
+        }
+      ],
+      "pattern": {
+        "after_phrase_id": "ch31-cl-p04",
+        "items": [
+          {
+            "ar": "مَا مَعْنَى …؟",
+            "meaning": {
+              "en": "what does … mean?",
+              "ur": "… کا مطلب کیا ہے؟"
+            },
+            "source": {
+              "en": "Chapter 31, Lesson 2: مَا",
+              "ur": "باب 31، سبق 2: مَا"
+            }
+          },
+          {
+            "ar": "هَلْ عِنْدَكَ …؟",
+            "meaning": {
+              "en": "do you have …?",
+              "ur": "کیا آپ کے پاس … ہے؟"
+            },
+            "source": {
+              "en": "Chapter 7 عِنْدَ + Chapter 31 هَلْ",
+              "ur": "باب 7 عِنْدَ + باب 31 هَلْ"
+            }
+          },
+          {
+            "ar": "جَزَاكَ اللَّهُ خَيْرًا",
+            "meaning": {
+              "en": "may Allah reward you with good",
+              "ur": "اللہ آپ کو جزائے خیر دے"
+            },
+            "source": {
+              "en": "Chapter 12",
+              "ur": "باب 12"
+            }
+          }
+        ],
+        "note": {
+          "en": "A polite request can be a question: هَلْ عِنْدَكَ مِثَالٌ؟ — no command needed.",
+          "ur": "ادب والی درخواست سوال بھی ہو سکتی ہے: هَلْ عِنْدَكَ مِثَالٌ؟ — حکم کی ضرورت نہیں۔"
+        }
+      },
+      "shadow_phrase_ids": [
+        "ch31-cl-p02",
+        "ch31-cl-p04",
+        "ch31-cl-p06",
+        "ch31-cl-p08"
+      ],
+      "mission_turns": [
+        {
+          "prompt_phrase_id": "ch31-cl-p01",
+          "goal_index": 0,
+          "cue": {
+            "en": "You do not know the word صَدِيقٌ on the board.",
+            "ur": "آپ کو تختے پر لکھا لفظ صَدِيقٌ نہیں آتا۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "هَلْ عِنْدَكَ مِثَالٌ، يَا أُسْتَاذُ؟",
+              "ar_plain": "هل عندك مثال، يا أستاذ؟",
+              "translit": "hal ʿindaka mithālun, yā ustādhu?",
+              "en": "Do you have an example, teacher?",
+              "ur": "استاد جی، کیا آپ کے پاس کوئی مثال ہے؟"
+            },
+            {
+              "ar": "نَعَمْ، مَا مَعْنَى هَذِهِ الْكَلِمَةِ؟",
+              "ar_plain": "نعم، ما معنى هذه الكلمة؟",
+              "translit": "naʿam, mā maʿnā hādhihi l-kalimati?",
+              "en": "Yes: what does this word mean?",
+              "ur": "جی ہاں: اس لفظ کا مطلب کیا ہے؟"
+            },
+            {
+              "ar": "شُكْرًا، جَزَاكَ اللَّهُ خَيْرًا.",
+              "ar_plain": "شكرا، جزاك الله خيرا.",
+              "translit": "shukran, jazāka llāhu khayran.",
+              "en": "Thank you, may Allah reward you with good.",
+              "ur": "شکریہ، اللہ آپ کو جزائے خیر دے۔"
+            }
+          ],
+          "correct_option_index": 1
+        },
+        {
+          "prompt_phrase_id": "ch31-cl-p03",
+          "goal_index": 1,
+          "cue": {
+            "en": "You understood. Now you want an example.",
+            "ur": "آپ سمجھ گئے۔ اب آپ کو مثال چاہیے۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "شُكْرًا، جَزَاكَ اللَّهُ خَيْرًا.",
+              "ar_plain": "شكرا، جزاك الله خيرا.",
+              "translit": "shukran, jazāka llāhu khayran.",
+              "en": "Thank you, may Allah reward you with good.",
+              "ur": "شکریہ، اللہ آپ کو جزائے خیر دے۔"
+            },
+            {
+              "ar": "نَعَمْ، مَا مَعْنَى هَذِهِ الْكَلِمَةِ؟",
+              "ar_plain": "نعم، ما معنى هذه الكلمة؟",
+              "translit": "naʿam, mā maʿnā hādhihi l-kalimati?",
+              "en": "Yes: what does this word mean?",
+              "ur": "جی ہاں: اس لفظ کا مطلب کیا ہے؟"
+            },
+            {
+              "ar": "هَلْ عِنْدَكَ مِثَالٌ، يَا أُسْتَاذُ؟",
+              "ar_plain": "هل عندك مثال، يا أستاذ؟",
+              "translit": "hal ʿindaka mithālun, yā ustādhu?",
+              "en": "Do you have an example, teacher?",
+              "ur": "استاد جی، کیا آپ کے پاس کوئی مثال ہے؟"
+            }
+          ],
+          "correct_option_index": 2
+        },
+        {
+          "prompt_phrase_id": "ch31-cl-p05",
+          "goal_index": 2,
+          "cue": {
+            "en": "The example was clear.",
+            "ur": "مثال واضح تھی۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "شُكْرًا، جَزَاكَ اللَّهُ خَيْرًا.",
+              "ar_plain": "شكرا، جزاك الله خيرا.",
+              "translit": "shukran, jazāka llāhu khayran.",
+              "en": "Thank you, may Allah reward you with good.",
+              "ur": "شکریہ، اللہ آپ کو جزائے خیر دے۔"
+            },
+            {
+              "ar": "هَلْ هَذَا صَحِيحٌ؟",
+              "ar_plain": "هل هذا صحيح؟",
+              "translit": "hal hādhā ṣaḥīḥun?",
+              "en": "Is this correct?",
+              "ur": "کیا یہ درست ہے؟"
+            },
+            {
+              "ar": "نَعَمْ، مَا مَعْنَى هَذِهِ الْكَلِمَةِ؟",
+              "ar_plain": "نعم، ما معنى هذه الكلمة؟",
+              "translit": "naʿam, mā maʿnā hādhihi l-kalimati?",
+              "en": "Yes: what does this word mean?",
+              "ur": "جی ہاں: اس لفظ کا مطلب کیا ہے؟"
+            }
+          ],
+          "correct_option_index": 0
+        }
+      ],
+      "answer_it": {
+        "turns": [
+          {
+            "prompt_phrase_id": "ch31-cl-p01",
+            "cue": {
+              "en": "Ask what the word on the board means.",
+              "ur": "تختے پر لکھے لفظ کا مطلب پوچھیں۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "مَا"
+              },
+              {
+                "kind": "WORD",
+                "ar": "مَعْنَى"
+              },
+              {
+                "kind": "WORD",
+                "ar": "الْكَلِمَةِ"
+              }
+            ],
+            "model_phrase_id": "ch31-cl-p02",
+            "tip": {
+              "en": "مَا مَعْنَى, then هَذِهِ الْكَلِمَةِ.",
+              "ur": "مَا مَعْنَى، پھر هَذِهِ الْكَلِمَةِ۔"
+            }
+          },
+          {
+            "prompt_phrase_id": "ch31-cl-p03",
+            "cue": {
+              "en": "Ask for an example.",
+              "ur": "مثال مانگیں۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "هَلْ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "عِنْدَكَ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "مِثَالٌ"
+              }
+            ],
+            "model_phrase_id": "ch31-cl-p04",
+            "tip": {
+              "en": "هَلْ عِنْدَكَ مِثَالٌ؟ — a question, not a command.",
+              "ur": "هَلْ عِنْدَكَ مِثَالٌ؟ — سوال، حکم نہیں۔"
+            }
+          },
+          {
+            "prompt_phrase_id": "ch31-cl-p05",
+            "cue": {
+              "en": "Thank him.",
+              "ur": "ان کا شکریہ ادا کریں۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "شُكْرًا"
+              },
+              {
+                "kind": "WORD",
+                "ar": "جَزَاكَ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "خَيْرًا"
+              }
+            ],
+            "model_phrase_id": "ch31-cl-p06",
+            "tip": {
+              "en": "شُكْرًا، جَزَاكَ اللَّهُ خَيْرًا.",
+              "ur": "شُكْرًا، جَزَاكَ اللَّهُ خَيْرًا۔"
+            }
+          }
+        ]
+      },
+      "can_do": [
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Ask what a word means",
+            "ur": "لفظ کا مطلب پوچھنا"
+          },
+          "ar": "مَا مَعْنَى هَذِهِ الْكَلِمَةِ؟"
+        },
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Ask for an example",
+            "ur": "مثال مانگنا"
+          },
+          "ar": "هَلْ عِنْدَكَ مِثَالٌ، يَا أُسْتَاذُ؟"
+        },
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Thank the teacher",
+            "ur": "استاد کا شکریہ ادا کرنا"
+          },
+          "ar": "شُكْرًا، جَزَاكَ اللَّهُ خَيْرًا"
+        },
+        {
+          "kind": "UNDERSTAND",
+          "label": {
+            "en": "Understand 'Yes, this is correct'",
+            "ur": "'جی ہاں، یہ درست ہے' سمجھنا"
+          },
+          "ar": "نَعَمْ، هَذَا صَحِيحٌ"
+        }
+      ]
+    }
+  },
+  "exercises": [
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch31-l06-ex01",
+      "prompt_line": {
+        "ar": "هَلْ عِنْدَكُمْ أَسْئِلَةٌ؟",
+        "ar_plain": "هل عندكم أسئلة؟",
+        "translit": "hal ʿindakum asʾilatun?",
+        "en": "Do you have any questions?",
+        "ur": "کیا آپ لوگوں کے کوئی سوال ہیں؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "هَذَا صَدِيقٌ.",
+          "ar_plain": "هذا صديق.",
+          "translit": "hādhā ṣadīqun.",
+          "en": "This is a friend.",
+          "ur": "یہ دوست ہے۔"
+        },
+        {
+          "ar": "نَعَمْ، مَا مَعْنَى هَذِهِ الْكَلِمَةِ؟",
+          "ar_plain": "نعم، ما معنى هذه الكلمة؟",
+          "translit": "naʿam, mā maʿnā hādhihi l-kalimati?",
+          "en": "Yes: what does this word mean?",
+          "ur": "جی ہاں: اس لفظ کا مطلب کیا ہے؟"
+        },
+        {
+          "ar": "وَإِيَّاكَ.",
+          "ar_plain": "وإياك.",
+          "translit": "wa-iyyāka.",
+          "en": "And you too.",
+          "ur": "اور آپ کو بھی۔"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "You do not know the word: ask its meaning — مَا مَعْنَى هَذِهِ الْكَلِمَةِ؟",
+        "ur": "آپ کو لفظ نہیں آتا: اس کا مطلب پوچھیں — مَا مَعْنَى هَذِهِ الْكَلِمَةِ؟"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch31-l06-ex02",
+      "prompt": {
+        "ar": "صَدِيقٌ: أَخٌ لَكَ، وَلَيْسَ مِنْ أُسْرَتِكَ.",
+        "ar_plain": "صديق: أخ لك، وليس من أسرتك.",
+        "translit": "ṣadīqun: akhun laka, wa-laysa min usratika.",
+        "en": "Ṣadīq: like a brother to you, but not from your family.",
+        "ur": "صَدِيقٌ: تمہارے لیے بھائی جیسا، مگر تمہارے خاندان سے نہیں۔"
+      },
+      "options": [
+        {
+          "en": "Ṣadīq: a teacher in your school.",
+          "ur": "صَدِيقٌ: تمہارے اسکول کا استاد۔"
+        },
+        {
+          "en": "Ṣadīq: someone from your family.",
+          "ur": "صَدِيقٌ: تمہارے خاندان کا کوئی فرد۔"
+        },
+        {
+          "en": "Ṣadīq: like a brother to you, but not from your family.",
+          "ur": "صَدِيقٌ: تمہارے لیے بھائی جیسا، مگر تمہارے خاندان سے نہیں۔"
+        },
+        {
+          "en": "Ṣadīq: a book you read.",
+          "ur": "صَدِيقٌ: ایک کتاب جو تم نے پڑھی۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَخٌ لَكَ، وَلَيْسَ مِنْ أُسْرَتِكَ: like a brother, but not family — a friend.",
+        "ur": "أَخٌ لَكَ، وَلَيْسَ مِنْ أُسْرَتِكَ: بھائی جیسا، مگر خاندان سے نہیں — دوست۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch31-l06-ex03",
+      "prompt_line": {
+        "ar": "صَدِيقٌ: أَخٌ لَكَ، وَلَيْسَ مِنْ أُسْرَتِكَ.",
+        "ar_plain": "صديق: أخ لك، وليس من أسرتك.",
+        "translit": "ṣadīqun: akhun laka, wa-laysa min usratika.",
+        "en": "Ṣadīq: like a brother to you, but not from your family.",
+        "ur": "صَدِيقٌ: تمہارے لیے بھائی جیسا، مگر تمہارے خاندان سے نہیں۔"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "هَلْ عِنْدَكَ مِثَالٌ، يَا أُسْتَاذُ؟",
+          "ar_plain": "هل عندك مثال، يا أستاذ؟",
+          "translit": "hal ʿindaka mithālun, yā ustādhu?",
+          "en": "Do you have an example, teacher?",
+          "ur": "استاد جی، کیا آپ کے پاس کوئی مثال ہے؟"
+        },
+        {
+          "ar": "هَلْ عِنْدَكُمْ أَسْئِلَةٌ؟",
+          "ar_plain": "هل عندكم أسئلة؟",
+          "translit": "hal ʿindakum asʾilatun?",
+          "en": "Do you have any questions?",
+          "ur": "کیا آپ لوگوں کے کوئی سوال ہیں؟"
+        },
+        {
+          "ar": "أَيْنَ الْفَصْلُ؟",
+          "ar_plain": "أين الفصل؟",
+          "translit": "ayna l-faṣlu?",
+          "en": "Where is the classroom?",
+          "ur": "کلاس کہاں ہے؟"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After an explanation, ask for an example: هَلْ عِنْدَكَ مِثَالٌ؟",
+        "ur": "مطلب سمجھنے کے بعد مثال مانگیں: هَلْ عِنْدَكَ مِثَالٌ؟"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch31-l06-ex04",
+      "statement": {
+        "en": "In the teacher's example, Umar is Ahmad's friend.",
+        "ur": "استاد کی مثال میں عمر احمد کا دوست ہے۔",
+        "ar_example": {
+          "ar": "نَعَمْ: عُمَرُ صَدِيقُ أَحْمَدَ. جَلَسَ مَعَهُ فِي الْفَصْلِ.",
+          "ar_plain": "نعم: عمر صديق أحمد. جلس معه في الفصل.",
+          "translit": "naʿam: ʿumaru ṣadīqu aḥmada. jalasa maʿahu fī l-faṣli.",
+          "en": "Yes: Umar is Ahmad's friend. He sat with him in class.",
+          "ur": "جی ہاں: عمر احمد کا دوست ہے۔ وہ کلاس میں اس کے ساتھ بیٹھا۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "عُمَرُ صَدِيقُ أَحْمَدَ: Umar is Ahmad's friend.",
+        "ur": "عُمَرُ صَدِيقُ أَحْمَدَ: عمر احمد کا دوست ہے۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch31-l06-ex05",
+      "prompt_line": {
+        "ar": "نَعَمْ: عُمَرُ صَدِيقُ أَحْمَدَ. جَلَسَ مَعَهُ فِي الْفَصْلِ.",
+        "ar_plain": "نعم: عمر صديق أحمد. جلس معه في الفصل.",
+        "translit": "naʿam: ʿumaru ṣadīqu aḥmada. jalasa maʿahu fī l-faṣli.",
+        "en": "Yes: Umar is Ahmad's friend. He sat with him in class.",
+        "ur": "جی ہاں: عمر احمد کا دوست ہے۔ وہ کلاس میں اس کے ساتھ بیٹھا۔"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "نَعَمْ، مَا مَعْنَى هَذِهِ الْكَلِمَةِ؟",
+          "ar_plain": "نعم، ما معنى هذه الكلمة؟",
+          "translit": "naʿam, mā maʿnā hādhihi l-kalimati?",
+          "en": "Yes: what does this word mean?",
+          "ur": "جی ہاں: اس لفظ کا مطلب کیا ہے؟"
+        },
+        {
+          "ar": "هَلْ عِنْدَكَ مِثَالٌ؟",
+          "ar_plain": "هل عندك مثال؟",
+          "translit": "hal ʿindaka mithālun?",
+          "en": "Do you have an example?",
+          "ur": "کیا آپ کے پاس مثال ہے؟"
+        },
+        {
+          "ar": "شُكْرًا، جَزَاكَ اللَّهُ خَيْرًا.",
+          "ar_plain": "شكرا، جزاك الله خيرا.",
+          "translit": "shukran, jazāka llāhu khayran.",
+          "en": "Thank you, may Allah reward you with good.",
+          "ur": "شکریہ، اللہ آپ کو جزائے خیر دے۔"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The example was clear: thank the teacher — شُكْرًا، جَزَاكَ اللَّهُ خَيْرًا.",
+        "ur": "مثال واضح تھی: استاد کا شکریہ ادا کریں — شُكْرًا، جَزَاكَ اللَّهُ خَيْرًا۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch31-l06-ex06",
+      "target_translation": {
+        "en": "Do you have an example, teacher?",
+        "ur": "استاد جی، کیا آپ کے پاس کوئی مثال ہے؟"
+      },
+      "tiles": [
+        {
+          "ar": "مِثَالٌ،",
+          "ar_plain": "مثال،",
+          "translit": "mithālun,",
+          "en": "an example",
+          "ur": "مثال"
+        },
+        {
+          "ar": "مَعْنَى",
+          "ar_plain": "معنى",
+          "translit": "maʿnā",
+          "en": "meaning",
+          "ur": "مطلب"
+        },
+        {
+          "ar": "هَلْ",
+          "ar_plain": "هل",
+          "translit": "hal",
+          "en": "(question)",
+          "ur": "کیا"
+        },
+        {
+          "ar": "أُسْتَاذُ؟",
+          "ar_plain": "أستاذ؟",
+          "translit": "ustādhu?",
+          "en": "teacher",
+          "ur": "استاد"
+        },
+        {
+          "ar": "عِنْدَكَ",
+          "ar_plain": "عندك",
+          "translit": "ʿindaka",
+          "en": "you have",
+          "ur": "آپ کے پاس"
+        },
+        {
+          "ar": "كَلِمَةٌ",
+          "ar_plain": "كلمة",
+          "translit": "kalimatun",
+          "en": "a word",
+          "ur": "لفظ"
+        },
+        {
+          "ar": "يَا",
+          "ar_plain": "يا",
+          "translit": "yā",
+          "en": "O",
+          "ur": "اے"
+        }
+      ],
+      "correct_order": [
+        2,
+        4,
+        0,
+        6,
+        3
+      ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "هَلْ عِنْدَكَ مِثَالٌ، يَا أُسْتَاذُ؟ — a polite question, no command.",
+        "ur": "هَلْ عِنْدَكَ مِثَالٌ، يَا أُسْتَاذُ؟ — ادب والا سوال، حکم نہیں۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch31-l06-ex07",
+      "prompt_line": {
+        "ar": "هَلْ هَذَا صَحِيحٌ؟",
+        "ar_plain": "هل هذا صحيح؟",
+        "translit": "hal hādhā ṣaḥīḥun?",
+        "en": "Is this correct?",
+        "ur": "کیا یہ درست ہے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "وَإِيَّاكَ.",
+          "ar_plain": "وإياك.",
+          "translit": "wa-iyyāka.",
+          "en": "And you too.",
+          "ur": "اور آپ کو بھی۔"
+        },
+        {
+          "ar": "نَعَمْ، هَذَا صَحِيحٌ.",
+          "ar_plain": "نعم، هذا صحيح.",
+          "translit": "naʿam, hādhā ṣaḥīḥun.",
+          "en": "Yes, this is correct.",
+          "ur": "جی ہاں، یہ درست ہے۔"
+        },
+        {
+          "ar": "مَا مَعْنَى هَذِهِ الْكَلِمَةِ؟",
+          "ar_plain": "ما معنى هذه الكلمة؟",
+          "translit": "mā maʿnā hādhihi l-kalimati?",
+          "en": "What does this word mean?",
+          "ur": "اس لفظ کا مطلب کیا ہے؟"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هَلْ هَذَا صَحِيحٌ؟ is yes/no: نَعَمْ، هَذَا صَحِيحٌ.",
+        "ur": "هَلْ هَذَا صَحِيحٌ؟ ہاں/نہیں والا ہے: نَعَمْ، هَذَا صَحِيحٌ۔"
+      }
+    }
+  ]
+}

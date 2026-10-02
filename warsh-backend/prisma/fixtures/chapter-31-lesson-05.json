@@ -2,28 +2,28 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 31, Lesson 5 (ch31-l05) — how many: كَمْ + one noun ending in ـًا (كَمْ كِتَابًا؟ كَمْ طَالِبًا؟), recognised as a pattern; answers are digits. Number words and their agreement are Chapter 48's; the term تمييز waits for Chapter 71 (S12); بِكَمْ is left out. 23:112 and 18:19 show a كَمْ question with a time-amount answer; لَبِثْتُمْ / لَبِثْنَا are glossed. Rebuilt 2026-10-02 in the proposal harvest, batch 2 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-31-content-proposal.md and its review amendments: common questions, not a 'complete toolkit' — هَلْ / أَ retrieved from Chapters 7 and 12 and extended to past events; مَنْ / مَا / مَاذَا as person, thing, action; أَيْنَ / مِنْ أَيْنَ retrieved, كَيْفَ taught; مَتَى and لِمَاذَا with separate practice; كَمْ + one noun with ـًا, answered with a digit (number words are Chapter 48, تمييز Chapter 71); a context lesson; CL10 Asking a Teacher; review and a 12-question test. Removed: هَلْ labelled a preposition, the 12:77 conditional hook called a question, مَا called a negator in لَا أَعْبُدُ مَا تَعْبُدُونَ, 12:87's command used as a question, the self-contradicting كَمْ rule, يَوْمَ called genitive, فَمَا خَطْبُكُمْ misattributed to 12:79, the scholar phrase bank and its 'most respectful' imperative, and multi-word build tiles.",
+    "title": "How Many?",
+    "titleAr": "كَمْ؟",
+    "titleUr": "کتنے؟",
     "chapter_order": 31,
     "lesson_order": 5,
-    "chapter_title": "Questioning and Communication",
-    "title": "Asking Questions About Nominal Sentences",
-    "titleAr": "الْأَسْئِلَةُ عَنِ الْجُمْلَةِ الِاسْمِيَّةِ",
-    "source": "book3_lesson8_questioning.md",
     "estimated_minutes": 8,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 12,
-      "ayah": 79,
-      "label": "Yusuf 12:79",
-      "ar": "قَالَ مَعَاذَ اللَّهِ أَن نَّأْخُذَ إِلَّا مَن وَجَدْنَا مَتَاعَنَا عِندَهُ إِنَّا إِذًا لَّظَالِمُونَ",
-      "en": "He said, \"[I seek] the refuge of Allāh [to prevent] that we take except him with whom we found our possession. Indeed, we would then be unjust.\"",
-      "ur": "(یوسف نے) کہا کہ خدا پناہ میں رکھے کہ جس شخص کے پاس ہم نے اپنی چیز پائی ہے اس کے سوا کسی اور کو پکڑ لیں ایسا کریں تو ہم (بڑے) بےانصاف ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012079.mp3"
+      "surah": 23,
+      "ayah": 112,
+      "label": "Al-Mu'minun 23:112",
+      "ar": "قَالَ كَمْ لَبِثْتُمْ فِي الْأَرْضِ عَدَدَ سِنِينَ",
+      "en": "He will say: How long did you stay on earth, in number of years?",
+      "ur": "(اللہ) پوچھے گا: تم زمین میں کتنے برس رہے؟",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/023112.mp3"
     },
     "noor_intro": {
-      "en": "Questions about nominal sentences use the same question words, but the underlying sentence has no verb. Let's practice asking and answering about nominal sentence facts.",
-      "ur": "Nominal sentences کے بارے میں سوالات میں وہی question words استعمال ہوتے ہیں، لیکن underlying sentence میں کوئی verb نہیں ہوتا۔ آئیے nominal sentence facts کے بارے میں پوچھنے اور جواب دینے کی مشق کریں۔"
+      "en": "كَمْ asks how many or how much. لَبِثْتُمْ means 'you stayed'; take it as given.",
+      "ur": "كَمْ پوچھتا ہے کتنے یا کتنا۔ لَبِثْتُمْ کا مطلب ہے 'تم ٹھہرے'؛ اسے ویسے ہی لے لیں۔"
     },
     "autoplay": true
   },
@@ -31,81 +31,138 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Asking about nominal sentence facts",
-        "ar": "السُّؤَالُ عَنْ حَقَائِقِ الْجُمْلَةِ الِاسْمِيَّةِ",
-        "ur": "Nominal sentence facts کے بارے میں پوچھنا"
+        "en": "كَمْ — how many?",
+        "ar": "كَمْ كِتَابًا؟",
+        "ur": "كَمْ — کتنے؟"
       },
       "explanation": {
-        "en": "To ask about a nominal sentence fact, put the question word at the front: هَلِ الْكِتَابُ جَدِيدٌ؟ (Is the book new?), أَيْنَ الْكِتَابُ؟ (Where is the book?). The question word replaces the element being asked about.",
-        "ur": "Nominal sentence fact کے بارے میں پوچھنے کے لیے، question word کو front میں رکھیں: هَلِ الْكِتَابُ جَدِيدٌ؟ (کیا کتاب نئی ہے؟)، أَيْنَ الْكِتَابُ؟ (کتاب کہاں ہے؟)۔ Question word اس element کی جگہ لیتا ہے جس کے بارے میں پوچھا جا رہا ہے۔"
+        "en": "كَمْ asks for a number. After it comes one noun ending in ـًا: كِتَابًا. كَمْ كِتَابًا؟ How many books?",
+        "ur": "كَمْ تعداد پوچھتا ہے۔ اس کے بعد ـًا والا ایک اسم آتا ہے: كِتَابًا۔ كَمْ كِتَابًا؟ کتنی کتابیں؟"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "هَلِ الْمُسْلِمُ مُؤْمِنٌ؟",
-        "ar_plain": "هل المسلم مؤمن؟",
-        "translit": "hal al-muslimu mu'minun?",
-        "en": "Is the Muslim a believer?",
-        "ur": "کیا مسلمان مومن ہے؟"
+        "ar": "كَمْ كِتَابًا عِنْدَكَ؟ — ٣.",
+        "ar_plain": "كم كتابا عندك؟ — ٣.",
+        "translit": "kam kitāban ʿindaka? — thalāthah.",
+        "en": "How many books do you have? — 3.",
+        "ur": "تمہارے پاس کتنی کتابیں ہیں؟ — 3۔"
       },
       "explanation": {
-        "en": "هَلِ marks a yes/no question about a nominal sentence. The underlying sentence is الْمُسْلِمُ مُؤْمِنٌ (the Muslim is a believer — equational).",
-        "ur": "هَلِ nominal sentence کے بارے میں ہاں/نہیں سوال mark کرتا ہے۔ Underlying sentence الْمُسْلِمُ مُؤْمِنٌ ہے (the Muslim is a believer — equational)۔"
+        "en": "Answer with the number. Number words come in Chapter 48; here a digit is enough.",
+        "ur": "جواب میں عدد بتائیں۔ گنتی کے الفاظ باب 48 میں آئیں گے؛ یہاں ہندسہ کافی ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "أَيْنَ الْكِتَابُ؟",
-        "ar_plain": "أين الكتاب؟",
-        "translit": "ayna al-kitaabu?",
-        "en": "Where is the book?",
-        "ur": "کتاب کہاں ہے؟"
+        "ar": "كَمْ طَالِبًا فِي الْفَصْلِ؟ — ٢٠.",
+        "ar_plain": "كم طالبا في الفصل؟ — ٢٠.",
+        "translit": "kam ṭāliban fī l-faṣli? — ʿishrūn.",
+        "en": "How many students are in the classroom? — 20.",
+        "ur": "کلاس میں کتنے طالب علم ہیں؟ — 20۔"
       },
       "explanation": {
-        "en": "أَيْنَ asks about the place of a nominal sentence subject. The answer would be a place expression: الْكِتَابُ عِنْدَ الْأَسْتَاذِ (the book is with the teacher).",
-        "ur": "أَيْنَ nominal sentence subject کی جگہ کے بارے میں پوچھتا ہے۔ جواب ایک place expression ہو گا: الْكِتَابُ عِنْدَ الْأَسْتَاذِ (کتاب استاد کے پاس ہے)۔"
+        "en": "طَالِبًا: one student-word with ـًا, even though the answer is twenty.",
+        "ur": "طَالِبًا: ـًا والا ایک لفظ، حالانکہ جواب بیس ہے۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "CONTRAST",
+      "concept": {
+        "en": "The noun after كَمْ",
+        "ar": "كِتَابٌ / كَمْ كِتَابًا؟",
+        "ur": "كَمْ کے بعد اسم"
+      },
+      "examples": [
+        {
+          "ar": "كِتَابٌ",
+          "ar_plain": "كتاب",
+          "translit": "kitābun",
+          "en": "a book",
+          "ur": "ایک کتاب"
+        },
+        {
+          "ar": "كَمْ كِتَابًا؟",
+          "ar_plain": "كم كتابا؟",
+          "translit": "kam kitāban?",
+          "en": "How many books?",
+          "ur": "کتنی کتابیں؟"
+        }
+      ],
+      "explanation": {
+        "en": "After كَمْ the noun is single and ends in ـًا. Recognise it; the name of this pattern waits for Chapter 71.",
+        "ur": "كَمْ کے بعد اسم واحد ہوتا ہے اور ـًا پر ختم ہوتا ہے۔ اسے پہچانیں؛ اس انداز کا نام باب 71 میں آئے گا۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
       "text": {
-        "ar": "خَطْبُكُمْ",
-        "ar_plain": "خطبكم",
-        "translit": "khatbukum",
-        "en": "your matter/affair",
-        "ur": "تمہاری بات/معاملہ"
+        "ar": "كَمْ قَلَمًا عِنْدَ زَيْنَبَ؟ — ٥.",
+        "ar_plain": "كم قلما عند زينب؟ — ٥.",
+        "translit": "kam qalaman ʿinda zaynaba? — khamsah.",
+        "en": "How many pens does Zaynab have? — 5.",
+        "ur": "زینب کے پاس کتنے قلم ہیں؟ — 5۔"
       },
       "explanation": {
-        "en": "خَطْبٌ (matter/affair) + كُمْ (your pl.) = your matter. Used in the phrase فَمَا خَطْبُكُمْ (so what was your matter / what happened to you).",
-        "ur": "خَطْبٌ (بات/معاملہ) + كُمْ (تمہارا جمع) = تمہاری بات۔ Phrase میں gebraucht: فَمَا خَطْبُكُمْ (تو تمہاری کیا بات تھی / تمہارے ساتھ کیا ہوا)۔"
+        "en": "عِنْدَ زَيْنَبَ: Zaynab has (Chapter 7). The question asks for a number of pens.",
+        "ur": "عِنْدَ زَيْنَبَ: زینب کے پاس (باب 7)۔ سوال قلموں کی تعداد پوچھتا ہے۔"
       }
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "أَسْرَارْتُمْ",
-        "ar_plain": "أسرارتم",
-        "translit": "asrartum",
-        "en": "you concealed",
-        "ur": "تم نے چھپایا"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "A number, not a time",
+        "ar": "كَمْ دَرْسًا؟ / مَتَى الدَّرْسُ؟",
+        "ur": "عدد، وقت نہیں"
       },
+      "examples": [
+        {
+          "ar": "كَمْ دَرْسًا الْيَوْمَ؟ — ٢.",
+          "ar_plain": "كم درسا اليوم؟ — ٢.",
+          "translit": "kam darsan al-yawma? — ithnān.",
+          "en": "How many lessons today? — 2.",
+          "ur": "آج کتنے سبق ہیں؟ — 2۔"
+        },
+        {
+          "ar": "مَتَى الدَّرْسُ؟ — غَدًا.",
+          "ar_plain": "متى الدرس؟ — غدا.",
+          "translit": "matā d-darsu? — ghadan.",
+          "en": "When is the lesson? — Tomorrow.",
+          "ur": "سبق کب ہے؟ — کل۔"
+        }
+      ],
       "explanation": {
-        "en": "Past tense from س-ر-ر (to conceal). أَسْرَرْتُ = I concealed. The doubled ر indicates the verb pattern. أَسْرَارْتُمْ = you (pl.) concealed.",
-        "ur": "س-ر-ر (چھپانا) سے ماضی۔ أَسْرَرْتُ = میں نے چھپایا۔ دوبارہ ر verb pattern indicate کرتا ہے۔ أَسْرَارْتُمْ = تم (جمع) نے چھپایا۔"
+        "en": "كَمْ wants a number; مَتَى wants a time.",
+        "ur": "كَمْ عدد چاہتا ہے؛ مَتَى وقت۔"
       }
     },
     {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Question words with nominal sentences: no verb needed",
-        "ur": "Nominal sentences کے ساتھ question words: verb کی ضرورت نہیں"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "23:112: He will say: How long did you stay on earth, in number of years?",
+        "ar": "قَالَ كَمْ لَبِثْتُمْ فِي الْأَرْضِ عَدَدَ سِنِينَ",
+        "ur": "23:112: (اللہ) پوچھے گا: تم زمین میں کتنے برس رہے؟"
       },
-      "body": {
-        "en": "In nominal sentences, there is no verb to question with هَلْ or أَ. Instead, the question word itself replaces the element being asked about. أَيْنَ الْكِتَابُ؟ = Where is the book? The book exists (nominal) — we just ask about its location.",
-        "ur": "Nominal sentences میں، verb نہیں ہوتا جسے هَلْ یا أَ کے ساتھ پوچھا جائے۔ اس کے بجائے، question word خود اس element کی جگہ لیتا ہے جس کے بارے میں پوچھا جا رہا ہے۔ أَيْنَ الْكِتَابُ؟ = کتاب کہاں ہے؟ کتاب موجود ہے (nominal) — ہم صرف اس کی جگہ کے بارے میں پوچھتے ہیں۔"
-      }
+      "explanation": {
+        "en": "كَمْ + لَبِثْتُمْ (you stayed): how long? Then عَدَدَ سِنِينَ — in number of years. The answer it asks for is an amount.",
+        "ur": "كَمْ + لَبِثْتُمْ (تم ٹھہرے): کتنی مدت؟ پھر عَدَدَ سِنِينَ — برسوں کی گنتی میں۔ یہ سوال ایک مقدار مانگتا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/023112.mp3"
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "18:19: One of them said: How long have you stayed? They said: We stayed a day or part of a day.",
+        "ar": "قَالَ قَائِلٌ مِّنْهُمْ كَمْ لَبِثْتُمْ ۖ قَالُوا لَبِثْنَا يَوْمًا أَوْ بَعْضَ يَوْمٍ",
+        "ur": "18:19: ان میں سے ایک نے کہا: تم کتنی مدت ٹھہرے؟ انہوں نے کہا: ایک دن یا دن کا کچھ حصہ۔"
+      },
+      "explanation": {
+        "en": "A كَمْ question and its answer in one ayah: an amount — يَوْمًا أَوْ بَعْضَ يَوْمٍ, a day or part of a day.",
+        "ur": "ایک ہی آیت میں كَمْ کا سوال اور اس کا جواب: ایک مقدار — يَوْمًا أَوْ بَعْضَ يَوْمٍ، ایک دن یا دن کا کچھ حصہ۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/018019.mp3"
     }
   ],
   "exercises": [
@@ -113,313 +170,346 @@
       "type": "TAP_TRANSLATION",
       "id": "ch31-l05-ex01",
       "prompt": {
-        "ar": "هَلِ الْمُسْلِمُ مُؤْمِنٌ؟",
-        "ar_plain": "هل المسلم مؤمن؟",
-        "translit": "hal al-muslimu mu'minun?",
-        "en": "Is the Muslim a believer?",
-        "ur": "کیا مسلمان مومن ہے؟"
+        "ar": "كَمْ كِتَابًا عِنْدَكَ؟",
+        "ar_plain": "كم كتابا عندك؟",
+        "translit": "kam kitāban ʿindaka?",
+        "en": "How many books do you have?",
+        "ur": "تمہارے پاس کتنی کتابیں ہیں؟"
       },
       "options": [
         {
-          "en": "Is the Muslim a believer?",
-          "ur": "کیا مسلمان مومن ہے؟"
+          "en": "Do you have a book?",
+          "ur": "کیا تمہارے پاس کتاب ہے؟"
         },
         {
-          "en": "Is the Muslim worshipping?",
-          "ur": "کیا مسلمان عبادت کر رہا ہے؟"
+          "en": "Where is your book?",
+          "ur": "تمہاری کتاب کہاں ہے؟"
         },
         {
-          "en": "Is the Muslim going?",
-          "ur": "کیا مسلمان جا رہا ہے؟"
+          "en": "How many books do you have?",
+          "ur": "تمہارے پاس کتنی کتابیں ہیں؟"
         },
         {
-          "en": "Who is the Muslim?",
-          "ur": "مسلمان کون ہے؟"
+          "en": "What is this book?",
+          "ur": "یہ کون سی کتاب ہے؟"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "This is a yes/no question about a nominal sentence: الْمُسْلِمُ مُؤْمِنٌ (the Muslim is a believer). There is no verb — it's equational.",
-        "ur": "یہ nominal sentence کے بارے میں ہاں/نہیں سوال ہے: الْمُسْلِمُ مُؤْمِنٌ (مسلمان مومن ہے)۔ کوئی verb نہیں — یہ equational ہے۔"
+        "en": "كَمْ asks how many: a number of books.",
+        "ur": "كَمْ پوچھتا ہے کتنی: کتابوں کی تعداد۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "CONVERSATION_BUILDER",
       "id": "ch31-l05-ex02",
-      "statement": {
-        "en": "To ask 'Where is the book?' in Arabic, you say أَيْنَ الْكِتَابُ — the question word أَيْنَ replaces the location part of the nominal sentence.",
-        "ur": "'کتاب کہاں ہے؟' عربی میں پوچھنے کے لیے، آپ أَيْنَ الْكِتَابُ کہتے ہیں — question word أَيْنَ nominal sentence کے location والے حصے کی جگہ لیتا ہے۔",
-        "ar_example": {
-          "ar": "أَيْنَ الْكِتَابُ؟",
-          "ar_plain": "أين الكتاب؟",
-          "translit": "ayna al-kitaabu?",
-          "en": "Where is the book?",
-          "ur": "کتاب کہاں ہے؟"
-        }
+      "prompt_line": {
+        "ar": "كَمْ طَالِبًا فِي الْفَصْلِ؟",
+        "ar_plain": "كم طالبا في الفصل؟",
+        "translit": "kam ṭāliban fī l-faṣli?",
+        "en": "How many students are in the classroom?",
+        "ur": "کلاس میں کتنے طالب علم ہیں؟"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "فِي الْمَدْرَسَةِ.",
+          "ar_plain": "في المدرسة.",
+          "translit": "fī l-madrasati.",
+          "en": "In the school.",
+          "ur": "اسکول میں۔"
+        },
+        {
+          "ar": "٢٠.",
+          "ar_plain": "٢٠.",
+          "translit": "ʿishrūn.",
+          "en": "20.",
+          "ur": "20۔"
+        },
+        {
+          "ar": "الْيَوْمَ.",
+          "ar_plain": "اليوم.",
+          "translit": "al-yawma.",
+          "en": "Today.",
+          "ur": "آج۔"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "كَمْ wants a number.",
+        "ur": "كَمْ تعداد چاہتا ہے۔"
+      }
     },
     {
       "type": "FILL_BLANK",
       "id": "ch31-l05-ex03",
       "mode": "TAP",
-      "sentence_ar": "___ الْمَسْجِدُ؟",
+      "sentence_ar": "___ قَلَمًا عِنْدَكِ؟ — ٣.",
       "hint": {
-        "en": "Where is the mosque?",
-        "ur": "مسجد کہاں ہے؟"
+        "en": "How many pens do you have? — 3.",
+        "ur": "تمہارے پاس کتنے قلم ہیں؟ — 3۔"
       },
       "options": [
         {
-          "ar": "أَيْنَ",
-          "ar_plain": "أين",
-          "translit": "ayna",
-          "en": "where",
-          "ur": "کہاں"
+          "ar": "كَمْ",
+          "ar_plain": "كم",
+          "translit": "kam",
+          "en": "how many?",
+          "ur": "کتنے؟"
         },
         {
           "ar": "مَتَى",
           "ar_plain": "متى",
-          "translit": "mataa",
-          "en": "when",
-          "ur": "کب"
+          "translit": "matā",
+          "en": "when?",
+          "ur": "کب؟"
         },
         {
-          "ar": "هَلْ",
-          "ar_plain": "هل",
-          "translit": "hal",
-          "en": "yes/no marker",
-          "ur": "ہاں/نہیں نشان"
+          "ar": "أَيْنَ",
+          "ar_plain": "أين",
+          "translit": "ayna",
+          "en": "where?",
+          "ur": "کہاں؟"
         },
         {
-          "ar": "لِمَاذَا",
-          "ar_plain": "لماذا",
-          "translit": "limaazaa",
-          "en": "why",
-          "ur": "کیوں"
+          "ar": "مَنْ",
+          "ar_plain": "من",
+          "translit": "man",
+          "en": "who?",
+          "ur": "کون؟"
         }
       ],
       "correct_answer": {
-        "ar": "أَيْنَ",
-        "ar_plain": "أين",
-        "translit": "ayna",
-        "en": "where",
-        "ur": "کہاں"
+        "ar": "كَمْ",
+        "ar_plain": "كم",
+        "translit": "kam",
+        "en": "how many?",
+        "ur": "کتنے؟"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The answer is a number, so the question is كَمْ.",
+        "ur": "جواب ایک عدد ہے، اس لیے سوال كَمْ ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch31-l05-ex04",
+      "mode": "TAP",
+      "sentence_ar": "كَمْ ___ فِي الْفَصْلِ؟",
+      "hint": {
+        "en": "How many students are in the classroom?",
+        "ur": "کلاس میں کتنے طالب علم ہیں؟"
+      },
+      "options": [
+        {
+          "ar": "طَالِبٌ",
+          "ar_plain": "طالب",
+          "translit": "ṭālibun",
+          "en": "student (ending ـٌ)",
+          "ur": "طالب علم (ـٌ)"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibu",
+          "en": "the student",
+          "ur": "وہ طالب علم"
+        },
+        {
+          "ar": "طُلَّابٌ",
+          "ar_plain": "طلاب",
+          "translit": "ṭullābun",
+          "en": "students",
+          "ur": "طلبہ"
+        },
+        {
+          "ar": "طَالِبًا",
+          "ar_plain": "طالبا",
+          "translit": "ṭāliban",
+          "en": "student (ending ـًا)",
+          "ur": "طالب علم (ـًا)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "طَالِبًا",
+        "ar_plain": "طالبا",
+        "translit": "ṭāliban",
+        "en": "student (ending ـًا)",
+        "ur": "طالب علم (ـًا)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After كَمْ comes one noun ending in ـًا: كَمْ طَالِبًا؟",
+        "ur": "كَمْ کے بعد ـًا والا ایک اسم آتا ہے: كَمْ طَالِبًا؟"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch31-l05-ex04",
+      "id": "ch31-l05-ex05",
       "left_column": [
         {
-          "ar": "هَلِ الْكِتَابُ جَدِيدٌ؟",
-          "ar_plain": "هل الكتاب جديد؟",
-          "translit": "hal al-kitaabu jadiidun?",
-          "en": "Is the book new?",
-          "ur": "کیا کتاب نئی ہے؟"
+          "ar": "كَمْ طَالِبًا هُنَا؟",
+          "ar_plain": "كم طالبا هنا؟",
+          "translit": "kam ṭāliban hunā?",
+          "en": "How many students are here?",
+          "ur": "یہاں کتنے طالب علم ہیں؟"
         },
         {
-          "ar": "أَيْنَ الْكِتَابُ؟",
-          "ar_plain": "أين الكتاب؟",
-          "translit": "ayna al-kitaabu?",
-          "en": "Where is the book?",
-          "ur": "کتاب کہاں ہے؟"
+          "ar": "مَتَى الدَّرْسُ؟",
+          "ar_plain": "متى الدرس؟",
+          "translit": "matā d-darsu?",
+          "en": "When is the lesson?",
+          "ur": "سبق کب ہے؟"
         },
         {
-          "ar": "كَيْفَ الْحَالُ؟",
-          "ar_plain": "كيف الحال؟",
-          "translit": "kayfa al-haalu?",
-          "en": "How is the condition?",
-          "ur": "حالت کیسی ہے؟"
-        },
-        {
-          "ar": "هَلِ الْمُسْلِمُ مُؤْمِنٌ؟",
-          "ar_plain": "هل المسلم مؤمن؟",
-          "translit": "hal al-muslimu mu'minun?",
-          "en": "Is the Muslim a believer?",
-          "ur": "کیا مسلمان مومن ہے؟"
+          "ar": "أَيْنَ الطُّلَّابُ؟",
+          "ar_plain": "أين الطلاب؟",
+          "translit": "ayna ṭ-ṭullābu?",
+          "en": "Where are the students?",
+          "ur": "طلبہ کہاں ہیں؟"
         }
       ],
       "right_column": [
         {
-          "en": "Nominal — yes/no (condition)",
-          "ur": "Nominal — ہاں/نہیں (حالت)"
+          "en": "Tomorrow.",
+          "ur": "کل۔"
         },
         {
-          "en": "Nominal — where question",
-          "ur": "Nominal — کہاں سوال"
+          "en": "In the mosque.",
+          "ur": "مسجد میں۔"
         },
         {
-          "en": "Nominal — how question",
-          "ur": "Nominal — کیسے سوال"
-        },
-        {
-          "en": "Nominal — identity question",
-          "ur": "Nominal — شناخت سوال"
+          "en": "12.",
+          "ur": "12۔"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
           2
         ],
         [
-          3,
-          3
+          1,
+          0
+        ],
+        [
+          2,
+          1
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch31-l05-ex05",
-      "target_translation": {
-        "en": "Is the house big?",
-        "ur": "کیا گھر بڑا ہے؟"
-      },
-      "tiles": [
-        {
-          "ar": "هَلْ",
-          "ar_plain": "هل",
-          "translit": "hal",
-          "en": "yes/no question",
-          "ur": "ہاں/نہیں سوال"
-        },
-        {
-          "ar": "الْبَيْتُ",
-          "ar_plain": "البيت",
-          "translit": "al-baytu",
-          "en": "the house",
-          "ur": "گھر"
-        },
-        {
-          "ar": "كَبِيرٌ",
-          "ar_plain": "كبير",
-          "translit": "kabirun",
-          "en": "big",
-          "ur": "بڑا"
-        },
-        {
-          "ar": "مُؤْمِنٌ",
-          "ar_plain": "مؤمن",
-          "translit": "mu'minun",
-          "en": "believer",
-          "ur": "مومن"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch31-l05-ex06",
-      "prompt": {
-        "ar": "كَيْفَ حَالُ الْمُسْلِمِ؟",
-        "ar_plain": "كيف حال المسلم؟",
-        "translit": "kayfa haalu al-muslimi?",
-        "en": "How is the Muslim's condition?",
-        "ur": "مسلمان کی حالت کیسی ہے؟"
-      },
-      "options": [
-        {
-          "en": "How is the Muslim's condition?",
-          "ur": "مسلمان کی حالت کیسی ہے؟"
-        },
-        {
-          "en": "Where is the Muslim's condition?",
-          "ur": "مسلمان کی حالت کہاں ہے؟"
-        },
-        {
-          "en": "Is the Muslim's condition good?",
-          "ur": "کیا مسلمان کی حالت اچھی ہے؟"
-        },
-        {
-          "en": "What is the Muslim's condition?",
-          "ur": "مسلمان کی حالت کیا ہے؟"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
+      "xp_value": 2,
       "explanation_on_wrong": {
-        "en": "كَيْفَ asks about manner/state (how). حَالُ الْمُسْلِمِ = the Muslim's condition/state. The answer describes the state.",
-        "ur": "كَيْفَ طریقہ/حال (کیسے) پوچھتا ہے۔ حَالُ الْمُسْلِمِ = مسلمان کی حالت۔ جواب حال بیان کرتا ہے۔"
+        "en": "كَمْ → a number, مَتَى → a time, أَيْنَ → a place.",
+        "ur": "كَمْ → عدد، مَتَى → وقت، أَيْنَ → جگہ۔"
       }
     },
     {
-      "type": "TAP_TRANSLATION",
-      "id": "ch31-l05-ex07",
-      "prompt": {
-        "ar": "هَلِ الْمُسْلِمُ مُؤْمِنٌ",
-        "ar_plain": "هل المسلم مؤمن",
-        "translit": "halil-muslimu mu'min",
-        "en": "Is the Muslim a believer?",
-        "ur": "کیا مسلمان مومن ہے؟"
+      "type": "MATCH_AYAH",
+      "id": "ch31-l05-ex06",
+      "ayah_fragment": {
+        "ar": "كَمْ لَبِثْتُمْ ۖ قَالُوا لَبِثْنَا يَوْمًا أَوْ بَعْضَ يَوْمٍ",
+        "surah_ref": "Al-Kahf 18:19"
       },
       "options": [
         {
-          "en": "The Muslim is a believer.",
-          "ur": "مسلمان مومن ہے۔"
+          "en": "A question about where, and its answer: in the cave.",
+          "ur": "کہاں کا سوال، اور جواب: غار میں۔"
         },
         {
-          "en": "Is the Muslim a believer?",
-          "ur": "کیا مسلمان مومن ہے؟"
+          "en": "A question about who, and its answer: one of them.",
+          "ur": "کون کا سوال، اور جواب: ان میں سے ایک۔"
         },
         {
-          "en": "Who is the believing Muslim?",
-          "ur": "مومن مسلمان کون ہے؟"
+          "en": "A yes/no question, and its answer: yes.",
+          "ur": "ہاں/نہیں کا سوال، اور جواب: ہاں۔"
         },
         {
-          "en": "Be a believer, O Muslim.",
-          "ur": "اے مسلمان، مومن بنو۔"
+          "en": "A question about how long, and its answer: a day or part of a day.",
+          "ur": "کتنی مدت کا سوال، اور اس کا جواب: ایک دن یا دن کا کچھ حصہ۔"
         }
       ],
-      "correct_index": 1,
-      "xp_value": 1
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كَمْ لَبِثْتُمْ: how long did you stay? — يَوْمًا أَوْ بَعْضَ يَوْمٍ, a day or part of a day.",
+        "ur": "كَمْ لَبِثْتُمْ: تم کتنی مدت ٹھہرے؟ — يَوْمًا أَوْ بَعْضَ يَوْمٍ، ایک دن یا دن کا کچھ حصہ۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch31-l05-ex07",
+      "prompt_line": {
+        "ar": "كَمْ دَرْسًا الْيَوْمَ؟",
+        "ar_plain": "كم درسا اليوم؟",
+        "translit": "kam darsan al-yawma?",
+        "en": "How many lessons are there today?",
+        "ur": "آج کتنے سبق ہیں؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "الدَّرْسُ سَهْلٌ.",
+          "ar_plain": "الدرس سهل.",
+          "translit": "ad-darsu sahlun.",
+          "en": "The lesson is easy.",
+          "ur": "سبق آسان ہے۔"
+        },
+        {
+          "ar": "نَعَمْ.",
+          "ar_plain": "نعم.",
+          "translit": "naʿam.",
+          "en": "Yes.",
+          "ur": "جی ہاں۔"
+        },
+        {
+          "ar": "٢.",
+          "ar_plain": "٢.",
+          "translit": "ithnān.",
+          "en": "2.",
+          "ur": "2۔"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "كَمْ wants a number: 2.",
+        "ur": "كَمْ تعداد چاہتا ہے: 2۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Questioning nominal sentences",
-      "ar": "السُّؤَالُ عَنِ الْجُمْلَةِ الِاسْمِيَّةِ",
-      "ur": "Nominal sentences کے بارے میں سوالات"
+      "en": "How many",
+      "ar": "كَمْ",
+      "ur": "کتنے"
     },
     "ayah": {
-      "surah": 12,
-      "ayah": 79,
-      "label": "Yusuf 12:79",
-      "ar": "قَالَ مَعَاذَ اللَّهِ أَن نَّأْخُذَ إِلَّا مَن وَجَدْنَا مَتَاعَنَا عِندَهُ إِنَّا إِذًا لَّظَالِمُونَ",
-      "en": "He said, \"[I seek] the refuge of Allāh [to prevent] that we take except him with whom we found our possession. Indeed, we would then be unjust.\"",
-      "ur": "(یوسف نے) کہا کہ خدا پناہ میں رکھے کہ جس شخص کے پاس ہم نے اپنی چیز پائی ہے اس کے سوا کسی اور کو پکڑ لیں ایسا کریں تو ہم (بڑے) بےانصاف ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012079.mp3"
+      "surah": 23,
+      "ayah": 112,
+      "label": "Al-Mu'minun 23:112",
+      "ar": "قَالَ كَمْ لَبِثْتُمْ فِي الْأَرْضِ عَدَدَ سِنِينَ",
+      "en": "He will say: How long did you stay on earth, in number of years?",
+      "ur": "(اللہ) پوچھے گا: تم زمین میں کتنے برس رہے؟",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/023112.mp3"
     },
     "highlighted_word_indices": [
-      1,
-      3,
-      5
+      1
+    ],
+    "highlighted_words": [
+      "كَمْ"
     ],
     "noor_explanation": {
-      "en": "فَمَا خَطْبُكُمْ = 'so what was your matter/affair?' — a nominal question (no verb). خَطْبُكُمْ uses possessive pronoun كُمْ. وَلَمْ تُبْنُوا contains لَمْ (negation of past) + تُبْنُوا (you did not speak/mention).",
-      "ur": "فَمَا خَطْبُكُمْ = 'تو تمہاری کیا بات تھی؟' — ایک nominal question (کوئی verb نہیں)۔ خَطْبُكُمْ possessive pronoun كُمْ استعمال کرتا ہے۔ وَلَمْ تُبْنُوا میں لَمْ (ماضی کی نفی) + تُبْنُوا (تم نے نہیں بتایا) ہے۔"
+      "en": "كَمْ asks for an amount, and the answer is a number. After كَمْ, look for one noun ending in ـًا.",
+      "ur": "كَمْ مقدار پوچھتا ہے، اور جواب ایک عدد ہوتا ہے۔ كَمْ کے بعد ـًا والا ایک اسم دیکھیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You can now ask questions about everything in Arabic — verbal sentences, nominal sentences, إِنَّ sentences. The question words are the same; only the underlying sentence type changes.",
-      "ur": "اب آپ ہر چیز کے بارے میں عربی میں سوالات پوچھ سکتے ہیں — verbal sentences، nominal sentences، إِنَّ sentences۔ Question words وہی ہیں؛ صرف underlying sentence type بدلتی ہے۔"
+      "en": "You can ask how many and answer with a number. Next: questions inside a conversation.",
+      "ur": "آپ 'کتنے' پوچھ سکتے ہیں اور عدد سے جواب دے سکتے ہیں۔ آگے: گفتگو کے اندر سوال۔"
     }
   }
 }

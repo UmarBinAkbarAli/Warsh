@@ -1,0 +1,507 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "_note": "Chapter 31, display lesson 6 (ch31-l07, new) — questions in context: two short exchanges (Yusuf and Umar about the teacher; Maryam and Zaynab, who is ill) where several replies are good Arabic but only one fits the question and the situation; هُوَ / مَعَهُ tracked back to the teacher. 20:17–18 is a Quranic question with its answer. Not a repair loop (Chapter 22) and not a new reading method (Chapter 30). Rebuilt 2026-10-02 in the proposal harvest, batch 2 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-31-content-proposal.md and its review amendments: common questions, not a 'complete toolkit' — هَلْ / أَ retrieved from Chapters 7 and 12 and extended to past events; مَنْ / مَا / مَاذَا as person, thing, action; أَيْنَ / مِنْ أَيْنَ retrieved, كَيْفَ taught; مَتَى and لِمَاذَا with separate practice; كَمْ + one noun with ـًا, answered with a digit (number words are Chapter 48, تمييز Chapter 71); a context lesson; CL10 Asking a Teacher; review and a 12-question test. Removed: هَلْ labelled a preposition, the 12:77 conditional hook called a question, مَا called a negator in لَا أَعْبُدُ مَا تَعْبُدُونَ, 12:87's command used as a question, the self-contradicting كَمْ rule, يَوْمَ called genitive, فَمَا خَطْبُكُمْ misattributed to 12:79, the scholar phrase bank and its 'most respectful' imperative, and multi-word build tiles.",
+    "title": "Questions in Context",
+    "titleAr": "السُّؤَالُ فِي سِيَاقِهِ",
+    "titleUr": "سیاق میں سوال",
+    "chapter_order": 31,
+    "lesson_order": 6,
+    "estimated_minutes": 9,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 20,
+      "ayah": 17,
+      "label": "Ta-Ha 20:17",
+      "ar": "وَمَا تِلْكَ بِيَمِينِكَ يَا مُوسَىٰ",
+      "en": "And what is that in your right hand, O Musa?",
+      "ur": "اور اے موسیٰ! تمہارے داہنے ہاتھ میں یہ کیا ہے؟",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020017.mp3"
+    },
+    "noor_intro": {
+      "en": "A question, and then an answer that fits it. Today you choose the reply that fits the situation.",
+      "ur": "ایک سوال، پھر اس کے مطابق جواب۔ آج آپ وہ جواب چنیں گے جو صورتِ حال کے مطابق ہو۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Read the situation first",
+        "ar": "سُؤَالٌ وَجَوَابٌ",
+        "ur": "پہلے صورتِ حال پڑھیں"
+      },
+      "explanation": {
+        "en": "Several replies can be good Arabic. Only one fits the question and the situation. Read who is speaking and what they already know.",
+        "ur": "کئی جواب درست عربی ہو سکتے ہیں۔ صرف ایک سوال اور صورتِ حال کے مطابق ہوتا ہے۔ دیکھیں کون بول رہا ہے اور وہ پہلے سے کیا جانتا ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "يُوسُفُ: هَلْ جَاءَ الْأُسْتَاذُ؟ — عُمَرُ: نَعَمْ، جَاءَ قَبْلَ الصَّلَاةِ.",
+        "ar_plain": "يوسف: هل جاء الأستاذ؟ — عمر: نعم، جاء قبل الصلاة.",
+        "translit": "yūsufu: hal jāʾa l-ustādhu? — ʿumaru: naʿam, jāʾa qabla ṣ-ṣalāti.",
+        "en": "Yusuf: Has the teacher come? — Umar: Yes, he came before the prayer.",
+        "ur": "یوسف: کیا استاد آ گئے؟ — عمر: جی ہاں، وہ نماز سے پہلے آئے۔"
+      },
+      "explanation": {
+        "en": "هَلْ → نَعَمْ, then a detail: قَبْلَ الصَّلَاةِ, before the prayer.",
+        "ur": "هَلْ → نَعَمْ، پھر تفصیل: قَبْلَ الصَّلَاةِ، نماز سے پہلے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "يُوسُفُ: أَيْنَ هُوَ الْآنَ؟ — عُمَرُ: فِي الْمَكْتَبَةِ مَعَ الطُّلَّابِ.",
+        "ar_plain": "يوسف: أين هو الآن؟ — عمر: في المكتبة مع الطلاب.",
+        "translit": "yūsufu: ayna huwa l-āna? — ʿumaru: fī l-maktabati maʿa ṭ-ṭullābi.",
+        "en": "Yusuf: Where is he now? — Umar: In the library with the students.",
+        "ur": "یوسف: وہ اب کہاں ہیں؟ — عمر: طلبہ کے ساتھ لائبریری میں۔"
+      },
+      "explanation": {
+        "en": "هُوَ is still the teacher. مَكْتَبَةٌ = library. أَيْنَ → a place.",
+        "ur": "هُوَ اب بھی استاد ہیں۔ مَكْتَبَةٌ = لائبریری۔ أَيْنَ → جگہ۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "يُوسُفُ: كَمْ طَالِبًا مَعَهُ؟ — عُمَرُ: ١٠.",
+        "ar_plain": "يوسف: كم طالبا معه؟ — عمر: ١٠.",
+        "translit": "yūsufu: kam ṭāliban maʿahu? — ʿumaru: ʿasharah.",
+        "en": "Yusuf: How many students are with him? — Umar: 10.",
+        "ur": "یوسف: ان کے ساتھ کتنے طالب علم ہیں؟ — عمر: 10۔"
+      },
+      "explanation": {
+        "en": "مَعَهُ, with him: the teacher again. كَمْ → a number.",
+        "ur": "مَعَهُ، ان کے ساتھ: پھر استاد۔ كَمْ → عدد۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "مَرْيَمُ: كَيْفَ حَالُكِ يَا زَيْنَبُ؟ — زَيْنَبُ: أَنَا مَرِيضَةٌ الْيَوْمَ.",
+        "ar_plain": "مريم: كيف حالك يا زينب؟ — زينب: أنا مريضة اليوم.",
+        "translit": "maryamu: kayfa ḥāluki yā zaynabu? — zaynabu: anā marīḍatun al-yawma.",
+        "en": "Maryam: How are you, Zaynab? — Zaynab: I am ill today.",
+        "ur": "مریم: زینب، تم کیسی ہو؟ — زینب: میں آج بیمار ہوں۔"
+      },
+      "explanation": {
+        "en": "كَيْفَ → a state. مَرِيضَةٌ = ill (a woman).",
+        "ur": "كَيْفَ → حالت۔ مَرِيضَةٌ = بیمار (عورت)۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "مَرْيَمُ: مَتَى ذَهَبْتِ إِلَى الطَّبِيبِ؟ — زَيْنَبُ: أَمْسِ.",
+        "ar_plain": "مريم: متى ذهبت إلى الطبيب؟ — زينب: أمس.",
+        "translit": "maryamu: matā dhahabti ilā ṭ-ṭabībi? — zaynabu: amsi.",
+        "en": "Maryam: When did you go to the doctor? — Zaynab: Yesterday.",
+        "ur": "مریم: تم ڈاکٹر کے پاس کب گئیں؟ — زینب: گزشتہ کل۔"
+      },
+      "explanation": {
+        "en": "طَبِيبٌ = doctor. A past action → a past time.",
+        "ur": "طَبِيبٌ = ڈاکٹر۔ گزرا ہوا کام → گزرا وقت۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "20:17: And what is that in your right hand, O Musa?",
+        "ar": "وَمَا تِلْكَ بِيَمِينِكَ يَا مُوسَىٰ",
+        "ur": "20:17: اور اے موسیٰ! تمہارے داہنے ہاتھ میں یہ کیا ہے؟"
+      },
+      "explanation": {
+        "en": "مَا asks what. Read the next ayah for the answer.",
+        "ur": "مَا پوچھتا ہے کیا۔ جواب کے لیے اگلی آیت پڑھیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020017.mp3"
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "20:18: He said: It is my staff.",
+        "ar": "قَالَ هِيَ عَصَايَ",
+        "ur": "20:18: انہوں نے کہا: یہ میری لاٹھی ہے۔"
+      },
+      "explanation": {
+        "en": "The answer names the thing: هِيَ عَصَايَ. A مَا question gets a thing.",
+        "ur": "جواب چیز کا نام بتاتا ہے: هِيَ عَصَايَ۔ مَا کے سوال کا جواب چیز ہوتا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020018.mp3"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch31-l07-ex01",
+      "prompt_line": {
+        "ar": "يُوسُفُ: هَلْ جَاءَ الْأُسْتَاذُ؟",
+        "ar_plain": "يوسف: هل جاء الأستاذ؟",
+        "translit": "yūsufu: hal jāʾa l-ustādhu?",
+        "en": "Yusuf: Has the teacher come?",
+        "ur": "یوسف: کیا استاد آ گئے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "هُوَ أُسْتَاذٌ.",
+          "ar_plain": "هو أستاذ.",
+          "translit": "huwa ustādhun.",
+          "en": "He is a teacher.",
+          "ur": "وہ استاد ہیں۔"
+        },
+        {
+          "ar": "فِي الْمَكْتَبَةِ.",
+          "ar_plain": "في المكتبة.",
+          "translit": "fī l-maktabati.",
+          "en": "In the library.",
+          "ur": "لائبریری میں۔"
+        },
+        {
+          "ar": "نَعَمْ، جَاءَ قَبْلَ الصَّلَاةِ.",
+          "ar_plain": "نعم، جاء قبل الصلاة.",
+          "translit": "naʿam, jāʾa qabla ṣ-ṣalāti.",
+          "en": "Yes, he came before the prayer.",
+          "ur": "جی ہاں، وہ نماز سے پہلے آئے۔"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "هَلْ asks yes or no first: نَعَمْ، جَاءَ…",
+        "ur": "هَلْ پہلے ہاں یا نہیں پوچھتا ہے: نَعَمْ، جَاءَ…"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch31-l07-ex02",
+      "statement": {
+        "en": "In Yusuf's question, هُوَ is Umar.",
+        "ur": "یوسف کے سوال میں هُوَ سے مراد عمر ہے۔",
+        "ar_example": {
+          "ar": "يُوسُفُ: أَيْنَ هُوَ الْآنَ؟",
+          "ar_plain": "يوسف: أين هو الآن؟",
+          "translit": "yūsufu: ayna huwa l-āna?",
+          "en": "Yusuf: Where is he now?",
+          "ur": "یوسف: وہ اب کہاں ہیں؟"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هُوَ points back to الْأُسْتَاذُ: where is the teacher now?",
+        "ur": "هُوَ الْأُسْتَاذُ کی طرف لوٹتا ہے: استاد اب کہاں ہیں؟"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch31-l07-ex03",
+      "prompt_line": {
+        "ar": "يُوسُفُ: أَيْنَ هُوَ الْآنَ؟",
+        "ar_plain": "يوسف: أين هو الآن؟",
+        "translit": "yūsufu: ayna huwa l-āna?",
+        "en": "Yusuf: Where is he now?",
+        "ur": "یوسف: وہ اب کہاں ہیں؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "فِي الْمَكْتَبَةِ مَعَ الطُّلَّابِ.",
+          "ar_plain": "في المكتبة مع الطلاب.",
+          "translit": "fī l-maktabati maʿa ṭ-ṭullābi.",
+          "en": "In the library with the students.",
+          "ur": "طلبہ کے ساتھ لائبریری میں۔"
+        },
+        {
+          "ar": "نَعَمْ، جَاءَ.",
+          "ar_plain": "نعم، جاء.",
+          "translit": "naʿam, jāʾa.",
+          "en": "Yes, he came.",
+          "ur": "جی ہاں، وہ آئے۔"
+        },
+        {
+          "ar": "قَبْلَ الصَّلَاةِ.",
+          "ar_plain": "قبل الصلاة.",
+          "translit": "qabla ṣ-ṣalāti.",
+          "en": "Before the prayer.",
+          "ur": "نماز سے پہلے۔"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "أَيْنَ wants a place. 'Before the prayer' answers مَتَى.",
+        "ur": "أَيْنَ جگہ چاہتا ہے۔ 'نماز سے پہلے' مَتَى کا جواب ہے۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch31-l07-ex04",
+      "prompt_line": {
+        "ar": "يُوسُفُ: كَمْ طَالِبًا مَعَهُ؟",
+        "ar_plain": "يوسف: كم طالبا معه؟",
+        "translit": "yūsufu: kam ṭāliban maʿahu?",
+        "en": "Yusuf: How many students are with him?",
+        "ur": "یوسف: ان کے ساتھ کتنے طالب علم ہیں؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "مَعَ الْأُسْتَاذِ.",
+          "ar_plain": "مع الأستاذ.",
+          "translit": "maʿa l-ustādhi.",
+          "en": "With the teacher.",
+          "ur": "استاد کے ساتھ۔"
+        },
+        {
+          "ar": "١٠.",
+          "ar_plain": "١٠.",
+          "translit": "ʿasharah.",
+          "en": "10.",
+          "ur": "10۔"
+        },
+        {
+          "ar": "فِي الْمَكْتَبَةِ.",
+          "ar_plain": "في المكتبة.",
+          "translit": "fī l-maktabati.",
+          "en": "In the library.",
+          "ur": "لائبریری میں۔"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "كَمْ wants a number.",
+        "ur": "كَمْ تعداد چاہتا ہے۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch31-l07-ex05",
+      "prompt_line": {
+        "ar": "مَرْيَمُ: كَيْفَ حَالُكِ يَا زَيْنَبُ؟",
+        "ar_plain": "مريم: كيف حالك يا زينب؟",
+        "translit": "maryamu: kayfa ḥāluki yā zaynabu?",
+        "en": "Maryam: How are you, Zaynab?",
+        "ur": "مریم: زینب، تم کیسی ہو؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "أَنَا مِنْ مِصْرَ.",
+          "ar_plain": "أنا من مصر.",
+          "translit": "anā min miṣra.",
+          "en": "I am from Egypt.",
+          "ur": "میں مصر سے ہوں۔"
+        },
+        {
+          "ar": "أَنَا زَيْنَبُ.",
+          "ar_plain": "أنا زينب.",
+          "translit": "anā zaynabu.",
+          "en": "I am Zaynab.",
+          "ur": "میں زینب ہوں۔"
+        },
+        {
+          "ar": "أَنَا مَرِيضَةٌ الْيَوْمَ.",
+          "ar_plain": "أنا مريضة اليوم.",
+          "translit": "anā marīḍatun al-yawma.",
+          "en": "I am ill today.",
+          "ur": "میں آج بیمار ہوں۔"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "كَيْفَ حَالُكِ asks for a state: مَرِيضَةٌ, ill.",
+        "ur": "كَيْفَ حَالُكِ حالت پوچھتا ہے: مَرِيضَةٌ، بیمار۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch31-l07-ex06",
+      "prompt_line": {
+        "ar": "مَرْيَمُ: مَتَى ذَهَبْتِ إِلَى الطَّبِيبِ؟",
+        "ar_plain": "مريم: متى ذهبت إلى الطبيب؟",
+        "translit": "maryamu: matā dhahabti ilā ṭ-ṭabībi?",
+        "en": "Maryam: When did you go to the doctor?",
+        "ur": "مریم: تم ڈاکٹر کے پاس کب گئیں؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "أَمْسِ.",
+          "ar_plain": "أمس.",
+          "translit": "amsi.",
+          "en": "Yesterday.",
+          "ur": "گزشتہ کل۔"
+        },
+        {
+          "ar": "غَدًا.",
+          "ar_plain": "غدا.",
+          "translit": "ghadan.",
+          "en": "Tomorrow.",
+          "ur": "آنے والے کل۔"
+        },
+        {
+          "ar": "إِلَى الطَّبِيبِ.",
+          "ar_plain": "إلى الطبيب.",
+          "translit": "ilā ṭ-ṭabībi.",
+          "en": "To the doctor.",
+          "ur": "ڈاکٹر کے پاس۔"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "ذَهَبْتِ is past, so the time is أَمْسِ.",
+        "ur": "ذَهَبْتِ ماضی ہے، اس لیے وقت أَمْسِ ہے۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch31-l07-ex07",
+      "left_column": [
+        {
+          "ar": "كَمْ طَالِبًا مَعَهُ؟",
+          "ar_plain": "كم طالبا معه؟",
+          "translit": "kam ṭāliban maʿahu?",
+          "en": "How many students are with him?",
+          "ur": "ان کے ساتھ کتنے طالب علم ہیں؟"
+        },
+        {
+          "ar": "كَيْفَ حَالُكِ؟",
+          "ar_plain": "كيف حالك؟",
+          "translit": "kayfa ḥāluki?",
+          "en": "How are you?",
+          "ur": "تم کیسی ہو؟"
+        },
+        {
+          "ar": "مَتَى ذَهَبْتِ؟",
+          "ar_plain": "متى ذهبت؟",
+          "translit": "matā dhahabti?",
+          "en": "When did you go?",
+          "ur": "تم کب گئیں؟"
+        },
+        {
+          "ar": "أَيْنَ هُوَ الْآنَ؟",
+          "ar_plain": "أين هو الآن؟",
+          "translit": "ayna huwa l-āna?",
+          "en": "Where is he now?",
+          "ur": "وہ اب کہاں ہیں؟"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "In the library.",
+          "ur": "لائبریری میں۔"
+        },
+        {
+          "en": "10.",
+          "ur": "10۔"
+        },
+        {
+          "en": "Yesterday.",
+          "ur": "گزشتہ کل۔"
+        },
+        {
+          "en": "I am ill today.",
+          "ur": "میں آج بیمار ہوں۔"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "Each reply answers its own question: number, state, time, place.",
+        "ur": "ہر جواب اپنے سوال کا ہے: عدد، حالت، وقت، جگہ۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch31-l07-ex08",
+      "ayah_fragment": {
+        "ar": "قَالَ هِيَ عَصَايَ",
+        "surah_ref": "Ta-Ha 20:18"
+      },
+      "options": [
+        {
+          "en": "It answers 'where?' — a place.",
+          "ur": "یہ 'کہاں؟' کا جواب ہے — جگہ۔"
+        },
+        {
+          "en": "It answers 'what is that?' — it names a thing.",
+          "ur": "یہ 'وہ کیا ہے؟' کا جواب ہے — ایک چیز کا نام۔"
+        },
+        {
+          "en": "It answers 'when?' — a time.",
+          "ur": "یہ 'کب؟' کا جواب ہے — وقت۔"
+        },
+        {
+          "en": "It answers 'how many?' — a number.",
+          "ur": "یہ 'کتنے؟' کا جواب ہے — عدد۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "وَمَا تِلْكَ؟ — هِيَ عَصَايَ: it is my staff. A مَا question gets a thing.",
+        "ur": "وَمَا تِلْكَ؟ — هِيَ عَصَايَ: یہ میری لاٹھی ہے۔ مَا کے سوال کا جواب چیز ہے۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Questions in context",
+      "ar": "السُّؤَالُ فِي سِيَاقِهِ",
+      "ur": "سیاق میں سوال"
+    },
+    "ayah": {
+      "surah": 20,
+      "ayah": 17,
+      "label": "Ta-Ha 20:17",
+      "ar": "وَمَا تِلْكَ بِيَمِينِكَ يَا مُوسَىٰ",
+      "en": "And what is that in your right hand, O Musa?",
+      "ur": "اور اے موسیٰ! تمہارے داہنے ہاتھ میں یہ کیا ہے؟",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020017.mp3"
+    },
+    "highlighted_word_indices": [
+      0
+    ],
+    "highlighted_words": [
+      "وَمَا"
+    ],
+    "noor_explanation": {
+      "en": "وَمَا تِلْكَ — and what is that? The reply, هِيَ عَصَايَ, fits because مَا asked for a thing.",
+      "ur": "وَمَا تِلْكَ — اور وہ کیا ہے؟ جواب هِيَ عَصَايَ اس لیے مناسب ہے کہ مَا نے چیز پوچھی تھی۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You chose replies by the situation, not just the question word. Next: Conversation Lab — asking a teacher.",
+      "ur": "آپ نے صرف سوالیہ لفظ نہیں، صورتِ حال دیکھ کر جواب چنا۔ آگے: گفتگو لیب — استاد سے پوچھنا۔"
+    }
+  }
+}

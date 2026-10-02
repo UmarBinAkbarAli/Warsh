@@ -1,0 +1,442 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 34 final test (ch34-test, new — the old seventh lesson ch34-l07 stays as a DRAFT row at order 8, so its completions never count as this pass). Twelve multiple-choice questions, two per strand: now/habit, the prefixes (تَكْتُبُ always with a named subject), supplied new stems, لَا 'does not' versus 'Do not!' by meaning, object and time, and two integrated items (نَعْبُدُ as Chapter 10 retrieval). No future markers, no full paradigm. Pass mark 80 %: 9/12 fails, 10/12 passes. Rebuilt 2026-10-02 in the proposal harvest, batch 2 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-34-content-proposal.md and its review amendments: the imperfect in context — not 'only right now' but unfinished or habitual action, shown by الْآنَ / كُلَّ يَوْمٍ; five subject readings on one sound Form I model (أَكْتُبُ، نَكْتُبُ، يَكْتُبُ، and تَكْتُبُ for أَنْتَ and for هِيَ) — four prefix patterns, with تَكْتُبُ decided by context; transfer to supplied complete imperfects (يَذْهَبُ، يَجْلِسُ، يَعْلَمُ — the middle vowel is given, never guessed); لَا + imperfect for 'does not', with 'Do not!' (لَا تَجْلِسْ، 9:40 لَا تَحْزَنْ) as a recognition contrast only (Chapter 45 teaches it); an object, an object pronoun and a time word; review; 12-question test. نَعْبُدُ is Chapter 10 retrieval; نَسْتَعِينُ is glossed (root ع و ن). The future (سَـ / سَوْفَ) is Chapter 35; أَنْتِ forms are Chapter 37. The old Al-Fatiha capstone ch34-l07 is kept as a DRAFT row at order 8 so no earlier completion counts as passing the new test. Removed: 'present tense = right now', the six-row 'full table', four prefixes read as four subjects, أَفْعَلُ as a pattern for every verb, نَسْتَعِينُ under س-ع-ن, the ash-Sharh line cited as 1:6, نَرَانِي, many-to-one matching, multi-word build tiles and out-of-range reveal highlights.",
+    "title": "Chapter 34 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الرَّابِعِ وَالثَّلَاثِينَ",
+    "titleUr": "باب 34 کا آخری امتحان",
+    "chapter_order": 34,
+    "lesson_order": 7,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 20,
+      "ayah": 46,
+      "label": "Ta-Ha 20:46",
+      "ar": "إِنَّنِي مَعَكُمَا أَسْمَعُ وَأَرَىٰ",
+      "en": "Indeed, I am with you both; I hear and I see.",
+      "ur": "بے شک میں تم دونوں کے ساتھ ہوں، سنتا ہوں اور دیکھتا ہوں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020046.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 34.",
+      "ur": "باب 34 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 34 — the imperfect",
+      "ar": "الْفِعْلُ الْمُضَارِعُ",
+      "ur": "باب 34 — فعل مضارع"
+    },
+    "ayah": {
+      "surah": 20,
+      "ayah": 46,
+      "label": "Ta-Ha 20:46",
+      "ar": "إِنَّنِي مَعَكُمَا أَسْمَعُ وَأَرَىٰ",
+      "en": "Indeed, I am with you both; I hear and I see.",
+      "ur": "بے شک میں تم دونوں کے ساتھ ہوں، سنتا ہوں اور دیکھتا ہوں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020046.mp3"
+    },
+    "highlighted_word_indices": [
+      2
+    ],
+    "highlighted_words": [
+      "أَسْمَعُ"
+    ],
+    "noor_explanation": {
+      "en": "أَسْمَعُ: أَـ, I; ongoing. You finish Chapter 34 able to read who is acting, and whether it is now or usual.",
+      "ur": "أَسْمَعُ: أَـ، میں؛ جاری۔ آپ باب 34 اس حال میں مکمل کرتے ہیں کہ پڑھ سکیں کون کر رہا ہے، اور ابھی یا عادتاً۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 34 complete. Chapter 35: the future, with سَـ and سَوْفَ.",
+      "ur": "باب 34 مکمل۔ باب 35: مستقبل، سَـ اور سَوْفَ کے ساتھ۔"
+    }
+  },
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 34,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch34-test-q01",
+        "topic": {
+          "en": "Now or habit",
+          "ur": "ابھی یا عادت"
+        },
+        "prompt": {
+          "en": "When is the action happening?",
+          "ur": "کام کب ہو رہا ہے؟"
+        },
+        "arabic": "يَقْرَأُ الطَّالِبُ الْآنَ.",
+        "options": [
+          {
+            "en": "yesterday",
+            "ur": "گزشتہ کل"
+          },
+          {
+            "en": "every day",
+            "ur": "ہر روز"
+          },
+          {
+            "en": "it is already finished",
+            "ur": "ختم ہو چکا"
+          },
+          {
+            "en": "now",
+            "ur": "ابھی"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch34-test-q02",
+        "topic": {
+          "en": "Now or habit",
+          "ur": "ابھی یا عادت"
+        },
+        "prompt": {
+          "en": "What does the sentence say?",
+          "ur": "جملہ کیا کہتا ہے؟"
+        },
+        "arabic": "تَذْهَبُ أُمِّي إِلَى السُّوقِ كُلَّ يَوْمٍ.",
+        "options": [
+          {
+            "en": "My mother went to the market yesterday.",
+            "ur": "میری امی گزشتہ کل بازار گئیں۔"
+          },
+          {
+            "en": "My mother goes to the market every day.",
+            "ur": "میری امی ہر روز بازار جاتی ہیں۔"
+          },
+          {
+            "en": "My mother is at the market only today.",
+            "ur": "میری امی صرف آج بازار میں ہیں۔"
+          },
+          {
+            "en": "Go to the market, mother!",
+            "ur": "امی، بازار جائیے!"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch34-test-q03",
+        "topic": {
+          "en": "Who is doing it",
+          "ur": "کون کر رہا ہے"
+        },
+        "prompt": {
+          "en": "Who is writing? (الرِّسَالَةَ = the letter)",
+          "ur": "کون لکھ رہا ہے؟ (الرِّسَالَةَ = خط)"
+        },
+        "arabic": "نَكْتُبُ الرِّسَالَةَ.",
+        "options": [
+          {
+            "en": "we",
+            "ur": "ہم"
+          },
+          {
+            "en": "I",
+            "ur": "میں"
+          },
+          {
+            "en": "he",
+            "ur": "وہ (مرد)"
+          },
+          {
+            "en": "she",
+            "ur": "وہ (عورت)"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch34-test-q04",
+        "topic": {
+          "en": "Who is doing it",
+          "ur": "کون کر رہا ہے"
+        },
+        "prompt": {
+          "en": "Who is writing?",
+          "ur": "کون لکھ رہا ہے؟"
+        },
+        "arabic": "تَكْتُبُ زَيْنَبُ الرِّسَالَةَ.",
+        "options": [
+          {
+            "en": "you (a man)",
+            "ur": "تم (مرد)"
+          },
+          {
+            "en": "I",
+            "ur": "میں"
+          },
+          {
+            "en": "Zaynab — she",
+            "ur": "زینب — وہ"
+          },
+          {
+            "en": "we",
+            "ur": "ہم"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch34-test-q05",
+        "topic": {
+          "en": "New verbs",
+          "ur": "نئے افعال"
+        },
+        "prompt": {
+          "en": "Who is asked about?",
+          "ur": "کس کے بارے میں پوچھا گیا ہے؟"
+        },
+        "arabic": "يَا يُوسُفُ، أَيْنَ تَجْلِسُ؟",
+        "options": [
+          {
+            "en": "a woman — she",
+            "ur": "ایک عورت — وہ"
+          },
+          {
+            "en": "Yusuf — you",
+            "ur": "یوسف — تم"
+          },
+          {
+            "en": "the speaker — I",
+            "ur": "بولنے والا — میں"
+          },
+          {
+            "en": "a group — we",
+            "ur": "ایک جماعت — ہم"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch34-test-q06",
+        "topic": {
+          "en": "New verbs",
+          "ur": "نئے افعال"
+        },
+        "prompt": {
+          "en": "What does it mean?",
+          "ur": "اس کا مطلب کیا ہے؟"
+        },
+        "arabic": "أَذْهَبُ إِلَى الْمَدْرَسَةِ كُلَّ يَوْمٍ.",
+        "options": [
+          {
+            "en": "We go to school every day.",
+            "ur": "ہم ہر روز اسکول جاتے ہیں۔"
+          },
+          {
+            "en": "He went to school.",
+            "ur": "وہ اسکول گیا۔"
+          },
+          {
+            "en": "Go to school every day!",
+            "ur": "ہر روز اسکول جاؤ!"
+          },
+          {
+            "en": "I go to school every day.",
+            "ur": "میں ہر روز اسکول جاتا ہوں۔"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch34-test-q07",
+        "topic": {
+          "en": "لَا",
+          "ur": "لَا"
+        },
+        "prompt": {
+          "en": "What does it mean?",
+          "ur": "اس کا مطلب کیا ہے؟"
+        },
+        "arabic": "لَا يَذْهَبُ أَحْمَدُ إِلَى السُّوقِ.",
+        "options": [
+          {
+            "en": "Ahmad does not go to the market.",
+            "ur": "احمد بازار نہیں جاتا۔"
+          },
+          {
+            "en": "Ahmad, do not go to the market!",
+            "ur": "احمد، بازار نہ جاؤ!"
+          },
+          {
+            "en": "Ahmad goes to the market.",
+            "ur": "احمد بازار جاتا ہے۔"
+          },
+          {
+            "en": "Did Ahmad go to the market?",
+            "ur": "کیا احمد بازار گیا؟"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch34-test-q08",
+        "topic": {
+          "en": "لَا",
+          "ur": "لَا"
+        },
+        "prompt": {
+          "en": "What is this?",
+          "ur": "یہ کیا ہے؟"
+        },
+        "arabic": "لَا تَجْلِسْ هُنَا!",
+        "options": [
+          {
+            "en": "saying that someone does not sit here",
+            "ur": "بتانا کہ کوئی یہاں نہیں بیٹھتا"
+          },
+          {
+            "en": "asking where someone sits",
+            "ur": "پوچھنا کہ کوئی کہاں بیٹھتا ہے"
+          },
+          {
+            "en": "telling someone not to sit here",
+            "ur": "کسی کو یہاں بیٹھنے سے روکنا"
+          },
+          {
+            "en": "saying that someone sat here",
+            "ur": "بتانا کہ کوئی یہاں بیٹھا"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch34-test-q09",
+        "topic": {
+          "en": "Object and time",
+          "ur": "مفعول اور وقت"
+        },
+        "prompt": {
+          "en": "Who is heard?",
+          "ur": "کسے سنا جاتا ہے؟"
+        },
+        "arabic": "يَسْمَعُ الطُّلَّابُ الْأُسْتَاذَ.",
+        "options": [
+          {
+            "en": "the students",
+            "ur": "طلبہ"
+          },
+          {
+            "en": "both",
+            "ur": "دونوں"
+          },
+          {
+            "en": "nobody",
+            "ur": "کسی کو نہیں"
+          },
+          {
+            "en": "the teacher",
+            "ur": "استاد"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch34-test-q10",
+        "topic": {
+          "en": "Object and time",
+          "ur": "مفعول اور وقت"
+        },
+        "prompt": {
+          "en": "When do we sit in the mosque?",
+          "ur": "ہم مسجد میں کب بیٹھتے ہیں؟"
+        },
+        "arabic": "نَجْلِسُ فِي الْمَسْجِدِ يَوْمَ الْجُمُعَةِ.",
+        "options": [
+          {
+            "en": "on Friday",
+            "ur": "جمعہ کے دن"
+          },
+          {
+            "en": "only now",
+            "ur": "صرف ابھی"
+          },
+          {
+            "en": "yesterday",
+            "ur": "گزشتہ کل"
+          },
+          {
+            "en": "every day",
+            "ur": "ہر روز"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch34-test-q11",
+        "topic": {
+          "en": "Putting it together",
+          "ur": "سب ایک ساتھ"
+        },
+        "prompt": {
+          "en": "Al-Fatiha 1:5 (Chapter 10). Who worships?",
+          "ur": "سورۃ الفاتحہ 1:5 (باب 10)۔ عبادت کون کرتا ہے؟"
+        },
+        "arabic": "إِيَّاكَ نَعْبُدُ",
+        "options": [
+          {
+            "en": "I",
+            "ur": "میں"
+          },
+          {
+            "en": "he",
+            "ur": "وہ"
+          },
+          {
+            "en": "we",
+            "ur": "ہم"
+          },
+          {
+            "en": "you",
+            "ur": "تم"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch34-test-q12",
+        "topic": {
+          "en": "Putting it together",
+          "ur": "سب ایک ساتھ"
+        },
+        "prompt": {
+          "en": "What does Umar do?",
+          "ur": "عمر کیا کرتا ہے؟"
+        },
+        "arabic": "يَفْهَمُ عُمَرُ الدَّرْسَ، وَلَا يَكْتُبُهُ.",
+        "options": [
+          {
+            "en": "He writes the lesson but does not understand it.",
+            "ur": "وہ سبق لکھتا ہے مگر سمجھتا نہیں۔"
+          },
+          {
+            "en": "He understands the lesson, but does not write it.",
+            "ur": "وہ سبق سمجھتا ہے، مگر اسے لکھتا نہیں۔"
+          },
+          {
+            "en": "He understood and wrote the lesson.",
+            "ur": "اس نے سبق سمجھا اور لکھا۔"
+          },
+          {
+            "en": "He tells someone not to write it.",
+            "ur": "وہ کسی کو اسے لکھنے سے روکتا ہے۔"
+          }
+        ],
+        "correct_index": 1
+      }
+    ]
+  }
+}

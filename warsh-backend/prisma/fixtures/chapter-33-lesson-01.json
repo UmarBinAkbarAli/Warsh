@@ -2,440 +2,277 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 33, Lesson 1 (ch33-l01) — selected Al-Kafirun excerpts (109:1, 109:2, 109:6) read with less help, as retrieval of Chapter 30's complete reading; one connection across the excerpts (who لَكُمْ / لِيَ point to) and one fresh authored line with 109:6's shape. Rebuilt 2026-10-02 in the proposal harvest, batch 2 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-33-content-proposal.md and its review amendments: a Book 3 reading bridge — Al-Kafirun excerpts retrieved (Chapter 30 owns the full reading); complete, staged readings of Al-Falaq 113:1–5, An-Nasr 110:1–3 (110:2 included) and, new, An-Nas 114:1–6; a mixed lesson on what وَ joins, the noun of إِنَّ, the predicate of لَيْسَ, questions and إِذَا; the old capstone becomes the review; a 12-question readiness test. Unfamiliar Quran forms (أَعُوذُ، رَأَيْتَ، يَدْخُلُونَ، سَبِّحْ، اسْتَغْفِرْهُ، كَانَ، تَوَّابًا، يُوَسْوِسُ) are glossed whole. Removed: 'first complete surah' and 'every word' claims, Al-Fatiha 1:5 and the imperfect preview (Chapter 34), the 2:256 slogan inside Al-Kafirun, revelation chronology and the 'mission complete' inference, 'إِذَا always future/certain', كَانَ 'connecting to present sense', وَ as a sentence-boundary rule, الطَّالِبُ يَقْرَأُ called verbal, the wrong root of نَسْتَعِينُ, many-to-one matching boards, 'Parse:' true/false items and stray foreign words.",
+    "title": "Read Familiar Arabic Again",
+    "titleAr": "قِرَاءَةُ مَا عَرَفْنَا",
+    "titleUr": "جانی پہچانی عربی دوبارہ پڑھنا",
     "chapter_order": 33,
     "lesson_order": 1,
-    "chapter_title": "Reading Comprehension and Integration",
-    "title": "Extended Reading: Key Lines of Al-Kafirun",
-    "titleAr": "قِرَاءَةُ مُوَسَّعَةٌ: فَهْمُ سُورَةِ الْكَافِرُون",
-    "source": "book3_lesson10_closing.md",
-    "estimated_minutes": 8,
-    "xp_reward": 10,
-    "titleUr": "توسیعی مطالعہ: سورۃ الکافرون کی اہم آیات"
+    "estimated_minutes": 7,
+    "xp_reward": 10
   },
   "hook": {
     "ayah": {
       "surah": 109,
-      "ayah": 1,
-      "label": "Al-Kafirun 109:1",
-      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
-      "en": "Say, O disbelievers.",
-      "ur": "کہہ دیجیے، اے کافرو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
+      "ayah": 2,
+      "label": "Al-Kafirun 109:2",
+      "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
+      "en": "I do not worship what you worship.",
+      "ur": "میں اس کی عبادت نہیں کرتا جس کی تم عبادت کرتے ہو۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109002.mp3"
     },
     "noor_intro": {
-      "en": "You met Al-Kafirun in Chapters 29–30. Here we return to its key lines — the call, the two negations, and the final line — and read them with the grammar you know.",
-      "ur": "آپ باب 29–30 میں سورۃ الکافرون پڑھ چکے ہیں۔ یہاں ہم اس کی اہم آیات — پکار، دو نفیاں، اور آخری آیت — دوبارہ اپنی گرامر کے ساتھ پڑھیں گے۔"
+      "en": "You read all of Al-Kafirun in Chapter 30. Today: three of its lines again, with less help.",
+      "ur": "آپ باب 30 میں پوری سورۃ الکافرون پڑھ چکے ہیں۔ آج: اس کی تین آیات دوبارہ، کم مدد کے ساتھ۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "109:1: Say: O disbelievers,",
+        "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
+        "ur": "109:1: کہہ دیجیے: اے کافرو،"
+      },
+      "explanation": {
+        "en": "قُلْ, say; يَا أَيُّهَا الْكَافِرُونَ, O disbelievers — the people addressed.",
+        "ur": "قُلْ، کہہ دیجیے؛ يَا أَيُّهَا الْكَافِرُونَ، اے کافرو — جنہیں مخاطب کیا گیا۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "109:2: I do not worship what you worship.",
+        "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
+        "ur": "109:2: میں اس کی عبادت نہیں کرتا جس کی تم عبادت کرتے ہو۔"
+      },
+      "explanation": {
+        "en": "لَا = not; مَا = what (Chapter 30). The verbs are given whole.",
+        "ur": "لَا = نہیں؛ مَا = جو (باب 30)۔ افعال پورے دیے گئے ہیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109002.mp3"
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "109:6: For you is your religion, and for me is my religion.",
+        "ar": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+        "ur": "109:6: تمہارے لیے تمہارا دین ہے اور میرے لیے میرا دین۔"
+      },
+      "explanation": {
+        "en": "لَكُمْ دِينُكُمْ: for you, your religion. وَلِيَ دِينِ: and for me, my religion.",
+        "ur": "لَكُمْ دِينُكُمْ: تمہارے لیے تمہارا دین۔ وَلِيَ دِينِ: اور میرے لیے میرا دین۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109006.mp3"
+    },
+    {
       "type": "CONCEPT",
       "concept": {
-        "en": "Al-Kafirun: how the six ayahs are built",
-        "ar": "الْكَافِرُونَ: بِنَاءُ الْآيَاتِ السِّتِّ",
-        "ur": "الکافرون: چھ آیات کی ساخت"
+        "en": "Reading with less help",
+        "ar": "مَنْ؟ مَاذَا؟ لِمَنْ؟",
+        "ur": "کم مدد کے ساتھ پڑھنا"
       },
       "explanation": {
-        "en": "Ayah 1 — a command and a call: قُلْ يَا أَيُّهَا الْكَافِرُونَ. Ayahs 2–5 — negations: لَا أَعْبُدُ مَا تَعْبُدُونَ, then وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ, repeated in a new form in ayahs 4–5. Ayah 6 — the closing line: لَكُمْ دِينُكُمْ وَلِيَ دِينِ.",
-        "ur": "آیت 1 — حکم اور پکار: قُلْ يَا أَيُّهَا الْكَافِرُونَ۔ آیات 2–5 — نفی: لَا أَعْبُدُ مَا تَعْبُدُونَ، پھر وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ، جو آیات 4–5 میں نئی صورت میں دہرائی گئی ہیں۔ آیت 6 — آخری بات: لَكُمْ دِينُكُمْ وَلِيَ دِينِ۔"
+        "en": "For each line ask: who speaks or is spoken to, what is said, and who it belongs to. Use what you know before you look at the meaning.",
+        "ur": "ہر سطر کے لیے پوچھیں: کون بول رہا ہے یا کس سے بات ہو رہی ہے، کیا کہا گیا، اور کس کا ہے۔ مطلب دیکھنے سے پہلے جو جانتے ہیں اسے استعمال کریں۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "قُلْ",
-        "ar_plain": "قل",
-        "translit": "qul",
-        "en": "Say!",
-        "ur": "کہو!"
+        "ar": "قَالَ الْإِمَامُ لِلطُّلَّابِ: لَكُمْ كُتُبُكُمْ، وَلِي كِتَابِي.",
+        "ar_plain": "قال الإمام للطلاب: لكم كتبكم، ولي كتابي.",
+        "translit": "qāla l-imāmu li-ṭ-ṭullābi: lakum kutubukum, wa-lī kitābī.",
+        "en": "The imam said to the students: You have your books, and I have my book.",
+        "ur": "امام نے طلبہ سے کہا: تمہارے لیے تمہاری کتابیں، اور میرے لیے میری کتاب۔"
       },
       "explanation": {
-        "en": "Command form (fi'l amr) from ق-و-ل (to say). قُلْ = say! — a direct command from Allah to the Prophet ﷺ.",
-        "ur": "ق-و-ل (کہنا) سے command form (فعل امر)۔ قُلْ = کہو! — اللہ کا نبی ﷺ کو براہ راست حکم۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "أَيُّهَا",
-        "ar_plain": "أيها",
-        "translit": "ayyuhaa",
-        "en": "O (linking the call)",
-        "ur": "اے"
-      },
-      "explanation": {
-        "en": "In يَا أَيُّهَا الْكَافِرُونَ, يَا is the calling particle and أَيُّهَا links the call to الْكَافِرُونَ, the people addressed. (Chapter 72 studies this pattern in full.)",
-        "ur": "يَا أَيُّهَا الْكَافِرُونَ میں يَا پکارنے کا حرف ہے اور أَيُّهَا پکار کو الْكَافِرُونَ سے جوڑتا ہے، جنہیں مخاطب کیا گیا۔ (باب 72 میں یہ ساخت پوری پڑھی جائے گی۔)"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "أَعْبُدُ",
-        "ar_plain": "اعبد",
-        "translit": "a'budu",
-        "en": "I worship",
-        "ur": "میں عبادت کرتا ہوں"
-      },
-      "explanation": {
-        "en": "Present tense from ع-ب-د. The prefix أَ- marks \"I\". لَا أَعْبُدُ مَا تَعْبُدُونَ — \"I do not worship what you worship\" (109:2).",
-        "ur": "ع-ب-د سے مضارع۔ أَ- کا سابقہ \"میں\" بتاتا ہے۔ لَا أَعْبُدُ مَا تَعْبُدُونَ — \"میں اس کی عبادت نہیں کرتا جس کی تم عبادت کرتے ہو\" (109:2)۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "عَابِدُونَ",
-        "ar_plain": "عابدون",
-        "translit": "'aabiduun",
-        "en": "worshippers / ones who worship",
-        "ur": "عبادت کرنے والے"
-      },
-      "explanation": {
-        "en": "A noun from the same root ع-ب-د: \"ones who worship\". وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ — \"nor are you worshippers of what I worship\" (109:3).",
-        "ur": "اسی مادے ع-ب-د سے اسم: \"عبادت کرنے والے\"۔ وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ — \"اور نہ تم اس کی عبادت کرنے والے ہو جس کی میں عبادت کرتا ہوں\" (109:3)۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "From call to closing line",
-        "ur": "پکار سے آخری آیت تک"
-      },
-      "body": {
-        "en": "The surah moves from a call (ayah 1), through a series of negations (ayahs 2–5), to its closing line, لَكُمْ دِينُكُمْ وَلِيَ دِينِ (ayah 6): \"For you is your religion, and for me is mine.\"",
-        "ur": "سورت پکار (آیت 1) سے شروع ہو کر نفیوں کے سلسلے (آیات 2–5) سے گزرتی ہوئی آخری آیت تک پہنچتی ہے: لَكُمْ دِينُكُمْ وَلِيَ دِينِ (آیت 6): \"تمہارے لیے تمہارا دین اور میرے لیے میرا دین۔\""
+        "en": "A new line with the same shape as 109:6: لَكُمْ … وَلِي ….",
+        "ur": "109:6 جیسی شکل کی ایک نئی سطر: لَكُمْ … وَلِي …۔"
       }
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
+      "type": "MATCH_AYAH",
       "id": "ch33-l01-ex01",
-      "prompt": {
+      "ayah_fragment": {
         "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
-        "ar_plain": "قل يا أيها الكافرون",
-        "translit": "qul yaa ayyuhaa al-kaafiroona",
-        "en": "Say, O disbelievers.",
-        "ur": "کہہ دیجیے، اے کافرو۔"
+        "surah_ref": "Al-Kafirun 109:1"
       },
       "options": [
         {
-          "en": "Say, O disbelievers.",
-          "ur": "کہہ دیجیے، اے کافرو۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "Say: O believers,",
+          "ur": "کہہ دیجیے: اے مومنو،"
         },
         {
-          "en": "Say, O believers.",
-          "ur": "کہہ دیجیے، اے مومنو۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "They said: O disbelievers,",
+          "ur": "انہوں نے کہا: اے کافرو،"
         },
         {
-          "en": "Tell the disbelievers.",
-          "ur": "کافروں کو بتاؤ۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "Say: O disbelievers,",
+          "ur": "کہہ دیجیے: اے کافرو،"
         },
         {
-          "en": "Say to the disbelievers.",
-          "ur": "کافروں سے کہو۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "Do not say: O disbelievers,",
+          "ur": "نہ کہیے: اے کافرو،"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "قُلْ, say; يَا أَيُّهَا الْكَافِرُونَ, O disbelievers.",
+        "ur": "قُلْ، کہہ دیجیے؛ يَا أَيُّهَا الْكَافِرُونَ، اے کافرو۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch33-l01-ex02",
+      "ayah_fragment": {
+        "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
+        "surah_ref": "Al-Kafirun 109:2"
+      },
+      "options": [
+        {
+          "en": "I do not worship what you worship.",
+          "ur": "میں اس کی عبادت نہیں کرتا جس کی تم عبادت کرتے ہو۔"
+        },
+        {
+          "en": "I worship what you worship.",
+          "ur": "میں اسی کی عبادت کرتا ہوں جس کی تم کرتے ہو۔"
+        },
+        {
+          "en": "You do not worship what I worship.",
+          "ur": "تم اس کی عبادت نہیں کرتے جس کی میں کرتا ہوں۔"
+        },
+        {
+          "en": "What do you worship?",
+          "ur": "تم کس کی عبادت کرتے ہو؟"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "قُلْ is a command verb. أَيُّهَا is the vocative particle. الْكَافِرُونَ is who is being addressed — disbelievers.",
-        "ur": "قُلْ ایک command verb ہے۔ أَيُّهَا vocative particle ہے۔ الْكَافِرُونَ وہ ہے جسے address کیا جا رہا ہے — کافرو۔"
+        "en": "لَا = not; مَا = what. I do not worship what you worship.",
+        "ur": "لَا = نہیں؛ مَا = جو۔ میں اس کی عبادت نہیں کرتا جس کی تم کرتے ہو۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch33-l01-ex03",
+      "ayah_fragment": {
+        "ar": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+        "surah_ref": "Al-Kafirun 109:6"
+      },
+      "options": [
+        {
+          "en": "the disbelievers",
+          "ur": "کافر"
+        },
+        {
+          "en": "the speaker — the one told to say قُلْ",
+          "ur": "بولنے والا — جسے قُلْ کہنے کا حکم ہے"
+        },
+        {
+          "en": "everyone",
+          "ur": "سب لوگ"
+        },
+        {
+          "en": "nobody",
+          "ur": "کوئی نہیں"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "وَلِيَ دِينِ: and for me, my religion — the one who says these words.",
+        "ur": "وَلِيَ دِينِ: اور میرے لیے میرا دین — جو یہ الفاظ کہتا ہے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch33-l01-ex02",
+      "id": "ch33-l01-ex04",
       "statement": {
-        "en": "أَعْبُدُ is first person singular present tense: 'I worship'.",
-        "ur": "أَعْبُدُ واحد متکلم مضارع ہے: 'میں عبادت کرتا ہوں'۔",
-        "ar_example": {
-          "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
-          "ar_plain": "لا اعبد ما تعبدون",
-          "translit": "laa a'budu maa ta'buduun",
-          "en": "I do not worship what you worship. (Al-Kafirun 109:2)",
-          "ur": "میں اس کی عبادت نہیں کرتا جس کی تم عبادت کرتے ہو۔ (الکافرون 109:2)"
-        }
+        "en": "In 109:6, لَكُمْ (for you) points to the same people called in 109:1.",
+        "ur": "109:6 میں لَكُمْ (تمہارے لیے) انہی لوگوں کی طرف اشارہ ہے جنہیں 109:1 میں پکارا گیا۔"
       },
       "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch33-l01-ex03",
-      "mode": "TAP",
-      "sentence_ar": "لَا أَعْبُدُ مَا ___",
-      "hint": {
-        "en": "I do not worship what you worship.",
-        "ur": "میں تمہاری عبادت نہیں کرواؤں گا جو تم پوجتے ہو۔"
-      },
-      "options": [
-        {
-          "ar": "تَعْبُدُونَ",
-          "ar_plain": "تعبدون",
-          "translit": "ta'budoona",
-          "en": "you (pl.) worship",
-          "ur": "تم (جمع) پوجتے ہو"
-        },
-        {
-          "ar": "أَعْبُدُ",
-          "ar_plain": "أعبد",
-          "translit": "a'budu",
-          "en": "I worship",
-          "ur": "میں پوجتا ہوں"
-        },
-        {
-          "ar": "يَعْبُدُ",
-          "ar_plain": "يعبد",
-          "translit": "ya'budu",
-          "en": "he worships",
-          "ur": "وہ پوجتا ہے"
-        },
-        {
-          "ar": "نَعْبُدُ",
-          "ar_plain": "نعبد",
-          "translit": "na'budu",
-          "en": "we worship",
-          "ur": "ہم پوجتے ہیں"
-        }
-      ],
-      "correct_answer": {
-        "ar": "تَعْبُدُونَ",
-        "ar_plain": "تعبدون",
-        "translit": "ta'budoona",
-        "en": "you (pl.) worship",
-        "ur": "تم (جمع) پوجتے ہو"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch33-l01-ex04",
-      "left_column": [
-        {
-          "ar": "قُلْ",
-          "ar_plain": "قل",
-          "translit": "qul",
-          "en": "say!",
-          "ur": "کہو!"
-        },
-        {
-          "ar": "يَا",
-          "ar_plain": "يا",
-          "translit": "yaa",
-          "en": "O",
-          "ur": "اے"
-        },
-        {
-          "ar": "أَعْبُدُ",
-          "ar_plain": "اعبد",
-          "translit": "a'budu",
-          "en": "I worship",
-          "ur": "میں عبادت کرتا ہوں"
-        },
-        {
-          "ar": "تَعْبُدُونَ",
-          "ar_plain": "تعبدون",
-          "translit": "ta'buduun",
-          "en": "you (pl.) worship",
-          "ur": "تم عبادت کرتے ہو"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "present tense — \"you (pl.)\"",
-          "ur": "مضارع — \"تم\""
-        },
-        {
-          "en": "command verb",
-          "ur": "فعل امر"
-        },
-        {
-          "en": "present tense — \"I\"",
-          "ur": "مضارع — \"میں\""
-        },
-        {
-          "en": "calling particle",
-          "ur": "حرفِ ندا"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          1
-        ],
-        [
-          1,
-          3
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          0
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch33-l01-ex05",
-      "target_translation": {
-        "en": "I do not worship what you worship. (Al-Kafirun 109:2)",
-        "ur": "میں اس کی عبادت نہیں کرتا جس کی تم عبادت کرتے ہو۔ (الکافرون 109:2)"
-      },
-      "tiles": [
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "not",
-          "ur": "نہیں"
-        },
-        {
-          "ar": "أَعْبُدُ",
-          "ar_plain": "اعبد",
-          "translit": "a'budu",
-          "en": "I worship",
-          "ur": "میں عبادت کرتا ہوں"
-        },
-        {
-          "ar": "مَا",
-          "ar_plain": "ما",
-          "translit": "maa",
-          "en": "what",
-          "ur": "جس کی"
-        },
-        {
-          "ar": "تَعْبُدُونَ",
-          "ar_plain": "تعبدون",
-          "translit": "ta'buduun",
-          "en": "you (pl.) worship",
-          "ur": "تم عبادت کرتے ہو"
-        },
-        {
-          "ar": "نَعْبُدُ",
-          "ar_plain": "نعبد",
-          "translit": "na'budu",
-          "en": "we worship",
-          "ur": "ہم عبادت کرتے ہیں"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch33-l01-ex06",
-      "prompt": {
-        "ar": "وَلَكُمْ دِينُكُمْ وَلِيَ دِينِ",
-        "ar_plain": "ولكم دينكم ولي ديني",
-        "translit": "walakum diinakum waliya diini",
-        "en": "For you is your religion, and for me is my religion.",
-        "ur": "تمہارے لیے تمہارا دین اور میرے لیے میرا دین۔"
-      },
-      "options": [
-        {
-          "en": "For you is your religion, and for me is my religion.",
-          "ur": "تمہارے لیے تمہارا دین اور میرے لیے میرا دین۔"
-        },
-        {
-          "en": "For me is your religion, and for you is mine.",
-          "ur": "میرے لیے تمہارا دین اور تمہارے لیے میرا۔"
-        },
-        {
-          "en": "We all share one religion.",
-          "ur": "ہم سب کا ایک ہی دین ہے۔"
-        },
-        {
-          "en": "Leave your religion for mine.",
-          "ur": "اپنا دین چھوڑ کر میرا اپناؤ۔"
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَكُمْ = for you (لِـ + كُمْ). دِينُكُمْ = your religion. لِيَ = for me. دِينِ = my religion (the ي of \"my\" is dropped in the recitation).",
-        "ur": "لَكُمْ = تمہارے لیے (لِـ + كُمْ)۔ دِينُكُمْ = تمہارا دین۔ لِيَ = میرے لیے۔ دِينِ = میرا دین (تلاوت میں \"میرا\" کی ي گر جاتی ہے)۔"
+        "en": "لَكُمْ — for you: the الْكَافِرُونَ addressed in 109:1.",
+        "ur": "لَكُمْ — تمہارے لیے: وہی الْكَافِرُونَ جنہیں 109:1 میں مخاطب کیا گیا۔"
       }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch33-l01-ex07",
+      "id": "ch33-l01-ex05",
       "prompt": {
-        "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
-        "ar_plain": "قل يا ايها الكافرون",
-        "translit": "qul yaa ayyuhaa al-kaafiruun",
-        "en": "Say: O disbelievers!",
-        "ur": "کہہ دو: اے کافرو!"
+        "ar": "قَالَ أَحْمَدُ لِصَدِيقِهِ: لَكَ قَلَمُكَ، وَلِي قَلَمِي.",
+        "ar_plain": "قال أحمد لصديقه: لك قلمك، ولي قلمي.",
+        "translit": "qāla aḥmadu li-ṣadīqihi: laka qalamuka, wa-lī qalamī.",
+        "en": "Ahmad said to his friend: You have your pen, and I have mine.",
+        "ur": "احمد نے اپنے دوست سے کہا: تمہارے لیے تمہارا قلم، اور میرے لیے میرا قلم۔"
       },
       "options": [
         {
-          "en": "The disbelievers said: O Muhammad!",
-          "ur": "کافروں نے کہا: اے محمد!"
+          "en": "Ahmad said to his friend: Give me your pen.",
+          "ur": "احمد نے اپنے دوست سے کہا: مجھے اپنا قلم دو۔"
         },
         {
-          "en": "Do not speak to the disbelievers.",
-          "ur": "کافروں سے بات مت کرو۔"
+          "en": "His friend said to Ahmad: I have no pen.",
+          "ur": "اس کے دوست نے احمد سے کہا: میرے پاس قلم نہیں۔"
         },
         {
-          "en": "Say: O disbelievers!",
-          "ur": "کہہ دو: اے کافرو!"
+          "en": "Ahmad said: We have one pen.",
+          "ur": "احمد نے کہا: ہمارے پاس ایک قلم ہے۔"
         },
         {
-          "en": "Who are the disbelievers?",
-          "ur": "کافر کون ہیں؟"
+          "en": "Ahmad said to his friend: You have your pen, and I have mine.",
+          "ur": "احمد نے اپنے دوست سے کہا: تمہارے لیے تمہارا قلم، اور میرے لیے میرا قلم۔"
         }
       ],
-      "correct_index": 2,
-      "xp_value": 1
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Same shape as 109:6: لَكَ … وَلِي … — yours, and mine.",
+        "ur": "109:6 جیسی شکل: لَكَ … وَلِي … — تمہارا، اور میرا۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Al-Kafirun: the call that opens the surah",
-      "ar": "سُورَةُ الْكَافِرُونَ: النِّدَاءُ فِي أَوَّلِهَا",
-      "ur": "الکافرون: سورت کو کھولنے والی پکار"
+      "en": "Reading familiar Arabic",
+      "ar": "قِرَاءَةُ مَا عَرَفْنَا",
+      "ur": "جانی پہچانی عربی"
     },
     "ayah": {
       "surah": 109,
-      "ayah": 1,
-      "label": "Al-Kafirun 109:1",
-      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
-      "en": "Say, O disbelievers.",
-      "ur": "کہہ دیجیے، اے کافرو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
+      "ayah": 6,
+      "label": "Al-Kafirun 109:6",
+      "ar": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+      "en": "For you is your religion, and for me is my religion.",
+      "ur": "تمہارے لیے تمہارا دین ہے اور میرے لیے میرا دین۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109006.mp3"
     },
     "highlighted_word_indices": [
       0,
       2
     ],
+    "highlighted_words": [
+      "لَكُمْ",
+      "وَلِيَ"
+    ],
     "noor_explanation": {
-      "en": "قُلْ is a command to the Prophet ﷺ; يَا أَيُّهَا الْكَافِرُونَ is the call to those addressed. Everything that follows answers this opening.",
-      "ur": "قُلْ نبی ﷺ کو حکم ہے؛ يَا أَيُّهَا الْكَافِرُونَ مخاطبوں کو پکار ہے۔ اس کے بعد سب کچھ اسی آغاز سے جڑا ہے۔"
+      "en": "لَكُمْ … وَلِيَ: you read who each part belongs to — with less help than in Chapter 30.",
+      "ur": "لَكُمْ … وَلِيَ: آپ نے پہچانا کہ ہر حصہ کس کا ہے — باب 30 سے کم مدد کے ساتھ۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You re-read the key lines of Al-Kafirun: the call, the negations with أَعْبُدُ and عَابِدُونَ, and the closing line. The full reading lives in Chapter 30; come back to it any time.",
-      "ur": "آپ نے سورۃ الکافرون کی اہم آیات دوبارہ پڑھیں: پکار، أَعْبُدُ اور عَابِدُونَ والی نفیاں، اور آخری آیت۔ مکمل مطالعہ باب 30 میں ہے؛ جب چاہیں دوبارہ پڑھیں۔"
+      "en": "You read familiar ayat with less help. Next: all of Al-Falaq.",
+      "ur": "آپ نے جانی پہچانی آیات کم مدد سے پڑھیں۔ آگے: پوری سورۃ الفلق۔"
     }
   }
 }

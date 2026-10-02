@@ -2,17 +2,14 @@
   "schema_version": "1.0",
   "template": "VERB_PATTERN",
   "_meta": {
-    "_note": "Chapter 34, Lesson 2 — First VERB_PATTERN: six selected core forms of the present tense (المضارع) and its four prefix letters.",
-    "template": "VERB_PATTERN",
+    "_note": "Chapter 34, Lesson 2 (ch34-l02) — the core table: one sound Form I model, كَتَبَ → يَكْتُبُ, in five readings (أَنَا، نَحْنُ، هُوَ، أَنْتَ، هِيَ) on four prefix patterns أ ن ي ت. أَنْتَ and هِيَ share تَكْتُبُ and are practised separately in named contexts; no isolated تَكْتُبُ is ever keyed to one subject. أَنْتِ (تَكْتُبِينَ) is left to Chapter 37. Rebuilt 2026-10-02 in the proposal harvest, batch 2 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-34-content-proposal.md and its review amendments: the imperfect in context — not 'only right now' but unfinished or habitual action, shown by الْآنَ / كُلَّ يَوْمٍ; five subject readings on one sound Form I model (أَكْتُبُ، نَكْتُبُ، يَكْتُبُ، and تَكْتُبُ for أَنْتَ and for هِيَ) — four prefix patterns, with تَكْتُبُ decided by context; transfer to supplied complete imperfects (يَذْهَبُ، يَجْلِسُ، يَعْلَمُ — the middle vowel is given, never guessed); لَا + imperfect for 'does not', with 'Do not!' (لَا تَجْلِسْ، 9:40 لَا تَحْزَنْ) as a recognition contrast only (Chapter 45 teaches it); an object, an object pronoun and a time word; review; 12-question test. نَعْبُدُ is Chapter 10 retrieval; نَسْتَعِينُ is glossed (root ع و ن). The future (سَـ / سَوْفَ) is Chapter 35; أَنْتِ forms are Chapter 37. The old Al-Fatiha capstone ch34-l07 is kept as a DRAFT row at order 8 so no earlier completion counts as passing the new test. Removed: 'present tense = right now', the six-row 'full table', four prefixes read as four subjects, أَفْعَلُ as a pattern for every verb, نَسْتَعِينُ under س-ع-ن, the ash-Sharh line cited as 1:6, نَرَانِي, many-to-one matching, multi-word build tiles and out-of-range reveal highlights.",
+    "title": "Five Readings of يَكْتُبُ",
+    "titleAr": "أَكْتُبُ، نَكْتُبُ، يَكْتُبُ، تَكْتُبُ",
+    "titleUr": "يَكْتُبُ کی پانچ صورتیں",
     "chapter_order": 34,
     "lesson_order": 2,
-    "chapter_title": "Present Tense — المضارع",
-    "title": "Core Present-Tense Forms — أَفْعَلُ يَفْعَلُ",
-    "titleAr": "جَدْوَلُ الصِّيغَةِ الْمُضَارِعِ",
-    "source": "book4_lesson1_present_tense.md",
-    "estimated_minutes": 12,
-    "xp_reward": 15,
-    "titleUr": "مضارع کی بنیادی صورتیں — أَفْعَلُ يَفْعَلُ"
+    "estimated_minutes": 10,
+    "xp_reward": 15
   },
   "hook": {
     "ayah": {
@@ -20,70 +17,54 @@
       "ayah": 5,
       "label": "Al-Fatiha 1:5",
       "ar": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
-      "en": "You alone we worship and You alone we seek help.",
-      "ur": "تجھ ہی کو ہم عبادت کرتے ہیں اور تجھ ہی سے ہم مدد مانگتے ہیں۔",
+      "en": "You alone we worship, and You alone we ask for help.",
+      "ur": "ہم تیری ہی عبادت کرتے ہیں اور تجھ ہی سے مدد مانگتے ہیں۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001005.mp3"
     },
     "noor_intro": {
-      "en": "نَعْبُدُ — we worship. This is the المضارع, the present tense. Today you learn six core forms and the four prefix letters that tell you who is acting.",
-      "ur": "نَعْبُدُ — ہم عبادت کرتے ہیں۔ یہ المضارع یعنی حال ہے۔ آج آپ چھ بنیادی صورتیں اور وہ چار سابقے سیکھیں گے جو بتاتے ہیں کہ کام کون کر رہا ہے۔"
+      "en": "نَعْبُدُ starts with نَـ: 'we'. Today: five readings of one verb, يَكْتُبُ.",
+      "ur": "نَعْبُدُ نَـ سے شروع ہوتا ہے: 'ہم'۔ آج: ایک فعل، يَكْتُبُ، کی پانچ صورتیں۔"
     },
     "autoplay": true
   },
   "conjugation_table": {
-    "root": "ف-ع-ل",
+    "root": "ك-ت-ب",
     "pattern_name": {
-      "en": "Present Tense — فِعْل مُضَارِع",
-      "ar": "فِعْل مُضَارِع",
-      "ur": "فعل مضارع — حال"
+      "en": "The imperfect: five core readings",
+      "ar": "الْفِعْلُ الْمُضَارِعُ",
+      "ur": "فعل مضارع: پانچ بنیادی صورتیں"
     },
     "rows": [
       {
         "pronoun": {
           "ar": "أَنَا",
           "ar_plain": "أنا",
-          "translit": "ana",
+          "translit": "anā",
           "en": "I",
           "ur": "میں"
         },
         "conjugated": {
-          "ar": "أَفْعَلُ",
-          "ar_plain": "أفعل",
-          "translit": "af'alu",
-          "en": "I do",
-          "ur": "میں کرتا ہوں۔"
+          "ar": "أَكْتُبُ",
+          "ar_plain": "أكتب",
+          "translit": "aktubu",
+          "en": "I write",
+          "ur": "میں لکھتا ہوں"
         }
       },
       {
         "pronoun": {
-          "ar": "أَنْتَ",
-          "ar_plain": "أنت",
-          "translit": "anta",
-          "en": "you (m. sg.)",
-          "ur": "آپ (m. sg.)"
+          "ar": "نَحْنُ",
+          "ar_plain": "نحن",
+          "translit": "naḥnu",
+          "en": "we",
+          "ur": "ہم"
         },
         "conjugated": {
-          "ar": "تَفْعَلُ",
-          "ar_plain": "تفعل",
-          "translit": "taf'alu",
-          "en": "you do",
-          "ur": "تم کرتے ہو"
-        }
-      },
-      {
-        "pronoun": {
-          "ar": "أَنْتِ",
-          "ar_plain": "أنتِ",
-          "translit": "anti",
-          "en": "you (f. sg.)",
-          "ur": "آپ (f. sg.)"
-        },
-        "conjugated": {
-          "ar": "تَفْعَلِينَ",
-          "ar_plain": "تفعلين",
-          "translit": "taf'aliina",
-          "en": "you do (f.)",
-          "ur": "آپ کرتے ہیں (f.)"
+          "ar": "نَكْتُبُ",
+          "ar_plain": "نكتب",
+          "translit": "naktubu",
+          "en": "we write",
+          "ur": "ہم لکھتے ہیں"
         }
       },
       {
@@ -95,11 +76,27 @@
           "ur": "وہ"
         },
         "conjugated": {
-          "ar": "يَفْعَلُ",
-          "ar_plain": "يفعل",
-          "translit": "yaf'alu",
-          "en": "he does",
-          "ur": "وہ کرتا ہے"
+          "ar": "يَكْتُبُ",
+          "ar_plain": "يكتب",
+          "translit": "yaktubu",
+          "en": "he writes",
+          "ur": "وہ لکھتا ہے"
+        }
+      },
+      {
+        "pronoun": {
+          "ar": "أَنْتَ",
+          "ar_plain": "أنت",
+          "translit": "anta",
+          "en": "you (a man)",
+          "ur": "تم (مرد)"
+        },
+        "conjugated": {
+          "ar": "تَكْتُبُ",
+          "ar_plain": "تكتب",
+          "translit": "taktubu",
+          "en": "you write",
+          "ur": "تم لکھتے ہو"
         }
       },
       {
@@ -108,354 +105,340 @@
           "ar_plain": "هي",
           "translit": "hiya",
           "en": "she",
-          "ur": "وہ"
+          "ur": "وہ (عورت)"
         },
         "conjugated": {
-          "ar": "تَفْعَلُ",
-          "ar_plain": "تفعل",
-          "translit": "taf'alu",
-          "en": "she does",
-          "ur": "وہ کرتی ہے"
-        }
-      },
-      {
-        "pronoun": {
-          "ar": "نَحْنُ",
-          "ar_plain": "نحن",
-          "translit": "nahnu",
-          "en": "we",
-          "ur": "ہم"
-        },
-        "conjugated": {
-          "ar": "نَفْعَلُ",
-          "ar_plain": "نفعل",
-          "translit": "naf'alu",
-          "en": "we do",
-          "ur": "ہم کرتے ہیں"
+          "ar": "تَكْتُبُ",
+          "ar_plain": "تكتب",
+          "translit": "taktubu",
+          "en": "she writes",
+          "ur": "وہ لکھتی ہے"
         }
       }
     ]
   },
   "exercises": [
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch34-l02-ex01",
-      "statement": {
-        "en": "In the present tense, he/she/it uses the prefix يَـ.",
-        "ur": "حال میں، وہ/انہوں prefix يَـ استعمال کرتے ہیں۔",
-        "ar_example": {
-          "ar": "يَفْعَلُ — he does",
-          "ar_plain": "يفعل",
-          "translit": "yaf'alu",
-          "en": "he does",
-          "ur": "وہ کرتا ہے"
-        }
+      "prompt": {
+        "ar": "أَكْتُبُ الدَّرْسَ.",
+        "ar_plain": "أكتب الدرس.",
+        "translit": "aktubu d-darsa.",
+        "en": "I write the lesson.",
+        "ur": "میں سبق لکھتا ہوں۔"
       },
-      "correct_answer": true,
+      "options": [
+        {
+          "en": "I write the lesson.",
+          "ur": "میں سبق لکھتا ہوں۔"
+        },
+        {
+          "en": "We write the lesson.",
+          "ur": "ہم سبق لکھتے ہیں۔"
+        },
+        {
+          "en": "He writes the lesson.",
+          "ur": "وہ سبق لکھتا ہے۔"
+        },
+        {
+          "en": "She writes the lesson.",
+          "ur": "وہ سبق لکھتی ہے۔"
+        }
+      ],
+      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "يَـ is the third person masculine singular prefix (he). هُوَ يَفْعَلُ = he does. هِيَ تَفْعَلُ (she does) uses تَـ — the same prefix as 'you (m.)'.",
-        "ur": "يَـ third person masculine singular prefix ہے (وہ)۔ هُوَ يَفْعَلُ = وہ کرتا ہے۔ هِيَ تَفْعَلُ (وہ کرتی ہے) تَـ prefix استعمال کرتی ہے۔"
+        "en": "أَ at the start: I.",
+        "ur": "شروع میں أَ: میں۔"
       }
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch34-l02-ex02",
       "prompt": {
-        "ar": "أَفْعَلُ",
-        "ar_plain": "أفعل",
-        "translit": "af'alu",
-        "en": "I do",
-        "ur": "میں کرتا ہوں"
+        "ar": "نَكْتُبُ الدَّرْسَ.",
+        "ar_plain": "نكتب الدرس.",
+        "translit": "naktubu d-darsa.",
+        "en": "We write the lesson.",
+        "ur": "ہم سبق لکھتے ہیں۔"
       },
       "options": [
         {
-          "en": "I do",
-          "ur": "میں کرتا ہوں",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "I write the lesson.",
+          "ur": "میں سبق لکھتا ہوں۔"
         },
         {
-          "en": "he does",
-          "ur": "وہ کرتا ہے",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "He writes the lesson.",
+          "ur": "وہ سبق لکھتا ہے۔"
         },
         {
-          "en": "we do",
-          "ur": "ہم کرتے ہیں",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "We write the lesson.",
+          "ur": "ہم سبق لکھتے ہیں۔"
         },
         {
-          "en": "you do",
-          "ur": "تو کرتا ہے",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "You write the lesson.",
+          "ur": "تم سبق لکھتے ہو۔"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "أَـ = first person singular (I). أَفْعَلُ = I do. This prefix marks the speaker as the actor.",
-        "ur": "أَـ = پہلا شخص واحد (میں)۔ أَفْعَلُ = میں کرتا ہوں۔ یہ prefix talker کو actor کے طور پر marks کرتا ہے۔"
+        "en": "نَ at the start: we — like نَعْبُدُ.",
+        "ur": "شروع میں نَ: ہم — جیسے نَعْبُدُ۔"
       }
     },
     {
       "type": "FILL_BLANK",
       "id": "ch34-l02-ex03",
       "mode": "TAP",
-      "sentence_ar": "الْمُسْلِمُونَ ___ اللَّهَ",
+      "sentence_ar": "هُوَ ___ الدَّرْسَ.",
       "hint": {
-        "en": "The believers worship Allah.",
-        "ur": "مومنین اللہ کی عبادت کرتے ہیں۔"
+        "en": "He writes the lesson.",
+        "ur": "وہ سبق لکھتا ہے۔"
       },
       "options": [
         {
-          "ar": "يَعْبُدُونَ",
-          "ar_plain": "يعبدون",
-          "translit": "ya'buduuna",
-          "en": "they worship",
-          "ur": "وہ عبادت کرتے ہیں"
+          "ar": "أَكْتُبُ",
+          "ar_plain": "أكتب",
+          "translit": "aktubu",
+          "en": "I write",
+          "ur": "میں لکھتا ہوں"
         },
         {
-          "ar": "نَعْبُدُ",
-          "ar_plain": "نعبد",
-          "translit": "na'budu",
-          "en": "we worship",
-          "ur": "ہم عبادت کرتے ہیں"
+          "ar": "نَكْتُبُ",
+          "ar_plain": "نكتب",
+          "translit": "naktubu",
+          "en": "we write",
+          "ur": "ہم لکھتے ہیں"
         },
         {
-          "ar": "أَعْبُدُ",
-          "ar_plain": "أعبد",
-          "translit": "a'budu",
-          "en": "I worship",
-          "ur": "میں عبادت کروں"
+          "ar": "تَكْتُبُ",
+          "ar_plain": "تكتب",
+          "translit": "taktubu",
+          "en": "you (m.) write / she writes",
+          "ur": "تم لکھتے ہو / وہ لکھتی ہے"
         },
         {
-          "ar": "تَعْبُدُونَ",
-          "ar_plain": "تعبدون",
-          "translit": "ta'buduuna",
-          "en": "you (pl.) worship",
-          "ur": "تم عبادت کرتے ہو"
+          "ar": "يَكْتُبُ",
+          "ar_plain": "يكتب",
+          "translit": "yaktubu",
+          "en": "he writes",
+          "ur": "وہ لکھتا ہے"
         }
       ],
       "correct_answer": {
-        "ar": "يَعْبُدُونَ",
-        "ar_plain": "يعبدون",
-        "translit": "ya'buduuna",
-        "en": "they worship",
-        "ur": "وہ عبادت کرتے ہیں"
+        "ar": "يَكْتُبُ",
+        "ar_plain": "يكتب",
+        "translit": "yaktubu",
+        "en": "he writes",
+        "ur": "وہ لکھتا ہے"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هُوَ, he: يَكْتُبُ.",
+        "ur": "هُوَ، وہ: يَكْتُبُ۔"
+      }
     },
     {
-      "type": "MATCHING",
+      "type": "FILL_BLANK",
       "id": "ch34-l02-ex04",
-      "left_column": [
-        {
-          "ar": "أَفْعَلُ",
-          "ar_plain": "أفعل",
-          "translit": "af'alu",
-          "en": "I do",
-          "ur": "میں کرتا ہوں"
-        },
-        {
-          "ar": "تَفْعَلُ",
-          "ar_plain": "تفعل",
-          "translit": "taf'alu",
-          "en": "you do",
-          "ur": "تو کرتا ہے"
-        },
-        {
-          "ar": "يَفْعَلُ",
-          "ar_plain": "يفعل",
-          "translit": "yaf'alu",
-          "en": "he does",
-          "ur": "وہ کرتا ہے"
-        },
-        {
-          "ar": "نَفْعَلُ",
-          "ar_plain": "نفعل",
-          "translit": "naf'alu",
-          "en": "we do",
-          "ur": "ہم کرتے ہیں"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "أَـ = I",
-          "ur": "أَـ = میں"
-        },
-        {
-          "en": "تَـ = you (sg.)",
-          "ur": "تَـ = تو (واحد)"
-        },
-        {
-          "en": "يَـ = he",
-          "ur": "يَـ = وہ"
-        },
-        {
-          "en": "نَـ = we",
-          "ur": "نَـ = ہم"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch34-l02-ex05",
-      "target_translation": {
-        "en": "We worship Allah.",
-        "ur": "ہم اللہ کی عبادت کرتے ہیں۔"
-      },
-      "tiles": [
-        {
-          "ar": "نَعْبُدُ",
-          "ar_plain": "نعبد",
-          "translit": "na'budu",
-          "en": "we worship",
-          "ur": "ہم عبادت کرتے ہیں"
-        },
-        {
-          "ar": "اللَّهَ",
-          "ar_plain": "الله",
-          "translit": "allaaha",
-          "en": "Allah",
-          "ur": "اللہ"
-        },
-        {
-          "ar": "يَعْبُدُ",
-          "ar_plain": "يعبد",
-          "translit": "ya'budu",
-          "en": "he worships",
-          "ur": "وہ عبادت کرتا ہے"
-        },
-        {
-          "ar": "أَعْبُدُ",
-          "ar_plain": "أعبد",
-          "translit": "a'budu",
-          "en": "I worship",
-          "ur": "میں عبادت کروں"
-        }
-      ],
-      "correct_order": [
-        0,
-        1
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch34-l02-ex06",
-      "prompt": {
-        "ar": "نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
-        "ar_plain": "نعبد وإياك نستعين",
-        "translit": "na'budu wa-iyyaaka nasta'iinu",
-        "en": "You alone we worship and You alone we seek help.",
-        "ur": "تجھ ہی کو ہم عبادت کرتے ہیں اور تجھ ہی سے ہم مدد مانگتے ہیں۔"
+      "mode": "TAP",
+      "sentence_ar": "أَنْتَ ___ الدَّرْسَ.",
+      "hint": {
+        "en": "You (a man) write the lesson.",
+        "ur": "تم (مرد) سبق لکھتے ہو۔"
       },
       "options": [
         {
-          "en": "You alone we worship and You alone we seek help.",
-          "ur": "تجھ ہی کو ہم عبادت کرتے ہیں اور تجھ ہی سے ہم مدد مانگتے ہیں۔",
-          "translit": "—",
-          "ar_plain": ""
+          "ar": "تَكْتُبُ",
+          "ar_plain": "تكتب",
+          "translit": "taktubu",
+          "en": "you (m.) write / she writes",
+          "ur": "تم لکھتے ہو / وہ لکھتی ہے"
         },
         {
-          "en": "We worship Him and He helps us.",
-          "ur": "ہم اس کی عبادت کرتے ہیں اور وہ ہماری مدد کرتا ہے۔",
-          "translit": "—",
-          "ar_plain": ""
+          "ar": "يَكْتُبُ",
+          "ar_plain": "يكتب",
+          "translit": "yaktubu",
+          "en": "he writes",
+          "ur": "وہ لکھتا ہے"
         },
         {
-          "en": "I worship and seek help.",
-          "ur": "میں پوجتا ہوں اور مدد مانگتا ہوں۔",
-          "translit": "—",
-          "ar_plain": ""
+          "ar": "أَكْتُبُ",
+          "ar_plain": "أكتب",
+          "translit": "aktubu",
+          "en": "I write",
+          "ur": "میں لکھتا ہوں"
         },
         {
-          "en": "They worship you and you help them.",
-          "ur": "وہ تمہاری عبادت کرتے ہیں اور تم ان کی مدد کرتے ہو۔",
-          "translit": "—",
-          "ar_plain": ""
+          "ar": "نَكْتُبُ",
+          "ar_plain": "نكتب",
+          "translit": "naktubu",
+          "en": "we write",
+          "ur": "ہم لکھتے ہیں"
         }
       ],
-      "correct_index": 0,
+      "correct_answer": {
+        "ar": "تَكْتُبُ",
+        "ar_plain": "تكتب",
+        "translit": "taktubu",
+        "en": "you (m.) write / she writes",
+        "ur": "تم لکھتے ہو / وہ لکھتی ہے"
+      },
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "Al-Fatiha 1:5 — both verbs are المضارع with نَ- prefix (first person plural). نَعْبُدُ = we worship, نَسْتَعِينُ = we seek help. إِيَّاكَ means 'You' as the object.",
-        "ur": "الفاتحة 1:5 — دونوں افعال المضارع ہیں نَ- prefix کے ساتھ (پہلا شخص جمع)۔ نَعْبُدُ = ہم عبادت کرتے ہیں، نَسْتَعِينُ = ہم مدد مانگتے ہیں۔ إِيَّاكَ کا مطلب ہے 'تم' object کے طور پر۔"
+        "en": "أَنْتَ, you (a man): تَكْتُبُ.",
+        "ur": "أَنْتَ، تم (مرد): تَكْتُبُ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch34-l02-ex05",
+      "mode": "TAP",
+      "sentence_ar": "هِيَ ___ الدَّرْسَ.",
+      "hint": {
+        "en": "She writes the lesson.",
+        "ur": "وہ سبق لکھتی ہے۔"
+      },
+      "options": [
+        {
+          "ar": "يَكْتُبُ",
+          "ar_plain": "يكتب",
+          "translit": "yaktubu",
+          "en": "he writes",
+          "ur": "وہ لکھتا ہے"
+        },
+        {
+          "ar": "تَكْتُبُ",
+          "ar_plain": "تكتب",
+          "translit": "taktubu",
+          "en": "you (m.) write / she writes",
+          "ur": "تم لکھتے ہو / وہ لکھتی ہے"
+        },
+        {
+          "ar": "أَكْتُبُ",
+          "ar_plain": "أكتب",
+          "translit": "aktubu",
+          "en": "I write",
+          "ur": "میں لکھتا ہوں"
+        },
+        {
+          "ar": "نَكْتُبُ",
+          "ar_plain": "نكتب",
+          "translit": "naktubu",
+          "en": "we write",
+          "ur": "ہم لکھتے ہیں"
+        }
+      ],
+      "correct_answer": {
+        "ar": "تَكْتُبُ",
+        "ar_plain": "تكتب",
+        "translit": "taktubu",
+        "en": "you (m.) write / she writes",
+        "ur": "تم لکھتے ہو / وہ لکھتی ہے"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هِيَ, she: also تَكْتُبُ — the same form as 'you write'.",
+        "ur": "هِيَ، وہ (عورت): یہ بھی تَكْتُبُ — 'تم لکھتے ہو' جیسی صورت۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch34-l02-ex07",
+      "id": "ch34-l02-ex06",
       "statement": {
-        "en": "The feminine 'she does' uses the same prefix as 'you masculine do'.",
-        "ur": "مؤنث 'وہ کرتی ہے' کے لیے وہی prefix ہے جو 'تو کرتا ہے' کے لیے۔",
+        "en": "Here تَكْتُبُ means 'you write'.",
+        "ur": "یہاں تَكْتُبُ کا مطلب 'تم لکھتے ہو' ہے۔",
         "ar_example": {
-          "ar": "تَفْعَلُ — she does / you (m.) do",
-          "ar_plain": "تفعل",
-          "translit": "taf'alu",
-          "en": "she does / you (m.) do",
-          "ur": "وہ کرتی ہے / تو کرتا ہے"
+          "ar": "تَكْتُبُ زَيْنَبُ الدَّرْسَ.",
+          "ar_plain": "تكتب زينب الدرس.",
+          "translit": "taktubu zaynabu d-darsa.",
+          "en": "Zaynab writes the lesson.",
+          "ur": "زینب سبق لکھتی ہے۔"
         }
       },
-      "correct_answer": true,
+      "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "تَـ is used for both second person masculine (أنتَ) and third person feminine (هِیَ). هِيَ تَفْعَلُ = she does. أَنْتَ تَفْعَلُ = you do. Context tells them apart.",
-        "ur": "تَـ دوسرے شخص مذکر (أنتَ) اور تیسرے شخص مؤنث (هِیَ) دونوں کے لیے استعمال ہوتا ہے۔ Context انہیں الگ کرتی ہے۔"
+        "en": "زَيْنَبُ is the doer: she writes. Same form as 'you write' — the named doer decides.",
+        "ur": "زَيْنَبُ کرنے والی ہے: وہ لکھتی ہے۔ 'تم لکھتے ہو' جیسی صورت — نام والا فاعل فیصلہ کرتا ہے۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch34-l02-ex07",
+      "prompt_line": {
+        "ar": "يَا أَحْمَدُ، مَاذَا تَكْتُبُ؟",
+        "ar_plain": "يا أحمد، ماذا تكتب؟",
+        "translit": "yā aḥmadu, mādhā taktubu?",
+        "en": "Ahmad, what are you writing?",
+        "ur": "احمد، تم کیا لکھ رہے ہو؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "يَكْتُبُ الدَّرْسَ.",
+          "ar_plain": "يكتب الدرس.",
+          "translit": "yaktubu d-darsa.",
+          "en": "He is writing the lesson.",
+          "ur": "وہ سبق لکھ رہا ہے۔"
+        },
+        {
+          "ar": "أَكْتُبُ الدَّرْسَ.",
+          "ar_plain": "أكتب الدرس.",
+          "translit": "aktubu d-darsa.",
+          "en": "I am writing the lesson.",
+          "ur": "میں سبق لکھ رہا ہوں۔"
+        },
+        {
+          "ar": "نَكْتُبُ الدَّرْسَ.",
+          "ar_plain": "نكتب الدرس.",
+          "translit": "naktubu d-darsa.",
+          "en": "We are writing the lesson.",
+          "ur": "ہم سبق لکھ رہے ہیں۔"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "يَا أَحْمَدُ … تَكْتُبُ: you, Ahmad. He answers about himself: أَكْتُبُ.",
+        "ur": "يَا أَحْمَدُ … تَكْتُبُ: تم، احمد۔ وہ اپنے بارے میں جواب دیتا ہے: أَكْتُبُ۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Six core forms, four prefix letters (أ ت ي ن)",
-      "ar": "أَحْرُفُ الْمُضَارَعَةِ: أ ت ي ن",
-      "ur": "چھ بنیادی صورتیں، چار سابقے (أ ت ي ن)"
+      "en": "Five readings, four prefixes",
+      "ar": "أَحْرُفُ الْمُضَارَعَةِ: أ ن ي ت",
+      "ur": "پانچ صورتیں، چار سابقے"
     },
     "ayah": {
       "surah": 1,
       "ayah": 5,
       "label": "Al-Fatiha 1:5",
       "ar": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
-      "en": "You alone we worship and You alone we seek help.",
-      "ur": "تجھ ہی کو ہم عبادت کرتے ہیں اور تجھ ہی سے ہم مدد مانگتے ہیں۔",
+      "en": "You alone we worship, and You alone we ask for help.",
+      "ur": "ہم تیری ہی عبادت کرتے ہیں اور تجھ ہی سے مدد مانگتے ہیں۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001005.mp3"
     },
     "highlighted_word_indices": [
       1,
       3
     ],
+    "highlighted_words": [
+      "نَعْبُدُ",
+      "نَسْتَعِينُ"
+    ],
     "noor_explanation": {
-      "en": "نَعْبُدُ and نَسْتَعِينُ — both are المضارع. The نَ- prefix tells you it is first person plural (we). This is Al-Fatiha's hidden grammar — once you see the prefix, you know who is speaking: the worshipper, collective and singular before their Lord.",
-      "ur": "نَعْبُدُ اور نَسْتَعِينُ — دونوں المضارع ہیں۔ نَ- prefix بتاتا ہے کہ یہ پہلا شخص جمع ہے (ہم)۔ یہ الفاتحہ کی hidden grammar ہے — ایک بار prefix دیکھو، پہچان لو کون بات کر رہا ہے: عابد، اجتماعی طور پر اپنے رب کے سامنے۔"
+      "en": "نَعْبُدُ and نَسْتَعِينُ both open with نَـ: we. One letter at the front tells you who — except تَـ, where you also read the context.",
+      "ur": "نَعْبُدُ اور نَسْتَعِينُ دونوں نَـ سے شروع ہوتے ہیں: ہم۔ شروع کا ایک حرف بتاتا ہے کون — سوائے تَـ کے، جہاں سیاق بھی دیکھنا ہوتا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "أَفْعَلُ تَفْعَلُ يَفْعَلُ نَفْعَلُ — the four prefix letters أ ت ي ن tell you who is acting. These six forms are the core; dual and plural forms add endings you will meet later. نَعْبُدُ = we worship.",
-      "ur": "أَفْعَلُ تَفْعَلُ يَفْعَلُ نَفْعَلُ — چار سابقے أ ت ي ن بتاتے ہیں کہ کام کون کر رہا ہے۔ یہ چھ صورتیں بنیاد ہیں؛ تثنیہ اور جمع کی صورتوں میں لاحقے آتے ہیں جو آگے آئیں گے۔ نَعْبُدُ = ہم عبادت کرتے ہیں۔"
+      "en": "أَ I, نَ we, يَ he, تَ you (a man) or she. Next: the same prefixes on new verbs.",
+      "ur": "أَ میں، نَ ہم، يَ وہ، تَ تم (مرد) یا وہ (عورت)۔ آگے: نئے افعال پر یہی سابقے۔"
     }
   }
 }

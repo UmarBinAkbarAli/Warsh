@@ -1,0 +1,504 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 35 review (ch35-l06, new, display order 6). Two different instances per test strand: attached سَـ, separate سَوْفَ, now/habit versus future, future versus past and command, لَنْ 'will not', and one attached and one separate Quran excerpt. No new forms. Chapter 36 (the maṣdar) is next. Rebuilt 2026-10-02 in the proposal harvest, batch 2 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-35-content-proposal.md and its review amendments: attached سَـ and separate سَوْفَ both point the Chapter 34 imperfect to the future — some grammarians describe a near/remote tendency, others no fixed difference, so it is mentioned once and never tested; present/habit versus future by marker and time word; future versus past and command (commands given whole — Chapter 51); لَنْ + imperfect recognised as 'will not' with the following form supplied (its ending is Chapter 45's); Quran readings 2:142 سَيَقُولُ, 102:3 سَوْفَ تَعْلَمُونَ, 93:5 وَلَسَوْفَ, 5:54, 7:143 and 3:92 لَنْ. Removed: 'سَـ = near, سَوْفَ = far/emphatic', 'سَوْفَ adds certainty to every promise', hooks with no future marker (108:2, 39:10–11, 108:1), قُولُ for يَقُولُ, the 'most common future form' claim, يَـ read as 'they', the spliced Quran-like composite, لَا خَوْفٌ in the future outcome, the Book 5 bridge claims, multi-word build tiles and many-to-one matching.",
+    "title": "Chapter 35 Review",
+    "titleAr": "مُرَاجَعَةُ الْفَصْلِ الْخَامِسِ وَالثَّلَاثِينَ",
+    "titleUr": "باب 35 کی دہرائی",
+    "chapter_order": 35,
+    "lesson_order": 6,
+    "estimated_minutes": 12,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 102,
+      "ayah": 3,
+      "label": "At-Takathur 102:3",
+      "ar": "كَلَّا سَوْفَ تَعْلَمُونَ",
+      "en": "No! You are going to know.",
+      "ur": "ہرگز نہیں! تم عنقریب جان لو گے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/102003.mp3"
+    },
+    "noor_intro": {
+      "en": "One more listen, then a review of the future.",
+      "ur": "ایک بار پھر سنیں، پھر مستقبل کی دہرائی۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 35 at a glance",
+        "ar": "سَـ · سَوْفَ · لَنْ",
+        "ur": "باب 35 ایک نظر میں"
+      },
+      "explanation": {
+        "en": "سَيَكْتُبُ / سَوْفَ يَكْتُبُ: will write. يَكْتُبُ: writes (now or usually). كَتَبَ: wrote. اكْتُبْ: write! لَنْ يَكْتُبَ: will not write.",
+        "ur": "سَيَكْتُبُ / سَوْفَ يَكْتُبُ: لکھے گا۔ يَكْتُبُ: لکھتا ہے (ابھی یا عادتاً)۔ كَتَبَ: لکھا۔ اكْتُبْ: لکھو! لَنْ يَكْتُبَ: نہیں لکھے گا۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "غَدًا سَنَذْهَبُ إِلَى الْمَسْجِدِ، وَسَوْفَ نَجْلِسُ مَعَ الْإِمَامِ. لَنْ نَذْهَبَ إِلَى السُّوقِ.",
+        "ar_plain": "غدا سنذهب إلى المسجد، وسوف نجلس مع الإمام. لن نذهب إلى السوق.",
+        "translit": "ghadan sa-nadhhabu ilā l-masjidi, wa-sawfa najlisu maʿa l-imāmi. lan nadhhaba ilā s-sūqi.",
+        "en": "Tomorrow we will go to the mosque, and we will sit with the imam. We will not go to the market.",
+        "ur": "کل ہم مسجد جائیں گے، اور امام کے ساتھ بیٹھیں گے۔ ہم بازار نہیں جائیں گے۔"
+      },
+      "explanation": {
+        "en": "All three in one plan: سَـ, سَوْفَ and لَنْ.",
+        "ur": "ایک ہی منصوبے میں تینوں: سَـ، سَوْفَ اور لَنْ۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "FILL_BLANK",
+      "id": "ch35-l06-ex01",
+      "mode": "TAP",
+      "sentence_ar": "___ إِلَى الْمَسْجِدِ غَدًا.",
+      "hint": {
+        "en": "I will go to the mosque tomorrow. (joined marker)",
+        "ur": "میں کل مسجد جاؤں گا۔ (جڑی ہوئی علامت)"
+      },
+      "options": [
+        {
+          "ar": "أَذْهَبُ",
+          "ar_plain": "أذهب",
+          "translit": "adhhabu",
+          "en": "go (I)",
+          "ur": "میں جاتا ہوں"
+        },
+        {
+          "ar": "ذَهَبْتُ",
+          "ar_plain": "ذهبت",
+          "translit": "dhahabtu",
+          "en": "went (I)",
+          "ur": "میں گیا"
+        },
+        {
+          "ar": "سَأَذْهَبُ",
+          "ar_plain": "سأذهب",
+          "translit": "sa-adhhabu",
+          "en": "will go (I)",
+          "ur": "میں جاؤں گا"
+        },
+        {
+          "ar": "سَيَذْهَبُ",
+          "ar_plain": "سيذهب",
+          "translit": "sa-yadhhabu",
+          "en": "will go (he)",
+          "ur": "وہ جائے گا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "سَأَذْهَبُ",
+        "ar_plain": "سأذهب",
+        "translit": "sa-adhhabu",
+        "en": "will go (I)",
+        "ur": "میں جاؤں گا"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "I + the future: سَـ + أَذْهَبُ.",
+        "ur": "میں + مستقبل: سَـ + أَذْهَبُ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch35-l06-ex02",
+      "prompt": {
+        "ar": "سَتَكْتُبُ مَرْيَمُ الدَّرْسَ.",
+        "ar_plain": "ستكتب مريم الدرس.",
+        "translit": "sa-taktubu maryamu d-darsa.",
+        "en": "Maryam will write the lesson.",
+        "ur": "مریم سبق لکھے گی۔"
+      },
+      "options": [
+        {
+          "en": "Maryam will write the lesson.",
+          "ur": "مریم سبق لکھے گی۔"
+        },
+        {
+          "en": "Maryam writes the lesson.",
+          "ur": "مریم سبق لکھتی ہے۔"
+        },
+        {
+          "en": "Maryam wrote the lesson.",
+          "ur": "مریم نے سبق لکھا۔"
+        },
+        {
+          "en": "You will write the lesson.",
+          "ur": "تم سبق لکھو گے۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "سَـ + تَكْتُبُ + مَرْيَمُ: she will write.",
+        "ur": "سَـ + تَكْتُبُ + مَرْيَمُ: وہ لکھے گی۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch35-l06-ex03",
+      "statement": {
+        "en": "This means the students understand the lesson now.",
+        "ur": "اس کا مطلب ہے طلبہ ابھی سبق سمجھتے ہیں۔",
+        "ar_example": {
+          "ar": "سَوْفَ يَفْهَمُ الطُّلَّابُ الدَّرْسَ.",
+          "ar_plain": "سوف يفهم الطلاب الدرس.",
+          "translit": "sawfa yafhamu ṭ-ṭullābu d-darsa.",
+          "en": "The students will understand the lesson.",
+          "ur": "طلبہ سبق سمجھ جائیں گے۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "سَوْفَ: they will understand.",
+        "ur": "سَوْفَ: وہ سمجھیں گے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch35-l06-ex04",
+      "prompt": {
+        "ar": "سَوْفَ أَقْرَأُ الْكِتَابَ.",
+        "ar_plain": "سوف أقرأ الكتاب.",
+        "translit": "sawfa aqraʾu l-kitāba.",
+        "en": "I will read the book.",
+        "ur": "میں کتاب پڑھوں گا۔"
+      },
+      "options": [
+        {
+          "en": "I am reading the book.",
+          "ur": "میں کتاب پڑھ رہا ہوں۔"
+        },
+        {
+          "en": "I read the book.",
+          "ur": "میں نے کتاب پڑھی۔"
+        },
+        {
+          "en": "We will read the book.",
+          "ur": "ہم کتاب پڑھیں گے۔"
+        },
+        {
+          "en": "I will read the book.",
+          "ur": "میں کتاب پڑھوں گا۔"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "سَوْفَ + أَقْرَأُ: I will read.",
+        "ur": "سَوْفَ + أَقْرَأُ: میں پڑھوں گا۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch35-l06-ex05",
+      "prompt_line": {
+        "ar": "مَاذَا يَفْعَلُ عُمَرُ الْآنَ؟",
+        "ar_plain": "ماذا يفعل عمر الآن؟",
+        "translit": "mādhā yafʿalu ʿumaru l-āna?",
+        "en": "What is Umar doing now?",
+        "ur": "عمر ابھی کیا کر رہا ہے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "سَيَكْتُبُ الدَّرْسَ غَدًا.",
+          "ar_plain": "سيكتب الدرس غدا.",
+          "translit": "sa-yaktubu d-darsa ghadan.",
+          "en": "He will write the lesson tomorrow.",
+          "ur": "وہ کل سبق لکھے گا۔"
+        },
+        {
+          "ar": "يَكْتُبُ الدَّرْسَ.",
+          "ar_plain": "يكتب الدرس.",
+          "translit": "yaktubu d-darsa.",
+          "en": "He is writing the lesson.",
+          "ur": "وہ سبق لکھ رہا ہے۔"
+        },
+        {
+          "ar": "كَتَبَ الدَّرْسَ أَمْسِ.",
+          "ar_plain": "كتب الدرس أمس.",
+          "translit": "kataba d-darsa amsi.",
+          "en": "He wrote the lesson yesterday.",
+          "ur": "اس نے گزشتہ کل سبق لکھا۔"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْآنَ: no future marker.",
+        "ur": "الْآنَ: مستقبل کی کوئی علامت نہیں۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch35-l06-ex06",
+      "statement": {
+        "en": "This is a habit.",
+        "ur": "یہ عادت ہے۔",
+        "ar_example": {
+          "ar": "سَنَجْلِسُ هُنَا غَدًا.",
+          "ar_plain": "سنجلس هنا غدا.",
+          "translit": "sa-najlisu hunā ghadan.",
+          "en": "We will sit here tomorrow.",
+          "ur": "ہم کل یہاں بیٹھیں گے۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "سَـ + غَدًا: something still to come.",
+        "ur": "سَـ + غَدًا: کچھ جو ابھی آنا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch35-l06-ex07",
+      "prompt": {
+        "ar": "ذَهَبَ أَحْمَدُ إِلَى الْمَدْرَسَةِ.",
+        "ar_plain": "ذهب أحمد إلى المدرسة.",
+        "translit": "dhahaba aḥmadu ilā l-madrasati.",
+        "en": "Ahmad went to school.",
+        "ur": "احمد اسکول گیا۔"
+      },
+      "options": [
+        {
+          "en": "Ahmad will go to school.",
+          "ur": "احمد اسکول جائے گا۔"
+        },
+        {
+          "en": "Ahmad goes to school.",
+          "ur": "احمد اسکول جاتا ہے۔"
+        },
+        {
+          "en": "Ahmad went to school.",
+          "ur": "احمد اسکول گیا۔"
+        },
+        {
+          "en": "Go to school, Ahmad!",
+          "ur": "احمد، اسکول جاؤ!"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ذَهَبَ: past.",
+        "ur": "ذَهَبَ: ماضی۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch35-l06-ex08",
+      "statement": {
+        "en": "This says what will happen.",
+        "ur": "یہ بتاتا ہے کیا ہوگا۔",
+        "ar_example": {
+          "ar": "اكْتُبِ الدَّرْسَ!",
+          "ar_plain": "اكتب الدرس!",
+          "translit": "uktubi d-darsa!",
+          "en": "Write the lesson!",
+          "ur": "سبق لکھو!"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "اكْتُبْ is a command: write!",
+        "ur": "اكْتُبْ حکم ہے: لکھو!"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch35-l06-ex09",
+      "prompt": {
+        "ar": "لَنْ يَجْلِسَ الْأُسْتَاذُ هُنَا.",
+        "ar_plain": "لن يجلس الأستاذ هنا.",
+        "translit": "lan yajlisa l-ustādhu hunā.",
+        "en": "The teacher will not sit here.",
+        "ur": "استاد یہاں نہیں بیٹھیں گے۔"
+      },
+      "options": [
+        {
+          "en": "The teacher does not sit here.",
+          "ur": "استاد یہاں نہیں بیٹھتے۔"
+        },
+        {
+          "en": "The teacher will not sit here.",
+          "ur": "استاد یہاں نہیں بیٹھیں گے۔"
+        },
+        {
+          "en": "The teacher will sit here.",
+          "ur": "استاد یہاں بیٹھیں گے۔"
+        },
+        {
+          "en": "Teacher, do not sit here!",
+          "ur": "استاد جی، یہاں نہ بیٹھیں!"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَنْ: will not.",
+        "ur": "لَنْ: نہیں … گے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch35-l06-ex10",
+      "mode": "TAP",
+      "sentence_ar": "___ أَذْهَبَ إِلَى السُّوقِ غَدًا.",
+      "hint": {
+        "en": "I will not go to the market tomorrow.",
+        "ur": "میں کل بازار نہیں جاؤں گا۔"
+      },
+      "options": [
+        {
+          "ar": "لَنْ",
+          "ar_plain": "لن",
+          "translit": "lan",
+          "en": "will not",
+          "ur": "نہیں … گا"
+        },
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "lā",
+          "en": "does not",
+          "ur": "نہیں"
+        },
+        {
+          "ar": "سَوْفَ",
+          "ar_plain": "سوف",
+          "translit": "sawfa",
+          "en": "will",
+          "ur": "گا"
+        },
+        {
+          "ar": "هَلْ",
+          "ar_plain": "هل",
+          "translit": "hal",
+          "en": "is…? / does…?",
+          "ur": "کیا…؟"
+        }
+      ],
+      "correct_answer": {
+        "ar": "لَنْ",
+        "ar_plain": "لن",
+        "translit": "lan",
+        "en": "will not",
+        "ur": "نہیں … گا"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "'Will not' + غَدًا: لَنْ. (أَذْهَبَ with fatḥa is the form after لَنْ.)",
+        "ur": "'نہیں … گا' + غَدًا: لَنْ۔ (فتحہ والا أَذْهَبَ لَنْ کے بعد کی صورت ہے۔)"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch35-l06-ex11",
+      "ayah_fragment": {
+        "ar": "سَيَقُولُ السُّفَهَاءُ",
+        "surah_ref": "Al-Baqarah 2:142"
+      },
+      "options": [
+        {
+          "en": "The foolish said",
+          "ur": "بے وقوفوں نے کہا"
+        },
+        {
+          "en": "The foolish are saying",
+          "ur": "بے وقوف کہہ رہے ہیں"
+        },
+        {
+          "en": "The foolish will not say",
+          "ur": "بے وقوف نہیں کہیں گے"
+        },
+        {
+          "en": "The foolish will say",
+          "ur": "بے وقوف کہیں گے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "سَيَقُولُ: سَـ, will say.",
+        "ur": "سَيَقُولُ: سَـ، کہیں گے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch35-l06-ex12",
+      "ayah_fragment": {
+        "ar": "وَلَسَوْفَ يُعْطِيكَ رَبُّكَ",
+        "surah_ref": "Ad-Duha 93:5"
+      },
+      "options": [
+        {
+          "en": "And your Lord is going to give you",
+          "ur": "اور تمہارا رب تمہیں عنقریب دے گا"
+        },
+        {
+          "en": "And your Lord gave you",
+          "ur": "اور تمہارے رب نے تمہیں دیا"
+        },
+        {
+          "en": "And your Lord will not give you",
+          "ur": "اور تمہارا رب تمہیں نہیں دے گا"
+        },
+        {
+          "en": "Give, your Lord!",
+          "ur": "دو، تمہارا رب!"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "وَلَسَوْفَ: and surely will.",
+        "ur": "وَلَسَوْفَ: اور ضرور … گا۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 35 — the future",
+      "ar": "سَـ وَسَوْفَ وَلَنْ",
+      "ur": "باب 35 — مستقبل"
+    },
+    "ayah": {
+      "surah": 102,
+      "ayah": 3,
+      "label": "At-Takathur 102:3",
+      "ar": "كَلَّا سَوْفَ تَعْلَمُونَ",
+      "en": "No! You are going to know.",
+      "ur": "ہرگز نہیں! تم عنقریب جان لو گے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/102003.mp3"
+    },
+    "highlighted_word_indices": [
+      1
+    ],
+    "highlighted_words": [
+      "سَوْفَ"
+    ],
+    "noor_explanation": {
+      "en": "سَوْفَ تَعْلَمُونَ: you will know. سَـ, سَوْفَ and لَنْ — you can read what is still to come.",
+      "ur": "سَوْفَ تَعْلَمُونَ: تم جان لو گے۔ سَـ، سَوْفَ اور لَنْ — آپ پڑھ سکتے ہیں جو ابھی آنا ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Review done. Next: the Chapter 35 final test.",
+      "ur": "دہرائی مکمل۔ آگے: باب 35 کا آخری امتحان۔"
+    }
+  }
+}

@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 33, Lesson 2 (ch33-l02) — all of Al-Falaq, staged 113:1–2, 113:3–5, then whole: قُلْ and أَعُوذُ … as two linked pieces (a command, then what is to be said); Chapter 18–19 vocabulary and Chapter 19's إِذَا وَقَبَ / إِذَا حَسَدَ retrieved; five ayah-meaning checks, one section task and two whole-passage tasks (repeated مِنْ شَرِّ; one connected request). Rebuilt 2026-10-02 in the proposal harvest, batch 2 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-33-content-proposal.md and its review amendments: a Book 3 reading bridge — Al-Kafirun excerpts retrieved (Chapter 30 owns the full reading); complete, staged readings of Al-Falaq 113:1–5, An-Nasr 110:1–3 (110:2 included) and, new, An-Nas 114:1–6; a mixed lesson on what وَ joins, the noun of إِنَّ, the predicate of لَيْسَ, questions and إِذَا; the old capstone becomes the review; a 12-question readiness test. Unfamiliar Quran forms (أَعُوذُ، رَأَيْتَ، يَدْخُلُونَ، سَبِّحْ، اسْتَغْفِرْهُ، كَانَ، تَوَّابًا، يُوَسْوِسُ) are glossed whole. Removed: 'first complete surah' and 'every word' claims, Al-Fatiha 1:5 and the imperfect preview (Chapter 34), the 2:256 slogan inside Al-Kafirun, revelation chronology and the 'mission complete' inference, 'إِذَا always future/certain', كَانَ 'connecting to present sense', وَ as a sentence-boundary rule, الطَّالِبُ يَقْرَأُ called verbal, the wrong root of نَسْتَعِينُ, many-to-one matching boards, 'Parse:' true/false items and stray foreign words.",
+    "title": "All of Al-Falaq",
+    "titleAr": "سُورَةُ الْفَلَقِ",
+    "titleUr": "پوری سورۃ الفلق",
     "chapter_order": 33,
     "lesson_order": 2,
-    "chapter_title": "Reading Comprehension and Integration",
-    "title": "Extended Reading: Surah Al-Falaq",
-    "titleAr": "قِرَاءَةُ مُوَسَّعَةٌ: سُورَةُ الْفَلَقِ",
-    "source": "book3_lesson10_closing.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
@@ -17,424 +17,363 @@
       "ayah": 1,
       "label": "Al-Falaq 113:1",
       "ar": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
-      "en": "Say: I seek refuge in the Lord of the daybreak.",
-      "ur": "کہہ دیجیے: میں صبح کے رب کی پناہ مانگتا ہوں۔",
+      "en": "Say: I seek refuge in the Lord of daybreak,",
+      "ur": "کہہ دیجیے: میں صبح کے رب کی پناہ مانگتا ہوں،",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113001.mp3"
     },
     "noor_intro": {
-      "en": "After Al-Kafirun, let's read Surah Al-Falaq. This Surah uses the same sentence types we know, but adds new vocabulary related to seeking refuge in Allah.",
-      "ur": "الکافرون کے بعد، آئیے Surah Al-Falaq پڑھیں۔ یہ Surah وہی sentence types استعمال کرتی ہے جو ہم جانتے ہیں، لیکن اللہ کی پناہ مانگنے سے متعلق نئی vocabulary شامل ہے۔"
+      "en": "All five ayat of Al-Falaq, in order. You know some phrases from Chapters 18–19; today you read them as one passage.",
+      "ur": "سورۃ الفلق کی پانچوں آیات، ترتیب سے۔ کچھ ٹکڑے آپ باب 18–19 سے جانتے ہیں؛ آج انہیں ایک عبارت کے طور پر پڑھیں۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "WORD",
-      "text": {
-        "ar": "أَعُوذُ",
-        "ar_plain": "أعوذ",
-        "translit": "a'uudhu",
-        "en": "I seek refuge",
-        "ur": "میں پناہ مانگتا ہوں"
-      },
-      "explanation": {
-        "en": "Present tense from ع-و-ذ (to seek refuge). أَعُوذُ = I seek refuge. The 'I' is the speaker (Prophet ﷺ or any believer).",
-        "ur": "ع-و-ذ (پناہ مانگنا) سے present tense۔ أَعُوذُ = میں پناہ مانگتا ہوں۔ 'میں' speaker ہے (نبی ﷺ یا کوئی بھی مومن)۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "بِرَبِّ",
-        "ar_plain": "برب",
-        "translit": "bi-rabbi",
-        "en": "in the Lord of",
-        "ur": "کے رب کی پناہ میں"
-      },
-      "explanation": {
-        "en": "بِ (in/with) + رَبِّ (Lord — genitive). بِرَبِّ = in the Lord. The بِ indicates the means/cause of seeking refuge.",
-        "ur": "بِ (میں/ساتھ) + رَبِّ (رب — مجرور)۔ بِرَبِّ = رب کی پناہ میں۔ بِ پناہ مانگنے کا ذریعہ/سبب indicate کرتا ہے۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "الْفَلَقِ",
-        "ar_plain": "الفلق",
-        "translit": "al-falaqi",
-        "en": "the daybreak / splitting",
-        "ur": "صبح / کھولنا"
-      },
-      "explanation": {
-        "en": "الْفَلَقُ = the daybreak, the splitting (of dawn). رَبِّ الْفَلَقِ = Lord of the daybreak — the one who causes the dawn to break.",
-        "ur": "الْفَلَقُ = صبح، کھولنا (دھsun کی splitting)۔ رَبِّ الْفَلَقِ = صبح کا رب — وہ جو صبح کو کھولتا ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Two pieces in 113:1",
         "ar": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
-        "ar_plain": "قل أعوذ برب الفلق",
-        "translit": "qul a'uudhu bi-rabbi al-falaqi",
-        "en": "Say: I seek refuge in the Lord of the daybreak.",
-        "ur": "کہہ دیجیے: میں صبح کے رب کی پناہ مانگتا ہوں۔"
+        "ur": "113:1 کے دو ٹکڑے"
       },
       "explanation": {
-        "en": "قُلْ (command) + أَعُوذُ (present tense verb) + بِرَبِّ الْفَلَقِ (prepositional phrase). This is a verbal sentence with a present tense verb.",
-        "ur": "قُلْ (command) + أَعُوذُ (present tense verb) + بِرَبِّ الْفَلَقِ (prepositional phrase)۔ یہ ایک verbal sentence ہے جس میں present tense verb ہے۔"
-      }
+        "en": "قُلْ: say — a command. Then what is to be said: أَعُوذُ, I seek refuge (given whole), بِرَبِّ الْفَلَقِ, in the Lord of daybreak.",
+        "ur": "قُلْ: کہہ دیجیے — حکم۔ پھر جو کہنا ہے: أَعُوذُ، میں پناہ مانگتا ہوں (پورا دیا گیا ہے)، بِرَبِّ الْفَلَقِ، صبح کے رب کی۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113001.mp3"
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "113:1: Say: I seek refuge in the Lord of daybreak,",
+        "ar": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
+        "ur": "113:1: کہہ دیجیے: میں صبح کے رب کی پناہ مانگتا ہوں،"
+      },
+      "explanation": {
+        "en": "رَبِّ الْفَلَقِ: iḍāfa — the Lord of daybreak.",
+        "ur": "رَبِّ الْفَلَقِ: اضافت — صبح کا رب۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113001.mp3"
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "113:2: from the evil of what He created,",
+        "ar": "مِن شَرِّ مَا خَلَقَ",
+        "ur": "113:2: اس کے شر سے جو اس نے پیدا کیا،"
+      },
+      "explanation": {
+        "en": "مِنْ شَرِّ, from the evil of; مَا خَلَقَ, what He created — مَا as 'what', as in Chapter 30.",
+        "ur": "مِنْ شَرِّ، کے شر سے؛ مَا خَلَقَ، جو اس نے پیدا کیا — مَا بمعنی 'جو'، جیسے باب 30 میں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113002.mp3"
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "113:3: and from the evil of darkness when it settles,",
+        "ar": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ",
+        "ur": "113:3: اور اندھیری رات کے شر سے جب وہ چھا جائے،"
+      },
+      "explanation": {
+        "en": "وَمِنْ شَرِّ again; غَاسِقٍ, darkness; إِذَا وَقَبَ, when it settles (Chapters 19 and 32).",
+        "ur": "پھر وَمِنْ شَرِّ؛ غَاسِقٍ، اندھیری رات؛ إِذَا وَقَبَ، جب وہ چھا جائے (باب 19 اور 32)۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113003.mp3"
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "113:4: and from the evil of those who blow on knots,",
+        "ar": "وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ",
+        "ur": "113:4: اور گرہوں میں پھونکنے والیوں کے شر سے،"
+      },
+      "explanation": {
+        "en": "النَّفَّاثَاتِ, those who blow; فِي الْعُقَدِ, on knots — given whole.",
+        "ur": "النَّفَّاثَاتِ، پھونکنے والیاں؛ فِي الْعُقَدِ، گرہوں میں — پورا دیا گیا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113004.mp3"
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "113:5: and from the evil of an envier when he envies.",
+        "ar": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+        "ur": "113:5: اور حسد کرنے والے کے شر سے جب وہ حسد کرے۔"
+      },
+      "explanation": {
+        "en": "حَاسِدٍ, an envier; إِذَا حَسَدَ, when he envies.",
+        "ur": "حَاسِدٍ، حسد کرنے والا؛ إِذَا حَسَدَ، جب وہ حسد کرے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113005.mp3"
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "أَعُوذُ بالْلهِ structure",
-        "ar": "أَعُوذُ بالْلهِ کی ساخت",
-        "ur": "أَعُوذُ بالْلهِ کی structure"
+        "en": "One request, a list of evils",
+        "ar": "مِنْ شَرِّ … وَمِنْ شَرِّ … وَمِنْ شَرِّ …",
+        "ur": "ایک درخواست، شر کی فہرست"
       },
       "explanation": {
-        "en": "أَعُوذُ means 'I seek refuge' — used when asking Allah's protection from harm. أَعُوذُ بالْلهِ = I seek refuge in Allah.",
-        "ur": "أَعُوذُ کا مطلب ہے 'میں پناہ مانگتا ہوں' — اللہ کی protection harm سے مانگتے وقت gebraucht۔ أَعُوذُ بالْلهِ = میں اللہ کی پناہ مانگتا ہوں۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Verbal sentence: أَعُوذُ بِرَبِّ الْفَلقِ",
-        "ur": "فعلی جملہ: أَعُوذُ بِرَبِّ الْفَلقِ"
+        "en": "113:1 is the request for refuge. 113:2–5 list what refuge is sought from; وَمِنْ شَرِّ repeats to add each one. The five ayat are one connected sentence.",
+        "ur": "113:1 پناہ کی درخواست ہے۔ 113:2–5 بتاتی ہیں کس سے پناہ مانگی جاتی ہے؛ ہر ایک کو جوڑنے کے لیے وَمِنْ شَرِّ دہرایا جاتا ہے۔ پانچوں آیات ایک جڑا ہوا جملہ ہیں۔"
       },
-      "body": {
-        "en": "أَعُوذُ is a present tense verb (أنا). The prepositional phrase بِرَبِّ الْفَلَقِ tells where/from whom refuge is sought. No nominal sentences in this ayah — pure verbal.",
-        "ur": "أَعُوذُ ایک present tense verb ہے (أنا)۔ Prepositional phrase بِرَبِّ الْفَلَقِ بتاتی ہے کہ کہاں/کس سے پناہ مانگی جا رہی ہے۔ اس ayah میں کوئی nominal sentences نہیں — خالص verbal۔"
-      }
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113003.mp3"
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
+      "type": "MATCH_AYAH",
       "id": "ch33-l02-ex01",
-      "prompt": {
+      "ayah_fragment": {
         "ar": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
-        "ar_plain": "قل أعوذ برب الفلق",
-        "translit": "qul a'uudhu bi-rabbi al-falaqi",
-        "en": "Say: I seek refuge in the Lord of the daybreak.",
-        "ur": "کہہ دیجیے: میں صبح کے رب کی پناہ مانگتا ہوں۔"
+        "surah_ref": "Al-Falaq 113:1"
       },
       "options": [
         {
-          "en": "Say: I seek refuge in the Lord of the daybreak.",
-          "ur": "کہہ دیجیے: میں صبح کے رب کی پناہ مانگتا ہوں۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "I said: the Lord of daybreak is near,",
+          "ur": "میں نے کہا: صبح کا رب قریب ہے،"
         },
         {
-          "en": "Say: I worship the Lord of the daybreak.",
-          "ur": "کہہ دیجیے: میں صبح کے رب کی عبادت کرتا ہوں۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "Say: I seek refuge in the Lord of daybreak,",
+          "ur": "کہہ دیجیے: میں صبح کے رب کی پناہ مانگتا ہوں،"
         },
         {
-          "en": "I seek refuge in the Lord of the daybreak.",
-          "ur": "میں صبح کے رب کی پناہ مانگتا ہوں۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "Say: I seek refuge from the daybreak,",
+          "ur": "کہہ دیجیے: میں صبح سے پناہ مانگتا ہوں،"
         },
         {
-          "en": "The Lord of the daybreak seeks refuge.",
-          "ur": "صبح کا رب پناہ مانگتا ہے۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "Who is the Lord of daybreak?",
+          "ur": "صبح کا رب کون ہے؟"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "قُلْ, say; أَعُوذُ, I seek refuge; بِرَبِّ الْفَلَقِ, in the Lord of daybreak.",
+        "ur": "قُلْ، کہہ دیجیے؛ أَعُوذُ، میں پناہ مانگتا ہوں؛ بِرَبِّ الْفَلَقِ، صبح کے رب کی۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch33-l02-ex02",
+      "ayah_fragment": {
+        "ar": "مِن شَرِّ مَا خَلَقَ",
+        "surah_ref": "Al-Falaq 113:2"
+      },
+      "options": [
+        {
+          "en": "from the good of what He created,",
+          "ur": "اس کی بھلائی سے جو اس نے پیدا کیا،"
+        },
+        {
+          "en": "what did He create?",
+          "ur": "اس نے کیا پیدا کیا؟"
+        },
+        {
+          "en": "He did not create evil,",
+          "ur": "اس نے شر پیدا نہیں کیا،"
+        },
+        {
+          "en": "from the evil of what He created,",
+          "ur": "اس کے شر سے جو اس نے پیدا کیا،"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مِنْ شَرِّ, from the evil of; مَا خَلَقَ, what He created.",
+        "ur": "مِنْ شَرِّ، کے شر سے؛ مَا خَلَقَ، جو اس نے پیدا کیا۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch33-l02-ex03",
+      "ayah_fragment": {
+        "ar": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ",
+        "surah_ref": "Al-Falaq 113:3"
+      },
+      "options": [
+        {
+          "en": "and from the evil of darkness when it settles,",
+          "ur": "اور اندھیری رات کے شر سے جب وہ چھا جائے،"
+        },
+        {
+          "en": "and from the evil of darkness — when did it settle?",
+          "ur": "اور اندھیری رات کے شر سے — وہ کب چھائی؟"
+        },
+        {
+          "en": "and from the evil of daybreak when it comes,",
+          "ur": "اور صبح کے شر سے جب وہ آئے،"
+        },
+        {
+          "en": "darkness settled, so evil came,",
+          "ur": "اندھیرا چھایا، تو شر آیا،"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "أَعُوذُ = I seek refuge (present tense verb). بِرَبِّ الْفَلَقِ = in the Lord of the daybreak (the one being sought for refuge).",
-        "ur": "أَعُوذُ = میں پناہ مانگتا ہوں (present tense verb)۔ بِرَبِّ الْفَلَقِ = صبح کے رب کی پناہ میں (جس سے پناہ مانگی جا رہی ہے)۔"
+        "en": "غَاسِقٍ, darkness; إِذَا وَقَبَ, when it settles — an event, not a question.",
+        "ur": "غَاسِقٍ، اندھیری رات؛ إِذَا وَقَبَ، جب وہ چھا جائے — واقعہ، سوال نہیں۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch33-l02-ex04",
+      "ayah_fragment": {
+        "ar": "وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ",
+        "surah_ref": "Al-Falaq 113:4"
+      },
+      "options": [
+        {
+          "en": "and from the good of those who tie knots,",
+          "ur": "اور گرہیں باندھنے والیوں کی بھلائی سے،"
+        },
+        {
+          "en": "those who blow on knots are in the evil,",
+          "ur": "گرہوں میں پھونکنے والیاں شر میں ہیں،"
+        },
+        {
+          "en": "and from the evil of those who blow on knots,",
+          "ur": "اور گرہوں میں پھونکنے والیوں کے شر سے،"
+        },
+        {
+          "en": "from the evil of an envier,",
+          "ur": "حسد کرنے والے کے شر سے،"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "النَّفَّاثَاتِ, those who blow; فِي الْعُقَدِ, on knots.",
+        "ur": "النَّفَّاثَاتِ، پھونکنے والیاں؛ فِي الْعُقَدِ، گرہوں میں۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch33-l02-ex05",
+      "ayah_fragment": {
+        "ar": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+        "surah_ref": "Al-Falaq 113:5"
+      },
+      "options": [
+        {
+          "en": "and from the evil of darkness when it settles.",
+          "ur": "اور اندھیری رات کے شر سے جب وہ چھا جائے۔"
+        },
+        {
+          "en": "and from the evil of an envier when he envies.",
+          "ur": "اور حسد کرنے والے کے شر سے جب وہ حسد کرے۔"
+        },
+        {
+          "en": "and an envier does not envy.",
+          "ur": "اور حسد کرنے والا حسد نہیں کرتا۔"
+        },
+        {
+          "en": "when did the envier envy?",
+          "ur": "حسد کرنے والے نے کب حسد کیا؟"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "حَاسِدٍ, an envier; إِذَا حَسَدَ, when he envies. (Darkness was 113:3.)",
+        "ur": "حَاسِدٍ، حسد کرنے والا؛ إِذَا حَسَدَ، جب وہ حسد کرے۔ (اندھیری رات 113:3 میں تھی۔)"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch33-l02-ex02",
+      "id": "ch33-l02-ex06",
       "statement": {
-        "en": "أَعُوذُ is a first person singular present tense verb meaning 'I seek refuge'.",
-        "ur": "أَعُوذُ first person singular present tense verb ہے جس کا مطلب ہے 'میں پناہ مانگتا ہوں'۔",
-        "ar_example": {
-          "ar": "أَعُوذُ بِاللَّهِ",
-          "ar_plain": "أعوذ بالله",
-          "translit": "a'uudhu billaahi",
-          "en": "I seek refuge in Allah.",
-          "ur": "میں اللہ کی پناہ مانگتا ہوں۔"
-        }
+        "en": "In 113:2–5, each ayah names one more thing that refuge is sought from.",
+        "ur": "113:2 سے 113:5 تک ہر آیت ایک اور چیز بتاتی ہے جس سے پناہ مانگی جاتی ہے۔"
       },
       "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch33-l02-ex03",
-      "mode": "TAP",
-      "sentence_ar": "أَعُوذُ بِرَبِّ ___",
-      "hint": {
-        "en": "I seek refuge in the Lord of the daybreak.",
-        "ur": "میں صبح کے رب کی پناہ مانگتا ہوں۔"
-      },
-      "options": [
-        {
-          "ar": "الْفَلَقِ",
-          "ar_plain": "الفلق",
-          "translit": "al-falaqi",
-          "en": "the daybreak",
-          "ur": "صبح"
-        },
-        {
-          "ar": "النَّاسِ",
-          "ar_plain": "الناس",
-          "translit": "an-naasi",
-          "en": "the people",
-          "ur": "لوگ"
-        },
-        {
-          "ar": "الْكَافِرُونَ",
-          "ar_plain": "الكافرون",
-          "translit": "al-kaafiroona",
-          "en": "the disbelievers",
-          "ur": "کافرو"
-        },
-        {
-          "ar": "الْجَنِّ",
-          "ar_plain": "الجن",
-          "translit": "al-jinni",
-          "en": "the jinn",
-          "ur": "جن"
-        }
-      ],
-      "correct_answer": {
-        "ar": "الْفَلَقِ",
-        "ar_plain": "الفلق",
-        "translit": "al-falaqi",
-        "en": "the daybreak",
-        "ur": "صبح"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch33-l02-ex04",
-      "left_column": [
-        {
-          "ar": "أَعُوذُ",
-          "ar_plain": "أعوذ",
-          "translit": "a'uudhu",
-          "en": "I seek refuge",
-          "ur": "میں پناہ مانگتا ہوں"
-        },
-        {
-          "ar": "رَبِّ",
-          "ar_plain": "ربي",
-          "translit": "rabbi",
-          "en": "Lord of",
-          "ur": "کا رب"
-        },
-        {
-          "ar": "الْفَلَقِ",
-          "ar_plain": "الفلق",
-          "translit": "al-falaqi",
-          "en": "the daybreak",
-          "ur": "صبح"
-        },
-        {
-          "ar": "قُلْ",
-          "ar_plain": "قل",
-          "translit": "qul",
-          "en": "Say!",
-          "ur": "کہو!"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "1st person sg. present verb",
-          "ur": "پہلا شخص واحد حال verb"
-        },
-        {
-          "en": "Possessed noun (Lord)",
-          "ur": "Possessed noun (رب)"
-        },
-        {
-          "en": "Genitive noun (daybreak)",
-          "ur": "مجرور noun (صبح)"
-        },
-        {
-          "en": "Command verb (fi'l amr)",
-          "ur": "Command verb (فعل امر)"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch33-l02-ex05",
-      "target_translation": {
-        "en": "I seek refuge in the Lord of the daybreak.",
-        "ur": "میں صبح کے رب کی پناہ مانگتا ہوں۔"
-      },
-      "tiles": [
-        {
-          "ar": "أَعُوذُ",
-          "ar_plain": "أعوذ",
-          "translit": "a'uudhu",
-          "en": "I seek refuge",
-          "ur": "میں پناہ مانگتا ہوں"
-        },
-        {
-          "ar": "بِرَبِّ",
-          "ar_plain": "برب",
-          "translit": "bi-rabbi",
-          "en": "in the Lord of",
-          "ur": "کے رب کی پناہ میں"
-        },
-        {
-          "ar": "الْفَلَقِ",
-          "ar_plain": "الفلق",
-          "translit": "al-falaqi",
-          "en": "the daybreak",
-          "ur": "صبح"
-        },
-        {
-          "ar": "أَعْبُدُ",
-          "ar_plain": "أعبد",
-          "translit": "a'budu",
-          "en": "I worship",
-          "ur": "میں عبادت کرتا ہوں"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch33-l02-ex06",
-      "prompt": {
-        "ar": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ مِنْ شَرِّ مَا خَلَقَ",
-        "ar_plain": "قل أعوذ برب الفلق من شر ما خلق",
-        "translit": "qul a'uudhu bi-rabbi al-falaqi min sharri maa khalaqa",
-        "en": "Say: I seek refuge in the Lord of the daybreak from the evil of what He created.",
-        "ur": "کہہ دیجیے: میں اس کیreate کی ہوئی ہر چیز کے شر سے صبح کے رب کی پناہ مانگتا ہوں۔"
-      },
-      "options": [
-        {
-          "en": "Say: I seek refuge in the Lord of the daybreak from the evil of what He created.",
-          "ur": "کہہ دیجیے: میں اس کیreate کی ہوئی ہر چیز کے شر سے صبح کے رب کی پناہ مانگتا ہوں۔",
-          "translit": "—",
-          "ar_plain": ""
-        },
-        {
-          "en": "I seek refuge in the Lord of creation from evil.",
-          "ur": "میں create ہونے والی چیز کے شر سے رب کی پناہ مانگتا ہوں۔",
-          "translit": "—",
-          "ar_plain": ""
-        },
-        {
-          "en": "The Lord of the daybreak created evil.",
-          "ur": "صبح کے رب نے برائی پیدا کی۔",
-          "translit": "—",
-          "ar_plain": ""
-        },
-        {
-          "en": "Say: I worship the Lord of the daybreak.",
-          "ur": "کہہ دیجیے: میں صبح کے رب کی عبادت کرتا ہوں۔",
-          "translit": "—",
-          "ar_plain": ""
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "مِنْ شَرِّ = from the evil of. مَا خَلَقَ = what He created (relative clause). مَا is the subject of خَلَقَ.",
-        "ur": "مِنْ شَرِّ = شر سے۔ مَا خَلَقَ = جسے اس نے پیدا کیا (relative clause)۔ مَا خَلَقَ کا subject ہے۔"
+        "en": "مِنْ شَرِّ … وَمِنْ شَرِّ …: each ayah adds one more evil.",
+        "ur": "مِنْ شَرِّ … وَمِنْ شَرِّ …: ہر آیت ایک اور شر کا اضافہ کرتی ہے۔"
       }
     },
     {
-      "type": "TAP_TRANSLATION",
+      "type": "TRUE_FALSE",
       "id": "ch33-l02-ex07",
-      "prompt": {
-        "ar": "أَعُوذُ بِرَبِّ الْفَلَقِ",
-        "ar_plain": "اعوذ برب الفلق",
-        "translit": "a'uudhu birabbil-falaq",
-        "en": "I seek refuge in the Lord of daybreak.",
-        "ur": "میں صبح کے رب کی پناہ مانگتا ہوں۔"
+      "statement": {
+        "en": "The word repeated in 113:2, 113:3, 113:4 and 113:5 is شَرِّ, evil.",
+        "ur": "113:2، 113:3، 113:4 اور 113:5 میں دہرایا جانے والا لفظ شَرِّ، شر، ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مِنْ شَرِّ in 113:2, then وَمِنْ شَرِّ three times.",
+        "ur": "113:2 میں مِنْ شَرِّ، پھر تین بار وَمِنْ شَرِّ۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch33-l02-ex08",
+      "ayah_fragment": {
+        "ar": "مِن شَرِّ مَا خَلَقَ",
+        "surah_ref": "Al-Falaq 113:2"
       },
       "options": [
         {
-          "en": "The Lord of daybreak protected me.",
-          "ur": "صبح کے رب نے میری حفاظت کی۔"
+          "en": "It starts a new request.",
+          "ur": "یہ ایک نئی درخواست شروع کرتی ہے۔"
         },
         {
-          "en": "Seek refuge from the daybreak.",
-          "ur": "صبح سے پناہ مانگو۔"
+          "en": "It answers a question.",
+          "ur": "یہ ایک سوال کا جواب ہے۔"
         },
         {
-          "en": "I love the Lord of daybreak.",
-          "ur": "میں صبح کے رب سے محبت کرتا ہوں۔"
+          "en": "It says what refuge is sought from — it continues 113:1.",
+          "ur": "یہ بتاتی ہے کہ کس چیز سے پناہ مانگی جاتی ہے — یہ 113:1 کو آگے بڑھاتی ہے۔"
         },
         {
-          "en": "I seek refuge in the Lord of daybreak.",
-          "ur": "میں صبح کے رب کی پناہ مانگتا ہوں۔"
+          "en": "It names the Lord.",
+          "ur": "یہ رب کا نام بتاتی ہے۔"
         }
       ],
-      "correct_index": 3,
-      "xp_value": 1
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "113:1 asks for refuge; 113:2–5 say from what. The five ayat are one connected sentence.",
+        "ur": "113:1 پناہ مانگتی ہے؛ 113:2–5 بتاتی ہیں کس سے۔ پانچوں آیات ایک جڑا ہوا جملہ ہیں۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Al-Falaq: seeking refuge in Allah's protection",
-      "ar": "الْفَلَق: اللہ کی حفاظت میں پناہ مانگنا",
-      "ur": "Al-Falaq: اللہ کی protection میں پناہ مانگنا"
+      "en": "All of Al-Falaq",
+      "ar": "سُورَةُ الْفَلَقِ",
+      "ur": "پوری سورۃ الفلق"
     },
     "ayah": {
       "surah": 113,
       "ayah": 1,
       "label": "Al-Falaq 113:1",
       "ar": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
-      "en": "Say: I seek refuge in the Lord of the daybreak.",
-      "ur": "کہہ دیجیے: میں صبح کے رب کی پناہ مانگتا ہوں۔",
+      "en": "Say: I seek refuge in the Lord of daybreak,",
+      "ur": "کہہ دیجیے: میں صبح کے رب کی پناہ مانگتا ہوں،",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113001.mp3"
     },
     "highlighted_word_indices": [
       1,
       2
     ],
+    "highlighted_words": [
+      "أَعُوذُ",
+      "بِرَبِّ"
+    ],
     "noor_explanation": {
-      "en": "أَعُوذُ is the key verb — to seek refuge/protection. بِرَبِّ الْفَلَقِ tells WHO is the source of refuge. The structure أَعُوذُ بِ is used throughout the Quran for seeking Allah's protection.",
-      "ur": "أَعُوذُ key verb ہے — پناہ/حفاظت مانگنا۔ بِرَبِّ الْفَلَقِ بتاتا ہے کہ پناہ کس سے مانگی جا رہی ہے۔ Structure أَعُوذُ بِ پورے قرآن میں اللہ کی حفاظت مانگنے کے لیے gebraucht۔"
+      "en": "أَعُوذُ بِرَبِّ الْفَلَقِ: the request. Everything after it says what the refuge is from.",
+      "ur": "أَعُوذُ بِرَبِّ الْفَلَقِ: درخواست۔ اس کے بعد سب کچھ بتاتا ہے کہ پناہ کس سے ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "أَعُوذُ بِاللَّهِ is something you may have said before without understanding it. Now you know: أَعُوذُ = I seek refuge, بِاللَّهِ = in Allah. This is real comprehension of what you say in du'a!",
-      "ur": "أَعُوذُ بِاللَّاهِ کچھ ایسا ہے جو شاید آپ نے سمجھے بغیر کہا ہو۔ اب آپ جانتے ہیں: أَعُوذُ = میں پناہ مانگتا ہوں، بِاللَّاهِ = اللہ میں۔ یہ اس کی real comprehension ہے جو آپ du'a میں کہتے ہیں!"
+      "en": "You read all of Al-Falaq as one passage. Next: all of An-Nasr.",
+      "ur": "آپ نے پوری سورۃ الفلق ایک عبارت کے طور پر پڑھی۔ آگے: پوری سورۃ النصر۔"
     }
   }
 }

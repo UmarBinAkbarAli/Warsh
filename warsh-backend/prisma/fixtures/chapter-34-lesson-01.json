@@ -2,12 +2,12 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 34, Lesson 1 (ch34-l01) — what the imperfect tells us: an unfinished action, happening now (الْآنَ) or as a habit (كُلَّ يَوْمٍ); كَتَبَ / يَكْتُبُ and قَرَأَ / يَقْرَأُ supplied as pairs; نَعْبُدُ retrieved from Chapter 10; 20:46 أَسْمَعُ as an ongoing 'I hear'. The future is Chapter 35. Rebuilt 2026-10-02 in the proposal harvest, batch 2 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-34-content-proposal.md and its review amendments: the imperfect in context — not 'only right now' but unfinished or habitual action, shown by الْآنَ / كُلَّ يَوْمٍ; five subject readings on one sound Form I model (أَكْتُبُ، نَكْتُبُ، يَكْتُبُ، and تَكْتُبُ for أَنْتَ and for هِيَ) — four prefix patterns, with تَكْتُبُ decided by context; transfer to supplied complete imperfects (يَذْهَبُ، يَجْلِسُ، يَعْلَمُ — the middle vowel is given, never guessed); لَا + imperfect for 'does not', with 'Do not!' (لَا تَجْلِسْ، 9:40 لَا تَحْزَنْ) as a recognition contrast only (Chapter 45 teaches it); an object, an object pronoun and a time word; review; 12-question test. نَعْبُدُ is Chapter 10 retrieval; نَسْتَعِينُ is glossed (root ع و ن). The future (سَـ / سَوْفَ) is Chapter 35; أَنْتِ forms are Chapter 37. The old Al-Fatiha capstone ch34-l07 is kept as a DRAFT row at order 8 so no earlier completion counts as passing the new test. Removed: 'present tense = right now', the six-row 'full table', four prefixes read as four subjects, أَفْعَلُ as a pattern for every verb, نَسْتَعِينُ under س-ع-ن, the ash-Sharh line cited as 1:6, نَرَانِي, many-to-one matching, multi-word build tiles and out-of-range reveal highlights.",
+    "title": "What the Imperfect Tells Us",
+    "titleAr": "الْفِعْلُ الْمُضَارِعُ",
+    "titleUr": "فعل مضارع کیا بتاتا ہے",
     "chapter_order": 34,
     "lesson_order": 1,
-    "chapter_title": "Present Tense — المضارع",
-    "title": "Introduction to the Present Tense",
-    "titleAr": "مُقَدِّمَةُ الْمُضَارِعِ",
-    "source": "book4_lesson1_present_tense.md",
     "estimated_minutes": 8,
     "xp_reward": 10
   },
@@ -17,109 +17,138 @@
       "ayah": 5,
       "label": "Al-Fatiha 1:5",
       "ar": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
-      "en": "You alone we worship and You alone we seek help.",
-      "ur": "تجھ ہی کو ہم عبادت کرتے ہیں اور تجھ ہی سے ہم مدد مانگتے ہیں۔",
+      "en": "You alone we worship, and You alone we ask for help.",
+      "ur": "ہم تیری ہی عبادت کرتے ہیں اور تجھ ہی سے مدد مانگتے ہیں۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001005.mp3"
     },
     "noor_intro": {
-      "en": "This is the most important moment in your Arabic journey. The ayah you recite every day in Salah — إِيَّاكَ نَعْبُدُ — contains a present tense verb. Today you will understand it. نَعْبُدُ is المضارع — the present tense.",
-      "ur": "یہ آپ کے عربی سفر میں سب سے اہم لمحہ ہے۔ وہ ayah جو آپ روزانہ نماز میں پڑھتے ہیں — إِيَّاكَ نَعْبُدُ — اس میں ایک present tense verb ہے۔ آج آپ اسے سمجھیں گے۔ نَعْبُدُ ہے المضارع — present tense۔"
+      "en": "نَعْبُدُ — 'we worship' — you met it in Chapter 10. Today: this kind of verb, the imperfect, الْمُضَارِعُ.",
+      "ur": "نَعْبُدُ — 'ہم عبادت کرتے ہیں' — آپ باب 10 میں دیکھ چکے ہیں۔ آج: فعل کی یہ قسم، مضارع، الْمُضَارِعُ۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Done, or still going on?",
+        "ar": "كَتَبَ / يَكْتُبُ",
+        "ur": "ہو چکا، یا جاری ہے؟"
+      },
+      "examples": [
+        {
+          "ar": "كَتَبَ",
+          "ar_plain": "كتب",
+          "translit": "kataba",
+          "en": "he wrote",
+          "ur": "اس نے لکھا"
+        },
+        {
+          "ar": "يَكْتُبُ",
+          "ar_plain": "يكتب",
+          "translit": "yaktubu",
+          "en": "he writes / he is writing",
+          "ur": "وہ لکھتا ہے / لکھ رہا ہے"
+        }
+      ],
+      "explanation": {
+        "en": "كَتَبَ is the past you know: the action is done. يَكْتُبُ is the imperfect: the action is not finished — happening now, or done regularly.",
+        "ur": "كَتَبَ وہ ماضی ہے جو آپ جانتے ہیں: کام ہو چکا۔ يَكْتُبُ مضارع ہے: کام ختم نہیں ہوا — ابھی ہو رہا ہے، یا باقاعدگی سے ہوتا ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "يَكْتُبُ أَحْمَدُ الدَّرْسَ الْآنَ.",
+        "ar_plain": "يكتب أحمد الدرس الآن.",
+        "translit": "yaktubu aḥmadu d-darsa l-āna.",
+        "en": "Ahmad is writing the lesson now.",
+        "ur": "احمد ابھی سبق لکھ رہا ہے۔"
+      },
+      "explanation": {
+        "en": "الْآنَ, now: the action is happening at this moment.",
+        "ur": "الْآنَ، ابھی: کام اسی وقت ہو رہا ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "يَذْهَبُ أَحْمَدُ إِلَى الْمَسْجِدِ كُلَّ يَوْمٍ.",
+        "ar_plain": "يذهب أحمد إلى المسجد كل يوم.",
+        "translit": "yadhhabu aḥmadu ilā l-masjidi kulla yawmin.",
+        "en": "Ahmad goes to the mosque every day.",
+        "ur": "احمد ہر روز مسجد جاتا ہے۔"
+      },
+      "explanation": {
+        "en": "كُلَّ يَوْمٍ, every day: a habit. The same kind of verb, a different time — the context tells you.",
+        "ur": "كُلَّ يَوْمٍ، ہر روز: عادت۔ فعل کی وہی قسم، وقت مختلف — سیاق بتاتا ہے۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "قَرَأَ / يَقْرَأُ",
+        "ar": "قَرَأَ / يَقْرَأُ",
+        "ur": "قَرَأَ / يَقْرَأُ"
+      },
+      "examples": [
+        {
+          "ar": "قَرَأَ",
+          "ar_plain": "قرأ",
+          "translit": "qaraʾa",
+          "en": "he read",
+          "ur": "اس نے پڑھا"
+        },
+        {
+          "ar": "يَقْرَأُ",
+          "ar_plain": "يقرأ",
+          "translit": "yaqraʾu",
+          "en": "he reads / he is reading",
+          "ur": "وہ پڑھتا ہے / پڑھ رہا ہے"
+        }
+      ],
+      "explanation": {
+        "en": "Another pair, given to you: قَرَأَ, he read → يَقْرَأُ, he reads.",
+        "ur": "ایک اور جوڑا، آپ کو دیا گیا: قَرَأَ، اس نے پڑھا → يَقْرَأُ، وہ پڑھتا ہے۔"
+      }
+    },
+    {
       "type": "CONCEPT",
       "concept": {
-        "en": "What is المضارع (present tense)?",
-        "ar": "مَا هُوَ الْمُضَارِعُ؟",
-        "ur": "المضارع (present tense) کیا ہے؟"
+        "en": "Not only 'right now'",
+        "ar": "الْمُضَارِعُ",
+        "ur": "صرف 'ابھی' نہیں"
       },
       "explanation": {
-        "en": "المُضَارِعُ is the present tense form of the Arabic verb. It describes actions happening NOW, in the PRESENT, or on a REGULAR/HABITUAL basis. نَعْبُدُ = we worship (right now or regularly).",
-        "ur": "المُضَارِعُ عربی verb کی present tense form ہے۔ یہ اب ہو رہی actions، PRESENT میں، یا باقاعدگی سے describes کرتی ہے۔ نَعْبُدُ = ہم عبادت کرتے ہیں (ابھی یا باقاعدگی سے)۔"
+        "en": "The imperfect, الْمُضَارِعُ, is for actions not finished: now, or as a habit. Words like الْآنَ and كُلَّ يَوْمٍ show which. The future, with سَـ / سَوْفَ, is Chapter 35.",
+        "ur": "مضارع، الْمُضَارِعُ، ان کاموں کے لیے ہے جو ختم نہیں ہوئے: ابھی، یا عادت کے طور پر۔ الْآنَ اور كُلَّ يَوْمٍ جیسے الفاظ بتاتے ہیں کون سا۔ مستقبل، سَـ / سَوْفَ کے ساتھ، باب 35 میں ہے۔"
       }
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "نَعْبُدُ",
-        "ar_plain": "نعبد",
-        "translit": "na'budu",
-        "en": "we worship",
-        "ur": "ہم عبادت کرتے ہیں"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "1:5: You alone we worship, and You alone we ask for help.",
+        "ar": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+        "ur": "1:5: ہم تیری ہی عبادت کرتے ہیں اور تجھ ہی سے مدد مانگتے ہیں۔"
       },
       "explanation": {
-        "en": "Present tense from ع-ب-د (to worship). Prefix نَ- = we (first person plural). نَعْبُدُ = we worship. The نَ tells us this is present tense, first person plural.",
-        "ur": "ع-ب-د (عبادت کرنا) سے present tense۔ Prefix نَ- = ہم (first person plural)۔ نَعْبُدُ = ہم عبادت کرتے ہیں۔ نَ ہمیں بتاتا ہے کہ یہ present tense، first person plural ہے۔"
-      }
+        "en": "Chapter 10: نَعْبُدُ — we worship. An imperfect: what the worshipper does, always. نَسْتَعِينُ, we ask for help, is a longer form given whole (root ع و ن).",
+        "ur": "باب 10: نَعْبُدُ — ہم عبادت کرتے ہیں۔ مضارع: عبادت کرنے والا ہمیشہ کیا کرتا ہے۔ نَسْتَعِينُ، ہم مدد مانگتے ہیں، ایک لمبی صورت ہے جو پوری دی گئی ہے (مادہ ع و ن)۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001005.mp3"
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "نَسْتَعِينُ",
-        "ar_plain": "نستعين",
-        "translit": "nasta'iinu",
-        "en": "we seek help",
-        "ur": "ہم مدد مانگتے ہیں"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "20:46: Indeed, I am with you both; I hear and I see.",
+        "ar": "إِنَّنِي مَعَكُمَا أَسْمَعُ وَأَرَىٰ",
+        "ur": "20:46: بے شک میں تم دونوں کے ساتھ ہوں، سنتا ہوں اور دیکھتا ہوں۔"
       },
       "explanation": {
-        "en": "Present tense from the root ع-و-ن (help), in the pattern اسْتَفْعَلَ (\"ask for\"). Prefix نَ- = we. نَسْتَعِينُ = we ask for help. The نَ prefix is the same as in نَعْبُدُ — both first person plural.",
-        "ur": "مادہ ع-و-ن (مدد) سے، اسْتَفْعَلَ (\"مانگنا\") کے وزن پر مضارع۔ سابقہ نَ- = ہم۔ نَسْتَعِينُ = ہم مدد مانگتے ہیں۔ نَ کا سابقہ نَعْبُدُ جیسا ہے — دونوں جمع متکلم۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "يَعْبُدُ",
-        "ar_plain": "يعبد",
-        "translit": "ya'budu",
-        "en": "he worships",
-        "ur": "وہ عبادت کرتا ہے"
+        "en": "أَسْمَعُ, I hear — an imperfect, ongoing. أَرَى, I see, is given whole.",
+        "ur": "أَسْمَعُ، میں سنتا ہوں — مضارع، جاری۔ أَرَى، میں دیکھتا ہوں، پورا دیا گیا ہے۔"
       },
-      "explanation": {
-        "en": "Present tense from ع-ب-د (to worship). Prefix يَ- = he (third person masculine singular). يَعْبُدُ = he worships. This is the most common form in the Quran.",
-        "ur": "ع-ب-د (عبادت کرنا) سے present tense۔ Prefix يَ- = وہ (third person masculine singular)۔ يَعْبُدُ = وہ عبادت کرتا ہے۔ یہ قرآن میں سب سے عام form ہے۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "تَعْبُدُ",
-        "ar_plain": "تعبد",
-        "translit": "ta'budu",
-        "en": "you (masc. sg.) worship",
-        "ur": "تو عبادت کرتا ہے"
-      },
-      "explanation": {
-        "en": "Present tense from ع-ب-د. Prefix تَ- = you (second person masculine singular). تَعْبُدُ = you worship. The تَ prefix is the key marker of second person in present tense.",
-        "ur": "ع-ب-د سے present tense۔ Prefix تَ- = تو (second person masculine singular)۔ تَعْبُدُ = تو عبادت کرتا ہے۔ تَ prefix second person کا key marker ہے۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "أَعْبُدُ",
-        "ar_plain": "أعبد",
-        "translit": "a'budu",
-        "en": "I worship",
-        "ur": "میں عبادت کروں"
-      },
-      "explanation": {
-        "en": "Present tense from ع-ب-د. Prefix أَ- = I (first person singular). أَعْبُدُ = I worship. The أَ prefix marks first person singular.",
-        "ur": "ع-ب-د سے present tense۔ Prefix أَ- = میں (first person singular)۔ أَعْبُدُ = میں عبادت کروں۔ أَ prefix first person singular کو mark کرتا ہے۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "The four present tense prefixes",
-        "ur": "چار present tense prefixes"
-      },
-      "body": {
-        "en": "أَ- = I | تَ- = you (sg.) | يَ- = he | نَ- = we. These four prefixes cover all the persons in the present tense. Each person has a unique prefix that never changes.",
-        "ur": "أَ- = میں | تَ- = تو (واحد) | يَ- = وہ | نَ- = ہم۔ یہ چار prefixes present tense میں تمام persons کو cover کرتے ہیں۔ ہر person کا ایک unique prefix ہوتا ہے جو کبھی نہیں بدلتا۔"
-      }
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020046.mp3"
     }
   ],
   "exercises": [
@@ -127,317 +156,197 @@
       "type": "TAP_TRANSLATION",
       "id": "ch34-l01-ex01",
       "prompt": {
-        "ar": "نَعْبُدُ اللَّهَ",
-        "ar_plain": "نعبد الله",
-        "translit": "na'budullaaha",
-        "en": "We worship Allah.",
-        "ur": "ہم اللہ کی عبادت کرتے ہیں۔"
+        "ar": "يَكْتُبُ أَحْمَدُ الدَّرْسَ الْآنَ.",
+        "ar_plain": "يكتب أحمد الدرس الآن.",
+        "translit": "yaktubu aḥmadu d-darsa l-āna.",
+        "en": "Ahmad is writing the lesson now.",
+        "ur": "احمد ابھی سبق لکھ رہا ہے۔"
       },
       "options": [
         {
-          "en": "We worship Allah.",
-          "ur": "ہم اللہ کی عبادت کرتے ہیں۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "Ahmad wrote the lesson.",
+          "ur": "احمد نے سبق لکھا۔"
         },
         {
-          "en": "I worship Allah.",
-          "ur": "میں اللہ کی عبادت کروں۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "Ahmad is writing the lesson now.",
+          "ur": "احمد ابھی سبق لکھ رہا ہے۔"
         },
         {
-          "en": "He worships Allah.",
-          "ur": "وہ اللہ کی عبادت کرتا ہے۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "Ahmad will write the lesson tomorrow.",
+          "ur": "احمد کل سبق لکھے گا۔"
         },
         {
-          "en": "You worship Allah.",
-          "ur": "تو اللہ کی عبادت کرتا ہے۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "Write the lesson, Ahmad!",
+          "ur": "احمد، سبق لکھو!"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "نَعْبُدُ has the prefix نَ- = we (first person plural). أَ- = I, تَ- = you (sg.), يَ- = he. The prefix tells you the person.",
-        "ur": "نَعْبُدُ میں prefix نَ- = ہم (first person plural) ہے۔ أَ- = میں، تَ- = تو (واحد)، يَ- = وہ۔ Prefix person بتاتا ہے۔"
+        "en": "يَكْتُبُ + الْآنَ: he is writing, now.",
+        "ur": "يَكْتُبُ + الْآنَ: وہ لکھ رہا ہے، ابھی۔"
       }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch34-l01-ex02",
       "statement": {
-        "en": "يَعْبُدُ means 'he worships' because the prefix يَ- indicates third person masculine singular.",
-        "ur": "يَعْبُدُ کا مطلب ہے 'وہ عبادت کرتا ہے' کیونکہ prefix يَ- third person masculine singular indicate کرتا ہے۔",
+        "en": "This happens only once, right now.",
+        "ur": "یہ صرف ایک بار، ابھی ہو رہا ہے۔",
         "ar_example": {
-          "ar": "يَعْبُدُ اللَّهَ",
-          "ar_plain": "يعبد الله",
-          "translit": "ya'budullaaha",
-          "en": "He worships Allah.",
-          "ur": "وہ اللہ کی عبادت کرتا ہے۔"
+          "ar": "يَذْهَبُ أَحْمَدُ إِلَى الْمَسْجِدِ كُلَّ يَوْمٍ.",
+          "ar_plain": "يذهب أحمد إلى المسجد كل يوم.",
+          "translit": "yadhhabu aḥmadu ilā l-masjidi kulla yawmin.",
+          "en": "Ahmad goes to the mosque every day.",
+          "ur": "احمد ہر روز مسجد جاتا ہے۔"
         }
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كُلَّ يَوْمٍ, every day: a habit.",
+        "ur": "كُلَّ يَوْمٍ، ہر روز: عادت۔"
+      }
     },
     {
-      "type": "FILL_BLANK",
+      "type": "CONVERSATION_BUILDER",
       "id": "ch34-l01-ex03",
-      "mode": "TAP",
-      "sentence_ar": "___ الْمُسْلِمُ اللَّهَ",
-      "hint": {
-        "en": "The Muslim worships Allah.",
-        "ur": "مسلمان اللہ کی عبادت کرتا ہے۔"
+      "prompt_line": {
+        "ar": "مَاذَا يَفْعَلُ الطَّالِبُ الْآنَ؟",
+        "ar_plain": "ماذا يفعل الطالب الآن؟",
+        "translit": "mādhā yafʿalu ṭ-ṭālibu l-āna?",
+        "en": "What is the student doing now?",
+        "ur": "طالب علم ابھی کیا کر رہا ہے؟"
       },
+      "response_mode": "PICK",
       "options": [
         {
-          "ar": "يَعْبُدُ",
-          "ar_plain": "يعبد",
-          "translit": "ya'budu",
-          "en": "he worships",
-          "ur": "وہ عبادت کرتا ہے"
+          "ar": "قَرَأَ الْكِتَابَ أَمْسِ.",
+          "ar_plain": "قرأ الكتاب أمس.",
+          "translit": "qaraʾa l-kitāba amsi.",
+          "en": "He read the book yesterday.",
+          "ur": "اس نے گزشتہ کل کتاب پڑھی۔"
         },
         {
-          "ar": "أَعْبُدُ",
-          "ar_plain": "أعبد",
-          "translit": "a'budu",
-          "en": "I worship",
-          "ur": "میں عبادت کروں"
+          "ar": "الْكِتَابُ جَدِيدٌ.",
+          "ar_plain": "الكتاب جديد.",
+          "translit": "al-kitābu jadīdun.",
+          "en": "The book is new.",
+          "ur": "کتاب نئی ہے۔"
         },
         {
-          "ar": "تَعْبُدُ",
-          "ar_plain": "تعبد",
-          "translit": "ta'budu",
-          "en": "you worship",
-          "ur": "تو عبادت کرتا ہے"
-        },
-        {
-          "ar": "نَعْبُدُ",
-          "ar_plain": "نعبد",
-          "translit": "na'budu",
-          "en": "we worship",
-          "ur": "ہم عبادت کرتے ہیں"
+          "ar": "يَقْرَأُ الْكِتَابَ.",
+          "ar_plain": "يقرأ الكتاب.",
+          "translit": "yaqraʾu l-kitāba.",
+          "en": "He is reading the book.",
+          "ur": "وہ کتاب پڑھ رہا ہے۔"
         }
       ],
-      "correct_answer": {
-        "ar": "يَعْبُدُ",
-        "ar_plain": "يعبد",
-        "translit": "ya'budu",
-        "en": "he worships",
-        "ur": "وہ عبادت کرتا ہے"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch34-l01-ex04",
-      "left_column": [
-        {
-          "ar": "أَعْبُدُ",
-          "ar_plain": "أعبد",
-          "translit": "a'budu",
-          "en": "I worship",
-          "ur": "میں عبادت کروں"
-        },
-        {
-          "ar": "تَعْبُدُ",
-          "ar_plain": "تعبد",
-          "translit": "ta'budu",
-          "en": "you worship",
-          "ur": "تو عبادت کرتا ہے"
-        },
-        {
-          "ar": "يَعْبُدُ",
-          "ar_plain": "يعبد",
-          "translit": "ya'budu",
-          "en": "he worships",
-          "ur": "وہ عبادت کرتا ہے"
-        },
-        {
-          "ar": "نَعْبُدُ",
-          "ar_plain": "نعبد",
-          "translit": "na'budu",
-          "en": "we worship",
-          "ur": "ہم عبادت کرتے ہیں"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "First person singular — أَ-",
-          "ur": "پہلا شخص واحد — أَ-"
-        },
-        {
-          "en": "Second person masc. sg. — تَ-",
-          "ur": "دوسرا شخص مذکر واحد — تَ-"
-        },
-        {
-          "en": "Third person masc. sg. — يَ-",
-          "ur": "تیسرا شخص مذکر واحد — يَ-"
-        },
-        {
-          "en": "First person plural — نَ-",
-          "ur": "پہلا شخص جمع — نَ-"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch34-l01-ex05",
-      "target_translation": {
-        "en": "I worship Allah.",
-        "ur": "میں اللہ کی عبادت کروں۔"
-      },
-      "tiles": [
-        {
-          "ar": "أَعْبُدُ",
-          "ar_plain": "أعبد",
-          "translit": "a'budu",
-          "en": "I worship",
-          "ur": "میں عبادت کروں"
-        },
-        {
-          "ar": "اللَّهَ",
-          "ar_plain": "الله",
-          "translit": "allaaha",
-          "en": "Allah",
-          "ur": "اللہ"
-        },
-        {
-          "ar": "يَعْبُدُ",
-          "ar_plain": "يعبد",
-          "translit": "ya'budu",
-          "en": "he worships",
-          "ur": "وہ عبادت کرتا ہے"
-        },
-        {
-          "ar": "نَعْبُدُ",
-          "ar_plain": "نعبد",
-          "translit": "na'budu",
-          "en": "we worship",
-          "ur": "ہم عبادت کرتے ہیں"
-        }
-      ],
-      "correct_order": [
-        0,
-        1
-      ],
-      "xp_value": 1
+      "correct_option_index": 2,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "الْآنَ asks about now: يَقْرَأُ, he is reading.",
+        "ur": "الْآنَ ابھی کا پوچھتا ہے: يَقْرَأُ، وہ پڑھ رہا ہے۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch34-l01-ex06",
+      "id": "ch34-l01-ex04",
       "prompt": {
-        "ar": "إِنَّا نَعْبُدُ إِلَهًا وَاحِدًا",
-        "ar_plain": "إنا نعبد إلها واحدا",
-        "translit": "innaa na'budu ilaahan waahidan",
-        "en": "We worship one God.",
-        "ur": "ہم ایک اللہ کی عبادت کرتے ہیں۔"
+        "ar": "تَذْهَبُ زَيْنَبُ إِلَى الْمَدْرَسَةِ كُلَّ يَوْمٍ.",
+        "ar_plain": "تذهب زينب إلى المدرسة كل يوم.",
+        "translit": "tadhhabu zaynabu ilā l-madrasati kulla yawmin.",
+        "en": "Zaynab goes to school every day.",
+        "ur": "زینب ہر روز اسکول جاتی ہے۔"
       },
       "options": [
         {
-          "en": "We worship one God.",
-          "ur": "ہم ایک اللہ کی عبادت کرتے ہیں۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "Zaynab goes to school every day.",
+          "ur": "زینب ہر روز اسکول جاتی ہے۔"
         },
         {
-          "en": "He worships one God.",
-          "ur": "وہ ایک اللہ کی عبادت کرتا ہے۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "Zaynab went to school yesterday.",
+          "ur": "زینب گزشتہ کل اسکول گئی۔"
         },
         {
-          "en": "We are one God.",
-          "ur": "ہم ایک اللہ ہیں۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "Zaynab is at school only today.",
+          "ur": "زینب صرف آج اسکول میں ہے۔"
         },
         {
-          "en": "I worship one God.",
-          "ur": "میں ایک اللہ کی عبادت کروں۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "Go to school, Zaynab!",
+          "ur": "زینب، اسکول جاؤ!"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "إِنَّا = we (emphatic). نَعْبُدُ = we worship. إِلَهًا وَاحِدًا = one God (indefinite accusative). The prefix نَ- = we.",
-        "ur": "إِنَّا = ہم (emphatic)۔ نَعْبُدُ = ہم عبادت کرتے ہیں۔ إِلَهًا وَاحِدًا = ایک اللہ (نکرہ منصوب)۔ Prefix نَ- = ہم۔"
+        "en": "An imperfect + كُلَّ يَوْمٍ: a habit.",
+        "ur": "مضارع + كُلَّ يَوْمٍ: عادت۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch34-l01-ex07",
-      "xp_value": 1,
-      "statement": {
-        "en": "In نَعْبُدُ اللَّهَ, the prefix نَ- tells us the subject is 'we' — so it means 'We worship Allah.'",
-        "ur": "نَعْبُدُ اللَّهَ میں prefix نَ- بتاتا ہے کہ فاعل 'ہم' ہے — یعنی اس کا مطلب ہے 'ہم اللہ کی عبادت کرتے ہیں۔'",
-        "ar_example": {
-          "ar": "نَعْبُدُ اللَّهَ",
-          "ar_plain": "نعبد الله",
-          "translit": "na'budullaaha",
-          "en": "We worship Allah.",
-          "ur": "ہم اللہ کی عبادت کرتے ہیں۔"
-        }
+      "type": "MATCH_AYAH",
+      "id": "ch34-l01-ex05",
+      "ayah_fragment": {
+        "ar": "إِيَّاكَ نَعْبُدُ",
+        "surah_ref": "Al-Fatiha 1:5"
       },
-      "correct_answer": true,
+      "options": [
+        {
+          "en": "You alone we worshipped once.",
+          "ur": "ہم نے ایک بار تیری عبادت کی۔"
+        },
+        {
+          "en": "You alone we will worship tomorrow.",
+          "ur": "ہم کل تیری عبادت کریں گے۔"
+        },
+        {
+          "en": "Worship You alone!",
+          "ur": "صرف تیری عبادت کرو!"
+        },
+        {
+          "en": "You alone we worship — an ongoing act.",
+          "ur": "ہم تیری ہی عبادت کرتے ہیں — مسلسل عمل۔"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "نَعْبُدُ = نَ- (we) + عْبُدُ (worship). The prefix نَ- always marks first person plural. نَعْبُدُ اللَّهَ = We worship Allah — exactly what Al-Fatiha 1:5 says.",
-        "ur": "نَعْبُدُ = نَ- (ہم) + عْبُدُ (عبادت)۔ Prefix نَ- ہمیشہ first person plural mark کرتا ہے۔ نَعْبُدُ اللَّهَ = ہم اللہ کی عبادت کرتے ہیں — یہی الفاتحہ 1:5 کہتی ہے۔"
+        "en": "نَعْبُدُ (Chapter 10): we worship — not finished, always.",
+        "ur": "نَعْبُدُ (باب 10): ہم عبادت کرتے ہیں — جاری، ہمیشہ۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "The present tense (المضارع) — and why Al-Fatiha now makes sense",
-      "ar": "الْمُضَارِعُ — اور کیوں اب الفاتحہ سمجھ آتی ہے",
-      "ur": "Present tense (المضارع) — اور کیوں اب Al-Fatiha سمجھ آتی ہے"
+      "en": "The imperfect",
+      "ar": "الْمُضَارِعُ",
+      "ur": "فعل مضارع"
     },
     "ayah": {
-      "surah": 1,
-      "ayah": 5,
-      "label": "Al-Fatiha 1:5",
-      "ar": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
-      "en": "You alone we worship and You alone we seek help.",
-      "ur": "تجھ ہی کو ہم عبادت کرتے ہیں اور تجھ ہی سے ہم مدد مانگتے ہیں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001005.mp3"
+      "surah": 20,
+      "ayah": 46,
+      "label": "Ta-Ha 20:46",
+      "ar": "إِنَّنِي مَعَكُمَا أَسْمَعُ وَأَرَىٰ",
+      "en": "Indeed, I am with you both; I hear and I see.",
+      "ur": "بے شک میں تم دونوں کے ساتھ ہوں، سنتا ہوں اور دیکھتا ہوں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020046.mp3"
     },
     "highlighted_word_indices": [
-      1,
       2
     ],
+    "highlighted_words": [
+      "أَسْمَعُ"
+    ],
     "noor_explanation": {
-      "en": "نَعْبُدُ = we worship (present tense). نَسْتَعِينُ = we seek help (present tense). Both have the نَ- prefix = we. Now in every Salah, when you say إِيَّاكَ نَعْبُدُ, you know exactly what it means: YOU we worship.",
-      "ur": "نَعْبُدُ = ہم عبادت کرتے ہیں (present tense)۔ نَسْتَعِينُ = ہم مدد مانگتے ہیں (present tense)۔ دونوں میں نَ- prefix = ہم۔ اب ہر نماز میں، جب آپ إِيَّاكَ نَعْبُدُ کہتے ہیں، آپ کو exactly معلوم ہے کہ اس کا مطلب ہے: تجھے ہم عبادت کرتے ہیں۔"
+      "en": "أَسْمَعُ: I hear — not finished, not once: ongoing. That is what the imperfect tells you.",
+      "ur": "أَسْمَعُ: میں سنتا ہوں — ختم نہیں، ایک بار نہیں: جاری۔ یہی مضارع بتاتا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You just unlocked the meaning of Al-Fatiha. نَعْبُدُ means we worship. The نَ tells us it is happening NOW or REGULARLY. You have crossed the most important threshold in Arabic — the present tense.",
-      "ur": "آپ نے ابھی Al-Fatiha کا مطلب unlock کیا ہے۔ نَعْبُدُ کا مطلب ہے ہم عبادت کرتے ہیں۔ نَ ہمیں بتاتا ہے کہ یہ اب ہو رہا ہے یا باقاعدگی سے ہوتا ہے۔ آپ عربی میں سب سے اہم threshold عبور کر چکے ہیں — present tense۔"
+      "en": "The imperfect is for what is happening or usually happens. Next: who is doing it.",
+      "ur": "مضارع اس کے لیے ہے جو ہو رہا ہے یا عادتاً ہوتا ہے۔ آگے: کون کر رہا ہے۔"
     }
   }
 }

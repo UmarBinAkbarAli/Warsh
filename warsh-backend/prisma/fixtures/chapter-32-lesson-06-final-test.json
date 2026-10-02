@@ -1,0 +1,445 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 32 final test (ch32-test, new). Twelve multiple-choice questions on the proposal's six two-question strands: مَتَى / إِذَا (q01–02), the event (q03–04), a stated response and an event-only excerpt (q05–06), 94:7's command and meaning (q07–08, recognition only — no imperative formation), fresh authored sentences with the verb meaning supplied (q09–10), 84:1 retrieval and a fresh event-only clause (q11–12). Pass mark 80 %: 9/12 fails, 10/12 passes. Rebuilt 2026-10-02 in the proposal harvest, batch 2 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-32-content-proposal.md and its review amendments: the chapter now teaches what its map promised — reading an إِذَا clause. مَتَى (Chapter 31) asks; إِذَا introduces an event; the event and its response (جَوَابُ الشَّرْطِ, named only); the two فَ of 94:7 (the first continues, the second marks the response; the command is انْصَبْ, glossed — commands are Chapter 51); transfer to 84:1 and 81:1, whose ayah states no response. Al-Falaq's إِذَا وَقَبَ / إِذَا حَسَدَ are Chapter 19 retrieval; An-Nasr is left to Chapter 33. No إِنْ or jussive (Chapter 68); no tense rule is taught. Removed: the sentence-type / إِنَّ / لَيْسَ re-run of Chapter 29, لَيْسَ with a nominative predicate, إِذَا labelled حرف جر, 'a future event in the past', فَ called an imperative particle, the duplicated An-Nasr parse items, and corrupted strings.",
+    "title": "Chapter 32 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الثَّانِي وَالثَّلَاثِينَ",
+    "titleUr": "باب 32 کا آخری امتحان",
+    "chapter_order": 32,
+    "lesson_order": 6,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 94,
+      "ayah": 7,
+      "label": "Ash-Sharh 94:7",
+      "ar": "فَإِذَا فَرَغْتَ فَانصَبْ",
+      "en": "So when you have finished, then strive.",
+      "ur": "پس جب آپ فارغ ہوں تو (عبادت میں) محنت کیجیے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/094007.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 32.",
+      "ur": "باب 32 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 32 — reading إِذَا",
+      "ar": "إِذَا وَمَا يَتْبَعُهَا",
+      "ur": "باب 32 — إِذَا کی پڑھائی"
+    },
+    "ayah": {
+      "surah": 94,
+      "ayah": 7,
+      "label": "Ash-Sharh 94:7",
+      "ar": "فَإِذَا فَرَغْتَ فَانصَبْ",
+      "en": "So when you have finished, then strive.",
+      "ur": "پس جب آپ فارغ ہوں تو (عبادت میں) محنت کیجیے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/094007.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "فَإِذَا",
+      "فَرَغْتَ",
+      "فَانصَبْ"
+    ],
+    "noor_explanation": {
+      "en": "فَإِذَا فَرَغْتَ فَانْصَبْ: you finish Chapter 32 able to find the event, the response, and the فَ between them.",
+      "ur": "فَإِذَا فَرَغْتَ فَانْصَبْ: آپ باب 32 اس حال میں مکمل کرتے ہیں کہ واقعہ، جواب، اور ان کے درمیان کا فَ پہچان سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 32 complete. Chapter 33: reading whole surahs — Al-Falaq, An-Nasr and An-Nas.",
+      "ur": "باب 32 مکمل۔ باب 33: پوری سورتیں پڑھنا — الفلق، النصر اور الناس۔"
+    }
+  },
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 32,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch32-test-q01",
+        "topic": {
+          "en": "مَتَى or إِذَا",
+          "ur": "مَتَى یا إِذَا"
+        },
+        "prompt": {
+          "en": "Which sentence asks a question?",
+          "ur": "کون سا جملہ سوال پوچھتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "إِذَا رَجَعَ الْإِمَامُ صَلَّيْنَا.",
+            "ur": "إِذَا رَجَعَ الْإِمَامُ صَلَّيْنَا."
+          },
+          {
+            "en": "رَجَعَ الْإِمَامُ أَمْسِ.",
+            "ur": "رَجَعَ الْإِمَامُ أَمْسِ."
+          },
+          {
+            "en": "مَتَى رَجَعَ الْإِمَامُ؟",
+            "ur": "مَتَى رَجَعَ الْإِمَامُ؟"
+          },
+          {
+            "en": "إِذَا جَاءَ الْمَسَاءُ رَجَعْنَا.",
+            "ur": "إِذَا جَاءَ الْمَسَاءُ رَجَعْنَا."
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch32-test-q02",
+        "topic": {
+          "en": "مَتَى or إِذَا",
+          "ur": "مَتَى یا إِذَا"
+        },
+        "prompt": {
+          "en": "What does إِذَا do here? (الضَّيْفُ = the guest)",
+          "ur": "یہاں إِذَا کیا کرتا ہے؟ (الضَّيْفُ = مہمان)"
+        },
+        "arabic": "إِذَا جَاءَ الضَّيْفُ قُمْنَا.",
+        "options": [
+          {
+            "en": "It introduces an event: when the guest comes.",
+            "ur": "یہ واقعہ شروع کرتا ہے: جب مہمان آتا ہے۔"
+          },
+          {
+            "en": "It asks when the guest came.",
+            "ur": "یہ پوچھتا ہے مہمان کب آیا۔"
+          },
+          {
+            "en": "It means 'because'.",
+            "ur": "اس کا مطلب 'کیونکہ' ہے۔"
+          },
+          {
+            "en": "It means 'did…?'.",
+            "ur": "اس کا مطلب 'کیا…؟' ہے۔"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch32-test-q03",
+        "topic": {
+          "en": "The event",
+          "ur": "واقعہ"
+        },
+        "prompt": {
+          "en": "What is the event?",
+          "ur": "واقعہ کیا ہے؟"
+        },
+        "arabic": "إِذَا رَجَعَتْ أُمِّي أَكَلْنَا.",
+        "options": [
+          {
+            "en": "we eat",
+            "ur": "ہم کھانا کھاتے ہیں"
+          },
+          {
+            "en": "my mother comes back",
+            "ur": "امی واپس آتی ہیں"
+          },
+          {
+            "en": "we go out",
+            "ur": "ہم باہر جاتے ہیں"
+          },
+          {
+            "en": "my mother eats",
+            "ur": "امی کھانا کھاتی ہیں"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch32-test-q04",
+        "topic": {
+          "en": "The event",
+          "ur": "واقعہ"
+        },
+        "prompt": {
+          "en": "What is the event? (سَكَتَ = fell silent)",
+          "ur": "واقعہ کیا ہے؟ (سَكَتَ = خاموش ہوا)"
+        },
+        "arabic": "إِذَا دَخَلَ الْأُسْتَاذُ الْفَصْلَ سَكَتَ الطُّلَّابُ.",
+        "options": [
+          {
+            "en": "the students fall silent",
+            "ur": "طلبہ خاموش ہو جاتے ہیں"
+          },
+          {
+            "en": "the students enter",
+            "ur": "طلبہ داخل ہوتے ہیں"
+          },
+          {
+            "en": "the teacher falls silent",
+            "ur": "استاد خاموش ہو جاتے ہیں"
+          },
+          {
+            "en": "the teacher enters the classroom",
+            "ur": "استاد کلاس میں داخل ہوتے ہیں"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch32-test-q05",
+        "topic": {
+          "en": "The response",
+          "ur": "جواب"
+        },
+        "prompt": {
+          "en": "What is the response? (فَرِحَ = was glad)",
+          "ur": "جواب کیا ہے؟ (فَرِحَ = خوش ہوا)"
+        },
+        "arabic": "إِذَا جَاءَ رَمَضَانُ فَرِحَ النَّاسُ.",
+        "options": [
+          {
+            "en": "the people are glad",
+            "ur": "لوگ خوش ہوتے ہیں"
+          },
+          {
+            "en": "Ramadan comes",
+            "ur": "رمضان آتا ہے"
+          },
+          {
+            "en": "no response is stated",
+            "ur": "کوئی جواب بیان نہیں ہوا"
+          },
+          {
+            "en": "the people come",
+            "ur": "لوگ آتے ہیں"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch32-test-q06",
+        "topic": {
+          "en": "The response",
+          "ur": "جواب"
+        },
+        "prompt": {
+          "en": "Is a response shown in these words? (الْمَسَاءُ = the evening)",
+          "ur": "کیا ان الفاظ میں جواب دکھایا گیا ہے؟ (الْمَسَاءُ = شام)"
+        },
+        "arabic": "إِذَا جَاءَ الْمَسَاءُ …",
+        "options": [
+          {
+            "en": "Yes: the evening comes.",
+            "ur": "ہاں: شام آتی ہے۔"
+          },
+          {
+            "en": "Yes: we go home.",
+            "ur": "ہاں: ہم گھر جاتے ہیں۔"
+          },
+          {
+            "en": "No — only the event is shown.",
+            "ur": "نہیں — صرف واقعہ دکھایا گیا ہے۔"
+          },
+          {
+            "en": "It is a question.",
+            "ur": "یہ سوال ہے۔"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch32-test-q07",
+        "topic": {
+          "en": "Ash-Sharh 94:7",
+          "ur": "سورۃ الشرح 94:7"
+        },
+        "prompt": {
+          "en": "Ash-Sharh 94:7. Which word is the command?",
+          "ur": "سورۃ الشرح 94:7۔ حکم کون سا لفظ ہے؟"
+        },
+        "arabic": "فَإِذَا فَرَغْتَ فَانصَبْ",
+        "options": [
+          {
+            "en": "فَ",
+            "ur": "فَ"
+          },
+          {
+            "en": "إِذَا",
+            "ur": "إِذَا"
+          },
+          {
+            "en": "فَرَغْتَ",
+            "ur": "فَرَغْتَ"
+          },
+          {
+            "en": "انْصَبْ",
+            "ur": "انْصَبْ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch32-test-q08",
+        "topic": {
+          "en": "Ash-Sharh 94:7",
+          "ur": "سورۃ الشرح 94:7"
+        },
+        "prompt": {
+          "en": "Ash-Sharh 94:7. What does it say?",
+          "ur": "سورۃ الشرح 94:7۔ یہ کیا کہتی ہے؟"
+        },
+        "arabic": "فَإِذَا فَرَغْتَ فَانصَبْ",
+        "options": [
+          {
+            "en": "Strive until you finish.",
+            "ur": "فارغ ہونے تک محنت کیجیے۔"
+          },
+          {
+            "en": "So when you have finished, then strive.",
+            "ur": "پس جب آپ فارغ ہوں تو محنت کیجیے۔"
+          },
+          {
+            "en": "When did you finish? Strive.",
+            "ur": "آپ کب فارغ ہوئے؟ محنت کیجیے۔"
+          },
+          {
+            "en": "You finished, so do not strive.",
+            "ur": "آپ فارغ ہو گئے، اس لیے محنت نہ کیجیے۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch32-test-q09",
+        "topic": {
+          "en": "A new sentence",
+          "ur": "نیا جملہ"
+        },
+        "prompt": {
+          "en": "(نَزَلَ = came down) What happens when the rain comes down?",
+          "ur": "(نَزَلَ = اترا) جب بارش اترتی ہے تو کیا ہوتا ہے؟"
+        },
+        "arabic": "إِذَا نَزَلَ الْمَطَرُ رَجَعَ الْأَوْلَادُ إِلَى الْبَيْتِ.",
+        "options": [
+          {
+            "en": "The children go out.",
+            "ur": "بچے باہر جاتے ہیں۔"
+          },
+          {
+            "en": "The children go back home.",
+            "ur": "بچے گھر واپس جاتے ہیں۔"
+          },
+          {
+            "en": "The rain stops.",
+            "ur": "بارش رک جاتی ہے۔"
+          },
+          {
+            "en": "Nothing is said.",
+            "ur": "کچھ بیان نہیں ہوا۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch32-test-q10",
+        "topic": {
+          "en": "A new sentence",
+          "ur": "نیا جملہ"
+        },
+        "prompt": {
+          "en": "(سُعَدَاءُ = happy) Where does the response start?",
+          "ur": "(سُعَدَاءُ = خوش) جواب کہاں سے شروع ہوتا ہے؟"
+        },
+        "arabic": "إِذَا فَهِمَ الطُّلَّابُ الدَّرْسَ فَهُمْ سُعَدَاءُ.",
+        "options": [
+          {
+            "en": "فَهُمْ",
+            "ur": "فَهُمْ"
+          },
+          {
+            "en": "إِذَا",
+            "ur": "إِذَا"
+          },
+          {
+            "en": "فَهِمَ",
+            "ur": "فَهِمَ"
+          },
+          {
+            "en": "الدَّرْسَ",
+            "ur": "الدَّرْسَ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch32-test-q11",
+        "topic": {
+          "en": "Al-Inshiqaq 84:1",
+          "ur": "سورۃ الانشقاق 84:1"
+        },
+        "prompt": {
+          "en": "Al-Inshiqaq 84:1. What does this ayah show?",
+          "ur": "سورۃ الانشقاق 84:1۔ یہ آیت کیا دکھاتی ہے؟"
+        },
+        "arabic": "إِذَا السَّمَاءُ انشَقَّتْ",
+        "options": [
+          {
+            "en": "A question: when did the sky split?",
+            "ur": "سوال: آسمان کب پھٹا؟"
+          },
+          {
+            "en": "A response with فَ.",
+            "ur": "فَ کے ساتھ جواب۔"
+          },
+          {
+            "en": "A command to the sky.",
+            "ur": "آسمان کو حکم۔"
+          },
+          {
+            "en": "An event: when the sky splits open.",
+            "ur": "ایک واقعہ: جب آسمان پھٹ جائے۔"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch32-test-q12",
+        "topic": {
+          "en": "A new sentence",
+          "ur": "نیا جملہ"
+        },
+        "prompt": {
+          "en": "(الْقَمَرُ = the moon, طَلَعَ = rose) What do these words show?",
+          "ur": "(الْقَمَرُ = چاند، طَلَعَ = نکلا) یہ الفاظ کیا دکھاتے ہیں؟"
+        },
+        "arabic": "إِذَا الْقَمَرُ طَلَعَ …",
+        "options": [
+          {
+            "en": "A question about the moon.",
+            "ur": "چاند کے بارے میں سوال۔"
+          },
+          {
+            "en": "An event and its response.",
+            "ur": "واقعہ اور اس کا جواب۔"
+          },
+          {
+            "en": "An event only: when the moon rises.",
+            "ur": "صرف واقعہ: جب چاند نکلتا ہے۔"
+          },
+          {
+            "en": "A reason: because the moon rose.",
+            "ur": "وجہ: کیونکہ چاند نکلا۔"
+          }
+        ],
+        "correct_index": 2
+      }
+    ]
+  }
+}

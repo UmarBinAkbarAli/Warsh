@@ -809,6 +809,31 @@ Everything below this list is either done and verified, or one of these:
    Discarded: the proposals' extra transfer/reading lessons (their jobs sit in
    the reviews), the separate Ch 28 feminine-forms lesson (taught inside each
    lesson), and all process text. Not done: scholarly review, Android pass.
+   **Proposal harvest, batch 2 (Chapters 31–35): live in production
+   2026-10-02.** Every lesson rebuilt to its proposal (they had only had the
+   2026-10-02 critical fixes); each chapter gained a REVIEW and a 12-question
+   `chNN-test` (80 %). Ch 31 common questions (هَلْ/أَ, مَنْ/مَا/مَاذَا, أَيْنَ/
+   كَيْفَ, مَتَى/لِمَاذَا, كَمْ + ـًا with digit answers), new context lesson
+   `ch31-l07`, and `ch31-l06` rebuilt in place as **CL10 Asking a Teacher**
+   (asks a word's meaning, asks for an example with هَلْ عِنْدَكَ مِثَالٌ؟ — no
+   imperative — and thanks; 10 new phrase clips); Ch 32 now teaches its map
+   topic, إِذَا clauses (event, response, the two فَ of 94:7, 84:1/81:1 as
+   event-only ayat); Ch 33 complete Al-Falaq, An-Nasr (110:2 now included) and,
+   new, An-Nas (`ch33-l06`), with `ch33-l05` turned into the review; Ch 34 the
+   imperfect on five core readings (تَـ by context), supplied stems, لَا vs
+   'Do not!', with the old Al-Fatiha capstone `ch34-l07` kept as a **DRAFT row
+   at order 8** so its completions never count as passing `ch34-test`; Ch 35
+   سَـ / سَوْفَ without the near/far rule, past/command contrast, لَنْ
+   recognition. Published with `scripts/promote-chapters-31-35.cjs` (staging
+   first: 115-check API walk — order, test locked on fetch and submit, key
+   stripped, 9/12 fails, 10/12 passes, replay 0 XP, ch34-l07 not served), then
+   `content:baseline` (469/469), 235 catalogue clips (R2 3863/3863) and the 10
+   CL10 phrase clips. Map entries for Ch 31–35 rewritten (S10). 128 new scenes
+   requested in `Docs/lesson-illustrations-needed.md`. Discarded: the split of
+   when/why into two lessons, the separate listening-task authoring process,
+   reading-budget and approval text. The Conversation Labs roadmap's CL10 row
+   still says "Provisional rebuild" — that file carries Codex's uncommitted
+   edits and was left alone. Not done: scholarly review, Android pass.
    **Chapter 25 (`Docs/proposals/chapter-25-content-correction.md`) is
    corrected, staging-verified and promoted to production 2026-09-24** on the
    owner's instruction. The first rewrite was reviewed and fixed before

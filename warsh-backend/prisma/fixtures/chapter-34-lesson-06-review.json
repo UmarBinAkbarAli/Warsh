@@ -1,0 +1,493 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 34 review (ch34-l06, was the first Al-Fatiha capstone; now the REVIEW at display 6). Two different instances for each test strand — now/habit, the prefixes with تَـ decided by context, transfer with supplied stems, لَا 'does not' versus 'Do not!', object and time, and an integrated item with نَعْبُدُ as Chapter 10 retrieval. No new stems or rules. Rebuilt 2026-10-02 in the proposal harvest, batch 2 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-34-content-proposal.md and its review amendments: the imperfect in context — not 'only right now' but unfinished or habitual action, shown by الْآنَ / كُلَّ يَوْمٍ; five subject readings on one sound Form I model (أَكْتُبُ، نَكْتُبُ، يَكْتُبُ، and تَكْتُبُ for أَنْتَ and for هِيَ) — four prefix patterns, with تَكْتُبُ decided by context; transfer to supplied complete imperfects (يَذْهَبُ، يَجْلِسُ، يَعْلَمُ — the middle vowel is given, never guessed); لَا + imperfect for 'does not', with 'Do not!' (لَا تَجْلِسْ، 9:40 لَا تَحْزَنْ) as a recognition contrast only (Chapter 45 teaches it); an object, an object pronoun and a time word; review; 12-question test. نَعْبُدُ is Chapter 10 retrieval; نَسْتَعِينُ is glossed (root ع و ن). The future (سَـ / سَوْفَ) is Chapter 35; أَنْتِ forms are Chapter 37. The old Al-Fatiha capstone ch34-l07 is kept as a DRAFT row at order 8 so no earlier completion counts as passing the new test. Removed: 'present tense = right now', the six-row 'full table', four prefixes read as four subjects, أَفْعَلُ as a pattern for every verb, نَسْتَعِينُ under س-ع-ن, the ash-Sharh line cited as 1:6, نَرَانِي, many-to-one matching, multi-word build tiles and out-of-range reveal highlights.",
+    "title": "Chapter 34 Review",
+    "titleAr": "مُرَاجَعَةُ الْفَصْلِ الرَّابِعِ وَالثَّلَاثِينَ",
+    "titleUr": "باب 34 کی دہرائی",
+    "chapter_order": 34,
+    "lesson_order": 6,
+    "estimated_minutes": 12,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 1,
+      "ayah": 5,
+      "label": "Al-Fatiha 1:5",
+      "ar": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+      "en": "You alone we worship, and You alone we ask for help.",
+      "ur": "ہم تیری ہی عبادت کرتے ہیں اور تجھ ہی سے مدد مانگتے ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001005.mp3"
+    },
+    "noor_intro": {
+      "en": "نَعْبُدُ one more time. Then a review of everything in Chapter 34.",
+      "ur": "ایک بار پھر نَعْبُدُ۔ پھر باب 34 کی پوری دہرائی۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 34 at a glance",
+        "ar": "أَكْتُبُ · نَكْتُبُ · يَكْتُبُ · تَكْتُبُ",
+        "ur": "باب 34 ایک نظر میں"
+      },
+      "explanation": {
+        "en": "أ I · ن we · ي he · ت you (a man) or she — the context decides. لَا before it: does not. An object follows; a time word says now or usually.",
+        "ur": "أ میں · ن ہم · ي وہ · ت تم (مرد) یا وہ (عورت) — سیاق فیصلہ کرتا ہے۔ اس سے پہلے لَا: نہیں کرتا۔ مفعول بعد میں؛ وقت کا لفظ بتاتا ہے ابھی یا عادتاً۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "يَا خَالِدُ، أَيْنَ تَعْمَلُ؟ — أَعْمَلُ فِي الْمَدْرَسَةِ، وَلَا أَعْمَلُ يَوْمَ الْجُمُعَةِ.",
+        "ar_plain": "يا خالد، أين تعمل؟ — أعمل في المدرسة، ولا أعمل يوم الجمعة.",
+        "translit": "yā khālidu, ayna taʿmalu? — aʿmalu fī l-madrasati, wa-lā aʿmalu yawma l-jumuʿati.",
+        "en": "Khalid, where do you work? — I work at the school, and I do not work on Friday.",
+        "ur": "خالد، تم کہاں کام کرتے ہو؟ — میں اسکول میں کام کرتا ہوں، اور جمعہ کے دن کام نہیں کرتا۔"
+      },
+      "explanation": {
+        "en": "A new exchange (يَعْمَلُ = he works). Each piece of Chapter 34 is in it: the prefixes, لَا, and a time word.",
+        "ur": "ایک نئی گفتگو (يَعْمَلُ = وہ کام کرتا ہے)۔ باب 34 کا ہر حصہ اس میں ہے: سابقے، لَا، اور وقت کا لفظ۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch34-l06-ex01",
+      "prompt": {
+        "ar": "يَجْلِسُ الْأُسْتَاذُ الْآنَ.",
+        "ar_plain": "يجلس الأستاذ الآن.",
+        "translit": "yajlisu l-ustādhu l-āna.",
+        "en": "The teacher is sitting down now.",
+        "ur": "استاد ابھی بیٹھ رہے ہیں۔"
+      },
+      "options": [
+        {
+          "en": "The teacher sat down yesterday.",
+          "ur": "استاد گزشتہ کل بیٹھے۔"
+        },
+        {
+          "en": "Sit down, teacher!",
+          "ur": "استاد جی، بیٹھیے!"
+        },
+        {
+          "en": "The teacher will sit down tomorrow.",
+          "ur": "استاد کل بیٹھیں گے۔"
+        },
+        {
+          "en": "The teacher is sitting down now.",
+          "ur": "استاد ابھی بیٹھ رہے ہیں۔"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يَجْلِسُ + الْآنَ: happening now.",
+        "ur": "يَجْلِسُ + الْآنَ: ابھی ہو رہا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch34-l06-ex02",
+      "statement": {
+        "en": "This is a habit.",
+        "ur": "یہ عادت ہے۔",
+        "ar_example": {
+          "ar": "نَقْرَأُ الْقُرْآنَ كُلَّ يَوْمٍ.",
+          "ar_plain": "نقرأ القرآن كل يوم.",
+          "translit": "naqraʾu l-qurʾāna kulla yawmin.",
+          "en": "We read the Quran every day.",
+          "ur": "ہم ہر روز قرآن پڑھتے ہیں۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كُلَّ يَوْمٍ: every day.",
+        "ur": "كُلَّ يَوْمٍ: ہر روز۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch34-l06-ex03",
+      "mode": "TAP",
+      "sentence_ar": "___ الدَّرْسَ.",
+      "hint": {
+        "en": "I write the lesson.",
+        "ur": "میں سبق لکھتا ہوں۔"
+      },
+      "options": [
+        {
+          "ar": "نَكْتُبُ",
+          "ar_plain": "نكتب",
+          "translit": "naktubu",
+          "en": "we write",
+          "ur": "ہم لکھتے ہیں"
+        },
+        {
+          "ar": "أَكْتُبُ",
+          "ar_plain": "أكتب",
+          "translit": "aktubu",
+          "en": "I write",
+          "ur": "میں لکھتا ہوں"
+        },
+        {
+          "ar": "يَكْتُبُ",
+          "ar_plain": "يكتب",
+          "translit": "yaktubu",
+          "en": "he writes",
+          "ur": "وہ لکھتا ہے"
+        },
+        {
+          "ar": "تَكْتُبُ",
+          "ar_plain": "تكتب",
+          "translit": "taktubu",
+          "en": "you (m.) write / she writes",
+          "ur": "تم لکھتے ہو / وہ لکھتی ہے"
+        }
+      ],
+      "correct_answer": {
+        "ar": "أَكْتُبُ",
+        "ar_plain": "أكتب",
+        "translit": "aktubu",
+        "en": "I write",
+        "ur": "میں لکھتا ہوں"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "I: أَـ — أَكْتُبُ.",
+        "ur": "میں: أَـ — أَكْتُبُ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch34-l06-ex04",
+      "statement": {
+        "en": "Here تَذْهَبُ means 'you go'.",
+        "ur": "یہاں تَذْهَبُ کا مطلب 'تم جاتے ہو' ہے۔",
+        "ar_example": {
+          "ar": "تَذْهَبُ مَرْيَمُ إِلَى الْمَسْجِدِ.",
+          "ar_plain": "تذهب مريم إلى المسجد.",
+          "translit": "tadhhabu maryamu ilā l-masjidi.",
+          "en": "Maryam goes to the mosque.",
+          "ur": "مریم مسجد جاتی ہے۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَرْيَمُ is named: she goes.",
+        "ur": "مَرْيَمُ کا نام ہے: وہ جاتی ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch34-l06-ex05",
+      "mode": "TAP",
+      "sentence_ar": "يَا عُمَرُ، أَيْنَ ___؟",
+      "hint": {
+        "en": "Umar, where do you sit?",
+        "ur": "عمر، تم کہاں بیٹھتے ہو؟"
+      },
+      "options": [
+        {
+          "ar": "يَجْلِسُ",
+          "ar_plain": "يجلس",
+          "translit": "yajlisu",
+          "en": "he sits",
+          "ur": "وہ بیٹھتا ہے"
+        },
+        {
+          "ar": "أَجْلِسُ",
+          "ar_plain": "أجلس",
+          "translit": "ajlisu",
+          "en": "I sit",
+          "ur": "میں بیٹھتا ہوں"
+        },
+        {
+          "ar": "تَجْلِسُ",
+          "ar_plain": "تجلس",
+          "translit": "tajlisu",
+          "en": "you sit / she sits",
+          "ur": "تم بیٹھتے ہو / وہ بیٹھتی ہے"
+        },
+        {
+          "ar": "نَجْلِسُ",
+          "ar_plain": "نجلس",
+          "translit": "najlisu",
+          "en": "we sit",
+          "ur": "ہم بیٹھتے ہیں"
+        }
+      ],
+      "correct_answer": {
+        "ar": "تَجْلِسُ",
+        "ar_plain": "تجلس",
+        "translit": "tajlisu",
+        "en": "you sit / she sits",
+        "ur": "تم بیٹھتے ہو / وہ بیٹھتی ہے"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Talking to Umar: you — تَجْلِسُ.",
+        "ur": "عمر سے بات: تم — تَجْلِسُ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch34-l06-ex06",
+      "prompt": {
+        "ar": "نَذْهَبُ إِلَى الْمَكْتَبَةِ.",
+        "ar_plain": "نذهب إلى المكتبة.",
+        "translit": "nadhhabu ilā l-maktabati.",
+        "en": "We go to the library.",
+        "ur": "ہم لائبریری جاتے ہیں۔"
+      },
+      "options": [
+        {
+          "en": "We go to the library.",
+          "ur": "ہم لائبریری جاتے ہیں۔"
+        },
+        {
+          "en": "We went to the library.",
+          "ur": "ہم لائبریری گئے۔"
+        },
+        {
+          "en": "He goes to the library.",
+          "ur": "وہ لائبریری جاتا ہے۔"
+        },
+        {
+          "en": "I go to the library.",
+          "ur": "میں لائبریری جاتا ہوں۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "نَـ: we.",
+        "ur": "نَـ: ہم۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch34-l06-ex07",
+      "prompt": {
+        "ar": "لَا يَجْلِسُ الطُّلَّابُ هُنَا.",
+        "ar_plain": "لا يجلس الطلاب هنا.",
+        "translit": "lā yajlisu ṭ-ṭullābu hunā.",
+        "en": "The students do not sit here.",
+        "ur": "طلبہ یہاں نہیں بیٹھتے۔"
+      },
+      "options": [
+        {
+          "en": "Do not sit here, students!",
+          "ur": "طلبہ، یہاں نہ بیٹھو!"
+        },
+        {
+          "en": "The students do not sit here.",
+          "ur": "طلبہ یہاں نہیں بیٹھتے۔"
+        },
+        {
+          "en": "The students sit here.",
+          "ur": "طلبہ یہاں بیٹھتے ہیں۔"
+        },
+        {
+          "en": "The students did not sit here.",
+          "ur": "طلبہ یہاں نہیں بیٹھے۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَا + يَجْلِسُ (ḍamma): a fact — they do not sit.",
+        "ur": "لَا + يَجْلِسُ (ضمہ): حقیقت — وہ نہیں بیٹھتے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch34-l06-ex08",
+      "statement": {
+        "en": "This tells someone what not to do.",
+        "ur": "یہ کسی کو بتاتا ہے کہ کیا نہ کرے۔",
+        "ar_example": {
+          "ar": "لَا تَكْتُبْ هُنَا!",
+          "ar_plain": "لا تكتب هنا!",
+          "translit": "lā taktub hunā!",
+          "en": "Do not write here!",
+          "ur": "یہاں نہ لکھو!"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَا تَكْتُبْ, with sukūn and !: Do not write here!",
+        "ur": "لَا تَكْتُبْ، سکون اور ! کے ساتھ: یہاں نہ لکھو!"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch34-l06-ex09",
+      "statement": {
+        "en": "ـهُ here is the one who understands.",
+        "ur": "یہاں ـهُ سمجھنے والا ہے۔",
+        "ar_example": {
+          "ar": "يَفْهَمُهُ الطَّالِبُ.",
+          "ar_plain": "يفهمه الطالب.",
+          "translit": "yafhamuhu ṭ-ṭālibu.",
+          "en": "The student understands it.",
+          "ur": "طالب علم اسے سمجھتا ہے۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The doer is الطَّالِبُ; ـهُ is what he understands: him / it.",
+        "ur": "کرنے والا الطَّالِبُ ہے؛ ـهُ وہ ہے جسے وہ سمجھتا ہے: اسے۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch34-l06-ex10",
+      "prompt_line": {
+        "ar": "مَتَى تَذْهَبُ إِلَى الْمَسْجِدِ؟",
+        "ar_plain": "متى تذهب إلى المسجد؟",
+        "translit": "matā tadhhabu ilā l-masjidi?",
+        "en": "When do you go to the mosque?",
+        "ur": "تم مسجد کب جاتے ہو؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "إِلَى الْمَسْجِدِ.",
+          "ar_plain": "إلى المسجد.",
+          "translit": "ilā l-masjidi.",
+          "en": "To the mosque.",
+          "ur": "مسجد کی طرف۔"
+        },
+        {
+          "ar": "ذَهَبَ أَمْسِ.",
+          "ar_plain": "ذهب أمس.",
+          "translit": "dhahaba amsi.",
+          "en": "He went yesterday.",
+          "ur": "وہ گزشتہ کل گیا۔"
+        },
+        {
+          "ar": "أَذْهَبُ يَوْمَ الْجُمُعَةِ.",
+          "ar_plain": "أذهب يوم الجمعة.",
+          "translit": "adhhabu yawma l-jumuʿati.",
+          "en": "I go on Friday.",
+          "ur": "میں جمعہ کے دن جاتا ہوں۔"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَتَى wants a time; you answer as 'I'.",
+        "ur": "مَتَى وقت چاہتا ہے؛ جواب 'میں' سے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch34-l06-ex11",
+      "ayah_fragment": {
+        "ar": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+        "surah_ref": "Al-Fatiha 1:5"
+      },
+      "options": [
+        {
+          "en": "I — أَـ: You alone I worship…",
+          "ur": "میں — أَـ: میں تیری ہی عبادت کرتا ہوں…"
+        },
+        {
+          "en": "He — يَـ: You alone he worships…",
+          "ur": "وہ — يَـ: وہ تیری ہی عبادت کرتا ہے…"
+        },
+        {
+          "en": "You — تَـ: You alone you worship…",
+          "ur": "تم — تَـ: تم تیری ہی عبادت کرتے ہو…"
+        },
+        {
+          "en": "We — نَـ: You alone we worship, and You alone we ask for help.",
+          "ur": "ہم — نَـ: ہم تیری ہی عبادت کرتے ہیں اور تجھ ہی سے مدد مانگتے ہیں۔"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "نَعْبُدُ (Chapter 10): نَـ, we.",
+        "ur": "نَعْبُدُ (باب 10): نَـ، ہم۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch34-l06-ex12",
+      "prompt": {
+        "ar": "أَكْتُبُ الدَّرْسَ الْآنَ، وَلَا أَذْهَبُ إِلَى السُّوقِ.",
+        "ar_plain": "أكتب الدرس الآن، ولا أذهب إلى السوق.",
+        "translit": "aktubu d-darsa l-āna, wa-lā adhhabu ilā s-sūqi.",
+        "en": "I am writing the lesson now, and I am not going to the market.",
+        "ur": "میں ابھی سبق لکھ رہا ہوں، اور بازار نہیں جا رہا۔"
+      },
+      "options": [
+        {
+          "en": "I wrote the lesson and went to the market.",
+          "ur": "میں نے سبق لکھا اور بازار گیا۔"
+        },
+        {
+          "en": "He is writing the lesson and not going to the market.",
+          "ur": "وہ سبق لکھ رہا ہے اور بازار نہیں جا رہا۔"
+        },
+        {
+          "en": "I am writing the lesson now, and I am not going to the market.",
+          "ur": "میں ابھی سبق لکھ رہا ہوں، اور بازار نہیں جا رہا۔"
+        },
+        {
+          "en": "Write the lesson and do not go to the market!",
+          "ur": "سبق لکھو اور بازار نہ جاؤ!"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَكْتُبُ, I write + الْآنَ; لَا أَذْهَبُ, I do not go.",
+        "ur": "أَكْتُبُ، میں لکھتا ہوں + الْآنَ؛ لَا أَذْهَبُ، میں نہیں جاتا۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 34 — the imperfect",
+      "ar": "الْفِعْلُ الْمُضَارِعُ",
+      "ur": "باب 34 — فعل مضارع"
+    },
+    "ayah": {
+      "surah": 1,
+      "ayah": 5,
+      "label": "Al-Fatiha 1:5",
+      "ar": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+      "en": "You alone we worship, and You alone we ask for help.",
+      "ur": "ہم تیری ہی عبادت کرتے ہیں اور تجھ ہی سے مدد مانگتے ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001005.mp3"
+    },
+    "highlighted_word_indices": [
+      1
+    ],
+    "highlighted_words": [
+      "نَعْبُدُ"
+    ],
+    "noor_explanation": {
+      "en": "نَعْبُدُ: نَـ, we; an imperfect, ongoing. You can now read who, and when, in verbs like it.",
+      "ur": "نَعْبُدُ: نَـ، ہم؛ مضارع، جاری۔ اب آپ ایسے افعال میں پڑھ سکتے ہیں کون، اور کب۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Review done. Next: the Chapter 34 final test.",
+      "ur": "دہرائی مکمل۔ آگے: باب 34 کا آخری امتحان۔"
+    }
+  }
+}

@@ -2,440 +2,325 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 34, Lesson 5 (ch34-l05) — a short imperfect sentence with an object (as with the past, Chapter 17), an object pronoun ـهُ (Chapter 19) on sound verbs (يَسْمَعُهُ، نَفْهَمُهُ، أَقْرَؤُهُ), and a time word (الْآنَ، كُلَّ يَوْمٍ، يَوْمَ الْجُمُعَةِ — no ظرف analysis); سَمِعَ → يَسْمَعُ and فَهِمَ → يَفْهَمُ supplied. 2:255 يَعْلَمُ مَا … is the Quran sentence with an object. Rebuilt 2026-10-02 in the proposal harvest, batch 2 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-34-content-proposal.md and its review amendments: the imperfect in context — not 'only right now' but unfinished or habitual action, shown by الْآنَ / كُلَّ يَوْمٍ; five subject readings on one sound Form I model (أَكْتُبُ، نَكْتُبُ، يَكْتُبُ، and تَكْتُبُ for أَنْتَ and for هِيَ) — four prefix patterns, with تَكْتُبُ decided by context; transfer to supplied complete imperfects (يَذْهَبُ، يَجْلِسُ، يَعْلَمُ — the middle vowel is given, never guessed); لَا + imperfect for 'does not', with 'Do not!' (لَا تَجْلِسْ، 9:40 لَا تَحْزَنْ) as a recognition contrast only (Chapter 45 teaches it); an object, an object pronoun and a time word; review; 12-question test. نَعْبُدُ is Chapter 10 retrieval; نَسْتَعِينُ is glossed (root ع و ن). The future (سَـ / سَوْفَ) is Chapter 35; أَنْتِ forms are Chapter 37. The old Al-Fatiha capstone ch34-l07 is kept as a DRAFT row at order 8 so no earlier completion counts as passing the new test. Removed: 'present tense = right now', the six-row 'full table', four prefixes read as four subjects, أَفْعَلُ as a pattern for every verb, نَسْتَعِينُ under س-ع-ن, the ash-Sharh line cited as 1:6, نَرَانِي, many-to-one matching, multi-word build tiles and out-of-range reveal highlights.",
+    "title": "Add an Object and a Time",
+    "titleAr": "الْمَفْعُولُ وَالْوَقْتُ",
+    "titleUr": "مفعول اور وقت",
     "chapter_order": 34,
     "lesson_order": 5,
-    "chapter_title": "Present Tense — المضارع",
-    "title": "Present Tense with Objects and Adverbs",
-    "titleAr": "الْمُضَارِعُ مَعَ الْمَفَاعِيلِ وَالظُّرُوفِ",
-    "source": "book4_lesson1_present_tense.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 1,
-      "ayah": 6,
-      "label": "Al-Fatiha 1:6",
-      "ar": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
-      "en": "Guide us to the straight path.",
-      "ur": "ہمیں سیدھے راستے کی طرف راہنمائی فرما۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001006.mp3"
+      "surah": 2,
+      "ayah": 255,
+      "label": "Al-Baqarah 2:255",
+      "ar": "يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ",
+      "en": "He knows what is before them and what is behind them.",
+      "ur": "وہ جانتا ہے جو کچھ ان کے آگے ہے اور جو ان کے پیچھے ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002255.mp3"
     },
     "noor_intro": {
-      "en": "Present tense verbs take objects and adverbs just like any verb. اهْدِنَا (guide us) uses the attached pronoun نَا = us. Let's practice present tense with objects.",
-      "ur": "Present tense verbs objects اور adverbs لیتے ہیں جیسے کوئی بھی verb۔ اهْدِنَا (ہمیں guidance فرما) attached pronoun نَا = ہم use کرتا ہے۔ آئیے objects کے ساتھ present tense کی مشق کریں۔"
+      "en": "يَعْلَمُ, then what He knows. Today: an imperfect with an object, and a word for when.",
+      "ur": "يَعْلَمُ، پھر وہ جو وہ جانتا ہے۔ آج: مفعول کے ساتھ مضارع، اور وقت بتانے والا لفظ۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
-      "type": "WORD",
-      "text": {
-        "ar": "اهْدِنَا",
-        "ar_plain": "اهدنا",
-        "translit": "ihdinaa",
-        "en": "guide us",
-        "ur": "ہمیں guidance فرما"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Action, doer, object",
+        "ar": "يَكْتُبُ أَحْمَدُ الدَّرْسَ",
+        "ur": "فعل، فاعل، مفعول"
       },
       "explanation": {
-        "en": "اهْدِ (imperative of ه-د-ي) + نَا (us). اهْدِنَا = guide us. The نَا is an attached pronoun meaning 'us' — a first person plural object.",
-        "ur": "اهْدِ (ه-د-ي کا imperative) + نَا (ہم)۔ اهْدِنَا = ہمیں guidance فرما۔ نَا ایک attached pronoun ہے جس کا مطلب 'ہم' ہے — first person plural object۔"
+        "en": "As with the past (Chapter 17): the action, the doer, then the object with fatḥa — الدَّرْسَ.",
+        "ur": "ماضی کی طرح (باب 17): فعل، کرنے والا، پھر فتحہ کے ساتھ مفعول — الدَّرْسَ۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "أَرَى الطَّالِبَ فِي الْمَسْجِدِ",
-        "ar_plain": "أرى الطالب في المسجد",
-        "translit": "araa at-taaliba fii al-masjidi",
-        "en": "I see the student in the mosque.",
-        "ur": "میں طالب علم کو مسجد میں دیکھتا ہوں۔"
+        "ar": "تَقْرَأُ زَيْنَبُ الْكِتَابَ.",
+        "ar_plain": "تقرأ زينب الكتاب.",
+        "translit": "taqraʾu zaynabu l-kitāba.",
+        "en": "Zaynab reads the book.",
+        "ur": "زینب کتاب پڑھتی ہے۔"
       },
       "explanation": {
-        "en": "أَرَى = I see (أَ- + ر-أ-ي). الْطَّالِبَ = the student (direct object). فِي الْمَسْجِدِ = in the mosque (prepositional phrase/adverb of place).",
-        "ur": "أَرَى = میں دیکھتا ہوں (أَ- + ر-أ-ي)۔ الْطَّالِبَ = طالب علم (direct object)۔ فِي الْمَسْجِدِ = مسجد میں (prepositional phrase/adverb of place)۔"
+        "en": "تَقْرَأُ + زَيْنَبُ (the doer) + الْكِتَابَ (the object).",
+        "ur": "تَقْرَأُ + زَيْنَبُ (کرنے والی) + الْكِتَابَ (مفعول)۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "An object pronoun",
+        "ar": "يَسْمَعُهُ",
+        "ur": "مفعول ضمیر"
+      },
+      "explanation": {
+        "en": "Chapter 19: ـهُ on a verb is 'him / it'. سَمِعَ → يَسْمَعُ, he hears (given) → يَسْمَعُهُ, he hears him.",
+        "ur": "باب 19: فعل پر ـهُ کا مطلب 'اسے' ہے۔ سَمِعَ → يَسْمَعُ، وہ سنتا ہے (دیا گیا) → يَسْمَعُهُ، وہ اسے سنتا ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "يَكْتُبُ الطَّالِبُ الدَّرْسَ يَوْمَ الْجُمُعَةِ",
-        "ar_plain": "يكتب الطالب الدرس يوم الجمعة",
-        "translit": "yaktubu at-taalibu ad-darsa yawma al-jumu'ati",
-        "en": "The student writes the lesson on Friday.",
-        "ur": "طالب علم جمعہ کے دن lesson لکھتا ہے۔"
+        "ar": "نَفْهَمُهُ الْآنَ.",
+        "ar_plain": "نفهمه الآن.",
+        "translit": "nafhamuhu l-āna.",
+        "en": "We understand it now.",
+        "ur": "ہم اسے اب سمجھتے ہیں۔"
       },
       "explanation": {
-        "en": "يَكْتُبُ (he writes) + الْدَّرْسَ (the lesson — object) + يَوْمَ الْجُمُعَةِ (on Friday — time adverb). The verb takes a direct object and a time expression.",
-        "ur": "يَكْتُبُ (وہ لکھتا ہے) + الْدَّرْسَ (lesson — object) + يَوْمَ الْجُمُعَةِ (جمعہ کے دن — time adverb)۔ Verb direct object اور time expression دونوں لیتا ہے۔"
+        "en": "فَهِمَ → يَفْهَمُ (given); نَفْهَمُ, we understand; ـهُ, it — the lesson.",
+        "ur": "فَهِمَ → يَفْهَمُ (دیا گیا)؛ نَفْهَمُ، ہم سمجھتے ہیں؛ ـهُ، اسے — سبق۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Now, or every day?",
+        "ar": "يَقْرَأُ الْقُرْآنَ الْآنَ / يَقْرَأُ الْقُرْآنَ كُلَّ يَوْمٍ",
+        "ur": "ابھی، یا ہر روز؟"
+      },
+      "examples": [
+        {
+          "ar": "يَقْرَأُ الْقُرْآنَ الْآنَ.",
+          "ar_plain": "يقرأ القرآن الآن.",
+          "translit": "yaqraʾu l-qurʾāna l-āna.",
+          "en": "He is reading the Quran now.",
+          "ur": "وہ ابھی قرآن پڑھ رہا ہے۔"
+        },
+        {
+          "ar": "يَقْرَأُ الْقُرْآنَ كُلَّ يَوْمٍ.",
+          "ar_plain": "يقرأ القرآن كل يوم.",
+          "translit": "yaqraʾu l-qurʾāna kulla yawmin.",
+          "en": "He reads the Quran every day.",
+          "ur": "وہ ہر روز قرآن پڑھتا ہے۔"
+        }
+      ],
+      "explanation": {
+        "en": "A time word tells you which: الْآنَ, now; كُلَّ يَوْمٍ, every day.",
+        "ur": "وقت کا لفظ بتاتا ہے کون سا: الْآنَ، ابھی؛ كُلَّ يَوْمٍ، ہر روز۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
       "text": {
-        "ar": "الصِّرَاطَ",
-        "ar_plain": "الصراط",
-        "translit": "as-siraata",
-        "en": "the path",
-        "ur": "راستہ"
+        "ar": "نَجْلِسُ فِي الْمَسْجِدِ يَوْمَ الْجُمُعَةِ.",
+        "ar_plain": "نجلس في المسجد يوم الجمعة.",
+        "translit": "najlisu fī l-masjidi yawma l-jumuʿati.",
+        "en": "We sit in the mosque on Friday.",
+        "ur": "ہم جمعہ کے دن مسجد میں بیٹھتے ہیں۔"
       },
       "explanation": {
-        "en": "الْصِّرَاطُ = the path/road. In the Quran, الصِّرَاطَ الْمُسْتَقِيمَ = the straight path. صِّرَاط is often used metaphorically for the way of righteousness.",
-        "ur": "الْصِّرَاطُ = راستہ/سڑک۔ قرآن میں، الصِّرَاطَ الْمُسْتَقِيمَ = سیدھا راستہ۔ صِّرَاط often righteousness کے طریقے کے لیے metaphorically used۔"
+        "en": "يَوْمَ الْجُمُعَةِ, on Friday (Chapter 31): when the habit happens.",
+        "ur": "يَوْمَ الْجُمُعَةِ، جمعہ کے دن (باب 31): عادت کب ہوتی ہے۔"
       }
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "الدَّرْسَ",
-        "ar_plain": "الدرس",
-        "translit": "ad-dars",
-        "en": "the lesson",
-        "ur": " سبق"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "2:255: He knows what is before them and what is behind them.",
+        "ar": "يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ",
+        "ur": "2:255: وہ جانتا ہے جو کچھ ان کے آگے ہے اور جو ان کے پیچھے ہے۔"
       },
       "explanation": {
-        "en": "الْدَّرْسُ = the lesson. د-ر-س is the root. As a direct object, it takes the accusative ending: الدَّرْسَ.",
-        "ur": "الْدَّرْسُ = lesson۔ د-ر-س root ہے۔ Direct object کے طور پر، یہ accusative ending لیتا ہے: الدَّرْسَ۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Attached pronouns as objects with present tense",
-        "ur": "Present tense کے ساتھ objects کے طور پر attached pronouns"
+        "en": "يَعْلَمُ, He knows, + its object: مَا بَيْنَ أَيْدِيهِمْ, what is before them, وَمَا خَلْفَهُمْ, and what is behind them.",
+        "ur": "يَعْلَمُ، وہ جانتا ہے، + اس کا مفعول: مَا بَيْنَ أَيْدِيهِمْ، جو ان کے آگے ہے، وَمَا خَلْفَهُمْ، اور جو ان کے پیچھے ہے۔"
       },
-      "body": {
-        "en": "With present tense, attached pronouns are common: يَرَانِي (he sees me), تَرَانِي (you see me), نَرَانِي (we see me). The pattern is: prefix + root + attached pronoun = person + action + object.",
-        "ur": "Present tense کے ساتھ، attached pronouns common ہیں: يَرَانِي (وہ مجھے دیکھتا ہے)، تَرَانِي (تو مجھے دیکھتا ہے)، نَرَانِي (ہم مجھے دیکھتے ہیں)۔ Pattern ہے: prefix + root + attached pronoun = person + action + object۔"
-      }
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002255.mp3"
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
+      "type": "TRUE_FALSE",
       "id": "ch34-l05-ex01",
+      "statement": {
+        "en": "The object here is زَيْنَبُ.",
+        "ur": "یہاں مفعول زَيْنَبُ ہے۔",
+        "ar_example": {
+          "ar": "تَقْرَأُ زَيْنَبُ الْكِتَابَ.",
+          "ar_plain": "تقرأ زينب الكتاب.",
+          "translit": "taqraʾu zaynabu l-kitāba.",
+          "en": "Zaynab reads the book.",
+          "ur": "زینب کتاب پڑھتی ہے۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "زَيْنَبُ is the doer; الْكِتَابَ, with fatḥa, is what she reads.",
+        "ur": "زَيْنَبُ پڑھنے والی ہے؛ الْكِتَابَ، فتحہ کے ساتھ، وہ ہے جو وہ پڑھتی ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch34-l05-ex02",
       "prompt": {
-        "ar": "يَرَى الطَّالِبُ الْكِتَابَ",
-        "ar_plain": "يرى الطالب الكتاب",
-        "translit": "yaraa at-taalibu al-kitaaba",
-        "en": "The student sees the book.",
-        "ur": "طالب علم کتاب دیکھتا ہے۔"
+        "ar": "يَسْمَعُهُ الطُّلَّابُ.",
+        "ar_plain": "يسمعه الطلاب.",
+        "translit": "yasmaʿuhu ṭ-ṭullābu.",
+        "en": "The students hear him.",
+        "ur": "طلبہ اسے سنتے ہیں۔"
       },
       "options": [
         {
-          "en": "The student sees the book.",
-          "ur": "طالب علم کتاب دیکھتا ہے۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "He hears the students.",
+          "ur": "وہ طلبہ کو سنتا ہے۔"
         },
         {
-          "en": "The book sees the student.",
-          "ur": "کتاب طالب علم کو دیکھتی ہے۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "The students hear him.",
+          "ur": "طلبہ اسے سنتے ہیں۔"
         },
         {
-          "en": "The student is seen by the book.",
-          "ur": "طالب علم کتاب سے دیکھا جاتا ہے۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "The students heard him.",
+          "ur": "طلبہ نے اسے سنا۔"
         },
         {
-          "en": "The students see the book.",
-          "ur": "طالب علم کتابیں دیکھتے ہیں۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "We hear him.",
+          "ur": "ہم اسے سنتے ہیں۔"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "يَرَى = he sees. The subject is الطَّالِبُ. الْكِتَابَ is the object (accusative). يَ prefix = he.",
-        "ur": "يَرَى = وہ دیکھتا ہے۔ Subject الطَّالِبُ ہے۔ الْكِتَابَ object ہے (منصوب)۔ يَ prefix = وہ۔"
+        "en": "يَسْمَعُ + ـهُ: hears him; the doer is الطُّلَّابُ.",
+        "ur": "يَسْمَعُ + ـهُ: اسے سنتے ہیں؛ کرنے والے الطُّلَّابُ ہیں۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch34-l05-ex03",
+      "prompt_line": {
+        "ar": "مَتَى تَقْرَأُ الْقُرْآنَ يَا أَحْمَدُ؟",
+        "ar_plain": "متى تقرأ القرآن يا أحمد؟",
+        "translit": "matā taqraʾu l-qurʾāna yā aḥmadu?",
+        "en": "When do you read the Quran, Ahmad?",
+        "ur": "احمد، تم قرآن کب پڑھتے ہو؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "فِي الْمَسْجِدِ.",
+          "ar_plain": "في المسجد.",
+          "translit": "fī l-masjidi.",
+          "en": "In the mosque.",
+          "ur": "مسجد میں۔"
+        },
+        {
+          "ar": "هُوَ يَقْرَؤُهُ.",
+          "ar_plain": "هو يقرؤه.",
+          "translit": "huwa yaqraʾuhu.",
+          "en": "He reads it.",
+          "ur": "وہ اسے پڑھتا ہے۔"
+        },
+        {
+          "ar": "أَقْرَؤُهُ كُلَّ يَوْمٍ.",
+          "ar_plain": "أقرؤه كل يوم.",
+          "translit": "aqraʾuhu kulla yawmin.",
+          "en": "I read it every day.",
+          "ur": "میں اسے ہر روز پڑھتا ہوں۔"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "مَتَى wants a time: كُلَّ يَوْمٍ. And you answer as 'I': أَقْرَؤُهُ.",
+        "ur": "مَتَى وقت چاہتا ہے: كُلَّ يَوْمٍ۔ اور جواب 'میں' سے: أَقْرَؤُهُ۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch34-l05-ex02",
+      "id": "ch34-l05-ex04",
       "statement": {
-        "en": "In يَوْمَ الْجُمُعَةِ, the word يَوْمَ functions as a time adverb (on the day of).",
-        "ur": "يَوْمَ الْجُمُعَةِ میں، word يَوْمَ time adverb کے طور پر کام کرتا ہے (جمعہ کے دن)۔",
+        "en": "This is a regular habit.",
+        "ur": "یہ باقاعدہ عادت ہے۔",
         "ar_example": {
-          "ar": "يَوْمَ الْجُمُعَةِ",
-          "ar_plain": "يوم الجمعة",
-          "translit": "yawma al-jumu'ati",
-          "en": "on Friday",
-          "ur": "جمعہ کے دن"
+          "ar": "نَجْلِسُ فِي الْمَسْجِدِ يَوْمَ الْجُمُعَةِ.",
+          "ar_plain": "نجلس في المسجد يوم الجمعة.",
+          "translit": "najlisu fī l-masjidi yawma l-jumuʿati.",
+          "en": "We sit in the mosque on Friday.",
+          "ur": "ہم جمعہ کے دن مسجد میں بیٹھتے ہیں۔"
         }
       },
       "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch34-l05-ex03",
-      "mode": "TAP",
-      "sentence_ar": "يَكْتُبُ الطَّالِبُ ___",
-      "hint": {
-        "en": "The student writes the lesson.",
-        "ur": "طالب علم سبق لکھتا ہے۔"
-      },
-      "options": [
-        {
-          "ar": "الدَّرْسَ",
-          "ar_plain": "الدرس",
-          "translit": "ad-darsa",
-          "en": "the lesson",
-          "ur": "سبق"
-        },
-        {
-          "ar": "يَوْمَ",
-          "ar_plain": "يوم",
-          "translit": "yawma",
-          "en": "day",
-          "ur": "دن"
-        },
-        {
-          "ar": "الْكِتَابَ",
-          "ar_plain": "الكتاب",
-          "translit": "al-kitaaba",
-          "en": "the book",
-          "ur": "کتاب"
-        },
-        {
-          "ar": "الْمَسْجِدَ",
-          "ar_plain": "المسجد",
-          "translit": "al-masjada",
-          "en": "the mosque",
-          "ur": "مسجد"
-        }
-      ],
-      "correct_answer": {
-        "ar": "الدَّرْسَ",
-        "ar_plain": "الدرس",
-        "translit": "ad-darsa",
-        "en": "the lesson",
-        "ur": "سبق"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch34-l05-ex04",
-      "left_column": [
-        {
-          "ar": "يَرَى الطَّالِبُ الْكِتَابَ",
-          "ar_plain": "يرى الطالب الكتاب",
-          "translit": "yaraa at-taalibu al-kitaaba",
-          "en": "The student sees the book",
-          "ur": "طالب علم کتاب دیکھتا ہے"
-        },
-        {
-          "ar": "يَكْتُبُ الطَّالِبُ الدَّرْسَ",
-          "ar_plain": "يكتب الطالب الدرس",
-          "translit": "yaktubu at-taalibu ad-darsa",
-          "en": "The student writes the lesson",
-          "ur": "طالب علم سبق لکھتا ہے"
-        },
-        {
-          "ar": "يَقْرَأُ الطَّالِبُ فِي الْمَسْجِدِ",
-          "ar_plain": "يقرأ الطالب في المسجد",
-          "translit": "yaqra'u at-taalibu fii al-masjidi",
-          "en": "The student reads in the mosque",
-          "ur": "طالب علم مسجد میں پڑھتا ہے"
-        },
-        {
-          "ar": "نَرَاكَ يَوْمَ الْجُمُعَةِ",
-          "ar_plain": "نراك يوم الجمعة",
-          "translit": "naraaka yawma al-jumu'ati",
-          "en": "We see you on Friday",
-          "ur": "ہم تجھے جمعہ کے دن دیکھتے ہیں"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "Verb + object",
-          "ur": "Verb + object"
-        },
-        {
-          "en": "Verb + object",
-          "ur": "Verb + object"
-        },
-        {
-          "en": "Verb + adverb of place",
-          "ur": "Verb + جگہ کا adverb"
-        },
-        {
-          "en": "Verb + object + time adverb",
-          "ur": "Verb + object + وقت کا adverb"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch34-l05-ex05",
-      "target_translation": {
-        "en": "He sees us on Friday.",
-        "ur": "وہ ہمیں جمعہ کے دن دیکھتا ہے۔"
-      },
-      "tiles": [
-        {
-          "ar": "يَرَانَا",
-          "ar_plain": "يرانا",
-          "translit": "yaraanaa",
-          "en": "he sees us",
-          "ur": "وہ ہمیں دیکھتا ہے"
-        },
-        {
-          "ar": "يَوْمَ الْجُمُعَةِ",
-          "ar_plain": "يوم الجمعة",
-          "translit": "yawma al-jumu'ati",
-          "en": "on Friday",
-          "ur": "جمعہ کے دن"
-        },
-        {
-          "ar": "يَرَانِي",
-          "ar_plain": "يراني",
-          "translit": "yaraani",
-          "en": "he sees me",
-          "ur": "وہ مجھے دیکھتا ہے"
-        },
-        {
-          "ar": "تَرَانَا",
-          "ar_plain": "ترانا",
-          "translit": "taraanaa",
-          "en": "you see us",
-          "ur": "تو ہمیں دیکھتا ہے"
-        }
-      ],
-      "correct_order": [
-        0,
-        1
-      ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يَوْمَ الْجُمُعَةِ with an imperfect: on Fridays, as a habit.",
+        "ur": "مضارع کے ساتھ يَوْمَ الْجُمُعَةِ: جمعہ کے دن، عادت کے طور پر۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch34-l05-ex06",
+      "id": "ch34-l05-ex05",
       "prompt": {
-        "ar": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
-        "ar_plain": "اهدنا الصراط المستقيم",
-        "translit": "ihdinaa as-siraata al-mustaqiima",
-        "en": "Guide us to the straight path.",
-        "ur": "ہمیں سیدھے راستے کی طرف راہنمائی فرما۔"
+        "ar": "تَفْهَمُ مَرْيَمُ الدَّرْسَ، وَتَكْتُبُهُ كُلَّ يَوْمٍ.",
+        "ar_plain": "تفهم مريم الدرس، وتكتبه كل يوم.",
+        "translit": "tafhamu maryamu d-darsa, wa-taktubuhu kulla yawmin.",
+        "en": "Maryam understands the lesson, and she writes it every day.",
+        "ur": "مریم سبق سمجھتی ہے، اور اسے ہر روز لکھتی ہے۔"
       },
       "options": [
         {
-          "en": "Guide us to the straight path.",
-          "ur": "ہمیں سیدھے راستے کی طرف راہنمائی فرما۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "Maryam understands the lesson, and she writes it every day.",
+          "ur": "مریم سبق سمجھتی ہے، اور اسے ہر روز لکھتی ہے۔"
         },
         {
-          "en": "We guide to the straight path.",
-          "ur": "ہم سیدھے راستے کی طرف guidance کرتے ہیں۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "Maryam understood the lesson and wrote it once.",
+          "ur": "مریم نے سبق سمجھا اور ایک بار لکھا۔"
         },
         {
-          "en": "Guide me to the straight path.",
-          "ur": "مجھے سیدھے راستے کی طرف راہنمائی فرما۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "Maryam writes to her every day.",
+          "ur": "مریم اسے ہر روز خط لکھتی ہے۔"
         },
         {
-          "en": "He guides us to the straight path.",
-          "ur": "وہ ہمیں سیدھے راستے کی طرف guidance کرتا ہے۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "The lesson understands Maryam.",
+          "ur": "سبق مریم کو سمجھتا ہے۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "اهْدِ is the command 'guide!'. نَا is the attached pronoun 'us' (first person plural object). الصِّرَاطَ الْمُسْتَقِيمَ = the straight path (object).",
-        "ur": "اهْدِ command ہے 'guidance فرما!'۔ نَا attached pronoun 'ہم' ہے (first person plural object)۔ الصِّرَاطَ الْمُسْتَقِيمَ = سیدھا راستہ (object)۔"
+        "en": "تَفْهَمُ + مَرْيَمُ (doer) + الدَّرْسَ (object); تَكْتُبُهُ, writes it; كُلَّ يَوْمٍ, every day.",
+        "ur": "تَفْهَمُ + مَرْيَمُ (فاعل) + الدَّرْسَ (مفعول)؛ تَكْتُبُهُ، اسے لکھتی ہے؛ كُلَّ يَوْمٍ، ہر روز۔"
       }
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch34-l05-ex07",
-      "prompt": {
-        "ar": "يَرَانِي الطَّالِبُ",
-        "ar_plain": "يراني الطالب",
-        "translit": "yaraanii at-taalib",
-        "en": "The student sees me.",
-        "ur": "طالب علم مجھے دیکھتا ہے۔"
-      },
-      "options": [
-        {
-          "en": "I see the student.",
-          "ur": "میں طالب علم کو دیکھتا ہوں۔"
-        },
-        {
-          "en": "The student sees me.",
-          "ur": "طالب علم مجھے دیکھتا ہے۔"
-        },
-        {
-          "en": "The student saw me.",
-          "ur": "طالب علم نے مجھے دیکھا۔"
-        },
-        {
-          "en": "Do you see the student?",
-          "ur": "کیا تم طالب علم کو دیکھتے ہو؟"
-        }
-      ],
-      "correct_index": 1,
-      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Present tense with objects and time/place expressions",
-      "ar": "objects اور time/place expressions کے ساتھ present tense",
-      "ur": "objects اور time/place expressions کے ساتھ present tense"
+      "en": "Object and time",
+      "ar": "الْمَفْعُولُ وَالْوَقْتُ",
+      "ur": "مفعول اور وقت"
     },
     "ayah": {
-      "surah": 1,
-      "ayah": 6,
-      "label": "Al-Fatiha 1:6",
-      "ar": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
-      "en": "Guide us to the straight path.",
-      "ur": "ہمیں سیدھے راستے کی طرف راہنمائی فرما۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001006.mp3"
+      "surah": 2,
+      "ayah": 255,
+      "label": "Al-Baqarah 2:255",
+      "ar": "يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ",
+      "en": "He knows what is before them and what is behind them.",
+      "ur": "وہ جانتا ہے جو کچھ ان کے آگے ہے اور جو ان کے پیچھے ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002255.mp3"
     },
     "highlighted_word_indices": [
-      0,
-      2
+      0
+    ],
+    "highlighted_words": [
+      "يَعْلَمُ"
     ],
     "noor_explanation": {
-      "en": "اهْدِنَا = guide us (اهْدِ + نَا = command + us). This is the du'a of Al-Fatiha — asking Allah directly for guidance. The object نَا is attached to the command verb.",
-      "ur": "اهْدِنَا = ہمیں guidance فرما (اهْدِ + نَا = command + ہم)۔ یہ Al-Fatiha کی du'a ہے — اللہ سے براہ راست guidance مانگنا۔ Object نَا command verb سے attached ہے۔"
+      "en": "يَعْلَمُ + what He knows: an imperfect with its object, as in the sentences you built today.",
+      "ur": "يَعْلَمُ + جو وہ جانتا ہے: مفعول کے ساتھ مضارع، جیسے آج کے جملے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You can now read the verbs of Al-Fatiha 1:5–6: the present-tense نَعْبُدُ and نَسْتَعِينُ, and the request اهْدِنَا with its attached object نَا.",
-      "ur": "اب آپ الفاتحہ 1:5–6 کے افعال پڑھ سکتے ہیں: مضارع نَعْبُدُ اور نَسْتَعِينُ، اور دعا اهْدِنَا جس کے ساتھ مفعول نَا جڑا ہے۔"
+      "en": "You read imperfect sentences with an object and a time. Next: the Chapter 34 review.",
+      "ur": "آپ نے مفعول اور وقت کے ساتھ مضارع والے جملے پڑھے۔ آگے: باب 34 کی دہرائی۔"
     }
   }
 }

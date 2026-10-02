@@ -2,15 +2,14 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 35, Lesson 2 (ch35-l02) — separate سَوْفَ before the imperfect, compared with attached سَـ: both mark the future; the near/far description is mentioned as one view among grammarians and the time word, not the marker, decides a timetable. 102:3 and 5:54 are the Quran readings; تَعْلَمُونَ / يَأْتِي glossed whole. Rebuilt 2026-10-02 in the proposal harvest, batch 2 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-35-content-proposal.md and its review amendments: attached سَـ and separate سَوْفَ both point the Chapter 34 imperfect to the future — some grammarians describe a near/remote tendency, others no fixed difference, so it is mentioned once and never tested; present/habit versus future by marker and time word; future versus past and command (commands given whole — Chapter 51); لَنْ + imperfect recognised as 'will not' with the following form supplied (its ending is Chapter 45's); Quran readings 2:142 سَيَقُولُ, 102:3 سَوْفَ تَعْلَمُونَ, 93:5 وَلَسَوْفَ, 5:54, 7:143 and 3:92 لَنْ. Removed: 'سَـ = near, سَوْفَ = far/emphatic', 'سَوْفَ adds certainty to every promise', hooks with no future marker (108:2, 39:10–11, 108:1), قُولُ for يَقُولُ, the 'most common future form' claim, يَـ read as 'they', the spliced Quran-like composite, لَا خَوْفٌ in the future outcome, the Book 5 bridge claims, multi-word build tiles and many-to-one matching.",
+    "title": "سَوْفَ: Will",
+    "titleAr": "سَوْفَ يَفْعَلُ",
+    "titleUr": "سَوْفَ: گا، گی، گے",
     "chapter_order": 35,
     "lesson_order": 2,
-    "chapter_title": "Future Tense with سَ",
-    "title": "سَـ and سَوْفَ: Two Future Markers",
-    "titleAr": "سَ بمقابلہ سَوْفَ: قریبی اور دوری مستقبل",
-    "source": "book4_lesson1_future_tense.md",
     "estimated_minutes": 8,
-    "xp_reward": 10,
-    "titleUr": "سَـ اور سَوْفَ: مستقبل کے دو نشان"
+    "xp_reward": 10
   },
   "hook": {
     "ayah": {
@@ -18,423 +17,333 @@
       "ayah": 3,
       "label": "At-Takathur 102:3",
       "ar": "كَلَّا سَوْفَ تَعْلَمُونَ",
-      "en": "No! You will come to know.",
+      "en": "No! You are going to know.",
       "ur": "ہرگز نہیں! تم عنقریب جان لو گے۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/102003.mp3"
     },
     "noor_intro": {
-      "en": "كَلَّا سَوْفَ تَعْلَمُونَ — \"No! You will come to know.\" سَوْفَ is the second future marker: a separate word before the present-tense verb.",
-      "ur": "كَلَّا سَوْفَ تَعْلَمُونَ — \"ہرگز نہیں! تم عنقریب جان لو گے۔\" سَوْفَ مستقبل کا دوسرا نشان ہے: مضارع فعل سے پہلے الگ لفظ۔"
+      "en": "سَوْفَ: the same job as سَـ, written as a separate word.",
+      "ur": "سَوْفَ: وہی کام جو سَـ کرتا ہے، الگ لفظ کی صورت میں۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Joined or separate",
+        "ar": "سَيَذْهَبُ / سَوْفَ يَذْهَبُ",
+        "ur": "جڑا ہوا یا الگ"
+      },
+      "examples": [
+        {
+          "ar": "سَيَذْهَبُ",
+          "ar_plain": "سيذهب",
+          "translit": "sa-yadhhabu",
+          "en": "he will go",
+          "ur": "وہ جائے گا"
+        },
+        {
+          "ar": "سَوْفَ يَذْهَبُ",
+          "ar_plain": "سوف يذهب",
+          "translit": "sawfa yadhhabu",
+          "en": "he will go",
+          "ur": "وہ جائے گا"
+        }
+      ],
+      "explanation": {
+        "en": "Both point the imperfect to the future. سَـ is joined to the verb; سَوْفَ stands before it as its own word.",
+        "ur": "دونوں مضارع کو مستقبل کی طرف موڑتے ہیں۔ سَـ فعل سے جڑا ہوتا ہے؛ سَوْفَ اس سے پہلے الگ لفظ ہوتا ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "سَوْفَ نَقْرَأُ الْكِتَابَ.",
+        "ar_plain": "سوف نقرأ الكتاب.",
+        "translit": "sawfa naqraʾu l-kitāba.",
+        "en": "We will read the book.",
+        "ur": "ہم کتاب پڑھیں گے۔"
+      },
+      "explanation": {
+        "en": "سَوْفَ + نَقْرَأُ: we will read.",
+        "ur": "سَوْفَ + نَقْرَأُ: ہم پڑھیں گے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "سَوْفَ تَكْتُبُ زَيْنَبُ الرِّسَالَةَ.",
+        "ar_plain": "سوف تكتب زينب الرسالة.",
+        "translit": "sawfa taktubu zaynabu r-risālata.",
+        "en": "Zaynab will write the letter.",
+        "ur": "زینب خط لکھے گی۔"
+      },
+      "explanation": {
+        "en": "سَوْفَ + تَكْتُبُ + زَيْنَبُ: she will write. رِسَالَةٌ = letter.",
+        "ur": "سَوْفَ + تَكْتُبُ + زَيْنَبُ: وہ لکھے گی۔ رِسَالَةٌ = خط۔"
+      }
+    },
+    {
       "type": "CONCEPT",
       "concept": {
-        "en": "سَـ vs سَوْفَ",
-        "ar": "سَـ وَ سَوْفَ",
-        "ur": "سَـ اور سَوْفَ"
+        "en": "Near or far?",
+        "ar": "سَـ / سَوْفَ",
+        "ur": "قریب یا دور؟"
       },
       "explanation": {
-        "en": "Arabic marks the future with سَـ (joined to the verb) or سَوْفَ (a separate word) before a present-tense verb. Both mean \"will\". Some grammarians describe سَوْفَ as pointing further ahead, but in practice the context decides — read both simply as \"will\".",
-        "ur": "عربی میں مستقبل کو مضارع فعل سے پہلے سَـ (فعل سے جڑا) یا سَوْفَ (الگ لفظ) سے ظاہر کیا جاتا ہے۔ دونوں کا مطلب \"گا/گی\" ہے۔ بعض نحوی سَوْفَ کو زیادہ دور کے مستقبل کے لیے بتاتے ہیں، لیکن عملاً سیاق فیصلہ کرتا ہے — دونوں کو سادہ \"گا\" پڑھیں۔"
+        "en": "Some grammarians say سَـ is for the near future and سَوْفَ for the further future; others find no fixed difference. Do not decide from the marker alone — read the time words, like غَدًا.",
+        "ur": "بعض نحوی کہتے ہیں سَـ قریب مستقبل کے لیے اور سَوْفَ دور کے لیے ہے؛ بعض کے نزدیک کوئی طے شدہ فرق نہیں۔ صرف علامت سے فیصلہ نہ کریں — وقت کے الفاظ پڑھیں، جیسے غَدًا۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "سَأَذْهَبُ غَدًا",
-        "ar_plain": "سأذهب غدا",
-        "translit": "sa-adhahabu ghadan",
-        "en": "I will go tomorrow.",
-        "ur": "میں کل جاؤں گا۔"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "102:3: No! You are going to know.",
+        "ar": "كَلَّا سَوْفَ تَعْلَمُونَ",
+        "ur": "102:3: ہرگز نہیں! تم عنقریب جان لو گے۔"
       },
       "explanation": {
-        "en": "سَأَذْهَبُ = I will go. Here غَدًا (\"tomorrow\") gives the time; سَـ itself only says \"will\".",
-        "ur": "سَأَذْهَبُ = میں جاؤں گا۔ یہاں غَدًا (\"کل\") وقت بتاتا ہے؛ سَـ خود صرف \"گا\" بتاتا ہے۔"
-      }
+        "en": "سَوْفَ + تَعْلَمُونَ (you all know — given whole): you will come to know.",
+        "ur": "سَوْفَ + تَعْلَمُونَ (تم سب جانتے ہو — پورا دیا گیا): تم جان لو گے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/102003.mp3"
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "سَوْفَ تَعْلَمُونَ",
-        "ar_plain": "سوف تعلمون",
-        "translit": "sauufa ta'lamoona",
-        "en": "You will come to know.",
-        "ur": "تم عنقریب جان لو گے۔"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "5:54: Allah will bring a people whom He loves and who love Him,",
+        "ar": "فَسَوْفَ يَأْتِي اللَّهُ بِقَوْمٍ يُحِبُّهُمْ وَيُحِبُّونَهُ",
+        "ur": "5:54: تو اللہ ایسے لوگ لے آئے گا جن سے وہ محبت کرے گا اور وہ اس سے محبت کریں گے،"
       },
       "explanation": {
-        "en": "سَوْفَ + تَعْلَمُونَ (\"you (pl.) know\") = \"you will come to know\". سَوْفَ marks the future, like سَـ.",
-        "ur": "سَوْفَ + تَعْلَمُونَ (\"تم جانتے ہو\") = \"تم جان لو گے\"۔ سَوْفَ، سَـ کی طرح، مستقبل بتاتا ہے۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "يَحْزَنُونَ",
-        "ar_plain": "يحزنون",
-        "translit": "yahzanoona",
-        "en": "they grieve",
-        "ur": "وہ غمگین ہوتے ہیں"
+        "en": "فَ + سَوْفَ + يَأْتِي (comes — given whole) + بِقَوْمٍ: Allah will bring a people.",
+        "ur": "فَ + سَوْفَ + يَأْتِي (آتا ہے — پورا دیا گیا) + بِقَوْمٍ: اللہ ایک قوم لے آئے گا۔"
       },
-      "explanation": {
-        "en": "Present tense from ح-ز-ن (to grieve). The prefix يَـ marks the third person (\"he/they\"); the ending ـُونَ makes it plural. Together: يَحْزَنُونَ = they grieve.",
-        "ur": "ح-ز-ن (غمگین ہونا) سے مضارع۔ سابقہ يَـ غائب (\"وہ\") بتاتا ہے؛ لاحقہ ـُونَ اسے جمع بناتا ہے۔ مل کر: يَحْزَنُونَ = وہ غمگین ہوتے ہیں۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "خَوْفٌ",
-        "ar_plain": "خوف",
-        "translit": "khoufun",
-        "en": "fear",
-        "ur": "خوف"
-      },
-      "explanation": {
-        "en": "Noun meaning fear. لَا خَوْفٌ = no fear. This is a nominal sentence: لا (negation) + خَوْفٌ (subject).",
-        "ur": "Noun جس کا مطلب ہے fear۔ لَا خَوْفٌ = کوئی خوف نہیں۔ یہ ایک nominal sentence ہے: لَا (negation) + خَوْفٌ (subject)۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "سَوْفَ in Quranic Arabic",
-        "ur": "عربی قرآنی میں سَوْفَ"
-      },
-      "body": {
-        "en": "سَوْفَ and سَـ both mark the future. What a sentence promises or warns comes from its words and context, not from the marker alone.",
-        "ur": "سَوْفَ اور سَـ دونوں مستقبل بتاتے ہیں۔ جملہ کیا وعدہ یا تنبیہ کرتا ہے یہ اس کے الفاظ اور سیاق سے آتا ہے، صرف نشان سے نہیں۔"
-      }
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/005054.mp3"
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
+      "type": "TRUE_FALSE",
       "id": "ch35-l02-ex01",
+      "statement": {
+        "en": "سَوْفَ here points to the future.",
+        "ur": "یہاں سَوْفَ مستقبل کی طرف اشارہ کرتا ہے۔",
+        "ar_example": {
+          "ar": "سَوْفَ نَقْرَأُ الْكِتَابَ.",
+          "ar_plain": "سوف نقرأ الكتاب.",
+          "translit": "sawfa naqraʾu l-kitāba.",
+          "en": "We will read the book.",
+          "ur": "ہم کتاب پڑھیں گے۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "سَوْفَ + نَقْرَأُ: we will read.",
+        "ur": "سَوْفَ + نَقْرَأُ: ہم پڑھیں گے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch35-l02-ex02",
       "prompt": {
-        "ar": "سَوْفَ تَعْلَمُونَ",
-        "ar_plain": "سوف تعلمون",
-        "translit": "sauufa ta'lamoona",
-        "en": "You will come to know.",
-        "ur": "تم عنقریب جان لو گے۔"
+        "ar": "سَوْفَ يَجْلِسُ الطُّلَّابُ هُنَا.",
+        "ar_plain": "سوف يجلس الطلاب هنا.",
+        "translit": "sawfa yajlisu ṭ-ṭullābu hunā.",
+        "en": "The students will sit here.",
+        "ur": "طلبہ یہاں بیٹھیں گے۔"
       },
       "options": [
         {
-          "en": "You will come to know.",
-          "ur": "تم عنقریب جان لو گے۔"
+          "en": "The students will sit here.",
+          "ur": "طلبہ یہاں بیٹھیں گے۔"
         },
         {
-          "en": "You knew yesterday.",
-          "ur": "تم کل جانتے تھے۔"
+          "en": "The students sit here.",
+          "ur": "طلبہ یہاں بیٹھتے ہیں۔"
         },
         {
-          "en": "Know!",
-          "ur": "جان لو!"
+          "en": "The students sat here.",
+          "ur": "طلبہ یہاں بیٹھے۔"
         },
         {
-          "en": "They will come to know.",
-          "ur": "وہ جان لیں گے۔"
+          "en": "Do not sit here, students!",
+          "ur": "طلبہ، یہاں نہ بیٹھو!"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "سَوْفَ = will (future). تَعْلَمُونَ = you (pl.) know. Together: \"you will come to know\".",
-        "ur": "سَوْفَ = گا (مستقبل)۔ تَعْلَمُونَ = تم جانتے ہو۔ مل کر: \"تم جان لو گے\"۔"
+        "en": "سَوْفَ before the verb: will sit.",
+        "ur": "فعل سے پہلے سَوْفَ: بیٹھیں گے۔"
       }
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch35-l02-ex02",
-      "statement": {
-        "en": "In لَا خَوْفٌ عَلَيْهِمْ, the word عَلَيْهِمْ uses the attached pronoun هُمْ meaning 'them' (third person plural).",
-        "ur": "لَا خَوْفٌ عَلَيْهِمْ میں، word عَلَيْهِمْ attached pronoun هُمْ use کرتا ہے جس کا مطلب ہے 'انہیں' (تیسرا شخص جمع)۔",
-        "ar_example": {
-          "ar": "عَلَيْهِمْ",
-          "ar_plain": "عليهم",
-          "translit": "'alayhim",
-          "en": "upon them",
-          "ur": "ان پر"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
     },
     {
       "type": "FILL_BLANK",
       "id": "ch35-l02-ex03",
       "mode": "TAP",
-      "sentence_ar": "سَوْفَ ___ الْحَقَّ",
+      "sentence_ar": "___ نَذْهَبُ إِلَى السُّوقِ غَدًا.",
       "hint": {
-        "en": "You (pl.) will come to know the truth. (constructed)",
-        "ur": "تم حق کو جان لو گے۔ (بنائی گئی مثال)"
+        "en": "We will go to the market tomorrow. (a separate word)",
+        "ur": "ہم کل بازار جائیں گے۔ (الگ لفظ)"
       },
       "options": [
         {
-          "ar": "عَلِمْتُمْ",
-          "ar_plain": "علمتم",
-          "translit": "'alimtum",
-          "en": "you knew (past)",
-          "ur": "تم نے جانا (ماضی)"
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "lā",
+          "en": "not",
+          "ur": "نہیں"
         },
         {
-          "ar": "تَعْلَمُونَ",
-          "ar_plain": "تعلمون",
-          "translit": "ta'lamuuna",
-          "en": "you (pl.) know",
-          "ur": "تم جانتے ہو"
+          "ar": "هَلْ",
+          "ar_plain": "هل",
+          "translit": "hal",
+          "en": "is…? / does…?",
+          "ur": "کیا…؟"
         },
-        {
-          "ar": "اعْلَمُوا",
-          "ar_plain": "اعلموا",
-          "translit": "i'lamuu",
-          "en": "know! (command)",
-          "ur": "جان لو! (امر)"
-        },
-        {
-          "ar": "عِلْمٌ",
-          "ar_plain": "علم",
-          "translit": "'ilm",
-          "en": "knowledge (noun)",
-          "ur": "علم (اسم)"
-        }
-      ],
-      "correct_answer": {
-        "ar": "تَعْلَمُونَ",
-        "ar_plain": "تعلمون",
-        "translit": "ta'lamuuna",
-        "en": "you (pl.) know",
-        "ur": "تم جانتے ہو"
-      },
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "سَوْفَ is followed by a present-tense verb: تَعْلَمُونَ.",
-        "ur": "سَوْفَ کے بعد مضارع فعل آتا ہے: تَعْلَمُونَ۔"
-      }
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch35-l02-ex04",
-      "left_column": [
-        {
-          "ar": "سَأَذْهَبُ",
-          "ar_plain": "سأذهب",
-          "translit": "sa-adhahabu",
-          "en": "I will go",
-          "ur": "میں جاؤں گا"
-        },
-        {
-          "ar": "سَوْفَ تَعْلَمُونَ",
-          "ar_plain": "سوف تعلمون",
-          "translit": "sauufa ta'lamoona",
-          "en": "You will come to know",
-          "ur": "تم جان لو گے"
-        },
-        {
-          "ar": "سَيَذْهَبُ",
-          "ar_plain": "سيذهب",
-          "translit": "sayadhahabu",
-          "en": "He will go",
-          "ur": "وہ جائے گا"
-        },
-        {
-          "ar": "سَنَذْهَبُ",
-          "ar_plain": "سنذهب",
-          "translit": "sanadhahabu",
-          "en": "We will go",
-          "ur": "ہم جائیں گے"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "future: سَـ + أَ (\"I\")",
-          "ur": "مستقبل: سَـ + أَ (\"میں\")"
-        },
-        {
-          "en": "future: the separate word سَوْفَ",
-          "ur": "مستقبل: الگ لفظ سَوْفَ"
-        },
-        {
-          "en": "future: سَـ + يَ (\"he\")",
-          "ur": "مستقبل: سَـ + يَ (\"وہ\")"
-        },
-        {
-          "en": "future: سَـ + نَ (\"we\")",
-          "ur": "مستقبل: سَـ + نَ (\"ہم\")"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch35-l02-ex05",
-      "target_translation": {
-        "en": "You (pl.) will come to know.",
-        "ur": "تم جان لو گے۔"
-      },
-      "tiles": [
         {
           "ar": "سَوْفَ",
           "ar_plain": "سوف",
-          "translit": "sauufa",
-          "en": "will (future)",
-          "ur": "گا (مستقبل)"
+          "translit": "sawfa",
+          "en": "will (separate word)",
+          "ur": "گا (الگ لفظ)"
         },
         {
-          "ar": "تَعْلَمُونَ",
-          "ar_plain": "تعلمون",
-          "translit": "ta'lamoona",
-          "en": "you (pl.) know",
-          "ur": "تم جانتے ہو"
-        },
-        {
-          "ar": "أَعْلَمُ",
-          "ar_plain": "أعلم",
-          "translit": "a'lamu",
-          "en": "I know",
-          "ur": "میں جانتا ہوں"
-        },
-        {
-          "ar": "سَتَعْلَمُ",
-          "ar_plain": "ستعلم",
-          "translit": "sata'lamu",
-          "en": "you (sg.) will know",
-          "ur": "تو جانے گا"
+          "ar": "إِذَا",
+          "ar_plain": "إذا",
+          "translit": "idhā",
+          "en": "when",
+          "ur": "جب"
         }
       ],
-      "correct_order": [
-        0,
-        1
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch35-l02-ex06",
-      "prompt": {
-        "ar": "لَا خَوْفٌ عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ",
-        "ar_plain": "لا خوف عليهم ولا هم يحزنون",
-        "translit": "laa khoufun 'alayhim walaa hum yahzanoona",
-        "en": "No fear shall be upon them, nor shall they grieve.",
-        "ur": "ان پر کوئی خوف نہیں اور نہ وہ غمگین ہوں گے۔"
+      "correct_answer": {
+        "ar": "سَوْفَ",
+        "ar_plain": "سوف",
+        "translit": "sawfa",
+        "en": "will (separate word)",
+        "ur": "گا (الگ لفظ)"
       },
-      "options": [
-        {
-          "en": "No fear shall be upon them, nor shall they grieve.",
-          "ur": "ان پر کوئی خوف نہیں اور نہ وہ غمگین ہوں گے۔",
-          "translit": "—",
-          "ar_plain": ""
-        },
-        {
-          "en": "There is no fear upon them and they grieve.",
-          "ur": "ان پر کوئی خوف نہیں اور وہ غمگین ہوتے ہیں۔",
-          "translit": "—",
-          "ar_plain": ""
-        },
-        {
-          "en": "They have no fear and they will grieve.",
-          "ur": "انہیں کوئی خوف نہیں اور وہ غمگین ہوں گے۔",
-          "translit": "—",
-          "ar_plain": ""
-        },
-        {
-          "en": "There is fear upon them and they grieve.",
-          "ur": "ان پر خوف ہے اور وہ غمگین ہوتے ہیں۔",
-          "translit": "—",
-          "ar_plain": ""
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَا خَوْفٌ = no fear (لَا negating a noun). وَلَا هُمْ يَحْزَنُونَ = nor do they grieve (present tense). The phrase appears in several ayat, e.g. Al-Baqarah 2:38.",
-        "ur": "لَا خَوْفٌ = کوئی خوف نہیں (اسم کی نفی)۔ وَلَا هُمْ يَحْزَنُونَ = اور نہ وہ غمگین ہوں گے (مضارع)۔ یہ الفاظ کئی آیات میں آتے ہیں، مثلاً البقرہ 2:38۔"
+        "en": "A separate word before the verb for the future: سَوْفَ.",
+        "ur": "مستقبل کے لیے فعل سے پہلے الگ لفظ: سَوْفَ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch35-l02-ex04",
+      "statement": {
+        "en": "سَأَكْتُبُ and سَوْفَ أَكْتُبُ both mean 'I will write'.",
+        "ur": "سَأَكْتُبُ اور سَوْفَ أَكْتُبُ دونوں کا مطلب 'میں لکھوں گا' ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Joined سَـ or separate سَوْفَ: both mark the future.",
+        "ur": "جڑا ہوا سَـ یا الگ سَوْفَ: دونوں مستقبل بتاتے ہیں۔"
       }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch35-l02-ex07",
+      "id": "ch35-l02-ex05",
       "prompt": {
-        "ar": "سَوْفَ تَعْلَمُونَ",
-        "ar_plain": "سوف تعلمون",
-        "translit": "sawfa ta'lamuun",
-        "en": "You will come to know.",
-        "ur": "تم عنقریب جان لو گے۔"
+        "ar": "سَوْفَ تَفْهَمُ الدَّرْسَ غَدًا يَا أَحْمَدُ.",
+        "ar_plain": "سوف تفهم الدرس غدا يا أحمد.",
+        "translit": "sawfa tafhamu d-darsa ghadan yā aḥmadu.",
+        "en": "You will understand the lesson tomorrow, Ahmad.",
+        "ur": "احمد، تم کل سبق سمجھ جاؤ گے۔"
       },
       "options": [
         {
-          "en": "You will come to know.",
-          "ur": "تم عنقریب جان لو گے۔"
+          "en": "You understand the lesson now, Ahmad.",
+          "ur": "احمد، تم ابھی سبق سمجھتے ہو۔"
         },
         {
-          "en": "You knew.",
-          "ur": "تم جانتے تھے۔"
+          "en": "You understood the lesson yesterday, Ahmad.",
+          "ur": "احمد، تم نے گزشتہ کل سبق سمجھا۔"
+        },
+        {
+          "en": "Understand the lesson, Ahmad!",
+          "ur": "احمد، سبق سمجھو!"
+        },
+        {
+          "en": "You will understand the lesson tomorrow, Ahmad.",
+          "ur": "احمد، تم کل سبق سمجھ جاؤ گے۔"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "سَوْفَ + تَفْهَمُ + يَا أَحْمَدُ: you will understand.",
+        "ur": "سَوْفَ + تَفْهَمُ + يَا أَحْمَدُ: تم سمجھو گے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch35-l02-ex06",
+      "ayah_fragment": {
+        "ar": "كَلَّا سَوْفَ تَعْلَمُونَ",
+        "surah_ref": "At-Takathur 102:3"
+      },
+      "options": [
+        {
+          "en": "No! You knew.",
+          "ur": "ہرگز نہیں! تم جان گئے تھے۔"
+        },
+        {
+          "en": "No! You are going to know.",
+          "ur": "ہرگز نہیں! تم عنقریب جان لو گے۔"
+        },
+        {
+          "en": "No! You know now.",
+          "ur": "ہرگز نہیں! تم ابھی جانتے ہو۔"
         },
         {
           "en": "Do you know?",
           "ur": "کیا تم جانتے ہو؟"
-        },
-        {
-          "en": "They will know.",
-          "ur": "وہ جان لیں گے۔"
         }
       ],
-      "correct_index": 0,
-      "xp_value": 1
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "سَوْفَ + تَعْلَمُونَ: you will come to know.",
+        "ur": "سَوْفَ + تَعْلَمُونَ: تم جان لو گے۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "سَوْفَ: the separate future marker",
-      "ar": "سَوْفَ لِلِاسْتِقْبَالِ",
-      "ur": "سَوْفَ: مستقبل کا الگ نشان"
+      "en": "سَوْفَ: the future",
+      "ar": "سَوْفَ",
+      "ur": "سَوْفَ: مستقبل"
     },
     "ayah": {
       "surah": 102,
       "ayah": 3,
       "label": "At-Takathur 102:3",
       "ar": "كَلَّا سَوْفَ تَعْلَمُونَ",
-      "en": "No! You will come to know.",
+      "en": "No! You are going to know.",
       "ur": "ہرگز نہیں! تم عنقریب جان لو گے۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/102003.mp3"
     },
     "highlighted_word_indices": [
-      1,
-      2
+      1
     ],
     "highlighted_words": [
-      "سَوْفَ",
-      "تَعْلَمُونَ"
+      "سَوْفَ"
     ],
     "noor_explanation": {
-      "en": "سَوْفَ + تَعْلَمُونَ = \"you will come to know\". The same verb with سَـ would be سَتَعْلَمُونَ.",
-      "ur": "سَوْفَ + تَعْلَمُونَ = \"تم جان لو گے\"۔ یہی فعل سَـ کے ساتھ سَتَعْلَمُونَ ہو گا۔"
+      "en": "سَوْفَ تَعْلَمُونَ: you will know. A separate word with the same job as سَـ.",
+      "ur": "سَوْفَ تَعْلَمُونَ: تم جان لو گے۔ الگ لفظ، کام وہی جو سَـ کا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "سَـ and سَوْفَ both mark the future, and both appear throughout the Quran. Read each as \"will\" and let the context tell you more.",
-      "ur": "سَـ اور سَوْفَ دونوں مستقبل بتاتے ہیں اور دونوں قرآن میں جگہ جگہ آتے ہیں۔ ہر ایک کو \"گا\" پڑھیں اور باقی سیاق سے سمجھیں۔"
+      "en": "You can read the future with سَـ or سَوْفَ. Next: telling 'now' from 'will', and future markers in the Quran.",
+      "ur": "آپ سَـ یا سَوْفَ کے ساتھ مستقبل پڑھ سکتے ہیں۔ آگے: 'ابھی' اور 'گا' میں فرق، اور قرآن میں مستقبل کی علامتیں۔"
     }
   }
 }

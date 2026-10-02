@@ -1,0 +1,435 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 32 review (ch32-l05, new, display order 5). Retrieves Chapter 19's إِذَا وَقَبَ, the مَتَى / إِذَا contrast, event and response, the فَ of a nominal response, the two فَ of 94:7 and 84:1's event-only ayah, with one fresh ordinary-Fusha listening item (الْمَطَرُ and الْأَوْلَادُ shown first). No new grammar. Rebuilt 2026-10-02 in the proposal harvest, batch 2 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-32-content-proposal.md and its review amendments: the chapter now teaches what its map promised — reading an إِذَا clause. مَتَى (Chapter 31) asks; إِذَا introduces an event; the event and its response (جَوَابُ الشَّرْطِ, named only); the two فَ of 94:7 (the first continues, the second marks the response; the command is انْصَبْ, glossed — commands are Chapter 51); transfer to 84:1 and 81:1, whose ayah states no response. Al-Falaq's إِذَا وَقَبَ / إِذَا حَسَدَ are Chapter 19 retrieval; An-Nasr is left to Chapter 33. No إِنْ or jussive (Chapter 68); no tense rule is taught. Removed: the sentence-type / إِنَّ / لَيْسَ re-run of Chapter 29, لَيْسَ with a nominative predicate, إِذَا labelled حرف جر, 'a future event in the past', فَ called an imperative particle, the duplicated An-Nasr parse items, and corrupted strings.",
+    "title": "Chapter 32 Review",
+    "titleAr": "مُرَاجَعَةُ الْفَصْلِ الثَّانِي وَالثَّلَاثِينَ",
+    "titleUr": "باب 32 کی دہرائی",
+    "chapter_order": 32,
+    "lesson_order": 5,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 113,
+      "ayah": 3,
+      "label": "Al-Falaq 113:3",
+      "ar": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ",
+      "en": "And from the evil of darkness when it settles,",
+      "ur": "اور اندھیری رات کے شر سے جب وہ چھا جائے،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113003.mp3"
+    },
+    "noor_intro": {
+      "en": "Where this chapter began. One more listen before the review.",
+      "ur": "جہاں سے یہ باب شروع ہوا۔ دہرائی سے پہلے ایک بار پھر سنیں۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Three questions for an إِذَا sentence",
+        "ar": "إِذَا … | …",
+        "ur": "إِذَا والے جملے کے تین سوال"
+      },
+      "explanation": {
+        "en": "1. Is it a question (مَتَى…؟) or an event (إِذَا)? 2. What is the event? 3. Is a response shown — and does فَ mark it?",
+        "ur": "1۔ یہ سوال ہے (مَتَى…؟) یا واقعہ (إِذَا)؟ 2۔ واقعہ کیا ہے؟ 3۔ کیا جواب دکھایا گیا ہے — اور کیا فَ اس کی علامت ہے؟"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "إِذَا جَاءَ رَمَضَانُ فَرِحَ النَّاسُ.",
+        "ar_plain": "إذا جاء رمضان فرح الناس.",
+        "translit": "idhā jāʾa ramaḍānu fariḥa n-nāsu.",
+        "en": "When Ramadan comes, the people are glad.",
+        "ur": "جب رمضان آتا ہے تو لوگ خوش ہوتے ہیں۔"
+      },
+      "explanation": {
+        "en": "فَرِحَ = was glad. Event: Ramadan comes. Response: the people are glad.",
+        "ur": "فَرِحَ = خوش ہوا۔ واقعہ: رمضان آتا ہے۔ جواب: لوگ خوش ہوتے ہیں۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "الْأَوْلَادُ",
+        "ar_plain": "الأولاد",
+        "translit": "al-awlādu",
+        "en": "the children",
+        "ur": "بچے"
+      },
+      "explanation": {
+        "en": "A word for the listening task: الْأَوْلَادُ, the children. You also know الْمَطَرُ, the rain.",
+        "ur": "سننے والے کام کے لیے ایک لفظ: الْأَوْلَادُ، بچے۔ الْمَطَرُ، بارش، آپ جانتے ہیں۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch32-l05-ex01",
+      "statement": {
+        "en": "In إِذَا وَقَبَ, إِذَا asks a question.",
+        "ur": "إِذَا وَقَبَ میں إِذَا سوال پوچھتا ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "إِذَا وَقَبَ: when it settles — an event, not a question.",
+        "ur": "إِذَا وَقَبَ: جب وہ چھا جائے — واقعہ، سوال نہیں۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch32-l05-ex02",
+      "mode": "TAP",
+      "sentence_ar": "___ رَجَعْتَ؟ — أَمْسِ.",
+      "hint": {
+        "en": "When did you come back? — Yesterday.",
+        "ur": "تم کب واپس آئے؟ — گزشتہ کل۔"
+      },
+      "options": [
+        {
+          "ar": "مَتَى",
+          "ar_plain": "متى",
+          "translit": "matā",
+          "en": "when? (question)",
+          "ur": "کب؟ (سوال)"
+        },
+        {
+          "ar": "إِذَا",
+          "ar_plain": "إذا",
+          "translit": "idhā",
+          "en": "when (an event)",
+          "ur": "جب (واقعہ)"
+        },
+        {
+          "ar": "هَلْ",
+          "ar_plain": "هل",
+          "translit": "hal",
+          "en": "is…? / did…?",
+          "ur": "کیا…؟"
+        },
+        {
+          "ar": "لِمَاذَا",
+          "ar_plain": "لماذا",
+          "translit": "li-mādhā",
+          "en": "why?",
+          "ur": "کیوں؟"
+        }
+      ],
+      "correct_answer": {
+        "ar": "مَتَى",
+        "ar_plain": "متى",
+        "translit": "matā",
+        "en": "when? (question)",
+        "ur": "کب؟ (سوال)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A question with a time answer: مَتَى.",
+        "ur": "وقت والے جواب کا سوال: مَتَى۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch32-l05-ex03",
+      "prompt": {
+        "ar": "إِذَا دَخَلَ الْأُسْتَاذُ الْفَصْلَ سَكَتَ الطُّلَّابُ.",
+        "ar_plain": "إذا دخل الأستاذ الفصل سكت الطلاب.",
+        "translit": "idhā dakhala l-ustādhu l-faṣla sakata ṭ-ṭullābu.",
+        "en": "When the teacher enters the classroom, the students fall silent.",
+        "ur": "جب استاد کلاس میں داخل ہوتے ہیں تو طلبہ خاموش ہو جاتے ہیں۔"
+      },
+      "options": [
+        {
+          "en": "When the students fall silent, the teacher enters.",
+          "ur": "جب طلبہ خاموش ہوتے ہیں تو استاد داخل ہوتے ہیں۔"
+        },
+        {
+          "en": "When did the teacher enter the classroom?",
+          "ur": "استاد کلاس میں کب داخل ہوئے؟"
+        },
+        {
+          "en": "The teacher entered because the students were silent.",
+          "ur": "استاد اس لیے داخل ہوئے کہ طلبہ خاموش تھے۔"
+        },
+        {
+          "en": "When the teacher enters the classroom, the students fall silent.",
+          "ur": "جب استاد کلاس میں داخل ہوتے ہیں تو طلبہ خاموش ہو جاتے ہیں۔"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Event after إِذَا: دَخَلَ الْأُسْتَاذُ الْفَصْلَ. Response: سَكَتَ الطُّلَّابُ.",
+        "ur": "إِذَا کے بعد واقعہ: دَخَلَ الْأُسْتَاذُ الْفَصْلَ۔ جواب: سَكَتَ الطُّلَّابُ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch32-l05-ex04",
+      "statement": {
+        "en": "The event is فَرِحَ النَّاسُ.",
+        "ur": "واقعہ فَرِحَ النَّاسُ ہے۔",
+        "ar_example": {
+          "ar": "إِذَا جَاءَ رَمَضَانُ فَرِحَ النَّاسُ.",
+          "ar_plain": "إذا جاء رمضان فرح الناس.",
+          "translit": "idhā jāʾa ramaḍānu fariḥa n-nāsu.",
+          "en": "When Ramadan comes, the people are glad.",
+          "ur": "جب رمضان آتا ہے تو لوگ خوش ہوتے ہیں۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The event follows إِذَا: جَاءَ رَمَضَانُ. فَرِحَ النَّاسُ is the response.",
+        "ur": "واقعہ إِذَا کے بعد ہے: جَاءَ رَمَضَانُ۔ فَرِحَ النَّاسُ جواب ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch32-l05-ex05",
+      "mode": "TAP",
+      "sentence_ar": "إِذَا نَجَحَتْ زَيْنَبُ ___ سَعِيدَةٌ.",
+      "hint": {
+        "en": "When Zaynab succeeds, then she is happy.",
+        "ur": "جب زینب کامیاب ہوتی ہے تو وہ خوش ہوتی ہے۔"
+      },
+      "options": [
+        {
+          "ar": "هِيَ",
+          "ar_plain": "هي",
+          "translit": "hiya",
+          "en": "she",
+          "ur": "وہ"
+        },
+        {
+          "ar": "فَإِذَا",
+          "ar_plain": "فإذا",
+          "translit": "fa-idhā",
+          "en": "so when",
+          "ur": "پس جب"
+        },
+        {
+          "ar": "فَهِيَ",
+          "ar_plain": "فهي",
+          "translit": "fa-hiya",
+          "en": "then she",
+          "ur": "تو وہ"
+        },
+        {
+          "ar": "فَهُوَ",
+          "ar_plain": "فهو",
+          "translit": "fa-huwa",
+          "en": "then he",
+          "ur": "تو وہ (مرد)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "فَهِيَ",
+        "ar_plain": "فهي",
+        "translit": "fa-hiya",
+        "en": "then she",
+        "ur": "تو وہ"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A nominal response about Zaynab takes فَ: فَهِيَ سَعِيدَةٌ.",
+        "ur": "زینب کے بارے میں اسمیہ جواب فَ کے ساتھ: فَهِيَ سَعِيدَةٌ۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch32-l05-ex06",
+      "ayah_fragment": {
+        "ar": "فَإِذَا فَرَغْتَ فَانصَبْ",
+        "surah_ref": "Ash-Sharh 94:7"
+      },
+      "options": [
+        {
+          "en": "Both فَ are commands.",
+          "ur": "دونوں فَ حکم ہیں۔"
+        },
+        {
+          "en": "The first فَ continues; the second فَ marks the response; انْصَبْ is the command.",
+          "ur": "پہلا فَ بات آگے بڑھاتا ہے؛ دوسرا فَ جواب کی علامت ہے؛ حکم انْصَبْ ہے۔"
+        },
+        {
+          "en": "The first فَ marks the response.",
+          "ur": "پہلا فَ جواب کی علامت ہے۔"
+        },
+        {
+          "en": "There is no response.",
+          "ur": "کوئی جواب نہیں۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "فَإِذَا … فَانْصَبْ: two فَ, two jobs.",
+        "ur": "فَإِذَا … فَانْصَبْ: دو فَ، دو کام۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch32-l05-ex07",
+      "ayah_fragment": {
+        "ar": "إِذَا السَّمَاءُ انشَقَّتْ",
+        "surah_ref": "Al-Inshiqaq 84:1"
+      },
+      "options": [
+        {
+          "en": "A question about the sky.",
+          "ur": "آسمان کے بارے میں سوال۔"
+        },
+        {
+          "en": "Event and response: the sky splits, so the sun is wrapped up.",
+          "ur": "واقعہ اور جواب: آسمان پھٹا، تو سورج لپیٹا گیا۔"
+        },
+        {
+          "en": "A command to the sky.",
+          "ur": "آسمان کو حکم۔"
+        },
+        {
+          "en": "Event only: when the sky splits open.",
+          "ur": "صرف واقعہ: جب آسمان پھٹ جائے۔"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "This ayah shows the event; do not invent a response.",
+        "ur": "یہ آیت واقعہ دکھاتی ہے؛ اپنی طرف سے جواب نہ بنائیں۔"
+      }
+    },
+    {
+      "type": "AUDIO_RECOGNITION",
+      "id": "ch32-l05-ex08",
+      "arabic_text": "إِذَا جَاءَ الْمَطَرُ رَجَعَ الْأَوْلَادُ إِلَى الْبَيْتِ.",
+      "options": [
+        {
+          "en": "When the children go back home, the rain comes.",
+          "ur": "جب بچے گھر واپس جاتے ہیں تو بارش آتی ہے۔"
+        },
+        {
+          "en": "When the rain comes, the children go back home.",
+          "ur": "جب بارش آتی ہے تو بچے گھر واپس جاتے ہیں۔"
+        },
+        {
+          "en": "When did the rain come? The children went home.",
+          "ur": "بارش کب آئی؟ بچے گھر گئے۔"
+        },
+        {
+          "en": "The rain came because the children went home.",
+          "ur": "بارش اس لیے آئی کہ بچے گھر گئے۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Event: جَاءَ الْمَطَرُ. Response: رَجَعَ الْأَوْلَادُ.",
+        "ur": "واقعہ: جَاءَ الْمَطَرُ۔ جواب: رَجَعَ الْأَوْلَادُ۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch32-l05-ex09",
+      "left_column": [
+        {
+          "ar": "مَتَى",
+          "ar_plain": "متى",
+          "translit": "matā",
+          "en": "matā",
+          "ur": "متى"
+        },
+        {
+          "ar": "إِذَا",
+          "ar_plain": "إذا",
+          "translit": "idhā",
+          "en": "idhā",
+          "ur": "اذا"
+        },
+        {
+          "ar": "فَ",
+          "ar_plain": "ف",
+          "translit": "fa",
+          "en": "fa",
+          "ur": "ف"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "introduces an event",
+          "ur": "واقعہ شروع کرتا ہے"
+        },
+        {
+          "en": "can mark the response",
+          "ur": "جواب کی علامت ہو سکتا ہے"
+        },
+        {
+          "en": "asks for a time",
+          "ur": "وقت پوچھتا ہے"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "مَتَى asks; إِذَا sets up the event; فَ can mark the response.",
+        "ur": "مَتَى پوچھتا ہے؛ إِذَا واقعہ رکھتا ہے؛ فَ جواب کی علامت ہو سکتا ہے۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 32 — reading إِذَا",
+      "ar": "إِذَا وَمَا يَتْبَعُهَا",
+      "ur": "باب 32 — إِذَا کی پڑھائی"
+    },
+    "ayah": {
+      "surah": 113,
+      "ayah": 5,
+      "label": "Al-Falaq 113:5",
+      "ar": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+      "en": "And from the evil of an envier when he envies.",
+      "ur": "اور حسد کرنے والے کے شر سے جب وہ حسد کرے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113005.mp3"
+    },
+    "highlighted_word_indices": [
+      3,
+      4
+    ],
+    "highlighted_words": [
+      "إِذَا",
+      "حَسَدَ"
+    ],
+    "noor_explanation": {
+      "en": "إِذَا حَسَدَ: the event. You now read every إِذَا by asking what the event is, and whether a response follows.",
+      "ur": "إِذَا حَسَدَ: واقعہ۔ اب آپ ہر إِذَا کو یہ پوچھ کر پڑھتے ہیں کہ واقعہ کیا ہے، اور کیا اس کے بعد جواب آتا ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Review done. Next: the Chapter 32 final test.",
+      "ur": "دہرائی مکمل۔ آگے: باب 32 کا آخری امتحان۔"
+    }
+  }
+}

@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 33, Lesson 3 (ch33-l03) — all of An-Nasr, staged 110:1–2 (the event, joined by وَ), 110:3 (the response with فَ), then whole; 110:2 is now taught. رَأَيْتَ، يَدْخُلُونَ، أَفْوَاجًا، سَبِّحْ، اسْتَغْفِرْهُ، كَانَ، تَوَّابًا are glossed whole — no stem, mood, command formation or حال. Chronology, tafsir and claims about what the Prophet ﷺ knew are left out. Rebuilt 2026-10-02 in the proposal harvest, batch 2 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-33-content-proposal.md and its review amendments: a Book 3 reading bridge — Al-Kafirun excerpts retrieved (Chapter 30 owns the full reading); complete, staged readings of Al-Falaq 113:1–5, An-Nasr 110:1–3 (110:2 included) and, new, An-Nas 114:1–6; a mixed lesson on what وَ joins, the noun of إِنَّ, the predicate of لَيْسَ, questions and إِذَا; the old capstone becomes the review; a 12-question readiness test. Unfamiliar Quran forms (أَعُوذُ، رَأَيْتَ، يَدْخُلُونَ، سَبِّحْ، اسْتَغْفِرْهُ، كَانَ، تَوَّابًا، يُوَسْوِسُ) are glossed whole. Removed: 'first complete surah' and 'every word' claims, Al-Fatiha 1:5 and the imperfect preview (Chapter 34), the 2:256 slogan inside Al-Kafirun, revelation chronology and the 'mission complete' inference, 'إِذَا always future/certain', كَانَ 'connecting to present sense', وَ as a sentence-boundary rule, الطَّالِبُ يَقْرَأُ called verbal, the wrong root of نَسْتَعِينُ, many-to-one matching boards, 'Parse:' true/false items and stray foreign words.",
+    "title": "All of An-Nasr",
+    "titleAr": "سُورَةُ النَّصْرِ",
+    "titleUr": "پوری سورۃ النصر",
     "chapter_order": 33,
     "lesson_order": 3,
-    "chapter_title": "Reading Comprehension and Integration",
-    "title": "Extended Reading: Surah An-Nasr",
-    "titleAr": "قِرَاءَةُ مُوَسَّعَةٌ: سُورَةُ النَّصْرِ",
-    "source": "book3_lesson10_closing.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
@@ -17,430 +17,273 @@
       "ayah": 1,
       "label": "An-Nasr 110:1",
       "ar": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ",
-      "en": "When the victory of Allah and the conquest come.",
-      "ur": "جب اللہ کی مدد اور فتح آجائے۔",
+      "en": "When the help of Allah comes, and the victory,",
+      "ur": "جب اللہ کی مدد اور فتح آ جائے،",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/110001.mp3"
     },
     "noor_intro": {
-      "en": "An-Nasr has three ayahs. Let us read all three, in order, with the grammar you know.",
-      "ur": "سورۃ النصر کی تین آیات ہیں۔ آئیے تینوں کو ترتیب سے اپنی گرامر کے ساتھ پڑھیں۔"
+      "en": "All three ayat of An-Nasr. Use Chapter 32: find the event after إِذَا, then the response.",
+      "ur": "سورۃ النصر کی تینوں آیات۔ باب 32 استعمال کریں: إِذَا کے بعد واقعہ تلاش کریں، پھر جواب۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "110:1: When the help of Allah comes, and the victory,",
+        "ar": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ",
+        "ur": "110:1: جب اللہ کی مدد اور فتح آ جائے،"
+      },
+      "explanation": {
+        "en": "إِذَا + جَاءَ: the event begins. نَصْرُ اللَّهِ, the help of Allah (iḍāfa); وَالْفَتْحُ, and the victory.",
+        "ur": "إِذَا + جَاءَ: واقعہ شروع ہوتا ہے۔ نَصْرُ اللَّهِ، اللہ کی مدد (اضافت)؛ وَالْفَتْحُ، اور فتح۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/110001.mp3"
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "110:2: and you see the people entering the religion of Allah in crowds,",
+        "ar": "وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا",
+        "ur": "110:2: اور آپ لوگوں کو اللہ کے دین میں فوج در فوج داخل ہوتے دیکھیں،"
+      },
+      "explanation": {
+        "en": "وَ joins this to the event. رَأَيْتَ, you see; يَدْخُلُونَ, entering; أَفْوَاجًا, in crowds — all given whole. فِي دِينِ اللَّهِ: into the religion of Allah.",
+        "ur": "وَ اسے واقعے سے جوڑتا ہے۔ رَأَيْتَ، آپ دیکھیں؛ يَدْخُلُونَ، داخل ہوتے؛ أَفْوَاجًا، فوج در فوج — سب پورے دیے گئے ہیں۔ فِي دِينِ اللَّهِ: اللہ کے دین میں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/110002.mp3"
+    },
+    {
       "type": "CONCEPT",
       "concept": {
-        "en": "An-Nasr: structure and meaning",
-        "ar": "سُورَةُ النَّصْرِ: الْبِنَاءُ وَالْمَعْنَى",
-        "ur": "سورۃ النصر: ساخت اور مطلب"
+        "en": "110:1–2: one event in two parts",
+        "ar": "إِذَا جَاءَ … وَرَأَيْتَ …",
+        "ur": "110:1–2: دو حصوں میں ایک واقعہ"
       },
       "explanation": {
-        "en": "An-Nasr has 3 ayahs: (1) \"when the help of Allah and the victory come\", (2) \"and you see the people entering the religion of Allah in crowds\", (3) the command to glorify and ask forgiveness.",
-        "ur": "سورۃ النصر کی 3 آیات ہیں: (1) \"جب اللہ کی مدد اور فتح آ جائے\"، (2) \"اور تم لوگوں کو اللہ کے دین میں فوج در فوج داخل ہوتے دیکھ لو\"، (3) تسبیح اور استغفار کا حکم۔"
-      }
+        "en": "The event has two parts joined by وَ: the help comes, and you see the people entering. The response has not come yet.",
+        "ur": "واقعے کے دو حصے ہیں جو وَ سے جڑے ہیں: مدد آتی ہے، اور آپ لوگوں کو داخل ہوتے دیکھتے ہیں۔ جواب ابھی نہیں آیا۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/110001.mp3"
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "نَصْرُ",
-        "ar_plain": "نصر",
-        "translit": "nasrun",
-        "en": "victory / help",
-        "ur": "فتح / مدد"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "110:3: then glorify the praise of your Lord and ask His forgiveness; indeed, He is ever accepting of repentance.",
+        "ar": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ ۚ إِنَّهُ كَانَ تَوَّابًا",
+        "ur": "110:3: تو اپنے رب کی حمد کے ساتھ تسبیح کیجیے اور اس سے مغفرت مانگیے؛ بے شک وہ بڑا توبہ قبول کرنے والا ہے۔"
       },
       "explanation": {
-        "en": "From ن-ص-ر (to give victory/help). نَصْرُ اللَّهِ = the victory/help that comes from Allah. This word appears in many Quranic contexts.",
-        "ur": "ن-ص-ر (فتح/مدد دینا) سے۔ نَصْرُ اللَّهِ = وہ فتح/مدد جو اللہ سے آتی ہے۔ یہ لفظ بہت سی قرآنی contexts میں appear کرتا ہے۔"
-      }
+        "en": "فَ marks the response (Chapter 32): سَبِّحْ, glorify, and اسْتَغْفِرْهُ, ask His forgiveness — given whole. إِنَّهُ كَانَ تَوَّابًا: indeed He is ever accepting of repentance.",
+        "ur": "فَ جواب کی علامت ہے (باب 32): سَبِّحْ، تسبیح کیجیے، اور اسْتَغْفِرْهُ، اس سے مغفرت مانگیے — پورے دیے گئے ہیں۔ إِنَّهُ كَانَ تَوَّابًا: بے شک وہ بڑا توبہ قبول کرنے والا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/110003.mp3"
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "الْفَتْحُ",
-        "ar_plain": "الفتح",
-        "translit": "al-fathu",
-        "en": "the conquest / opening",
-        "ur": "فتح / کھولنا"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Event, then response",
+        "ar": "إِذَا جَاءَ … فَسَبِّحْ",
+        "ur": "واقعہ، پھر جواب"
       },
       "explanation": {
-        "en": "From ف-ت-ح (to open). الْفَتْحُ = the opening / the victory.",
-        "ur": "ف-ت-ح (کھولنا) سے۔ الْفَتْحُ = کھلنا / فتح۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ",
-        "ar_plain": "إذا جاء فتح الله والفتح",
-        "translit": "izaa jaa'a nasrullaahi wal-fathu",
-        "en": "When the victory of Allah and the conquest come.",
-        "ur": "جب اللہ کی مدد اور فتح آجائے۔"
+        "en": "110:1–2 is the event; 110:3 opens with فَ: the response. Read the three ayat as one connected whole.",
+        "ur": "110:1–2 واقعہ ہے؛ 110:3 فَ سے شروع ہوتی ہے: جواب۔ تینوں آیات کو ایک جڑی ہوئی عبارت کے طور پر پڑھیں۔"
       },
-      "explanation": {
-        "en": "إِذَا = when (time conditional). جَاءَ = came (past tense). نَصْرُ اللَّهِ = victory from Allah (subject with idafa). وَالْفَتْحُ = and the conquest (coordinated noun).",
-        "ur": "إِذَا = جب (time conditional)۔ جَاءَ = آیا (ماضی)۔ نَصْرُ اللَّهِ = اللہ سے فتح (idafa کے ساتھ subject)۔ وَالْفَتْحُ = اور فتح (coordinated noun)۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا",
-        "ar_plain": "ورايت الناس يدخلون في دين الله افواجا",
-        "translit": "wa ra-aytan-naasa yadkhuluuna fii diinillaahi afwaajaa",
-        "en": "And you see the people entering the religion of Allah in crowds. (An-Nasr 110:2)",
-        "ur": "اور تم لوگوں کو اللہ کے دین میں فوج در فوج داخل ہوتے دیکھ لو۔ (النصر 110:2)"
-      },
-      "explanation": {
-        "en": "رَأَيْتَ = you saw (here: you see). النَّاسَ = the people (object). يَدْخُلُونَ = they enter — what the people are doing. فِي دِينِ اللَّهِ = into the religion of Allah. أَفْوَاجًا = in crowds.",
-        "ur": "رَأَيْتَ = تم نے دیکھا (یہاں: تم دیکھو)۔ النَّاسَ = لوگ (مفعول)۔ يَدْخُلُونَ = وہ داخل ہوتے ہیں — لوگ کیا کر رہے ہیں۔ فِي دِينِ اللَّهِ = اللہ کے دین میں۔ أَفْوَاجًا = فوج در فوج۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "The إِذَا clause: a grammatical feature",
-        "ur": "إِذَا clause: ایک گرامری خاصیت"
-      },
-      "body": {
-        "en": "إِذَا in Quranic Arabic often introduces a future event described in past tense — this is a stylistic feature. It creates a sense of certainty about future events.",
-        "ur": "عربی قرآنی میں إِذَا اکثر ایسے future event کو introduce کرتا ہے جو ماضی tense میں describe ہوتا ہے — یہ ایک stylistic feature ہے۔ یہ future events کے بارے میں یقین کا احساس پیدا کرتا ہے۔"
-      }
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/110003.mp3"
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
+      "type": "MATCH_AYAH",
       "id": "ch33-l03-ex01",
-      "prompt": {
+      "ayah_fragment": {
         "ar": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ",
-        "ar_plain": "إذا جاء فتح الله والفتح",
-        "translit": "izaa jaa'a nasrullaahi wal-fathu",
-        "en": "When the victory of Allah and the conquest come.",
-        "ur": "جب اللہ کی مدد اور فتح آجائے۔"
+        "surah_ref": "An-Nasr 110:1"
       },
       "options": [
         {
-          "en": "When the victory of Allah and the conquest come.",
-          "ur": "جب اللہ کی مدد اور فتح آجائے۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "When did the help of Allah come?",
+          "ur": "اللہ کی مدد کب آئی؟"
         },
         {
-          "en": "The victory of Allah and the conquest came.",
-          "ur": "اللہ کی مدد اور فتح آ گئی۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "The help of Allah came because of the victory.",
+          "ur": "اللہ کی مدد فتح کی وجہ سے آئی۔"
         },
         {
-          "en": "If the victory of Allah and the conquest come.",
-          "ur": "اگر اللہ کی مدد اور فتح آئے۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "Is the help of Allah near?",
+          "ur": "کیا اللہ کی مدد قریب ہے؟"
         },
         {
-          "en": "Allah's victory opened.",
-          "ur": "اللہ کی فتح کھل گئی۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "When the help of Allah comes, and the victory,",
+          "ur": "جب اللہ کی مدد اور فتح آ جائے،"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "إِذَا + جَاءَ: when … comes — the event.",
+        "ur": "إِذَا + جَاءَ: جب … آئے — واقعہ۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch33-l03-ex02",
+      "ayah_fragment": {
+        "ar": "وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا",
+        "surah_ref": "An-Nasr 110:2"
+      },
+      "options": [
+        {
+          "en": "and you see the people entering the religion of Allah in crowds,",
+          "ur": "اور آپ لوگوں کو اللہ کے دین میں فوج در فوج داخل ہوتے دیکھیں،"
+        },
+        {
+          "en": "and the people leave the religion of Allah,",
+          "ur": "اور لوگ اللہ کے دین سے نکل جائیں،"
+        },
+        {
+          "en": "and you enter the people's houses,",
+          "ur": "اور آپ لوگوں کے گھروں میں داخل ہوں،"
+        },
+        {
+          "en": "and you see the people asking about the religion,",
+          "ur": "اور آپ لوگوں کو دین کے بارے میں پوچھتے دیکھیں،"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "إِذَا means 'when' (time), not 'if' (condition). جَاءَ is past tense used for future certainty. و indicates coordination — two events together.",
-        "ur": "إِذَا کا مطلب ہے 'جب' (وقت)، 'اگر' (condition) نہیں۔ جَاءَ ماضی ہے جو future certainty کے لیے gebraucht۔ و coordination indicate کرتا ہے — دو events اکٹھے۔"
+        "en": "رَأَيْتَ, you see; يَدْخُلُونَ, entering; فِي دِينِ اللَّهِ, the religion of Allah; أَفْوَاجًا, in crowds.",
+        "ur": "رَأَيْتَ، آپ دیکھیں؛ يَدْخُلُونَ، داخل ہوتے؛ فِي دِينِ اللَّهِ، اللہ کے دین میں؛ أَفْوَاجًا، فوج در فوج۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch33-l03-ex03",
+      "ayah_fragment": {
+        "ar": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ",
+        "surah_ref": "An-Nasr 110:3"
+      },
+      "options": [
+        {
+          "en": "so your Lord glorified you",
+          "ur": "تو آپ کے رب نے آپ کی تسبیح کی"
+        },
+        {
+          "en": "when did you ask forgiveness?",
+          "ur": "آپ نے کب مغفرت مانگی؟"
+        },
+        {
+          "en": "then glorify the praise of your Lord and ask His forgiveness",
+          "ur": "تو اپنے رب کی حمد کے ساتھ تسبیح کیجیے اور اس سے مغفرت مانگیے"
+        },
+        {
+          "en": "and the people asked forgiveness",
+          "ur": "اور لوگوں نے مغفرت مانگی"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "سَبِّحْ, glorify; اسْتَغْفِرْهُ, ask His forgiveness — commands, given whole.",
+        "ur": "سَبِّحْ، تسبیح کیجیے؛ اسْتَغْفِرْهُ، اس سے مغفرت مانگیے — احکام، پورے دیے گئے ہیں۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch33-l03-ex02",
+      "id": "ch33-l03-ex04",
       "statement": {
-        "en": "In نَصْرُ اللَّهِ, the word اللَّهِ is in the genitive case as the possessor in an idafa construction.",
-        "ur": "نَصْرُ اللَّهِ میں، word اللَّهِ genitive case میں ہے۔",
-        "ar_example": {
-          "ar": "نَصْرُ اللَّهِ",
-          "ar_plain": "نصر الله",
-          "translit": "nasrullaahi",
-          "en": "the victory of Allah",
-          "ur": "اللہ کی مدد"
-        }
+        "en": "رَبِّكَ (your Lord) in 110:3 speaks to the same person as رَأَيْتَ (you see) in 110:2.",
+        "ur": "110:3 میں رَبِّكَ (آپ کا رب) اسی شخص سے بات ہے جس سے 110:2 میں رَأَيْتَ (آپ دیکھیں) کہا گیا۔"
       },
       "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch33-l03-ex03",
-      "mode": "TAP",
-      "sentence_ar": "فَسَبِّحْ بِحَمْدِ ___",
-      "hint": {
-        "en": "So glorify with the praise of your Lord.",
-        "ur": "تو اپنے رب کی تعریف کے ساتھ تسبیح کرو۔"
-      },
-      "options": [
-        {
-          "ar": "رَبِّكَ",
-          "ar_plain": "ربك",
-          "translit": "rabbika",
-          "en": "your Lord",
-          "ur": "آپ کا رب"
-        },
-        {
-          "ar": "اللَّهِ",
-          "ar_plain": "الله",
-          "translit": "allaahi",
-          "en": "Allah",
-          "ur": "اللہ"
-        },
-        {
-          "ar": "النَّاسِ",
-          "ar_plain": "الناس",
-          "translit": "an-naasi",
-          "en": "the people",
-          "ur": "لوگ"
-        },
-        {
-          "ar": "الْمُسْلِمِ",
-          "ar_plain": "المسلم",
-          "translit": "al-muslimi",
-          "en": "the Muslim",
-          "ur": "مسلمان"
-        }
-      ],
-      "correct_answer": {
-        "ar": "رَبِّكَ",
-        "ar_plain": "ربك",
-        "translit": "rabbika",
-        "en": "your Lord",
-        "ur": "آپ کا رب"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch33-l03-ex04",
-      "left_column": [
-        {
-          "ar": "نَصْرُ",
-          "ar_plain": "نصر",
-          "translit": "nasrun",
-          "en": "victory",
-          "ur": "فتح/مدد"
-        },
-        {
-          "ar": "الْفَتْحُ",
-          "ar_plain": "الفتح",
-          "translit": "al-fathu",
-          "en": "conquest",
-          "ur": "فتح"
-        },
-        {
-          "ar": "رَبِّكَ",
-          "ar_plain": "ربك",
-          "translit": "rabbika",
-          "en": "your Lord",
-          "ur": "آپ کا رب"
-        },
-        {
-          "ar": "تَوَّابًا",
-          "ar_plain": "توابا",
-          "translit": "tawwaaban",
-          "en": "ever-accepting of repentance",
-          "ur": "توبہ قبول کرنے والا"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "Noun from ن-ص-ر",
-          "ur": "ن-ص-ر سے noun"
-        },
-        {
-          "en": "Noun from ف-ت-ح",
-          "ur": "ف-ت-ح سے noun"
-        },
-        {
-          "en": "Possessed noun + suffix",
-          "ur": "Possessed noun + suffix"
-        },
-        {
-          "en": "Intensive noun from ت-و-ب (\"ever-relenting\")",
-          "ur": "ت-و-ب سے مبالغے کا اسم (\"بہت توبہ قبول کرنے والا\")"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch33-l03-ex05",
-      "target_translation": {
-        "en": "When the victory of Allah comes.",
-        "ur": "جب اللہ کی مدد آئے۔"
-      },
-      "tiles": [
-        {
-          "ar": "إِذَا",
-          "ar_plain": "إذا",
-          "translit": "izaa",
-          "en": "when",
-          "ur": "جب"
-        },
-        {
-          "ar": "جَاءَ",
-          "ar_plain": "جاء",
-          "translit": "jaa'a",
-          "en": "came",
-          "ur": "آیا"
-        },
-        {
-          "ar": "نَصْرُ",
-          "ar_plain": "نصر",
-          "translit": "nasrun",
-          "en": "victory",
-          "ur": "فتح/مدد"
-        },
-        {
-          "ar": "اللَّهِ",
-          "ar_plain": "الله",
-          "translit": "allaahi",
-          "en": "of Allah",
-          "ur": "اللہ کی"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch33-l03-ex06",
-      "prompt": {
-        "ar": "إِنَّهُ كَانَ تَوَّابًا",
-        "ar_plain": "إنه كان توابا",
-        "translit": "innahu kaana tawwaaban",
-        "en": "Indeed, He is ever-accepting of repentance.",
-        "ur": "بے شک وہ توبہ قبول کرنے والا ہے۔"
-      },
-      "options": [
-        {
-          "en": "Indeed, He is ever-accepting of repentance.",
-          "ur": "بے شک وہ توبہ قبول کرنے والا ہے۔",
-          "translit": "—",
-          "ar_plain": ""
-        },
-        {
-          "en": "He was ever-accepting of repentance.",
-          "ur": "وہ توبہ قبول کرنے والا تھا۔",
-          "translit": "—",
-          "ar_plain": ""
-        },
-        {
-          "en": "Is He ever-accepting of repentance?",
-          "ur": "کیا وہ توبہ قبول کرنے والا ہے؟",
-          "translit": "—",
-          "ar_plain": ""
-        },
-        {
-          "en": "He is not accepting of repentance.",
-          "ur": "وہ توبہ قبول نہیں کرتا۔",
-          "translit": "—",
-          "ar_plain": ""
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "إِنَّ = truly/indeed (emphasizing). كَانَ = was/became (linking verb connecting to present sense). تَوَّابًا = ever-accepting of repentance (predicate).",
-        "ur": "إِنَّ = بے شک/واقعی (emphasizing)۔ كَانَ = تھا/ہو گیا (present sense سے جڑا linking verb)۔ تَوَّابًا = توبہ قبول کرنے والا (predicate)۔"
+        "en": "Both ـكَ in رَبِّكَ and ـتَ in رَأَيْتَ address the same 'you'.",
+        "ur": "رَبِّكَ کا ـكَ اور رَأَيْتَ کا ـتَ ایک ہی 'آپ' سے خطاب ہیں۔"
       }
     },
     {
-      "type": "TAP_TRANSLATION",
-      "id": "ch33-l03-ex07",
-      "prompt": {
-        "ar": "وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا",
-        "ar_plain": "ورايت الناس يدخلون في دين الله افواجا",
-        "translit": "wa ra-aytan-naasa yadkhuluuna fii diinillaahi afwaajaa",
-        "en": "And you see the people entering the religion of Allah in crowds.",
-        "ur": "اور تم لوگوں کو اللہ کے دین میں فوج در فوج داخل ہوتے دیکھ لو۔"
+      "type": "MATCH_AYAH",
+      "id": "ch33-l03-ex05",
+      "ayah_fragment": {
+        "ar": "فَسَبِّحْ",
+        "surah_ref": "An-Nasr 110:3"
       },
       "options": [
         {
-          "en": "And the people saw you entering the religion of Allah.",
-          "ur": "اور لوگوں نے تمہیں اللہ کے دین میں داخل ہوتے دیکھا۔"
+          "en": "It begins a new event.",
+          "ur": "یہ نیا واقعہ شروع کرتا ہے۔"
         },
         {
-          "en": "And you see the people entering the religion of Allah in crowds.",
-          "ur": "اور تم لوگوں کو اللہ کے دین میں فوج در فوج داخل ہوتے دیکھ لو۔"
+          "en": "It begins the response to the event in 110:1–2.",
+          "ur": "یہ 110:1–2 کے واقعے کا جواب شروع کرتا ہے۔"
         },
         {
-          "en": "The people left the religion of Allah in crowds.",
-          "ur": "لوگ فوج در فوج اللہ کا دین چھوڑ گئے۔"
+          "en": "It asks a question.",
+          "ur": "یہ سوال پوچھتا ہے۔"
         },
         {
-          "en": "Enter the religion of Allah, O people.",
-          "ur": "اے لوگو، اللہ کے دین میں داخل ہو جاؤ۔"
+          "en": "It is the help of Allah.",
+          "ur": "یہ اللہ کی مدد ہے۔"
         }
       ],
       "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "رَأَيْتَ = you see; النَّاسَ = the people (object); يَدْخُلُونَ = entering; أَفْوَاجًا = in crowds.",
-        "ur": "رَأَيْتَ = تم دیکھو؛ النَّاسَ = لوگ (مفعول)؛ يَدْخُلُونَ = داخل ہوتے؛ أَفْوَاجًا = فوج در فوج۔"
+        "en": "فَ marks the response (Chapter 32): the event was 110:1–2.",
+        "ur": "فَ جواب کی علامت ہے (باب 32): واقعہ 110:1–2 تھا۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch33-l03-ex06",
+      "statement": {
+        "en": "An-Nasr says: when Allah's help and victory come and you see people entering His religion, then glorify your Lord and ask His forgiveness.",
+        "ur": "سورۃ النصر کہتی ہے: جب اللہ کی مدد اور فتح آئے اور آپ لوگوں کو اس کے دین میں داخل ہوتے دیکھیں، تو اپنے رب کی تسبیح کیجیے اور اس سے مغفرت مانگیے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Event: 110:1–2. Response: 110:3.",
+        "ur": "واقعہ: 110:1–2۔ جواب: 110:3۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "An-Nasr: the victory Surah",
+      "en": "All of An-Nasr",
       "ar": "سُورَةُ النَّصْرِ",
-      "ur": "سورۃ النصر"
+      "ur": "پوری سورۃ النصر"
     },
     "ayah": {
       "surah": 110,
-      "ayah": 1,
-      "label": "An-Nasr 110:1",
-      "ar": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ",
-      "en": "When the victory of Allah and the conquest come.",
-      "ur": "جب اللہ کی مدد اور فتح آجائے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/110001.mp3"
+      "ayah": 3,
+      "label": "An-Nasr 110:3",
+      "ar": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ ۚ إِنَّهُ كَانَ تَوَّابًا",
+      "en": "then glorify the praise of your Lord and ask His forgiveness; indeed, He is ever accepting of repentance.",
+      "ur": "تو اپنے رب کی حمد کے ساتھ تسبیح کیجیے اور اس سے مغفرت مانگیے؛ بے شک وہ بڑا توبہ قبول کرنے والا ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/110003.mp3"
     },
     "highlighted_word_indices": [
       0,
-      1,
-      2
+      3
+    ],
+    "highlighted_words": [
+      "فَسَبِّحْ",
+      "وَاسْتَغْفِرْهُ"
     ],
     "noor_explanation": {
-      "en": "إِذَا جَاءَ — \"when … comes\": a past-tense verb after إِذَا pointing to a future event. نَصْرُ اللَّهِ is an iḍāfa, and وَالْفَتْحُ is joined to it.",
-      "ur": "إِذَا جَاءَ — \"جب … آئے\": إِذَا کے بعد ماضی کا فعل جو آنے والے واقعے کی طرف اشارہ کرتا ہے۔ نَصْرُ اللَّهِ اضافت ہے اور وَالْفَتْحُ اس سے جڑا ہے۔"
+      "en": "فَسَبِّحْ … وَاسْتَغْفِرْهُ: the response to the whole event of 110:1–2. You read the surah from its إِذَا to its فَ.",
+      "ur": "فَسَبِّحْ … وَاسْتَغْفِرْهُ: 110:1–2 کے پورے واقعے کا جواب۔ آپ نے سورت اس کے إِذَا سے اس کے فَ تک پڑھی۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You read all three ayahs of An-Nasr: the إِذَا clause, the people entering in crowds, and the command to glorify and seek forgiveness.",
-      "ur": "آپ نے سورۃ النصر کی تینوں آیات پڑھیں: إِذَا والا جملہ، لوگوں کا فوج در فوج داخل ہونا، اور تسبیح و استغفار کا حکم۔"
+      "en": "You read all of An-Nasr, event to response. Next: all of An-Nas.",
+      "ur": "آپ نے پوری سورۃ النصر پڑھی، واقعے سے جواب تک۔ آگے: پوری سورۃ الناس۔"
     }
   }
 }

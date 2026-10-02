@@ -1,0 +1,437 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 35 final test (ch35-test, new — not ch35-l07). Twelve multiple-choice questions on six two-question strands: attached سَـ (q01–02), separate سَوْفَ and its equivalence with سَـ (q03–04, no near/far key), now/habit versus future (q05–06), past and command (q07–08), لَنْ recognised by meaning (q09–10, no ending derivation), and one attached and one separate Quran excerpt (q11–12). Pass mark 80 %: 9/12 fails, 10/12 passes. Rebuilt 2026-10-02 in the proposal harvest, batch 2 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-35-content-proposal.md and its review amendments: attached سَـ and separate سَوْفَ both point the Chapter 34 imperfect to the future — some grammarians describe a near/remote tendency, others no fixed difference, so it is mentioned once and never tested; present/habit versus future by marker and time word; future versus past and command (commands given whole — Chapter 51); لَنْ + imperfect recognised as 'will not' with the following form supplied (its ending is Chapter 45's); Quran readings 2:142 سَيَقُولُ, 102:3 سَوْفَ تَعْلَمُونَ, 93:5 وَلَسَوْفَ, 5:54, 7:143 and 3:92 لَنْ. Removed: 'سَـ = near, سَوْفَ = far/emphatic', 'سَوْفَ adds certainty to every promise', hooks with no future marker (108:2, 39:10–11, 108:1), قُولُ for يَقُولُ, the 'most common future form' claim, يَـ read as 'they', the spliced Quran-like composite, لَا خَوْفٌ in the future outcome, the Book 5 bridge claims, multi-word build tiles and many-to-one matching.",
+    "title": "Chapter 35 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الْخَامِسِ وَالثَّلَاثِينَ",
+    "titleUr": "باب 35 کا آخری امتحان",
+    "chapter_order": 35,
+    "lesson_order": 7,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 2,
+      "ayah": 142,
+      "label": "Al-Baqarah 2:142",
+      "ar": "سَيَقُولُ السُّفَهَاءُ مِنَ النَّاسِ",
+      "en": "The foolish among the people will say,",
+      "ur": "لوگوں میں سے بے وقوف کہیں گے،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002142.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 35.",
+      "ur": "باب 35 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 35 — the future",
+      "ar": "سَـ وَسَوْفَ وَلَنْ",
+      "ur": "باب 35 — مستقبل"
+    },
+    "ayah": {
+      "surah": 2,
+      "ayah": 142,
+      "label": "Al-Baqarah 2:142",
+      "ar": "سَيَقُولُ السُّفَهَاءُ مِنَ النَّاسِ",
+      "en": "The foolish among the people will say,",
+      "ur": "لوگوں میں سے بے وقوف کہیں گے،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002142.mp3"
+    },
+    "highlighted_word_indices": [
+      0
+    ],
+    "highlighted_words": [
+      "سَيَقُولُ"
+    ],
+    "noor_explanation": {
+      "en": "سَيَقُولُ: will say. You finish Chapter 35 able to read what is still to come — and what will not be.",
+      "ur": "سَيَقُولُ: کہیں گے۔ آپ باب 35 اس حال میں مکمل کرتے ہیں کہ پڑھ سکیں کیا ہونے والا ہے — اور کیا نہیں ہوگا۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 35 complete. Chapter 36: the maṣdar — the name of an action.",
+      "ur": "باب 35 مکمل۔ باب 36: مصدر — کام کا نام۔"
+    }
+  },
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 35,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch35-test-q01",
+        "topic": {
+          "en": "سَـ",
+          "ur": "سَـ"
+        },
+        "prompt": {
+          "en": "When does Yusuf go?",
+          "ur": "یوسف کب جاتا ہے؟"
+        },
+        "arabic": "سَيَذْهَبُ يُوسُفُ إِلَى الْمَسْجِدِ.",
+        "options": [
+          {
+            "en": "now",
+            "ur": "ابھی"
+          },
+          {
+            "en": "in the future",
+            "ur": "مستقبل میں"
+          },
+          {
+            "en": "in the past",
+            "ur": "ماضی میں"
+          },
+          {
+            "en": "every day",
+            "ur": "ہر روز"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch35-test-q02",
+        "topic": {
+          "en": "سَـ",
+          "ur": "سَـ"
+        },
+        "prompt": {
+          "en": "Who will write, and when? (الرِّسَالَةَ = the letter)",
+          "ur": "کون لکھے گا، اور کب؟ (الرِّسَالَةَ = خط)"
+        },
+        "arabic": "سَنَكْتُبُ الرِّسَالَةَ غَدًا.",
+        "options": [
+          {
+            "en": "I — tomorrow",
+            "ur": "میں — کل"
+          },
+          {
+            "en": "we — yesterday",
+            "ur": "ہم — گزشتہ کل"
+          },
+          {
+            "en": "he — now",
+            "ur": "وہ — ابھی"
+          },
+          {
+            "en": "we — tomorrow",
+            "ur": "ہم — کل"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch35-test-q03",
+        "topic": {
+          "en": "سَوْفَ",
+          "ur": "سَوْفَ"
+        },
+        "prompt": {
+          "en": "What does it mean?",
+          "ur": "اس کا مطلب کیا ہے؟"
+        },
+        "arabic": "سَوْفَ تَقْرَأُ زَيْنَبُ الْكِتَابَ.",
+        "options": [
+          {
+            "en": "Zaynab will read the book.",
+            "ur": "زینب کتاب پڑھے گی۔"
+          },
+          {
+            "en": "Zaynab reads the book now.",
+            "ur": "زینب ابھی کتاب پڑھتی ہے۔"
+          },
+          {
+            "en": "Zaynab read the book.",
+            "ur": "زینب نے کتاب پڑھی۔"
+          },
+          {
+            "en": "Zaynab, read the book!",
+            "ur": "زینب، کتاب پڑھو!"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch35-test-q04",
+        "topic": {
+          "en": "سَوْفَ",
+          "ur": "سَوْفَ"
+        },
+        "prompt": {
+          "en": "Which one means the same as سَأَذْهَبُ?",
+          "ur": "کون سا سَأَذْهَبُ کے برابر مطلب رکھتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "أَذْهَبُ",
+            "ur": "أَذْهَبُ"
+          },
+          {
+            "en": "ذَهَبْتُ",
+            "ur": "ذَهَبْتُ"
+          },
+          {
+            "en": "سَوْفَ أَذْهَبُ",
+            "ur": "سَوْفَ أَذْهَبُ"
+          },
+          {
+            "en": "لَنْ أَذْهَبَ",
+            "ur": "لَنْ أَذْهَبَ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch35-test-q05",
+        "topic": {
+          "en": "Now or future",
+          "ur": "ابھی یا مستقبل"
+        },
+        "prompt": {
+          "en": "When?",
+          "ur": "کب؟"
+        },
+        "arabic": "يَجْلِسُ الطُّلَّابُ فِي الْفَصْلِ الْآنَ.",
+        "options": [
+          {
+            "en": "tomorrow",
+            "ur": "کل"
+          },
+          {
+            "en": "yesterday",
+            "ur": "گزشتہ کل"
+          },
+          {
+            "en": "now",
+            "ur": "ابھی"
+          },
+          {
+            "en": "never",
+            "ur": "کبھی نہیں"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch35-test-q06",
+        "topic": {
+          "en": "Now or future",
+          "ur": "ابھی یا مستقبل"
+        },
+        "prompt": {
+          "en": "What will happen tomorrow?",
+          "ur": "کل کیا ہوگا؟"
+        },
+        "arabic": "نَذْهَبُ إِلَى الْمَسْجِدِ كُلَّ يَوْمٍ، وَسَنَذْهَبُ إِلَى السُّوقِ غَدًا.",
+        "options": [
+          {
+            "en": "going to the market",
+            "ur": "بازار جانا"
+          },
+          {
+            "en": "going to the mosque only",
+            "ur": "صرف مسجد جانا"
+          },
+          {
+            "en": "nothing",
+            "ur": "کچھ نہیں"
+          },
+          {
+            "en": "sitting in class",
+            "ur": "کلاس میں بیٹھنا"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch35-test-q07",
+        "topic": {
+          "en": "Past and command",
+          "ur": "ماضی اور حکم"
+        },
+        "prompt": {
+          "en": "When did it happen?",
+          "ur": "یہ کب ہوا؟"
+        },
+        "arabic": "كَتَبَ عُمَرُ الدَّرْسَ.",
+        "options": [
+          {
+            "en": "now",
+            "ur": "ابھی"
+          },
+          {
+            "en": "in the future",
+            "ur": "مستقبل میں"
+          },
+          {
+            "en": "it is a command",
+            "ur": "یہ حکم ہے"
+          },
+          {
+            "en": "in the past",
+            "ur": "ماضی میں"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch35-test-q08",
+        "topic": {
+          "en": "Past and command",
+          "ur": "ماضی اور حکم"
+        },
+        "prompt": {
+          "en": "What is this?",
+          "ur": "یہ کیا ہے؟"
+        },
+        "arabic": "اكْتُبِ الدَّرْسَ يَا عُمَرُ!",
+        "options": [
+          {
+            "en": "saying Umar will write the lesson",
+            "ur": "بتانا کہ عمر سبق لکھے گا"
+          },
+          {
+            "en": "telling Umar to write the lesson",
+            "ur": "عمر کو سبق لکھنے کا کہنا"
+          },
+          {
+            "en": "saying Umar wrote the lesson",
+            "ur": "بتانا کہ عمر نے سبق لکھا"
+          },
+          {
+            "en": "asking whether Umar writes",
+            "ur": "پوچھنا کہ کیا عمر لکھتا ہے"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch35-test-q09",
+        "topic": {
+          "en": "لَنْ",
+          "ur": "لَنْ"
+        },
+        "prompt": {
+          "en": "What does it mean?",
+          "ur": "اس کا مطلب کیا ہے؟"
+        },
+        "arabic": "لَنْ يَذْهَبَ أَحْمَدُ غَدًا.",
+        "options": [
+          {
+            "en": "Ahmad will not go tomorrow.",
+            "ur": "احمد کل نہیں جائے گا۔"
+          },
+          {
+            "en": "Ahmad will go tomorrow.",
+            "ur": "احمد کل جائے گا۔"
+          },
+          {
+            "en": "Ahmad did not go yesterday.",
+            "ur": "احمد گزشتہ کل نہیں گیا۔"
+          },
+          {
+            "en": "Ahmad does not go every day.",
+            "ur": "احمد ہر روز نہیں جاتا۔"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch35-test-q10",
+        "topic": {
+          "en": "لَنْ",
+          "ur": "لَنْ"
+        },
+        "prompt": {
+          "en": "What does it say about Umar?",
+          "ur": "یہ عمر کے بارے میں کیا کہتا ہے؟"
+        },
+        "arabic": "لَا يَجْلِسُ عُمَرُ هُنَا، وَلَنْ يَجْلِسَ غَدًا.",
+        "options": [
+          {
+            "en": "He sits here and will sit here tomorrow.",
+            "ur": "وہ یہاں بیٹھتا ہے اور کل بھی بیٹھے گا۔"
+          },
+          {
+            "en": "He did not sit here yesterday.",
+            "ur": "وہ گزشتہ کل یہاں نہیں بیٹھا۔"
+          },
+          {
+            "en": "He does not sit here, and he will not sit here tomorrow.",
+            "ur": "وہ یہاں نہیں بیٹھتا، اور کل بھی نہیں بیٹھے گا۔"
+          },
+          {
+            "en": "He will sit here tomorrow.",
+            "ur": "وہ کل یہاں بیٹھے گا۔"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch35-test-q11",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآن کی پڑھائی"
+        },
+        "prompt": {
+          "en": "Al-Baqarah 2:142. What does سَيَقُولُ tell you?",
+          "ur": "سورۃ البقرہ 2:142۔ سَيَقُولُ کیا بتاتا ہے؟"
+        },
+        "arabic": "سَيَقُولُ السُّفَهَاءُ مِنَ النَّاسِ",
+        "options": [
+          {
+            "en": "they said — the past",
+            "ur": "انہوں نے کہا — ماضی"
+          },
+          {
+            "en": "they are saying now",
+            "ur": "وہ ابھی کہہ رہے ہیں"
+          },
+          {
+            "en": "say! — a command",
+            "ur": "کہو! — حکم"
+          },
+          {
+            "en": "they will say — the future",
+            "ur": "وہ کہیں گے — مستقبل"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch35-test-q12",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآن کی پڑھائی"
+        },
+        "prompt": {
+          "en": "At-Takathur 102:3. Which word marks the future?",
+          "ur": "سورۃ التکاثر 102:3۔ کون سا لفظ مستقبل کی علامت ہے؟"
+        },
+        "arabic": "كَلَّا سَوْفَ تَعْلَمُونَ",
+        "options": [
+          {
+            "en": "كَلَّا",
+            "ur": "كَلَّا"
+          },
+          {
+            "en": "سَوْفَ",
+            "ur": "سَوْفَ"
+          },
+          {
+            "en": "تَعْلَمُونَ",
+            "ur": "تَعْلَمُونَ"
+          }
+        ],
+        "correct_index": 1
+      }
+    ]
+  }
+}

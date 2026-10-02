@@ -638,7 +638,7 @@ Chapters 26–30 were rebuilt in the proposal harvest and promoted 2026-10-02: 1
 | `ch29-sentence-inside-sentence.png` | `ch29-l03` card 2 | الطَّالِبُ / ذَهَبَ إِلَى الْمَدْرَسَةِ | A large speech bubble containing a smaller sentence strip |
 | `ch29-skip-opening-word.png` | `ch29-l03` card 3 | قُلْ · وَ · لَا | A sentence strip whose first small tile is greyed out and lifted aside |
 | `ch29-oneness-symbolic.png` | `ch29-l03` card 4 | قُلْ هُوَ اللَّهُ أَحَدٌ | Symbolic: a single bright star above a calm, empty desert at night; no figures |
-| `ch29-kafirun-symbolic.png` | `ch29-l03` card 5 · `ch29-l05` card 4 · `ch30-l04` card 4 · `ch30-l05` card 2 | لَا أَعْبُدُ مَا تَعْبُدُونَ · وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ | Symbolic: two separate paths diverging across an open plain at sunrise; no figures |
+| `ch29-kafirun-symbolic.png` | `ch29-l03` card 5 · `ch29-l05` card 4 · `ch30-l04` card 4 · `ch30-l05` card 2 · `ch33-l01` card 1 · `ch33-l01` card 2 · `ch34-l04` card 5 | لَا أَعْبُدُ مَا تَعْبُدُونَ · وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ | Symbolic: two separate paths diverging across an open plain at sunrise; no figures |
 | `ch29-big-house-emphasis.png` | `ch29-l04` card 1 | الْبَيْتُ كَبِيرٌ / إِنَّ الْبَيْتَ كَبِيرٌ | A big house with a bold underline beneath it, as if stressed |
 | `ch29-big-house-crossed.png` | `ch29-l04` card 2 | الْبَيْتُ كَبِيرٌ / لَيْسَ الْبَيْتُ كَبِيرًا | A modest house with a faint outline of a bigger house crossed out above it |
 | `ch29-which-part-changes.png` | `ch29-l04` card 3 · `ch29-l06` card 2 | إِنَّ: الِاسْمُ ـَ · لَيْسَ: الْخَبَرُ ـً · إِنَّ الْبَيْتَ كَبِيرٌ · لَيْسَ الْبَيْتُ كَبِيرًا | Two sentence strips: in the first the first tile is highlighted, in the second the last tile is highlighted |
@@ -649,7 +649,7 @@ Chapters 26–30 were rebuilt in the proposal harvest and promoted 2026-10-02: 1
 | `ch29-doer-noun-vs-verb.png` | `ch29-l05` card 5 | عَابِدُونَ / عَبَدَ | Split panel: an action arrow tile; a name-badge tile on a person silhouette (no face) |
 | `ch30-ahmad-family-text.png` | `ch30-l01` card 1 | هَذَا أَحْمَدُ. هُوَ طَالِبٌ. بَيْتُهُ قَرِيبٌ مِنَ الْمَدْرَسَةِ، وَأُخْتُهُ فَاطِمَةُ مُدَرِّسَةٌ فِيهَا. | A school next to a small house; a boy and his older sister in hijab seen from behind walking towards the school |
 | `ch30-sentence-breaks.png` | `ch30-l01` card 2 | هَذَا أَحْمَدُ. / هُوَ طَالِبٌ. | A paragraph strip cut into four separate pieces with small scissors |
-| `ch30-pronoun-arrows.png` | `ch30-l01` card 3 · `ch30-l07` card 2 | هُوَ · بَيْتُهُ · أُخْتُهُ ← أَحْمَدُ · مَنْ؟ مَاذَا؟ ثُمَّ مَاذَا؟ | Small tiles with curved arrows all pointing back to one name-badge tile |
+| `ch30-pronoun-arrows.png` | `ch30-l01` card 3 · `ch30-l07` card 2 · `ch33-l06` card 8 | هُوَ · بَيْتُهُ · أُخْتُهُ ← أَحْمَدُ · مَنْ؟ مَاذَا؟ ثُمَّ مَاذَا؟ | Small tiles with curved arrows all pointing back to one name-badge tile |
 | `ch30-teacher-in-school.png` | `ch30-l01` card 4 | فِيهَا ← الْمَدْرَسَةِ | A female teacher in hijab seen from behind at the front of a classroom |
 | `ch30-ahmad-day-story.png` | `ch30-l02` card 1 | خَرَجَ أَحْمَدُ مِنَ الْبَيْتِ وَذَهَبَ إِلَى الْمَدْرَسَةِ، فَدَخَلَ الْفَصْلَ وَبَدَأَ الْأُسْتَاذُ الدَّرْسَ. فَهِمَ أَحْمَدُ الدَّرْسَ فَرَجَعَ إِلَى الْبَيْتِ. | Five small comic panels, all faceless/from behind: leaving a house, walking to school, entering a classroom, teacher starting a lesson, walking home |
 | `ch30-five-steps.png` | `ch30-l02` card 2 | ١ خَرَجَ ٢ ذَهَبَ ٣ دَخَلَ ٤ بَدَأَ ٥ فَهِمَ … رَجَعَ | Five numbered stepping stones across a stream |
@@ -666,7 +666,7 @@ Chapters 26–30 were rebuilt in the proposal harvest and promoted 2026-10-02: 1
 | `ch30-two-ma.png` | `ch30-l04` card 5 | مَا هَذَا؟ / مَا تَعْبُدُونَ | Split panel: a question-mark tag; a frame around a group of tiles |
 | `ch30-kafirun-1.png` | `ch30-l05` card 1 | قُلْ يَا أَيُّهَا الْكَافِرُونَ | Symbolic: an open Mushaf at Surah Al-Kafirun's page under lamp light; no figures |
 | `ch30-kafirun-two-sides.png` | `ch30-l05` card 3 · `ch30-l05` card 4 · `ch30-l05` card 5 | وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ · وَلَا أَنَا عَابِدٌ مَا عَبَدْتُمْ | Symbolic: two separate lamps lit on two sides of a dividing line; no figures |
-| `ch30-kafirun-6.png` | `ch30-l05` card 6 | لَكُمْ دِينُكُمْ وَلِيَ دِينِ | Symbolic: two separate paths across an open plain, each ending at its own lit doorway; no figures |
+| `ch30-kafirun-6.png` | `ch30-l05` card 6 · `ch33-l01` card 3 | لَكُمْ دِينُكُمْ وَلِيَ دِينِ | Symbolic: two separate paths across an open plain, each ending at its own lit doorway; no figures |
 | `ch30-for-you-your.png` | `ch30-l05` card 7 | لَكُمْ / دِينُكُمْ | Split panel: a gift box with an arrow towards a group; a name tag on a book |
 | `ch30-maryam-market.png` | `ch30-l07` card 1 | ذَهَبَتْ مَرْيَمُ إِلَى السُّوقِ مَعَ أُمِّهَا، فَأَعْطَتْهَا أُمُّهَا قَلَمًا جَدِيدًا. وَرَجَعَتْ مَرْيَمُ إِلَى الْبَيْتِ، فَكَتَبَتْ بِهِ الدَّرْسَ. | A girl in hijab and her mother, both seen from behind, at a market stall; then the girl writing with a new pen at home |
 
@@ -678,6 +678,141 @@ Chapters 26–30 were rebuilt in the proposal harvest and promoted 2026-10-02: 1
 | `ch20-l04` card 1 | أَنْتُمْ / أَنْتُنَّ | `images/discover/ch10-you-all-facing-group.webp` |
 | `ch20-l05` card 1 | هُمْ / هُنَّ | `images/discover/ch10-they-two-groups.webp` |
 | `ch23-l04` card 4 | قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ | `images/discover/ch19-daybreak.webp` |
+
+### Chapters 31–35
+
+Chapters 31–35 were rebuilt in the proposal harvest (batch 2) and promoted 2026-10-02: 177 discover cards, **128 new scenes**; the rest reuse a scene requested here or for Chapters 29–31. Same rules: Quran cards stay symbolic, no figures — never Allah, prophets, angels, jinn or the devil; every person is faceless or seen from behind.
+
+| Filename | Cards | Arabic on the card | Scene |
+|---|---|---|---|
+| `ch31-statement-or-question.png` | `ch31-l01` card 1 | الْكِتَابُ جَدِيدٌ / هَلِ الْكِتَابُ جَدِيدٌ؟ | Two identical new books side by side; a small question-mark tag hangs over the second one only |
+| `ch31-did-ahmad-go.png` | `ch31-l01` card 2 · `ch31-l01` card 7 | هَلْ ذَهَبَ أَحْمَدُ إِلَى الْمَسْجِدِ؟ · أَذَهَبَ الطَّالِبُ؟ | A boy seen from behind walking up the steps of a mosque, a small question-mark bubble above the path |
+| `ch31-yes-mosque.png` | `ch31-l01` card 3 | نَعَمْ، ذَهَبَ إِلَى الْمَسْجِدِ. | The same boy, seen from behind, now inside the mosque courtyard; a green tick beside him |
+| `ch31-no-market.png` | `ch31-l01` card 4 · `ch34-l03` card 5 | لَا، ذَهَبَ إِلَى السُّوقِ. · تَذْهَبُ فَاطِمَةُ إِلَى السُّوقِ. | A boy seen from behind walking into a market street with fruit stalls; a small cross over a mosque sign-post |
+| `ch31-do-you-have-pen.png` | `ch31-l01` card 5 | أَعِنْدَكَ قَلَمٌ؟ | A hand (no face) holding out an empty palm towards a pen lying on a desk, a question-mark tag on the pen |
+| `ch31-two-question-keys.png` | `ch31-l01` card 6 | هَلْ عِنْدَكَ قَلَمٌ؟ / أَعِنْدَكَ قَلَمٌ؟ | Two different keys, one long and one tiny, both opening the same small box |
+| `ch31-ghashiyah-symbolic.png` | `ch31-l01` card 8 | هَلْ أَتَاكَ حَدِيثُ الْغَاشِيَةِ | Symbolic: a vast dark cloud bank rolling over a wide plain at dusk; no figures |
+| `ch31-who-is-this.png` | `ch31-l02` card 1 | مَنْ هَذَا؟ | A man in a white thobe seen from behind at a classroom door; a hand points at him, question-mark tag above |
+| `ch31-who-in-class.png` | `ch31-l02` card 2 | مَنْ فِي الْفَصْلِ؟ | A classroom seen through an open door: a teacher's back at the board, empty desks |
+| `ch31-what-is-this.png` | `ch31-l02` card 3 | مَا هَذَا؟ | A hand (no face) pointing at a single pen lying on a desk, question-mark tag above it |
+| `ch31-person-or-thing.png` | `ch31-l02` card 4 | مَنْ هَذَا؟ / مَا هَذَا؟ | Split panel: a hand pointing at a man seen from behind; a hand pointing at a pen |
+| `ch31-what-did-he-do.png` | `ch31-l02` card 5 · `ch33-l04` card 7 | مَاذَا فَعَلَ الطَّالِبُ؟ · الطَّالِبُ كَتَبَ الدَّرْسَ / كَتَبَ الطَّالِبُ الدَّرْسَ | A student seen from behind writing in a notebook at a desk |
+| `ch31-zaynab-reading.png` | `ch31-l02` card 6 · `ch34-l05` card 2 | مَاذَا قَرَأَتْ زَيْنَبُ؟ · تَقْرَأُ زَيْنَبُ الْكِتَابَ. | A girl in hijab seen from behind reading a book at a window seat |
+| `ch31-two-kinds-of-ma.png` | `ch31-l02` card 7 | مَا هَذَا؟ / قَرَأْتُ مَا كَتَبْتَ | Split panel: a question-mark tag on a closed box; an open notebook passed from one hand to another |
+| `ch31-qariah-symbolic.png` | `ch31-l02` card 8 | مَا الْقَارِعَةُ | Symbolic: a great bronze bell struck once, sound rings spreading over an empty plain; no figures |
+| `ch31-where-is-book.png` | `ch31-l03` card 1 | أَيْنَ الْكِتَابُ؟ | A book on a shelf inside a small house, a dotted path leading to it from the door |
+| `ch31-where-and-from-where.png` | `ch31-l03` card 2 | أَيْنَ أَنْتَ؟ / مِنْ أَيْنَ أَنْتَ؟ | Split panel: a pin on a house; an arrow starting from a distant country outline on a map |
+| `ch31-how-are-you.png` | `ch31-l03` card 3 · `ch31-l03` card 4 | كَيْفَ حَالُكَ؟ · كَيْفَ حَالُكَ؟ — بِخَيْرٍ، الْحَمْدُ لِلَّهِ. | Two men seen from behind shaking hands at a mosque gate |
+| `ch31-easy-lesson.png` | `ch31-l03` card 5 · `ch34-l05` card 4 | كَيْفَ الدَّرْسُ؟ — الدَّرْسُ سَهْلٌ. · نَفْهَمُهُ الْآنَ. | An open notebook with three short neat lines and a green tick; a light feather resting on it |
+| `ch31-by-car-to-school.png` | `ch31-l03` card 6 | كَيْفَ ذَهَبْتَ إِلَى الْمَدْرَسَةِ؟ — بِالسَّيَّارَةِ. | A small car pulling up at a school gate; no figures visible |
+| `ch31-place-or-state.png` | `ch31-l03` card 7 | أَيْنَ أَحْمَدُ؟ / كَيْفَ أَحْمَدُ؟ | Split panel: a map pin on a mosque; a small sun-and-smile weather icon (no human face) |
+| `ch31-crossroads-symbolic.png` | `ch31-l03` card 8 | فَأَيْنَ تَذْهَبُونَ | Symbolic: an empty crossroads in open country at sunrise, signposts without lettering; no figures |
+| `ch31-when-calendar.png` | `ch31-l04` card 1 | مَتَى الدَّرْسُ؟ | A three-page desk calendar: yesterday's page torn off, today's page lit, tomorrow's page peeking |
+| `ch31-market-yesterday.png` | `ch31-l04` card 2 | مَتَى ذَهَبَ أَحْمَدُ إِلَى السُّوقِ؟ — أَمْسِ. | A market street at evening light; a calendar page marked with a backward arrow pinned to a stall |
+| `ch31-exam-friday.png` | `ch31-l04` card 3 | مَتَى الِامْتِحَانُ؟ — يَوْمَ الْجُمُعَةِ. | An exam paper and a pencil on a desk beside a weekly calendar with one day highlighted |
+| `ch31-why-reason.png` | `ch31-l04` card 4 | لِمَاذَا؟ | A question-mark tag tied by a string to a small lit lamp: the reason |
+| `ch31-ill-at-home.png` | `ch31-l04` card 5 | لِمَاذَا رَجَعَ أَحْمَدُ إِلَى الْبَيْتِ؟ — لِأَنَّهُ مَرِيضٌ. | A boy seen from behind lying under a blanket on a sofa, a glass of water on the table |
+| `ch31-lesson-in-mosque.png` | `ch31-l04` card 6 · `ch33-l04` card 6 | لِمَاذَا ذَهَبْتَ إِلَى الْمَسْجِدِ؟ — لِأَنَّ الدَّرْسَ فِيهِ. · إِذَا جَاءَ الْإِمَامُ بَدَأَ الدَّرْسُ. | Inside a mosque: a low wooden rehal with an open book and a circle of floor cushions; no figures |
+| `ch31-time-or-reason.png` | `ch31-l04` card 7 | مَتَى رَجَعَ؟ / لِمَاذَا رَجَعَ؟ | Split panel: a clock; a small lit lamp |
+| `ch31-help-near-symbolic.png` | `ch31-l04` card 8 | مَتَىٰ نَصْرُ اللَّهِ | Symbolic: first light breaking over a long dark valley; no figures |
+| `ch31-how-many-books.png` | `ch31-l05` card 1 | كَمْ كِتَابًا؟ | A short stack of books on a desk with a small blank counter tag beside it |
+| `ch31-three-books.png` | `ch31-l05` card 2 | كَمْ كِتَابًا عِنْدَكَ؟ — ٣. | Exactly three books standing upright on a shelf |
+| `ch31-full-classroom.png` | `ch31-l05` card 3 · `ch35-l03` card 2 | كَمْ طَالِبًا فِي الْفَصْلِ؟ — ٢٠. · نَجْلِسُ فِي الْفَصْلِ كُلَّ يَوْمٍ. | A classroom from the back row: many students' backs at their desks, the board ahead |
+| `ch31-one-to-count.png` | `ch31-l05` card 4 | كِتَابٌ / كَمْ كِتَابًا؟ | Split panel: one book alone; the same book with a small blank counter tag |
+| `ch31-five-pens.png` | `ch31-l05` card 5 | كَمْ قَلَمًا عِنْدَ زَيْنَبَ؟ — ٥. | Five pens fanned out in a girl's hand (hand and sleeve only) |
+| `ch31-number-or-time.png` | `ch31-l05` card 6 | كَمْ دَرْسًا؟ / مَتَى الدَّرْسُ؟ | Split panel: two numbered counters; a clock |
+| `ch31-years-symbolic.png` | `ch31-l05` card 7 | قَالَ كَمْ لَبِثْتُمْ فِي الْأَرْضِ عَدَدَ سِنِينَ | Symbolic: an hourglass on bare earth with a long line of sunsets fading behind it; no figures |
+| `ch31-cave-symbolic.png` | `ch31-l05` card 8 | قَالَ قَائِلٌ مِّنْهُمْ كَمْ لَبِثْتُمْ ۖ قَالُوا لَبِثْنَا يَوْمًا أَوْ بَعْضَ يَوْمٍ | Symbolic: the mouth of a quiet cave with morning light falling across its floor; no figures |
+| `ch31-question-answer-cards.png` | `ch31-l07` card 1 | سُؤَالٌ وَجَوَابٌ | Two speech-bubble cards on a table, a dotted line joining a question card to one of three answer cards |
+| `ch31-two-boys-mosque-door.png` | `ch31-l07` card 2 · `ch33-l04` card 5 | يُوسُفُ: هَلْ جَاءَ الْأُسْتَاذُ؟ — عُمَرُ: نَعَمْ، جَاءَ قَبْلَ الصَّلَاةِ. · سَأَلَ يُوسُفُ: مَتَى الدَّرْسُ؟ فَقَالَ أَحْمَدُ: بَعْدَ الصَّلَاةِ. | Two boys seen from behind talking at a mosque door |
+| `ch31-teacher-in-library.png` | `ch31-l07` card 3 · `ch31-l07` card 4 | يُوسُفُ: أَيْنَ هُوَ الْآنَ؟ — عُمَرُ: فِي الْمَكْتَبَةِ مَعَ الطُّلَّابِ. · يُوسُفُ: كَمْ طَالِبًا مَعَهُ؟ — عُمَرُ: ١٠. | A library with tall shelves: a teacher and a group of students seen from behind at a long table |
+| `ch31-friend-visits-ill.png` | `ch31-l07` card 5 | مَرْيَمُ: كَيْفَ حَالُكِ يَا زَيْنَبُ؟ — زَيْنَبُ: أَنَا مَرِيضَةٌ الْيَوْمَ. | A girl in hijab seen from behind bringing a cup of tea to a friend wrapped in a blanket, also seen from behind |
+| `ch31-doctor-yesterday.png` | `ch31-l07` card 6 | مَرْيَمُ: مَتَى ذَهَبْتِ إِلَى الطَّبِيبِ؟ — زَيْنَبُ: أَمْسِ. | A clinic door with a stethoscope symbol; a calendar page with a backward arrow pinned beside it |
+| `ch31-staff-symbolic.png` | `ch31-l07` card 7 · `ch31-l07` card 8 | وَمَا تِلْكَ بِيَمِينِكَ يَا مُوسَىٰ · قَالَ هِيَ عَصَايَ | Symbolic: a plain wooden shepherd's staff leaning against a rock in a quiet valley; no figures |
+| `ch31-question-keys-board.png` | `ch31-l08` card 1 | هَلْ · مَنْ · مَا · مَاذَا · أَيْنَ · كَيْفَ · مَتَى · لِمَاذَا · كَمْ | A wooden board with nine hooks, each holding a different small key; nine small locked boxes below |
+| `ch31-two-friends-library.png` | `ch31-l08` card 2 | خَالِدٌ: إِلَى أَيْنَ ذَهَبْتَ أَمْسِ؟ — بِلَالٌ: ذَهَبْتُ إِلَى الْمَكْتَبَةِ. — خَالِدٌ: لِمَاذَا؟ — بِلَالٌ: لِأَنَّ الِامْتِحَانَ غَدًا. | Two young men seen from behind walking past library shelves, one carrying an exam timetable |
+| `ch32-darkness-settles-symbolic.png` | `ch32-l01` card 1 · `ch33-l02` card 4 | وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ | Symbolic: night darkness spreading over a quiet village of flat roofs; no figures |
+| `ch32-envy-symbolic.png` | `ch32-l01` card 2 · `ch33-l02` card 6 | وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ | Symbolic: a single dark thundercloud casting a shadow across a sunlit garden; no figures |
+| `ch32-question-or-event.png` | `ch32-l01` card 3 | مَتَى جَاءَ الْأُسْتَاذُ؟ / إِذَا جَاءَ الْأُسْتَاذُ | Split panel: a question-mark tag on a clock; a door opening onto a classroom with an arrow continuing past it |
+| `ch32-teacher-arrives.png` | `ch32-l01` card 4 | إِذَا جَاءَ الْأُسْتَاذُ | A classroom door opening, a teacher seen from behind stepping in |
+| `ch32-students-stand.png` | `ch32-l01` card 5 | إِذَا جَاءَ الْأُسْتَاذُ قُمْنَا. | Students seen from behind rising from their desks as a door opens at the front |
+| `ch32-mother-yesterday.png` | `ch32-l01` card 6 | مَتَى رَجَعَتْ أُمُّكَ؟ — رَجَعَتْ أَمْسِ. | A woman in an abaya seen from behind at a front door with a suitcase; a calendar page with a backward arrow |
+| `ch32-family-dinner.png` | `ch32-l01` card 7 · `ch32-l02` card 2 | مَتَى الدَّرْسُ؟ / إِذَا رَجَعَتْ أُمِّي أَكَلْنَا · إِذَا رَجَعَتْ أُمِّي أَكَلْنَا. | A family dinner table seen from the doorway, a woman in hijab (from behind) putting her bag down as the others sit |
+| `ch32-two-dominoes.png` | `ch32-l02` card 1 · `ch32-l02` card 5 · `ch33-l03` card 3 | إِذَا جَاءَ الْأُسْتَاذُ | قُمْنَا · جَوَابُ الشَّرْطِ · إِذَا جَاءَ … وَرَأَيْتَ … | Two dominoes: the first tipping, the second about to fall because of it |
+| `ch32-quiet-classroom.png` | `ch32-l02` card 3 | إِذَا جَاءَ الْأُسْتَاذُ سَكَتَ الطُّلَّابُ. | A classroom from the back: students' backs, all still, as a teacher enters at the front door |
+| `ch32-rain.png` | `ch32-l02` card 4 | الْمَطَرُ | Rain falling on a street of low houses, puddles forming; no figures |
+| `ch32-domino-alone.png` | `ch32-l02` card 6 · `ch32-l04` card 3 | إِذَا جَاءَ الْأُسْتَاذُ قُمْنَا / إِذَا جَاءَ الْأُسْتَاذُ … · إِذَا السَّمَاءُ انْشَقَّتْ … | Split panel: two dominoes, one knocking the other; a single domino standing alone |
+| `ch32-sharh-symbolic.png` | `ch32-l02` card 7 · `ch32-l03` card 1 | فَإِذَا فَرَغْتَ فَانصَبْ | Symbolic: a finished day's work — a closed ledger and a lamp being lit for the night's prayer mat; no figures |
+| `ch32-first-link.png` | `ch32-l03` card 2 | فَإِذَا | A chain: a new link being clipped onto the end of an existing chain |
+| `ch32-second-link.png` | `ch32-l03` card 3 | فَانْصَبْ | A signpost reading only an arrow, placed at the start of a second path segment |
+| `ch32-happy-student.png` | `ch32-l03` card 4 | إِذَا فَهِمَ الطَّالِبُ الدَّرْسَ فَهُوَ سَعِيدٌ. | A student seen from behind raising both arms over a finished notebook with a green tick |
+| `ch32-ready-class.png` | `ch32-l03` card 5 · `ch32-l03` card 6 | إِذَا جَاءَ الْأُسْتَاذُ قُمْنَا / إِذَا جَاءَ الْأُسْتَاذُ فَنَحْنُ جَاهِزُونَ · فَإِذَا جَاءَ الْأُسْتَاذُ فَنَحْنُ جَاهِزُونَ. | Split panel: students rising from desks; the same students seated with books open and pens ready |
+| `ch32-path-to-light-symbolic.png` | `ch32-l03` card 7 | وَإِلَىٰ رَبِّكَ فَارْغَب | Symbolic: a single path climbing a hill towards a bright horizon; no figures |
+| `ch32-sky-splits-symbolic.png` | `ch32-l04` card 1 | إِذَا السَّمَاءُ انشَقَّتْ | Symbolic: a vast sky with a single bright seam of light opening across the clouds; no figures |
+| `ch32-noun-then-action.png` | `ch32-l04` card 2 | إِذَا السَّمَاءُ انْشَقَّتْ | Two tiles in a row: a sky tile, then a lightning-crack tile |
+| `ch32-sun-wrapped-symbolic.png` | `ch32-l04` card 4 | إِذَا الشَّمْسُ كُوِّرَتْ | Symbolic: the sun dimming behind a slowly closing veil of dark cloud; no figures |
+| `ch32-sunrise-school.png` | `ch32-l04` card 5 · `ch32-l04` card 6 | إِذَا طَلَعَتِ الشَّمْسُ خَرَجْنَا / إِذَا طَلَعَتِ الشَّمْسُ … · إِذَا طَلَعَتِ الشَّمْسُ خَرَجْنَا إِلَى الْمَدْرَسَةِ. | Split panel: sunrise over houses with a school bag by the door; the same sunrise with the door still closed |
+| `ch32-three-step-check.png` | `ch32-l05` card 1 · `ch33-l05` card 1 | إِذَا … | … · سُورَةٌ · جُمْلَةٌ · سُؤَالٌ · إِذَا | A small checklist card with three empty boxes and a pencil; no lettering |
+| `ch32-ramadan-crescent.png` | `ch32-l05` card 2 | إِذَا جَاءَ رَمَضَانُ فَرِحَ النَّاسُ. | A thin crescent moon over a street hung with lanterns; no figures |
+| `ch32-children-rain.png` | `ch32-l05` card 3 | الْأَوْلَادُ | Children seen from behind running home under umbrellas in the rain |
+| `ch33-reading-lamp.png` | `ch33-l01` card 4 | مَنْ؟ مَاذَا؟ لِمَنْ؟ | An open book under a reading lamp, a pencil resting beside three short underlined lines |
+| `ch33-imam-books.png` | `ch33-l01` card 5 | قَالَ الْإِمَامُ لِلطُّلَّابِ: لَكُمْ كُتُبُكُمْ، وَلِي كِتَابِي. | An imam in white seen from behind handing a stack of books to students, keeping one book under his arm |
+| `ch33-falaq-daybreak-symbolic.png` | `ch33-l02` card 1 · `ch33-l02` card 2 | قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ | Symbolic: the first thin line of dawn breaking over dark hills; no figures |
+| `ch33-shelter-symbolic.png` | `ch33-l02` card 3 · `ch33-l02` card 7 | مِن شَرِّ مَا خَلَقَ · مِنْ شَرِّ … وَمِنْ شَرِّ … وَمِنْ شَرِّ … | Symbolic: a strong stone shelter with a lit doorway on a stormy plain; no figures |
+| `ch33-knots-symbolic.png` | `ch33-l02` card 5 | وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ | Symbolic: a length of rough cord tied in several knots, lying on a dark cloth; no figures |
+| `ch33-nasr-gates-symbolic.png` | `ch33-l03` card 1 · `ch33-l03` card 5 | إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ · إِذَا جَاءَ … فَسَبِّحْ | Symbolic: great city gates standing open at sunrise, banners of light above them; no figures |
+| `ch33-nasr-crowds-symbolic.png` | `ch33-l03` card 2 | وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا | Symbolic: many paths from every direction converging on one lit gateway; no figures |
+| `ch33-nasr-prayer-mat-symbolic.png` | `ch33-l03` card 4 | فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ ۚ إِنَّهُ كَانَ تَوَّابًا | Symbolic: a prayer mat laid out on a rooftop at dusk with prayer beads beside it; no figures |
+| `ch33-nas-dawn-city-symbolic.png` | `ch33-l06` card 1 · `ch33-l06` card 2 · `ch33-l06` card 3 | قُلْ أَعُوذُ بِرَبِّ النَّاسِ · مَلِكِ النَّاسِ · إِلَٰهِ النَّاسِ | Symbolic: a sleeping city under a wide sky just before dawn, a single lamp lit in a window; no figures |
+| `ch33-three-lamps-one-flame.png` | `ch33-l06` card 4 | رَبِّ النَّاسِ · مَلِكِ النَّاسِ · إِلَٰهِ النَّاسِ | Three lamps in a row lit from one single flame passed along a taper; no figures |
+| `ch33-whisper-shadow-symbolic.png` | `ch33-l06` card 5 · `ch33-l06` card 6 · `ch33-l06` card 7 | مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ · الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ · مِنَ الْجِنَّةِ وَالنَّاسِ | Symbolic: a thin wisp of shadow slipping back behind a lit doorway; no figure, no creature |
+| `ch33-two-boys-to-mosque.png` | `ch33-l04` card 1 | ذَهَبَ أَحْمَدُ وَيُوسُفُ إِلَى الْمَسْجِدِ. إِنَّ الْمَسْجِدَ قَرِيبٌ، وَلَيْسَ الطَّرِيقُ طَوِيلًا. سَأَلَ يُوسُفُ: مَتَى الدَّرْسُ؟ فَقَالَ أَحْمَدُ: بَعْدَ الصَّلَاةِ. إِذَا جَاءَ الْإِمَامُ بَدَأَ الدَّرْسُ. | Two boys seen from behind walking a short road to a nearby mosque; an imam in white approaching from the other side |
+| `ch33-what-wa-joins.png` | `ch33-l04` card 2 | أَحْمَدُ وَيُوسُفُ / قَرِيبٌ، وَلَيْسَ الطَّرِيقُ طَوِيلًا | Split panel: a clip joining two name badges; a clip joining two full sentence strips |
+| `ch33-mosque-near.png` | `ch33-l04` card 3 | إِنَّ الْمَسْجِدَ قَرِيبٌ | A small mosque just across a quiet lane from a row of houses |
+| `ch33-short-road.png` | `ch33-l04` card 4 | لَيْسَ الطَّرِيقُ طَوِيلًا | A short straight lane, only a few steps long, ending at a mosque door |
+| `ch33-asr-hourglass-symbolic.png` | `ch33-l04` card 8 | إِنَّ الْإِنسَانَ لَفِي خُسْرٍ | Symbolic: an hourglass with its sand nearly run out, late afternoon light; no figures |
+| `ch33-friday-mosque.png` | `ch33-l05` card 2 · `ch34-l05` card 6 | إِذَا جَاءَ يَوْمُ الْجُمُعَةِ ذَهَبْنَا إِلَى الْمَسْجِدِ. إِنَّ الْمَسْجِدَ كَبِيرٌ، وَلَيْسَ بَعِيدًا. سَأَلَنِي أَخِي: كَمْ رَجُلًا فِيهِ؟ قُلْتُ: ١٠٠. · نَجْلِسُ فِي الْمَسْجِدِ يَوْمَ الْجُمُعَةِ. | A large mosque a short walk from a row of houses on a Friday morning, two brothers seen from behind on the path |
+| `ch34-done-or-doing.png` | `ch34-l01` card 1 | كَتَبَ / يَكْتُبُ | Split panel: a closed notebook with a finished page and a capped pen; an open notebook with a pen mid-line (hand only) |
+| `ch34-writing-now.png` | `ch34-l01` card 2 · `ch34-l05` card 1 | يَكْتُبُ أَحْمَدُ الدَّرْسَ الْآنَ. · يَكْتُبُ أَحْمَدُ الدَّرْسَ | A boy seen from behind writing at a desk, a wall clock above him |
+| `ch34-every-day-mosque.png` | `ch34-l01` card 3 | يَذْهَبُ أَحْمَدُ إِلَى الْمَسْجِدِ كُلَّ يَوْمٍ. | A row of seven small panels of the same path to a mosque at the same hour; a boy seen from behind on each |
+| `ch34-reading-pair.png` | `ch34-l01` card 4 | قَرَأَ / يَقْرَأُ | Split panel: a closed book on a shelf; the same book open in a reader's hands (hands only) |
+| `ch34-clock-and-calendar.png` | `ch34-l01` card 5 · `ch34-l05` card 5 | الْمُضَارِعُ · يَقْرَأُ الْقُرْآنَ الْآنَ / يَقْرَأُ الْقُرْآنَ كُلَّ يَوْمٍ | A clock beside a weekly calendar with every day ticked |
+| `ch34-fatiha-symbolic.png` | `ch34-l01` card 6 | إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ | Symbolic: an open Mushaf on a stand beside a prayer mat in soft morning light; no figures |
+| `ch34-hear-see-symbolic.png` | `ch34-l01` card 7 | إِنَّنِي مَعَكُمَا أَسْمَعُ وَأَرَىٰ | Symbolic: a wide desert at night under a sky full of stars, a single path lit; no figures |
+| `ch34-went-goes.png` | `ch34-l03` card 1 | ذَهَبَ ← يَذْهَبُ | Split panel: footprints leading away from a door; the same feet mid-step on a path (feet only) |
+| `ch34-four-prefix-tiles.png` | `ch34-l03` card 2 · `ch34-l03` card 4 · `ch34-l06` card 1 · `ch35-l01` card 3 | أَذْهَبُ · نَذْهَبُ · يَذْهَبُ · تَذْهَبُ · أَجْلِسُ · نَجْلِسُ · يَجْلِسُ · تَجْلِسُ · أَكْتُبُ · نَكْتُبُ · يَكْتُبُ · تَكْتُبُ · سَأَكْتُبُ · سَنَكْتُبُ · سَيَكْتُبُ · سَتَكْتُبُ | Four small square tiles in a row, each a different colour, in front of the same verb strip |
+| `ch34-sat-sits.png` | `ch34-l03` card 3 | جَلَسَ ← يَجْلِسُ | Split panel: an empty chair with a cushion still pressed; a student seen from behind sitting down |
+| `ch34-where-do-you-sit.png` | `ch34-l03` card 6 | يَا عُمَرُ، أَيْنَ تَجْلِسُ؟ | A classroom with one empty desk highlighted; a boy seen from behind standing beside it |
+| `ch34-knowledge-symbolic.png` | `ch34-l03` card 7 · `ch34-l05` card 7 | وَاللَّهُ يَعْلَمُ وَأَنتُمْ لَا تَعْلَمُونَ · يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ | Symbolic: a lamp shining over a closed book, light spreading beyond it into the dark; no figures |
+| `ch34-not-going.png` | `ch34-l04` card 1 | لَا أَذْهَبُ | A pair of shoes left neatly at a doorstep, the door closed |
+| `ch34-pen-capped.png` | `ch34-l04` card 2 | يَكْتُبُ أَحْمَدُ / لَا يَكْتُبُ أَحْمَدُ | Split panel: a pen writing on paper (hand only); the same pen capped and set aside |
+| `ch34-empty-bench.png` | `ch34-l04` card 3 · `ch35-l05` card 4 | لَا نَجْلِسُ هُنَا. · لَنْ نَجْلِسَ هُنَا. | An empty bench beside a path, a group seen from behind walking past it |
+| `ch34-zaynab-home.png` | `ch34-l04` card 4 | لَا تَذْهَبُ زَيْنَبُ إِلَى السُّوقِ. | A girl in hijab seen from behind reading at home by a window, the market visible far off |
+| `ch34-do-not-sit.png` | `ch34-l04` card 6 · `ch34-l04` card 7 | لَا تَجْلِسْ هُنَا! · لَا تَجْلِسُ زَيْنَبُ هُنَا / لَا تَجْلِسْ هُنَا! | A chair with a small 'reserved' ribbon across its seat (no lettering) |
+| `ch34-cave-calm-symbolic.png` | `ch34-l04` card 8 | لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا | Symbolic: the calm interior of a mountain cave at night with moonlight at its mouth; no figures |
+| `ch34-listening.png` | `ch34-l05` card 3 | يَسْمَعُهُ | A student seen from behind turned towards a teacher (also from behind) speaking at the front |
+| `ch34-teacher-at-school.png` | `ch34-l06` card 2 | يَا خَالِدُ، أَيْنَ تَعْمَلُ؟ — أَعْمَلُ فِي الْمَدْرَسَةِ، وَلَا أَعْمَلُ يَوْمَ الْجُمُعَةِ. | A man seen from behind unlocking a school gate in the morning; a weekly calendar with Friday marked off |
+| `ch35-path-ahead.png` | `ch35-l01` card 1 | يَذْهَبُ / سَيَذْهَبُ | A path seen from behind a walker's feet, the road ahead lit by morning sun |
+| `ch35-tomorrow-mosque.png` | `ch35-l01` card 2 · `ch35-l06` card 2 | سَيَذْهَبُ أَحْمَدُ إِلَى الْمَسْجِدِ غَدًا. · غَدًا سَنَذْهَبُ إِلَى الْمَسْجِدِ، وَسَوْفَ نَجْلِسُ مَعَ الْإِمَامِ. لَنْ نَذْهَبَ إِلَى السُّوقِ. | A calendar page with a forward arrow pinned beside a mosque door; no figures |
+| `ch35-sit-with-imam.png` | `ch35-l01` card 4 · `ch35-l03` card 3 | سَنَجْلِسُ مَعَ الْإِمَامِ. · سَنَجْلِسُ فِي الْمَسْجِدِ يَوْمَ الْجُمُعَةِ. | A circle of floor cushions around an empty spot where an imam's cushion waits, in a quiet mosque |
+| `ch35-speech-bubble-arrow.png` | `ch35-l01` card 5 | يَقُولُ / سَيَقُولُ | A blank speech bubble with a small forward arrow beside it |
+| `ch35-qiblah-symbolic.png` | `ch35-l01` card 6 · `ch35-l03` card 5 | سَيَقُولُ السُّفَهَاءُ مِنَ النَّاسِ | Symbolic: a compass rose on an old map turning towards a single lit point; no figures |
+| `ch35-joined-or-separate.png` | `ch35-l02` card 1 | سَيَذْهَبُ / سَوْفَ يَذْهَبُ | Split panel: a small tag clipped onto a box; the same tag standing on its own just in front of the box |
+| `ch35-book-tomorrow.png` | `ch35-l02` card 2 · `ch35-l04` card 3 | سَوْفَ نَقْرَأُ الْكِتَابَ. · سَيَقْرَأُ أَحْمَدُ الْكِتَابَ غَدًا. | A closed book on a desk with a bookmark, a calendar showing the next day |
+| `ch35-letter-and-pen.png` | `ch35-l02` card 3 | سَوْفَ تَكْتُبُ زَيْنَبُ الرِّسَالَةَ. | A blank letter sheet and an envelope beside a pen, waiting on a desk |
+| `ch35-road-markers.png` | `ch35-l02` card 4 | سَـ / سَوْفَ | A long straight road with several mile-stones fading into the distance; no lettering |
+| `ch35-takathur-symbolic.png` | `ch35-l02` card 5 | كَلَّا سَوْفَ تَعْلَمُونَ | Symbolic: an hourglass beside a pile of coins with the sand nearly run out; no figures |
+| `ch35-new-dawn-symbolic.png` | `ch35-l02` card 6 | فَسَوْفَ يَأْتِي اللَّهُ بِقَوْمٍ يُحِبُّهُمْ وَيُحِبُّونَهُ | Symbolic: many small lamps lighting up one by one across a dark valley; no figures |
+| `ch35-now-later.png` | `ch35-l03` card 1 | يَقْرَأُ أَحْمَدُ الْآنَ / سَيَقْرَأُ أَحْمَدُ غَدًا | Split panel: a boy seen from behind reading at a desk under a clock; the same desk empty with a calendar page for the next day |
+| `ch35-duha-symbolic.png` | `ch35-l03` card 4 | وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰ | Symbolic: bright late-morning sunlight pouring over a green valley; no figures |
+| `ch35-four-times.png` | `ch35-l04` card 1 · `ch35-l06` card 1 | قَرَأَ · يَقْرَأُ · سَيَقْرَأُ · اقْرَأْ · سَـ · سَوْفَ · لَنْ | Four panels of the same book: closed on a shelf, open in hands, waiting with a calendar arrow, and handed over by a pointing hand |
+| `ch35-book-on-shelf.png` | `ch35-l04` card 2 | قَرَأَ أَحْمَدُ الْكِتَابَ أَمْسِ. | A finished book back on a shelf, bookmark at the last page |
+| `ch35-hand-offers-book.png` | `ch35-l04` card 4 · `ch35-l04` card 5 | اقْرَأِ الْكِتَابَ يَا أَحْمَدُ! · سَتَقْرَأُ الْكِتَابَ / اقْرَأِ الْكِتَابَ! | A hand (no face) holding out an open book towards the viewer |
+| `ch35-alaq-symbolic.png` | `ch35-l04` card 6 | اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ | Symbolic: a mountain cave mouth at night with a single beam of light falling on an open page; no figures |
+| `ch35-closed-gate.png` | `ch35-l05` card 1 · `ch35-l05` card 3 | لَنْ يَذْهَبَ · لَا يَذْهَبُ / لَنْ يَذْهَبَ | A closed garden gate at the end of a path, with a calendar page and a forward arrow hung on it |
+| `ch35-open-or-closed-gate.png` | `ch35-l05` card 2 | سَيَذْهَبُ / لَنْ يَذْهَبَ | Split panel: the same garden gate standing open; and closed |
+| `ch35-mountain-symbolic.png` | `ch35-l05` card 5 | قَالَ لَن تَرَانِي | Symbolic: a great mountain under a vast sky, light breaking behind its peak; no figures |
+| `ch35-giving-symbolic.png` | `ch35-l05` card 6 | لَن تَنَالُوا الْبِرَّ حَتَّىٰ تُنفِقُوا مِمَّا تُحِبُّونَ | Symbolic: an open hand-woven basket of fruit set down at a doorstep in morning light; hands only, no faces |
 
 ## Open — Chapters 1–11 (requested 2026-09-24)
 

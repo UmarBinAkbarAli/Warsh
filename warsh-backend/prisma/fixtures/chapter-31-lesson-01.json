@@ -2,440 +2,480 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 31, Lesson 1 (ch31-l01) — yes/no questions: هَلْ and the question hamza retrieved from Chapters 7 and 12, statement versus question, past events read 'did…?', نَعَمْ / لَا replies. 88:1 is the hook; it is read as a call to attention, not a request for information. Rebuilt 2026-10-02 in the proposal harvest, batch 2 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-31-content-proposal.md and its review amendments: common questions, not a 'complete toolkit' — هَلْ / أَ retrieved from Chapters 7 and 12 and extended to past events; مَنْ / مَا / مَاذَا as person, thing, action; أَيْنَ / مِنْ أَيْنَ retrieved, كَيْفَ taught; مَتَى and لِمَاذَا with separate practice; كَمْ + one noun with ـًا, answered with a digit (number words are Chapter 48, تمييز Chapter 71); a context lesson; CL10 Asking a Teacher; review and a 12-question test. Removed: هَلْ labelled a preposition, the 12:77 conditional hook called a question, مَا called a negator in لَا أَعْبُدُ مَا تَعْبُدُونَ, 12:87's command used as a question, the self-contradicting كَمْ rule, يَوْمَ called genitive, فَمَا خَطْبُكُمْ misattributed to 12:79, the scholar phrase bank and its 'most respectful' imperative, and multi-word build tiles.",
+    "title": "Yes or No? هَلْ and أَ",
+    "titleAr": "هَلْ وَالْهَمْزَةُ",
+    "titleUr": "ہاں یا نہیں؟ هَلْ اور أَ",
     "chapter_order": 31,
     "lesson_order": 1,
-    "chapter_title": "Questioning and Communication",
-    "title": "Question Words in Arabic",
-    "titleAr": "أَدَوَاتُ الِاسْتِفْهَامِ فِي اللُّغَةِ الْعَرَبِيَّةِ",
-    "source": "book3_lesson8_questioning.md",
     "estimated_minutes": 8,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 12,
-      "ayah": 77,
-      "label": "Yusuf 12:77",
-      "ar": "قَالُوا إِنْ يَسْرِقْ فَقَدْ سَرَقَ أَخٌ لَهُ مِنْ قَبْلُ",
-      "en": "They said: If he steals, a brother of his has stolen before.",
-      "ur": "انہوں نے کہا: اگر وہ چوری کرے گا تو اس کا ایک بھائی پہلے ہی چوری کر چکا ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012077.mp3"
+      "surah": 88,
+      "ayah": 1,
+      "label": "Al-Ghashiyah 88:1",
+      "ar": "هَلْ أَتَاكَ حَدِيثُ الْغَاشِيَةِ",
+      "en": "Has the story of the Overwhelming Event reached you?",
+      "ur": "کیا آپ تک ڈھانپ لینے والی (قیامت) کی خبر پہنچی؟",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/088001.mp3"
     },
     "noor_intro": {
-      "en": "Every language has question words. Arabic has a complete system of interrogatives. Let's learn them — they'll open up the Quran in a new way.",
-      "ur": "ہر زبان میں question words ہوتے ہیں۔ عربی میں interrogatives کا مکمل نظام ہے۔ آئیے سیکھیں — یہ قرآن کو ایک نئے طریقے سے کھولیں گے۔"
+      "en": "هَلْ opens a yes/no question. You met it in Chapter 12; today you tell a question from a statement.",
+      "ur": "هَلْ ہاں/نہیں والا سوال شروع کرتا ہے۔ آپ اسے باب 12 میں دیکھ چکے ہیں؛ آج آپ سوال اور خبر میں فرق کریں گے۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "WORD",
-      "text": {
-        "ar": "مَنْ",
-        "ar_plain": "من",
-        "translit": "man",
-        "en": "who",
-        "ur": "کون"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Statement or question?",
+        "ar": "الْكِتَابُ جَدِيدٌ / هَلِ الْكِتَابُ جَدِيدٌ؟",
+        "ur": "خبر یا سوال؟"
       },
+      "examples": [
+        {
+          "ar": "الْكِتَابُ جَدِيدٌ",
+          "ar_plain": "الكتاب جديد",
+          "translit": "al-kitābu jadīdun",
+          "en": "The book is new.",
+          "ur": "کتاب نئی ہے۔"
+        },
+        {
+          "ar": "هَلِ الْكِتَابُ جَدِيدٌ؟",
+          "ar_plain": "هل الكتاب جديد؟",
+          "translit": "hali l-kitābu jadīdun?",
+          "en": "Is the book new?",
+          "ur": "کیا کتاب نئی ہے؟"
+        }
+      ],
       "explanation": {
-        "en": "Interrogative for people — who? مَنْ فَعَلَ؟ = Who did it?",
-        "ur": "لوگوں کے لیے interrogative — کون؟ مَنْ فَعَلَ؟ = کس نے کیا؟"
-      },
-      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/man.webp"
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "مَا",
-        "ar_plain": "ما",
-        "translit": "maa",
-        "en": "what",
-        "ur": "کیا"
-      },
-      "explanation": {
-        "en": "Interrogative for things — what? مَا هَذَا؟ = What is this? Also used for negation لَا أَعْبَدُ مَا تَعْبُدُونَ.",
-        "ur": "چیزوں کے لیے interrogative — کیا؟ مَا هَذَا؟ = یہ کیا ہے؟ Negation کے لیے بھی gebraucht: لَا أَعْبَدُ مَا تَعْبُدُونَ۔"
+        "en": "Put هَلْ in front and the statement becomes a yes/no question. Before الـ it is read هَلِ.",
+        "ur": "شروع میں هَلْ لگائیں تو خبر ہاں/نہیں والا سوال بن جاتی ہے۔ الـ سے پہلے اسے هَلِ پڑھتے ہیں۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "هَلْ",
-        "ar_plain": "هل",
-        "translit": "hal",
-        "en": "yes/no question marker",
-        "ur": "ہاں/نہیں سوال کا نشان"
+        "ar": "هَلْ ذَهَبَ أَحْمَدُ إِلَى الْمَسْجِدِ؟",
+        "ar_plain": "هل ذهب أحمد إلى المسجد؟",
+        "translit": "hal dhahaba aḥmadu ilā l-masjidi?",
+        "en": "Did Ahmad go to the mosque?",
+        "ur": "کیا احمد مسجد گیا؟"
       },
       "explanation": {
-        "en": "Question particle for yes/no questions. هَلْ جَاءَ الْأَسْتَاذُ؟ = Did the teacher come?",
-        "ur": "ہاں/نہیں سوالات کے لیے question particle۔ هَلْ جَاءَ الْأَسْتَاذُ؟ = کیا استاد آیا؟"
+        "en": "ذَهَبَ is a past action, so the question is 'Did…?', not 'Is…?'.",
+        "ur": "ذَهَبَ گزرا ہوا کام ہے، اس لیے سوال 'کیا وہ گیا؟' ہے، 'کیا وہ ہے؟' نہیں۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "أَ",
-        "ar_plain": "أ",
-        "translit": "a",
-        "en": "yes/no question prefix",
-        "ur": "ہاں/نہیں سوال prefix"
+        "ar": "نَعَمْ، ذَهَبَ إِلَى الْمَسْجِدِ.",
+        "ar_plain": "نعم، ذهب إلى المسجد.",
+        "translit": "naʿam, dhahaba ilā l-masjidi.",
+        "en": "Yes, he went to the mosque.",
+        "ur": "جی ہاں، وہ مسجد گیا۔"
       },
       "explanation": {
-        "en": "Question prefix attached to the verb. Similar to هَلْ but placed at the start of the sentence. أَذَهَبَ إِلَى الْمَسْجِدِ؟ = Is he going to the mosque?",
-        "ur": "Verb کے شروع میں لگایا جانے والا question prefix۔ هَلْ کSimilar لیکن sentence کے start پر۔ أَذَهَبَ إِلَى الْمَسْجِدِ؟ = کیا وہ مسجد جا رہا ہے؟"
+        "en": "A yes/no question gets نَعَمْ (yes) or لَا (no), then the fact.",
+        "ur": "ہاں/نہیں والے سوال کا جواب نَعَمْ (ہاں) یا لَا (نہیں) سے، پھر بات۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "أَيْنَ",
-        "ar_plain": "أين",
-        "translit": "ayna",
-        "en": "where",
-        "ur": "کہاں"
+        "ar": "لَا، ذَهَبَ إِلَى السُّوقِ.",
+        "ar_plain": "لا، ذهب إلى السوق.",
+        "translit": "lā, dhahaba ilā s-sūqi.",
+        "en": "No, he went to the market.",
+        "ur": "نہیں، وہ بازار گیا۔"
       },
       "explanation": {
-        "en": "Interrogative for place — where? أَيْنَ الْكِتَابُ؟ = Where is the book?",
-        "ur": "جگہ کے لیے interrogative — کہاں؟ أَيْنَ الْكِتَابُ؟ = کتاب کہاں ہے؟"
-      },
-      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/ayna.webp"
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "كَيْفَ",
-        "ar_plain": "كيف",
-        "translit": "kayfa",
-        "en": "how",
-        "ur": "کیسے"
-      },
-      "explanation": {
-        "en": "Interrogative for manner/state — how? كَيْفَ حَالُكَ؟ = How are you? (condition/state)",
-        "ur": "طریقہ/حال کے لیے interrogative — کیسے؟ كَيْفَ حَالُكَ؟ = آپ کی حالت کیسی ہے؟"
+        "en": "لَا here simply means 'no'.",
+        "ur": "یہاں لَا کا مطلب صرف 'نہیں' ہے۔"
       }
     },
     {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "The complete Arabic question system",
-        "ur": "عربی کا مکمل سوالی نظام"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The question hamza",
+        "ar": "أَعِنْدَكَ قَلَمٌ؟",
+        "ur": "سوالیہ ہمزہ"
       },
-      "body": {
-        "en": "Arabic question words cover all question types: مَن (who), مَا (what), هَلْ / أَ (yes/no), أَيْنَ (where), كَيْفَ (how), مَتَى (when), لِمَاذَا (why), كَمْ (how many).",
-        "ur": "عربی question words ہر question type کو cover کرتے ہیں: مَن (کون)، مَا (کیا)، هَلْ / أَ (ہاں/نہیں)، أَيْنَ (کہاں)، كَيْفَ (کیسے)، مَتَى (کب)، لِمَاذَا (کیوں)، كَمْ (کتنے)۔"
+      "explanation": {
+        "en": "Chapter 7: أَ on the front of a sentence also makes a yes/no question. أَعِنْدَكَ قَلَمٌ؟ Do you have a pen?",
+        "ur": "باب 7: جملے کے شروع میں أَ بھی ہاں/نہیں والا سوال بناتا ہے۔ أَعِنْدَكَ قَلَمٌ؟ کیا تمہارے پاس قلم ہے؟"
       }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "هَلْ or أَ",
+        "ar": "هَلْ عِنْدَكَ قَلَمٌ؟ / أَعِنْدَكَ قَلَمٌ؟",
+        "ur": "هَلْ یا أَ"
+      },
+      "examples": [
+        {
+          "ar": "هَلْ عِنْدَكَ قَلَمٌ؟",
+          "ar_plain": "هل عندك قلم؟",
+          "translit": "hal ʿindaka qalamun?",
+          "en": "Do you have a pen?",
+          "ur": "کیا تمہارے پاس قلم ہے؟"
+        },
+        {
+          "ar": "أَعِنْدَكَ قَلَمٌ؟",
+          "ar_plain": "أعندك قلم؟",
+          "translit": "a-ʿindaka qalamun?",
+          "en": "Do you have a pen?",
+          "ur": "کیا تمہارے پاس قلم ہے؟"
+        }
+      ],
+      "explanation": {
+        "en": "Both ask the same yes/no question. أَ is written joined to the next word.",
+        "ur": "دونوں ایک ہی ہاں/نہیں والا سوال پوچھتے ہیں۔ أَ اگلے لفظ سے ملا کر لکھا جاتا ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "أَذَهَبَ الطَّالِبُ؟",
+        "ar_plain": "أذهب الطالب؟",
+        "translit": "a-dhahaba ṭ-ṭālibu?",
+        "en": "Did the student go?",
+        "ur": "کیا طالب علم گیا؟"
+      },
+      "explanation": {
+        "en": "أَ + ذَهَبَ: did he go? This أَ is the question marker, not part of the verb.",
+        "ur": "أَ + ذَهَبَ: کیا وہ گیا؟ یہ أَ سوال کی علامت ہے، فعل کا حصہ نہیں۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "88:1: Has the story of the Overwhelming Event reached you?",
+        "ar": "هَلْ أَتَاكَ حَدِيثُ الْغَاشِيَةِ",
+        "ur": "88:1: کیا آپ تک ڈھانپ لینے والی (قیامت) کی خبر پہنچی؟"
+      },
+      "explanation": {
+        "en": "هَلْ + أَتَاكَ, has it come to you. Here the question calls you to listen; it is not asking for information.",
+        "ur": "هَلْ + أَتَاكَ، کیا تم تک آئی؟ یہاں سوال توجہ دلاتا ہے؛ معلومات نہیں مانگتا۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/088001.mp3"
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
+      "type": "TRUE_FALSE",
       "id": "ch31-l01-ex01",
+      "statement": {
+        "en": "This is a question.",
+        "ur": "یہ سوال ہے۔",
+        "ar_example": {
+          "ar": "الْكِتَابُ جَدِيدٌ",
+          "ar_plain": "الكتاب جديد",
+          "translit": "al-kitābu jadīdun",
+          "en": "The book is new.",
+          "ur": "کتاب نئی ہے۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "No هَلْ and no أَ: it is a statement — the book is new.",
+        "ur": "نہ هَلْ ہے نہ أَ: یہ خبر ہے — کتاب نئی ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch31-l01-ex02",
       "prompt": {
-        "ar": "مَنْ هَذَا؟",
-        "ar_plain": "من هذا؟",
-        "translit": "man haazaa?",
-        "en": "Who is this?",
-        "ur": "یہ کون ہے؟"
+        "ar": "هَلْ ذَهَبَ أَحْمَدُ إِلَى الْمَسْجِدِ؟",
+        "ar_plain": "هل ذهب أحمد إلى المسجد؟",
+        "translit": "hal dhahaba aḥmadu ilā l-masjidi?",
+        "en": "Did Ahmad go to the mosque?",
+        "ur": "کیا احمد مسجد گیا؟"
       },
       "options": [
         {
-          "en": "Who is this?",
-          "ur": "یہ کون ہے؟"
+          "en": "Ahmad went to the mosque.",
+          "ur": "احمد مسجد گیا۔"
         },
         {
-          "en": "What is this?",
-          "ur": "یہ کیا ہے؟"
+          "en": "Is Ahmad in the mosque?",
+          "ur": "کیا احمد مسجد میں ہے؟"
         },
         {
-          "en": "Where is this?",
-          "ur": "یہ کہاں ہے؟"
+          "en": "Did Ahmad go to the mosque?",
+          "ur": "کیا احمد مسجد گیا؟"
         },
         {
-          "en": "How is this?",
-          "ur": "یہ کیسے ہے؟"
+          "en": "Where did Ahmad go?",
+          "ur": "احمد کہاں گیا؟"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "مَنْ asks about people (who). مَا would ask about things (what).",
-        "ur": "مَنْ لوگوں کے بارے میں پوچھتا ہے (کون)۔ مَا چیزوں کے بارے میں (کیا)۔"
+        "en": "هَلْ + ذَهَبَ (a past action): did he go?",
+        "ur": "هَلْ + ذَهَبَ (گزرا ہوا کام): کیا وہ گیا؟"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch31-l01-ex03",
+      "prompt_line": {
+        "ar": "هَلْ ذَهَبَتْ فَاطِمَةُ إِلَى الْمَدْرَسَةِ؟",
+        "ar_plain": "هل ذهبت فاطمة إلى المدرسة؟",
+        "translit": "hal dhahabat fāṭimatu ilā l-madrasati?",
+        "en": "Did Fatimah go to the school?",
+        "ur": "کیا فاطمہ اسکول گئی؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "نَعَمْ، ذَهَبَتْ إِلَى الْمَدْرَسَةِ.",
+          "ar_plain": "نعم، ذهبت إلى المدرسة.",
+          "translit": "naʿam, dhahabat ilā l-madrasati.",
+          "en": "Yes, she went to the school.",
+          "ur": "جی ہاں، وہ اسکول گئی۔"
+        },
+        {
+          "ar": "هِيَ فَاطِمَةُ.",
+          "ar_plain": "هي فاطمة.",
+          "translit": "hiya fāṭimatu.",
+          "en": "She is Fatimah.",
+          "ur": "وہ فاطمہ ہے۔"
+        },
+        {
+          "ar": "الْمَدْرَسَةُ كَبِيرَةٌ.",
+          "ar_plain": "المدرسة كبيرة.",
+          "translit": "al-madrasatu kabīratun.",
+          "en": "The school is big.",
+          "ur": "اسکول بڑا ہے۔"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "هَلْ wants yes or no: نَعَمْ، ذَهَبَتْ…",
+        "ur": "هَلْ ہاں یا نہیں چاہتا ہے: نَعَمْ، ذَهَبَتْ…"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch31-l01-ex04",
+      "prompt": {
+        "ar": "أَعِنْدَكِ كِتَابٌ؟",
+        "ar_plain": "أعندك كتاب؟",
+        "translit": "a-ʿindaki kitābun?",
+        "en": "Do you have a book? (to a woman)",
+        "ur": "کیا تمہارے پاس کتاب ہے؟ (عورت سے)"
+      },
+      "options": [
+        {
+          "en": "You have a book. (to a woman)",
+          "ur": "تمہارے پاس کتاب ہے۔ (عورت سے)"
+        },
+        {
+          "en": "Where is your book?",
+          "ur": "تمہاری کتاب کہاں ہے؟"
+        },
+        {
+          "en": "Is this your book?",
+          "ur": "کیا یہ تمہاری کتاب ہے؟"
+        },
+        {
+          "en": "Do you have a book? (to a woman)",
+          "ur": "کیا تمہارے پاس کتاب ہے؟ (عورت سے)"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَ at the front makes the question: do you have…?",
+        "ur": "شروع میں أَ سوال بناتا ہے: کیا تمہارے پاس…؟"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch31-l01-ex02",
-      "statement": {
-        "en": "هَلْ and أَ both function as yes/no question markers in Arabic.",
-        "ur": "هَلْ اور أَ دونوں عربی میں ہاں/نہیں question markers کے طور پر کام کرتے ہیں۔",
-        "ar_example": {
-          "ar": "هَلْ جَاءَ الْأَسْتَاذُ؟ / أَذَهَبَ إِلَى الْمَسْجِدِ؟",
-          "ar_plain": "هل جاء الأستاذ؟ / أذهب إلى المسجد؟",
-          "translit": "hal jaa'a al-ustaazu? / a-dhahaba ilaa al-masjidi?",
-          "en": "Did the teacher come? / Is he going to the mosque?",
-          "ur": "کیا استاد آیا؟ / کیا وہ مسجد جا رہا ہے؟"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch31-l01-ex03",
-      "mode": "TAP",
-      "sentence_ar": "___ هَذَا؟",
-      "hint": {
-        "en": "What is this?",
-        "ur": "یہ کیا ہے؟"
-      },
-      "options": [
-        {
-          "ar": "مَا",
-          "ar_plain": "ما",
-          "translit": "maa",
-          "en": "what",
-          "ur": "کیا"
-        },
-        {
-          "ar": "مَنْ",
-          "ar_plain": "من",
-          "translit": "man",
-          "en": "who",
-          "ur": "کون"
-        },
-        {
-          "ar": "أَيْنَ",
-          "ar_plain": "أين",
-          "translit": "ayna",
-          "en": "where",
-          "ur": "کہاں"
-        },
-        {
-          "ar": "كَيْفَ",
-          "ar_plain": "كيف",
-          "translit": "kayfa",
-          "en": "how",
-          "ur": "کیسے"
-        }
-      ],
-      "correct_answer": {
-        "ar": "مَا",
-        "ar_plain": "ما",
-        "translit": "maa",
-        "en": "what",
-        "ur": "کیا"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch31-l01-ex04",
-      "left_column": [
-        {
-          "ar": "مَنْ",
-          "ar_plain": "من",
-          "translit": "man",
-          "en": "who",
-          "ur": "کون"
-        },
-        {
-          "ar": "مَا",
-          "ar_plain": "ما",
-          "translit": "maa",
-          "en": "what",
-          "ur": "کیا"
-        },
-        {
-          "ar": "أَيْنَ",
-          "ar_plain": "أين",
-          "translit": "ayna",
-          "en": "where",
-          "ur": "کہاں"
-        },
-        {
-          "ar": "كَيْفَ",
-          "ar_plain": "كيف",
-          "translit": "kayfa",
-          "en": "how",
-          "ur": "کیسے"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "Person — who?",
-          "ur": "شخص — کون؟"
-        },
-        {
-          "en": "Thing — what?",
-          "ur": "چیز — کیا؟"
-        },
-        {
-          "en": "Place — where?",
-          "ur": "جگہ — کہاں؟"
-        },
-        {
-          "en": "Manner — how?",
-          "ur": "طریقہ — کیسے؟"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
       "id": "ch31-l01-ex05",
-      "target_translation": {
-        "en": "Where is the book?",
-        "ur": "کتاب کہاں ہے؟"
-      },
-      "tiles": [
-        {
-          "ar": "أَيْنَ",
-          "ar_plain": "أين",
-          "translit": "ayna",
-          "en": "where",
-          "ur": "کہاں"
-        },
-        {
-          "ar": "الْكِتَابُ",
-          "ar_plain": "الكتاب",
-          "translit": "al-kitaabu",
-          "en": "the book",
-          "ur": "کتاب"
-        },
-        {
-          "ar": "مَا",
-          "ar_plain": "ما",
-          "translit": "maa",
-          "en": "what",
-          "ur": "کیا"
-        },
-        {
-          "ar": "هَلْ",
-          "ar_plain": "هل",
-          "translit": "hal",
-          "en": "question marker",
-          "ur": "سوال کا نشان"
+      "statement": {
+        "en": "In أَذَهَبَ الطَّالِبُ؟ the أَ means 'I'.",
+        "ur": "أَذَهَبَ الطَّالِبُ؟ میں أَ کا مطلب 'میں' ہے۔",
+        "ar_example": {
+          "ar": "أَذَهَبَ الطَّالِبُ؟",
+          "ar_plain": "أذهب الطالب؟",
+          "translit": "a-dhahaba ṭ-ṭālibu?",
+          "en": "Did the student go?",
+          "ur": "کیا طالب علم گیا؟"
         }
-      ],
-      "correct_order": [
-        0,
-        1
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch31-l01-ex06",
-      "prompt": {
-        "ar": "كَيْفَ حَالُكَ؟",
-        "ar_plain": "كيف حالك؟",
-        "translit": "kayfa haaluka?",
-        "en": "How are you? (How is your condition?)",
-        "ur": "آپ کیسے ہیں؟ (آپ کی حالت کیسی ہے؟)"
       },
-      "options": [
-        {
-          "en": "How are you?",
-          "ur": "آپ کیسے ہیں؟"
-        },
-        {
-          "en": "What is your condition?",
-          "ur": "آپ کی حالت کیا ہے؟"
-        },
-        {
-          "en": "Where is your condition?",
-          "ur": "آپ کی حالت کہاں ہے؟"
-        },
-        {
-          "en": "When is your condition?",
-          "ur": "آپ کی حالت کب ہے؟"
-        }
-      ],
-      "correct_index": 0,
+      "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "كَيْفَ asks about manner or state — how? حَالُكَ = your condition/state. Together: How is your condition?",
-        "ur": "كَيْفَ طریقہ یا حال پوچھتا ہے — کیسے؟ حَالُكَ = آپ کی حالت۔ مل کر: آپ کی حالت کیسی ہے؟"
+        "en": "Here أَ is the question marker: did the student go? ذَهَبَ is a past verb.",
+        "ur": "یہاں أَ سوال کی علامت ہے: کیا طالب علم گیا؟ ذَهَبَ ماضی کا فعل ہے۔"
       }
     },
     {
-      "type": "TAP_TRANSLATION",
-      "id": "ch31-l01-ex07",
-      "prompt": {
-        "ar": "مَنْ هَذَا",
-        "ar_plain": "من هذا",
-        "translit": "man haadhaa",
-        "en": "Who is this?",
-        "ur": "یہ کون ہے؟"
+      "type": "FILL_BLANK",
+      "id": "ch31-l01-ex06",
+      "mode": "TAP",
+      "sentence_ar": "___ الْكِتَابُ جَدِيدٌ؟",
+      "hint": {
+        "en": "Is the book new?",
+        "ur": "کیا کتاب نئی ہے؟"
       },
       "options": [
         {
-          "en": "What is this?",
-          "ur": "یہ کیا ہے؟"
+          "ar": "مَا",
+          "ar_plain": "ما",
+          "translit": "mā",
+          "en": "what?",
+          "ur": "کیا؟"
         },
         {
-          "en": "Who is this?",
-          "ur": "یہ کون ہے؟"
+          "ar": "هَلِ",
+          "ar_plain": "هل",
+          "translit": "hali",
+          "en": "is…? / did…?",
+          "ur": "کیا…؟"
         },
         {
-          "en": "Where is this?",
-          "ur": "یہ کہاں ہے؟"
+          "ar": "مَنْ",
+          "ar_plain": "من",
+          "translit": "man",
+          "en": "who?",
+          "ur": "کون؟"
         },
         {
-          "en": "This is him.",
-          "ur": "یہ وہی ہے۔"
+          "ar": "أَيْنَ",
+          "ar_plain": "أين",
+          "translit": "ayna",
+          "en": "where?",
+          "ur": "کہاں؟"
         }
       ],
-      "correct_index": 1,
-      "xp_value": 1
+      "correct_answer": {
+        "ar": "هَلِ",
+        "ar_plain": "هل",
+        "translit": "hali",
+        "en": "is…? / did…?",
+        "ur": "کیا…؟"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A yes/no question: هَلْ, read هَلِ before الـ.",
+        "ur": "ہاں/نہیں والا سوال: هَلْ، الـ سے پہلے هَلِ پڑھا جاتا ہے۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch31-l01-ex07",
+      "prompt_line": {
+        "ar": "هَلْ أَكَلْتَ؟",
+        "ar_plain": "هل أكلت؟",
+        "translit": "hal akalta?",
+        "en": "Did you eat?",
+        "ur": "کیا تم نے کھانا کھایا؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "نَعَمْ، أَكَلْتَ.",
+          "ar_plain": "نعم، أكلت.",
+          "translit": "naʿam, akalta.",
+          "en": "Yes, you ate.",
+          "ur": "جی ہاں، تم نے کھایا۔"
+        },
+        {
+          "ar": "لَا، شَرِبْتُ الْمَاءَ فَقَطْ.",
+          "ar_plain": "لا، شربت الماء فقط.",
+          "translit": "lā, sharibtu l-māʾa faqaṭ.",
+          "en": "No, I only drank water.",
+          "ur": "نہیں، میں نے صرف پانی پیا۔"
+        },
+        {
+          "ar": "مَاذَا أَكَلْتَ؟",
+          "ar_plain": "ماذا أكلت؟",
+          "translit": "mādhā akalta?",
+          "en": "What did you eat?",
+          "ur": "تم نے کیا کھایا؟"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "Answer about yourself (شَرِبْتُ, I drank). A question is not an answer.",
+        "ur": "اپنے بارے میں جواب دیں (شَرِبْتُ، میں نے پیا)۔ سوال، جواب نہیں ہوتا۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch31-l01-ex08",
+      "ayah_fragment": {
+        "ar": "هَلْ أَتَاكَ حَدِيثُ الْغَاشِيَةِ",
+        "surah_ref": "Al-Ghashiyah 88:1"
+      },
+      "options": [
+        {
+          "en": "A statement, not a question",
+          "ur": "خبر، سوال نہیں"
+        },
+        {
+          "en": "A 'where' question with أَيْنَ",
+          "ur": "أَيْنَ والا 'کہاں' کا سوال"
+        },
+        {
+          "en": "A yes/no question that opens with هَلْ",
+          "ur": "هَلْ سے شروع ہونے والا ہاں/نہیں کا سوال"
+        },
+        {
+          "en": "A command",
+          "ur": "حکم"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هَلْ أَتَاكَ: has it reached you? A question with هَلْ.",
+        "ur": "هَلْ أَتَاكَ: کیا آپ تک پہنچی؟ هَلْ والا سوال۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Arabic interrogative particles",
-      "ar": "أَدَوَاتُ الِاسْتِفْهَامِ فِي اللُّغَةِ الْعَرَبِيَّةِ",
-      "ur": "عربی کے سوالی الفاظ"
+      "en": "Yes/no questions",
+      "ar": "هَلْ وَالْهَمْزَةُ",
+      "ur": "ہاں/نہیں والے سوال"
     },
     "ayah": {
-      "surah": 12,
-      "ayah": 77,
-      "label": "Yusuf 12:77",
-      "ar": "قَالُوا إِنْ يَسْرِقْ فَقَدْ سَرَقَ أَخٌ لَهُ مِنْ قَبْلُ",
-      "en": "They said: If he steals, a brother of his has stolen before.",
-      "ur": "انہوں نے کہا: اگر وہ چوری کرے گا تو اس کا ایک بھائی پہلے ہی چوری کر چکا ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012077.mp3"
+      "surah": 88,
+      "ayah": 1,
+      "label": "Al-Ghashiyah 88:1",
+      "ar": "هَلْ أَتَاكَ حَدِيثُ الْغَاشِيَةِ",
+      "en": "Has the story of the Overwhelming Event reached you?",
+      "ur": "کیا آپ تک ڈھانپ لینے والی (قیامت) کی خبر پہنچی؟",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/088001.mp3"
     },
     "highlighted_word_indices": [
-      1,
-      5
+      0
+    ],
+    "highlighted_words": [
+      "هَلْ"
     ],
     "noor_explanation": {
-      "en": "This ayah from Yusuf has two question-related structures: إِنْ يَسْرِقْ (if he steals) uses إِنْ as a conditional particle, and أَخٌ لَهُ (a brother of his) shows possession with attached pronoun.",
-      "ur": "یوسف کی یہ آیت دو question-related structures رکھتی ہے: إِنْ يَسْرِقْ (اگر وہ چوری کرے) میں إِنْ conditional particle ہے، اور أَخٌ لَهُ (اس کا ایک بھائی) attached pronoun کے ساتھ possession دکھاتی ہے۔"
+      "en": "هَلْ أَتَاكَ: has it reached you? When a sentence opens with هَلْ or أَ, ask: statement or question?",
+      "ur": "هَلْ أَتَاكَ: کیا تم تک پہنچی؟ جب جملہ هَلْ یا أَ سے شروع ہو تو پوچھیں: خبر ہے یا سوال؟"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Arabic question words are precise and powerful. مَنْ for people, مَا for things, أَيْنَ for place, كَيْفَ for manner — each one opens a different door in the Quran.",
-      "ur": "عربی question words درست اور طاقتور ہیں۔ لوگوں کے لیے مَنْ، چیزوں کے لیے مَا، جگہ کے لیے أَيْنَ، طریقہ کے لیے كَيْفَ — ہر ایک قرآن میں ایک مختلف دروازہ کھولتا ہے۔"
+      "en": "You can tell a yes/no question from a statement. Next: who and what.",
+      "ur": "آپ ہاں/نہیں والے سوال کو خبر سے الگ پہچان سکتے ہیں۔ آگے: کون اور کیا۔"
     }
   }
 }

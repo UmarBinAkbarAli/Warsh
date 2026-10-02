@@ -52,6 +52,15 @@ Do not touch Codex's uncommitted edits to the proposal files themselves.
 | Batch | Chapters | Status | Grabbed | Discarded |
 |---|---|---|---|---|
 | 1 | 26–30 | **done, live 2026-10-02** | Full rebuild of every lesson (Ch 26–29 had never had the per-chapter correctness rebuild — only a hotfix); a REVIEW + 12-question test per chapter; Ch 26 layered iḍāfa + 1:4; Ch 27 eight prepositions, real لِـ/بِـ spelling, pronoun after preposition; Ch 28 verb complements + feminine forms; Ch 29 sentence cores, correct إِنَّ/لَيْسَ; Ch 30 story/dialogue/relative مَا + complete Al-Kafirun | Extra transfer lessons (Ch 26 l05, Ch 30 l06), separate Quran-reading lesson (Ch 27), separate feminine-forms lesson (Ch 28 l07) — folded into reviews/lessons; process text |
+| 2 | 31–35 | **done, live 2026-10-02** | Full rebuild of every lesson + REVIEW + 12-question test per chapter; Ch 31 كَيْفَ/مَتَى/لِمَاذَا/كَمْ taught, new context lesson `ch31-l07`, CL10 Asking a Teacher (`ch31-l06`); Ch 32 the إِذَا event/response/فَ topic its map promised (was a Ch 29 re-run); Ch 33 complete Al-Falaq + An-Nasr + new An-Nas reading (`ch33-l06`); Ch 34 five core imperfect readings, supplied stems, لَا vs 'Do not!'; Ch 35 سَـ/سَوْفَ without near/far, لَنْ recognition | Splitting when/why into two lessons, the listening-task authoring process, reading-budget text, the CL10 roadmap edit (proposal file has Codex's uncommitted edits) |
+| 3 | 36–40 | | | |
+| 4 | 41–45 | | | |
+| 5 | 46–50 | | | |
+| 6 | 51–55 | | | |
+| 7 | 56–60 | | | |
+| 8 | 61–65 | | | |
+| 9 | 66–70 | | | |
+| 10 | 71–72 | | | |
 
 **Batch 1 notes for later batches.** Builder scripts live in the session
 scratchpad only; the reusable pieces are `scripts/promote-chapters-26-30.cjs`
@@ -63,12 +72,5 @@ was filled in directly for the walk) → production `content:check` → dry run 
 apply → `content:baseline` → `audio:prebuild-catalog:db` → illustration rows.
 Open item found on the way: `quran:audit-fixtures` flags `chapter-50-lesson-05.json`
 hook/reveal 55:1 — fix it in batch 5.
-| 2 | 31–35 | | | |
-| 3 | 36–40 | | | |
-| 4 | 41–45 | | | |
-| 5 | 46–50 | | | |
-| 6 | 51–55 | | | |
-| 7 | 56–60 | | | |
-| 8 | 61–65 | | | |
-| 9 | 66–70 | | | |
-| 10 | 71–72 | | | |
+
+**Batch 2 notes for later batches.** Builders in the scratchpad again; reusable: `scripts/promote-chapters-31-35.cjs` now supports a surplus row as `[id, order, null, null, null, fixture, "DRAFT"]` (moves it, unpublishes it, keeps progress — used for `ch34-l07`). Gotchas met: the test `no chapter-test topic repeats one of its question's options` (a topic of 'إِنَّ' with an option 'إِنَّ' fails); a lab's scored answer may not be a `heard_only` phrase; any card whose `concept.ar` is Quran text needs `audio_url` (otherwise it would be synthesised); `audio:prebuild-fixtures` (non-dry) only uploads missing phrase clips. The staging user now also has Ch 31–35 progress, so batch 3's walk can start at Ch 36. `seed.cjs` still `require`s fixture files deleted in batches 1–2 (e.g. `chapter-27-lesson-05.json`, `chapter-34-lesson-07.json`) — the full seed is never run, but it would crash; not touched.

@@ -2,111 +2,170 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 35, Lesson 1 (ch35-l01) — attached سَـ on the Chapter 34 forms (سَأَكْتُبُ، سَنَكْتُبُ، سَيَكْتُبُ، سَتَكْتُبُ — still 'you' or 'she' by context); قَالَ → يَقُولُ supplied whole (not قُولُ) → سَيَقُولُ, read in 2:142. Rebuilt 2026-10-02 in the proposal harvest, batch 2 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-35-content-proposal.md and its review amendments: attached سَـ and separate سَوْفَ both point the Chapter 34 imperfect to the future — some grammarians describe a near/remote tendency, others no fixed difference, so it is mentioned once and never tested; present/habit versus future by marker and time word; future versus past and command (commands given whole — Chapter 51); لَنْ + imperfect recognised as 'will not' with the following form supplied (its ending is Chapter 45's); Quran readings 2:142 سَيَقُولُ, 102:3 سَوْفَ تَعْلَمُونَ, 93:5 وَلَسَوْفَ, 5:54, 7:143 and 3:92 لَنْ. Removed: 'سَـ = near, سَوْفَ = far/emphatic', 'سَوْفَ adds certainty to every promise', hooks with no future marker (108:2, 39:10–11, 108:1), قُولُ for يَقُولُ, the 'most common future form' claim, يَـ read as 'they', the spliced Quran-like composite, لَا خَوْفٌ in the future outcome, the Book 5 bridge claims, multi-word build tiles and many-to-one matching.",
+    "title": "سَـ: Will",
+    "titleAr": "سَيَفْعَلُ",
+    "titleUr": "سَـ: گا، گی، گے",
     "chapter_order": 35,
     "lesson_order": 1,
-    "chapter_title": "Future Tense with سَ",
-    "title": "Introduction to Future with سَ",
-    "titleAr": "مُقَدِّمَةُ الْمُسْتَقْبَلِ بِسَـ",
-    "source": "book4_lesson1_future_tense.md",
     "estimated_minutes": 8,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 87,
-      "ayah": 10,
-      "label": "Al-A'la 87:10",
-      "ar": "سَيَذَّكَّرُ مَنْ يَخْشَىٰ",
-      "en": "The one who fears [Allah] will be reminded.",
-      "ur": "جو ڈرتا ہے وہ نصیحت حاصل کرے گا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087010.mp3"
+      "surah": 2,
+      "ayah": 142,
+      "label": "Al-Baqarah 2:142",
+      "ar": "سَيَقُولُ السُّفَهَاءُ مِنَ النَّاسِ",
+      "en": "The foolish among the people will say,",
+      "ur": "لوگوں میں سے بے وقوف کہیں گے،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002142.mp3"
     },
     "noor_intro": {
-      "en": "سَيَذَّكَّرُ — \"will be reminded\". The سَـ at the front turns a present-tense verb into a future one. Arabic has two future markers, سَـ and سَوْفَ; this lesson starts with سَـ.",
-      "ur": "سَيَذَّكَّرُ — \"نصیحت حاصل کرے گا\"۔ شروع کا سَـ مضارع فعل کو مستقبل بنا دیتا ہے۔ عربی میں مستقبل کے دو نشان ہیں، سَـ اور سَوْفَ؛ یہ سبق سَـ سے شروع ہوتا ہے۔"
+      "en": "سَيَقُولُ: they will say. One letter, سَـ, turns 'says' into 'will say'.",
+      "ur": "سَيَقُولُ: وہ کہیں گے۔ ایک حرف، سَـ، 'کہتا ہے' کو 'کہے گا' بنا دیتا ہے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
-      "type": "CONCEPT",
+      "type": "CONTRAST",
       "concept": {
-        "en": "The future marker سَـ",
-        "ar": "عَلَامَةُ الْمُسْتَقْبَلِ سَـ",
-        "ur": "Future کا marker سَـ"
+        "en": "Add سَـ",
+        "ar": "يَذْهَبُ / سَيَذْهَبُ",
+        "ur": "سَـ لگائیں"
       },
+      "examples": [
+        {
+          "ar": "يَذْهَبُ",
+          "ar_plain": "يذهب",
+          "translit": "yadhhabu",
+          "en": "he goes",
+          "ur": "وہ جاتا ہے"
+        },
+        {
+          "ar": "سَيَذْهَبُ",
+          "ar_plain": "سيذهب",
+          "translit": "sa-yadhhabu",
+          "en": "he will go",
+          "ur": "وہ جائے گا"
+        }
+      ],
       "explanation": {
-        "en": "سَـ is a prefix added BEFORE the present tense prefixes to indicate future. سَـ + أَـ = سَأَـ (I will). سَـ + تَـ = سَتَـ (you will). سَـ + يَـ = سَيَـ (he will). سَـ + نَـ = سَنَـ (we will).",
-        "ur": "سَـ ایک prefix ہے جو future indicate کرنے کے لیے present tense prefixes سے پہلے شامل کیا جاتا ہے۔ سَـ + أَـ = سَأَـ (میں ہوں گا)۔ سَـ + تَـ = سَتَـ (تو ہو گا)۔ سَـ + يَـ = سَيَـ (وہ ہو گا)۔ سَـ + نَـ = سَنَـ (ہم ہوں گے)۔"
+        "en": "سَـ joins the front of the imperfect and points it to the future. The verb itself does not change.",
+        "ur": "سَـ مضارع کے شروع میں جڑ کر اسے مستقبل کی طرف موڑ دیتا ہے۔ فعل خود نہیں بدلتا۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "سَأَذْهَبُ",
-        "ar_plain": "سأذهب",
-        "translit": "sa-adhahabu",
-        "en": "I will go",
-        "ur": "میں جاؤں گا"
+        "ar": "سَيَذْهَبُ أَحْمَدُ إِلَى الْمَسْجِدِ غَدًا.",
+        "ar_plain": "سيذهب أحمد إلى المسجد غدا.",
+        "translit": "sa-yadhhabu aḥmadu ilā l-masjidi ghadan.",
+        "en": "Ahmad will go to the mosque tomorrow.",
+        "ur": "احمد کل مسجد جائے گا۔"
       },
       "explanation": {
-        "en": "سَـ + أَـ (I) + ذ-ه-ب = سَأَذْهَبُ. The سَـ marks future, the أَـ marks first person singular. Together: I will go.",
-        "ur": "سَـ + أَـ (میں) + ذ-ه-ب = سَأَذْهَبُ۔ سَـ future mark کرتا ہے، أَـ first person singular mark کرتا ہے۔ مل کر: میں جاؤں گا۔"
+        "en": "سَـ + يَذْهَبُ, and غَدًا agrees: the future.",
+        "ur": "سَـ + يَذْهَبُ، اور غَدًا بھی یہی کہتا ہے: مستقبل۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "سَـ on every form",
+        "ar": "سَأَكْتُبُ · سَنَكْتُبُ · سَيَكْتُبُ · سَتَكْتُبُ",
+        "ur": "ہر صورت پر سَـ"
+      },
+      "examples": [
+        {
+          "ar": "سَأَكْتُبُ",
+          "ar_plain": "سأكتب",
+          "translit": "sa-aktubu",
+          "en": "I will write",
+          "ur": "میں لکھوں گا"
+        },
+        {
+          "ar": "سَنَكْتُبُ",
+          "ar_plain": "سنكتب",
+          "translit": "sa-naktubu",
+          "en": "we will write",
+          "ur": "ہم لکھیں گے"
+        },
+        {
+          "ar": "سَيَكْتُبُ",
+          "ar_plain": "سيكتب",
+          "translit": "sa-yaktubu",
+          "en": "he will write",
+          "ur": "وہ لکھے گا"
+        },
+        {
+          "ar": "سَتَكْتُبُ",
+          "ar_plain": "ستكتب",
+          "translit": "sa-taktubu",
+          "en": "you (m.) will write / she will write",
+          "ur": "تم لکھو گے / وہ لکھے گی"
+        }
+      ],
+      "explanation": {
+        "en": "سَـ goes on every form from Chapter 34. سَتَكْتُبُ is still 'you' or 'she' — the context decides.",
+        "ur": "سَـ باب 34 کی ہر صورت پر لگتا ہے۔ سَتَكْتُبُ اب بھی 'تم' یا 'وہ (عورت)' ہے — سیاق فیصلہ کرتا ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "سَيَذْهَبُ",
-        "ar_plain": "سيذهب",
-        "translit": "sayadhahabu",
-        "en": "He will go",
-        "ur": "وہ جائے گا"
+        "ar": "سَنَجْلِسُ مَعَ الْإِمَامِ.",
+        "ar_plain": "سنجلس مع الإمام.",
+        "translit": "sa-najlisu maʿa l-imāmi.",
+        "en": "We will sit with the imam.",
+        "ur": "ہم امام کے ساتھ بیٹھیں گے۔"
       },
       "explanation": {
-        "en": "سَـ + يَذْهَبُ = سَيَذْهَبُ, \"he will go\". The سَـ marks the future; the verb itself does not change.",
-        "ur": "سَـ + يَذْهَبُ = سَيَذْهَبُ، \"وہ جائے گا\"۔ سَـ مستقبل بتاتا ہے؛ فعل خود نہیں بدلتا۔"
+        "en": "سَـ + نَجْلِسُ: we will sit.",
+        "ur": "سَـ + نَجْلِسُ: ہم بیٹھیں گے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "سَنَذْهَبُ",
-        "ar_plain": "سنذهب",
-        "translit": "sana-dhahabu",
-        "en": "We will go",
-        "ur": "ہم جائیں گے"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "قَالَ → يَقُولُ → سَيَقُولُ",
+        "ar": "يَقُولُ / سَيَقُولُ",
+        "ur": "قَالَ → يَقُولُ → سَيَقُولُ"
       },
+      "examples": [
+        {
+          "ar": "يَقُولُ",
+          "ar_plain": "يقول",
+          "translit": "yaqūlu",
+          "en": "he says",
+          "ur": "وہ کہتا ہے"
+        },
+        {
+          "ar": "سَيَقُولُ",
+          "ar_plain": "سيقول",
+          "translit": "sa-yaqūlu",
+          "en": "he will say",
+          "ur": "وہ کہے گا"
+        }
+      ],
       "explanation": {
-        "en": "سَـ + نَـ (we) + ذ-ه-ب = سَنَذْهَبُ. Note: when سَـ + نَـ combine, it becomes سَنَـ.",
-        "ur": "سَـ + نَـ (ہم) + ذ-ه-ب = سَنَذْهَبُ۔ Note: جب سَـ + نَـ ملتے ہیں، یہ سَنَـ بن جاتا ہے۔"
+        "en": "قَالَ, he said; its imperfect is يَقُولُ, he says — given whole (not قُولُ). With سَـ: سَيَقُولُ, he will say.",
+        "ur": "قَالَ، اس نے کہا؛ اس کا مضارع يَقُولُ ہے، وہ کہتا ہے — پورا دیا گیا (قُولُ نہیں)۔ سَـ کے ساتھ: سَيَقُولُ، وہ کہے گا۔"
       }
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "سَيَقُولُ",
-        "ar_plain": "سيقول",
-        "translit": "sayaquulu",
-        "en": "He will say",
-        "ur": "وہ کہے گا"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "2:142: The foolish among the people will say,",
+        "ar": "سَيَقُولُ السُّفَهَاءُ مِنَ النَّاسِ",
+        "ur": "2:142: لوگوں میں سے بے وقوف کہیں گے،"
       },
       "explanation": {
-        "en": "The present tense of قَالَ is يَقُولُ (\"he says\"). Add سَـ: سَيَقُولُ = \"he will say\". It opens Al-Baqarah 2:142: سَيَقُولُ السُّفَهَاءُ.",
-        "ur": "قَالَ کا مضارع يَقُولُ (\"وہ کہتا ہے\") ہے۔ سَـ لگائیں: سَيَقُولُ = \"وہ کہے گا\"۔ البقرہ 2:142 اسی سے شروع ہوتی ہے: سَيَقُولُ السُّفَهَاءُ۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "سَـ future vs present tense",
-        "ar": "سَـ future بمقابلہ present tense",
-        "ur": "سَـ مستقبل بمقابلہ موجودہ زمانہ"
+        "en": "سَيَقُولُ: will say. السُّفَهَاءُ, the foolish; مِنَ النَّاسِ, among the people. The verse tells of something that will be said.",
+        "ur": "سَيَقُولُ: کہیں گے۔ السُّفَهَاءُ، بے وقوف؛ مِنَ النَّاسِ، لوگوں میں سے۔ آیت ایسی بات بتاتی ہے جو کہی جائے گی۔"
       },
-      "body": {
-        "en": "Present: أَذْهَبُ (I go). Future: سَأَذْهَبُ (I will go). Only the سَـ is added — everything else stays the same.",
-        "ur": "Present: أَذْهَبُ (میں جاتا ہوں)۔ Future: سَأَذْهَبُ (میں جاؤں گا)۔ صرف سَـ شامل ہوتا ہے — باقی سب same رہتا ہے۔"
-      }
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002142.mp3"
     }
   ],
   "exercises": [
@@ -114,329 +173,214 @@
       "type": "TAP_TRANSLATION",
       "id": "ch35-l01-ex01",
       "prompt": {
-        "ar": "سَأَذْهَبُ إِلَى الْمَسْجِدِ",
-        "ar_plain": "سأذهب إلى المسجد",
-        "translit": "sa-adhahabu ilaa al-masjidi",
-        "en": "I will go to the mosque.",
-        "ur": "میں مسجد جاؤں گا۔"
+        "ar": "سَأَكْتُبُ الدَّرْسَ.",
+        "ar_plain": "سأكتب الدرس.",
+        "translit": "sa-aktubu d-darsa.",
+        "en": "I will write the lesson.",
+        "ur": "میں سبق لکھوں گا۔"
       },
       "options": [
         {
-          "en": "I will go to the mosque.",
-          "ur": "میں مسجد جاؤں گا۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "I write the lesson.",
+          "ur": "میں سبق لکھتا ہوں۔"
         },
         {
-          "en": "I go to the mosque.",
-          "ur": "میں مسجد جاتا ہوں۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "I will write the lesson.",
+          "ur": "میں سبق لکھوں گا۔"
         },
         {
-          "en": "He will go to the mosque.",
-          "ur": "وہ مسجد جائے گا۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "I wrote the lesson.",
+          "ur": "میں نے سبق لکھا۔"
         },
         {
-          "en": "We will go to the mosque.",
-          "ur": "ہم مسجد جائیں گے۔",
-          "translit": "—",
-          "ar_plain": ""
+          "en": "We will write the lesson.",
+          "ur": "ہم سبق لکھیں گے۔"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "سَـ + أَـ = I will (future). أَذْهَبُ = I go (present). The سَـ prefix changes present to future.",
-        "ur": "سَـ + أَـ = میں ہوں گا (future)۔ أَذْهَبُ = میں جاتا ہوں (present)۔ سَـ prefix present کو future میں بدل دیتا ہے۔"
+        "en": "سَـ + أَكْتُبُ: I will write.",
+        "ur": "سَـ + أَكْتُبُ: میں لکھوں گا۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch35-l01-ex02",
+      "mode": "TAP",
+      "sentence_ar": "___ أَحْمَدُ إِلَى السُّوقِ غَدًا.",
+      "hint": {
+        "en": "Ahmad will go to the market tomorrow.",
+        "ur": "احمد کل بازار جائے گا۔"
+      },
+      "options": [
+        {
+          "ar": "يَذْهَبُ",
+          "ar_plain": "يذهب",
+          "translit": "yadhhabu",
+          "en": "goes (he)",
+          "ur": "جاتا ہے"
+        },
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "went (he)",
+          "ur": "گیا"
+        },
+        {
+          "ar": "سَأَذْهَبُ",
+          "ar_plain": "سأذهب",
+          "translit": "sa-adhhabu",
+          "en": "will go (I)",
+          "ur": "میں جاؤں گا"
+        },
+        {
+          "ar": "سَيَذْهَبُ",
+          "ar_plain": "سيذهب",
+          "translit": "sa-yadhhabu",
+          "en": "will go (he)",
+          "ur": "جائے گا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "سَيَذْهَبُ",
+        "ar_plain": "سيذهب",
+        "translit": "sa-yadhhabu",
+        "en": "will go (he)",
+        "ur": "جائے گا"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "He + the future: سَـ + يَذْهَبُ.",
+        "ur": "وہ + مستقبل: سَـ + يَذْهَبُ۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch35-l01-ex02",
-      "statement": {
-        "en": "In سَيَذْهَبُ, the prefix سَـ indicates future tense and يَـ indicates third person masculine singular.",
-        "ur": "سَيَذْهَبُ میں، prefix سَـ future tense indicate کرتا ہے اور يَـ third person masculine singular indicate کرتا ہے۔",
-        "ar_example": {
-          "ar": "سَيَذْهَبُ",
-          "ar_plain": "سيذهب",
-          "translit": "sayadhahabu",
-          "en": "He will go",
-          "ur": "وہ جائے گا"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
       "id": "ch35-l01-ex03",
-      "mode": "TAP",
-      "sentence_ar": "سَ___ الْمُسْلِمُ إِلَى الْمَسْجِدِ",
-      "hint": {
-        "en": "The Muslim will go to the mosque.",
-        "ur": "مسلمان مسجد جائے گا۔"
+      "statement": {
+        "en": "Fatimah is sitting here now.",
+        "ur": "فاطمہ ابھی یہاں بیٹھی ہے۔",
+        "ar_example": {
+          "ar": "سَتَجْلِسُ فَاطِمَةُ هُنَا.",
+          "ar_plain": "ستجلس فاطمة هنا.",
+          "translit": "sa-tajlisu fāṭimatu hunā.",
+          "en": "Fatimah will sit here.",
+          "ur": "فاطمہ یہاں بیٹھے گی۔"
+        }
       },
-      "options": [
-        {
-          "ar": "يَذْهَبُ",
-          "ar_plain": "يذهب",
-          "translit": "yadhahabu",
-          "en": "he goes",
-          "ur": "وہ جاتا ہے"
-        },
-        {
-          "ar": "أَذْهَبُ",
-          "ar_plain": "أذهب",
-          "translit": "adhahabu",
-          "en": "I go",
-          "ur": "میں جاتا ہوں"
-        },
-        {
-          "ar": "نَذْهَبُ",
-          "ar_plain": "نذهب",
-          "translit": "nadhahabu",
-          "en": "we go",
-          "ur": "ہم جاتے ہیں"
-        },
-        {
-          "ar": "تَذْهَبُ",
-          "ar_plain": "تذهب",
-          "translit": "tadhahabu",
-          "en": "you go",
-          "ur": "تو جاتا ہے"
-        }
-      ],
-      "correct_answer": {
-        "ar": "يَذْهَبُ",
-        "ar_plain": "يذهب",
-        "translit": "yadhahabu",
-        "en": "he goes",
-        "ur": "وہ جاتا ہے"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch35-l01-ex04",
-      "left_column": [
-        {
-          "ar": "سَأَذْهَبُ",
-          "ar_plain": "سأذهب",
-          "translit": "sa-adhahabu",
-          "en": "I will go",
-          "ur": "میں جاؤں گا"
-        },
-        {
-          "ar": "سَتَذْهَبُ",
-          "ar_plain": "ستذهب",
-          "translit": "satadhahabu",
-          "en": "you will go",
-          "ur": "تو جائے گا"
-        },
-        {
-          "ar": "سَيَذْهَبُ",
-          "ar_plain": "سيذهب",
-          "translit": "sayadhahabu",
-          "en": "he will go",
-          "ur": "وہ جائے گا"
-        },
-        {
-          "ar": "سَنَذْهَبُ",
-          "ar_plain": "سنذهب",
-          "translit": "sanadhahabu",
-          "en": "we will go",
-          "ur": "ہم جائیں گے"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "سَـ + أَـ + verb",
-          "ur": "سَـ + أَـ + verb"
-        },
-        {
-          "en": "سَـ + تَـ + verb",
-          "ur": "سَـ + تَـ + verb"
-        },
-        {
-          "en": "سَـ + يَـ + verb",
-          "ur": "سَـ + يَـ + verb"
-        },
-        {
-          "en": "سَـ + نَـ + verb",
-          "ur": "سَـ + نَـ + verb"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch35-l01-ex05",
-      "target_translation": {
-        "en": "He will go to the mosque.",
-        "ur": "وہ مسجد جائے گا۔"
-      },
-      "tiles": [
-        {
-          "ar": "سَيَذْهَبُ",
-          "ar_plain": "سيذهب",
-          "translit": "sayadhahabu",
-          "en": "he will go",
-          "ur": "وہ جائے گا"
-        },
-        {
-          "ar": "إِلَى الْمَسْجِدِ",
-          "ar_plain": "إلى المسجد",
-          "translit": "ilaa al-masjidi",
-          "en": "to the mosque",
-          "ur": "مسجد میں"
-        },
-        {
-          "ar": "يَذْهَبُ",
-          "ar_plain": "يذهب",
-          "translit": "yadhahabu",
-          "en": "he goes",
-          "ur": "وہ جاتا ہے"
-        },
-        {
-          "ar": "سَأَذْهَبُ",
-          "ar_plain": "سأذهب",
-          "translit": "sa-adhahabu",
-          "en": "I will go",
-          "ur": "میں جاؤں گا"
-        }
-      ],
-      "correct_order": [
-        0,
-        1
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch35-l01-ex06",
-      "prompt": {
-        "ar": "سَيَقُولُ اللَّهُ",
-        "ar_plain": "سيقول الله",
-        "translit": "sayaquulu allaahu",
-        "en": "Allah will say.",
-        "ur": "اللہ کہے گا۔"
-      },
-      "options": [
-        {
-          "en": "Allah will say.",
-          "ur": "اللہ کہے گا۔",
-          "translit": "—",
-          "ar_plain": ""
-        },
-        {
-          "en": "Allah says.",
-          "ur": "اللہ کہتا ہے۔",
-          "translit": "—",
-          "ar_plain": ""
-        },
-        {
-          "en": "I will say to Allah.",
-          "ur": "میں اللہ سے کہے گا۔",
-          "translit": "—",
-          "ar_plain": ""
-        },
-        {
-          "en": "Allah will be.",
-          "ur": "اللہ ہو گا۔",
-          "translit": "—",
-          "ar_plain": ""
-        }
-      ],
-      "correct_index": 0,
+      "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "The present tense of قَالَ is يَقُولُ. With سَـ: سَيَقُولُ = \"he will say\". (قُولُ alone is not the present tense.)",
-        "ur": "قَالَ کا مضارع يَقُولُ ہے۔ سَـ کے ساتھ: سَيَقُولُ = \"وہ کہے گا\"۔ (صرف قُولُ مضارع نہیں ہے۔)"
+        "en": "سَـ points to the future: Fatimah will sit here.",
+        "ur": "سَـ مستقبل کی طرف اشارہ ہے: فاطمہ یہاں بیٹھے گی۔"
       }
     },
     {
-      "type": "TAP_TRANSLATION",
-      "id": "ch35-l01-ex07",
-      "prompt": {
-        "ar": "سَأَذْهَبُ إِلَى الْمَسْجِدِ",
-        "ar_plain": "ساذهب الى المسجد",
-        "translit": "sa-adhhabu ilaa al-masjid",
-        "en": "I will go to the mosque.",
-        "ur": "میں مسجد جاؤں گا۔"
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch35-l01-ex04",
+      "prompt_line": {
+        "ar": "مَتَى سَتَذْهَبُ إِلَى الْمَدْرَسَةِ؟",
+        "ar_plain": "متى ستذهب إلى المدرسة؟",
+        "translit": "matā sa-tadhhabu ilā l-madrasati?",
+        "en": "When will you go to the school?",
+        "ur": "تم اسکول کب جاؤ گے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "سَأَذْهَبُ غَدًا.",
+          "ar_plain": "سأذهب غدا.",
+          "translit": "sa-adhhabu ghadan.",
+          "en": "I will go tomorrow.",
+          "ur": "میں کل جاؤں گا۔"
+        },
+        {
+          "ar": "ذَهَبْتُ أَمْسِ.",
+          "ar_plain": "ذهبت أمس.",
+          "translit": "dhahabtu amsi.",
+          "en": "I went yesterday.",
+          "ur": "میں گزشتہ کل گیا۔"
+        },
+        {
+          "ar": "إِلَى الْمَدْرَسَةِ.",
+          "ar_plain": "إلى المدرسة.",
+          "translit": "ilā l-madrasati.",
+          "en": "To the school.",
+          "ur": "اسکول کی طرف۔"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "A future question, a future answer: سَأَذْهَبُ غَدًا.",
+        "ur": "مستقبل کا سوال، مستقبل کا جواب: سَأَذْهَبُ غَدًا۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch35-l01-ex05",
+      "ayah_fragment": {
+        "ar": "سَيَقُولُ السُّفَهَاءُ مِنَ النَّاسِ",
+        "surah_ref": "Al-Baqarah 2:142"
       },
       "options": [
         {
-          "en": "I went to the mosque.",
-          "ur": "میں مسجد گیا۔"
+          "en": "The foolish among the people said",
+          "ur": "لوگوں میں سے بے وقوفوں نے کہا"
         },
         {
-          "en": "I am at the mosque.",
-          "ur": "میں مسجد میں ہوں۔"
+          "en": "The foolish among the people are saying now",
+          "ur": "لوگوں میں سے بے وقوف ابھی کہہ رہے ہیں"
         },
         {
-          "en": "Go to the mosque.",
-          "ur": "مسجد جاؤ۔"
+          "en": "The foolish among the people will say",
+          "ur": "لوگوں میں سے بے وقوف کہیں گے"
         },
         {
-          "en": "I will go to the mosque.",
-          "ur": "میں مسجد جاؤں گا۔"
+          "en": "Say to the foolish among the people",
+          "ur": "لوگوں میں سے بے وقوفوں سے کہو"
         }
       ],
-      "correct_index": 3,
-      "xp_value": 1
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "سَـ + يَقُولُ: will say.",
+        "ur": "سَـ + يَقُولُ: کہیں گے۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "سَـ: the future prefix",
-      "ar": "السِّينُ لِلِاسْتِقْبَالِ",
-      "ur": "سَـ: مستقبل کا سابقہ"
+      "en": "سَـ: the future",
+      "ar": "سِينُ الِاسْتِقْبَالِ",
+      "ur": "سَـ: مستقبل"
     },
     "ayah": {
-      "surah": 87,
-      "ayah": 10,
-      "label": "Al-A'la 87:10",
-      "ar": "سَيَذَّكَّرُ مَنْ يَخْشَىٰ",
-      "en": "The one who fears [Allah] will be reminded.",
-      "ur": "جو ڈرتا ہے وہ نصیحت حاصل کرے گا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087010.mp3"
+      "surah": 2,
+      "ayah": 142,
+      "label": "Al-Baqarah 2:142",
+      "ar": "سَيَقُولُ السُّفَهَاءُ مِنَ النَّاسِ",
+      "en": "The foolish among the people will say,",
+      "ur": "لوگوں میں سے بے وقوف کہیں گے،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002142.mp3"
     },
     "highlighted_word_indices": [
       0
     ],
     "highlighted_words": [
-      "سَيَذَّكَّرُ"
+      "سَيَقُولُ"
     ],
     "noor_explanation": {
-      "en": "سَيَذَّكَّرُ = سَـ + يَذَّكَّرُ: \"he will be reminded\". The سَـ marks the future.",
-      "ur": "سَيَذَّكَّرُ = سَـ + يَذَّكَّرُ: \"وہ نصیحت حاصل کرے گا\"۔ سَـ مستقبل بتاتا ہے۔"
+      "en": "سَيَقُولُ: سَـ + يَقُولُ. One joined letter, and the saying is still to come.",
+      "ur": "سَيَقُولُ: سَـ + يَقُولُ۔ ایک جڑا ہوا حرف، اور کہنا ابھی آنے والا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "The سَـ prefix makes the future tense easy: just add it before the present tense verb. سَـ أَـ = I will, سَـ تَـ = you will, سَـ يَـ = he will, سَـ نَـ = we will.",
-      "ur": "سَـ prefix future tense کو آسان بناتا ہے: present tense verb سے پہلے صرف شامل کرو۔ سَـ أَـ = میں ہوں گا، سَـ تَـ = تو ہو گا، سَـ يَـ = وہ ہو گا، سَـ نَـ = ہم ہوں گے۔"
+      "en": "You can read 'will' with سَـ. Next: the separate word سَوْفَ.",
+      "ur": "آپ سَـ کے ساتھ مستقبل پڑھ سکتے ہیں۔ آگے: الگ لفظ سَوْفَ۔"
     }
   }
 }
