@@ -129,49 +129,49 @@
       "type": "TAP_TRANSLATION",
       "id": "ch66-l03-ex01",
       "prompt": {
-        "ar": "عِنْدَ رَبِّهِمْ يَجْلِسُونَ",
-        "ar_plain": "عند ربهم يجلسون",
-        "translit": "inda rabbihim yajlisuuna",
-        "en": "They sit near their Lord.",
-        "ur": "وہ اپنے رب کے پاس بیٹھتے ہیں۔"
+        "ar": "جَلَسَ الْوَلَدُ تَحْتَ الشَّجَرَةِ",
+        "ar_plain": "جلس الولد تحت الشجرة",
+        "translit": "jalasa al-waladu tahta ash-shajarati",
+        "en": "The boy sat under the tree",
+        "ur": "لڑکا درخت کے نیچے بیٹھا"
       },
       "options": [
         {
-          "en": "They sit near their Lord.",
-          "ur": "وہ اپنے رب کے پاس بیٹھتے ہیں۔"
+          "en": "The boy sat under the tree",
+          "ur": "لڑکا درخت کے نیچے بیٹھا"
         },
         {
-          "en": "They sit with their Lord.",
-          "ur": "وہ اپنے رب کے ساتھ بیٹھتے ہیں۔"
+          "en": "The boy sat above the tree",
+          "ur": "لڑکا درخت کے اوپر بیٹھا"
         },
         {
-          "en": "Their Lord sits with them.",
-          "ur": "ان کا رب ان کے ساتھ بیٹھتا ہے۔"
+          "en": "The tree was under the boy",
+          "ur": "درخت لڑکے کے نیچے تھا"
         },
         {
-          "en": "They are near their Lord.",
-          "ur": "وہ اپنے رب کے پاس ہیں۔"
+          "en": "The boy sat behind the tree",
+          "ur": "لڑکا درخت کے پیچھے بیٹھا"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "عِنْدَ is a place zarf (منصوب) meaning 'near/at.' يَجْلِسُونَ is the verb. The sentence literally: 'At their Lord, they sit.'",
-        "ur": "عِنْدَ مکان کا ظرف ہے (منصوب) جس کا مطلب 'پاس/ساتھ'۔ يَجْلِسُونَ فعل ہے۔ جملہ: 'ان کے رب کے پاس، وہ بیٹھتے ہیں'۔"
+        "en": "تَحْتَ is a place zarf meaning 'under' (accusative); الشَّجَرَةِ is its مُضَاف إِلَيْه. 'Above' would be فَوْقَ and 'behind' خَلْفَ.",
+        "ur": "تَحْتَ ظرفِ مکان ہے جس کا معنی 'نیچے' ہے (منصوب)؛ الشَّجَرَةِ اس کا مضاف الیہ ہے۔ 'اوپر' کے لیے فَوْقَ اور 'پیچھے' کے لیے خَلْفَ۔"
       }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch66-l03-ex02",
       "statement": {
-        "en": "أَمَامَ, خَلْفَ, فَوْقَ, تَحْتَ are all مَكَانِيَّة (place) zarfs and are منصوب.",
-        "ur": "أَمَامَ, خَلْفَ, فَوْقَ, تَحْتَ سب مَكَانِيَّة (مکان کے) ظروف ہیں اور مَنْصُوبٌ ہیں۔",
+        "en": "أَمَامَ, خَلْفَ, فَوْقَ, تَحْتَ are all place zarfs and are منصوب.",
+        "ur": "أَمَامَ، خَلْفَ، فَوْقَ، تَحْتَ سب ظروفِ مکان ہیں اور منصوب ہیں۔",
         "ar_example": {
-          "ar": "وَاللَّهُ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
-          "ar_plain": "والله على كل شيء قدير",
-          "translit": "wallahu 'alaa kulli shay-in qadiir",
-          "en": "And Allah is over all things competent.",
-          "ur": "اور اللہ ہر چیز پر قادر ہے۔"
+          "ar": "يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ",
+          "ar_plain": "يعلم ما بين أيديهم وما خلفهم",
+          "translit": "ya'lamu maa bayna aydiihim wa-maa khalfahum",
+          "en": "He knows what is before them and what is behind them.",
+          "ur": "وہ جانتا ہے جو ان کے آگے ہے اور جو ان کے پیچھے ہے۔"
         }
       },
       "correct_answer": true,
@@ -181,25 +181,18 @@
       "type": "FILL_BLANK",
       "id": "ch66-l03-ex03",
       "mode": "TAP",
-      "sentence_ar": "الْمُؤْمِنُونَ يَعْبُدُونَ رَبَّهُمْ ___",
+      "sentence_ar": "صَلَّيْتُ ___ الْإِمَامِ",
       "hint": {
-        "en": "The believers worship their Lord near/in front of Him.",
-        "ur": "مومنین اپنے رب کی عبادت اس کے سامنے کرتے ہیں۔"
+        "en": "'I prayed behind the imam.'",
+        "ur": "'میں نے امام کے پیچھے نماز پڑھی۔'"
       },
       "options": [
         {
-          "ar": "عِنْدَ",
-          "ar_plain": "عند",
-          "translit": "inda",
-          "en": "near",
-          "ur": "پاس"
-        },
-        {
-          "ar": "أَمَامَ",
-          "ar_plain": "امام",
-          "translit": "amaama",
-          "en": "in front of",
-          "ur": "ساتھ"
+          "ar": "خَلْفَ",
+          "ar_plain": "خلف",
+          "translit": "khalfa",
+          "en": "behind",
+          "ur": "پیچھے"
         },
         {
           "ar": "فَوْقَ",
@@ -209,19 +202,26 @@
           "ur": "اوپر"
         },
         {
-          "ar": "مَعَ",
-          "ar_plain": "مع",
-          "translit": "ma'a",
-          "en": "with",
-          "ur": "ساتھ"
+          "ar": "تَحْتَ",
+          "ar_plain": "تحت",
+          "translit": "tahta",
+          "en": "under",
+          "ur": "نیچے"
+        },
+        {
+          "ar": "يَوْمَ",
+          "ar_plain": "يوم",
+          "translit": "yawma",
+          "en": "on the day",
+          "ur": "جس دن"
         }
       ],
       "correct_answer": {
-        "ar": "عِنْدَ",
-        "ar_plain": "عند",
-        "translit": "inda",
-        "en": "near",
-        "ur": "پاس"
+        "ar": "خَلْفَ",
+        "ar_plain": "خلف",
+        "translit": "khalfa",
+        "en": "behind",
+        "ur": "پیچھے"
       },
       "xp_value": 1
     },
@@ -400,23 +400,23 @@
           "ur": "عرش کے نیچے پانی ہے۔"
         },
         {
-          "en": "The water is below the Throne.",
-          "ur": "پانی عرش کے نیچے ہے۔"
-        },
-        {
-          "en": "The Throne is below water.",
+          "en": "The Throne is below the water.",
           "ur": "عرش پانی کے نیچے ہے۔"
         },
         {
-          "en": "Under the water is the Throne.",
-          "ur": "پانی کے نیچے عرش ہے۔"
+          "en": "Above the Throne is water.",
+          "ur": "عرش کے اوپر پانی ہے۔"
+        },
+        {
+          "en": "Behind the Throne is water.",
+          "ur": "عرش کے پیچھے پانی ہے۔"
         }
       ],
-      "correct_index": 1,
+      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "تَحْتَ is a place zarf (منصوب). تَحْتَ الْعَرْشِ means 'below the Throne.' تَحْتَ identifies the location of الْمَاءُ.",
-        "ur": "تَحْتَ مکان کا ظرف ہے (منصوب)۔ تَحْتَ الْعَرْشِ مطلب 'عرش کے نیچے'۔ تَحْتَ پانی کی جگہ ظاہر کرتا ہے۔"
+        "en": "تَحْتَ is a place zarf (accusative): تَحْتَ الْعَرْشِ 'below the Throne'. It comes first here as the خَبَر, and الْمَاءُ is the delayed مُبْتَدَأ.",
+        "ur": "تَحْتَ ظرفِ مکان (منصوب) ہے: تَحْتَ الْعَرْشِ 'عرش کے نیچے'۔ یہاں یہ خبر کے طور پر پہلے آیا ہے اور الْمَاءُ مؤخر مبتدا ہے۔"
       }
     },
     {
@@ -455,7 +455,7 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002255.mp3"
     },
     "highlighted_word_indices": [
-      19
+      23
     ],
     "noor_explanation": {
       "en": "عِنْدَهُ — 'with Him' or 'near Him.' عِنْدَ is a place zarf telling us WHERE. It is منصوب as مفعول فيه. Whether time or place, the zarf is always in the accusative.",
