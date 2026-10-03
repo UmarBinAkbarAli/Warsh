@@ -2,14 +2,14 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 50, Lesson 2 — Extended dialogues with advanced sentence patterns.",
+    "_note": "Chapter 50, Lesson 2 (ch50-l02), rebuilt 2026-10-03 in the proposal harvest, batch 5 (the old lesson was titled \"Extended Arabic Dialogues\" but held no dialogue; it had a matching task with identical columns and a build task that promised \"Allah willing\" without the words). Reading 18:23 and the start of 18:24 for reference and connector clues: إِنِّي, ذَٰلِكَ, وَ, إِلَّا, and أَنْ + يَشَاءَ (Chapter 45). فَاعِلٌ is a supplied word; غَدًا gives the future sense.",
     "chapter_order": 50,
     "lesson_order": 2,
-    "chapter_title": "Reading Comprehension and Dialogue Expansion",
-    "title": "Extended Arabic Dialogues",
-    "titleAr": "الْحِوَارُ الْعَرَبِيُّ الْمُتَّصِلُ",
-    "source": "book5_lesson6_reading_comprehension.md",
-    "estimated_minutes": 8,
+    "chapter_title": "Connected Reading and Practical Fusha",
+    "title": "Pronouns, Connectors and What They Point To",
+    "titleAr": "الضَّمَائِرُ وَالرَّوَابِطُ وَمَا تُشِيرُ إِلَيْهِ",
+    "titleUr": "ضمیریں، ربط اور ان کا اشارہ",
+    "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
@@ -17,71 +17,67 @@
       "surah": 18,
       "ayah": 23,
       "label": "Al-Kahf 18:23",
-      "ar": "وَلَا تَقُولَنَّ لِشَيْءٍ إِنِّي فَاعِلٌ ذَٰلِكَ غَدًا",
-      "en": "And never say of anything, Indeed I will do that tomorrow.",
-      "ur": "اور کسی چیز کے لیے مت کہہ دیجیے کہ میں کل اسے ضرور کروں گا۔",
+      "ar": "إِنِّى فَاعِلٌ ذَٰلِكَ غَدًا",
+      "en": "\"…indeed, I will do that tomorrow.\"",
+      "ur": "\"…بے شک میں یہ کام کل کروں گا۔\"",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/018023.mp3"
     },
+    "autoplay": true,
     "noor_intro": {
-      "en": "Today we read extended Arabic dialogues. These are longer conversations between two or more speakers, using advanced grammar. We practice reading fluently and understanding the overall flow of a conversation.",
-      "ur": "آج ہم extended عربی dialogues پڑھتے ہیں۔ یہ دو یا زیادہ speakers کے درمیان لمبی conversations ہیں، advanced grammar استعمال کرتے ہوئے۔ ہم fluency سے پڑھنے اور conversation کے overall flow کو سمجھنے کی practice کرتے ہیں۔"
-    },
-    "autoplay": true
+      "en": "إِنِّي فَاعِلٌ ذَٰلِكَ غَدًا — who is \"I\", and what is \"that\"?",
+      "ur": "إِنِّي فَاعِلٌ ذَٰلِكَ غَدًا — \"میں\" کون ہے اور \"وہ\" کیا ہے؟"
+    }
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Dialogue comprehension strategy",
-        "ar": "إِسْتِرَاتِيجِيَّةُ فَهْمِ الْحِوَارِ",
-        "ur": "حوار سمجھنے کی حکمت"
+        "en": "Reading with clues",
+        "ar": "الْقِرَاءَةُ بِالْقَرَائِنِ",
+        "ur": "سراغوں کے ساتھ پڑھنا"
       },
       "explanation": {
-        "en": "When reading dialogues in Arabic: (1) identify the speakers, (2) understand each statement's meaning, (3) follow the progression of ideas, (4) note the key vocabulary used. Don't try to translate word-by-word — understand the conversation's direction.",
-        "ur": "عربی میں dialogues پڑھتے وقت: (1) speakers کو پہچانیں، (2) ہر statement کا مطلب سمجھیں، (3) ideas کے progression کو follow کریں، (4) key vocabulary note کریں جو used ہوئی ہے۔ Word-by-word translate کرنے کی کوشش نہ کریں — conversation کی direction سمجھیں۔"
+        "en": "Small words tell you how a text hangs together. A pronoun (إِنِّي = \"indeed I\") points to a person; a demonstrative (ذَٰلِكَ = \"that\") points to a thing already in the context; وَ joins; إِلَّا sets an exception. Ask of each one: what does it point to, or what does it join?",
+        "ur": "چھوٹے الفاظ بتاتے ہیں کہ متن آپس میں کیسے جڑا ہے۔ ضمیر (إِنِّي = \"بے شک میں\") کسی شخص کی طرف اشارہ کرتی ہے؛ اسمِ اشارہ (ذَٰلِكَ = \"وہ\") سیاق میں پہلے سے موجود چیز کی طرف؛ وَ جوڑتا ہے؛ إِلَّا استثنا لاتا ہے۔ ہر ایک کے لیے پوچھیں: یہ کس کی طرف اشارہ کرتا ہے یا کیا جوڑتا ہے؟"
       }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "غَدًا",
-        "ar_plain": "غدا",
-        "translit": "ghadan",
-        "en": "tomorrow",
-        "ur": "کل"
-      },
-      "explanation": {
-        "en": "غَدًا means 'tomorrow.' It appears in this ayah as part of the warning against saying 'I will do it tomorrow' — a common human failing. غَدًا is in the accusative as an adverb of time.",
-        "ur": "غَدًا کا مطلب 'کل' ہے۔ یہ اس ayah میں اس warning کا حصہ ہے کہ 'میں کل کروں گا' مت کہیں — ایک common human failing۔ غَدًا adverb of time کے طور پر accusative میں ہے۔"
-      },
-      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/ghadan.webp"
     },
     {
       "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "وَلَا تَقُولَنَّ لِشَيْءٍ إِنِّي فَاعِلٌ ذَٰلِكَ غَدًا",
-        "ar_plain": "ولا تقولن لشيء إني فاعل ذلك غدا",
-        "translit": "wa laa taquulu anna li-shay'in innii faa'ilun dhaalika ghadan",
-        "en": "And never say of anything, Indeed I will do that tomorrow",
-        "ur": "اور کسی چیز کے لیے مت کہہ دیجیے کہ میں کل اسے ضرور کروں گا۔"
+        "ar": "وَلَا تَقُولَنَّ لِشَا۟ىْءٍ إِنِّى فَاعِلٌ ذَٰلِكَ غَدًا",
+        "ar_plain": "ولا تقولن لشايء اني فاعل ذلك غدا",
+        "translit": "wa-laa taquulanna li-shay-in innii faa-ilun dhaalika ghadan",
+        "en": "And never say of anything, \"Indeed, I will do that tomorrow,\"",
+        "ur": "اور کسی چیز کے بارے میں ہرگز نہ کہنا: \"بے شک میں یہ کام کل کروں گا،\""
       },
       "explanation": {
-        "en": "وَلَا تَقُولَنَّ is 'never say' — the لَا is prohibitive, تَقُولُ is 'you say', نَّ is for emphasis. إِنِّي فَاعِلٌ ذَٰلِكَ is 'indeed I will do that.' غَدًا is 'tomorrow' — the warning is: don't promise future action without knowledge of Allah's will.",
-        "ur": "وَلَا تَقُولَنَّ 'مت کہیں' ہے — لَا prohibitive ہے، تَقُولُ 'آپ کہتے ہیں'، نَّ emphasis کے لیے ہے۔ إِنِّي فَاعِلٌ ذَٰلِكَ 'بیشک میں وہ کروں گا' ہے۔ غَدًا 'کل' ہے — warning ہے: اللہ کی مرضی کے بغیر مستقبل کے action کا وعدہ مت کرو۔"
+        "en": "لَا تَقُولَنَّ = \"never say\" (a prohibition, supplied whole). إِنِّي = إِنَّ + ي: \"indeed I\" — the speaker. ذَٰلِكَ = \"that\": the thing in question. فَاعِلٌ = \"doing / going to do\" (supplied); غَدًا = \"tomorrow\" gives the future sense. (18:23)",
+        "ur": "لَا تَقُولَنَّ = \"ہرگز نہ کہنا\" (نہی، پورا دیا ہوا)۔ إِنِّي = إِنَّ + ي: \"بے شک میں\" — بولنے والا۔ ذَٰلِكَ = \"وہ\": جس چیز کی بات ہو رہی ہے۔ فَاعِلٌ = \"کرنے والا / کرنے کو ہوں\" (دیا ہوا)؛ غَدًا = \"کل\" مستقبل کا مفہوم دیتا ہے۔ (18:23)"
       }
     },
     {
-      "type": "WORD",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "فَاعِلٌ",
-        "ar_plain": "فاعل",
-        "translit": "faa'ilun",
-        "en": "doing / will do (present participle)",
-        "ur": "کرنے والا"
+        "ar": "إِلَّآ أَن يَشَآءَ اللَّهُ ۚ وَاذْكُر رَّبَّكَ إِذَا نَسِيتَ وَقُلْ عَسَىٰٓ أَن يَهْدِيَنِ رَبِّى لِأَقْرَبَ مِنْ هَٰذَا رَشَدًا",
+        "ar_plain": "الا ان يشاء الله  واذكر ربك اذا نسيت وقل عسي ان يهدين ربي لاقرب من هذا رشدا",
+        "translit": "illaa an yashaa-a allaahu",
+        "en": "Except [when adding], \"If Allah wills.\"",
+        "ur": "مگر (یہ کہہ کر) \"اگر اللہ چاہے۔\""
       },
       "explanation": {
-        "en": "فَاعِلٌ is the active participle of فَعَلَ (root ف-ع-ل, \"to do\"): \"one who does / doing\". In إِنِّي فَاعِلٌ ذَٰلِكَ غَدًا the word غَدًا (\"tomorrow\") gives the future reading: \"I am going to do that tomorrow\". The participle itself does not mean \"future\".",
-        "ur": "فَاعِلٌ، فَعَلَ (مادہ ف-ع-ل، \"کرنا\") کا اسم فاعل ہے: \"کرنے والا\"۔ إِنِّي فَاعِلٌ ذَٰلِكَ غَدًا میں لفظ غَدًا (\"کل\") مستقبل کا معنی دیتا ہے: \"میں کل یہ کرنے والا ہوں\"۔ اسم فاعل خود \"مستقبل\" کا معنی نہیں رکھتا۔"
+        "en": "إِلَّا = \"except\". أَنْ + يَشَاءَ: the verb after أَنْ ends in fatḥa (Chapter 45): \"that Allah wills\". The exception is attached to the promise in 18:23. (18:24)",
+        "ur": "إِلَّا = \"سوائے\"۔ أَنْ + يَشَاءَ: أَنْ کے بعد فعل فتحہ پر ختم ہوتا ہے (باب 45): \"کہ اللہ چاہے\"۔ استثنا 18:23 کے وعدے سے جڑا ہے۔ (18:24)"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Two ayat, one sentence",
+        "ur": "دو آیات، ایک جملہ"
+      },
+      "body": {
+        "en": "18:24 starts with إِلَّا, so it cannot stand alone: it continues 18:23. When an ayah begins with a connector, look back to what it attaches to.",
+        "ur": "18:24 إِلَّا سے شروع ہوتی ہے، اس لیے اکیلی نہیں رہ سکتی: یہ 18:23 کا تسلسل ہے۔ جب کوئی آیت ربط سے شروع ہو تو پیچھے دیکھیں کہ وہ کس سے جڑی ہے۔"
       }
     }
   ],
@@ -90,64 +86,178 @@
       "type": "TAP_TRANSLATION",
       "id": "ch50-l02-ex01",
       "prompt": {
-        "ar": "وَلَا تَقُولَنَّ لِشَيْءٍ إِنِّي فَاعِلٌ ذَٰلِكَ غَدًا",
-        "ar_plain": "ولا تقولن لشيء إني فاعل ذلك غدا",
-        "translit": "wa laa taquulu anna li-shay'in innii faa'ilun dhaalika ghadan",
-        "en": "And never say of anything, Indeed I will do that tomorrow.",
-        "ur": "اور کسی چیز کے لیے مت کہہ دیجیے کہ میں کل اسے ضرور کروں گا۔"
+        "ar": "إِنِّي فَاعِلٌ ذَٰلِكَ غَدًا",
+        "ar_plain": "اني فاعل ذلك غدا",
+        "translit": "innii faa-ilun dhaalika ghadan",
+        "en": "(18:23)",
+        "ur": "(18:23)"
       },
       "options": [
         {
-          "en": "And never say of anything, Indeed I will do that tomorrow.",
-          "ur": "اور کسی چیز کے لیے مت کہہ دیجیے کہ میں کل اسے ضرور کروں گا۔"
+          "en": "Indeed, I will do that tomorrow.",
+          "ur": "بے شک میں یہ کام کل کروں گا۔"
         },
         {
-          "en": "Do not say that you will do something tomorrow.",
-          "ur": "مت کہیں کہ آپ کل کوئی چیز کروں گے۔"
+          "en": "Indeed, I did that yesterday.",
+          "ur": "بے شک میں نے وہ کل کیا تھا۔"
         },
         {
-          "en": "And never promise anything for tomorrow.",
-          "ur": "اور کل کے لیے کوئی وعدہ مت کرو۔"
+          "en": "Do that tomorrow!",
+          "ur": "وہ کل کرو!"
         },
         {
-          "en": "All of the above",
-          "ur": "اوپر سب"
+          "en": "Indeed, he will do that tomorrow.",
+          "ur": "بے شک وہ یہ کام کل کرے گا۔"
         }
       ],
       "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "وَلَا تَقُولَنَّ is 'never say' — a strong prohibition with emphasis (نَّ). لِشَيْءٍ is 'of anything' (obj. of the verb). إِنِّي فَاعِلٌ ذَٰلِكَ is 'indeed I will do that.' غَدًا is 'tomorrow.' The ayah warns against making promises about the future without Allah's knowledge.",
-        "ur": "وَلَا تَقُولَنَّ 'مت کہیں' ہے — emphasis کے ساتھ ایک strong prohibition (نَّ)۔ لِشَيْءٍ 'کسی چیز کے لیے' (verb کا obj.)۔ إِنِّي فَاعِلٌ ذَٰلِكَ 'بیشک میں وہ کروں گا'۔ غَدًا 'کل' ہے۔ ayah اللہ کے علم کے بغیر مستقبل کے بارے میں promises بنانے سے warns کرتی ہے۔"
-      }
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch50-l02-ex02",
-      "statement": {
-        "en": "غَدًا is in the accusative because it functions as an adverb of time.",
-        "ur": "غَدًا accusative میں ہے کیونکہ یہ time کا adverb ہے۔"
-      },
-      "correct_answer": true,
       "xp_value": 1
     },
     {
-      "type": "MATCHING",
-      "id": "ch50-l02-ex03",
-      "left_column": [
+      "type": "TAP_TRANSLATION",
+      "id": "ch50-l02-ex02",
+      "prompt": {
+        "ar": "ذَٰلِكَ",
+        "ar_plain": "ذلك",
+        "translit": "dhaalika",
+        "en": "(in 18:23)",
+        "ur": "(18:23 میں)"
+      },
+      "options": [
         {
-          "ar": "وَلَا تَقُولَنَّ",
-          "ar_plain": "ولا تقولن",
-          "translit": "wa laa taquulu nna",
-          "en": "never say (emphatic)",
-          "ur": "مت کہیں (emphasis)"
+          "en": "\"I\" — the speaker",
+          "ur": "\"میں\" — بولنے والا"
         },
         {
-          "ar": "إِنِّي",
-          "ar_plain": "إني",
-          "translit": "innii",
-          "en": "indeed I",
-          "ur": "بیشک میں"
+          "en": "\"that\" — the thing the speaker says he will do",
+          "ur": "\"وہ\" — جو کام بولنے والا کہتا ہے کہ کرے گا"
+        },
+        {
+          "en": "\"tomorrow\" — a time word",
+          "ur": "\"کل\" — وقت کا لفظ"
+        },
+        {
+          "en": "\"never\" — a prohibition",
+          "ur": "\"ہرگز\" — نہی"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch50-l02-ex03",
+      "statement": {
+        "en": "In إِنِّي فَاعِلٌ, the ـي in إِنِّي points to the speaker.",
+        "ur": "إِنِّي فَاعِلٌ میں إِنِّي کی ـي بولنے والے کی طرف اشارہ کرتی ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "True: إِنِّي = إِنَّ + ي, \"indeed I\".",
+        "ur": "درست: إِنِّي = إِنَّ + ي، \"بے شک میں\"۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch50-l02-ex04",
+      "prompt": {
+        "ar": "إِلَّا أَنْ يَشَاءَ اللَّهُ",
+        "ar_plain": "الا ان يشاء الله",
+        "translit": "illaa an yashaa-a allaahu",
+        "en": "(18:24)",
+        "ur": "(18:24)"
+      },
+      "options": [
+        {
+          "en": "and Allah wills",
+          "ur": "اور اللہ چاہتا ہے"
+        },
+        {
+          "en": "because Allah willed",
+          "ur": "کیونکہ اللہ نے چاہا"
+        },
+        {
+          "en": "except that Allah wills",
+          "ur": "سوائے اس کے کہ اللہ چاہے"
+        },
+        {
+          "en": "Allah does not will",
+          "ur": "اللہ نہیں چاہتا"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch50-l02-ex05",
+      "mode": "TAP",
+      "sentence_ar": "إِلَّا أَنْ ___ اللَّهُ",
+      "hint": {
+        "en": "except that Allah wills",
+        "ur": "سوائے اس کے کہ اللہ چاہے"
+      },
+      "options": [
+        {
+          "ar": "يَشَاءُ",
+          "ar_plain": "يشاء",
+          "translit": "yashaa-u",
+          "en": "(ḍamma form)",
+          "ur": "(ضمہ والی صورت)"
+        },
+        {
+          "ar": "يَشَأْ",
+          "ar_plain": "يشا",
+          "translit": "yasha",
+          "en": "(sukūn form)",
+          "ur": "(سکون والی صورت)"
+        },
+        {
+          "ar": "شَاءَ",
+          "ar_plain": "شاء",
+          "translit": "shaa-a",
+          "en": "he willed",
+          "ur": "اس نے چاہا"
+        },
+        {
+          "ar": "يَشَاءَ",
+          "ar_plain": "يشاء",
+          "translit": "yashaa-a",
+          "en": "(after أَنْ)",
+          "ur": "(أَنْ کے بعد)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يَشَاءَ",
+        "ar_plain": "يشاء",
+        "translit": "yashaa-a",
+        "en": "(after أَنْ)",
+        "ur": "(أَنْ کے بعد)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After أَنْ the verb ends in fatḥa.",
+        "ur": "أَنْ کے بعد فعل فتحہ پر ختم ہوتا ہے۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch50-l02-ex06",
+      "left_column": [
+        {
+          "ar": "وَ",
+          "ar_plain": "و",
+          "translit": "wa",
+          "en": "and",
+          "ur": "اور"
+        },
+        {
+          "ar": "إِلَّا",
+          "ar_plain": "الا",
+          "translit": "illaa",
+          "en": "except",
+          "ur": "سوائے"
         },
         {
           "ar": "غَدًا",
@@ -157,35 +267,35 @@
           "ur": "کل"
         },
         {
-          "ar": "فَاعِلٌ",
-          "ar_plain": "فاعل",
-          "translit": "faa'ilun",
-          "en": "doing / will do",
-          "ur": "کرنے والا"
+          "ar": "إِنِّي",
+          "ar_plain": "اني",
+          "translit": "innii",
+          "en": "indeed I",
+          "ur": "بے شک میں"
         }
       ],
       "right_column": [
         {
-          "en": "never say (emphatic)",
-          "ur": "مت کہیں (emphasis)"
+          "en": "points to the speaker",
+          "ur": "بولنے والے کی طرف اشارہ"
         },
         {
-          "en": "indeed I",
-          "ur": "بیشک میں"
+          "en": "sets an exception",
+          "ur": "استثنا لاتا ہے"
         },
         {
-          "en": "tomorrow",
-          "ur": "کل"
+          "en": "joins two parts",
+          "ur": "دو حصوں کو جوڑتا ہے"
         },
         {
-          "en": "doing / will do",
-          "ur": "کرنے والا"
+          "en": "gives the time",
+          "ur": "وقت بتاتا ہے"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
+          2
         ],
         [
           1,
@@ -193,84 +303,36 @@
         ],
         [
           2,
-          2
+          3
         ],
         [
           3,
-          3
+          0
         ]
       ],
       "xp_value": 1
     },
     {
-      "type": "FILL_BLANK",
-      "id": "ch50-l02-ex04",
-      "mode": "TAP",
-      "sentence_ar": "إِنِّي ___ ذَٰلِكَ غَدًا",
-      "hint": {
-        "en": "Indeed I will do that tomorrow.",
-        "ur": "بیشک میں کل وہ کروں گا۔"
-      },
-      "options": [
-        {
-          "ar": "فَاعِلٌ",
-          "ar_plain": "فاعل",
-          "translit": "faa'ilun",
-          "en": "doing (present participle)",
-          "ur": "کرنے والا (present participle)"
-        },
-        {
-          "ar": "فَعَلْتُ",
-          "ar_plain": "فعلت",
-          "translit": "fa'altu",
-          "en": "I did (past)",
-          "ur": "میں نے کیا (ماضی)"
-        },
-        {
-          "ar": "سَأَفْعَلُ",
-          "ar_plain": "سأفعل",
-          "translit": "sa-af'alu",
-          "en": "I will do (future)",
-          "ur": "میں کروں گا (مستقبل)"
-        },
-        {
-          "ar": "مُفْعِلٌ",
-          "ar_plain": "مفعل",
-          "translit": "muf'ilun",
-          "en": "causing",
-          "ur": "کرانے والا"
-        }
-      ],
-      "correct_answer": {
-        "ar": "فَاعِلٌ",
-        "ar_plain": "فاعل",
-        "translit": "faa'ilun",
-        "en": "doing (present participle)",
-        "ur": "کرنے والا (present participle)"
-      },
-      "xp_value": 1
-    },
-    {
       "type": "BUILD_SENTENCE",
-      "id": "ch50-l02-ex05",
+      "id": "ch50-l02-ex07",
       "target_translation": {
-        "en": "I will do that tomorrow, Allah willing.",
-        "ur": "میں کل وہ کروں گا، اگر اللہ چاہے۔"
+        "en": "I will do that tomorrow, except that Allah wills.",
+        "ur": "میں یہ کام کل کروں گا، سوائے اس کے کہ اللہ چاہے۔"
       },
       "tiles": [
         {
           "ar": "إِنِّي",
-          "ar_plain": "إني",
+          "ar_plain": "اني",
           "translit": "innii",
           "en": "indeed I",
-          "ur": "بیشک میں"
+          "ur": "بے شک میں"
         },
         {
           "ar": "فَاعِلٌ",
           "ar_plain": "فاعل",
-          "translit": "faa'ilun",
-          "en": "will do",
-          "ur": "کروں گا"
+          "translit": "faa-ilun",
+          "en": "going to do",
+          "ur": "کرنے کو"
         },
         {
           "ar": "ذَٰلِكَ",
@@ -285,131 +347,85 @@
           "translit": "ghadan",
           "en": "tomorrow",
           "ur": "کل"
+        },
+        {
+          "ar": "إِلَّا",
+          "ar_plain": "الا",
+          "translit": "illaa",
+          "en": "except",
+          "ur": "سوائے"
+        },
+        {
+          "ar": "أَنْ",
+          "ar_plain": "ان",
+          "translit": "an",
+          "en": "that",
+          "ur": "کہ"
+        },
+        {
+          "ar": "يَشَاءَ",
+          "ar_plain": "يشاء",
+          "translit": "yashaa-a",
+          "en": "wills",
+          "ur": "چاہے"
+        },
+        {
+          "ar": "اللَّهُ",
+          "ar_plain": "الله",
+          "translit": "allaahu",
+          "en": "Allah",
+          "ur": "اللہ"
         }
       ],
       "correct_order": [
         0,
         1,
         2,
-        3
+        3,
+        4,
+        5,
+        6,
+        7
       ],
       "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch50-l02-ex06",
-      "prompt": {
-        "ar": "وَلَا تَقُولَنَّ",
-        "ar_plain": "ولا تقولن",
-        "translit": "wa laa taquulu nna",
-        "en": "Never say.",
-        "ur": "مت کہیں۔"
-      },
-      "options": [
-        {
-          "en": "Never say.",
-          "ur": "مت کہیں۔"
-        },
-        {
-          "en": "Do not speak.",
-          "ur": "مت بولو۔"
-        },
-        {
-          "en": "They never said.",
-          "ur": "انہوں نے کبھی نہیں کہا۔"
-        },
-        {
-          "en": "And you did not say.",
-          "ur": "اور آپ نے نہیں کہا۔"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "وَلَا تَقُولَنَّ is the prohibitive form: لَا (no/not) + تَقُولُ (you say) + نَّ (emphatic). The نَّ at the end is for strong emphasis — 'never say it, period.'",
-        "ur": "وَلَا تَقُولَنَّ prohibitive form ہے: لَا (نہیں) + تَقُولُ (آپ کہتے ہیں) + نَّ (emphasis)۔ آخر میں نَّ strong emphasis کے لیے ہے — 'کبھی مت کہیں، period.'۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch50-l02-ex07",
-      "sentence_ar": "إِنِّي فَاعِلٌ ذَٰلِكَ غَدًا",
-      "words": [
-        {
-          "ar": "إِنِّي",
-          "ar_plain": "إني",
-          "translit": "innii",
-          "en": "indeed I",
-          "ur": "واقعی میں"
-        },
-        {
-          "ar": "فَاعِلٌ",
-          "ar_plain": "فاعل",
-          "translit": "faa'ilun",
-          "en": "will do",
-          "ur": "کرے گا"
-        },
-        {
-          "ar": "ذَٰلِكَ",
-          "ar_plain": "ذلك",
-          "translit": "dhaalika",
-          "en": "that",
-          "ur": "کہ"
-        },
-        {
-          "ar": "غَدًا",
-          "ar_plain": "غدا",
-          "translit": "ghadan",
-          "en": "tomorrow",
-          "ur": "کل"
-        }
-      ],
-      "available_roles": [
-        "PARTICLE",
-        "VERB",
-        "SUBJECT",
-        "DEMONSTRATIVE"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "VERB",
-        "SUBJECT",
-        "DEMONSTRATIVE"
-      ],
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "إِنِّي = إِنَّ + ي (\"indeed I\"). فَاعِلٌ = active participle of فَعَلَ, \"one who will do\" here because of غَدًا. ذَٰلِكَ = \"that\". غَدًا = \"tomorrow\".",
-        "ur": "إِنِّي = إِنَّ + ي (\"بے شک میں\")۔ فَاعِلٌ = فَعَلَ کا اسم فاعل، یہاں غَدًا کی وجہ سے \"کرنے والا ہوں\"۔ ذَٰلِكَ = \"یہ\"۔ غَدًا = \"کل\"۔"
-      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Dialogue and prohibition — the warning about promises",
-      "ar": "الْحِوَارُ وَالنَّهْيُ — عَنِ الْعُهُودِ",
-      "ur": "حوار اور منع — عزم کے بارے میں تنبیہ"
+      "en": "A promise and its exception",
+      "ar": "الْوَعْدُ وَالِاسْتِثْنَاءُ",
+      "ur": "وعدہ اور اس کا استثنا"
     },
     "ayah": {
       "surah": 18,
       "ayah": 23,
       "label": "Al-Kahf 18:23",
-      "ar": "وَلَا تَقُولَنَّ لِشَيْءٍ إِنِّي فَاعِلٌ ذَٰلِكَ غَدًا",
-      "en": "And never say of anything, Indeed I will do that tomorrow.",
-      "ur": "اور کسی چیز کے لیے مت کہہ دیجیے کہ میں کل اسے ضرور کروں گا۔",
+      "ar": "إِنِّى فَاعِلٌ ذَٰلِكَ غَدًا",
+      "en": "\"…indeed, I will do that tomorrow.\"",
+      "ur": "\"…بے شک میں یہ کام کل کروں گا۔\"",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/018023.mp3"
     },
     "highlighted_word_indices": [
-      0
+      0,
+      1,
+      2,
+      3
+    ],
+    "highlighted_words": [
+      "إِنِّى",
+      "فَاعِلٌ",
+      "ذَٰلِكَ",
+      "غَدًا"
     ],
     "noor_explanation": {
-      "en": "This ayah from Surah Al-Kahf is the source of the famous principle: never say 'I will do it tomorrow' without adding 'Allah willing' (إِنْ شَاءَ اللَّه). The prohibition وَلَا تَقُولَنَّ is absolute — a lesson in humility before Allah's knowledge.",
-      "ur": "یہ ayah سورۃ الکہف سے ہے famous principle کا source ہے: 'میں کل کروں گا' مت کہیں بغیر 'اگر اللہ چاہے' (إِنْ شَاءَ اللَّه) شامل کیے۔ Prohibition وَلَا تَقُولَنَّ مطلق ہے — اللہ کے علم کے سامنے عاجزی کا ایک lesson۔"
+      "en": "إِنِّي (the speaker) … ذَٰلِكَ (the thing) … غَدًا (when) — and 18:24 adds إِلَّا أَنْ يَشَاءَ اللَّهُ.",
+      "ur": "إِنِّي (بولنے والا) … ذَٰلِكَ (وہ کام) … غَدًا (کب) — اور 18:24 إِلَّا أَنْ يَشَاءَ اللَّهُ جوڑتی ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "This ayah teaches us the correct way to make promises in Arabic: add إِنْ شَاءَ اللَّهُ (if Allah wills). وَلَا تَقُولَنَّ لِشَيْءٍ إِنِّي فَاعِلٌ ذَٰلِكَ غَدًا إِلَّا إِنْ شَاءَ اللَّهُ — never promise without Allah's will. This is both grammar and spiritual wisdom.",
-      "ur": "یہ ayah ہمیں عربی میں وعدے کرنے کا صحیح طریقہ سکھاتی ہے: إِنْ شَاءَ اللَّهُ (اگر اللہ چاہے) شامل کرو۔ وَلَا تَقُولَنَّ لِشَيْءٍ إِنِّي فَاعِلٌ ذَٰلِكَ غَدًا إِلَّا إِنْ شَاءَ اللَّهُ — اللہ کی مرضی کے بغیر مت وعدہ کرو۔ یہ grammar بھی ہے اور روحانی حکمت بھی۔"
+      "en": "Ask of every small word: what does it point to, and what does it join?",
+      "ur": "ہر چھوٹے لفظ کے لیے پوچھیں: یہ کس کی طرف اشارہ کرتا ہے اور کیا جوڑتا ہے؟"
     }
   }
 }

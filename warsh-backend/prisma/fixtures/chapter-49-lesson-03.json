@@ -2,245 +2,429 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 49, Lesson 3 — adjective agreement (gender, number, definiteness, case), the non-human plural, and a noun + prepositional phrase vs. iḍāfa (76:1).",
+    "_note": "Chapter 49, Lesson 3 (ch49-l07, new). Added 2026-10-03 in the proposal harvest, batch 5, from Docs/proposals/chapter-49-content-proposal.md. The other three sisters of إِنَّ, each with its own meaning and the same noun-in-fatḥa pattern. Expectation is not a guaranteed future and wish is not a future tense. 78:40, 4:73, 2:21, 7:187.",
     "chapter_order": 49,
     "lesson_order": 3,
-    "chapter_title": "Advanced Sentence Construction",
-    "title": "Descriptions and Agreement",
-    "titleAr": "الصِّفَةُ وَالْمُطَابَقَةُ",
-    "estimated_minutes": 8,
-    "xp_reward": 10,
-    "titleUr": "صفت اور مطابقت"
+    "chapter_title": "Clauses and Links",
+    "title": "لَكِنَّ, لَعَلَّ and لَيْتَ",
+    "titleAr": "لَكِنَّ وَلَعَلَّ وَلَيْتَ",
+    "titleUr": "لَكِنَّ، لَعَلَّ اور لَيْتَ",
+    "estimated_minutes": 10,
+    "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 76,
-      "ayah": 1,
-      "label": "Al-Insan 76:1",
-      "ar": "هَلْ أَتَىٰ عَلَى الْإِنْسَانِ حِينٌ مِنَ الدَّهْرِ لَمْ يَكُنْ شَيْئًا مَذْكُورًا",
-      "en": "Has there come upon man a period of time when he was not a thing worth mentioning?",
-      "ur": "کیا انسان پر زمانے میں ایک ایسا وقت نہیں گزرا جب وہ کوئی قابلِ ذکر چیز نہ تھا؟",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/076001.mp3"
+      "surah": 78,
+      "ayah": 40,
+      "label": "An-Naba’ 78:40",
+      "ar": "وَيَقُولُ الْكَافِرُ يَا لَيْتَنِي كُنْتُ تُرَابًا",
+      "en": "And the disbeliever will say, \"Oh, I wish I were dust!\"",
+      "ur": "اور کافر کہے گا: \"کاش میں مٹی ہوتا!\"",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/078040.mp3"
     },
     "autoplay": true,
     "noor_intro": {
-      "en": "حِينٌ مِنَ الدَّهْرِ — \"a period of time\". A noun followed by a prepositional phrase — not an iḍāfa. Today: how descriptions attach to nouns.",
-      "ur": "حِينٌ مِنَ الدَّهْرِ — \"زمانے کا ایک وقت\"۔ اسم کے بعد حرفِ جر والا جملہ — اضافت نہیں۔ آج: صفات اسموں سے کیسے جڑتی ہیں۔"
+      "en": "يَا لَيْتَنِي — \"if only I …\": a wish, and a sister of إِنَّ.",
+      "ur": "يَا لَيْتَنِي — \"کاش میں …\": ایک تمنا اور إِنَّ کی بہن۔"
     }
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Adjective agreement",
-        "ar": "مُطَابَقَةُ الصِّفَةِ",
-        "ur": "صفت کی مطابقت"
+        "en": "Three more sisters of إِنَّ",
+        "ar": "أَخَوَاتُ إِنَّ",
+        "ur": "إِنَّ کی تین اور بہنیں"
       },
       "explanation": {
-        "en": "An adjective matches its noun in gender, number, definiteness and case: الطَّالِبُ الْمُجْتَهِدُ, الطَّالِبَةُ الْمُجْتَهِدَةُ, رَأَيْتُ طَالِبًا مُجْتَهِدًا. Case is رَفْع / نَصْب / جَرّ — nouns have no jazm.",
-        "ur": "صفت اپنے اسم سے جنس، عدد، معرفہ/نکرہ اور اعراب میں مطابقت رکھتی ہے: الطَّالِبُ الْمُجْتَهِدُ، الطَّالِبَةُ الْمُجْتَهِدَةُ، رَأَيْتُ طَالِبًا مُجْتَهِدًا۔ اعراب رفع / نصب / جر ہے — اسم پر جزم نہیں۔"
+        "en": "لَكِنَّ \"but\", لَعَلَّ \"perhaps / so that\", لَيْتَ \"if only\". Like إِنَّ and أَنَّ, each puts its noun in fatḥa and leaves its predicate nominative. Each has its own meaning: contrast, hope or expectation, and wish.",
+        "ur": "لَكِنَّ \"لیکن\"، لَعَلَّ \"شاید / تاکہ\"، لَيْتَ \"کاش\"۔ إِنَّ اور أَنَّ کی طرح ہر ایک اپنے اسم کو فتحہ دیتا ہے اور خبر مرفوع رہتی ہے۔ ہر ایک کا اپنا مطلب ہے: تضاد، امید یا توقع، اور تمنا۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "الْكُتُبُ الْجَدِيدَةُ",
-        "ar_plain": "الكتب الجديدة",
-        "translit": "al-kutubul-jadiida",
-        "en": "the new books",
-        "ur": "نئی کتابیں"
+        "ar": "الدَّرْسُ طَوِيلٌ لَكِنَّهُ سَهْلٌ",
+        "ar_plain": "الدرس طويل لكنه سهل",
+        "translit": "ad-darsu tawiilun laakinnahu sahlun",
+        "en": "The lesson is long, but it is easy. (constructed)",
+        "ur": "سبق لمبا ہے لیکن آسان ہے۔ (بنایا گیا جملہ)"
       },
       "explanation": {
-        "en": "A plural of things (not people) usually takes a feminine singular adjective: الْكُتُبُ الْجَدِيدَةُ, not الْجُدُدُ.",
-        "ur": "چیزوں (لوگ نہیں) کی جمع کے ساتھ عموماً مؤنث واحد صفت آتی ہے: الْكُتُبُ الْجَدِيدَةُ۔"
+        "en": "لَكِنَّ + هُ (its noun) + سَهْلٌ (its predicate). It joins two statements and sets the second against the first.",
+        "ur": "لَكِنَّ + هُ (اس کا اسم) + سَهْلٌ (اس کی خبر)۔ یہ دو باتوں کو جوڑتا ہے اور دوسری کو پہلی کے مقابل رکھتا ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "الْمُعَلِّمُونَ الْمُخْلِصُونَ",
-        "ar_plain": "المعلمون المخلصون",
-        "translit": "al-mu'allimuunal-mukhlisuun",
-        "en": "the sincere teachers",
-        "ur": "مخلص اساتذہ"
+        "ar": "وَلَٰكِنَّ أَكْثَرَ النَّاسِ لَا يَعْلَمُونَ",
+        "ar_plain": "ولكن اكثر الناس لا يعلمون",
+        "translit": "wa-laakinna aktharan-naasi laa ya-lamuuna",
+        "en": "but most of the people do not know (Al-A’raf 7:187)",
+        "ur": "لیکن اکثر لوگ نہیں جانتے (الاعراف 7:187)"
       },
       "explanation": {
-        "en": "A plural of people takes a plural adjective: الْمُخْلِصُونَ.",
-        "ur": "لوگوں کی جمع کے ساتھ جمع صفت آتی ہے: الْمُخْلِصُونَ۔"
+        "en": "لَكِنَّ + أَكْثَرَ (its noun, fatḥa) + لَا يَعْلَمُونَ (its predicate).",
+        "ur": "لَكِنَّ + أَكْثَرَ (اس کا اسم، فتحہ) + لَا يَعْلَمُونَ (اس کی خبر)۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "حِينٌ مِنَ الدَّهْرِ",
-        "ar_plain": "حين من الدهر",
-        "translit": "hiinun minad-dahr",
-        "en": "a period of time (Al-Insan 76:1)",
-        "ur": "زمانے کا ایک وقت (الانسان 76:1)"
+        "ar": "لَعَلَّ الطَّالِبَ فِي الْمَسْجِدِ",
+        "ar_plain": "لعل الطالب في المسجد",
+        "translit": "la-alla at-taaliba fii al-masjidi",
+        "en": "Perhaps the student is in the masjid. (constructed)",
+        "ur": "شاید طالب علم مسجد میں ہے۔ (بنایا گیا جملہ)"
       },
       "explanation": {
-        "en": "حِينٌ (a period) + مِنَ الدَّهْرِ (a prepositional phrase: مِنْ + genitive الدَّهْرِ). Not an iḍāfa — an iḍāfa joins two nouns directly, like بَابُ الْبَيْتِ.",
-        "ur": "حِينٌ (ایک وقت) + مِنَ الدَّهْرِ (حرفِ جر والا جملہ: مِنْ + مجرور الدَّهْرِ)۔ اضافت نہیں — اضافت دو اسموں کو سیدھا جوڑتی ہے، جیسے بَابُ الْبَيْتِ۔"
+        "en": "لَعَلَّ expresses a hope or an expectation, not a certainty. الطَّالِبَ (fatḥa) is its noun; فِي الْمَسْجِدِ is its predicate.",
+        "ur": "لَعَلَّ امید یا توقع ظاہر کرتا ہے، یقین نہیں۔ الطَّالِبَ (فتحہ) اس کا اسم ہے؛ فِي الْمَسْجِدِ اس کی خبر ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "لَمْ يَكُنْ شَيْئًا مَذْكُورًا",
-        "ar_plain": "لم يكن شيئا مذكورا",
-        "translit": "lam yakun shay-an madhkuuraa",
-        "en": "he was not a thing worth mentioning (76:1)",
-        "ur": "وہ کوئی قابلِ ذکر چیز نہ تھا (76:1)"
+        "ar": "لَعَلَّكُمْ تَتَّقُونَ",
+        "ar_plain": "لعلكم تتقون",
+        "translit": "la-allakum tattaquuna",
+        "en": "so that you may become mindful (Al-Baqarah 2:21)",
+        "ur": "تاکہ تم پرہیزگار بن جاؤ (البقرہ 2:21)"
       },
       "explanation": {
-        "en": "شَيْئًا مَذْكُورًا: noun + adjective, both indefinite and مَنْصُوب (the predicate of يَكُنْ).",
-        "ur": "شَيْئًا مَذْكُورًا: اسم + صفت، دونوں نکرہ اور منصوب (يَكُنْ کی خبر)۔"
+        "en": "Here لَعَلَّ is translated \"so that you may\": the meaning of لَعَلَّ depends on the context. كُمْ is its noun.",
+        "ur": "یہاں لَعَلَّ کا ترجمہ \"تاکہ تم\" ہے: لَعَلَّ کا مطلب سیاق پر منحصر ہے۔ كُمْ اس کا اسم ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "يَا لَيْتَنِي كُنْتُ مَعَهُمْ",
+        "ar_plain": "يا ليتني كنت معهم",
+        "translit": "yaa laytanii kuntu ma-ahum",
+        "en": "Oh, I wish I had been with them! (An-Nisa 4:73)",
+        "ur": "کاش میں ان کے ساتھ ہوتا! (النساء 4:73)"
+      },
+      "explanation": {
+        "en": "لَيْتَ is a wish — for something that is not so. It is not an ordinary future. نِي (me) is its noun.",
+        "ur": "لَيْتَ ایک تمنا ہے — اس چیز کی جو نہیں ہے۔ یہ عام مستقبل نہیں۔ نِي (مجھے) اس کا اسم ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "لَيْتَ الدَّرْسَ سَهْلٌ",
+        "ar_plain": "ليت الدرس سهل",
+        "translit": "layta ad-darsa sahlun",
+        "en": "If only the lesson were easy. (constructed)",
+        "ur": "کاش سبق آسان ہوتا۔ (بنایا گیا جملہ)"
+      },
+      "explanation": {
+        "en": "لَيْتَ + الدَّرْسَ (noun, fatḥa) + سَهْلٌ (predicate, nominative).",
+        "ur": "لَيْتَ + الدَّرْسَ (اسم، فتحہ) + سَهْلٌ (خبر، مرفوع)۔"
       }
     }
   ],
   "exercises": [
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch49-l03-ex01",
+      "id": "ch49-l07-ex01",
       "prompt": {
-        "ar": "الْكُتُبُ الْجَدِيدَةُ",
-        "ar_plain": "الكتب الجديدة",
-        "translit": "al-kutubul-jadiida",
-        "en": "the new books",
-        "ur": "نئی کتابیں"
+        "ar": "الدَّرْسُ طَوِيلٌ لَكِنَّهُ سَهْلٌ",
+        "ar_plain": "الدرس طويل لكنه سهل",
+        "translit": "ad-darsu tawiilun laakinnahu sahlun",
+        "en": "The lesson is long, but it is easy.",
+        "ur": "سبق لمبا ہے لیکن آسان ہے۔"
       },
       "options": [
         {
-          "en": "the new books",
-          "ur": "نئی کتابیں"
+          "en": "The lesson is long, but it is easy.",
+          "ur": "سبق لمبا ہے لیکن آسان ہے۔"
         },
         {
-          "en": "the new book",
-          "ur": "نئی کتاب"
+          "en": "The lesson is long because it is easy.",
+          "ur": "سبق لمبا ہے کیونکہ آسان ہے۔"
         },
         {
-          "en": "a new book",
-          "ur": "ایک نئی کتاب"
+          "en": "If only the lesson were long.",
+          "ur": "کاش سبق لمبا ہوتا۔"
         },
         {
-          "en": "the books are new",
-          "ur": "کتابیں نئی ہیں"
+          "en": "Perhaps the lesson is easy.",
+          "ur": "شاید سبق آسان ہے۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch49-l03-ex02",
-      "statement": {
-        "en": "Adjectives agree with their noun in rafʿ, naṣb or jazm.",
-        "ur": "صفات اپنے اسم سے رفع، نصب یا جزم میں مطابقت رکھتی ہیں۔"
+      "type": "TAP_TRANSLATION",
+      "id": "ch49-l07-ex02",
+      "prompt": {
+        "ar": "لَعَلَّ الطَّالِبَ فِي الْمَسْجِدِ",
+        "ar_plain": "لعل الطالب في المسجد",
+        "translit": "la-alla at-taaliba fii al-masjidi",
+        "en": "(A hope or expectation)",
+        "ur": "(امید یا توقع)"
       },
-      "correct_answer": false,
+      "options": [
+        {
+          "en": "The student is certainly in the masjid.",
+          "ur": "طالب علم یقیناً مسجد میں ہے۔"
+        },
+        {
+          "en": "If only the student were in the masjid.",
+          "ur": "کاش طالب علم مسجد میں ہوتا۔"
+        },
+        {
+          "en": "Perhaps the student is in the masjid.",
+          "ur": "شاید طالب علم مسجد میں ہے۔"
+        },
+        {
+          "en": "The student is not in the masjid.",
+          "ur": "طالب علم مسجد میں نہیں ہے۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch49-l07-ex03",
+      "prompt": {
+        "ar": "يَا لَيْتَنِي كُنْتُ مَعَهُمْ",
+        "ar_plain": "يا ليتني كنت معهم",
+        "translit": "yaa laytanii kuntu ma-ahum",
+        "en": "(4:73)",
+        "ur": "(4:73)"
+      },
+      "options": [
+        {
+          "en": "Perhaps I was with them.",
+          "ur": "شاید میں ان کے ساتھ تھا۔"
+        },
+        {
+          "en": "But I was with them.",
+          "ur": "لیکن میں ان کے ساتھ تھا۔"
+        },
+        {
+          "en": "Indeed, I was with them.",
+          "ur": "بے شک میں ان کے ساتھ تھا۔"
+        },
+        {
+          "en": "Oh, I wish I had been with them!",
+          "ur": "کاش میں ان کے ساتھ ہوتا!"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch49-l07-ex04",
+      "mode": "TAP",
+      "sentence_ar": "لَكِنَّ ___ سَهْلٌ",
+      "hint": {
+        "en": "But the lesson is easy.",
+        "ur": "لیکن سبق آسان ہے۔"
+      },
+      "options": [
+        {
+          "ar": "الدَّرْسُ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsu",
+          "en": "the lesson (ḍamma)",
+          "ur": "سبق (ضمہ)"
+        },
+        {
+          "ar": "الدَّرْسَ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsa",
+          "en": "the lesson (fatḥa)",
+          "ur": "سبق (فتحہ)"
+        },
+        {
+          "ar": "الدَّرْسِ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsi",
+          "en": "the lesson (kasra)",
+          "ur": "سبق (کسرہ)"
+        },
+        {
+          "ar": "دَرْسٌ",
+          "ar_plain": "درس",
+          "translit": "darsun",
+          "en": "a lesson",
+          "ur": "ایک سبق"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الدَّرْسَ",
+        "ar_plain": "الدرس",
+        "translit": "ad-darsa",
+        "en": "the lesson (fatḥa)",
+        "ur": "سبق (فتحہ)"
+      },
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "False. Nouns and adjectives take rafʿ, naṣb or jarr — never jazm.",
-        "ur": "غلط۔ اسم اور صفات رفع، نصب یا جر لیتے ہیں — جزم کبھی نہیں۔"
+        "en": "After لَكِنَّ the noun ends in fatḥa.",
+        "ur": "لَكِنَّ کے بعد اسم پر فتحہ آتا ہے۔"
       }
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch49-l03-ex03",
+      "id": "ch49-l07-ex05",
       "mode": "TAP",
-      "sentence_ar": "رَأَيْتُ طَالِبًا ___",
+      "sentence_ar": "لَعَلَّ ___ فِي الْبَيْتِ",
       "hint": {
-        "en": "I saw a hardworking student.",
-        "ur": "میں نے ایک محنتی طالب علم دیکھا۔"
+        "en": "Perhaps the teacher is at home.",
+        "ur": "شاید استاد گھر میں ہے۔"
       },
       "options": [
         {
-          "ar": "مُجْتَهِدًا",
-          "ar_plain": "مجتهدا",
-          "translit": "mujtahidan",
-          "en": "hardworking (acc., indef.)",
-          "ur": "محنتی (منصوب، نکرہ)"
+          "ar": "الْمُعَلِّمُ",
+          "ar_plain": "المعلم",
+          "translit": "al-mu-allimu",
+          "en": "the teacher (ḍamma)",
+          "ur": "استاد (ضمہ)"
         },
         {
-          "ar": "مُجْتَهِدٌ",
-          "ar_plain": "مجتهد",
-          "translit": "mujtahidun",
-          "en": "(nom.)",
-          "ur": "(مرفوع)"
+          "ar": "الْمُعَلِّمِ",
+          "ar_plain": "المعلم",
+          "translit": "al-mu-allimi",
+          "en": "the teacher (kasra)",
+          "ur": "استاد (کسرہ)"
         },
         {
-          "ar": "الْمُجْتَهِدَ",
-          "ar_plain": "المجتهد",
-          "translit": "al-mujtahida",
-          "en": "(definite)",
-          "ur": "(معرفہ)"
+          "ar": "الْمُعَلِّمَ",
+          "ar_plain": "المعلم",
+          "translit": "al-mu-allima",
+          "en": "the teacher (fatḥa)",
+          "ur": "استاد (فتحہ)"
         },
         {
-          "ar": "مُجْتَهِدَةً",
-          "ar_plain": "مجتهدة",
-          "translit": "mujtahidatan",
-          "en": "(feminine)",
-          "ur": "(مؤنث)"
+          "ar": "مُعَلِّمٌ",
+          "ar_plain": "معلم",
+          "translit": "mu-allimun",
+          "en": "a teacher",
+          "ur": "ایک استاد"
         }
       ],
       "correct_answer": {
-        "ar": "مُجْتَهِدًا",
-        "ar_plain": "مجتهدا",
-        "translit": "mujtahidan",
-        "en": "hardworking (acc., indef.)",
-        "ur": "محنتی (منصوب، نکرہ)"
+        "ar": "الْمُعَلِّمَ",
+        "ar_plain": "المعلم",
+        "translit": "al-mu-allima",
+        "en": "the teacher (fatḥa)",
+        "ur": "استاد (فتحہ)"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After لَعَلَّ the noun ends in fatḥa.",
+        "ur": "لَعَلَّ کے بعد اسم پر فتحہ آتا ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch49-l07-ex06",
+      "mode": "TAP",
+      "sentence_ar": "لَيْتَ ___ سَهْلٌ",
+      "hint": {
+        "en": "If only the lesson were easy.",
+        "ur": "کاش سبق آسان ہوتا۔"
+      },
+      "options": [
+        {
+          "ar": "الدَّرْسَ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsa",
+          "en": "the lesson (fatḥa)",
+          "ur": "سبق (فتحہ)"
+        },
+        {
+          "ar": "الدَّرْسُ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsu",
+          "en": "the lesson (ḍamma)",
+          "ur": "سبق (ضمہ)"
+        },
+        {
+          "ar": "الدَّرْسِ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsi",
+          "en": "the lesson (kasra)",
+          "ur": "سبق (کسرہ)"
+        },
+        {
+          "ar": "دَرْسٌ",
+          "ar_plain": "درس",
+          "translit": "darsun",
+          "en": "a lesson",
+          "ur": "ایک سبق"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الدَّرْسَ",
+        "ar_plain": "الدرس",
+        "translit": "ad-darsa",
+        "en": "the lesson (fatḥa)",
+        "ur": "سبق (فتحہ)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After لَيْتَ the noun ends in fatḥa.",
+        "ur": "لَيْتَ کے بعد اسم پر فتحہ آتا ہے۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch49-l03-ex04",
+      "id": "ch49-l07-ex07",
       "left_column": [
         {
-          "ar": "الْكُتُبُ الْجَدِيدَةُ",
-          "ar_plain": "الكتب الجديدة",
-          "translit": "al-kutubul-jadiida",
-          "en": "the new books",
-          "ur": "نئی کتابیں"
+          "ar": "لَكِنَّ",
+          "ar_plain": "لكن",
+          "translit": "laakinna",
+          "en": "but",
+          "ur": "لیکن"
         },
         {
-          "ar": "الْمُعَلِّمُونَ الْمُخْلِصُونَ",
-          "ar_plain": "المعلمون المخلصون",
-          "translit": "al-mu'allimuunal-mukhlisuun",
-          "en": "the sincere teachers",
-          "ur": "مخلص اساتذہ"
+          "ar": "لَعَلَّ",
+          "ar_plain": "لعل",
+          "translit": "la-alla",
+          "en": "perhaps",
+          "ur": "شاید"
         },
         {
-          "ar": "حِينٌ مِنَ الدَّهْرِ",
-          "ar_plain": "حين من الدهر",
-          "translit": "hiinun minad-dahr",
-          "en": "a period of time",
-          "ur": "زمانے کا ایک وقت"
+          "ar": "لَيْتَ",
+          "ar_plain": "ليت",
+          "translit": "layta",
+          "en": "if only",
+          "ur": "کاش"
         },
         {
-          "ar": "بَابُ الْبَيْتِ",
-          "ar_plain": "باب البيت",
-          "translit": "baabul-bayt",
-          "en": "the door of the house",
-          "ur": "گھر کا دروازہ"
+          "ar": "إِنَّ",
+          "ar_plain": "ان",
+          "translit": "inna",
+          "en": "indeed",
+          "ur": "بے شک"
         }
       ],
       "right_column": [
         {
-          "en": "people plural + plural adjective",
-          "ur": "لوگوں کی جمع + جمع صفت"
+          "en": "a wish",
+          "ur": "تمنا"
         },
         {
-          "en": "iḍāfa",
-          "ur": "اضافت"
+          "en": "the base particle (Chapter 24)",
+          "ur": "بنیادی حرف (باب 24)"
         },
         {
-          "en": "things plural + feminine singular adjective",
-          "ur": "چیزوں کی جمع + مؤنث واحد صفت"
+          "en": "contrast",
+          "ur": "تضاد"
         },
         {
-          "en": "noun + prepositional phrase",
-          "ur": "اسم + حرفِ جر والا جملہ"
+          "en": "hope or expectation",
+          "ur": "امید یا توقع"
         }
       ],
       "correct_pairs": [
@@ -250,11 +434,11 @@
         ],
         [
           1,
-          0
+          3
         ],
         [
           2,
-          3
+          0
         ],
         [
           3,
@@ -264,129 +448,85 @@
       "xp_value": 1
     },
     {
-      "type": "BUILD_SENTENCE",
-      "id": "ch49-l03-ex05",
-      "target_translation": {
-        "en": "a period of time (76:1)",
-        "ur": "زمانے کا ایک وقت (76:1)"
-      },
-      "tiles": [
-        {
-          "ar": "حِينٌ",
-          "ar_plain": "حين",
-          "translit": "hiinun",
-          "en": "a period",
-          "ur": "ایک وقت"
-        },
-        {
-          "ar": "مِنَ",
-          "ar_plain": "من",
-          "translit": "mina",
-          "en": "of",
-          "ur": "کا"
-        },
-        {
-          "ar": "الدَّهْرِ",
-          "ar_plain": "الدهر",
-          "translit": "ad-dahr",
-          "en": "time",
-          "ur": "زمانہ"
-        },
-        {
-          "ar": "الدَّهْرُ",
-          "ar_plain": "الدهر",
-          "translit": "ad-dahru",
-          "en": "(nominative)",
-          "ur": "(مرفوع)"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1
-    },
-    {
       "type": "TRUE_FALSE",
-      "id": "ch49-l03-ex06",
+      "id": "ch49-l07-ex08",
       "statement": {
-        "en": "حِينٌ مِنَ الدَّهْرِ is an iḍāfa.",
-        "ur": "حِينٌ مِنَ الدَّهْرِ اضافت ہے۔"
+        "en": "لَعَلَّ means that something will certainly happen.",
+        "ur": "لَعَلَّ کا مطلب ہے کہ کوئی چیز یقیناً ہوگی۔"
       },
       "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "False. مِنَ الدَّهْرِ is a prepositional phrase after the noun حِينٌ.",
-        "ur": "غلط۔ مِنَ الدَّهْرِ اسم حِينٌ کے بعد حرفِ جر والا جملہ ہے۔"
+        "en": "False: لَعَلَّ is hope or expectation. The context shapes the translation.",
+        "ur": "غلط: لَعَلَّ امید یا توقع ہے۔ ترجمہ سیاق سے بنتا ہے۔"
       }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch49-l03-ex07",
+      "id": "ch49-l07-ex09",
       "prompt": {
-        "ar": "الْمُعَلِّمُونَ الْمُخْلِصُونَ",
-        "ar_plain": "المعلمون المخلصون",
-        "translit": "al-mu'allimuunal-mukhlisuun",
-        "en": "the sincere teachers",
-        "ur": "مخلص اساتذہ"
+        "ar": "لَيْتَ الدَّرْسَ سَهْلٌ",
+        "ar_plain": "ليت الدرس سهل",
+        "translit": "layta ad-darsa sahlun",
+        "en": "(A wish)",
+        "ur": "(تمنا)"
       },
       "options": [
         {
-          "en": "the sincere teachers",
-          "ur": "مخلص اساتذہ"
+          "en": "The lesson will be easy.",
+          "ur": "سبق آسان ہوگا۔"
         },
         {
-          "en": "the sincere teacher",
-          "ur": "مخلص استاد"
+          "en": "If only the lesson were easy.",
+          "ur": "کاش سبق آسان ہوتا۔"
         },
         {
-          "en": "the teachers are sincere",
-          "ur": "اساتذہ مخلص ہیں"
+          "en": "Perhaps the lesson is easy.",
+          "ur": "شاید سبق آسان ہے۔"
         },
         {
-          "en": "sincerity of the teachers",
-          "ur": "اساتذہ کا اخلاص"
+          "en": "The lesson is not easy, but I like it.",
+          "ur": "سبق آسان نہیں لیکن مجھے پسند ہے۔"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 1,
       "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Noun + prepositional phrase",
-      "ar": "اسْمٌ وَجَارٌّ وَمَجْرُورٌ",
-      "ur": "اسم + حرفِ جر والا جملہ"
+      "en": "A wish with لَيْتَ",
+      "ar": "لَيْتَ",
+      "ur": "لَيْتَ سے تمنا"
     },
     "ayah": {
-      "surah": 76,
-      "ayah": 1,
-      "label": "Al-Insan 76:1",
-      "ar": "هَلْ أَتَىٰ عَلَى الْإِنْسَانِ حِينٌ مِنَ الدَّهْرِ لَمْ يَكُنْ شَيْئًا مَذْكُورًا",
-      "en": "Has there come upon man a period of time when he was not a thing worth mentioning?",
-      "ur": "کیا انسان پر زمانے میں ایک ایسا وقت نہیں گزرا جب وہ کوئی قابلِ ذکر چیز نہ تھا؟",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/076001.mp3"
+      "surah": 78,
+      "ayah": 40,
+      "label": "An-Naba’ 78:40",
+      "ar": "وَيَقُولُ الْكَافِرُ يَا لَيْتَنِي كُنْتُ تُرَابًا",
+      "en": "And the disbeliever will say, \"Oh, I wish I were dust!\"",
+      "ur": "اور کافر کہے گا: \"کاش میں مٹی ہوتا!\"",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/078040.mp3"
     },
     "highlighted_word_indices": [
+      3,
       4,
-      5,
-      6
+      5
     ],
     "highlighted_words": [
-      "حِينٌ",
-      "مِنَ",
-      "الدَّهْرِ"
+      "لَيْتَنِي",
+      "كُنْتُ",
+      "تُرَابًا"
     ],
     "noor_explanation": {
-      "en": "حِينٌ + مِنَ الدَّهْرِ: a noun described by a prepositional phrase, not an iḍāfa.",
-      "ur": "حِينٌ + مِنَ الدَّهْرِ: حرفِ جر والے جملے سے بیان کیا گیا اسم، اضافت نہیں۔"
+      "en": "لَيْتَ — \"if only\": a wish, with its noun نِي.",
+      "ur": "لَيْتَ — \"کاش\": تمنا، اس کے اسم نِي کے ساتھ۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Adjectives match their noun; things-plurals take a feminine singular adjective; and مِنْ + noun is a prepositional phrase, not an iḍāfa.",
-      "ur": "صفات اپنے اسم کے مطابق ہوتی ہیں؛ چیزوں کی جمع مؤنث واحد صفت لیتی ہے؛ اور مِنْ + اسم حرفِ جر والا جملہ ہے، اضافت نہیں۔"
+      "en": "لَكِنَّ = but, لَعَلَّ = perhaps, لَيْتَ = if only — all with fatḥa on their noun.",
+      "ur": "لَكِنَّ = لیکن، لَعَلَّ = شاید، لَيْتَ = کاش — سب اپنے اسم پر فتحہ کے ساتھ۔"
     }
   }
 }

@@ -1,0 +1,434 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 48, final test (ch48-test, new). Added 2026-10-03 in the proposal harvest, batch 5. Twelve multiple-choice questions: clock time and duration (q01–02), 1–10 (q03–04), 11–20 (q05–06), a compound and 100 (q07–08), unit versus instrument (q09–10) and CL14 itinerary comprehension (q11–12). The gender of each counted noun is given in the prompt; options are neutral Arabic. Pass mark 80 %: 9/12 fails, 10/12 passes.",
+    "title": "Chapter 48 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الثَّامِنِ وَالْأَرْبَعِينَ",
+    "titleUr": "باب 48 کا آخری امتحان",
+    "chapter_order": 48,
+    "lesson_order": 9,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 9,
+      "ayah": 36,
+      "label": "At-Tawbah 9:36",
+      "ar": "إِنَّ عِدَّةَ الشُّهُورِ عِندَ اللَّهِ اثْنَا عَشَرَ شَهْرًا",
+      "en": "\"Indeed, the number of months with Allah is twelve months…\"",
+      "ur": "\"بے شک اللہ کے نزدیک مہینوں کی گنتی بارہ مہینے ہے…\"",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/009036.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 48.",
+      "ur": "باب 48 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 48,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch48-test-q01",
+        "topic": {
+          "en": "Clock time",
+          "ur": "گھڑی کا وقت"
+        },
+        "prompt": {
+          "en": "Which phrase means 'at seven in the evening'?",
+          "ur": "کون سا مرکب 'شام سات بجے' ہے؟"
+        },
+        "options": [
+          {
+            "en": "فِي السَّاعَةِ السَّابِعَةِ صَبَاحًا",
+            "ur": "فِي السَّاعَةِ السَّابِعَةِ صَبَاحًا"
+          },
+          {
+            "en": "فِي السَّاعَةِ السَّابِعَةِ مَسَاءً",
+            "ur": "فِي السَّاعَةِ السَّابِعَةِ مَسَاءً"
+          },
+          {
+            "en": "فِي السَّاعَةِ الثَّامِنَةِ مَسَاءً",
+            "ur": "فِي السَّاعَةِ الثَّامِنَةِ مَسَاءً"
+          },
+          {
+            "en": "سَبْعُ سَاعَاتٍ",
+            "ur": "سَبْعُ سَاعَاتٍ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch48-test-q02",
+        "topic": {
+          "en": "Clock time or duration",
+          "ur": "گھڑی کا وقت یا مدت"
+        },
+        "prompt": {
+          "en": "Which phrase gives a length of time (a duration), not a clock time?",
+          "ur": "کون سا مرکب وقت کی مدت بتاتا ہے، گھڑی کا وقت نہیں؟"
+        },
+        "options": [
+          {
+            "en": "السَّاعَةُ الثَّالِثَةُ",
+            "ur": "السَّاعَةُ الثَّالِثَةُ"
+          },
+          {
+            "en": "فِي السَّاعَةِ الثَّالِثَةِ مَسَاءً",
+            "ur": "فِي السَّاعَةِ الثَّالِثَةِ مَسَاءً"
+          },
+          {
+            "en": "الثَّالِثَةُ صَبَاحًا",
+            "ur": "الثَّالِثَةُ صَبَاحًا"
+          },
+          {
+            "en": "ثَلَاثُ سَاعَاتٍ",
+            "ur": "ثَلَاثُ سَاعَاتٍ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch48-test-q03",
+        "topic": {
+          "en": "Numbers 3–10",
+          "ur": "اعداد 3–10"
+        },
+        "prompt": {
+          "en": "How do you say 'three days'? (يَوْمٌ is masculine)",
+          "ur": "'تین دن' کیسے کہتے ہیں؟ (يَوْمٌ مذکر ہے)"
+        },
+        "options": [
+          {
+            "en": "ثَلَاثَةُ أَيَّامٍ",
+            "ur": "ثَلَاثَةُ أَيَّامٍ"
+          },
+          {
+            "en": "ثَلَاثُ أَيَّامٍ",
+            "ur": "ثَلَاثُ أَيَّامٍ"
+          },
+          {
+            "en": "ثَلَاثَةُ يَوْمٍ",
+            "ur": "ثَلَاثَةُ يَوْمٍ"
+          },
+          {
+            "en": "ثَلَاثُ يَوْمٍ",
+            "ur": "ثَلَاثُ يَوْمٍ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch48-test-q04",
+        "topic": {
+          "en": "Numbers 3–10",
+          "ur": "اعداد 3–10"
+        },
+        "prompt": {
+          "en": "How do you say 'five nights'? (لَيْلَةٌ is feminine)",
+          "ur": "'پانچ راتیں' کیسے کہتے ہیں؟ (لَيْلَةٌ مؤنث ہے)"
+        },
+        "options": [
+          {
+            "en": "خَمْسَةُ لَيَالٍ",
+            "ur": "خَمْسَةُ لَيَالٍ"
+          },
+          {
+            "en": "خَمْسُ لَيْلَةٍ",
+            "ur": "خَمْسُ لَيْلَةٍ"
+          },
+          {
+            "en": "خَمْسُ لَيَالٍ",
+            "ur": "خَمْسُ لَيَالٍ"
+          },
+          {
+            "en": "خَمْسَةُ لَيْلَةٍ",
+            "ur": "خَمْسَةُ لَيْلَةٍ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch48-test-q05",
+        "topic": {
+          "en": "Numbers 11–20",
+          "ur": "اعداد 11–20"
+        },
+        "prompt": {
+          "en": "Which phrase means 'twelve months'? (شَهْرٌ is masculine)",
+          "ur": "کون سا مرکب 'بارہ مہینے' ہے؟ (شَهْرٌ مذکر ہے)"
+        },
+        "options": [
+          {
+            "en": "اثْنَا عَشَرَ أَشْهُرٍ",
+            "ur": "اثْنَا عَشَرَ أَشْهُرٍ"
+          },
+          {
+            "en": "اثْنَتَا عَشْرَةَ شَهْرًا",
+            "ur": "اثْنَتَا عَشْرَةَ شَهْرًا"
+          },
+          {
+            "en": "اثْنَا عَشَرَ شَهْرًا",
+            "ur": "اثْنَا عَشَرَ شَهْرًا"
+          },
+          {
+            "en": "اثْنَانِ شَهْرًا",
+            "ur": "اثْنَانِ شَهْرًا"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch48-test-q06",
+        "topic": {
+          "en": "Numbers 11–20",
+          "ur": "اعداد 11–20"
+        },
+        "prompt": {
+          "en": "Which phrase means 'eleven stars'? (كَوْكَبٌ is masculine)",
+          "ur": "کون سا مرکب 'گیارہ ستارے' ہے؟ (كَوْكَبٌ مذکر ہے)"
+        },
+        "options": [
+          {
+            "en": "أَحَدَ عَشَرَ كَوْكَبًا",
+            "ur": "أَحَدَ عَشَرَ كَوْكَبًا"
+          },
+          {
+            "en": "إِحْدَى عَشْرَةَ كَوْكَبًا",
+            "ur": "إِحْدَى عَشْرَةَ كَوْكَبًا"
+          },
+          {
+            "en": "أَحَدَ عَشَرَ كَوَاكِبَ",
+            "ur": "أَحَدَ عَشَرَ كَوَاكِبَ"
+          },
+          {
+            "en": "أَحَدَ عَشَرَ كَوْكَبٌ",
+            "ur": "أَحَدَ عَشَرَ كَوْكَبٌ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch48-test-q07",
+        "topic": {
+          "en": "Tens and compounds",
+          "ur": "دہائیاں اور مرکب اعداد"
+        },
+        "prompt": {
+          "en": "Which phrase means 'ninety-nine ewes'? (نَعْجَةٌ is feminine)",
+          "ur": "کون سا مرکب 'ننانوے دُنبیاں' ہے؟ (نَعْجَةٌ مؤنث ہے)"
+        },
+        "options": [
+          {
+            "en": "تِسْعَةٌ وَتِسْعُونَ نَعْجَةً",
+            "ur": "تِسْعَةٌ وَتِسْعُونَ نَعْجَةً"
+          },
+          {
+            "en": "تِسْعٌ وَتِسْعُونَ نِعَاجٍ",
+            "ur": "تِسْعٌ وَتِسْعُونَ نِعَاجٍ"
+          },
+          {
+            "en": "تِسْعُونَ وَتِسْعٌ نَعْجَةً",
+            "ur": "تِسْعُونَ وَتِسْعٌ نَعْجَةً"
+          },
+          {
+            "en": "تِسْعٌ وَتِسْعُونَ نَعْجَةً",
+            "ur": "تِسْعٌ وَتِسْعُونَ نَعْجَةً"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch48-test-q08",
+        "topic": {
+          "en": "One hundred",
+          "ur": "ایک سو"
+        },
+        "prompt": {
+          "en": "Which phrase means 'a hundred years'?",
+          "ur": "کون سا مرکب 'سو سال' ہے؟"
+        },
+        "options": [
+          {
+            "en": "مِائَةُ أَعْوَامٍ",
+            "ur": "مِائَةُ أَعْوَامٍ"
+          },
+          {
+            "en": "مِائَةُ عَامٍ",
+            "ur": "مِائَةُ عَامٍ"
+          },
+          {
+            "en": "مِائَةُ عَامًا",
+            "ur": "مِائَةُ عَامًا"
+          },
+          {
+            "en": "مِائَةٌ أَعْوَامٌ",
+            "ur": "مِائَةٌ أَعْوَامٌ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch48-test-q09",
+        "topic": {
+          "en": "Measures",
+          "ur": "پیمائشیں"
+        },
+        "prompt": {
+          "en": "Which word is a unit of weight?",
+          "ur": "کون سا لفظ وزن کی اکائی ہے؟"
+        },
+        "options": [
+          {
+            "en": "مِيزَانٌ",
+            "ur": "مِيزَانٌ"
+          },
+          {
+            "en": "ذِرَاعٌ",
+            "ur": "ذِرَاعٌ"
+          },
+          {
+            "en": "صَاعٌ",
+            "ur": "صَاعٌ"
+          },
+          {
+            "en": "رِطْلٌ",
+            "ur": "رِطْلٌ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch48-test-q10",
+        "topic": {
+          "en": "Measures",
+          "ur": "پیمائشیں"
+        },
+        "prompt": {
+          "en": "Which word is the instrument you weigh with?",
+          "ur": "کون سا لفظ وہ آلہ ہے جس سے تولا جاتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "رِطْلٌ",
+            "ur": "رِطْلٌ"
+          },
+          {
+            "en": "مِيزَانٌ",
+            "ur": "مِيزَانٌ"
+          },
+          {
+            "en": "ذِرَاعٌ",
+            "ur": "ذِرَاعٌ"
+          },
+          {
+            "en": "مُدٌّ",
+            "ur": "مُدٌّ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch48-test-q11",
+        "topic": {
+          "en": "Travel plan (CL14)",
+          "ur": "سفر کا منصوبہ (CL14)"
+        },
+        "prompt": {
+          "en": "A trip leaves at 19:00, takes three hours and arrives at 22:00. Which question asks when A arrives?",
+          "ur": "ایک سفر 19:00 پر روانہ ہوتا ہے، تین گھنٹے لیتا ہے اور 22:00 پر پہنچتا ہے۔ کون سا سوال پوچھتا ہے کہ A کب پہنچتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "مَتَى تَصِلُ؟",
+            "ur": "مَتَى تَصِلُ؟"
+          },
+          {
+            "en": "مَتَى تَبْدَأُ الرِّحْلَةُ؟",
+            "ur": "مَتَى تَبْدَأُ الرِّحْلَةُ؟"
+          },
+          {
+            "en": "كَمْ سَاعَةً تَسْتَغْرِقُ الرِّحْلَةُ؟",
+            "ur": "كَمْ سَاعَةً تَسْتَغْرِقُ الرِّحْلَةُ؟"
+          },
+          {
+            "en": "عَفْوًا.",
+            "ur": "عَفْوًا."
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch48-test-q12",
+        "topic": {
+          "en": "Travel plan (CL14)",
+          "ur": "سفر کا منصوبہ (CL14)"
+        },
+        "prompt": {
+          "en": "A says «تَسْتَغْرِقُ ثَلَاثَ سَاعَاتٍ.» Which fact did A give?",
+          "ur": "A کہتا ہے «تَسْتَغْرِقُ ثَلَاثَ سَاعَاتٍ.» A نے کون سی بات بتائی؟"
+        },
+        "options": [
+          {
+            "en": "the departure time",
+            "ur": "روانگی کا وقت"
+          },
+          {
+            "en": "the arrival time",
+            "ur": "آمد کا وقت"
+          },
+          {
+            "en": "the length of the trip",
+            "ur": "سفر کی مدت"
+          },
+          {
+            "en": "the day of travel",
+            "ur": "سفر کا دن"
+          }
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 48 — numbers and time",
+      "ar": "الْأَعْدَادُ وَالْوَقْتُ",
+      "ur": "باب 48 — اعداد اور وقت"
+    },
+    "ayah": {
+      "surah": 9,
+      "ayah": 36,
+      "label": "At-Tawbah 9:36",
+      "ar": "إِنَّ عِدَّةَ الشُّهُورِ عِندَ اللَّهِ اثْنَا عَشَرَ شَهْرًا",
+      "en": "\"Indeed, the number of months with Allah is twelve months…\"",
+      "ur": "\"بے شک اللہ کے نزدیک مہینوں کی گنتی بارہ مہینے ہے…\"",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/009036.mp3"
+    },
+    "highlighted_word_indices": [
+      5,
+      6,
+      7
+    ],
+    "highlighted_words": [
+      "اثْنَا",
+      "عَشَرَ",
+      "شَهْرًا"
+    ],
+    "noor_explanation": {
+      "en": "A number and its noun.",
+      "ur": "عدد اور اس کا معدود۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 48 complete. Chapter 49: clauses and links.",
+      "ur": "باب 48 مکمل۔ باب 49: جملے اور ربط۔"
+    }
+  }
+}

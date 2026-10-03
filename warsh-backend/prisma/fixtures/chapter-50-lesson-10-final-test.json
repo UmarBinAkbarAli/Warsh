@@ -1,0 +1,436 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 50, final test (ch50-test, new). Added 2026-10-03 in the proposal harvest, batch 5. Twelve multiple-choice questions: gist (q01–02), text-supported detail (q03–04), reference and connector (q05–06), one decision each from Al-Adiyat and Az-Zalzalah (q07–08), the CL15 help-desk replies (q09–10) and a summary and an inference (q11–12). Pass mark 80 %: 9/12 fails, 10/12 passes.",
+    "title": "Chapter 50 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الْخَمْسِينَ",
+    "titleUr": "باب 50 کا آخری امتحان",
+    "chapter_order": 50,
+    "lesson_order": 10,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 99,
+      "ayah": 1,
+      "label": "Az-Zalzalah 99:1",
+      "ar": "إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا",
+      "en": "When the earth is shaken with its quake,",
+      "ur": "جب زمین پوری طرح ہلا دی جائے گی،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/099001.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 50.",
+      "ur": "باب 50 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 50,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch50-test-q01",
+        "topic": {
+          "en": "Gist",
+          "ur": "مرکزی خیال"
+        },
+        "prompt": {
+          "en": "Which sentence is the main idea of 2:164: «إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالْأَرْضِ وَاخْتِلَافِ اللَّيْلِ وَالنَّهَارِ … لَآيَاتٍ لِقَوْمٍ يَعْقِلُونَ»?",
+          "ur": "2:164 کا مرکزی خیال کون سا جملہ ہے: «إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالْأَرْضِ وَاخْتِلَافِ اللَّيْلِ وَالنَّهَارِ … لَآيَاتٍ لِقَوْمٍ يَعْقِلُونَ»؟"
+        },
+        "options": [
+          {
+            "en": "Night is always longer than day.",
+            "ur": "رات ہمیشہ دن سے لمبی ہوتی ہے۔"
+          },
+          {
+            "en": "Creation and its changes are signs for people who think.",
+            "ur": "تخلیق اور اس کی تبدیلیاں سوچنے والوں کے لیے نشانیاں ہیں۔"
+          },
+          {
+            "en": "People should not think about the heavens.",
+            "ur": "لوگوں کو آسمانوں کے بارے میں نہیں سوچنا چاہیے۔"
+          },
+          {
+            "en": "Ships are signs of wealth.",
+            "ur": "کشتیاں دولت کی نشانی ہیں۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch50-test-q02",
+        "topic": {
+          "en": "Gist",
+          "ur": "مرکزی خیال"
+        },
+        "prompt": {
+          "en": "Which sentence sums up 55:1–4 («الرَّحْمَٰنُ عَلَّمَ الْقُرْآنَ خَلَقَ الْإِنْسَانَ عَلَّمَهُ الْبَيَانَ»)?",
+          "ur": "55:1–4 کا خلاصہ کون سا جملہ ہے («الرَّحْمَٰنُ عَلَّمَ الْقُرْآنَ خَلَقَ الْإِنْسَانَ عَلَّمَهُ الْبَيَانَ»)؟"
+        },
+        "options": [
+          {
+            "en": "Man taught the Quran to the Most Merciful.",
+            "ur": "انسان نے رحمٰن کو قرآن سکھایا۔"
+          },
+          {
+            "en": "The Quran created man.",
+            "ur": "قرآن نے انسان کو پیدا کیا۔"
+          },
+          {
+            "en": "The Most Merciful did not teach man.",
+            "ur": "رحمٰن نے انسان کو نہیں سکھایا۔"
+          },
+          {
+            "en": "The Most Merciful taught the Quran, created man and taught him expression.",
+            "ur": "رحمٰن نے قرآن سکھایا، انسان کو پیدا کیا اور اسے بیان سکھایا۔"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch50-test-q03",
+        "topic": {
+          "en": "Detail",
+          "ur": "تفصیل"
+        },
+        "prompt": {
+          "en": "In 24:25, which words say what they will come to know?",
+          "ur": "24:25 میں کون سے الفاظ بتاتے ہیں کہ وہ کیا جان لیں گے؟"
+        },
+        "options": [
+          {
+            "en": "وَيَعْلَمُونَ أَنَّ اللَّهَ هُوَ الْحَقُّ الْمُبِينُ",
+            "ur": "وَيَعْلَمُونَ أَنَّ اللَّهَ هُوَ الْحَقُّ الْمُبِينُ"
+          },
+          {
+            "en": "يَوْمَئِذٍ يُوَفِّيهِمُ",
+            "ur": "يَوْمَئِذٍ يُوَفِّيهِمُ"
+          },
+          {
+            "en": "دِينَهُمُ الْحَقَّ",
+            "ur": "دِينَهُمُ الْحَقَّ"
+          },
+          {
+            "en": "يُوَفِّيهِمُ اللَّهُ",
+            "ur": "يُوَفِّيهِمُ اللَّهُ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch50-test-q04",
+        "topic": {
+          "en": "Detail",
+          "ur": "تفصیل"
+        },
+        "prompt": {
+          "en": "In 99:6, who are shown their deeds?",
+          "ur": "99:6 میں کسے ان کے اعمال دکھائے جاتے ہیں؟"
+        },
+        "options": [
+          {
+            "en": "the earth",
+            "ur": "زمین"
+          },
+          {
+            "en": "the angels",
+            "ur": "فرشتے"
+          },
+          {
+            "en": "the people, who come forth in separate groups",
+            "ur": "لوگ، جو الگ الگ گروہوں میں نکلتے ہیں"
+          },
+          {
+            "en": "only one person",
+            "ur": "صرف ایک شخص"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch50-test-q05",
+        "topic": {
+          "en": "Reference",
+          "ur": "حوالہ"
+        },
+        "prompt": {
+          "en": "In «عَلَّمَهُ الْبَيَانَ» (55:4), what does the هُ point back to?",
+          "ur": "«عَلَّمَهُ الْبَيَانَ» (55:4) میں هُ کس کی طرف لوٹتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "الْقُرْآنَ (55:2)",
+            "ur": "الْقُرْآنَ (55:2)"
+          },
+          {
+            "en": "الْإِنْسَانَ (55:3)",
+            "ur": "الْإِنْسَانَ (55:3)"
+          },
+          {
+            "en": "الرَّحْمَٰنُ (55:1)",
+            "ur": "الرَّحْمَٰنُ (55:1)"
+          },
+          {
+            "en": "الْبَيَانَ",
+            "ur": "الْبَيَانَ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch50-test-q06",
+        "topic": {
+          "en": "Connector",
+          "ur": "ربط"
+        },
+        "prompt": {
+          "en": "What does «إِلَّا أَنْ يَشَاءَ اللَّهُ» (18:24) add to the promise in 18:23?",
+          "ur": "«إِلَّا أَنْ يَشَاءَ اللَّهُ» (18:24) 18:23 کے وعدے میں کیا اضافہ کرتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "an exception: \"except that Allah wills\"",
+            "ur": "ایک استثنا: \"سوائے اس کے کہ اللہ چاہے\""
+          },
+          {
+            "en": "a reason: \"because Allah willed\"",
+            "ur": "ایک وجہ: \"کیونکہ اللہ نے چاہا\""
+          },
+          {
+            "en": "a second promise",
+            "ur": "دوسرا وعدہ"
+          },
+          {
+            "en": "a question",
+            "ur": "ایک سوال"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch50-test-q07",
+        "topic": {
+          "en": "Al-Adiyat",
+          "ur": "العادیات"
+        },
+        "prompt": {
+          "en": "In 100:1–5, which picture comes right before «فَأَثَرْنَ بِهِ نَقْعًا» (they stir up dust)?",
+          "ur": "100:1–5 میں «فَأَثَرْنَ بِهِ نَقْعًا» (وہ غبار اڑاتے ہیں) سے ٹھیک پہلے کون سا منظر ہے؟"
+        },
+        "options": [
+          {
+            "en": "they pant («وَالْعَادِيَاتِ ضَبْحًا»)",
+            "ur": "وہ ہانپتے ہیں («وَالْعَادِيَاتِ ضَبْحًا»)"
+          },
+          {
+            "en": "they strike sparks («فَالْمُورِيَاتِ قَدْحًا»)",
+            "ur": "وہ چنگاریاں نکالتے ہیں («فَالْمُورِيَاتِ قَدْحًا»)"
+          },
+          {
+            "en": "they raid at dawn («فَالْمُغِيرَاتِ صُبْحًا»)",
+            "ur": "وہ صبح حملہ کرتے ہیں («فَالْمُغِيرَاتِ صُبْحًا»)"
+          },
+          {
+            "en": "they enter a gathering («فَوَسَطْنَ بِهِ جَمْعًا»)",
+            "ur": "وہ جمگھٹے میں گھستے ہیں («فَوَسَطْنَ بِهِ جَمْعًا»)"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch50-test-q08",
+        "topic": {
+          "en": "Az-Zalzalah",
+          "ur": "الزلزال"
+        },
+        "prompt": {
+          "en": "In 99:7–8, what differs between the two ayat?",
+          "ur": "99:7–8 میں دونوں آیات میں کیا مختلف ہے؟"
+        },
+        "options": [
+          {
+            "en": "who is addressed",
+            "ur": "مخاطب کون ہے"
+          },
+          {
+            "en": "whether the deed is seen",
+            "ur": "کیا عمل دیکھا جاتا ہے"
+          },
+          {
+            "en": "the weight of the deed",
+            "ur": "عمل کا وزن"
+          },
+          {
+            "en": "the thing done: good («خَيْرًا») or evil («شَرًّا»)",
+            "ur": "کیا ہوا کام: نیکی («خَيْرًا») یا برائی («شَرًّا»)"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch50-test-q09",
+        "topic": {
+          "en": "Help request (CL15)",
+          "ur": "مدد کی درخواست (CL15)"
+        },
+        "prompt": {
+          "en": "The helper says «تَفَضَّلْ.» Which sentence tells the helper you lost your bag?",
+          "ur": "مددگار کہتا ہے «تَفَضَّلْ.» کون سا جملہ مددگار کو بتاتا ہے کہ آپ کا بیگ کھو گیا؟"
+        },
+        "options": [
+          {
+            "en": "أَيْنَ الْمَكْتَبُ؟",
+            "ur": "أَيْنَ الْمَكْتَبُ؟"
+          },
+          {
+            "en": "شُكْرًا.",
+            "ur": "شُكْرًا."
+          },
+          {
+            "en": "عَفْوًا.",
+            "ur": "عَفْوًا."
+          },
+          {
+            "en": "فَقَدْتُ حَقِيبَتِي.",
+            "ur": "فَقَدْتُ حَقِيبَتِي."
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch50-test-q10",
+        "topic": {
+          "en": "Help request (CL15)",
+          "ur": "مدد کی درخواست (CL15)"
+        },
+        "prompt": {
+          "en": "The helper says «الْمَكْتَبُ هُنَاكَ.» What did you learn?",
+          "ur": "مددگار کہتا ہے «الْمَكْتَبُ هُنَاكَ.» آپ نے کیا جانا؟"
+        },
+        "options": [
+          {
+            "en": "where the office is",
+            "ur": "دفتر کہاں ہے"
+          },
+          {
+            "en": "that the office is closed",
+            "ur": "کہ دفتر بند ہے"
+          },
+          {
+            "en": "that your bag was found",
+            "ur": "کہ آپ کا بیگ مل گیا"
+          },
+          {
+            "en": "that the helper is leaving",
+            "ur": "کہ مددگار جا رہا ہے"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch50-test-q11",
+        "topic": {
+          "en": "Summary",
+          "ur": "خلاصہ"
+        },
+        "prompt": {
+          "en": "Which is the best summary of 100:6–11?",
+          "ur": "100:6–11 کا بہترین خلاصہ کون سا ہے؟"
+        },
+        "options": [
+          {
+            "en": "Mankind is grateful and gives away his wealth.",
+            "ur": "انسان شکر گزار ہے اور اپنا مال دے دیتا ہے۔"
+          },
+          {
+            "en": "Mankind is ungrateful and attached to wealth, yet his Lord is fully aware of them on the Day.",
+            "ur": "انسان ناشکرا اور مال کا شیدا ہے، مگر اس کا رب اس دن ان سے پوری طرح باخبر ہے۔"
+          },
+          {
+            "en": "The racers are fully aware of their Lord.",
+            "ur": "دوڑنے والے اپنے رب سے پوری طرح باخبر ہیں۔"
+          },
+          {
+            "en": "The graves are empty and nothing is known.",
+            "ur": "قبریں خالی ہیں اور کچھ معلوم نہیں۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch50-test-q12",
+        "topic": {
+          "en": "Inference",
+          "ur": "نتیجہ"
+        },
+        "prompt": {
+          "en": "Which statement is supported by 99:7–8?",
+          "ur": "99:7–8 سے کون سا بیان ثابت ہوتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "Only large deeds will be seen.",
+            "ur": "صرف بڑے اعمال دیکھے جائیں گے۔"
+          },
+          {
+            "en": "Good deeds are seen but evil deeds are not.",
+            "ur": "نیک اعمال دیکھے جاتے ہیں مگر برے نہیں۔"
+          },
+          {
+            "en": "Even a very small deed, good or evil, will be seen.",
+            "ur": "بہت چھوٹا عمل بھی، نیک یا برا، دیکھا جائے گا۔"
+          },
+          {
+            "en": "The earth decides which deeds count.",
+            "ur": "زمین طے کرتی ہے کہ کون سے اعمال شمار ہوں۔"
+          }
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 50 — connected reading",
+      "ar": "الْقِرَاءَةُ الْمُتَرَابِطَةُ",
+      "ur": "باب 50 — مسلسل پڑھنا"
+    },
+    "ayah": {
+      "surah": 99,
+      "ayah": 1,
+      "label": "Az-Zalzalah 99:1",
+      "ar": "إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا",
+      "en": "When the earth is shaken with its quake,",
+      "ur": "جب زمین پوری طرح ہلا دی جائے گی،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/099001.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "highlighted_words": [
+      "إِذَا",
+      "زُلْزِلَتِ",
+      "الْأَرْضُ",
+      "زِلْزَالَهَا"
+    ],
+    "noor_explanation": {
+      "en": "Reading a text for gist, evidence and references.",
+      "ur": "متن کو مرکزی خیال، شہادت اور حوالوں کے لیے پڑھنا۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 50 complete. Chapter 51 begins Book 6.",
+      "ur": "باب 50 مکمل۔ باب 51 سے کتاب 6 شروع ہوتی ہے۔"
+    }
+  }
+}

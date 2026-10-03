@@ -889,8 +889,35 @@ Everything below this list is either done and verified, or one of these:
    scenes for 150 cards requested in `Docs/lesson-illustrations-needed.md` (the
    cards of the kept Ch 44 lessons and Ch 45 lessons 1–7 are a later pass).
    Map entries for Ch 41–45 rewritten (S10). Not done: scholarly review, Android
-   pass; `quran:audit-fixtures` still flags `chapter-50-lesson-05.json` 55:1
-   (batch 5).
+   pass.
+   **Proposal harvest, batch 5 (Chapters 46–50): live in production
+   2026-10-03.** Ch 46 kept its six lessons (a line saying سَيَصْلَى "stays
+   مَرْفُوع" in `ch46-l05` is corrected: its ending is hidden until Chapter 57)
+   and gained the retrieval review `ch46-l07` and `ch46-test`; `ch46-l06` is now
+   STANDARD as the proposal asks. Ch 47 kept its lessons and gained `ch47-test`.
+   Ch 48 gained numbers 11–20 (`ch48-l06`), tens / compounds / 100 (`ch48-l07`),
+   an hours-1–12 card in the clock lesson, the review `ch48-l08`, `ch48-test`
+   and **CL14 Time and Travel Planning** (`ch48-l05` rebuilt in place; the old
+   SP8 travel du'a phrases are gone) and was reordered to the nine-item plan.
+   Ch 49 was rebuilt: layers of a sentence (`ch49-l01`), أَنَّ / كَأَنَّ
+   (`ch49-l02`), the new لَكِنَّ / لَعَلَّ / لَيْتَ lesson (`ch49-l07`), which word
+   a phrase belongs to (`ch49-l03`), relative clauses with their linking pronoun
+   (`ch49-l04`), 67:1 kept (`ch49-l05`), review and test. Ch 50 rebuilt
+   `ch50-l02` (pronouns and connectors, 18:23–24) and `ch50-l03` (24:25 in
+   chunks), converted `ch50-l04` to **CL15 Asking for Help**, fixed `ch50-l05`'s
+   hook (the Quran audit's 55:1 flag is gone), and gained Al-Adiyat in two parts
+   (`ch50-l07`, `ch50-l08`), Az-Zalzalah (`ch50-l09`), the review and
+   `ch50-test`. Published with `scripts/promote-chapters-46-50.cjs` after a
+   staging API walk (order, test locked until the lessons are done, key
+   stripped, 9/12 fails, 10/12 passes, replay 0 XP, all five chapters);
+   `content:check` 514/514 and `content:baseline` 514. **No TTS was generated:**
+   313 missing catalogue clips (116 new) and 19 phrase clips (CL13, CL14, CL15)
+   are listed in `Docs/lesson-audio-needed.md`. 28 new scenes for 85 cards
+   requested in `Docs/lesson-illustrations-needed.md` (the cards of the kept
+   lessons are a later pass). Map entries for Ch 46–50 rewritten (S10). Not
+   done: scholarly review, Android pass, the proposal's optional metric-unit
+   bank (meter, kilometre, kilogram, litre) and a Studio read-through of the
+   rebuilt Ch 49 / Ch 50 lessons.
    **Chapter 25 (`Docs/proposals/chapter-25-content-correction.md`) is
    corrected, staging-verified and promoted to production 2026-09-24** on the
    owner's instruction. The first rewrite was reviewed and fixed before

@@ -1,0 +1,478 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 49, retrieval review (ch49-l06, new). Added 2026-10-03 in the proposal harvest, batch 5. Two tasks per strand: main and embedded clause, the sisters of إِنَّ, phrase boundaries, relative links, and 67:1. No new particle.",
+    "chapter_order": 49,
+    "lesson_order": 7,
+    "chapter_title": "Clauses and Links",
+    "title": "Chapter 49 Review — Clauses and Links",
+    "titleAr": "مُرَاجَعَةُ الْبَابِ 49 — الْجُمَلُ وَالرَّوَابِطُ",
+    "titleUr": "باب 49 کا جائزہ — جملے اور ربط",
+    "estimated_minutes": 10,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 67,
+      "ayah": 1,
+      "label": "Al-Mulk 67:1",
+      "ar": "تَبَٰرَكَ الَّذِى بِيَدِهِ الْمُلْكُ وَهُوَ عَلَىٰ كُلِّ شَىْءٍ قَدِيرٌ",
+      "en": "\"Blessed is He in whose hand is the dominion, and He is over all things competent.\"",
+      "ur": "\"بابرکت ہے وہ جس کے ہاتھ میں بادشاہی ہے اور وہ ہر چیز پر قادر ہے۔\"",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/067001.mp3"
+    },
+    "autoplay": true,
+    "noor_intro": {
+      "en": "Review: clauses, the sisters of إِنَّ, phrase boundaries and links.",
+      "ur": "جائزہ: جملے، إِنَّ کی بہنیں، ٹکڑوں کی حدیں اور ربط۔"
+    }
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 49 summary",
+        "ar": "خُلَاصَةُ الْبَابِ",
+        "ur": "باب 49 کا خلاصہ"
+      },
+      "explanation": {
+        "en": "A main clause can carry another (قَالَ … إِنَّ …, عَلِمَ … أَنَّ …). The sisters of إِنَّ — أَنَّ, كَأَنَّ, لَكِنَّ, لَعَلَّ, لَيْتَ — put their noun in fatḥa. Ask which word each phrase belongs to. A relative clause may point back to its noun with a pronoun.",
+        "ur": "مرکزی جملہ دوسرا جملہ رکھ سکتا ہے (قَالَ … إِنَّ …، عَلِمَ … أَنَّ …)۔ إِنَّ کی بہنیں — أَنَّ، كَأَنَّ، لَكِنَّ، لَعَلَّ، لَيْتَ — اپنے اسم کو فتحہ دیتی ہیں۔ پوچھیں کہ ہر ٹکڑا کس لفظ سے جڑا ہے۔ صلہ والا جملہ ضمیر سے اپنے اسم کی طرف لوٹ سکتا ہے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Short أَنْ is different",
+        "ur": "چھوٹا أَنْ مختلف ہے"
+      },
+      "body": {
+        "en": "أَنْ without shadda takes a verb (أُرِيدُ أَنْ أَفْهَمَ); أَنَّ with shadda takes a noun in fatḥa.",
+        "ur": "شدّہ کے بغیر أَنْ فعل لیتا ہے (أُرِيدُ أَنْ أَفْهَمَ)؛ شدّہ والا أَنَّ فتحہ والا اسم لیتا ہے۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch49-l06-ex01",
+      "prompt": {
+        "ar": "قَالَ الطَّالِبُ إِنَّ الدَّرْسَ سَهْلٌ",
+        "ar_plain": "قال الطالب ان الدرس سهل",
+        "translit": "qaala at-taalibu inna ad-darsa sahlun",
+        "en": "The student said, \"Indeed, the lesson is easy.\"",
+        "ur": "طالب علم نے کہا: \"بے شک سبق آسان ہے۔\""
+      },
+      "options": [
+        {
+          "en": "what was said: إِنَّ الدَّرْسَ سَهْلٌ",
+          "ur": "جو کہا گیا: إِنَّ الدَّرْسَ سَهْلٌ"
+        },
+        {
+          "en": "the main clause: إِنَّ الدَّرْسَ سَهْلٌ",
+          "ur": "مرکزی جملہ: إِنَّ الدَّرْسَ سَهْلٌ"
+        },
+        {
+          "en": "the predicate: الطَّالِبُ",
+          "ur": "خبر: الطَّالِبُ"
+        },
+        {
+          "en": "the noun of إِنَّ: قَالَ",
+          "ur": "إِنَّ کا اسم: قَالَ"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch49-l06-ex02",
+      "mode": "TAP",
+      "sentence_ar": "عَلِمَ الطَّالِبُ ___ الدَّرْسَ سَهْلٌ",
+      "hint": {
+        "en": "The student knew that the lesson is easy.",
+        "ur": "طالب علم نے جان لیا کہ سبق آسان ہے۔"
+      },
+      "options": [
+        {
+          "ar": "أَنْ",
+          "ar_plain": "ان",
+          "translit": "an",
+          "en": "to",
+          "ur": "کہ"
+        },
+        {
+          "ar": "أَنَّ",
+          "ar_plain": "ان",
+          "translit": "anna",
+          "en": "that",
+          "ur": "کہ"
+        },
+        {
+          "ar": "كَأَنَّ",
+          "ar_plain": "كان",
+          "translit": "ka-anna",
+          "en": "as if",
+          "ur": "گویا"
+        },
+        {
+          "ar": "لَيْتَ",
+          "ar_plain": "ليت",
+          "translit": "layta",
+          "en": "if only",
+          "ur": "کاش"
+        }
+      ],
+      "correct_answer": {
+        "ar": "أَنَّ",
+        "ar_plain": "ان",
+        "translit": "anna",
+        "en": "that",
+        "ur": "کہ"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After a verb of knowing: أَنَّ + a noun in fatḥa.",
+        "ur": "جاننے کے فعل کے بعد: أَنَّ + فتحہ والا اسم۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch49-l06-ex03",
+      "prompt": {
+        "ar": "كَأَنَّ الْوَلَدَ أَسَدٌ",
+        "ar_plain": "كان الولد اسد",
+        "translit": "ka-anna al-walada asadun",
+        "en": "(constructed)",
+        "ur": "(بنایا گیا جملہ)"
+      },
+      "options": [
+        {
+          "en": "the boy knew the lion",
+          "ur": "لڑکا شیر کو جانتا تھا"
+        },
+        {
+          "en": "if only the boy were a lion",
+          "ur": "کاش لڑکا شیر ہوتا"
+        },
+        {
+          "en": "as if the boy is a lion",
+          "ur": "گویا لڑکا شیر ہے"
+        },
+        {
+          "en": "the boy is a lion, but small",
+          "ur": "لڑکا شیر ہے لیکن چھوٹا"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch49-l06-ex04",
+      "prompt": {
+        "ar": "لَيْتَ الدَّرْسَ سَهْلٌ",
+        "ar_plain": "ليت الدرس سهل",
+        "translit": "layta ad-darsa sahlun",
+        "en": "(constructed)",
+        "ur": "(بنایا گیا جملہ)"
+      },
+      "options": [
+        {
+          "en": "If only the lesson were easy.",
+          "ur": "کاش سبق آسان ہوتا۔"
+        },
+        {
+          "en": "Perhaps the lesson is easy.",
+          "ur": "شاید سبق آسان ہے۔"
+        },
+        {
+          "en": "The lesson is long, but easy.",
+          "ur": "سبق لمبا ہے لیکن آسان۔"
+        },
+        {
+          "en": "Indeed, the lesson is easy.",
+          "ur": "بے شک سبق آسان ہے۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch49-l06-ex05",
+      "prompt": {
+        "ar": "كِتَابُ الطَّالِبِ",
+        "ar_plain": "كتاب الطالب",
+        "translit": "kitaabu at-taalibi",
+        "en": "(iḍāfa)",
+        "ur": "(اضافت)"
+      },
+      "options": [
+        {
+          "en": "the book is a student",
+          "ur": "کتاب ایک طالب علم ہے"
+        },
+        {
+          "en": "the student’s book",
+          "ur": "طالب علم کی کتاب"
+        },
+        {
+          "en": "the new book",
+          "ur": "نئی کتاب"
+        },
+        {
+          "en": "in the student’s book",
+          "ur": "طالب علم کی کتاب میں"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch49-l06-ex06",
+      "statement": {
+        "en": "In كِتَابُ الطَّالِبِ الْجَدِيدِ, الْجَدِيدِ describes الطَّالِبِ.",
+        "ur": "كِتَابُ الطَّالِبِ الْجَدِيدِ میں الْجَدِيدِ الطَّالِبِ کی صفت ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "True: it is genitive, like الطَّالِبِ.",
+        "ur": "درست: یہ مجرور ہے، الطَّالِبِ کی طرح۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch49-l06-ex07",
+      "prompt": {
+        "ar": "الْكِتَابُ الَّذِي قَرَأْتُهُ",
+        "ar_plain": "الكتاب الذي قراته",
+        "translit": "al-kitaabu alladhii qara-tuhu",
+        "en": "(the هُ is the link)",
+        "ur": "(هُ ربط ہے)"
+      },
+      "options": [
+        {
+          "en": "the book that read me",
+          "ur": "وہ کتاب جس نے مجھے پڑھا"
+        },
+        {
+          "en": "the book that he wrote",
+          "ur": "وہ کتاب جو اس نے لکھی"
+        },
+        {
+          "en": "the book is new",
+          "ur": "کتاب نئی ہے"
+        },
+        {
+          "en": "the book that I read",
+          "ur": "وہ کتاب جو میں نے پڑھی"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch49-l06-ex08",
+      "mode": "TAP",
+      "sentence_ar": "الطَّالِبُ ___ كَتَبَ الدَّرْسَ مُجْتَهِدٌ",
+      "hint": {
+        "en": "The student who wrote the lesson is hardworking.",
+        "ur": "وہ طالب علم جس نے سبق لکھا محنتی ہے۔"
+      },
+      "options": [
+        {
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "alladhii",
+          "en": "who (masculine singular)",
+          "ur": "جو (مذکر واحد)"
+        },
+        {
+          "ar": "الَّتِي",
+          "ar_plain": "التي",
+          "translit": "allatii",
+          "en": "who (feminine)",
+          "ur": "جو (مؤنث)"
+        },
+        {
+          "ar": "الَّذِينَ",
+          "ar_plain": "الذين",
+          "translit": "alladhiina",
+          "en": "who (plural)",
+          "ur": "جو (جمع)"
+        },
+        {
+          "ar": "أَنَّ",
+          "ar_plain": "ان",
+          "translit": "anna",
+          "en": "that",
+          "ur": "کہ"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الَّذِي",
+        "ar_plain": "الذي",
+        "translit": "alladhii",
+        "en": "who (masculine singular)",
+        "ur": "جو (مذکر واحد)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The antecedent is masculine singular.",
+        "ur": "سابقہ مذکر واحد ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch49-l06-ex09",
+      "statement": {
+        "en": "Every relative clause must show a pronoun that points back to its noun.",
+        "ur": "ہر صلہ والے جملے میں ایسی ضمیر ہونا ضروری ہے جو اپنے اسم کی طرف لوٹے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False: in الطَّالِبُ الَّذِي كَتَبَ الدَّرْسَ no extra pronoun appears.",
+        "ur": "غلط: الطَّالِبُ الَّذِي كَتَبَ الدَّرْسَ میں کوئی اضافی ضمیر نظر نہیں آتی۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch49-l06-ex10",
+      "prompt": {
+        "ar": "بِيَدِهِ الْمُلْكُ",
+        "ar_plain": "بيده الملك",
+        "translit": "biyadihi al-mulku",
+        "en": "(67:1)",
+        "ur": "(67:1)"
+      },
+      "options": [
+        {
+          "en": "in His hand is the dominion",
+          "ur": "اس کے ہاتھ میں بادشاہی ہے"
+        },
+        {
+          "en": "the dominion has no hand",
+          "ur": "بادشاہی کا کوئی ہاتھ نہیں"
+        },
+        {
+          "en": "His hand is the dominion of the hand",
+          "ur": "اس کا ہاتھ ہاتھ کی بادشاہی ہے"
+        },
+        {
+          "en": "the dominion is not in His hand",
+          "ur": "بادشاہی اس کے ہاتھ میں نہیں"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch49-l06-ex11",
+      "mode": "TAP",
+      "sentence_ar": "لَيْتَ ___ سَهْلٌ",
+      "hint": {
+        "en": "If only the lesson were easy.",
+        "ur": "کاش سبق آسان ہوتا۔"
+      },
+      "options": [
+        {
+          "ar": "الدَّرْسُ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsu",
+          "en": "the lesson (ḍamma)",
+          "ur": "سبق (ضمہ)"
+        },
+        {
+          "ar": "الدَّرْسِ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsi",
+          "en": "the lesson (kasra)",
+          "ur": "سبق (کسرہ)"
+        },
+        {
+          "ar": "الدَّرْسَ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsa",
+          "en": "the lesson (fatḥa)",
+          "ur": "سبق (فتحہ)"
+        },
+        {
+          "ar": "دَرْسٌ",
+          "ar_plain": "درس",
+          "translit": "darsun",
+          "en": "a lesson",
+          "ur": "ایک سبق"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الدَّرْسَ",
+        "ar_plain": "الدرس",
+        "translit": "ad-darsa",
+        "en": "the lesson (fatḥa)",
+        "ur": "سبق (فتحہ)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A sister of إِنَّ puts its noun in fatḥa.",
+        "ur": "إِنَّ کی بہن اپنے اسم کو فتحہ دیتی ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch49-l06-ex12",
+      "statement": {
+        "en": "In وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ, the predicate is قَدِيرٌ.",
+        "ur": "وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ میں خبر قَدِيرٌ ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "True: هُوَ is the subject; عَلَىٰ كُلِّ شَيْءٍ goes with قَدِيرٌ.",
+        "ur": "درست: هُوَ مبتدا ہے؛ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ کے ساتھ ہے۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Reading 67:1 in layers",
+      "ar": "تَبَارَكَ الَّذِي",
+      "ur": "67:1 کو تہ بہ تہ پڑھنا"
+    },
+    "ayah": {
+      "surah": 67,
+      "ayah": 1,
+      "label": "Al-Mulk 67:1",
+      "ar": "تَبَٰرَكَ الَّذِى بِيَدِهِ الْمُلْكُ وَهُوَ عَلَىٰ كُلِّ شَىْءٍ قَدِيرٌ",
+      "en": "\"Blessed is He in whose hand is the dominion, and He is over all things competent.\"",
+      "ur": "\"بابرکت ہے وہ جس کے ہاتھ میں بادشاہی ہے اور وہ ہر چیز پر قادر ہے۔\"",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/067001.mp3"
+    },
+    "highlighted_word_indices": [
+      1,
+      2,
+      3
+    ],
+    "highlighted_words": [
+      "الَّذِى",
+      "بِيَدِهِ",
+      "الْمُلْكُ"
+    ],
+    "noor_explanation": {
+      "en": "الَّذِي + a clause that points back with هِ.",
+      "ur": "الَّذِي + وہ جملہ جو هِ سے پیچھے لوٹتا ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Clauses, particles, phrases and links — the layers of a sentence.",
+      "ur": "جملے، حروف، ٹکڑے اور ربط — جملے کی تہیں۔"
+    }
+  }
+}

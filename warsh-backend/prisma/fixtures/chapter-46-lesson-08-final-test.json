@@ -1,0 +1,437 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 46, final test (ch46-test, new). Added 2026-10-03 in the proposal harvest, batch 5. Twelve multiple-choice questions: parsing routine (q01–02), governor versus nearby word (q03–04), regular ending (q05–06), statement / prohibition / command (q07–08), purpose and endpoint (q09–10), Al-Masad 111:1–3 (q11–12). Options are neutral Arabic; no weak-final or five-verb endings. Pass mark 80 %: 9/12 fails, 10/12 passes.",
+    "title": "Chapter 46 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ السَّادِسِ وَالْأَرْبَعِينَ",
+    "titleUr": "باب 46 کا آخری امتحان",
+    "chapter_order": 46,
+    "lesson_order": 8,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 17,
+      "ayah": 22,
+      "label": "Al-Isra' 17:22",
+      "ar": "لَا تَجْعَلْ مَعَ اللَّهِ إِلَٰهًا آخَرَ",
+      "en": "Do not set up another god alongside Allah.",
+      "ur": "اللہ کے ساتھ کوئی دوسرا معبود نہ بناؤ۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/017022.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 46.",
+      "ur": "باب 46 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 46,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch46-test-q01",
+        "topic": {
+          "en": "Parsing routine",
+          "ur": "تجزیے کا طریقہ"
+        },
+        "prompt": {
+          "en": "Which verb completes 'The student did not go to school'?",
+          "ur": "کون سا فعل جملہ 'طالب علم اسکول نہیں گیا' مکمل کرتا ہے؟"
+        },
+        "arabic": "الطَّالِبُ لَمْ ___ إِلَى الْمَدْرَسَةِ.",
+        "options": [
+          {
+            "en": "يَذْهَبْ",
+            "ur": "يَذْهَبْ"
+          },
+          {
+            "en": "يَذْهَبُ",
+            "ur": "يَذْهَبُ"
+          },
+          {
+            "en": "يَذْهَبَ",
+            "ur": "يَذْهَبَ"
+          },
+          {
+            "en": "ذَهَبَ",
+            "ur": "ذَهَبَ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch46-test-q02",
+        "topic": {
+          "en": "Parsing routine",
+          "ur": "تجزیے کا طریقہ"
+        },
+        "prompt": {
+          "en": "In «أَحْمَدُ يُرِيدُ أَنْ يَكْتُبَ الدَّرْسَ», which word governs يَكْتُبَ?",
+          "ur": "«أَحْمَدُ يُرِيدُ أَنْ يَكْتُبَ الدَّرْسَ» میں يَكْتُبَ پر کون سا لفظ عمل کرتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "يُرِيدُ",
+            "ur": "يُرِيدُ"
+          },
+          {
+            "en": "أَحْمَدُ",
+            "ur": "أَحْمَدُ"
+          },
+          {
+            "en": "أَنْ",
+            "ur": "أَنْ"
+          },
+          {
+            "en": "الدَّرْسَ",
+            "ur": "الدَّرْسَ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch46-test-q03",
+        "topic": {
+          "en": "Governor or nearby word",
+          "ur": "عامل یا قریبی لفظ"
+        },
+        "prompt": {
+          "en": "In «إِنَّ الطَّالِبَ يَكْتُبُ الدَّرْسَ», does إِنَّ govern the verb يَكْتُبُ?",
+          "ur": "«إِنَّ الطَّالِبَ يَكْتُبُ الدَّرْسَ» میں کیا إِنَّ فعل يَكْتُبُ پر عمل کرتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "Yes — it makes the verb مَنْصُوب.",
+            "ur": "ہاں — وہ فعل کو منصوب کرتا ہے۔"
+          },
+          {
+            "en": "No — إِنَّ works on the noun after it; the verb stays with ḍamma.",
+            "ur": "نہیں — إِنَّ اپنے بعد والے اسم پر عمل کرتا ہے؛ فعل ضمہ پر رہتا ہے۔"
+          },
+          {
+            "en": "Yes — it makes the verb مَجْزُوم.",
+            "ur": "ہاں — وہ فعل کو مجزوم کرتا ہے۔"
+          },
+          {
+            "en": "No — the verb is a perfect verb.",
+            "ur": "نہیں — فعل ماضی ہے۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch46-test-q04",
+        "topic": {
+          "en": "Governor or nearby word",
+          "ur": "عامل یا قریبی لفظ"
+        },
+        "prompt": {
+          "en": "In «أُرِيدُ أَنْ أَفْهَمَ», which verb does أَنْ govern?",
+          "ur": "«أُرِيدُ أَنْ أَفْهَمَ» میں أَنْ کس فعل پر عمل کرتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "أُرِيدُ",
+            "ur": "أُرِيدُ"
+          },
+          {
+            "en": "both verbs",
+            "ur": "دونوں افعال"
+          },
+          {
+            "en": "neither verb",
+            "ur": "کسی فعل پر نہیں"
+          },
+          {
+            "en": "أَفْهَمَ",
+            "ur": "أَفْهَمَ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch46-test-q05",
+        "topic": {
+          "en": "Regular ending",
+          "ur": "عام فعل کا آخر"
+        },
+        "prompt": {
+          "en": "Which verb completes 'He will not write the lesson'?",
+          "ur": "کون سا فعل جملہ 'وہ سبق نہیں لکھے گا' مکمل کرتا ہے؟"
+        },
+        "arabic": "لَنْ ___ الدَّرْسَ.",
+        "options": [
+          {
+            "en": "يَكْتُبُ",
+            "ur": "يَكْتُبُ"
+          },
+          {
+            "en": "يَكْتُبْ",
+            "ur": "يَكْتُبْ"
+          },
+          {
+            "en": "كَتَبَ",
+            "ur": "كَتَبَ"
+          },
+          {
+            "en": "يَكْتُبَ",
+            "ur": "يَكْتُبَ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch46-test-q06",
+        "topic": {
+          "en": "Regular ending",
+          "ur": "عام فعل کا آخر"
+        },
+        "prompt": {
+          "en": "Which verb completes 'He did not sit in the class'?",
+          "ur": "کون سا فعل جملہ 'وہ کلاس میں نہیں بیٹھا' مکمل کرتا ہے؟"
+        },
+        "arabic": "لَمْ ___ فِي الْفَصْلِ.",
+        "options": [
+          {
+            "en": "يَجْلِسْ",
+            "ur": "يَجْلِسْ"
+          },
+          {
+            "en": "يَجْلِسُ",
+            "ur": "يَجْلِسُ"
+          },
+          {
+            "en": "يَجْلِسَ",
+            "ur": "يَجْلِسَ"
+          },
+          {
+            "en": "جَلَسَ",
+            "ur": "جَلَسَ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch46-test-q07",
+        "topic": {
+          "en": "Statement, prohibition, command",
+          "ur": "بیان، نہی، امر"
+        },
+        "prompt": {
+          "en": "Which sentence means 'Do not go to the market'?",
+          "ur": "کون سا جملہ 'بازار مت جاؤ' کا مطلب دیتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "لَا تَذْهَبُ إِلَى السُّوقِ.",
+            "ur": "لَا تَذْهَبُ إِلَى السُّوقِ."
+          },
+          {
+            "en": "اِذْهَبْ إِلَى السُّوقِ.",
+            "ur": "اِذْهَبْ إِلَى السُّوقِ."
+          },
+          {
+            "en": "لَا تَذْهَبْ إِلَى السُّوقِ.",
+            "ur": "لَا تَذْهَبْ إِلَى السُّوقِ."
+          },
+          {
+            "en": "لَنْ تَذْهَبَ إِلَى السُّوقِ.",
+            "ur": "لَنْ تَذْهَبَ إِلَى السُّوقِ."
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch46-test-q08",
+        "topic": {
+          "en": "Statement, prohibition, command",
+          "ur": "بیان، نہی، امر"
+        },
+        "prompt": {
+          "en": "Which one is a command form meaning 'Go!'?",
+          "ur": "کون سی صورت امر ہے جس کا مطلب 'جاؤ!' ہے؟"
+        },
+        "options": [
+          {
+            "en": "لَا تَذْهَبْ",
+            "ur": "لَا تَذْهَبْ"
+          },
+          {
+            "en": "اِذْهَبْ",
+            "ur": "اِذْهَبْ"
+          },
+          {
+            "en": "لَمْ يَذْهَبْ",
+            "ur": "لَمْ يَذْهَبْ"
+          },
+          {
+            "en": "يَذْهَبُ",
+            "ur": "يَذْهَبُ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch46-test-q09",
+        "topic": {
+          "en": "Purpose clause",
+          "ur": "غرض کا جملہ"
+        },
+        "prompt": {
+          "en": "Which verb completes 'I study so that I understand'?",
+          "ur": "کون سا فعل جملہ 'میں پڑھتا ہوں تاکہ سمجھوں' مکمل کرتا ہے؟"
+        },
+        "arabic": "أَدْرُسُ كَيْ ___.",
+        "options": [
+          {
+            "en": "أَفْهَمَ",
+            "ur": "أَفْهَمَ"
+          },
+          {
+            "en": "أَفْهَمُ",
+            "ur": "أَفْهَمُ"
+          },
+          {
+            "en": "أَفْهَمْ",
+            "ur": "أَفْهَمْ"
+          },
+          {
+            "en": "فَهِمْتُ",
+            "ur": "فَهِمْتُ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch46-test-q10",
+        "topic": {
+          "en": "Endpoint حَتَّى",
+          "ur": "انتہا والا حَتَّى"
+        },
+        "prompt": {
+          "en": "Which verb completes 'I sit here until Ahmad arrives'?",
+          "ur": "کون سا فعل جملہ 'میں یہاں بیٹھتا ہوں جب تک احمد نہ آ جائے' مکمل کرتا ہے؟"
+        },
+        "arabic": "أَجْلِسُ هُنَا حَتَّى ___ أَحْمَدُ.",
+        "options": [
+          {
+            "en": "يَحْضُرُ",
+            "ur": "يَحْضُرُ"
+          },
+          {
+            "en": "يَحْضُرْ",
+            "ur": "يَحْضُرْ"
+          },
+          {
+            "en": "حَضَرَ",
+            "ur": "حَضَرَ"
+          },
+          {
+            "en": "يَحْضُرَ",
+            "ur": "يَحْضُرَ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch46-test-q11",
+        "topic": {
+          "en": "Al-Masad 111:3",
+          "ur": "المسد 111:3"
+        },
+        "prompt": {
+          "en": "In سَيَصْلَىٰ (111:3), what does سَـ do?",
+          "ur": "سَيَصْلَىٰ (111:3) میں سَـ کیا کرتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "It makes the verb مَجْزُوم.",
+            "ur": "یہ فعل کو مجزوم کرتا ہے۔"
+          },
+          {
+            "en": "It marks the future; it is not a governor.",
+            "ur": "یہ مستقبل کی نشانی ہے؛ یہ عامل نہیں۔"
+          },
+          {
+            "en": "It makes the verb مَنْصُوب.",
+            "ur": "یہ فعل کو منصوب کرتا ہے۔"
+          },
+          {
+            "en": "It marks a prohibition.",
+            "ur": "یہ نہی کی نشانی ہے۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch46-test-q12",
+        "topic": {
+          "en": "Al-Masad 111:1–3",
+          "ur": "المسد 111:1–3"
+        },
+        "prompt": {
+          "en": "Which word in 111:1–3 is an imperfect verb?",
+          "ur": "111:1–3 میں کون سا لفظ مضارع فعل ہے؟"
+        },
+        "options": [
+          {
+            "en": "تَبَّتْ",
+            "ur": "تَبَّتْ"
+          },
+          {
+            "en": "وَتَبَّ",
+            "ur": "وَتَبَّ"
+          },
+          {
+            "en": "سَيَصْلَىٰ",
+            "ur": "سَيَصْلَىٰ"
+          },
+          {
+            "en": "أَغْنَىٰ",
+            "ur": "أَغْنَىٰ"
+          }
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 46 — applying the three states",
+      "ar": "تَطْبِيقُ الْأَحْوَالِ الثَّلَاثِ",
+      "ur": "باب 46 — تین حالتوں کا اطلاق"
+    },
+    "ayah": {
+      "surah": 17,
+      "ayah": 22,
+      "label": "Al-Isra' 17:22",
+      "ar": "لَا تَجْعَلْ مَعَ اللَّهِ إِلَٰهًا آخَرَ",
+      "en": "Do not set up another god alongside Allah.",
+      "ur": "اللہ کے ساتھ کوئی دوسرا معبود نہ بناؤ۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/017022.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "لَا",
+      "تَجْعَلْ"
+    ],
+    "noor_explanation": {
+      "en": "Verb, governor, state, sign.",
+      "ur": "فعل، عامل، حالت، علامت۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 46 complete. Chapter 47: the sound masculine plural.",
+      "ur": "باب 46 مکمل۔ باب 47: جمع مذکر سالم۔"
+    }
+  }
+}

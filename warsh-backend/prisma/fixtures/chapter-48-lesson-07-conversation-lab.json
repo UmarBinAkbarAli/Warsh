@@ -2,216 +2,828 @@
   "schema_version": "1.0",
   "template": "SPOKEN_PHRASES",
   "_meta": {
-    "_note": "SP8 after Chapter 48 — Travel and Hajj du'a foundations. Jussive forms enable conditional phrasing for travel and Hajj du'a.",
+    "_note": "Chapter 48, Lesson 7 (ch48-l05 rebuilt in place as the CL14 Conversation Lab, display order 7). Rebuilt 2026-10-03 in the proposal harvest, batch 5, from Docs/proposals/chapter-48-content-proposal.md; the old SP8 travel du‘a phrases are dropped (Chapter 60 owns travel and Hajj). A is the travel companion who knows the fictional itinerary — departs 19:00, takes three hours, arrives 22:00 — and B is the learner who asks the three questions. تَبْدَأُ, تَسْتَغْرِقُ, تَصِلُ and سَأَصِلُ are supplied whole; A’s lines are heard-only; every scored answer is a B phrase. Nine scored exercises: six question choices (three guided, three fresh) and three reply-comprehension items.",
+    "title": "Time and Travel Planning — Conversation Lab",
+    "titleAr": "تَخْطِيطُ الْوَقْتِ وَالسَّفَرِ",
+    "titleUr": "وقت اور سفر کی منصوبہ بندی — گفتگو لیب",
     "chapter_order": 48,
-    "lesson_order": 5,
+    "lesson_order": 7,
     "estimated_minutes": 10,
     "xp_reward": 15
   },
   "hook": {
     "ayah": {
       "surah": 2,
-      "ayah": 198,
-      "label": "Al-Baqarah 2:198",
-      "ar": "لَيْسَ عَلَيْكُمْ جُنَاحٌ أَن تَبْتَغُوا فَضْلًا مِّن رَّبِّكُمْ ۚ فَإِذَا أَفَضْتُم مِّنْ عَرَفَاتٍ فَاذْكُرُوا اللَّهَ عِندَ الْمَشْعَرِ الْحَرَامِ ۖ وَاذْكُرُوهُ كَمَا هَدَاكُمْ وَإِن كُنتُم مِّن قَبْلِهِ لَمِنَ الضَّالِّينَ",
-      "en": "There is no blame upon you for seeking bounty from your Lord [during ḥajj]. But when you depart from ʿArafāt, remember Allāh at al-Mashʿar al-Ḥarām. And remember Him, as He has guided you, for indeed, you were before that among those astray.",
-      "ur": "اس کا تمہیں کچھ گناہ نہیں کہ (حج کے دنوں میں بذریعہ تجارت) اپنے پروردگار سے روزی طلب کرو اور جب عرفات سے واپس ہونے لگو تو مشعر حرام (یعنی مزدلفے) میں خدا کا ذکر کرو اور اس طرح ذکر کرو جس طرح اس نے تم کو سکھایا۔ اور اس سے پیشتر تم لوگ (ان طریقوں سے) محض ناواقف تھے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002198.mp3"
+      "ayah": 196,
+      "label": "Al-Baqarah 2:196",
+      "ar": "فَصِيَامُ ثَلَٰثَةِ أَيَّامٍ فِى الْحَجِّ وَسَبْعَةٍ إِذَا رَجَعْتُمْ",
+      "en": "\"…then a fast of three days during the Hajj and of seven when you have returned.\"",
+      "ur": "\"…تو تین دن حج کے دوران اور سات دن جب تم لوٹ آؤ (روزے رکھے)۔\"",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002196.mp3"
     },
     "noor_intro": {
-      "en": "SP8 — Travel and Hajj du'a foundations. This lesson uses the jussive verb forms you've learned to give you the spoken phrases for travel, Hajj, and emergency du'a in classical Fus'ha.",
-      "ur": "SP8 — سفر اور حج دعاء بنیادیں۔ اس lesson میں ہم jussive verb forms استعمال کرتے ہیں جنہیں آپ نے سیکھا ہے تاکہ آپ کو سفر، حج، اور ہنگامی دعاء کے لیے spoken phrases classical Fus'ha میں ملیں۔"
+      "en": "Today you ask about a trip: when it begins, how long it takes, and when your companion arrives.",
+      "ur": "آج آپ ایک سفر کے بارے میں پوچھتے ہیں: وہ کب شروع ہوتا ہے، کتنا وقت لگتا ہے اور آپ کا ساتھی کب پہنچتا ہے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
+  "exercises": [
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch48-l05-ex01",
+      "prompt_line": {
+        "ar": "عِنْدَكَ سُؤَالٌ؟",
+        "ar_plain": "عندك سؤال؟",
+        "translit": "indaka suaalun",
+        "en": "Do you have a question? (You want to know when the trip begins.)",
+        "ur": "کیا آپ کا کوئی سوال ہے؟ (آپ جاننا چاہتے ہیں کہ سفر کب شروع ہوتا ہے۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "مَتَى تَبْدَأُ الرِّحْلَةُ؟",
+          "ar_plain": "متي تبدا الرحلة؟",
+          "translit": "mataa tabdau ar-rihlatu",
+          "en": "When does the trip begin?",
+          "ur": "سفر کب شروع ہوتا ہے؟"
+        },
+        {
+          "ar": "كَمْ سَاعَةً تَسْتَغْرِقُ الرِّحْلَةُ؟",
+          "ar_plain": "كم ساعة تستغرق الرحلة؟",
+          "translit": "kam saaatan tastaghriqu ar-rihlatu",
+          "en": "How many hours does the trip take?",
+          "ur": "سفر میں کتنے گھنٹے لگتے ہیں؟"
+        },
+        {
+          "ar": "مَتَى تَصِلُ؟",
+          "ar_plain": "متي تصل؟",
+          "translit": "mataa tasilu",
+          "en": "When do you arrive?",
+          "ur": "آپ کب پہنچتے ہیں؟"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "To ask the start time, say مَتَى تَبْدَأُ الرِّحْلَةُ؟",
+        "ur": "شروع کا وقت پوچھنے کے لیے کہیں مَتَى تَبْدَأُ الرِّحْلَةُ؟"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch48-l05-ex02",
+      "prompt_line": {
+        "ar": "تَبْدَأُ فِي السَّاعَةِ السَّابِعَةِ مَسَاءً.",
+        "ar_plain": "تبدا في الساعة السابعة مساء.",
+        "translit": "tabdau fii as-saaati as-saabiati masaan",
+        "en": "It begins at seven in the evening. (Now you want to know the length of the trip.)",
+        "ur": "یہ شام سات بجے شروع ہوتا ہے۔ (اب آپ سفر کا دورانیہ جاننا چاہتے ہیں۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "مَتَى تَبْدَأُ الرِّحْلَةُ؟",
+          "ar_plain": "متي تبدا الرحلة؟",
+          "translit": "mataa tabdau ar-rihlatu",
+          "en": "When does the trip begin?",
+          "ur": "سفر کب شروع ہوتا ہے؟"
+        },
+        {
+          "ar": "شُكْرًا.",
+          "ar_plain": "شكرا.",
+          "translit": "shukran",
+          "en": "Thank you.",
+          "ur": "شکریہ۔"
+        },
+        {
+          "ar": "كَمْ سَاعَةً تَسْتَغْرِقُ الرِّحْلَةُ؟",
+          "ar_plain": "كم ساعة تستغرق الرحلة؟",
+          "translit": "kam saaatan tastaghriqu ar-rihlatu",
+          "en": "How many hours does the trip take?",
+          "ur": "سفر میں کتنے گھنٹے لگتے ہیں؟"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "To ask the duration, say كَمْ سَاعَةً تَسْتَغْرِقُ الرِّحْلَةُ؟",
+        "ur": "دورانیہ پوچھنے کے لیے کہیں كَمْ سَاعَةً تَسْتَغْرِقُ الرِّحْلَةُ؟"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch48-l05-ex03",
+      "prompt_line": {
+        "ar": "تَسْتَغْرِقُ ثَلَاثَ سَاعَاتٍ.",
+        "ar_plain": "تستغرق ثلاث ساعات.",
+        "translit": "tastaghriqu thalaatha saaaatin",
+        "en": "It takes three hours. (Now you want to know when A arrives.)",
+        "ur": "اس میں تین گھنٹے لگتے ہیں۔ (اب آپ جاننا چاہتے ہیں کہ A کب پہنچے گا۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "مَتَى تَصِلُ؟",
+          "ar_plain": "متي تصل؟",
+          "translit": "mataa tasilu",
+          "en": "When do you arrive?",
+          "ur": "آپ کب پہنچتے ہیں؟"
+        },
+        {
+          "ar": "مَتَى تَبْدَأُ الرِّحْلَةُ؟",
+          "ar_plain": "متي تبدا الرحلة؟",
+          "translit": "mataa tabdau ar-rihlatu",
+          "en": "When does the trip begin?",
+          "ur": "سفر کب شروع ہوتا ہے؟"
+        },
+        {
+          "ar": "شُكْرًا.",
+          "ar_plain": "شكرا.",
+          "translit": "shukran",
+          "en": "Thank you.",
+          "ur": "شکریہ۔"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "To ask about arrival, say مَتَى تَصِلُ؟",
+        "ur": "آمد پوچھنے کے لیے کہیں مَتَى تَصِلُ؟"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch48-l05-ex04",
+      "prompt_line": {
+        "ar": "هَلْ عِنْدَكَ سُؤَالٌ؟",
+        "ar_plain": "هل عندك سؤال؟",
+        "translit": "hal indaka suaalun",
+        "en": "Do you have a question? (You are leaving in the morning and want the departure time.)",
+        "ur": "کیا آپ کا کوئی سوال ہے؟ (آپ صبح روانہ ہو رہے ہیں اور روانگی کا وقت جاننا چاہتے ہیں۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "كَمْ سَاعَةً تَسْتَغْرِقُ الرِّحْلَةُ؟",
+          "ar_plain": "كم ساعة تستغرق الرحلة؟",
+          "translit": "kam saaatan tastaghriqu ar-rihlatu",
+          "en": "How many hours does the trip take?",
+          "ur": "سفر میں کتنے گھنٹے لگتے ہیں؟"
+        },
+        {
+          "ar": "مَتَى تَصِلُ؟",
+          "ar_plain": "متي تصل؟",
+          "translit": "mataa tasilu",
+          "en": "When do you arrive?",
+          "ur": "آپ کب پہنچتے ہیں؟"
+        },
+        {
+          "ar": "مَتَى تَبْدَأُ الرِّحْلَةُ؟",
+          "ar_plain": "متي تبدا الرحلة؟",
+          "translit": "mataa tabdau ar-rihlatu",
+          "en": "When does the trip begin?",
+          "ur": "سفر کب شروع ہوتا ہے؟"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The departure time is asked with مَتَى تَبْدَأُ الرِّحْلَةُ؟",
+        "ur": "روانگی کا وقت مَتَى تَبْدَأُ الرِّحْلَةُ؟ سے پوچھا جاتا ہے۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch48-l05-ex05",
+      "prompt_line": {
+        "ar": "تَبْدَأُ فِي السَّاعَةِ الثَّامِنَةِ صَبَاحًا.",
+        "ar_plain": "تبدا في الساعة الثامنة صباحا.",
+        "translit": "tabdau fii as-saaati ath-thaaminati sabaahan",
+        "en": "It begins at eight in the morning. (You want to know how many hours it takes.)",
+        "ur": "یہ صبح آٹھ بجے شروع ہوتا ہے۔ (آپ جاننا چاہتے ہیں کہ اس میں کتنے گھنٹے لگتے ہیں۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "مَتَى تَصِلُ؟",
+          "ar_plain": "متي تصل؟",
+          "translit": "mataa tasilu",
+          "en": "When do you arrive?",
+          "ur": "آپ کب پہنچتے ہیں؟"
+        },
+        {
+          "ar": "كَمْ سَاعَةً تَسْتَغْرِقُ الرِّحْلَةُ؟",
+          "ar_plain": "كم ساعة تستغرق الرحلة؟",
+          "translit": "kam saaatan tastaghriqu ar-rihlatu",
+          "en": "How many hours does the trip take?",
+          "ur": "سفر میں کتنے گھنٹے لگتے ہیں؟"
+        },
+        {
+          "ar": "مَتَى تَبْدَأُ الرِّحْلَةُ؟",
+          "ar_plain": "متي تبدا الرحلة؟",
+          "translit": "mataa tabdau ar-rihlatu",
+          "en": "When does the trip begin?",
+          "ur": "سفر کب شروع ہوتا ہے؟"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Hours of duration: كَمْ سَاعَةً تَسْتَغْرِقُ الرِّحْلَةُ؟",
+        "ur": "دورانیہ کے گھنٹے: كَمْ سَاعَةً تَسْتَغْرِقُ الرِّحْلَةُ؟"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch48-l05-ex06",
+      "prompt_line": {
+        "ar": "تَسْتَغْرِقُ أَرْبَعَ سَاعَاتٍ.",
+        "ar_plain": "تستغرق اربع ساعات.",
+        "translit": "tastaghriqu arbaa saaaatin",
+        "en": "It takes four hours. (You want to know when A arrives.)",
+        "ur": "اس میں چار گھنٹے لگتے ہیں۔ (آپ جاننا چاہتے ہیں کہ A کب پہنچے گا۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "مَتَى تَبْدَأُ الرِّحْلَةُ؟",
+          "ar_plain": "متي تبدا الرحلة؟",
+          "translit": "mataa tabdau ar-rihlatu",
+          "en": "When does the trip begin?",
+          "ur": "سفر کب شروع ہوتا ہے؟"
+        },
+        {
+          "ar": "كَمْ سَاعَةً تَسْتَغْرِقُ الرِّحْلَةُ؟",
+          "ar_plain": "كم ساعة تستغرق الرحلة؟",
+          "translit": "kam saaatan tastaghriqu ar-rihlatu",
+          "en": "How many hours does the trip take?",
+          "ur": "سفر میں کتنے گھنٹے لگتے ہیں؟"
+        },
+        {
+          "ar": "مَتَى تَصِلُ؟",
+          "ar_plain": "متي تصل؟",
+          "translit": "mataa tasilu",
+          "en": "When do you arrive?",
+          "ur": "آپ کب پہنچتے ہیں؟"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Arrival: مَتَى تَصِلُ؟",
+        "ur": "آمد: مَتَى تَصِلُ؟"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch48-l05-ex07",
+      "prompt": {
+        "ar": "تَبْدَأُ فِي السَّاعَةِ السَّابِعَةِ مَسَاءً.",
+        "ar_plain": "تبدا في الساعة السابعة مساء.",
+        "translit": "tabdau fii as-saaati as-saabiati masaan",
+        "en": "(A replies)",
+        "ur": "(A کا جواب)"
+      },
+      "options": [
+        {
+          "en": "It begins at seven in the evening.",
+          "ur": "یہ شام سات بجے شروع ہوتا ہے۔"
+        },
+        {
+          "en": "It takes seven hours.",
+          "ur": "اس میں سات گھنٹے لگتے ہیں۔"
+        },
+        {
+          "en": "I will arrive at seven.",
+          "ur": "میں سات بجے پہنچوں گا۔"
+        },
+        {
+          "en": "It begins at seven in the morning.",
+          "ur": "یہ صبح سات بجے شروع ہوتا ہے۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch48-l05-ex08",
+      "prompt": {
+        "ar": "تَسْتَغْرِقُ ثَلَاثَ سَاعَاتٍ.",
+        "ar_plain": "تستغرق ثلاث ساعات.",
+        "translit": "tastaghriqu thalaatha saaaatin",
+        "en": "(A replies)",
+        "ur": "(A کا جواب)"
+      },
+      "options": [
+        {
+          "en": "It begins at three.",
+          "ur": "یہ تین بجے شروع ہوتا ہے۔"
+        },
+        {
+          "en": "I will arrive at three.",
+          "ur": "میں تین بجے پہنچوں گا۔"
+        },
+        {
+          "en": "It takes three hours.",
+          "ur": "اس میں تین گھنٹے لگتے ہیں۔"
+        },
+        {
+          "en": "It takes thirteen hours.",
+          "ur": "اس میں تیرہ گھنٹے لگتے ہیں۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch48-l05-ex09",
+      "prompt": {
+        "ar": "سَأَصِلُ فِي السَّاعَةِ الْعَاشِرَةِ مَسَاءً.",
+        "ar_plain": "ساصل في الساعة العاشرة مساء.",
+        "translit": "saasilu fii as-saaati al-aashirati masaan",
+        "en": "(A replies)",
+        "ur": "(A کا جواب)"
+      },
+      "options": [
+        {
+          "en": "The trip takes ten hours.",
+          "ur": "سفر میں دس گھنٹے لگتے ہیں۔"
+        },
+        {
+          "en": "I will arrive at ten in the evening.",
+          "ur": "میں رات دس بجے پہنچوں گا۔"
+        },
+        {
+          "en": "It begins at ten in the evening.",
+          "ur": "یہ رات دس بجے شروع ہوتا ہے۔"
+        },
+        {
+          "en": "I arrived at ten in the morning.",
+          "ur": "میں صبح دس بجے پہنچا۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1
+    }
+  ],
   "spoken_phrases": {
     "scene": {
-      "en": "Travel, Hajj, and Emergency Du'a",
-      "ur": "سفر، حج، اور ہنگامی دعاء"
+      "en": "A is your travel companion and has the trip plan: departure 19:00 (seven in the evening), duration three hours, arrival 22:00 (ten in the evening). You (B) ask three questions: when does it begin, how long does it take, and when does A arrive?",
+      "ur": "A آپ کا سفر کا ساتھی ہے اور اس کے پاس سفر کا پروگرام ہے: روانگی 19:00 (شام سات بجے)، دورانیہ تین گھنٹے، آمد 22:00 (رات دس بجے)۔ آپ (B) تین سوال پوچھتے ہیں: وہ کب شروع ہوتا ہے، کتنا وقت لگتا ہے اور A کب پہنچتا ہے؟"
     },
     "phrases": [
       {
-        "id": "sp8-p1",
+        "id": "ch48-cl-p01",
         "phrase": {
-          "ar": "بِسْمِ اللَّهِ",
-          "ar_plain": "بسم الله",
-          "translit": "bismillaah",
-          "en": "In the name of Allah",
-          "ur": "اللہ کے نام سے"
+          "ar": "عِنْدَكَ سُؤَالٌ؟",
+          "ar_plain": "عندك سؤال؟",
+          "translit": "indaka suaalun",
+          "en": "Do you have a question?",
+          "ur": "کیا آپ کا کوئی سوال ہے؟"
         },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp8-p1.mp3",
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch48-cl-p01.mp3",
         "context": {
-          "en": "Said when setting out or mounting a ride (Abu Dawud 2602)",
-          "ur": "سفر شروع کرتے یا سواری پر بیٹھتے وقت (ابو داؤد 2602)"
+          "en": "A, your travel companion, invites your question. (A knows the trip itinerary.)",
+          "ur": "A، آپ کا سفر کا ساتھی، آپ کو سوال پوچھنے کی دعوت دیتا ہے۔ (A کو سفر کا پروگرام معلوم ہے۔)"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch48-cl-p02",
+        "phrase": {
+          "ar": "مَتَى تَبْدَأُ الرِّحْلَةُ؟",
+          "ar_plain": "متي تبدا الرحلة؟",
+          "translit": "mataa tabdau ar-rihlatu",
+          "en": "When does the trip begin?",
+          "ur": "سفر کب شروع ہوتا ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch48-cl-p02.mp3",
+        "context": {
+          "en": "You ask the departure time. تَبْدَأُ is supplied whole.",
+          "ur": "آپ روانگی کا وقت پوچھتے ہیں۔ تَبْدَأُ پورا دیا گیا ہے۔"
         }
       },
       {
-        "id": "sp8-p2",
+        "id": "ch48-cl-p03",
         "phrase": {
-          "ar": "حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ",
-          "ar_plain": "حسبنا الله ونعم الوكيل",
-          "translit": "hasbunallaahu wa ni'mal-wakiil",
-          "en": "Allah is sufficient for us, and what an excellent guardian",
-          "ur": "اللہ ہمارے لیے کافی ہے، اور کیا اچھا وکیل ہے"
+          "ar": "تَبْدَأُ فِي السَّاعَةِ السَّابِعَةِ مَسَاءً.",
+          "ar_plain": "تبدا في الساعة السابعة مساء.",
+          "translit": "tabdau fii as-saaati as-saabiati masaan",
+          "en": "It begins at seven in the evening.",
+          "ur": "یہ شام سات بجے شروع ہوتا ہے۔"
         },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp8-p2.mp3",
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch48-cl-p03.mp3",
         "context": {
-          "en": "Said in difficulty (Al Imran 3:173)",
-          "ur": "مشکل میں کہا جاتا ہے (آل عمران 3:173)"
+          "en": "A reads the itinerary: departure 19:00.",
+          "ur": "A پروگرام پڑھتا ہے: روانگی 19:00۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch48-cl-p04",
+        "phrase": {
+          "ar": "كَمْ سَاعَةً تَسْتَغْرِقُ الرِّحْلَةُ؟",
+          "ar_plain": "كم ساعة تستغرق الرحلة؟",
+          "translit": "kam saaatan tastaghriqu ar-rihlatu",
+          "en": "How many hours does the trip take?",
+          "ur": "سفر میں کتنے گھنٹے لگتے ہیں؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch48-cl-p04.mp3",
+        "context": {
+          "en": "You ask the duration: كَمْ + a singular noun (Chapter 31). تَسْتَغْرِقُ is supplied whole.",
+          "ur": "آپ دورانیہ پوچھتے ہیں: كَمْ + واحد اسم (باب 31)۔ تَسْتَغْرِقُ پورا دیا گیا ہے۔"
         }
       },
       {
-        "id": "sp8-p3",
+        "id": "ch48-cl-p05",
         "phrase": {
-          "ar": "لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",
-          "ar_plain": "لا حول ولا قوة إلا بالله",
-          "translit": "laa hawla wa laa quwwata illaa billaahi",
-          "en": "There is no power and no strength except through Allah",
-          "ur": "اللہ کے سوا کوئی حیلہ نہیں اور کوئی طاقت نہیں"
+          "ar": "تَسْتَغْرِقُ ثَلَاثَ سَاعَاتٍ.",
+          "ar_plain": "تستغرق ثلاث ساعات.",
+          "translit": "tastaghriqu thalaatha saaaatin",
+          "en": "It takes three hours.",
+          "ur": "اس میں تین گھنٹے لگتے ہیں۔"
         },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp8-p3.mp3",
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch48-cl-p05.mp3",
         "context": {
-          "en": "Said in difficulty; also the response at حَيَّ عَلَى الصَّلَاةِ (Muslim 385)",
-          "ur": "مشکل میں؛ اور حَيَّ عَلَى الصَّلَاةِ کا جواب (مسلم 385)"
+          "en": "A reads the itinerary: three hours (the number follows the Chapter 48 rule: سَاعَةٌ is feminine).",
+          "ur": "A پروگرام پڑھتا ہے: تین گھنٹے (عدد باب 48 کے قاعدے کے مطابق ہے: سَاعَةٌ مؤنث ہے)۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch48-cl-p06",
+        "phrase": {
+          "ar": "مَتَى تَصِلُ؟",
+          "ar_plain": "متي تصل؟",
+          "translit": "mataa tasilu",
+          "en": "When do you arrive?",
+          "ur": "آپ کب پہنچتے ہیں؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch48-cl-p06.mp3",
+        "context": {
+          "en": "You ask A when A arrives. تَصِلُ is supplied whole.",
+          "ur": "آپ A سے پوچھتے ہیں کہ وہ کب پہنچے گا۔ تَصِلُ پورا دیا گیا ہے۔"
         }
       },
       {
-        "id": "sp8-p4",
+        "id": "ch48-cl-p07",
         "phrase": {
-          "ar": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ",
-          "ar_plain": "اللهم اني اعوذ بك من الهم والحزن",
-          "translit": "allaahumma innii a'uudhu bika minal-hammi wal-hazan",
-          "en": "O Allah, I seek refuge in You from worry and grief",
-          "ur": "اے اللہ! میں فکر اور غم سے تیری پناہ مانگتا ہوں"
+          "ar": "سَأَصِلُ فِي السَّاعَةِ الْعَاشِرَةِ مَسَاءً.",
+          "ar_plain": "ساصل في الساعة العاشرة مساء.",
+          "translit": "saasilu fii as-saaati al-aashirati masaan",
+          "en": "I will arrive at ten in the evening.",
+          "ur": "میں رات دس بجے پہنچوں گا۔"
         },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp8-p4.mp3",
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch48-cl-p07.mp3",
         "context": {
-          "en": "A supplication against worry (al-Bukhari 6369)",
-          "ur": "فکر سے بچنے کی دعا (بخاری 6369)"
+          "en": "A reads the itinerary: arrival 22:00. سَأَصِلُ is supplied whole.",
+          "ur": "A پروگرام پڑھتا ہے: آمد 22:00۔ سَأَصِلُ پورا دیا گیا ہے۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch48-cl-p08",
+        "phrase": {
+          "ar": "شُكْرًا.",
+          "ar_plain": "شكرا.",
+          "translit": "shukran",
+          "en": "Thank you.",
+          "ur": "شکریہ۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch48-cl-p08.mp3",
+        "context": {
+          "en": "You thank A.",
+          "ur": "آپ A کا شکریہ ادا کرتے ہیں۔"
         }
       },
       {
-        "id": "sp8-p5",
+        "id": "ch48-cl-p09",
         "phrase": {
-          "ar": "لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ",
-          "ar_plain": "لبيك اللهم لبيك",
-          "translit": "labbayka allaahumma labbayka",
-          "en": "At Your service, O Allah, at Your service",
-          "ur": "میں حاضر ہوں تجھے یا اللہ، میں حاضر ہوں تجھے"
+          "ar": "عَفْوًا.",
+          "ar_plain": "عفوا.",
+          "translit": "afwan",
+          "en": "You are welcome.",
+          "ur": "خوش آمدید۔"
         },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp8-p5.mp3",
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch48-cl-p09.mp3",
         "context": {
-          "en": "The Talbiyah — said during Hajj and Umrah (al-Bukhari 1549)",
-          "ur": "تلبیہ — حج اور عمرہ میں کہا جاتا ہے (بخاری 1549)"
-        }
-      },
-      {
-        "id": "sp8-p6",
-        "phrase": {
-          "ar": "رَبِّ اغْفِرْ وَارْحَمْ",
-          "ar_plain": "رب اغفر وارحم",
-          "translit": "rabbighfir warham",
-          "en": "My Lord, forgive and have mercy",
-          "ur": "اے میرے رب! بخش اور رحم کر"
+          "en": "A answers your thanks.",
+          "ur": "A آپ کے شکریے کا جواب دیتا ہے۔"
         },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp8-p6.mp3",
-        "context": {
-          "en": "A supplication from the Quran: وَقُلْ رَبِّ اغْفِرْ وَارْحَمْ (Al-Mu'minun 23:118)",
-          "ur": "قرآن کی دعا: وَقُلْ رَبِّ اغْفِرْ وَارْحَمْ (المؤمنون 23:118)"
-        }
-      },
-      {
-        "id": "sp8-p7",
-        "phrase": {
-          "ar": "إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ",
-          "ar_plain": "انا لله وانا اليه راجعون",
-          "translit": "innaa lillaahi wa innaa ilayhi raaji'uun",
-          "en": "Indeed, we belong to Allah, and to Him we will return",
-          "ur": "بے شک ہم اللہ ہی کے ہیں اور اسی کی طرف لوٹنے والے ہیں"
-        },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp8-p7.mp3",
-        "context": {
-          "en": "Said when struck by a loss (Al-Baqarah 2:156)",
-          "ur": "کسی مصیبت یا نقصان پر کہا جاتا ہے (البقرہ 2:156)"
-        }
-      },
-      {
-        "id": "sp8-p8",
-        "phrase": {
-          "ar": "سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا",
-          "ar_plain": "سبحان الذي سخر لنا هذا",
-          "translit": "subhaana alladhii sakhkhara lanaa haadhaa",
-          "en": "Glory be to the One who made this subservient to us",
-          "ur": "پاک ہے وہ جس نے ہمارے لیے یہ مسخر کیا"
-        },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp8-p8.mp3",
-        "context": {
-          "en": "Said on a ride or transport (Az-Zukhruf 43:13)",
-          "ur": "سواری پر کہا جاتا ہے (الزخرف 43:13)"
-        }
-      },
-      {
-        "id": "sp8-p9",
-        "phrase": {
-          "ar": "أَسْتَغْفِرُ اللَّهَ",
-          "ar_plain": "أستغفر الله",
-          "translit": "astaghfiru allaaha",
-          "en": "I seek forgiveness of Allah",
-          "ur": "میں اللہ سے بخشش چاہتا ہوں"
-        },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp8-p9.mp3",
-        "context": {
-          "en": "Seeking forgiveness — said often",
-          "ur": "استغفار — کثرت سے کہا جاتا ہے"
-        }
-      },
-      {
-        "id": "sp8-p10",
-        "phrase": {
-          "ar": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى وَالْعَفَافَ وَالْغِنَى",
-          "ar_plain": "اللهم اني اسالك الهدى والتقى والعفاف والغنى",
-          "translit": "allaahumma innii as-alukal-hudaa wat-tuqaa wal-'afaafa wal-ghinaa",
-          "en": "O Allah, I ask You for guidance, piety, chastity and sufficiency",
-          "ur": "اے اللہ! میں تجھ سے ہدایت، تقویٰ، پاکدامنی اور بے نیازی مانگتا ہوں"
-        },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp8-p10.mp3",
-        "context": {
-          "en": "A general supplication (Muslim 2721)",
-          "ur": "ایک عام دعا (مسلم 2721)"
-        }
+        "heard_only": true
       }
     ],
     "dialogue": [
       {
         "speaker": "A",
-        "phrase_id": "sp8-p1"
+        "phrase_id": "ch48-cl-p01"
       },
       {
         "speaker": "B",
-        "phrase_id": "sp8-p2"
+        "phrase_id": "ch48-cl-p02"
       },
       {
         "speaker": "A",
-        "phrase_id": "sp8-p3"
+        "phrase_id": "ch48-cl-p03"
       },
       {
         "speaker": "B",
-        "phrase_id": "sp8-p4"
+        "phrase_id": "ch48-cl-p04"
       },
       {
         "speaker": "A",
-        "phrase_id": "sp8-p5"
+        "phrase_id": "ch48-cl-p05"
       },
       {
         "speaker": "B",
-        "phrase_id": "sp8-p6"
+        "phrase_id": "ch48-cl-p06"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch48-cl-p07"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch48-cl-p08"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch48-cl-p09"
       }
-    ]
+    ],
+    "lab": {
+      "title": {
+        "en": "Time and Travel Planning",
+        "ur": "وقت اور سفر کی منصوبہ بندی"
+      },
+      "mission": {
+        "en": "Use the itinerary A knows: ask when the trip begins, how long it takes and when A arrives — then thank A.",
+        "ur": "A کے پاس موجود پروگرام کے مطابق پوچھیں: سفر کب شروع ہوتا ہے، کتنا وقت لگتا ہے اور A کب پہنچتا ہے — پھر A کا شکریہ ادا کریں۔"
+      },
+      "toolkit": [
+        "مَتَى",
+        "كَمْ سَاعَةً",
+        "تَبْدَأُ",
+        "تَسْتَغْرِقُ",
+        "تَصِلُ",
+        "السَّاعَةُ السَّابِعَةُ",
+        "السَّاعَةُ الْعَاشِرَةُ",
+        "شُكْرًا"
+      ],
+      "goals": [
+        {
+          "en": "Ask when the trip begins",
+          "ur": "سفر کب شروع ہوتا ہے، یہ پوچھیں"
+        },
+        {
+          "en": "Ask how many hours it takes",
+          "ur": "پوچھیں کہ کتنے گھنٹے لگتے ہیں"
+        },
+        {
+          "en": "Ask when A arrives",
+          "ur": "پوچھیں کہ A کب پہنچتا ہے"
+        },
+        {
+          "en": "Thank A",
+          "ur": "A کا شکریہ ادا کریں"
+        }
+      ],
+      "pattern": {
+        "after_phrase_id": "ch48-cl-p02",
+        "items": [
+          {
+            "ar": "مَتَى …؟",
+            "meaning": {
+              "en": "when …?",
+              "ur": "کب …؟"
+            },
+            "source": {
+              "en": "مَتَى: Chapters 31 and 42; the verbs تَبْدَأُ and تَصِلُ are supplied whole",
+              "ur": "مَتَى: ابواب 31 اور 42؛ فعل تَبْدَأُ اور تَصِلُ پورے دیے گئے ہیں"
+            }
+          },
+          {
+            "ar": "كَمْ سَاعَةً …؟",
+            "meaning": {
+              "en": "how many hours …?",
+              "ur": "کتنے گھنٹے …؟"
+            },
+            "source": {
+              "en": "كَمْ + a singular noun: Chapter 31; the hours: Chapter 48",
+              "ur": "كَمْ + واحد اسم: باب 31؛ گھنٹے: باب 48"
+            }
+          }
+        ],
+        "note": {
+          "en": "Each question asks for one fact from the itinerary: a clock time (السَّاعَةُ + an ordinal hour) or a length of time (a number + سَاعَاتٍ). Read the clock time and the duration separately.",
+          "ur": "ہر سوال پروگرام سے ایک بات پوچھتا ہے: گھڑی کا وقت (السَّاعَةُ + ترتیبی گھنٹہ) یا وقت کی مدت (عدد + سَاعَاتٍ)۔ گھڑی کا وقت اور مدت الگ الگ پڑھیں۔"
+        }
+      },
+      "shadow_phrase_ids": [
+        "ch48-cl-p02",
+        "ch48-cl-p04",
+        "ch48-cl-p06",
+        "ch48-cl-p08"
+      ],
+      "mission_turns": [
+        {
+          "prompt_phrase_id": "ch48-cl-p01",
+          "goal_index": 0,
+          "cue": {
+            "en": "A invites your question. Ask when the trip begins.",
+            "ur": "A آپ کو سوال کی دعوت دیتا ہے۔ پوچھیں کہ سفر کب شروع ہوتا ہے۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "مَتَى تَصِلُ؟",
+              "ar_plain": "متي تصل؟",
+              "translit": "mataa tasilu",
+              "en": "When do you arrive?",
+              "ur": "آپ کب پہنچتے ہیں؟"
+            },
+            {
+              "ar": "مَتَى تَبْدَأُ الرِّحْلَةُ؟",
+              "ar_plain": "متي تبدا الرحلة؟",
+              "translit": "mataa tabdau ar-rihlatu",
+              "en": "When does the trip begin?",
+              "ur": "سفر کب شروع ہوتا ہے؟"
+            },
+            {
+              "ar": "كَمْ سَاعَةً تَسْتَغْرِقُ الرِّحْلَةُ؟",
+              "ar_plain": "كم ساعة تستغرق الرحلة؟",
+              "translit": "kam saaatan tastaghriqu ar-rihlatu",
+              "en": "How many hours does the trip take?",
+              "ur": "سفر میں کتنے گھنٹے لگتے ہیں؟"
+            }
+          ],
+          "correct_option_index": 1
+        },
+        {
+          "prompt_phrase_id": "ch48-cl-p03",
+          "goal_index": 1,
+          "cue": {
+            "en": "A said seven in the evening. Ask how many hours the trip takes.",
+            "ur": "A نے شام سات بجے کہا۔ پوچھیں کہ سفر میں کتنے گھنٹے لگتے ہیں۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "كَمْ سَاعَةً تَسْتَغْرِقُ الرِّحْلَةُ؟",
+              "ar_plain": "كم ساعة تستغرق الرحلة؟",
+              "translit": "kam saaatan tastaghriqu ar-rihlatu",
+              "en": "How many hours does the trip take?",
+              "ur": "سفر میں کتنے گھنٹے لگتے ہیں؟"
+            },
+            {
+              "ar": "شُكْرًا.",
+              "ar_plain": "شكرا.",
+              "translit": "shukran",
+              "en": "Thank you.",
+              "ur": "شکریہ۔"
+            },
+            {
+              "ar": "مَتَى تَبْدَأُ الرِّحْلَةُ؟",
+              "ar_plain": "متي تبدا الرحلة؟",
+              "translit": "mataa tabdau ar-rihlatu",
+              "en": "When does the trip begin?",
+              "ur": "سفر کب شروع ہوتا ہے؟"
+            }
+          ],
+          "correct_option_index": 0
+        },
+        {
+          "prompt_phrase_id": "ch48-cl-p05",
+          "goal_index": 2,
+          "cue": {
+            "en": "A said three hours. Ask when A arrives.",
+            "ur": "A نے تین گھنٹے کہا۔ پوچھیں کہ A کب پہنچتا ہے۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "مَتَى تَبْدَأُ الرِّحْلَةُ؟",
+              "ar_plain": "متي تبدا الرحلة؟",
+              "translit": "mataa tabdau ar-rihlatu",
+              "en": "When does the trip begin?",
+              "ur": "سفر کب شروع ہوتا ہے؟"
+            },
+            {
+              "ar": "كَمْ سَاعَةً تَسْتَغْرِقُ الرِّحْلَةُ؟",
+              "ar_plain": "كم ساعة تستغرق الرحلة؟",
+              "translit": "kam saaatan tastaghriqu ar-rihlatu",
+              "en": "How many hours does the trip take?",
+              "ur": "سفر میں کتنے گھنٹے لگتے ہیں؟"
+            },
+            {
+              "ar": "مَتَى تَصِلُ؟",
+              "ar_plain": "متي تصل؟",
+              "translit": "mataa tasilu",
+              "en": "When do you arrive?",
+              "ur": "آپ کب پہنچتے ہیں؟"
+            }
+          ],
+          "correct_option_index": 2
+        }
+      ],
+      "answer_it": {
+        "turns": [
+          {
+            "prompt_phrase_id": "ch48-cl-p03",
+            "cue": {
+              "en": "Ask how many hours the trip takes.",
+              "ur": "پوچھیں کہ سفر میں کتنے گھنٹے لگتے ہیں۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "كَمْ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "سَاعَةً"
+              },
+              {
+                "kind": "WORD",
+                "ar": "تَسْتَغْرِقُ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "الرِّحْلَةُ"
+              }
+            ],
+            "model_phrase_id": "ch48-cl-p04",
+            "tip": {
+              "en": "كَمْ + سَاعَةً, then تَسْتَغْرِقُ الرِّحْلَةُ.",
+              "ur": "كَمْ + سَاعَةً، پھر تَسْتَغْرِقُ الرِّحْلَةُ۔"
+            }
+          },
+          {
+            "prompt_phrase_id": "ch48-cl-p05",
+            "cue": {
+              "en": "Ask when A arrives.",
+              "ur": "پوچھیں کہ A کب پہنچتا ہے۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "مَتَى"
+              },
+              {
+                "kind": "WORD",
+                "ar": "تَصِلُ"
+              }
+            ],
+            "model_phrase_id": "ch48-cl-p06",
+            "tip": {
+              "en": "مَتَى, then تَصِلُ.",
+              "ur": "مَتَى، پھر تَصِلُ۔"
+            }
+          }
+        ]
+      },
+      "can_do": [
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Ask when something begins",
+            "ur": "پوچھنا کہ کچھ کب شروع ہوتا ہے"
+          },
+          "ar": "مَتَى تَبْدَأُ الرِّحْلَةُ؟"
+        },
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Ask how many hours it takes",
+            "ur": "پوچھنا کہ کتنے گھنٹے لگتے ہیں"
+          },
+          "ar": "كَمْ سَاعَةً تَسْتَغْرِقُ الرِّحْلَةُ؟"
+        },
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Ask when someone arrives",
+            "ur": "پوچھنا کہ کوئی کب پہنچتا ہے"
+          },
+          "ar": "مَتَى تَصِلُ؟"
+        },
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Thank",
+            "ur": "شکریہ ادا کرنا"
+          },
+          "ar": "شُكْرًا"
+        }
+      ]
+    }
   },
   "close": {
     "noor_message": {
-      "en": "SP8 complete. These ten phrases cover travel, Hajj, and emergency du'a — the moments when Fus'ha matters most. لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ — the Talbiyah of Hajj. سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا — the du'a in transport. Practice them all.",
-      "ur": "SP8 مکمل۔ یہ دس phrases سفر، حج، اور ہنگامی دعاء کو cover کرتی ہیں — وہ moments جب Fus'ha سب سے زیادہ important ہے۔ لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ — حج کا تلبیہ۔ سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا — نقل و حمل میں دعاء۔ سب کو practice کریں۔"
+      "en": "You asked when, how long and when to arrive — a clock time and a duration, read from one itinerary.",
+      "ur": "آپ نے پوچھا کب، کتنی دیر اور کب پہنچنا — ایک ہی پروگرام سے گھڑی کا وقت اور مدت پڑھے۔"
     }
   }
 }

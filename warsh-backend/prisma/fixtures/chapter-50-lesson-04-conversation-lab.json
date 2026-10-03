@@ -1,0 +1,784 @@
+{
+  "schema_version": "1.0",
+  "template": "SPOKEN_PHRASES",
+  "_meta": {
+    "_note": "Chapter 50, Lesson 4 (ch50-l04 converted in place to the CL15 Conversation Lab, display order 4). Rebuilt 2026-10-03 in the proposal harvest, batch 5, from Docs/proposals/chapter-50-content-proposal.md (the old lesson was a STANDARD \"mastery\" reading of 3:18 with a typo, شَهِدَ اللَّهُمْ, in two prompts). One coherent lost-bag help-desk scene: B opens politely, states the problem, asks where, and thanks; A (the helper) greets, invites, offers help and gives the location. لَوْ سَمَحْتَ, فَقَدْتُ and سَأُسَاعِدُكَ are supplied whole; A’s lines are heard-only; every scored answer is a B phrase. The hook, 2:186, is Chapter 22’s anchor and is framed as retrieval.",
+    "title": "Asking for Help — Conversation Lab",
+    "titleAr": "طَلَبُ الْمُسَاعَدَةِ",
+    "titleUr": "مدد مانگنا — گفتگو لیب",
+    "chapter_order": 50,
+    "lesson_order": 4,
+    "estimated_minutes": 10,
+    "xp_reward": 15
+  },
+  "hook": {
+    "ayah": {
+      "surah": 2,
+      "ayah": 186,
+      "label": "Al-Baqarah 2:186",
+      "ar": "وَإِذَا سَأَلَكَ عِبَادِى عَنِّى فَإِنِّى قَرِيبٌ",
+      "en": "\"And when My servants ask you about Me — indeed, I am near.\"",
+      "ur": "\"اور جب میرے بندے تم سے میرے بارے میں پوچھیں تو میں تو پاس ہوں۔\"",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002186.mp3"
+    },
+    "noor_intro": {
+      "en": "Today you ask for help: open politely, say what the problem is, ask where to go, and thank the helper.",
+      "ur": "آج آپ مدد مانگتے ہیں: ادب سے بات شروع کریں، مسئلہ بتائیں، پوچھیں کہاں جانا ہے اور مددگار کا شکریہ ادا کریں۔"
+    },
+    "autoplay": false
+  },
+  "exercises": [
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch50-l04-ex01",
+      "prompt_line": {
+        "ar": "السَّلَامُ عَلَيْكُمْ.",
+        "ar_plain": "السلام عليكم.",
+        "translit": "as-salaamu alaykum",
+        "en": "Peace be upon you. (You greet back and open politely.)",
+        "ur": "آپ پر سلامتی ہو۔ (آپ جواب دیتے ہیں اور ادب سے بات شروع کرتے ہیں۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "فَقَدْتُ حَقِيبَتِي.",
+          "ar_plain": "فقدت حقيبتي.",
+          "translit": "faqadtu haqiibatii",
+          "en": "I lost my bag.",
+          "ur": "میرا بیگ کھو گیا ہے۔"
+        },
+        {
+          "ar": "وَعَلَيْكُمُ السَّلَامُ. لَوْ سَمَحْتَ.",
+          "ar_plain": "وعليكم السلام. لو سمحت.",
+          "translit": "wa-alaykumu as-salaamu. law samahta",
+          "en": "And upon you be peace. Excuse me, please.",
+          "ur": "اور آپ پر سلامتی ہو۔ معاف کیجیے، براہِ مہربانی۔"
+        },
+        {
+          "ar": "شُكْرًا.",
+          "ar_plain": "شكرا.",
+          "translit": "shukran",
+          "en": "Thank you.",
+          "ur": "شکریہ۔"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Return the greeting and open politely: وَعَلَيْكُمُ السَّلَامُ. لَوْ سَمَحْتَ.",
+        "ur": "سلام کا جواب دیں اور ادب سے شروع کریں: وَعَلَيْكُمُ السَّلَامُ. لَوْ سَمَحْتَ۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch50-l04-ex02",
+      "prompt_line": {
+        "ar": "تَفَضَّلْ.",
+        "ar_plain": "تفضل.",
+        "translit": "tafaddal",
+        "en": "Go ahead. (You say your bag is lost.)",
+        "ur": "فرمائیے۔ (آپ بتاتے ہیں کہ آپ کا بیگ کھو گیا ہے۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "شُكْرًا.",
+          "ar_plain": "شكرا.",
+          "translit": "shukran",
+          "en": "Thank you.",
+          "ur": "شکریہ۔"
+        },
+        {
+          "ar": "أَيْنَ الْمَكْتَبُ؟",
+          "ar_plain": "اين المكتب؟",
+          "translit": "ayna al-maktabu",
+          "en": "Where is the office?",
+          "ur": "دفتر کہاں ہے؟"
+        },
+        {
+          "ar": "فَقَدْتُ حَقِيبَتِي.",
+          "ar_plain": "فقدت حقيبتي.",
+          "translit": "faqadtu haqiibatii",
+          "en": "I lost my bag.",
+          "ur": "میرا بیگ کھو گیا ہے۔"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "To state the problem: فَقَدْتُ حَقِيبَتِي.",
+        "ur": "مسئلہ بتانے کے لیے: فَقَدْتُ حَقِيبَتِي۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch50-l04-ex03",
+      "prompt_line": {
+        "ar": "سَأُسَاعِدُكَ.",
+        "ar_plain": "ساساعدك.",
+        "translit": "sa-usaa-iduka",
+        "en": "I will help you. (You ask where to go.)",
+        "ur": "میں آپ کی مدد کروں گا۔ (آپ پوچھتے ہیں کہاں جانا ہے۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "أَيْنَ الْمَكْتَبُ؟",
+          "ar_plain": "اين المكتب؟",
+          "translit": "ayna al-maktabu",
+          "en": "Where is the office?",
+          "ur": "دفتر کہاں ہے؟"
+        },
+        {
+          "ar": "وَعَلَيْكُمُ السَّلَامُ. لَوْ سَمَحْتَ.",
+          "ar_plain": "وعليكم السلام. لو سمحت.",
+          "translit": "wa-alaykumu as-salaamu. law samahta",
+          "en": "And upon you be peace. Excuse me, please.",
+          "ur": "اور آپ پر سلامتی ہو۔ معاف کیجیے، براہِ مہربانی۔"
+        },
+        {
+          "ar": "شُكْرًا.",
+          "ar_plain": "شكرا.",
+          "translit": "shukran",
+          "en": "Thank you.",
+          "ur": "شکریہ۔"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "To ask where: أَيْنَ الْمَكْتَبُ؟",
+        "ur": "کہاں پوچھنے کے لیے: أَيْنَ الْمَكْتَبُ؟"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch50-l04-ex04",
+      "prompt_line": {
+        "ar": "الْمَكْتَبُ هُنَاكَ.",
+        "ar_plain": "المكتب هناك.",
+        "translit": "al-maktabu hunaaka",
+        "en": "The office is over there. (You thank the helper.)",
+        "ur": "دفتر وہاں ہے۔ (آپ مددگار کا شکریہ ادا کرتے ہیں۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "فَقَدْتُ حَقِيبَتِي.",
+          "ar_plain": "فقدت حقيبتي.",
+          "translit": "faqadtu haqiibatii",
+          "en": "I lost my bag.",
+          "ur": "میرا بیگ کھو گیا ہے۔"
+        },
+        {
+          "ar": "أَيْنَ الْمَكْتَبُ؟",
+          "ar_plain": "اين المكتب؟",
+          "translit": "ayna al-maktabu",
+          "en": "Where is the office?",
+          "ur": "دفتر کہاں ہے؟"
+        },
+        {
+          "ar": "شُكْرًا.",
+          "ar_plain": "شكرا.",
+          "translit": "shukran",
+          "en": "Thank you.",
+          "ur": "شکریہ۔"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "To thank: شُكْرًا.",
+        "ur": "شکریہ ادا کرنے کے لیے: شُكْرًا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch50-l04-ex05",
+      "prompt": {
+        "ar": "الْمَكْتَبُ هُنَاكَ.",
+        "ar_plain": "المكتب هناك.",
+        "translit": "al-maktabu hunaaka",
+        "en": "(The helper replies)",
+        "ur": "(مددگار کا جواب)"
+      },
+      "options": [
+        {
+          "en": "The office is over there.",
+          "ur": "دفتر وہاں ہے۔"
+        },
+        {
+          "en": "The office is closed.",
+          "ur": "دفتر بند ہے۔"
+        },
+        {
+          "en": "I am in the office.",
+          "ur": "میں دفتر میں ہوں۔"
+        },
+        {
+          "en": "Where is the office?",
+          "ur": "دفتر کہاں ہے؟"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch50-l04-ex06",
+      "prompt": {
+        "ar": "فَقَدْتُ حَقِيبَتِي.",
+        "ar_plain": "فقدت حقيبتي.",
+        "translit": "faqadtu haqiibatii",
+        "en": "(You say)",
+        "ur": "(آپ کہتے ہیں)"
+      },
+      "options": [
+        {
+          "en": "I found my bag.",
+          "ur": "مجھے میرا بیگ مل گیا۔"
+        },
+        {
+          "en": "I lost my bag.",
+          "ur": "میرا بیگ کھو گیا ہے۔"
+        },
+        {
+          "en": "Where is my bag?",
+          "ur": "میرا بیگ کہاں ہے؟"
+        },
+        {
+          "en": "I will help you.",
+          "ur": "میں آپ کی مدد کروں گا۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch50-l04-ex07",
+      "prompt": {
+        "ar": "لَوْ سَمَحْتَ.",
+        "ar_plain": "لو سمحت.",
+        "translit": "law samahta",
+        "en": "(You say)",
+        "ur": "(آپ کہتے ہیں)"
+      },
+      "options": [
+        {
+          "en": "Thank you very much.",
+          "ur": "بہت شکریہ۔"
+        },
+        {
+          "en": "Go ahead.",
+          "ur": "فرمائیے۔"
+        },
+        {
+          "en": "Excuse me, please.",
+          "ur": "معاف کیجیے، براہِ مہربانی۔"
+        },
+        {
+          "en": "You are welcome.",
+          "ur": "خوش آمدید۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch50-l04-ex08",
+      "statement": {
+        "en": "سَأُسَاعِدُكَ is said by the helper, and means \"I will help you\".",
+        "ur": "سَأُسَاعِدُكَ مددگار کہتا ہے اور اس کا مطلب ہے \"میں آپ کی مدد کروں گا\"۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "True: it is the helper’s offer.",
+        "ur": "درست: یہ مددگار کی پیشکش ہے۔"
+      }
+    }
+  ],
+  "spoken_phrases": {
+    "scene": {
+      "en": "You (B) have lost your bag at a station and go to the help desk. A, the helper, greets you, invites you to speak, offers help and tells you where the office is.",
+      "ur": "آپ (B) کا بیگ اسٹیشن پر کھو گیا ہے اور آپ مدد کاؤنٹر پر جاتے ہیں۔ A، مددگار، آپ کو سلام کرتا ہے، بات کرنے کی دعوت دیتا ہے، مدد کی پیشکش کرتا ہے اور بتاتا ہے کہ دفتر کہاں ہے۔"
+    },
+    "phrases": [
+      {
+        "id": "ch50-cl-p01",
+        "phrase": {
+          "ar": "السَّلَامُ عَلَيْكُمْ.",
+          "ar_plain": "السلام عليكم.",
+          "translit": "as-salaamu alaykum",
+          "en": "Peace be upon you.",
+          "ur": "آپ پر سلامتی ہو۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch50-cl-p01.mp3",
+        "context": {
+          "en": "The helper at the help desk greets you.",
+          "ur": "مددگار کاؤنٹر پر آپ کو سلام کرتا ہے۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch50-cl-p02",
+        "phrase": {
+          "ar": "وَعَلَيْكُمُ السَّلَامُ. لَوْ سَمَحْتَ.",
+          "ar_plain": "وعليكم السلام. لو سمحت.",
+          "translit": "wa-alaykumu as-salaamu. law samahta",
+          "en": "And upon you be peace. Excuse me, please.",
+          "ur": "اور آپ پر سلامتی ہو۔ معاف کیجیے، براہِ مہربانی۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch50-cl-p02.mp3",
+        "context": {
+          "en": "You return the greeting and open politely. لَوْ سَمَحْتَ is supplied whole.",
+          "ur": "آپ سلام کا جواب دیتے ہیں اور ادب سے بات شروع کرتے ہیں۔ لَوْ سَمَحْتَ پورا دیا گیا ہے۔"
+        }
+      },
+      {
+        "id": "ch50-cl-p03",
+        "phrase": {
+          "ar": "تَفَضَّلْ.",
+          "ar_plain": "تفضل.",
+          "translit": "tafaddal",
+          "en": "Go ahead.",
+          "ur": "فرمائیے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch50-cl-p03.mp3",
+        "context": {
+          "en": "The helper invites you to speak.",
+          "ur": "مددگار آپ کو بات کرنے کی دعوت دیتا ہے۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch50-cl-p04",
+        "phrase": {
+          "ar": "فَقَدْتُ حَقِيبَتِي.",
+          "ar_plain": "فقدت حقيبتي.",
+          "translit": "faqadtu haqiibatii",
+          "en": "I lost my bag.",
+          "ur": "میرا بیگ کھو گیا ہے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch50-cl-p04.mp3",
+        "context": {
+          "en": "You state your problem. فَقَدْتُ is supplied whole.",
+          "ur": "آپ اپنا مسئلہ بتاتے ہیں۔ فَقَدْتُ پورا دیا گیا ہے۔"
+        }
+      },
+      {
+        "id": "ch50-cl-p05",
+        "phrase": {
+          "ar": "سَأُسَاعِدُكَ.",
+          "ar_plain": "ساساعدك.",
+          "translit": "sa-usaa-iduka",
+          "en": "I will help you.",
+          "ur": "میں آپ کی مدد کروں گا۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch50-cl-p05.mp3",
+        "context": {
+          "en": "The helper offers help. سَأُسَاعِدُكَ is supplied whole.",
+          "ur": "مددگار مدد کی پیشکش کرتا ہے۔ سَأُسَاعِدُكَ پورا دیا گیا ہے۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch50-cl-p06",
+        "phrase": {
+          "ar": "أَيْنَ الْمَكْتَبُ؟",
+          "ar_plain": "اين المكتب؟",
+          "translit": "ayna al-maktabu",
+          "en": "Where is the office?",
+          "ur": "دفتر کہاں ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch50-cl-p06.mp3",
+        "context": {
+          "en": "You ask where to go (أَيْنَ: Chapter 2).",
+          "ur": "آپ پوچھتے ہیں کہاں جانا ہے (أَيْنَ: باب 2)۔"
+        }
+      },
+      {
+        "id": "ch50-cl-p07",
+        "phrase": {
+          "ar": "الْمَكْتَبُ هُنَاكَ.",
+          "ar_plain": "المكتب هناك.",
+          "translit": "al-maktabu hunaaka",
+          "en": "The office is over there.",
+          "ur": "دفتر وہاں ہے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch50-cl-p07.mp3",
+        "context": {
+          "en": "The helper gives the location.",
+          "ur": "مددگار جگہ بتاتا ہے۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch50-cl-p08",
+        "phrase": {
+          "ar": "شُكْرًا.",
+          "ar_plain": "شكرا.",
+          "translit": "shukran",
+          "en": "Thank you.",
+          "ur": "شکریہ۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch50-cl-p08.mp3",
+        "context": {
+          "en": "You thank the helper.",
+          "ur": "آپ مددگار کا شکریہ ادا کرتے ہیں۔"
+        }
+      },
+      {
+        "id": "ch50-cl-p09",
+        "phrase": {
+          "ar": "عَفْوًا.",
+          "ar_plain": "عفوا.",
+          "translit": "afwan",
+          "en": "You are welcome.",
+          "ur": "خوش آمدید۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch50-cl-p09.mp3",
+        "context": {
+          "en": "The helper answers your thanks.",
+          "ur": "مددگار آپ کے شکریے کا جواب دیتا ہے۔"
+        },
+        "heard_only": true
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "A",
+        "phrase_id": "ch50-cl-p01"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch50-cl-p02"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch50-cl-p03"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch50-cl-p04"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch50-cl-p05"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch50-cl-p06"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch50-cl-p07"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch50-cl-p08"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch50-cl-p09"
+      }
+    ],
+    "lab": {
+      "title": {
+        "en": "Asking for Help",
+        "ur": "مدد مانگنا"
+      },
+      "mission": {
+        "en": "Open politely, state that you lost your bag, ask where the office is, and thank the helper.",
+        "ur": "ادب سے بات شروع کریں، بتائیں کہ آپ کا بیگ کھو گیا ہے، پوچھیں کہ دفتر کہاں ہے اور مددگار کا شکریہ ادا کریں۔"
+      },
+      "toolkit": [
+        "لَوْ سَمَحْتَ",
+        "فَقَدْتُ حَقِيبَتِي",
+        "أَيْنَ",
+        "الْمَكْتَبُ",
+        "هُنَاكَ",
+        "شُكْرًا"
+      ],
+      "goals": [
+        {
+          "en": "Open politely",
+          "ur": "ادب سے بات شروع کریں"
+        },
+        {
+          "en": "State the problem",
+          "ur": "مسئلہ بتائیں"
+        },
+        {
+          "en": "Ask where to go",
+          "ur": "پوچھیں کہاں جانا ہے"
+        },
+        {
+          "en": "Thank the helper",
+          "ur": "مددگار کا شکریہ ادا کریں"
+        }
+      ],
+      "pattern": {
+        "after_phrase_id": "ch50-cl-p04",
+        "items": [
+          {
+            "ar": "لَوْ سَمَحْتَ.",
+            "meaning": {
+              "en": "excuse me, please",
+              "ur": "معاف کیجیے، براہِ مہربانی"
+            },
+            "source": {
+              "en": "A polite opening, supplied whole (not the conditional of Chapter 67)",
+              "ur": "ادب والا آغاز، پورا دیا گیا (باب 67 کا شرط والا لَوْ نہیں)"
+            }
+          },
+          {
+            "ar": "أَيْنَ …؟",
+            "meaning": {
+              "en": "where …?",
+              "ur": "… کہاں ہے؟"
+            },
+            "source": {
+              "en": "أَيْنَ: Chapter 2",
+              "ur": "أَيْنَ: باب 2"
+            }
+          }
+        ],
+        "note": {
+          "en": "A help request has a fixed order: open politely, state the problem, then ask the one question you need answered.",
+          "ur": "مدد کی درخواست کی ایک ترتیب ہوتی ہے: ادب سے آغاز، مسئلہ، پھر وہ ایک سوال جس کا جواب چاہیے۔"
+        }
+      },
+      "shadow_phrase_ids": [
+        "ch50-cl-p02",
+        "ch50-cl-p04",
+        "ch50-cl-p06",
+        "ch50-cl-p08"
+      ],
+      "mission_turns": [
+        {
+          "prompt_phrase_id": "ch50-cl-p01",
+          "goal_index": 0,
+          "cue": {
+            "en": "The helper greets you. Greet back and open politely.",
+            "ur": "مددگار آپ کو سلام کرتا ہے۔ جواب دیں اور ادب سے شروع کریں۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "شُكْرًا.",
+              "ar_plain": "شكرا.",
+              "translit": "shukran",
+              "en": "Thank you.",
+              "ur": "شکریہ۔"
+            },
+            {
+              "ar": "وَعَلَيْكُمُ السَّلَامُ. لَوْ سَمَحْتَ.",
+              "ar_plain": "وعليكم السلام. لو سمحت.",
+              "translit": "wa-alaykumu as-salaamu. law samahta",
+              "en": "And upon you be peace. Excuse me, please.",
+              "ur": "اور آپ پر سلامتی ہو۔ معاف کیجیے، براہِ مہربانی۔"
+            },
+            {
+              "ar": "فَقَدْتُ حَقِيبَتِي.",
+              "ar_plain": "فقدت حقيبتي.",
+              "translit": "faqadtu haqiibatii",
+              "en": "I lost my bag.",
+              "ur": "میرا بیگ کھو گیا ہے۔"
+            }
+          ],
+          "correct_option_index": 1
+        },
+        {
+          "prompt_phrase_id": "ch50-cl-p03",
+          "goal_index": 1,
+          "cue": {
+            "en": "The helper says \"go ahead\". Tell him your bag is lost.",
+            "ur": "مددگار کہتا ہے \"فرمائیے\"۔ اسے بتائیں کہ آپ کا بیگ کھو گیا ہے۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "أَيْنَ الْمَكْتَبُ؟",
+              "ar_plain": "اين المكتب؟",
+              "translit": "ayna al-maktabu",
+              "en": "Where is the office?",
+              "ur": "دفتر کہاں ہے؟"
+            },
+            {
+              "ar": "شُكْرًا.",
+              "ar_plain": "شكرا.",
+              "translit": "shukran",
+              "en": "Thank you.",
+              "ur": "شکریہ۔"
+            },
+            {
+              "ar": "فَقَدْتُ حَقِيبَتِي.",
+              "ar_plain": "فقدت حقيبتي.",
+              "translit": "faqadtu haqiibatii",
+              "en": "I lost my bag.",
+              "ur": "میرا بیگ کھو گیا ہے۔"
+            }
+          ],
+          "correct_option_index": 2
+        },
+        {
+          "prompt_phrase_id": "ch50-cl-p05",
+          "goal_index": 2,
+          "cue": {
+            "en": "The helper will help. Ask where the office is.",
+            "ur": "مددگار مدد کرے گا۔ پوچھیں کہ دفتر کہاں ہے۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "أَيْنَ الْمَكْتَبُ؟",
+              "ar_plain": "اين المكتب؟",
+              "translit": "ayna al-maktabu",
+              "en": "Where is the office?",
+              "ur": "دفتر کہاں ہے؟"
+            },
+            {
+              "ar": "فَقَدْتُ حَقِيبَتِي.",
+              "ar_plain": "فقدت حقيبتي.",
+              "translit": "faqadtu haqiibatii",
+              "en": "I lost my bag.",
+              "ur": "میرا بیگ کھو گیا ہے۔"
+            },
+            {
+              "ar": "وَعَلَيْكُمُ السَّلَامُ. لَوْ سَمَحْتَ.",
+              "ar_plain": "وعليكم السلام. لو سمحت.",
+              "translit": "wa-alaykumu as-salaamu. law samahta",
+              "en": "And upon you be peace. Excuse me, please.",
+              "ur": "اور آپ پر سلامتی ہو۔ معاف کیجیے، براہِ مہربانی۔"
+            }
+          ],
+          "correct_option_index": 0
+        },
+        {
+          "prompt_phrase_id": "ch50-cl-p07",
+          "goal_index": 3,
+          "cue": {
+            "en": "The helper tells you where the office is. Thank him.",
+            "ur": "مددگار بتاتا ہے کہ دفتر کہاں ہے۔ اس کا شکریہ ادا کریں۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "وَعَلَيْكُمُ السَّلَامُ. لَوْ سَمَحْتَ.",
+              "ar_plain": "وعليكم السلام. لو سمحت.",
+              "translit": "wa-alaykumu as-salaamu. law samahta",
+              "en": "And upon you be peace. Excuse me, please.",
+              "ur": "اور آپ پر سلامتی ہو۔ معاف کیجیے، براہِ مہربانی۔"
+            },
+            {
+              "ar": "أَيْنَ الْمَكْتَبُ؟",
+              "ar_plain": "اين المكتب؟",
+              "translit": "ayna al-maktabu",
+              "en": "Where is the office?",
+              "ur": "دفتر کہاں ہے؟"
+            },
+            {
+              "ar": "شُكْرًا.",
+              "ar_plain": "شكرا.",
+              "translit": "shukran",
+              "en": "Thank you.",
+              "ur": "شکریہ۔"
+            }
+          ],
+          "correct_option_index": 2
+        }
+      ],
+      "answer_it": {
+        "turns": [
+          {
+            "prompt_phrase_id": "ch50-cl-p03",
+            "cue": {
+              "en": "Say that you lost your bag.",
+              "ur": "کہیں کہ آپ کا بیگ کھو گیا ہے۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "فَقَدْتُ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "حَقِيبَتِي"
+              }
+            ],
+            "model_phrase_id": "ch50-cl-p04",
+            "tip": {
+              "en": "فَقَدْتُ, then حَقِيبَتِي.",
+              "ur": "فَقَدْتُ، پھر حَقِيبَتِي۔"
+            }
+          },
+          {
+            "prompt_phrase_id": "ch50-cl-p05",
+            "cue": {
+              "en": "Ask where the office is.",
+              "ur": "پوچھیں کہ دفتر کہاں ہے۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "أَيْنَ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "الْمَكْتَبُ"
+              }
+            ],
+            "model_phrase_id": "ch50-cl-p06",
+            "tip": {
+              "en": "أَيْنَ, then الْمَكْتَبُ.",
+              "ur": "أَيْنَ، پھر الْمَكْتَبُ۔"
+            }
+          }
+        ]
+      },
+      "can_do": [
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Open politely",
+            "ur": "ادب سے آغاز کرنا"
+          },
+          "ar": "لَوْ سَمَحْتَ"
+        },
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "State a problem",
+            "ur": "مسئلہ بتانا"
+          },
+          "ar": "فَقَدْتُ حَقِيبَتِي"
+        },
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Ask where something is",
+            "ur": "پوچھنا کہ کچھ کہاں ہے"
+          },
+          "ar": "أَيْنَ الْمَكْتَبُ؟"
+        },
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Thank the helper",
+            "ur": "مددگار کا شکریہ"
+          },
+          "ar": "شُكْرًا"
+        }
+      ]
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Open politely, state the problem, ask where, and thank — a help request in four steps.",
+      "ur": "ادب سے آغاز، مسئلہ، کہاں کا سوال اور شکریہ — چار قدموں میں مدد کی درخواست۔"
+    }
+  }
+}

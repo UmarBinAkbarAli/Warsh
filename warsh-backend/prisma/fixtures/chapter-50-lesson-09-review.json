@@ -1,0 +1,399 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 50, retrieval review (ch50-l06, new). Added 2026-10-03 in the proposal harvest, batch 5. Ten retrieval tasks across the chapter: Az-Zalzalah, Al-Adiyat, reference (55:4, 99:3 / 99:5), connector (18:24), 24:25, CL15 and the 2:164 gist. No new material.",
+    "chapter_order": 50,
+    "lesson_order": 9,
+    "chapter_title": "Connected Reading and Practical Fusha",
+    "title": "Chapter 50 Review — Connected Reading",
+    "titleAr": "مُرَاجَعَةُ الْبَابِ 50 — الْقِرَاءَةُ الْمُتَرَابِطَةُ",
+    "titleUr": "باب 50 کا جائزہ — مسلسل پڑھنا",
+    "estimated_minutes": 10,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 99,
+      "ayah": 1,
+      "label": "Az-Zalzalah 99:1",
+      "ar": "إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا",
+      "en": "When the earth is shaken with its quake,",
+      "ur": "جب زمین پوری طرح ہلا دی جائے گی،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/099001.mp3"
+    },
+    "autoplay": true,
+    "noor_intro": {
+      "en": "Review: gist, evidence, references and the help-desk dialogue.",
+      "ur": "جائزہ: مرکزی خیال، شہادت، حوالے اور مدد کاؤنٹر کی گفتگو۔"
+    }
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 50 summary",
+        "ar": "خُلَاصَةُ الْبَابِ",
+        "ur": "باب 50 کا خلاصہ"
+      },
+      "explanation": {
+        "en": "Read for the main idea, then check the details in the text. Follow what pronouns and connectors point to. Cut a long ayah where the meaning turns. For a help request: open politely, state the problem, ask where, thank.",
+        "ur": "پہلے مرکزی خیال پڑھیں، پھر متن میں تفصیل دیکھیں۔ ضمیروں اور رابطوں کے اشارے کو دیکھیں۔ لمبی آیت کو وہاں کاٹیں جہاں مطلب مڑتا ہے۔ مدد کی درخواست کے لیے: ادب سے آغاز، مسئلہ، کہاں کا سوال، شکریہ۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Evidence first",
+        "ur": "پہلے شہادت"
+      },
+      "body": {
+        "en": "A good answer about a text points to the words that support it. If you cannot point to the words, you are guessing.",
+        "ur": "متن کے بارے میں اچھا جواب ان الفاظ کی طرف اشارہ کرتا ہے جو اسے سہارا دیں۔ اگر آپ الفاظ کی طرف اشارہ نہ کر سکیں تو آپ اندازہ لگا رہے ہیں۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch50-l06-ex01",
+      "prompt": {
+        "ar": "إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا",
+        "ar_plain": "اذا زلزلت الارض زلزالها",
+        "translit": "idhaa zulzilati al-ardu zilzaalahaa",
+        "en": "(99:1)",
+        "ur": "(99:1)"
+      },
+      "options": [
+        {
+          "en": "When the earth is shaken with its quake,",
+          "ur": "جب زمین پوری طرح ہلا دی جائے گی،"
+        },
+        {
+          "en": "When the earth is calm and still,",
+          "ur": "جب زمین پرسکون اور ساکن ہو،"
+        },
+        {
+          "en": "The earth did not shake.",
+          "ur": "زمین نہیں ہلی۔"
+        },
+        {
+          "en": "Shake the earth!",
+          "ur": "زمین کو ہلاؤ!"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch50-l06-ex02",
+      "prompt": {
+        "ar": "فَالْمُغِيرَٰتِ صُبْحًا",
+        "ar_plain": "فالمغيرت صبحا",
+        "translit": "fal-mughiiraati subhan",
+        "en": "(100:3)",
+        "ur": "(100:3)"
+      },
+      "options": [
+        {
+          "en": "and those that pray at dawn,",
+          "ur": "اور فجر میں نماز پڑھنے والوں کی،"
+        },
+        {
+          "en": "and those that rest at night,",
+          "ur": "اور رات کو آرام کرنے والوں کی،"
+        },
+        {
+          "en": "and those that raid at dawn,",
+          "ur": "پھر صبح کے وقت حملہ کرنے والوں کی،"
+        },
+        {
+          "en": "and those that raid at noon,",
+          "ur": "اور دوپہر کو حملہ کرنے والوں کی،"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch50-l06-ex03",
+      "prompt": {
+        "ar": "عَلَّمَهُ الْبَيَانَ",
+        "ar_plain": "علمه البيان",
+        "translit": "allamahu al-bayaana",
+        "en": "(55:4) — What does the هُ refer to?",
+        "ur": "(55:4) — هُ کس کی طرف لوٹتا ہے؟"
+      },
+      "options": [
+        {
+          "en": "the Quran of 55:2",
+          "ur": "55:2 کا قرآن"
+        },
+        {
+          "en": "the man of 55:3",
+          "ur": "55:3 کا انسان"
+        },
+        {
+          "en": "the speaker",
+          "ur": "بولنے والا"
+        },
+        {
+          "en": "nothing — it is a new noun",
+          "ur": "کچھ نہیں — یہ نیا اسم ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch50-l06-ex04",
+      "prompt": {
+        "ar": "إِلَّا أَنْ يَشَاءَ اللَّهُ",
+        "ar_plain": "الا ان يشاء الله",
+        "translit": "illaa an yashaa-a allaahu",
+        "en": "(18:24)",
+        "ur": "(18:24)"
+      },
+      "options": [
+        {
+          "en": "and Allah wills",
+          "ur": "اور اللہ چاہتا ہے"
+        },
+        {
+          "en": "because Allah willed",
+          "ur": "کیونکہ اللہ نے چاہا"
+        },
+        {
+          "en": "Allah does not will",
+          "ur": "اللہ نہیں چاہتا"
+        },
+        {
+          "en": "except that Allah wills",
+          "ur": "سوائے اس کے کہ اللہ چاہے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch50-l06-ex05",
+      "prompt": {
+        "ar": "يَوْمَئِذٍ يُوَفِّيهِمُ اللَّهُ دِينَهُمُ الْحَقَّ وَيَعْلَمُونَ أَنَّ اللَّهَ هُوَ الْحَقُّ الْمُبِينُ",
+        "ar_plain": "يومئذ يوفيهم الله دينهم الحق ويعلمون ان الله هو الحق المبين",
+        "translit": "yawma-idhin yuwaffiihimu allaahu diinahumu al-haqqa wa-ya-lamuuna anna allaaha huwa al-haqqu al-mubiinu",
+        "en": "(24:25) — What will they know?",
+        "ur": "(24:25) — وہ کیا جان لیں گے؟"
+      },
+      "options": [
+        {
+          "en": "that the Day is far",
+          "ur": "کہ وہ دن دور ہے"
+        },
+        {
+          "en": "that Allah does not pay them",
+          "ur": "کہ اللہ انہیں ادا نہیں کرتا"
+        },
+        {
+          "en": "that Allah is the manifest Truth",
+          "ur": "کہ اللہ ہی ظاہر حق ہے"
+        },
+        {
+          "en": "that the truth is hidden",
+          "ur": "کہ حق چھپا ہوا ہے"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch50-l06-ex06",
+      "prompt": {
+        "ar": "إِنَّ الْإِنسَٰنَ لِرَبِّهِۦ لَكَنُودٌ",
+        "ar_plain": "ان الانسن لربه لكنود",
+        "translit": "inna al-insaana lirabbihi la-kanuudun",
+        "en": "(100:6)",
+        "ur": "(100:6)"
+      },
+      "options": [
+        {
+          "en": "Indeed, mankind is very ungrateful to his Lord,",
+          "ur": "بے شک انسان اپنے رب کا بڑا ناشکرا ہے،"
+        },
+        {
+          "en": "Indeed, mankind is very grateful to his Lord,",
+          "ur": "بے شک انسان اپنے رب کا بڑا شکر گزار ہے،"
+        },
+        {
+          "en": "Indeed, his Lord is ungrateful to mankind,",
+          "ur": "بے شک اس کا رب انسان کا ناشکرا ہے،"
+        },
+        {
+          "en": "Mankind did not thank his Lord.",
+          "ur": "انسان نے اپنے رب کا شکر نہیں کیا۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch50-l06-ex07",
+      "prompt": {
+        "ar": "فَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًا يَرَهُۥ",
+        "ar_plain": "فمن يعمل مثقال ذرة خيرا يره",
+        "translit": "faman ya-mal mithqaala dharratin khayran yarahu",
+        "en": "(99:7)",
+        "ur": "(99:7)"
+      },
+      "options": [
+        {
+          "en": "So whoever does the weight of an atom of good will not see it,",
+          "ur": "تو جو کوئی ذرّے کے برابر نیکی کرے گا وہ اسے نہیں دیکھے گا،"
+        },
+        {
+          "en": "So whoever sees the atom will do good,",
+          "ur": "تو جو ذرّہ دیکھے گا وہ نیکی کرے گا،"
+        },
+        {
+          "en": "So good is the weight of the earth,",
+          "ur": "تو نیکی زمین کا وزن ہے،"
+        },
+        {
+          "en": "So whoever does the weight of an atom of good will see it,",
+          "ur": "تو جو کوئی ذرّے کے برابر نیکی کرے گا وہ اسے دیکھ لے گا،"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch50-l06-ex08",
+      "statement": {
+        "en": "In Az-Zalzalah, لَهَا in 99:3 and 99:5 points back to the earth.",
+        "ur": "الزلزال میں 99:3 اور 99:5 کا لَهَا زمین کی طرف لوٹتا ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "True: it is the earth that is shaken and that is inspired.",
+        "ur": "درست: زمین ہی ہلائی جاتی ہے اور اسی کو حکم دیا جاتا ہے۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch50-l06-ex09",
+      "prompt_line": {
+        "ar": "تَفَضَّلْ.",
+        "ar_plain": "تفضل.",
+        "translit": "tafaddal",
+        "en": "Go ahead. (You say your bag is lost.)",
+        "ur": "فرمائیے۔ (آپ بتاتے ہیں کہ آپ کا بیگ کھو گیا ہے۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "شُكْرًا.",
+          "ar_plain": "شكرا.",
+          "translit": "shukran",
+          "en": "Thank you.",
+          "ur": "شکریہ۔"
+        },
+        {
+          "ar": "أَيْنَ الْمَكْتَبُ؟",
+          "ar_plain": "اين المكتب؟",
+          "translit": "ayna al-maktabu",
+          "en": "Where is the office?",
+          "ur": "دفتر کہاں ہے؟"
+        },
+        {
+          "ar": "فَقَدْتُ حَقِيبَتِي.",
+          "ar_plain": "فقدت حقيبتي.",
+          "translit": "faqadtu haqiibatii",
+          "en": "I lost my bag.",
+          "ur": "میرا بیگ کھو گیا ہے۔"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "To state the problem: فَقَدْتُ حَقِيبَتِي.",
+        "ur": "مسئلہ بتانے کے لیے: فَقَدْتُ حَقِيبَتِي۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch50-l06-ex10",
+      "prompt": {
+        "ar": "الْمَكْتَبُ هُنَاكَ.",
+        "ar_plain": "المكتب هناك.",
+        "translit": "al-maktabu hunaaka",
+        "en": "(The helper replies)",
+        "ur": "(مددگار کا جواب)"
+      },
+      "options": [
+        {
+          "en": "The office is closed.",
+          "ur": "دفتر بند ہے۔"
+        },
+        {
+          "en": "The office is over there.",
+          "ur": "دفتر وہاں ہے۔"
+        },
+        {
+          "en": "I am in the office.",
+          "ur": "میں دفتر میں ہوں۔"
+        },
+        {
+          "en": "Where is the office?",
+          "ur": "دفتر کہاں ہے؟"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Connected reading",
+      "ar": "الْقِرَاءَةُ الْمُتَرَابِطَةُ",
+      "ur": "مسلسل پڑھنا"
+    },
+    "ayah": {
+      "surah": 99,
+      "ayah": 1,
+      "label": "Az-Zalzalah 99:1",
+      "ar": "إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا",
+      "en": "When the earth is shaken with its quake,",
+      "ur": "جب زمین پوری طرح ہلا دی جائے گی،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/099001.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "highlighted_words": [
+      "إِذَا",
+      "زُلْزِلَتِ",
+      "الْأَرْضُ",
+      "زِلْزَالَهَا"
+    ],
+    "noor_explanation": {
+      "en": "An event, then its results — read the surah as a sequence.",
+      "ur": "ایک واقعہ، پھر اس کے نتائج — سورت کو ترتیب کے طور پر پڑھیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Gist, evidence, references, chunks and a help request — Chapter 50 in one review.",
+      "ur": "مرکزی خیال، شہادت، حوالے، ٹکڑے اور مدد کی درخواست — باب 50 ایک جائزے میں۔"
+    }
+  }
+}
