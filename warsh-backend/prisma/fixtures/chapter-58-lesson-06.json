@@ -1,29 +1,30 @@
 {
-  "schema_version": "1.0",
-  "template": "REVIEW",
   "_meta": {
-    "_note": "Chapter 58, Lesson 6 — REVIEW. Book 6 Higher Syntax capstone: transitive/intransitive, fronted predicate, إنَّ constructions, two-object verbs. Bridges to Ch59 capstone.",
+    "_note": "Chapter 58, Lesson 5 — Applied parsing: analyzing complex Quranic sentences with transitive/intransitive and fronted predicate patterns",
     "chapter_order": 58,
     "lesson_order": 6,
     "chapter_title": "Higher-Level Syntax and Classical Usage",
-    "title": "Chapter 58 Review — Higher Syntax",
-    "titleAr": "مُرَاجَعَةُ الْبَابِ الثَّامِنِ وَالْخَمْسِينَ",
+    "title": "Applied Parsing — تحليل الجمل القرآنية",
+    "titleAr": "تَحْلِيلُ الْجُمَلِ الْقُرْآنِيَّةِ",
+    "source": "book_6_higher_syntax_58_applied_parsing.md",
     "estimated_minutes": 10,
     "xp_reward": 10
   },
+  "schema_version": "1.0",
+  "template": "STANDARD",
   "hook": {
     "ayah": {
-      "surah": 3,
-      "ayah": 18,
-      "label": "Aal-Imran 3:18",
-      "ar": "شَهِدَ اللَّهُ أَنَّهُ لَا إِلَهَ إِلَّا هُوَ وَالْمَلَائِكَةُ وَأُولُو الْعِلْمِ قَائِمًا بِالْقِسْطِ",
-      "en": "Allah witnesses that there is no deity except Him, and so do the angels and those of knowledge — upholding justice.",
-      "ur": "اللہ گواہی دیتا ہے کہ اس کے سوا کوئی معبود نہیں، اور فرشتے اور اہل علم بھی — انصاف کو قائم رکھتے ہوئے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003018.mp3"
+      "surah": 2,
+      "ayah": 30,
+      "label": "Al-Baqarah 2:30",
+      "ar": "وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً",
+      "en": "And when your Lord said to the angels, 'Indeed, I will make upon the earth a successive authority.'",
+      "ur": "اور جب تمہارے رب نے فرشتوں سے کہا کہ بے شک میں زمین میں ایک خلیفہ بنانے والا ہوں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002030.mp3"
     },
     "noor_intro": {
-      "en": "شَهِدَ اللَّهُ — \"Allah bears witness\". A verbal sentence: a transitive verb, its subject, an أَنَّ-clause as the object, and قَائِمًا describing a state. A good place to review Chapter 58.",
-      "ur": "شَهِدَ اللَّهُ — \"اللہ گواہی دیتا ہے\"۔ جملہ فعلیہ: متعدی فعل، اس کا فاعل، أَنَّ والا جز بطور مفعول، اور قَائِمًا جو حالت بتاتا ہے۔ باب 58 کی مراجعہ کے لیے اچھی جگہ۔"
+      "en": "إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً combines إِنَّ (with the attached \"I\"), an active participle جَاعِلٌ that takes an object, and a prepositional phrase. Today we parse such sentences piece by piece.",
+      "ur": "إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً میں إِنَّ (متصل \"میں\" کے ساتھ)، مفعول لینے والا اسم فاعل جَاعِلٌ، اور جار مجرور سب جمع ہیں۔ آج ہم ایسے جملوں کو ٹکڑا ٹکڑا پڑھیں گے۔"
     },
     "autoplay": true
   },
@@ -31,298 +32,442 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Chapter 58 — Four key structures",
-        "ar": "الْبَابُ 58 — أَرْبَعُ هَيَاكِلَ أَسَاسِيَّةٌ",
-        "ur": "باب 58 — چار بنیادی ساختیں"
+        "en": "Applied Parsing — Integrated Analysis",
+        "ar": "تَحْلِيلُ الْجُمَلِ الْقُرْآنِيَّةِ — تَطْبِيقُ مَا تَعَلَّمْنَاهُ",
+        "ur": "قرآنی جملوں کا تجزیہ — جو ہم نے سیکھا اس کا اطلاق"
       },
       "explanation": {
-        "en": "1. A transitive verb takes an accusative object. 2. Two-object verbs (عَلَّمَ، جَعَلَ، ظَنَّ، أَعْطَى) take two. 3. A fronted predicate: لِلَّهِ الْأَمْرُ, وَعَلَىٰ أَبْصَارِهِمْ غِشَاوَةٌ. 4. إِنَّ: subject accusative, predicate nominative.",
-        "ur": "1. متعدی فعل منصوب مفعول لیتا ہے۔ 2. دو مفعول والے افعال (عَلَّمَ، جَعَلَ، ظَنَّ، أَعْطَى) دو لیتے ہیں۔ 3. مقدم خبر: لِلَّهِ الْأَمْرُ، وَعَلَىٰ أَبْصَارِهِمْ غِشَاوَةٌ۔ 4. إِنَّ: اسم منصوب، خبر مرفوع۔"
+        "en": "Real Quranic sentences combine several patterns at once: إِنَّ (subject accusative, predicate nominative), transitive verbs or participles taking objects, and prepositional phrases. The skill is to spot each pattern, then see how they fit together.",
+        "ur": "اصل قرآنی جملوں میں کئی ترتیبیں ایک ساتھ ہوتی ہیں: إِنَّ (اسم منصوب، خبر مرفوع)، مفعول لینے والے متعدی افعال یا اسم فاعل، اور جار مجرور۔ مہارت یہ ہے کہ ہر ترتیب پہچانیں، پھر دیکھیں کہ وہ کیسے جڑتی ہیں۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "جَاعِلٌ",
+        "ar_plain": "جاعل",
+        "translit": "jaa'ilun",
+        "en": "making / appointing — متعدي to two objects",
+        "ur": "بنانے والا / مقرر کرنے والا — دو مفعول به والا متعدی"
+      },
+      "explanation": {
+        "en": "جَاعِلٌ is the active participle (اسْمُ فَاعِل) of جَعَلَ: \"one who places / is going to place\". Like its verb it takes an object: خَلِيفَةً (accusative). فِي الْأَرْضِ (\"on the earth\") is a prepositional phrase. Here جَعَلَ means \"place\", so there is one object.",
+        "ur": "جَاعِلٌ، جَعَلَ کا اسم فاعل ہے: \"رکھنے / بنانے والا\"۔ اپنے فعل کی طرح یہ مفعول لیتا ہے: خَلِيفَةً (منصوب)۔ فِي الْأَرْضِ (\"زمین میں\") جار مجرور ہے۔ یہاں جَعَلَ \"رکھنا\" کے معنی میں ہے، اس لیے ایک ہی مفعول ہے۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "إِنِّي",
+        "ar_plain": "اني",
+        "translit": "inni",
+        "en": "indeed I — إِنَّ + attached ي (first person)",
+        "ur": "بے شک میں — إِنَّ + attached ي (پہلا شخص)"
+      },
+      "explanation": {
+        "en": "إِنِّي = إِنَّ + ي (\"I\"). The ي is the subject of إِنَّ (in the accusative position). جَاعِلٌ is the predicate of إِنَّ — nominative, with ḍamma and tanwīn.",
+        "ur": "إِنِّي = إِنَّ + ي (\"میں\")۔ ي إِنَّ کا اسم ہے (نصب کی جگہ)۔ جَاعِلٌ إِنَّ کی خبر ہے — مرفوع، ضمہ اور تنوین کے ساتھ۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "خَلِيفَةً",
+        "ar_plain": "خليفة",
+        "translit": "khaliifatan",
+        "en": "successor / vicegerent — مفعول به (accusative)",
+        "ur": "خلیفہ — مفعول به (نصب)"
+      },
+      "explanation": {
+        "en": "خَلِيفَةً, the object of جَاعِلٌ (accusative), from خ-ل-ف (to succeed). The word also appears in Ṣād 38:26: يَا دَاوُودُ إِنَّا جَعَلْنَاكَ خَلِيفَةً فِي الْأَرْضِ.",
+        "ur": "خَلِيفَةً، جَاعِلٌ کا مفعول (منصوب)، مادہ خ-ل-ف (جانشین ہونا)۔ یہ لفظ سورۃ ص 38:26 میں بھی ہے: يَا دَاوُودُ إِنَّا جَعَلْنَاكَ خَلِيفَةً فِي الْأَرْضِ۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "شَهِدَ اللَّهُ أَنَّهُ لَا إِلَهَ إِلَّا هُوَ",
-        "ar_plain": "شهد الله انه لا اله الا هو",
-        "translit": "shahida Allahu annahu laa ilaaha illaa huwa",
-        "en": "Allah witnesses that there is no deity except Him.",
-        "ur": "اللہ گواہی دیتا ہے کہ اس کے سوا کوئی معبود نہیں۔"
+        "ar": "إِنِّي جَاعِلٌ خَلِيفَةً",
+        "ar_plain": "اني جاعل خليفة",
+        "translit": "inni jaa'ilun khaliifatan",
+        "en": "Indeed I am making a successor.",
+        "ur": "بے شک میں ایک خلیفہ بنانے والا ہوں۔"
       },
       "explanation": {
-        "en": "شَهِدَ (transitive verb) + اللَّهُ (subject) + أَنَّهُ لَا إِلَٰهَ إِلَّا هُوَ (the object — a whole أَنَّ-clause: what He bears witness to).",
-        "ur": "شَهِدَ (متعدی فعل) + اللَّهُ (فاعل) + أَنَّهُ لَا إِلَٰهَ إِلَّا هُوَ (مفعول — پورا أَنَّ والا جز: جس کی وہ گواہی دیتا ہے)۔"
+        "en": "إِنِّي = إِنَّ + ي (subject of إِنَّ). جَاعِلٌ = predicate of إِنَّ (nominative). خَلِيفَةً = object of جَاعِلٌ (accusative).",
+        "ur": "إِنِّي = إِنَّ + ي (إِنَّ کا اسم)۔ جَاعِلٌ = إِنَّ کی خبر (مرفوع)۔ خَلِيفَةً = جَاعِلٌ کا مفعول (منصوب)۔"
       }
     },
     {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "قَائِمًا بِالْقِسْطِ — a حال phrase",
-        "ur": "قَائِمًا بِالْقِسْطِ — ایک حال phrase"
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً",
+        "ar_plain": "واذ قال ربك للملائكة اني جاعل في الارض خليفة",
+        "translit": "wa idh qaala rabbuka li-l-malaa'ikati innii jaa'ilun fii al-ardi khaliifatan",
+        "en": "And when your Lord said to the angels, 'Indeed I will make upon the earth a successor.'",
+        "ur": "اور جب تمہارے رب نے فرشتوں سے کہا کہ بے شک میں زمین میں ایک خلیفہ بنانے والا ہوں۔"
       },
-      "body": {
-        "en": "قَائِمًا بِالْقِسْطِ means 'upholding justice' — this is a حال (descriptive accusative). It describes the state in which the witnesses (Allah, angels, people of knowledge) are testifying. Accusative because it is a حال. Chapter 71 will give this term its full treatment.",
-        "ur": "قَائِمًا بِالْقِسْطِ کا مطلب 'انصاف کو قائم رکھتے ہوئے' — یہ ایک حال (descriptive accusative) ہے۔ یہ اس حال کو بیان کرتا ہے جس میں گواہ (اللہ، فرشتے، اہل علم) گواہی دے رہے ہیں۔"
+      "explanation": {
+        "en": "قَالَ رَبُّكَ = verb + subject. لِلْمَلَائِكَةِ = prepositional phrase naming who was addressed. What was said, إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً, is an إِنَّ-sentence: ي = subject of إِنَّ, جَاعِلٌ = predicate, فِي الْأَرْضِ = prepositional phrase, خَلِيفَةً = object of جَاعِلٌ.",
+        "ur": "قَالَ رَبُّكَ = فعل + فاعل۔ لِلْمَلَائِكَةِ = جار مجرور، جن سے خطاب ہوا۔ جو کہا گیا، إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً، إِنَّ والا جملہ ہے: ي = إِنَّ کا اسم، جَاعِلٌ = خبر، فِي الْأَرْضِ = جار مجرور، خَلِيفَةً = جَاعِلٌ کا مفعول۔"
       }
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
-      "id": "ch58-l06-ex01",
-      "prompt": {
-        "ar": "شَهِدَ اللَّهُ أَنَّهُ لَا إِلَهَ إِلَّا هُوَ",
-        "ar_plain": "شهد الله انه لا اله الا هو",
-        "translit": "shahida Allahu annahu laa ilaaha illaa huwa",
-        "en": "Allah witnesses that there is no deity except Him.",
-        "ur": "اللہ گواہی دیتا ہے کہ اس کے سوا کوئی معبود نہیں۔"
-      },
-      "options": [
-        {
-          "en": "Allah witnesses that there is no deity except Him.",
-          "ur": "اللہ گواہی دیتا ہے کہ اس کے سوا کوئی معبود نہیں۔"
-        },
-        {
-          "en": "Allah knows that there is no god but He.",
-          "ur": "اللہ جانتا ہے کہ اس کے سوا کوئی معبود نہیں۔"
-        },
-        {
-          "en": "Allah decrees that there is none like Him.",
-          "ur": "اللہ فیصلہ کرتا ہے کہ اس جیسا کوئی نہیں۔"
-        },
-        {
-          "en": "Allah said there is no deity except Him.",
-          "ur": "اللہ نے کہا کہ اس کے سوا کوئی معبود نہیں۔"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "شَهِدَ means 'witnessed/testified,' not 'knew' or 'said.' أَنَّهُ introduces the content of the testimony as a subordinate clause.",
-        "ur": "شَهِدَ کا مطلب 'گواہی دی' ہے، نہ 'جانا' یا 'کہا'۔ أَنَّهُ گواہی کا مواد subordinate clause کے طور پر متعارف کراتا ہے۔"
-      }
-    },
-    {
+      "id": "ch58-l05-ex01",
       "type": "TRUE_FALSE",
-      "id": "ch58-l06-ex02",
       "statement": {
-        "en": "In وَعَلَىٰ أَبْصَارِهِمْ غِشَاوَةٌ, عَلَىٰ أَبْصَارِهِمْ is a fronted predicate and غِشَاوَةٌ is the delayed subject.",
-        "ur": "وَعَلَىٰ أَبْصَارِهِمْ غِشَاوَةٌ میں عَلَىٰ أَبْصَارِهِمْ مقدم خبر اور غِشَاوَةٌ مؤخر مبتدا ہے۔",
-        "ar_example": {
-          "ar": "وَعَلَىٰ أَبْصَارِهِمْ غِشَاوَةٌ",
-          "ar_plain": "وعلى أبصارهم غشاوة",
-          "translit": "wa 'alaa abSaarihim ghishaawatun",
-          "en": "and over their vision is a veil",
-          "ur": "اور ان کی آنکھوں پر پردہ ہے"
-        }
+        "en": "In إِنِّي جَاعِلٌ خَلِيفَةً, the predicate جَاعِلٌ is accusative because of إِنَّ.",
+        "ur": "إِنِّي جَاعِلٌ خَلِيفَةً میں خبر جَاعِلٌ إِنَّ کی وجہ سے منصوب ہے۔"
       },
-      "correct_answer": true,
+      "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "True. غِشَاوَةٌ is indefinite, so the prepositional predicate عَلَىٰ أَبْصَارِهِمْ comes first (Al-Baqarah 2:7).",
-        "ur": "درست۔ غِشَاوَةٌ نکرہ ہے، اس لیے جار مجرور خبر عَلَىٰ أَبْصَارِهِمْ پہلے آئی (سورۃ البقرہ 2:7)۔"
+        "en": "False. إِنَّ makes only its subject (the ي) accusative. Its predicate جَاعِلٌ is nominative — see the ḍamma and tanwīn. خَلِيفَةً is accusative because it is the object of جَاعِلٌ.",
+        "ur": "غلط۔ إِنَّ صرف اپنے اسم (ي) کو منصوب کرتا ہے۔ اس کی خبر جَاعِلٌ مرفوع ہے — ضمہ اور تنوین دیکھیں۔ خَلِيفَةً اس لیے منصوب ہے کہ وہ جَاعِلٌ کا مفعول ہے۔"
       }
     },
     {
-      "type": "FILL_BLANK",
-      "id": "ch58-l06-ex03",
-      "mode": "TAP",
-      "sentence_ar": "وَأُولُو الْعِلْمِ قَائِمًا ___",
-      "hint": {
-        "en": "...and those of knowledge — upholding justice.",
-        "ur": "...اور اہل علم — انصاف کو قائم رکھتے ہوئے۔"
-      },
-      "options": [
+      "id": "ch58-l05-ex02",
+      "type": "GRAMMAR_PARSE",
+      "sentence_ar": "إِنِّي جَاعِلٌ خَلِيفَةً",
+      "words": [
         {
-          "ar": "بِالْقِسْطِ",
-          "ar_plain": "بالقسط",
-          "translit": "bil-qisti",
-          "en": "with justice",
-          "ur": "انصاف کے ساتھ"
+          "ar": "إِنِّي",
+          "ar_plain": "اني",
+          "translit": "inni",
+          "en": "indeed I",
+          "ur": "واقعی میں"
         },
         {
-          "ar": "بِالْحَقِّ",
-          "ar_plain": "بالحق",
-          "translit": "bil-haqqi",
-          "en": "with truth",
-          "ur": "حق کے ساتھ"
+          "ar": "جَاعِلٌ",
+          "ar_plain": "جاعل",
+          "translit": "jaa'ilun",
+          "en": "making",
+          "ur": "بنانا"
         },
         {
-          "ar": "بِالْعَدْلِ",
-          "ar_plain": "بالعدل",
-          "translit": "bil-'adli",
-          "en": "with equity",
-          "ur": "عدل کے ساتھ"
-        },
-        {
-          "ar": "بِالصِّدْقِ",
-          "ar_plain": "بالصدق",
-          "translit": "bis-sidqi",
-          "en": "with truth",
-          "ur": "سچائی کے ساتھ"
+          "ar": "خَلِيفَةً",
+          "ar_plain": "خليفة",
+          "translit": "khaliifatan",
+          "en": "a successor",
+          "ur": "ایک جانشین"
         }
       ],
-      "correct_answer": {
-        "ar": "بِالْقِسْطِ",
-        "ar_plain": "بالقسط",
-        "translit": "bil-qisti",
-        "en": "with justice",
-        "ur": "انصاف کے ساتھ"
-      },
-      "xp_value": 1
+      "available_roles": [
+        "SUBJECT",
+        "PREDICATE",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "PREDICATE",
+        "OBJECT"
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "إِنِّي = إِنَّ + ي; the ي is the subject of إِنَّ. جَاعِلٌ = predicate (nominative). خَلِيفَةً = object of جَاعِلٌ (accusative).",
+        "ur": "إِنِّي = إِنَّ + ي؛ ي إِنَّ کا اسم ہے۔ جَاعِلٌ = خبر (مرفوع)۔ خَلِيفَةً = جَاعِلٌ کا مفعول (منصوب)۔"
+      }
     },
     {
+      "id": "ch58-l05-ex03",
       "type": "MATCHING",
-      "id": "ch58-l06-ex04",
       "left_column": [
         {
-          "ar": "شَهِدَ اللَّهُ أَنَّهُ لَا إِلَهَ إِلَّا هُوَ",
-          "ar_plain": "شهد الله انه لا اله الا هو",
-          "translit": "shahida Allahu annahu laa ilaaha illaa huwa",
-          "en": "Transitive verb + أنَّ clause as object",
-          "ur": "متعدي فعل + أنَّ clause مفعول"
+          "ar": "إِنِّي",
+          "ar_plain": "اني",
+          "translit": "inni",
+          "en": "indeed I",
+          "ur": "واقعی میں"
         },
         {
-          "ar": "لِلَّهِ الْأَمْرُ",
-          "ar_plain": "لله الأمر",
-          "translit": "lillaahi al-amru",
-          "en": "Fronted predicate",
-          "ur": "خبر مقدم"
+          "ar": "جَاعِلٌ",
+          "ar_plain": "جاعل",
+          "translit": "jaa'ilun",
+          "en": "making",
+          "ur": "بنانا"
         },
         {
-          "ar": "إِنَّ اللَّهَ سَمِيعٌ عَلِيمٌ",
-          "ar_plain": "ان الله سميع عليم",
-          "translit": "inna Allaha samee'un 'aleemun",
-          "en": "إنَّ: accusative subject, nominative predicate",
-          "ur": "إنَّ مع مبتدأ منصوب"
+          "ar": "خَلِيفَةً",
+          "ar_plain": "خليفة",
+          "translit": "khaliifatan",
+          "en": "successor",
+          "ur": "جانشین"
         },
         {
-          "ar": "قَائِمًا بِالْقِسْطِ",
-          "ar_plain": "قائما بالقسط",
-          "translit": "qaa'iman bil-qist",
-          "en": "Descriptive accusative (حال)",
-          "ur": "وصفی منصوب (حال)"
+          "ar": "فِي الْأَرْضِ",
+          "ar_plain": "في الارض",
+          "translit": "fii al-ardi",
+          "en": "upon the earth",
+          "ur": "زمین پر"
         }
       ],
       "right_column": [
         {
-          "en": "Fronted predicate",
-          "ur": "خبر مقدم"
+          "en": "إِنَّ + its subject (the ي)",
+          "ur": "إِنَّ + اس کا اسم (ي)"
         },
         {
-          "en": "Transitive verb + أنَّ clause as object",
-          "ur": "متعدي فعل + أنَّ clause مفعول"
+          "en": "predicate of إِنَّ, nominative — takes an object",
+          "ur": "إِنَّ کی خبر، مرفوع — مفعول لیتی ہے"
         },
         {
-          "en": "Descriptive accusative (حال)",
-          "ur": "وصفی منصوب (حال)"
+          "en": "object, accusative",
+          "ur": "مفعول، منصوب"
         },
         {
-          "en": "إنَّ: accusative subject, nominative predicate",
-          "ur": "إنَّ: اسم منصوب، خبر مرفوع"
+          "en": "prepositional phrase",
+          "ur": "جار مجرور"
         }
       ],
       "correct_pairs": [
         [
           0,
-          1
-        ],
-        [
-          1,
           0
         ],
         [
+          1,
+          1
+        ],
+        [
           2,
-          3
+          2
         ],
         [
           3,
-          2
+          3
         ]
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "إِنِّي = إِنَّ + its subject ي. جَاعِلٌ = predicate (nominative), taking the object خَلِيفَةً (accusative). فِي الْأَرْضِ = prepositional phrase (الْأَرْضِ genitive).",
+        "ur": "إِنِّي = إِنَّ + اس کا اسم ي۔ جَاعِلٌ = خبر (مرفوع)، جو مفعول خَلِيفَةً (منصوب) لیتی ہے۔ فِي الْأَرْضِ = جار مجرور (الْأَرْضِ مجرور)۔"
+      }
     },
     {
+      "id": "ch58-l05-ex04",
+      "type": "TRUE_FALSE",
+      "statement": {
+        "en": "In وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ, لِلْمَلَائِكَةِ is a prepositional phrase naming who was addressed, not a direct object.",
+        "ur": "وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ میں لِلْمَلَائِكَةِ جار مجرور ہے جو مخاطب کو بتاتا ہے، مفعول بہ نہیں۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "True. لِلْمَلَائِكَةِ = لِـ + الْمَلَائِكَةِ (genitive): \"to the angels\". What is said after قَالَ is the content of the speech.",
+        "ur": "درست۔ لِلْمَلَائِكَةِ = لِـ + الْمَلَائِكَةِ (مجرور): \"فرشتوں سے\"۔ قَالَ کے بعد جو کہا جائے وہ بات کا مضمون ہے۔"
+      }
+    },
+    {
+      "id": "ch58-l05-ex05",
+      "type": "FILL_BLANK",
+      "mode": "TAP",
+      "sentence_ar": "إِنَّ اللَّهَ ___",
+      "hint": {
+        "en": "Indeed Allah is... (choose the correct description).",
+        "ur": "بے شک اللہ ... ہے (درست description choose کرو)۔"
+      },
+      "options": [
+        {
+          "ar": "غَفُورٌ رَحِيمٌ",
+          "ar_plain": "غفور رحيم",
+          "translit": "ghafuurun rahiimun",
+          "en": "Forgiving, Merciful (nominative)",
+          "ur": "بخشنے والا، رحم کرنے والا (رفع)"
+        },
+        {
+          "ar": "غَفُورًا رَحِيمًا",
+          "ar_plain": "غفورا رحيما",
+          "translit": "ghafuuran rahiiman",
+          "en": "Forgiving, Merciful (accusative)",
+          "ur": "بخشنے والا، رحم کرنے والا (نصب)"
+        },
+        {
+          "ar": "الْغَفُورُ الرَّحِيمُ",
+          "ar_plain": "الغفور الرحيم",
+          "translit": "al-ghafuuru ar-raHiimu",
+          "en": "the Forgiving, the Merciful (definite)",
+          "ur": "بخشنے والا، مہربان (معرفہ)"
+        },
+        {
+          "ar": "غَفُورٍ رَحِيمٍ",
+          "ar_plain": "غفور رحيم",
+          "translit": "ghafuurin rahiimin",
+          "en": "Forgiving, Merciful (genitive)",
+          "ur": "بخشنے والا، رحم کرنے والا (جر)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "غَفُورٌ رَحِيمٌ",
+        "ar_plain": "غفور رحيم",
+        "translit": "ghafuurun rahiimun",
+        "en": "Forgiving, Merciful (nominative)",
+        "ur": "بخشنے والا، رحم کرنے والا (رفع)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "إِنَّ makes its subject (اللَّهَ) accusative, but its predicate stays nominative: غَفُورٌ رَحِيمٌ.",
+        "ur": "إِنَّ اپنے اسم (اللَّهَ) کو منصوب کرتا ہے، مگر اس کی خبر مرفوع رہتی ہے: غَفُورٌ رَحِيمٌ۔"
+      }
+    },
+    {
+      "id": "ch58-l05-ex06",
       "type": "BUILD_SENTENCE",
-      "id": "ch58-l06-ex05",
       "target_translation": {
-        "en": "Allah witnesses that there is no deity except Him.",
-        "ur": "اللہ گواہی دیتا ہے کہ اس کے سوا کوئی معبود نہیں۔"
+        "en": "Indeed, in that is a sign.",
+        "ur": "بے شک اس میں ایک نشانی ہے۔"
       },
       "tiles": [
         {
-          "ar": "شَهِدَ",
-          "ar_plain": "شهد",
-          "translit": "shahida",
-          "en": "witnesses",
-          "ur": "گواہی دیتا ہے"
+          "ar": "إِنَّ",
+          "ar_plain": "إن",
+          "translit": "inna",
+          "en": "indeed",
+          "ur": "بے شک"
         },
         {
-          "ar": "اللَّهُ",
-          "ar_plain": "الله",
-          "translit": "Allahu",
-          "en": "Allah",
-          "ur": "اللہ"
+          "ar": "فِي ذَٰلِكَ",
+          "ar_plain": "في ذلك",
+          "translit": "fii dhaalika",
+          "en": "in that",
+          "ur": "اس میں"
         },
         {
-          "ar": "أَنَّهُ",
-          "ar_plain": "انه",
-          "translit": "annahu",
-          "en": "that He",
-          "ur": "کہ وہ"
+          "ar": "لَآيَةً",
+          "ar_plain": "لآية",
+          "translit": "la-aayatan",
+          "en": "a sign (acc.)",
+          "ur": "ایک نشانی (منصوب)"
         },
         {
-          "ar": "لَا إِلَهَ",
-          "ar_plain": "لا اله",
-          "translit": "laa ilaaha",
-          "en": "no deity",
-          "ur": "کوئی معبود نہیں"
-        },
-        {
-          "ar": "إِلَّا هُوَ",
-          "ar_plain": "الا هو",
-          "translit": "illaa huwa",
-          "en": "except Him",
-          "ur": "سوائے اس کے"
+          "ar": "لَآيَةٌ",
+          "ar_plain": "لآية",
+          "translit": "la-aayatun",
+          "en": "a sign (nom.)",
+          "ur": "ایک نشانی (مرفوع)"
         }
       ],
       "correct_order": [
         0,
         1,
-        2,
-        3,
-        4
+        2
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "e.g. An-Naḥl 16:11: إِنَّ + فِي ذَٰلِكَ (fronted predicate) + لَآيَةً (subject of إِنَّ, delayed — accusative, with the emphatic لَـ). An indefinite subject comes after a prepositional predicate.",
+        "ur": "مثلاً سورۃ النحل 16:11: إِنَّ + فِي ذَٰلِكَ (مقدم خبر) + لَآيَةً (إِنَّ کا مؤخر اسم — منصوب، تاکید کے لَـ کے ساتھ)۔ نکرہ اسم جار مجرور خبر کے بعد آتا ہے۔"
+      }
+    },
+    {
+      "id": "ch58-l05-ex07",
+      "type": "GRAMMAR_PARSE",
+      "sentence_ar": "إِنَّ فِي ذَٰلِكَ لَآيَةً",
+      "words": [
+        {
+          "ar": "إِنَّ",
+          "ar_plain": "إن",
+          "translit": "inna",
+          "en": "indeed",
+          "ur": "بے شک"
+        },
+        {
+          "ar": "فِي ذَٰلِكَ",
+          "ar_plain": "في ذلك",
+          "translit": "fii dhaalika",
+          "en": "in that",
+          "ur": "اس میں"
+        },
+        {
+          "ar": "لَآيَةً",
+          "ar_plain": "لآية",
+          "translit": "la-aayatan",
+          "en": "a sign",
+          "ur": "ایک نشانی"
+        }
+      ],
+      "available_roles": [
+        "PARTICLE",
+        "SUBJECT",
+        "PREDICATE"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "PREDICATE",
+        "SUBJECT"
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "إِنَّ = particle. فِي ذَٰلِكَ = fronted predicate (prepositional phrase). لَآيَةً = delayed subject of إِنَّ (accusative).",
+        "ur": "إِنَّ = حرف۔ فِي ذَٰلِكَ = مقدم خبر (جار مجرور)۔ لَآيَةً = إِنَّ کا مؤخر اسم (منصوب)۔"
+      }
+    },
+    {
+      "id": "ch58-l05-ex08",
+      "type": "TAP_TRANSLATION",
+      "prompt": {
+        "ar": "إِنَّ إِلَٰهَكُمْ لَوَاحِدٌ",
+        "ar_plain": "إن إلهكم لواحد",
+        "translit": "inna ilaahakum la-waaHidun",
+        "en": "Indeed, your god is One.",
+        "ur": "بے شک تمہارا معبود ایک ہے۔"
+      },
+      "options": [
+        {
+          "en": "Indeed, your god is One.",
+          "ur": "بے شک تمہارا معبود ایک ہے۔"
+        },
+        {
+          "en": "Indeed, your gods are many.",
+          "ur": "بے شک تمہارے معبود بہت ہیں۔"
+        },
+        {
+          "en": "Your god was one.",
+          "ur": "تمہارا معبود ایک تھا۔"
+        },
+        {
+          "en": "Is your god one?",
+          "ur": "کیا تمہارا معبود ایک ہے؟"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Aṣ-Ṣāffāt 37:4. إِنَّ + إِلَٰهَكُمْ (\"your god\" — subject of إِنَّ, accusative) + لَوَاحِدٌ (\"is One\" — predicate, nominative, with the emphatic لَـ).",
+        "ur": "سورۃ الصافات 37:4۔ إِنَّ + إِلَٰهَكُمْ (\"تمہارا معبود\" — إِنَّ کا اسم، منصوب) + لَوَاحِدٌ (\"ایک ہے\" — خبر، مرفوع، تاکید کے لَـ کے ساتھ)۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Higher Syntax — The Grammar of Tawheed",
-      "ar": "النَّحْوُ الْعَالِي — قَوَاعِدُ التَّوْحِيدِ",
-      "ur": "بلند نحو — توحید کا قواعد"
+      "en": "Applied Parsing — Integrated Analysis",
+      "ar": "تَحْلِيلُ الْجُمَلِ الْقُرْآنِيَّةِ",
+      "ur": "قرآنی جملوں کا تجزیہ"
     },
     "ayah": {
-      "surah": 3,
-      "ayah": 18,
-      "label": "Aal-Imran 3:18",
-      "ar": "شَهِدَ اللَّهُ أَنَّهُ لَا إِلَهَ إِلَّا هُوَ وَالْمَلَائِكَةُ وَأُولُو الْعِلْمِ قَائِمًا بِالْقِسْطِ",
-      "en": "Allah witnesses that there is no deity except Him, and so do the angels and those of knowledge — upholding justice.",
-      "ur": "اللہ گواہی دیتا ہے کہ اس کے سوا کوئی معبود نہیں، اور فرشتے اور اہل علم بھی — انصاف کو قائم رکھتے ہوئے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003018.mp3"
+      "surah": 2,
+      "ayah": 30,
+      "label": "Al-Baqarah 2:30",
+      "ar": "وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً",
+      "en": "And when your Lord said to the angels, 'Indeed, I will make upon the earth a successive authority.'",
+      "ur": "اور جب تمہارے رب نے فرشتوں سے کہا کہ بے شک میں زمین میں ایک خلیفہ بنانے والا ہوں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002030.mp3"
     },
     "highlighted_word_indices": [
-      0
+      4,
+      5,
+      6,
+      7
     ],
     "noor_explanation": {
-      "en": "شَهِدَ (a transitive verb), اللَّهُ (its subject), أَنَّهُ لَا إِلَٰهَ إِلَّا هُوَ (its object, a whole clause), and قَائِمًا (\"upholding\", describing a state). One ayah, several of this chapter's structures.",
-      "ur": "شَهِدَ (متعدی فعل)، اللَّهُ (اس کا فاعل)، أَنَّهُ لَا إِلَٰهَ إِلَّا هُوَ (اس کا مفعول، پورا جز)، اور قَائِمًا (\"قائم رکھنے والا\"، حالت بتاتا ہے)۔ ایک آیت، اس باب کی کئی ساختیں۔"
+      "en": "إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً: إِنِّي = إِنَّ + its subject ي; جَاعِلٌ = predicate (nominative); فِي الْأَرْضِ = prepositional phrase; خَلِيفَةً = object of جَاعِلٌ (accusative). Before it, قَالَ رَبُّكَ لِلْمَلَائِكَةِ — verb, subject, and the addressees with لِـ.",
+      "ur": "إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً: إِنِّي = إِنَّ + اس کا اسم ي؛ جَاعِلٌ = خبر (مرفوع)؛ فِي الْأَرْضِ = جار مجرور؛ خَلِيفَةً = جَاعِلٌ کا مفعول (منصوب)۔ اس سے پہلے قَالَ رَبُّكَ لِلْمَلَائِكَةِ — فعل، فاعل، اور لِـ کے ساتھ مخاطبین۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Chapter 58 complete: transitive and intransitive verbs, two-object verbs, the fronted predicate, and إِنَّ with its sisters. Chapter 59 brings Book 6 together.",
-      "ur": "باب 58 مکمل: متعدی اور لازم افعال، دو مفعول والے افعال، مقدم خبر، اور إِنَّ اور اس کی بہنیں۔ باب 59 کتاب 6 کو یکجا کرتا ہے۔"
+      "en": "Chapter 58 has equipped you with the analytical tools to parse complex Arabic sentences: transitive vs intransitive, two-object verbs, fronted predicate (المبتدأ المؤخر), and إِنَّ emphasis. These tools apply everywhere in the Quran. Keep practicing — every ayah you read is an opportunity to apply these patterns. The next step is Chapter 59, where we integrate everything from Book 6.",
+      "ur": "Chapter 58 نے آپ کو complex عربی جملوں کو parse کرنے کے analytical tools سے equipped کیا ہے: transitive vs intransitive، دو-object verbs، المبتدأ المؤخر، اور إِنَّ emphasis۔ یہ tools ہر جگہ قرآن میں apply ہوتے ہیں۔ Chapter 59 اگلا ہے، جہاں ہم Book 6 سے ہر چیز کو integrate کرتے ہیں۔"
     }
   }
 }

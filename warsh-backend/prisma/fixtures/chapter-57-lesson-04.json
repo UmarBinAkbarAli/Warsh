@@ -2,29 +2,28 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 57, Lesson 4 — كان وأخواتها: the incomplete verbs (كان وأخواتها) that take two arguments (اسم كان and خبر كان).",
+    "_note": "Chapter 57, Lesson 4 (ch57-l11, new). The hollow imperfect under the known governors: يَقُولُ / لَنْ يَقُولَ / لَمْ يَقُلْ and يَكُونُ / لَنْ يَكُونَ / لَمْ يَكُنْ, third person masculine singular only. Six guided cells (two families by three moods) and two fresh governor / stem decisions. 112:4 and 72:5 are read as the attested jussive and subjunctive; the command قُلْ is supplied. Eight exercises. Added 2026-10-04 in the proposal harvest, batch 7 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-57-content-proposal.md and its review amendments.",
+    "title": "Hollow Verbs and the Moods — الأجوف والمزاج",
+    "titleAr": "الْأَجْوَفُ وَالْمَزَاجُ",
+    "titleUr": "اجوف فعل اور مزاج",
     "chapter_order": 57,
     "lesson_order": 4,
-    "chapter_title": "Advanced Verb Grammar",
-    "title": "Kana and its Sisters — كان وأخواتها",
-    "titleAr": "كَانَ وَأَخَوَاتُهَا",
-    "source": "book_6_grammar_science_57_weak_verbs.md",
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 33,
-      "ayah": 27,
-      "label": "Al-Ahzab 33:27",
-      "ar": "وَكَانَ اللَّهُ عَلَىٰ كُلِّ شَيْءٍ قَدِيرًا",
-      "en": "And ever is Allah, over all things, competent.",
-      "ur": "اور اللہ ہر چیز پر قدرت رکھتا ہے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033027.mp3"
+      "surah": 112,
+      "ayah": 4,
+      "label": "Al-Ikhlas 112:4",
+      "ar": "وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
+      "en": "Nor is there to Him any equivalent.\"",
+      "ur": "اور کوئی اس کا ہمسر نہیں",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/112004.mp3"
     },
     "noor_intro": {
-      "en": "وَكَانَ اللَّهُ … قَدِيرًا: كَانَ needs two parts. Its subject (اسم كان), اللَّهُ, stays nominative; its predicate (خبر كان), قَدِيرًا, becomes accusative. Its sisters — أَصْبَحَ، أَمْسَى، صَارَ، لَيْسَ — work the same way.",
-      "ur": "وَكَانَ اللَّهُ … قَدِيرًا: كَانَ کو دو حصے چاہییں۔ اس کا اسم، اللَّهُ، مرفوع رہتا ہے؛ اس کی خبر، قَدِيرًا، منصوب ہو جاتی ہے۔ اس کی بہنیں — أَصْبَحَ، أَمْسَى، صَارَ، لَيْسَ — بھی اسی طرح کام کرتی ہیں۔"
+      "en": "Where did the long ū of يَكُونُ go? The governor decides.",
+      "ur": "يَكُونُ کی لمبی ū کہاں گئی؟ محرک فیصلہ کرتا ہے۔"
     },
     "autoplay": true
   },
@@ -32,435 +31,587 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Kana and its sisters — incomplete verbs",
-        "ar": "كَانَ وَأَخَوَاتُهَا — الْأَفْعَالُ النَّاقِصَةُ",
-        "ur": "كَانَ اور اس کی sisters — ناقص أفعال"
+        "en": "Hollow verbs shorten in the jussive",
+        "ar": "الْأَجْوَفُ بَيْنَ الرَّفْعِ وَالنَّصْبِ وَالْجَزْمِ",
+        "ur": "اجوف فعل: رفع، نصب اور جزم"
       },
       "explanation": {
-        "en": "كَانَ وَأَخَوَاتُهَا do not give a complete meaning alone. They enter a nominal sentence: اسم كان (its subject) is nominative; خبر كان (its predicate) is accusative. The common sisters: أَصْبَحَ، أَمْسَى، صَارَ، لَيْسَ، مَا زَالَ.",
-        "ur": "كَانَ وَأَخَوَاتُهَا اکیلے مکمل معنی نہیں دیتے۔ یہ جملہ اسمیہ پر داخل ہوتے ہیں: اسم کان مرفوع ہوتا ہے؛ خبر کان منصوب۔ عام بہنیں: أَصْبَحَ، أَمْسَى، صَارَ، لَيْسَ، مَا زَالَ۔"
+        "en": "Chapters 44–46 taught the mood triggers: لَنْ gives the subjunctive (naṣb) and لَمْ gives the jussive (jazm). A sound verb changes only its last vowel: يَكْتُبُ → لَنْ يَكْتُبَ → لَمْ يَكْتُبْ. A hollow verb (weak letter in the middle) behaves the same in the subjunctive but SHORTENS its stem in the jussive: يَقُولُ → لَنْ يَقُولَ → لَمْ يَقُلْ, and يَكُونُ → لَنْ يَكُونَ → لَمْ يَكُنْ. The long ū is dropped because it would meet the silent final letter.",
+        "ur": "باب 44–46 میں مزاج کے محرکات پڑھے: لَنْ نصب دیتا ہے اور لَمْ جزم۔ صحیح فعل صرف آخری حرکت بدلتا ہے: يَكْتُبُ → لَنْ يَكْتُبَ → لَمْ يَكْتُبْ۔ اجوف فعل (درمیان میں حرفِ علت) نصب میں اسی طرح چلتا ہے مگر جزم میں اپنا تنا چھوٹا کر لیتا ہے: يَقُولُ → لَنْ يَقُولَ → لَمْ يَقُلْ، اور يَكُونُ → لَنْ يَكُونَ → لَمْ يَكُنْ۔ لمبی ū اس لیے گر جاتی ہے کہ وہ آخری ساکن حرف سے مل جاتی۔"
       }
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "كَانَ",
-        "ar_plain": "كان",
-        "translit": "kaana",
-        "en": "was/were — the incomplete verb",
-        "ur": "تھا/تھے — ناقص فعل"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "قَالَ — three states",
+        "ur": "قَالَ — تین حالتیں"
       },
+      "examples": [
+        {
+          "ar": "يَقُولُ",
+          "ar_plain": "يقول",
+          "translit": "yaqūlu",
+          "en": "he says (indicative)",
+          "ur": "وہ کہتا ہے (رفع)"
+        },
+        {
+          "ar": "لَنْ يَقُولَ",
+          "ar_plain": "لن يقول",
+          "translit": "lan yaqūla",
+          "en": "he will never say (subjunctive)",
+          "ur": "وہ ہرگز نہیں کہے گا (نصب)"
+        },
+        {
+          "ar": "لَمْ يَقُلْ",
+          "ar_plain": "لم يقل",
+          "translit": "lam yaqul",
+          "en": "he did not say (jussive)",
+          "ur": "اس نے نہیں کہا (جزم)"
+        }
+      ],
       "explanation": {
-        "en": "كَانَ = \"was / to be\". It needs a subject and a predicate. اسم كان (its subject) is nominative; خبر كان (its predicate) is accusative.",
-        "ur": "كَانَ = \"تھا / ہونا\"۔ اسے اسم اور خبر چاہیے۔ اسم کان مرفوع ہوتا ہے؛ خبر کان منصوب۔"
+        "en": "The stem يَقُول- stays whole after لَنْ; after لَمْ it shortens to يَقُل-.",
+        "ur": "تنا يَقُول- لَنْ کے بعد پورا رہتا ہے؛ لَمْ کے بعد يَقُل- ہو جاتا ہے۔"
       }
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "أَصْبَحَ / أَمْسَى / صَارَ",
-        "ar_plain": "اصبح / امسى / صار",
-        "translit": "asbaha / amsaa / saara",
-        "en": "became / was at morning / became",
-        "ur": "ہو گیا / صبح تھا / بن گیا"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "كَانَ — three states",
+        "ur": "كَانَ — تین حالتیں"
       },
+      "examples": [
+        {
+          "ar": "يَكُونُ",
+          "ar_plain": "يكون",
+          "translit": "yakūnu",
+          "en": "he is (indicative)",
+          "ur": "وہ ہے (رفع)"
+        },
+        {
+          "ar": "لَنْ يَكُونَ",
+          "ar_plain": "لن يكون",
+          "translit": "lan yakūna",
+          "en": "he will never be (subjunctive)",
+          "ur": "وہ ہرگز نہیں ہوگا (نصب)"
+        },
+        {
+          "ar": "لَمْ يَكُنْ",
+          "ar_plain": "لم يكن",
+          "translit": "lam yakun",
+          "en": "he was not (jussive)",
+          "ur": "وہ نہیں تھا (جزم)"
+        }
+      ],
       "explanation": {
-        "en": "أَصْبَحَ (\"became, in the morning\"), أَمْسَى (\"became, in the evening\") and صَارَ (\"became\") follow كَانَ: subject nominative, predicate accusative.",
-        "ur": "أَصْبَحَ (\"صبح کے وقت ہو گیا\")، أَمْسَى (\"شام کے وقت ہو گیا\") اور صَارَ (\"ہو گیا\") كَانَ کی طرح ہیں: اسم مرفوع، خبر منصوب۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "كَانَ اللَّهُ غَفُورًا رَحِيمًا",
-        "ar_plain": "كان الله غفورا رحيما",
-        "translit": "kaana allaahu ghafuuran rahiiman",
-        "en": "Allah is ever Forgiving, Merciful.",
-        "ur": "اللہ بخشنے والا، رحم کرنے والا تھا۔"
-      },
-      "explanation": {
-        "en": "كَانَ = incomplete verb. اللَّهُ = اسم كان (nominative). غَفُورًا = خبر كان (accusative), and رَحِيمًا a second predicate.",
-        "ur": "كَانَ = فعل ناقص۔ اللَّهُ = اسم کان (مرفوع)۔ غَفُورًا = خبر کان (منصوب)، اور رَحِيمًا دوسری خبر۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "صَارَ الْمَاءُ ثَلْجًا",
-        "ar_plain": "صار الماء ثلجا",
-        "translit": "saara al-maa'u thaljan",
-        "en": "The water became ice.",
-        "ur": "پانی برف بن گیا۔"
-      },
-      "explanation": {
-        "en": "صَارَ = \"became\". الْمَاءُ = اسم صار (nominative). ثَلْجًا = خبر صار (accusative).",
-        "ur": "صَارَ = \"ہو گیا\"۔ الْمَاءُ = اسم (مرفوع)۔ ثَلْجًا = خبر (منصوب)۔"
+        "en": "The same shape: يَكُون- stays whole after لَنْ, shortens to يَكُن- after لَمْ.",
+        "ur": "وہی شکل: يَكُون- لَنْ کے بعد پورا رہتا ہے، لَمْ کے بعد يَكُن- ہو جاتا ہے۔"
       }
     },
     {
       "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "وَكَانَ اللَّهُ عَلَى كُلِّ شَيْءٍ قَدِيرًا",
-        "ar_plain": "وكان الله على كل شيء قديرا",
-        "translit": "wa kana allaahu 'alaa kulli shay'in qadiiran",
-        "en": "And ever is Allah, over all things, competent.",
-        "ur": "اور اللہ ہر چیز پر قادر تھا۔",
-        "audio_url": "https://everyayah.com/data/Alafasy_128kbps/057001.mp3"
+        "ar": "وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
+        "ar_plain": "ولم يكن له كفوا احد",
+        "translit": "walam yakun llahu kufuwan ʾaḥadun",
+        "en": "Nor is there to Him any equivalent.\"",
+        "ur": "اور کوئی اس کا ہمسر نہیں"
       },
       "explanation": {
-        "en": "Al-Aḥzāb 33:27. كَانَ = incomplete verb. اللَّهُ = اسم كان (nominative). قَدِيرًا = خبر كان (accusative). عَلَىٰ كُلِّ شَيْءٍ (\"over all things\") is linked to قَدِيرًا.",
-        "ur": "سورۃ الاحزاب 33:27۔ كَانَ = فعل ناقص۔ اللَّهُ = اسم کان (مرفوع)۔ قَدِيرًا = خبر کان (منصوب)۔ عَلَىٰ كُلِّ شَيْءٍ (\"ہر چیز پر\") قَدِيرًا سے متعلق ہے۔"
+        "en": "لَمْ يَكُن — the jussive of يَكُونُ: the ū is gone and the last letter is silent. 'And there has never been anyone equal to Him.' (Al-Ikhlas 112:4) (Al-Ikhlas 112:4)",
+        "ur": "لَمْ يَكُن — يَكُونُ کا جزم: ū گر گئی اور آخری حرف ساکن ہے۔ 'اور اس کے برابر کوئی نہیں ہوا۔' (الاخلاص 112:4) (Al-Ikhlas 112:4)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "وَأَنَّا ظَنَنَّا أَن لَّن تَقُولَ الْإِنسُ وَالْجِنُّ عَلَى اللَّهِ كَذِبًا",
+        "ar_plain": "وانا ظننا ان لن تقول الانس والجن على الله كذبا",
+        "translit": "waʾannā ẓanannā ʾan llan taqūla al-ʾinsu wa-l-jinnu ʿalā al-lahi kadhiban",
+        "en": "And we had thought that mankind and the jinn would never speak about Allāh a lie.",
+        "ur": "اور ہمارا (یہ) خیال تھا کہ انسان اور جن خدا کی نسبت جھوٹ نہیں بولتے"
+      },
+      "explanation": {
+        "en": "لَن تَقُولَ — the subjunctive of the same verb: the stem is whole, the last vowel is a fatḥa. (Here the subject is the collective الْإِنسُ وَالْجِنُّ, taken as feminine singular.) (Al-Jinn 72:5) (undefined 72:5)",
+        "ur": "لَن تَقُولَ — اسی فعل کا نصب: تنا پورا ہے، آخری حرکت فتحہ ہے۔ (یہاں فاعل جمع کا مجموعہ الْإِنسُ وَالْجِنُّ ہے، جو مؤنث واحد مانا گیا۔) (الجن 72:5) (undefined 72:5)"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "لَمْ يَقُلْ شَيْئًا",
+        "ar_plain": "لم يقل شيئا",
+        "translit": "lam yaqul shayʾan",
+        "en": "He did not say anything.",
+        "ur": "اس نے کچھ نہیں کہا۔"
+      },
+      "explanation": {
+        "en": "لَمْ + the shortened jussive يَقُلْ. Not يَقُولْ — that form does not exist.",
+        "ur": "لَمْ + چھوٹا جزم يَقُلْ۔ يَقُولْ نہیں — ایسی کوئی شکل نہیں۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "The governor decides, not the stem",
+        "ur": "فیصلہ محرک کرتا ہے، تنا نہیں"
+      },
+      "body": {
+        "en": "Read the governor first: no governor means the indicative (يَقُولُ); لَنْ means the subjunctive (يَقُولَ); لَمْ means the jussive (يَقُلْ). This lesson covers the third person masculine singular of these two verbs only; other persons keep the long vowel, and the command قُلْ (112:1) is supplied to you.",
+        "ur": "پہلے محرک دیکھیں: محرک نہ ہو تو رفع (يَقُولُ)؛ لَنْ ہو تو نصب (يَقُولَ)؛ لَمْ ہو تو جزم (يَقُلْ)۔ یہ سبق ان دو افعال کے صرف غائب مذکر واحد کو لیتا ہے؛ دوسرے صیغوں میں لمبی حرکت رہتی ہے، اور امر قُلْ (112:1) آپ کو دیا گیا ہے۔"
       }
     }
   ],
   "exercises": [
     {
-      "id": "ch57-l04-ex01",
-      "type": "TAP_TRANSLATION",
-      "prompt": {
-        "ar": "كَانَ الْغُلَامُ مُجْتَهِدًا",
-        "ar_plain": "كان الغلام مجتهدا",
-        "translit": "kaana al-ghulaamu mujtahidan",
-        "en": "The boy was diligent.",
-        "ur": "لڑکا محنتی تھا۔"
-      },
-      "options": [
-        {
-          "en": "The boy was diligent.",
-          "ur": "لڑکا محنتی تھا۔"
-        },
-        {
-          "en": "The diligent boy was.",
-          "ur": "محنتی لڑکا تھا۔"
-        },
-        {
-          "en": "The boy becomes diligent.",
-          "ur": "لڑکا محنتی ہوتا ہے۔"
-        },
-        {
-          "en": "Was the boy diligent?",
-          "ur": "کیا لڑکا محنتی تھا؟"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "كَانَ = incomplete verb. الْغُلَامُ = اسم كان (nominative, ḍamma). مُجْتَهِدًا = خبر كان (accusative, fatḥa).",
-        "ur": "كَانَ = فعل ناقص۔ الْغُلَامُ = اسم کان (مرفوع، ضمہ)۔ مُجْتَهِدًا = خبر کان (منصوب، فتحہ)۔"
-      }
-    },
-    {
-      "id": "ch57-l04-ex02",
-      "type": "MATCHING",
-      "left_column": [
-        {
-          "ar": "كَانَ",
-          "ar_plain": "كان",
-          "translit": "kaana",
-          "en": "was",
-          "ur": "تھا"
-        },
-        {
-          "ar": "أَصْبَحَ",
-          "ar_plain": "اصبح",
-          "translit": "asbaha",
-          "en": "became (morning)",
-          "ur": "بن گیا (صبح)"
-        },
-        {
-          "ar": "أَمْسَى",
-          "ar_plain": "امسى",
-          "translit": "amsaa",
-          "en": "became (evening)",
-          "ur": "بن گیا (شام)"
-        },
-        {
-          "ar": "صَارَ",
-          "ar_plain": "صار",
-          "translit": "saara",
-          "en": "became",
-          "ur": "بن گیا"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "was — a state in the past",
-          "ur": "تھا — ماضی کی حالت"
-        },
-        {
-          "en": "became — in the morning",
-          "ur": "ہو گیا — صبح کے وقت"
-        },
-        {
-          "en": "became — in the evening",
-          "ur": "ہو گیا — شام کے وقت"
-        },
-        {
-          "en": "became — changed into",
-          "ur": "ہو گیا — بدل گیا"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "كَانَ, أَصْبَحَ, أَمْسَى and صَارَ are all incomplete verbs: subject nominative, predicate accusative.",
-        "ur": "كَانَ، أَصْبَحَ، أَمْسَى اور صَارَ سب افعال ناقصہ ہیں: اسم مرفوع، خبر منصوب۔"
-      }
-    },
-    {
-      "id": "ch57-l04-ex03",
-      "type": "TRUE_FALSE",
-      "statement": {
-        "en": "With كَانَ and its sisters, both the اسم كان (subject) and the خبر كان (predicate) are in the accusative case (نصب).",
-        "ur": "كَانَ اور اس کی sisters کے ساتھ، اسم كان (subject) اور خبر كان (predicate) دونوں نصب میں ہوتے ہیں۔"
-      },
-      "correct_answer": false,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "False. اسم كان (its subject) is nominative; خبر كان (its predicate) is accusative. Example: كَانَ اللَّهُ غَفُورًا — اللَّهُ (ḍamma), غَفُورًا (fatḥa).",
-        "ur": "غلط۔ اسم کان مرفوع ہوتا ہے؛ خبر کان منصوب۔ مثال: كَانَ اللَّهُ غَفُورًا — اللَّهُ (ضمہ)، غَفُورًا (فتحہ)۔"
-      }
-    },
-    {
-      "id": "ch57-l04-ex04",
       "type": "FILL_BLANK",
+      "id": "ch57-l11-ex01",
       "mode": "TAP",
-      "sentence_ar": "___ الْمَاءُ بَارِدًا",
+      "sentence_ar": "الطَّالِبُ ___ الْحَقَّ.",
       "hint": {
-        "en": "The water became cold.",
-        "ur": "پانی ٹھنڈا ہو گیا۔"
+        "en": "The student says the truth.",
+        "ur": "طالب علم حق کہتا ہے۔"
       },
       "options": [
         {
-          "ar": "صَارَ",
-          "ar_plain": "صار",
-          "translit": "saara",
-          "en": "became",
-          "ur": "ہو گیا"
+          "ar": "يَقُولُ",
+          "ar_plain": "يقول",
+          "translit": "yaqūlu",
+          "en": "he says (indicative)",
+          "ur": "وہ کہتا ہے (رفع)"
         },
         {
-          "ar": "كَانَ",
-          "ar_plain": "كان",
-          "translit": "kaana",
-          "en": "was",
-          "ur": "تھا"
+          "ar": "يَقُولَ",
+          "ar_plain": "يقول",
+          "translit": "yaqūla",
+          "en": "(subjunctive)",
+          "ur": "(نصب)"
         },
         {
-          "ar": "ذَهَبَ",
-          "ar_plain": "ذهب",
-          "translit": "dhahaba",
-          "en": "went",
-          "ur": "گیا"
+          "ar": "يَقُلْ",
+          "ar_plain": "يقل",
+          "translit": "yaqul",
+          "en": "(jussive)",
+          "ur": "(جزم)"
         },
         {
-          "ar": "رَأَى",
-          "ar_plain": "راى",
-          "translit": "ra'aa",
-          "en": "saw",
-          "ur": "دیکھا"
+          "ar": "قَالَ",
+          "ar_plain": "قال",
+          "translit": "qāla",
+          "en": "he said",
+          "ur": "اس نے کہا"
         }
       ],
       "correct_answer": {
-        "ar": "صَارَ",
-        "ar_plain": "صار",
-        "translit": "saara",
-        "en": "became",
-        "ur": "ہو گیا"
+        "ar": "يَقُولُ",
+        "ar_plain": "يقول",
+        "translit": "yaqūlu",
+        "en": "he says (indicative)",
+        "ur": "وہ کہتا ہے (رفع)"
       },
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "صَارَ = \"became\". الْمَاءُ = its subject (nominative). بَارِدًا = its predicate (accusative). \"The water became cold.\"",
-        "ur": "صَارَ = \"ہو گیا\"۔ الْمَاءُ = اس کا اسم (مرفوع)۔ بَارِدًا = اس کی خبر (منصوب)۔ \"پانی ٹھنڈا ہو گیا۔\""
+        "en": "No governor, so the indicative: يَقُولُ.",
+        "ur": "کوئی محرک نہیں، اس لیے رفع: يَقُولُ۔"
       }
     },
     {
-      "id": "ch57-l04-ex05",
-      "type": "BUILD_SENTENCE",
-      "target_translation": {
-        "en": "The day became long.",
-        "ur": "دن لمبا ہو گیا۔"
-      },
-      "tiles": [
-        {
-          "ar": "أَصْبَحَ",
-          "ar_plain": "اصبح",
-          "translit": "asbaha",
-          "en": "became (morning)",
-          "ur": "بن گیا (صبح)"
-        },
-        {
-          "ar": "النَّهَارُ",
-          "ar_plain": "النهار",
-          "translit": "an-nahaaru",
-          "en": "the day",
-          "ur": "دن"
-        },
-        {
-          "ar": "طَوِيلًا",
-          "ar_plain": "طويلا",
-          "translit": "tawiilan",
-          "en": "long (acc.)",
-          "ur": "لمبا (نصب)"
-        },
-        {
-          "ar": "طَوِيلٌ",
-          "ar_plain": "طويل",
-          "translit": "tawiilun",
-          "en": "long (nom.)",
-          "ur": "لمبا (رفع)"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "أَصْبَحَ (incomplete verb) + النَّهَارُ (its subject, nominative) + طَوِيلًا (its predicate, accusative). طَوِيلٌ is nominative — wrong for the predicate.",
-        "ur": "أَصْبَحَ (فعل ناقص) + النَّهَارُ (اس کا اسم، مرفوع) + طَوِيلًا (اس کی خبر، منصوب)۔ طَوِيلٌ مرفوع ہے — خبر کے لیے غلط۔"
-      }
-    },
-    {
-      "id": "ch57-l04-ex06",
-      "type": "TRUE_FALSE",
-      "statement": {
-        "en": "لَيْسَ is a sister of كَانَ meaning \"is not\", and it makes its subject accusative.",
-        "ur": "لَيْسَ كَانَ کی بہن ہے جس کا مطلب \"نہیں ہے\"، اور یہ اپنے اسم کو منصوب کرتا ہے۔"
-      },
-      "correct_answer": false,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "False. لَيْسَ is a sister of كَانَ, but like كَانَ its subject stays nominative and its predicate is accusative: لَيْسَ الْكِتَابُ صَعْبًا, \"the book is not difficult\".",
-        "ur": "غلط۔ لَيْسَ كَانَ کی بہن ہے، مگر كَانَ کی طرح اس کا اسم مرفوع رہتا ہے اور خبر منصوب: لَيْسَ الْكِتَابُ صَعْبًا، \"کتاب مشکل نہیں\"۔"
-      }
-    },
-    {
-      "id": "ch57-l04-ex07",
-      "type": "GRAMMAR_PARSE",
-      "sentence_ar": "كَانَ اللَّهُ رَحِيمًا",
-      "words": [
-        {
-          "ar": "كَانَ",
-          "ar_plain": "كان",
-          "translit": "kaana",
-          "en": "was",
-          "ur": "تھا"
-        },
-        {
-          "ar": "اللَّهُ",
-          "ar_plain": "الله",
-          "translit": "allaahu",
-          "en": "Allah",
-          "ur": "اللہ"
-        },
-        {
-          "ar": "رَحِيمًا",
-          "ar_plain": "رحيما",
-          "translit": "rahiiman",
-          "en": "Merciful",
-          "ur": "مہربان"
-        }
-      ],
-      "available_roles": [
-        "VERB",
-        "SUBJECT",
-        "PREDICATE",
-        "OBJECT"
-      ],
-      "correct_roles": [
-        "VERB",
-        "SUBJECT",
-        "PREDICATE"
-      ],
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "كَانَ = incomplete verb (past, مَبْنِيّ). اللَّهُ = اسم كان (nominative). رَحِيمًا = خبر كان — a predicate, not an object (accusative).",
-        "ur": "كَانَ = فعل ناقص (ماضی، مبنی)۔ اللَّهُ = اسم کان (مرفوع)۔ رَحِيمًا = خبر کان — خبر ہے، مفعول نہیں (منصوب)۔"
-      }
-    },
-    {
-      "id": "ch57-l04-ex08",
-      "type": "TAP_TRANSLATION",
-      "prompt": {
-        "ar": "لَيْسَ الْعِلْمُ كَثِيرًا",
-        "ar_plain": "ليس العلم كثيرا",
-        "translit": "laysa al-'ilmu kathiiran",
-        "en": "Knowledge is not abundant.",
-        "ur": "علم کی فراوانی نہیں ہے۔"
+      "type": "FILL_BLANK",
+      "id": "ch57-l11-ex02",
+      "mode": "TAP",
+      "sentence_ar": "لَنْ ___ الْكَذِبَ.",
+      "hint": {
+        "en": "He will never say the lie.",
+        "ur": "وہ جھوٹ ہرگز نہیں کہے گا۔"
       },
       "options": [
         {
-          "en": "Knowledge is not abundant.",
-          "ur": "علم زیادہ نہیں ہے۔"
+          "ar": "يَقُولُ",
+          "ar_plain": "يقول",
+          "translit": "yaqūlu",
+          "en": "(indicative)",
+          "ur": "(رفع)"
         },
         {
-          "en": "The abundant knowledge.",
-          "ur": "زیادہ علم۔"
+          "ar": "يَقُولَ",
+          "ar_plain": "يقول",
+          "translit": "yaqūla",
+          "en": "(subjunctive)",
+          "ur": "(نصب)"
         },
         {
-          "en": "The knowledge was abundant.",
-          "ur": "علم زیادہ تھا۔"
+          "ar": "يَقُلْ",
+          "ar_plain": "يقل",
+          "translit": "yaqul",
+          "en": "(jussive)",
+          "ur": "(جزم)"
         },
         {
-          "en": "Is knowledge abundant?",
-          "ur": "کیا علم زیادہ ہے؟"
+          "ar": "يَقُولْ",
+          "ar_plain": "يقول",
+          "translit": "yaqūl",
+          "en": "(not a real form)",
+          "ur": "(یہ شکل نہیں)"
         }
       ],
-      "correct_index": 0,
+      "correct_answer": {
+        "ar": "يَقُولَ",
+        "ar_plain": "يقول",
+        "translit": "yaqūla",
+        "en": "(subjunctive)",
+        "ur": "(نصب)"
+      },
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَيْسَ = \"is not\" (sister of كَانَ). الْعِلْمُ = its subject (nominative). كَثِيرًا = its predicate (accusative).",
-        "ur": "لَيْسَ = \"نہیں ہے\" (كَانَ کی بہن)۔ الْعِلْمُ = اس کا اسم (مرفوع)۔ كَثِيرًا = اس کی خبر (منصوب)۔"
+        "en": "لَنْ gives the subjunctive: the stem stays whole and takes a fatḥa — يَقُولَ.",
+        "ur": "لَنْ نصب دیتا ہے: تنا پورا رہتا اور فتحہ لیتا ہے — يَقُولَ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch57-l11-ex03",
+      "mode": "TAP",
+      "sentence_ar": "لَمْ ___ شَيْئًا.",
+      "hint": {
+        "en": "He did not say anything.",
+        "ur": "اس نے کچھ نہیں کہا۔"
+      },
+      "options": [
+        {
+          "ar": "يَقُولُ",
+          "ar_plain": "يقول",
+          "translit": "yaqūlu",
+          "en": "(indicative)",
+          "ur": "(رفع)"
+        },
+        {
+          "ar": "يَقُولَ",
+          "ar_plain": "يقول",
+          "translit": "yaqūla",
+          "en": "(subjunctive)",
+          "ur": "(نصب)"
+        },
+        {
+          "ar": "يَقُلْ",
+          "ar_plain": "يقل",
+          "translit": "yaqul",
+          "en": "(jussive)",
+          "ur": "(جزم)"
+        },
+        {
+          "ar": "يَقُولْ",
+          "ar_plain": "يقول",
+          "translit": "yaqūl",
+          "en": "(not a real form)",
+          "ur": "(یہ شکل نہیں)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يَقُلْ",
+        "ar_plain": "يقل",
+        "translit": "yaqul",
+        "en": "(jussive)",
+        "ur": "(جزم)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَمْ gives the jussive: the ū drops and the last letter is silent — يَقُلْ.",
+        "ur": "لَمْ جزم دیتا ہے: ū گر جاتی ہے اور آخری حرف ساکن ہوتا ہے — يَقُلْ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch57-l11-ex04",
+      "mode": "TAP",
+      "sentence_ar": "هُوَ ___ مَعَنَا.",
+      "hint": {
+        "en": "He is with us.",
+        "ur": "وہ ہمارے ساتھ ہے۔"
+      },
+      "options": [
+        {
+          "ar": "يَكُونَ",
+          "ar_plain": "يكون",
+          "translit": "yakūna",
+          "en": "(subjunctive)",
+          "ur": "(نصب)"
+        },
+        {
+          "ar": "يَكُنْ",
+          "ar_plain": "يكن",
+          "translit": "yakun",
+          "en": "(jussive)",
+          "ur": "(جزم)"
+        },
+        {
+          "ar": "كَانَ",
+          "ar_plain": "كان",
+          "translit": "kāna",
+          "en": "he was",
+          "ur": "وہ تھا"
+        },
+        {
+          "ar": "يَكُونُ",
+          "ar_plain": "يكون",
+          "translit": "yakūnu",
+          "en": "he is (indicative)",
+          "ur": "وہ ہے (رفع)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يَكُونُ",
+        "ar_plain": "يكون",
+        "translit": "yakūnu",
+        "en": "he is (indicative)",
+        "ur": "وہ ہے (رفع)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "No governor, so the indicative: يَكُونُ.",
+        "ur": "کوئی محرک نہیں، اس لیے رفع: يَكُونُ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch57-l11-ex05",
+      "mode": "TAP",
+      "sentence_ar": "لَنْ ___ هُنَاكَ.",
+      "hint": {
+        "en": "He will never be there.",
+        "ur": "وہ وہاں ہرگز نہیں ہوگا۔"
+      },
+      "options": [
+        {
+          "ar": "يَكُونَ",
+          "ar_plain": "يكون",
+          "translit": "yakūna",
+          "en": "(subjunctive)",
+          "ur": "(نصب)"
+        },
+        {
+          "ar": "يَكُونُ",
+          "ar_plain": "يكون",
+          "translit": "yakūnu",
+          "en": "(indicative)",
+          "ur": "(رفع)"
+        },
+        {
+          "ar": "يَكُنْ",
+          "ar_plain": "يكن",
+          "translit": "yakun",
+          "en": "(jussive)",
+          "ur": "(جزم)"
+        },
+        {
+          "ar": "يَكُونْ",
+          "ar_plain": "يكون",
+          "translit": "yakūn",
+          "en": "(not a real form)",
+          "ur": "(یہ شکل نہیں)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يَكُونَ",
+        "ar_plain": "يكون",
+        "translit": "yakūna",
+        "en": "(subjunctive)",
+        "ur": "(نصب)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَنْ gives the subjunctive: يَكُونَ, stem whole.",
+        "ur": "لَنْ نصب دیتا ہے: يَكُونَ، تنا پورا۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch57-l11-ex06",
+      "mode": "TAP",
+      "sentence_ar": "لَمْ ___ هُنَاكَ.",
+      "hint": {
+        "en": "He was not there.",
+        "ur": "وہ وہاں نہیں تھا۔"
+      },
+      "options": [
+        {
+          "ar": "يَكُونُ",
+          "ar_plain": "يكون",
+          "translit": "yakūnu",
+          "en": "(indicative)",
+          "ur": "(رفع)"
+        },
+        {
+          "ar": "يَكُنْ",
+          "ar_plain": "يكن",
+          "translit": "yakun",
+          "en": "(jussive)",
+          "ur": "(جزم)"
+        },
+        {
+          "ar": "يَكُونَ",
+          "ar_plain": "يكون",
+          "translit": "yakūna",
+          "en": "(subjunctive)",
+          "ur": "(نصب)"
+        },
+        {
+          "ar": "يَكُونْ",
+          "ar_plain": "يكون",
+          "translit": "yakūn",
+          "en": "(not a real form)",
+          "ur": "(یہ شکل نہیں)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يَكُنْ",
+        "ar_plain": "يكن",
+        "translit": "yakun",
+        "en": "(jussive)",
+        "ur": "(جزم)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَمْ gives the jussive: the ū drops — يَكُنْ (as in 112:4).",
+        "ur": "لَمْ جزم دیتا ہے: ū گر جاتی ہے — يَكُنْ (جیسا 112:4 میں)۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch57-l11-ex07",
+      "mode": "TAP",
+      "sentence_ar": "هُوَ لَمْ ___ طَالِبًا.",
+      "hint": {
+        "en": "He was not a student.",
+        "ur": "وہ طالب علم نہیں تھا۔"
+      },
+      "options": [
+        {
+          "ar": "يَكُونَ",
+          "ar_plain": "يكون",
+          "translit": "yakūna",
+          "en": "(subjunctive)",
+          "ur": "(نصب)"
+        },
+        {
+          "ar": "يَكُونُ",
+          "ar_plain": "يكون",
+          "translit": "yakūnu",
+          "en": "(indicative)",
+          "ur": "(رفع)"
+        },
+        {
+          "ar": "كَانَ",
+          "ar_plain": "كان",
+          "translit": "kāna",
+          "en": "he was",
+          "ur": "وہ تھا"
+        },
+        {
+          "ar": "يَكُنْ",
+          "ar_plain": "يكن",
+          "translit": "yakun",
+          "en": "(jussive)",
+          "ur": "(جزم)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يَكُنْ",
+        "ar_plain": "يكن",
+        "translit": "yakun",
+        "en": "(jussive)",
+        "ur": "(جزم)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Fresh: لَمْ again, so the shortened jussive.",
+        "ur": "نیا جملہ: پھر لَمْ، اس لیے چھوٹا جزم۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch57-l11-ex08",
+      "mode": "TAP",
+      "sentence_ar": "نَحْنُ نَظُنُّ أَنَّهُ لَنْ ___ ذَلِكَ.",
+      "hint": {
+        "en": "We think he will never say that.",
+        "ur": "ہمارا خیال ہے وہ یہ ہرگز نہیں کہے گا۔"
+      },
+      "options": [
+        {
+          "ar": "يَقُلْ",
+          "ar_plain": "يقل",
+          "translit": "yaqul",
+          "en": "(jussive)",
+          "ur": "(جزم)"
+        },
+        {
+          "ar": "يَقُولُ",
+          "ar_plain": "يقول",
+          "translit": "yaqūlu",
+          "en": "(indicative)",
+          "ur": "(رفع)"
+        },
+        {
+          "ar": "يَقُولَ",
+          "ar_plain": "يقول",
+          "translit": "yaqūla",
+          "en": "(subjunctive)",
+          "ur": "(نصب)"
+        },
+        {
+          "ar": "قَالَ",
+          "ar_plain": "قال",
+          "translit": "qāla",
+          "en": "he said",
+          "ur": "اس نے کہا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يَقُولَ",
+        "ar_plain": "يقول",
+        "translit": "yaqūla",
+        "en": "(subjunctive)",
+        "ur": "(نصب)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Fresh: لَنْ again, so the subjunctive with the whole stem.",
+        "ur": "نیا جملہ: پھر لَنْ، اس لیے پورے تنے کے ساتھ نصب۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Kana and its Sisters — كان وأخواتها",
-      "ar": "كَانَ وَأَخَوَاتُهَا",
-      "ur": "كَانَ اور اس کی sisters"
+      "en": "The shortened jussive",
+      "ar": "لَمْ يَكُن",
+      "ur": "چھوٹا جزم"
     },
     "ayah": {
-      "surah": 33,
-      "ayah": 27,
-      "label": "Al-Ahzab 33:27",
-      "ar": "وَكَانَ اللَّهُ عَلَىٰ كُلِّ شَيْءٍ قَدِيرًا",
-      "en": "And ever is Allah, over all things, competent.",
-      "ur": "اور اللہ ہر چیز پر قدرت رکھتا ہے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033027.mp3"
+      "surah": 112,
+      "ayah": 4,
+      "label": "Al-Ikhlas 112:4",
+      "ar": "وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
+      "en": "Nor is there to Him any equivalent.\"",
+      "ur": "اور کوئی اس کا ہمسر نہیں",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/112004.mp3"
     },
     "highlighted_word_indices": [
       0,
-      1,
-      5
+      1
+    ],
+    "highlighted_words": [
+      "وَلَمْ",
+      "يَكُن"
     ],
     "noor_explanation": {
-      "en": "وَكَانَ اللَّهُ … قَدِيرًا: اللَّهُ keeps its ḍamma — it is the subject of كَانَ. قَدِيرًا takes a fatḥa with tanwīn — it is the predicate of كَانَ. Of Allah, كَانَ means \"is ever\".",
-      "ur": "وَكَانَ اللَّهُ … قَدِيرًا: اللَّهُ اپنا ضمہ رکھتا ہے — یہ كَانَ کا اسم ہے۔ قَدِيرًا تنوین والا فتحہ لیتا ہے — یہ كَانَ کی خبر ہے۔ اللہ کے لیے كَانَ کا مطلب \"ہمیشہ سے ہے\"۔"
+      "en": "وَلَمْ يَكُن — after لَمْ the hollow verb loses its long ū: يَكُونُ becomes يَكُنْ.",
+      "ur": "وَلَمْ يَكُن — لَمْ کے بعد اجوف فعل اپنی لمبی ū کھو دیتا ہے: يَكُونُ بن جاتا ہے يَكُنْ۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "كَانَ and its sisters — أَصْبَحَ، أَمْسَى، صَارَ، لَيْسَ، مَا زَالَ: the subject stays nominative, the predicate becomes accusative.",
-      "ur": "كَانَ اور اس کی بہنیں — أَصْبَحَ، أَمْسَى، صَارَ، لَيْسَ، مَا زَالَ: اسم مرفوع رہتا ہے، خبر منصوب ہو جاتی ہے۔"
+      "en": "Hollow verbs: whole stem after لَنْ, shortened stem after لَمْ.",
+      "ur": "اجوف افعال: لَنْ کے بعد پورا تنا، لَمْ کے بعد چھوٹا تنا۔"
     }
   }
 }

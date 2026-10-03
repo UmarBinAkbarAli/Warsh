@@ -947,6 +947,34 @@ Everything below this list is either done and verified, or one of these:
    later pass). Map entries for Ch 51–55 rewritten (S10). Not done: scholarly
    review, Android pass, Chapter 52's constructed dialogue lesson, and turning
    `ch55-l06` into the review.
+   **Proposal harvest, batch 7 (Chapters 56–60): live in production
+   2026-10-04.** Ch 56 gained the dual as the first term of an iḍāfa
+   (`ch56-l04`, rebuilt), the four dual relatives (`ch56-l05`, rebuilt), all of
+   Abasa in four parts (`ch56-l10`–`l13`), a rebuilt review and a **16-question
+   test**; the misplaced five-verbs row `ch56-l09` is unpublished (progress kept).
+   Ch 57 gained hollow verbs (`ch57-l11`) and final-weak verbs (`ch57-l12`) under
+   لَنْ and لَمْ, `ch57-l04` now teaches كَانَ alone, a rebuilt review and
+   `ch57-test`. Ch 58 gained the participle that takes an object (`ch58-l09`),
+   reported speech (`ch58-l04`, rebuilt), a rebuilt review and `ch58-test`. Ch 59
+   gained all of Al-A'la in two parts (`ch59-l07`, `l08`), a rebuilt review and
+   the **16-question Book 6 capstone test**; the label حال was removed from
+   `ch59-l02` / `l03` (Chapter 71's). Ch 60 converted `ch60-l04` into the CL16
+   Conversation Lab "Travel and Hajj", swapped `l02` / `l03`, and gained a
+   review and `ch60-test`. **Owner decisions of 2026-10-04:** nothing taught in
+   an earlier chapter is repeated, so Ch 58's absolute-object lesson (taught in
+   `ch55-l06`), Ch 58's Al-Masad reading (`ch46-l06`), Ch 59's synthesis lesson
+   and Ch 52's dialogue lesson are not built; المفعول المطلق stays in Chapter 55.
+   Published with `scripts/promote-chapters-56-60.cjs` after a staging API walk
+   (test locked until the lessons are done, key stripped, 9/12 and 12/16 fail,
+   10/12 and 13/16 pass, replay 0 XP, all five chapters); `content:check`
+   556/556 and `content:baseline` 556. **No TTS was generated:** the missing
+   catalogue list in `Docs/lesson-audio-needed.md` is now 663 clips (152 new) and
+   the nine CL16 phrase clips are listed. 67 new scenes for 94 cards requested in
+   `Docs/lesson-illustrations-needed.md` (the cards of the kept lessons are a
+   later pass). Map entries for Ch 56–60 rewritten (S10). Learners who finished
+   `ch56-l04`, `l05`, `l08`, `ch57-l04`, `l09`, `l10`, `ch58-l04`, `l06`,
+   `ch59-l02`, `l03`, `l05` or `ch60-l04` see an "Updated" notice. Not done:
+   scholarly review, Android pass, and the CL16 phrase recordings.
    **Chapter 25 (`Docs/proposals/chapter-25-content-correction.md`) is
    corrected, staging-verified and promoted to production 2026-09-24** on the
    owner's instruction. The first rewrite was reviewed and fixed before

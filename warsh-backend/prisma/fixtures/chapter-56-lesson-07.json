@@ -2,29 +2,28 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 56, Lesson 7 — The five nouns in Quranic contexts with attached pronouns.",
+    "_note": "Chapter 56, Lesson 7 (ch56-l05, rebuilt in place). The old row repeated Chapter 38/51 dual verbs; the dual relatives are owned here (topic table of chapters-26-68-review.md): the four forms اللَّذَانِ / اللَّذَيْنِ / اللَّتَانِ / اللَّتَيْنِ with 4:16 and 41:29, a contrast with الَّذِي / الَّذِينَ, eight nominative-versus-oblique decisions (guided and fresh, accusative and genitive each tried for the masculine and the feminine), the plural contrast and the point that the relative keeps its full form. Ten exercises. Added 2026-10-04 in the proposal harvest, batch 7 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-56-content-proposal.md and its review amendments.",
+    "title": "The Dual Relatives — اللَّذَانِ وَاللَّتَانِ",
+    "titleAr": "الْأَسْمَاءُ الْمَوْصُولَةُ لِلْمُثَنَّى",
+    "titleUr": "مثنی کے اسمائے موصول",
     "chapter_order": 56,
     "lesson_order": 7,
-    "chapter_title": "Special Noun Types",
-    "title": "The Five Nouns in the Quran — الأسماء الخمسة في القرآن",
-    "titleAr": "الْأَسْمَاءُ الْخَمْسَةُ فِي الْقُرْآنِ",
-    "source": "book_6_grammar_science_56_special_noun_types.md",
-    "estimated_minutes": 9,
+    "estimated_minutes": 11,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 12,
+      "surah": 4,
       "ayah": 16,
-      "label": "Yusuf 12:16",
-      "ar": "وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ",
-      "en": "And they came to their father at night, weeping.",
-      "ur": "اور یہ لوگ رات کے وقت باپ کے پاس روتے ہوئے آئے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012016.mp3"
+      "label": "An-Nisa 4:16",
+      "ar": "وَاللَّذَانِ يَأْتِيَانِهَا مِنكُمْ",
+      "en": "And the two who commit it among you",
+      "ur": "اور تم میں سے وہ دو جو اسے کریں",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/004016.mp3"
     },
     "noor_intro": {
-      "en": "أَبَاهُمْ = \"their father\". It is the object of جَاءُوا, so it is accusative — and the five-noun أَب shows that with ا. In the nominative it would be أَبُوهُمْ, in the genitive أَبِيهِمْ.",
-      "ur": "أَبَاهُمْ = \"ان کا باپ\"۔ یہ جَاءُوا کا مفعول ہے، اس لیے منصوب ہے — اور اسمائے خمسہ والا أَب یہ ا سے دکھاتا ہے۔ رفع میں أَبُوهُمْ ہوتا، جر میں أَبِيهِمْ۔"
+      "en": "Not 'who' but 'the two who' — Arabic has a separate relative for two.",
+      "ur": "'جو' نہیں بلکہ 'وہ دو جو' — عربی میں دو کے لیے الگ اسم موصول ہے۔"
     },
     "autoplay": true
   },
@@ -32,423 +31,614 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "The Five Nouns with attached pronouns",
-        "ar": "الْأَسْمَاءُ الْخَمْسَةُ مَعَ الضَّمَائِرِ",
-        "ur": "پانچ اسم ضمیر کے ساتھ"
+        "en": "The dual relatives",
+        "ar": "الْأَسْمَاءُ الْمَوْصُولَةُ لِلْمُثَنَّى",
+        "ur": "مثنی کے اسمائے موصول"
       },
       "explanation": {
-        "en": "With an attached pronoun the five nouns show case with a long vowel: أَبُوهُ / أَبَاهُ / أَبِيهِ (his father), أَخُوهُ / أَخَاهُ / أَخِيهِ (his brother), فُوهُ / فَاهُ / فِيهِ (his mouth). ذُو is the exception: it is always followed by a noun, never a pronoun.",
-        "ur": "متصل ضمیر کے ساتھ اسمائے خمسہ لمبی آواز سے اعراب دکھاتے ہیں: أَبُوهُ / أَبَاهُ / أَبِيهِ (اس کا باپ)، أَخُوهُ / أَخَاهُ / أَخِيهِ (اس کا بھائی)، فُوهُ / فَاهُ / فِيهِ (اس کا منہ)۔ ذُو استثنا ہے: اس کے بعد ہمیشہ اسم آتا ہے، ضمیر نہیں۔"
+        "en": "Chapters 6, 8 and 40 gave you the relatives الَّذِي, الَّتِي and the plural الَّذِينَ. For TWO people or things there are four dual forms: masculine nominative اللَّذَانِ, masculine accusative / genitive اللَّذَيْنِ; feminine nominative اللَّتَانِ, feminine accusative / genitive اللَّتَيْنِ. They mean 'the two who / the two which' and are followed by a clause.",
+        "ur": "باب 6، 8 اور 40 میں آپ نے الَّذِي، الَّتِي اور جمع الَّذِينَ پڑھے۔ دو افراد یا چیزوں کے لیے چار مثنی صورتیں ہیں: مذکر رفع اللَّذَانِ، مذکر نصب / جر اللَّذَيْنِ؛ مؤنث رفع اللَّتَانِ، مؤنث نصب / جر اللَّتَيْنِ۔ ان کا مطلب 'وہ دو جو' ہے اور ان کے بعد جملہ آتا ہے۔"
       }
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "أَبُوهُ",
-        "ar_plain": "ابوه",
-        "translit": "abuuho",
-        "en": "his father — from أَبٌ",
-        "ur": "اس کا باپ — أَبٌ سے"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "One, two, many",
+        "ur": "ایک، دو، کئی"
       },
+      "examples": [
+        {
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "alladhī",
+          "en": "who (one, masculine)",
+          "ur": "جو (ایک، مذکر)"
+        },
+        {
+          "ar": "اللَّذَانِ",
+          "ar_plain": "اللذان",
+          "translit": "al-ladhāni",
+          "en": "who (two, masculine, nominative)",
+          "ur": "جو (دو، مذکر، رفع)"
+        },
+        {
+          "ar": "الَّذِينَ",
+          "ar_plain": "الذين",
+          "translit": "alladhīna",
+          "en": "who (many, masculine)",
+          "ur": "جو (کئی، مذکر)"
+        }
+      ],
       "explanation": {
-        "en": "أَبُوهُ = أَبُو + هُ (\"his\"). The و shows the nominative. You meet أَبَاهُ (accusative) and أَبِيهِ (genitive) in the story of Yūsuf.",
-        "ur": "أَبُوهُ = أَبُو + هُ (\"اس کا\")۔ و رفع ظاہر کرتا ہے۔ قصہ یوسف میں أَبَاهُ (نصب) اور أَبِيهِ (جر) بھی ملتے ہیں۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "أَخُوهُ",
-        "ar_plain": "اخوه",
-        "translit": "akhuuho",
-        "en": "his brother — from أَخٌ",
-        "ur": "اس کا بھائی — أَخٌ سے"
-      },
-      "explanation": {
-        "en": "أَخُوهُ = أَخُو + هُ. The و shows the nominative: لَيُوسُفُ وَأَخُوهُ (12:8). Accusative أَخَاهُ, genitive أَخِيهِ.",
-        "ur": "أَخُوهُ = أَخُو + هُ۔ و رفع ظاہر کرتا ہے: لَيُوسُفُ وَأَخُوهُ (12:8)۔ نصب أَخَاهُ، جر أَخِيهِ۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "ذُو الْعَرْشِ",
-        "ar_plain": "ذو العرش",
-        "translit": "dhul-'arshi",
-        "en": "Possessor of the Throne — from ذُو",
-        "ur": "عرش کا مالک — ذُو سے"
-      },
-      "explanation": {
-        "en": "ذُو = \"possessor of\", always followed by a noun in the genitive. ذُو الْعَرْشِ (nominative), ذَا الْعَرْشِ (accusative), ذِي الْعَرْشِ (genitive).",
-        "ur": "ذُو = \"والا\"، ہمیشہ اس کے بعد مجرور اسم آتا ہے۔ ذُو الْعَرْشِ (رفع)، ذَا الْعَرْشِ (نصب)، ذِي الْعَرْشِ (جر)۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "أَبُوهُ مُسْلِمٌ",
-        "ar_plain": "ابوه مسلم",
-        "translit": "abuuho muslimun",
-        "en": "His father is a Muslim.",
-        "ur": "اس کا باپ مسلمان ہے۔"
-      },
-      "explanation": {
-        "en": "أَبُوهُ = \"his father\", the subject — nominative, shown by و. مُسْلِمٌ = predicate.",
-        "ur": "أَبُوهُ = \"اس کا باپ\"، مبتدا — مرفوع، و سے ظاہر۔ مُسْلِمٌ = خبر۔"
+        "en": "Match the relative to how many it refers to: one → الَّذِي, two → اللَّذَانِ / اللَّذَيْنِ, many → الَّذِينَ.",
+        "ur": "اسم موصول کو اس تعداد سے ملائیں جس کی طرف وہ اشارہ کرتا ہے: ایک → الَّذِي، دو → اللَّذَانِ / اللَّذَيْنِ، کئی → الَّذِينَ۔"
       }
     },
     {
       "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "اتَّقُوا رَبَّكُمُ الَّذِي خَلَقَكُم مِّن نَّفْسٍ وَاحِدَةٍ",
-        "ar_plain": "اتقوا ربكم الذي خلقكم من نفس واحدة",
-        "translit": "ittaquu rabbakumu alladhii khalaqakum min nafsin waaHidah",
-        "en": "Fear your Lord, who created you from one soul",
-        "ur": "اپنے رب سے ڈرو جس نے تمہیں ایک جان سے پیدا کیا"
+        "ar": "وَاللَّذَانِ يَأْتِيَانِهَا مِنكُمْ",
+        "ar_plain": "واللذان ياتيانها منكم",
+        "translit": "wa-l-ladhāni yaʾtiyaānihā minkum",
+        "en": "And the two who commit it among you",
+        "ur": "اور تم میں سے وہ دو جو اسے کریں"
       },
       "explanation": {
-        "en": "An-Nisāʾ 4:1. رَبَّكُمْ = رَبَّ + كُمْ (\"your\"), the object of اتَّقُوا — accusative, shown by an ordinary fatḥa. رَبّ is a normal noun, not one of the five; it never adds a long vowel.",
-        "ur": "سورۃ النساء 4:1۔ رَبَّكُمْ = رَبَّ + كُمْ (\"تمہارا\")، اتَّقُوا کا مفعول — منصوب، عام فتحہ سے۔ رَبّ عام اسم ہے، اسمائے خمسہ میں سے نہیں؛ اس پر لمبی آواز نہیں بڑھتی۔"
+        "en": "اللَّذَانِ is the masculine dual relative in the nominative: it opens the sentence as the subject. (An-Nisa 4:16) (An-Nisa 4:16)",
+        "ur": "اللَّذَانِ مذکر مثنی اسم موصول ہے، رفع میں: یہ جملے کا مبتدا بن کر آیا ہے۔ (النساء 4:16) (An-Nisa 4:16)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "رَبَّنَا أَرِنَا اللَّذَيْنِ أَضَلَّانَا",
+        "ar_plain": "ربنا ارنا اللذين اضلانا",
+        "translit": "rabbanā ʾarinā al-ladhayni ʾaḍallānā",
+        "en": "Our Lord, show us the two who misled us",
+        "ur": "اے ہمارے رب، ہمیں وہ دو دکھا جنہوں نے ہمیں گمراہ کیا"
+      },
+      "explanation": {
+        "en": "اللَّذَيْنِ is the masculine dual relative in the accusative: it is the object of أَرِنَا. The ـَيْنِ ending is the same one the genitive uses. (Fussilat 41:29) (undefined 41:29)",
+        "ur": "اللَّذَيْنِ مذکر مثنی اسم موصول ہے، نصب میں: یہ أَرِنَا کا مفعول ہے۔ ـَيْنِ وہی انجام ہے جو جر میں آتا ہے۔ (فصلت 41:29) (undefined 41:29)"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "الطَّالِبَتَانِ اللَّتَانِ كَتَبَتَا الدَّرْسَ",
+        "ar_plain": "الطالبتان اللتان كتبتا الدرس",
+        "translit": "aṭ-ṭālibatāni al-latāni katabatā ad-darsa",
+        "en": "the two (female) students who wrote the lesson",
+        "ur": "وہ دو طالبات جنہوں نے سبق لکھا"
+      },
+      "explanation": {
+        "en": "Feminine nominative: اللَّتَانِ describes الطَّالِبَتَانِ. The verb كَتَبَتَا is the past dual you met in Chapter 51. (A constructed sentence.)",
+        "ur": "مؤنث رفع: اللَّتَانِ الطَّالِبَتَانِ کا وصف ہے۔ كَتَبَتَا ماضی مثنی ہے جو باب 51 میں آیا۔ (بنایا ہوا جملہ۔)"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "سَلَّمْتُ عَلَى الطَّالِبَتَيْنِ اللَّتَيْنِ كَتَبَتَا الدَّرْسَ",
+        "ar_plain": "سلمت على الطالبتين اللتين كتبتا الدرس",
+        "translit": "sallamtu ʿalā aṭ-ṭālibatayni al-latayni katabatā ad-darsa",
+        "en": "I greeted the two (female) students who wrote the lesson",
+        "ur": "میں نے ان دو طالبات کو سلام کیا جنہوں نے سبق لکھا"
+      },
+      "explanation": {
+        "en": "Feminine oblique: الطَّالِبَتَيْنِ follows عَلَى (genitive) and اللَّتَيْنِ takes the same ـَيْنِ. (A constructed sentence.)",
+        "ur": "مؤنث نصب / جر: الطَّالِبَتَيْنِ عَلَى کے بعد (مجرور) ہے اور اللَّتَيْنِ بھی وہی ـَيْنِ لیتا ہے۔ (بنایا ہوا جملہ۔)"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "The relative keeps its full form",
+        "ur": "اسم موصول اپنی پوری صورت رکھتا ہے"
+      },
+      "body": {
+        "en": "A dual noun loses its نِ as the first term of an iḍāfa (the previous lesson). A dual RELATIVE does not: it is never the first term of anything, so it stays اللَّذَانِ, اللَّذَيْنِ, اللَّتَانِ, اللَّتَيْنِ. Choose the nominative form for a doer or subject, and the ـَيْنِ form after a verb's object or a preposition.",
+        "ur": "مثنی اسم اضافت کے پہلے جز کے طور پر نِ کھو دیتا ہے (پچھلا سبق)۔ مثنی اسم موصول نہیں کھوتا: وہ کسی کا پہلا جز نہیں، اس لیے اللَّذَانِ، اللَّذَيْنِ، اللَّتَانِ، اللَّتَيْنِ ہی رہتا ہے۔ فاعل یا مبتدا کے لیے رفع کی صورت لیں، اور مفعول یا حرف جر کے بعد ـَيْنِ والی صورت۔"
       }
     }
   ],
   "exercises": [
     {
-      "id": "ch56-l07-ex01",
-      "type": "TAP_TRANSLATION",
-      "prompt": {
-        "ar": "أَبُوهُ مُسْلِمٌ",
-        "ar_plain": "ابوه مسلم",
-        "translit": "abuuho muslimun",
-        "en": "His father is a Muslim.",
-        "ur": "اس کا باپ مسلمان ہے۔"
+      "type": "FILL_BLANK",
+      "id": "ch56-l05-ex01",
+      "mode": "TAP",
+      "sentence_ar": "الطَّالِبَانِ ___ كَتَبَا الدَّرْسَ.",
+      "hint": {
+        "en": "The two students who wrote the lesson.",
+        "ur": "وہ دو طالب علم جنہوں نے سبق لکھا۔"
       },
       "options": [
         {
-          "en": "His father is a Muslim.",
-          "ur": "اس کا باپ مسلمان ہے۔"
+          "ar": "اللَّذَانِ",
+          "ar_plain": "اللذان",
+          "translit": "al-ladhāni",
+          "en": "who (two, masc., nom.)",
+          "ur": "جو (دو، مذکر، رفع)"
         },
         {
-          "en": "The Muslim's father.",
-          "ur": "مسلمان کا باپ۔"
+          "ar": "اللَّذَيْنِ",
+          "ar_plain": "اللذين",
+          "translit": "al-ladhayni",
+          "en": "who (two, masc., acc. / gen.)",
+          "ur": "جو (دو، مذکر، نصب / جر)"
         },
         {
-          "en": "His brothers are Muslims.",
-          "ur": "اس کے بھائی مسلمان ہیں۔"
+          "ar": "اللَّتَانِ",
+          "ar_plain": "اللتان",
+          "translit": "al-latāni",
+          "en": "who (two, fem., nom.)",
+          "ur": "جو (دو، مؤنث، رفع)"
         },
         {
-          "en": "A father is Muslim.",
-          "ur": "ایک باپ مسلمان ہے۔"
+          "ar": "الَّذِينَ",
+          "ar_plain": "الذين",
+          "translit": "alladhīna",
+          "en": "who (many)",
+          "ur": "جو (کئی)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "اللَّذَانِ",
+        "ar_plain": "اللذان",
+        "translit": "al-ladhāni",
+        "en": "who (two, masc., nom.)",
+        "ur": "جو (دو، مذکر، رفع)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Two masculine students in the nominative take اللَّذَانِ.",
+        "ur": "دو مذکر طالب علم رفع میں اللَّذَانِ لیتے ہیں۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch56-l05-ex02",
+      "mode": "TAP",
+      "sentence_ar": "الرَّجُلَانِ ___ دَخَلَا الْمَسْجِدَ جَاءَا.",
+      "hint": {
+        "en": "The two men who entered the mosque came.",
+        "ur": "وہ دو آدمی جو مسجد میں داخل ہوئے آئے۔"
+      },
+      "options": [
+        {
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "alladhī",
+          "en": "who (one)",
+          "ur": "جو (ایک)"
+        },
+        {
+          "ar": "اللَّتَانِ",
+          "ar_plain": "اللتان",
+          "translit": "al-latāni",
+          "en": "who (two, fem., nom.)",
+          "ur": "جو (دو، مؤنث، رفع)"
+        },
+        {
+          "ar": "اللَّذَيْنِ",
+          "ar_plain": "اللذين",
+          "translit": "al-ladhayni",
+          "en": "who (two, masc., acc. / gen.)",
+          "ur": "جو (دو، مذکر، نصب / جر)"
+        },
+        {
+          "ar": "اللَّذَانِ",
+          "ar_plain": "اللذان",
+          "translit": "al-ladhāni",
+          "en": "who (two, masc., nom.)",
+          "ur": "جو (دو، مذکر، رفع)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "اللَّذَانِ",
+        "ar_plain": "اللذان",
+        "translit": "al-ladhāni",
+        "en": "who (two, masc., nom.)",
+        "ur": "جو (دو، مذکر، رفع)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The two men are the doers (nominative), so the relative is اللَّذَانِ.",
+        "ur": "دو آدمی فاعل ہیں (رفع)، اس لیے اسم موصول اللَّذَانِ ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch56-l05-ex03",
+      "mode": "TAP",
+      "sentence_ar": "رَأَيْتُ الطَّالِبَيْنِ ___ كَتَبَا الدَّرْسَ.",
+      "hint": {
+        "en": "I saw the two students who wrote the lesson.",
+        "ur": "میں نے ان دو طالب علموں کو دیکھا جنہوں نے سبق لکھا۔"
+      },
+      "options": [
+        {
+          "ar": "اللَّذَانِ",
+          "ar_plain": "اللذان",
+          "translit": "al-ladhāni",
+          "en": "who (two, masc., nom.)",
+          "ur": "جو (دو، مذکر، رفع)"
+        },
+        {
+          "ar": "اللَّذَيْنِ",
+          "ar_plain": "اللذين",
+          "translit": "al-ladhayni",
+          "en": "who (two, masc., acc. / gen.)",
+          "ur": "جو (دو، مذکر، نصب / جر)"
+        },
+        {
+          "ar": "اللَّتَيْنِ",
+          "ar_plain": "اللتين",
+          "translit": "al-latayni",
+          "en": "who (two, fem., acc. / gen.)",
+          "ur": "جو (دو، مؤنث، نصب / جر)"
+        },
+        {
+          "ar": "الَّذِينَ",
+          "ar_plain": "الذين",
+          "translit": "alladhīna",
+          "en": "who (many)",
+          "ur": "جو (کئی)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "اللَّذَيْنِ",
+        "ar_plain": "اللذين",
+        "translit": "al-ladhayni",
+        "en": "who (two, masc., acc. / gen.)",
+        "ur": "جو (دو، مذکر، نصب / جر)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The two students are objects (accusative), so the relative takes ـَيْنِ: اللَّذَيْنِ.",
+        "ur": "دو طالب علم مفعول ہیں (نصب)، اس لیے اسم موصول ـَيْنِ لیتا ہے: اللَّذَيْنِ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch56-l05-ex04",
+      "mode": "TAP",
+      "sentence_ar": "سَلَّمْتُ عَلَى الرَّجُلَيْنِ ___ دَخَلَا الْمَسْجِدَ.",
+      "hint": {
+        "en": "I greeted the two men who entered the mosque.",
+        "ur": "میں نے ان دو آدمیوں کو سلام کیا جو مسجد میں داخل ہوئے۔"
+      },
+      "options": [
+        {
+          "ar": "اللَّذَانِ",
+          "ar_plain": "اللذان",
+          "translit": "al-ladhāni",
+          "en": "who (two, masc., nom.)",
+          "ur": "جو (دو، مذکر، رفع)"
+        },
+        {
+          "ar": "اللَّتَانِ",
+          "ar_plain": "اللتان",
+          "translit": "al-latāni",
+          "en": "who (two, fem., nom.)",
+          "ur": "جو (دو، مؤنث، رفع)"
+        },
+        {
+          "ar": "اللَّذَيْنِ",
+          "ar_plain": "اللذين",
+          "translit": "al-ladhayni",
+          "en": "who (two, masc., acc. / gen.)",
+          "ur": "جو (دو، مذکر، نصب / جر)"
+        },
+        {
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "alladhī",
+          "en": "who (one)",
+          "ur": "جو (ایک)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "اللَّذَيْنِ",
+        "ar_plain": "اللذين",
+        "translit": "al-ladhayni",
+        "en": "who (two, masc., acc. / gen.)",
+        "ur": "جو (دو، مذکر، نصب / جر)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After the preposition عَلَى the men are genitive, so the relative takes ـَيْنِ.",
+        "ur": "حرف جر عَلَى کے بعد آدمی مجرور ہیں، اس لیے اسم موصول ـَيْنِ لیتا ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch56-l05-ex05",
+      "mode": "TAP",
+      "sentence_ar": "الطَّالِبَتَانِ ___ كَتَبَتَا الدَّرْسَ.",
+      "hint": {
+        "en": "The two (female) students who wrote the lesson.",
+        "ur": "وہ دو طالبات جنہوں نے سبق لکھا۔"
+      },
+      "options": [
+        {
+          "ar": "اللَّتَيْنِ",
+          "ar_plain": "اللتين",
+          "translit": "al-latayni",
+          "en": "who (two, fem., acc. / gen.)",
+          "ur": "جو (دو، مؤنث، نصب / جر)"
+        },
+        {
+          "ar": "اللَّتَانِ",
+          "ar_plain": "اللتان",
+          "translit": "al-latāni",
+          "en": "who (two, fem., nom.)",
+          "ur": "جو (دو، مؤنث، رفع)"
+        },
+        {
+          "ar": "اللَّذَانِ",
+          "ar_plain": "اللذان",
+          "translit": "al-ladhāni",
+          "en": "who (two, masc., nom.)",
+          "ur": "جو (دو، مذکر، رفع)"
+        },
+        {
+          "ar": "الَّتِي",
+          "ar_plain": "التي",
+          "translit": "allatī",
+          "en": "who (one, fem.)",
+          "ur": "جو (ایک، مؤنث)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "اللَّتَانِ",
+        "ar_plain": "اللتان",
+        "translit": "al-latāni",
+        "en": "who (two, fem., nom.)",
+        "ur": "جو (دو، مؤنث، رفع)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Two feminine students in the nominative take اللَّتَانِ.",
+        "ur": "دو مؤنث طالبات رفع میں اللَّتَانِ لیتی ہیں۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch56-l05-ex06",
+      "mode": "TAP",
+      "sentence_ar": "الْمُعَلِّمَتَانِ ___ دَخَلَتَا الْمَسْجِدَ جَاءَتَا.",
+      "hint": {
+        "en": "The two (female) teachers who entered the mosque came.",
+        "ur": "وہ دو معلمات جو مسجد میں داخل ہوئیں آئیں۔"
+      },
+      "options": [
+        {
+          "ar": "اللَّتَانِ",
+          "ar_plain": "اللتان",
+          "translit": "al-latāni",
+          "en": "who (two, fem., nom.)",
+          "ur": "جو (دو، مؤنث، رفع)"
+        },
+        {
+          "ar": "اللَّذَانِ",
+          "ar_plain": "اللذان",
+          "translit": "al-ladhāni",
+          "en": "who (two, masc., nom.)",
+          "ur": "جو (دو، مذکر، رفع)"
+        },
+        {
+          "ar": "اللَّتَيْنِ",
+          "ar_plain": "اللتين",
+          "translit": "al-latayni",
+          "en": "who (two, fem., acc. / gen.)",
+          "ur": "جو (دو، مؤنث، نصب / جر)"
+        },
+        {
+          "ar": "الَّذِينَ",
+          "ar_plain": "الذين",
+          "translit": "alladhīna",
+          "en": "who (many)",
+          "ur": "جو (کئی)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "اللَّتَانِ",
+        "ar_plain": "اللتان",
+        "translit": "al-latāni",
+        "en": "who (two, fem., nom.)",
+        "ur": "جو (دو، مؤنث، رفع)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The two teachers are the doers (nominative) and feminine: اللَّتَانِ.",
+        "ur": "دو معلمات فاعل (رفع) اور مؤنث ہیں: اللَّتَانِ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch56-l05-ex07",
+      "mode": "TAP",
+      "sentence_ar": "رَأَيْتُ الطَّالِبَتَيْنِ ___ كَتَبَتَا الدَّرْسَ.",
+      "hint": {
+        "en": "I saw the two (female) students who wrote the lesson.",
+        "ur": "میں نے ان دو طالبات کو دیکھا جنہوں نے سبق لکھا۔"
+      },
+      "options": [
+        {
+          "ar": "اللَّتَانِ",
+          "ar_plain": "اللتان",
+          "translit": "al-latāni",
+          "en": "who (two, fem., nom.)",
+          "ur": "جو (دو، مؤنث، رفع)"
+        },
+        {
+          "ar": "اللَّذَيْنِ",
+          "ar_plain": "اللذين",
+          "translit": "al-ladhayni",
+          "en": "who (two, masc., acc. / gen.)",
+          "ur": "جو (دو، مذکر، نصب / جر)"
+        },
+        {
+          "ar": "اللَّتَيْنِ",
+          "ar_plain": "اللتين",
+          "translit": "al-latayni",
+          "en": "who (two, fem., acc. / gen.)",
+          "ur": "جو (دو، مؤنث، نصب / جر)"
+        },
+        {
+          "ar": "الَّتِي",
+          "ar_plain": "التي",
+          "translit": "allatī",
+          "en": "who (one, fem.)",
+          "ur": "جو (ایک، مؤنث)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "اللَّتَيْنِ",
+        "ar_plain": "اللتين",
+        "translit": "al-latayni",
+        "en": "who (two, fem., acc. / gen.)",
+        "ur": "جو (دو، مؤنث، نصب / جر)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The two students are objects (accusative); a feminine dual relative takes ـَيْنِ: اللَّتَيْنِ.",
+        "ur": "دو طالبات مفعول ہیں (نصب)؛ مؤنث مثنی اسم موصول ـَيْنِ لیتا ہے: اللَّتَيْنِ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch56-l05-ex08",
+      "mode": "TAP",
+      "sentence_ar": "سَلَّمْتُ عَلَى الْمُعَلِّمَتَيْنِ ___ دَخَلَتَا الْمَسْجِدَ.",
+      "hint": {
+        "en": "I greeted the two (female) teachers who entered the mosque.",
+        "ur": "میں نے ان دو معلمات کو سلام کیا جو مسجد میں داخل ہوئیں۔"
+      },
+      "options": [
+        {
+          "ar": "اللَّتَانِ",
+          "ar_plain": "اللتان",
+          "translit": "al-latāni",
+          "en": "who (two, fem., nom.)",
+          "ur": "جو (دو، مؤنث، رفع)"
+        },
+        {
+          "ar": "اللَّذَيْنِ",
+          "ar_plain": "اللذين",
+          "translit": "al-ladhayni",
+          "en": "who (two, masc., acc. / gen.)",
+          "ur": "جو (دو، مذکر، نصب / جر)"
+        },
+        {
+          "ar": "الَّذِينَ",
+          "ar_plain": "الذين",
+          "translit": "alladhīna",
+          "en": "who (many)",
+          "ur": "جو (کئی)"
+        },
+        {
+          "ar": "اللَّتَيْنِ",
+          "ar_plain": "اللتين",
+          "translit": "al-latayni",
+          "en": "who (two, fem., acc. / gen.)",
+          "ur": "جو (دو، مؤنث، نصب / جر)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "اللَّتَيْنِ",
+        "ar_plain": "اللتين",
+        "translit": "al-latayni",
+        "en": "who (two, fem., acc. / gen.)",
+        "ur": "جو (دو، مؤنث، نصب / جر)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After عَلَى the two teachers are genitive: the feminine oblique form is اللَّتَيْنِ.",
+        "ur": "عَلَى کے بعد دو معلمات مجرور ہیں: مؤنث نصب / جر کی صورت اللَّتَيْنِ ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch56-l05-ex09",
+      "prompt": {
+        "ar": "الرِّجَالُ ___ دَخَلُوا الْمَسْجِدَ",
+        "ar_plain": "الرجال ___ دخلوا المسجد",
+        "translit": "ar-rijālu ___ dakhalū al-masjida",
+        "en": "(the men … who entered the mosque — many men)",
+        "ur": "(وہ آدمی … جو مسجد میں داخل ہوئے — کئی آدمی)"
+      },
+      "options": [
+        {
+          "en": "الَّذِينَ — many people, not two",
+          "ur": "الَّذِينَ — کئی افراد، دو نہیں"
+        },
+        {
+          "en": "اللَّذَانِ — it would mean two men",
+          "ur": "اللَّذَانِ — اس کا مطلب دو آدمی ہوگا"
+        },
+        {
+          "en": "اللَّذَيْنِ — it would mean two men",
+          "ur": "اللَّذَيْنِ — اس کا مطلب دو آدمی ہوگا"
+        },
+        {
+          "en": "الَّتِي — it is feminine singular",
+          "ur": "الَّتِي — یہ مؤنث واحد ہے"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "أَبُوهُ = \"his father\" (nominative, و). مُسْلِمٌ = predicate.",
-        "ur": "أَبُوهُ = \"اس کا باپ\" (مرفوع، و)۔ مُسْلِمٌ = خبر۔"
+        "en": "The dual relatives are only for two. For many men the plural الَّذِينَ stays.",
+        "ur": "مثنی اسمائے موصول صرف دو کے لیے ہیں۔ کئی آدمیوں کے لیے جمع الَّذِينَ ہی رہتا ہے۔"
       }
     },
     {
-      "id": "ch56-l07-ex02",
-      "type": "MATCHING",
-      "left_column": [
-        {
-          "ar": "أَبُوهُ",
-          "ar_plain": "ابوه",
-          "translit": "abuuho",
-          "en": "his father",
-          "ur": "اس کے والد"
-        },
-        {
-          "ar": "أَخُوهُ",
-          "ar_plain": "اخوه",
-          "translit": "akhuuho",
-          "en": "his brother",
-          "ur": "اس کا بھائی"
-        },
-        {
-          "ar": "ذُو الْعَرْشِ",
-          "ar_plain": "ذو العرش",
-          "translit": "dhul-'arshi",
-          "en": "Possessor of the Throne",
-          "ur": "عرش کا مالک"
-        },
-        {
-          "ar": "رَبُّهُ",
-          "ar_plain": "ربه",
-          "translit": "rabbuhu",
-          "en": "his Lord",
-          "ur": "اس کا رب"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "from أَبٌ (father)",
-          "ur": "أَبٌ سے (باپ)"
-        },
-        {
-          "en": "from أَخٌ (brother)",
-          "ur": "أَخٌ سے (بھائی)"
-        },
-        {
-          "en": "from ذُو (possessor)",
-          "ur": "ذُو سے (مالک)"
-        },
-        {
-          "en": "normal إضافة (not الخمسة)",
-          "ur": "عام اضافہ (الخمسة نہیں)"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "أَبُوهُ and أَخُوهُ are five-noun forms with و (nominative). ذُو الْعَرْشِ is ذُو + a genitive noun. رَبُّهُ is an ordinary iḍāfa — رَبّ is not one of the five.",
-        "ur": "أَبُوهُ اور أَخُوهُ اسمائے خمسہ کی صورتیں ہیں، و کے ساتھ (رفع)۔ ذُو الْعَرْشِ ذُو + مجرور اسم ہے۔ رَبُّهُ عام اضافت ہے — رَبّ اسمائے خمسہ میں سے نہیں۔"
-      }
-    },
-    {
-      "id": "ch56-l07-ex03",
       "type": "TRUE_FALSE",
+      "id": "ch56-l05-ex10",
       "statement": {
-        "en": "رَبُّهُ (his Lord) follows the same pattern as أَبُوهُ (his father) — both are examples of the إضافة of the five special nouns.",
-        "ur": "رَبُّهُ (اس کا رب) أَبُوهُ (اس کا باپ) جیسے ہی pattern follow کرتا ہے — دونوں الْخَمْسَةُ کے اضافہ کی examples ہیں۔"
+        "en": "Like كِتَابَا in كِتَابَا الطَّالِبِ, the dual relative loses its نِ: اللَّذَا.",
+        "ur": "كِتَابَا الطَّالِبِ کے كِتَابَا کی طرح مثنی اسم موصول بھی نِ کھو دیتا ہے: اللَّذَا۔"
       },
       "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "Correct, it does not. رَبّ is an ordinary noun: رَبُّهُ، رَبَّهُ، رَبِّهِ — short vowels only. Only the five nouns add و / ا / ي.",
-        "ur": "درست، ایسا نہیں۔ رَبّ عام اسم ہے: رَبُّهُ، رَبَّهُ، رَبِّهِ — صرف چھوٹی حرکات۔ صرف اسمائے خمسہ و / ا / ي بڑھاتے ہیں۔"
-      }
-    },
-    {
-      "id": "ch56-l07-ex04",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "رَأَيْتُ ___",
-      "hint": {
-        "en": "I saw his brother.",
-        "ur": "میں نے اس کے بھائی کو دیکھا۔"
-      },
-      "options": [
-        {
-          "ar": "أَخَاهُ",
-          "ar_plain": "أخاه",
-          "translit": "akhaahu",
-          "en": "his brother (acc.)",
-          "ur": "اس کا بھائی (منصوب)"
-        },
-        {
-          "ar": "أَخُوهُ",
-          "ar_plain": "أخوه",
-          "translit": "akhuuhu",
-          "en": "his brother (nom.)",
-          "ur": "اس کا بھائی (مرفوع)"
-        },
-        {
-          "ar": "أَخِيهِ",
-          "ar_plain": "أخيه",
-          "translit": "akhiihi",
-          "en": "his brother (gen.)",
-          "ur": "اس کا بھائی (مجرور)"
-        },
-        {
-          "ar": "الْأَخُ",
-          "ar_plain": "الأخ",
-          "translit": "al-akhu",
-          "en": "the brother",
-          "ur": "بھائی"
-        }
-      ],
-      "correct_answer": {
-        "ar": "أَخَاهُ",
-        "ar_plain": "أخاه",
-        "translit": "akhaahu",
-        "en": "his brother (acc.)",
-        "ur": "اس کا بھائی (منصوب)"
-      },
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "His brother is the object of رَأَيْتُ, so it must be accusative: أَخَاهُ, with ا.",
-        "ur": "اس کا بھائی رَأَيْتُ کا مفعول ہے، اس لیے منصوب ہونا چاہیے: أَخَاهُ، ا کے ساتھ۔"
-      }
-    },
-    {
-      "id": "ch56-l07-ex05",
-      "type": "BUILD_SENTENCE",
-      "target_translation": {
-        "en": "Allah is the Owner of the Throne.",
-        "ur": "اللہ عرش والا ہے۔"
-      },
-      "tiles": [
-        {
-          "ar": "اللَّهُ",
-          "ar_plain": "الله",
-          "translit": "allaahu",
-          "en": "Allah",
-          "ur": "اللہ"
-        },
-        {
-          "ar": "ذُو",
-          "ar_plain": "ذو",
-          "translit": "dhuu",
-          "en": "owner of (nom.)",
-          "ur": "والا (مرفوع)"
-        },
-        {
-          "ar": "الْعَرْشِ",
-          "ar_plain": "العرش",
-          "translit": "al-'arshi",
-          "en": "the Throne (gen.)",
-          "ur": "عرش (مجرور)"
-        },
-        {
-          "ar": "ذَا",
-          "ar_plain": "ذا",
-          "translit": "dhaa",
-          "en": "owner of (acc.)",
-          "ur": "والا (منصوب)"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "اللَّهُ (subject) + ذُو (predicate, nominative — و) + الْعَرْشِ (genitive after ذُو). ذَا is the accusative form, wrong here.",
-        "ur": "اللَّهُ (مبتدا) + ذُو (خبر، مرفوع — و) + الْعَرْشِ (ذُو کے بعد مجرور)۔ ذَا نصب کی صورت ہے، یہاں غلط۔"
-      }
-    },
-    {
-      "id": "ch56-l07-ex06",
-      "type": "TRUE_FALSE",
-      "statement": {
-        "en": "With an attached pronoun, the five nouns show case by a long vowel: أَخُوهُ (nom.), أَخَاهُ (acc.), أَخِيهِ (gen.).",
-        "ur": "متصل ضمیر کے ساتھ اسمائے خمسہ لمبی آواز سے اعراب دکھاتے ہیں: أَخُوهُ (رفع)، أَخَاهُ (نصب)، أَخِيهِ (جر)۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "True. و = nominative, ا = accusative, ي = genitive.",
-        "ur": "درست۔ و = رفع، ا = نصب، ي = جر۔"
-      }
-    },
-    {
-      "id": "ch56-l07-ex07",
-      "type": "GRAMMAR_PARSE",
-      "sentence_ar": "أَخُوهُ مُسْلِمٌ",
-      "words": [
-        {
-          "ar": "أَخُوهُ",
-          "ar_plain": "اخوه",
-          "translit": "akhuuho",
-          "en": "his brother",
-          "ur": "اس کا بھائی"
-        },
-        {
-          "ar": "مُسْلِمٌ",
-          "ar_plain": "مسلم",
-          "translit": "muslimun",
-          "en": "a Muslim",
-          "ur": "ایک مسلمان"
-        }
-      ],
-      "available_roles": [
-        "SUBJECT",
-        "OBJECT",
-        "PREDICATE"
-      ],
-      "correct_roles": [
-        "SUBJECT",
-        "PREDICATE"
-      ],
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "أَخُوهُ = subject (nominative — و). مُسْلِمٌ = predicate (nominative).",
-        "ur": "أَخُوهُ = مبتدا (مرفوع — و)۔ مُسْلِمٌ = خبر (مرفوع)۔"
-      }
-    },
-    {
-      "id": "ch56-l07-ex08",
-      "type": "TAP_TRANSLATION",
-      "prompt": {
-        "ar": "أَبُوهُ وَأَخُوهُ مُسْلِمَانِ",
-        "ar_plain": "ابوه واخوه مسلمان",
-        "translit": "abuuho wa akhhuho muslimaani",
-        "en": "His father and his brother are Muslims.",
-        "ur": "اس کے والد اور بھائی مسلمان ہیں۔"
-      },
-      "options": [
-        {
-          "en": "His father and his brother are Muslims.",
-          "ur": "اس کا باپ اور اس کا بھائی مسلمان ہیں۔"
-        },
-        {
-          "en": "His father is a Muslim brother.",
-          "ur": "اس کا باپ ایک مسلمان بھائی ہے۔"
-        },
-        {
-          "en": "A Muslim father and brother.",
-          "ur": "ایک مسلمان باپ اور بھائی۔"
-        },
-        {
-          "en": "His father of the Muslim.",
-          "ur": "مسلمان کا باپ۔"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "أَبُوهُ = 'his father' (from أَبٌ). وَ = conjunction. أَخُوهُ = 'his brother' (from أَخٌ). مُسْلِمَانِ = dual خَبَر (رفع) — both subjects share the same predicate.",
-        "ur": "أَبُوهُ = 'اس کا باپ' (أَبٌ سے)۔ و = حرف عطف۔ أَخُوهُ = 'اس کا بھائی' (أَخٌ سے)۔ مُسْلِمَانِ = مثنی خبر (رفع) — دونوں موضوعs ایک predicate share کرتے ہیں۔"
+        "en": "False. A relative is never the first term of an iḍāfa, so it keeps its full form: اللَّذَانِ / اللَّذَيْنِ.",
+        "ur": "غلط۔ اسم موصول کبھی اضافت کا پہلا جز نہیں ہوتا، اس لیے وہ پوری صورت رکھتا ہے: اللَّذَانِ / اللَّذَيْنِ۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "The Five Nouns — الأسماء الخمسة",
-      "ar": "الْأَسْمَاءُ الْخَمْسَةُ",
-      "ur": "پانچ اسم"
+      "en": "The relative for two",
+      "ar": "وَاللَّذَانِ",
+      "ur": "دو کے لیے اسم موصول"
     },
     "ayah": {
-      "surah": 40,
-      "ayah": 15,
-      "label": "Ghafir 40:15",
-      "ar": "رَفِيعُ الدَّرَجَاتِ ذُو الْعَرْشِ يُلْقِي الرُّوحَ مِنْ أَمْرِهِ عَلَىٰ مَن يَشَاءُ مِنْ عِبَادِهِ لِيُنذِرَ يَوْمَ التَّلَاقِ",
-      "en": "[He is] the Exalted above [all] degrees, Owner of the Throne; He places the inspiration of His command [i.e., revelation] upon whom He wills of His servants to warn of the Day of Meeting.",
-      "ur": "مالک درجات عالی اور صاحب عرش ہے۔ اپنے بندوں میں سے جس پر چاہتا ہے اپنے حکم سے وحی بھیجتا ہے تاکہ ملاقات کے دن سے ڈراوے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/040015.mp3"
+      "surah": 4,
+      "ayah": 16,
+      "label": "An-Nisa 4:16",
+      "ar": "وَاللَّذَانِ يَأْتِيَانِهَا مِنكُمْ",
+      "en": "And the two who commit it among you",
+      "ur": "اور تم میں سے وہ دو جو اسے کریں",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/004016.mp3"
     },
     "highlighted_word_indices": [
-      2
+      0
+    ],
+    "highlighted_words": [
+      "وَاللَّذَانِ"
     ],
     "noor_explanation": {
-      "en": "ذُو الْعَرْشِ — \"Owner of the Throne\". ذُو is nominative, shown by its و, and is always followed by a noun in the genitive. It never takes an attached pronoun.",
-      "ur": "ذُو الْعَرْشِ — \"عرش والا\"۔ ذُو مرفوع ہے، و سے ظاہر، اور اس کے بعد ہمیشہ مجرور اسم آتا ہے۔ اس پر کبھی متصل ضمیر نہیں آتی۔"
+      "en": "وَاللَّذَانِ — 'and the two who': the masculine dual relative in the nominative, followed by the clause that says what the two do.",
+      "ur": "وَاللَّذَانِ — 'اور وہ دو جو': مذکر مثنی اسم موصول، رفع میں، اور اس کے بعد وہ جملہ جو بتاتا ہے کہ دونوں کیا کرتے ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "The five nouns — أَبٌ, أَخٌ, حَمٌ, فُو, ذُو. In the Quran you now recognise أَبُوهُ / أَبَاهُ / أَبِيهِ and أَخُوهُ / أَخَاهُ / أَخِيهِ: the long vowel tells you the case.",
-      "ur": "اسمائے خمسہ — أَبٌ، أَخٌ، حَمٌ، فُو، ذُو۔ قرآن میں اب آپ أَبُوهُ / أَبَاهُ / أَبِيهِ اور أَخُوهُ / أَخَاهُ / أَخِيهِ پہچانتے ہیں: لمبی آواز اعراب بتاتی ہے۔"
+      "en": "Four dual relatives — two for the nominative, two with ـَيْنِ — and they keep their full form.",
+      "ur": "چار مثنی اسمائے موصول — دو رفع کے لیے، دو ـَيْنِ والے — اور وہ اپنی پوری صورت رکھتے ہیں۔"
     }
   }
 }

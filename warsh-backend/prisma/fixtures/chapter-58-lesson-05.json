@@ -1,30 +1,29 @@
 {
+  "schema_version": "1.0",
+  "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 58, Lesson 5 — Applied parsing: analyzing complex Quranic sentences with transitive/intransitive and fronted predicate patterns",
+    "_note": "Chapter 58, Lesson 5 (ch58-l04, rebuilt in place). The old row, 'Emphasis in Nominal Sentences', re-taught إِنَّ and its sisters, which are Chapters 24 and 49's, so it is replaced by the reported-clause lesson of the proposal: قَالَ + a لِـ listener phrase + a quoted clause (2:30, 19:30 and a constructed teacher / student sentence), the quote-internal إِنَّ roles, and the contrast with the two-noun-object frame of Lesson 2. Eight exercises (four guided, four fresh). The old ظَنَّ card (two objects) is Lesson 2's. Added 2026-10-04 in the proposal harvest, batch 7 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-58-content-proposal.md and its review amendments.",
+    "title": "Reported Speech — الْمَقُولُ وَالْمُخَاطَبُ",
+    "titleAr": "الْمَقُولُ وَالْمُخَاطَبُ",
+    "titleUr": "نقل کیا ہوا کلام",
     "chapter_order": 58,
     "lesson_order": 5,
-    "chapter_title": "Higher-Level Syntax and Classical Usage",
-    "title": "Applied Parsing — تحليل الجمل القرآنية",
-    "titleAr": "تَحْلِيلُ الْجُمَلِ الْقُرْآنِيَّةِ",
-    "source": "book_6_higher_syntax_58_applied_parsing.md",
     "estimated_minutes": 10,
     "xp_reward": 10
   },
-  "schema_version": "1.0",
-  "template": "STANDARD",
   "hook": {
     "ayah": {
       "surah": 2,
       "ayah": 30,
       "label": "Al-Baqarah 2:30",
-      "ar": "وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً",
-      "en": "And when your Lord said to the angels, 'Indeed, I will make upon the earth a successive authority.'",
-      "ur": "اور جب تمہارے رب نے فرشتوں سے کہا کہ بے شک میں زمین میں ایک خلیفہ بنانے والا ہوں۔",
+      "ar": "وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً ۖ قَالُوا أَتَجْعَلُ فِيهَا مَن يُفْسِدُ فِيهَا وَيَسْفِكُ الدِّمَاءَ وَنَحْنُ نُسَبِّحُ بِحَمْدِكَ وَنُقَدِّسُ لَكَ ۖ قَالَ إِنِّي أَعْلَمُ مَا لَا تَعْلَمُونَ",
+      "en": "And [mention, O Muḥammad], when your Lord said to the angels, \"Indeed, I will make upon the earth a successive authority.\" They said, \"Will You place upon it one who causes corruption therein and sheds blood, while we exalt You with praise and declare Your perfection?\" He [Allāh] said, \"Indeed, I know that which you do not know.\"",
+      "ur": "اور (وہ وقت یاد کرنے کے قابل ہے) جب تمہارے پروردگار نے فرشتوں سے فرمایا کہ میں زمین میں (اپنا) نائب بنانے والا ہوں۔ انہوں نے کہا۔ کیا تُو اس میں ایسے شخص کو نائب بنانا چاہتا ہے جو خرابیاں کرے اور کشت وخون کرتا پھرے اور ہم تیری تعریف کے ساتھ تسبیح وتقدیس کرتے رہتے ہیں۔ (خدا نے) فرمایا میں وہ باتیں جانتا ہوں جو تم نہیں جانتے",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002030.mp3"
     },
     "noor_intro": {
-      "en": "إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً combines إِنَّ (with the attached \"I\"), an active participle جَاعِلٌ that takes an object, and a prepositional phrase. Today we parse such sentences piece by piece.",
-      "ur": "إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً میں إِنَّ (متصل \"میں\" کے ساتھ)، مفعول لینے والا اسم فاعل جَاعِلٌ، اور جار مجرور سب جمع ہیں۔ آج ہم ایسے جملوں کو ٹکڑا ٹکڑا پڑھیں گے۔"
+      "en": "A sentence inside a sentence: first who spoke to whom, then what was said.",
+      "ur": "جملے کے اندر جملہ: پہلے کس نے کس سے کہا، پھر کیا کہا گیا۔"
     },
     "autoplay": true
   },
@@ -32,442 +31,430 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Applied Parsing — Integrated Analysis",
-        "ar": "تَحْلِيلُ الْجُمَلِ الْقُرْآنِيَّةِ — تَطْبِيقُ مَا تَعَلَّمْنَاهُ",
-        "ur": "قرآنی جملوں کا تجزیہ — جو ہم نے سیکھا اس کا اطلاق"
+        "en": "What was said and who it was said to",
+        "ar": "الْمَقُولُ وَالْمُخَاطَبُ",
+        "ur": "کیا کہا گیا اور کس سے کہا گیا"
       },
       "explanation": {
-        "en": "Real Quranic sentences combine several patterns at once: إِنَّ (subject accusative, predicate nominative), transitive verbs or participles taking objects, and prepositional phrases. The skill is to spot each pattern, then see how they fit together.",
-        "ur": "اصل قرآنی جملوں میں کئی ترتیبیں ایک ساتھ ہوتی ہیں: إِنَّ (اسم منصوب، خبر مرفوع)، مفعول لینے والے متعدی افعال یا اسم فاعل، اور جار مجرور۔ مہارت یہ ہے کہ ہر ترتیب پہچانیں، پھر دیکھیں کہ وہ کیسے جڑتی ہیں۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "جَاعِلٌ",
-        "ar_plain": "جاعل",
-        "translit": "jaa'ilun",
-        "en": "making / appointing — متعدي to two objects",
-        "ur": "بنانے والا / مقرر کرنے والا — دو مفعول به والا متعدی"
-      },
-      "explanation": {
-        "en": "جَاعِلٌ is the active participle (اسْمُ فَاعِل) of جَعَلَ: \"one who places / is going to place\". Like its verb it takes an object: خَلِيفَةً (accusative). فِي الْأَرْضِ (\"on the earth\") is a prepositional phrase. Here جَعَلَ means \"place\", so there is one object.",
-        "ur": "جَاعِلٌ، جَعَلَ کا اسم فاعل ہے: \"رکھنے / بنانے والا\"۔ اپنے فعل کی طرح یہ مفعول لیتا ہے: خَلِيفَةً (منصوب)۔ فِي الْأَرْضِ (\"زمین میں\") جار مجرور ہے۔ یہاں جَعَلَ \"رکھنا\" کے معنی میں ہے، اس لیے ایک ہی مفعول ہے۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "إِنِّي",
-        "ar_plain": "اني",
-        "translit": "inni",
-        "en": "indeed I — إِنَّ + attached ي (first person)",
-        "ur": "بے شک میں — إِنَّ + attached ي (پہلا شخص)"
-      },
-      "explanation": {
-        "en": "إِنِّي = إِنَّ + ي (\"I\"). The ي is the subject of إِنَّ (in the accusative position). جَاعِلٌ is the predicate of إِنَّ — nominative, with ḍamma and tanwīn.",
-        "ur": "إِنِّي = إِنَّ + ي (\"میں\")۔ ي إِنَّ کا اسم ہے (نصب کی جگہ)۔ جَاعِلٌ إِنَّ کی خبر ہے — مرفوع، ضمہ اور تنوین کے ساتھ۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "خَلِيفَةً",
-        "ar_plain": "خليفة",
-        "translit": "khaliifatan",
-        "en": "successor / vicegerent — مفعول به (accusative)",
-        "ur": "خلیفہ — مفعول به (نصب)"
-      },
-      "explanation": {
-        "en": "خَلِيفَةً, the object of جَاعِلٌ (accusative), from خ-ل-ف (to succeed). The word also appears in Ṣād 38:26: يَا دَاوُودُ إِنَّا جَعَلْنَاكَ خَلِيفَةً فِي الْأَرْضِ.",
-        "ur": "خَلِيفَةً، جَاعِلٌ کا مفعول (منصوب)، مادہ خ-ل-ف (جانشین ہونا)۔ یہ لفظ سورۃ ص 38:26 میں بھی ہے: يَا دَاوُودُ إِنَّا جَعَلْنَاكَ خَلِيفَةً فِي الْأَرْضِ۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "إِنِّي جَاعِلٌ خَلِيفَةً",
-        "ar_plain": "اني جاعل خليفة",
-        "translit": "inni jaa'ilun khaliifatan",
-        "en": "Indeed I am making a successor.",
-        "ur": "بے شک میں ایک خلیفہ بنانے والا ہوں۔"
-      },
-      "explanation": {
-        "en": "إِنِّي = إِنَّ + ي (subject of إِنَّ). جَاعِلٌ = predicate of إِنَّ (nominative). خَلِيفَةً = object of جَاعِلٌ (accusative).",
-        "ur": "إِنِّي = إِنَّ + ي (إِنَّ کا اسم)۔ جَاعِلٌ = إِنَّ کی خبر (مرفوع)۔ خَلِيفَةً = جَاعِلٌ کا مفعول (منصوب)۔"
+        "en": "After قَالَ ('he said') a whole clause can be what was said. A لِـ phrase names the listener: قَالَ رَبُّكَ لِلْمَلَائِكَةِ — 'your Lord said to the angels'. The listener (لِلْمَلَائِكَةِ) is a prepositional phrase; the quoted clause (إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً) is the content. Read the quotation as its own sentence, with its own roles — for example an إِنَّ clause: the pronoun after إِنَّ is its subject, the predicate follows.",
+        "ur": "قَالَ ('اس نے کہا') کے بعد پورا جملہ 'جو کہا گیا' بن سکتا ہے۔ لِـ والا حصہ سننے والے کا نام لیتا ہے: قَالَ رَبُّكَ لِلْمَلَائِكَةِ — 'تیرے رب نے فرشتوں سے کہا'۔ سننے والا (لِلْمَلَائِكَةِ) جار مجرور ہے؛ نقل کیا گیا جملہ (إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً) مضمون ہے۔ اقتباس کو اس کے اپنے کرداروں کے ساتھ ایک الگ جملے کی طرح پڑھیں — مثلاً إِنَّ والا جملہ: إِنَّ کے بعد ضمیر اس کا اسم ہے، خبر آگے آتی ہے۔"
       }
     },
     {
       "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً",
-        "ar_plain": "واذ قال ربك للملائكة اني جاعل في الارض خليفة",
-        "translit": "wa idh qaala rabbuka li-l-malaa'ikati innii jaa'ilun fii al-ardi khaliifatan",
-        "en": "And when your Lord said to the angels, 'Indeed I will make upon the earth a successor.'",
-        "ur": "اور جب تمہارے رب نے فرشتوں سے کہا کہ بے شک میں زمین میں ایک خلیفہ بنانے والا ہوں۔"
+        "ar": "وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً ۖ قَالُوا أَتَجْعَلُ فِيهَا مَن يُفْسِدُ فِيهَا وَيَسْفِكُ الدِّمَاءَ وَنَحْنُ نُسَبِّحُ بِحَمْدِكَ وَنُقَدِّسُ لَكَ ۖ قَالَ إِنِّي أَعْلَمُ مَا لَا تَعْلَمُونَ",
+        "ar_plain": "واذ قال ربك للملائكة اني جاعل في الارض خليفة  قالوا اتجعل فيها من يفسد فيها ويسفك الدماء ونحن نسبح بحمدك ونقدس لك  قال اني اعلم ما لا تعلمون",
+        "translit": "waʾidh qāla rabbuka lilmalāʾikati ʾinnī jāʿilun fī al-ʾarḍi khalīfatan ۖ qālū ʾatajʿalu fīhā man yufsidu fīhā wayasfiku ad-dimāʾa wanaḥnu nusabbiḥu biḥamdika wanuqaddisu laka ۖ qāla ʾinnī ʾaʿlamu mā lā taʿlamūna",
+        "en": "And [mention, O Muḥammad], when your Lord said to the angels, \"Indeed, I will make upon the earth a successive authority.\" They said, \"Will You place upon it one who causes corruption therein and sheds blood, while we exalt You with praise and declare Your perfection?\" He [Allāh] said, \"Indeed, I know that which you do not know.\"",
+        "ur": "اور (وہ وقت یاد کرنے کے قابل ہے) جب تمہارے پروردگار نے فرشتوں سے فرمایا کہ میں زمین میں (اپنا) نائب بنانے والا ہوں۔ انہوں نے کہا۔ کیا تُو اس میں ایسے شخص کو نائب بنانا چاہتا ہے جو خرابیاں کرے اور کشت وخون کرتا پھرے اور ہم تیری تعریف کے ساتھ تسبیح وتقدیس کرتے رہتے ہیں۔ (خدا نے) فرمایا میں وہ باتیں جانتا ہوں جو تم نہیں جانتے"
       },
       "explanation": {
-        "en": "قَالَ رَبُّكَ = verb + subject. لِلْمَلَائِكَةِ = prepositional phrase naming who was addressed. What was said, إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً, is an إِنَّ-sentence: ي = subject of إِنَّ, جَاعِلٌ = predicate, فِي الْأَرْضِ = prepositional phrase, خَلِيفَةً = object of جَاعِلٌ.",
-        "ur": "قَالَ رَبُّكَ = فعل + فاعل۔ لِلْمَلَائِكَةِ = جار مجرور، جن سے خطاب ہوا۔ جو کہا گیا، إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً، إِنَّ والا جملہ ہے: ي = إِنَّ کا اسم، جَاعِلٌ = خبر، فِي الْأَرْضِ = جار مجرور، خَلِيفَةً = جَاعِلٌ کا مفعول۔"
+        "en": "قَالَ رَبُّكَ = verb + subject. لِلْمَلَائِكَةِ = who was addressed (prepositional phrase). إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً = what was said. Inside it: ي = اسم إِنَّ, جَاعِلٌ = خبر إِنَّ (nominative), خَلِيفَةً = object of the participle (accusative). (Al-Baqarah 2:30) (Al-Baqarah 2:30)",
+        "ur": "قَالَ رَبُّكَ = فعل + فاعل۔ لِلْمَلَائِكَةِ = جس سے بات کی گئی (جار مجرور)۔ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً = جو کہا گیا۔ اس کے اندر: ي = اسم إِنَّ، جَاعِلٌ = خبر إِنَّ (مرفوع)، خَلِيفَةً = اسم فاعل کا مفعول (منصوب)۔ (البقرہ 2:30) (Al-Baqarah 2:30)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "قَالَ إِنِّي عَبْدُ اللَّهِ",
+        "ar_plain": "قال اني عبد الله",
+        "translit": "qāla ʾinnī ʿabdu al-lahi",
+        "en": "He said, 'Indeed I am a servant of Allah'",
+        "ur": "اس نے کہا: بے شک میں اللہ کا بندہ ہوں"
+      },
+      "explanation": {
+        "en": "Here there is no listener phrase: قَالَ is followed straight by the quotation. إِنِّي = إِنَّ + ي (اسم إِنَّ); عَبْدُ = خبر إِنَّ, nominative; اللَّهِ is the second term of the iḍāfa. (Maryam 19:30) (undefined 19:30)",
+        "ur": "یہاں سننے والے کا جملہ نہیں: قَالَ کے بعد سیدھا اقتباس ہے۔ إِنِّي = إِنَّ + ي (اسم إِنَّ)؛ عَبْدُ = خبر إِنَّ، مرفوع؛ اللَّهِ اضافت کا دوسرا جز ہے۔ (مریم 19:30) (undefined 19:30)"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "قَالَ الْمُعَلِّمُ لِلطَّالِبِ إِنَّكَ مُجْتَهِدٌ",
+        "ar_plain": "قال المعلم للطالب انك مجتهد",
+        "translit": "qāla al-muʿallimu lilṭṭālibi ʾinnaka mujtahidun",
+        "en": "The teacher said to the student: 'Indeed you are hardworking.'",
+        "ur": "استاد نے طالب علم سے کہا: 'بے شک تم محنتی ہو۔'"
+      },
+      "explanation": {
+        "en": "قَالَ الْمُعَلِّمُ = verb + subject. لِلطَّالِبِ = the listener. إِنَّكَ مُجْتَهِدٌ = what was said: ك = اسم إِنَّ, مُجْتَهِدٌ = خبر إِنَّ, nominative. (A constructed sentence.)",
+        "ur": "قَالَ الْمُعَلِّمُ = فعل + فاعل۔ لِلطَّالِبِ = سننے والا۔ إِنَّكَ مُجْتَهِدٌ = جو کہا گیا: ك = اسم إِنَّ، مُجْتَهِدٌ = خبر إِنَّ، مرفوع۔ (بنایا ہوا جملہ۔)"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "A quotation / two noun objects",
+        "ur": "اقتباس / دو اسمی مفعول"
+      },
+      "examples": [
+        {
+          "ar": "قَالَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ …",
+          "ar_plain": "قال للملائكة اني جاعل …",
+          "translit": "qāla lilmalāʾikati ʾinnī jāʿilun …",
+          "en": "he said to the angels: 'I am making …' (a listener phrase and a quotation)",
+          "ur": "اس نے فرشتوں سے کہا: 'میں بنانے والا ہوں …' (سننے والا اور اقتباس)"
+        },
+        {
+          "ar": "عَلَّمَ آدَمَ الْأَسْمَاءَ",
+          "ar_plain": "علم ادم الاسماء",
+          "translit": "ʿallama ʾādama al-ʾasmāʾa",
+          "en": "he taught Adam the names (two noun objects)",
+          "ur": "اس نے آدم کو نام سکھائے (دو اسمی مفعول)"
+        }
+      ],
+      "explanation": {
+        "en": "Do not count a quoted clause or a لِـ phrase as a second noun object. The two-object frame of Lesson 2 has two bare accusative nouns.",
+        "ur": "اقتباس یا لِـ والے حصے کو دوسرا اسمی مفعول نہ گنیں۔ سبق 2 کے دو مفعولوں میں دو بغیر حرف کے منصوب اسم ہوتے ہیں۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Read in layers",
+        "ur": "تہوں میں پڑھیں"
+      },
+      "body": {
+        "en": "First separate the frame (verb, subject, listener) from the quotation. Then read the quotation as its own sentence. The participle and its object from the previous lesson sit inside the quotation of 2:30.",
+        "ur": "پہلے ڈھانچہ (فعل، فاعل، سننے والا) اقتباس سے الگ کریں۔ پھر اقتباس کو اس کے اپنے جملے کی طرح پڑھیں۔ پچھلے سبق کا اسم فاعل اور اس کا مفعول 2:30 کے اقتباس کے اندر ہیں۔"
       }
     }
   ],
   "exercises": [
     {
-      "id": "ch58-l05-ex01",
-      "type": "TRUE_FALSE",
-      "statement": {
-        "en": "In إِنِّي جَاعِلٌ خَلِيفَةً, the predicate جَاعِلٌ is accusative because of إِنَّ.",
-        "ur": "إِنِّي جَاعِلٌ خَلِيفَةً میں خبر جَاعِلٌ إِنَّ کی وجہ سے منصوب ہے۔"
-      },
-      "correct_answer": false,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "False. إِنَّ makes only its subject (the ي) accusative. Its predicate جَاعِلٌ is nominative — see the ḍamma and tanwīn. خَلِيفَةً is accusative because it is the object of جَاعِلٌ.",
-        "ur": "غلط۔ إِنَّ صرف اپنے اسم (ي) کو منصوب کرتا ہے۔ اس کی خبر جَاعِلٌ مرفوع ہے — ضمہ اور تنوین دیکھیں۔ خَلِيفَةً اس لیے منصوب ہے کہ وہ جَاعِلٌ کا مفعول ہے۔"
-      }
-    },
-    {
-      "id": "ch58-l05-ex02",
-      "type": "GRAMMAR_PARSE",
-      "sentence_ar": "إِنِّي جَاعِلٌ خَلِيفَةً",
-      "words": [
-        {
-          "ar": "إِنِّي",
-          "ar_plain": "اني",
-          "translit": "inni",
-          "en": "indeed I",
-          "ur": "واقعی میں"
-        },
-        {
-          "ar": "جَاعِلٌ",
-          "ar_plain": "جاعل",
-          "translit": "jaa'ilun",
-          "en": "making",
-          "ur": "بنانا"
-        },
-        {
-          "ar": "خَلِيفَةً",
-          "ar_plain": "خليفة",
-          "translit": "khaliifatan",
-          "en": "a successor",
-          "ur": "ایک جانشین"
-        }
-      ],
-      "available_roles": [
-        "SUBJECT",
-        "PREDICATE",
-        "OBJECT"
-      ],
-      "correct_roles": [
-        "SUBJECT",
-        "PREDICATE",
-        "OBJECT"
-      ],
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "إِنِّي = إِنَّ + ي; the ي is the subject of إِنَّ. جَاعِلٌ = predicate (nominative). خَلِيفَةً = object of جَاعِلٌ (accusative).",
-        "ur": "إِنِّي = إِنَّ + ي؛ ي إِنَّ کا اسم ہے۔ جَاعِلٌ = خبر (مرفوع)۔ خَلِيفَةً = جَاعِلٌ کا مفعول (منصوب)۔"
-      }
-    },
-    {
-      "id": "ch58-l05-ex03",
-      "type": "MATCHING",
-      "left_column": [
-        {
-          "ar": "إِنِّي",
-          "ar_plain": "اني",
-          "translit": "inni",
-          "en": "indeed I",
-          "ur": "واقعی میں"
-        },
-        {
-          "ar": "جَاعِلٌ",
-          "ar_plain": "جاعل",
-          "translit": "jaa'ilun",
-          "en": "making",
-          "ur": "بنانا"
-        },
-        {
-          "ar": "خَلِيفَةً",
-          "ar_plain": "خليفة",
-          "translit": "khaliifatan",
-          "en": "successor",
-          "ur": "جانشین"
-        },
-        {
-          "ar": "فِي الْأَرْضِ",
-          "ar_plain": "في الارض",
-          "translit": "fii al-ardi",
-          "en": "upon the earth",
-          "ur": "زمین پر"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "إِنَّ + its subject (the ي)",
-          "ur": "إِنَّ + اس کا اسم (ي)"
-        },
-        {
-          "en": "predicate of إِنَّ, nominative — takes an object",
-          "ur": "إِنَّ کی خبر، مرفوع — مفعول لیتی ہے"
-        },
-        {
-          "en": "object, accusative",
-          "ur": "مفعول، منصوب"
-        },
-        {
-          "en": "prepositional phrase",
-          "ur": "جار مجرور"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "إِنِّي = إِنَّ + its subject ي. جَاعِلٌ = predicate (nominative), taking the object خَلِيفَةً (accusative). فِي الْأَرْضِ = prepositional phrase (الْأَرْضِ genitive).",
-        "ur": "إِنِّي = إِنَّ + اس کا اسم ي۔ جَاعِلٌ = خبر (مرفوع)، جو مفعول خَلِيفَةً (منصوب) لیتی ہے۔ فِي الْأَرْضِ = جار مجرور (الْأَرْضِ مجرور)۔"
-      }
-    },
-    {
-      "id": "ch58-l05-ex04",
-      "type": "TRUE_FALSE",
-      "statement": {
-        "en": "In وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ, لِلْمَلَائِكَةِ is a prepositional phrase naming who was addressed, not a direct object.",
-        "ur": "وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ میں لِلْمَلَائِكَةِ جار مجرور ہے جو مخاطب کو بتاتا ہے، مفعول بہ نہیں۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "True. لِلْمَلَائِكَةِ = لِـ + الْمَلَائِكَةِ (genitive): \"to the angels\". What is said after قَالَ is the content of the speech.",
-        "ur": "درست۔ لِلْمَلَائِكَةِ = لِـ + الْمَلَائِكَةِ (مجرور): \"فرشتوں سے\"۔ قَالَ کے بعد جو کہا جائے وہ بات کا مضمون ہے۔"
-      }
-    },
-    {
-      "id": "ch58-l05-ex05",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "إِنَّ اللَّهَ ___",
-      "hint": {
-        "en": "Indeed Allah is... (choose the correct description).",
-        "ur": "بے شک اللہ ... ہے (درست description choose کرو)۔"
-      },
-      "options": [
-        {
-          "ar": "غَفُورٌ رَحِيمٌ",
-          "ar_plain": "غفور رحيم",
-          "translit": "ghafuurun rahiimun",
-          "en": "Forgiving, Merciful (nominative)",
-          "ur": "بخشنے والا، رحم کرنے والا (رفع)"
-        },
-        {
-          "ar": "غَفُورًا رَحِيمًا",
-          "ar_plain": "غفورا رحيما",
-          "translit": "ghafuuran rahiiman",
-          "en": "Forgiving, Merciful (accusative)",
-          "ur": "بخشنے والا، رحم کرنے والا (نصب)"
-        },
-        {
-          "ar": "الْغَفُورُ الرَّحِيمُ",
-          "ar_plain": "الغفور الرحيم",
-          "translit": "al-ghafuuru ar-raHiimu",
-          "en": "the Forgiving, the Merciful (definite)",
-          "ur": "بخشنے والا، مہربان (معرفہ)"
-        },
-        {
-          "ar": "غَفُورٍ رَحِيمٍ",
-          "ar_plain": "غفور رحيم",
-          "translit": "ghafuurin rahiimin",
-          "en": "Forgiving, Merciful (genitive)",
-          "ur": "بخشنے والا، رحم کرنے والا (جر)"
-        }
-      ],
-      "correct_answer": {
-        "ar": "غَفُورٌ رَحِيمٌ",
-        "ar_plain": "غفور رحيم",
-        "translit": "ghafuurun rahiimun",
-        "en": "Forgiving, Merciful (nominative)",
-        "ur": "بخشنے والا، رحم کرنے والا (رفع)"
-      },
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "إِنَّ makes its subject (اللَّهَ) accusative, but its predicate stays nominative: غَفُورٌ رَحِيمٌ.",
-        "ur": "إِنَّ اپنے اسم (اللَّهَ) کو منصوب کرتا ہے، مگر اس کی خبر مرفوع رہتی ہے: غَفُورٌ رَحِيمٌ۔"
-      }
-    },
-    {
-      "id": "ch58-l05-ex06",
-      "type": "BUILD_SENTENCE",
-      "target_translation": {
-        "en": "Indeed, in that is a sign.",
-        "ur": "بے شک اس میں ایک نشانی ہے۔"
-      },
-      "tiles": [
-        {
-          "ar": "إِنَّ",
-          "ar_plain": "إن",
-          "translit": "inna",
-          "en": "indeed",
-          "ur": "بے شک"
-        },
-        {
-          "ar": "فِي ذَٰلِكَ",
-          "ar_plain": "في ذلك",
-          "translit": "fii dhaalika",
-          "en": "in that",
-          "ur": "اس میں"
-        },
-        {
-          "ar": "لَآيَةً",
-          "ar_plain": "لآية",
-          "translit": "la-aayatan",
-          "en": "a sign (acc.)",
-          "ur": "ایک نشانی (منصوب)"
-        },
-        {
-          "ar": "لَآيَةٌ",
-          "ar_plain": "لآية",
-          "translit": "la-aayatun",
-          "en": "a sign (nom.)",
-          "ur": "ایک نشانی (مرفوع)"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "e.g. An-Naḥl 16:11: إِنَّ + فِي ذَٰلِكَ (fronted predicate) + لَآيَةً (subject of إِنَّ, delayed — accusative, with the emphatic لَـ). An indefinite subject comes after a prepositional predicate.",
-        "ur": "مثلاً سورۃ النحل 16:11: إِنَّ + فِي ذَٰلِكَ (مقدم خبر) + لَآيَةً (إِنَّ کا مؤخر اسم — منصوب، تاکید کے لَـ کے ساتھ)۔ نکرہ اسم جار مجرور خبر کے بعد آتا ہے۔"
-      }
-    },
-    {
-      "id": "ch58-l05-ex07",
-      "type": "GRAMMAR_PARSE",
-      "sentence_ar": "إِنَّ فِي ذَٰلِكَ لَآيَةً",
-      "words": [
-        {
-          "ar": "إِنَّ",
-          "ar_plain": "إن",
-          "translit": "inna",
-          "en": "indeed",
-          "ur": "بے شک"
-        },
-        {
-          "ar": "فِي ذَٰلِكَ",
-          "ar_plain": "في ذلك",
-          "translit": "fii dhaalika",
-          "en": "in that",
-          "ur": "اس میں"
-        },
-        {
-          "ar": "لَآيَةً",
-          "ar_plain": "لآية",
-          "translit": "la-aayatan",
-          "en": "a sign",
-          "ur": "ایک نشانی"
-        }
-      ],
-      "available_roles": [
-        "PARTICLE",
-        "SUBJECT",
-        "PREDICATE"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "PREDICATE",
-        "SUBJECT"
-      ],
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "إِنَّ = particle. فِي ذَٰلِكَ = fronted predicate (prepositional phrase). لَآيَةً = delayed subject of إِنَّ (accusative).",
-        "ur": "إِنَّ = حرف۔ فِي ذَٰلِكَ = مقدم خبر (جار مجرور)۔ لَآيَةً = إِنَّ کا مؤخر اسم (منصوب)۔"
-      }
-    },
-    {
-      "id": "ch58-l05-ex08",
       "type": "TAP_TRANSLATION",
+      "id": "ch58-l04-ex01",
       "prompt": {
-        "ar": "إِنَّ إِلَٰهَكُمْ لَوَاحِدٌ",
-        "ar_plain": "إن إلهكم لواحد",
-        "translit": "inna ilaahakum la-waaHidun",
-        "en": "Indeed, your god is One.",
-        "ur": "بے شک تمہارا معبود ایک ہے۔"
+        "ar": "قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً",
+        "ar_plain": "قال ربك للملائكة اني جاعل في الارض خليفة",
+        "translit": "qāla rabbuka lilmalāʾikati ʾinnī jāʿilun fī al-ʾarḍi khalīfatan",
+        "en": "(2:30: which phrase names who was addressed?)",
+        "ur": "(2:30: کون سا حصہ بتاتا ہے کہ کس سے بات کی گئی؟)"
       },
       "options": [
         {
-          "en": "Indeed, your god is One.",
-          "ur": "بے شک تمہارا معبود ایک ہے۔"
+          "en": "لِلْمَلَائِكَةِ — a prepositional phrase",
+          "ur": "لِلْمَلَائِكَةِ — جار مجرور"
         },
         {
-          "en": "Indeed, your gods are many.",
-          "ur": "بے شک تمہارے معبود بہت ہیں۔"
+          "en": "إِنِّي — the quotation",
+          "ur": "إِنِّي — اقتباس"
         },
         {
-          "en": "Your god was one.",
-          "ur": "تمہارا معبود ایک تھا۔"
+          "en": "خَلِيفَةً — the listener",
+          "ur": "خَلِيفَةً — سننے والا"
         },
         {
-          "en": "Is your god one?",
-          "ur": "کیا تمہارا معبود ایک ہے؟"
+          "en": "قَالَ رَبُّكَ — the quotation",
+          "ur": "قَالَ رَبُّكَ — اقتباس"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "Aṣ-Ṣāffāt 37:4. إِنَّ + إِلَٰهَكُمْ (\"your god\" — subject of إِنَّ, accusative) + لَوَاحِدٌ (\"is One\" — predicate, nominative, with the emphatic لَـ).",
-        "ur": "سورۃ الصافات 37:4۔ إِنَّ + إِلَٰهَكُمْ (\"تمہارا معبود\" — إِنَّ کا اسم، منصوب) + لَوَاحِدٌ (\"ایک ہے\" — خبر، مرفوع، تاکید کے لَـ کے ساتھ)۔"
+        "en": "لِـ + الْمَلَائِكَةِ names the listener.",
+        "ur": "لِـ + الْمَلَائِكَةِ سننے والے کا نام لیتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch58-l04-ex02",
+      "prompt": {
+        "ar": "قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً",
+        "ar_plain": "قال ربك للملائكة اني جاعل في الارض خليفة",
+        "translit": "qāla rabbuka lilmalāʾikati ʾinnī jāʿilun fī al-ʾarḍi khalīfatan",
+        "en": "(2:30: which part is what was said?)",
+        "ur": "(2:30: کون سا حصہ ہے جو کہا گیا؟)"
+      },
+      "options": [
+        {
+          "en": "قَالَ رَبُّكَ",
+          "ur": "قَالَ رَبُّكَ"
+        },
+        {
+          "en": "إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً",
+          "ur": "إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً"
+        },
+        {
+          "en": "لِلْمَلَائِكَةِ",
+          "ur": "لِلْمَلَائِكَةِ"
+        },
+        {
+          "en": "only خَلِيفَةً",
+          "ur": "صرف خَلِيفَةً"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The quotation begins at إِنِّي and runs to the end.",
+        "ur": "اقتباس إِنِّي سے شروع ہو کر آخر تک جاتا ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch58-l04-ex03",
+      "mode": "TAP",
+      "sentence_ar": "قَالَ الْمُعَلِّمُ ___ إِنَّكَ مُجْتَهِدٌ.",
+      "hint": {
+        "en": "The teacher said to the student: 'Indeed you are hardworking.'",
+        "ur": "استاد نے طالب علم سے کہا: 'بے شک تم محنتی ہو۔'"
+      },
+      "options": [
+        {
+          "ar": "الطَّالِبَ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭāliba",
+          "en": "the student (accusative)",
+          "ur": "طالب علم (منصوب)"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibu",
+          "en": "the student (nominative)",
+          "ur": "طالب علم (مرفوع)"
+        },
+        {
+          "ar": "لِلطَّالِبِ",
+          "ar_plain": "للطالب",
+          "translit": "lilṭṭālibi",
+          "en": "to the student (the listener)",
+          "ur": "طالب علم سے (سننے والا)"
+        },
+        {
+          "ar": "بِالطَّالِبِ",
+          "ar_plain": "بالطالب",
+          "translit": "bi-ṭ-ṭālibi",
+          "en": "with the student",
+          "ur": "طالب علم کے ساتھ"
+        }
+      ],
+      "correct_answer": {
+        "ar": "لِلطَّالِبِ",
+        "ar_plain": "للطالب",
+        "translit": "lilṭṭālibi",
+        "en": "to the student (the listener)",
+        "ur": "طالب علم سے (سننے والا)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The listener comes with لِـ: لِلطَّالِبِ.",
+        "ur": "سننے والا لِـ کے ساتھ آتا ہے: لِلطَّالِبِ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch58-l04-ex04",
+      "prompt": {
+        "ar": "إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً",
+        "ar_plain": "اني جاعل في الارض خليفة",
+        "translit": "ʾinnī jāʿilun fī al-ʾarḍi khalīfatan",
+        "en": "(inside the quotation: what is جَاعِلٌ?)",
+        "ur": "(اقتباس کے اندر: جَاعِلٌ کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "the subject of إِنَّ, accusative",
+          "ur": "إِنَّ کا اسم، منصوب"
+        },
+        {
+          "en": "the object of قَالَ",
+          "ur": "قَالَ کا مفعول"
+        },
+        {
+          "en": "the listener",
+          "ur": "سننے والا"
+        },
+        {
+          "en": "the predicate of إِنَّ, nominative",
+          "ur": "إِنَّ کی خبر، مرفوع"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ي is the subject of إِنَّ; جَاعِلٌ is its predicate.",
+        "ur": "ي إِنَّ کا اسم ہے؛ جَاعِلٌ اس کی خبر۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch58-l04-ex05",
+      "prompt": {
+        "ar": "قَالَ إِنِّي عَبْدُ اللَّهِ",
+        "ar_plain": "قال اني عبد الله",
+        "translit": "qāla ʾinnī ʿabdu al-lahi",
+        "en": "(19:30: what is عَبْدُ?)",
+        "ur": "(19:30: عَبْدُ کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "the predicate of إِنَّ, nominative",
+          "ur": "إِنَّ کی خبر، مرفوع"
+        },
+        {
+          "en": "the subject of إِنَّ, accusative",
+          "ur": "إِنَّ کا اسم، منصوب"
+        },
+        {
+          "en": "a listener phrase",
+          "ur": "سننے والے کا جملہ"
+        },
+        {
+          "en": "the verb of the quotation",
+          "ur": "اقتباس کا فعل"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "عَبْدُ is the predicate (nominative); اللَّهِ is the second term of its iḍāfa.",
+        "ur": "عَبْدُ خبر ہے (مرفوع)؛ اللَّهِ اس کی اضافت کا دوسرا جز ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch58-l04-ex06",
+      "statement": {
+        "en": "In قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ …, لِلْمَلَائِكَةِ and the quotation are two noun objects of قَالَ.",
+        "ur": "قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ … میں لِلْمَلَائِكَةِ اور اقتباس قَالَ کے دو اسمی مفعول ہیں۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. One is a prepositional phrase naming the listener; the other is a quoted clause.",
+        "ur": "غلط۔ ایک جار مجرور ہے جو سننے والے کا نام لیتا ہے؛ دوسرا نقل کیا ہوا جملہ ہے۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch58-l04-ex07",
+      "target_translation": {
+        "en": "The teacher said to the student: 'Indeed you are hardworking.'",
+        "ur": "استاد نے طالب علم سے کہا: 'بے شک تم محنتی ہو۔'"
+      },
+      "tiles": [
+        {
+          "ar": "إِنَّكَ",
+          "ar_plain": "انك",
+          "translit": "ʾinnaka",
+          "en": "indeed you",
+          "ur": "بے شک تم"
+        },
+        {
+          "ar": "قَالَ",
+          "ar_plain": "قال",
+          "translit": "qāla",
+          "en": "said",
+          "ur": "کہا"
+        },
+        {
+          "ar": "مُجْتَهِدٌ",
+          "ar_plain": "مجتهد",
+          "translit": "mujtahidun",
+          "en": "hardworking",
+          "ur": "محنتی"
+        },
+        {
+          "ar": "لِلطَّالِبِ",
+          "ar_plain": "للطالب",
+          "translit": "lilṭṭālibi",
+          "en": "to the student",
+          "ur": "طالب علم سے"
+        },
+        {
+          "ar": "الْمُعَلِّمُ",
+          "ar_plain": "المعلم",
+          "translit": "al-muʿallimu",
+          "en": "the teacher",
+          "ur": "استاد"
+        }
+      ],
+      "correct_order": [
+        1,
+        4,
+        3,
+        0,
+        2
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Frame first (verb, subject, listener), then the quotation (اسم إِنَّ, then its predicate).",
+        "ur": "پہلے ڈھانچہ (فعل، فاعل، سننے والا)، پھر اقتباس (اسم إِنَّ، پھر اس کی خبر)۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch58-l04-ex08",
+      "prompt": {
+        "ar": "قَالَ الطَّالِبُ لِلْمُعَلِّمِ إِنِّي حَاضِرٌ",
+        "ar_plain": "قال الطالب للمعلم اني حاضر",
+        "translit": "qāla aṭ-ṭālibu lilmuʿallimi ʾinnī ḥāḍirun",
+        "en": "(The student said to the teacher: 'Indeed I am present.' What is حَاضِرٌ?)",
+        "ur": "(طالب علم نے استاد سے کہا: 'بے شک میں حاضر ہوں۔' حَاضِرٌ کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "the listener",
+          "ur": "سننے والا"
+        },
+        {
+          "en": "the subject of قَالَ",
+          "ur": "قَالَ کا فاعل"
+        },
+        {
+          "en": "the predicate of إِنَّ, nominative",
+          "ur": "إِنَّ کی خبر، مرفوع"
+        },
+        {
+          "en": "the subject of إِنَّ, accusative",
+          "ur": "إِنَّ کا اسم، منصوب"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Fresh sentence, same pattern: ي is the subject of إِنَّ and حَاضِرٌ its predicate.",
+        "ur": "نیا جملہ، وہی نمونہ: ي إِنَّ کا اسم اور حَاضِرٌ اس کی خبر ہے۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Applied Parsing — Integrated Analysis",
-      "ar": "تَحْلِيلُ الْجُمَلِ الْقُرْآنِيَّةِ",
-      "ur": "قرآنی جملوں کا تجزیہ"
+      "en": "What was said, and to whom",
+      "ar": "الْمَقُولُ وَالْمُخَاطَبُ",
+      "ur": "کیا کہا اور کس سے"
     },
     "ayah": {
       "surah": 2,
       "ayah": 30,
       "label": "Al-Baqarah 2:30",
-      "ar": "وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً",
-      "en": "And when your Lord said to the angels, 'Indeed, I will make upon the earth a successive authority.'",
-      "ur": "اور جب تمہارے رب نے فرشتوں سے کہا کہ بے شک میں زمین میں ایک خلیفہ بنانے والا ہوں۔",
+      "ar": "وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً ۖ قَالُوا أَتَجْعَلُ فِيهَا مَن يُفْسِدُ فِيهَا وَيَسْفِكُ الدِّمَاءَ وَنَحْنُ نُسَبِّحُ بِحَمْدِكَ وَنُقَدِّسُ لَكَ ۖ قَالَ إِنِّي أَعْلَمُ مَا لَا تَعْلَمُونَ",
+      "en": "And [mention, O Muḥammad], when your Lord said to the angels, \"Indeed, I will make upon the earth a successive authority.\" They said, \"Will You place upon it one who causes corruption therein and sheds blood, while we exalt You with praise and declare Your perfection?\" He [Allāh] said, \"Indeed, I know that which you do not know.\"",
+      "ur": "اور (وہ وقت یاد کرنے کے قابل ہے) جب تمہارے پروردگار نے فرشتوں سے فرمایا کہ میں زمین میں (اپنا) نائب بنانے والا ہوں۔ انہوں نے کہا۔ کیا تُو اس میں ایسے شخص کو نائب بنانا چاہتا ہے جو خرابیاں کرے اور کشت وخون کرتا پھرے اور ہم تیری تعریف کے ساتھ تسبیح وتقدیس کرتے رہتے ہیں۔ (خدا نے) فرمایا میں وہ باتیں جانتا ہوں جو تم نہیں جانتے",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002030.mp3"
     },
     "highlighted_word_indices": [
-      4,
-      5,
-      6,
-      7
+      1,
+      3,
+      4
+    ],
+    "highlighted_words": [
+      "قَالَ",
+      "لِلْمَلَائِكَةِ",
+      "إِنِّي"
     ],
     "noor_explanation": {
-      "en": "إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً: إِنِّي = إِنَّ + its subject ي; جَاعِلٌ = predicate (nominative); فِي الْأَرْضِ = prepositional phrase; خَلِيفَةً = object of جَاعِلٌ (accusative). Before it, قَالَ رَبُّكَ لِلْمَلَائِكَةِ — verb, subject, and the addressees with لِـ.",
-      "ur": "إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً: إِنِّي = إِنَّ + اس کا اسم ي؛ جَاعِلٌ = خبر (مرفوع)؛ فِي الْأَرْضِ = جار مجرور؛ خَلِيفَةً = جَاعِلٌ کا مفعول (منصوب)۔ اس سے پہلے قَالَ رَبُّكَ لِلْمَلَائِكَةِ — فعل، فاعل، اور لِـ کے ساتھ مخاطبین۔"
+      "en": "قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي … — the verb and its subject, the listener, then the quotation read as its own sentence.",
+      "ur": "قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي … — فعل اور اس کا فاعل، سننے والا، پھر اقتباس جو اپنے جملے کی طرح پڑھا جاتا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Chapter 58 has equipped you with the analytical tools to parse complex Arabic sentences: transitive vs intransitive, two-object verbs, fronted predicate (المبتدأ المؤخر), and إِنَّ emphasis. These tools apply everywhere in the Quran. Keep practicing — every ayah you read is an opportunity to apply these patterns. The next step is Chapter 59, where we integrate everything from Book 6.",
-      "ur": "Chapter 58 نے آپ کو complex عربی جملوں کو parse کرنے کے analytical tools سے equipped کیا ہے: transitive vs intransitive، دو-object verbs، المبتدأ المؤخر، اور إِنَّ emphasis۔ یہ tools ہر جگہ قرآن میں apply ہوتے ہیں۔ Chapter 59 اگلا ہے، جہاں ہم Book 6 سے ہر چیز کو integrate کرتے ہیں۔"
+      "en": "Separate the frame from the quotation — then read each in its own layer.",
+      "ur": "ڈھانچے کو اقتباس سے الگ کریں — پھر ہر تہہ کو الگ پڑھیں۔"
     }
   }
 }

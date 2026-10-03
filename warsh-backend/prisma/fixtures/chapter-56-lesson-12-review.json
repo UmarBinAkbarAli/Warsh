@@ -1,0 +1,524 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 56, Retrieval review (ch56-l08, converted in place from the old integration lesson to a REVIEW). Twelve tasks: one retrieval for each of the ten test strands (maqṣūr, manqūṣ, five nouns, dual first term, dual relatives, role-and-form transfer, and the four Abasa sections), plus a further dual-relative gender / case decision and the five-noun condition (alone, not in an iḍāfa). No new material. Added 2026-10-04 in the proposal harvest, batch 7 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-56-content-proposal.md and its review amendments.",
+    "title": "Chapter 56 Review — Special Nouns",
+    "titleAr": "مُرَاجَعَةُ الْبَابِ 56 — الْأَسْمَاءُ الْخَاصَّةُ",
+    "titleUr": "باب 56 کا جائزہ — خاص اسم",
+    "chapter_order": 56,
+    "lesson_order": 12,
+    "estimated_minutes": 12,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 80,
+      "ayah": 11,
+      "label": "undefined 80:11",
+      "ar": "كَلَّا إِنَّهَا تَذْكِرَةٌ",
+      "en": "No! Indeed, they [i.e., these verses] are a reminder;",
+      "ur": "دیکھو یہ (قرآن) نصیحت ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/080011.mp3"
+    },
+    "noor_intro": {
+      "en": "Review Chapter 56: special nouns, the dual and Abasa.",
+      "ur": "باب 56 کا جائزہ: خاص اسم، مثنی اور عبس۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 56 summary",
+        "ar": "خُلَاصَةُ الْبَابِ",
+        "ur": "باب 56 کا خلاصہ"
+      },
+      "explanation": {
+        "en": "Special nouns hide or change their case signs. A maqṣūr noun (مُوسَى, الْفَتَى) shows no sign; a manqūṣ noun (الْقَاضِي) shows only the accusative fatḥa. The five nouns (أَبُوهُ, أَخُوهُ, ذُو) show case with و / ا / ي. A dual drops its نِ as the first term of an iḍāfa (يَدَا أَبِي لَهَبٍ), but a dual relative (اللَّذَانِ, اللَّذَيْنِ, اللَّتَانِ, اللَّتَيْنِ) keeps its full form. Abasa 80:1–42 is the reading.",
+        "ur": "خاص اسم اپنی حالت کی علامتیں چھپاتے یا بدلتے ہیں۔ مقصور (مُوسَى، الْفَتَى) کوئی علامت نہیں دکھاتا؛ منقوص (الْقَاضِي) صرف نصب کا فتحہ دکھاتا ہے۔ پانچ اسم (أَبُوهُ، أَخُوهُ، ذُو) و / ا / ي سے حالت دکھاتے ہیں۔ مثنی اضافت کا پہلا جز بن کر اپنا نِ کھو دیتا ہے (يَدَا أَبِي لَهَبٍ)، مگر مثنی اسم موصول (اللَّذَانِ، اللَّذَيْنِ، اللَّتَانِ، اللَّتَيْنِ) پوری صورت رکھتا ہے۔ عبس 80:1–42 قراءت ہے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Check the sentence, then the ending",
+        "ur": "پہلے جملہ، پھر انجام"
+      },
+      "body": {
+        "en": "For a special noun, ask what it is doing in the sentence first. Then look at the ending: a vowel, a letter (و / ا / ي), or nothing at all.",
+        "ur": "خاص اسم کے لیے پہلے پوچھیں کہ وہ جملے میں کیا کر رہا ہے۔ پھر انجام دیکھیں: حرکت، حرف (و / ا / ي)، یا کچھ بھی نہیں۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch56-l08-ex01",
+      "prompt": {
+        "ar": "رَأَيْتُ الْفَتَى فِي الْمَسْجِدِ",
+        "ar_plain": "رايت الفتى في المسجد",
+        "translit": "raʾaytu al-fatā fī al-masjidi",
+        "en": "I saw the youth in the mosque.",
+        "ur": "میں نے نوجوان کو مسجد میں دیکھا۔"
+      },
+      "options": [
+        {
+          "en": "الْفَتَى is the object of رَأَيْتُ, accusative — the sentence shows it, not the ending",
+          "ur": "الْفَتَى رَأَيْتُ کا مفعول ہے، منصوب — جملہ یہ دکھاتا ہے، انجام نہیں"
+        },
+        {
+          "en": "الْفَتَى is the subject, nominative",
+          "ur": "الْفَتَى مبتدا ہے، مرفوع"
+        },
+        {
+          "en": "الْفَتَى is genitive after فِي",
+          "ur": "الْفَتَى فِي کے بعد مجرور ہے"
+        },
+        {
+          "en": "الْفَتَى shows a fatḥa on its last letter",
+          "ur": "الْفَتَى کے آخر پر فتحہ دکھائی دیتا ہے"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A maqṣūr noun ends in an alif: no case sign shows, whatever the role.",
+        "ur": "مقصور اسم الف پر ختم ہوتا ہے: کردار کچھ بھی ہو، کوئی علامت نظر نہیں آتی۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch56-l08-ex02",
+      "prompt": {
+        "ar": "رَأَيْتُ مُوسَى وَالْقَاضِيَ",
+        "ar_plain": "رايت موسى والقاضي",
+        "translit": "raʾaytu mūsā wa-l-qāḍiya",
+        "en": "I saw Musa and the judge.",
+        "ur": "میں نے موسیٰ اور قاضی کو دیکھا۔"
+      },
+      "options": [
+        {
+          "en": "both show a fatḥa",
+          "ur": "دونوں فتحہ دکھاتے ہیں"
+        },
+        {
+          "en": "مُوسَى shows nothing; الْقَاضِيَ shows the accusative fatḥa",
+          "ur": "مُوسَى کچھ نہیں دکھاتا؛ الْقَاضِيَ نصب کا فتحہ دکھاتا ہے"
+        },
+        {
+          "en": "both show nothing",
+          "ur": "دونوں کچھ نہیں دکھاتے"
+        },
+        {
+          "en": "مُوسَى shows a fatḥa; الْقَاضِيَ shows nothing",
+          "ur": "مُوسَى فتحہ دکھاتا ہے؛ الْقَاضِيَ کچھ نہیں"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Maqṣūr: never a sign. Manqūṣ: only the accusative.",
+        "ur": "مقصور: کبھی علامت نہیں۔ منقوص: صرف نصب۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch56-l08-ex03",
+      "prompt": {
+        "ar": "هَذَا ___ مُسْلِمٌ.",
+        "ar_plain": "هذا ___ مسلم.",
+        "translit": "hadhā ___ muslimun",
+        "en": "His father is a Muslim.",
+        "ur": "اس کا باپ مسلمان ہے۔"
+      },
+      "options": [
+        {
+          "en": "أَبَاهُ — the ا shows the nominative",
+          "ur": "أَبَاهُ — ا رفع دکھاتا ہے"
+        },
+        {
+          "en": "أَبِيهِ — the ي shows the nominative",
+          "ur": "أَبِيهِ — ي رفع دکھاتا ہے"
+        },
+        {
+          "en": "أَبُوهُ — the و shows the nominative",
+          "ur": "أَبُوهُ — و رفع دکھاتا ہے"
+        },
+        {
+          "en": "أَبٌ — with his",
+          "ur": "أَبٌ — 'اس کا' کے ساتھ"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Five nouns with a pronoun: و nominative, ا accusative, ي genitive.",
+        "ur": "ضمیر کے ساتھ پانچ اسم: و رفع، ا نصب، ي جر۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch56-l08-ex04",
+      "statement": {
+        "en": "The نِ of يَدَانِ drops in يَدَا أَبِي لَهَبٍ because it is the first term of an iḍāfa.",
+        "ur": "يَدَانِ کا نِ يَدَا أَبِي لَهَبٍ میں اس لیے گرتا ہے کہ وہ اضافت کا پہلا جز ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes — a dual that opens an iḍāfa loses its نِ.",
+        "ur": "جی ہاں — اضافت کھولنے والا مثنی اپنا نِ کھو دیتا ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch56-l08-ex05",
+      "mode": "TAP",
+      "sentence_ar": "الطَّالِبَانِ ___ كَتَبَا الدَّرْسَ.",
+      "hint": {
+        "en": "The two students who wrote the lesson.",
+        "ur": "وہ دو طالب علم جنہوں نے سبق لکھا۔"
+      },
+      "options": [
+        {
+          "ar": "اللَّذَانِ",
+          "ar_plain": "اللذان",
+          "translit": "al-ladhāni",
+          "en": "who (two, masc., nom.)",
+          "ur": "جو (دو، مذکر، رفع)"
+        },
+        {
+          "ar": "اللَّذَيْنِ",
+          "ar_plain": "اللذين",
+          "translit": "al-ladhayni",
+          "en": "who (two, masc., acc. / gen.)",
+          "ur": "جو (دو، مذکر، نصب / جر)"
+        },
+        {
+          "ar": "اللَّتَانِ",
+          "ar_plain": "اللتان",
+          "translit": "al-latāni",
+          "en": "who (two, fem., nom.)",
+          "ur": "جو (دو، مؤنث، رفع)"
+        },
+        {
+          "ar": "الَّذِينَ",
+          "ar_plain": "الذين",
+          "translit": "alladhīna",
+          "en": "who (many)",
+          "ur": "جو (کئی)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "اللَّذَانِ",
+        "ar_plain": "اللذان",
+        "translit": "al-ladhāni",
+        "en": "who (two, masc., nom.)",
+        "ur": "جو (دو، مذکر، رفع)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Two masculine students in the nominative take اللَّذَانِ.",
+        "ur": "دو مذکر طالب علم رفع میں اللَّذَانِ لیتے ہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch56-l08-ex06",
+      "prompt": {
+        "ar": "جَاءَ الْقَاضِي وَأَبُوهُ",
+        "ar_plain": "جاء القاضي وابوه",
+        "translit": "jāʾa al-qāḍī waʾabūhu",
+        "en": "The judge and his father came.",
+        "ur": "قاضی اور اس کا باپ آئے۔"
+      },
+      "options": [
+        {
+          "en": "both show a ḍamma on the last letter",
+          "ur": "دونوں کے آخر پر ضمہ دکھائی دیتا ہے"
+        },
+        {
+          "en": "الْقَاضِي is accusative and أَبُوهُ is nominative",
+          "ur": "الْقَاضِي منصوب اور أَبُوهُ مرفوع ہے"
+        },
+        {
+          "en": "both are genitive",
+          "ur": "دونوں مجرور ہیں"
+        },
+        {
+          "en": "both are nominative: الْقَاضِي shows nothing, أَبُوهُ shows the و",
+          "ur": "دونوں مرفوع ہیں: الْقَاضِي کچھ نہیں دکھاتا، أَبُوهُ و دکھاتا ہے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Special nouns still take the case their role requires; only the sign differs.",
+        "ur": "خاص اسم پھر بھی وہی حالت لیتے ہیں جو ان کا کردار چاہتا ہے؛ صرف علامت مختلف ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch56-l08-ex07",
+      "prompt": {
+        "ar": "فَأَنتَ لَهُ تَصَدَّىٰ … فَأَنتَ عَنْهُ تَلَهَّىٰ",
+        "ar_plain": "فانت له تصدى … فانت عنه تلهى",
+        "translit": "faʾanta lahu taṣaddā … faʾanta ʿanhu talahhā",
+        "en": "(80:6 and 80:10)",
+        "ur": "(80:6 اور 80:10)"
+      },
+      "options": [
+        {
+          "en": "لَهُ and عَنْهُ are the same person",
+          "ur": "لَهُ اور عَنْهُ ایک ہی شخص ہیں"
+        },
+        {
+          "en": "the same person is addressed as أَنتَ; لَهُ and عَنْهُ point to two different people",
+          "ur": "ایک ہی شخص کو أَنتَ سے مخاطب کیا گیا؛ لَهُ اور عَنْهُ دو مختلف افراد کی طرف اشارہ کرتے ہیں"
+        },
+        {
+          "en": "أَنتَ is a different person each time",
+          "ur": "أَنتَ ہر بار ایک مختلف شخص ہے"
+        },
+        {
+          "en": "none of them is a person",
+          "ur": "ان میں کوئی شخص نہیں"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Same 'you', two different 'him's.",
+        "ur": "'تم' وہی، دو مختلف 'وہ'۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch56-l08-ex08",
+      "prompt": {
+        "ar": "مِن نُّطْفَةٍ خَلَقَهُ فَقَدَّرَهُ … ثُمَّ إِذَا شَاءَ أَنشَرَهُ",
+        "ar_plain": "من نطفة خلقه فقدره … ثم اذا شاء انشره",
+        "translit": "min nnuṭfatin khalaqahu faqaddarahu … thumma ʾidhā shāʾa ʾansharahu",
+        "en": "(80:19 and 80:22)",
+        "ur": "(80:19 اور 80:22)"
+      },
+      "options": [
+        {
+          "en": "a drop, then death and burial, then being raised — in that order",
+          "ur": "بوند، پھر موت اور دفن، پھر اٹھایا جانا — اسی ترتیب سے"
+        },
+        {
+          "en": "being raised, then a drop",
+          "ur": "اٹھایا جانا، پھر بوند"
+        },
+        {
+          "en": "death first, then a drop",
+          "ur": "پہلے موت، پھر بوند"
+        },
+        {
+          "en": "a drop only",
+          "ur": "صرف بوند"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ثُمَّ joins the steps in the order they happen.",
+        "ur": "ثُمَّ مراحل کو اسی ترتیب سے جوڑتا ہے جس سے وہ ہوتے ہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch56-l08-ex09",
+      "prompt": {
+        "ar": "فَلْيَنظُرِ الْإِنسَانُ إِلَىٰ طَعَامِهِ … مَّتَاعًا لَّكُمْ وَلِأَنْعَامِكُمْ",
+        "ar_plain": "فلينظر الانسان الى طعامه … متاعا لكم ولانعامكم",
+        "translit": "falyanẓuri al-ʾinsānu ʾilā ṭaʿāmihi … mmatāʿan llakum waliʾanʿāmikum",
+        "en": "(80:24 and 80:32)",
+        "ur": "(80:24 اور 80:32)"
+      },
+      "options": [
+        {
+          "en": "it looks at man's house, and the provision is for the earth",
+          "ur": "یہ انسان کے گھر کو دیکھتی ہے، اور سامان زمین کے لیے ہے"
+        },
+        {
+          "en": "it forbids food, and the provision is for no one",
+          "ur": "یہ کھانا منع کرتی ہے، اور سامان کسی کے لیے نہیں"
+        },
+        {
+          "en": "it looks at man's food, and the provision is for you and your livestock",
+          "ur": "یہ انسان کے کھانے کو دیکھتی ہے، اور سامان تمہارے اور تمہارے مویشیوں کے لیے ہے"
+        },
+        {
+          "en": "it looks at the sky only",
+          "ur": "یہ صرف آسمان کو دیکھتی ہے"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "80:24 starts the list; 80:32 names who benefits.",
+        "ur": "80:24 فہرست شروع کرتی ہے؛ 80:32 فائدہ اٹھانے والوں کا نام لیتی ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch56-l08-ex10",
+      "prompt": {
+        "ar": "وُجُوهٌ يَوْمَئِذٍ مُّسْفِرَةٌ … وَوُجُوهٌ يَوْمَئِذٍ عَلَيْهَا غَبَرَةٌ",
+        "ar_plain": "وجوه يومئذ مسفرة … ووجوه يومئذ عليها غبرة",
+        "translit": "wujūhun yawmaʾidhin mmusfiratun … wawujūhun yawmaʾidhin ʿalayhā ghabaratun",
+        "en": "(80:38 and 80:40)",
+        "ur": "(80:38 اور 80:40)"
+      },
+      "options": [
+        {
+          "en": "one kind of face described twice",
+          "ur": "ایک ہی طرح کے چہرے دو بار بیان ہوئے"
+        },
+        {
+          "en": "two kinds of faces, both bright",
+          "ur": "دو طرح کے چہرے، دونوں روشن"
+        },
+        {
+          "en": "no faces are mentioned",
+          "ur": "کسی چہرے کا ذکر نہیں"
+        },
+        {
+          "en": "two kinds of faces: bright and rejoicing, and dusty and dark",
+          "ur": "دو طرح کے چہرے: روشن اور خوش، اور گرد آلود اور سیاہ"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The surah closes by setting two groups side by side.",
+        "ur": "سورت دو گروہوں کو پہلو بہ پہلو رکھ کر ختم ہوتی ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch56-l08-ex11",
+      "mode": "TAP",
+      "sentence_ar": "سَلَّمْتُ عَلَى الْمُعَلِّمَتَيْنِ ___ دَخَلَتَا الْمَسْجِدَ.",
+      "hint": {
+        "en": "I greeted the two (female) teachers who entered the mosque.",
+        "ur": "میں نے ان دو معلمات کو سلام کیا جو مسجد میں داخل ہوئیں۔"
+      },
+      "options": [
+        {
+          "ar": "اللَّتَيْنِ",
+          "ar_plain": "اللتين",
+          "translit": "al-latayni",
+          "en": "who (two, fem., acc. / gen.)",
+          "ur": "جو (دو، مؤنث، نصب / جر)"
+        },
+        {
+          "ar": "اللَّتَانِ",
+          "ar_plain": "اللتان",
+          "translit": "al-latāni",
+          "en": "who (two, fem., nom.)",
+          "ur": "جو (دو، مؤنث، رفع)"
+        },
+        {
+          "ar": "اللَّذَيْنِ",
+          "ar_plain": "اللذين",
+          "translit": "al-ladhayni",
+          "en": "who (two, masc., acc. / gen.)",
+          "ur": "جو (دو، مذکر، نصب / جر)"
+        },
+        {
+          "ar": "الَّذِينَ",
+          "ar_plain": "الذين",
+          "translit": "alladhīna",
+          "en": "who (many)",
+          "ur": "جو (کئی)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "اللَّتَيْنِ",
+        "ar_plain": "اللتين",
+        "translit": "al-latayni",
+        "en": "who (two, fem., acc. / gen.)",
+        "ur": "جو (دو، مؤنث، نصب / جر)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After عَلَى the two teachers are genitive: the feminine oblique form is اللَّتَيْنِ.",
+        "ur": "عَلَى کے بعد دو معلمات مجرور ہیں: مؤنث نصب / جر کی صورت اللَّتَيْنِ ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch56-l08-ex12",
+      "prompt": {
+        "ar": "أَبٌ كَرِيمٌ",
+        "ar_plain": "اب كريم",
+        "translit": "ʾabun karīmun",
+        "en": "A father is generous.",
+        "ur": "ایک باپ سخی ہے۔"
+      },
+      "options": [
+        {
+          "en": "it always shows the letter و",
+          "ur": "یہ ہمیشہ و دکھاتا ہے"
+        },
+        {
+          "en": "on its own, أَبٌ takes the ordinary ḍamma with tanwīn — the و-ا-ي signs come only with an iḍāfa",
+          "ur": "اکیلا أَبٌ عام ضمہ اور تنوین لیتا ہے — و-ا-ي کی علامتیں صرف اضافت کے ساتھ آتی ہیں"
+        },
+        {
+          "en": "it shows no case at all",
+          "ur": "یہ کوئی حالت نہیں دکھاتا"
+        },
+        {
+          "en": "it is genitive",
+          "ur": "یہ مجرور ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The five nouns are special only when they are joined to a following word.",
+        "ur": "پانچ اسم تب خاص ہوتے ہیں جب وہ اگلے لفظ کے ساتھ جڑیں۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Role first, then the sign",
+      "ar": "الدَّوْرُ أَوَّلًا",
+      "ur": "پہلے کردار، پھر علامت"
+    },
+    "ayah": {
+      "surah": 80,
+      "ayah": 11,
+      "label": "undefined 80:11",
+      "ar": "كَلَّا إِنَّهَا تَذْكِرَةٌ",
+      "en": "No! Indeed, they [i.e., these verses] are a reminder;",
+      "ur": "دیکھو یہ (قرآن) نصیحت ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/080011.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      2
+    ],
+    "highlighted_words": [
+      "كَلَّا",
+      "تَذْكِرَةٌ"
+    ],
+    "noor_explanation": {
+      "en": "Special nouns hide their case in different ways, but the role in the sentence always decides it.",
+      "ur": "خاص اسم اپنی حالت مختلف طریقوں سے چھپاتے ہیں، مگر جملے میں کردار ہی اسے طے کرتا ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Maqṣūr, manqūṣ, the five nouns, the dual and its relatives, and all of Abasa — Chapter 56 in one review.",
+      "ur": "مقصور، منقوص، پانچ اسم، مثنی اور اس کے اسمائے موصول، اور پوری عبس — باب 56 ایک جائزے میں۔"
+    }
+  }
+}

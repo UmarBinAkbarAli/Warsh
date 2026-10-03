@@ -1,0 +1,442 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 57, Final test (ch57-test, new). Twelve multiple-choice questions at 80 % (9/12 fails, 10/12 passes), two for each strand: root versus written stem (q01–02), hollow forms (q03–04), final-weak forms (q05–06), the five patterns (q07–08), nūn and mood (q09–10) and كَانَ roles (q11–12). The imperative contrast of ch57-l08 and the khutbah phrases are formative only. Added 2026-10-04 in the proposal harvest, batch 7 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-57-content-proposal.md and its review amendments.",
+    "title": "Chapter 57 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ السَّابِعِ وَالْخَمْسِينَ",
+    "titleUr": "باب 57 کا آخری امتحان",
+    "chapter_order": 57,
+    "lesson_order": 13,
+    "estimated_minutes": 12,
+    "xp_reward": 25
+  },
+  "hook": {
+    "ayah": {
+      "surah": 112,
+      "ayah": 4,
+      "label": "Al-Ikhlas 112:4",
+      "ar": "وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
+      "en": "Nor is there to Him any equivalent.\"",
+      "ur": "اور کوئی اس کا ہمسر نہیں",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/112004.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 57.",
+      "ur": "باب 57 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 57,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch57-test-q01",
+        "topic": {
+          "en": "Root letters",
+          "ur": "مادے کے حروف"
+        },
+        "prompt": {
+          "en": "Which of these verbs has a weak letter among its root letters?",
+          "ur": "ان افعال میں سے کس کے مادے میں حرفِ علت ہے؟"
+        },
+        "arabic": "قَالَ · آمَنَ · كَتَبَ · ذَهَبَ",
+        "options": [
+          {
+            "en": "آمَنَ — root ء-م-ن",
+            "ur": "آمَنَ — مادہ ء-م-ن"
+          },
+          {
+            "en": "قَالَ — root ق-و-ل",
+            "ur": "قَالَ — مادہ ق-و-ل"
+          },
+          {
+            "en": "كَتَبَ — root ك-ت-ب",
+            "ur": "كَتَبَ — مادہ ك-ت-ب"
+          },
+          {
+            "en": "ذَهَبَ — root ذ-ه-ب",
+            "ur": "ذَهَبَ — مادہ ذ-ه-ب"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch57-test-q02",
+        "topic": {
+          "en": "A hamza root",
+          "ur": "ہمزہ والا مادہ"
+        },
+        "prompt": {
+          "en": "Why is آمَنَ not a weak verb?",
+          "ur": "آمَنَ معتل فعل کیوں نہیں؟"
+        },
+        "arabic": "آمَنَ",
+        "options": [
+          {
+            "en": "It has a long alif in the middle of its root",
+            "ur": "اس کے مادے کے درمیان لمبا الف ہے"
+          },
+          {
+            "en": "It ends in a weak letter",
+            "ur": "یہ حرفِ علت پر ختم ہوتا ہے"
+          },
+          {
+            "en": "It is a noun",
+            "ur": "یہ اسم ہے"
+          },
+          {
+            "en": "Its root is ء-م-ن: the first letter is a hamza, a full consonant",
+            "ur": "اس کا مادہ ء-م-ن ہے: پہلا حرف ہمزہ ہے، پورا حرفِ صحیح"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch57-test-q03",
+        "topic": {
+          "en": "A hollow verb under لَمْ",
+          "ur": "لَمْ کے تحت اجوف فعل"
+        },
+        "prompt": {
+          "en": "Which form completes 'He did not say the truth'?",
+          "ur": "کون سی صورت 'اس نے حق نہیں کہا' کو مکمل کرتی ہے؟"
+        },
+        "arabic": "لَمْ ___ الْحَقَّ",
+        "options": [
+          {
+            "en": "يَقُلْ",
+            "ur": "يَقُلْ"
+          },
+          {
+            "en": "يَقُولُ",
+            "ur": "يَقُولُ"
+          },
+          {
+            "en": "يَقُولَ",
+            "ur": "يَقُولَ"
+          },
+          {
+            "en": "يَقُولْ",
+            "ur": "يَقُولْ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch57-test-q04",
+        "topic": {
+          "en": "A hollow verb under لَنْ",
+          "ur": "لَنْ کے تحت اجوف فعل"
+        },
+        "prompt": {
+          "en": "Which form completes 'He will never be with them'?",
+          "ur": "کون سی صورت 'وہ ان کے ساتھ ہرگز نہیں ہوگا' کو مکمل کرتی ہے؟"
+        },
+        "arabic": "لَنْ ___ مَعَهُمْ",
+        "options": [
+          {
+            "en": "يَكُنْ",
+            "ur": "يَكُنْ"
+          },
+          {
+            "en": "يَكُونُ",
+            "ur": "يَكُونُ"
+          },
+          {
+            "en": "يَكُونَ",
+            "ur": "يَكُونَ"
+          },
+          {
+            "en": "كَانَ",
+            "ur": "كَانَ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch57-test-q05",
+        "topic": {
+          "en": "A final-weak verb under لَمْ",
+          "ur": "لَمْ کے تحت ناقص فعل"
+        },
+        "prompt": {
+          "en": "Which form completes 'He did not throw the ball'?",
+          "ur": "کون سی صورت 'اس نے گیند نہیں پھینکی' کو مکمل کرتی ہے؟"
+        },
+        "arabic": "لَمْ ___ الْكُرَةَ",
+        "options": [
+          {
+            "en": "يَرْمِي",
+            "ur": "يَرْمِي"
+          },
+          {
+            "en": "يَرْمِيَ",
+            "ur": "يَرْمِيَ"
+          },
+          {
+            "en": "رَمَى",
+            "ur": "رَمَى"
+          },
+          {
+            "en": "يَرْمِ",
+            "ur": "يَرْمِ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch57-test-q06",
+        "topic": {
+          "en": "A final-weak verb under لَنْ",
+          "ur": "لَنْ کے تحت ناقص فعل"
+        },
+        "prompt": {
+          "en": "Which form completes 'He will never call to the good'?",
+          "ur": "کون سی صورت 'وہ بھلائی کی طرف ہرگز نہیں بلائے گا' کو مکمل کرتی ہے؟"
+        },
+        "arabic": "لَنْ ___ إِلَى الْخَيْرِ",
+        "options": [
+          {
+            "en": "يَدْعُ",
+            "ur": "يَدْعُ"
+          },
+          {
+            "en": "يَدْعُوَ",
+            "ur": "يَدْعُوَ"
+          },
+          {
+            "en": "يَدْعُو",
+            "ur": "يَدْعُو"
+          },
+          {
+            "en": "دَعَا",
+            "ur": "دَعَا"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch57-test-q07",
+        "topic": {
+          "en": "The five patterns: who is meant",
+          "ur": "افعال خمسہ: کس کے لیے"
+        },
+        "prompt": {
+          "en": "Which person does يُؤْمِنُونَ show?",
+          "ur": "يُؤْمِنُونَ کون سا صیغہ دکھاتا ہے؟"
+        },
+        "arabic": "يُؤْمِنُونَ",
+        "options": [
+          {
+            "en": "He (singular)",
+            "ur": "وہ (واحد)"
+          },
+          {
+            "en": "You (m. sg.)",
+            "ur": "تم (مذکر واحد)"
+          },
+          {
+            "en": "They (m. pl.)",
+            "ur": "وہ (مذکر جمع)"
+          },
+          {
+            "en": "You two",
+            "ur": "تم دونوں"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch57-test-q08",
+        "topic": {
+          "en": "The five patterns: the feminine singular",
+          "ur": "افعال خمسہ: مؤنث واحد"
+        },
+        "prompt": {
+          "en": "Which pattern addresses a single woman: 'you do'?",
+          "ur": "کون سا صیغہ ایک عورت سے خطاب کرتا ہے: 'تم کرتی ہو'؟"
+        },
+        "options": [
+          {
+            "en": "تَفْعَلِينَ",
+            "ur": "تَفْعَلِينَ"
+          },
+          {
+            "en": "تَفْعَلُونَ",
+            "ur": "تَفْعَلُونَ"
+          },
+          {
+            "en": "تَفْعَلَانِ",
+            "ur": "تَفْعَلَانِ"
+          },
+          {
+            "en": "يَفْعَلُونَ",
+            "ur": "يَفْعَلُونَ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch57-test-q09",
+        "topic": {
+          "en": "The ن after لَمْ",
+          "ur": "لَمْ کے بعد ن"
+        },
+        "prompt": {
+          "en": "What happens to the ن of يَتَّقُونَ after لَمْ?",
+          "ur": "لَمْ کے بعد يَتَّقُونَ کے ن کا کیا ہوتا ہے؟"
+        },
+        "arabic": "لَمْ يَتَّقُوا",
+        "options": [
+          {
+            "en": "It stays",
+            "ur": "یہ رہتا ہے"
+          },
+          {
+            "en": "It drops, because لَمْ gives the jussive",
+            "ur": "یہ گر جاتا ہے، کیونکہ لَمْ جزم دیتا ہے"
+          },
+          {
+            "en": "It becomes a ي",
+            "ur": "یہ ي بن جاتا ہے"
+          },
+          {
+            "en": "It moves to the front",
+            "ur": "یہ آگے چلا جاتا ہے"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch57-test-q10",
+        "topic": {
+          "en": "The ن after أَنْ",
+          "ur": "أَنْ کے بعد ن"
+        },
+        "prompt": {
+          "en": "Which is correct after أَنْ: 'that you fight'?",
+          "ur": "أَنْ کے بعد کون سا درست ہے: 'کہ تم لڑو'؟"
+        },
+        "options": [
+          {
+            "en": "أَنْ تُقَاتِلُونَ",
+            "ur": "أَنْ تُقَاتِلُونَ"
+          },
+          {
+            "en": "أَنْ يُقَاتِلَانِ",
+            "ur": "أَنْ يُقَاتِلَانِ"
+          },
+          {
+            "en": "أَنْ يُقَاتِلُ",
+            "ur": "أَنْ يُقَاتِلُ"
+          },
+          {
+            "en": "أَنْ تُقَاتِلُوا",
+            "ur": "أَنْ تُقَاتِلُوا"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch57-test-q11",
+        "topic": {
+          "en": "The subject and predicate of كَانَ",
+          "ur": "كَانَ کا اسم اور خبر"
+        },
+        "prompt": {
+          "en": "In كَانَ الطَّالِبُ مُجْتَهِدًا, which word is the خَبَر كَانَ, and what is its case?",
+          "ur": "كَانَ الطَّالِبُ مُجْتَهِدًا میں خبر كان کون سا لفظ ہے اور اس کی حالت کیا ہے؟"
+        },
+        "arabic": "كَانَ الطَّالِبُ مُجْتَهِدًا",
+        "options": [
+          {
+            "en": "مُجْتَهِدًا, accusative",
+            "ur": "مُجْتَهِدًا، منصوب"
+          },
+          {
+            "en": "الطَّالِبُ, nominative",
+            "ur": "الطَّالِبُ، مرفوع"
+          },
+          {
+            "en": "كَانَ, accusative",
+            "ur": "كَانَ، منصوب"
+          },
+          {
+            "en": "مُجْتَهِدًا, nominative",
+            "ur": "مُجْتَهِدًا، مرفوع"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch57-test-q12",
+        "topic": {
+          "en": "A plural predicate after كَانَ",
+          "ur": "كَانَ کے بعد جمع خبر"
+        },
+        "prompt": {
+          "en": "In كُنَّا مُسْلِمِينَ, what shows that the predicate is accusative?",
+          "ur": "كُنَّا مُسْلِمِينَ میں کون سی چیز دکھاتی ہے کہ خبر منصوب ہے؟"
+        },
+        "arabic": "كُنَّا مُسْلِمِينَ",
+        "options": [
+          {
+            "en": "A fatḥa on the last letter",
+            "ur": "آخری حرف پر فتحہ"
+          },
+          {
+            "en": "The word كُنَّا",
+            "ur": "لفظ كُنَّا"
+          },
+          {
+            "en": "The ending ـِينَ of the sound masculine plural",
+            "ur": "جمع مذکر سالم کا انجام ـِينَ"
+          },
+          {
+            "en": "Nothing shows it",
+            "ur": "کچھ نہیں دکھاتا"
+          }
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 57 — weak verbs and the five verbs",
+      "ar": "الْمُعْتَلُّ وَالْأَفْعَالُ الْخَمْسَةُ",
+      "ur": "باب 57 — معتل افعال اور افعال خمسہ"
+    },
+    "ayah": {
+      "surah": 112,
+      "ayah": 4,
+      "label": "Al-Ikhlas 112:4",
+      "ar": "وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
+      "en": "Nor is there to Him any equivalent.\"",
+      "ur": "اور کوئی اس کا ہمسر نہیں",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/112004.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "وَلَمْ",
+      "يَكُن"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 57 able to tell a weak root from a hamza, read hollow and final-weak verbs under the moods, recognise the five verbs and read كَانَ.",
+      "ur": "آپ باب 57 اس حال میں مکمل کرتے ہیں کہ معتل مادے اور ہمزہ میں فرق کر سکتے ہیں، مزاج کے تحت اجوف اور ناقص افعال پڑھ سکتے ہیں، افعال خمسہ پہچان سکتے ہیں اور كَانَ پڑھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 57 complete. Chapter 58: complements and the sentence.",
+      "ur": "باب 57 مکمل۔ باب 58: متعلقات اور جملہ۔"
+    }
+  }
+}

@@ -1,0 +1,444 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 58, Final test (ch58-test, new). Twelve multiple-choice questions at 80 % (9/12 fails, 10/12 passes), two for each strand: object versus preposition (q01–02), two-object frames (q03–04), fronting (q05–06), a participle with an object (q07–08), reported speech (q09–10) and layered synthesis (q11–12). Added 2026-10-04 in the proposal harvest, batch 7 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-58-content-proposal.md and its review amendments.",
+    "title": "Chapter 58 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الثَّامِنِ وَالْخَمْسِينَ",
+    "titleUr": "باب 58 کا آخری امتحان",
+    "chapter_order": 58,
+    "lesson_order": 8,
+    "estimated_minutes": 12,
+    "xp_reward": 25
+  },
+  "hook": {
+    "ayah": {
+      "surah": 2,
+      "ayah": 30,
+      "label": "Al-Baqarah 2:30",
+      "ar": "وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً ۖ قَالُوا أَتَجْعَلُ فِيهَا مَن يُفْسِدُ فِيهَا وَيَسْفِكُ الدِّمَاءَ وَنَحْنُ نُسَبِّحُ بِحَمْدِكَ وَنُقَدِّسُ لَكَ ۖ قَالَ إِنِّي أَعْلَمُ مَا لَا تَعْلَمُونَ",
+      "en": "And [mention, O Muḥammad], when your Lord said to the angels, \"Indeed, I will make upon the earth a successive authority.\" They said, \"Will You place upon it one who causes corruption therein and sheds blood, while we exalt You with praise and declare Your perfection?\" He [Allāh] said, \"Indeed, I know that which you do not know.\"",
+      "ur": "اور (وہ وقت یاد کرنے کے قابل ہے) جب تمہارے پروردگار نے فرشتوں سے فرمایا کہ میں زمین میں (اپنا) نائب بنانے والا ہوں۔ انہوں نے کہا۔ کیا تُو اس میں ایسے شخص کو نائب بنانا چاہتا ہے جو خرابیاں کرے اور کشت وخون کرتا پھرے اور ہم تیری تعریف کے ساتھ تسبیح وتقدیس کرتے رہتے ہیں۔ (خدا نے) فرمایا میں وہ باتیں جانتا ہوں جو تم نہیں جانتے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002030.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 58.",
+      "ur": "باب 58 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 58,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch58-test-q01",
+        "topic": {
+          "en": "Object or preposition",
+          "ur": "مفعول یا حرف جر"
+        },
+        "prompt": {
+          "en": "In ذَهَبَ زَيْدٌ إِلَى الْمَسْجِدِ, why is الْمَسْجِدِ not an object?",
+          "ur": "ذَهَبَ زَيْدٌ إِلَى الْمَسْجِدِ میں الْمَسْجِدِ مفعول کیوں نہیں؟"
+        },
+        "arabic": "ذَهَبَ زَيْدٌ إِلَى الْمَسْجِدِ",
+        "options": [
+          {
+            "en": "It is the subject",
+            "ur": "یہ فاعل ہے"
+          },
+          {
+            "en": "It comes through the preposition إِلَى and is genitive",
+            "ur": "یہ حرف جر إِلَى کے ذریعے آتا ہے اور مجرور ہے"
+          },
+          {
+            "en": "It is accusative",
+            "ur": "یہ منصوب ہے"
+          },
+          {
+            "en": "It is a verb",
+            "ur": "یہ فعل ہے"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch58-test-q02",
+        "topic": {
+          "en": "An omitted object",
+          "ur": "چھوڑا ہوا مفعول"
+        },
+        "prompt": {
+          "en": "In أَكَلَ زَيْدٌ تَمْرًا, which word is the direct object?",
+          "ur": "أَكَلَ زَيْدٌ تَمْرًا میں مفعول بہ کون سا لفظ ہے؟"
+        },
+        "arabic": "أَكَلَ زَيْدٌ تَمْرًا",
+        "options": [
+          {
+            "en": "زَيْدٌ",
+            "ur": "زَيْدٌ"
+          },
+          {
+            "en": "أَكَلَ",
+            "ur": "أَكَلَ"
+          },
+          {
+            "en": "None of them",
+            "ur": "ان میں سے کوئی نہیں"
+          },
+          {
+            "en": "تَمْرًا",
+            "ur": "تَمْرًا"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch58-test-q03",
+        "topic": {
+          "en": "Giving frame",
+          "ur": "دینے / سکھانے کی ترکیب"
+        },
+        "prompt": {
+          "en": "How many direct objects does عَلَّمَ have in this ayah?",
+          "ur": "اس آیت میں عَلَّمَ کے کتنے مفعول ہیں؟"
+        },
+        "arabic": "وَعَلَّمَ آدَمَ الْأَسْمَاءَ كُلَّهَا",
+        "options": [
+          {
+            "en": "Two: آدَمَ and الْأَسْمَاءَ",
+            "ur": "دو: آدَمَ اور الْأَسْمَاءَ"
+          },
+          {
+            "en": "One: آدَمَ",
+            "ur": "ایک: آدَمَ"
+          },
+          {
+            "en": "None",
+            "ur": "کوئی نہیں"
+          },
+          {
+            "en": "Three",
+            "ur": "تین"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch58-test-q04",
+        "topic": {
+          "en": "Making-into frame",
+          "ur": "بنا دینے کی ترکیب"
+        },
+        "prompt": {
+          "en": "In وَجَعَلْنَا اللَّيْلَ لِبَاسًا, what is لِبَاسًا?",
+          "ur": "وَجَعَلْنَا اللَّيْلَ لِبَاسًا میں لِبَاسًا کیا ہے؟"
+        },
+        "arabic": "وَجَعَلْنَا اللَّيْلَ لِبَاسًا",
+        "options": [
+          {
+            "en": "A prepositional phrase",
+            "ur": "جار مجرور"
+          },
+          {
+            "en": "The subject",
+            "ur": "فاعل"
+          },
+          {
+            "en": "The second object of جَعَلْنَا, accusative",
+            "ur": "جَعَلْنَا کا دوسرا مفعول، منصوب"
+          },
+          {
+            "en": "An adjective of the verb",
+            "ur": "فعل کی صفت"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch58-test-q05",
+        "topic": {
+          "en": "A fronted predicate",
+          "ur": "مقدم خبر"
+        },
+        "prompt": {
+          "en": "In وَعَلَىٰ أَبْصَارِهِمْ غِشَاوَةٌ, which word is the delayed subject?",
+          "ur": "وَعَلَىٰ أَبْصَارِهِمْ غِشَاوَةٌ میں مؤخر مبتدا کون سا لفظ ہے؟"
+        },
+        "arabic": "وَعَلَىٰ أَبْصَارِهِمْ غِشَاوَةٌ",
+        "options": [
+          {
+            "en": "أَبْصَارِهِمْ",
+            "ur": "أَبْصَارِهِمْ"
+          },
+          {
+            "en": "عَلَىٰ",
+            "ur": "عَلَىٰ"
+          },
+          {
+            "en": "هِمْ",
+            "ur": "هِمْ"
+          },
+          {
+            "en": "غِشَاوَةٌ",
+            "ur": "غِشَاوَةٌ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch58-test-q06",
+        "topic": {
+          "en": "A fronted predicate without a governor",
+          "ur": "عامل کے بغیر مقدم خبر"
+        },
+        "prompt": {
+          "en": "In لَكُمْ دِينُكُمْ, what is لَكُمْ?",
+          "ur": "لَكُمْ دِينُكُمْ میں لَكُمْ کیا ہے؟"
+        },
+        "arabic": "لَكُمْ دِينُكُمْ",
+        "options": [
+          {
+            "en": "The fronted predicate, a prepositional phrase",
+            "ur": "مقدم خبر، جار مجرور"
+          },
+          {
+            "en": "The subject, nominative",
+            "ur": "مبتدا، مرفوع"
+          },
+          {
+            "en": "The object, accusative",
+            "ur": "مفعول، منصوب"
+          },
+          {
+            "en": "A verb",
+            "ur": "فعل"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch58-test-q07",
+        "topic": {
+          "en": "A participle with an object",
+          "ur": "مفعول والا اسم فاعل"
+        },
+        "prompt": {
+          "en": "In الطَّالِبُ كَاتِبٌ دَرْسَهُ الْآنَ, which word is the object of كَاتِبٌ?",
+          "ur": "الطَّالِبُ كَاتِبٌ دَرْسَهُ الْآنَ میں كَاتِبٌ کا مفعول کون سا لفظ ہے؟"
+        },
+        "arabic": "الطَّالِبُ كَاتِبٌ دَرْسَهُ الْآنَ",
+        "options": [
+          {
+            "en": "الطَّالِبُ",
+            "ur": "الطَّالِبُ"
+          },
+          {
+            "en": "الْآنَ",
+            "ur": "الْآنَ"
+          },
+          {
+            "en": "دَرْسَهُ",
+            "ur": "دَرْسَهُ"
+          },
+          {
+            "en": "كَاتِبٌ",
+            "ur": "كَاتِبٌ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch58-test-q08",
+        "topic": {
+          "en": "A participle without an object",
+          "ur": "بغیر مفعول کے اسم فاعل"
+        },
+        "prompt": {
+          "en": "In الطَّالِبُ كَاتِبٌ with no object, what is كَاتِبٌ?",
+          "ur": "الطَّالِبُ كَاتِبٌ میں، مفعول کے بغیر، كَاتِبٌ کیا ہے؟"
+        },
+        "arabic": "الطَّالِبُ كَاتِبٌ",
+        "options": [
+          {
+            "en": "A verb with an object",
+            "ur": "مفعول والا فعل"
+          },
+          {
+            "en": "A plain noun naming the person, the predicate",
+            "ur": "شخص کا نام لینے والا عام اسم، خبر"
+          },
+          {
+            "en": "An object",
+            "ur": "مفعول"
+          },
+          {
+            "en": "A preposition",
+            "ur": "حرف جر"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch58-test-q09",
+        "topic": {
+          "en": "Listener and quotation",
+          "ur": "سننے والا اور اقتباس"
+        },
+        "prompt": {
+          "en": "In قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً, who is addressed?",
+          "ur": "قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً میں مخاطب کون ہے؟"
+        },
+        "arabic": "قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً",
+        "options": [
+          {
+            "en": "خَلِيفَةً",
+            "ur": "خَلِيفَةً"
+          },
+          {
+            "en": "إِنِّي",
+            "ur": "إِنِّي"
+          },
+          {
+            "en": "رَبُّكَ",
+            "ur": "رَبُّكَ"
+          },
+          {
+            "en": "لِلْمَلَائِكَةِ — a prepositional phrase",
+            "ur": "لِلْمَلَائِكَةِ — جار مجرور"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch58-test-q10",
+        "topic": {
+          "en": "Inside a quotation",
+          "ur": "اقتباس کے اندر"
+        },
+        "prompt": {
+          "en": "Inside the quotation إِنَّكَ مُجْتَهِدٌ, what is مُجْتَهِدٌ?",
+          "ur": "اقتباس إِنَّكَ مُجْتَهِدٌ کے اندر مُجْتَهِدٌ کیا ہے؟"
+        },
+        "arabic": "قَالَ الْمُعَلِّمُ لِلطَّالِبِ إِنَّكَ مُجْتَهِدٌ",
+        "options": [
+          {
+            "en": "The predicate of إِنَّ, nominative",
+            "ur": "إِنَّ کی خبر، مرفوع"
+          },
+          {
+            "en": "The subject of إِنَّ, accusative",
+            "ur": "إِنَّ کا اسم، منصوب"
+          },
+          {
+            "en": "The listener",
+            "ur": "سننے والا"
+          },
+          {
+            "en": "The object of قَالَ",
+            "ur": "قَالَ کا مفعول"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch58-test-q11",
+        "topic": {
+          "en": "Layered reading of 2:30",
+          "ur": "2:30 کی تہہ دار قراءت"
+        },
+        "prompt": {
+          "en": "In 2:30, how do خَلِيفَةً, جَاعِلٌ and لِلْمَلَائِكَةِ relate?",
+          "ur": "2:30 میں خَلِيفَةً، جَاعِلٌ اور لِلْمَلَائِكَةِ کا آپس میں کیا تعلق ہے؟"
+        },
+        "arabic": "وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً ۖ قَالُوا أَتَجْعَلُ فِيهَا مَن يُفْسِدُ فِيهَا وَيَسْفِكُ الدِّمَاءَ وَنَحْنُ نُسَبِّحُ بِحَمْدِكَ وَنُقَدِّسُ لَكَ ۖ قَالَ إِنِّي أَعْلَمُ مَا لَا تَعْلَمُونَ",
+        "options": [
+          {
+            "en": "خَلِيفَةً is the listener; لِلْمَلَائِكَةِ is the object",
+            "ur": "خَلِيفَةً سننے والا ہے؛ لِلْمَلَائِكَةِ مفعول ہے"
+          },
+          {
+            "en": "All three are objects of قَالَ",
+            "ur": "تینوں قَالَ کے مفعول ہیں"
+          },
+          {
+            "en": "خَلِيفَةً is the object of the participle جَاعِلٌ inside the quotation; لِلْمَلَائِكَةِ names the listener outside it",
+            "ur": "خَلِيفَةً اقتباس کے اندر اسم فاعل جَاعِلٌ کا مفعول ہے؛ لِلْمَلَائِكَةِ اس کے باہر سننے والے کا نام لیتا ہے"
+          },
+          {
+            "en": "جَاعِلٌ is the speaker's object",
+            "ur": "جَاعِلٌ بولنے والے کا مفعول ہے"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch58-test-q12",
+        "topic": {
+          "en": "A fresh layered sentence",
+          "ur": "ایک نیا تہہ دار جملہ"
+        },
+        "prompt": {
+          "en": "In قَالَ الْمُعَلِّمُ لِلطَّالِبِ إِنَّكَ كَاتِبٌ دَرْسَكَ, which word is the object of the participle?",
+          "ur": "قَالَ الْمُعَلِّمُ لِلطَّالِبِ إِنَّكَ كَاتِبٌ دَرْسَكَ میں اسم فاعل کا مفعول کون سا لفظ ہے؟"
+        },
+        "arabic": "قَالَ الْمُعَلِّمُ لِلطَّالِبِ إِنَّكَ كَاتِبٌ دَرْسَكَ",
+        "options": [
+          {
+            "en": "لِلطَّالِبِ",
+            "ur": "لِلطَّالِبِ"
+          },
+          {
+            "en": "دَرْسَكَ",
+            "ur": "دَرْسَكَ"
+          },
+          {
+            "en": "إِنَّكَ",
+            "ur": "إِنَّكَ"
+          },
+          {
+            "en": "الْمُعَلِّمُ",
+            "ur": "الْمُعَلِّمُ"
+          }
+        ],
+        "correct_index": 1
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 58 — complements and the sentence",
+      "ar": "مُتَعَلِّقَاتُ الْجُمْلَةِ",
+      "ur": "باب 58 — متعلقات اور جملہ"
+    },
+    "ayah": {
+      "surah": 2,
+      "ayah": 30,
+      "label": "Al-Baqarah 2:30",
+      "ar": "وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً ۖ قَالُوا أَتَجْعَلُ فِيهَا مَن يُفْسِدُ فِيهَا وَيَسْفِكُ الدِّمَاءَ وَنَحْنُ نُسَبِّحُ بِحَمْدِكَ وَنُقَدِّسُ لَكَ ۖ قَالَ إِنِّي أَعْلَمُ مَا لَا تَعْلَمُونَ",
+      "en": "And [mention, O Muḥammad], when your Lord said to the angels, \"Indeed, I will make upon the earth a successive authority.\" They said, \"Will You place upon it one who causes corruption therein and sheds blood, while we exalt You with praise and declare Your perfection?\" He [Allāh] said, \"Indeed, I know that which you do not know.\"",
+      "ur": "اور (وہ وقت یاد کرنے کے قابل ہے) جب تمہارے پروردگار نے فرشتوں سے فرمایا کہ میں زمین میں (اپنا) نائب بنانے والا ہوں۔ انہوں نے کہا۔ کیا تُو اس میں ایسے شخص کو نائب بنانا چاہتا ہے جو خرابیاں کرے اور کشت وخون کرتا پھرے اور ہم تیری تعریف کے ساتھ تسبیح وتقدیس کرتے رہتے ہیں۔ (خدا نے) فرمایا میں وہ باتیں جانتا ہوں جو تم نہیں جانتے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002030.mp3"
+    },
+    "highlighted_word_indices": [
+      1,
+      3
+    ],
+    "highlighted_words": [
+      "قَالَ",
+      "لِلْمَلَائِكَةِ"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 58 able to tell objects from prepositional phrases, read two-object verbs and fronted predicates, and take a quoted sentence apart in layers.",
+      "ur": "آپ باب 58 اس حال میں مکمل کرتے ہیں کہ مفعول اور جار مجرور میں فرق کر سکتے ہیں، دو مفعول والے افعال اور مقدم خبر پڑھ سکتے ہیں، اور نقل کیا ہوا جملہ تہوں میں کھول سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 58 complete. Chapter 59: the Book 6 capstone.",
+      "ur": "باب 58 مکمل۔ باب 59: کتاب 6 کا اختتامی باب۔"
+    }
+  }
+}

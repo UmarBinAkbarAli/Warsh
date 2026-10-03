@@ -1,0 +1,439 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 60, Final test (ch60-test, new). Twelve multiple-choice questions at 80 % (9/12 fails, 10/12 passes), two for each strand: vehicles (q01–02), time words (q03–04), Hajj words (q05–06), the CL16 exchange (q07–08), place names (q09–10) and farewell words (q11–12). Every question asks for a word's or phrase's meaning; none asks what a pilgrim must do, and the scene facts of q07–08 are written in the question. Added 2026-10-04 in the proposal harvest, batch 7 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-60-content-proposal.md and its review amendments.",
+    "title": "Chapter 60 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ السِّتِّينَ",
+    "titleUr": "باب 60 کا آخری امتحان",
+    "chapter_order": 60,
+    "lesson_order": 8,
+    "estimated_minutes": 10,
+    "xp_reward": 25
+  },
+  "hook": {
+    "ayah": {
+      "surah": 106,
+      "ayah": 2,
+      "label": "undefined 106:2",
+      "ar": "إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ",
+      "en": "Their accustomed security [in] the caravan of winter and summer -",
+      "ur": "(یعنی) ان کو جاڑے اور گرمی کے سفر سے مانوس کرنے کے سبب",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/106002.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 60.",
+      "ur": "باب 60 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 60,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch60-test-q01",
+        "topic": {
+          "en": "A vehicle",
+          "ur": "ایک سواری"
+        },
+        "prompt": {
+          "en": "Which word means 'bus'?",
+          "ur": "کون سا لفظ 'بس' کا مطلب دیتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "طَائِرَةٌ",
+            "ur": "طَائِرَةٌ"
+          },
+          {
+            "en": "قِطَارٌ",
+            "ur": "قِطَارٌ"
+          },
+          {
+            "en": "حَافِلَةٌ",
+            "ur": "حَافِلَةٌ"
+          },
+          {
+            "en": "بَحْرٌ",
+            "ur": "بَحْرٌ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch60-test-q02",
+        "topic": {
+          "en": "Boarding",
+          "ur": "سوار ہونا"
+        },
+        "prompt": {
+          "en": "What did the speaker do?",
+          "ur": "بولنے والے نے کیا کیا؟"
+        },
+        "arabic": "رَكِبْتُ الْقِطَارَ إِلَى الْمَدِينَةِ",
+        "options": [
+          {
+            "en": "Boarded the train to Madinah",
+            "ur": "مدینہ کی ٹرین پر سوار ہوا"
+          },
+          {
+            "en": "Left the train in Madinah",
+            "ur": "مدینہ میں ٹرین چھوڑ دی"
+          },
+          {
+            "en": "Bought a train",
+            "ur": "ٹرین خریدی"
+          },
+          {
+            "en": "Saw the sea in Madinah",
+            "ur": "مدینہ میں سمندر دیکھا"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch60-test-q03",
+        "topic": {
+          "en": "Time words",
+          "ur": "وقت کے الفاظ"
+        },
+        "prompt": {
+          "en": "Which word means 'appointment; scheduled time'?",
+          "ur": "کون سا لفظ 'ملاقات؛ مقررہ وقت' کا مطلب دیتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "بَابٌ",
+            "ur": "بَابٌ"
+          },
+          {
+            "en": "سَفَرٌ",
+            "ur": "سَفَرٌ"
+          },
+          {
+            "en": "حَجٌّ",
+            "ur": "حَجٌّ"
+          },
+          {
+            "en": "مَوْعِدٌ",
+            "ur": "مَوْعِدٌ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch60-test-q04",
+        "topic": {
+          "en": "A trip's time",
+          "ur": "سفر کا وقت"
+        },
+        "prompt": {
+          "en": "What does مَوْعِدُ الرِّحْلَةِ name?",
+          "ur": "مَوْعِدُ الرِّحْلَةِ کس کا نام ہے؟"
+        },
+        "arabic": "مَوْعِدُ الرِّحْلَةِ",
+        "options": [
+          {
+            "en": "The price of the trip",
+            "ur": "سفر کی قیمت"
+          },
+          {
+            "en": "The scheduled time of the trip",
+            "ur": "سفر کا مقررہ وقت"
+          },
+          {
+            "en": "The end of the trip",
+            "ur": "سفر کا اختتام"
+          },
+          {
+            "en": "The companion on the trip",
+            "ur": "سفر کا ساتھی"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch60-test-q05",
+        "topic": {
+          "en": "The pilgrimage",
+          "ur": "زیارت"
+        },
+        "prompt": {
+          "en": "Which word means 'Hajj, the pilgrimage to Makkah'?",
+          "ur": "کون سا لفظ 'حج، مکہ کی زیارت' کا مطلب دیتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "حَجٌّ",
+            "ur": "حَجٌّ"
+          },
+          {
+            "en": "وَدَاعٌ",
+            "ur": "وَدَاعٌ"
+          },
+          {
+            "en": "مَوْعِدٌ",
+            "ur": "مَوْعِدٌ"
+          },
+          {
+            "en": "قِطَارٌ",
+            "ur": "قِطَارٌ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch60-test-q06",
+        "topic": {
+          "en": "The lesser pilgrimage",
+          "ur": "چھوٹی زیارت"
+        },
+        "prompt": {
+          "en": "Which word means 'Umrah, the lesser pilgrimage'?",
+          "ur": "کون سا لفظ 'عمرہ، چھوٹی زیارت' کا مطلب دیتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "رَحِيلٌ",
+            "ur": "رَحِيلٌ"
+          },
+          {
+            "en": "عُمْرَةٌ",
+            "ur": "عُمْرَةٌ"
+          },
+          {
+            "en": "طَائِرَةٌ",
+            "ur": "طَائِرَةٌ"
+          },
+          {
+            "en": "يَوْمٌ",
+            "ur": "يَوْمٌ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch60-test-q07",
+        "topic": {
+          "en": "Is this the right bus?",
+          "ur": "کیا یہ درست بس ہے؟"
+        },
+        "prompt": {
+          "en": "Bus A is labelled Madinah and you need Makkah. Which sentence asks the helper about it?",
+          "ur": "بس A پر مدینہ لکھا ہے اور آپ کو مکہ جانا ہے۔ کون سا جملہ مددگار سے اس کے بارے میں پوچھتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "شُكْرًا.",
+            "ur": "شُكْرًا."
+          },
+          {
+            "en": "لَا، إِلَى مَكَّةَ.",
+            "ur": "لَا، إِلَى مَكَّةَ."
+          },
+          {
+            "en": "هَلْ هَذِهِ الْحَافِلَةُ إِلَى مَكَّةَ؟",
+            "ur": "هَلْ هَذِهِ الْحَافِلَةُ إِلَى مَكَّةَ؟"
+          },
+          {
+            "en": "أَمَامَ الْمَحَطَّةِ؟",
+            "ur": "أَمَامَ الْمَحَطَّةِ؟"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch60-test-q08",
+        "topic": {
+          "en": "Correcting a mistake",
+          "ur": "غلطی کی اصلاح"
+        },
+        "prompt": {
+          "en": "The helper says 'To Madinah, correct?' but you are going to Makkah. What do you answer?",
+          "ur": "مددگار کہتا ہے 'مدینہ کی طرف، ٹھیک ہے؟' مگر آپ مکہ جا رہے ہیں۔ آپ کیا جواب دیں گے؟"
+        },
+        "arabic": "إِلَى الْمَدِينَةِ، صَحِيحٌ؟",
+        "options": [
+          {
+            "en": "شُكْرًا.",
+            "ur": "شُكْرًا."
+          },
+          {
+            "en": "هَلْ هَذِهِ الْحَافِلَةُ إِلَى مَكَّةَ؟",
+            "ur": "هَلْ هَذِهِ الْحَافِلَةُ إِلَى مَكَّةَ؟"
+          },
+          {
+            "en": "أَمَامَ الْمَحَطَّةِ؟",
+            "ur": "أَمَامَ الْمَحَطَّةِ؟"
+          },
+          {
+            "en": "لَا، إِلَى مَكَّةَ.",
+            "ur": "لَا، إِلَى مَكَّةَ."
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch60-test-q09",
+        "topic": {
+          "en": "Three words together",
+          "ur": "تین الفاظ ایک ساتھ"
+        },
+        "prompt": {
+          "en": "What kind of words are عَرَفَاتٌ, مِنًى and مُزْدَلِفَةُ?",
+          "ur": "عَرَفَاتٌ، مِنًى اور مُزْدَلِفَةُ کس قسم کے الفاظ ہیں؟"
+        },
+        "arabic": "عَرَفَاتٌ · مِنًى · مُزْدَلِفَةُ",
+        "options": [
+          {
+            "en": "Names of vehicles",
+            "ur": "سواریوں کے نام"
+          },
+          {
+            "en": "Names of places",
+            "ur": "جگہوں کے نام"
+          },
+          {
+            "en": "Names of months",
+            "ur": "مہینوں کے نام"
+          },
+          {
+            "en": "Farewell words",
+            "ur": "رخصتی کے الفاظ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch60-test-q10",
+        "topic": {
+          "en": "A valley",
+          "ur": "ایک وادی"
+        },
+        "prompt": {
+          "en": "Which place is مِنًى?",
+          "ur": "مِنًى کون سی جگہ ہے؟"
+        },
+        "arabic": "مِنًى",
+        "options": [
+          {
+            "en": "Mina, the tented valley",
+            "ur": "منیٰ، خیموں کی وادی"
+          },
+          {
+            "en": "Arafat, the plains",
+            "ur": "عرفات، میدان"
+          },
+          {
+            "en": "A train station",
+            "ur": "ریلوے اسٹیشن"
+          },
+          {
+            "en": "A door",
+            "ur": "دروازہ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch60-test-q11",
+        "topic": {
+          "en": "Saying goodbye",
+          "ur": "الوداع کہنا"
+        },
+        "prompt": {
+          "en": "What does وَدَاعٌ mean?",
+          "ur": "وَدَاعٌ کا کیا مطلب ہے؟"
+        },
+        "arabic": "وَدَاعٌ",
+        "options": [
+          {
+            "en": "Arrival",
+            "ur": "آمد"
+          },
+          {
+            "en": "A ticket",
+            "ur": "ٹکٹ"
+          },
+          {
+            "en": "A gate",
+            "ur": "دروازہ"
+          },
+          {
+            "en": "Farewell",
+            "ur": "رخصتی"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch60-test-q12",
+        "topic": {
+          "en": "Going round",
+          "ur": "چکر لگانا"
+        },
+        "prompt": {
+          "en": "What does طَوَافٌ mean?",
+          "ur": "طَوَافٌ کا کیا مطلب ہے؟"
+        },
+        "arabic": "طَوَافٌ",
+        "options": [
+          {
+            "en": "A farewell",
+            "ur": "رخصتی"
+          },
+          {
+            "en": "A bus",
+            "ur": "بس"
+          },
+          {
+            "en": "Going round the Ka'bah",
+            "ur": "کعبہ کے گرد چکر لگانا"
+          },
+          {
+            "en": "A month",
+            "ur": "مہینہ"
+          }
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 60 — travel and Hajj language",
+      "ar": "لُغَةُ السَّفَرِ وَالْحَجِّ",
+      "ur": "باب 60 — سفر اور حج کی زبان"
+    },
+    "ayah": {
+      "surah": 106,
+      "ayah": 2,
+      "label": "undefined 106:2",
+      "ar": "إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ",
+      "en": "Their accustomed security [in] the caravan of winter and summer -",
+      "ur": "(یعنی) ان کو جاڑے اور گرمی کے سفر سے مانوس کرنے کے سبب",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/106002.mp3"
+    },
+    "highlighted_word_indices": [
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "رِحْلَةَ",
+      "الشِّتَاءِ"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 60 able to name vehicles and places, ask whether this bus goes to Makkah, and correct a wrong destination.",
+      "ur": "آپ باب 60 اس حال میں مکمل کرتے ہیں کہ سواریوں اور جگہوں کے نام بتا سکتے ہیں، پوچھ سکتے ہیں کہ کیا یہ بس مکہ جاتی ہے، اور غلط منزل کی اصلاح کر سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 60 complete. Chapter 61: at the market.",
+      "ur": "باب 60 مکمل۔ باب 61: بازار میں۔"
+    }
+  }
+}

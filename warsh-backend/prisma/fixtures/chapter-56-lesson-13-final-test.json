@@ -1,0 +1,563 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 56, Final test (ch56-test, new). Sixteen multiple-choice questions at 80 % (12/16 fails, 13/16 passes): maqṣūr (q01–02), manqūṣ (q03–04), five nouns (q05–06), dual as first term (q07–08), dual relatives (q09–10), role / form transfer (q11–12) and four Abasa samples, one from each section (q13–16). Added 2026-10-04 in the proposal harvest, batch 7 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-56-content-proposal.md and its review amendments.",
+    "title": "Chapter 56 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ السَّادِسِ وَالْخَمْسِينَ",
+    "titleUr": "باب 56 کا آخری امتحان",
+    "chapter_order": 56,
+    "lesson_order": 13,
+    "estimated_minutes": 12,
+    "xp_reward": 25
+  },
+  "hook": {
+    "ayah": {
+      "surah": 80,
+      "ayah": 11,
+      "label": "undefined 80:11",
+      "ar": "كَلَّا إِنَّهَا تَذْكِرَةٌ",
+      "en": "No! Indeed, they [i.e., these verses] are a reminder;",
+      "ur": "دیکھو یہ (قرآن) نصیحت ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/080011.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 56.",
+      "ur": "باب 56 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 56,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch56-test-q01",
+        "topic": {
+          "en": "A maqṣūr noun's ending",
+          "ur": "مقصور اسم کا انجام"
+        },
+        "prompt": {
+          "en": "In جَاءَ مُوسَى, رَأَيْتُ مُوسَى and مَرَرْتُ بِمُوسَى the word مُوسَى looks the same each time. What does that mean?",
+          "ur": "جَاءَ مُوسَى، رَأَيْتُ مُوسَى اور مَرَرْتُ بِمُوسَى میں لفظ مُوسَى ہر بار ایک جیسا نظر آتا ہے۔ اس کا کیا مطلب ہے؟"
+        },
+        "options": [
+          {
+            "en": "It is fixed in form, like هَذَا",
+            "ur": "یہ صورت میں مقرر ہے، جیسے هَذَا"
+          },
+          {
+            "en": "It is always nominative",
+            "ur": "یہ ہمیشہ مرفوع ہے"
+          },
+          {
+            "en": "It ends in an alif, so no case shows; the sentence tells you the role",
+            "ur": "یہ الف پر ختم ہوتا ہے، اس لیے کوئی حالت نظر نہیں آتی؛ جملہ کردار بتاتا ہے"
+          },
+          {
+            "en": "It is always accusative",
+            "ur": "یہ ہمیشہ منصوب ہے"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch56-test-q02",
+        "topic": {
+          "en": "A maqṣūr noun's role",
+          "ur": "مقصور اسم کا کردار"
+        },
+        "prompt": {
+          "en": "In رَأَيْتُ الْفَتَى فِي الْمَسْجِدِ, what is الْفَتَى?",
+          "ur": "رَأَيْتُ الْفَتَى فِي الْمَسْجِدِ میں الْفَتَى کیا ہے؟"
+        },
+        "arabic": "رَأَيْتُ الْفَتَى فِي الْمَسْجِدِ",
+        "options": [
+          {
+            "en": "The object of رَأَيْتُ, accusative (shown only by the sentence)",
+            "ur": "رَأَيْتُ کا مفعول، منصوب (صرف جملے سے ظاہر)"
+          },
+          {
+            "en": "The subject, nominative",
+            "ur": "مبتدا، مرفوع"
+          },
+          {
+            "en": "Genitive after فِي",
+            "ur": "فِي کے بعد مجرور"
+          },
+          {
+            "en": "The verb",
+            "ur": "فعل"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch56-test-q03",
+        "topic": {
+          "en": "The accusative of a manqūṣ noun",
+          "ur": "منقوص اسم کا نصب"
+        },
+        "prompt": {
+          "en": "Which form of الْقَاضِي is the accusative?",
+          "ur": "الْقَاضِي کی کون سی صورت منصوب ہے؟"
+        },
+        "options": [
+          {
+            "en": "الْقَاضِي",
+            "ur": "الْقَاضِي"
+          },
+          {
+            "en": "الْقَاضِ",
+            "ur": "الْقَاضِ"
+          },
+          {
+            "en": "قَاضٍ",
+            "ur": "قَاضٍ"
+          },
+          {
+            "en": "الْقَاضِيَ",
+            "ur": "الْقَاضِيَ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch56-test-q04",
+        "topic": {
+          "en": "An indefinite manqūṣ noun",
+          "ur": "نکرہ منقوص اسم"
+        },
+        "prompt": {
+          "en": "What happens to the ي of الْقَاضِي when it becomes indefinite in the nominative, قَاضٍ?",
+          "ur": "الْقَاضِي جب مرفوع نکرہ بنتا ہے، قَاضٍ، تو اس کی ي کا کیا ہوتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "It stays and takes a ḍamma",
+            "ur": "یہ رہتی ہے اور ضمہ لیتی ہے"
+          },
+          {
+            "en": "It drops before the tanwīn",
+            "ur": "یہ تنوین سے پہلے گر جاتی ہے"
+          },
+          {
+            "en": "It becomes an alif",
+            "ur": "یہ الف بن جاتی ہے"
+          },
+          {
+            "en": "It becomes a و",
+            "ur": "یہ و بن جاتی ہے"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch56-test-q05",
+        "topic": {
+          "en": "The nominative sign of a five-noun",
+          "ur": "پانچ اسموں میں سے ایک کی رفع کی علامت"
+        },
+        "prompt": {
+          "en": "Which word completes 'His father is a Muslim'?",
+          "ur": "کون سا لفظ 'اس کا باپ مسلمان ہے' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "___ مُسْلِمٌ",
+        "options": [
+          {
+            "en": "أَبُوهُ",
+            "ur": "أَبُوهُ"
+          },
+          {
+            "en": "أَبَاهُ",
+            "ur": "أَبَاهُ"
+          },
+          {
+            "en": "أَبِيهِ",
+            "ur": "أَبِيهِ"
+          },
+          {
+            "en": "None of them",
+            "ur": "ان میں سے کوئی نہیں"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch56-test-q06",
+        "topic": {
+          "en": "ذُو and its case",
+          "ur": "ذُو اور اس کی حالت"
+        },
+        "prompt": {
+          "en": "In ذُو الْعَرْشِ, why is ذُو written with و?",
+          "ur": "ذُو الْعَرْشِ میں ذُو کو و کے ساتھ کیوں لکھا گیا؟"
+        },
+        "arabic": "ذُو الْعَرْشِ",
+        "options": [
+          {
+            "en": "It is genitive; the genitive is ذُو",
+            "ur": "یہ مجرور ہے؛ مجرور ذُو ہوتا ہے"
+          },
+          {
+            "en": "It is accusative, with a و",
+            "ur": "یہ منصوب ہے، و کے ساتھ"
+          },
+          {
+            "en": "It is nominative; the accusative would be ذَا and the genitive ذِي",
+            "ur": "یہ مرفوع ہے؛ نصب ذَا اور جر ذِي ہوگا"
+          },
+          {
+            "en": "It has no case",
+            "ur": "اس میں کوئی حالت نہیں"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch56-test-q07",
+        "topic": {
+          "en": "A dual noun as the first term",
+          "ur": "مثنی اسم پہلے جز کے طور پر"
+        },
+        "prompt": {
+          "en": "Which phrase means 'the student's two books' (nominative)?",
+          "ur": "کون سا جملہ 'طالب علم کی دو کتابیں' (رفع) کا مطلب دیتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "كِتَابَانِ الطَّالِبِ",
+            "ur": "كِتَابَانِ الطَّالِبِ"
+          },
+          {
+            "en": "كِتَابَا الطَّالِبِ",
+            "ur": "كِتَابَا الطَّالِبِ"
+          },
+          {
+            "en": "كِتَابَيْنِ الطَّالِبِ",
+            "ur": "كِتَابَيْنِ الطَّالِبِ"
+          },
+          {
+            "en": "كِتَابَا الطَّالِبُ",
+            "ur": "كِتَابَا الطَّالِبُ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch56-test-q08",
+        "topic": {
+          "en": "The dual in Al-Masad",
+          "ur": "المسد میں مثنی"
+        },
+        "prompt": {
+          "en": "In تَبَّتْ يَدَا أَبِي لَهَبٍ, why has يَدَا no نِ?",
+          "ur": "تَبَّتْ يَدَا أَبِي لَهَبٍ میں يَدَا میں نِ کیوں نہیں؟"
+        },
+        "arabic": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ",
+        "options": [
+          {
+            "en": "Because it is a verb",
+            "ur": "کیونکہ یہ فعل ہے"
+          },
+          {
+            "en": "Because it is plural",
+            "ur": "کیونکہ یہ جمع ہے"
+          },
+          {
+            "en": "Because it is genitive",
+            "ur": "کیونکہ یہ مجرور ہے"
+          },
+          {
+            "en": "Because it is the first term of an iḍāfa",
+            "ur": "کیونکہ یہ اضافت کا پہلا جز ہے"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch56-test-q09",
+        "topic": {
+          "en": "A masculine dual relative in the nominative",
+          "ur": "مذکر مثنی اسم موصول رفع میں"
+        },
+        "prompt": {
+          "en": "Which relative completes 'the two students who wrote the lesson'?",
+          "ur": "کون سا اسم موصول 'وہ دو طالب علم جنہوں نے سبق لکھا' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "الطَّالِبَانِ ___ كَتَبَا الدَّرْسَ",
+        "options": [
+          {
+            "en": "اللَّذَيْنِ",
+            "ur": "اللَّذَيْنِ"
+          },
+          {
+            "en": "اللَّتَانِ",
+            "ur": "اللَّتَانِ"
+          },
+          {
+            "en": "اللَّذَانِ",
+            "ur": "اللَّذَانِ"
+          },
+          {
+            "en": "الَّذِينَ",
+            "ur": "الَّذِينَ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch56-test-q10",
+        "topic": {
+          "en": "A feminine dual relative after a preposition",
+          "ur": "حرف جر کے بعد مؤنث مثنی اسم موصول"
+        },
+        "prompt": {
+          "en": "Which relative completes 'I greeted the two (female) teachers who entered the mosque'?",
+          "ur": "کون سا اسم موصول 'میں نے ان دو معلمات کو سلام کیا جو مسجد میں داخل ہوئیں' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "سَلَّمْتُ عَلَى الْمُعَلِّمَتَيْنِ ___ دَخَلَتَا الْمَسْجِدَ",
+        "options": [
+          {
+            "en": "اللَّتَيْنِ",
+            "ur": "اللَّتَيْنِ"
+          },
+          {
+            "en": "اللَّتَانِ",
+            "ur": "اللَّتَانِ"
+          },
+          {
+            "en": "اللَّذَيْنِ",
+            "ur": "اللَّذَيْنِ"
+          },
+          {
+            "en": "الَّتِي",
+            "ur": "الَّتِي"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch56-test-q11",
+        "topic": {
+          "en": "Maqṣūr against manqūṣ",
+          "ur": "مقصور بمقابلہ منقوص"
+        },
+        "prompt": {
+          "en": "What do the endings show in رَأَيْتُ مُوسَى وَالْقَاضِيَ?",
+          "ur": "رَأَيْتُ مُوسَى وَالْقَاضِيَ میں انجام کیا دکھاتے ہیں؟"
+        },
+        "arabic": "رَأَيْتُ مُوسَى وَالْقَاضِيَ",
+        "options": [
+          {
+            "en": "Both show a fatḥa",
+            "ur": "دونوں فتحہ دکھاتے ہیں"
+          },
+          {
+            "en": "Both show nothing",
+            "ur": "دونوں کچھ نہیں دکھاتے"
+          },
+          {
+            "en": "مُوسَى shows a fatḥa; الْقَاضِيَ shows nothing",
+            "ur": "مُوسَى فتحہ دکھاتا ہے؛ الْقَاضِيَ کچھ نہیں"
+          },
+          {
+            "en": "مُوسَى shows nothing; الْقَاضِيَ shows the accusative fatḥa",
+            "ur": "مُوسَى کچھ نہیں دکھاتا؛ الْقَاضِيَ نصب کا فتحہ دکھاتا ہے"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch56-test-q12",
+        "topic": {
+          "en": "A dual first term and its describing word",
+          "ur": "مثنی پہلا جز اور اس کی صفت"
+        },
+        "prompt": {
+          "en": "Which sentence means 'The student's two books are new'?",
+          "ur": "کون سا جملہ 'طالب علم کی دو کتابیں نئی ہیں' کا مطلب دیتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "كِتَابَانِ الطَّالِبِ جَدِيدَا",
+            "ur": "كِتَابَانِ الطَّالِبِ جَدِيدَا"
+          },
+          {
+            "en": "كِتَابَا الطَّالِبِ جَدِيدَانِ",
+            "ur": "كِتَابَا الطَّالِبِ جَدِيدَانِ"
+          },
+          {
+            "en": "كِتَابَا الطَّالِبِ جَدِيدَا",
+            "ur": "كِتَابَا الطَّالِبِ جَدِيدَا"
+          },
+          {
+            "en": "كِتَابَانِ الطَّالِبِ جَدِيدَانِ",
+            "ur": "كِتَابَانِ الطَّالِبِ جَدِيدَانِ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch56-test-q13",
+        "topic": {
+          "en": "Abasa — the opening contrast",
+          "ur": "عبس — ابتدائی تضاد"
+        },
+        "prompt": {
+          "en": "What contrast do 80:6 and 80:10 draw?",
+          "ur": "80:6 اور 80:10 کون سا تضاد کھینچتی ہیں؟"
+        },
+        "arabic": "فَأَنتَ لَهُ تَصَدَّىٰ … فَأَنتَ عَنْهُ تَلَهَّىٰ",
+        "options": [
+          {
+            "en": "Attention to the one who thinks himself free of need, distraction from the one who came striving and fearing",
+            "ur": "بے نیاز سمجھنے والے کی طرف توجہ، دوڑ کر آنے والے اور ڈرنے والے سے غفلت"
+          },
+          {
+            "en": "Attention to the one who came striving, distraction from the one free of need",
+            "ur": "دوڑ کر آنے والے کی طرف توجہ، بے نیاز شخص سے غفلت"
+          },
+          {
+            "en": "Attention to both people equally",
+            "ur": "دونوں افراد کی طرف برابر توجہ"
+          },
+          {
+            "en": "Distraction from both people",
+            "ur": "دونوں سے غفلت"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch56-test-q14",
+        "topic": {
+          "en": "Abasa — the order of events",
+          "ur": "عبس — واقعات کی ترتیب"
+        },
+        "prompt": {
+          "en": "In what order do 80:21–22 place the events?",
+          "ur": "80:21–22 واقعات کو کس ترتیب میں رکھتی ہیں؟"
+        },
+        "arabic": "ثُمَّ أَمَاتَهُ فَأَقْبَرَهُ ثُمَّ إِذَا شَاءَ أَنشَرَهُ",
+        "options": [
+          {
+            "en": "Being raised, then death and burial",
+            "ur": "اٹھایا جانا، پھر موت اور دفن"
+          },
+          {
+            "en": "Death and burial only",
+            "ur": "صرف موت اور دفن"
+          },
+          {
+            "en": "Death and burial, then being raised when He wills",
+            "ur": "موت اور دفن، پھر جب وہ چاہے اٹھایا جانا"
+          },
+          {
+            "en": "Being raised only",
+            "ur": "صرف اٹھایا جانا"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch56-test-q15",
+        "topic": {
+          "en": "Abasa — who benefits",
+          "ur": "عبس — فائدہ کس کو"
+        },
+        "prompt": {
+          "en": "For whom is the provision of 80:24–31, according to 80:32?",
+          "ur": "80:32 کے مطابق 80:24–31 کا سامان کن کے لیے ہے؟"
+        },
+        "arabic": "مَّتَاعًا لَّكُمْ وَلِأَنْعَامِكُمْ",
+        "options": [
+          {
+            "en": "For the earth only",
+            "ur": "صرف زمین کے لیے"
+          },
+          {
+            "en": "For the livestock only",
+            "ur": "صرف مویشیوں کے لیے"
+          },
+          {
+            "en": "For no one",
+            "ur": "کسی کے لیے نہیں"
+          },
+          {
+            "en": "For you and for your livestock",
+            "ur": "تمہارے اور تمہارے مویشیوں کے لیے"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch56-test-q16",
+        "topic": {
+          "en": "Abasa — how it closes",
+          "ur": "عبس — اس کا اختتام"
+        },
+        "prompt": {
+          "en": "How does the surah end, in 80:38–42?",
+          "ur": "80:38–42 میں سورت کیسے ختم ہوتی ہے؟"
+        },
+        "arabic": "وُجُوهٌ يَوْمَئِذٍ مُّسْفِرَةٌ … وَوُجُوهٌ يَوْمَئِذٍ عَلَيْهَا غَبَرَةٌ",
+        "options": [
+          {
+            "en": "One kind of face, all bright",
+            "ur": "ایک ہی طرح کے چہرے، سب روشن"
+          },
+          {
+            "en": "Two kinds of faces on the Day: bright and rejoicing, and dusty and dark",
+            "ur": "اس دن دو طرح کے چہرے: روشن اور خوش، اور گرد آلود اور سیاہ"
+          },
+          {
+            "en": "A list of fruits",
+            "ur": "پھلوں کی فہرست"
+          },
+          {
+            "en": "The story of two people who came",
+            "ur": "آنے والے دو افراد کی کہانی"
+          }
+        ],
+        "correct_index": 1
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 56 — special nouns",
+      "ar": "الْأَسْمَاءُ الْخَاصَّةُ",
+      "ur": "باب 56 — خاص اسم"
+    },
+    "ayah": {
+      "surah": 111,
+      "ayah": 1,
+      "label": "undefined 111:1",
+      "ar": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ",
+      "en": "May the hands of Abū Lahab be ruined, and ruined is he.",
+      "ur": "ابولہب کے ہاتھ ٹوٹیں اور وہ ہلاک ہو",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/111001.mp3"
+    },
+    "highlighted_word_indices": [
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "يَدَا",
+      "أَبِي"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 56 able to read special nouns by their role, drop the dual's نِ before an iḍāfa, choose the right dual relative, and read Abasa whole.",
+      "ur": "آپ باب 56 اس حال میں مکمل کرتے ہیں کہ خاص اسموں کو ان کے کردار سے پڑھ سکتے ہیں، اضافت سے پہلے مثنی کا نِ گرا سکتے ہیں، درست مثنی اسم موصول چن سکتے ہیں، اور عبس پوری پڑھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 56 complete. Chapter 57: weak verbs and the five verbs.",
+      "ur": "باب 56 مکمل۔ باب 57: معتل افعال اور افعال خمسہ۔"
+    }
+  }
+}

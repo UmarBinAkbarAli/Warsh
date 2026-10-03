@@ -1,0 +1,566 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 59, Final test (ch59-test, new, the Book 6 capstone). Sixteen multiple-choice questions at 80 % (12/16 fails, 13/16 passes), two for each of eight strands: nominal roles (q01–02, Chapter 55), special nouns (q03–04, Chapter 56), weak verbs under لَمْ (q05–06, Chapter 57), five-verb mood (q07–08, Chapter 57), object versus preposition and two objects (q09–10, Chapter 58), fronting and the absolute object (q11–12, Chapters 58 and 55), Al-A'la (q13–14) and a participle and reported-speech transfer (q15–16, Chapter 58). Every question retrieves something that a lesson practised; none introduces a construction. Added 2026-10-04 in the proposal harvest, batch 7 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-59-content-proposal.md and its review amendments.",
+    "title": "Chapter 59 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ التَّاسِعِ وَالْخَمْسِينَ",
+    "titleUr": "باب 59 کا آخری امتحان",
+    "chapter_order": 59,
+    "lesson_order": 8,
+    "estimated_minutes": 15,
+    "xp_reward": 30
+  },
+  "hook": {
+    "ayah": {
+      "surah": 87,
+      "ayah": 14,
+      "label": "Al-A'la 87:14",
+      "ar": "قَدْ أَفْلَحَ مَن تَزَكَّىٰ",
+      "en": "He has certainly succeeded who purifies himself",
+      "ur": "بے شک وہ مراد کو پہنچ گیا جو پاک ہوا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087014.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 59 and Book 6.",
+      "ur": "باب 59 اور کتاب 6 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 59,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch59-test-q01",
+        "topic": {
+          "en": "Role of a noun",
+          "ur": "اسم کا کردار"
+        },
+        "prompt": {
+          "en": "In كَتَبَ الطَّالِبُ الدَّرْسَ, which word is the مَفْعُول بِهِ, and in what case?",
+          "ur": "كَتَبَ الطَّالِبُ الدَّرْسَ میں مفعول بہ کون سا لفظ ہے اور کس حالت میں؟"
+        },
+        "arabic": "كَتَبَ الطَّالِبُ الدَّرْسَ",
+        "options": [
+          {
+            "en": "الطَّالِبُ — nominative",
+            "ur": "الطَّالِبُ — مرفوع"
+          },
+          {
+            "en": "كَتَبَ — accusative",
+            "ur": "كَتَبَ — منصوب"
+          },
+          {
+            "en": "الدَّرْسَ — accusative",
+            "ur": "الدَّرْسَ — منصوب"
+          },
+          {
+            "en": "الدَّرْسَ — genitive",
+            "ur": "الدَّرْسَ — مجرور"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch59-test-q02",
+        "topic": {
+          "en": "A noun after a preposition",
+          "ur": "حرف جر کے بعد اسم"
+        },
+        "prompt": {
+          "en": "In ذَهَبَ الْغُلَامُ إِلَى الْمَدْرَسَةِ, what case is الْمَدْرَسَةِ, and why?",
+          "ur": "ذَهَبَ الْغُلَامُ إِلَى الْمَدْرَسَةِ میں الْمَدْرَسَةِ کس حالت میں ہے اور کیوں؟"
+        },
+        "arabic": "ذَهَبَ الْغُلَامُ إِلَى الْمَدْرَسَةِ",
+        "options": [
+          {
+            "en": "Genitive, after the preposition إِلَى",
+            "ur": "مجرور، حرف جر إِلَى کے بعد"
+          },
+          {
+            "en": "Nominative, as the subject",
+            "ur": "مرفوع، فاعل ہونے کی وجہ سے"
+          },
+          {
+            "en": "Accusative, as the object",
+            "ur": "منصوب، مفعول ہونے کی وجہ سے"
+          },
+          {
+            "en": "It has no case",
+            "ur": "اس کی کوئی حالت نہیں"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch59-test-q03",
+        "topic": {
+          "en": "A five noun in the accusative",
+          "ur": "پانچ اسموں میں سے ایک نصب میں"
+        },
+        "prompt": {
+          "en": "In رَأَيْتُ أَبَاهُ, what shows that أَبَاهُ is accusative?",
+          "ur": "رَأَيْتُ أَبَاهُ میں کون سی چیز دکھاتی ہے کہ أَبَاهُ منصوب ہے؟"
+        },
+        "arabic": "رَأَيْتُ أَبَاهُ",
+        "options": [
+          {
+            "en": "A ḍamma on the last letter",
+            "ur": "آخری حرف پر ضمہ"
+          },
+          {
+            "en": "The و before the pronoun",
+            "ur": "ضمیر سے پہلے و"
+          },
+          {
+            "en": "Nothing shows it",
+            "ur": "کچھ نہیں دکھاتا"
+          },
+          {
+            "en": "The ا before the pronoun",
+            "ur": "ضمیر سے پہلے ا"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch59-test-q04",
+        "topic": {
+          "en": "A dual as the first term",
+          "ur": "مثنی پہلے جز کے طور پر"
+        },
+        "prompt": {
+          "en": "Which phrase means 'the student's two books' (nominative)?",
+          "ur": "کون سا جملہ 'طالب علم کی دو کتابیں' (رفع) کا مطلب دیتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "كِتَابَانِ الطَّالِبِ",
+            "ur": "كِتَابَانِ الطَّالِبِ"
+          },
+          {
+            "en": "كِتَابَا الطَّالِبِ",
+            "ur": "كِتَابَا الطَّالِبِ"
+          },
+          {
+            "en": "كِتَابَيْنِ الطَّالِبِ",
+            "ur": "كِتَابَيْنِ الطَّالِبِ"
+          },
+          {
+            "en": "كِتَابُ الطَّالِبَيْنِ",
+            "ur": "كِتَابُ الطَّالِبَيْنِ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch59-test-q05",
+        "topic": {
+          "en": "A hollow verb after لَمْ",
+          "ur": "لَمْ کے بعد اجوف فعل"
+        },
+        "prompt": {
+          "en": "Which form completes 'He was not there'?",
+          "ur": "کون سی صورت 'وہ وہاں نہیں تھا' کو مکمل کرتی ہے؟"
+        },
+        "arabic": "لَمْ ___ هُنَاكَ",
+        "options": [
+          {
+            "en": "يَكُنْ",
+            "ur": "يَكُنْ"
+          },
+          {
+            "en": "يَكُونُ",
+            "ur": "يَكُونُ"
+          },
+          {
+            "en": "يَكُونَ",
+            "ur": "يَكُونَ"
+          },
+          {
+            "en": "كَانَ",
+            "ur": "كَانَ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch59-test-q06",
+        "topic": {
+          "en": "A final-weak verb after لَمْ",
+          "ur": "لَمْ کے بعد ناقص فعل"
+        },
+        "prompt": {
+          "en": "Which form completes 'He did not throw the ball'?",
+          "ur": "کون سی صورت 'اس نے گیند نہیں پھینکی' کو مکمل کرتی ہے؟"
+        },
+        "arabic": "لَمْ ___ الْكُرَةَ",
+        "options": [
+          {
+            "en": "يَرْمِي",
+            "ur": "يَرْمِي"
+          },
+          {
+            "en": "يَرْمِيَ",
+            "ur": "يَرْمِيَ"
+          },
+          {
+            "en": "رَمَى",
+            "ur": "رَمَى"
+          },
+          {
+            "en": "يَرْمِ",
+            "ur": "يَرْمِ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch59-test-q07",
+        "topic": {
+          "en": "A five verb with no governor",
+          "ur": "بغیر عامل کے افعال خمسہ"
+        },
+        "prompt": {
+          "en": "Which form completes 'The believers believe in Allah'?",
+          "ur": "کون سی صورت 'ایمان والے اللہ پر ایمان رکھتے ہیں' کو مکمل کرتی ہے؟"
+        },
+        "arabic": "الْمُؤْمِنُونَ ___ بِاللَّهِ",
+        "options": [
+          {
+            "en": "يُؤْمِنُوا",
+            "ur": "يُؤْمِنُوا"
+          },
+          {
+            "en": "يُؤْمِنُونَ",
+            "ur": "يُؤْمِنُونَ"
+          },
+          {
+            "en": "يُؤْمِنَ",
+            "ur": "يُؤْمِنَ"
+          },
+          {
+            "en": "يُؤْمِنْ",
+            "ur": "يُؤْمِنْ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch59-test-q08",
+        "topic": {
+          "en": "A five verb after لَمْ",
+          "ur": "لَمْ کے بعد افعال خمسہ"
+        },
+        "prompt": {
+          "en": "Which form means 'They did not fear'?",
+          "ur": "کون سی صورت 'انہوں نے تقویٰ نہیں کیا' کا مطلب دیتی ہے؟"
+        },
+        "options": [
+          {
+            "en": "لَمْ يَتَّقُونَ",
+            "ur": "لَمْ يَتَّقُونَ"
+          },
+          {
+            "en": "لَمْ يَتَّقِ",
+            "ur": "لَمْ يَتَّقِ"
+          },
+          {
+            "en": "لَمْ يَتَّقُوا",
+            "ur": "لَمْ يَتَّقُوا"
+          },
+          {
+            "en": "لَنْ يَتَّقُونَ",
+            "ur": "لَنْ يَتَّقُونَ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch59-test-q09",
+        "topic": {
+          "en": "Object or preposition",
+          "ur": "مفعول یا حرف جر"
+        },
+        "prompt": {
+          "en": "In صَبَرَ زَيْدٌ عَلَى الْمِحْنَةِ, what is عَلَى الْمِحْنَةِ?",
+          "ur": "صَبَرَ زَيْدٌ عَلَى الْمِحْنَةِ میں عَلَى الْمِحْنَةِ کیا ہے؟"
+        },
+        "arabic": "صَبَرَ زَيْدٌ عَلَى الْمِحْنَةِ",
+        "options": [
+          {
+            "en": "A direct object, accusative",
+            "ur": "مفعول بہ، منصوب"
+          },
+          {
+            "en": "The subject",
+            "ur": "فاعل"
+          },
+          {
+            "en": "The verb",
+            "ur": "فعل"
+          },
+          {
+            "en": "A prepositional phrase, not an object",
+            "ur": "جار مجرور، مفعول نہیں"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch59-test-q10",
+        "topic": {
+          "en": "Two objects",
+          "ur": "دو مفعول"
+        },
+        "prompt": {
+          "en": "In وَجَدْتُ زَيْدًا صَادِقًا, what is صَادِقًا?",
+          "ur": "وَجَدْتُ زَيْدًا صَادِقًا میں صَادِقًا کیا ہے؟"
+        },
+        "arabic": "وَجَدْتُ زَيْدًا صَادِقًا",
+        "options": [
+          {
+            "en": "A prepositional phrase",
+            "ur": "جار مجرور"
+          },
+          {
+            "en": "The second object, accusative",
+            "ur": "دوسرا مفعول، منصوب"
+          },
+          {
+            "en": "The subject",
+            "ur": "فاعل"
+          },
+          {
+            "en": "A verb",
+            "ur": "فعل"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch59-test-q11",
+        "topic": {
+          "en": "A fronted predicate",
+          "ur": "مقدم خبر"
+        },
+        "prompt": {
+          "en": "In فِي الْبَيْتِ رَجُلٌ, which word is the subject?",
+          "ur": "فِي الْبَيْتِ رَجُلٌ میں مبتدا کون سا لفظ ہے؟"
+        },
+        "arabic": "فِي الْبَيْتِ رَجُلٌ",
+        "options": [
+          {
+            "en": "رَجُلٌ — nominative, delayed",
+            "ur": "رَجُلٌ — مرفوع، مؤخر"
+          },
+          {
+            "en": "الْبَيْتِ — genitive",
+            "ur": "الْبَيْتِ — مجرور"
+          },
+          {
+            "en": "فِي — a particle",
+            "ur": "فِي — حرف"
+          },
+          {
+            "en": "None of them",
+            "ur": "ان میں سے کوئی نہیں"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch59-test-q12",
+        "topic": {
+          "en": "A verbal noun that stresses the verb",
+          "ur": "فعل کو مضبوط کرنے والا مصدر"
+        },
+        "prompt": {
+          "en": "In وَكَلَّمَ اللَّهُ مُوسَى تَكْلِيمًا, what is تَكْلِيمًا?",
+          "ur": "وَكَلَّمَ اللَّهُ مُوسَى تَكْلِيمًا میں تَكْلِيمًا کیا ہے؟"
+        },
+        "arabic": "وَكَلَّمَ اللَّهُ مُوسَىٰ تَكْلِيمًا",
+        "options": [
+          {
+            "en": "The direct object of كَلَّمَ",
+            "ur": "كَلَّمَ کا مفعول بہ"
+          },
+          {
+            "en": "The subject",
+            "ur": "فاعل"
+          },
+          {
+            "en": "The verbal noun of كَلَّمَ that stresses the action — not a second direct object",
+            "ur": "كَلَّمَ کا مصدر جو عمل کو مضبوط کرتا ہے — دوسرا مفعول بہ نہیں"
+          },
+          {
+            "en": "A preposition",
+            "ur": "حرف جر"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch59-test-q13",
+        "topic": {
+          "en": "Al-A'la — the first half",
+          "ur": "الاعلیٰ — پہلا حصہ"
+        },
+        "prompt": {
+          "en": "What do 87:2–4 say about the Lord?",
+          "ur": "87:2–4 رب کے بارے میں کیا کہتی ہیں؟"
+        },
+        "arabic": "الَّذِي خَلَقَ فَسَوَّىٰ وَالَّذِي قَدَّرَ فَهَدَىٰ وَالَّذِي أَخْرَجَ الْمَرْعَىٰ",
+        "options": [
+          {
+            "en": "He created and proportioned, measured out and guided, and brought out the pasture",
+            "ur": "اس نے پیدا کیا اور درست بنایا، اندازہ کیا اور راہ دکھائی، اور چراگاہ نکالی"
+          },
+          {
+            "en": "He created and left",
+            "ur": "اس نے پیدا کیا اور چھوڑ دیا"
+          },
+          {
+            "en": "He brought out the pasture only",
+            "ur": "اس نے صرف چراگاہ نکالی"
+          },
+          {
+            "en": "Nothing is said of the Lord",
+            "ur": "رب کے بارے میں کچھ نہیں کہا گیا"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch59-test-q14",
+        "topic": {
+          "en": "Al-A'la — the whole",
+          "ur": "الاعلیٰ — پوری سورت"
+        },
+        "prompt": {
+          "en": "Which sentence best describes 87:10–19?",
+          "ur": "کون سا جملہ 87:10–19 کو بہترین بیان کرتا ہے؟"
+        },
+        "arabic": "قَدْ أَفْلَحَ مَن تَزَكَّىٰ … وَالْآخِرَةُ خَيْرٌ وَأَبْقَىٰ",
+        "options": [
+          {
+            "en": "Only the story of the earlier prophets",
+            "ur": "صرف پہلے انبیاء کی کہانی"
+          },
+          {
+            "en": "Two paths — the one who fears and is purified succeeds; you prefer this world, though the Hereafter is better — and all this is in the earlier scrolls",
+            "ur": "دو راستے — ڈرنے والا اور پاکیزگی اختیار کرنے والا کامیاب ہے؛ تم دنیا کو ترجیح دیتے ہو حالانکہ آخرت بہتر ہے — اور یہ سب پہلے صحیفوں میں ہے"
+          },
+          {
+            "en": "Only praise of the Lord",
+            "ur": "صرف رب کی حمد"
+          },
+          {
+            "en": "Only a list of what the Lord made",
+            "ur": "صرف رب کی بنائی چیزوں کی فہرست"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch59-test-q15",
+        "topic": {
+          "en": "A participle with an object",
+          "ur": "مفعول والا اسم فاعل"
+        },
+        "prompt": {
+          "en": "In الْمُعَلِّمُ قَارِئٌ الْكِتَابَ الْآنَ, which word is the object of the participle قَارِئٌ?",
+          "ur": "الْمُعَلِّمُ قَارِئٌ الْكِتَابَ الْآنَ میں اسم فاعل قَارِئٌ کا مفعول کون سا لفظ ہے؟"
+        },
+        "arabic": "الْمُعَلِّمُ قَارِئٌ الْكِتَابَ الْآنَ",
+        "options": [
+          {
+            "en": "الْمُعَلِّمُ",
+            "ur": "الْمُعَلِّمُ"
+          },
+          {
+            "en": "الْآنَ",
+            "ur": "الْآنَ"
+          },
+          {
+            "en": "قَارِئٌ",
+            "ur": "قَارِئٌ"
+          },
+          {
+            "en": "الْكِتَابَ",
+            "ur": "الْكِتَابَ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch59-test-q16",
+        "topic": {
+          "en": "Quoted speech",
+          "ur": "نقل کیا ہوا کلام"
+        },
+        "prompt": {
+          "en": "In قَالَ الطَّالِبُ لِلْمُعَلِّمِ إِنِّي حَاضِرٌ, which phrase names the listener?",
+          "ur": "قَالَ الطَّالِبُ لِلْمُعَلِّمِ إِنِّي حَاضِرٌ میں سننے والے کا نام کون سا حصہ لیتا ہے؟"
+        },
+        "arabic": "قَالَ الطَّالِبُ لِلْمُعَلِّمِ إِنِّي حَاضِرٌ",
+        "options": [
+          {
+            "en": "إِنِّي",
+            "ur": "إِنِّي"
+          },
+          {
+            "en": "حَاضِرٌ",
+            "ur": "حَاضِرٌ"
+          },
+          {
+            "en": "لِلْمُعَلِّمِ",
+            "ur": "لِلْمُعَلِّمِ"
+          },
+          {
+            "en": "الطَّالِبُ",
+            "ur": "الطَّالِبُ"
+          }
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Book 6 — grammar science",
+      "ar": "عِلْمُ النَّحْوِ",
+      "ur": "کتاب 6 — علم النحو"
+    },
+    "ayah": {
+      "surah": 87,
+      "ayah": 14,
+      "label": "Al-A'la 87:14",
+      "ar": "قَدْ أَفْلَحَ مَن تَزَكَّىٰ",
+      "en": "He has certainly succeeded who purifies himself",
+      "ur": "بے شک وہ مراد کو پہنچ گیا جو پاک ہوا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087014.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "قَدْ",
+      "أَفْلَحَ"
+    ],
+    "noor_explanation": {
+      "en": "You finish Book 6 able to read a sentence by role and sign, tell special nouns and weak verbs by their endings, and read Al-A'la as a whole.",
+      "ur": "آپ کتاب 6 اس حال میں مکمل کرتے ہیں کہ جملے کو کردار اور علامت سے پڑھ سکتے ہیں، خاص اسموں اور معتل افعال کو ان کے انجام سے پہچان سکتے ہیں، اور الاعلیٰ پوری پڑھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 59 complete — Book 6 is done. Chapter 60: travel, schedules and Hajj language.",
+      "ur": "باب 59 مکمل — کتاب 6 پوری ہوئی۔ باب 60: سفر، اوقات اور حج کی زبان۔"
+    }
+  }
+}

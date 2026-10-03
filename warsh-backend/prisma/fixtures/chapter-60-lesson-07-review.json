@@ -1,0 +1,502 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 60, Retrieval review (ch60-l07, new). Twelve tasks, two for each of the six test strands: vehicles and destinations, appointments and time words, Hajj words, the CL16 exchange, place names and farewell words. Words and phrases only: no ritual rule, route or timing is asked. Added 2026-10-04 in the proposal harvest, batch 7 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-60-content-proposal.md and its review amendments.",
+    "title": "Chapter 60 Review — Travel and Hajj Language",
+    "titleAr": "مُرَاجَعَةُ الْبَابِ 60 — لُغَةُ السَّفَرِ وَالْحَجِّ",
+    "titleUr": "باب 60 کا جائزہ — سفر اور حج کی زبان",
+    "chapter_order": 60,
+    "lesson_order": 7,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 106,
+      "ayah": 2,
+      "label": "undefined 106:2",
+      "ar": "إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ",
+      "en": "Their accustomed security [in] the caravan of winter and summer -",
+      "ur": "(یعنی) ان کو جاڑے اور گرمی کے سفر سے مانوس کرنے کے سبب",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/106002.mp3"
+    },
+    "noor_intro": {
+      "en": "Review Chapter 60: vehicles, time words, Hajj words, the bus conversation and place names.",
+      "ur": "باب 60 کا جائزہ: سواریاں، وقت کے الفاظ، حج کے الفاظ، بس کی گفتگو اور جگہوں کے نام۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 60 summary",
+        "ar": "خُلَاصَةُ الْبَابِ",
+        "ur": "باب 60 کا خلاصہ"
+      },
+      "explanation": {
+        "en": "Vehicles and destinations (حَافِلَةٌ, طَائِرَةٌ, قِطَارٌ, رَكِبَ), time and appointments (مَوْعِدٌ, سَاعَةٌ, يَوْمٌ, شَهْرٌ), Hajj words (حَجٌّ, عُمْرَةٌ, رَحِيلٌ), the travel conversation (is this bus going to Makkah? in front of the station? no, to Makkah), place names (عَرَفَاتٌ, مِنًى, مُزْدَلِفَةُ) and farewell words (دُعَاءٌ, وَدَاعٌ, طَوَافٌ). This is word and phrase practice: it does not teach ritual rules or timings.",
+        "ur": "سواریاں اور منزلیں (حَافِلَةٌ، طَائِرَةٌ، قِطَارٌ، رَكِبَ)، وقت اور ملاقاتیں (مَوْعِدٌ، سَاعَةٌ، يَوْمٌ، شَهْرٌ)، حج کے الفاظ (حَجٌّ، عُمْرَةٌ، رَحِيلٌ)، سفر کی گفتگو (کیا یہ بس مکہ جا رہی ہے؟ اسٹیشن کے سامنے؟ نہیں، مکہ کی طرف)، جگہوں کے نام (عَرَفَاتٌ، مِنًى، مُزْدَلِفَةُ) اور رخصتی کے الفاظ (دُعَاءٌ، وَدَاعٌ، طَوَافٌ)۔ یہ الفاظ اور جملوں کی مشق ہے: یہ ہدایات یا اوقات نہیں سکھاتی۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Words, not rulings",
+        "ur": "الفاظ، فتوے نہیں"
+      },
+      "body": {
+        "en": "Each question asks what a word or phrase means. None asks what a pilgrim must do or when.",
+        "ur": "ہر سوال پوچھتا ہے کہ لفظ یا جملے کا مطلب کیا ہے۔ کوئی سوال یہ نہیں پوچھتا کہ حاجی کو کیا کرنا ہے یا کب۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch60-l07-ex01",
+      "prompt": {
+        "ar": "حَافِلَةٌ",
+        "ar_plain": "حافلة",
+        "translit": "ḥāfilatun",
+        "en": "(which vehicle is this?)",
+        "ur": "(یہ کون سی سواری ہے؟)"
+      },
+      "options": [
+        {
+          "en": "a bus",
+          "ur": "بس"
+        },
+        {
+          "en": "an airplane",
+          "ur": "ہوائی جہاز"
+        },
+        {
+          "en": "a train",
+          "ur": "ٹرین"
+        },
+        {
+          "en": "a sea",
+          "ur": "سمندر"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "حَافِلَةٌ is a bus; طَائِرَةٌ is an airplane; قِطَارٌ is a train.",
+        "ur": "حَافِلَةٌ بس ہے؛ طَائِرَةٌ ہوائی جہاز؛ قِطَارٌ ٹرین۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch60-l07-ex02",
+      "prompt": {
+        "ar": "رَكِبْتُ الْقِطَارَ إِلَى الْمَدِينَةِ",
+        "ar_plain": "ركبت القطار الى المدينة",
+        "translit": "rakibtu al-qiṭāra ʾilā al-madīnati",
+        "en": "(what did I do?)",
+        "ur": "(میں نے کیا کیا؟)"
+      },
+      "options": [
+        {
+          "en": "I left the train in Madinah",
+          "ur": "میں نے مدینہ میں ٹرین چھوڑ دی"
+        },
+        {
+          "en": "I boarded the train to Madinah",
+          "ur": "میں مدینہ کی ٹرین پر سوار ہوا"
+        },
+        {
+          "en": "I bought a train",
+          "ur": "میں نے ٹرین خریدی"
+        },
+        {
+          "en": "I saw the sea in Madinah",
+          "ur": "میں نے مدینہ میں سمندر دیکھا"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "رَكِبَ means 'to ride, to board'.",
+        "ur": "رَكِبَ کا مطلب 'سوار ہونا' ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch60-l07-ex03",
+      "prompt": {
+        "ar": "مَوْعِدُ الرِّحْلَةِ",
+        "ar_plain": "موعد الرحلة",
+        "translit": "mawʿidu ar-riḥlati",
+        "en": "(what does this phrase name?)",
+        "ur": "(یہ جملہ کس کا نام ہے؟)"
+      },
+      "options": [
+        {
+          "en": "the end of the trip",
+          "ur": "سفر کا اختتام"
+        },
+        {
+          "en": "the price of the trip",
+          "ur": "سفر کی قیمت"
+        },
+        {
+          "en": "the scheduled time of the trip",
+          "ur": "سفر کا مقررہ وقت"
+        },
+        {
+          "en": "the companion on the trip",
+          "ur": "سفر کا ساتھی"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَوْعِدٌ is an appointment or scheduled time.",
+        "ur": "مَوْعِدٌ ملاقات یا مقررہ وقت ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch60-l07-ex04",
+      "statement": {
+        "en": "يَوْمٌ means 'day' and شَهْرٌ means 'month'.",
+        "ur": "يَوْمٌ کا مطلب 'دن' اور شَهْرٌ کا مطلب 'مہینہ' ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes — a day is shorter than a month.",
+        "ur": "جی ہاں — دن مہینے سے چھوٹا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch60-l07-ex05",
+      "prompt": {
+        "ar": "حَجٌّ",
+        "ar_plain": "حج",
+        "translit": "ḥajjun",
+        "en": "(which word is this?)",
+        "ur": "(یہ کون سا لفظ ہے؟)"
+      },
+      "options": [
+        {
+          "en": "a bus",
+          "ur": "بس"
+        },
+        {
+          "en": "an appointment",
+          "ur": "ملاقات"
+        },
+        {
+          "en": "a farewell",
+          "ur": "رخصتی"
+        },
+        {
+          "en": "Hajj, the pilgrimage to Makkah",
+          "ur": "حج، مکہ کی زیارت"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "حَجٌّ is the pilgrimage; عُمْرَةٌ is the lesser pilgrimage.",
+        "ur": "حَجٌّ زیارتِ مکہ ہے؛ عُمْرَةٌ چھوٹی زیارت۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch60-l07-ex06",
+      "prompt": {
+        "ar": "عُمْرَةٌ",
+        "ar_plain": "عمرة",
+        "translit": "ʿumratun",
+        "en": "(which word is this?)",
+        "ur": "(یہ کون سا لفظ ہے؟)"
+      },
+      "options": [
+        {
+          "en": "Hajj, the pilgrimage",
+          "ur": "حج، بڑی زیارت"
+        },
+        {
+          "en": "Umrah, the lesser pilgrimage",
+          "ur": "عمرہ، چھوٹی زیارت"
+        },
+        {
+          "en": "a departure",
+          "ur": "روانگی"
+        },
+        {
+          "en": "a ticket",
+          "ur": "ٹکٹ"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "عُمْرَةٌ is the lesser pilgrimage.",
+        "ur": "عُمْرَةٌ چھوٹی زیارت ہے۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch60-l07-ex07",
+      "prompt_line": {
+        "ar": "تَفَضَّلْ.",
+        "ar_plain": "تفضل.",
+        "translit": "tafaḍḍal",
+        "en": "Go ahead. (Bus A says Madinah; you need Makkah.)",
+        "ur": "فرمائیے۔ (بس A پر مدینہ لکھا ہے؛ آپ کو مکہ جانا ہے۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "شُكْرًا.",
+          "ar_plain": "شكرا.",
+          "translit": "shukran",
+          "en": "Thank you.",
+          "ur": "شکریہ۔"
+        },
+        {
+          "ar": "هَلْ هَذِهِ الْحَافِلَةُ إِلَى مَكَّةَ؟",
+          "ar_plain": "هل هذه الحافلة الى مكة؟",
+          "translit": "hal hadhihi al-ḥāfilatu ʾilā makkata",
+          "en": "Is this bus going to Makkah?",
+          "ur": "کیا یہ بس مکہ جا رہی ہے؟"
+        },
+        {
+          "ar": "لَا، إِلَى مَكَّةَ.",
+          "ar_plain": "لا، الى مكة.",
+          "translit": "lā ʾilā makkata",
+          "en": "No, to Makkah.",
+          "ur": "نہیں، مکہ کی طرف۔"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Ask whether this bus goes to Makkah.",
+        "ur": "پوچھیں کہ کیا یہ بس مکہ جاتی ہے۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch60-l07-ex08",
+      "prompt_line": {
+        "ar": "إِلَى الْمَدِينَةِ، صَحِيحٌ؟",
+        "ar_plain": "الى المدينة، صحيح؟",
+        "translit": "ʾilā al-madīnati ṣaḥīḥun",
+        "en": "To Madinah, correct? (You are going to Makkah.)",
+        "ur": "مدینہ کی طرف، ٹھیک ہے؟ (آپ مکہ جا رہے ہیں۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "لَا، إِلَى مَكَّةَ.",
+          "ar_plain": "لا، الى مكة.",
+          "translit": "lā ʾilā makkata",
+          "en": "No, to Makkah.",
+          "ur": "نہیں، مکہ کی طرف۔"
+        },
+        {
+          "ar": "شُكْرًا.",
+          "ar_plain": "شكرا.",
+          "translit": "shukran",
+          "en": "Thank you.",
+          "ur": "شکریہ۔"
+        },
+        {
+          "ar": "أَمَامَ الْمَحَطَّةِ؟",
+          "ar_plain": "امام المحطة؟",
+          "translit": "ʾamāma al-maḥaṭṭati",
+          "en": "In front of the station?",
+          "ur": "اسٹیشن کے سامنے؟"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Correct the wrong destination.",
+        "ur": "غلط منزل کی اصلاح کریں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch60-l07-ex09",
+      "prompt": {
+        "ar": "عَرَفَاتٌ · مِنًى · مُزْدَلِفَةُ",
+        "ar_plain": "عرفات · منى · مزدلفة",
+        "translit": "ʿarafātun · minanā · muzdalifatu",
+        "en": "(what are these three words?)",
+        "ur": "(یہ تین الفاظ کیا ہیں؟)"
+      },
+      "options": [
+        {
+          "en": "names of vehicles",
+          "ur": "سواریوں کے نام"
+        },
+        {
+          "en": "names of months",
+          "ur": "مہینوں کے نام"
+        },
+        {
+          "en": "farewell words",
+          "ur": "رخصتی کے الفاظ"
+        },
+        {
+          "en": "names of places",
+          "ur": "جگہوں کے نام"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Arafat, Mina and Muzdalifah are place names.",
+        "ur": "عرفات، منیٰ اور مزدلفہ جگہوں کے نام ہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch60-l07-ex10",
+      "prompt": {
+        "ar": "مِنًى",
+        "ar_plain": "منى",
+        "translit": "minanā",
+        "en": "(which place is this?)",
+        "ur": "(یہ کون سی جگہ ہے؟)"
+      },
+      "options": [
+        {
+          "en": "Mina, the tented valley",
+          "ur": "منیٰ، خیموں کی وادی"
+        },
+        {
+          "en": "Arafat, the plains",
+          "ur": "عرفات، میدان"
+        },
+        {
+          "en": "a train station",
+          "ur": "ریلوے اسٹیشن"
+        },
+        {
+          "en": "a door",
+          "ur": "دروازہ"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مِنًى is Mina; عَرَفَاتٌ is Arafat.",
+        "ur": "مِنًى منیٰ ہے؛ عَرَفَاتٌ عرفات۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch60-l07-ex11",
+      "prompt": {
+        "ar": "وَدَاعٌ",
+        "ar_plain": "وداع",
+        "translit": "wadāʿun",
+        "en": "(what does this word mean?)",
+        "ur": "(اس لفظ کا مطلب کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "arrival",
+          "ur": "آمد"
+        },
+        {
+          "en": "farewell",
+          "ur": "رخصتی"
+        },
+        {
+          "en": "a ticket",
+          "ur": "ٹکٹ"
+        },
+        {
+          "en": "a gate",
+          "ur": "دروازہ"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "وَدَاعٌ is farewell.",
+        "ur": "وَدَاعٌ رخصتی ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch60-l07-ex12",
+      "prompt": {
+        "ar": "طَوَافٌ",
+        "ar_plain": "طواف",
+        "translit": "ṭawaāfun",
+        "en": "(what does this word mean?)",
+        "ur": "(اس لفظ کا مطلب کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "a farewell",
+          "ur": "رخصتی"
+        },
+        {
+          "en": "a bus",
+          "ur": "بس"
+        },
+        {
+          "en": "circling the Ka'bah",
+          "ur": "کعبہ کا چکر لگانا"
+        },
+        {
+          "en": "a month",
+          "ur": "مہینہ"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "طَوَافٌ is going round the Ka'bah; وَدَاعٌ is farewell.",
+        "ur": "طَوَافٌ کعبہ کے گرد چکر ہے؛ وَدَاعٌ رخصتی ہے۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "A journey in words",
+      "ar": "رِحْلَةُ الشِّتَاءِ وَالصَّيْفِ",
+      "ur": "الفاظ میں سفر"
+    },
+    "ayah": {
+      "surah": 106,
+      "ayah": 2,
+      "label": "undefined 106:2",
+      "ar": "إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ",
+      "en": "Their accustomed security [in] the caravan of winter and summer -",
+      "ur": "(یعنی) ان کو جاڑے اور گرمی کے سفر سے مانوس کرنے کے سبب",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/106002.mp3"
+    },
+    "highlighted_word_indices": [
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "رِحْلَةَ",
+      "الشِّتَاءِ"
+    ],
+    "noor_explanation": {
+      "en": "رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ — 'the journey of winter and summer': رِحْلَةٌ is a journey, the word the whole chapter is about.",
+      "ur": "رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ — 'سردی اور گرمی کا سفر': رِحْلَةٌ سفر ہے، وہی لفظ جس کے گرد پورا باب ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Vehicles, time, Hajj words, a bus conversation, places and farewells — Chapter 60 in one review.",
+      "ur": "سواریاں، وقت، حج کے الفاظ، بس کی گفتگو، جگہیں اور رخصتیاں — باب 60 ایک جائزے میں۔"
+    }
+  }
+}

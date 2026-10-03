@@ -1,209 +1,241 @@
 {
   "schema_version": "1.0",
-  "template": "REVIEW",
+  "template": "STANDARD",
   "_meta": {
-    "_note": "R12 — Post-Peak 2 Reinforcement after Chapter 57. Reviews Book 6 content: الإعراب، الأسماء الخمسة، weak verbs, الأفعال الخمسة.",
+    "_note": "Chapter 57, Lesson 8 — الأفعال الخمسة in the Quran: deep practice. Quranic examples of all five forms, including ن-dropping in مجزوم/منصوب contexts.",
     "chapter_order": 57,
     "lesson_order": 9,
-    "chapter_title": "R12 — Post-Peak 2 Review",
-    "title": "R12 — Peak 2 Mastery: الإعراب and Advanced Verbs",
-    "titleAr": "الْمُرَاجَعَةُ الثَّانِيَةَ عَشْرَةَ — الْإِعْرَابُ وَالْأَفْعَالُ",
-    "estimated_minutes": 15,
-    "xp_reward": 20
+    "chapter_title": "Advanced Verb Grammar — الأفعال الخمسة",
+    "title": "الأفعال الخمسة in the Quran — Deep Practice",
+    "titleAr": "الأَفْعَالُ الخَمْسَةُ فِي الْقُرْآنِ",
+    "estimated_minutes": 12,
+    "xp_reward": 12
   },
   "hook": {
     "ayah": {
-      "surah": 56,
-      "ayah": 77,
-      "label": "Al-Waqi'ah 56:77",
-      "ar": "إِنَّهُ لَقُرْآنٌ كَرِيمٌ",
-      "en": "Indeed, it is a noble Quran",
-      "ur": "بے شک یہ ایک کریم قرآن ہے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/056077.mp3"
+      "surah": 2,
+      "ayah": 278,
+      "label": "Al-Baqarah 2:278",
+      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَذَرُوا مَا بَقِيَ مِنَ الرِّبَا",
+      "en": "O you who believe! Fear Allah and give up what remains of riba.",
+      "ur": "اے ایمان والو! اللہ سے ڈرو اور جو سود باقی ہے اسے چھوڑ دو۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002278.mp3"
     },
     "noor_intro": {
-      "en": "R12 reviews Book 6: الْإِعْرَاب وَالْبِنَاء, the special noun types, weak verbs and the five verbs. Let's check how they work together.",
-      "ur": "R12 کتاب 6 کی مراجعہ ہے: اعراب و بنا، خاص اسم، معتل افعال اور افعال خمسہ۔ دیکھیں یہ سب مل کر کیسے کام کرتے ہیں۔"
+      "en": "اتَّقُوا and ذَرُوا are plural commands. A command is built on the jussive of the present tense, so like تَتَّقُوا and تَذَرُوا it has no ن. Today we read the Quran looking for the ن — present or missing.",
+      "ur": "اتَّقُوا اور ذَرُوا جمع امر ہیں۔ امر مضارع کے مجزوم پر بنتا ہے، اس لیے تَتَّقُوا اور تَذَرُوا کی طرح اس میں ن نہیں۔ آج ہم قرآن میں ن تلاش کریں گے — موجود یا غائب۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Book 6 in review — four pillars",
-        "ur": "Book 6 جائزہ میں — چار ستون"
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "اتَّقُوا اللَّهَ وَذَرُوا مَا بَقِيَ مِنَ الرِّبَا",
+        "ar_plain": "اتقوا الله وذروا ما بقي من الربا",
+        "translit": "ittaquu Allaaha wa dharuu maa baqiya mina ar-ribaa",
+        "en": "Fear Allah and give up what remains of riba.",
+        "ur": "اللہ سے ڈرو اور جو سود باقی ہے اسے چھوڑ دو۔"
       },
-      "body": {
-        "en": "1. الْإِعْرَاب وَالْبِنَاء — words whose endings change (مُعْرَب) and words with fixed endings (مَبْنِيّ). 2. Special nouns: the five nouns (أَب، أَخ…), الْمَقْصُور (مُوسَى), الْمَنْقُوص (الْقَاضِي), the dual (كِتَابَانِ). 3. Weak verbs: قَالَ، كَانَ، رَأَى — the و / ي of the root changes shape. 4. The five verbs — ن marks raf'.",
-        "ur": "1. اعراب و بنا — وہ الفاظ جن کا آخر بدلتا ہے (معرب) اور جن کا مقرر ہے (مبنی)۔ 2. خاص اسم: اسمائے خمسہ (أَب، أَخ…)، مقصور (مُوسَى)، منقوص (الْقَاضِي)، تثنیہ (كِتَابَانِ)۔ 3. معتل افعال: قَالَ، كَانَ، رَأَى — مادے کا و / ي شکل بدلتا ہے۔ 4. افعال خمسہ — ن رفع کی علامت۔"
+      "explanation": {
+        "en": "Al-Baqarah 2:278. اتَّقُوا (\"fear!\") and ذَرُوا (\"give up!\") are plural commands. The command is formed from the jussive (تَتَّقُوا → اتَّقُوا), so it has no ن, just like the five verbs in jazm.",
+        "ur": "سورۃ البقرہ 2:278۔ اتَّقُوا (\"ڈرو!\") اور ذَرُوا (\"چھوڑ دو!\") جمع امر ہیں۔ امر مجزوم سے بنتا ہے (تَتَّقُوا ← اتَّقُوا)، اس لیے اس میں ن نہیں، بالکل جزم والے افعال خمسہ کی طرح۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "أَبُو إِبْرَاهِيمَ",
-        "ar_plain": "أبو إبراهيم",
-        "translit": "abuu Ibraahiima",
-        "en": "the father of Ibrahim",
-        "ur": "ابراہیم کے والد"
+        "ar": "وَلَا تَكُونُوا",
+        "ar_plain": "ولا تكونوا",
+        "translit": "wa laa takuunuu",
+        "en": "and do not be (2nd pl., مجزوم)",
+        "ur": "اور مت ہو (دوسرا جمع، مجزوم)"
       },
       "explanation": {
-        "en": "أَبُو shows the nominative with و: أَبُو (nom.), أَبَا (acc.), أَبِي (gen.). Like the five verbs, the five nouns show their state with a letter rather than a short vowel.",
-        "ur": "أَبُو رفع و سے دکھاتا ہے: أَبُو (رفع)، أَبَا (نصب)، أَبِي (جر)۔ افعال خمسہ کی طرح اسمائے خمسہ بھی اپنی حالت حرکت کے بجائے حرف سے دکھاتے ہیں۔"
+        "en": "تَكُونُوا = تَفْعَلُونَ pattern of كَانَ. After لَا الناهية (prohibitive لَا), the verb is مجزوم, so ن drops: تَكُونُونَ → تَكُونُوا. This appears dozens of times in the Quran.",
+        "ur": "تَكُونُوا = كَانَ کا تَفْعَلُونَ pattern۔ لَا الناهية (منع کرنے والا لَا) کے بعد فعل مجزوم ہے، اس لیے ن گرتی ہے: تَكُونُونَ → تَكُونُوا۔ یہ قرآن میں درجنوں بار آتا ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "أَن تُقَاتِلُوا",
+        "ar_plain": "أن تقاتلوا",
+        "translit": "an tuqaatiluu",
+        "en": "that you fight (2nd pl., منصوب)",
+        "ur": "کہ تم لڑو (دوسرا جمع، منصوب)"
+      },
+      "explanation": {
+        "en": "After أَنْ (which causes naṣb), تُقَاتِلُونَ loses its ن: أَنْ تُقَاتِلُوا. أَنْ + naṣb is very common.",
+        "ur": "أَنْ (جو نصب دیتا ہے) کے بعد تُقَاتِلُونَ اپنا ن کھو دیتا ہے: أَنْ تُقَاتِلُوا۔ أَنْ + نصب بہت عام ہے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Summary: الأفعال الخمسة state signals",
+        "ur": "خلاصہ: الأفعال الخمسة کی حالت کی علامات"
+      },
+      "body": {
+        "en": "مرفوع (default): ون / ان / ين — ن present. Triggered by: no preceding particle. منصوب (after أَن، لَن، كَي): و / ا / ي — ن absent. مجزوم (after لَمْ، لَمَّا، لَا الناهية، لام الأمر): و / ا / ي — ن absent. The distinction between منصوب and مجزوم requires knowing the triggering particle.",
+        "ur": "مرفوع (default): ون / ان / ين — ن موجود۔ Trigger: کوئی particle نہیں۔ منصوب (أَن، لَن، كَي کے بعد): و / ا / ي — ن غیر موجود۔ مجزوم (لَمْ، لَمَّا، لَا الناهية، لام الأمر کے بعد): و / ا / ي — ن غیر موجود۔"
       }
     }
   ],
   "exercises": [
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch57-l09-ex01",
+      "id": "ch57-l08-ex01",
       "prompt": {
-        "ar": "قَالَ رَبِّي يَعْلَمُ",
-        "ar_plain": "قال ربي يعلم",
-        "translit": "qaala rabbii ya'lamu",
-        "en": "He said: My Lord knows",
-        "ur": "اس نے کہا: میرا رب جانتا ہے"
+        "ar": "وَلَا تَكُونُوا كَالَّذِينَ كَفَرُوا",
+        "ar_plain": "ولا تكونوا كالذين كفروا",
+        "translit": "wa laa takuunuu kalladheena kafaruu",
+        "en": "And do not be like those who disbelieved",
+        "ur": "اور ان لوگوں جیسے مت ہو جنہوں نے کفر کیا"
       },
       "options": [
         {
-          "en": "He said: My Lord knows",
-          "ur": "اس نے کہا: میرا رب جانتا ہے"
+          "en": "And do not be like those who disbelieved",
+          "ur": "اور ان لوگوں جیسے مت ہو جنہوں نے کفر کیا"
         },
         {
-          "en": "He said: My Lord knew",
-          "ur": "اس نے کہا: میرے رب نے جانا"
+          "en": "And they were not like those who disbelieved",
+          "ur": "اور وہ ان لوگوں جیسے نہیں تھے جنہوں نے کفر کیا"
         },
         {
-          "en": "He says: My Lord will know",
-          "ur": "وہ کہتا ہے: میرا رب جانے گا"
+          "en": "And do not say what the disbelievers say",
+          "ur": "اور وہ نہ کہو جو کافر کہتے ہیں"
         },
         {
-          "en": "My Lord said: He knows",
-          "ur": "میرے رب نے کہا: وہ جانتا ہے"
+          "en": "And those who disbelieved were not like you",
+          "ur": "اور جنہوں نے کفر کیا وہ تم جیسے نہیں تھے"
         }
       ],
       "correct_index": 0,
       "xp_value": 2,
       "explanation_on_wrong": {
-        "en": "قَالَ is a weak verb (root: ق-و-ل, middle root letter و). Past tense: قَالَ. يَعْلَمُ is present tense 'he knows' (مرفوع, no triggering particle).",
-        "ur": "قَالَ ایک معتل فعل ہے (جڑ: ق-و-ل، درمیانی حرف و)۔ ماضی: قَالَ۔ يَعْلَمُ مضارع 'وہ جانتا ہے' (مرفوع) ہے۔"
+        "en": "وَلَا تَكُونُوا: وَ (and) + لَا الناهية (prohibitive, triggers مجزوم) + تَكُونُوا (you be, مجزوم, ن dropped). كَالَّذِينَ = كَـ (like) + الَّذِينَ (those who). كَفَرُوا = they disbelieved (past).",
+        "ur": "وَلَا تَكُونُوا: وَ (اور) + لَا الناهية (منع، مجزوم trigger) + تَكُونُوا (تم ہو، مجزوم، ن گری)۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch57-l09-ex02",
+      "id": "ch57-l08-ex02",
       "statement": {
-        "en": "الأسماء الخمسة and الأفعال الخمسة both use letters (not diacritics) to show grammatical state.",
-        "ur": "الأسماء الخمسة اور الأفعال الخمسة دونوں اعرابی حالت ظاہر کرنے کے لیے حرکات کی بجائے حروف استعمال کرتے ہیں۔",
+        "en": "In أَن تُؤْمِنُوا, the verb تُؤْمِنُوا is مجزوم because of أَن.",
+        "ur": "أَن تُؤْمِنُوا میں، فعل تُؤْمِنُوا مجزوم ہے کیونکہ أَن ہے۔",
         "ar_example": {
-          "ar": "أَبُو بَكْرٍ / يَعْمَلُونَ",
-          "ar_plain": "أبو بكر / يعملون",
-          "translit": "abuu bakrin / ya'maluuna",
-          "en": "Abu Bakr / they work (مرفوع)",
-          "ur": "ابو بکر / وہ کام کرتے ہیں (مرفوع)"
+          "ar": "أَن تُؤْمِنُوا بِاللَّهِ",
+          "ar_plain": "أن تؤمنوا بالله",
+          "translit": "an tu'minuu billaahi",
+          "en": "that you believe in Allah",
+          "ur": "کہ تم اللہ پر ایمان لاؤ"
         }
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. أَنْ causes naṣb, not jazm. In the five verbs both look the same — the ن drops — but the state is naṣb.",
+        "ur": "غلط۔ أَنْ نصب دیتا ہے، جزم نہیں۔ افعال خمسہ میں دونوں ایک جیسے لگتے ہیں — ن گر جاتا ہے — مگر حالت نصب ہے۔"
+      }
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch57-l09-ex03",
+      "id": "ch57-l08-ex03",
       "mode": "TAP",
-      "sentence_ar": "إِنَّهُ لَقُرْآنٌ ___",
+      "sentence_ar": "اتَّقُوا اللَّهَ وَذَرُوا مَا بَقِيَ مِنَ ___",
       "hint": {
-        "en": "noble / generous (Al-Waqi'ah 56:77)",
-        "ur": "کریم / شریف (الواقعۃ 56:77)"
+        "en": "riba / interest (Al-Baqarah 2:278)",
+        "ur": "سود (البقرۃ 2:278)"
       },
       "options": [
         {
-          "ar": "كَرِيمٌ",
-          "ar_plain": "كريم",
-          "translit": "kariimun",
-          "en": "noble (خبر إِنَّ, مرفوع)",
-          "ur": "شریف (إِنَّ کی خبر، مرفوع)"
+          "ar": "الرِّبَا",
+          "ar_plain": "الربا",
+          "translit": "ar-ribaa",
+          "en": "the riba",
+          "ur": "سود"
         },
         {
-          "ar": "كَرِيمًا",
-          "ar_plain": "كريما",
-          "translit": "kariiman",
-          "en": "noble (منصوب)",
-          "ur": "شریف (منصوب)"
+          "ar": "الظُّلْمِ",
+          "ar_plain": "الظلم",
+          "translit": "az-zulmi",
+          "en": "the injustice",
+          "ur": "ظلم"
         },
         {
-          "ar": "كَرِيمٍ",
-          "ar_plain": "كريم",
-          "translit": "kariimin",
-          "en": "noble (مجرور)",
-          "ur": "شریف (مجرور)"
+          "ar": "الشِّرْكِ",
+          "ar_plain": "الشرك",
+          "translit": "ash-shirki",
+          "en": "polytheism",
+          "ur": "شرک"
         },
         {
-          "ar": "الْكَرِيمُ",
-          "ar_plain": "الكريم",
-          "translit": "al-kariim",
-          "en": "the Noble One",
-          "ur": "کریم"
+          "ar": "الْكَذِبِ",
+          "ar_plain": "الكذب",
+          "translit": "al-kadhibi",
+          "en": "the lie",
+          "ur": "جھوٹ"
         }
       ],
       "correct_answer": {
-        "ar": "كَرِيمٌ",
-        "ar_plain": "كريم",
-        "translit": "kariimun",
-        "en": "noble (خبر إِنَّ, مرفوع)",
-        "ur": "شریف (إِنَّ کی خبر، مرفوع)"
+        "ar": "الرِّبَا",
+        "ar_plain": "الربا",
+        "translit": "ar-ribaa",
+        "en": "the riba",
+        "ur": "سود"
       },
       "xp_value": 2
     },
     {
       "type": "MATCHING",
-      "id": "ch57-l09-ex04",
+      "id": "ch57-l08-ex04",
       "left_column": [
         {
-          "ar": "مُعْرَب",
-          "ar_plain": "معرب",
-          "translit": "mu'rab",
-          "en": "case-changing",
-          "ur": "کیس بدلنا"
+          "ar": "يُؤْمِنُونَ",
+          "ar_plain": "يؤمنون",
+          "translit": "yu'minuuna",
+          "en": "they believe",
+          "ur": "وہ یقین رکھتے ہیں"
         },
         {
-          "ar": "مَبْنِيّ",
-          "ar_plain": "مبني",
-          "translit": "mabni",
-          "en": "fixed ending",
-          "ur": "مقررہ اختتام"
+          "ar": "لَمْ يُؤْمِنُوا",
+          "ar_plain": "لم يؤمنوا",
+          "translit": "lam yu'minuu",
+          "en": "they did not believe",
+          "ur": "انہوں نے یقین نہیں کیا"
         },
         {
-          "ar": "معتل",
-          "ar_plain": "معتل",
-          "translit": "mu'tall",
-          "en": "weak verb",
-          "ur": "کمزور فعل"
+          "ar": "أَن يُؤْمِنُوا",
+          "ar_plain": "أن يؤمنوا",
+          "translit": "an yu'minuu",
+          "en": "that they believe",
+          "ur": "کہ وہ یقین رکھتے ہیں"
         },
         {
-          "ar": "المثنى",
-          "ar_plain": "المثنى",
-          "translit": "al-muthannaa",
-          "en": "the dual",
-          "ur": "دوہری"
+          "ar": "اتَّقُوا",
+          "ar_plain": "اتقوا",
+          "translit": "ittaquu",
+          "en": "fear! (plural command)",
+          "ur": "خوف! (کثرت حکم)"
         }
       ],
       "right_column": [
         {
-          "en": "كِتَابٌ / كِتَابًا / كِتَابٍ",
-          "ur": "کتاب مرفوع/منصوب/مجرور"
+          "en": "مرفوع — ن present",
+          "ur": "مرفوع — ن موجود"
         },
         {
-          "en": "هَذَا — never changes ending",
-          "ur": "هَذَا — اختتام کبھی نہیں بدلتا"
+          "en": "مجزوم after لَمْ — ن absent",
+          "ur": "مجزوم لَمْ کے بعد — ن غیر موجود"
         },
         {
-          "en": "كَانَ، قَالَ، رَأَى",
-          "ur": "كَانَ، قَالَ، رَأَى"
+          "en": "منصوب after أَن — ن absent",
+          "ur": "منصوب أَن کے بعد — ن غیر موجود"
         },
         {
-          "en": "كِتَابَانِ (مرفوع) / كِتَابَيْنِ (منصوب/مجرور)",
-          "ur": "كِتَابَانِ / كِتَابَيْنِ"
+          "en": "imperative (مجزوم type) — ن absent",
+          "ur": "امر (مجزوم قسم) — ن غیر موجود"
         }
       ],
       "correct_pairs": [
@@ -228,120 +260,78 @@
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch57-l09-ex05",
+      "id": "ch57-l08-ex05",
       "target_translation": {
-        "en": "Indeed, it is a noble Quran.",
-        "ur": "بے شک یہ ایک کریم قرآن ہے۔"
+        "en": "Fear Allah and give up riba.",
+        "ur": "اللہ سے ڈرو اور سود چھوڑ دو۔"
       },
       "tiles": [
         {
-          "ar": "إِنَّهُ",
-          "ar_plain": "إنه",
-          "translit": "innahu",
-          "en": "Indeed it",
-          "ur": "بے شک یہ"
+          "ar": "اتَّقُوا",
+          "ar_plain": "اتقوا",
+          "translit": "ittaquu",
+          "en": "fear (pl. imp.)",
+          "ur": "ڈرو"
         },
         {
-          "ar": "لَقُرْآنٌ",
-          "ar_plain": "لقرآن",
-          "translit": "laqur'aanun",
-          "en": "is indeed a Quran",
-          "ur": "یقیناً قرآن ہے"
+          "ar": "اللَّهَ",
+          "ar_plain": "الله",
+          "translit": "Allaaha",
+          "en": "Allah",
+          "ur": "اللہ"
         },
         {
-          "ar": "كَرِيمٌ",
-          "ar_plain": "كريم",
-          "translit": "kariimun",
-          "en": "noble",
-          "ur": "کریم"
+          "ar": "وَذَرُوا",
+          "ar_plain": "وذروا",
+          "translit": "wa dharuu",
+          "en": "and give up",
+          "ur": "اور چھوڑو"
+        },
+        {
+          "ar": "الرِّبَا",
+          "ar_plain": "الربا",
+          "translit": "ar-ribaa",
+          "en": "the riba",
+          "ur": "سود"
         }
       ],
       "correct_order": [
         0,
         1,
-        2
+        2,
+        3
       ],
       "xp_value": 1
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch57-l09-ex06",
-      "sentence_ar": "يُؤْمِنُونَ بِاللَّهِ",
-      "sentence": {
-        "ar": "يُؤْمِنُونَ بِاللَّهِ",
-        "ar_plain": "يؤمنون بالله",
-        "translit": "yu'minuuna billaahi",
-        "en": "they believe in Allah",
-        "ur": "وہ اللہ پر ایمان لاتے ہیں"
-      },
-      "words": [
-        {
-          "ar": "يُؤْمِنُونَ",
-          "ar_plain": "يؤمنون",
-          "translit": "yu'minuuna",
-          "en": "they believe (مرفوع)",
-          "ur": "وہ ایمان لاتے ہیں (مرفوع)"
-        },
-        {
-          "ar": "بِ",
-          "ar_plain": "ب",
-          "translit": "bi",
-          "en": "in (preposition)",
-          "ur": "میں"
-        },
-        {
-          "ar": "اللَّهِ",
-          "ar_plain": "الله",
-          "translit": "Allaahi",
-          "en": "Allah (مجرور)",
-          "ur": "اللہ (مجرور)"
-        }
-      ],
-      "available_roles": [
-        "VERB",
-        "PREPOSITION",
-        "NOUN"
-      ],
-      "correct_roles": [
-        "VERB",
-        "PREPOSITION",
-        "NOUN"
-      ],
-      "xp_value": 2,
-      "explanation_on_wrong": {
-        "en": "يُؤْمِنُونَ is the verb (الأفعال الخمسة, مرفوع — ن present, no triggering particle). بِ is a preposition. اللَّهِ is مجرور (object of the preposition بِ).",
-        "ur": "يُؤْمِنُونَ فعل ہے (الأفعال الخمسة، مرفوع — ن موجود، کوئی triggering particle نہیں)۔ بِ حرف جر ہے۔ اللَّهِ مجرور ہے۔"
-      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "R12 — Book 6 review",
-      "ar": "الْمُرَاجَعَةُ الثَّانِيَةَ عَشْرَةَ",
-      "ur": "R12 — کتاب 6 کی مراجعہ"
+      "en": "الأفعال الخمسة — ن as a state signal in the Quran",
+      "ar": "الأفعال الخمسة — النون كعلامة إعراب في القرآن",
+      "ur": "الأفعال الخمسة — قرآن میں ن بطور اعرابی علامت"
     },
     "ayah": {
-      "surah": 56,
-      "ayah": 77,
-      "label": "Al-Waqi'ah 56:77",
-      "ar": "إِنَّهُ لَقُرْآنٌ كَرِيمٌ",
-      "en": "Indeed, it is a noble Quran",
-      "ur": "بے شک یہ ایک کریم قرآن ہے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/056077.mp3"
+      "surah": 2,
+      "ayah": 278,
+      "label": "Al-Baqarah 2:278",
+      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَذَرُوا مَا بَقِيَ مِنَ الرِّبَا",
+      "en": "O you who believe! Fear Allah and give up what remains of riba.",
+      "ur": "اے ایمان والو! اللہ سے ڈرو اور جو سود باقی ہے اسے چھوڑ دو۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002278.mp3"
     },
     "highlighted_word_indices": [
-      1,
-      2
+      4,
+      6
     ],
     "noor_explanation": {
-      "en": "إِنَّهُ = إِنَّ + هُ (\"it\" — the subject of إِنَّ). لَـ = emphasis. قُرْآنٌ = the predicate of إِنَّ (nominative, tanwīn). كَرِيمٌ = its adjective (nominative). Every ending here tells you the word's role.",
-      "ur": "إِنَّهُ = إِنَّ + هُ (\"وہ\" — إِنَّ کا اسم)۔ لَـ = تاکید۔ قُرْآنٌ = إِنَّ کی خبر (مرفوع، تنوین)۔ كَرِيمٌ = اس کی صفت (مرفوع)۔ یہاں ہر آخر لفظ کا کردار بتاتا ہے۔"
+      "en": "اتَّقُوا and ذَرُوا — plural commands, built on the jussive, so no ن. When you see ـُوا / ـَا / ـِي without ن, look for the reason: a command, a prohibition with لَا, لَمْ, or a naṣb particle like أَنْ، لَنْ، كَيْ.",
+      "ur": "اتَّقُوا اور ذَرُوا — جمع امر، مجزوم پر بنے، اس لیے ن نہیں۔ جب ـُوا / ـَا / ـِي بغیر ن کے دیکھیں تو وجہ تلاش کریں: امر، لَا سے نہی، لَمْ، یا أَنْ، لَنْ، كَيْ جیسا ناصب حرف۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "R12 complete. Book 6 gave you الْإِعْرَاب, the special nouns, weak verbs and the five verbs. Book 7 puts this grammar to work in applied Arabic.",
-      "ur": "R12 مکمل۔ کتاب 6 نے آپ کو اعراب، خاص اسم، معتل افعال اور افعال خمسہ دیے۔ کتاب 7 اس گرامر کو عملی عربی میں استعمال کرتی ہے۔"
+      "en": "Five forms, one signal: ن in raf'; no ن in naṣb, jazm and the command. يُؤْمِنُونَ، أَنْ يُؤْمِنُوا، لَمْ يُؤْمِنُوا، اتَّقُوا — you can now read them all.",
+      "ur": "پانچ صورتیں، ایک علامت: رفع میں ن؛ نصب، جزم اور امر میں ن نہیں۔ يُؤْمِنُونَ، أَنْ يُؤْمِنُوا، لَمْ يُؤْمِنُوا، اتَّقُوا — اب آپ سب پڑھ سکتے ہیں۔"
     }
   }
 }

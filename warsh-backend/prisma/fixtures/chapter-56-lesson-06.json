@@ -2,29 +2,28 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 56, Lesson 6 — Full comparison: المقصور vs المنقوص vs standard nouns.",
+    "_note": "Chapter 56, Lesson 6 (ch56-l04, rebuilt in place). The dual itself is Chapter 38's and is retrieved, not retaught; the new content is nūn deletion when the dual is the first term of an iḍāfa (111:1 يَدَا أَبِي لَهَبٍ, 5:27 ابْنَيْ آدَمَ) in all three cases, against the ordinary dual (55:46 جَنَّتَانِ) and the predicate that keeps its نِ. Eight exercises. Added 2026-10-04 in the proposal harvest, batch 7 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-56-content-proposal.md and its review amendments.",
+    "title": "The Dual as First Term — المثنى المضاف",
+    "titleAr": "الْمُثَنَّى الْمُضَافُ",
+    "titleUr": "اضافت کا پہلا جز مثنی",
     "chapter_order": 56,
     "lesson_order": 6,
-    "chapter_title": "Special Noun Types",
-    "title": "Maqsur vs Munqas — What Makes Them Different",
-    "titleAr": "الْمَقْصُورُ وَالْمَنْقُوصُ — مَا الْفَرْقُ؟",
-    "source": "book_6_grammar_science_56_special_noun_types.md",
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 12,
-      "ayah": 36,
-      "label": "Yusuf 12:36",
-      "ar": "وَدَخَلَ مَعَهُ السِّجْنَ فَتَيَانِ ۖ قَالَ أَحَدُهُمَا إِنِّي أَرَانِي أَعْصِرُ خَمْرًا ۖ وَقَالَ الْآخَرُ إِنِّي أَرَانِي أَحْمِلُ فَوْقَ رَأْسِي خُبْزًا تَأْكُلُ الطَّيْرُ مِنْهُ ۖ نَبِّئْنَا بِتَأْوِيلِهِ ۖ إِنَّا نَرَاكَ مِنَ الْمُحْسِنِينَ",
-      "en": "And there entered the prison with him two young men. One of them said, \"Indeed, I have seen myself [in a dream] pressing [grapes for] wine.\" The other said, \"Indeed, I have seen myself carrying upon my head [some] bread, from which the birds were eating. Inform us of its interpretation; indeed, we see you to be of those who do good.\"",
-      "ur": "اور ان کے ساتھ دو اور جوان بھی داخل زندان ہوئے۔ ایک نے ان میں سے کہا کہ (میں نے خواب دیکھا ہے) دیکھتا (کیا) ہوں کہ شراب (کے لیے انگور) نچوڑ رہا ہوں۔ دوسرے نے کہا کہ (میں نے بھی خواب دیکھا ہے) میں یہ دیکھتا ہوں کہ اپنے سر پر روٹیاں اٹھائے ہوئے ہوں اور جانور ان میں سے کھا رہے (ہیں تو) ہمیں ان کی تعبیر بتا دیجیئے کہ ہم تمہیں نیکوکار دیکھتے ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012036.mp3"
+      "surah": 111,
+      "ayah": 1,
+      "label": "undefined 111:1",
+      "ar": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ",
+      "en": "May the hands of Abū Lahab be ruined, and ruined is he.",
+      "ur": "ابولہب کے ہاتھ ٹوٹیں اور وہ ہلاک ہو",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/111001.mp3"
     },
     "noor_intro": {
-      "en": "مُوسَى (مقصور) and الْقَاضِي (منقوص) both end in weak letters, but they behave differently in i'rab: a مقصور noun shows no visible case ending at all, while a منقوص noun shows only the fatḥa in the accusative (الْقَاضِيَ) and, when indefinite, drops its yā' in the nominative and genitive (قَاضٍ).",
-      "ur": "مُوسَى (مقصور) اور الْقَاضِي (منقوص) دونوں حرفِ علت پر ختم ہوتے ہیں، لیکن اعراب میں مختلف ہیں: مقصور پر کوئی اعراب ظاہر نہیں ہوتا، جبکہ منقوص پر صرف نصب ظاہر ہوتا ہے (الْقَاضِيَ)، اور نکرہ ہو تو رفع اور جر میں اس کی ی گر جاتی ہے (قَاضٍ)۔"
+      "en": "Why is it يَدَا and not يَدَانِ? One small change tells you what comes next.",
+      "ur": "يَدَانِ کے بجائے يَدَا کیوں؟ ایک چھوٹی سی تبدیلی بتاتی ہے کہ آگے کیا آ رہا ہے۔"
     },
     "autoplay": true
   },
@@ -32,459 +31,439 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Al-Maqṣūr — ends in an alif, case never visible",
-        "ar": "الْمَقْصُورُ — آخِرُهُ أَلِفٌ لَازِمَةٌ",
-        "ur": "مقصور — آخر میں الف، اعراب کبھی ظاہر نہیں"
+        "en": "The dual loses its نِ as the first term of an iḍāfa",
+        "ar": "الْمُثَنَّى الْمُضَافُ",
+        "ur": "اضافت کا پہلا جز بننے پر مثنی کا نِ گر جاتا ہے"
       },
       "explanation": {
-        "en": "A maqṣūr noun ends in an alif (often written ى). It looks the same in all three cases: جَاءَ مُوسَى، رَأَيْتُ مُوسَى، مَعَ مُوسَى. Without الْ it takes tanwīn on the letter before: فَتًى.",
-        "ur": "مقصور اسم الف پر ختم ہوتا ہے (اکثر ى کی شکل میں)۔ یہ تینوں حالتوں میں ایک جیسا رہتا ہے: جَاءَ مُوسَى، رَأَيْتُ مُوسَى، مَعَ مُوسَى۔ الْ کے بغیر پہلے حرف پر تنوین آتی ہے: فَتًى۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Al-Manqūṣ — ends in ي, only the accusative shows",
-        "ar": "الْمَنْقُوصُ — آخِرُهُ يَاءٌ لَازِمَةٌ مَكْسُورٌ مَا قَبْلَهَا",
-        "ur": "منقوص — آخر میں ي، صرف نصب ظاہر"
-      },
-      "explanation": {
-        "en": "A manqūṣ noun ends in ي after a kasra. With الْ: الْقَاضِي (nominative and genitive — no vowel shows), الْقَاضِيَ (accusative). Without الْ: قَاضٍ (nominative and genitive — the ي drops), قَاضِيًا (accusative).",
-        "ur": "منقوص اسم کسرہ کے بعد ي پر ختم ہوتا ہے۔ الْ کے ساتھ: الْقَاضِي (رفع اور جر — حرکت ظاہر نہیں)، الْقَاضِيَ (نصب)۔ الْ کے بغیر: قَاضٍ (رفع اور جر — ي گر جاتی ہے)، قَاضِيًا (نصب)۔"
+        "en": "Chapter 38 taught the dual: ـانِ in the nominative, ـَيْنِ in the accusative and genitive (كِتَابَانِ, كِتَابَيْنِ). New here: when a dual noun is the FIRST term of an iḍāfa, it drops the final نِ — كِتَابَانِ becomes كِتَابَا الطَّالِبِ ('the student's two books'). The long vowel stays and still shows the case: ـا for the nominative, ـَيْ for the accusative and genitive.",
+        "ur": "باب 38 میں مثنی پڑھا: رفع میں ـانِ، نصب اور جر میں ـَيْنِ (كِتَابَانِ، كِتَابَيْنِ)۔ یہاں نیا نکتہ: جب مثنی اسم اضافت کا پہلا جز ہو تو آخری نِ گر جاتا ہے — كِتَابَانِ بن جاتا ہے كِتَابَا الطَّالِبِ ('طالب علم کی دو کتابیں')۔ لمبی حرکت باقی رہتی ہے اور حالت دکھاتی ہے: رفع میں ـا، نصب اور جر میں ـَيْ۔"
       }
     },
     {
       "type": "CONTRAST",
-      "explanation": {
-        "en": "مُوسَى ends in an alif: no case is ever visible. الْقَاضِي ends in ي: the accusative fatḥa shows (الْقَاضِيَ). So the accusative is where they look different.",
-        "ur": "مُوسَى الف پر ختم ہوتا ہے: کوئی اعراب کبھی ظاہر نہیں۔ الْقَاضِي ي پر ختم ہوتا ہے: نصب کا فتحہ ظاہر ہوتا ہے (الْقَاضِيَ)۔ اس لیے نصب میں دونوں کا فرق نظر آتا ہے۔"
+      "concept": {
+        "en": "Ordinary dual / dual as first term",
+        "ur": "عام مثنی / اضافت کا پہلا جز"
       },
       "examples": [
         {
-          "ar": "مُوسَى",
-          "ar_plain": "موسى",
-          "translit": "moosaa",
-          "en": "Musa — maqṣūr: same in every case",
-          "ur": "موسیٰ - الف مقصورہ، رفع میں رہتا ہے"
+          "ar": "كِتَابَانِ",
+          "ar_plain": "كتابان",
+          "translit": "kitābāni",
+          "en": "two books (the نِ stays)",
+          "ur": "دو کتابیں (نِ باقی)"
         },
         {
-          "ar": "الْقَاضِيَ",
-          "ar_plain": "القاضي",
-          "translit": "al-qaadhee",
-          "en": "the judge (acc.) — manqūṣ: fatḥa shows",
-          "ur": "جج - ي ڈراپ رفع میں"
+          "ar": "كِتَابَا الطَّالِبِ",
+          "ar_plain": "كتابا الطالب",
+          "translit": "kitābā aṭ-ṭālibi",
+          "en": "the student's two books (the نِ drops)",
+          "ur": "طالب علم کی دو کتابیں (نِ گر گیا)"
         }
       ],
-      "concept": {
-        "en": "Maqṣūr vs manqūṣ",
-        "ar": "مُوسَى / الْقَاضِي",
-        "ur": "مقصور بمقابلہ منقوص"
+      "explanation": {
+        "en": "The ordinary dual keeps its نِ. The moment it is joined to a second noun as the first term, the نِ goes: كِتَابَا الطَّالِبِ.",
+        "ur": "عام مثنی اپنا نِ رکھتا ہے۔ جونہی وہ دوسرے اسم سے اضافت میں پہلا جز بنتا ہے، نِ گر جاتا ہے: كِتَابَا الطَّالِبِ۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "يَدَا أَبِي لَهَبٍ",
+        "ar_plain": "يدا ابي لهب",
+        "translit": "yadā ʾabī lahabin",
+        "en": "the two hands of Abu Lahab",
+        "ur": "ابو لہب کے دونوں ہاتھ"
+      },
+      "explanation": {
+        "en": "يَدَانِ ('two hands') becomes يَدَا before أَبِي لَهَبٍ. يَدَا is nominative (the doer of تَبَّتْ), so it ends in ـا; أَبِي لَهَبٍ is the second term, genitive. (Al-Masad 111:1) (undefined 111:1)",
+        "ur": "يَدَانِ ('دو ہاتھ') أَبِي لَهَبٍ سے پہلے يَدَا ہو گیا۔ يَدَا مرفوع ہے (تَبَّتْ کا فاعل)، اس لیے ـا پر ختم ہوتا ہے؛ أَبِي لَهَبٍ دوسرا جز ہے، مجرور۔ (المسد 111:1) (undefined 111:1)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "نَبَأَ ابْنَيْ آدَمَ",
+        "ar_plain": "نبا ابني ادم",
+        "translit": "nabaʾa abnay ʾādama",
+        "en": "the news of the two sons of Adam",
+        "ur": "آدم کے دونوں بیٹوں کی خبر"
+      },
+      "explanation": {
+        "en": "ابْنَيْ آدَمَ: ابْنَانِ ('two sons') appears here as ابْنَيْ — the نِ has dropped and the ـَيْ shows the genitive, because the phrase follows نَبَأَ ('news of'). آدَمَ is the second term. (Al-Ma'idah 5:27) (Al-Ma'idah 5:27)",
+        "ur": "ابْنَيْ آدَمَ: ابْنَانِ ('دو بیٹے') یہاں ابْنَيْ ہے — نِ گر گیا اور ـَيْ جر کو دکھاتا ہے کیونکہ یہ جملہ نَبَأَ ('کی خبر') کے بعد ہے۔ آدَمَ دوسرا جز ہے۔ (المائدہ 5:27) (Al-Ma'idah 5:27)"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "رَأَيْتُ مُوسَى وَالْقَاضِيَ",
-        "ar_plain": "رايت موسى والقاضي",
-        "translit": "ra'aytu moosaa wal-qaadhiya",
-        "en": "I saw Musa and the judge.",
-        "ur": "میں نے موسیٰ اور قاضی کو دیکھا۔"
+        "ar": "رَأَيْتُ طَالِبَيِ الْمَدْرَسَةِ",
+        "ar_plain": "رايت طالبي المدرسة",
+        "translit": "raʾaytu ṭālibayi al-madrasati",
+        "en": "I saw the school's two students",
+        "ur": "میں نے اسکول کے دو طالب علموں کو دیکھا"
       },
       "explanation": {
-        "en": "Both are objects of رَأَيْتُ, so both are accusative. مُوسَى shows nothing (maqṣūr). الْقَاضِيَ shows a fatḥa on the ي (manqūṣ). This is where the two types look different.",
-        "ur": "دونوں رَأَيْتُ کے مفعول ہیں، اس لیے دونوں منصوب ہیں۔ مُوسَى کچھ ظاہر نہیں کرتا (مقصور)۔ الْقَاضِيَ ي پر فتحہ دکھاتا ہے (منقوص)۔ یہی وہ جگہ ہے جہاں دونوں قسمیں الگ نظر آتی ہیں۔"
+        "en": "طَالِبَانِ → طَالِبَيِ before الْمَدْرَسَةِ. It is the object of رَأَيْتُ, so it ends in ـَيْ (accusative). The same spelling would appear after a preposition (genitive): the sentence tells you which.",
+        "ur": "طَالِبَانِ → الْمَدْرَسَةِ سے پہلے طَالِبَيِ۔ یہ رَأَيْتُ کا مفعول ہے، اس لیے ـَيْ (منصوب) پر ختم ہوتا ہے۔ حرف جر کے بعد (مجرور) بھی یہی املا ہوگا: جملہ بتاتا ہے کہ کون سی حالت ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "مُوسَى وَالْقَاضِي فِي الْمَسْجِدِ",
-        "ar_plain": "موسى والقاضي في المسجد",
-        "translit": "moosaa wal-qaadhee fii al-masjidi",
-        "en": "Musa and the judge are in the masjid.",
-        "ur": "موسیٰ اور قاضی مسجد میں ہیں۔"
+        "ar": "وَلِمَنْ خَافَ مَقَامَ رَبِّهِ جَنَّتَانِ",
+        "ar_plain": "ولمن خاف مقام ربه جنتان",
+        "translit": "waliman khāfa maqāma rabbihi jannatāni",
+        "en": "But for he who has feared the position of his Lord are two gardens -",
+        "ur": "اور جو شخص اپنے پروردگار کے سامنے کھڑے ہونے سے ڈرا اس کے لئے دو باغ ہیں"
       },
       "explanation": {
-        "en": "Here both are nominative subjects, and neither shows a vowel: مُوسَى keeps its alif, الْقَاضِي keeps its ي. In the nominative they behave alike.",
-        "ur": "یہاں دونوں مرفوع مبتدا ہیں، اور کسی پر حرکت ظاہر نہیں: مُوسَى اپنا الف رکھتا ہے، الْقَاضِي اپنی ي۔ رفع میں دونوں ایک جیسا برتاؤ کرتے ہیں۔"
+        "en": "جَنَّتَانِ ('two gardens') is an ordinary dual — it is not the first term of an iḍāfa, so it keeps its نِ. (Ar-Rahman 55:46)",
+        "ur": "جَنَّتَانِ ('دو باغ') عام مثنی ہے — یہ اضافت کا پہلا جز نہیں، اس لیے نِ باقی رہتا ہے۔ (Ar-Rahman 55:46)"
       }
     },
     {
       "type": "GRAMMAR_NOTE",
       "title": {
-        "en": "The accusative tells them apart",
-        "ur": "نصب دونوں کو الگ کرتا ہے"
+        "en": "The head's role decides its ending",
+        "ur": "پہلے جز کا کردار اس کا انجام طے کرتا ہے"
       },
       "body": {
-        "en": "In the nominative and genitive, neither type shows a vowel. In the accusative, the manqūṣ noun shows a fatḥa (الْقَاضِيَ) while the maqṣūr noun still shows nothing (مُوسَى).",
-        "ur": "رفع اور جر میں کسی قسم پر حرکت ظاہر نہیں ہوتی۔ نصب میں منقوص فتحہ دکھاتا ہے (الْقَاضِيَ) جبکہ مقصور پھر بھی کچھ نہیں دکھاتا (مُوسَى)۔"
+        "en": "The second term is always genitive. The dual's own ending depends on ITS role: جَاءَ طَالِبَا الْمَدْرَسَةِ (nominative), رَأَيْتُ طَالِبَيِ الْمَدْرَسَةِ (accusative), سَلَّمْتُ عَلَى طَالِبَيِ الْمَدْرَسَةِ (genitive). A word that describes the dual is not the first term of anything, so it keeps its نِ: كِتَابَا الطَّالِبِ جَدِيدَانِ.",
+        "ur": "دوسرا جز ہمیشہ مجرور ہوتا ہے۔ مثنی کا اپنا انجام اس کے اپنے کردار پر ہے: جَاءَ طَالِبَا الْمَدْرَسَةِ (رفع)، رَأَيْتُ طَالِبَيِ الْمَدْرَسَةِ (نصب)، سَلَّمْتُ عَلَى طَالِبَيِ الْمَدْرَسَةِ (جر)۔ مثنی کی صفت کسی کا پہلا جز نہیں، اس لیے نِ رکھتی ہے: كِتَابَا الطَّالِبِ جَدِيدَانِ۔"
       }
     }
   ],
   "exercises": [
     {
-      "id": "ch56-l06-ex01",
+      "type": "TAP_TRANSLATION",
+      "id": "ch56-l04-ex01",
+      "prompt": {
+        "ar": "كِتَابَا الطَّالِبِ",
+        "ar_plain": "كتابا الطالب",
+        "translit": "kitābā aṭ-ṭālibi",
+        "en": "(the student's two books)",
+        "ur": "(طالب علم کی دو کتابیں)"
+      },
+      "options": [
+        {
+          "en": "the two students' book",
+          "ur": "دو طالب علموں کی کتاب"
+        },
+        {
+          "en": "the student's two books",
+          "ur": "طالب علم کی دو کتابیں"
+        },
+        {
+          "en": "the student's book",
+          "ur": "طالب علم کی کتاب"
+        },
+        {
+          "en": "two books and a student",
+          "ur": "دو کتابیں اور ایک طالب علم"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كِتَابَا is the dual (two books) and الطَّالِبِ is the single student they belong to.",
+        "ur": "كِتَابَا مثنی ہے (دو کتابیں) اور الطَّالِبِ وہ ایک طالب علم ہے جس کی ہیں۔"
+      }
+    },
+    {
       "type": "TRUE_FALSE",
+      "id": "ch56-l04-ex02",
       "statement": {
-        "en": "In the accusative, a manqūṣ noun shows a fatḥa (الْقَاضِيَ) while a maqṣūr noun shows nothing (مُوسَى).",
-        "ur": "نصب میں منقوص فتحہ دکھاتا ہے (الْقَاضِيَ) جبکہ مقصور کچھ نہیں دکھاتا (مُوسَى)۔"
+        "en": "The نِ of كِتَابَانِ drops in كِتَابَا الطَّالِبِ because the dual is the first term of an iḍāfa.",
+        "ur": "كِتَابَانِ کا نِ كِتَابَا الطَّالِبِ میں اس لیے گرتا ہے کہ مثنی اضافت کا پہلا جز ہے۔"
       },
       "correct_answer": true,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "True. The maqṣūr noun never shows a case vowel; the manqūṣ noun shows only the accusative fatḥa.",
-        "ur": "درست۔ مقصور کبھی اعراب کی حرکت ظاہر نہیں کرتا؛ منقوص صرف نصب کا فتحہ دکھاتا ہے۔"
+        "en": "Yes — the first term of an iḍāfa never keeps the dual نِ.",
+        "ur": "جی ہاں — اضافت کا پہلا جز مثنی کا نِ نہیں رکھتا۔"
       }
     },
     {
-      "id": "ch56-l06-ex02",
+      "type": "FILL_BLANK",
+      "id": "ch56-l04-ex03",
+      "mode": "TAP",
+      "sentence_ar": "___ الطَّالِبِ جَدِيدَانِ.",
+      "hint": {
+        "en": "The student's two books are new.",
+        "ur": "طالب علم کی دو کتابیں نئی ہیں۔"
+      },
+      "options": [
+        {
+          "ar": "كِتَابَانِ",
+          "ar_plain": "كتابان",
+          "translit": "kitābāni",
+          "en": "two books (keeps the نِ)",
+          "ur": "دو کتابیں (نِ کے ساتھ)"
+        },
+        {
+          "ar": "كِتَابَيْنِ",
+          "ar_plain": "كتابين",
+          "translit": "kitābayni",
+          "en": "two books (accusative / genitive)",
+          "ur": "دو کتابیں (نصب / جر)"
+        },
+        {
+          "ar": "كِتَابَا",
+          "ar_plain": "كتابا",
+          "translit": "kitābā",
+          "en": "two books (first term, nominative)",
+          "ur": "دو کتابیں (پہلا جز، رفع)"
+        },
+        {
+          "ar": "كِتَابُ",
+          "ar_plain": "كتاب",
+          "translit": "kitābu",
+          "en": "a book",
+          "ur": "ایک کتاب"
+        }
+      ],
+      "correct_answer": {
+        "ar": "كِتَابَا",
+        "ar_plain": "كتابا",
+        "translit": "kitābā",
+        "en": "two books (first term, nominative)",
+        "ur": "دو کتابیں (پہلا جز، رفع)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The subject is nominative and the first term of the iḍāfa: كِتَابَا, without the نِ.",
+        "ur": "مبتدا مرفوع ہے اور اضافت کا پہلا جز: كِتَابَا، بغیر نِ کے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch56-l04-ex04",
+      "prompt": {
+        "ar": "رَأَيْتُ طَالِبَيِ الْمَدْرَسَةِ",
+        "ar_plain": "رايت طالبي المدرسة",
+        "translit": "raʾaytu ṭālibayi al-madrasati",
+        "en": "(I saw the school's two students)",
+        "ur": "(میں نے اسکول کے دو طالب علموں کو دیکھا)"
+      },
+      "options": [
+        {
+          "en": "I saw the school's two students",
+          "ur": "میں نے اسکول کے دو طالب علموں کو دیکھا"
+        },
+        {
+          "en": "I saw two schools of the student",
+          "ur": "میں نے طالب علم کے دو اسکول دیکھے"
+        },
+        {
+          "en": "I saw the school's student",
+          "ur": "میں نے اسکول کے طالب علم کو دیکھا"
+        },
+        {
+          "en": "The two students saw the school",
+          "ur": "دو طالب علموں نے اسکول کو دیکھا"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "طَالِبَيِ is accusative (object of رَأَيْتُ), dual, and the first term; الْمَدْرَسَةِ is the second term.",
+        "ur": "طَالِبَيِ منصوب (رَأَيْتُ کا مفعول)، مثنی اور پہلا جز ہے؛ الْمَدْرَسَةِ دوسرا جز۔"
+      }
+    },
+    {
       "type": "MATCHING",
+      "id": "ch56-l04-ex05",
       "left_column": [
         {
-          "ar": "مُوسَى",
-          "ar_plain": "موسى",
-          "translit": "moosaa",
-          "en": "Musa",
-          "ur": "موسی"
+          "ar": "جَاءَ طَالِبَا الْمَدْرَسَةِ",
+          "ar_plain": "جاء طالبا المدرسة",
+          "translit": "jāʾa ṭālibā al-madrasati",
+          "en": "(1)",
+          "ur": "(1)"
         },
         {
-          "ar": "الْقَاضِي",
-          "ar_plain": "القاضي",
-          "translit": "al-qaadhee",
-          "en": "the judge (nom.)",
-          "ur": "جج (نام)"
+          "ar": "رَأَيْتُ طَالِبَيِ الْمَدْرَسَةِ",
+          "ar_plain": "رايت طالبي المدرسة",
+          "translit": "raʾaytu ṭālibayi al-madrasati",
+          "en": "(2)",
+          "ur": "(2)"
         },
         {
-          "ar": "عِيسَى",
-          "ar_plain": "عيسى",
-          "translit": "'iisaa",
-          "en": "Isa",
-          "ur": "عیسیٰ"
-        },
-        {
-          "ar": "الْهَادِي",
-          "ar_plain": "الهادي",
-          "translit": "al-haadiy",
-          "en": "the guide (nom.)",
-          "ur": "گائیڈ (نام)"
+          "ar": "سَلَّمْتُ عَلَى طَالِبَيِ الْمَدْرَسَةِ",
+          "ar_plain": "سلمت على طالبي المدرسة",
+          "translit": "sallamtu ʿalā ṭālibayi al-madrasati",
+          "en": "(3)",
+          "ur": "(3)"
         }
       ],
       "right_column": [
         {
-          "en": "مُوسَى — maqṣūr: ends in an alif",
-          "ur": "مُوسَى — مقصور: الف پر ختم"
+          "en": "I saw the school's two students — the dual is the object: accusative",
+          "ur": "میں نے اسکول کے دو طالب علموں کو دیکھا — مثنی مفعول ہے: نصب"
         },
         {
-          "en": "الْقَاضِي — manqūṣ: ends in ي",
-          "ur": "الْقَاضِي — منقوص: ي پر ختم"
+          "en": "I greeted the school's two students — after a preposition: genitive",
+          "ur": "میں نے اسکول کے دو طالب علموں کو سلام کیا — حرف جر کے بعد: جر"
         },
         {
-          "en": "عِيسَى — maqṣūr: ends in an alif",
-          "ur": "عِيسَى — مقصور: الف پر ختم"
-        },
-        {
-          "en": "الْهَادِي — manqūṣ: ends in ي",
-          "ur": "الْهَادِي — منقوص: ي پر ختم"
+          "en": "the school's two students came — the dual is the doer: nominative",
+          "ur": "اسکول کے دو طالب علم آئے — مثنی فاعل ہے: رفع"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
           2
         ],
         [
-          3,
-          3
+          1,
+          0
+        ],
+        [
+          2,
+          1
         ]
       ],
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "مُوسَى and عِيسَى end in an alif (maqṣūr). الْقَاضِي and الْهَادِي end in ي after a kasra (manqūṣ).",
-        "ur": "مُوسَى اور عِيسَى الف پر ختم ہوتے ہیں (مقصور)۔ الْقَاضِي اور الْهَادِي کسرہ کے بعد ي پر (منقوص)۔"
+        "en": "ـا shows the nominative; the same ـَيْ shows both the accusative and the genitive, and the sentence tells you which.",
+        "ur": "ـا رفع دکھاتا ہے؛ ایک ہی ـَيْ نصب اور جر دونوں دکھاتا ہے، اور جملہ بتاتا ہے کہ کون سی۔"
       }
     },
     {
-      "id": "ch56-l06-ex03",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "رَأَيْتُ مُوسَى وَالْقَاضِيَ فِي ___",
-      "hint": {
-        "en": "I saw Musa and the judge in the house.",
-        "ur": "میں نے موسیٰ اور قاضی کو گھر میں دیکھا۔"
-      },
-      "options": [
-        {
-          "ar": "الْبَيْتِ",
-          "ar_plain": "البيت",
-          "translit": "al-bayti",
-          "en": "the house (gen.)",
-          "ur": "گھر (جر)"
-        },
-        {
-          "ar": "الْبَيْتُ",
-          "ar_plain": "البيت",
-          "translit": "al-baytu",
-          "en": "the house (nom.)",
-          "ur": "گھر (رفع)"
-        },
-        {
-          "ar": "الْبَيْتَ",
-          "ar_plain": "البيت",
-          "translit": "al-bayta",
-          "en": "the house (acc.)",
-          "ur": "گھر (نصب)"
-        },
-        {
-          "ar": "الْبَيْتَانِ",
-          "ar_plain": "البيتين",
-          "translit": "al-baytayni",
-          "en": "two houses",
-          "ur": "دو گھر"
-        }
-      ],
-      "correct_answer": {
-        "ar": "الْبَيْتِ",
-        "ar_plain": "البيت",
-        "translit": "al-bayti",
-        "en": "the house (gen.)",
-        "ur": "گھر (جر)"
-      },
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "فِي is a preposition, so الْبَيْتِ is genitive — kasra on the last letter.",
-        "ur": "فِي حرف جر ہے، اس لیے الْبَيْتِ مجرور ہے — آخری حرف پر کسرہ۔"
-      }
-    },
-    {
-      "id": "ch56-l06-ex04",
       "type": "BUILD_SENTENCE",
+      "id": "ch56-l04-ex06",
       "target_translation": {
-        "en": "Musa and the guide are in the mosque.",
-        "ur": "موسیٰ اور ہادی مسجد میں ہیں۔"
+        "en": "The student's two books are new.",
+        "ur": "طالب علم کی دو کتابیں نئی ہیں۔"
       },
       "tiles": [
         {
-          "ar": "مُوسَى",
-          "ar_plain": "موسى",
-          "translit": "moosaa",
-          "en": "Musa",
-          "ur": "موسی"
+          "ar": "جَدِيدَانِ",
+          "ar_plain": "جديدان",
+          "translit": "jadīdāni",
+          "en": "new (dual)",
+          "ur": "نئی (مثنی)"
         },
         {
-          "ar": "وَ",
-          "ar_plain": "و",
-          "translit": "wa",
-          "en": "and",
-          "ur": "اور"
+          "ar": "كِتَابَا",
+          "ar_plain": "كتابا",
+          "translit": "kitābā",
+          "en": "two books (first term)",
+          "ur": "دو کتابیں (پہلا جز)"
         },
         {
-          "ar": "الْهَادِي",
-          "ar_plain": "الهادي",
-          "translit": "al-haadiy",
-          "en": "the guide (nom.)",
-          "ur": "ہادی (رفع)"
-        },
-        {
-          "ar": "فِي",
-          "ar_plain": "في",
-          "translit": "fii",
-          "en": "in",
-          "ur": "میں"
-        },
-        {
-          "ar": "الْمَسْجِدِ",
-          "ar_plain": "المسجد",
-          "translit": "al-masjidi",
-          "en": "the mosque (gen.)",
-          "ur": "مسجد (جر)"
+          "ar": "الطَّالِبِ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibi",
+          "en": "of the student",
+          "ur": "طالب علم کی"
         }
       ],
       "correct_order": [
-        0,
         1,
         2,
-        3,
-        4
+        0
       ],
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "مُوسَى (subject) + وَ (and) + الْهَادِي (joined to the subject, nominative — no vowel shows on its ي) + فِي (preposition) + الْمَسْجِدِ (genitive).",
-        "ur": "مُوسَى (مبتدا) + وَ (اور) + الْهَادِي (مبتدا پر معطوف، مرفوع — ي پر حرکت ظاہر نہیں) + فِي (حرف جر) + الْمَسْجِدِ (مجرور)۔"
+        "en": "First term, second term, then the dual predicate جَدِيدَانِ — it keeps its نِ.",
+        "ur": "پہلا جز، دوسرا جز، پھر مثنی خبر جَدِيدَانِ — یہ نِ رکھتی ہے۔"
       }
     },
     {
-      "id": "ch56-l06-ex05",
-      "type": "TAP_TRANSLATION",
-      "prompt": {
-        "ar": "الْقَاضِي وَمُوسَى",
-        "ar_plain": "القاضي وموسى",
-        "translit": "al-qaadhee wa moosaa",
-        "en": "The judge and Musa.",
-        "ur": "قاضی اور موسیٰ۔"
-      },
-      "options": [
-        {
-          "en": "The judge and Musa.",
-          "ur": "قاضی اور موسیٰ۔"
-        },
-        {
-          "en": "Musa's judge.",
-          "ur": "قاضی موسیٰ۔"
-        },
-        {
-          "en": "The judge of Musa.",
-          "ur": "موسیٰ کا قاضی۔"
-        },
-        {
-          "en": "The judge is Musa.",
-          "ur": "قاضی موسیٰ ہے۔"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "وَ means \"and\", so this is two nouns joined: \"the judge and Musa\". Without وَ, الْقَاضِي مُوسَى could be read \"the judge is Musa\".",
-        "ur": "وَ کا مطلب \"اور\" ہے، اس لیے یہ دو جڑے ہوئے اسم ہیں: \"قاضی اور موسیٰ\"۔ وَ کے بغیر الْقَاضِي مُوسَى کا مطلب \"قاضی موسیٰ ہے\" ہو سکتا تھا۔"
-      }
-    },
-    {
-      "id": "ch56-l06-ex06",
       "type": "TRUE_FALSE",
+      "id": "ch56-l04-ex07",
       "statement": {
-        "en": "مُوسَى and الْقَاضِي look different only in the nominative.",
-        "ur": "مُوسَى اور الْقَاضِي صرف رفع میں مختلف نظر آتے ہیں۔"
+        "en": "In تَبَّتْ يَدَا أَبِي لَهَبٍ, the word يَدَا keeps its نِ.",
+        "ur": "تَبَّتْ يَدَا أَبِي لَهَبٍ میں لفظ يَدَا اپنا نِ رکھتا ہے۔"
       },
       "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "False. In the nominative neither shows a vowel. They look different in the accusative: مُوسَى stays the same, but الْقَاضِيَ takes a fatḥa.",
-        "ur": "غلط۔ رفع میں کسی پر حرکت ظاہر نہیں ہوتی۔ فرق نصب میں نظر آتا ہے: مُوسَى ویسا ہی رہتا ہے، مگر الْقَاضِيَ فتحہ لیتا ہے۔"
+        "en": "False. يَدَا is the first term of the iḍāfa يَدَا أَبِي لَهَبٍ, so the نِ of يَدَانِ has dropped.",
+        "ur": "غلط۔ يَدَا اضافت يَدَا أَبِي لَهَبٍ کا پہلا جز ہے، اس لیے يَدَانِ کا نِ گر گیا۔"
       }
     },
     {
-      "id": "ch56-l06-ex07",
       "type": "GRAMMAR_PARSE",
-      "sentence_ar": "الْفَتَى وَالْقَاضِي مُسْلِمَانِ",
+      "id": "ch56-l04-ex08",
+      "sentence_ar": "جَاءَ طَالِبَا الْمَدْرَسَةِ",
       "words": [
         {
-          "ar": "الْفَتَى",
-          "ar_plain": "الفتى",
-          "translit": "al-fataa",
-          "en": "the young man",
-          "ur": "نوجوان"
+          "ar": "جَاءَ",
+          "ar_plain": "جاء",
+          "translit": "jāʾa",
+          "en": "came",
+          "ur": "آیا"
         },
         {
-          "ar": "وَ",
-          "ar_plain": "و",
-          "translit": "wa",
-          "en": "and",
-          "ur": "اور"
+          "ar": "طَالِبَا",
+          "ar_plain": "طالبا",
+          "translit": "ṭālibā",
+          "en": "the two students of",
+          "ur": "دو طالب علم"
         },
         {
-          "ar": "الْقَاضِي",
-          "ar_plain": "القاضي",
-          "translit": "al-qaadhee",
-          "en": "the judge",
-          "ur": "جج"
-        },
-        {
-          "ar": "مُسْلِمَانِ",
-          "ar_plain": "مسلمان",
-          "translit": "muslimaani",
-          "en": "two Muslims",
-          "ur": "دو مسلمان"
+          "ar": "الْمَدْرَسَةِ",
+          "ar_plain": "المدرسة",
+          "translit": "al-madrasati",
+          "en": "the school",
+          "ur": "اسکول"
         }
       ],
       "available_roles": [
-        "SUBJECT",
-        "PREDICATE",
-        "ADJECTIVE",
         "VERB",
-        "CONJUNCTION"
+        "SUBJECT",
+        "OBJECT",
+        "POSSESSIVE"
       ],
       "correct_roles": [
+        "VERB",
         "SUBJECT",
-        "CONJUNCTION",
-        "SUBJECT",
-        "PREDICATE"
+        "POSSESSIVE"
       ],
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "الْفَتَى = subject (maqṣūr, nominative implied). وَ = conjunction. الْقَاضِي = joined to the subject (manqūṣ, nominative implied). مُسْلِمَانِ = predicate (dual, nominative) for both.",
-        "ur": "الْفَتَى = مبتدا (مقصور، رفع مقدر)۔ وَ = حرف عطف۔ الْقَاضِي = مبتدا پر معطوف (منقوص، رفع مقدر)۔ مُسْلِمَانِ = دونوں کی خبر (تثنیہ، مرفوع)۔"
-      }
-    },
-    {
-      "id": "ch56-l06-ex08",
-      "type": "TAP_TRANSLATION",
-      "prompt": {
-        "ar": "عِيسَى وَالْفَتَى مُسْلِمَانِ",
-        "ar_plain": "عيسى والفتى مسلمان",
-        "translit": "'iisaa wal-fataa muslimaani",
-        "en": "Isa and the young man are Muslims.",
-        "ur": "عیسیٰ اور نوجوان مسلمان ہیں۔"
-      },
-      "options": [
-        {
-          "en": "Isa and the young man are Muslims.",
-          "ur": "عیسیٰ اور جوان آدمی مسلمان ہیں۔"
-        },
-        {
-          "en": "Isa's young Muslim.",
-          "ur": "عیسیٰ کا جوان مسلمان۔"
-        },
-        {
-          "en": "The Muslim is Isa and the young man.",
-          "ur": "مسلمان عیسیٰ اور جوان ہے۔"
-        },
-        {
-          "en": "Two Muslim Isa.",
-          "ur": "دو مسلمان عیسیٰ۔"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "عِيسَى (subject, maqṣūr) + وَ + الْفَتَى (joined to it, maqṣūr) + مُسْلِمَانِ (dual predicate, nominative). Neither maqṣūr noun shows its case.",
-        "ur": "عِيسَى (مبتدا، مقصور) + وَ + الْفَتَى (معطوف، مقصور) + مُسْلِمَانِ (تثنیہ خبر، مرفوع)۔ کوئی مقصور اسم اپنا اعراب ظاہر نہیں کرتا۔"
+        "en": "جَاءَ is the verb; طَالِبَا is the doer (dual, first term, نِ dropped); الْمَدْرَسَةِ is the second term, genitive.",
+        "ur": "جَاءَ فعل ہے؛ طَالِبَا فاعل ہے (مثنی، پہلا جز، نِ گرا ہوا)؛ الْمَدْرَسَةِ دوسرا جز ہے، مجرور۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Maqṣūr vs manqūṣ — المقصور والمنقوص",
-      "ar": "الْمَقْصُورُ وَالْمَنْقُوصُ",
-      "ur": "مقصور اور منقوص"
+      "en": "A dual that opens an iḍāfa",
+      "ar": "يَدَا أَبِي لَهَبٍ",
+      "ur": "اضافت کھولنے والا مثنی"
     },
     "ayah": {
-      "surah": 12,
-      "ayah": 36,
-      "label": "Yusuf 12:36",
-      "ar": "وَدَخَلَ مَعَهُ السِّجْنَ فَتَيَانِ ۖ قَالَ أَحَدُهُمَا إِنِّي أَرَانِي أَعْصِرُ خَمْرًا ۖ وَقَالَ الْآخَرُ إِنِّي أَرَانِي أَحْمِلُ فَوْقَ رَأْسِي خُبْزًا تَأْكُلُ الطَّيْرُ مِنْهُ ۖ نَبِّئْنَا بِتَأْوِيلِهِ ۖ إِنَّا نَرَاكَ مِنَ الْمُحْسِنِينَ",
-      "en": "And there entered the prison with him two young men. One of them said, \"Indeed, I have seen myself [in a dream] pressing [grapes for] wine.\" The other said, \"Indeed, I have seen myself carrying upon my head [some] bread, from which the birds were eating. Inform us of its interpretation; indeed, we see you to be of those who do good.\"",
-      "ur": "اور ان کے ساتھ دو اور جوان بھی داخل زندان ہوئے۔ ایک نے ان میں سے کہا کہ (میں نے خواب دیکھا ہے) دیکھتا (کیا) ہوں کہ شراب (کے لیے انگور) نچوڑ رہا ہوں۔ دوسرے نے کہا کہ (میں نے بھی خواب دیکھا ہے) میں یہ دیکھتا ہوں کہ اپنے سر پر روٹیاں اٹھائے ہوئے ہوں اور جانور ان میں سے کھا رہے (ہیں تو) ہمیں ان کی تعبیر بتا دیجیئے کہ ہم تمہیں نیکوکار دیکھتے ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012036.mp3"
+      "surah": 111,
+      "ayah": 1,
+      "label": "undefined 111:1",
+      "ar": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ",
+      "en": "May the hands of Abū Lahab be ruined, and ruined is he.",
+      "ur": "ابولہب کے ہاتھ ٹوٹیں اور وہ ہلاک ہو",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/111001.mp3"
     },
     "highlighted_word_indices": [
-      3
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "يَدَا",
+      "أَبِي"
     ],
     "noor_explanation": {
-      "en": "فَتَيَانِ = \"two young men\" — the dual of the maqṣūr noun فَتًى. In the dual, the hidden ي at the end of فَتًى comes back: فَتَى → فَتَيَانِ. The dual ending ـَانِ then shows the nominative clearly.",
-      "ur": "فَتَيَانِ = \"دو نوجوان\" — مقصور اسم فَتًى کا تثنیہ۔ تثنیہ میں فَتًى کے آخر کی چھپی ہوئی ي واپس آ جاتی ہے: فَتَى ← فَتَيَانِ۔ پھر تثنیہ کی علامت ـَانِ رفع صاف دکھاتی ہے۔"
+      "en": "يَدَا أَبِي لَهَبٍ — يَدَانِ lost its نِ because it opens the iḍāfa; أَبِي (genitive, with the yā' of the five nouns) and لَهَبٍ follow.",
+      "ur": "يَدَا أَبِي لَهَبٍ — يَدَانِ کا نِ اس لیے گرا کہ وہ اضافت کھولتا ہے؛ پھر أَبِي (مجرور، پانچ اسموں کی یا کے ساتھ) اور لَهَبٍ آتے ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "مُوسَى, عِيسَى, الْفَتَى — maqṣūr: the ending never shows a case. الْقَاضِي, الْهَادِي — manqūṣ: only the accusative fatḥa shows, and without الْ the ي drops (قَاضٍ).",
-      "ur": "مُوسَى، عِيسَى، الْفَتَى — مقصور: آخر کبھی اعراب ظاہر نہیں کرتا۔ الْقَاضِي، الْهَادِي — منقوص: صرف نصب کا فتحہ ظاہر ہوتا ہے، اور الْ کے بغیر ي گر جاتی ہے (قَاضٍ)۔"
+      "en": "A dual that opens an iḍāfa loses its نِ — and its long vowel still shows its case.",
+      "ur": "جو مثنی اضافت کھولے وہ اپنا نِ کھو دیتا ہے — اور اس کی لمبی حرکت اب بھی حالت دکھاتی ہے۔"
     }
   }
 }

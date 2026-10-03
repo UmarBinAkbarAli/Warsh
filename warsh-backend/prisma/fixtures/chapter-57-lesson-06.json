@@ -2,28 +2,28 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 57, Lesson 6 — الأفعال الخمسة: Introduction. The five special present-tense verb forms that end in ن. Grammar prerequisite: المضارع from Book 4.",
+    "_note": "Chapter 57, Lesson 6 (ch57-l04, rebuilt in place). كَانَ alone: the hollow verb as the head of a plain nominal sentence, اسم كان nominative and خبر كان accusative, with 4:96, 33:27 and a sound masculine plural predicate (28:53, كُنَّا مُسْلِمِينَ). The old lesson also taught أَصْبَحَ, أَمْسَى, صَارَ, لَيْسَ and مَا زَالَ as sisters; they are Chapter 65's (and لَيْسَ is Chapter 25's), so they are removed here. Eight exercises (four guided, four fresh). Added 2026-10-04 in the proposal harvest, batch 7 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-57-content-proposal.md and its review amendments.",
+    "title": "Kana — كان",
+    "titleAr": "كَانَ",
+    "titleUr": "كَانَ",
     "chapter_order": 57,
     "lesson_order": 6,
-    "chapter_title": "Advanced Verb Grammar — الأفعال الخمسة",
-    "title": "الأفعال الخمسة — The Five Special Verbs",
-    "titleAr": "الْأَفْعَالُ الْخَمْسَةُ",
     "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 2,
-      "ayah": 3,
-      "label": "Al-Baqarah 2:3",
-      "ar": "الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلَاةَ",
-      "en": "Those who believe in the unseen and establish prayer",
-      "ur": "وہ لوگ جو غیب پر ایمان لاتے ہیں اور نماز قائم کرتے ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002003.mp3"
+      "surah": 33,
+      "ayah": 27,
+      "label": "Al-Ahzab 33:27",
+      "ar": "وَكَانَ اللَّهُ عَلَىٰ كُلِّ شَيْءٍ قَدِيرًا",
+      "en": "And ever is Allah, over all things, competent",
+      "ur": "اور اللہ ہر چیز پر قادر ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033027.mp3"
     },
     "noor_intro": {
-      "en": "يُؤْمِنُونَ and يُقِيمُونَ — you have seen these forms everywhere in the Quran. They are not ordinary present-tense verbs. They belong to a group called الأفعال الخمسة — the Five Verbs. They have a special rule: case endings are shown by ن, not by diacritics.",
-      "ur": "يُؤْمِنُونَ اور يُقِيمُونَ — آپ نے یہ شکلیں قرآن میں ہر جگہ دیکھی ہیں۔ یہ عام مضارع افعال نہیں ہیں۔ یہ الأفعال الخمسة نامی ایک گروپ سے تعلق رکھتے ہیں۔ ان کا خاص قاعدہ ہے: اعرابی علامات حروف سے نہیں بلکہ ن سے ظاہر ہوتی ہیں۔"
+      "en": "One little verb in front of a sentence — and the predicate changes its ending.",
+      "ur": "جملے کے آگے ایک چھوٹا سا فعل — اور خبر کا انجام بدل جاتا ہے۔"
     },
     "autoplay": true
   },
@@ -31,374 +31,452 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "What are الأفعال الخمسة?",
-        "ar": "مَا هِيَ الأَفْعَالُ الخَمْسَةُ؟",
-        "ur": "الأفعال الخمسة کیا ہیں؟"
+        "en": "كَانَ — a hollow verb that changes the sentence",
+        "ar": "كَانَ — اسْمُهَا مَرْفُوعٌ وَخَبَرُهَا مَنْصُوبٌ",
+        "ur": "كَانَ — اس کا اسم مرفوع اور خبر منصوب"
       },
       "explanation": {
-        "en": "Five present-tense verb forms that carry ن to show their grammatical state: يَفْعَلُونَ (they m. do), تَفْعَلُونَ (you pl. do), يَفْعَلَانِ (they two do), تَفْعَلَانِ (you two do), تَفْعَلِينَ (you f. sg. do). When مرفوع: ends in -ونَ / -انِ. When منصوب/مجزوم: ن drops.",
-        "ur": "پانچ مضارع فعل کی شکلیں جو ن کے ذریعے اپنی اعرابی حالت ظاہر کرتی ہیں: يَفْعَلُونَ، تَفْعَلُونَ، يَفْعَلَانِ، تَفْعَلَانِ، تَفْعَلِينَ۔ مرفوع میں: -ونَ / -انِ پر ختم۔ منصوب/مجزوم میں: ن گر جاتی ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "يُؤْمِنُونَ",
-        "ar_plain": "يؤمنون",
-        "translit": "yu'minuuna",
-        "en": "they (m. pl.) believe",
-        "ur": "وہ (مذکر جمع) ایمان لاتے ہیں"
-      },
-      "explanation": {
-        "en": "يُؤْمِنُونَ = يُؤْمِن + ـُونَ (they, m.). It is in raf' — no particle before it changes it — so the ن stays. In 2:3 it is the verb of the relative clause after الَّذِينَ.",
-        "ur": "يُؤْمِنُونَ = يُؤْمِن + ـُونَ (وہ سب)۔ یہ مرفوع ہے — اس سے پہلے کوئی حرف اسے نہیں بدلتا — اس لیے ن باقی ہے۔ 2:3 میں یہ الَّذِينَ کے بعد صلے کا فعل ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "لَمْ يَتَّقُوا",
-        "ar_plain": "لم يتقوا",
-        "translit": "lam yattaquu",
-        "en": "they did not fear (Allah) [jussive]",
-        "ur": "وہ (اللہ سے) نہیں ڈرے [مجزوم]"
-      },
-      "explanation": {
-        "en": "يَتَّقُونَ (\"they fear Allah\") after لَمْ becomes لَمْ يَتَّقُوا: لَمْ causes jazm, and in the five verbs jazm is shown by dropping the ن.",
-        "ur": "يَتَّقُونَ (\"وہ اللہ سے ڈرتے ہیں\") لَمْ کے بعد لَمْ يَتَّقُوا بن جاتا ہے: لَمْ جزم دیتا ہے، اور افعال خمسہ میں جزم ن گرا کر ظاہر ہوتا ہے۔"
+        "en": "كَانَ ('was, to be') is the hollow verb you met in this chapter (كَانَ / كُنْتُ / يَكُونُ). Put it in front of a plain nominal sentence and the sentence changes: الطَّالِبُ مُجْتَهِدٌ ('The student is hardworking') becomes كَانَ الطَّالِبُ مُجْتَهِدًا ('The student was hardworking'). The subject stays nominative and is now called اسم كان; the predicate becomes accusative and is called خبر كان. (Its sisters are Chapter 65's.)",
+        "ur": "كَانَ ('تھا، ہونا') وہ اجوف فعل ہے جو آپ اس باب میں دیکھ چکے (كَانَ / كُنْتُ / يَكُونُ)۔ اسے سادہ اسمیہ جملے کے آگے رکھیں تو جملہ بدل جاتا ہے: الطَّالِبُ مُجْتَهِدٌ ('طالب علم محنتی ہے') بن جاتا ہے كَانَ الطَّالِبُ مُجْتَهِدًا ('طالب علم محنتی تھا')۔ مبتدا مرفوع رہتا ہے اور اسم كان کہلاتا ہے؛ خبر منصوب ہو جاتی ہے اور خبر كان کہلاتی ہے۔ (اس کی بہنیں باب 65 کی ہیں۔)"
       }
     },
     {
       "type": "CONTRAST",
+      "concept": {
+        "en": "Plain sentence / sentence with كَانَ",
+        "ur": "سادہ جملہ / كَانَ والا جملہ"
+      },
       "examples": [
         {
-          "ar": "يُؤْمِنُونَ",
-          "ar_plain": "يؤمنون",
-          "translit": "yu'minuuna",
-          "en": "they believe (مرفوع — ن present)",
-          "ur": "وہ ایمان لاتے ہیں (مرفوع — ن موجود)"
+          "ar": "الطَّالِبُ مُجْتَهِدٌ",
+          "ar_plain": "الطالب مجتهد",
+          "translit": "aṭ-ṭālibu mujtahidun",
+          "en": "The student is hardworking. (predicate nominative)",
+          "ur": "طالب علم محنتی ہے۔ (خبر مرفوع)"
         },
         {
-          "ar": "أَن يُؤْمِنُوا",
-          "ar_plain": "ان يؤمنوا",
-          "translit": "an yu'minuu",
-          "en": "that they believe (منصوب — ن dropped)",
-          "ur": "کہ وہ ایمان لائیں (منصوب — ن گری)"
+          "ar": "كَانَ الطَّالِبُ مُجْتَهِدًا",
+          "ar_plain": "كان الطالب مجتهدا",
+          "translit": "kāna aṭ-ṭālibu mujtahidan",
+          "en": "The student was hardworking. (predicate accusative)",
+          "ur": "طالب علم محنتی تھا۔ (خبر منصوب)"
         }
       ],
       "explanation": {
-        "en": "The same verb, two states. مرفوع (no triggering particle) keeps ن. منصوب (after أَن) drops ن. The meaning shifts: 'they believe' vs 'that they believe.'",
-        "ur": "ایک ہی فعل، دو حالتیں۔ مرفوع (کوئی triggering particle نہیں) ن رکھتا ہے۔ منصوب (أَن کے بعد) ن گرا دیتا ہے۔ معنی بدل جاتا ہے۔"
+        "en": "Same two nouns. With كَانَ the subject keeps its ḍamma and the predicate's tanwīn becomes a fatḥa.",
+        "ur": "وہی دو اسم۔ كَانَ کے ساتھ مبتدا اپنا ضمہ رکھتا ہے اور خبر کی تنوین فتحہ بن جاتی ہے۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "وَكَانَ اللَّهُ غَفُورًا رَّحِيمًا",
+        "ar_plain": "وكان الله غفورا رحيما",
+        "translit": "wakāna al-lahu ghafūran rraḥīman",
+        "en": "And Allah is ever Forgiving, Merciful",
+        "ur": "اور اللہ ہمیشہ بخشنے والا، رحم کرنے والا ہے"
       },
-      "concept": {
-        "en": "Same verb, two states",
-        "ar": "يُؤْمِنُونَ / أَنْ يُؤْمِنُوا",
-        "ur": "ایک فعل، دو حالتیں"
+      "explanation": {
+        "en": "كَانَ = the verb. اللَّهُ = اسم كان, nominative. غَفُورًا رَّحِيمًا = خبر كان, accusative (tanwīn fatḥa). Said of Allah, كَانَ means 'is ever'. (An-Nisa 4:96) (An-Nisa 4:96)",
+        "ur": "كَانَ = فعل۔ اللَّهُ = اسم كان، مرفوع۔ غَفُورًا رَّحِيمًا = خبر كان، منصوب (تنوین فتحہ)۔ اللہ کے بارے میں كَانَ کا مطلب 'ہمیشہ ہے'۔ (النساء 4:96) (An-Nisa 4:96)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "وَكَانَ اللَّهُ عَلَىٰ كُلِّ شَيْءٍ قَدِيرًا",
+        "ar_plain": "وكان الله على كل شيء قديرا",
+        "translit": "wakāna al-lahu ʿalā kulli shayʾin qadīran",
+        "en": "And ever is Allah, over all things, competent",
+        "ur": "اور اللہ ہر چیز پر قادر ہے"
+      },
+      "explanation": {
+        "en": "Same pattern: اللَّهُ is the اسم, and قَدِيرًا is the خبر with a fatḥa. عَلَىٰ كُلِّ شَيْءٍ ('over all things') sits between and belongs to قَدِيرًا. (Al-Ahzab 33:27) (Al-Ahzab 33:27)",
+        "ur": "وہی نمونہ: اللَّهُ اسم ہے، اور قَدِيرًا خبر ہے فتحہ کے ساتھ۔ عَلَىٰ كُلِّ شَيْءٍ ('ہر چیز پر') بیچ میں ہے اور قَدِيرًا سے متعلق ہے۔ (الاحزاب 33:27) (Al-Ahzab 33:27)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "إِنَّا كُنَّا مِن قَبْلِهِ مُسْلِمِينَ",
+        "ar_plain": "انا كنا من قبله مسلمين",
+        "translit": "ʾinnā kunnā min qablihi muslimīna",
+        "en": "Indeed we were, before it, Muslims",
+        "ur": "بے شک ہم اس سے پہلے مسلمان تھے"
+      },
+      "explanation": {
+        "en": "A sound masculine plural as the predicate: مُسْلِمِينَ ends in ـِينَ, the accusative sign of the sound masculine plural — so it is خبر كان, accusative, even though no fatḥa shows. (Al-Qasas 28:53) (undefined 28:53)",
+        "ur": "جمع مذکر سالم بطور خبر: مُسْلِمِينَ ـِينَ پر ختم ہوتا ہے جو جمع مذکر سالم کا نصب کی علامت ہے — یعنی یہ خبر كان، منصوب ہے، اگرچہ فتحہ نظر نہیں آتا۔ (القصص 28:53) (undefined 28:53)"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "تَفْعَلِينَ",
-        "ar_plain": "تفعلين",
-        "translit": "taf'aliina",
-        "en": "you (f. sg.) do [مرفوع]",
-        "ur": "تم (مؤنث مفرد) کرتی ہو [مرفوع]"
+        "ar": "كُنَّا مُسْلِمِينَ",
+        "ar_plain": "كنا مسلمين",
+        "translit": "kunnā muslimīna",
+        "en": "We were Muslims.",
+        "ur": "ہم مسلمان تھے۔"
       },
       "explanation": {
-        "en": "تَفْعَلِينَ (\"you, a woman, do\"): raf' ends in ـِينَ. After أَنْ، لَنْ or لَمْ the ن drops: لَمْ تَفْعَلِي.",
-        "ur": "تَفْعَلِينَ (\"تم، ایک عورت، کرتی ہو\"): رفع ـِينَ پر ختم۔ أَنْ، لَنْ یا لَمْ کے بعد ن گر جاتا ہے: لَمْ تَفْعَلِي۔"
+        "en": "كُنَّا is كَانَ with نَا ('we'): the pronoun نَا is the اسم كان. مُسْلِمِينَ is the خبر, accusative by ـِينَ. (You met this sentence in the past-tense lesson.)",
+        "ur": "كُنَّا ہے كَانَ نَا ('ہم') کے ساتھ: ضمیر نَا اسم كان ہے۔ مُسْلِمِينَ خبر ہے، ـِينَ سے منصوب۔ (یہ جملہ آپ نے ماضی کے سبق میں دیکھا۔)"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Only كَانَ here",
+        "ur": "یہاں صرف كَانَ"
+      },
+      "body": {
+        "en": "This lesson teaches كَانَ alone. Verbs like أَصْبَحَ and صَارَ work in a similar way, but they belong to Chapter 65 and are not used here. Watch the two signs: اسم كان is nominative, خبر كان is accusative.",
+        "ur": "یہ سبق صرف كَانَ سکھاتا ہے۔ أَصْبَحَ اور صَارَ جیسے افعال اسی طرح کام کرتے ہیں مگر وہ باب 65 کے ہیں اور یہاں استعمال نہیں ہوتے۔ دو علامتیں یاد رکھیں: اسم كان مرفوع، خبر كان منصوب۔"
       }
     }
   ],
   "exercises": [
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch57-l06-ex01",
+      "id": "ch57-l04-ex01",
       "prompt": {
-        "ar": "يُؤْمِنُونَ بِالْغَيْبِ",
-        "ar_plain": "يؤمنون بالغيب",
-        "translit": "yu'minuuna bil-ghaybi",
-        "en": "they believe in the unseen",
-        "ur": "وہ غیب پر ایمان لاتے ہیں"
+        "ar": "كَانَ الطَّالِبُ مُجْتَهِدًا",
+        "ar_plain": "كان الطالب مجتهدا",
+        "translit": "kāna aṭ-ṭālibu mujtahidan",
+        "en": "(The student was hardworking.)",
+        "ur": "(طالب علم محنتی تھا۔)"
       },
       "options": [
         {
-          "en": "they believe in the unseen",
-          "ur": "وہ غیب پر ایمان لاتے ہیں"
+          "en": "The student is hardworking.",
+          "ur": "طالب علم محنتی ہے۔"
         },
         {
-          "en": "he believes in the unseen",
-          "ur": "وہ (واحد) غیب پر ایمان لاتا ہے"
+          "en": "The student was hardworking.",
+          "ur": "طالب علم محنتی تھا۔"
         },
         {
-          "en": "they believed in the unseen",
-          "ur": "وہ غیب پر ایمان لائے"
+          "en": "The hardworking student was.",
+          "ur": "محنتی طالب علم تھا۔"
         },
         {
-          "en": "that they believe in the unseen",
-          "ur": "کہ وہ غیب پر ایمان لائیں"
+          "en": "The student will be hardworking.",
+          "ur": "طالب علم محنتی ہوگا۔"
         }
       ],
-      "correct_index": 0,
-      "xp_value": 2,
+      "correct_index": 1,
+      "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "يُؤْمِنُونَ is third-person masculine plural present (one of الأفعال الخمسة): 'they believe.' The ون suffix = plural masculine + مرفوع state.",
-        "ur": "يُؤْمِنُونَ third-person masculine plural present ہے (الأفعال الخمسة میں سے ایک): 'وہ ایمان لاتے ہیں'۔ ون لاحقہ = جمع مذکر + مرفوع حالت۔"
+        "en": "كَانَ puts the sentence in the past: 'was'.",
+        "ur": "كَانَ جملے کو ماضی میں رکھتا ہے: 'تھا'۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch57-l04-ex02",
+      "mode": "TAP",
+      "sentence_ar": "كَانَ ___ مُجْتَهِدًا.",
+      "hint": {
+        "en": "The student was hardworking.",
+        "ur": "طالب علم محنتی تھا۔"
+      },
+      "options": [
+        {
+          "ar": "الطَّالِبَ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭāliba",
+          "en": "the student (accusative)",
+          "ur": "طالب علم (منصوب)"
+        },
+        {
+          "ar": "الطَّالِبِ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibi",
+          "en": "the student (genitive)",
+          "ur": "طالب علم (مجرور)"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibu",
+          "en": "the student (nominative)",
+          "ur": "طالب علم (مرفوع)"
+        },
+        {
+          "ar": "طَالِبًا",
+          "ar_plain": "طالبا",
+          "translit": "ṭāliban",
+          "en": "a student (accusative)",
+          "ur": "ایک طالب علم (منصوب)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الطَّالِبُ",
+        "ar_plain": "الطالب",
+        "translit": "aṭ-ṭālibu",
+        "en": "the student (nominative)",
+        "ur": "طالب علم (مرفوع)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "اسم كان stays nominative: الطَّالِبُ.",
+        "ur": "اسم كان مرفوع رہتا ہے: الطَّالِبُ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch57-l04-ex03",
+      "mode": "TAP",
+      "sentence_ar": "كَانَ الطَّالِبُ ___.",
+      "hint": {
+        "en": "The student was hardworking.",
+        "ur": "طالب علم محنتی تھا۔"
+      },
+      "options": [
+        {
+          "ar": "مُجْتَهِدًا",
+          "ar_plain": "مجتهدا",
+          "translit": "mujtahidan",
+          "en": "hardworking (accusative)",
+          "ur": "محنتی (منصوب)"
+        },
+        {
+          "ar": "مُجْتَهِدٌ",
+          "ar_plain": "مجتهد",
+          "translit": "mujtahidun",
+          "en": "hardworking (nominative)",
+          "ur": "محنتی (مرفوع)"
+        },
+        {
+          "ar": "مُجْتَهِدٍ",
+          "ar_plain": "مجتهد",
+          "translit": "mujtahidin",
+          "en": "hardworking (genitive)",
+          "ur": "محنتی (مجرور)"
+        },
+        {
+          "ar": "مُجْتَهِدُونَ",
+          "ar_plain": "مجتهدون",
+          "translit": "mujtahidūna",
+          "en": "hardworking (plural)",
+          "ur": "محنتی (جمع)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "مُجْتَهِدًا",
+        "ar_plain": "مجتهدا",
+        "translit": "mujtahidan",
+        "en": "hardworking (accusative)",
+        "ur": "محنتی (منصوب)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "خبر كان is accusative: مُجْتَهِدًا, with the fatḥa tanwīn.",
+        "ur": "خبر كان منصوب ہے: مُجْتَهِدًا، فتحہ تنوین کے ساتھ۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch57-l06-ex02",
+      "id": "ch57-l04-ex04",
       "statement": {
-        "en": "In الأفعال الخمسة, the ن drops when the verb is in مجزوم or منصوب state.",
-        "ur": "الأفعال الخمسة میں، ن اس وقت گر جاتی ہے جب فعل مجزوم یا منصوب حالت میں ہو۔",
-        "ar_example": {
-          "ar": "لَمْ يُؤْمِنُوا",
-          "ar_plain": "لم يؤمنوا",
-          "translit": "lam yu'minuu",
-          "en": "they did not believe",
-          "ur": "وہ ایمان نہیں لائے"
-        }
+        "en": "When كَانَ is added to الطَّالِبُ مُجْتَهِدٌ, the predicate changes from مُجْتَهِدٌ to مُجْتَهِدًا.",
+        "ur": "الطَّالِبُ مُجْتَهِدٌ میں كَانَ لگانے سے خبر مُجْتَهِدٌ سے مُجْتَهِدًا ہو جاتی ہے۔"
       },
       "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes: the subject stays nominative and the predicate becomes accusative.",
+        "ur": "جی ہاں: مبتدا مرفوع رہتا ہے اور خبر منصوب ہو جاتی ہے۔"
+      }
     },
     {
-      "type": "FILL_BLANK",
-      "id": "ch57-l06-ex03",
-      "mode": "TAP",
-      "sentence_ar": "الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ ___",
-      "hint": {
-        "en": "the prayer (Al-Baqarah 2:3)",
-        "ur": "نماز (البقرۃ 2:3)"
+      "type": "TAP_TRANSLATION",
+      "id": "ch57-l04-ex05",
+      "prompt": {
+        "ar": "كُنَّا مُسْلِمِينَ",
+        "ar_plain": "كنا مسلمين",
+        "translit": "kunnā muslimīna",
+        "en": "(We were Muslims.)",
+        "ur": "(ہم مسلمان تھے۔)"
       },
       "options": [
         {
-          "ar": "الصَّلَاةَ",
-          "ar_plain": "الصلاة",
-          "translit": "as-salaata",
-          "en": "the prayer (منصوب)",
-          "ur": "نماز (منصوب)"
+          "en": "مُسْلِمِينَ is اسم كان, nominative",
+          "ur": "مُسْلِمِينَ اسم كان ہے، مرفوع"
         },
         {
-          "ar": "الصَّلَاةُ",
-          "ar_plain": "الصلاة",
-          "translit": "as-salaatu",
-          "en": "the prayer (مرفوع)",
-          "ur": "نماز (مرفوع)"
+          "en": "مُسْلِمِينَ is genitive after كُنَّا",
+          "ur": "مُسْلِمِينَ كُنَّا کے بعد مجرور ہے"
         },
         {
-          "ar": "الصَّلَاةِ",
-          "ar_plain": "الصلاة",
-          "translit": "as-salaati",
-          "en": "the prayer (مجرور)",
-          "ur": "نماز (مجرور)"
+          "en": "مُسْلِمِينَ is the verb",
+          "ur": "مُسْلِمِينَ فعل ہے"
         },
         {
-          "ar": "الصَّيَّامَ",
-          "ar_plain": "الصيام",
-          "translit": "as-siyaama",
-          "en": "the fasting",
-          "ur": "روزہ"
+          "en": "مُسْلِمِينَ is خبر كان, accusative — the sign is ـِينَ",
+          "ur": "مُسْلِمِينَ خبر كان ہے، منصوب — علامت ـِينَ ہے"
         }
       ],
-      "correct_answer": {
-        "ar": "الصَّلَاةَ",
-        "ar_plain": "الصلاة",
-        "translit": "as-salaata",
-        "en": "the prayer (منصوب)",
-        "ur": "نماز (منصوب)"
-      },
-      "xp_value": 2
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch57-l06-ex04",
-      "left_column": [
-        {
-          "ar": "يُؤْمِنُونَ",
-          "ar_plain": "يؤمنون",
-          "translit": "yu'minuuna",
-          "en": "they believe (m.pl.)",
-          "ur": "وہ مانتے ہیں (m.pl.)"
-        },
-        {
-          "ar": "تُؤْمِنُونَ",
-          "ar_plain": "تؤمنون",
-          "translit": "tu'minuuna",
-          "en": "you believe (m.pl.)",
-          "ur": "آپ کو یقین ہے (m.pl.)"
-        },
-        {
-          "ar": "تُؤْمِنِينَ",
-          "ar_plain": "تؤمنين",
-          "translit": "tu'miniina",
-          "en": "you believe (f.sg.)",
-          "ur": "آپ کو یقین ہے (f.sg.)"
-        },
-        {
-          "ar": "يُؤْمِنَانِ",
-          "ar_plain": "يؤمنان",
-          "translit": "yu'minaani",
-          "en": "they two believe",
-          "ur": "وہ دونوں یقین رکھتے ہیں"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "3rd m. plural",
-          "ur": "تیسرا مذکر جمع"
-        },
-        {
-          "en": "2nd m. plural",
-          "ur": "دوسرا مذکر جمع"
-        },
-        {
-          "en": "2nd f. singular",
-          "ur": "دوسرا مؤنث مفرد"
-        },
-        {
-          "en": "3rd dual",
-          "ur": "تیسرا تثنیہ"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 2
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch57-l06-ex05",
-      "target_translation": {
-        "en": "Those who establish prayer.",
-        "ur": "وہ لوگ جو نماز قائم کرتے ہیں۔"
-      },
-      "tiles": [
-        {
-          "ar": "الَّذِينَ",
-          "ar_plain": "الذين",
-          "translit": "alladheena",
-          "en": "those who",
-          "ur": "وہ جو"
-        },
-        {
-          "ar": "يُقِيمُونَ",
-          "ar_plain": "يقيمون",
-          "translit": "yuqiimuuna",
-          "en": "establish (m.pl.)",
-          "ur": "قائم کرتے ہیں"
-        },
-        {
-          "ar": "الصَّلَاةَ",
-          "ar_plain": "الصلاة",
-          "translit": "as-salaata",
-          "en": "the prayer",
-          "ur": "نماز"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The sound masculine plural shows accusative with ـِينَ — and here that is the predicate.",
+        "ur": "جمع مذکر سالم نصب ـِينَ سے دکھاتی ہے — اور یہاں یہی خبر ہے۔"
+      }
     },
     {
       "type": "GRAMMAR_PARSE",
-      "id": "ch57-l06-ex06",
-      "sentence_ar": "يُؤْمِنُونَ بِالْغَيْبِ",
-      "sentence": {
-        "ar": "يُؤْمِنُونَ بِالْغَيْبِ",
-        "ar_plain": "يؤمنون بالغيب",
-        "translit": "yu'minuuna bil-ghaybi",
-        "en": "they believe in the unseen",
-        "ur": "وہ غیب پر ایمان لاتے ہیں"
-      },
+      "id": "ch57-l04-ex06",
+      "sentence_ar": "كَانَ اللَّهُ غَفُورًا",
       "words": [
         {
-          "ar": "يُؤْمِنُونَ",
-          "ar_plain": "يؤمنون",
-          "translit": "yu'minuuna",
-          "en": "they believe (مرفوع)",
-          "ur": "وہ ایمان لاتے ہیں (مرفوع)"
+          "ar": "كَانَ",
+          "ar_plain": "كان",
+          "translit": "kāna",
+          "en": "was / ever",
+          "ur": "تھا / ہمیشہ"
         },
         {
-          "ar": "بِ",
-          "ar_plain": "ب",
-          "translit": "bi",
-          "en": "in/with (prep.)",
-          "ur": "میں/کے ساتھ"
+          "ar": "اللَّهُ",
+          "ar_plain": "الله",
+          "translit": "al-lahu",
+          "en": "Allah",
+          "ur": "اللہ"
         },
         {
-          "ar": "الْغَيْبِ",
-          "ar_plain": "الغيب",
-          "translit": "al-ghaybi",
-          "en": "the unseen",
-          "ur": "غیب"
+          "ar": "غَفُورًا",
+          "ar_plain": "غفورا",
+          "translit": "ghafūran",
+          "en": "Forgiving",
+          "ur": "بخشنے والا"
         }
       ],
       "available_roles": [
         "VERB",
-        "PREPOSITION",
-        "NOUN"
+        "SUBJECT",
+        "PREDICATE",
+        "OBJECT"
       ],
       "correct_roles": [
         "VERB",
-        "PREPOSITION",
-        "NOUN"
+        "SUBJECT",
+        "PREDICATE"
       ],
-      "xp_value": 2,
+      "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "يُؤْمِنُونَ is the verb (one of الأفعال الخمسة, مرفوع). بِ is a preposition. الْغَيْبِ is its مجرور object.",
-        "ur": "يُؤْمِنُونَ فعل ہے (الأفعال الخمسة میں سے، مرفوع)۔ بِ حرف جر ہے۔ الْغَيْبِ اس کا مجرور مفعول ہے۔"
+        "en": "كَانَ is the verb; اللَّهُ is its subject (اسم كان, nominative); غَفُورًا is its predicate (خبر كان, accusative).",
+        "ur": "كَانَ فعل ہے؛ اللَّهُ اس کا اسم (اسم كان، مرفوع)؛ غَفُورًا اس کی خبر (خبر كان، منصوب)۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch57-l04-ex07",
+      "target_translation": {
+        "en": "The student was hardworking.",
+        "ur": "طالب علم محنتی تھا۔"
+      },
+      "tiles": [
+        {
+          "ar": "مُجْتَهِدًا",
+          "ar_plain": "مجتهدا",
+          "translit": "mujtahidan",
+          "en": "hardworking",
+          "ur": "محنتی"
+        },
+        {
+          "ar": "كَانَ",
+          "ar_plain": "كان",
+          "translit": "kāna",
+          "en": "was",
+          "ur": "تھا"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibu",
+          "en": "the student",
+          "ur": "طالب علم"
+        }
+      ],
+      "correct_order": [
+        1,
+        2,
+        0
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Verb first, then اسم كان, then خبر كان.",
+        "ur": "پہلے فعل، پھر اسم كان، پھر خبر كان۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch57-l04-ex08",
+      "prompt": {
+        "ar": "الطَّالِبُ مُجْتَهِدٌ  ↔  كَانَ الطَّالِبُ مُجْتَهِدًا",
+        "ar_plain": "الطالب مجتهد  ↔  كان الطالب مجتهدا",
+        "translit": "aṭ-ṭālibu mujtahidun ↔ kāna aṭ-ṭālibu mujtahidan",
+        "en": "(what changed besides the verb?)",
+        "ur": "(فعل کے علاوہ کیا بدلا؟)"
+      },
+      "options": [
+        {
+          "en": "the subject went from nominative to accusative",
+          "ur": "مبتدا مرفوع سے منصوب ہو گیا"
+        },
+        {
+          "en": "the predicate went from nominative to accusative",
+          "ur": "خبر مرفوع سے منصوب ہو گئی"
+        },
+        {
+          "en": "both words became genitive",
+          "ur": "دونوں الفاظ مجرور ہو گئے"
+        },
+        {
+          "en": "nothing changed",
+          "ur": "کچھ نہیں بدلا"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Only the predicate changes its case.",
+        "ur": "صرف خبر کی حالت بدلتی ہے۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "الأفعال الخمسة — ن marks the state",
-      "ar": "الأفعال الخمسة — النون علامة الإعراب",
-      "ur": "الأفعال الخمسة — ن اعراب کی علامت ہے"
+      "en": "اسم كان and خبر كان",
+      "ar": "اسْمُ كَانَ وَخَبَرُهَا",
+      "ur": "اسم كان اور خبر كان"
     },
     "ayah": {
-      "surah": 2,
-      "ayah": 3,
-      "label": "Al-Baqarah 2:3",
-      "ar": "الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلَاةَ",
-      "en": "Those who believe in the unseen and establish prayer",
-      "ur": "وہ لوگ جو غیب پر ایمان لاتے ہیں اور نماز قائم کرتے ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002003.mp3"
+      "surah": 33,
+      "ayah": 27,
+      "label": "Al-Ahzab 33:27",
+      "ar": "وَكَانَ اللَّهُ عَلَىٰ كُلِّ شَيْءٍ قَدِيرًا",
+      "en": "And ever is Allah, over all things, competent",
+      "ur": "اور اللہ ہر چیز پر قادر ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033027.mp3"
     },
     "highlighted_word_indices": [
       1,
-      3
+      5
+    ],
+    "highlighted_words": [
+      "اللَّهُ",
+      "قَدِيرًا"
     ],
     "noor_explanation": {
-      "en": "يُؤْمِنُونَ and يُقِيمُونَ are both in raf' — nothing before them changes them — so both keep their ن. In لَمْ يُؤْمِنُوا the ن drops because لَمْ causes jazm. The ن is your signal.",
-      "ur": "يُؤْمِنُونَ اور يُقِيمُونَ دونوں مرفوع ہیں — ان سے پہلے کوئی حرف انہیں نہیں بدلتا — اس لیے دونوں کا ن باقی ہے۔ لَمْ يُؤْمِنُوا میں ن گرتا ہے کیونکہ لَمْ جزم دیتا ہے۔ ن آپ کی علامت ہے۔"
+      "en": "وَكَانَ اللَّهُ … قَدِيرًا — اللَّهُ is the nominative subject and قَدِيرًا the accusative predicate.",
+      "ur": "وَكَانَ اللَّهُ … قَدِيرًا — اللَّهُ مرفوع اسم ہے اور قَدِيرًا منصوب خبر۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "الأفعال الخمسة — five forms, one rule: ن present = مرفوع; ن absent = منصوب or مجزوم. يُؤْمِنُونَ, يُقِيمُونَ, يَتَّقُوا — now you know what you are reading.",
-      "ur": "الأفعال الخمسة — پانچ شکلیں، ایک قاعدہ: ن موجود = مرفوع؛ ن غیر موجود = منصوب یا مجزوم۔ يُؤْمِنُونَ، يُقِيمُونَ، يَتَّقُوا — اب آپ جانتے ہیں کہ آپ کیا پڑھ رہے ہیں۔"
+      "en": "كَانَ: the subject stays nominative, the predicate becomes accusative.",
+      "ur": "كَانَ: مبتدا مرفوع رہتا ہے، خبر منصوب ہو جاتی ہے۔"
     }
   }
 }

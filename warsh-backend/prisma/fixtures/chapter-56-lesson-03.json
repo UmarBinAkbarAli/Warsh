@@ -2,12 +2,12 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 56, Lesson 3 — الْأَسْمَاءُ الْخَمْسَةُ: the five nouns أَبٌ، أَخٌ، حَمٌ، فُمٌ، ذُو.",
+    "_note": "Chapter 56, Lesson 6 — Full comparison: المقصور vs المنقوص vs standard nouns.",
     "chapter_order": 56,
     "lesson_order": 3,
     "chapter_title": "Special Noun Types",
-    "title": "The Five Nouns — الأسماء الخمسة",
-    "titleAr": "الْأَسْمَاءُ الْخَمْسَةُ",
+    "title": "Maqsur vs Munqas — What Makes Them Different",
+    "titleAr": "الْمَقْصُورُ وَالْمَنْقُوصُ — مَا الْفَرْقُ؟",
     "source": "book_6_grammar_science_56_special_noun_types.md",
     "estimated_minutes": 9,
     "xp_reward": 10
@@ -15,16 +15,16 @@
   "hook": {
     "ayah": {
       "surah": 12,
-      "ayah": 8,
-      "label": "Yusuf 12:8",
-      "ar": "إِذْ قَالُوا لَيُوسُفُ وَأَخُوهُ أَحَبُّ إِلَىٰ أَبِينَا مِنَّا",
-      "en": "When they said, \"Joseph and his brother are more beloved to our father than we\"",
-      "ur": "جب انہوں نے کہا کہ یوسف اور اس کا بھائی ہمارے باپ کو ہم سے زیادہ پیارے ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012008.mp3"
+      "ayah": 36,
+      "label": "Yusuf 12:36",
+      "ar": "وَدَخَلَ مَعَهُ السِّجْنَ فَتَيَانِ ۖ قَالَ أَحَدُهُمَا إِنِّي أَرَانِي أَعْصِرُ خَمْرًا ۖ وَقَالَ الْآخَرُ إِنِّي أَرَانِي أَحْمِلُ فَوْقَ رَأْسِي خُبْزًا تَأْكُلُ الطَّيْرُ مِنْهُ ۖ نَبِّئْنَا بِتَأْوِيلِهِ ۖ إِنَّا نَرَاكَ مِنَ الْمُحْسِنِينَ",
+      "en": "And there entered the prison with him two young men. One of them said, \"Indeed, I have seen myself [in a dream] pressing [grapes for] wine.\" The other said, \"Indeed, I have seen myself carrying upon my head [some] bread, from which the birds were eating. Inform us of its interpretation; indeed, we see you to be of those who do good.\"",
+      "ur": "اور ان کے ساتھ دو اور جوان بھی داخل زندان ہوئے۔ ایک نے ان میں سے کہا کہ (میں نے خواب دیکھا ہے) دیکھتا (کیا) ہوں کہ شراب (کے لیے انگور) نچوڑ رہا ہوں۔ دوسرے نے کہا کہ (میں نے بھی خواب دیکھا ہے) میں یہ دیکھتا ہوں کہ اپنے سر پر روٹیاں اٹھائے ہوئے ہوں اور جانور ان میں سے کھا رہے (ہیں تو) ہمیں ان کی تعبیر بتا دیجیئے کہ ہم تمہیں نیکوکار دیکھتے ہیں",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012036.mp3"
     },
     "noor_intro": {
-      "en": "Listen for أَخُوهُ (\"his brother\") and أَبِينَا (\"our father\"). These belong to الْأَسْمَاءُ الْخَمْسَةُ, five nouns that show their case with a long vowel when they are joined to a following word: و for nominative, ا for accusative, ي for genitive.",
-      "ur": "أَخُوهُ (\"اس کا بھائی\") اور أَبِينَا (\"ہمارا باپ\") سنیں۔ یہ اسمائے خمسہ میں سے ہیں — پانچ اسم جو اگلے لفظ سے جڑنے پر لمبی آواز سے اعراب دکھاتے ہیں: رفع میں و، نصب میں ا، جر میں ي۔"
+      "en": "مُوسَى (مقصور) and الْقَاضِي (منقوص) both end in weak letters, but they behave differently in i'rab: a مقصور noun shows no visible case ending at all, while a منقوص noun shows only the fatḥa in the accusative (الْقَاضِيَ) and, when indefinite, drops its yā' in the nominative and genitive (قَاضٍ).",
+      "ur": "مُوسَى (مقصور) اور الْقَاضِي (منقوص) دونوں حرفِ علت پر ختم ہوتے ہیں، لیکن اعراب میں مختلف ہیں: مقصور پر کوئی اعراب ظاہر نہیں ہوتا، جبکہ منقوص پر صرف نصب ظاہر ہوتا ہے (الْقَاضِيَ)، اور نکرہ ہو تو رفع اور جر میں اس کی ی گر جاتی ہے (قَاضٍ)۔"
     },
     "autoplay": true
   },
@@ -32,174 +32,159 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "The Five Nouns — الْأَسْمَاءُ الْخَمْسَةُ",
-        "ar": "الْأَسْمَاءُ الْخَمْسَةُ — أَبٌ، أَخٌ، حَمٌ، فُو، ذُو",
-        "ur": "پانچ اسم — أَبٌ، أَخٌ، حَمٌ، فُمٌ، ذُو"
+        "en": "Al-Maqṣūr — ends in an alif, case never visible",
+        "ar": "الْمَقْصُورُ — آخِرُهُ أَلِفٌ لَازِمَةٌ",
+        "ur": "مقصور — آخر میں الف، اعراب کبھی ظاہر نہیں"
       },
       "explanation": {
-        "en": "الْأَسْمَاءُ الْخَمْسَةُ are أَبٌ (father), أَخٌ (brother), حَمٌ (father-in-law), فُو (mouth) and ذُو (possessor of). When one is the first noun of an iḍāfa (except with \"my\"), it shows case with a long vowel: أَبُوهُ (nom.), أَبَاهُ (acc.), أَبِيهِ (gen.).",
-        "ur": "اسمائے خمسہ یہ ہیں: أَبٌ (باپ)، أَخٌ (بھائی)، حَمٌ (سسر)، فُو (منہ) اور ذُو (والا)۔ جب ان میں سے کوئی اضافت کا پہلا اسم ہو (\"میرا\" کے سوا)، تو لمبی آواز سے اعراب دکھاتا ہے: أَبُوهُ (رفع)، أَبَاهُ (نصب)، أَبِيهِ (جر)۔"
+        "en": "A maqṣūr noun ends in an alif (often written ى). It looks the same in all three cases: جَاءَ مُوسَى، رَأَيْتُ مُوسَى، مَعَ مُوسَى. Without الْ it takes tanwīn on the letter before: فَتًى.",
+        "ur": "مقصور اسم الف پر ختم ہوتا ہے (اکثر ى کی شکل میں)۔ یہ تینوں حالتوں میں ایک جیسا رہتا ہے: جَاءَ مُوسَى، رَأَيْتُ مُوسَى، مَعَ مُوسَى۔ الْ کے بغیر پہلے حرف پر تنوین آتی ہے: فَتًى۔"
       }
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "أَبٌ",
-        "ar_plain": "اب",
-        "translit": "abun",
-        "en": "father — one of the five special nouns",
-        "ur": "باپ — پانچ خاص اسم میں سے ایک"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Al-Manqūṣ — ends in ي, only the accusative shows",
+        "ar": "الْمَنْقُوصُ — آخِرُهُ يَاءٌ لَازِمَةٌ مَكْسُورٌ مَا قَبْلَهَا",
+        "ur": "منقوص — آخر میں ي، صرف نصب ظاہر"
       },
       "explanation": {
-        "en": "أَبٌ = \"father\". Alone it behaves normally: أَبٌ، أَبًا، أَبٍ. In iḍāfa it takes a long vowel: أَبُو الطَّالِبِ (nom.), أَبَا الطَّالِبِ (acc.), أَبِي الطَّالِبِ (gen.) — and أَبُوهُ, أَبَاهُ, أَبِيهِ with \"his\".",
-        "ur": "أَبٌ = \"باپ\"۔ اکیلا ہو تو عام طرح: أَبٌ، أَبًا، أَبٍ۔ اضافت میں لمبی آواز لیتا ہے: أَبُو الطَّالِبِ (رفع)، أَبَا الطَّالِبِ (نصب)، أَبِي الطَّالِبِ (جر) — اور \"اس کا\" کے ساتھ أَبُوهُ، أَبَاهُ، أَبِيهِ۔"
+        "en": "A manqūṣ noun ends in ي after a kasra. With الْ: الْقَاضِي (nominative and genitive — no vowel shows), الْقَاضِيَ (accusative). Without الْ: قَاضٍ (nominative and genitive — the ي drops), قَاضِيًا (accusative).",
+        "ur": "منقوص اسم کسرہ کے بعد ي پر ختم ہوتا ہے۔ الْ کے ساتھ: الْقَاضِي (رفع اور جر — حرکت ظاہر نہیں)، الْقَاضِيَ (نصب)۔ الْ کے بغیر: قَاضٍ (رفع اور جر — ي گر جاتی ہے)، قَاضِيًا (نصب)۔"
       }
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "أَخٌ",
-        "ar_plain": "اخ",
-        "translit": "akhun",
-        "en": "brother — one of the five special nouns",
-        "ur": "بھائی — پانچ خاص اسم میں سے ایک"
-      },
+      "type": "CONTRAST",
       "explanation": {
-        "en": "أَخٌ = \"brother\". Alone: أَخٌ، أَخًا، أَخٍ. In iḍāfa: أَخُوهُ (nom.), أَخَاهُ (acc.), أَخِيهِ (gen.).",
-        "ur": "أَخٌ = \"بھائی\"۔ اکیلا: أَخٌ، أَخًا، أَخٍ۔ اضافت میں: أَخُوهُ (رفع)، أَخَاهُ (نصب)، أَخِيهِ (جر)۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "ذُو",
-        "ar_plain": "ذو",
-        "translit": "dhul",
-        "en": "possessor of / owner of — one of the five, used in classical Arabic",
-        "ur": "جس کے پاس ہو / مالک — پانچ میں سے، قدیم عربی میں مستعمل"
+        "en": "مُوسَى ends in an alif: no case is ever visible. الْقَاضِي ends in ي: the accusative fatḥa shows (الْقَاضِيَ). So the accusative is where they look different.",
+        "ur": "مُوسَى الف پر ختم ہوتا ہے: کوئی اعراب کبھی ظاہر نہیں۔ الْقَاضِي ي پر ختم ہوتا ہے: نصب کا فتحہ ظاہر ہوتا ہے (الْقَاضِيَ)۔ اس لیے نصب میں دونوں کا فرق نظر آتا ہے۔"
       },
-      "explanation": {
-        "en": "ذُو = \"possessor of\". It is always followed by a noun (never by an attached pronoun), and it changes with case: ذُو (nom.), ذَا (acc.), ذِي (gen.). In the Quran: ذُو الْعَرْشِ, \"Owner of the Throne\".",
-        "ur": "ذُو = \"والا\"۔ اس کے بعد ہمیشہ اسم آتا ہے (متصل ضمیر نہیں)، اور یہ اعراب کے ساتھ بدلتا ہے: ذُو (رفع)، ذَا (نصب)، ذِي (جر)۔ قرآن میں: ذُو الْعَرْشِ، \"عرش والا\"۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "أَبُوهُ",
-        "ar_plain": "ابوه",
-        "translit": "abuuho",
-        "en": "his father",
-        "ur": "اس کا باپ"
-      },
-      "explanation": {
-        "en": "أَبُوهُ = أَبُو + هُ (\"his\"). The و shows the nominative. In the accusative it is أَبَاهُ, in the genitive أَبِيهِ.",
-        "ur": "أَبُوهُ = أَبُو + هُ (\"اس کا\")۔ و رفع ظاہر کرتا ہے۔ نصب میں أَبَاهُ، جر میں أَبِيهِ۔"
+      "examples": [
+        {
+          "ar": "مُوسَى",
+          "ar_plain": "موسى",
+          "translit": "moosaa",
+          "en": "Musa — maqṣūr: same in every case",
+          "ur": "موسیٰ - الف مقصورہ، رفع میں رہتا ہے"
+        },
+        {
+          "ar": "الْقَاضِيَ",
+          "ar_plain": "القاضي",
+          "translit": "al-qaadhee",
+          "en": "the judge (acc.) — manqūṣ: fatḥa shows",
+          "ur": "جج - ي ڈراپ رفع میں"
+        }
+      ],
+      "concept": {
+        "en": "Maqṣūr vs manqūṣ",
+        "ar": "مُوسَى / الْقَاضِي",
+        "ur": "مقصور بمقابلہ منقوص"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "أَخُوهُ",
-        "ar_plain": "اخوه",
-        "translit": "akhuuho",
-        "en": "his brother",
-        "ur": "اس کا بھائی"
+        "ar": "رَأَيْتُ مُوسَى وَالْقَاضِيَ",
+        "ar_plain": "رايت موسى والقاضي",
+        "translit": "ra'aytu moosaa wal-qaadhiya",
+        "en": "I saw Musa and the judge.",
+        "ur": "میں نے موسیٰ اور قاضی کو دیکھا۔"
       },
       "explanation": {
-        "en": "أَخُوهُ = أَخُو + هُ. The و shows the nominative; accusative أَخَاهُ, genitive أَخِيهِ.",
-        "ur": "أَخُوهُ = أَخُو + هُ۔ و رفع ظاہر کرتا ہے؛ نصب أَخَاهُ، جر أَخِيهِ۔"
+        "en": "Both are objects of رَأَيْتُ, so both are accusative. مُوسَى shows nothing (maqṣūr). الْقَاضِيَ shows a fatḥa on the ي (manqūṣ). This is where the two types look different.",
+        "ur": "دونوں رَأَيْتُ کے مفعول ہیں، اس لیے دونوں منصوب ہیں۔ مُوسَى کچھ ظاہر نہیں کرتا (مقصور)۔ الْقَاضِيَ ي پر فتحہ دکھاتا ہے (منقوص)۔ یہی وہ جگہ ہے جہاں دونوں قسمیں الگ نظر آتی ہیں۔"
       }
     },
     {
-      "type": "AYAH_PREVIEW",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "ذُو الْعَرْشِ",
-        "ar_plain": "ذو العرش",
-        "translit": "dhul-'arshi",
-        "en": "Possessor of the Throne",
-        "ur": "عرش کا مالک"
+        "ar": "مُوسَى وَالْقَاضِي فِي الْمَسْجِدِ",
+        "ar_plain": "موسى والقاضي في المسجد",
+        "translit": "moosaa wal-qaadhee fii al-masjidi",
+        "en": "Musa and the judge are in the masjid.",
+        "ur": "موسیٰ اور قاضی مسجد میں ہیں۔"
       },
       "explanation": {
-        "en": "e.g. Ghāfir 40:15. ذُو is nominative (و), and الْعَرْشِ after it is genitive as the second noun of the iḍāfa. In the accusative it would be ذَا الْعَرْشِ, in the genitive ذِي الْعَرْشِ.",
-        "ur": "مثلاً سورۃ غافر 40:15۔ ذُو مرفوع ہے (و)، اور اس کے بعد الْعَرْشِ مضاف الیہ ہونے کی وجہ سے مجرور۔ نصب میں ذَا الْعَرْشِ ہوتا، جر میں ذِي الْعَرْشِ۔"
+        "en": "Here both are nominative subjects, and neither shows a vowel: مُوسَى keeps its alif, الْقَاضِي keeps its ي. In the nominative they behave alike.",
+        "ur": "یہاں دونوں مرفوع مبتدا ہیں، اور کسی پر حرکت ظاہر نہیں: مُوسَى اپنا الف رکھتا ہے، الْقَاضِي اپنی ي۔ رفع میں دونوں ایک جیسا برتاؤ کرتے ہیں۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "The accusative tells them apart",
+        "ur": "نصب دونوں کو الگ کرتا ہے"
+      },
+      "body": {
+        "en": "In the nominative and genitive, neither type shows a vowel. In the accusative, the manqūṣ noun shows a fatḥa (الْقَاضِيَ) while the maqṣūr noun still shows nothing (مُوسَى).",
+        "ur": "رفع اور جر میں کسی قسم پر حرکت ظاہر نہیں ہوتی۔ نصب میں منقوص فتحہ دکھاتا ہے (الْقَاضِيَ) جبکہ مقصور پھر بھی کچھ نہیں دکھاتا (مُوسَى)۔"
       }
     }
   ],
   "exercises": [
     {
-      "id": "ch56-l03-ex01",
-      "type": "TAP_TRANSLATION",
-      "prompt": {
-        "ar": "أَبُوهُ مُسْلِمٌ",
-        "ar_plain": "ابوه مسلم",
-        "translit": "abuuho muslimun",
-        "en": "His father is a Muslim.",
-        "ur": "اس کا باپ مسلمان ہے۔"
+      "id": "ch56-l06-ex01",
+      "type": "TRUE_FALSE",
+      "statement": {
+        "en": "In the accusative, a manqūṣ noun shows a fatḥa (الْقَاضِيَ) while a maqṣūr noun shows nothing (مُوسَى).",
+        "ur": "نصب میں منقوص فتحہ دکھاتا ہے (الْقَاضِيَ) جبکہ مقصور کچھ نہیں دکھاتا (مُوسَى)۔"
       },
-      "options": [
-        {
-          "en": "His father is a Muslim.",
-          "ur": "اس کا باپ مسلمان ہے۔"
-        },
-        {
-          "en": "The Muslim's father.",
-          "ur": "مسلمان کا باپ۔"
-        },
-        {
-          "en": "A father is Muslim.",
-          "ur": "ایک باپ مسلمان ہے۔"
-        },
-        {
-          "en": "His brothers are Muslim.",
-          "ur": "اس کے بھائی مسلمان ہیں۔"
-        }
-      ],
-      "correct_index": 0,
+      "correct_answer": true,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "أَبُوهُ = \"his father\", nominative (the و). مُسْلِمٌ = predicate. أَبُوهُ is the subject of the nominal sentence.",
-        "ur": "أَبُوهُ = \"اس کا باپ\"، مرفوع (و)۔ مُسْلِمٌ = خبر۔ أَبُوهُ جملہ اسمیہ کا مبتدا ہے۔"
+        "en": "True. The maqṣūr noun never shows a case vowel; the manqūṣ noun shows only the accusative fatḥa.",
+        "ur": "درست۔ مقصور کبھی اعراب کی حرکت ظاہر نہیں کرتا؛ منقوص صرف نصب کا فتحہ دکھاتا ہے۔"
       }
     },
     {
-      "id": "ch56-l03-ex02",
+      "id": "ch56-l06-ex02",
       "type": "MATCHING",
       "left_column": [
         {
-          "ar": "أَبٌ",
-          "ar_plain": "اب",
-          "translit": "abun",
-          "en": "father",
-          "ur": "باپ"
+          "ar": "مُوسَى",
+          "ar_plain": "موسى",
+          "translit": "moosaa",
+          "en": "Musa",
+          "ur": "موسی"
         },
         {
-          "ar": "أَخٌ",
-          "ar_plain": "اخ",
-          "translit": "akhun",
-          "en": "brother",
-          "ur": "بھائی"
+          "ar": "الْقَاضِي",
+          "ar_plain": "القاضي",
+          "translit": "al-qaadhee",
+          "en": "the judge (nom.)",
+          "ur": "جج (نام)"
         },
         {
-          "ar": "ذُو",
-          "ar_plain": "ذو",
-          "translit": "dhul",
-          "en": "possessor of",
-          "ur": "کے مالک"
+          "ar": "عِيسَى",
+          "ar_plain": "عيسى",
+          "translit": "'iisaa",
+          "en": "Isa",
+          "ur": "عیسیٰ"
+        },
+        {
+          "ar": "الْهَادِي",
+          "ar_plain": "الهادي",
+          "translit": "al-haadiy",
+          "en": "the guide (nom.)",
+          "ur": "گائیڈ (نام)"
         }
       ],
       "right_column": [
         {
-          "en": "أَبُوهُ — his father",
-          "ur": "أَبُوهُ — اس کا باپ"
+          "en": "مُوسَى — maqṣūr: ends in an alif",
+          "ur": "مُوسَى — مقصور: الف پر ختم"
         },
         {
-          "en": "أَخُوهُ — his brother",
-          "ur": "أَخُوهُ — اس کا بھائی"
+          "en": "الْقَاضِي — manqūṣ: ends in ي",
+          "ur": "الْقَاضِي — منقوص: ي پر ختم"
         },
         {
-          "en": "ذُو الْعَرْشِ — Owner of the Throne",
-          "ur": "ذُو الْعَرْشِ — عرش والا"
+          "en": "عِيسَى — maqṣūr: ends in an alif",
+          "ur": "عِيسَى — مقصور: الف پر ختم"
+        },
+        {
+          "en": "الْهَادِي — manqūṣ: ends in ي",
+          "ur": "الْهَادِي — منقوص: ي پر ختم"
         }
       ],
       "correct_pairs": [
@@ -214,248 +199,292 @@
         [
           2,
           2
+        ],
+        [
+          3,
+          3
         ]
       ],
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "أَبٌ, أَخٌ and ذُو are three of the five nouns. In iḍāfa they show case with و / ا / ي.",
-        "ur": "أَبٌ، أَخٌ اور ذُو اسمائے خمسہ میں سے تین ہیں۔ اضافت میں یہ و / ا / ي سے اعراب دکھاتے ہیں۔"
+        "en": "مُوسَى and عِيسَى end in an alif (maqṣūr). الْقَاضِي and الْهَادِي end in ي after a kasra (manqūṣ).",
+        "ur": "مُوسَى اور عِيسَى الف پر ختم ہوتے ہیں (مقصور)۔ الْقَاضِي اور الْهَادِي کسرہ کے بعد ي پر (منقوص)۔"
       }
     },
     {
-      "id": "ch56-l03-ex03",
-      "type": "TRUE_FALSE",
-      "statement": {
-        "en": "With an attached pronoun, أَبٌ shows its case with a long vowel: أَبُوهُ (nom.), أَبَاهُ (acc.), أَبِيهِ (gen.).",
-        "ur": "متصل ضمیر کے ساتھ أَبٌ لمبی آواز سے اعراب دکھاتا ہے: أَبُوهُ (رفع)، أَبَاهُ (نصب)، أَبِيهِ (جر)۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "True. و marks the nominative, ا the accusative, ي the genitive — this is what makes the five nouns special.",
-        "ur": "درست۔ و رفع، ا نصب، ي جر کی علامت ہے — یہی اسمائے خمسہ کی خصوصیت ہے۔"
-      }
-    },
-    {
-      "id": "ch56-l03-ex04",
+      "id": "ch56-l06-ex03",
       "type": "FILL_BLANK",
       "mode": "TAP",
-      "sentence_ar": "هَذَا ___",
+      "sentence_ar": "رَأَيْتُ مُوسَى وَالْقَاضِيَ فِي ___",
       "hint": {
-        "en": "This is his brother.",
-        "ur": "یہ اس کا بھائی ہے۔"
+        "en": "I saw Musa and the judge in the house.",
+        "ur": "میں نے موسیٰ اور قاضی کو گھر میں دیکھا۔"
       },
       "options": [
         {
-          "ar": "أَخُوهُ",
-          "ar_plain": "أخوه",
-          "translit": "akhuuhu",
-          "en": "his brother (nom.)",
-          "ur": "اس کا بھائی (مرفوع)"
+          "ar": "الْبَيْتِ",
+          "ar_plain": "البيت",
+          "translit": "al-bayti",
+          "en": "the house (gen.)",
+          "ur": "گھر (جر)"
         },
         {
-          "ar": "أَخَاهُ",
-          "ar_plain": "أخاه",
-          "translit": "akhaahu",
-          "en": "his brother (acc.)",
-          "ur": "اس کا بھائی (منصوب)"
+          "ar": "الْبَيْتُ",
+          "ar_plain": "البيت",
+          "translit": "al-baytu",
+          "en": "the house (nom.)",
+          "ur": "گھر (رفع)"
         },
         {
-          "ar": "أَخِيهِ",
-          "ar_plain": "أخيه",
-          "translit": "akhiihi",
-          "en": "his brother (gen.)",
-          "ur": "اس کا بھائی (مجرور)"
+          "ar": "الْبَيْتَ",
+          "ar_plain": "البيت",
+          "translit": "al-bayta",
+          "en": "the house (acc.)",
+          "ur": "گھر (نصب)"
         },
         {
-          "ar": "الْأَخُ",
-          "ar_plain": "الأخ",
-          "translit": "al-akhu",
-          "en": "the brother",
-          "ur": "بھائی"
+          "ar": "الْبَيْتَانِ",
+          "ar_plain": "البيتين",
+          "translit": "al-baytayni",
+          "en": "two houses",
+          "ur": "دو گھر"
         }
       ],
       "correct_answer": {
-        "ar": "أَخُوهُ",
-        "ar_plain": "أخوه",
-        "translit": "akhuuhu",
-        "en": "his brother (nom.)",
-        "ur": "اس کا بھائی (مرفوع)"
+        "ar": "الْبَيْتِ",
+        "ar_plain": "البيت",
+        "translit": "al-bayti",
+        "en": "the house (gen.)",
+        "ur": "گھر (جر)"
       },
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "هَذَا is the subject, so the predicate is nominative: أَخُوهُ, with و.",
-        "ur": "هَذَا مبتدا ہے، اس لیے خبر مرفوع ہے: أَخُوهُ، و کے ساتھ۔"
+        "en": "فِي is a preposition, so الْبَيْتِ is genitive — kasra on the last letter.",
+        "ur": "فِي حرف جر ہے، اس لیے الْبَيْتِ مجرور ہے — آخری حرف پر کسرہ۔"
       }
     },
     {
-      "id": "ch56-l03-ex05",
+      "id": "ch56-l06-ex04",
       "type": "BUILD_SENTENCE",
       "target_translation": {
-        "en": "The possessor of the Throne.",
-        "ur": "عرش کا مالک۔"
+        "en": "Musa and the guide are in the mosque.",
+        "ur": "موسیٰ اور ہادی مسجد میں ہیں۔"
       },
       "tiles": [
         {
-          "ar": "ذُو",
-          "ar_plain": "ذو",
-          "translit": "dhul",
-          "en": "possessor of",
-          "ur": "کے مالک"
+          "ar": "مُوسَى",
+          "ar_plain": "موسى",
+          "translit": "moosaa",
+          "en": "Musa",
+          "ur": "موسی"
         },
         {
-          "ar": "الْعَرْشِ",
-          "ar_plain": "العرش",
-          "translit": "al-'arshi",
-          "en": "the Throne (gen.)",
-          "ur": "عرش (جر)"
+          "ar": "وَ",
+          "ar_plain": "و",
+          "translit": "wa",
+          "en": "and",
+          "ur": "اور"
         },
         {
-          "ar": "ذِي",
-          "ar_plain": "ذي",
-          "translit": "dhii",
-          "en": "possessor of (gen.)",
-          "ur": "والا (مجرور)"
+          "ar": "الْهَادِي",
+          "ar_plain": "الهادي",
+          "translit": "al-haadiy",
+          "en": "the guide (nom.)",
+          "ur": "ہادی (رفع)"
         },
         {
-          "ar": "الْعَرْشُ",
-          "ar_plain": "العرش",
-          "translit": "al-'arshu",
-          "en": "the Throne (nom.)",
-          "ur": "عرش (رفع)"
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fii",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "الْمَسْجِدِ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjidi",
+          "en": "the mosque (gen.)",
+          "ur": "مسجد (جر)"
         }
       ],
       "correct_order": [
         0,
-        1
+        1,
+        2,
+        3,
+        4
       ],
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "ذُو (\"possessor of\", nominative) + الْعَرْشِ (genitive, second noun of the iḍāfa).",
-        "ur": "ذُو (\"والا\"، مرفوع) + الْعَرْشِ (مجرور، مضاف الیہ)۔"
+        "en": "مُوسَى (subject) + وَ (and) + الْهَادِي (joined to the subject, nominative — no vowel shows on its ي) + فِي (preposition) + الْمَسْجِدِ (genitive).",
+        "ur": "مُوسَى (مبتدا) + وَ (اور) + الْهَادِي (مبتدا پر معطوف، مرفوع — ي پر حرکت ظاہر نہیں) + فِي (حرف جر) + الْمَسْجِدِ (مجرور)۔"
       }
     },
     {
-      "id": "ch56-l03-ex06",
-      "type": "TRUE_FALSE",
-      "statement": {
-        "en": "ذُو is always مَبْنِيّ — its ending never changes regardless of its role in the sentence.",
-        "ur": "ذُو ہمیشہ مَبْنِيّ ہے — اس کا ending کبھی نہیں بدلتا۔"
-      },
-      "correct_answer": false,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "False. ذُو is مُعْرَب: ذُو (nominative), ذَا (accusative), ذِي (genitive).",
-        "ur": "غلط۔ ذُو معرب ہے: ذُو (رفع)، ذَا (نصب)، ذِي (جر)۔"
-      }
-    },
-    {
-      "id": "ch56-l03-ex07",
-      "type": "GRAMMAR_PARSE",
-      "sentence_ar": "ذُو الْعَرْشِ الْمَجِيدُ",
-      "words": [
-        {
-          "ar": "ذُو",
-          "ar_plain": "ذو",
-          "translit": "dhul",
-          "en": "possessor of",
-          "ur": "کے مالک"
-        },
-        {
-          "ar": "الْعَرْشِ",
-          "ar_plain": "العرش",
-          "translit": "al-'arshi",
-          "en": "the Throne (gen.)",
-          "ur": "عرش (جنرل)"
-        },
-        {
-          "ar": "الْمَجِيدُ",
-          "ar_plain": "المجيد",
-          "translit": "al-majiidu",
-          "en": "the Glorious",
-          "ur": "بزرگی والا"
-        }
-      ],
-      "available_roles": [
-        "PREDICATE",
-        "POSSESSIVE",
-        "ADJECTIVE",
-        "OBJECT"
-      ],
-      "correct_roles": [
-        "PREDICATE",
-        "POSSESSIVE",
-        "ADJECTIVE"
-      ],
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "Al-Burūj 85:15, continuing \"and He is the Forgiving, the Loving\": ذُو = a further predicate (nominative, و). الْعَرْشِ = second noun of the iḍāfa (genitive). الْمَجِيدُ = \"the Glorious\", a description in the nominative.",
-        "ur": "سورۃ البروج 85:15، \"اور وہی بخشنے والا، محبت کرنے والا\" کے بعد: ذُو = مزید خبر (مرفوع، و)۔ الْعَرْشِ = مضاف الیہ (مجرور)۔ الْمَجِيدُ = \"بزرگی والا\"، مرفوع صفت۔"
-      }
-    },
-    {
-      "id": "ch56-l03-ex08",
+      "id": "ch56-l06-ex05",
       "type": "TAP_TRANSLATION",
       "prompt": {
-        "ar": "أَبُوهُ فِي الْبَيْتِ",
-        "ar_plain": "ابوه في البيت",
-        "translit": "abuuho fii al-bayti",
-        "en": "His father is in the house.",
-        "ur": "اس کا باپ گھر میں ہے۔"
+        "ar": "الْقَاضِي وَمُوسَى",
+        "ar_plain": "القاضي وموسى",
+        "translit": "al-qaadhee wa moosaa",
+        "en": "The judge and Musa.",
+        "ur": "قاضی اور موسیٰ۔"
       },
       "options": [
         {
-          "en": "His father is in the house.",
-          "ur": "اس کا باپ گھر میں ہے۔"
+          "en": "The judge and Musa.",
+          "ur": "قاضی اور موسیٰ۔"
         },
         {
-          "en": "His brother is in the house.",
-          "ur": "اس کا بھائی گھر میں ہے۔"
+          "en": "Musa's judge.",
+          "ur": "قاضی موسیٰ۔"
         },
         {
-          "en": "The father of the house.",
-          "ur": "گھر کا باپ۔"
+          "en": "The judge of Musa.",
+          "ur": "موسیٰ کا قاضی۔"
         },
         {
-          "en": "His father went to the house.",
-          "ur": "اس کا باپ گھر گیا۔"
+          "en": "The judge is Musa.",
+          "ur": "قاضی موسیٰ ہے۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "أَبُوهُ = \"his father\", the subject (nominative, و). فِي = preposition. الْبَيْتِ = genitive after فِي.",
-        "ur": "أَبُوهُ = \"اس کا باپ\"، مبتدا (مرفوع، و)۔ فِي = حرف جر۔ الْبَيْتِ = فِي کے بعد مجرور۔"
+        "en": "وَ means \"and\", so this is two nouns joined: \"the judge and Musa\". Without وَ, الْقَاضِي مُوسَى could be read \"the judge is Musa\".",
+        "ur": "وَ کا مطلب \"اور\" ہے، اس لیے یہ دو جڑے ہوئے اسم ہیں: \"قاضی اور موسیٰ\"۔ وَ کے بغیر الْقَاضِي مُوسَى کا مطلب \"قاضی موسیٰ ہے\" ہو سکتا تھا۔"
+      }
+    },
+    {
+      "id": "ch56-l06-ex06",
+      "type": "TRUE_FALSE",
+      "statement": {
+        "en": "مُوسَى and الْقَاضِي look different only in the nominative.",
+        "ur": "مُوسَى اور الْقَاضِي صرف رفع میں مختلف نظر آتے ہیں۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. In the nominative neither shows a vowel. They look different in the accusative: مُوسَى stays the same, but الْقَاضِيَ takes a fatḥa.",
+        "ur": "غلط۔ رفع میں کسی پر حرکت ظاہر نہیں ہوتی۔ فرق نصب میں نظر آتا ہے: مُوسَى ویسا ہی رہتا ہے، مگر الْقَاضِيَ فتحہ لیتا ہے۔"
+      }
+    },
+    {
+      "id": "ch56-l06-ex07",
+      "type": "GRAMMAR_PARSE",
+      "sentence_ar": "الْفَتَى وَالْقَاضِي مُسْلِمَانِ",
+      "words": [
+        {
+          "ar": "الْفَتَى",
+          "ar_plain": "الفتى",
+          "translit": "al-fataa",
+          "en": "the young man",
+          "ur": "نوجوان"
+        },
+        {
+          "ar": "وَ",
+          "ar_plain": "و",
+          "translit": "wa",
+          "en": "and",
+          "ur": "اور"
+        },
+        {
+          "ar": "الْقَاضِي",
+          "ar_plain": "القاضي",
+          "translit": "al-qaadhee",
+          "en": "the judge",
+          "ur": "جج"
+        },
+        {
+          "ar": "مُسْلِمَانِ",
+          "ar_plain": "مسلمان",
+          "translit": "muslimaani",
+          "en": "two Muslims",
+          "ur": "دو مسلمان"
+        }
+      ],
+      "available_roles": [
+        "SUBJECT",
+        "PREDICATE",
+        "ADJECTIVE",
+        "VERB",
+        "CONJUNCTION"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "CONJUNCTION",
+        "SUBJECT",
+        "PREDICATE"
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْفَتَى = subject (maqṣūr, nominative implied). وَ = conjunction. الْقَاضِي = joined to the subject (manqūṣ, nominative implied). مُسْلِمَانِ = predicate (dual, nominative) for both.",
+        "ur": "الْفَتَى = مبتدا (مقصور، رفع مقدر)۔ وَ = حرف عطف۔ الْقَاضِي = مبتدا پر معطوف (منقوص، رفع مقدر)۔ مُسْلِمَانِ = دونوں کی خبر (تثنیہ، مرفوع)۔"
+      }
+    },
+    {
+      "id": "ch56-l06-ex08",
+      "type": "TAP_TRANSLATION",
+      "prompt": {
+        "ar": "عِيسَى وَالْفَتَى مُسْلِمَانِ",
+        "ar_plain": "عيسى والفتى مسلمان",
+        "translit": "'iisaa wal-fataa muslimaani",
+        "en": "Isa and the young man are Muslims.",
+        "ur": "عیسیٰ اور نوجوان مسلمان ہیں۔"
+      },
+      "options": [
+        {
+          "en": "Isa and the young man are Muslims.",
+          "ur": "عیسیٰ اور جوان آدمی مسلمان ہیں۔"
+        },
+        {
+          "en": "Isa's young Muslim.",
+          "ur": "عیسیٰ کا جوان مسلمان۔"
+        },
+        {
+          "en": "The Muslim is Isa and the young man.",
+          "ur": "مسلمان عیسیٰ اور جوان ہے۔"
+        },
+        {
+          "en": "Two Muslim Isa.",
+          "ur": "دو مسلمان عیسیٰ۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "عِيسَى (subject, maqṣūr) + وَ + الْفَتَى (joined to it, maqṣūr) + مُسْلِمَانِ (dual predicate, nominative). Neither maqṣūr noun shows its case.",
+        "ur": "عِيسَى (مبتدا، مقصور) + وَ + الْفَتَى (معطوف، مقصور) + مُسْلِمَانِ (تثنیہ خبر، مرفوع)۔ کوئی مقصور اسم اپنا اعراب ظاہر نہیں کرتا۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "The Five Nouns — الأسماء الخمسة",
-      "ar": "الْأَسْمَاءُ الْخَمْسَةُ",
-      "ur": "پانچ اسم"
+      "en": "Maqṣūr vs manqūṣ — المقصور والمنقوص",
+      "ar": "الْمَقْصُورُ وَالْمَنْقُوصُ",
+      "ur": "مقصور اور منقوص"
     },
     "ayah": {
-      "surah": 40,
-      "ayah": 15,
-      "label": "Ghafir 40:15",
-      "ar": "رَفِيعُ الدَّرَجَاتِ ذُو الْعَرْشِ يُلْقِي الرُّوحَ مِنْ أَمْرِهِ عَلَىٰ مَن يَشَاءُ مِنْ عِبَادِهِ لِيُنذِرَ يَوْمَ التَّلَاقِ",
-      "en": "[He is] the Exalted above [all] degrees, Owner of the Throne; He places the inspiration of His command [i.e., revelation] upon whom He wills of His servants to warn of the Day of Meeting.",
-      "ur": "مالک درجات عالی اور صاحب عرش ہے۔ اپنے بندوں میں سے جس پر چاہتا ہے اپنے حکم سے وحی بھیجتا ہے تاکہ ملاقات کے دن سے ڈراوے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/040015.mp3"
+      "surah": 12,
+      "ayah": 36,
+      "label": "Yusuf 12:36",
+      "ar": "وَدَخَلَ مَعَهُ السِّجْنَ فَتَيَانِ ۖ قَالَ أَحَدُهُمَا إِنِّي أَرَانِي أَعْصِرُ خَمْرًا ۖ وَقَالَ الْآخَرُ إِنِّي أَرَانِي أَحْمِلُ فَوْقَ رَأْسِي خُبْزًا تَأْكُلُ الطَّيْرُ مِنْهُ ۖ نَبِّئْنَا بِتَأْوِيلِهِ ۖ إِنَّا نَرَاكَ مِنَ الْمُحْسِنِينَ",
+      "en": "And there entered the prison with him two young men. One of them said, \"Indeed, I have seen myself [in a dream] pressing [grapes for] wine.\" The other said, \"Indeed, I have seen myself carrying upon my head [some] bread, from which the birds were eating. Inform us of its interpretation; indeed, we see you to be of those who do good.\"",
+      "ur": "اور ان کے ساتھ دو اور جوان بھی داخل زندان ہوئے۔ ایک نے ان میں سے کہا کہ (میں نے خواب دیکھا ہے) دیکھتا (کیا) ہوں کہ شراب (کے لیے انگور) نچوڑ رہا ہوں۔ دوسرے نے کہا کہ (میں نے بھی خواب دیکھا ہے) میں یہ دیکھتا ہوں کہ اپنے سر پر روٹیاں اٹھائے ہوئے ہوں اور جانور ان میں سے کھا رہے (ہیں تو) ہمیں ان کی تعبیر بتا دیجیئے کہ ہم تمہیں نیکوکار دیکھتے ہیں",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012036.mp3"
     },
     "highlighted_word_indices": [
-      2
+      3
     ],
     "noor_explanation": {
-      "en": "رَفِيعُ الدَّرَجَاتِ ذُو الْعَرْشِ — \"Exalted in degrees, Owner of the Throne\". ذُو is nominative, shown by its و; الْعَرْشِ after it is genitive.",
-      "ur": "رَفِيعُ الدَّرَجَاتِ ذُو الْعَرْشِ — \"بلند درجوں والا، عرش والا\"۔ ذُو مرفوع ہے، و سے ظاہر؛ اس کے بعد الْعَرْشِ مجرور ہے۔"
+      "en": "فَتَيَانِ = \"two young men\" — the dual of the maqṣūr noun فَتًى. In the dual, the hidden ي at the end of فَتًى comes back: فَتَى → فَتَيَانِ. The dual ending ـَانِ then shows the nominative clearly.",
+      "ur": "فَتَيَانِ = \"دو نوجوان\" — مقصور اسم فَتًى کا تثنیہ۔ تثنیہ میں فَتًى کے آخر کی چھپی ہوئی ي واپس آ جاتی ہے: فَتَى ← فَتَيَانِ۔ پھر تثنیہ کی علامت ـَانِ رفع صاف دکھاتی ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "The five nouns — أَبٌ, أَخٌ, حَمٌ, فُو, ذُو — show case with a long vowel when joined to the next word: و (nominative), ا (accusative), ي (genitive). أَبُوهُ, أَبَاهُ, أَبِيهِ.",
-      "ur": "اسمائے خمسہ — أَبٌ، أَخٌ، حَمٌ، فُو، ذُو — اگلے لفظ سے جڑنے پر لمبی آواز سے اعراب دکھاتے ہیں: و (رفع)، ا (نصب)، ي (جر)۔ أَبُوهُ، أَبَاهُ، أَبِيهِ۔"
+      "en": "مُوسَى, عِيسَى, الْفَتَى — maqṣūr: the ending never shows a case. الْقَاضِي, الْهَادِي — manqūṣ: only the accusative fatḥa shows, and without الْ the ي drops (قَاضٍ).",
+      "ur": "مُوسَى، عِيسَى، الْفَتَى — مقصور: آخر کبھی اعراب ظاہر نہیں کرتا۔ الْقَاضِي، الْهَادِي — منقوص: صرف نصب کا فتحہ ظاہر ہوتا ہے، اور الْ کے بغیر ي گر جاتی ہے (قَاضٍ)۔"
     }
   }
 }
