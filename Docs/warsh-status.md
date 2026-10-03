@@ -856,7 +856,9 @@ Everything below this list is either done and verified, or one of these:
    `scripts/promote-chapters-36-40.cjs` (unchanged rows skipped, reorder-only
    rows touch only the order; staging first: API walk for all five chapters —
    order, test locked on submit, key stripped, 9/12 fails, 10/12 passes, replay
-   0 XP), then `content:baseline` (484/484) and the catalogue audio. Map entries
+   0 XP), then `content:baseline` (484/484), 121 catalogue clips (3810 already in
+   R2; nine Ch 43/44 clips failed on a transient OpenAI connection error and
+   were retried) and the 16 CL11/CL12 phrase clips. Map entries
    for Ch 36–40 rewritten (S10). 58 new scenes requested in
    `Docs/lesson-illustrations-needed.md` (the cards of the older kept Ch 37–40
    lessons are not mapped yet). Discarded: the separate Ch 37 Quran lesson, the
