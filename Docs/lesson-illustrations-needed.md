@@ -814,6 +814,71 @@ Chapters 31–35 were rebuilt in the proposal harvest (batch 2) and promoted 202
 | `ch35-mountain-symbolic.png` | `ch35-l05` card 5 | قَالَ لَن تَرَانِي | Symbolic: a great mountain under a vast sky, light breaking behind its peak; no figures |
 | `ch35-giving-symbolic.png` | `ch35-l05` card 6 | لَن تَنَالُوا الْبِرَّ حَتَّىٰ تُنفِقُوا مِمَّا تُحِبُّونَ | Symbolic: an open hand-woven basket of fruit set down at a doorstep in morning light; hands only, no faces |
 
+### Chapters 36–40
+
+Requested 2026-10-03 with the batch-3 rebuild (Docs/proposals/proposal-harvest-tracker.md): every discover card of the new or rebuilt lessons — all of Chapter 36, the reviews of Chapters 37–40 and the two new Chapter 40 lessons (`ch40-l09`, `ch40-l08`). 58 new scenes cover 69 cards; 3 cards reuse `ch33-nasr-gates-symbolic.png` (An-Nasr 110:1). Not yet mapped: the cards of the older Chapter 37–40 lessons that were kept as they were (Ch 37 l01–l05, Ch 38 l01–l05, Ch 39 l01–l05, Ch 40 l01, l02, l03, l04, l05) — a later pass.
+
+| Filename | Cards | Arabic | Brief |
+|---|---|---|---|
+| `ch36-action-name-tag.png` | `ch36-l01` card 1 | الْمَصْدَرُ | A pen gliding across a clean sheet with a plain blank label tag riding on its motion trail: the action itself, named. No hands, no figures |
+| `ch36-wrote-vs-writing.png` | `ch36-l01` card 2 · `ch36-l02` card 2 | كَتَبَ / كِتَابَةٌ · كَتَبَ ← كِتَابَةٌ | Split panel: left, a finished letter with a pen laid beside it (he wrote); right, the same pen mid-stroke with soft motion lines (writing as an activity). No figures |
+| `ch36-helped-vs-help.png` | `ch36-l01` card 3 · `ch36-l02` card 3 | نَصَرَ / نَصْرٌ · نَصَرَ ← نَصْرٌ | Split panel: left, a hand (no face) lifting another hand up a step (he helped); right, a pair of clasped hands alone (help as a thing) |
+| `ch36-ahmad-wrote-letter.png` | `ch36-l01` card 4 | كَتَبَ أَحْمَدُ الرِّسَالَةَ. | A boy seen from behind at a desk, a sealed envelope in front of him; faceless figures: blank featureless faces or turned away |
+| `ch36-easy-writing.png` | `ch36-l01` card 5 · `ch36-l02` card 4 · `ch36-l09` card 3 | الْكِتَابَةُ سَهْلَةٌ. · كِتَابَةُ الدَّرْسِ | An open notebook with a smooth flowing line being drawn by a pen, a gentle green downhill arrow beside it. No figures |
+| `ch36-form-one-tree.png` | `ch36-l02` card 1 | الْفِعْلُ الثُّلَاثِيُّ | A root tree with one trunk and two branches that end in leaves of two different shapes: one verb type, different noun shapes. No lettering, no figures |
+| `ch36-helping-friend.png` | `ch36-l02` card 5 | نَصَرَ أَحْمَدُ صَدِيقَهُ. | Two boys seen from behind at the foot of mosque steps, one steadying the other's bag strap; faceless figures: blank featureless faces or turned away |
+| `ch36-root-extra-letter.png` | `ch36-l03` card 1 | الْفِعْلُ الْمَزِيدُ | A plain wooden block beside the same block with a small gold peg added in the middle: a letter added to the root. No lettering, no figures |
+| `ch36-glorify-prayer-beads.png` | `ch36-l03` card 2 | سَبَّحَ ← تَسْبِيحٌ | A string of prayer beads resting on a folded cloth in soft light. No figures |
+| `ch36-teaching-board.png` | `ch36-l03` card 3 | عَلَّمَ ← تَعْلِيمٌ | An empty classroom with a board, a pointer resting on its ledge and rows of desks. No figures |
+| `ch36-sending-letter.png` | `ch36-l03` card 4 | أَرْسَلَ ← إِرْسَالٌ | A sealed letter leaving a hand (no face) towards a distant doorway along a dotted path |
+| `ch36-faith-lantern.png` | `ch36-l03` card 5 | آمَنَ ← إِيمَانٌ | A lit lantern held in an open palm at dusk; symbolic, no face |
+| `ch36-signpost-not-law.png` | `ch36-l03` card 6 | نَمَطٌ لَا قَاعِدَةٌ | A wooden signpost pointing along a path, with a small gap in the fence beside it: a clue, not a guarantee. No lettering, no figures |
+| `ch36-quraysh-preview-symbolic.png` | `ch36-l03` card 7 | لِإِيلَافِ قُرَيْشٍ | Symbolic: a long road through two seasons, snow-dusted dunes on the left and sun-baked dunes on the right, a distant gate. No figures |
+| `ch36-noun-takes-role.png` | `ch36-l04` card 1 | الْمَصْدَرُ اسْمٌ | Three small identical tiles placed in three different slots of a wooden rack: one word, three roles. No lettering, no figures |
+| `ch36-subject-or-after-preposition.png` | `ch36-l04` card 2 | الْكِتَابَةُ / فِي الْكِتَابَةِ | Split panel: a pen alone at the centre of a table; the same pen inside a small box with an arrow pointing into it. No figures |
+| `ch36-sits-for-writing.png` | `ch36-l04` card 3 | يَجْلِسُ أَحْمَدُ لِلْكِتَابَةِ. | A boy seen from behind sitting down at a desk with a notebook and pen; faceless figures: blank featureless faces or turned away |
+| `ch36-chain-link.png` | `ch36-l04` card 4 | كِتَابَةُ الدَّرْسِ / نَصْرُ اللَّهِ | Two chain links joined, the left one larger than the right. No lettering, no figures |
+| `ch36-his-handwriting.png` | `ch36-l04` card 5 | كِتَابَتُهُ جَمِيلَةٌ. | A neat page of handwriting beside a pen, a small tag pointing back to a boy seen from behind; faceless figures: blank featureless faces or turned away |
+| `ch36-hasten-to-dhikr-symbolic.png` | `ch36-l04` card 6 | فَاسْعَوْا إِلَى ذِكْرِ اللَّهِ | Symbolic: an open mosque doorway at midday with a clear path of light across a courtyard. No figures |
+| `ch36-verb-action-doer.png` | `ch36-l07` card 1 | كَتَبَ / كِتَابَةٌ / كَاتِبٌ | Three panels: a pen resting on a desk; the pen mid-stroke; a boy seen from behind holding the pen; faceless figures: blank featureless faces or turned away |
+| `ch36-doer-shape.png` | `ch36-l07` card 2 | اسْمُ الْفَاعِلِ | Two identical silhouettes from behind, each holding a different tool (a pen, a rope), the same blank name-tag shape above both; faceless figures: blank featureless faces or turned away |
+| `ch36-helper-hand.png` | `ch36-l07` card 3 | نَصَرَ / نَاصِرٌ | A hand (no face) steadying a ladder while someone climbs, seen from behind; faceless figures: blank featureless faces or turned away |
+| `ch36-ahmad-writer.png` | `ch36-l07` card 4 · `ch36-l09` card 4 | أَحْمَدُ كَاتِبٌ. | A boy seen from behind at a desk, shelves of notebooks behind him, a plain name tag in the corner; faceless figures: blank featureless faces or turned away |
+| `ch36-word-type-or-role.png` | `ch36-l07` card 5 | اسْمُ الْفَاعِلِ / فَاعِلٌ | Two panels: left, a boy entering a classroom door (the one who acts); right, a boy seated with a plain name card (only a description); faceless figures: blank featureless faces or turned away |
+| `ch36-noble-recorders-symbolic.png` | `ch36-l07` card 6 | كِرَامًا كَاتِبِينَ | Symbolic: two soft columns of light beside an open ledger floating above a quiet field. No figures |
+| `ch36-writer-and-written.png` | `ch36-l08` card 1 | كَاتِبٌ / مَكْتُوبٌ | Two panels: a pen writing; a page already written, pen laid beside it. No figures |
+| `ch36-helper-and-helped.png` | `ch36-l08` card 2 | نَاصِرٌ / مَنْصُورٌ | Two panels: a hand (no face) lifting; a person standing on the top step seen from behind; faceless figures: blank featureless faces or turned away |
+| `ch36-receiver-pattern.png` | `ch36-l08` card 3 | اسْمُ الْمَفْعُولِ | A seal pressing a blank shape into warm wax, the wax carrying the shape: the receiver of the action. No lettering, no figures |
+| `ch36-door-open.png` | `ch36-l08` card 4 | الْبَابُ مَفْتُوحٌ. | A wooden door standing open onto a bright courtyard, a key still in the lock. No figures |
+| `ch36-lesson-written.png` | `ch36-l08` card 5 · `ch36-l09` card 5 | الدَّرْسُ مَكْتُوبٌ. | A notebook page filled with neat lines, a pen laid beside it. No figures |
+| `ch36-participle-not-object.png` | `ch36-l08` card 6 | اسْمُ الْمَفْعُولِ / مَفْعُولٌ بِهِ | Split panel: left, a hand (no face) holding a book out to someone (an object of an action); right, a finished page lying still on a table (a described thing) |
+| `ch36-dhikr-greater-symbolic.png` | `ch36-l05` card 1 | وَلَذِكْرُ اللَّهِ أَكْبَرُ | Symbolic: a small lamp glowing in a vast starry sky. No figures |
+| `ch36-faith-unmixed-symbolic.png` | `ch36-l05` card 3 | وَلَمْ يَلْبِسُوا إِيمَانَهُمْ بِظُلْمٍ | Symbolic: a clear glass of water beside a muddy one, light falling only on the clear glass. No figures |
+| `ch36-quoted-or-related.png` | `ch36-l05` card 4 | سَبِّحِ / تَسْبِيحٌ | Two panels: an open Mushaf with a highlighter line under one word; beside it a loose note card that is not part of the book. No figures |
+| `ch36-find-the-action-noun.png` | `ch36-l05` card 5 | كَيْفَ نَقْرَأُ؟ | A magnifying glass over a row of plain wooden word-blocks, one block glowing. No lettering, no figures |
+| `ch36-three-nouns-one-root.png` | `ch36-l09` card 1 · `ch36-l06` card 1 · `ch36-l06` card 2 | كِتَابَةٌ / كَاتِبٌ / مَكْتُوبٌ · الْمَصْدَرُ · الْفَاعِلُ · الْمَفْعُولُ · الْكِتَابَةُ سَهْلَةٌ، وَأَحْمَدُ كَاتِبٌ، وَالدَّرْسُ مَكْتُوبٌ. | One tree trunk splitting into three branches that end in a pen, a boy's silhouette from behind and a written page; faceless figures: blank featureless faces or turned away |
+| `ch36-help-trio.png` | `ch36-l09` card 2 | نَصْرٌ / نَاصِرٌ / مَنْصُورٌ | Three panels: clasped hands alone; a hand (no face) lifting; a person on the top step seen from behind; faceless figures: blank featureless faces or turned away |
+| `ch36-noun-no-clock.png` | `ch36-l09` card 6 | لَا زَمَنَ فِي الِاسْمِ | A clock face with no hands beside a notebook on a desk. No figures |
+| `ch37-feminine-forms-grid.png` | `ch37-l06` card 1 | هِيَ · أَنْتِ · هُنَّ · أَنْتُنَّ | Four small panels of silhouettes from behind: one woman walking, one woman reading, a small group of women, one woman praying; faceless figures: blank featureless faces or turned away |
+| `ch37-believing-woman-prays.png` | `ch37-l06` card 2 | الْمُؤْمِنَةُ تُصَلِّي الْفَجْرَ. | A woman in a long garment seen from behind on a prayer mat at dawn; faceless figures: blank featureless faces or turned away |
+| `ch38-dual-glance.png` | `ch38-l06` card 1 | الْمُثَنَّى | Two identical books, two identical pens and two doors side by side. No figures |
+| `ch38-two-students-write.png` | `ch38-l06` card 2 | الطَّالِبَانِ الْمُجْتَهِدَانِ يَكْتُبَانِ. | Two students seen from behind sharing one bench, each writing in a notebook; faceless figures: blank featureless faces or turned away |
+| `ch39-surah-four-ayat-symbolic.png` | `ch39-l06` card 1 | سُورَةُ قُرَيْشٍ | Symbolic: four lanterns in a row along a road at dusk. No figures |
+| `ch39-lord-of-this-house-symbolic.png` | `ch39-l06` card 2 | رَبَّ هَٰذَا الْبَيْتِ | Symbolic: the Kaʿbah seen from far across an open plain at dawn; no figures, no crowd |
+| `ch40-prep-phrase-tag.png` | `ch40-l09` card 1 | الْجَارُّ وَالْمَجْرُورُ | A small blank tag hung on a pen that rests in a box: a phrase attached to a thing. No lettering, no figures |
+| `ch40-mosque-statement-or-description.png` | `ch40-l09` card 2 | الْمَسْجِدُ فِي الْمَدِينَةِ / مَسْجِدٌ فِي الْمَدِينَةِ | Split panel: left, one particular mosque in a city with a green tick (the mosque is in the city); right, a nameless mosque among rooftops with a small question tag (a mosque in the city). No figures |
+| `ch40-book-on-desk-statement.png` | `ch40-l09` card 3 | الْكِتَابُ عَلَى الْمَكْتَبِ / كِتَابٌ عَلَى الْمَكْتَبِ | Split panel: one specific book clearly set apart on a desk with a green tick; a plain unnamed book on a desk. No figures |
+| `ch40-teacher-knows-quran.png` | `ch40-l09` card 4 | الْمُعَلِّمُ عَالِمٌ بِالْقُرْآنِ. | A teacher seen from behind at a lectern with an open Mushaf and full shelves, a thought-bubble holding the same Mushaf; faceless figures: blank featureless faces or turned away |
+| `ch40-knows-everything-symbolic.png` | `ch40-l09` card 5 | وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ | Symbolic: a vast open ledger of stars under a night sky with soft light across all of it. No figures |
+| `ch40-student-book-on-desk.png` | `ch40-l09` card 6 · `ch40-l07` card 1 | كِتَابُ هَذَا الطَّالِبِ الْمُجْتَهِدِ عَلَى الْمَكْتَبِ. · الْأَوْصَافُ | A student's desk with a notebook and a pen, a school bag on the chair beside it. No figures |
+| `ch40-one-to-group.png` | `ch40-l08` card 1 · `ch40-l08` card 2 | الَّذِي → الَّذِينَ · الَّذِي / الَّذِينَ | Left, one man seen from behind; right, a row of men seen from behind; faceless figures: blank featureless faces or turned away |
+| `ch40-students-write-lesson.png` | `ch40-l08` card 3 · `ch40-l07` card 2 | الطُّلَّابُ الَّذِينَ يَكْتُبُونَ الدَّرْسَ · الطُّلَّابُ الَّذِينَ يَكْتُبُونَ فِي الْفَصْلِ | A row of students seen from behind writing at their desks; faceless figures: blank featureless faces or turned away |
+| `ch40-women-in-classroom.png` | `ch40-l08` card 4 | اللَّاتِي | A group of women students seen from behind in a bright classroom; faceless figures: blank featureless faces or turned away |
+| `ch40-women-writing.png` | `ch40-l08` card 5 | الطَّالِبَاتُ اللَّاتِي يَكْتُبْنَ الدَّرْسَ | A group of women students seen from behind, all writing in notebooks; faceless figures: blank featureless faces or turned away |
+| `ch40-books-on-desk.png` | `ch40-l08` card 6 | الَّتِي | A neat stack of three books on a desk. No figures |
+| `ch40-path-of-the-favoured-symbolic.png` | `ch40-l08` card 7 | صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ | Symbolic: a straight sunlit path across a green plain with many footprints along it. No figures |
+| `ch40-three-groups-sort.png` | `ch40-l08` card 8 | مَنْ هُمْ؟ | Three baskets: one holding silhouettes of men from behind, one holding silhouettes of women from behind, one holding a stack of books; faceless figures: blank featureless faces or turned away |
+
 ## Open — Chapters 1–11 (requested 2026-09-24)
 
 An audit of every Chapter 1–11 discover card found **377 of 564 without a picture**. Each card was matched against the live discover scenes and the approved vocabulary pictures:

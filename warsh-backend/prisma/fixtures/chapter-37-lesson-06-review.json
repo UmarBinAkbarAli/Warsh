@@ -1,0 +1,555 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 37, review (ch37-l06, new, display order 6). Added 2026-10-03 in the proposal harvest, batch 3 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-37-content-proposal.md and its review amendments. Two distinct instances for each of the six checkpoint strands — the shared تَـ (she / you m.), أَنْتِ تَفْعَلِينَ, نون النسوة, the weak-final pair تُصَلِّي / تُصَلِّينَ, two cited Quran readings (29:45, 2:233) and a named feminine subject. No new forms. Lessons 1–5 were already corrected (no final-ت rule, أَنْتِ تَذْهَبِينَ, نون النسوة, weak-final whole forms, cited Quran readings) and are unchanged; the proposal's separate Quran lesson is not added because ch37-l04 already reads 29:45, 2:233, 99:4 and 50:30.",
+    "title": "Chapter 37 Review",
+    "titleAr": "مُرَاجَعَةُ الْفَصْلِ السَّابِعِ وَالثَّلَاثِينَ",
+    "titleUr": "باب 37 کی دہرائی",
+    "chapter_order": 37,
+    "lesson_order": 6,
+    "estimated_minutes": 12,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 29,
+      "ayah": 45,
+      "label": "Al-'Ankabut 29:45",
+      "ar": "إِنَّ الصَّلَاةَ تَنْهَىٰ عَنِ الْفَحْشَاءِ وَالْمُنْكَرِ",
+      "en": "Indeed, prayer restrains from immorality and wrongdoing.",
+      "ur": "بے شک نماز بے حیائی اور برائی سے روکتی ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/029045.mp3"
+    },
+    "noor_intro": {
+      "en": "Review: the feminine forms of the imperfect.",
+      "ur": "دہرائی: مضارع کی مؤنث صورتیں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 37 at a glance",
+        "ar": "هِيَ · أَنْتِ · هُنَّ · أَنْتُنَّ",
+        "ur": "باب 37 ایک نظر میں"
+      },
+      "explanation": {
+        "en": "هِيَ تَذْهَبُ / أَنْتَ تَذْهَبُ: the same form. أَنْتِ تَذْهَبِينَ: one woman addressed. هُنَّ يَذْهَبْنَ / أَنْتُنَّ تَذْهَبْنَ: a group of women, ـْنَ.",
+        "ur": "هِيَ تَذْهَبُ / أَنْتَ تَذْهَبُ: ایک ہی صورت۔ أَنْتِ تَذْهَبِينَ: ایک عورت سے خطاب۔ هُنَّ يَذْهَبْنَ / أَنْتُنَّ تَذْهَبْنَ: عورتوں کا گروہ، ـْنَ۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "الْمُؤْمِنَةُ تُصَلِّي الْفَجْرَ.",
+        "ar_plain": "المؤمنة تصلي الفجر.",
+        "translit": "al-muʾminatu tuṣallī l-fajra.",
+        "en": "The believing woman prays the dawn prayer.",
+        "ur": "مومنہ فجر کی نماز پڑھتی ہے۔"
+      },
+      "explanation": {
+        "en": "A named feminine subject, and a whole weak-final form: تُصَلِّي.",
+        "ur": "نام لیا گیا مؤنث فاعل، اور پورا ناقص صورت: تُصَلِّي۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "FILL_BLANK",
+      "id": "ch37-l06-ex01",
+      "mode": "TAP",
+      "sentence_ar": "هِيَ ___ إِلَى الْمَدْرَسَةِ.",
+      "hint": {
+        "en": "She goes to the school.",
+        "ur": "وہ (عورت) اسکول جاتی ہے۔"
+      },
+      "options": [
+        {
+          "ar": "يَذْهَبْنَ",
+          "ar_plain": "يذهبن",
+          "translit": "yadhhabna",
+          "en": "they (f.) go",
+          "ur": "وہ (عورتیں) جاتی ہیں"
+        },
+        {
+          "ar": "تَذْهَبُ",
+          "ar_plain": "تذهب",
+          "translit": "tadhhabu",
+          "en": "goes (she)",
+          "ur": "جاتی ہے"
+        },
+        {
+          "ar": "تَذْهَبِينَ",
+          "ar_plain": "تذهبين",
+          "translit": "tadhhabīna",
+          "en": "you (f.) go",
+          "ur": "تم (عورت) جاتی ہو"
+        },
+        {
+          "ar": "أَذْهَبُ",
+          "ar_plain": "أذهب",
+          "translit": "adhhabu",
+          "en": "I go",
+          "ur": "میں جاتا ہوں"
+        }
+      ],
+      "correct_answer": {
+        "ar": "تَذْهَبُ",
+        "ar_plain": "تذهب",
+        "translit": "tadhhabu",
+        "en": "goes (she)",
+        "ur": "جاتی ہے"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هِيَ + تَذْهَبُ: she goes.",
+        "ur": "هِيَ + تَذْهَبُ: وہ (عورت) جاتی ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch37-l06-ex02",
+      "prompt": {
+        "ar": "أَنْتَ تَذْهَبُ إِلَى الْمَسْجِدِ.",
+        "ar_plain": "أنت تذهب إلى المسجد.",
+        "translit": "anta tadhhabu ilā l-masjidi.",
+        "en": "You (m.) go to the mosque.",
+        "ur": "تم (مرد) مسجد جاتے ہو۔"
+      },
+      "options": [
+        {
+          "en": "She goes to the mosque.",
+          "ur": "وہ (عورت) مسجد جاتی ہے۔"
+        },
+        {
+          "en": "You (f.) go to the mosque.",
+          "ur": "تم (عورت) مسجد جاتی ہو۔"
+        },
+        {
+          "en": "You (m.) go to the mosque.",
+          "ur": "تم (مرد) مسجد جاتے ہو۔"
+        },
+        {
+          "en": "They (f.) go to the mosque.",
+          "ur": "وہ (عورتیں) مسجد جاتی ہیں۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَنْتَ names the one addressed: a man. The verb form is the same as for هِيَ.",
+        "ur": "أَنْتَ مخاطب کا نام لیتا ہے: ایک مرد۔ فعل کی صورت هِيَ والی ہی ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch37-l06-ex03",
+      "prompt": {
+        "ar": "أَنْتِ تَقْرَئِينَ الْقُرْآنَ.",
+        "ar_plain": "أنت تقرئين القرآن.",
+        "translit": "anti taqraʾīna l-qurʾāna.",
+        "en": "You (f.) read the Quran.",
+        "ur": "تم (عورت) قرآن پڑھتی ہو۔"
+      },
+      "options": [
+        {
+          "en": "You (f.) read the Quran.",
+          "ur": "تم (عورت) قرآن پڑھتی ہو۔"
+        },
+        {
+          "en": "She reads the Quran.",
+          "ur": "وہ (عورت) قرآن پڑھتی ہے۔"
+        },
+        {
+          "en": "They (f.) read the Quran.",
+          "ur": "وہ (عورتیں) قرآن پڑھتی ہیں۔"
+        },
+        {
+          "en": "You (m.) read the Quran.",
+          "ur": "تم (مرد) قرآن پڑھتے ہو۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَنْتِ + تَقْرَئِينَ: one woman addressed.",
+        "ur": "أَنْتِ + تَقْرَئِينَ: ایک عورت سے خطاب۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch37-l06-ex04",
+      "statement": {
+        "en": "تَذْهَبِينَ is the form for a group of women.",
+        "ur": "تَذْهَبِينَ عورتوں کے گروہ کی صورت ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "تَذْهَبِينَ is for one woman (أَنْتِ). A group of women: تَذْهَبْنَ.",
+        "ur": "تَذْهَبِينَ ایک عورت (أَنْتِ) کے لیے ہے۔ عورتوں کا گروہ: تَذْهَبْنَ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch37-l06-ex05",
+      "mode": "TAP",
+      "sentence_ar": "هُنَّ ___ لِلَّهِ.",
+      "hint": {
+        "en": "They (f.) prostrate to Allah.",
+        "ur": "وہ (عورتیں) اللہ کو سجدہ کرتی ہیں۔"
+      },
+      "options": [
+        {
+          "ar": "يَسْجُدُونَ",
+          "ar_plain": "يسجدون",
+          "translit": "yasjudūna",
+          "en": "they (m.) prostrate",
+          "ur": "وہ (مرد) سجدہ کرتے ہیں"
+        },
+        {
+          "ar": "تَسْجُدُ",
+          "ar_plain": "تسجد",
+          "translit": "tasjudu",
+          "en": "she prostrates",
+          "ur": "وہ (عورت) سجدہ کرتی ہے"
+        },
+        {
+          "ar": "تَسْجُدِينَ",
+          "ar_plain": "تسجدين",
+          "translit": "tasjudīna",
+          "en": "you (f.) prostrate",
+          "ur": "تم (عورت) سجدہ کرتی ہو"
+        },
+        {
+          "ar": "يَسْجُدْنَ",
+          "ar_plain": "يسجدن",
+          "translit": "yasjudna",
+          "en": "they (f.) prostrate",
+          "ur": "وہ (عورتیں) سجدہ کرتی ہیں"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يَسْجُدْنَ",
+        "ar_plain": "يسجدن",
+        "translit": "yasjudna",
+        "en": "they (f.) prostrate",
+        "ur": "وہ (عورتیں) سجدہ کرتی ہیں"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هُنَّ + يَسْجُدْنَ: the feminine plural ends in ـْنَ.",
+        "ur": "هُنَّ + يَسْجُدْنَ: مؤنث جمع ـْنَ پر ختم ہوتی ہے۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch37-l06-ex06",
+      "left_column": [
+        {
+          "ar": "هُنَّ يَذْهَبْنَ",
+          "ar_plain": "هن يذهبن",
+          "translit": "hunna yadhhabna",
+          "en": "they (f.) go",
+          "ur": "وہ (عورتیں) جاتی ہیں"
+        },
+        {
+          "ar": "أَنْتُنَّ تَذْهَبْنَ",
+          "ar_plain": "أنتن تذهبن",
+          "translit": "antunna tadhhabna",
+          "en": "you (f. pl.) go",
+          "ur": "تم (عورتیں) جاتی ہو"
+        },
+        {
+          "ar": "أَنْتِ تَذْهَبِينَ",
+          "ar_plain": "أنت تذهبين",
+          "translit": "anti tadhhabīna",
+          "en": "you (f.) go",
+          "ur": "تم (عورت) جاتی ہو"
+        },
+        {
+          "ar": "هُمْ يَذْهَبُونَ",
+          "ar_plain": "هم يذهبون",
+          "translit": "hum yadhhabūna",
+          "en": "they (m.) go",
+          "ur": "وہ (مرد) جاتے ہیں"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "you (f.) go — one woman",
+          "ur": "تم (ایک عورت) جاتی ہو"
+        },
+        {
+          "en": "they (m.) go",
+          "ur": "وہ (مرد) جاتے ہیں"
+        },
+        {
+          "en": "they (f.) go",
+          "ur": "وہ (عورتیں) جاتی ہیں"
+        },
+        {
+          "en": "you (f. pl.) go — a group of women",
+          "ur": "تم (عورتوں کا گروہ) جاتی ہو"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "ـِينَ: one woman. ـْنَ: a group of women. ـُونَ: men.",
+        "ur": "ـِينَ: ایک عورت۔ ـْنَ: عورتوں کا گروہ۔ ـُونَ: مرد۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch37-l06-ex07",
+      "prompt": {
+        "ar": "هِيَ تُصَلِّي الْفَجْرَ.",
+        "ar_plain": "هي تصلي الفجر.",
+        "translit": "hiya tuṣallī l-fajra.",
+        "en": "She prays the dawn prayer.",
+        "ur": "وہ (عورت) فجر کی نماز پڑھتی ہے۔"
+      },
+      "options": [
+        {
+          "en": "You (f.) pray the dawn prayer.",
+          "ur": "تم (عورت) فجر کی نماز پڑھتی ہو۔"
+        },
+        {
+          "en": "He prays the dawn prayer.",
+          "ur": "وہ (مرد) فجر کی نماز پڑھتا ہے۔"
+        },
+        {
+          "en": "They (f.) pray the dawn prayer.",
+          "ur": "وہ (عورتیں) فجر کی نماز پڑھتی ہیں۔"
+        },
+        {
+          "en": "She prays the dawn prayer.",
+          "ur": "وہ (عورت) فجر کی نماز پڑھتی ہے۔"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هِيَ + تُصَلِّي: the whole form for 'she prays'.",
+        "ur": "هِيَ + تُصَلِّي: 'وہ (عورت) نماز پڑھتی ہے' کی پوری صورت۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch37-l06-ex08",
+      "statement": {
+        "en": "أَنْتِ تُصَلِّينَ الْعَصْرَ means 'You (f.) pray the afternoon prayer.'",
+        "ur": "أَنْتِ تُصَلِّينَ الْعَصْرَ کا مطلب ہے 'تم (عورت) عصر کی نماز پڑھتی ہو۔'"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Correct: أَنْتِ names the one addressed, and تُصَلِّينَ is the whole form.",
+        "ur": "درست: أَنْتِ مخاطب کا نام لیتا ہے، اور تُصَلِّينَ پوری صورت ہے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch37-l06-ex09",
+      "ayah_fragment": {
+        "ar": "إِنَّ الصَّلَاةَ تَنْهَىٰ",
+        "surah_ref": "Al-'Ankabut 29:45"
+      },
+      "options": [
+        {
+          "en": "Prayer restrains — the subject is feminine, so the verb begins with تَـ",
+          "ur": "نماز روکتی ہے — فاعل مؤنث ہے، اس لیے فعل تَـ سے شروع ہوتا ہے"
+        },
+        {
+          "en": "Prayer is restrained — the verb is a noun",
+          "ur": "نماز روکی جاتی ہے — فعل اسم ہے"
+        },
+        {
+          "en": "They restrain prayer — the verb is plural",
+          "ur": "وہ نماز کو روکتے ہیں — فعل جمع ہے"
+        },
+        {
+          "en": "You restrain prayer — the verb is addressed to a woman",
+          "ur": "تم نماز کو روکتی ہو — فعل عورت سے خطاب ہے"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الصَّلَاةَ is the subject; تَنْهَىٰ is its verb — a whole form.",
+        "ur": "الصَّلَاةَ فاعل ہے؛ تَنْهَىٰ اس کا فعل ہے — پوری صورت۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch37-l06-ex10",
+      "ayah_fragment": {
+        "ar": "وَالْوَالِدَاتُ يُرْضِعْنَ",
+        "surah_ref": "Al-Baqarah 2:233"
+      },
+      "options": [
+        {
+          "en": "The fathers nurse",
+          "ur": "باپ دودھ پلاتے ہیں"
+        },
+        {
+          "en": "The mothers nurse — a feminine plural verb in ـْنَ",
+          "ur": "مائیں دودھ پلاتی ہیں — مؤنث جمع فعل ـْنَ میں"
+        },
+        {
+          "en": "The mother nurses — a feminine singular verb",
+          "ur": "ماں دودھ پلاتی ہے — مؤنث واحد فعل"
+        },
+        {
+          "en": "You nurse, mothers",
+          "ur": "اے مائیو، تم دودھ پلاؤ"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْوَالِدَاتُ (mothers) with يُرْضِعْنَ: feminine plural, ending ـْنَ.",
+        "ur": "الْوَالِدَاتُ (مائیں) کے ساتھ يُرْضِعْنَ: مؤنث جمع، ـْنَ پر۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch37-l06-ex11",
+      "mode": "TAP",
+      "sentence_ar": "الْمُؤْمِنَةُ ___ الْفَجْرَ.",
+      "hint": {
+        "en": "The believing woman prays the dawn prayer.",
+        "ur": "مومنہ فجر کی نماز پڑھتی ہے۔"
+      },
+      "options": [
+        {
+          "ar": "نُصَلِّي",
+          "ar_plain": "نصلي",
+          "translit": "nuṣallī",
+          "en": "we pray",
+          "ur": "ہم نماز پڑھتے ہیں"
+        },
+        {
+          "ar": "يُصَلِّي",
+          "ar_plain": "يصلي",
+          "translit": "yuṣallī",
+          "en": "he prays",
+          "ur": "وہ (مرد) نماز پڑھتا ہے"
+        },
+        {
+          "ar": "أُصَلِّي",
+          "ar_plain": "أصلي",
+          "translit": "uṣallī",
+          "en": "I pray",
+          "ur": "میں نماز پڑھتا ہوں"
+        },
+        {
+          "ar": "تُصَلِّي",
+          "ar_plain": "تصلي",
+          "translit": "tuṣallī",
+          "en": "she prays",
+          "ur": "وہ (عورت) نماز پڑھتی ہے"
+        }
+      ],
+      "correct_answer": {
+        "ar": "تُصَلِّي",
+        "ar_plain": "تصلي",
+        "translit": "tuṣallī",
+        "en": "she prays",
+        "ur": "وہ (عورت) نماز پڑھتی ہے"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A feminine subject: تُصَلِّي.",
+        "ur": "مؤنث فاعل: تُصَلِّي۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch37-l06-ex12",
+      "prompt": {
+        "ar": "الطَّالِبَةُ تَقْرَأُ الدَّرْسَ.",
+        "ar_plain": "الطالبة تقرأ الدرس.",
+        "translit": "aṭ-ṭālibatu taqraʾu d-darsa.",
+        "en": "The student (f.) reads the lesson.",
+        "ur": "طالبہ سبق پڑھتی ہے۔"
+      },
+      "options": [
+        {
+          "en": "The student (f.) reads the lesson.",
+          "ur": "طالبہ سبق پڑھتی ہے۔"
+        },
+        {
+          "en": "The students (f.) read the lesson.",
+          "ur": "طالبات سبق پڑھتی ہیں۔"
+        },
+        {
+          "en": "The student (m.) reads the lesson.",
+          "ur": "طالب علم سبق پڑھتا ہے۔"
+        },
+        {
+          "en": "You (f.) read the lesson.",
+          "ur": "تم (عورت) سبق پڑھتی ہو۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الطَّالِبَةُ (feminine) + تَقْرَأُ.",
+        "ur": "الطَّالِبَةُ (مؤنث) + تَقْرَأُ۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Feminine forms of the imperfect",
+      "ar": "تَفْعَلُ · تَفْعَلِينَ · يَفْعَلْنَ",
+      "ur": "مضارع کی مؤنث صورتیں"
+    },
+    "ayah": {
+      "surah": 29,
+      "ayah": 45,
+      "label": "Al-'Ankabut 29:45",
+      "ar": "إِنَّ الصَّلَاةَ تَنْهَىٰ عَنِ الْفَحْشَاءِ وَالْمُنْكَرِ",
+      "en": "Indeed, prayer restrains from immorality and wrongdoing.",
+      "ur": "بے شک نماز بے حیائی اور برائی سے روکتی ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/029045.mp3"
+    },
+    "highlighted_word_indices": [
+      2
+    ],
+    "highlighted_words": [
+      "تَنْهَىٰ"
+    ],
+    "noor_explanation": {
+      "en": "تَنْهَىٰ: a whole weak-final form with a feminine subject. You now read the feminine forms by subject, prefix and ending together.",
+      "ur": "تَنْهَىٰ: مؤنث فاعل کے ساتھ ایک پوری ناقص صورت۔ اب آپ مؤنث صورتیں فاعل، سابقے اور آخری حصے کو ساتھ ملا کر پڑھتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Review done. Next: the chapter test.",
+      "ur": "دہرائی مکمل۔ آگے: باب کا امتحان۔"
+    }
+  }
+}

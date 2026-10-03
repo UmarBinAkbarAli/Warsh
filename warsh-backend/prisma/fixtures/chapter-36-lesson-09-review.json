@@ -1,0 +1,499 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 36, Lesson 9 (ch36-l06, display order 9). Rebuilt 2026-10-03 in the proposal harvest, batch 3 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-36-content-proposal.md and its review amendments. Review of the six Chapter 36 strands — maṣdar versus verb, Form II/IV pairs, Quran readings, active participle, passive participle, three-way integration — plus one retrieval each from Chapter 34 (imperfect) and Chapter 35 (سَـ), labelled as retrieval. No new forms. Removed: the Form II 'تَفْعَالٌ / تَكْتَابٌ' rule, إِقْرَارٌ and آمَنَ filed under the wrong form, 'the Quran begins with 87:1', تَسْبِيحٌ placed inside 87:1/87:2, the unsupported 'every page / hundreds' claims, the الصَّلَاة maṣdar classification, the 'Peak 1 mastery' label, malformed build sentences and the stray Chinese/Cyrillic text.",
+    "title": "Chapter 36 Review",
+    "titleAr": "مُرَاجَعَةُ الْفَصْلِ السَّادِسِ وَالثَّلَاثِينَ",
+    "titleUr": "باب 36 کی دہرائی",
+    "chapter_order": 36,
+    "lesson_order": 9,
+    "estimated_minutes": 12,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 110,
+      "ayah": 1,
+      "label": "An-Nasr 110:1",
+      "ar": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ",
+      "en": "When the help of Allah comes, and the victory,",
+      "ur": "جب اللہ کی مدد اور فتح آ جائے،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/110001.mp3"
+    },
+    "noor_intro": {
+      "en": "Review: verbs, maṣdars and participles.",
+      "ur": "دہرائی: فعل، مصدر اور اسمِ فاعل و مفعول۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 36 at a glance",
+        "ar": "الْمَصْدَرُ · الْفَاعِلُ · الْمَفْعُولُ",
+        "ur": "باب 36 ایک نظر میں"
+      },
+      "explanation": {
+        "en": "كَتَبَ: he wrote. كِتَابَةٌ: writing. كَاتِبٌ: a writer. مَكْتُوبٌ: written. تَعْلِيمٌ and إِيمَانٌ: maṣdars of عَلَّمَ and آمَنَ.",
+        "ur": "كَتَبَ: اس نے لکھا۔ كِتَابَةٌ: لکھنا۔ كَاتِبٌ: لکھنے والا۔ مَكْتُوبٌ: لکھا ہوا۔ تَعْلِيمٌ اور إِيمَانٌ: عَلَّمَ اور آمَنَ کے مصدر۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "الْكِتَابَةُ سَهْلَةٌ، وَأَحْمَدُ كَاتِبٌ، وَالدَّرْسُ مَكْتُوبٌ.",
+        "ar_plain": "الكتابة سهلة، وأحمد كاتب، والدرس مكتوب.",
+        "translit": "al-kitābatu sahlatun, wa-aḥmadu kātibun, wa-d-darsu maktūbun.",
+        "en": "Writing is easy, Ahmad is a writer, and the lesson is written.",
+        "ur": "لکھنا آسان ہے، احمد لکھنے والا ہے، اور سبق لکھا ہوا ہے۔"
+      },
+      "explanation": {
+        "en": "Action, doer, receiver — one root, three jobs.",
+        "ur": "کام، کرنے والا، جس پر کام ہوا — ایک مادّہ، تین کام۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "FILL_BLANK",
+      "id": "ch36-l06-ex01",
+      "mode": "TAP",
+      "sentence_ar": "نَصَرَ ← ___",
+      "hint": {
+        "en": "he helped ← help",
+        "ur": "اس نے مدد کی ← مدد"
+      },
+      "options": [
+        {
+          "ar": "نَاصِرٌ",
+          "ar_plain": "ناصر",
+          "translit": "nāṣirun",
+          "en": "a helper",
+          "ur": "مدد کرنے والا"
+        },
+        {
+          "ar": "نَصْرٌ",
+          "ar_plain": "نصر",
+          "translit": "naṣrun",
+          "en": "help",
+          "ur": "مدد"
+        },
+        {
+          "ar": "مَنْصُورٌ",
+          "ar_plain": "منصور",
+          "translit": "manṣūrun",
+          "en": "one who is helped",
+          "ur": "جس کی مدد کی گئی"
+        },
+        {
+          "ar": "نَصَرَ",
+          "ar_plain": "نصر",
+          "translit": "naṣara",
+          "en": "he helped",
+          "ur": "اس نے مدد کی"
+        }
+      ],
+      "correct_answer": {
+        "ar": "نَصْرٌ",
+        "ar_plain": "نصر",
+        "translit": "naṣrun",
+        "en": "help",
+        "ur": "مدد"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The maṣdar of نَصَرَ is نَصْرٌ.",
+        "ur": "نَصَرَ کا مصدر نَصْرٌ ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch36-l06-ex02",
+      "statement": {
+        "en": "كَتَبَ and كِتَابَةٌ are both nouns.",
+        "ur": "كَتَبَ اور كِتَابَةٌ دونوں اسم ہیں۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كَتَبَ is a verb; كِتَابَةٌ is its maṣdar, a noun.",
+        "ur": "كَتَبَ فعل ہے؛ كِتَابَةٌ اس کا مصدر ہے، اسم۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch36-l06-ex03",
+      "mode": "TAP",
+      "sentence_ar": "عَلَّمَ ← ___",
+      "hint": {
+        "en": "he taught ← teaching",
+        "ur": "اس نے سکھایا ← سکھانا"
+      },
+      "options": [
+        {
+          "ar": "تَعْلِيمٌ",
+          "ar_plain": "تعليم",
+          "translit": "taʿlīmun",
+          "en": "teaching",
+          "ur": "سکھانا"
+        },
+        {
+          "ar": "إِرْسَالٌ",
+          "ar_plain": "إرسال",
+          "translit": "irsālun",
+          "en": "sending",
+          "ur": "بھیجنا"
+        },
+        {
+          "ar": "إِيمَانٌ",
+          "ar_plain": "إيمان",
+          "translit": "īmānun",
+          "en": "belief",
+          "ur": "ایمان"
+        },
+        {
+          "ar": "تَسْبِيحٌ",
+          "ar_plain": "تسبيح",
+          "translit": "tasbīḥun",
+          "en": "glorifying",
+          "ur": "تسبیح کرنا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "تَعْلِيمٌ",
+        "ar_plain": "تعليم",
+        "translit": "taʿlīmun",
+        "en": "teaching",
+        "ur": "سکھانا"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "عَلَّمَ ← تَعْلِيمٌ (Form II, تَفْعِيلٌ).",
+        "ur": "عَلَّمَ ← تَعْلِيمٌ (دوسری صورت، تَفْعِيلٌ)۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch36-l06-ex04",
+      "ayah_fragment": {
+        "ar": "وَلَذِكْرُ اللَّهِ أَكْبَرُ",
+        "surah_ref": "Al-'Ankabut 29:45"
+      },
+      "options": [
+        {
+          "en": "ذِكْرُ is the verb",
+          "ur": "ذِكْرُ فعل ہے"
+        },
+        {
+          "en": "أَكْبَرُ is the maṣdar",
+          "ur": "أَكْبَرُ مصدر ہے"
+        },
+        {
+          "en": "ذِكْرُ is the maṣdar",
+          "ur": "ذِكْرُ مصدر ہے"
+        },
+        {
+          "en": "اللَّهِ is the maṣdar",
+          "ur": "اللَّهِ مصدر ہے"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ذِكْرُ names the action of remembering.",
+        "ur": "ذِكْرُ یاد کرنے کے عمل کا نام ہے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch36-l06-ex05",
+      "ayah_fragment": {
+        "ar": "وَلَمْ يَلْبِسُوا إِيمَانَهُمْ بِظُلْمٍ",
+        "surah_ref": "Al-An'am 6:82"
+      },
+      "options": [
+        {
+          "en": "their faith",
+          "ur": "ان کا ایمان"
+        },
+        {
+          "en": "they believed",
+          "ur": "وہ ایمان لائے"
+        },
+        {
+          "en": "their wrongdoing",
+          "ur": "ان کا ظلم"
+        },
+        {
+          "en": "believers",
+          "ur": "ایمان والے"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "إِيمَانَهُمْ: the maṣdar with 'their'.",
+        "ur": "إِيمَانَهُمْ: مصدر اور 'ان کا'۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch36-l06-ex06",
+      "prompt": {
+        "ar": "أَحْمَدُ كَاتِبٌ.",
+        "ar_plain": "أحمد كاتب.",
+        "translit": "aḥmadu kātibun.",
+        "en": "Ahmad is a writer.",
+        "ur": "احمد لکھنے والا ہے۔"
+      },
+      "options": [
+        {
+          "en": "Ahmad is written.",
+          "ur": "احمد لکھا ہوا ہے۔"
+        },
+        {
+          "en": "Ahmad wrote.",
+          "ur": "احمد نے لکھا۔"
+        },
+        {
+          "en": "Ahmad is a writer.",
+          "ur": "احمد لکھنے والا ہے۔"
+        },
+        {
+          "en": "Ahmad's writing.",
+          "ur": "احمد کا لکھنا۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كَاتِبٌ: the doer.",
+        "ur": "كَاتِبٌ: کرنے والا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch36-l06-ex07",
+      "prompt": {
+        "ar": "الدَّرْسُ مَكْتُوبٌ.",
+        "ar_plain": "الدرس مكتوب.",
+        "translit": "ad-darsu maktūbun.",
+        "en": "The lesson is written.",
+        "ur": "سبق لکھا ہوا ہے۔"
+      },
+      "options": [
+        {
+          "en": "The lesson is a writer.",
+          "ur": "سبق لکھنے والا ہے۔"
+        },
+        {
+          "en": "The lesson writes.",
+          "ur": "سبق لکھتا ہے۔"
+        },
+        {
+          "en": "The lesson is writing.",
+          "ur": "سبق لکھنا ہے۔"
+        },
+        {
+          "en": "The lesson is written.",
+          "ur": "سبق لکھا ہوا ہے۔"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَكْتُوبٌ: the receiver of the writing.",
+        "ur": "مَكْتُوبٌ: لکھنے کا کام جس پر ہوا۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch36-l06-ex08",
+      "mode": "TAP",
+      "sentence_ar": "نَصْرٌ · نَاصِرٌ · ___",
+      "hint": {
+        "en": "action · doer · the one who is helped",
+        "ur": "کام · کرنے والا · جس کی مدد کی گئی"
+      },
+      "options": [
+        {
+          "ar": "مَنْصُورٌ",
+          "ar_plain": "منصور",
+          "translit": "manṣūrun",
+          "en": "one who is helped",
+          "ur": "جس کی مدد کی گئی"
+        },
+        {
+          "ar": "نَصَرَ",
+          "ar_plain": "نصر",
+          "translit": "naṣara",
+          "en": "he helped",
+          "ur": "اس نے مدد کی"
+        },
+        {
+          "ar": "نَاصِرٌ",
+          "ar_plain": "ناصر",
+          "translit": "nāṣirun",
+          "en": "a helper",
+          "ur": "مدد کرنے والا"
+        },
+        {
+          "ar": "إِيمَانٌ",
+          "ar_plain": "إيمان",
+          "translit": "īmānun",
+          "en": "belief",
+          "ur": "ایمان"
+        }
+      ],
+      "correct_answer": {
+        "ar": "مَنْصُورٌ",
+        "ar_plain": "منصور",
+        "translit": "manṣūrun",
+        "en": "one who is helped",
+        "ur": "جس کی مدد کی گئی"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The receiver: مَنْصُورٌ.",
+        "ur": "جس پر کام ہوا: مَنْصُورٌ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch36-l06-ex09",
+      "statement": {
+        "en": "A participle like كَاتِبٌ tells you, by itself, that the writing happened in the past.",
+        "ur": "كَاتِبٌ جیسا اسم خود بتاتا ہے کہ لکھنا ماضی میں ہوا۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A noun gives no time on its own. Only a verb or a marker does.",
+        "ur": "اسم اپنا کوئی زمانہ نہیں رکھتا۔ یہ کام فعل یا علامت کرتی ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch36-l06-ex10",
+      "mode": "TAP",
+      "sentence_ar": "___ أَحْمَدُ الدَّرْسَ الْآنَ.",
+      "hint": {
+        "en": "Chapter 34 retrieval: Ahmad writes the lesson now.",
+        "ur": "باب 34 کی یاد: احمد ابھی سبق لکھتا ہے۔"
+      },
+      "options": [
+        {
+          "ar": "كَتَبَ",
+          "ar_plain": "كتب",
+          "translit": "kataba",
+          "en": "wrote",
+          "ur": "لکھا"
+        },
+        {
+          "ar": "يَكْتُبُ",
+          "ar_plain": "يكتب",
+          "translit": "yaktubu",
+          "en": "writes",
+          "ur": "لکھتا ہے"
+        },
+        {
+          "ar": "سَيَكْتُبُ",
+          "ar_plain": "سيكتب",
+          "translit": "sa-yaktubu",
+          "en": "will write",
+          "ur": "لکھے گا"
+        },
+        {
+          "ar": "كَاتِبٌ",
+          "ar_plain": "كاتب",
+          "translit": "kātibun",
+          "en": "a writer",
+          "ur": "لکھنے والا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يَكْتُبُ",
+        "ar_plain": "يكتب",
+        "translit": "yaktubu",
+        "en": "writes",
+        "ur": "لکھتا ہے"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْآنَ (now) with the imperfect: يَكْتُبُ.",
+        "ur": "الْآنَ (ابھی) کے ساتھ مضارع: يَكْتُبُ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch36-l06-ex11",
+      "prompt": {
+        "ar": "سَيَكْتُبُ أَحْمَدُ الدَّرْسَ غَدًا.",
+        "ar_plain": "سيكتب أحمد الدرس غدا.",
+        "translit": "sa-yaktubu aḥmadu d-darsa ghadan.",
+        "en": "Ahmad will write the lesson tomorrow.",
+        "ur": "احمد کل سبق لکھے گا۔"
+      },
+      "options": [
+        {
+          "en": "Ahmad wrote the lesson yesterday.",
+          "ur": "احمد نے گزشتہ کل سبق لکھا۔"
+        },
+        {
+          "en": "Ahmad writes the lesson now.",
+          "ur": "احمد ابھی سبق لکھتا ہے۔"
+        },
+        {
+          "en": "Ahmad will write the lesson tomorrow.",
+          "ur": "احمد کل سبق لکھے گا۔"
+        },
+        {
+          "en": "Ahmad is a writer.",
+          "ur": "احمد لکھنے والا ہے۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Chapter 35 retrieval: سَـ marks the future.",
+        "ur": "باب 35 کی یاد: سَـ مستقبل کی علامت ہے۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 36 — verbs, maṣdars and participles",
+      "ar": "الْمَصْدَرُ · الْفَاعِلُ · الْمَفْعُولُ",
+      "ur": "باب 36 — فعل، مصدر، اسم فاعل و مفعول"
+    },
+    "ayah": {
+      "surah": 110,
+      "ayah": 1,
+      "label": "An-Nasr 110:1",
+      "ar": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ",
+      "en": "When the help of Allah comes, and the victory,",
+      "ur": "جب اللہ کی مدد اور فتح آ جائے،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/110001.mp3"
+    },
+    "highlighted_word_indices": [
+      2,
+      4
+    ],
+    "highlighted_words": [
+      "نَصْرُ",
+      "وَالْفَتْحُ"
+    ],
+    "noor_explanation": {
+      "en": "نَصْرُ and الْفَتْحُ: maṣdars. You can now tell an action noun, a doer noun and a receiver noun apart.",
+      "ur": "نَصْرُ اور الْفَتْحُ: مصدر۔ اب آپ کام کے اسم، کرنے والے کے اسم اور جس پر کام ہوا اس کے اسم میں فرق کر سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Review done. Next: the chapter test.",
+      "ur": "دہرائی مکمل۔ آگے: باب کا امتحان۔"
+    }
+  }
+}

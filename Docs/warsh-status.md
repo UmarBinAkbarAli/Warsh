@@ -834,6 +834,34 @@ Everything below this list is either done and verified, or one of these:
    reading-budget and approval text. The Conversation Labs roadmap's CL10 row
    still says "Provisional rebuild" — that file carries Codex's uncommitted
    edits and was left alone. Not done: scholarly review, Android pass.
+   **Proposal harvest, batch 3 (Chapters 36–40): live in production
+   2026-10-03.** Ch 36 rebuilt to its ten-item plan: maṣdar versus verb,
+   Form I pairs (كَتَبَ ← كِتَابَةٌ, نَصَرَ ← نَصْرٌ), four selected Form II/IV
+   pairs on تَفْعِيلٌ / إِفْعَالٌ, the maṣdar as a noun, new participle lessons
+   (`ch36-l07` active, `ch36-l08` passive — nominal use, word type kept apart
+   from sentence role), exact Quranic maṣdars (29:45, 110:1, 6:82), new
+   integration lesson `ch36-l09`, REVIEW and `ch36-test`; the false
+   "تَكْتَابٌ" Form II rule, misfiled إِقْرَارٌ / آمَنَ and stray CJK/Cyrillic
+   text are gone. Ch 37–40 had already been corrected (2026-10-02), so their
+   lessons were kept and only the gaps added: REVIEW + test in each chapter;
+   Ch 38 **CL11 Daily Routine for Two** (`ch38-cl11`; owner decision D3 —
+   built under the harvest instruction, unpublish it if unwanted; 8 phrase
+   clips); Ch 40 the missing prepositional-phrase lesson (`ch40-l09`, 2:29
+   بِكُلِّ شَيْءٍ with عَلِيمٌ) and the group-relative lesson `ch40-l08`
+   (الَّذِينَ / اللَّاتِي / الَّتِي, 1:7), with `ch40-l06` rebuilt in place as
+   **CL12 At the Mosque** (8 clips) at order 8. Patched: an "always ـانِ" line
+   and an unsubmittable multi-word build tile in Ch 38, two lām-of-command lines
+   in Ch 39 (Chapter 68's), the "adjective order can swap" and "a verb after two
+   joined subjects is plural" rules in Ch 40. Published with
+   `scripts/promote-chapters-36-40.cjs` (unchanged rows skipped, reorder-only
+   rows touch only the order; staging first: API walk for all five chapters —
+   order, test locked on submit, key stripped, 9/12 fails, 10/12 passes, replay
+   0 XP), then `content:baseline` (484/484) and the catalogue audio. Map entries
+   for Ch 36–40 rewritten (S10). 58 new scenes requested in
+   `Docs/lesson-illustrations-needed.md` (the cards of the older kept Ch 37–40
+   lessons are not mapped yet). Discarded: the separate Ch 37 Quran lesson, the
+   She/You split, a separate Ch 40 الَّذِينَ lesson, the dual relatives (Ch 56)
+   and all process text. Not done: scholarly review, Android pass.
    **Chapter 25 (`Docs/proposals/chapter-25-content-correction.md`) is
    corrected, staging-verified and promoted to production 2026-09-24** on the
    owner's instruction. The first rewrite was reviewed and fixed before

@@ -1,0 +1,735 @@
+{
+  "schema_version": "1.0",
+  "template": "SPOKEN_PHRASES",
+  "_meta": {
+    "_note": "Chapter 40, Lesson 8 (ch40-l06, rebuilt in place as CL12, display order 8). Added 2026-10-03 in the proposal harvest, batch 3 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-40-content-proposal.md and its review amendments. CL12 At the Mosque replaces the old SP7 phrase list: a visitor (B) greets a staff member (A), asks when the Asr prayer begins and where the wudu area is, understands the short replies and thanks him. The staff replies, the time fact, the direction and the closing وَإِيَّاكَ are heard_only. تَبْدَأُ / سَتَبْدَأُ are supplied whole. Devotional wording is left out: the adhan call, response and supplication stay in ch40-l05 with their sources. Three PICK mission turns, two Answer-it turns and seven scored practice exercises.",
+    "title": "At the Mosque — Conversation Lab",
+    "titleAr": "فِي الْمَسْجِدِ",
+    "titleUr": "مسجد میں — گفتگو لیب",
+    "chapter_order": 40,
+    "lesson_order": 8,
+    "estimated_minutes": 10,
+    "xp_reward": 15
+  },
+  "hook": {
+    "ayah": {
+      "surah": 2,
+      "ayah": 238,
+      "label": "Al-Baqarah 2:238",
+      "ar": "حَافِظُوا عَلَى الصَّلَوَاتِ وَالصَّلَاةِ الْوُسْطَىٰ",
+      "en": "Guard strictly the prayers and the middle prayer.",
+      "ur": "نمازوں کی حفاظت کرو اور خاص طور پر درمیانی نماز کی۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002238.mp3"
+    },
+    "noor_intro": {
+      "en": "Today you walk into a masjid as a visitor: ask when the prayer begins and where to make wudu, then thank the staff.",
+      "ur": "آج آپ ایک مہمان کے طور پر مسجد میں جاتے ہیں: پوچھیں نماز کب شروع ہوتی ہے اور وضو کہاں کریں، پھر عملے کا شکریہ ادا کریں۔"
+    },
+    "autoplay": false
+  },
+  "close": {
+    "noor_message": {
+      "en": "You asked when the prayer begins, asked where to make wudu, and thanked the staff.",
+      "ur": "آپ نے پوچھا نماز کب شروع ہوتی ہے، پوچھا وضو کہاں کریں، اور عملے کا شکریہ ادا کیا۔"
+    }
+  },
+  "spoken_phrases": {
+    "scene": {
+      "en": "A visitor (B) enters a masjid in the afternoon. A notice at the door says the Asr prayer starts in half an hour. B greets a member of staff (A) and asks two questions.",
+      "ur": "ایک مہمان (B) دوپہر کے بعد مسجد میں داخل ہوتا ہے۔ دروازے پر لگی اطلاع کے مطابق عصر کی نماز آدھے گھنٹے میں شروع ہوگی۔ B عملے کے ایک رکن (A) کو سلام کرتا ہے اور دو سوال پوچھتا ہے۔"
+    },
+    "phrases": [
+      {
+        "id": "ch40-cl-p01",
+        "phrase": {
+          "ar": "السَّلَامُ عَلَيْكُمْ.",
+          "ar_plain": "السلام عليكم.",
+          "translit": "as-salāmu ʿalaykum.",
+          "en": "Peace be upon you.",
+          "ur": "آپ پر سلامتی ہو۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch40-cl-p01.mp3",
+        "context": {
+          "en": "You greet the staff member at the door (Chapter 12).",
+          "ur": "آپ دروازے پر عملے کے ایک رکن کو سلام کرتے ہیں (باب 12)۔"
+        }
+      },
+      {
+        "id": "ch40-cl-p02",
+        "phrase": {
+          "ar": "وَعَلَيْكُمُ السَّلَامُ وَرَحْمَةُ اللَّهِ.",
+          "ar_plain": "وعليكم السلام ورحمة الله.",
+          "translit": "wa-ʿalaykumu s-salāmu wa-raḥmatu llāhi.",
+          "en": "And upon you be peace and Allah's mercy.",
+          "ur": "اور آپ پر سلامتی اور اللہ کی رحمت ہو۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch40-cl-p02.mp3",
+        "context": {
+          "en": "The staff member replies.",
+          "ur": "عملے کے رکن جواب دیتے ہیں۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch40-cl-p03",
+        "phrase": {
+          "ar": "مَتَى تَبْدَأُ صَلَاةُ الْعَصْرِ؟",
+          "ar_plain": "متى تبدأ صلاة العصر؟",
+          "translit": "matā tabdaʾu ṣalātu l-ʿaṣri?",
+          "en": "When does the Asr prayer begin?",
+          "ur": "عصر کی نماز کب شروع ہوتی ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch40-cl-p03.mp3",
+        "context": {
+          "en": "You ask about the time. تَبْدَأُ = it begins (given whole here); الْعَصْرِ = the afternoon prayer time.",
+          "ur": "آپ وقت پوچھتے ہیں۔ تَبْدَأُ = شروع ہوتی ہے (یہاں پورا دیا گیا)؛ الْعَصْرِ = عصر کا وقت۔"
+        }
+      },
+      {
+        "id": "ch40-cl-p04",
+        "phrase": {
+          "ar": "سَتَبْدَأُ بَعْدَ نِصْفِ سَاعَةٍ.",
+          "ar_plain": "ستبدأ بعد نصف ساعة.",
+          "translit": "sa-tabdaʾu baʿda niṣfi sāʿatin.",
+          "en": "It will begin in half an hour.",
+          "ur": "یہ آدھے گھنٹے بعد شروع ہوگی۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch40-cl-p04.mp3",
+        "context": {
+          "en": "The staff member points to a notice on the wall. سَـ = will (Chapter 35); نِصْفُ سَاعَةٍ = half an hour. You listen and understand.",
+          "ur": "عملے کے رکن دیوار کی ایک اطلاع کی طرف اشارہ کرتے ہیں۔ سَـ = گا (باب 35)؛ نِصْفُ سَاعَةٍ = آدھا گھنٹہ۔ آپ سن کر سمجھتے ہیں۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch40-cl-p05",
+        "phrase": {
+          "ar": "أَيْنَ مَكَانُ الْوُضُوءِ؟",
+          "ar_plain": "أين مكان الوضوء؟",
+          "translit": "ayna makānu l-wuḍūʾi?",
+          "en": "Where is the place of wudu?",
+          "ur": "وضو کی جگہ کہاں ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch40-cl-p05.mp3",
+        "context": {
+          "en": "You want to wash before praying. مَكَانُ = place; الْوُضُوءِ = wudu.",
+          "ur": "آپ نماز سے پہلے وضو کرنا چاہتے ہیں۔ مَكَانُ = جگہ؛ الْوُضُوءِ = وضو۔"
+        }
+      },
+      {
+        "id": "ch40-cl-p06",
+        "phrase": {
+          "ar": "هُنَاكَ، عَلَى الْيَمِينِ.",
+          "ar_plain": "هناك، على اليمين.",
+          "translit": "hunāka, ʿalā l-yamīni.",
+          "en": "There, on the right.",
+          "ur": "وہاں، دائیں طرف۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch40-cl-p06.mp3",
+        "context": {
+          "en": "The staff member points. الْيَمِينِ = the right. You listen and understand.",
+          "ur": "عملے کے رکن اشارہ کرتے ہیں۔ الْيَمِينِ = دایاں۔ آپ سن کر سمجھتے ہیں۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch40-cl-p07",
+        "phrase": {
+          "ar": "شُكْرًا، جَزَاكَ اللَّهُ خَيْرًا.",
+          "ar_plain": "شكرا، جزاك الله خيرا.",
+          "translit": "shukran, jazāka llāhu khayran.",
+          "en": "Thank you, may Allah reward you with good.",
+          "ur": "شکریہ، اللہ آپ کو جزائے خیر دے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch40-cl-p07.mp3",
+        "context": {
+          "en": "You close politely (Chapter 12).",
+          "ur": "آپ ادب سے بات ختم کرتے ہیں (باب 12)۔"
+        }
+      },
+      {
+        "id": "ch40-cl-p08",
+        "phrase": {
+          "ar": "وَإِيَّاكَ.",
+          "ar_plain": "وإياك.",
+          "translit": "wa-iyyāka.",
+          "en": "And you too.",
+          "ur": "اور آپ کو بھی۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch40-cl-p08.mp3",
+        "context": {
+          "en": "The staff member's reply.",
+          "ur": "عملے کے رکن کا جواب۔"
+        },
+        "heard_only": true
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "B",
+        "phrase_id": "ch40-cl-p01"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch40-cl-p02"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch40-cl-p03"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch40-cl-p04"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch40-cl-p05"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch40-cl-p06"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch40-cl-p07"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch40-cl-p08"
+      }
+    ],
+    "lab": {
+      "title": {
+        "en": "At the Mosque",
+        "ur": "مسجد میں"
+      },
+      "mission": {
+        "en": "You are the visitor. Ask when the Asr prayer begins, ask where the wudu place is, then thank the staff member.",
+        "ur": "آپ مہمان ہیں۔ پوچھیں عصر کی نماز کب شروع ہوتی ہے، پوچھیں وضو کی جگہ کہاں ہے، پھر عملے کے رکن کا شکریہ ادا کریں۔"
+      },
+      "toolkit": [
+        "مَتَى تَبْدَأُ",
+        "صَلَاةُ الْعَصْرِ",
+        "أَيْنَ مَكَانُ",
+        "الْوُضُوءِ",
+        "سَتَبْدَأُ",
+        "هُنَاكَ",
+        "شُكْرًا",
+        "جَزَاكَ اللَّهُ خَيْرًا"
+      ],
+      "goals": [
+        {
+          "en": "Ask when the prayer begins",
+          "ur": "پوچھیں نماز کب شروع ہوتی ہے"
+        },
+        {
+          "en": "Ask where the wudu place is",
+          "ur": "پوچھیں وضو کی جگہ کہاں ہے"
+        },
+        {
+          "en": "Thank the staff politely",
+          "ur": "ادب سے عملے کا شکریہ ادا کریں"
+        }
+      ],
+      "pattern": {
+        "after_phrase_id": "ch40-cl-p03",
+        "items": [
+          {
+            "ar": "مَتَى تَبْدَأُ …؟",
+            "meaning": {
+              "en": "when does … begin?",
+              "ur": "… کب شروع ہوتی ہے؟"
+            },
+            "source": {
+              "en": "Chapter 31: مَتَى",
+              "ur": "باب 31: مَتَى"
+            }
+          },
+          {
+            "ar": "أَيْنَ مَكَانُ …؟",
+            "meaning": {
+              "en": "where is the place of …?",
+              "ur": "… کی جگہ کہاں ہے؟"
+            },
+            "source": {
+              "en": "Chapter 2: أَيْنَ + the iḍāfa of Chapter 3",
+              "ur": "باب 2: أَيْنَ + باب 3 کی اضافت"
+            }
+          },
+          {
+            "ar": "سَتَبْدَأُ",
+            "meaning": {
+              "en": "it will begin",
+              "ur": "یہ شروع ہوگی"
+            },
+            "source": {
+              "en": "Chapter 35: سَـ",
+              "ur": "باب 35: سَـ"
+            }
+          }
+        ],
+        "note": {
+          "en": "تَبْدَأُ (it begins) and سَتَبْدَأُ (it will begin) are the same verb, now and later. Here you hear the future and ask with the present.",
+          "ur": "تَبْدَأُ (شروع ہوتی ہے) اور سَتَبْدَأُ (شروع ہوگی) ایک ہی فعل ہے، ابھی اور بعد میں۔ یہاں آپ مستقبل سنتے ہیں اور حال سے پوچھتے ہیں۔"
+        }
+      },
+      "shadow_phrase_ids": [
+        "ch40-cl-p03",
+        "ch40-cl-p05",
+        "ch40-cl-p07"
+      ],
+      "mission_turns": [
+        {
+          "prompt_phrase_id": "ch40-cl-p02",
+          "goal_index": 0,
+          "cue": {
+            "en": "The staff member has greeted you. You want to know when the Asr prayer begins.",
+            "ur": "عملے کے رکن نے آپ کو جواب دیا۔ آپ جاننا چاہتے ہیں عصر کی نماز کب شروع ہوتی ہے۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "مَتَى تَبْدَأُ صَلَاةُ الْعَصْرِ؟",
+              "ar_plain": "متى تبدأ صلاة العصر؟",
+              "translit": "matā tabdaʾu ṣalātu l-ʿaṣri?",
+              "en": "When does the Asr prayer begin?",
+              "ur": "عصر کی نماز کب شروع ہوتی ہے؟"
+            },
+            {
+              "ar": "أَيْنَ مَكَانُ الْوُضُوءِ؟",
+              "ar_plain": "أين مكان الوضوء؟",
+              "translit": "ayna makānu l-wuḍūʾi?",
+              "en": "Where is the place of wudu?",
+              "ur": "وضو کی جگہ کہاں ہے؟"
+            },
+            {
+              "ar": "شُكْرًا، جَزَاكَ اللَّهُ خَيْرًا.",
+              "ar_plain": "شكرا، جزاك الله خيرا.",
+              "translit": "shukran, jazāka llāhu khayran.",
+              "en": "Thank you, may Allah reward you with good.",
+              "ur": "شکریہ، اللہ آپ کو جزائے خیر دے۔"
+            }
+          ],
+          "correct_option_index": 0
+        },
+        {
+          "prompt_phrase_id": "ch40-cl-p04",
+          "goal_index": 1,
+          "cue": {
+            "en": "You heard that the prayer starts in half an hour. Now you want to wash.",
+            "ur": "آپ نے سنا نماز آدھے گھنٹے میں شروع ہوگی۔ اب آپ وضو کرنا چاہتے ہیں۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "شُكْرًا، جَزَاكَ اللَّهُ خَيْرًا.",
+              "ar_plain": "شكرا، جزاك الله خيرا.",
+              "translit": "shukran, jazāka llāhu khayran.",
+              "en": "Thank you, may Allah reward you with good.",
+              "ur": "شکریہ، اللہ آپ کو جزائے خیر دے۔"
+            },
+            {
+              "ar": "أَيْنَ مَكَانُ الْوُضُوءِ؟",
+              "ar_plain": "أين مكان الوضوء؟",
+              "translit": "ayna makānu l-wuḍūʾi?",
+              "en": "Where is the place of wudu?",
+              "ur": "وضو کی جگہ کہاں ہے؟"
+            },
+            {
+              "ar": "مَتَى تَبْدَأُ صَلَاةُ الْعَصْرِ؟",
+              "ar_plain": "متى تبدأ صلاة العصر؟",
+              "translit": "matā tabdaʾu ṣalātu l-ʿaṣri?",
+              "en": "When does the Asr prayer begin?",
+              "ur": "عصر کی نماز کب شروع ہوتی ہے؟"
+            }
+          ],
+          "correct_option_index": 1
+        },
+        {
+          "prompt_phrase_id": "ch40-cl-p06",
+          "goal_index": 2,
+          "cue": {
+            "en": "He pointed to the place. Close politely.",
+            "ur": "انہوں نے جگہ کی طرف اشارہ کیا۔ ادب سے بات ختم کریں۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "أَيْنَ مَكَانُ الْوُضُوءِ؟",
+              "ar_plain": "أين مكان الوضوء؟",
+              "translit": "ayna makānu l-wuḍūʾi?",
+              "en": "Where is the place of wudu?",
+              "ur": "وضو کی جگہ کہاں ہے؟"
+            },
+            {
+              "ar": "مَتَى تَبْدَأُ صَلَاةُ الْعَصْرِ؟",
+              "ar_plain": "متى تبدأ صلاة العصر؟",
+              "translit": "matā tabdaʾu ṣalātu l-ʿaṣri?",
+              "en": "When does the Asr prayer begin?",
+              "ur": "عصر کی نماز کب شروع ہوتی ہے؟"
+            },
+            {
+              "ar": "شُكْرًا، جَزَاكَ اللَّهُ خَيْرًا.",
+              "ar_plain": "شكرا، جزاك الله خيرا.",
+              "translit": "shukran, jazāka llāhu khayran.",
+              "en": "Thank you, may Allah reward you with good.",
+              "ur": "شکریہ، اللہ آپ کو جزائے خیر دے۔"
+            }
+          ],
+          "correct_option_index": 2
+        }
+      ],
+      "answer_it": {
+        "turns": [
+          {
+            "prompt_phrase_id": "ch40-cl-p02",
+            "cue": {
+              "en": "Ask when the Asr prayer begins.",
+              "ur": "پوچھیں عصر کی نماز کب شروع ہوتی ہے۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "مَتَى"
+              },
+              {
+                "kind": "WORD",
+                "ar": "تَبْدَأُ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "صَلَاةُ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "الْعَصْرِ"
+              }
+            ],
+            "model_phrase_id": "ch40-cl-p03",
+            "tip": {
+              "en": "مَتَى تَبْدَأُ, then صَلَاةُ الْعَصْرِ.",
+              "ur": "مَتَى تَبْدَأُ، پھر صَلَاةُ الْعَصْرِ۔"
+            }
+          },
+          {
+            "prompt_phrase_id": "ch40-cl-p04",
+            "cue": {
+              "en": "Ask where the wudu place is.",
+              "ur": "پوچھیں وضو کی جگہ کہاں ہے۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "أَيْنَ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "مَكَانُ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "الْوُضُوءِ"
+              }
+            ],
+            "model_phrase_id": "ch40-cl-p05",
+            "tip": {
+              "en": "أَيْنَ, then the iḍāfa مَكَانُ الْوُضُوءِ.",
+              "ur": "أَيْنَ، پھر اضافت مَكَانُ الْوُضُوءِ۔"
+            }
+          }
+        ]
+      },
+      "can_do": [
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Ask when the prayer begins",
+            "ur": "پوچھنا نماز کب شروع ہوتی ہے"
+          },
+          "ar": "مَتَى تَبْدَأُ صَلَاةُ الْعَصْرِ؟"
+        },
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Ask where the wudu place is",
+            "ur": "پوچھنا وضو کی جگہ کہاں ہے"
+          },
+          "ar": "أَيْنَ مَكَانُ الْوُضُوءِ؟"
+        },
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Thank the staff",
+            "ur": "عملے کا شکریہ ادا کرنا"
+          },
+          "ar": "شُكْرًا، جَزَاكَ اللَّهُ خَيْرًا"
+        },
+        {
+          "kind": "UNDERSTAND",
+          "label": {
+            "en": "Understand 'It will begin in half an hour'",
+            "ur": "'یہ آدھے گھنٹے بعد شروع ہوگی' سمجھنا"
+          },
+          "ar": "سَتَبْدَأُ بَعْدَ نِصْفِ سَاعَةٍ"
+        }
+      ]
+    }
+  },
+  "exercises": [
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch40-l06-ex01",
+      "prompt_line": {
+        "ar": "وَعَلَيْكُمُ السَّلَامُ وَرَحْمَةُ اللَّهِ.",
+        "ar_plain": "وعليكم السلام ورحمة الله.",
+        "translit": "wa-ʿalaykumu s-salāmu wa-raḥmatu llāhi.",
+        "en": "And upon you be peace and Allah's mercy.",
+        "ur": "اور آپ پر سلامتی اور اللہ کی رحمت ہو۔"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "هُنَاكَ، عَلَى الْيَمِينِ.",
+          "ar_plain": "هناك، على اليمين.",
+          "translit": "hunāka, ʿalā l-yamīni.",
+          "en": "There, on the right.",
+          "ur": "وہاں، دائیں طرف۔"
+        },
+        {
+          "ar": "مَتَى تَبْدَأُ صَلَاةُ الْعَصْرِ؟",
+          "ar_plain": "متى تبدأ صلاة العصر؟",
+          "translit": "matā tabdaʾu ṣalātu l-ʿaṣri?",
+          "en": "When does the Asr prayer begin?",
+          "ur": "عصر کی نماز کب شروع ہوتی ہے؟"
+        },
+        {
+          "ar": "وَإِيَّاكَ.",
+          "ar_plain": "وإياك.",
+          "translit": "wa-iyyāka.",
+          "en": "And you too.",
+          "ur": "اور آپ کو بھی۔"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "You want the time: مَتَى تَبْدَأُ صَلَاةُ الْعَصْرِ؟",
+        "ur": "آپ کو وقت چاہیے: مَتَى تَبْدَأُ صَلَاةُ الْعَصْرِ؟"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch40-l06-ex02",
+      "prompt": {
+        "ar": "مَتَى تَبْدَأُ صَلَاةُ الْعَصْرِ؟",
+        "ar_plain": "متى تبدأ صلاة العصر؟",
+        "translit": "matā tabdaʾu ṣalātu l-ʿaṣri?",
+        "en": "When does the Asr prayer begin?",
+        "ur": "عصر کی نماز کب شروع ہوتی ہے؟"
+      },
+      "options": [
+        {
+          "en": "Where does the Asr prayer begin?",
+          "ur": "عصر کی نماز کہاں شروع ہوتی ہے؟"
+        },
+        {
+          "en": "When does the Asr prayer begin?",
+          "ur": "عصر کی نماز کب شروع ہوتی ہے؟"
+        },
+        {
+          "en": "Who begins the Asr prayer?",
+          "ur": "عصر کی نماز کون شروع کرتا ہے؟"
+        },
+        {
+          "en": "When did the Asr prayer end?",
+          "ur": "عصر کی نماز کب ختم ہوئی؟"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَتَى asks 'when'; تَبْدَأُ: it begins.",
+        "ur": "مَتَى 'کب' پوچھتا ہے؛ تَبْدَأُ: شروع ہوتی ہے۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch40-l06-ex03",
+      "prompt_line": {
+        "ar": "سَتَبْدَأُ بَعْدَ نِصْفِ سَاعَةٍ.",
+        "ar_plain": "ستبدأ بعد نصف ساعة.",
+        "translit": "sa-tabdaʾu baʿda niṣfi sāʿatin.",
+        "en": "It will begin in half an hour.",
+        "ur": "یہ آدھے گھنٹے بعد شروع ہوگی۔"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "شُكْرًا، جَزَاكَ اللَّهُ خَيْرًا.",
+          "ar_plain": "شكرا، جزاك الله خيرا.",
+          "translit": "shukran, jazāka llāhu khayran.",
+          "en": "Thank you, may Allah reward you with good.",
+          "ur": "شکریہ، اللہ آپ کو جزائے خیر دے۔"
+        },
+        {
+          "ar": "مَتَى تَبْدَأُ صَلَاةُ الْعَصْرِ؟",
+          "ar_plain": "متى تبدأ صلاة العصر؟",
+          "translit": "matā tabdaʾu ṣalātu l-ʿaṣri?",
+          "en": "When does the Asr prayer begin?",
+          "ur": "عصر کی نماز کب شروع ہوتی ہے؟"
+        },
+        {
+          "ar": "أَيْنَ مَكَانُ الْوُضُوءِ؟",
+          "ar_plain": "أين مكان الوضوء؟",
+          "translit": "ayna makānu l-wuḍūʾi?",
+          "en": "Where is the place of wudu?",
+          "ur": "وضو کی جگہ کہاں ہے؟"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "You have the time; now ask where to wash: أَيْنَ مَكَانُ الْوُضُوءِ؟",
+        "ur": "آپ کو وقت معلوم ہو گیا؛ اب پوچھیں وضو کہاں کریں: أَيْنَ مَكَانُ الْوُضُوءِ؟"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch40-l06-ex04",
+      "prompt": {
+        "ar": "سَتَبْدَأُ بَعْدَ نِصْفِ سَاعَةٍ.",
+        "ar_plain": "ستبدأ بعد نصف ساعة.",
+        "translit": "sa-tabdaʾu baʿda niṣfi sāʿatin.",
+        "en": "It will begin in half an hour.",
+        "ur": "یہ آدھے گھنٹے بعد شروع ہوگی۔"
+      },
+      "options": [
+        {
+          "en": "It will begin in half an hour.",
+          "ur": "یہ آدھے گھنٹے بعد شروع ہوگی۔"
+        },
+        {
+          "en": "It began half an hour ago.",
+          "ur": "یہ آدھا گھنٹہ پہلے شروع ہوئی۔"
+        },
+        {
+          "en": "It begins every half hour.",
+          "ur": "یہ ہر آدھے گھنٹے بعد شروع ہوتی ہے۔"
+        },
+        {
+          "en": "It will not begin.",
+          "ur": "یہ شروع نہیں ہوگی۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "سَـ marks the future: سَتَبْدَأُ = it will begin.",
+        "ur": "سَـ مستقبل کی علامت ہے: سَتَبْدَأُ = شروع ہوگی۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch40-l06-ex05",
+      "statement": {
+        "en": "سَتَبْدَأُ means the prayer is going to begin later.",
+        "ur": "سَتَبْدَأُ کا مطلب ہے نماز بعد میں شروع ہونے والی ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Correct: سَـ + تَبْدَأُ.",
+        "ur": "درست: سَـ + تَبْدَأُ۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch40-l06-ex06",
+      "target_translation": {
+        "en": "Where is the place of wudu?",
+        "ur": "وضو کی جگہ کہاں ہے؟"
+      },
+      "tiles": [
+        {
+          "ar": "مَتَى",
+          "ar_plain": "متى",
+          "translit": "matā",
+          "en": "when",
+          "ur": "کب"
+        },
+        {
+          "ar": "مَكَانُ",
+          "ar_plain": "مكان",
+          "translit": "makānu",
+          "en": "place of",
+          "ur": "جگہ"
+        },
+        {
+          "ar": "أَيْنَ",
+          "ar_plain": "أين",
+          "translit": "ayna",
+          "en": "where",
+          "ur": "کہاں"
+        },
+        {
+          "ar": "الْوُضُوءِ",
+          "ar_plain": "الوضوء",
+          "translit": "al-wuḍūʾi",
+          "en": "wudu",
+          "ur": "وضو"
+        }
+      ],
+      "correct_order": [
+        2,
+        1,
+        3
+      ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "أَيْنَ مَكَانُ الْوُضُوءِ؟ — أَيْنَ asks 'where'.",
+        "ur": "أَيْنَ مَكَانُ الْوُضُوءِ؟ — أَيْنَ 'کہاں' پوچھتا ہے۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch40-l06-ex07",
+      "prompt_line": {
+        "ar": "هُنَاكَ، عَلَى الْيَمِينِ.",
+        "ar_plain": "هناك، على اليمين.",
+        "translit": "hunāka, ʿalā l-yamīni.",
+        "en": "There, on the right.",
+        "ur": "وہاں، دائیں طرف۔"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "أَيْنَ مَكَانُ الْوُضُوءِ؟",
+          "ar_plain": "أين مكان الوضوء؟",
+          "translit": "ayna makānu l-wuḍūʾi?",
+          "en": "Where is the place of wudu?",
+          "ur": "وضو کی جگہ کہاں ہے؟"
+        },
+        {
+          "ar": "شُكْرًا، جَزَاكَ اللَّهُ خَيْرًا.",
+          "ar_plain": "شكرا، جزاك الله خيرا.",
+          "translit": "shukran, jazāka llāhu khayran.",
+          "en": "Thank you, may Allah reward you with good.",
+          "ur": "شکریہ، اللہ آپ کو جزائے خیر دے۔"
+        },
+        {
+          "ar": "وَعَلَيْكُمُ السَّلَامُ.",
+          "ar_plain": "وعليكم السلام.",
+          "translit": "wa-ʿalaykumu s-salāmu.",
+          "en": "And upon you be peace.",
+          "ur": "اور آپ پر سلامتی ہو۔"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "He showed you the place: thank him.",
+        "ur": "انہوں نے جگہ بتا دی: ان کا شکریہ ادا کریں۔"
+      }
+    }
+  ]
+}

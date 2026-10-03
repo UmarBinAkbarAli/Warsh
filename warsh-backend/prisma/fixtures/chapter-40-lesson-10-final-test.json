@@ -1,0 +1,435 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 40, final test (ch40-test, new). Added 2026-10-03 in the proposal harvest, batch 3 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-40-content-proposal.md and its review amendments. Twelve multiple-choice questions in the 2/2/2/3/2/1 allocation: adjective chains (q01–02), the demonstrative inside a possessor phrase (q03–04), prepositional phrases (q05–06), the three group relatives (q07–09, one each), two Quran readings (q10 87:1, q11 1:7) and one combined sentence (q12). In q08 الَّتِي is left out of the options so no recognised pattern is keyed wrong. Dual relatives, resumptive pronouns and the CL12 lab are not tested. Pass mark 80 %: 9/12 fails, 10/12 passes. Answer positions 3/3/3/3, no repeating cycle.",
+    "title": "Chapter 40 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الْأَرْبَعِينَ",
+    "titleUr": "باب 40 کا آخری امتحان",
+    "chapter_order": 40,
+    "lesson_order": 10,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 87,
+      "ayah": 1,
+      "label": "Al-A'la 87:1",
+      "ar": "سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى",
+      "en": "Glorify the name of your Lord, the Most High,",
+      "ur": "اپنے بلند ترین رب کے نام کی تسبیح کرو،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087001.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 40.",
+      "ur": "باب 40 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 40,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch40-test-q01",
+        "topic": {
+          "en": "Adjectives",
+          "ur": "صفات"
+        },
+        "prompt": {
+          "en": "Which phrase means 'the knowledgeable, noble man'?",
+          "ur": "کون سا ٹکڑا 'عالم، شریف آدمی' ہے؟"
+        },
+        "options": [
+          {
+            "en": "الرَّجُلُ الْعَالِمُ الْكَرِيمُ",
+            "ur": "الرَّجُلُ الْعَالِمُ الْكَرِيمُ"
+          },
+          {
+            "en": "الرَّجُلُ الْعَالِمَةُ الْكَرِيمَةُ",
+            "ur": "الرَّجُلُ الْعَالِمَةُ الْكَرِيمَةُ"
+          },
+          {
+            "en": "رَجُلٌ الْعَالِمُ الْكَرِيمُ",
+            "ur": "رَجُلٌ الْعَالِمُ الْكَرِيمُ"
+          },
+          {
+            "en": "الرَّجُلَانِ الْعَالِمَانِ",
+            "ur": "الرَّجُلَانِ الْعَالِمَانِ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch40-test-q02",
+        "topic": {
+          "en": "Adjectives",
+          "ur": "صفات"
+        },
+        "prompt": {
+          "en": "Which phrase is correct for 'a diligent female student'?",
+          "ur": "'ایک محنتی طالبہ' کے لیے کون سا ٹکڑا درست ہے؟"
+        },
+        "options": [
+          {
+            "en": "طَالِبَةٌ مُجْتَهِدٌ",
+            "ur": "طَالِبَةٌ مُجْتَهِدٌ"
+          },
+          {
+            "en": "طَالِبٌ مُجْتَهِدَةٌ",
+            "ur": "طَالِبٌ مُجْتَهِدَةٌ"
+          },
+          {
+            "en": "طَالِبَةٌ مُجْتَهِدَةٌ",
+            "ur": "طَالِبَةٌ مُجْتَهِدَةٌ"
+          },
+          {
+            "en": "طَالِبَةٌ مُجْتَهِدُونَ",
+            "ur": "طَالِبَةٌ مُجْتَهِدُونَ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch40-test-q03",
+        "topic": {
+          "en": "Possessor phrase",
+          "ur": "مضاف الیہ کا ٹکڑا"
+        },
+        "prompt": {
+          "en": "Which word is the possessed noun — the 'book of …'?",
+          "ur": "مضاف کون سا لفظ ہے — 'کی کتاب'؟"
+        },
+        "arabic": "كِتَابُ هَذَا الرَّجُلِ الْعَالِمِ",
+        "options": [
+          {
+            "en": "الرَّجُلِ",
+            "ur": "الرَّجُلِ"
+          },
+          {
+            "en": "كِتَابُ",
+            "ur": "كِتَابُ"
+          },
+          {
+            "en": "هَذَا",
+            "ur": "هَذَا"
+          },
+          {
+            "en": "الْعَالِمِ",
+            "ur": "الْعَالِمِ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch40-test-q04",
+        "topic": {
+          "en": "Possessor phrase",
+          "ur": "مضاف الیہ کا ٹکڑا"
+        },
+        "prompt": {
+          "en": "What does الْجَدِيدِ describe?",
+          "ur": "الْجَدِيدِ کس کی صفت ہے؟"
+        },
+        "arabic": "اسْمُ هَذَا الْكِتَابِ الْجَدِيدِ",
+        "options": [
+          {
+            "en": "اسْمُ",
+            "ur": "اسْمُ"
+          },
+          {
+            "en": "هَذَا",
+            "ur": "هَذَا"
+          },
+          {
+            "en": "none of them",
+            "ur": "ان میں سے کوئی نہیں"
+          },
+          {
+            "en": "الْكِتَابِ",
+            "ur": "الْكِتَابِ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch40-test-q05",
+        "topic": {
+          "en": "Prepositional phrase",
+          "ur": "حرفِ جر والا ٹکڑا"
+        },
+        "prompt": {
+          "en": "Which one is a complete statement?",
+          "ur": "کون سا مکمل جملہ ہے؟"
+        },
+        "options": [
+          {
+            "en": "الْمَسْجِدُ فِي الْمَدِينَةِ",
+            "ur": "الْمَسْجِدُ فِي الْمَدِينَةِ"
+          },
+          {
+            "en": "مَسْجِدٌ فِي الْمَدِينَةِ",
+            "ur": "مَسْجِدٌ فِي الْمَدِينَةِ"
+          },
+          {
+            "en": "بَيْتٌ فِي الْمَدِينَةِ",
+            "ur": "بَيْتٌ فِي الْمَدِينَةِ"
+          },
+          {
+            "en": "كِتَابٌ عَلَى الْمَكْتَبِ",
+            "ur": "كِتَابٌ عَلَى الْمَكْتَبِ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch40-test-q06",
+        "topic": {
+          "en": "Prepositional phrase",
+          "ur": "حرفِ جر والا ٹکڑا"
+        },
+        "prompt": {
+          "en": "Al-Baqarah 2:29. Which word does the phrase بِكُلِّ شَيْءٍ go with?",
+          "ur": "سورۃ البقرہ 2:29۔ ٹکڑا بِكُلِّ شَيْءٍ کس لفظ کے ساتھ جاتا ہے؟"
+        },
+        "arabic": "وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ",
+        "options": [
+          {
+            "en": "وَهُوَ",
+            "ur": "وَهُوَ"
+          },
+          {
+            "en": "عَلِيمٌ",
+            "ur": "عَلِيمٌ"
+          },
+          {
+            "en": "كُلِّ",
+            "ur": "كُلِّ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch40-test-q07",
+        "topic": {
+          "en": "Group: men",
+          "ur": "گروہ: مرد"
+        },
+        "prompt": {
+          "en": "Which word completes it? The Muslims who go to the mosque.",
+          "ur": "کون سا لفظ مکمل کرتا ہے؟ وہ مسلمان جو مسجد جاتے ہیں۔"
+        },
+        "arabic": "الْمُسْلِمُونَ ___ يَذْهَبُونَ إِلَى الْمَسْجِدِ.",
+        "options": [
+          {
+            "en": "الَّذِي",
+            "ur": "الَّذِي"
+          },
+          {
+            "en": "الَّتِي",
+            "ur": "الَّتِي"
+          },
+          {
+            "en": "الَّذِينَ",
+            "ur": "الَّذِينَ"
+          },
+          {
+            "en": "اللَّاتِي",
+            "ur": "اللَّاتِي"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch40-test-q08",
+        "topic": {
+          "en": "Group: women",
+          "ur": "گروہ: عورتیں"
+        },
+        "prompt": {
+          "en": "Which word completes it? The female students who are in the classroom.",
+          "ur": "کون سا لفظ مکمل کرتا ہے؟ وہ طالبات جو کلاس میں ہیں۔"
+        },
+        "arabic": "الطَّالِبَاتُ ___ فِي الْفَصْلِ.",
+        "options": [
+          {
+            "en": "الَّذِي",
+            "ur": "الَّذِي"
+          },
+          {
+            "en": "اللَّاتِي",
+            "ur": "اللَّاتِي"
+          },
+          {
+            "en": "ذَلِكَ",
+            "ur": "ذَلِكَ"
+          },
+          {
+            "en": "الَّذِينَ",
+            "ur": "الَّذِينَ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch40-test-q09",
+        "topic": {
+          "en": "Group: things",
+          "ur": "گروہ: چیزیں"
+        },
+        "prompt": {
+          "en": "Which word completes it? The books that are on the desk.",
+          "ur": "کون سا لفظ مکمل کرتا ہے؟ وہ کتابیں جو میز پر ہیں۔"
+        },
+        "arabic": "الْكُتُبُ ___ عَلَى الْمَكْتَبِ.",
+        "options": [
+          {
+            "en": "الَّذِينَ",
+            "ur": "الَّذِينَ"
+          },
+          {
+            "en": "اللَّاتِي",
+            "ur": "اللَّاتِي"
+          },
+          {
+            "en": "الَّذِي",
+            "ur": "الَّذِي"
+          },
+          {
+            "en": "الَّتِي",
+            "ur": "الَّتِي"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch40-test-q10",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآن کی پڑھائی"
+        },
+        "prompt": {
+          "en": "Al-A'la 87:1. Which word does الْأَعْلَى describe — 'the Most High'?",
+          "ur": "سورۃ الأعلى 87:1۔ الْأَعْلَى کس لفظ کی صفت ہے — 'سب سے بلند'؟"
+        },
+        "arabic": "سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى",
+        "options": [
+          {
+            "en": "سَبِّحِ",
+            "ur": "سَبِّحِ"
+          },
+          {
+            "en": "اسْمَ",
+            "ur": "اسْمَ"
+          },
+          {
+            "en": "رَبِّكَ",
+            "ur": "رَبِّكَ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch40-test-q11",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآن کی پڑھائی"
+        },
+        "prompt": {
+          "en": "Al-Fatiha 1:7. What does الَّذِينَ do here?",
+          "ur": "سورۃ الفاتحہ 1:7۔ یہاں الَّذِينَ کیا کرتا ہے؟"
+        },
+        "arabic": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ",
+        "options": [
+          {
+            "en": "starts the description of a group — 'those upon whom You bestowed favour'",
+            "ur": "ایک گروہ کا وصف شروع کرتا ہے — 'وہ جن پر تو نے انعام کیا'"
+          },
+          {
+            "en": "asks a question about a group",
+            "ur": "ایک گروہ کے بارے میں سوال کرتا ہے"
+          },
+          {
+            "en": "gives a command to a group",
+            "ur": "ایک گروہ کو حکم دیتا ہے"
+          },
+          {
+            "en": "names one dual noun",
+            "ur": "ایک مثنی اسم کا نام لیتا ہے"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch40-test-q12",
+        "topic": {
+          "en": "Combined sentence",
+          "ur": "مرکب جملہ"
+        },
+        "prompt": {
+          "en": "What does it say?",
+          "ur": "یہ کیا کہتا ہے؟"
+        },
+        "arabic": "كِتَابُ هَذَا الطَّالِبِ الْمُجْتَهِدِ عَلَى الْمَكْتَبِ.",
+        "options": [
+          {
+            "en": "This diligent student is on the book of the desk.",
+            "ur": "یہ محنتی طالب علم میز کی کتاب پر ہے۔"
+          },
+          {
+            "en": "The book is diligent, and this student is on the desk.",
+            "ur": "کتاب محنتی ہے، اور یہ طالب علم میز پر ہے۔"
+          },
+          {
+            "en": "The desk of this diligent student is on the book.",
+            "ur": "اس محنتی طالب علم کی میز کتاب پر ہے۔"
+          },
+          {
+            "en": "The book of this diligent student is on the desk.",
+            "ur": "اس محنتی طالب علم کی کتاب میز پر ہے۔"
+          }
+        ],
+        "correct_index": 3
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 40 — longer descriptions",
+      "ar": "تَوْسِيعُ الْأَوْصَافِ",
+      "ur": "باب 40 — لمبی وضاحتیں"
+    },
+    "ayah": {
+      "surah": 87,
+      "ayah": 1,
+      "label": "Al-A'la 87:1",
+      "ar": "سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى",
+      "en": "Glorify the name of your Lord, the Most High,",
+      "ur": "اپنے بلند ترین رب کے نام کی تسبیح کرو،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087001.mp3"
+    },
+    "highlighted_word_indices": [
+      1,
+      2,
+      3
+    ],
+    "highlighted_words": [
+      "اسْمَ",
+      "رَبِّكَ",
+      "الْأَعْلَى"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 40 able to read a noun with its adjectives, a possessor phrase, a prepositional phrase and a group description.",
+      "ur": "آپ باب 40 اس حال میں مکمل کرتے ہیں کہ اسم کو اس کی صفات کے ساتھ، مضاف الیہ کے ٹکڑے کو، حرفِ جر والے ٹکڑے کو اور گروہ کے وصف کو پڑھ سکیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 40 complete. Chapter 41: connected reading.",
+      "ur": "باب 40 مکمل۔ باب 41: جڑی ہوئی عبارت کی پڑھائی۔"
+    }
+  }
+}

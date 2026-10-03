@@ -2,111 +2,140 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 36, Lesson 2 - More مصدر forms. Pattern recognition across different verb forms.",
+    "_note": "Chapter 36, Lesson 2 (ch36-l02). Rebuilt 2026-10-03 in the proposal harvest, batch 3 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-36-content-proposal.md and its review amendments. Form I (the basic three-letter verb) takes many maṣdar shapes, so the learner studies two pairs as pairs — كَتَبَ / كِتَابَةٌ and نَصَرَ / نَصْرٌ — and never derives an unseen one; كِتَابَةُ الدَّرْسِ in a phrase; 110:1. Removed: the Form II 'تَفْعَالٌ / تَكْتَابٌ' rule, إِقْرَارٌ and آمَنَ filed under the wrong form, 'the Quran begins with 87:1', تَسْبِيحٌ placed inside 87:1/87:2, the unsupported 'every page / hundreds' claims, the الصَّلَاة maṣdar classification, the 'Peak 1 mastery' label, malformed build sentences and the stray Chinese/Cyrillic text.",
+    "title": "Learn Common Form I Verb–Maṣdar Pairs",
+    "titleAr": "مَصَادِرُ الْفِعْلِ الثُّلَاثِيِّ",
+    "titleUr": "تین حرفی فعل کے مصدر",
     "chapter_order": 36,
     "lesson_order": 2,
-    "chapter_title": "المصدر (Verbal Noun)",
-    "title": "More المصدر Patterns",
-    "titleAr": "المصدر کے مزید وزن",
-    "source": "reader_lecture_36_verbs.md",
     "estimated_minutes": 8,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 87,
+      "surah": 110,
       "ayah": 1,
-      "label": "Al-A'la 87:1",
-      "ar": "سَبِّحْ اسْمَ رَبِّكَ الْأَعْلَى",
-      "en": "Glorify the name of your Lord, the Most High.",
-      "ur": "اپنے بلند ترین رب کا نام تسبیح کرو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087001.mp3"
+      "label": "An-Nasr 110:1",
+      "ar": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ",
+      "en": "When the help of Allah comes, and the victory,",
+      "ur": "جب اللہ کی مدد اور فتح آ جائے،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/110001.mp3"
     },
     "noor_intro": {
-      "en": "Last lesson: the مصدر is the noun of an action. Today: more patterns. Some verbs have short مصادر, some long. All follow rules.",
-      "ur": "پچھلے سبق: مصدر کسی عمل کا نام ہے۔ آج: مزید وزن۔ کچھ افعال کے مصادر مختصر ہوتے ہیں، کچھ لمبے۔ سب قوانین کی پیروی کرتے ہیں۔"
+      "en": "نَصْرُ: help. Its verb is نَصَرَ. Some verbs and their maṣdars you simply learn as pairs.",
+      "ur": "نَصْرُ: مدد۔ اس کا فعل نَصَرَ ہے۔ کچھ فعل اور ان کے مصدر آپ کو جوڑی کے طور پر ہی سیکھنے ہوتے ہیں۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Form II مصدر pattern: تَفْعِيلٌ",
-        "ar": "مَصْدَرُ فَعَّلَ: تَفْعِيلٌ",
-        "ur": "دوسرے باب (فَعَّلَ) کا مصدر: تَفْعِيلٌ"
+        "en": "Form I",
+        "ar": "الْفِعْلُ الثُّلَاثِيُّ",
+        "ur": "تین حرفی فعل"
       },
       "explanation": {
-        "en": "Form II verbs (like عَلَّمَ) usually form their مصدر on the pattern تَفْعِيلٌ: عَلَّمَ → تَعْلِيمٌ. The doubled middle letter of the verb becomes a long ī in the مصدر.",
-        "ur": "دوسرے باب (فَعَّلَ) کے افعال (جیسے عَلَّمَ) کا مصدر عموماً وزن تَفْعِيلٌ پر آتا ہے: عَلَّمَ → تَعْلِيمٌ۔ فعل کا مشدد درمیانی حرف مصدر میں لمبی 'ی' کے ساتھ آتا ہے۔"
+        "en": "Form I is the basic verb: three root letters, no extra letters — كَتَبَ, نَصَرَ. Its maṣdars come in many shapes.",
+        "ur": "پہلی صورت بنیادی فعل ہے: تین اصل حروف، کوئی اضافی حرف نہیں — كَتَبَ، نَصَرَ۔ اس کے مصدر کئی شکلوں میں آتے ہیں۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Pair 1",
+        "ar": "كَتَبَ ← كِتَابَةٌ",
+        "ur": "جوڑی 1"
+      },
+      "examples": [
+        {
+          "ar": "كَتَبَ",
+          "ar_plain": "كتب",
+          "translit": "kataba",
+          "en": "he wrote",
+          "ur": "اس نے لکھا"
+        },
+        {
+          "ar": "كِتَابَةٌ",
+          "ar_plain": "كتابة",
+          "translit": "kitābatun",
+          "en": "writing",
+          "ur": "لکھنا"
+        }
+      ],
+      "explanation": {
+        "en": "He wrote ← writing. This maṣdar has the shape كِتَابَةٌ.",
+        "ur": "اس نے لکھا ← لکھنا۔ اس مصدر کی شکل كِتَابَةٌ ہے۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Pair 2",
+        "ar": "نَصَرَ ← نَصْرٌ",
+        "ur": "جوڑی 2"
+      },
+      "examples": [
+        {
+          "ar": "نَصَرَ",
+          "ar_plain": "نصر",
+          "translit": "naṣara",
+          "en": "he helped",
+          "ur": "اس نے مدد کی"
+        },
+        {
+          "ar": "نَصْرٌ",
+          "ar_plain": "نصر",
+          "translit": "naṣrun",
+          "en": "help",
+          "ur": "مدد"
+        }
+      ],
+      "explanation": {
+        "en": "He helped ← help. This maṣdar has a different shape: نَصْرٌ. No single shape fits every Form I verb, so learn each one as a pair.",
+        "ur": "اس نے مدد کی ← مدد۔ اس مصدر کی شکل مختلف ہے: نَصْرٌ۔ پہلی صورت کے ہر فعل پر ایک ہی شکل نہیں لگتی، اس لیے ہر ایک کو جوڑی کے طور پر سیکھیں۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "تَعْلِيمٌ",
-        "ar_plain": "تعليم",
-        "translit": "ta'liimun",
-        "en": "teaching",
-        "ur": "سکھانا"
+        "ar": "كِتَابَةُ الدَّرْسِ",
+        "ar_plain": "كتابة الدرس",
+        "translit": "kitābatu d-darsi",
+        "en": "the writing of the lesson",
+        "ur": "سبق لکھنا"
       },
       "explanation": {
-        "en": "تَعْلِيمٌ is the مصدر of عَلَّمَ (Form II, 'to teach'). The pattern is تَفْعِيلٌ — notice the kasra under the middle letter and the ي instead of the second root letter.",
-        "ur": "تَعْلِيمٌ كا مصدر عَلَّمَ (دوسری شکل، 'سکھانا') ہے۔ وزن ہے تَفْعِيلٌ — دھیان دیں وسطی حرف پر کسرہ اور دوسرے مادے کی جگہ ي۔"
+        "en": "A maṣdar can be the first word of an iḍāfa: كِتَابَةُ + الدَّرْسِ.",
+        "ur": "مصدر اضافت کا پہلا لفظ بن سکتا ہے: كِتَابَةُ + الدَّرْسِ۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "تَحْلِيلٌ",
-        "ar_plain": "تحليل",
-        "translit": "tahliilun",
-        "en": "analysis",
-        "ur": "تحلیل"
+        "ar": "نَصَرَ أَحْمَدُ صَدِيقَهُ.",
+        "ar_plain": "نصر أحمد صديقه.",
+        "translit": "naṣara aḥmadu ṣadīqahu.",
+        "en": "Ahmad helped his friend.",
+        "ur": "احمد نے اپنے دوست کی مدد کی۔"
       },
       "explanation": {
-        "en": "تَحْلِيلٌ is the مصدر of حَلَّلَ (Form II, 'to analyze'). The pattern تَفْعِيلٌ again — with the middle letter having a kasra.",
-        "ur": "تَحْلِيلٌ كا مصدر حَلَّلَ (دوسری شکل، 'تحلیل کرنا') ہے۔ پھر وزن تَفْعِيلٌ — وسطی حرف پر کسرہ کے ساتھ۔"
+        "en": "The verb is نَصَرَ. Its maṣdar, نَصْرٌ, names the help itself.",
+        "ur": "فعل نَصَرَ ہے۔ اس کا مصدر نَصْرٌ خود مدد کا نام ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "إِرْسَالٌ",
-        "ar_plain": "ارسال",
-        "translit": "irsaalun",
-        "en": "sending",
-        "ur": "بھیجنا"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "110:1: نَصْرُ",
+        "ar": "جَاءَ نَصْرُ اللَّهِ",
+        "ur": "110:1: نَصْرُ"
       },
       "explanation": {
-        "en": "إِرْسَالٌ is the مصدر of أَرْسَلَ (Form IV, 'to send'). The pattern إِفْعَالٌ — with a kasra under the first letter and fatha on the middle.",
-        "ur": "إِرْسَالٌ كا مصدر أَرْسَلَ (چوتھی شکل، 'بھیجنا') ہے۔ وزن ہے إِفْعَالٌ — پہلے حرف پر کسرہ اور وسطی پر زبر۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "مصدر patterns by verb form",
-        "ur": "فعل کی شکل کے مطابق مصادر کے وزن"
+        "en": "نَصْرُ is the maṣdar of نَصَرَ. Here it is the first word of an iḍāfa: the help of Allah.",
+        "ur": "نَصْرُ فعل نَصَرَ کا مصدر ہے۔ یہاں یہ اضافت کا پہلا لفظ ہے: اللہ کی مدد۔"
       },
-      "body": {
-        "en": "Form I (فَعَلَ): many patterns — عِلْمٌ (عَلِمَ), قِرَاءَةٌ (قَرَأَ), كِتَابَةٌ (كَتَبَ). Form II (فَعَّلَ): usually تَفْعِيلٌ — تَعْلِيمٌ (عَلَّمَ), تَسْبِيحٌ (سَبَّحَ). Form IV (أَفْعَلَ): إِفْعَالٌ — إِرْسَالٌ (أَرْسَلَ). These are common patterns, not rules without exceptions.",
-        "ur": "باب اول (فَعَلَ): کئی اوزان — عِلْمٌ (عَلِمَ)، قِرَاءَةٌ (قَرَأَ)، كِتَابَةٌ (كَتَبَ)۔ باب دوم (فَعَّلَ): عموماً تَفْعِيلٌ — تَعْلِيمٌ (عَلَّمَ)، تَسْبِيحٌ (سَبَّحَ)۔ باب چہارم (أَفْعَلَ): إِفْعَالٌ — إِرْسَالٌ (أَرْسَلَ)۔ یہ عام اوزان ہیں، بلا استثنا قاعدے نہیں۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "إِقْرَارٌ",
-        "ar_plain": "اقرار",
-        "translit": "iqraarun",
-        "en": "acknowledgment",
-        "ur": "اقرار"
-      },
-      "explanation": {
-        "en": "إِقْرَارٌ is the مصدر of أَقَرَّ (Form IV, 'to acknowledge'), root ق-ر-ر. It follows the Form IV pattern إِفْعَالٌ.",
-        "ur": "إِقْرَارٌ، أَقَرَّ (باب چہارم، 'اقرار کرنا') کا مصدر ہے، مادہ ق-ر-ر۔ یہ باب چہارم کے وزن إِفْعَالٌ پر ہے۔"
-      }
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/110001.mp3"
     }
   ],
   "exercises": [
@@ -114,341 +143,242 @@
       "type": "TAP_TRANSLATION",
       "id": "ch36-l02-ex01",
       "prompt": {
-        "ar": "تَعْلِيمٌ",
-        "ar_plain": "تعليم",
-        "translit": "ta'liimun",
-        "en": "teaching",
-        "ur": "سکھانا"
+        "ar": "نَصْرٌ",
+        "ar_plain": "نصر",
+        "translit": "naṣrun",
+        "en": "help",
+        "ur": "مدد"
       },
       "options": [
         {
-          "en": "teaching",
-          "ur": "سکھانا"
+          "en": "a helper",
+          "ur": "مدد کرنے والا"
         },
         {
-          "en": "learning",
-          "ur": "سیکھنا"
+          "en": "he helped",
+          "ur": "اس نے مدد کی"
         },
         {
-          "en": "knowledge",
-          "ur": "علم"
+          "en": "help",
+          "ur": "مدد"
         },
         {
-          "en": "writing",
-          "ur": "لکھنا"
+          "en": "helped one",
+          "ur": "جس کی مدد کی گئی"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "تَعْلِيمٌ is the مصدر of عَلَّمَ (Form II, 'to teach'). The pattern تَفْعِيلٌ — 'the making of an action.'",
-        "ur": "تَعْلِيمٌ عَلَّمَ (دوسری شکل، 'سکھانا') کا مصدر ہے۔ وزن تَفْعِيلٌ — 'کسی عمل کا نام بنانا'۔"
+        "en": "نَصْرٌ is the noun help.",
+        "ur": "نَصْرٌ اسم ہے: مدد۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch36-l02-ex02",
+      "mode": "TAP",
+      "sentence_ar": "___ الدَّرْسِ سَهْلَةٌ.",
+      "hint": {
+        "en": "The writing of the lesson is easy.",
+        "ur": "سبق لکھنا آسان ہے۔"
+      },
+      "options": [
+        {
+          "ar": "كَتَبَ",
+          "ar_plain": "كتب",
+          "translit": "kataba",
+          "en": "he wrote",
+          "ur": "اس نے لکھا"
+        },
+        {
+          "ar": "كِتَابَةُ",
+          "ar_plain": "كتابة",
+          "translit": "kitābatu",
+          "en": "writing of",
+          "ur": "لکھنا"
+        },
+        {
+          "ar": "نَصْرُ",
+          "ar_plain": "نصر",
+          "translit": "naṣru",
+          "en": "help of",
+          "ur": "مدد"
+        },
+        {
+          "ar": "يَكْتُبُ",
+          "ar_plain": "يكتب",
+          "translit": "yaktubu",
+          "en": "he writes",
+          "ur": "وہ لکھتا ہے"
+        }
+      ],
+      "correct_answer": {
+        "ar": "كِتَابَةُ",
+        "ar_plain": "كتابة",
+        "translit": "kitābatu",
+        "en": "writing of",
+        "ur": "لکھنا"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The writing of the lesson: كِتَابَةُ الدَّرْسِ.",
+        "ur": "سبق لکھنا: كِتَابَةُ الدَّرْسِ۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch36-l02-ex02",
+      "id": "ch36-l02-ex03",
       "statement": {
-        "en": "Form II verbs always produce their مصدر with the pattern تَفْعِيلٌ.",
-        "ur": "دوسری شکل کے افعال ہمیشہ وزن تَفْعِيلٌ سے اپنا مصدر بناتے ہیں۔",
-        "ar_example": {
-          "ar": "عَلَّمَ — تَعْلِيمٌ",
-          "ar_plain": "علم — تعليم",
-          "translit": "allama — ta'liimun",
-          "en": "taught — teaching",
-          "ur": "سکھایا — سکھانا"
-        }
+        "en": "كِتَابَةٌ and نَصْرٌ have the same shape, so every Form I maṣdar looks like them.",
+        "ur": "كِتَابَةٌ اور نَصْرٌ کی شکل ایک جیسی ہے، اس لیے پہلی صورت کا ہر مصدر ایسا ہی ہوتا ہے۔"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Their shapes differ. Form I maṣdars come in many shapes — learn each as a pair.",
+        "ur": "ان کی شکلیں مختلف ہیں۔ پہلی صورت کے مصدر کئی شکلوں میں آتے ہیں — ہر ایک کو جوڑی کے طور پر سیکھیں۔"
+      }
     },
     {
-      "type": "FILL_BLANK",
-      "id": "ch36-l02-ex03",
-      "mode": "TAP",
-      "sentence_ar": "الْإِنْسَانُ يَحْتَاجُ إِلَى ___",
-      "hint": {
-        "en": "Human needs: teaching, learning, and sending.",
-        "ur": "انسان کو ضرورت ہے: سکھانے، سیکھنے، اور بھیجنے کی۔"
+      "type": "TAP_TRANSLATION",
+      "id": "ch36-l02-ex04",
+      "prompt": {
+        "ar": "نَصَرَ أَحْمَدُ صَدِيقَهُ.",
+        "ar_plain": "نصر أحمد صديقه.",
+        "translit": "naṣara aḥmadu ṣadīqahu.",
+        "en": "Ahmad helped his friend.",
+        "ur": "احمد نے اپنے دوست کی مدد کی۔"
       },
       "options": [
         {
-          "ar": "إِرْسَالٍ",
-          "ar_plain": "ارسال",
-          "translit": "irsaalin",
-          "en": "sending",
-          "ur": "بھیجنا"
+          "en": "Ahmad's help is great.",
+          "ur": "احمد کی مدد بڑی ہے۔"
         },
         {
-          "ar": "تَعْلِيمٍ",
-          "ar_plain": "تعليم",
-          "translit": "ta'liimin",
-          "en": "teaching",
-          "ur": "سکھانا"
+          "en": "Ahmad helps a friend.",
+          "ur": "احمد دوست کی مدد کرتا ہے۔"
         },
         {
-          "ar": "إِقْرَارٍ",
-          "ar_plain": "اقرار",
-          "translit": "iqraarin",
-          "en": "acknowledgment",
-          "ur": "اقرار"
+          "en": "Ahmad wrote to his friend.",
+          "ur": "احمد نے اپنے دوست کو لکھا۔"
         },
         {
-          "ar": "تَسْبِيحٍ",
-          "ar_plain": "تسبيح",
-          "translit": "tasbiihin",
-          "en": "glorification",
-          "ur": "تسبیح"
+          "en": "Ahmad helped his friend.",
+          "ur": "احمد نے اپنے دوست کی مدد کی۔"
         }
       ],
-      "correct_answer": {
-        "ar": "إِرْسَالٍ",
-        "ar_plain": "ارسال",
-        "translit": "irsaalin",
-        "en": "sending",
-        "ur": "بھیجنا"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch36-l02-ex04",
-      "left_column": [
-        {
-          "ar": "تَعْلِيمٌ",
-          "ar_plain": "تعليم",
-          "translit": "ta'liimun",
-          "en": "teaching",
-          "ur": "سکھانا"
-        },
-        {
-          "ar": "إِرْسَالٌ",
-          "ar_plain": "ارسال",
-          "translit": "irsaalun",
-          "en": "sending",
-          "ur": "بھیجنا"
-        },
-        {
-          "ar": "كِتَابَةٌ",
-          "ar_plain": "كتابة",
-          "translit": "kitaabatum",
-          "en": "writing",
-          "ur": "لکھنا"
-        },
-        {
-          "ar": "إِقْرَارٌ",
-          "ar_plain": "اقرار",
-          "translit": "iqraarun",
-          "en": "acknowledgment",
-          "ur": "اقرار"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "sending",
-          "ur": "بھیجنا"
-        },
-        {
-          "en": "writing",
-          "ur": "لکھنا"
-        },
-        {
-          "en": "teaching",
-          "ur": "سکھانا"
-        },
-        {
-          "en": "acknowledgment",
-          "ur": "اقرار"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          2
-        ],
-        [
-          1,
-          0
-        ],
-        [
-          2,
-          1
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "نَصَرَ is the verb: he helped.",
+        "ur": "نَصَرَ فعل ہے: اس نے مدد کی۔"
+      }
     },
     {
       "type": "BUILD_SENTENCE",
       "id": "ch36-l02-ex05",
       "target_translation": {
-        "en": "The sending is from Allah.",
-        "ur": "بھیجنا اللہ کی طرف سے ہے۔"
+        "en": "The writing of the lesson is easy.",
+        "ur": "سبق لکھنا آسان ہے۔"
       },
       "tiles": [
         {
-          "ar": "إِرْسَالٌ",
-          "ar_plain": "ارسال",
-          "translit": "irsaalun",
-          "en": "sending",
-          "ur": "بھیجنا"
+          "ar": "سَهْلَةٌ",
+          "ar_plain": "سهلة",
+          "translit": "sahlatun",
+          "en": "easy",
+          "ur": "آسان"
         },
         {
-          "ar": "مِنَ",
-          "ar_plain": "من",
-          "translit": "mina",
-          "en": "from",
-          "ur": "سے"
+          "ar": "كِتَابَةُ",
+          "ar_plain": "كتابة",
+          "translit": "kitābatu",
+          "en": "writing of",
+          "ur": "لکھنا"
         },
         {
-          "ar": "اللَّهِ",
-          "ar_plain": "الله",
-          "translit": "Allahi",
-          "en": "Allah",
-          "ur": "اللہ"
-        },
-        {
-          "ar": "اللهُ",
-          "ar_plain": "الله",
-          "translit": "Allahu",
-          "en": "Allah (nom.)",
-          "ur": "اللہ (نصب)"
+          "ar": "الدَّرْسِ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsi",
+          "en": "the lesson",
+          "ur": "سبق"
         }
       ],
       "correct_order": [
-        0,
         1,
-        2
+        2,
+        0
       ],
-      "xp_value": 1
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "كِتَابَةُ الدَّرْسِ سَهْلَةٌ.",
+        "ur": "كِتَابَةُ الدَّرْسِ سَهْلَةٌ۔"
+      }
     },
     {
-      "type": "TAP_TRANSLATION",
+      "type": "MATCH_AYAH",
       "id": "ch36-l02-ex06",
-      "prompt": {
-        "ar": "إِنَّ الْإِرْسَالَ مِنَ اللَّهِ",
-        "ar_plain": "ان الرسالة من الله",
-        "translit": "inna al-irsaala mina Allahi",
-        "en": "Indeed the sending is from Allah.",
-        "ur": "بیشک بھیجنا اللہ کی طرف سے ہے۔"
+      "ayah_fragment": {
+        "ar": "إِذَا جَاءَ نَصْرُ اللَّهِ",
+        "surah_ref": "An-Nasr 110:1"
       },
       "options": [
         {
-          "en": "Indeed the sending is from Allah.",
-          "ur": "بیشک بھیجنا اللہ کی طرف سے ہے۔"
+          "en": "When the help of Allah comes",
+          "ur": "جب اللہ کی مدد آ جائے"
         },
         {
-          "en": "Indeed the teaching is from Allah.",
-          "ur": "بیشک سکھانا اللہ کی طرف سے ہے۔"
+          "en": "When Allah helps the helper",
+          "ur": "جب اللہ مدد کرنے والے کی مدد کرے"
         },
         {
-          "en": "Indeed the acknowledgment is from Allah.",
-          "ur": "بیشک اقرار اللہ کی طرف سے ہے۔"
+          "en": "When Allah wrote the help",
+          "ur": "جب اللہ نے مدد لکھی"
         },
         {
-          "en": "Indeed the sending is to Allah.",
-          "ur": "بیشک بھیجنا اللہ کو ہے۔"
+          "en": "Help Allah when it comes!",
+          "ur": "اللہ کی مدد کرو جب وہ آئے!"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "إِرْسَالٌ is the مصدر of أَرْسَلَ (Form IV, 'to send'). إِنَّ + مصدر + مِنَ = 'indeed the [action] is from.'",
-        "ur": "إِرْسَالٌ أَرْسَلَ (چوتھی شکل، 'بھیجنا') کا مصدر ہے۔ إِنَّ + مصدر + مِنَ = 'بیشک [فعل] سے ہے'۔"
+        "en": "نَصْرُ اللَّهِ: the help of Allah — a maṣdar in an iḍāfa.",
+        "ur": "نَصْرُ اللَّهِ: اللہ کی مدد — اضافت میں مصدر۔"
       }
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch36-l02-ex07",
-      "statement": {
-        "en": "The pattern إِفْعَالٌ belongs to Form IV verbs.",
-        "ur": "وزن إِفْعَالٌ چوتھی شکل کے افعال سے ہے۔",
-        "ar_example": {
-          "ar": "أَرْسَلَ — إِرْسَالٌ",
-          "ar_plain": "ارسل — ارسال",
-          "translit": "arsala — irsaalun",
-          "en": "he sent — sending",
-          "ur": "اس نے بھیجا — بھیجنا"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch36-l02-ex08",
-      "target_translation": {
-        "en": "Teaching is a noble action.",
-        "ur": "سکھانا ایک عمدہ عمل ہے۔"
-      },
-      "tiles": [
-        {
-          "ar": "تَعْلِيمٌ",
-          "ar_plain": "تعليم",
-          "translit": "ta'liimun",
-          "en": "teaching",
-          "ur": "سکھانا"
-        },
-        {
-          "ar": "فِعْلٌ",
-          "ar_plain": "فعل",
-          "translit": "fi'lun",
-          "en": "action",
-          "ur": "عمل"
-        },
-        {
-          "ar": "كَرِيمٌ",
-          "ar_plain": "كريم",
-          "translit": "kariimun",
-          "en": "noble",
-          "ur": "شریف"
-        },
-        {
-          "ar": "نَفِيسٌ",
-          "ar_plain": "نفيس",
-          "translit": "nafiisun",
-          "en": "valuable",
-          "ur": "قیمتی"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Form II and IV مصدر patterns",
-      "ar": "دوسری اور چوتھی شکل کے مصادر کے وزن",
-      "ur": "دوسری اور چوتھی شکل کے مصادر کے وزن"
+      "en": "Learn the pair",
+      "ar": "نَصَرَ ← نَصْرٌ",
+      "ur": "جوڑی یاد کریں"
     },
     "ayah": {
-      "surah": 87,
+      "surah": 110,
       "ayah": 1,
-      "label": "Al-A'la 87:1",
-      "ar": "سَبِّحْ اسْمَ رَبِّكَ الْأَعْلَى",
-      "en": "Glorify the name of your Lord, the Most High.",
-      "ur": "اپنے بلند ترین رب کا نام تسبیح کرو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087001.mp3"
+      "label": "An-Nasr 110:1",
+      "ar": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ",
+      "en": "When the help of Allah comes, and the victory,",
+      "ur": "جب اللہ کی مدد اور فتح آ جائے،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/110001.mp3"
     },
     "highlighted_word_indices": [
-      0
+      2
+    ],
+    "highlighted_words": [
+      "نَصْرُ"
     ],
     "noor_explanation": {
-      "en": "سَبِّحْ is the command of سَبَّحَ, a Form II verb from س-ب-ح. Its مصدر is تَسْبِيحٌ — the Form II pattern تَفْعِيلٌ. Form IV verbs take إِفْعَالٌ (إِرْسَالٌ).",
-      "ur": "سَبِّحْ، سَبَّحَ کا امر ہے جو س-ب-ح سے باب دوم کا فعل ہے۔ اس کا مصدر تَسْبِيحٌ ہے — باب دوم کا وزن تَفْعِيلٌ۔ باب چہارم کے افعال إِفْعَالٌ لیتے ہیں (إِرْسَالٌ)۔"
+      "en": "نَصْرُ: the maṣdar of نَصَرَ. A Form I maṣdar is a word to learn together with its verb.",
+      "ur": "نَصْرُ: نَصَرَ کا مصدر۔ پہلی صورت کا مصدر ایسا لفظ ہے جسے اپنے فعل کے ساتھ سیکھا جاتا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Form I: عِلْمٌ, قِرَاءَةٌ, كِتَابَةٌ. Form II: تَعْلِيمٌ, تَسْبِيحٌ. Form IV: إِرْسَالٌ, إِقْرَارٌ. The verb form tells you what pattern to expect for its مصدر.",
-      "ur": "باب اول: عِلْمٌ، قِرَاءَةٌ، كِتَابَةٌ۔ باب دوم: تَعْلِيمٌ، تَسْبِيحٌ۔ باب چہارم: إِرْسَالٌ، إِقْرَارٌ۔ فعل کا باب بتاتا ہے کہ اس کے مصدر کا وزن کیا ہو گا۔"
+      "en": "Two pairs learned. Next: verbs with extra letters.",
+      "ur": "دو جوڑیاں سیکھ لیں۔ آگے: اضافی حروف والے فعل۔"
     }
   }
 }

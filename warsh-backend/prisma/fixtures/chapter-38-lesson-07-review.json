@@ -1,0 +1,560 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 38, review (ch38-l06, new, display order 7). Added 2026-10-03 in the proposal harvest, batch 3 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-38-content-proposal.md and its review amendments. Two distinct instances for each of the six checkpoint strands: dual noun forms (nominative / after a preposition), أَنْتُمَا versus the 'we' reply, indicative dual verbs, dual adjective agreement, a dual versus two nouns joined by وَ, and two Quran readings (55:19, 55:46). No past dual forms, no moods, no construct nūn. Lessons 1–5 were already corrected (dual noun endings, هُمَا / أَنْتُمَا, adjective agreement, dual versus وَ-coordination with 28:15 and 110:1, no first-person dual, cited Quran readings); only two defects were patched.",
+    "title": "Chapter 38 Review",
+    "titleAr": "مُرَاجَعَةُ الْفَصْلِ الثَّامِنِ وَالثَّلَاثِينَ",
+    "titleUr": "باب 38 کی دہرائی",
+    "chapter_order": 38,
+    "lesson_order": 7,
+    "estimated_minutes": 12,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 55,
+      "ayah": 19,
+      "label": "Ar-Rahman 55:19",
+      "ar": "مَرَجَ الْبَحْرَيْنِ يَلْتَقِيَانِ",
+      "en": "He released the two seas, meeting one another.",
+      "ur": "اس نے دو سمندر چھوڑ دیے جو آپس میں ملتے ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/055019.mp3"
+    },
+    "noor_intro": {
+      "en": "Review: the dual.",
+      "ur": "دہرائی: مثنی۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 38 at a glance",
+        "ar": "الْمُثَنَّى",
+        "ur": "باب 38 ایک نظر میں"
+      },
+      "explanation": {
+        "en": "Nouns: ـَانِ (nominative), ـَيْنِ (accusative or genitive). Verbs: هُمَا يَكْتُبَانِ, هُمَا تَكْتُبَانِ, أَنْتُمَا تَكْتُبَانِ. 'We': نَحْنُ نَكْتُبُ — no 'we two'.",
+        "ur": "اسم: ـَانِ (رفع)، ـَيْنِ (نصب یا جر)۔ فعل: هُمَا يَكْتُبَانِ، هُمَا تَكْتُبَانِ، أَنْتُمَا تَكْتُبَانِ۔ 'ہم': نَحْنُ نَكْتُبُ — 'ہم دو' الگ نہیں۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "الطَّالِبَانِ الْمُجْتَهِدَانِ يَكْتُبَانِ.",
+        "ar_plain": "الطالبان المجتهدان يكتبان.",
+        "translit": "aṭ-ṭālibāni l-mujtahidāni yaktubāni.",
+        "en": "The two diligent students write.",
+        "ur": "دو محنتی طالب علم لکھتے ہیں۔"
+      },
+      "explanation": {
+        "en": "A dual noun, a dual adjective and a dual verb — all in ـَانِ.",
+        "ur": "مثنی اسم، مثنی صفت اور مثنی فعل — سب ـَانِ پر۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "FILL_BLANK",
+      "id": "ch38-l06-ex01",
+      "mode": "TAP",
+      "sentence_ar": "___ فِي الْمَسْجِدِ.",
+      "hint": {
+        "en": "The two students are in the mosque.",
+        "ur": "دو طالب علم مسجد میں ہیں۔"
+      },
+      "options": [
+        {
+          "ar": "الطَّالِبَيْنِ",
+          "ar_plain": "الطالبين",
+          "translit": "aṭ-ṭālibayni",
+          "en": "the two students (after a preposition)",
+          "ur": "دو طالب علم (حرفِ جر کے بعد)"
+        },
+        {
+          "ar": "الطَّالِبَانِ",
+          "ar_plain": "الطالبان",
+          "translit": "aṭ-ṭālibāni",
+          "en": "the two students",
+          "ur": "دو طالب علم"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibu",
+          "en": "the student",
+          "ur": "طالب علم"
+        },
+        {
+          "ar": "الطَّالِبُونَ",
+          "ar_plain": "الطالبون",
+          "translit": "aṭ-ṭālibūna",
+          "en": "the students",
+          "ur": "طالب علم (جمع)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الطَّالِبَانِ",
+        "ar_plain": "الطالبان",
+        "translit": "aṭ-ṭālibāni",
+        "en": "the two students",
+        "ur": "دو طالب علم"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The subject of the sentence: nominative dual, ـَانِ.",
+        "ur": "جملے کا مبتدا: رفع میں مثنی، ـَانِ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch38-l06-ex02",
+      "mode": "TAP",
+      "sentence_ar": "أَجْلِسُ مَعَ ___.",
+      "hint": {
+        "en": "I sit with the two students.",
+        "ur": "میں دو طالب علموں کے ساتھ بیٹھتا ہوں۔"
+      },
+      "options": [
+        {
+          "ar": "الطَّالِبَانِ",
+          "ar_plain": "الطالبان",
+          "translit": "aṭ-ṭālibāni",
+          "en": "the two students",
+          "ur": "دو طالب علم"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibu",
+          "en": "the student",
+          "ur": "طالب علم"
+        },
+        {
+          "ar": "الطَّالِبُونَ",
+          "ar_plain": "الطالبون",
+          "translit": "aṭ-ṭālibūna",
+          "en": "the students",
+          "ur": "طالب علم (جمع)"
+        },
+        {
+          "ar": "الطَّالِبَيْنِ",
+          "ar_plain": "الطالبين",
+          "translit": "aṭ-ṭālibayni",
+          "en": "the two students",
+          "ur": "دو طالب علم"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الطَّالِبَيْنِ",
+        "ar_plain": "الطالبين",
+        "translit": "aṭ-ṭālibayni",
+        "en": "the two students",
+        "ur": "دو طالب علم"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After مَعَ the noun is genitive: ـَيْنِ.",
+        "ur": "مَعَ کے بعد اسم مجرور ہوتا ہے: ـَيْنِ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch38-l06-ex03",
+      "prompt": {
+        "ar": "أَنْتُمَا تَجْلِسَانِ فِي الْفَصْلِ.",
+        "ar_plain": "أنتما تجلسان في الفصل.",
+        "translit": "antumā tajlisāni fī l-faṣli.",
+        "en": "You two sit in the classroom.",
+        "ur": "تم دونوں کلاس میں بیٹھتے ہو۔"
+      },
+      "options": [
+        {
+          "en": "You two sit in the classroom.",
+          "ur": "تم دونوں کلاس میں بیٹھتے ہو۔"
+        },
+        {
+          "en": "They two sit in the classroom.",
+          "ur": "وہ دونوں کلاس میں بیٹھتے ہیں۔"
+        },
+        {
+          "en": "We sit in the classroom.",
+          "ur": "ہم کلاس میں بیٹھتے ہیں۔"
+        },
+        {
+          "en": "He sits in the classroom.",
+          "ur": "وہ کلاس میں بیٹھتا ہے۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَنْتُمَا: you two. تَجْلِسَانِ: ـَانِ.",
+        "ur": "أَنْتُمَا: تم دونوں۔ تَجْلِسَانِ: ـَانِ۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch38-l06-ex04",
+      "prompt_line": {
+        "ar": "مَاذَا تَفْعَلَانِ؟",
+        "ar_plain": "ماذا تفعلان؟",
+        "translit": "mādhā tafʿalāni?",
+        "en": "What do you two do?",
+        "ur": "تم دونوں کیا کرتے ہو؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "يَكْتُبَانِ الدَّرْسَ.",
+          "ar_plain": "يكتبان الدرس.",
+          "translit": "yaktubāni d-darsa.",
+          "en": "The two write the lesson.",
+          "ur": "وہ دونوں سبق لکھتے ہیں۔"
+        },
+        {
+          "ar": "نَكْتُبُ الدَّرْسَ.",
+          "ar_plain": "نكتب الدرس.",
+          "translit": "naktubu d-darsa.",
+          "en": "We write the lesson.",
+          "ur": "ہم سبق لکھتے ہیں۔"
+        },
+        {
+          "ar": "أَكْتُبُ الدَّرْسَ.",
+          "ar_plain": "أكتب الدرس.",
+          "translit": "aktubu d-darsa.",
+          "en": "I write the lesson.",
+          "ur": "میں سبق لکھتا ہوں۔"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "You answer for two with the ordinary 'we': نَكْتُبُ.",
+        "ur": "آپ دو کی طرف سے عام 'ہم' سے جواب دیتے ہیں: نَكْتُبُ۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch38-l06-ex05",
+      "left_column": [
+        {
+          "ar": "هُمَا يَكْتُبَانِ",
+          "ar_plain": "هما يكتبان",
+          "translit": "humā yaktubāni",
+          "en": "they two (m.) write",
+          "ur": "وہ دو (مرد) لکھتے ہیں"
+        },
+        {
+          "ar": "هُمَا تَكْتُبَانِ",
+          "ar_plain": "هما تكتبان",
+          "translit": "humā taktubāni",
+          "en": "they two (f.) write",
+          "ur": "وہ دو (عورتیں) لکھتی ہیں"
+        },
+        {
+          "ar": "أَنْتُمَا تَكْتُبَانِ",
+          "ar_plain": "أنتما تكتبان",
+          "translit": "antumā taktubāni",
+          "en": "you two write",
+          "ur": "تم دونوں لکھتے ہو"
+        },
+        {
+          "ar": "هُوَ يَكْتُبُ",
+          "ar_plain": "هو يكتب",
+          "translit": "huwa yaktubu",
+          "en": "he writes",
+          "ur": "وہ لکھتا ہے"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "you two write — men or women",
+          "ur": "تم دونوں لکھتے ہو — مرد یا عورتیں"
+        },
+        {
+          "en": "he writes",
+          "ur": "وہ لکھتا ہے"
+        },
+        {
+          "en": "they two (m.) write",
+          "ur": "وہ دو (مرد) لکھتے ہیں"
+        },
+        {
+          "en": "they two (f.) write",
+          "ur": "وہ دو (عورتیں) لکھتی ہیں"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "With هُمَا, يَـ is masculine and تَـ is feminine. أَنْتُمَا is the same for both.",
+        "ur": "هُمَا کے ساتھ يَـ مذکر اور تَـ مؤنث ہے۔ أَنْتُمَا دونوں کے لیے ایک ہی ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch38-l06-ex06",
+      "statement": {
+        "en": "With أَنْتُمَا the verb's prefix tells you whether the two are men or women.",
+        "ur": "أَنْتُمَا کے ساتھ فعل کا سابقہ بتاتا ہے کہ دونوں مرد ہیں یا عورتیں۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَنْتُمَا تَكْتُبَانِ is the same for two men and two women. Only the context tells you.",
+        "ur": "أَنْتُمَا تَكْتُبَانِ دو مردوں اور دو عورتوں کے لیے ایک ہی ہے۔ صرف سیاق بتاتا ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch38-l06-ex07",
+      "mode": "TAP",
+      "sentence_ar": "الْمَرْأَتَانِ ___.",
+      "hint": {
+        "en": "The two learned women.",
+        "ur": "دو عالمہ عورتیں۔"
+      },
+      "options": [
+        {
+          "ar": "الْعَالِمَانِ",
+          "ar_plain": "العالمان",
+          "translit": "al-ʿālimāni",
+          "en": "the two learned (m.)",
+          "ur": "دو عالم (مرد)"
+        },
+        {
+          "ar": "الْعَالِمَتَانِ",
+          "ar_plain": "العالمتان",
+          "translit": "al-ʿālimatāni",
+          "en": "the two learned (f.)",
+          "ur": "دو عالمہ"
+        },
+        {
+          "ar": "الْعَالِمَةُ",
+          "ar_plain": "العالمة",
+          "translit": "al-ʿālimatu",
+          "en": "the learned (f. sg.)",
+          "ur": "عالمہ (واحد)"
+        },
+        {
+          "ar": "الْعَالِمُونَ",
+          "ar_plain": "العالمون",
+          "translit": "al-ʿālimūna",
+          "en": "the learned (m. pl.)",
+          "ur": "عالم (جمع)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الْعَالِمَتَانِ",
+        "ar_plain": "العالمتان",
+        "translit": "al-ʿālimatāni",
+        "en": "the two learned (f.)",
+        "ur": "دو عالمہ"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A feminine dual noun takes a feminine dual adjective: ـتَانِ.",
+        "ur": "مؤنث مثنی اسم کے ساتھ مؤنث مثنی صفت آتی ہے: ـتَانِ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch38-l06-ex08",
+      "prompt": {
+        "ar": "الطَّالِبَانِ الْمُجْتَهِدَانِ",
+        "ar_plain": "الطالبان المجتهدان",
+        "translit": "aṭ-ṭālibāni l-mujtahidāni",
+        "en": "the two diligent students",
+        "ur": "دو محنتی طالب علم"
+      },
+      "options": [
+        {
+          "en": "the diligent student",
+          "ur": "محنتی طالب علم"
+        },
+        {
+          "en": "the two diligent female students",
+          "ur": "دو محنتی طالبات"
+        },
+        {
+          "en": "the diligent students",
+          "ur": "محنتی طالب علم (جمع)"
+        },
+        {
+          "en": "the two diligent students",
+          "ur": "دو محنتی طالب علم"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Noun and adjective both end in ـَانِ.",
+        "ur": "اسم اور صفت دونوں ـَانِ پر ختم ہوتے ہیں۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch38-l06-ex09",
+      "statement": {
+        "en": "فَاطِمَةُ وَخَدِيجَةُ is a dual noun.",
+        "ur": "فَاطِمَةُ وَخَدِيجَةُ ایک مثنی اسم ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "These are two singular names joined by وَ. A dual is one word with ـَانِ or ـَيْنِ.",
+        "ur": "یہ وَ سے جڑے دو واحد نام ہیں۔ مثنی ایک لفظ ہوتا ہے جس پر ـَانِ یا ـَيْنِ ہو۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch38-l06-ex10",
+      "ayah_fragment": {
+        "ar": "نَصْرُ اللَّهِ وَالْفَتْحُ",
+        "surah_ref": "An-Nasr 110:1"
+      },
+      "options": [
+        {
+          "en": "a dual noun",
+          "ur": "مثنی اسم"
+        },
+        {
+          "en": "two singular nouns joined by وَ",
+          "ur": "وَ سے جڑے دو واحد اسم"
+        },
+        {
+          "en": "a dual verb",
+          "ur": "مثنی فعل"
+        },
+        {
+          "en": "a plural noun",
+          "ur": "جمع اسم"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "نَصْرُ and الْفَتْحُ are separate singular nouns joined by وَ.",
+        "ur": "نَصْرُ اور الْفَتْحُ الگ الگ واحد اسم ہیں جنہیں وَ نے جوڑا ہے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch38-l06-ex11",
+      "ayah_fragment": {
+        "ar": "مَرَجَ الْبَحْرَيْنِ يَلْتَقِيَانِ",
+        "surah_ref": "Ar-Rahman 55:19"
+      },
+      "options": [
+        {
+          "en": "The sea meets the sea",
+          "ur": "سمندر سمندر سے ملتا ہے"
+        },
+        {
+          "en": "He released the two seas, meeting one another — a dual noun and a dual verb",
+          "ur": "اس نے دو سمندر چھوڑ دیے جو آپس میں ملتے ہیں — مثنی اسم اور مثنی فعل"
+        },
+        {
+          "en": "He released seas, they meet",
+          "ur": "اس نے سمندر چھوڑے، وہ ملتے ہیں"
+        },
+        {
+          "en": "Release the two seas!",
+          "ur": "دو سمندر چھوڑ دو!"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْبَحْرَيْنِ: dual noun (ـَيْنِ). يَلْتَقِيَانِ: dual verb (ـَانِ).",
+        "ur": "الْبَحْرَيْنِ: مثنی اسم (ـَيْنِ)۔ يَلْتَقِيَانِ: مثنی فعل (ـَانِ)۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch38-l06-ex12",
+      "ayah_fragment": {
+        "ar": "وَلِمَنْ خَافَ مَقَامَ رَبِّهِ جَنَّتَانِ",
+        "surah_ref": "Ar-Rahman 55:46"
+      },
+      "options": [
+        {
+          "en": "a garden",
+          "ur": "ایک باغ"
+        },
+        {
+          "en": "two gardens",
+          "ur": "دو باغ"
+        },
+        {
+          "en": "gardens",
+          "ur": "باغات"
+        },
+        {
+          "en": "the garden of Paradise",
+          "ur": "جنت کا باغ"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "جَنَّتَانِ: the dual of جَنَّةٌ — two gardens.",
+        "ur": "جَنَّتَانِ: جَنَّةٌ کا مثنی — دو باغ۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "The dual",
+      "ar": "الْمُثَنَّى",
+      "ur": "مثنی"
+    },
+    "ayah": {
+      "surah": 55,
+      "ayah": 19,
+      "label": "Ar-Rahman 55:19",
+      "ar": "مَرَجَ الْبَحْرَيْنِ يَلْتَقِيَانِ",
+      "en": "He released the two seas, meeting one another.",
+      "ur": "اس نے دو سمندر چھوڑ دیے جو آپس میں ملتے ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/055019.mp3"
+    },
+    "highlighted_word_indices": [
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "الْبَحْرَيْنِ",
+      "يَلْتَقِيَانِ"
+    ],
+    "noor_explanation": {
+      "en": "الْبَحْرَيْنِ and يَلْتَقِيَانِ: a dual noun and a dual verb in one short phrase.",
+      "ur": "الْبَحْرَيْنِ اور يَلْتَقِيَانِ: ایک مختصر ٹکڑے میں مثنی اسم اور مثنی فعل۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Review done. Next: the chapter test.",
+      "ur": "دہرائی مکمل۔ آگے: باب کا امتحان۔"
+    }
+  }
+}

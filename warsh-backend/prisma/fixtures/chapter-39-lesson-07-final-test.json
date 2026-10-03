@@ -1,0 +1,444 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 39, final test (ch39-test, new). Added 2026-10-03 in the proposal harvest, batch 3 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-39-content-proposal.md and its review amendments. Twelve multiple-choice questions on six two-question strands: 106:1 (q01–02), 106:2 (q03–04), 106:3 (q05–06), 106:4 (q07–08), two whole-reading evidence decisions (q09–10) and the two narrow retrievals — the season nouns are not a dual (q11) and the referent of ـهُمْ (q12). The selected 'accustomed security' rendering bounds q02; no distractor is a recognised alternative rendering. No route history, tafsir or finer parsing. Pass mark 80 %: 9/12 fails, 10/12 passes. Answer positions 3/3/3/3, no repeating cycle. Lessons 1–5 were already corrected (only words from 106:1–4, qāfila marked as outside the surah, آمَنَهُمْ with the local sense, إِيلَاف's renderings attributed); two over-teaching lines about the lām of command were softened to a supplied chunk, because that form is Chapter 68's.",
+    "title": "Chapter 39 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ التَّاسِعِ وَالثَّلَاثِينَ",
+    "titleUr": "باب 39 کا آخری امتحان",
+    "chapter_order": 39,
+    "lesson_order": 7,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 106,
+      "ayah": 1,
+      "label": "Quraysh 106:1",
+      "ar": "لِإِيلَافِ قُرَيْشٍ",
+      "en": "For the accustomed security of Quraysh —",
+      "ur": "قریش کو مانوس رکھنے کی وجہ سے —",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/106001.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 39.",
+      "ur": "باب 39 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 39,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch39-test-q01",
+        "topic": {
+          "en": "Ayah 1",
+          "ur": "آیت 1"
+        },
+        "prompt": {
+          "en": "Quraysh 106:1. What does قُرَيْشٍ name?",
+          "ur": "سورۃ قریش 106:1۔ قُرَيْشٍ کس کا نام ہے؟"
+        },
+        "arabic": "لِإِيلَافِ قُرَيْشٍ",
+        "options": [
+          {
+            "en": "a season",
+            "ur": "ایک موسم"
+          },
+          {
+            "en": "a journey",
+            "ur": "ایک سفر"
+          },
+          {
+            "en": "a tribe — the people of Makkah",
+            "ur": "ایک قبیلہ — مکہ کے لوگ"
+          },
+          {
+            "en": "a house",
+            "ur": "ایک گھر"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch39-test-q02",
+        "topic": {
+          "en": "Ayah 1",
+          "ur": "آیت 1"
+        },
+        "prompt": {
+          "en": "Quraysh 106:1. Which is the best match for the whole phrase?",
+          "ur": "سورۃ قریش 106:1۔ پورے ٹکڑے کا بہترین مطلب کون سا ہے؟"
+        },
+        "arabic": "لِإِيلَافِ قُرَيْشٍ",
+        "options": [
+          {
+            "en": "For the accustomed security of Quraysh",
+            "ur": "قریش کو مانوس رکھنے کی وجہ سے"
+          },
+          {
+            "en": "So let Quraysh worship",
+            "ur": "تو قریش عبادت کریں"
+          },
+          {
+            "en": "Quraysh set out in winter",
+            "ur": "قریش سردی میں نکلے"
+          },
+          {
+            "en": "Quraysh feared hunger",
+            "ur": "قریش بھوک سے ڈرے"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch39-test-q03",
+        "topic": {
+          "en": "Ayah 2",
+          "ur": "آیت 2"
+        },
+        "prompt": {
+          "en": "Quraysh 106:2. What does رِحْلَةَ mean?",
+          "ur": "سورۃ قریش 106:2۔ رِحْلَةَ کا مطلب کیا ہے؟"
+        },
+        "arabic": "إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ",
+        "options": [
+          {
+            "en": "a house",
+            "ur": "ایک گھر"
+          },
+          {
+            "en": "hunger",
+            "ur": "بھوک"
+          },
+          {
+            "en": "a season",
+            "ur": "ایک موسم"
+          },
+          {
+            "en": "a journey",
+            "ur": "ایک سفر"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch39-test-q04",
+        "topic": {
+          "en": "Ayah 2",
+          "ur": "آیت 2"
+        },
+        "prompt": {
+          "en": "Quraysh 106:2. Which two seasons are named?",
+          "ur": "سورۃ قریش 106:2۔ کون سے دو موسم مذکور ہیں؟"
+        },
+        "arabic": "إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ",
+        "options": [
+          {
+            "en": "spring and autumn",
+            "ur": "بہار اور خزاں"
+          },
+          {
+            "en": "winter and summer",
+            "ur": "سردی اور گرمی"
+          },
+          {
+            "en": "day and night",
+            "ur": "دن اور رات"
+          },
+          {
+            "en": "morning and evening",
+            "ur": "صبح اور شام"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch39-test-q05",
+        "topic": {
+          "en": "Ayah 3",
+          "ur": "آیت 3"
+        },
+        "prompt": {
+          "en": "Quraysh 106:3. What does the verse tell them to do?",
+          "ur": "سورۃ قریش 106:3۔ آیت انہیں کیا کرنے کو کہتی ہے؟"
+        },
+        "arabic": "فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ",
+        "options": [
+          {
+            "en": "travel in winter",
+            "ur": "سردی میں سفر کریں"
+          },
+          {
+            "en": "worship the Lord of this House",
+            "ur": "اس گھر کے رب کی عبادت کریں"
+          },
+          {
+            "en": "fear hunger",
+            "ur": "بھوک سے ڈریں"
+          },
+          {
+            "en": "feed the House",
+            "ur": "گھر کو کھلائیں"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch39-test-q06",
+        "topic": {
+          "en": "Ayah 3",
+          "ur": "آیت 3"
+        },
+        "prompt": {
+          "en": "Quraysh 106:3. Which word means 'Lord'?",
+          "ur": "سورۃ قریش 106:3۔ 'رب' کا لفظ کون سا ہے؟"
+        },
+        "arabic": "فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ",
+        "options": [
+          {
+            "en": "فَلْيَعْبُدُوا",
+            "ur": "فَلْيَعْبُدُوا"
+          },
+          {
+            "en": "الْبَيْتِ",
+            "ur": "الْبَيْتِ"
+          },
+          {
+            "en": "هَٰذَا",
+            "ur": "هَٰذَا"
+          },
+          {
+            "en": "رَبَّ",
+            "ur": "رَبَّ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch39-test-q07",
+        "topic": {
+          "en": "Ayah 4",
+          "ur": "آیت 4"
+        },
+        "prompt": {
+          "en": "Quraysh 106:4. Which pair of blessings does the verse name?",
+          "ur": "سورۃ قریش 106:4۔ آیت کون سی دو نعمتیں بیان کرتی ہے؟"
+        },
+        "arabic": "الَّذِي أَطْعَمَهُمْ مِنْ جُوعٍ وَآمَنَهُمْ مِنْ خَوْفٍ",
+        "options": [
+          {
+            "en": "food and safety",
+            "ur": "کھانا اور امن"
+          },
+          {
+            "en": "the journey and the House",
+            "ur": "سفر اور گھر"
+          },
+          {
+            "en": "winter and summer",
+            "ur": "سردی اور گرمی"
+          },
+          {
+            "en": "a tribe and a Lord",
+            "ur": "ایک قبیلہ اور ایک رب"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch39-test-q08",
+        "topic": {
+          "en": "Ayah 4",
+          "ur": "آیت 4"
+        },
+        "prompt": {
+          "en": "Quraysh 106:4. What does وَآمَنَهُمْ مِنْ خَوْفٍ mean here?",
+          "ur": "سورۃ قریش 106:4۔ یہاں وَآمَنَهُمْ مِنْ خَوْفٍ کا مطلب کیا ہے؟"
+        },
+        "arabic": "الَّذِي أَطْعَمَهُمْ مِنْ جُوعٍ وَآمَنَهُمْ مِنْ خَوْفٍ",
+        "options": [
+          {
+            "en": "He believed them because of fear",
+            "ur": "اس نے خوف کی وجہ سے ان کا یقین کیا"
+          },
+          {
+            "en": "They believed in fear",
+            "ur": "وہ خوف میں ایمان لائے"
+          },
+          {
+            "en": "He made them safe from fear",
+            "ur": "اس نے انہیں خوف سے امن دیا"
+          },
+          {
+            "en": "They were afraid of Him",
+            "ur": "وہ اس سے ڈرتے تھے"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch39-test-q09",
+        "topic": {
+          "en": "Whole reading",
+          "ur": "پوری سورت کی پڑھائی"
+        },
+        "prompt": {
+          "en": "Read the end of the surah. Who fed them and made them safe?",
+          "ur": "سورت کا اختتام پڑھیں۔ انہیں کس نے کھلایا اور امن دیا؟"
+        },
+        "arabic": "فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ ۝ الَّذِي أَطْعَمَهُمْ مِنْ جُوعٍ وَآمَنَهُمْ مِنْ خَوْفٍ",
+        "options": [
+          {
+            "en": "the Lord of this House",
+            "ur": "اس گھر کا رب"
+          },
+          {
+            "en": "Quraysh",
+            "ur": "قریش"
+          },
+          {
+            "en": "winter and summer",
+            "ur": "سردی اور گرمی"
+          },
+          {
+            "en": "the journey",
+            "ur": "سفر"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch39-test-q10",
+        "topic": {
+          "en": "Whole reading",
+          "ur": "پوری سورت کی پڑھائی"
+        },
+        "prompt": {
+          "en": "Read the whole surah. What does it tell them to do?",
+          "ur": "پوری سورت پڑھیں۔ وہ انہیں کیا کرنے کو کہتی ہے؟"
+        },
+        "arabic": "لِإِيلَافِ قُرَيْشٍ ۝ إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ ۝ فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ ۝ الَّذِي أَطْعَمَهُمْ مِنْ جُوعٍ وَآمَنَهُمْ مِنْ خَوْفٍ",
+        "options": [
+          {
+            "en": "make the winter and summer journeys",
+            "ur": "سردی اور گرمی کے سفر کریں"
+          },
+          {
+            "en": "feed the hungry",
+            "ur": "بھوکوں کو کھلائیں"
+          },
+          {
+            "en": "build the House",
+            "ur": "گھر بنائیں"
+          },
+          {
+            "en": "worship the Lord of this House",
+            "ur": "اس گھر کے رب کی عبادت کریں"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch39-test-q11",
+        "topic": {
+          "en": "Dual or وَ",
+          "ur": "مثنی یا وَ"
+        },
+        "prompt": {
+          "en": "Quraysh 106:2. What are الشِّتَاءِ and الصَّيْفِ?",
+          "ur": "سورۃ قریش 106:2۔ الشِّتَاءِ اور الصَّيْفِ کیا ہیں؟"
+        },
+        "arabic": "إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ",
+        "options": [
+          {
+            "en": "one dual noun",
+            "ur": "ایک مثنی اسم"
+          },
+          {
+            "en": "a verb and a noun",
+            "ur": "ایک فعل اور ایک اسم"
+          },
+          {
+            "en": "two singular nouns joined by وَ",
+            "ur": "وَ سے جڑے دو واحد اسم"
+          },
+          {
+            "en": "two verbs",
+            "ur": "دو فعل"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch39-test-q12",
+        "topic": {
+          "en": "Attached ـهُمْ",
+          "ur": "جڑا ہوا ـهُمْ"
+        },
+        "prompt": {
+          "en": "Quraysh 106:4. Who does ـهُمْ in أَطْعَمَهُمْ stand for?",
+          "ur": "سورۃ قریش 106:4۔ أَطْعَمَهُمْ میں ـهُمْ کس کی طرف اشارہ ہے؟"
+        },
+        "arabic": "الَّذِي أَطْعَمَهُمْ مِنْ جُوعٍ وَآمَنَهُمْ مِنْ خَوْفٍ",
+        "options": [
+          {
+            "en": "the House",
+            "ur": "گھر"
+          },
+          {
+            "en": "Quraysh",
+            "ur": "قریش"
+          },
+          {
+            "en": "the Lord",
+            "ur": "رب"
+          },
+          {
+            "en": "the journey",
+            "ur": "سفر"
+          }
+        ],
+        "correct_index": 1
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Surah Quraysh",
+      "ar": "سُورَةُ قُرَيْشٍ",
+      "ur": "سورۃ قریش"
+    },
+    "ayah": {
+      "surah": 106,
+      "ayah": 1,
+      "label": "Quraysh 106:1",
+      "ar": "لِإِيلَافِ قُرَيْشٍ",
+      "en": "For the accustomed security of Quraysh —",
+      "ur": "قریش کو مانوس رکھنے کی وجہ سے —",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/106001.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "لِإِيلَافِ",
+      "قُرَيْشٍ"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 39 able to read Surah Quraysh ayah by ayah and as one connected surah.",
+      "ur": "آپ باب 39 اس حال میں مکمل کرتے ہیں کہ سورۃ قریش کو آیت بہ آیت اور ایک جڑی ہوئی سورت کے طور پر پڑھ سکیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 39 complete. Chapter 40: longer descriptions.",
+      "ur": "باب 39 مکمل۔ باب 40: لمبی وضاحتیں۔"
+    }
+  }
+}

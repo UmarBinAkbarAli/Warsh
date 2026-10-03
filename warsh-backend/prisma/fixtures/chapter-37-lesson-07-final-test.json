@@ -1,0 +1,437 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 37, final test (ch37-test, new — not a converted lesson). Added 2026-10-03 in the proposal harvest, batch 3 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-37-content-proposal.md and its review amendments. Twelve multiple-choice questions on six two-question strands: the shared تَـ with a named pronoun (q01–02), أَنْتِ تَفْعَلِينَ (q03–04), نون النسوة (q05–06), the weak-final تُصَلِّي / تُصَلِّينَ pair (q07–08), cited Quran subjects 29:45 and 2:233 (q09–10) and a fresh named feminine subject (q11–12). Pass mark 80 %: 9/12 fails, 10/12 passes. Answer positions 3/3/3/3, no repeating cycle. Lessons 1–5 were already corrected (no final-ت rule, أَنْتِ تَذْهَبِينَ, نون النسوة, weak-final whole forms, cited Quran readings) and are unchanged; the proposal's separate Quran lesson is not added because ch37-l04 already reads 29:45, 2:233, 99:4 and 50:30.",
+    "title": "Chapter 37 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ السَّابِعِ وَالثَّلَاثِينَ",
+    "titleUr": "باب 37 کا آخری امتحان",
+    "chapter_order": 37,
+    "lesson_order": 7,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 29,
+      "ayah": 45,
+      "label": "Al-'Ankabut 29:45",
+      "ar": "إِنَّ الصَّلَاةَ تَنْهَىٰ عَنِ الْفَحْشَاءِ وَالْمُنْكَرِ",
+      "en": "Indeed, prayer restrains from immorality and wrongdoing.",
+      "ur": "بے شک نماز بے حیائی اور برائی سے روکتی ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/029045.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 37.",
+      "ur": "باب 37 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 37,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch37-test-q01",
+        "topic": {
+          "en": "Shared تَـ",
+          "ur": "مشترک تَـ"
+        },
+        "prompt": {
+          "en": "Who goes?",
+          "ur": "کون جاتا ہے؟"
+        },
+        "arabic": "هِيَ تَذْهَبُ إِلَى الْمَسْجِدِ.",
+        "options": [
+          {
+            "en": "you (m.)",
+            "ur": "تم (مرد)"
+          },
+          {
+            "en": "she",
+            "ur": "وہ (عورت)"
+          },
+          {
+            "en": "you (f.)",
+            "ur": "تم (عورت)"
+          },
+          {
+            "en": "they (f.)",
+            "ur": "وہ (عورتیں)"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch37-test-q02",
+        "topic": {
+          "en": "Shared تَـ",
+          "ur": "مشترک تَـ"
+        },
+        "prompt": {
+          "en": "Who sits here?",
+          "ur": "یہاں کون بیٹھتا ہے؟"
+        },
+        "arabic": "أَنْتَ تَجْلِسُ هُنَا.",
+        "options": [
+          {
+            "en": "she",
+            "ur": "وہ (عورت)"
+          },
+          {
+            "en": "you (f.)",
+            "ur": "تم (عورت)"
+          },
+          {
+            "en": "they (f.)",
+            "ur": "وہ (عورتیں)"
+          },
+          {
+            "en": "you (m.)",
+            "ur": "تم (مرد)"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch37-test-q03",
+        "topic": {
+          "en": "أَنْتِ",
+          "ur": "أَنْتِ"
+        },
+        "prompt": {
+          "en": "Who is being addressed?",
+          "ur": "کس سے خطاب ہے؟"
+        },
+        "arabic": "أَنْتِ تَجْلِسِينَ هُنَا.",
+        "options": [
+          {
+            "en": "one woman",
+            "ur": "ایک عورت"
+          },
+          {
+            "en": "one man",
+            "ur": "ایک مرد"
+          },
+          {
+            "en": "a group of women",
+            "ur": "عورتوں کا گروہ"
+          },
+          {
+            "en": "a group of men",
+            "ur": "مردوں کا گروہ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch37-test-q04",
+        "topic": {
+          "en": "أَنْتِ",
+          "ur": "أَنْتِ"
+        },
+        "prompt": {
+          "en": "Which form means 'you (f.) read' — one woman?",
+          "ur": "کون سی صورت 'تم (عورت) پڑھتی ہو' ہے — ایک عورت؟"
+        },
+        "options": [
+          {
+            "en": "تَقْرَأُ",
+            "ur": "تَقْرَأُ"
+          },
+          {
+            "en": "تَقْرَأْنَ",
+            "ur": "تَقْرَأْنَ"
+          },
+          {
+            "en": "تَقْرَئِينَ",
+            "ur": "تَقْرَئِينَ"
+          },
+          {
+            "en": "يَقْرَأْنَ",
+            "ur": "يَقْرَأْنَ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch37-test-q05",
+        "topic": {
+          "en": "نون النسوة",
+          "ur": "نون النسوة"
+        },
+        "prompt": {
+          "en": "Who sits here?",
+          "ur": "یہاں کون بیٹھتا ہے؟"
+        },
+        "arabic": "هُنَّ يَجْلِسْنَ هُنَا.",
+        "options": [
+          {
+            "en": "they (m.)",
+            "ur": "وہ (مرد)"
+          },
+          {
+            "en": "they (f.)",
+            "ur": "وہ (عورتیں)"
+          },
+          {
+            "en": "you (f.)",
+            "ur": "تم (عورت)"
+          },
+          {
+            "en": "she",
+            "ur": "وہ (عورت)"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch37-test-q06",
+        "topic": {
+          "en": "نون النسوة",
+          "ur": "نون النسوة"
+        },
+        "prompt": {
+          "en": "Who is being addressed?",
+          "ur": "کس سے خطاب ہے؟"
+        },
+        "arabic": "أَنْتُنَّ تَذْهَبْنَ إِلَى الْمَدْرَسَةِ.",
+        "options": [
+          {
+            "en": "one woman",
+            "ur": "ایک عورت"
+          },
+          {
+            "en": "one man",
+            "ur": "ایک مرد"
+          },
+          {
+            "en": "a group of men",
+            "ur": "مردوں کا گروہ"
+          },
+          {
+            "en": "a group of women",
+            "ur": "عورتوں کا گروہ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch37-test-q07",
+        "topic": {
+          "en": "Weak-final forms",
+          "ur": "ناقص صورتیں"
+        },
+        "prompt": {
+          "en": "Who prays?",
+          "ur": "نماز کون پڑھتا ہے؟"
+        },
+        "arabic": "أَنْتِ تُصَلِّينَ الْعَصْرَ.",
+        "options": [
+          {
+            "en": "she",
+            "ur": "وہ (عورت)"
+          },
+          {
+            "en": "you (m.)",
+            "ur": "تم (مرد)"
+          },
+          {
+            "en": "you (f.)",
+            "ur": "تم (عورت)"
+          },
+          {
+            "en": "he",
+            "ur": "وہ (مرد)"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch37-test-q08",
+        "topic": {
+          "en": "Weak-final forms",
+          "ur": "ناقص صورتیں"
+        },
+        "prompt": {
+          "en": "What does it say?",
+          "ur": "یہ کیا کہتا ہے؟"
+        },
+        "arabic": "هِيَ تُصَلِّي الضُّحَى.",
+        "options": [
+          {
+            "en": "She prays the forenoon prayer.",
+            "ur": "وہ (عورت) چاشت کی نماز پڑھتی ہے۔"
+          },
+          {
+            "en": "You (f.) pray the forenoon prayer.",
+            "ur": "تم (عورت) چاشت کی نماز پڑھتی ہو۔"
+          },
+          {
+            "en": "They (f.) pray the forenoon prayer.",
+            "ur": "وہ (عورتیں) چاشت کی نماز پڑھتی ہیں۔"
+          },
+          {
+            "en": "He prays the forenoon prayer.",
+            "ur": "وہ (مرد) چاشت کی نماز پڑھتا ہے۔"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch37-test-q09",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآن کی پڑھائی"
+        },
+        "prompt": {
+          "en": "Al-'Ankabut 29:45. Which word is the subject of تَنْهَىٰ?",
+          "ur": "سورۃ العنکبوت 29:45۔ تَنْهَىٰ کا فاعل کون سا لفظ ہے؟"
+        },
+        "arabic": "إِنَّ الصَّلَاةَ تَنْهَىٰ عَنِ الْفَحْشَاءِ وَالْمُنْكَرِ",
+        "options": [
+          {
+            "en": "الْفَحْشَاءِ",
+            "ur": "الْفَحْشَاءِ"
+          },
+          {
+            "en": "الْمُنْكَرِ",
+            "ur": "الْمُنْكَرِ"
+          },
+          {
+            "en": "الصَّلَاةَ",
+            "ur": "الصَّلَاةَ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch37-test-q10",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآن کی پڑھائی"
+        },
+        "prompt": {
+          "en": "Al-Baqarah 2:233. Who nurses?",
+          "ur": "سورۃ البقرہ 2:233۔ دودھ کون پلاتا ہے؟"
+        },
+        "arabic": "وَالْوَالِدَاتُ يُرْضِعْنَ أَوْلَادَهُنَّ",
+        "options": [
+          {
+            "en": "the mothers",
+            "ur": "مائیں"
+          },
+          {
+            "en": "the fathers",
+            "ur": "باپ"
+          },
+          {
+            "en": "the children",
+            "ur": "بچے"
+          },
+          {
+            "en": "the teachers",
+            "ur": "استانیاں"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch37-test-q11",
+        "topic": {
+          "en": "Named feminine subject",
+          "ur": "نام لیا گیا مؤنث فاعل"
+        },
+        "prompt": {
+          "en": "Which verb completes it? The teacher (f.) reads the lesson.",
+          "ur": "کون سا فعل جملہ مکمل کرتا ہے؟ استانی سبق پڑھتی ہے۔"
+        },
+        "arabic": "الْمُعَلِّمَةُ ___ الدَّرْسَ.",
+        "options": [
+          {
+            "en": "يَقْرَأُ",
+            "ur": "يَقْرَأُ"
+          },
+          {
+            "en": "تَقْرَأُ",
+            "ur": "تَقْرَأُ"
+          },
+          {
+            "en": "تَقْرَئِينَ",
+            "ur": "تَقْرَئِينَ"
+          },
+          {
+            "en": "يَقْرَأْنَ",
+            "ur": "يَقْرَأْنَ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch37-test-q12",
+        "topic": {
+          "en": "Named feminine subject",
+          "ur": "نام لیا گیا مؤنث فاعل"
+        },
+        "prompt": {
+          "en": "Which verb completes it? The believing women prostrate in the mosque.",
+          "ur": "کون سا فعل جملہ مکمل کرتا ہے؟ مومن عورتیں مسجد میں سجدہ کرتی ہیں۔"
+        },
+        "arabic": "الْمُؤْمِنَاتُ ___ فِي الْمَسْجِدِ.",
+        "options": [
+          {
+            "en": "يَسْجُدُ",
+            "ur": "يَسْجُدُ"
+          },
+          {
+            "en": "تَسْجُدُ",
+            "ur": "تَسْجُدُ"
+          },
+          {
+            "en": "تَسْجُدِينَ",
+            "ur": "تَسْجُدِينَ"
+          },
+          {
+            "en": "يَسْجُدْنَ",
+            "ur": "يَسْجُدْنَ"
+          }
+        ],
+        "correct_index": 3
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 37 — feminine forms",
+      "ar": "صِيَغُ الْمُضَارِعِ الْمُؤَنَّثَةُ",
+      "ur": "باب 37 — مؤنث صورتیں"
+    },
+    "ayah": {
+      "surah": 29,
+      "ayah": 45,
+      "label": "Al-'Ankabut 29:45",
+      "ar": "إِنَّ الصَّلَاةَ تَنْهَىٰ عَنِ الْفَحْشَاءِ وَالْمُنْكَرِ",
+      "en": "Indeed, prayer restrains from immorality and wrongdoing.",
+      "ur": "بے شک نماز بے حیائی اور برائی سے روکتی ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/029045.mp3"
+    },
+    "highlighted_word_indices": [
+      2
+    ],
+    "highlighted_words": [
+      "تَنْهَىٰ"
+    ],
+    "noor_explanation": {
+      "en": "تَنْهَىٰ: a whole form with a feminine subject. You finish Chapter 37 able to read who is acting from the subject, prefix and ending together.",
+      "ur": "تَنْهَىٰ: مؤنث فاعل کے ساتھ پوری صورت۔ آپ باب 37 اس حال میں مکمل کرتے ہیں کہ فاعل، سابقے اور آخری حصے سے پہچان سکیں کون کام کر رہا ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 37 complete. Chapter 38: the dual.",
+      "ur": "باب 37 مکمل۔ باب 38: تثنیہ۔"
+    }
+  }
+}

@@ -2,373 +2,422 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 36, Lesson 5 — المصدر in Context. verbs and their sources in Quranic ayat.",
+    "_note": "Chapter 36, Lesson 5 (ch36-l07, new). Rebuilt 2026-10-03 in the proposal harvest, batch 3 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-36-content-proposal.md and its review amendments. Basic active participle (اسم الفاعل) on sound Form I roots only: the trio كَتَبَ / كِتَابَةٌ / كَاتِبٌ and نَصَرَ / نَاصِرٌ, meaning supplied; nominal use (أَحْمَدُ كَاتِبٌ); word type (اسم الفاعل) kept apart from sentence role (فاعل) with جَاءَ الْكَاتِبُ versus أَحْمَدُ كَاتِبٌ; no object-governing participle (Chapter 58), no tense claim; plural كَاتِبِينَ (82:11) supplied as a plural form (endings are Chapter 47's). Removed: the Form II 'تَفْعَالٌ / تَكْتَابٌ' rule, إِقْرَارٌ and آمَنَ filed under the wrong form, 'the Quran begins with 87:1', تَسْبِيحٌ placed inside 87:1/87:2, the unsupported 'every page / hundreds' claims, the الصَّلَاة maṣdar classification, the 'Peak 1 mastery' label, malformed build sentences and the stray Chinese/Cyrillic text.",
+    "title": "Who Does It? The Active Participle",
+    "titleAr": "اسْمُ الْفَاعِلِ",
+    "titleUr": "اسم فاعل — کرنے والا",
     "chapter_order": 36,
     "lesson_order": 5,
-    "chapter_title": "المصدر (Verbal Noun)",
-    "title": "المصدر in Context — الذِّكْرُ وَالصَّلَاةُ",
-    "titleAr": "المصدر في السّياق — الذِّكْرُ وَالصَّلَاةُ",
-    "source": "reader_lecture_36_verbs.md",
     "estimated_minutes": 8,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 87,
-      "ayah": 2,
-      "label": "Al-A'la 87:2",
-      "ar": "الَّذِي خَلَقَ فَسَوَّىٰ",
-      "en": "Who created and proportioned.",
-      "ur": "جس نے پیدا کیا اور مناسب بنایا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087002.mp3"
+      "surah": 82,
+      "ayah": 11,
+      "label": "Al-Infitar 82:11",
+      "ar": "كِرَامًا كَاتِبِينَ",
+      "en": "Noble and recording,",
+      "ur": "معزز لکھنے والے،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/082011.mp3"
     },
     "noor_intro": {
-      "en": "Every verb has a noun form — the مصدر. Al-A'la opens with the command سَبِّحِ; its مصدر, تَسْبِيحٌ, names the same action as a concept. Today we pair verbs from Al-A'la with their مصادر.",
-      "ur": "ہر فعل کی ایک اسمی صورت ہے — مصدر۔ سورۃ الاعلیٰ حکم سَبِّحِ سے شروع ہوتی ہے؛ اس کا مصدر تَسْبِيحٌ اسی کام کو تصور کے طور پر بیان کرتا ہے۔ آج ہم الاعلیٰ کے افعال کو ان کے مصادر سے ملائیں گے۔"
+      "en": "كَاتِبِينَ: the writers — the plural of كَاتِبٌ, the one who writes.",
+      "ur": "كَاتِبِينَ: لکھنے والے — كَاتِبٌ کی جمع، یعنی لکھنے والا۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Verb, action noun, doer",
+        "ar": "كَتَبَ / كِتَابَةٌ / كَاتِبٌ",
+        "ur": "فعل، مصدر، کرنے والا"
+      },
+      "examples": [
+        {
+          "ar": "كَتَبَ",
+          "ar_plain": "كتب",
+          "translit": "kataba",
+          "en": "he wrote",
+          "ur": "اس نے لکھا"
+        },
+        {
+          "ar": "كِتَابَةٌ",
+          "ar_plain": "كتابة",
+          "translit": "kitābatun",
+          "en": "writing",
+          "ur": "لکھنا"
+        },
+        {
+          "ar": "كَاتِبٌ",
+          "ar_plain": "كاتب",
+          "translit": "kātibun",
+          "en": "a writer",
+          "ur": "لکھنے والا"
+        }
+      ],
+      "explanation": {
+        "en": "Three words from one root: the verb (he wrote), the maṣdar (writing) and a noun for the doer — كَاتِبٌ, a writer.",
+        "ur": "ایک مادّے سے تین الفاظ: فعل (اس نے لکھا)، مصدر (لکھنا) اور کرنے والے کے لیے اسم — كَاتِبٌ، لکھنے والا۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The pattern فَاعِلٌ",
+        "ar": "اسْمُ الْفَاعِلِ",
+        "ur": "اسم فاعل"
+      },
+      "explanation": {
+        "en": "On the basic three-letter verbs we are studying, the doer noun follows فَاعِلٌ: a long ā after the first letter, then kasra. كَتَبَ ← كَاتِبٌ. نَصَرَ ← نَاصِرٌ.",
+        "ur": "جن بنیادی تین حرفی فعلوں کو ہم پڑھ رہے ہیں ان پر کرنے والے کا اسم فَاعِلٌ کے وزن پر آتا ہے: پہلے حرف کے بعد لمبا ā، پھر کسرہ۔ كَتَبَ ← كَاتِبٌ۔ نَصَرَ ← نَاصِرٌ۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "A helper",
+        "ar": "نَصَرَ / نَاصِرٌ",
+        "ur": "مدد کرنے والا"
+      },
+      "examples": [
+        {
+          "ar": "نَصَرَ",
+          "ar_plain": "نصر",
+          "translit": "naṣara",
+          "en": "he helped",
+          "ur": "اس نے مدد کی"
+        },
+        {
+          "ar": "نَاصِرٌ",
+          "ar_plain": "ناصر",
+          "translit": "nāṣirun",
+          "en": "a helper",
+          "ur": "مدد کرنے والا"
+        }
+      ],
+      "explanation": {
+        "en": "نَصَرَ: he helped. نَاصِرٌ: a helper — the one who helps.",
+        "ur": "نَصَرَ: اس نے مدد کی۔ نَاصِرٌ: مدد کرنے والا۔"
+      }
+    },
+    {
       "type": "EXAMPLE",
       "text": {
-        "ar": "سَبِّحْ",
-        "ar_plain": "سبح",
-        "translit": "sabbih",
-        "en": "glorify (command — Form II verb)",
-        "ur": "تسبیح (حکم - فارم II فعل)"
+        "ar": "أَحْمَدُ كَاتِبٌ.",
+        "ar_plain": "أحمد كاتب.",
+        "translit": "aḥmadu kātibun.",
+        "en": "Ahmad is a writer.",
+        "ur": "احمد لکھنے والا ہے۔"
       },
       "explanation": {
-        "en": "سَبِّحْ is the command of the Form II verb سَبَّحَ (س-ب-ح). Its مصدر is تَسْبِيحٌ. Al-A'la uses the command; the مصدر is supplied here to show the pair.",
-        "ur": "سَبِّحْ باب دوم کے فعل سَبَّحَ (س-ب-ح) کا امر ہے۔ اس کا مصدر تَسْبِيحٌ ہے۔ سورۃ الاعلیٰ میں امر آیا ہے؛ جوڑا دکھانے کے لیے مصدر یہاں دیا گیا ہے۔"
+        "en": "A noun sentence: كَاتِبٌ describes Ahmad. It says what he is — not when he writes.",
+        "ur": "اسمیہ جملہ: كَاتِبٌ احمد کو بیان کرتا ہے۔ یہ بتاتا ہے وہ کیا ہے — یہ نہیں کہ کب لکھتا ہے۔"
       }
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "خَلَقَ",
-        "ar_plain": "خلق",
-        "translit": "khalaqa",
-        "en": "He created",
-        "ur": "اس نے پیدا کیا۔"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Word type or sentence role?",
+        "ar": "اسْمُ الْفَاعِلِ / فَاعِلٌ",
+        "ur": "لفظ کی قسم یا جملے کا کردار؟"
       },
+      "examples": [
+        {
+          "ar": "جَاءَ الْكَاتِبُ.",
+          "ar_plain": "جاء الكاتب.",
+          "translit": "jāʾa l-kātibu.",
+          "en": "The writer came.",
+          "ur": "لکھنے والا آیا۔"
+        },
+        {
+          "ar": "أَحْمَدُ كَاتِبٌ.",
+          "ar_plain": "أحمد كاتب.",
+          "translit": "aḥmadu kātibun.",
+          "en": "Ahmad is a writer.",
+          "ur": "احمد لکھنے والا ہے۔"
+        }
+      ],
       "explanation": {
-        "en": "Past tense verb — Form I (خ-ل-ق). Its مصدر is خَلْقٌ (creation). The verb names the action; the مصدر states it as an abstract concept.",
-        "ur": "ماضی فعل — Form I (مادہ خ-ل-ق)۔ اس کا مصدر ہے خَلْقٌ (creatio)۔ فعل عمل کو نام دیتا ہے؛ مصدر اسے ایک abstract تصور کے طور پر بیان کرتا ہے۔"
+        "en": "Both كَاتِب words are active participles. In the first, الْكَاتِبُ is also the subject of the verb (فَاعِل). In the second, كَاتِبٌ is only a description. The word type does not decide the role.",
+        "ur": "دونوں كَاتِب الفاظ اسم فاعل ہیں۔ پہلے جملے میں الْكَاتِبُ فعل کا فاعل بھی ہے۔ دوسرے میں كَاتِبٌ صرف وصف ہے۔ لفظ کی قسم کردار کا فیصلہ نہیں کرتی۔"
       }
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "ذِكْرٌ",
-        "ar_plain": "ذكر",
-        "translit": "dhikrun",
-        "en": "remembrance",
-        "ur": "یاد"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "82:11: noble writers",
+        "ar": "كِرَامًا كَاتِبِينَ",
+        "ur": "82:11: معزز لکھنے والے"
       },
       "explanation": {
-        "en": "The مصدر of ذ-ك-ر (to remember). ذِكْرٌ appears in hundreds of Quranic contexts. From it comes تَذْكِيرٌ (reminder) and يَذْكُرُ (he remembers). The root ذ-ك-ر covers both human memory and divine revelation.",
-        "ur": "مادہ ذ-ك-ر کا مصدر (یاد کرنا)۔ ذِكْرٌ قرآن میں بہت سے مقامات پر آتا ہے۔ اسی مادے سے تَذْكِيرٌ (یاد دہانی) اور يَذْكُرُ (وہ یاد کرتا ہے) نکلتے ہیں۔ یہ انسانی یاد اور الٰہی نصیحت دونوں کے لیے آتا ہے۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "صَلَاةٌ",
-        "ar_plain": "صلاة",
-        "translit": "salaatun",
-        "en": "prayer — the verbal noun of ص-ل-و",
-        "ur": "دعا - ص-ل-و کا زبانی اسم"
+        "en": "كَاتِبِينَ is the plural of كَاتِبٌ: writers. Plural endings are Chapter 47's; here it is a supplied form.",
+        "ur": "كَاتِبِينَ كَاتِبٌ کی جمع ہے: لکھنے والے۔ جمع کے آخری حروف باب 47 میں ہیں؛ یہاں یہ دیا گیا لفظ ہے۔"
       },
-      "explanation": {
-        "en": "The مصدر of ص-ل-و — 'to pray / to bless.' صَلَاةٌ is the verbal noun. The related verb يُصَلِّي (he prays) is the present tense form. The five daily prayers are called الصَّلَوَاتُ in the Quran.",
-        "ur": "مادہ ص-ل-و کا مصدر — 'پریں / برکت دیں'۔ صَلَاةٌ اسم مصدر ہے۔ متعلقہ فعل يُصَلِّي (وہ پریں) present tense form ہے۔ روزانہ کی پانچ نمازیں قرآن میں الصَّلَوَاتُ کہلاتی ہیں۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "How to find the مصدر in any verse",
-        "ur": "کسی بھی آیت میں مصدر کیسے پائیں"
-      },
-      "body": {
-        "en": "When you see a command verb (سَبِّحْ، ذَكِّرْ، صَلِّ)، ask: what noun describes this action as a concept? That noun is often the مصدر. س-ب-ح → تَسْبِيحٌ. ذ-ك-ر → ذِكْرٌ. ص-ل-و → صَلَاةٌ.",
-        "ur": "جب آپ ایک حکم فعل دیکھیں (سَبِّحْ، ذَكِّرْ، صَلِّ)، پوچھیں: کون سا اسم اس عمل کو ایک تصور کے طور پر بیان کرتا ہے؟ وہ اسم اکثر مصدر ہوتا ہے۔ س-ب-ح → تَسْبِيحٌ۔ ذ-ك-ر → ذِكْرٌ۔ ص-ل-و → صَلَاةٌ۔"
-      }
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/082011.mp3"
     }
   ],
   "exercises": [
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch36-l05-ex01",
+      "id": "ch36-l07-ex01",
       "prompt": {
-        "ar": "سَبِّحْ اسْمَ رَبِّكَ الْأَعْلَى",
-        "ar_plain": "سبح اسم ربك الاعلى",
-        "translit": "sabbih isma rabbika al-a'laa",
-        "en": "Glorify the name of your Lord, the Most High.",
-        "ur": "اپنے بلند ترین رب کا نام تسبیح کرو۔"
+        "ar": "كَاتِبٌ",
+        "ar_plain": "كاتب",
+        "translit": "kātibun",
+        "en": "a writer",
+        "ur": "لکھنے والا"
       },
       "options": [
         {
-          "en": "Glorify the name of your Lord, the Most High.",
-          "ur": "اپنے بلند ترین رب کا نام تسبیح کرو۔"
+          "en": "a writer",
+          "ur": "لکھنے والا"
         },
         {
-          "en": "Remember the name of your Lord, the Most High.",
-          "ur": "اپنے بلند ترین رب کا نام یاد کرو۔"
+          "en": "writing",
+          "ur": "لکھنا"
         },
         {
-          "en": "Know the name of your Lord, the Most High.",
-          "ur": "اپنے بلند ترین رب کا نام جانو۔"
+          "en": "he wrote",
+          "ur": "اس نے لکھا"
         },
         {
-          "en": "Proclaim the name of your Lord, the Most High.",
-          "ur": "اپنے بلند ترین رب کا نام بیان کرو۔"
+          "en": "written",
+          "ur": "لکھا ہوا"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "سَبِّحْ is the command from س-ب-ح — 'glorify'. Its مصدر is تَسْبِيحٌ — glorification. This is Al-A'la 87:1.",
-        "ur": "سَبِّحْ مادہ س-ب-ح سے حکم ہے — 'تسبیح کرو'۔ اس کا مصدر ہے تَسْبِيحٌ — تسبیح۔ یہ الاعلیٰ 87:1 ہے۔"
+        "en": "كَاتِبٌ: the one who writes.",
+        "ur": "كَاتِبٌ: لکھنے والا۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch36-l07-ex02",
+      "mode": "TAP",
+      "sentence_ar": "أَحْمَدُ ___.",
+      "hint": {
+        "en": "Ahmad is a writer.",
+        "ur": "احمد لکھنے والا ہے۔"
+      },
+      "options": [
+        {
+          "ar": "كِتَابَةٌ",
+          "ar_plain": "كتابة",
+          "translit": "kitābatun",
+          "en": "writing",
+          "ur": "لکھنا"
+        },
+        {
+          "ar": "كَتَبَ",
+          "ar_plain": "كتب",
+          "translit": "kataba",
+          "en": "he wrote",
+          "ur": "اس نے لکھا"
+        },
+        {
+          "ar": "كَاتِبٌ",
+          "ar_plain": "كاتب",
+          "translit": "kātibun",
+          "en": "a writer",
+          "ur": "لکھنے والا"
+        },
+        {
+          "ar": "مَكْتُوبٌ",
+          "ar_plain": "مكتوب",
+          "translit": "maktūbun",
+          "en": "written",
+          "ur": "لکھا ہوا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "كَاتِبٌ",
+        "ar_plain": "كاتب",
+        "translit": "kātibun",
+        "en": "a writer",
+        "ur": "لکھنے والا"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The doer description: أَحْمَدُ كَاتِبٌ.",
+        "ur": "کرنے والے کا وصف: أَحْمَدُ كَاتِبٌ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch36-l07-ex03",
+      "prompt": {
+        "ar": "نَاصِرٌ",
+        "ar_plain": "ناصر",
+        "translit": "nāṣirun",
+        "en": "a helper",
+        "ur": "مدد کرنے والا"
+      },
+      "options": [
+        {
+          "en": "help",
+          "ur": "مدد"
+        },
+        {
+          "en": "he helped",
+          "ur": "اس نے مدد کی"
+        },
+        {
+          "en": "one who is helped",
+          "ur": "جس کی مدد کی گئی"
+        },
+        {
+          "en": "a helper",
+          "ur": "مدد کرنے والا"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "نَاصِرٌ: the one who helps.",
+        "ur": "نَاصِرٌ: مدد کرنے والا۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch36-l07-ex04",
+      "mode": "TAP",
+      "sentence_ar": "نَصَرَ ← ___",
+      "hint": {
+        "en": "he helped ← a helper (the doer)",
+        "ur": "اس نے مدد کی ← مدد کرنے والا"
+      },
+      "options": [
+        {
+          "ar": "نَصْرٌ",
+          "ar_plain": "نصر",
+          "translit": "naṣrun",
+          "en": "help",
+          "ur": "مدد"
+        },
+        {
+          "ar": "مَنْصُورٌ",
+          "ar_plain": "منصور",
+          "translit": "manṣūrun",
+          "en": "one who is helped",
+          "ur": "جس کی مدد کی گئی"
+        },
+        {
+          "ar": "نَصَرَ",
+          "ar_plain": "نصر",
+          "translit": "naṣara",
+          "en": "he helped",
+          "ur": "اس نے مدد کی"
+        },
+        {
+          "ar": "نَاصِرٌ",
+          "ar_plain": "ناصر",
+          "translit": "nāṣirun",
+          "en": "a helper",
+          "ur": "مدد کرنے والا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "نَاصِرٌ",
+        "ar_plain": "ناصر",
+        "translit": "nāṣirun",
+        "en": "a helper",
+        "ur": "مدد کرنے والا"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The doer follows فَاعِلٌ: نَاصِرٌ.",
+        "ur": "کرنے والا فَاعِلٌ پر آتا ہے: نَاصِرٌ۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch36-l05-ex02",
+      "id": "ch36-l07-ex05",
       "statement": {
-        "en": "The مصدر of خَلَقَ is خَلْقٌ — the creation.",
-        "ur": "خَلَقَ کا مصدر ہے خَلْقٌ — تخلیق۔",
+        "en": "In أَحْمَدُ كَاتِبٌ, the word كَاتِبٌ is the فَاعِل — the subject of a verb.",
+        "ur": "أَحْمَدُ كَاتِبٌ میں لفظ كَاتِبٌ فاعل ہے — کسی فعل کا فاعل۔",
         "ar_example": {
-          "ar": "خَلَقَ الْإِنْسَانَ مِنْ نُطْفَةٍ",
-          "ar_plain": "خلق الإنسان من نطفة",
-          "translit": "khalaqa al-insaana min nutfatin",
-          "en": "He created man from a drop",
-          "ur": "اس نے انسان کو نطفہ سے پیدا کیا"
+          "ar": "أَحْمَدُ كَاتِبٌ.",
+          "ar_plain": "أحمد كاتب.",
+          "translit": "aḥmadu kātibun.",
+          "en": "Ahmad is a writer.",
+          "ur": "احمد لکھنے والا ہے۔"
         }
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كَاتِبٌ is an active participle, but here it only describes Ahmad. There is no verb for it to be the subject of.",
+        "ur": "كَاتِبٌ اسم فاعل ہے، مگر یہاں صرف احمد کو بیان کرتا ہے۔ کوئی فعل نہیں جس کا یہ فاعل ہو۔"
+      }
     },
     {
-      "type": "FILL_BLANK",
-      "id": "ch36-l05-ex03",
-      "mode": "TAP",
-      "sentence_ar": "الصَّلَاةُ ذِكْرُ ___",
-      "hint": {
-        "en": "Prayer is the remembrance of Allah.",
-        "ur": "نماز اللہ کا ذِکر ہے۔"
+      "type": "MATCH_AYAH",
+      "id": "ch36-l07-ex06",
+      "ayah_fragment": {
+        "ar": "كِرَامًا كَاتِبِينَ",
+        "surah_ref": "Al-Infitar 82:11"
       },
       "options": [
         {
-          "ar": "اللَّهِ",
-          "ar_plain": "الله",
-          "translit": "Allahi",
-          "en": "Allah",
-          "ur": "اللہ"
+          "en": "noble writers",
+          "ur": "معزز لکھنے والے"
         },
         {
-          "ar": "الرَّسُولِ",
-          "ar_plain": "الرسول",
-          "translit": "ar-rasuuli",
-          "en": "the Messenger",
-          "ur": "رسول"
+          "en": "noble writing",
+          "ur": "معزز لکھنا"
         },
         {
-          "ar": "الْإِنْسَانِ",
-          "ar_plain": "الإنسان",
-          "translit": "al-insaani",
-          "en": "the human",
-          "ur": "انسان"
+          "en": "noble books",
+          "ur": "معزز کتابیں"
         },
         {
-          "ar": "الْجَنَّةِ",
-          "ar_plain": "الجنة",
-          "translit": "al-janati",
-          "en": "the garden",
-          "ur": "جنت"
-        }
-      ],
-      "correct_answer": {
-        "ar": "اللَّهِ",
-        "ar_plain": "الله",
-        "translit": "Allahi",
-        "en": "Allah",
-        "ur": "اللہ"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch36-l05-ex04",
-      "left_column": [
-        {
-          "ar": "تَسْبِيحٌ",
-          "ar_plain": "تسبيح",
-          "translit": "tasbiihun",
-          "en": "glorification",
-          "ur": "تسبیح"
-        },
-        {
-          "ar": "خَلْقٌ",
-          "ar_plain": "خلق",
-          "translit": "khalqun",
-          "en": "creation",
-          "ur": "تخلیق"
-        },
-        {
-          "ar": "ذِكْرٌ",
-          "ar_plain": "ذكر",
-          "translit": "dhikrun",
-          "en": "remembrance",
-          "ur": "یاد"
-        },
-        {
-          "ar": "صَلَاةٌ",
-          "ar_plain": "صلاة",
-          "translit": "salaatun",
-          "en": "prayer",
-          "ur": "دعا"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "س-ب-ح — glorify",
-          "ur": "س-ب-ح — تسبیح کرو"
-        },
-        {
-          "en": "خ-ل-ق — create",
-          "ur": "خ-ل-ق — پیدا کرو"
-        },
-        {
-          "en": "ص-ل-و — pray",
-          "ur": "ص-ل-و — پریں"
-        },
-        {
-          "en": "ذ-ك-ر — remember",
-          "ur": "ذ-ك-ر — یاد کرو"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          3
-        ],
-        [
-          3,
-          2
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch36-l05-ex05",
-      "target_translation": {
-        "en": "The remembrance is from Allah.",
-        "ur": "ذکر اللہ کی طرف سے ہے۔"
-      },
-      "tiles": [
-        {
-          "ar": "الذِّكْرُ",
-          "ar_plain": "الذكر",
-          "translit": "adh-dhikru",
-          "en": "the remembrance",
-          "ur": "ذکر"
-        },
-        {
-          "ar": "مِنَ",
-          "ar_plain": "من",
-          "translit": "mina",
-          "en": "from",
-          "ur": "سے"
-        },
-        {
-          "ar": "اللَّهِ",
-          "ar_plain": "الله",
-          "translit": "Allahi",
-          "en": "Allah",
-          "ur": "اللہ"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch36-l05-ex06",
-      "prompt": {
-        "ar": "إِنَّ الصَّلَاةَ تَنْهَىٰ عَنِ الْفَحْشَاءِ وَالْمُنْكَرِ",
-        "ar_plain": "إن الصلاة تنهى عن الفحشاء والمنكر",
-        "translit": "inna as-salaata tanhaa 'ani al-fahshaa'i wal-munkari",
-        "en": "Indeed, prayer forbids immorality and wrongdoing.",
-        "ur": "بے شک نماز بے حیائی اور برائی سے روکتی ہے۔"
-      },
-      "options": [
-        {
-          "en": "Indeed, prayer forbids immorality and wrongdoing.",
-          "ur": "بے شک نماز بے حیائی اور برائی سے روکتی ہے۔"
-        },
-        {
-          "en": "Indeed, the prayer is the remembrance of Allah.",
-          "ur": "بے شک نماز اللہ کا ذکر ہے۔"
-        },
-        {
-          "en": "Indeed, Allah forbids prayer and wrongdoing.",
-          "ur": "بے شک اللہ نماز اور برائی سے روکتا ہے۔"
-        },
-        {
-          "en": "Indeed, immorality and wrongdoing are from prayer.",
-          "ur": "بے شک بے حیائی اور برائی نماز سے ہے۔"
+          "en": "they wrote nobly",
+          "ur": "انہوں نے عمدہ لکھا"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "صَلَاةُ is the مصدر of ص-ل-و (to pray). تَنْهَى = she forbids (المضارع). الْفَحْشَاءِ وَالْمُنْكَرِ = immorality and wrongdoing. Prayer's moral function in the Quran.",
-        "ur": "صَلَاةُ مادہ ص-ل-و کا مصدر ہے (پریں)۔ تَنْهَى = وہ روکتی ہے (المضارع)۔ الْفَحْشَاءِ وَالْمُنْكَرِ = بے حیائی اور برائی۔ قرآن میں نماز کا اخلاقی کام۔"
+        "en": "كَاتِبِينَ: writers — plural of كَاتِبٌ.",
+        "ur": "كَاتِبِينَ: لکھنے والے — كَاتِبٌ کی جمع۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "المصدر in the Quran — verbs become nouns",
-      "ar": "الْمَصْدَرُ فِي الْقُرْآنِ — تَصِيرُ الْأَفْعَالُ أَسْمَاءً",
-      "ur": "قرآن میں مصدر — افعال اسم بن جاتے ہیں"
+      "en": "The doer noun",
+      "ar": "اسْمُ الْفَاعِلِ",
+      "ur": "کرنے والے کا اسم"
     },
     "ayah": {
-      "surah": 87,
-      "ayah": 1,
-      "label": "Al-A'la 87:1",
-      "ar": "سَبِّحْ اسْمَ رَبِّكَ الْأَعْلَى",
-      "en": "Glorify the name of your Lord, the Most High.",
-      "ur": "اپنے بلند ترین رب کا نام تسبیح کرو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087001.mp3"
+      "surah": 82,
+      "ayah": 11,
+      "label": "Al-Infitar 82:11",
+      "ar": "كِرَامًا كَاتِبِينَ",
+      "en": "Noble and recording,",
+      "ur": "معزز لکھنے والے،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/082011.mp3"
     },
     "highlighted_word_indices": [
-      0
+      1
+    ],
+    "highlighted_words": [
+      "كَاتِبِينَ"
     ],
     "noor_explanation": {
-      "en": "سَبِّحْ → تَسْبِيحٌ. The command names the action; the مصدر turns it into a concept. In the Quran, this relationship is everywhere: every command verb has a مصدر that the text will sometimes use in its place. Recognize the pair and the Quranic style opens up.",
-      "ur": "سَبِّحْ → تَسْبِيحٌ۔ حکم عمل کو نام دیتا ہے؛ مصدر اسے ایک تصور میں تبدیل کرتا ہے۔ قرآن میں یہ تعلق ہر جگہ ہے: ہر حکم فعل کا ایک مصدر ہوتا ہے جو متن کبھی اس کی جگہ استعمال کرتا ہے۔ جوڑی پہچانو اور قرآنی انداز کھل جاتا ہے۔"
+      "en": "كَاتِبِينَ: the plural of the doer noun كَاتِبٌ.",
+      "ur": "كَاتِبِينَ: کرنے والے کے اسم كَاتِبٌ کی جمع۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "The مصدر connects verb to noun. When you see a command, ask: what is this action as a noun? That noun is the مصدر. س-ب-ح → تَسْبِيحٌ. ذ-ك-ر → ذِكْرٌ. ص-ل-و → صَلَاةٌ. You now see the action behind the word.",
-      "ur": "مصدر فعل کو اسم سے جوڑتا ہے۔ جب آپ ایک حکم دیکھیں، پوچھیں: یہ عمل ایک اسم کے طور پر کیا ہے؟ وہ اسم مصدر ہے۔ س-ب-ح → تَسْبِيحٌ۔ ذ-ك-ر → ذِكْرٌ۔ ص-ل-و → صَلَاةٌ۔ اب آپ لفظ کے پیچھے عمل دیکھتے ہو۔"
+      "en": "You can name the doer. Next: the thing that receives the action.",
+      "ur": "اب آپ کرنے والے کا نام لے سکتے ہیں۔ آگے: وہ چیز جس پر کام ہوتا ہے۔"
     }
   }
 }

@@ -2,111 +2,140 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 36, Lesson 1 - Introduction to المصدر (verbal noun). Peak 1 ends here.",
+    "_note": "Chapter 36, Lesson 1 (ch36-l01). Rebuilt 2026-10-03 in the proposal harvest, batch 3 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-36-content-proposal.md and its review amendments. The maṣdar as a noun that names an action with no person and no time, set against the finite verb; the two Form I families كَتَبَ / كِتَابَةٌ and نَصَرَ / نَصْرٌ; 110:1 نَصْرُ (and الْفَتْحُ) read as maṣdar and verb side by side; hook 29:45 ذِكْرُ, the chapter's Quran hook. Removed: the Form II 'تَفْعَالٌ / تَكْتَابٌ' rule, إِقْرَارٌ and آمَنَ filed under the wrong form, 'the Quran begins with 87:1', تَسْبِيحٌ placed inside 87:1/87:2, the unsupported 'every page / hundreds' claims, the الصَّلَاة maṣdar classification, the 'Peak 1 mastery' label, malformed build sentences and the stray Chinese/Cyrillic text.",
+    "title": "What Is a Maṣdar?",
+    "titleAr": "مَا هُوَ الْمَصْدَرُ؟",
+    "titleUr": "مصدر کیا ہے؟",
     "chapter_order": 36,
     "lesson_order": 1,
-    "chapter_title": "المصدر (Verbal Noun)",
-    "title": "What is the المصدر؟",
-    "titleAr": "الْمَصْدَرُ چیست؟",
-    "source": "reader_lecture_36_verbs.md",
     "estimated_minutes": 8,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 87,
-      "ayah": 1,
-      "label": "Al-A'la 87:1",
-      "ar": "سَبِّحْ اسْمَ رَبِّكَ الْأَعْلَى",
-      "en": "Glorify the name of your Lord, the Most High.",
-      "ur": "اپنے بلند ترین رب کا نام تسبیح کرو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087001.mp3"
+      "surah": 29,
+      "ayah": 45,
+      "label": "Al-'Ankabut 29:45",
+      "ar": "وَلَذِكْرُ اللَّهِ أَكْبَرُ",
+      "en": "And the remembrance of Allah is greater.",
+      "ur": "اور اللہ کا ذکر سب سے بڑا ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/029045.mp3"
     },
     "noor_intro": {
-      "en": "سَبِّحْ — 'glorify' — comes from the root س-ب-ح. The مصدر of this verb is تَسْبِيحٌ — the verbal noun meaning 'glorification.' Today you learn what مصدر is and how to find it.",
-      "ur": "سَبِّحْ — 'تسبیح کرو' — مادہ س-ب-ح سے ہے۔ اس کا مصدر تَسْبِيحٌ ہے — یہ مصدر ہے جس کا مطلب ہے 'تسبیح'۔ آج سیکھو گے کہ مصدر کیا ہے اور اسے کیسے پہچانا جائے۔"
+      "en": "ذِكْرُ: 'remembering'. It is a noun that names an action — and that kind of noun is called a maṣdar.",
+      "ur": "ذِكْرُ: 'یاد کرنا'۔ یہ ایسا اسم ہے جو کام کا نام بتاتا ہے — اور ایسے اسم کو مصدر کہتے ہیں۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "المصدر — verbal noun",
-        "ar": "الْمَصْدَرُ — اسم مصدر",
-        "ur": "المصدر — فعل کا نام"
+        "en": "The maṣdar",
+        "ar": "الْمَصْدَرُ",
+        "ur": "مصدر"
       },
       "explanation": {
-        "en": "المصدر is the noun derived from a verb. It expresses the concept of the action. If the verb means 'to glorfiy,' the مصدر is 'glorification.' It answers: 'what is the action?'",
-        "ur": "المصدر وہ اسم ہے جو فعل سے بنا ہے۔ یہ فعل کے مفہوم کو ظاہر کرتا ہے۔ اگر فعل کا مطلب 'تسبیح کرنا' ہو تو مصدر 'تسبیح' ہے۔ یہ بتاتا ہے: 'کیا کرنا ہے؟'"
+        "en": "A maṣdar is a noun that names an action itself — writing, helping — with no person and no time attached to it.",
+        "ur": "مصدر ایسا اسم ہے جو خود کام کا نام بتاتا ہے — لکھنا، مدد کرنا — اس کے ساتھ نہ کوئی شخص ہوتا ہے نہ وقت۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "A verb and its maṣdar",
+        "ar": "كَتَبَ / كِتَابَةٌ",
+        "ur": "فعل اور اس کا مصدر"
+      },
+      "examples": [
+        {
+          "ar": "كَتَبَ",
+          "ar_plain": "كتب",
+          "translit": "kataba",
+          "en": "he wrote",
+          "ur": "اس نے لکھا"
+        },
+        {
+          "ar": "كِتَابَةٌ",
+          "ar_plain": "كتابة",
+          "translit": "kitābatun",
+          "en": "writing",
+          "ur": "لکھنا"
+        }
+      ],
+      "explanation": {
+        "en": "كَتَبَ is a verb: someone did it, in the past. كِتَابَةٌ is a noun: the action itself, with no one doing it and no time.",
+        "ur": "كَتَبَ فعل ہے: کسی نے کیا، ماضی میں۔ كِتَابَةٌ اسم ہے: خود کام، نہ کوئی کرنے والا اور نہ وقت۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Another pair",
+        "ar": "نَصَرَ / نَصْرٌ",
+        "ur": "ایک اور جوڑی"
+      },
+      "examples": [
+        {
+          "ar": "نَصَرَ",
+          "ar_plain": "نصر",
+          "translit": "naṣara",
+          "en": "he helped",
+          "ur": "اس نے مدد کی"
+        },
+        {
+          "ar": "نَصْرٌ",
+          "ar_plain": "نصر",
+          "translit": "naṣrun",
+          "en": "help",
+          "ur": "مدد"
+        }
+      ],
+      "explanation": {
+        "en": "نَصَرَ: he helped. نَصْرٌ: help — the act of helping, named as a noun. Its shape is different from كِتَابَةٌ.",
+        "ur": "نَصَرَ: اس نے مدد کی۔ نَصْرٌ: مدد — مدد کرنے کا عمل، اسم کی صورت میں۔ اس کی شکل كِتَابَةٌ سے مختلف ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "تَسْبِيحٌ",
-        "ar_plain": "تسبيح",
-        "translit": "tasbiihun",
-        "en": "glorification",
-        "ur": "تسبیح"
+        "ar": "كَتَبَ أَحْمَدُ الرِّسَالَةَ.",
+        "ar_plain": "كتب أحمد الرسالة.",
+        "translit": "kataba aḥmadu r-risālata.",
+        "en": "Ahmad wrote the letter.",
+        "ur": "احمد نے خط لکھا۔"
       },
       "explanation": {
-        "en": "تَسْبِيحٌ is the مصدر of سَبَّحَ / سَبِّحْ (to glorify). It names the action: 'glorification'. Surah Al-A'la opens with the command سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى (87:1); تَسْبِيحٌ is the related verbal noun.",
-        "ur": "تَسْبِيحٌ، سَبَّحَ / سَبِّحْ (تسبیح کرنا) کا مصدر ہے۔ یہ کام کا نام ہے: 'تسبیح'۔ سورۃ الاعلیٰ حکم سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى (87:1) سے شروع ہوتی ہے؛ تَسْبِيحٌ اس سے متعلق مصدر ہے۔"
+        "en": "A verb sentence: we know who (أَحْمَدُ) and when (the past).",
+        "ur": "فعل والا جملہ: ہمیں معلوم ہے کون (أَحْمَدُ) اور کب (ماضی)۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "قِرَاءَةٌ",
-        "ar_plain": "قراءة",
-        "translit": "qiraa'atun",
-        "en": "reading",
-        "ur": "پڑھنا"
+        "ar": "الْكِتَابَةُ سَهْلَةٌ.",
+        "ar_plain": "الكتابة سهلة.",
+        "translit": "al-kitābatu sahlatun.",
+        "en": "Writing is easy.",
+        "ur": "لکھنا آسان ہے۔"
       },
       "explanation": {
-        "en": "قِرَاءَةٌ is the مصدر of قَرَأَ (he read). The pattern changes: the root ق-ر-أ becomes قِرَاءَةٌ, with a kasra on the first letter and a long ā before the last.",
-        "ur": "قِرَاءَةٌ، قَرَأَ (اس نے پڑھا) کا مصدر ہے۔ وزن بدل جاتا ہے: مادہ ق-ر-أ سے قِرَاءَةٌ بنتا ہے — پہلے حرف پر کسرہ اور آخری حرف سے پہلے لمبی 'آ'۔"
+        "en": "The maṣdar is an ordinary noun here, the subject. It names the action and says nothing about who writes or when.",
+        "ur": "یہاں مصدر عام اسم ہے، مبتدا۔ وہ کام کا نام بتاتا ہے، یہ نہیں کہ کون لکھتا ہے یا کب۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "عِلْمٌ",
-        "ar_plain": "علم",
-        "translit": "ilmun",
-        "en": "knowledge",
-        "ur": "علم"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "110:1: the help of Allah comes, and the victory",
+        "ar": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ",
+        "ur": "110:1: اللہ کی مدد اور فتح آ جائے"
       },
       "explanation": {
-        "en": "عِلْمٌ is the مصدر of عَلِمَ (he knew). Some verbs produce very short مصدر forms — just three letters with a kasra on the first.",
-        "ur": "عِلْمٌ کا مصدر عَلِمَ (اس نے جاننا) ہے۔ کچھ مصادر بہت مختصر ہوتے ہیں — صرف تین حروف پہلے پر کسرہ کے ساتھ۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "كِتَابَةٌ",
-        "ar_plain": "كتابة",
-        "translit": "kitaabatum",
-        "en": "writing",
-        "ur": "لکھنا"
+        "en": "جَاءَ is the verb: it comes. نَصْرُ (help) and الْفَتْحُ (the opening, the victory) are maṣdars — nouns naming actions.",
+        "ur": "جَاءَ فعل ہے: آ جائے۔ نَصْرُ (مدد) اور الْفَتْحُ (کھلنا، فتح) مصدر ہیں — کام کے نام بتانے والے اسم۔"
       },
-      "explanation": {
-        "en": "كِتَابَةٌ is the مصدر of كَتَبَ (he wrote). The pattern is different again — ك-ت-ب becomes كِتَابَةٌ. Each verb form produces its own مصدر pattern.",
-        "ur": "كِتَابَةٌ کا مصدر كَتَبَ (اس نے لکھا) ہے۔ وزن الگ ہے — ك-ت-ب سے كِتَابَةٌ بنتی ہے۔ ہر فعل کے own مصدر کا وزن ہوتا ہے۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "The role of the مصدر",
-        "ur": "المصدر کا کردار"
-      },
-      "body": {
-        "en": "المصدر answers: 'what is the action or state?' It functions as a noun. عِلْمٌ = knowing, تَسْبِيحٌ = glorifying, قِرَاءَةٌ = reading. The Quran uses مصادر hundreds of times to name actions.",
-        "ur": "المصدر یہ بتاتا ہے: 'کیا کرنا یا کیا ہونا ہے؟' یہ اسم کی طرح کام کرتا ہے۔ عِلْمٌ = جاننا، تَسْبِيحٌ = تسبیح کرنا، قِرَاءَةٌ = پڑھنا۔ قرآن میں مصادر ہزاروں بار آئے ہیں تاکہ افعال کے نام بتائے جائیں۔"
-      }
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/110001.mp3"
     }
   ],
   "exercises": [
@@ -114,161 +143,169 @@
       "type": "TAP_TRANSLATION",
       "id": "ch36-l01-ex01",
       "prompt": {
-        "ar": "تَسْبِيحٌ",
-        "ar_plain": "تسبيح",
-        "translit": "tasbiihun",
-        "en": "glorification",
-        "ur": "تسبیح"
+        "ar": "كِتَابَةٌ",
+        "ar_plain": "كتابة",
+        "translit": "kitābatun",
+        "en": "writing",
+        "ur": "لکھنا"
       },
       "options": [
         {
-          "en": "glorification",
-          "ur": "تسبیح"
-        },
-        {
-          "en": "reading",
-          "ur": "پڑھنا"
-        },
-        {
-          "en": "knowledge",
-          "ur": "علم"
-        },
-        {
           "en": "writing",
           "ur": "لکھنا"
+        },
+        {
+          "en": "he wrote",
+          "ur": "اس نے لکھا"
+        },
+        {
+          "en": "he helped",
+          "ur": "اس نے مدد کی"
+        },
+        {
+          "en": "a book",
+          "ur": "ایک کتاب"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "تَسْبِيحٌ is the مصدر of سَبِّحْ — 'glorification.' It names the action of glorifying Allah.",
-        "ur": "تَسْبِيحٌ کا مصدر سَبِّحْ ہے — 'تسبیح'۔ یہ اللہ کی تسبیح کا نام ہے۔"
+        "en": "كِتَابَةٌ is the noun: writing.",
+        "ur": "كِتَابَةٌ اسم ہے: لکھنا۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch36-l01-ex02",
+      "mode": "TAP",
+      "sentence_ar": "___ سَهْلَةٌ.",
+      "hint": {
+        "en": "Writing is easy.",
+        "ur": "لکھنا آسان ہے۔"
+      },
+      "options": [
+        {
+          "ar": "كَتَبَ",
+          "ar_plain": "كتب",
+          "translit": "kataba",
+          "en": "he wrote",
+          "ur": "اس نے لکھا"
+        },
+        {
+          "ar": "نَصَرَ",
+          "ar_plain": "نصر",
+          "translit": "naṣara",
+          "en": "he helped",
+          "ur": "اس نے مدد کی"
+        },
+        {
+          "ar": "يَكْتُبُ",
+          "ar_plain": "يكتب",
+          "translit": "yaktubu",
+          "en": "he writes",
+          "ur": "وہ لکھتا ہے"
+        },
+        {
+          "ar": "الْكِتَابَةُ",
+          "ar_plain": "الكتابة",
+          "translit": "al-kitābatu",
+          "en": "writing",
+          "ur": "لکھنا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الْكِتَابَةُ",
+        "ar_plain": "الكتابة",
+        "translit": "al-kitābatu",
+        "en": "writing",
+        "ur": "لکھنا"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A noun fits here: الْكِتَابَةُ سَهْلَةٌ.",
+        "ur": "یہاں اسم آتا ہے: الْكِتَابَةُ سَهْلَةٌ۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch36-l01-ex02",
-      "statement": {
-        "en": "المصدر is a noun derived from a verb that expresses the concept of the action.",
-        "ur": "المصدر ایک اسم ہے جو فعل سے بنا ہے اور فعل کے مفہوم کو ظاہر کرتا ہے۔",
-        "ar_example": {
-          "ar": "قِرَاءَةٌ",
-          "ar_plain": "قراءة",
-          "translit": "qiraa'atun",
-          "en": "reading",
-          "ur": "پڑھنا"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
       "id": "ch36-l01-ex03",
-      "mode": "TAP",
-      "sentence_ar": "___ هُوَ فِعْلُ الْعِلْمِ",
-      "hint": {
-        "en": "Knowledge is the مصدر of 'to know.'",
-        "ur": "علم 'جاننا' کا مصدر ہے۔"
-      },
-      "options": [
-        {
-          "ar": "عِلْمٌ",
-          "ar_plain": "علم",
-          "translit": "ilmun",
-          "en": "knowledge",
-          "ur": "علم"
-        },
-        {
-          "ar": "عَالَمٌ",
-          "ar_plain": "عالم",
-          "translit": "aalimun",
-          "en": "scholar",
-          "ur": "عالم"
-        },
-        {
-          "ar": "يُعَلِّمُ",
-          "ar_plain": "يعلم",
-          "translit": "yu'allimu",
-          "en": "he teaches",
-          "ur": "وہ سکھاتا ہے"
-        },
-        {
-          "ar": "مَعْلُومٌ",
-          "ar_plain": "معلوم",
-          "translit": "ma'loomun",
-          "en": "known",
-          "ur": "معلوم"
+      "statement": {
+        "en": "In this sentence, كَتَبَ is a maṣdar.",
+        "ur": "اس جملے میں كَتَبَ مصدر ہے۔",
+        "ar_example": {
+          "ar": "كَتَبَ أَحْمَدُ الرِّسَالَةَ.",
+          "ar_plain": "كتب أحمد الرسالة.",
+          "translit": "kataba aḥmadu r-risālata.",
+          "en": "Ahmad wrote the letter.",
+          "ur": "احمد نے خط لکھا۔"
         }
-      ],
-      "correct_answer": {
-        "ar": "عِلْمٌ",
-        "ar_plain": "علم",
-        "translit": "ilmun",
-        "en": "knowledge",
-        "ur": "علم"
       },
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كَتَبَ is a verb: it says who (Ahmad) and when (the past). The maṣdar is كِتَابَةٌ.",
+        "ur": "كَتَبَ فعل ہے: وہ بتاتا ہے کون (احمد) اور کب (ماضی)۔ مصدر كِتَابَةٌ ہے۔"
+      }
     },
     {
       "type": "MATCHING",
       "id": "ch36-l01-ex04",
       "left_column": [
         {
-          "ar": "تَسْبِيحٌ",
-          "ar_plain": "تسبيح",
-          "translit": "tasbiihun",
-          "en": "glorification",
-          "ur": "تسبیح"
-        },
-        {
-          "ar": "قِرَاءَةٌ",
-          "ar_plain": "قراءة",
-          "translit": "qiraa'atun",
-          "en": "reading",
-          "ur": "پڑھنا"
-        },
-        {
-          "ar": "عِلْمٌ",
-          "ar_plain": "علم",
-          "translit": "ilmun",
-          "en": "knowledge",
-          "ur": "علم"
+          "ar": "كَتَبَ",
+          "ar_plain": "كتب",
+          "translit": "kataba",
+          "en": "he wrote",
+          "ur": "اس نے لکھا"
         },
         {
           "ar": "كِتَابَةٌ",
           "ar_plain": "كتابة",
-          "translit": "kitaabatum",
+          "translit": "kitābatun",
           "en": "writing",
           "ur": "لکھنا"
+        },
+        {
+          "ar": "نَصَرَ",
+          "ar_plain": "نصر",
+          "translit": "naṣara",
+          "en": "he helped",
+          "ur": "اس نے مدد کی"
+        },
+        {
+          "ar": "نَصْرٌ",
+          "ar_plain": "نصر",
+          "translit": "naṣrun",
+          "en": "help",
+          "ur": "مدد"
         }
       ],
       "right_column": [
         {
-          "en": "reading",
-          "ur": "پڑھنا"
+          "en": "help",
+          "ur": "مدد"
+        },
+        {
+          "en": "he wrote",
+          "ur": "اس نے لکھا"
         },
         {
           "en": "writing",
           "ur": "لکھنا"
         },
         {
-          "en": "glorification",
-          "ur": "تسبیح"
-        },
-        {
-          "en": "knowledge",
-          "ur": "علم"
+          "en": "he helped",
+          "ur": "اس نے مدد کی"
         }
       ],
       "correct_pairs": [
         [
           0,
-          2
+          1
         ],
         [
           1,
-          0
+          2
         ],
         [
           2,
@@ -276,179 +313,80 @@
         ],
         [
           3,
-          1
+          0
         ]
       ],
-      "xp_value": 1
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "A verb says someone did it; its maṣdar only names the action.",
+        "ur": "فعل بتاتا ہے کہ کسی نے کیا؛ اس کا مصدر صرف کام کا نام بتاتا ہے۔"
+      }
     },
     {
-      "type": "BUILD_SENTENCE",
+      "type": "MATCH_AYAH",
       "id": "ch36-l01-ex05",
-      "target_translation": {
-        "en": "Glorification is an action.",
-        "ur": "تسبیح ایک عمل ہے۔"
-      },
-      "tiles": [
-        {
-          "ar": "تَسْبِيحٌ",
-          "ar_plain": "تسبيح",
-          "translit": "tasbiihun",
-          "en": "glorification",
-          "ur": "تسبیح"
-        },
-        {
-          "ar": "فِعْلٌ",
-          "ar_plain": "فعل",
-          "translit": "fi'lun",
-          "en": "an action",
-          "ur": "ایک عمل"
-        },
-        {
-          "ar": "هُوَ",
-          "ar_plain": "هو",
-          "translit": "huwa",
-          "en": "it is",
-          "ur": "یہ ہے"
-        },
-        {
-          "ar": "كِتَابَةٌ",
-          "ar_plain": "كتابة",
-          "translit": "kitaabatum",
-          "en": "writing",
-          "ur": "لکھنا"
-        }
-      ],
-      "correct_order": [
-        2,
-        0,
-        1
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch36-l01-ex06",
-      "statement": {
-        "en": "The مصدر always looks identical to the verb it comes from.",
-        "ur": "المصدر ہمیشہ اس فعل جیسا ہوتا ہے جِس سے وہ نکلا ہے۔",
-        "ar_example": {
-          "ar": "كَتَبَ — كِتَابَةٌ",
-          "ar_plain": "كتب — كتابة",
-          "translit": "kataba — kitaabatum",
-          "en": "wrote — writing",
-          "ur": "لکھا — لکھنا"
-        }
-      },
-      "correct_answer": false,
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch36-l01-ex07",
-      "prompt": {
-        "ar": "قِرَاءَةُ الدَّرْسِ",
-        "ar_plain": "قراءة الدرس",
-        "translit": "qiraa'atu ad-darsi",
-        "en": "the reading of the lesson",
-        "ur": " سبق کا پڑھنا"
+      "ayah_fragment": {
+        "ar": "جَاءَ نَصْرُ اللَّهِ",
+        "surah_ref": "An-Nasr 110:1"
       },
       "options": [
         {
-          "en": "the reading of the lesson",
-          "ur": "سبق کا پڑھنا"
+          "en": "جَاءَ is the verb 'it comes'; نَصْرُ is a noun naming an action — help",
+          "ur": "جَاءَ فعل ہے 'آ جائے'؛ نَصْرُ ایسا اسم ہے جو کام کا نام بتاتا ہے — مدد"
         },
         {
-          "en": "the book of the lesson",
-          "ur": "سبق کی کتاب"
+          "en": "Both words are verbs",
+          "ur": "دونوں الفاظ فعل ہیں"
         },
         {
-          "en": "the writing of the lesson",
-          "ur": "سبق کا لکھنا"
+          "en": "نَصْرُ is a verb: he helps",
+          "ur": "نَصْرُ فعل ہے: وہ مدد کرتا ہے"
         },
         {
-          "en": "the student of the lesson",
-          "ur": "سبق کا طالب علم"
+          "en": "Both words are maṣdars",
+          "ur": "دونوں الفاظ مصدر ہیں"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "قِرَاءَةُ is the مصدر 'reading' + الْدَّرْسِ (the lesson). The pattern: مصدر + ال + noun = the [action] of the [noun].",
-        "ur": "قِرَاءَةُ مصدر 'پڑھنا' ہے + الْدَّرْسِ (سبق)۔ نمونہ: مصدر + ال + اسم = [اسم] کا [فعل]۔"
+        "en": "جَاءَ is the verb; نَصْرُ names the action help.",
+        "ur": "جَاءَ فعل ہے؛ نَصْرُ مدد نامی کام کا نام ہے۔"
       }
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch36-l01-ex08",
-      "target_translation": {
-        "en": "Knowledge is from Allah.",
-        "ur": "علم اللہ کی طرف سے ہے۔"
-      },
-      "tiles": [
-        {
-          "ar": "عِلْمٌ",
-          "ar_plain": "علم",
-          "translit": "ilmun",
-          "en": "knowledge",
-          "ur": "علم"
-        },
-        {
-          "ar": "مِنَ",
-          "ar_plain": "من",
-          "translit": "mina",
-          "en": "from",
-          "ur": "سے"
-        },
-        {
-          "ar": "اللَّهِ",
-          "ar_plain": "الله",
-          "translit": " Allahi",
-          "en": "Allah",
-          "ur": "اللہ"
-        },
-        {
-          "ar": "عِلْمٌ",
-          "ar_plain": "علم",
-          "translit": "ilmun",
-          "en": "knowledge",
-          "ur": "علم"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "المصدر = verbal noun",
-      "ar": "الْمَصْدَرُ = اسم مصدر",
-      "ur": "المصدر = فعل کا نام"
+      "en": "The maṣdar names the action",
+      "ar": "الْمَصْدَرُ",
+      "ur": "مصدر کام کا نام ہے"
     },
     "ayah": {
-      "surah": 87,
+      "surah": 110,
       "ayah": 1,
-      "label": "Al-A'la 87:1",
-      "ar": "سَبِّحْ اسْمَ رَبِّكَ الْأَعْلَى",
-      "en": "Glorify the name of your Lord, the Most High.",
-      "ur": "اپنے بلند ترین رب کا نام تسبیح کرو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087001.mp3"
+      "label": "An-Nasr 110:1",
+      "ar": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ",
+      "en": "When the help of Allah comes, and the victory,",
+      "ur": "جب اللہ کی مدد اور فتح آ جائے،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/110001.mp3"
     },
     "highlighted_word_indices": [
-      0
+      2,
+      4
+    ],
+    "highlighted_words": [
+      "نَصْرُ",
+      "وَالْفَتْحُ"
     ],
     "noor_explanation": {
-      "en": "سَبِّحْ — glorify — comes from the root س-ب-ح. Its مصدر is تَسْبِيحٌ — 'glorification.' Peak 1 ends here: you have learned verbs, pronouns, and now the verbal noun. The next Peak builds on this foundation.",
-      "ur": "سَبِّحْ — تسبیح کرو — مادہ س-ب-ح سے ہے۔ اس کا مصدر تَسْبِيحٌ ہے — 'تسبیح'۔ پیک 1 یہاں ختم ہوتا ہے: آپ نے افعال، ضمائر، اور اب اسم مصدر سیکھ لیا ہے۔ اگلا پیک اس بنیاد پر بنا ہے۔"
+      "en": "نَصْرُ and الْفَتْحُ are maṣdars. The only verb in this opening is جَاءَ.",
+      "ur": "نَصْرُ اور الْفَتْحُ مصدر ہیں۔ اس آغاز میں فعل صرف جَاءَ ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "المصدر is the name of an action used as a noun. عِلْمٌ, تَسْبِيحٌ, قِرَاءَةٌ, كِتَابَةٌ — all of these name actions; they are not verbs. Well done.",
-      "ur": "المصدر کسی عمل کا نام ہے جو اسم کی طرح استعمال ہوتا ہے۔ عِلْمٌ, تَسْبِيحٌ, قِرَاءَةٌ, كِتَابَةٌ — یہ سب عملوں کے نام ہیں، خود فعل نہیں۔ بہت اچھا۔"
+      "en": "You can tell a verb from its maṣdar. Next: learn the pairs.",
+      "ur": "اب آپ فعل کو اس کے مصدر سے الگ پہچان سکتے ہیں۔ آگے: جوڑیاں سیکھیں۔"
     }
   }
 }

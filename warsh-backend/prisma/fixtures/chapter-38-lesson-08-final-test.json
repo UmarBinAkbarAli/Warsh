@@ -1,0 +1,438 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 38, final test (ch38-test, new). Added 2026-10-03 in the proposal harvest, batch 3 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-38-content-proposal.md and its review amendments. Twelve multiple-choice questions on six two-question strands: dual noun forms (q01–02), أَنْتُمَا and the 'we' reply (q03–04), indicative dual verbs (q05–06), dual adjective agreement (q07–08), a dual versus a وَ-pair (q09–10) and the cited Quran duals 55:19 and 55:46 (q11–12). It does not depend on the CL11 lab. Pass mark 80 %: 9/12 fails, 10/12 passes. Answer positions 3/3/3/3, no repeating cycle. Lessons 1–5 were already corrected (dual noun endings, هُمَا / أَنْتُمَا, adjective agreement, dual versus وَ-coordination with 28:15 and 110:1, no first-person dual, cited Quran readings); only two defects were patched.",
+    "title": "Chapter 38 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الثَّامِنِ وَالثَّلَاثِينَ",
+    "titleUr": "باب 38 کا آخری امتحان",
+    "chapter_order": 38,
+    "lesson_order": 8,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 55,
+      "ayah": 19,
+      "label": "Ar-Rahman 55:19",
+      "ar": "مَرَجَ الْبَحْرَيْنِ يَلْتَقِيَانِ",
+      "en": "He released the two seas, meeting one another.",
+      "ur": "اس نے دو سمندر چھوڑ دیے جو آپس میں ملتے ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/055019.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 38.",
+      "ur": "باب 38 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 38,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch38-test-q01",
+        "topic": {
+          "en": "Dual nouns",
+          "ur": "مثنی اسم"
+        },
+        "prompt": {
+          "en": "Which sentence has the dual noun in the right form? The two students are in the mosque.",
+          "ur": "کس جملے میں مثنی اسم درست صورت میں ہے؟ دو طالب علم مسجد میں ہیں۔"
+        },
+        "options": [
+          {
+            "en": "الطَّالِبَيْنِ فِي الْمَسْجِدِ.",
+            "ur": "الطَّالِبَيْنِ فِي الْمَسْجِدِ."
+          },
+          {
+            "en": "الطَّالِبَانِ فِي الْمَسْجِدِ.",
+            "ur": "الطَّالِبَانِ فِي الْمَسْجِدِ."
+          },
+          {
+            "en": "الطَّالِبُونَ فِي الْمَسْجِدِ.",
+            "ur": "الطَّالِبُونَ فِي الْمَسْجِدِ."
+          },
+          {
+            "en": "الطَّالِبُ فِي الْمَسْجِدِ.",
+            "ur": "الطَّالِبُ فِي الْمَسْجِدِ."
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch38-test-q02",
+        "topic": {
+          "en": "Dual nouns",
+          "ur": "مثنی اسم"
+        },
+        "prompt": {
+          "en": "Which form completes it? I sit with the two students.",
+          "ur": "کون سی صورت جملہ مکمل کرتی ہے؟ میں دو طالب علموں کے ساتھ بیٹھتا ہوں۔"
+        },
+        "arabic": "أَجْلِسُ مَعَ ___.",
+        "options": [
+          {
+            "en": "الطَّالِبَانِ",
+            "ur": "الطَّالِبَانِ"
+          },
+          {
+            "en": "الطَّالِبُ",
+            "ur": "الطَّالِبُ"
+          },
+          {
+            "en": "الطَّالِبُونَ",
+            "ur": "الطَّالِبُونَ"
+          },
+          {
+            "en": "الطَّالِبَيْنِ",
+            "ur": "الطَّالِبَيْنِ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch38-test-q03",
+        "topic": {
+          "en": "أَنْتُمَا",
+          "ur": "أَنْتُمَا"
+        },
+        "prompt": {
+          "en": "Who sits here?",
+          "ur": "یہاں کون بیٹھتا ہے؟"
+        },
+        "arabic": "أَنْتُمَا تَجْلِسَانِ هُنَا.",
+        "options": [
+          {
+            "en": "you two — men or women",
+            "ur": "تم دونوں — مرد یا عورتیں"
+          },
+          {
+            "en": "he",
+            "ur": "وہ (مرد)"
+          },
+          {
+            "en": "they (f.)",
+            "ur": "وہ (عورتیں)"
+          },
+          {
+            "en": "we",
+            "ur": "ہم"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch38-test-q04",
+        "topic": {
+          "en": "We reply",
+          "ur": "'ہم' کا جواب"
+        },
+        "prompt": {
+          "en": "A teacher asks the two of you. Which reply do you give for both of you?",
+          "ur": "استاد آپ دونوں سے پوچھتے ہیں۔ آپ دونوں کی طرف سے کون سا جواب دیتے ہیں؟"
+        },
+        "arabic": "مَاذَا تَفْعَلَانِ؟",
+        "options": [
+          {
+            "en": "أَكْتُبُ الدَّرْسَ.",
+            "ur": "أَكْتُبُ الدَّرْسَ."
+          },
+          {
+            "en": "يَكْتُبَانِ الدَّرْسَ.",
+            "ur": "يَكْتُبَانِ الدَّرْسَ."
+          },
+          {
+            "en": "نَكْتُبُ الدَّرْسَ.",
+            "ur": "نَكْتُبُ الدَّرْسَ."
+          },
+          {
+            "en": "هُمَا يَكْتُبَانِ.",
+            "ur": "هُمَا يَكْتُبَانِ."
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch38-test-q05",
+        "topic": {
+          "en": "Dual verbs",
+          "ur": "مثنی فعل"
+        },
+        "prompt": {
+          "en": "Who writes the lesson?",
+          "ur": "سبق کون لکھتا ہے؟"
+        },
+        "arabic": "هُمَا تَكْتُبَانِ الدَّرْسَ.",
+        "options": [
+          {
+            "en": "one woman",
+            "ur": "ایک عورت"
+          },
+          {
+            "en": "the two men",
+            "ur": "دو مرد"
+          },
+          {
+            "en": "the two women",
+            "ur": "دو عورتیں"
+          },
+          {
+            "en": "you two (m.)",
+            "ur": "تم دونوں (مرد)"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch38-test-q06",
+        "topic": {
+          "en": "Dual verbs",
+          "ur": "مثنی فعل"
+        },
+        "prompt": {
+          "en": "Who writes the lesson?",
+          "ur": "سبق کون لکھتا ہے؟"
+        },
+        "arabic": "هُمَا يَكْتُبَانِ الدَّرْسَ.",
+        "options": [
+          {
+            "en": "the two men",
+            "ur": "دو مرد"
+          },
+          {
+            "en": "the two women",
+            "ur": "دو عورتیں"
+          },
+          {
+            "en": "you two",
+            "ur": "تم دونوں"
+          },
+          {
+            "en": "we",
+            "ur": "ہم"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch38-test-q07",
+        "topic": {
+          "en": "Dual adjectives",
+          "ur": "مثنی صفت"
+        },
+        "prompt": {
+          "en": "Which phrase means 'the two diligent female students'?",
+          "ur": "کون سا ٹکڑا 'دو محنتی طالبات' ہے؟"
+        },
+        "options": [
+          {
+            "en": "الطَّالِبَانِ الْمُجْتَهِدَانِ",
+            "ur": "الطَّالِبَانِ الْمُجْتَهِدَانِ"
+          },
+          {
+            "en": "الطَّالِبَتَانِ الْمُجْتَهِدَانِ",
+            "ur": "الطَّالِبَتَانِ الْمُجْتَهِدَانِ"
+          },
+          {
+            "en": "الطَّالِبَتَانِ الْمُجْتَهِدَةُ",
+            "ur": "الطَّالِبَتَانِ الْمُجْتَهِدَةُ"
+          },
+          {
+            "en": "الطَّالِبَتَانِ الْمُجْتَهِدَتَانِ",
+            "ur": "الطَّالِبَتَانِ الْمُجْتَهِدَتَانِ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch38-test-q08",
+        "topic": {
+          "en": "Dual adjectives",
+          "ur": "مثنی صفت"
+        },
+        "prompt": {
+          "en": "Which adjective completes it? The two new books.",
+          "ur": "کون سی صفت جملہ مکمل کرتی ہے؟ دو نئی کتابیں۔"
+        },
+        "arabic": "الْكِتَابَانِ ___",
+        "options": [
+          {
+            "en": "الْجَدِيدُ",
+            "ur": "الْجَدِيدُ"
+          },
+          {
+            "en": "الْجَدِيدَانِ",
+            "ur": "الْجَدِيدَانِ"
+          },
+          {
+            "en": "الْجَدِيدَةُ",
+            "ur": "الْجَدِيدَةُ"
+          },
+          {
+            "en": "الْجَدِيدُونَ",
+            "ur": "الْجَدِيدُونَ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch38-test-q09",
+        "topic": {
+          "en": "Dual or وَ",
+          "ur": "مثنی یا وَ"
+        },
+        "prompt": {
+          "en": "Is this a dual form?",
+          "ur": "کیا یہ مثنی ہے؟"
+        },
+        "arabic": "فَاطِمَةُ وَخَدِيجَةُ",
+        "options": [
+          {
+            "en": "No — two singular names joined by وَ",
+            "ur": "نہیں — وَ سے جڑے دو واحد نام"
+          },
+          {
+            "en": "Yes — a dual noun",
+            "ur": "ہاں — مثنی اسم"
+          },
+          {
+            "en": "Yes — a dual verb",
+            "ur": "ہاں — مثنی فعل"
+          },
+          {
+            "en": "No — a plural noun",
+            "ur": "نہیں — جمع اسم"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch38-test-q10",
+        "topic": {
+          "en": "Dual or وَ",
+          "ur": "مثنی یا وَ"
+        },
+        "prompt": {
+          "en": "Is this a dual form?",
+          "ur": "کیا یہ مثنی ہے؟"
+        },
+        "arabic": "رَجُلَانِ",
+        "options": [
+          {
+            "en": "No — two singular nouns joined by وَ",
+            "ur": "نہیں — وَ سے جڑے دو واحد اسم"
+          },
+          {
+            "en": "No — a plural noun",
+            "ur": "نہیں — جمع اسم"
+          },
+          {
+            "en": "Yes — a dual noun",
+            "ur": "ہاں — مثنی اسم"
+          },
+          {
+            "en": "No — a verb",
+            "ur": "نہیں — فعل"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch38-test-q11",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآن کی پڑھائی"
+        },
+        "prompt": {
+          "en": "Ar-Rahman 55:19. Which word is the dual verb?",
+          "ur": "سورۃ الرحمٰن 55:19۔ مثنی فعل کون سا لفظ ہے؟"
+        },
+        "arabic": "مَرَجَ الْبَحْرَيْنِ يَلْتَقِيَانِ",
+        "options": [
+          {
+            "en": "مَرَجَ",
+            "ur": "مَرَجَ"
+          },
+          {
+            "en": "يَلْتَقِيَانِ",
+            "ur": "يَلْتَقِيَانِ"
+          },
+          {
+            "en": "الْبَحْرَيْنِ",
+            "ur": "الْبَحْرَيْنِ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch38-test-q12",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآن کی پڑھائی"
+        },
+        "prompt": {
+          "en": "Ar-Rahman 55:46. Which word is the dual noun?",
+          "ur": "سورۃ الرحمٰن 55:46۔ مثنی اسم کون سا لفظ ہے؟"
+        },
+        "arabic": "وَلِمَنْ خَافَ مَقَامَ رَبِّهِ جَنَّتَانِ",
+        "options": [
+          {
+            "en": "وَلِمَنْ",
+            "ur": "وَلِمَنْ"
+          },
+          {
+            "en": "خَافَ",
+            "ur": "خَافَ"
+          },
+          {
+            "en": "مَقَامَ",
+            "ur": "مَقَامَ"
+          },
+          {
+            "en": "جَنَّتَانِ",
+            "ur": "جَنَّتَانِ"
+          }
+        ],
+        "correct_index": 3
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 38 — the dual",
+      "ar": "الْمُثَنَّى",
+      "ur": "باب 38 — مثنی"
+    },
+    "ayah": {
+      "surah": 55,
+      "ayah": 19,
+      "label": "Ar-Rahman 55:19",
+      "ar": "مَرَجَ الْبَحْرَيْنِ يَلْتَقِيَانِ",
+      "en": "He released the two seas, meeting one another.",
+      "ur": "اس نے دو سمندر چھوڑ دیے جو آپس میں ملتے ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/055019.mp3"
+    },
+    "highlighted_word_indices": [
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "الْبَحْرَيْنِ",
+      "يَلْتَقِيَانِ"
+    ],
+    "noor_explanation": {
+      "en": "الْبَحْرَيْنِ يَلْتَقِيَانِ: a dual noun and a dual verb. You finish Chapter 38 able to read two of anything in ـَانِ and ـَيْنِ.",
+      "ur": "الْبَحْرَيْنِ يَلْتَقِيَانِ: مثنی اسم اور مثنی فعل۔ آپ باب 38 اس حال میں مکمل کرتے ہیں کہ ـَانِ اور ـَيْنِ میں دو کی چیزیں پڑھ سکیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 38 complete. Chapter 39: Surah Quraysh.",
+      "ur": "باب 38 مکمل۔ باب 39: سورۃ قریش۔"
+    }
+  }
+}

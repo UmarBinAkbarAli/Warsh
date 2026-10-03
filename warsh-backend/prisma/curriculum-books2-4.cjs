@@ -854,154 +854,575 @@ const specs = [
     ],
   },
 
-  // ── Ch36 ── المصدر: The Verbal Noun ──────────────────────────────────────
+  // ── Ch36 ── Verbal Nouns and Basic Participles in Context ─────────────────
   {
-    order: 36,
-    sourceFile: "reader_lecture_36_masdar_verbal_noun.md",
-    title: "المصدر: The Verbal Noun",
-    titleAr: "الْمَصْدَر",
-    description: "The masdar — expressing an act as a noun: dhikr, salah, hamd, ibadah.",
-    hook: { ayahAr: "وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ", ayahRef: "Al-Baqarah 2:43", highlightedWord: "الصَّلَاةَ" },
-    examples: [
-      card("الذِّكْرُ يُطَمْئِنُ الْقُلُوبَ", "Remembrance settles hearts", "adh-dhikru yutma'inul-quloob"),
-      card("الصَّلَاةُ عِمَادُ الدِّينِ", "Prayer is the pillar of the religion", "as-salaatu imaadud-deen"),
-      card("الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ", "All praise is for Allah, Lord of the worlds", "al-hamdu lillaahi rabbil-aalameen"),
-      card("الْعِبَادَةُ غَايَةُ الْخَلْقِ", "Worship is the purpose of creation", "al-ibaadatu ghaayatul-khalq"),
+    "order": 36,
+    "sourceFile": "Docs/proposals/chapter-36-content-proposal.md",
+    "title": "Verbal Nouns and Basic Participles in Context",
+    "titleAr": "الْمَصْدَرُ، اسْمُ الْفَاعِلِ، اسْمُ الْمَفْعُولِ",
+    "titleUr": "مصدر اور اسم فاعل و مفعول: سیاق میں",
+    "description": "Recognise selected verb–maṣdar pairs, use a maṣdar as a noun, and tell a doer noun (كَاتِبٌ) from a receiver noun (مَكْتُوبٌ) in supported nominal sentences. A selected introduction, not a complete morphology or participle system.",
+    "descriptionUr": "منتخب فعل اور مصدر کی جوڑیاں پہچانیں، مصدر کو اسم کے طور پر استعمال کریں، اور سہارا دیے گئے اسمیہ جملوں میں کرنے والے کے اسم (كَاتِبٌ) کو جس پر کام ہوا اس کے اسم (مَكْتُوبٌ) سے الگ پہچانیں۔ یہ ایک منتخب تعارف ہے، مکمل صرفی یا اسمِ فاعل و مفعول کا نظام نہیں۔",
+    "hook": {
+      "ayahAr": "وَلَذِكْرُ اللَّهِ أَكْبَرُ",
+      "ayahRef": "Al-'Ankabut 29:45",
+      "highlightedWord": "ذِكْرُ"
+    },
+    "examples": [
+      {
+        "arabicText": "الْكِتَابَةُ سَهْلَةٌ",
+        "translation": "Writing is easy.",
+        "transliteration": "al-kitābatu sahlatun"
+      },
+      {
+        "arabicText": "أَحْمَدُ كَاتِبٌ",
+        "translation": "Ahmad is a writer.",
+        "transliteration": "aḥmadu kātibun"
+      },
+      {
+        "arabicText": "الدَّرْسُ مَكْتُوبٌ",
+        "translation": "The lesson is written.",
+        "transliteration": "ad-darsu maktūbun"
+      },
+      {
+        "arabicText": "وَلَذِكْرُ اللَّهِ أَكْبَرُ",
+        "translation": "And the remembrance of Allah is greater.",
+        "transliteration": "wa-ladhikru llāhi akbaru"
+      }
     ],
-    parseText: "الصَّلَاةُ عِمَادُ الدِّينِ",
-    parseTokens: [token("الصَّلَاةُ", "مبتدأ", "prayer"), token("عِمَادُ", "مضاف", "pillar of"), token("الدِّينِ", "مضاف إليه", "the religion")],
-    conversation: ["مَا هُوَ عِمَادُ الدِّينِ؟", "الصَّلَاةُ عِمَادُ الدِّينِ"],
-    conversationDistractor: "سَيَعْلَمُونَ غَدًا",
-    distractor: "They will know tomorrow",
-    blankDistractor: "الزَّكَاةُ",
-    noorTip: "الصَّلَاةَ in Al-Baqarah 2:43 is a masdar used as a direct object — the act commanded.",
-    noorTipUr: "مصدر وہ اسم ہے جو فعل کا معنی رکھتا ہے — صلاة، ذکر، حمد، عبادت سب مصادر ہیں۔",
-    focuses: [
-      { title: "The Act of Remembering (ذِكْر)", titleAr: "ذِكْر", grammarTerm: "مصدر", reveal: "You saw ذَكَرَ (he remembered) converted to ذِكْر (the act of remembering).", hookQuestion: "How does ذِكْر differ in meaning from ذَكَرَ?" },
-      { title: "The Act of Praying (صَلَاة)", titleAr: "صَلَاة", grammarTerm: "مصدر", reveal: "You recognised صَلَاة as a noun that carries the whole meaning of the act.", hookQuestion: "Why is الصَّلَاةُ called the pillar of the religion?" },
-      { title: "The Act of Praising (حَمْد)", titleAr: "حَمْد", grammarTerm: "مصدر", reveal: "You traced الْحَمْدُ back to the verb حَمِدَ and understood its nominal force.", hookQuestion: "What does it mean to start with الْحَمْدُ?" },
-      { title: "Worship as a Noun (عِبَادَة)", titleAr: "عِبَادَة", grammarTerm: "مصدر", reveal: "You used عِبَادَة in a predicate to define the purpose of creation.", hookQuestion: "How is عِبَادَةُ used in الْعِبَادَةُ غَايَةُ الْخَلْقِ?" },
+    "parseText": "كِتَابَةُ الدَّرْسِ سَهْلَةٌ",
+    "parseTokens": [
+      {
+        "word": "كِتَابَةُ",
+        "label": "مضاف",
+        "gloss": "writing of"
+      },
+      {
+        "word": "الدَّرْسِ",
+        "label": "مضاف إليه",
+        "gloss": "the lesson"
+      },
+      {
+        "word": "سَهْلَةٌ",
+        "label": "خبر",
+        "gloss": "easy"
+      }
     ],
+    "conversation": [
+      "هَلِ الدَّرْسُ مَكْتُوبٌ؟",
+      "نَعَمْ، الدَّرْسُ مَكْتُوبٌ"
+    ],
+    "conversationDistractor": "كَتَبَ أَحْمَدُ الرِّسَالَةَ",
+    "distractor": "Ahmad wrote the letter.",
+    "blankDistractor": "كَتَبَ",
+    "noorTip": "A maṣdar names the action, كَاتِبٌ names the doer and مَكْتُوبٌ names what receives it.",
+    "noorTipUr": "مصدر کام کا نام ہے، كَاتِبٌ کرنے والے کا اور مَكْتُوبٌ اس کا جس پر کام ہوا۔",
+    "focuses": [
+      {
+        "title": "What Is a Maṣdar?",
+        "titleAr": "مَا هُوَ الْمَصْدَرُ؟",
+        "grammarTerm": "مصدر",
+        "reveal": "You told a verb from its maṣdar: كَتَبَ and كِتَابَةٌ.",
+        "hookQuestion": "Which names the action with no person and no time: كَتَبَ or كِتَابَةٌ?"
+      },
+      {
+        "title": "Form I Verb–Maṣdar Pairs",
+        "titleAr": "مَصَادِرُ الْفِعْلِ الثُّلَاثِيِّ",
+        "grammarTerm": "مصدر",
+        "reveal": "You learned كَتَبَ ← كِتَابَةٌ and نَصَرَ ← نَصْرٌ as pairs.",
+        "hookQuestion": "Do كِتَابَةٌ and نَصْرٌ share one shape?"
+      },
+      {
+        "title": "Derived-Form Maṣdars",
+        "titleAr": "مَصَادِرُ الْأَفْعَالِ الْمَزِيدَةِ",
+        "grammarTerm": "مصدر",
+        "reveal": "You matched four pairs on two common patterns, تَفْعِيلٌ and إِفْعَالٌ.",
+        "hookQuestion": "What is the maṣdar of عَلَّمَ?"
+      },
+      {
+        "title": "The Maṣdar as a Noun",
+        "titleAr": "الْمَصْدَرُ اسْمٌ",
+        "grammarTerm": "مضاف",
+        "reveal": "You read a maṣdar as a subject, after a preposition and in an iḍāfa.",
+        "hookQuestion": "Why does فِي الْكِتَابَةِ end in kasra?"
+      },
+      {
+        "title": "Who Does It? The Active Participle",
+        "titleAr": "اسْمُ الْفَاعِلِ",
+        "grammarTerm": "اسم الفاعل",
+        "reveal": "You named the doer: كَاتِبٌ, نَاصِرٌ.",
+        "hookQuestion": "Is كَاتِبٌ in أَحْمَدُ كَاتِبٌ a subject?"
+      },
+      {
+        "title": "What Receives It? The Passive Participle",
+        "titleAr": "اسْمُ الْمَفْعُولِ",
+        "grammarTerm": "اسم المفعول",
+        "reveal": "You named the receiver: مَكْتُوبٌ, مَنْصُورٌ, مَفْتُوحٌ.",
+        "hookQuestion": "What does مَكْتُوبٌ describe?"
+      },
+      {
+        "title": "Maṣdars in the Quran",
+        "titleAr": "الْمَصْدَرُ فِي الْآيَاتِ",
+        "grammarTerm": "مصدر",
+        "reveal": "You found ذِكْرُ, نَصْرُ and إِيمَانَهُمْ in exact ayat.",
+        "hookQuestion": "Is تَسْبِيحٌ in Al-A'la 87:1?"
+      },
+      {
+        "title": "Action, Doer, or Receiver?",
+        "titleAr": "الْفِعْلُ وَالْفَاعِلُ وَالْمَفْعُولُ",
+        "grammarTerm": "مصدر واسما الفاعل والمفعول",
+        "reveal": "You sorted كِتَابَةٌ, كَاتِبٌ and مَكْتُوبٌ in sentences.",
+        "hookQuestion": "Which noun tells you when the writing happened?"
+      }
+    ]
   },
 
-  // ── Ch37 ── Feminine Verb Forms ───────────────────────────────────────────
+  // ── Ch37 ── Feminine Imperfect Forms in Context ───────────────────────────
   {
-    order: 37,
-    sourceFile: "reader_lecture_37_feminine_verb_forms.md",
-    title: "Feminine Verb Forms",
-    titleAr: "الأَفْعَال الْمُؤَنَّثَة",
-    description: "Present tense feminine forms — she does, you (f) do, they (f) do.",
-    hook: { ayahAr: "إِنَّ الصَّلَاةَ تَنْهَى عَنِ الْفَحْشَاءِ", ayahRef: "Al-Ankabut 29:45", highlightedWord: "تَنْهَى" },
-    examples: [
-      card("تَقْرَأُ الْمُعَلِّمَةُ الدَّرْسَ", "The female teacher reads the lesson", "taqra'ul-mu'allimatu ad-darsa"),
-      card("تَذْهَبُ إِلَى الْمَسْجِدِ كُلَّ يَوْمٍ", "She goes to the mosque every day", "tadhhabu ilal-masjidi kulla yawm"),
-      card("هَلْ تَكْتُبِينَ الرِّسَالَةَ الآنَ؟", "Are you (f) writing the letter now?", "hal taktubeenar-risaalatal-aan"),
-      card("إِنَّ الصَّلَاةَ تَنْهَى عَنِ الْفَحْشَاءِ", "Indeed prayer prevents indecency", "innas-salaata tanhal-anil-fahshaa'"),
+    "order": 37,
+    "sourceFile": "Docs/proposals/chapter-37-content-proposal.md",
+    "title": "Feminine Imperfect Forms in Context",
+    "titleAr": "صِيَغُ الْمُضَارِعِ الْمُؤَنَّثَةُ فِي السِّيَاقِ",
+    "titleUr": "مؤنث مضارع کی صورتیں: سیاق میں",
+    "description": "Use the subject and context to tell هِيَ تَفْعَلُ from أَنْتَ تَفْعَلُ, read أَنْتِ تَفْعَلِينَ and the feminine plural with ـْنَ, and recognise selected weak-final forms as whole forms. Not a complete agreement, weak-verb or mood paradigm.",
+    "descriptionUr": "فاعل اور سیاق سے هِيَ تَفْعَلُ اور أَنْتَ تَفْعَلُ میں فرق کریں، أَنْتِ تَفْعَلِينَ اور ـْنَ والی مؤنث جمع پڑھیں، اور منتخب ناقص صورتوں کو پوری صورت کے طور پر پہچانیں۔ یہ مکمل مطابقت، ناقص افعال یا حالتوں کا نظام نہیں۔",
+    "hook": {
+      "ayahAr": "إِنَّ الصَّلَاةَ تَنْهَىٰ عَنِ الْفَحْشَاءِ وَالْمُنْكَرِ",
+      "ayahRef": "Al-'Ankabut 29:45",
+      "highlightedWord": "تَنْهَىٰ"
+    },
+    "examples": [
+      {
+        "arabicText": "هِيَ تَذْهَبُ إِلَى الْمَسْجِدِ",
+        "translation": "She goes to the mosque.",
+        "transliteration": "hiya tadhhabu ilā l-masjidi"
+      },
+      {
+        "arabicText": "أَنْتِ تَقْرَئِينَ الْقُرْآنَ",
+        "translation": "You (f.) read the Quran.",
+        "transliteration": "anti taqraʾīna l-qurʾāna"
+      },
+      {
+        "arabicText": "هُنَّ يَسْجُدْنَ لِلَّهِ",
+        "translation": "They (f.) prostrate to Allah.",
+        "transliteration": "hunna yasjudna lillāhi"
+      },
+      {
+        "arabicText": "إِنَّ الصَّلَاةَ تَنْهَىٰ عَنِ الْفَحْشَاءِ",
+        "translation": "Indeed, prayer restrains from immorality.",
+        "transliteration": "inna ṣ-ṣalāta tanhā ʿani l-faḥshāʾi"
+      }
     ],
-    parseText: "تَقْرَأُ الْمُعَلِّمَةُ الدَّرْسَ",
-    parseTokens: [token("تَقْرَأُ", "فعل", "reads"), token("الْمُعَلِّمَةُ", "فاعل", "the teacher (f)"), token("الدَّرْسَ", "مفعول", "the lesson")],
-    conversation: ["مَاذَا تَفْعَلُ الْمُعَلِّمَةُ؟", "تَقْرَأُ الْمُعَلِّمَةُ الدَّرْسَ"],
-    conversationDistractor: "الصَّلَاةُ عِمَادُ الدِّينِ",
-    distractor: "Prayer is the pillar of the religion",
-    blankDistractor: "يَقْرَأُ",
-    noorTip: "تَنْهَى in Al-Ankabut is a feminine present tense verb — prayer itself as an acting agent.",
-    noorTipUr: "تَنْهَى — وہ روکتی ہے۔ صلاة مؤنث ہے اس لیے تَـ کا استعمال ہوا۔",
-    focuses: [
-      { title: "She Does (تَفْعَلُ)", titleAr: "تَـ للغائبة", grammarTerm: "فعل مضارع غائبة", reveal: "You saw the تَـ prefix serving both she and you — context separates them.", hookQuestion: "How do you know تَقْرَأُ means 'she reads' and not 'you read' here?" },
-      { title: "She Is Going", titleAr: "تَذْهَبُ", grammarTerm: "فعل مضارع مؤنث", reveal: "You used a feminine present verb in a movement sentence.", hookQuestion: "What would change if the subject were masculine?" },
-      { title: "You (f) Are Reading", titleAr: "تَكْتُبِينَ", grammarTerm: "فعل مضارع مخاطبة", reveal: "You added ينَ to the stem to address a female listener directly.", hookQuestion: "What does the ينَ ending signal?" },
-      { title: "The Sky and Earth Are Feminine Too", titleAr: "السَّمَاء وَالأَرْض", grammarTerm: "مؤنث مجازي", reveal: "You recognised that grammatically feminine nouns take feminine verbs.", hookQuestion: "Why does تَنْهَى agree with الصَّلَاةَ?" },
+    "parseText": "الطَّالِبَةُ تَقْرَأُ الدَّرْسَ",
+    "parseTokens": [
+      {
+        "word": "الطَّالِبَةُ",
+        "label": "فاعل",
+        "gloss": "the student (f.)"
+      },
+      {
+        "word": "تَقْرَأُ",
+        "label": "فعل",
+        "gloss": "reads"
+      },
+      {
+        "word": "الدَّرْسَ",
+        "label": "مفعول",
+        "gloss": "the lesson"
+      }
     ],
+    "conversation": [
+      "مَاذَا تَفْعَلُ الْمُعَلِّمَةُ؟",
+      "تَقْرَأُ الْمُعَلِّمَةُ الدَّرْسَ"
+    ],
+    "conversationDistractor": "الصَّلَاةُ عِمَادُ الدِّينِ",
+    "distractor": "Prayer is the pillar of the religion.",
+    "blankDistractor": "يَقْرَأُ",
+    "noorTip": "تَنْهَىٰ in Al-'Ankabut 29:45 is a whole weak-final form with a feminine subject: الصَّلَاةَ.",
+    "noorTipUr": "تَنْهَىٰ — مؤنث فاعل کے ساتھ پوری ناقص صورت: الصَّلَاةَ۔",
+    "focuses": [
+      {
+        "title": "She or You? The تَـ Form",
+        "titleAr": "تَفْعَلُ لِلْغَائِبَةِ وَالْمُخَاطَبِ",
+        "grammarTerm": "فعل مضارع",
+        "reveal": "You saw one form serve both 'she' and 'you (m.)', and used the pronoun to decide.",
+        "hookQuestion": "How do you know تَذْهَبُ means 'she goes' and not 'you go'?"
+      },
+      {
+        "title": "You (f.): أَنْتِ تَفْعَلِينَ",
+        "titleAr": "تَفْعَلِينَ لِلْمُخَاطَبَةِ",
+        "grammarTerm": "فعل مضارع مخاطبة",
+        "reveal": "You read the ending ـِينَ as one woman addressed.",
+        "hookQuestion": "What would change if the listener were a man?"
+      },
+      {
+        "title": "Feminine Plural: ـْنَ",
+        "titleAr": "نُونُ النِّسْوَةِ",
+        "grammarTerm": "نون النسوة",
+        "reveal": "You read هُنَّ يَفْعَلْنَ and أَنْتُنَّ تَفْعَلْنَ.",
+        "hookQuestion": "How does ـْنَ differ from ـِينَ?"
+      },
+      {
+        "title": "Weak-Final Whole Forms",
+        "titleAr": "تُصَلِّي وَتُصَلِّينَ",
+        "grammarTerm": "فعل ناقص",
+        "reveal": "You learned تُصَلِّي and تُصَلِّينَ as whole forms.",
+        "hookQuestion": "Why do we learn تُصَلِّي whole?"
+      },
+      {
+        "title": "A Named Feminine Subject",
+        "titleAr": "الْفَاعِلُ الْمُؤَنَّثُ",
+        "grammarTerm": "الفاعل",
+        "reveal": "You matched a verb to الْمُعَلِّمَةُ, الْمُؤْمِنَةُ and الْمُؤْمِنَاتُ.",
+        "hookQuestion": "Which verb goes with الطَّالِبَةُ?"
+      },
+      {
+        "title": "Feminine Verbs in the Quran",
+        "titleAr": "أَفْعَالٌ مُؤَنَّثَةٌ فِي الْقُرْآنِ",
+        "grammarTerm": "فعل مضارع",
+        "reveal": "You read تَنْهَىٰ, يُرْضِعْنَ and تُحَدِّثُ in exact ayat.",
+        "hookQuestion": "Who is the subject of تَنْهَىٰ in 29:45?"
+      }
+    ]
   },
 
-  // ── Ch38 ── Expanded Verb Usage and Communication ─────────────────────────
+  // ── Ch38 ── Dual Forms in Context ─────────────────────────────────────────
   {
-    order: 38,
-    sourceFile: "reader_lecture_38_verb_communication.md",
-    title: "Expanded Verb Usage and Communication",
-    titleAr: "الأَفْعَال الْمُضَارِعَة فِي الْحِوَار",
-    description: "Present tense verbs in dialogue and connected speech.",
-    hook: { ayahAr: "أَفَلَا تَعْقِلُونَ", ayahRef: "Al-Baqarah 2:44", highlightedWord: "تَعْقِلُونَ" },
-    examples: [
-      card("أَفَلَا تَعْقِلُونَ مَا تَقُولُونَ؟", "Do you not understand what you say?", "afalaa ta'qiloona maa taqooloon"),
-      card("يَتَكَلَّمُ الأُسْتَاذُ وَيَسْمَعُ الطُّلَّابُ", "The teacher speaks and the students listen", "yatakallamal-ustaadhu wayasma'ut-tullaab"),
-      card("مَا تَفْعَلُ الآنَ؟ أَكْتُبُ رِسَالَةً", "What are you doing now? I am writing a letter.", "maa taf'alul-aan? Aktubu risaalatan"),
-      card("هَلْ تَفْهَمُونَ الدَّرْسَ؟ نَعَمْ نَفْهَمُهُ", "Do you understand the lesson? Yes, we understand it.", "hal tafhamoonal-dars? na'am nafahamuh"),
+    "order": 38,
+    "sourceFile": "Docs/proposals/chapter-38-content-proposal.md",
+    "title": "Dual Forms in Context",
+    "titleAr": "الْمُثَنَّى فِي السِّيَاقِ",
+    "titleUr": "مثنی: سیاق میں",
+    "description": "Recognise dual noun endings in nominative and oblique contexts, read هُمَا and أَنْتُمَا with selected indicative dual verbs, match dual adjectives to their nouns, and tell a true dual from two singular words joined by وَ. Arabic has no separate first-person dual: speaker and partner say نَحْنُ. A selected introduction, not a complete dual or mood paradigm.",
+    "descriptionUr": "رفع اور نصب و جر میں مثنی اسم کے آخری حروف پہچانیں، هُمَا اور أَنْتُمَا کو منتخب مرفوع مثنی افعال کے ساتھ پڑھیں، مثنی صفت کو اس کے اسم سے ملائیں، اور سچے مثنی کو وَ سے جڑے دو واحد الفاظ سے الگ کریں۔ عربی میں متکلم مثنی کی الگ صورت نہیں: بولنے والا اور اس کا ساتھی نَحْنُ کہتے ہیں۔ یہ ایک منتخب تعارف ہے، مکمل مثنی یا حالتوں کا نظام نہیں۔",
+    "hook": {
+      "ayahAr": "فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ",
+      "ayahRef": "Ar-Rahman 55:13",
+      "highlightedWord": "تُكَذِّبَانِ"
+    },
+    "examples": [
+      {
+        "arabicText": "الطَّالِبَانِ فِي الْمَسْجِدِ",
+        "translation": "The two students are in the mosque.",
+        "transliteration": "aṭ-ṭālibāni fī l-masjidi"
+      },
+      {
+        "arabicText": "هُمَا يَكْتُبَانِ الدَّرْسَ",
+        "translation": "They two write the lesson.",
+        "transliteration": "humā yaktubāni d-darsa"
+      },
+      {
+        "arabicText": "أَنْتُمَا تَجْلِسَانِ فِي الْفَصْلِ",
+        "translation": "You two sit in the classroom.",
+        "transliteration": "antumā tajlisāni fī l-faṣli"
+      },
+      {
+        "arabicText": "مَرَجَ الْبَحْرَيْنِ يَلْتَقِيَانِ",
+        "translation": "He released the two seas, meeting one another.",
+        "transliteration": "maraja l-baḥrayni yaltaqiyāni"
+      }
     ],
-    parseText: "يَتَكَلَّمُ الأُسْتَاذُ وَيَسْمَعُ الطُّلَّابُ",
-    parseTokens: [token("يَتَكَلَّمُ", "فعل", "speaks"), token("الأُسْتَاذُ", "فاعل", "the teacher"), token("يَسْمَعُ", "فعل", "listens"), token("الطُّلَّابُ", "فاعل", "the students")],
-    conversation: ["هَلْ تَفْهَمُ الدَّرْسَ؟", "نَعَمْ، أَفْهَمُ الدَّرْسَ جَيِّدًا"],
-    conversationDistractor: "تَقْرَأُ الْمُعَلِّمَةُ الدَّرْسَ",
-    distractor: "The female teacher reads the lesson",
-    blankDistractor: "تَسْمَعُ",
-    noorTip: "أَفَلَا تَعْقِلُونَ — do you not reason? The Quran questions us in the present tense.",
-    noorTipUr: "تَعْقِلُونَ جمع مذکر مخاطب کا صیغہ ہے — تم سب سمجھتے ہو۔",
-    focuses: [
-      { title: "Do You Not Understand?", titleAr: "أَفَلَا تَعْقِلُونَ", grammarTerm: "استفهام إنكاري", reveal: "You recognised a rhetorical question using the present tense to challenge.", hookQuestion: "What kind of answer does أَفَلَا expect?" },
-      { title: "A Conversation in the Present", titleAr: "حِوَار بِالْمُضَارِع", grammarTerm: "فعل مضارع في الحوار", reveal: "You carried a full exchange using present tense verbs naturally.", hookQuestion: "Which present verbs appear in the third example?" },
-      { title: "Verb Then Subject", titleAr: "الْفِعْل قَبْلَ الْفَاعِل", grammarTerm: "ترتيب الجملة الفعلية", reveal: "You confirmed the standard order: verb first, then the subject in verbal sentences.", hookQuestion: "In يَتَكَلَّمُ الأُسْتَاذُ, which came first?" },
-      { title: "Questions with Present Verbs", titleAr: "أَسْئِلَة الْمُضَارِع", grammarTerm: "استفهام مع المضارع", reveal: "You asked and answered questions using هَلْ with present tense verbs.", hookQuestion: "How do you ask 'do you understand?' in Arabic?" },
+    "parseText": "هُمَا يَكْتُبَانِ الدَّرْسَ",
+    "parseTokens": [
+      {
+        "word": "هُمَا",
+        "label": "ضمير",
+        "gloss": "they two"
+      },
+      {
+        "word": "يَكْتُبَانِ",
+        "label": "فعل",
+        "gloss": "write (dual)"
+      },
+      {
+        "word": "الدَّرْسَ",
+        "label": "مفعول",
+        "gloss": "the lesson"
+      }
     ],
+    "conversation": [
+      "مَاذَا تَفْعَلَانِ كُلَّ يَوْمٍ؟",
+      "نَذْهَبُ إِلَى الْمَدْرَسَةِ"
+    ],
+    "conversationDistractor": "هُمَا يَذْهَبَانِ إِلَى الْمَدْرَسَةِ",
+    "distractor": "They two go to the school.",
+    "blankDistractor": "يَذْهَبُونَ",
+    "noorTip": "Two people are asked with ـَانِ, but they answer with the ordinary 'we': نَذْهَبُ.",
+    "noorTipUr": "دو افراد سے ـَانِ کے ساتھ پوچھا جاتا ہے، مگر وہ عام 'ہم' سے جواب دیتے ہیں: نَذْهَبُ۔",
+    "focuses": [
+      {
+        "title": "Two: The Dual Noun",
+        "titleAr": "الْمُثَنَّى",
+        "grammarTerm": "مثنى",
+        "reveal": "You read ـَانِ and ـَيْنِ on nouns.",
+        "hookQuestion": "Which ending does a dual subject take?"
+      },
+      {
+        "title": "Two People: هُمَا and أَنْتُمَا",
+        "titleAr": "ضَمِيرَا الْمُثَنَّى",
+        "grammarTerm": "فعل مضارع مثنى",
+        "reveal": "You read هُمَا يَكْتُبَانِ, هُمَا تَكْتُبَانِ and أَنْتُمَا تَكْتُبَانِ.",
+        "hookQuestion": "Does أَنْتُمَا show whether the two are men or women?"
+      },
+      {
+        "title": "Two Nouns, Matching Adjectives",
+        "titleAr": "مُطَابَقَةُ الصِّفَةِ لِلْمُثَنَّى",
+        "grammarTerm": "صفة",
+        "reveal": "You matched الطَّالِبَانِ الْمُجْتَهِدَانِ and الطَّالِبَتَانِ الْمُجْتَهِدَتَانِ.",
+        "hookQuestion": "What does a feminine dual adjective end in?"
+      },
+      {
+        "title": "A Dual, or Two Words Joined by وَ?",
+        "titleAr": "الْمُثَنَّى وَالْعَطْفُ",
+        "grammarTerm": "عطف",
+        "reveal": "You told رَجُلَانِ from نَصْرُ اللَّهِ وَالْفَتْحُ.",
+        "hookQuestion": "Is فَاطِمَةُ وَخَدِيجَةُ a dual?"
+      },
+      {
+        "title": "Singular, Dual and Plural",
+        "titleAr": "الْمُفْرَدُ وَالْمُثَنَّى وَالْجَمْعُ",
+        "grammarTerm": "العدد",
+        "reveal": "You read the dual in 55:19 and 55:46.",
+        "hookQuestion": "Which word in 55:19 is a dual verb?"
+      },
+      {
+        "title": "Daily Routine for Two (CL11)",
+        "titleAr": "مَاذَا تَفْعَلَانِ كُلَّ يَوْمٍ؟",
+        "grammarTerm": "المثنى والمتكلم",
+        "reveal": "You answered a question put to two people with 'we'.",
+        "hookQuestion": "Why does Arabic answer a 'you two' question with نَحْنُ?"
+      }
+    ]
   },
 
-  // ── Ch39 ── Grammar in Context: Surah Quraysh Vocabulary ──────────────────
+  // ── Ch39 ── Surah Quraysh: Read Four Ayat in Context ──────────────────────
   {
-    order: 39,
-    sourceFile: "reader_lecture_39_surah_quraysh_vocabulary.md",
-    title: "Surah Quraysh Vocabulary",
-    titleAr: "مُفْرَدَات سُورَة قُرَيْش",
-    description: "Vocabulary from Surah Al-Quraysh — journey, winter, summer, hunger, fear.",
-    hook: { ayahAr: "لِإِيلَافِ قُرَيْشٍ", ayahRef: "Al-Quraysh 106:1", highlightedWord: "إِيلَافِ" },
-    examples: [
-      card("لِإِيلَافِ قُرَيْشٍ إِيلَافِهِمْ", "For the bonding of Quraysh, their bonding", "li-eelaafi quraysh eelaafihim"),
-      card("رِحْلَةُ الشِّتَاءِ وَالصَّيْفِ", "The journey of winter and summer", "rihlatus-shitaa'i was-sayf"),
-      card("أَطْعَمَهُمْ مِنْ جُوعٍ", "He fed them from hunger", "at'amahum min joo'"),
-      card("آمَنَهُمْ مِنْ خَوْفٍ", "He gave them security from fear", "aamanahum min khawf"),
+    "order": 39,
+    "sourceFile": "Docs/proposals/chapter-39-content-proposal.md",
+    "title": "Surah Quraysh: Read Four Ayat in Context",
+    "titleAr": "سُورَةُ قُرَيْشٍ: قِرَاءَةٌ فِي السِّيَاقِ",
+    "titleUr": "سورۃ قریش: چار آیات سیاق میں",
+    "description": "Read Quraysh 106:1–4 in order, learn selected words and phrases about Quraysh, the two seasonal journeys, worship, food and safety, and keep the ayat apart from translation and optional commentary. Supported reading of one short surah, not exhaustive vocabulary, grammar or tafsir.",
+    "descriptionUr": "سورۃ قریش 106:1–4 ترتیب سے پڑھیں، قریش، دو موسمی سفروں، عبادت، کھانے اور امن کے بارے میں منتخب الفاظ اور ٹکڑے سیکھیں، اور آیات کو ترجمے اور اختیاری تشریح سے الگ رکھیں۔ ایک مختصر سورت کی سہارا دی گئی پڑھائی، مکمل ذخیرۂ الفاظ، گرامر یا تفسیر نہیں۔",
+    "hook": {
+      "ayahAr": "لِإِيلَافِ قُرَيْشٍ",
+      "ayahRef": "Quraysh 106:1",
+      "highlightedWord": "إِيلَافِ"
+    },
+    "examples": [
+      {
+        "arabicText": "لِإِيلَافِ قُرَيْشٍ",
+        "translation": "For the accustomed security of Quraysh —",
+        "transliteration": "li-īlāfi quraysh"
+      },
+      {
+        "arabicText": "إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ",
+        "translation": "their accustomed security in the journey of winter and summer —",
+        "transliteration": "īlāfihim riḥlata sh-shitāʾi wa-ṣ-ṣayf"
+      },
+      {
+        "arabicText": "فَلْيَعْبُدُوا رَبَّ هَذَا الْبَيْتِ",
+        "translation": "so let them worship the Lord of this House,",
+        "transliteration": "falyaʿbudū rabba hādhā l-bayt"
+      },
+      {
+        "arabicText": "الَّذِي أَطْعَمَهُمْ مِنْ جُوعٍ وَآمَنَهُمْ مِنْ خَوْفٍ",
+        "translation": "who fed them against hunger and made them safe from fear.",
+        "transliteration": "alladhī aṭʿamahum min jūʿin wa-āmanahum min khawf"
+      }
     ],
-    parseText: "رِحْلَةُ الشِّتَاءِ وَالصَّيْفِ",
-    parseTokens: [token("رِحْلَةُ", "مضاف", "journey of"), token("الشِّتَاءِ", "مضاف إليه", "winter"), token("الصَّيْفِ", "مضاف إليه", "summer")],
-    conversation: ["مَا مَعْنَى إِيلَاف؟", "الإِيلَافُ هُوَ الرِّبَاطُ وَالأَمَانُ"],
-    conversationDistractor: "هَلْ تَفْهَمُ الدَّرْسَ؟",
-    distractor: "Do you understand the lesson?",
-    blankDistractor: "الرَّبِيع",
-    noorTip: "Surah Quraysh is only 4 ayat but packed with vocabulary about protection and provision.",
-    noorTipUr: "سورۃ قریش میں سفر، موسم، بھوک اور خوف کے الفاظ آتے ہیں — ان کو یاد کریں۔",
-    focuses: [
-      { title: "The Bond of Quraysh", titleAr: "إِيلَاف قُرَيْش", grammarTerm: "مصدر + مضاف إليه", reveal: "You read إِيلَاف as a masdar expressing the act of bonding.", hookQuestion: "What does إِيلَاف mean as an action noun?" },
-      { title: "Two Journeys", titleAr: "رِحْلَة الشِّتَاء وَالصَّيْف", grammarTerm: "عطف في الإضافة", reveal: "You linked two seasons to a single journey noun using واو العطف.", hookQuestion: "How does Arabic connect two possessors to one noun?" },
-      { title: "Safe From Hunger", titleAr: "أَطْعَمَ مِنْ جُوع", grammarTerm: "فعل + مِنْ", reveal: "You saw مِنْ expressing the cause of feeding — feeding because of hunger.", hookQuestion: "What does مِنْ جُوعٍ express about the hunger?" },
-      { title: "Safe From Fear", titleAr: "آمَنَ مِنْ خَوْف", grammarTerm: "فعل + مِنْ", reveal: "You completed the surah's parallel structure: fed/hungry, safe/afraid.", hookQuestion: "What is the parallel between أَطْعَمَ and آمَنَ in this surah?" },
+    "parseText": "رَبَّ هَذَا الْبَيْتِ",
+    "parseTokens": [
+      {
+        "word": "رَبَّ",
+        "label": "مفعول",
+        "gloss": "Lord"
+      },
+      {
+        "word": "هَذَا",
+        "label": "اسم إشارة",
+        "gloss": "this"
+      },
+      {
+        "word": "الْبَيْتِ",
+        "label": "مضاف إليه",
+        "gloss": "the House"
+      }
     ],
+    "conversation": [
+      "مَنِ الَّذِي أَطْعَمَهُمْ مِنْ جُوعٍ؟",
+      "رَبُّ هَذَا الْبَيْتِ"
+    ],
+    "conversationDistractor": "رِحْلَةُ الشِّتَاءِ",
+    "distractor": "the journey of winter",
+    "blankDistractor": "الشِّتَاءِ",
+    "noorTip": "Each ayah is read with its own reference; the connections between them come from the displayed text, not from one gloss of إِيلَاف.",
+    "noorTipUr": "ہر آیت اپنے حوالے کے ساتھ پڑھی جاتی ہے؛ ان کے درمیان تعلق دکھائی گئی عبارت سے آتا ہے، إِيلَاف کے کسی ایک ترجمے سے نہیں۔",
+    "focuses": [
+      {
+        "title": "Ayah 1: Quraysh and إِيلَاف",
+        "titleAr": "لِإِيلَافِ قُرَيْشٍ",
+        "grammarTerm": "مصدر",
+        "reveal": "You read لِإِيلَافِ قُرَيْشٍ with one attributed rendering.",
+        "hookQuestion": "Does one English word settle the meaning of إِيلَاف?"
+      },
+      {
+        "title": "Ayah 2: Winter and Summer Journeys",
+        "titleAr": "رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ",
+        "grammarTerm": "عطف",
+        "reveal": "You read the journeys and saw two singular nouns joined by وَ.",
+        "hookQuestion": "Is الشِّتَاءِ وَالصَّيْفِ a dual?"
+      },
+      {
+        "title": "Ayah 3: Worship the Lord of This House",
+        "titleAr": "رَبَّ هَذَا الْبَيْتِ",
+        "grammarTerm": "إضافة",
+        "reveal": "You read فَلْيَعْبُدُوا as a whole command phrase.",
+        "hookQuestion": "Whom does the ayah tell them to worship?"
+      },
+      {
+        "title": "Ayah 4: Food and Safety",
+        "titleAr": "أَطْعَمَهُمْ وَآمَنَهُمْ",
+        "grammarTerm": "فعل ماض",
+        "reveal": "You read two verbs with ـهُمْ and the local sense of آمَنَهُمْ.",
+        "hookQuestion": "What does ـهُمْ stand for?"
+      },
+      {
+        "title": "Read the Whole Surah",
+        "titleAr": "قِرَاءَةُ السُّورَةِ",
+        "grammarTerm": "السياق",
+        "reveal": "You read the four ayat as one connected surah.",
+        "hookQuestion": "Who fed them and made them safe?"
+      }
+    ]
   },
 
-  // ── Ch40 ── Sentence Expansion and Expression ─────────────────────────────
+  // ── Ch40 ── Expanding Arabic Descriptions: Phrases and Relative Pronouns ───
   {
-    order: 40,
-    sourceFile: "reader_lecture_40_sentence_expansion.md",
-    title: "Sentence Expansion and Expression",
-    titleAr: "تَوَسُّع الْجُمْلَة وَالتَّعْبِير",
-    description: "Layered nominal sentences with adjective, idafa, and preposition combined.",
-    hook: { ayahAr: "وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ", ayahRef: "Al-Baqarah 2:29", highlightedWord: "عَلِيمٌ" },
-    examples: [
-      card("الْعَالِمُ الْكَبِيرُ فِي الْمَدِينَةِ مَشْهُورٌ", "The great scholar in the city is famous", "al-aaalmul-kabeeru fil-madeenati mashhoor"),
-      card("طَالِبُ الْعِلْمِ الْمُجْتَهِدُ يَنَالُ الأَجْرَ", "The diligent student of knowledge attains the reward", "taalibul-ilmil-mujtahidu yanaalul-ajr"),
-      card("وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ", "And He is Knowing of all things", "wa huwa bikulli shay'in aleem"),
-      card("الطَّرِيقُ إِلَى الْجَنَّةِ مَفْرُوشٌ بِالْمَكَارِهِ", "The path to Paradise is paved with difficulties", "at-tareequ ilal-jannati mafrooshan bil-makaarih"),
+    "order": 40,
+    "sourceFile": "Docs/proposals/chapter-40-content-proposal.md",
+    "title": "Expanding Arabic Descriptions: Phrases and Relative Pronouns",
+    "titleAr": "تَوْسِيعُ الْأَوْصَافِ الْعَرَبِيَّةِ",
+    "titleUr": "عربی وضاحتوں کی توسیع: ٹکڑے اور اسمِ موصول",
+    "description": "Expand familiar noun phrases with matched adjectives, a demonstrative inside an iḍāfa and selected prepositional phrases, then tell the common singular, human-group and plural-things relative descriptions apart. A selected pattern set, not a complete relative-pronoun or Quran-parsing system.",
+    "descriptionUr": "جانے پہچانے اسمی ٹکڑوں کو ملتی ہوئی صفات، اضافت کے اندر اسمِ اشارہ اور منتخب حرفِ جر والے ٹکڑوں سے پھیلائیں، پھر واحد، انسانی گروہ اور چیزوں کی جمع کے عام اسمِ موصول والے اوصاف میں فرق کریں۔ یہ منتخب نمونوں کا مجموعہ ہے، اسمِ موصول یا قرآن کی مکمل تجزیہ کاری کا نظام نہیں۔",
+    "hook": {
+      "ayahAr": "وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ",
+      "ayahRef": "Al-Baqarah 2:29",
+      "highlightedWord": "عَلِيمٌ"
+    },
+    "examples": [
+      {
+        "arabicText": "الطَّالِبُ الْمُجْتَهِدُ الْكَرِيمُ",
+        "translation": "the diligent, noble student",
+        "transliteration": "aṭ-ṭālibu l-mujtahidu l-karīmu"
+      },
+      {
+        "arabicText": "كِتَابُ هَذَا الطَّالِبِ الْمُجْتَهِدِ عَلَى الْمَكْتَبِ",
+        "translation": "The book of this diligent student is on the desk.",
+        "transliteration": "kitābu hādhā ṭ-ṭālibi l-mujtahidi ʿalā l-maktabi"
+      },
+      {
+        "arabicText": "الطُّلَّابُ الَّذِينَ يَكْتُبُونَ فِي الْفَصْلِ",
+        "translation": "the students who write in the classroom",
+        "transliteration": "aṭ-ṭullābu lladhīna yaktubūna fī l-faṣli"
+      },
+      {
+        "arabicText": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ",
+        "translation": "the path of those upon whom You bestowed favour",
+        "transliteration": "ṣirāṭa lladhīna anʿamta ʿalayhim"
+      }
     ],
-    parseText: "وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ",
-    parseTokens: [token("هُوَ", "مبتدأ", "He"), token("بِكُلِّ", "حرف جر", "of all"), token("شَيْءٍ", "مضاف إليه", "things"), token("عَلِيمٌ", "خبر", "All-Knowing")],
-    conversation: ["كَيْفَ تَصِفُ اللَّهَ بِالْعَرَبِيَّةِ؟", "وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ"],
-    conversationDistractor: "رِحْلَةُ الشِّتَاءِ وَالصَّيْفِ",
-    distractor: "The journey of winter and summer",
-    blankDistractor: "جَهُولٌ",
-    noorTip: "وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ — four words, a pronoun, a preposition phrase, and an adjective. That is Book 4.",
-    noorTipUr: "یہ جملہ مبتدا، شبہ جملہ اور خبر کا مجموعہ ہے — قرآن کی خوبصورت ترکیب۔",
-    focuses: [
-      { title: "A Richer Description", titleAr: "وَصْف مُثَرَّى", grammarTerm: "نعت + شبه جملة", reveal: "You layered an adjective onto a noun already defined by idafa.", hookQuestion: "In الْعَالِمُ الْكَبِيرُ فِي الْمَدِينَةِ, what is the adjective and what is the place phrase?" },
-      { title: "Adding a Preposition", titleAr: "إِضَافَة حَرْف الْجَر", grammarTerm: "شبه جملة في الخبر", reveal: "You used a preposition phrase as the predicate of a nominal sentence.", hookQuestion: "In وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ, what is the subject and what is the predicate?" },
-      { title: "Stacking Adjectives", titleAr: "تَعَدُّد الصِّفَات", grammarTerm: "نعت متعدد", reveal: "You described a noun with multiple agreeing adjectives.", hookQuestion: "How would you add another adjective to الطَّرِيقُ الطَّوِيلُ الصَّعْبُ?" },
-      { title: "Reading a Complex Ayah", titleAr: "قِرَاءَة آيَة مُرَكَّبَة", grammarTerm: "تركيب قرآني", reveal: "You parsed وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ using every tool you built across 40 chapters.", hookQuestion: "Name every grammatical role in وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ." },
+    "parseText": "كِتَابُ هَذَا الطَّالِبِ الْمُجْتَهِدِ عَلَى الْمَكْتَبِ",
+    "parseTokens": [
+      {
+        "word": "كِتَابُ",
+        "label": "مبتدأ",
+        "gloss": "the book of"
+      },
+      {
+        "word": "هَذَا الطَّالِبِ",
+        "label": "مضاف إليه",
+        "gloss": "this student"
+      },
+      {
+        "word": "الْمُجْتَهِدِ",
+        "label": "صفة",
+        "gloss": "diligent"
+      },
+      {
+        "word": "عَلَى الْمَكْتَبِ",
+        "label": "خبر",
+        "gloss": "on the desk"
+      }
     ],
+    "conversation": [
+      "أَيْنَ الْكِتَابُ؟",
+      "الْكِتَابُ عَلَى الْمَكْتَبِ"
+    ],
+    "conversationDistractor": "كِتَابٌ عَلَى الْمَكْتَبِ",
+    "distractor": "a book on the desk",
+    "blankDistractor": "الَّذِي",
+    "noorTip": "A prepositional phrase after a definite noun is the statement; after an indefinite noun it describes. In 2:29, بِكُلِّ شَيْءٍ goes with عَلِيمٌ.",
+    "noorTipUr": "معرفہ اسم کے بعد حرفِ جر والا ٹکڑا جملہ ہے؛ نکرہ کے بعد وضاحت۔ 2:29 میں بِكُلِّ شَيْءٍ عَلِيمٌ کے ساتھ ہے۔",
+    "focuses": [
+      {
+        "title": "One Noun, Several Adjectives",
+        "titleAr": "صِفَاتٌ مُتَتَابِعَةٌ",
+        "grammarTerm": "صفة",
+        "reveal": "You stacked matching adjectives on one noun.",
+        "hookQuestion": "Does the second adjective describe the first?"
+      },
+      {
+        "title": "Possession with a Demonstrative",
+        "titleAr": "إِضَافَةٌ إِلَى اسْمِ إِشَارَةٍ",
+        "grammarTerm": "مضاف إليه",
+        "reveal": "You read كِتَابُ هَذَا الرَّجُلِ الْعَالِمِ layer by layer.",
+        "hookQuestion": "Which word is the possessed noun?"
+      },
+      {
+        "title": "Add a Prepositional Phrase",
+        "titleAr": "الْجَارُّ وَالْمَجْرُورُ",
+        "grammarTerm": "جار ومجرور",
+        "reveal": "You told a phrase that completes a statement from one that describes a noun.",
+        "hookQuestion": "What does بِكُلِّ شَيْءٍ go with in 2:29?"
+      },
+      {
+        "title": "Three Ways to Describe",
+        "titleAr": "ثَلَاثُ طُرُقٍ لِلْوَصْفِ",
+        "grammarTerm": "صلة",
+        "reveal": "You told an adjective, a describing sentence and a relative clause apart.",
+        "hookQuestion": "When is الَّذِي not used?"
+      },
+      {
+        "title": "Describe a Group",
+        "titleAr": "الْأَسْمَاءُ الْمَوْصُولَةُ لِلْجَمْعِ",
+        "grammarTerm": "اسم موصول",
+        "reveal": "You chose الَّذِينَ, اللَّاتِي or الَّتِي by who the group is.",
+        "hookQuestion": "Which relative goes with a group of women?"
+      },
+      {
+        "title": "Read the Layers in the Quran",
+        "titleAr": "قِرَاءَةُ التَّرَاكِيبِ",
+        "grammarTerm": "تراكيب",
+        "reveal": "You read رَبِّ الْعَالَمِينَ, اسْمَ رَبِّكَ الْأَعْلَى and the group in 1:7.",
+        "hookQuestion": "What does الْأَعْلَى describe in 87:1?"
+      },
+      {
+        "title": "Masjid Phrases: The Adhan",
+        "titleAr": "عِبَارَاتُ الْمَسْجِدِ",
+        "grammarTerm": "عبارات",
+        "reveal": "You separated the call, the response and the supplication, each with its source.",
+        "hookQuestion": "Which phrase is the response to حَيَّ عَلَى الصَّلَاةِ?"
+      },
+      {
+        "title": "At the Mosque (CL12)",
+        "titleAr": "فِي الْمَسْجِدِ",
+        "grammarTerm": "المحادثة",
+        "reveal": "You asked when the prayer begins and where the wudu place is.",
+        "hookQuestion": "How do you ask where something is?"
+      }
+    ]
   },
 ];
 

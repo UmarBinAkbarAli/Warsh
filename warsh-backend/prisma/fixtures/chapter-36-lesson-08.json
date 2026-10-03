@@ -1,0 +1,434 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "_note": "Chapter 36, Lesson 8 (ch36-l09, new). Rebuilt 2026-10-03 in the proposal harvest, batch 3 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-36-content-proposal.md and its review amendments. Integration after both participles: maṣdar, active participle and passive participle of one root side by side, then sorted in constructed nominal sentences with every word meaning supplied; word type kept apart from role and case; a noun on its own gives no tense. Scored decisions use only the practised roots كَتَبَ and نَصَرَ. Removed: the Form II 'تَفْعَالٌ / تَكْتَابٌ' rule, إِقْرَارٌ and آمَنَ filed under the wrong form, 'the Quran begins with 87:1', تَسْبِيحٌ placed inside 87:1/87:2, the unsupported 'every page / hundreds' claims, the الصَّلَاة maṣdar classification, the 'Peak 1 mastery' label, malformed build sentences and the stray Chinese/Cyrillic text.",
+    "title": "Action, Doer, or Receiver?",
+    "titleAr": "الْفِعْلُ وَالْفَاعِلُ وَالْمَفْعُولُ",
+    "titleUr": "کام، کرنے والا، یا جس پر کام ہوا؟",
+    "chapter_order": 36,
+    "lesson_order": 8,
+    "estimated_minutes": 8,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 82,
+      "ayah": 11,
+      "label": "Al-Infitar 82:11",
+      "ar": "كِرَامًا كَاتِبِينَ",
+      "en": "Noble and recording,",
+      "ur": "معزز لکھنے والے،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/082011.mp3"
+    },
+    "noor_intro": {
+      "en": "كَاتِبِينَ: writers. Today: one root, three nouns — the action, the doer and the receiver.",
+      "ur": "كَاتِبِينَ: لکھنے والے۔ آج: ایک مادّہ، تین اسم — کام، کرنے والا اور جس پر کام ہوا۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "One root, three nouns",
+        "ar": "كِتَابَةٌ / كَاتِبٌ / مَكْتُوبٌ",
+        "ur": "ایک مادّہ، تین اسم"
+      },
+      "examples": [
+        {
+          "ar": "كِتَابَةٌ",
+          "ar_plain": "كتابة",
+          "translit": "kitābatun",
+          "en": "writing",
+          "ur": "لکھنا"
+        },
+        {
+          "ar": "كَاتِبٌ",
+          "ar_plain": "كاتب",
+          "translit": "kātibun",
+          "en": "a writer",
+          "ur": "لکھنے والا"
+        },
+        {
+          "ar": "مَكْتُوبٌ",
+          "ar_plain": "مكتوب",
+          "translit": "maktūbun",
+          "en": "written",
+          "ur": "لکھا ہوا"
+        }
+      ],
+      "explanation": {
+        "en": "كِتَابَةٌ: the action (writing). كَاتِبٌ: the doer (a writer). مَكْتُوبٌ: the receiver (what is written).",
+        "ur": "كِتَابَةٌ: کام (لکھنا)۔ كَاتِبٌ: کرنے والا (لکھنے والا)۔ مَكْتُوبٌ: جس پر کام ہوا (لکھا ہوا)۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "The same three from نَصَرَ",
+        "ar": "نَصْرٌ / نَاصِرٌ / مَنْصُورٌ",
+        "ur": "نَصَرَ سے وہی تین"
+      },
+      "examples": [
+        {
+          "ar": "نَصْرٌ",
+          "ar_plain": "نصر",
+          "translit": "naṣrun",
+          "en": "help",
+          "ur": "مدد"
+        },
+        {
+          "ar": "نَاصِرٌ",
+          "ar_plain": "ناصر",
+          "translit": "nāṣirun",
+          "en": "a helper",
+          "ur": "مدد کرنے والا"
+        },
+        {
+          "ar": "مَنْصُورٌ",
+          "ar_plain": "منصور",
+          "translit": "manṣūrun",
+          "en": "one who is helped",
+          "ur": "جس کی مدد کی گئی"
+        }
+      ],
+      "explanation": {
+        "en": "نَصْرٌ: the action (help). نَاصِرٌ: the doer (a helper). مَنْصُورٌ: the receiver (one who is helped).",
+        "ur": "نَصْرٌ: کام (مدد)۔ نَاصِرٌ: کرنے والا (مدد کرنے والا)۔ مَنْصُورٌ: جس پر کام ہوا (جس کی مدد کی گئی)۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "الْكِتَابَةُ سَهْلَةٌ.",
+        "ar_plain": "الكتابة سهلة.",
+        "translit": "al-kitābatu sahlatun.",
+        "en": "Writing is easy.",
+        "ur": "لکھنا آسان ہے۔"
+      },
+      "explanation": {
+        "en": "Which noun? The action itself — a maṣdar.",
+        "ur": "کون سا اسم؟ خود کام — مصدر۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "أَحْمَدُ كَاتِبٌ.",
+        "ar_plain": "أحمد كاتب.",
+        "translit": "aḥmadu kātibun.",
+        "en": "Ahmad is a writer.",
+        "ur": "احمد لکھنے والا ہے۔"
+      },
+      "explanation": {
+        "en": "Which noun? The one who does it — the active participle.",
+        "ur": "کون سا اسم؟ جو کام کرتا ہے — اسم فاعل۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "الدَّرْسُ مَكْتُوبٌ.",
+        "ar_plain": "الدرس مكتوب.",
+        "translit": "ad-darsu maktūbun.",
+        "en": "The lesson is written.",
+        "ur": "سبق لکھا ہوا ہے۔"
+      },
+      "explanation": {
+        "en": "Which noun? The one the action happened to — the passive participle.",
+        "ur": "کون سا اسم؟ جس پر کام ہوا — اسم مفعول۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "No time on its own",
+        "ar": "لَا زَمَنَ فِي الِاسْمِ",
+        "ur": "اسم میں اپنا زمانہ نہیں"
+      },
+      "explanation": {
+        "en": "None of these three nouns places the event in the past, now or the future. Only a verb, or a marker like سَـ, does that. Word type is also not sentence role: ask both questions.",
+        "ur": "ان تینوں اسموں میں سے کوئی بھی واقعے کو ماضی، حال یا مستقبل میں نہیں رکھتا۔ یہ کام فعل یا سَـ جیسی علامت کرتی ہے۔ لفظ کی قسم جملے کا کردار بھی نہیں: دونوں سوال پوچھیں۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch36-l09-ex01",
+      "prompt": {
+        "ar": "كَاتِبٌ",
+        "ar_plain": "كاتب",
+        "translit": "kātibun",
+        "en": "a writer",
+        "ur": "لکھنے والا"
+      },
+      "options": [
+        {
+          "en": "the action",
+          "ur": "کام"
+        },
+        {
+          "en": "the doer",
+          "ur": "کرنے والا"
+        },
+        {
+          "en": "the receiver",
+          "ur": "جس پر کام ہوا"
+        },
+        {
+          "en": "a verb",
+          "ur": "فعل"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كَاتِبٌ: the doer.",
+        "ur": "كَاتِبٌ: کرنے والا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch36-l09-ex02",
+      "prompt": {
+        "ar": "مَكْتُوبٌ",
+        "ar_plain": "مكتوب",
+        "translit": "maktūbun",
+        "en": "written",
+        "ur": "لکھا ہوا"
+      },
+      "options": [
+        {
+          "en": "the doer",
+          "ur": "کرنے والا"
+        },
+        {
+          "en": "the action",
+          "ur": "کام"
+        },
+        {
+          "en": "a verb",
+          "ur": "فعل"
+        },
+        {
+          "en": "the receiver",
+          "ur": "جس پر کام ہوا"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَكْتُوبٌ: the receiver.",
+        "ur": "مَكْتُوبٌ: جس پر کام ہوا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch36-l09-ex03",
+      "prompt": {
+        "ar": "نَصْرٌ",
+        "ar_plain": "نصر",
+        "translit": "naṣrun",
+        "en": "help",
+        "ur": "مدد"
+      },
+      "options": [
+        {
+          "en": "the action",
+          "ur": "کام"
+        },
+        {
+          "en": "the receiver",
+          "ur": "جس پر کام ہوا"
+        },
+        {
+          "en": "the doer",
+          "ur": "کرنے والا"
+        },
+        {
+          "en": "a verb",
+          "ur": "فعل"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "نَصْرٌ: the action itself.",
+        "ur": "نَصْرٌ: خود کام۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch36-l09-ex04",
+      "mode": "TAP",
+      "sentence_ar": "الْمُسْلِمُ ___ لِأَخِيهِ.",
+      "hint": {
+        "en": "The Muslim is a helper to his brother.",
+        "ur": "مسلمان اپنے بھائی کا مددگار ہے۔"
+      },
+      "options": [
+        {
+          "ar": "نَصْرٌ",
+          "ar_plain": "نصر",
+          "translit": "naṣrun",
+          "en": "help",
+          "ur": "مدد"
+        },
+        {
+          "ar": "مَنْصُورٌ",
+          "ar_plain": "منصور",
+          "translit": "manṣūrun",
+          "en": "one who is helped",
+          "ur": "جس کی مدد کی گئی"
+        },
+        {
+          "ar": "نَاصِرٌ",
+          "ar_plain": "ناصر",
+          "translit": "nāṣirun",
+          "en": "a helper",
+          "ur": "مدد کرنے والا"
+        },
+        {
+          "ar": "نَصَرَ",
+          "ar_plain": "نصر",
+          "translit": "naṣara",
+          "en": "he helped",
+          "ur": "اس نے مدد کی"
+        }
+      ],
+      "correct_answer": {
+        "ar": "نَاصِرٌ",
+        "ar_plain": "ناصر",
+        "translit": "nāṣirun",
+        "en": "a helper",
+        "ur": "مدد کرنے والا"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The doer: a helper — نَاصِرٌ.",
+        "ur": "کرنے والا: مددگار — نَاصِرٌ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch36-l09-ex05",
+      "mode": "TAP",
+      "sentence_ar": "الدَّرْسُ ___.",
+      "hint": {
+        "en": "The lesson is written.",
+        "ur": "سبق لکھا ہوا ہے۔"
+      },
+      "options": [
+        {
+          "ar": "كَاتِبٌ",
+          "ar_plain": "كاتب",
+          "translit": "kātibun",
+          "en": "a writer",
+          "ur": "لکھنے والا"
+        },
+        {
+          "ar": "مَكْتُوبٌ",
+          "ar_plain": "مكتوب",
+          "translit": "maktūbun",
+          "en": "written",
+          "ur": "لکھا ہوا"
+        },
+        {
+          "ar": "كِتَابَةٌ",
+          "ar_plain": "كتابة",
+          "translit": "kitābatun",
+          "en": "writing",
+          "ur": "لکھنا"
+        },
+        {
+          "ar": "كَتَبَ",
+          "ar_plain": "كتب",
+          "translit": "kataba",
+          "en": "he wrote",
+          "ur": "اس نے لکھا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "مَكْتُوبٌ",
+        "ar_plain": "مكتوب",
+        "translit": "maktūbun",
+        "en": "written",
+        "ur": "لکھا ہوا"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The lesson received the writing: مَكْتُوبٌ.",
+        "ur": "سبق پر لکھنے کا کام ہوا: مَكْتُوبٌ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch36-l09-ex06",
+      "prompt": {
+        "ar": "أَحْمَدُ كَاتِبٌ، وَالدَّرْسُ مَكْتُوبٌ.",
+        "ar_plain": "أحمد كاتب، والدرس مكتوب.",
+        "translit": "aḥmadu kātibun, wa-d-darsu maktūbun.",
+        "en": "Ahmad is a writer, and the lesson is written.",
+        "ur": "احمد لکھنے والا ہے، اور سبق لکھا ہوا ہے۔"
+      },
+      "options": [
+        {
+          "en": "Ahmad wrote, and the lesson was a writer.",
+          "ur": "احمد نے لکھا، اور سبق لکھنے والا تھا۔"
+        },
+        {
+          "en": "Ahmad is written, and the lesson is a writer.",
+          "ur": "احمد لکھا ہوا ہے، اور سبق لکھنے والا ہے۔"
+        },
+        {
+          "en": "Ahmad is a writer, and the lesson is written.",
+          "ur": "احمد لکھنے والا ہے، اور سبق لکھا ہوا ہے۔"
+        },
+        {
+          "en": "Ahmad's writing is the lesson.",
+          "ur": "احمد کا لکھنا سبق ہے۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كَاتِبٌ is the doer, Ahmad; مَكْتُوبٌ is the receiver, the lesson.",
+        "ur": "كَاتِبٌ کرنے والا ہے، احمد؛ مَكْتُوبٌ جس پر کام ہوا، سبق۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Action, doer, receiver",
+      "ar": "كِتَابَةٌ · كَاتِبٌ · مَكْتُوبٌ",
+      "ur": "کام، کرنے والا، جس پر کام ہوا"
+    },
+    "ayah": {
+      "surah": 82,
+      "ayah": 11,
+      "label": "Al-Infitar 82:11",
+      "ar": "كِرَامًا كَاتِبِينَ",
+      "en": "Noble and recording,",
+      "ur": "معزز لکھنے والے،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/082011.mp3"
+    },
+    "highlighted_word_indices": [
+      1
+    ],
+    "highlighted_words": [
+      "كَاتِبِينَ"
+    ],
+    "noor_explanation": {
+      "en": "One root gives all three nouns. Ask what the word is, then what it does in the sentence.",
+      "ur": "ایک مادّہ تینوں اسم دیتا ہے۔ پوچھیں لفظ کیا ہے، پھر جملے میں کیا کردار ادا کر رہا ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Next: a review of verbs, maṣdars and participles.",
+      "ur": "آگے: فعل، مصدر اور اسمِ فاعل و مفعول کی دہرائی۔"
+    }
+  }
+}

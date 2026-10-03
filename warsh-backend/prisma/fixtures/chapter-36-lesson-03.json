@@ -2,13 +2,12 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 36, Lesson 3 - Recognizing مصدر in Quranic context. التَّوْحِيد as example.",
+    "_note": "Chapter 36, Lesson 3 (ch36-l03). Rebuilt 2026-10-03 in the proposal harvest, batch 3 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-36-content-proposal.md and its review amendments. A bounded set of four supplied pairs: Form II سَبَّحَ / تَسْبِيحٌ and عَلَّمَ / تَعْلِيمٌ (pattern تَفْعِيلٌ), Form IV أَرْسَلَ / إِرْسَالٌ and آمَنَ / إِيمَانٌ (pattern إِفْعَالٌ); each pattern is a common clue, not a guarantee; hook 87:1 سَبِّحِ with the explicit note that تَسْبِيحٌ is not in the verse; لِإِيلَافِ (106:1) named as a recognition-only preview for Chapter 39, never scored. Finite derived-verb conjugation is Chapter 51's. Removed: the Form II 'تَفْعَالٌ / تَكْتَابٌ' rule, إِقْرَارٌ and آمَنَ filed under the wrong form, 'the Quran begins with 87:1', تَسْبِيحٌ placed inside 87:1/87:2, the unsupported 'every page / hundreds' claims, the الصَّلَاة maṣdar classification, the 'Peak 1 mastery' label, malformed build sentences and the stray Chinese/Cyrillic text.",
+    "title": "Recognize Common Derived-Form Maṣdars",
+    "titleAr": "مَصَادِرُ الْأَفْعَالِ الْمَزِيدَةِ",
+    "titleUr": "اضافی حروف والے فعل کے مصدر",
     "chapter_order": 36,
     "lesson_order": 3,
-    "chapter_title": "المصدر (Verbal Noun)",
-    "title": "المصدر in the Quran",
-    "titleAr": "قرآن میں المصدر",
-    "source": "reader_lecture_36_verbs.md",
     "estimated_minutes": 8,
     "xp_reward": 10
   },
@@ -17,96 +16,166 @@
       "surah": 87,
       "ayah": 1,
       "label": "Al-A'la 87:1",
-      "ar": "سَبِّحْ اسْمَ رَبِّكَ الْأَعْلَى",
-      "en": "Glorify the name of your Lord, the Most High.",
-      "ur": "اپنے بلند ترین رب کا نام تسبیح کرو۔",
+      "ar": "سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى",
+      "en": "Glorify the name of your Lord, the Most High,",
+      "ur": "اپنے بلند ترین رب کے نام کی تسبیح کرو،",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087001.mp3"
     },
     "noor_intro": {
-      "en": "Many key Islamic words are مصادر. Today you learn to spot them and trace each one back to its verb. تَوْحِيدٌ means 'making one' — affirming that Allah is One.",
-      "ur": "اسلام کے کئی بنیادی الفاظ مصادر ہیں۔ آج آپ انہیں پہچاننا اور ہر ایک کو اس کے فعل تک لے جانا سیکھیں گے۔ تَوْحِيدٌ کا مطلب ہے 'ایک ماننا' — اللہ کے ایک ہونے کا اقرار۔"
+      "en": "سَبِّحِ: glorify! Its maṣdar, تَسْبِيحٌ, is not in this verse — but the pair is what this lesson is about.",
+      "ur": "سَبِّحِ: تسبیح کرو! اس کا مصدر تَسْبِيحٌ اس آیت میں نہیں ہے — لیکن یہی جوڑی آج کا موضوع ہے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "التَّوْحِيدُ — making Allah one",
-        "ar": "التَّوْحِيدُ — اللہ کو ایک بنانا",
-        "ur": "التَّوْحِيدُ — اللہ کو ایک بنانا"
+        "en": "Verbs with extra letters",
+        "ar": "الْفِعْلُ الْمَزِيدُ",
+        "ur": "اضافی حروف والا فعل"
       },
       "explanation": {
-        "en": "تَوْحِيدٌ comes from the root و-ح-د (one). It means 'affirming Allah's oneness' — the core doctrine of Islam. لا إِلَٰهَ إِلَّا اللَّهُ is the statement of تَوْحِيدٌ.",
-        "ur": "تَوْحِيدٌ مادہ و-ح-د (ایک) سے ہے۔ اس کا مطلب ہے 'اللہ کی وحدت کا اعتراف' — اسلام کا بنیادی عقیدہ۔ لا إِلَٰهَ إِلَّا اللَّهُ توحید کا بیان ہے۔"
+        "en": "Some verbs add a letter to the root. Form II doubles the middle letter (سَبَّحَ). Form IV begins with أَ (أَرْسَلَ). Their maṣdars follow common patterns.",
+        "ur": "کچھ فعل اصل میں ایک حرف بڑھا لیتے ہیں۔ دوسری صورت میں درمیانی حرف دوہرا ہوتا ہے (سَبَّحَ)۔ چوتھی صورت أَ سے شروع ہوتی ہے (أَرْسَلَ)۔ ان کے مصدر عام اوزان پر چلتے ہیں۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "تَوْحِيدُ اللَّهِ",
-        "ar_plain": "توحيد الله",
-        "translit": "tawhiidu Allahi",
-        "en": "the oneness of Allah",
-        "ur": "اللہ کی توحید"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Form II: تَفْعِيلٌ",
+        "ar": "سَبَّحَ ← تَسْبِيحٌ",
+        "ur": "دوسری صورت: تَفْعِيلٌ"
       },
+      "examples": [
+        {
+          "ar": "سَبَّحَ",
+          "ar_plain": "سبح",
+          "translit": "sabbaḥa",
+          "en": "he glorified",
+          "ur": "اس نے تسبیح کی"
+        },
+        {
+          "ar": "تَسْبِيحٌ",
+          "ar_plain": "تسبيح",
+          "translit": "tasbīḥun",
+          "en": "glorifying",
+          "ur": "تسبیح کرنا"
+        }
+      ],
       "explanation": {
-        "en": "تَوْحِيدُ is the مصدر of وَحَّدَ (Form II, 'to make one'). With اللَّهِ in the genitive: 'the oneness of Allah' — affirming He is the only deity.",
-        "ur": "تَوْحِيدُ وَحَّدَ (دوسری شکل، 'ایک بنانا') کا مصدر ہے۔ اللَّهِ کے ساتھ: 'اللہ کی توحید' — اس کی واحد الہی ہونے کا اعتراف۔"
+        "en": "The doubled middle letter becomes تَ … ـِيـ …: تَسْبِيحٌ.",
+        "ur": "دوہرا درمیانی حرف تَ … ـِيـ … بن جاتا ہے: تَسْبِيحٌ۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "إِخْلَاصٌ",
-        "ar_plain": "اخلاص",
-        "translit": "ikhlaasun",
-        "en": "sincerity",
-        "ur": "خلوص"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Form II: تَفْعِيلٌ",
+        "ar": "عَلَّمَ ← تَعْلِيمٌ",
+        "ur": "دوسری صورت: تَفْعِيلٌ"
       },
+      "examples": [
+        {
+          "ar": "عَلَّمَ",
+          "ar_plain": "علم",
+          "translit": "ʿallama",
+          "en": "he taught",
+          "ur": "اس نے سکھایا"
+        },
+        {
+          "ar": "تَعْلِيمٌ",
+          "ar_plain": "تعليم",
+          "translit": "taʿlīmun",
+          "en": "teaching",
+          "ur": "سکھانا"
+        }
+      ],
       "explanation": {
-        "en": "إِخْلَاصٌ is the مصدر of أَخْلَصَ (Form IV, 'to be sincere'). The root خ-ل-ص means 'pure.' إِخْلَاصٌ in the Quran means 'sincerity in worship.'",
-        "ur": "إِخْلَاصٌ أَخْلَصَ (چوتھی شکل، 'خلیص ہونا') کا مصدر ہے۔ مادہ خ-ل-ص کا مطلب 'خالص' ہے۔ قرآن میں إِخْلَاصٌ کا مطلب ہے 'عبادت میں خلوص'۔"
+        "en": "The same pattern: عَلَّمَ ← تَعْلِيمٌ.",
+        "ur": "وہی وزن: عَلَّمَ ← تَعْلِيمٌ۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "إِيمَانٌ",
-        "ar_plain": "ايمان",
-        "translit": "ii'maanun",
-        "en": "belief / faith",
-        "ur": "ایمان"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Form IV: إِفْعَالٌ",
+        "ar": "أَرْسَلَ ← إِرْسَالٌ",
+        "ur": "چوتھی صورت: إِفْعَالٌ"
       },
+      "examples": [
+        {
+          "ar": "أَرْسَلَ",
+          "ar_plain": "أرسل",
+          "translit": "arsala",
+          "en": "he sent",
+          "ur": "اس نے بھیجا"
+        },
+        {
+          "ar": "إِرْسَالٌ",
+          "ar_plain": "إرسال",
+          "translit": "irsālun",
+          "en": "sending",
+          "ur": "بھیجنا"
+        }
+      ],
       "explanation": {
-        "en": "إِيمَانٌ is the مصدر of آمَنَ (Form IV, 'to believe'), root أ-م-ن. The related verb opens Al-Baqarah 2:3: يُؤْمِنُونَ بِالْغَيْبِ — 'they believe in the unseen'.",
-        "ur": "إِيمَانٌ، آمَنَ (باب چہارم، 'ایمان لانا') کا مصدر ہے، مادہ أ-م-ن۔ اس سے متعلق فعل البقرہ 2:3 کے شروع میں ہے: يُؤْمِنُونَ بِالْغَيْبِ — 'وہ غیب پر ایمان لاتے ہیں'۔"
+        "en": "The opening أَ becomes إِ, and a long ā comes before the last letter: إِرْسَالٌ.",
+        "ur": "شروع کا أَ إِ بن جاتا ہے، اور آخری حرف سے پہلے لمبا ā آتا ہے: إِرْسَالٌ۔"
       }
     },
     {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "مصدر in construction: مصدر + ال + noun",
-        "ur": "مصدر کی ساخت: مصدر + ال + اسم"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Form IV: إِفْعَالٌ",
+        "ar": "آمَنَ ← إِيمَانٌ",
+        "ur": "چوتھی صورت: إِفْعَالٌ"
       },
-      "body": {
-        "en": "When a مصدر takes ال and a noun, it means 'the [action] of the [noun].' تَوْحِيدُ اللَّهِ = 'the making-Allah-one = affirming Allah's oneness.' إِيمَانٌ بِاللَّهِ = 'belief in Allah.'",
-        "ur": "جب مصدر ال اور اسم لیتا ہے، اس کا مطلب '[اسم] کا [فعل]' ہوتا ہے۔ تَوْحِيدُ اللَّهِ = 'اللہ کو ایک بنانا'۔ إِيمَانٌ بِاللَّهِ = 'اللہ پر ایمان'۔"
+      "examples": [
+        {
+          "ar": "آمَنَ",
+          "ar_plain": "آمن",
+          "translit": "āmana",
+          "en": "he believed",
+          "ur": "وہ ایمان لایا"
+        },
+        {
+          "ar": "إِيمَانٌ",
+          "ar_plain": "إيمان",
+          "translit": "īmānun",
+          "en": "faith, belief",
+          "ur": "ایمان"
+        }
+      ],
+      "explanation": {
+        "en": "The same pattern, with a long ī at the start: آمَنَ ← إِيمَانٌ. Here it means belief.",
+        "ur": "وہی وزن، شروع میں لمبا ī کے ساتھ: آمَنَ ← إِيمَانٌ۔ یہاں اس کا مطلب ایمان ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "ذِكْرٌ",
-        "ar_plain": "ذكر",
-        "translit": "dhikrun",
-        "en": "remembrance",
-        "ur": "یاد"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "A clue, not a guarantee",
+        "ar": "نَمَطٌ لَا قَاعِدَةٌ",
+        "ur": "اشارہ، ضمانت نہیں"
       },
       "explanation": {
-        "en": "ذِكْرٌ is the مصدر of ذَكَرَ (Form I, 'to remember'). It appears in the Quran constantly: الَّذِينَ يَذْكُرُونَ اللَّهَ قِيَامًا وَقُعُودًا — 'those who remember Allah standing and sitting.'",
-        "ur": "ذِكْرٌ ذَكَرَ (پہلی شکل، 'یاد کرنا') کا مصدر ہے۔ یہ قرآن میں بار بار آیا ہے: الَّذِينَ يَذْكُرُونَ اللَّهَ قِيَامًا وَقُعُودًا — 'جو لوگ کھڑے ہو کر اور بیٹھ کر اللہ کو یاد کرتے ہیں'۔"
+        "en": "These patterns are common and help you recognise a maṣdar. They are not exception-free: learn the four pairs, and check any new verb in a dictionary.",
+        "ur": "یہ اوزان عام ہیں اور مصدر پہچاننے میں مدد دیتے ہیں۔ ان میں کوئی استثنا نہ ہو ایسا نہیں: یہ چار جوڑیاں سیکھیں، اور نیا فعل لغت میں دیکھیں۔"
       }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Quraysh 106:1 — a preview for Chapter 39",
+        "ar": "لِإِيلَافِ قُرَيْشٍ",
+        "ur": "قریش 106:1 — باب 39 کی جھلک"
+      },
+      "explanation": {
+        "en": "إِيلَافٌ is also a Form IV maṣdar, with the same إِفْعَالٌ shape. You will read this surah in Chapter 39; it is not tested here.",
+        "ur": "إِيلَافٌ بھی چوتھی صورت کا مصدر ہے، اسی إِفْعَالٌ شکل کے ساتھ۔ آپ یہ سورت باب 39 میں پڑھیں گے؛ یہاں اس کا امتحان نہیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/106001.mp3"
     }
   ],
   "exercises": [
@@ -114,350 +183,366 @@
       "type": "TAP_TRANSLATION",
       "id": "ch36-l03-ex01",
       "prompt": {
-        "ar": "تَوْحِيدُ اللَّهِ",
-        "ar_plain": "توحيد الله",
-        "translit": "tawhiidu Allahi",
-        "en": "the oneness of Allah",
-        "ur": "اللہ کی توحید"
+        "ar": "تَعْلِيمٌ",
+        "ar_plain": "تعليم",
+        "translit": "taʿlīmun",
+        "en": "teaching",
+        "ur": "سکھانا"
       },
       "options": [
         {
-          "en": "the oneness of Allah",
-          "ur": "اللہ کی توحید"
+          "en": "teaching",
+          "ur": "سکھانا"
         },
         {
-          "en": "the remembrance of Allah",
-          "ur": "اللہ کی یاد"
+          "en": "sending",
+          "ur": "بھیجنا"
         },
         {
-          "en": "the belief of Allah",
-          "ur": "اللہ کا ایمان"
+          "en": "belief",
+          "ur": "ایمان"
         },
         {
-          "en": "the glorification of Allah",
-          "ur": "اللہ کی تسبیح"
+          "en": "glorifying",
+          "ur": "تسبیح کرنا"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "تَوْحِيدٌ comes from the root و-ح-د (one). تَوْحِيدُ اللَّهِ = affirming Allah's oneness.",
-        "ur": "تَوْحِيدٌ مادہ و-ح-د (ایک) سے ہے۔ تَوْحِيدُ اللَّهِ = اللہ کی وحدت کا اعتراف۔"
+        "en": "تَعْلِيمٌ is the maṣdar of عَلَّمَ: teaching.",
+        "ur": "تَعْلِيمٌ عَلَّمَ کا مصدر ہے: سکھانا۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch36-l03-ex02",
-      "statement": {
-        "en": "إِخْلَاصٌ means 'sincerity' and comes from a Form IV verb.",
-        "ur": "إِخْلَاصٌ کا مطلب 'خلوص' ہے اور یہ چوتھی شکل کے فعل سے ہے۔",
-        "ar_example": {
-          "ar": "أَخْلَصَ — إِخْلَاصٌ",
-          "ar_plain": "اخلص — اخلاص",
-          "translit": "akhlasa — ikhlaasun",
-          "en": "he was sincere — sincerity",
-          "ur": "وہ خلیص ہوا — خلوص"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
       "type": "FILL_BLANK",
-      "id": "ch36-l03-ex03",
+      "id": "ch36-l03-ex02",
       "mode": "TAP",
-      "sentence_ar": "الْمُسْلِمُ يَعْمَلُ بِإِخْلَاصٍ وَ ___",
+      "sentence_ar": "عَلَّمَ ← ___",
       "hint": {
-        "en": "The Muslim works with sincerity and faith.",
-        "ur": "مسلمان خلوص اور ایمان کے ساتھ کام کرتا ہے۔"
+        "en": "he taught ← teaching",
+        "ur": "اس نے سکھایا ← سکھانا"
       },
       "options": [
         {
-          "ar": "إِيمَانٍ",
-          "ar_plain": "ايمان",
-          "translit": "ii'maanin",
-          "en": "faith",
+          "ar": "إِرْسَالٌ",
+          "ar_plain": "إرسال",
+          "translit": "irsālun",
+          "en": "sending",
+          "ur": "بھیجنا"
+        },
+        {
+          "ar": "تَسْبِيحٌ",
+          "ar_plain": "تسبيح",
+          "translit": "tasbīḥun",
+          "en": "glorifying",
+          "ur": "تسبیح کرنا"
+        },
+        {
+          "ar": "إِيمَانٌ",
+          "ar_plain": "إيمان",
+          "translit": "īmānun",
+          "en": "belief",
           "ur": "ایمان"
         },
         {
-          "ar": "تَوْحِيدٍ",
-          "ar_plain": "توحيد",
-          "translit": "tawhiidin",
-          "en": "oneness",
-          "ur": "توحید"
-        },
-        {
-          "ar": "ذِكْرٍ",
-          "ar_plain": "ذكر",
-          "translit": "dhikrin",
-          "en": "remembrance",
-          "ur": "یاد"
-        },
-        {
-          "ar": "عِلْمٍ",
-          "ar_plain": "علم",
-          "translit": "ilmin",
-          "en": "knowledge",
-          "ur": "علم"
+          "ar": "تَعْلِيمٌ",
+          "ar_plain": "تعليم",
+          "translit": "taʿlīmun",
+          "en": "teaching",
+          "ur": "سکھانا"
         }
       ],
       "correct_answer": {
-        "ar": "إِيمَانٍ",
-        "ar_plain": "ايمان",
-        "translit": "ii'maanin",
-        "en": "faith",
-        "ur": "ایمان"
+        "ar": "تَعْلِيمٌ",
+        "ar_plain": "تعليم",
+        "translit": "taʿlīmun",
+        "en": "teaching",
+        "ur": "سکھانا"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "عَلَّمَ ← تَعْلِيمٌ.",
+        "ur": "عَلَّمَ ← تَعْلِيمٌ۔"
+      }
     },
     {
-      "type": "MATCHING",
+      "type": "TAP_TRANSLATION",
+      "id": "ch36-l03-ex03",
+      "prompt": {
+        "ar": "إِرْسَالٌ",
+        "ar_plain": "إرسال",
+        "translit": "irsālun",
+        "en": "sending",
+        "ur": "بھیجنا"
+      },
+      "options": [
+        {
+          "en": "he sent",
+          "ur": "اس نے بھیجا"
+        },
+        {
+          "en": "sending",
+          "ur": "بھیجنا"
+        },
+        {
+          "en": "a messenger",
+          "ur": "پیغمبر"
+        },
+        {
+          "en": "teaching",
+          "ur": "سکھانا"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "إِرْسَالٌ is the maṣdar of أَرْسَلَ: sending.",
+        "ur": "إِرْسَالٌ أَرْسَلَ کا مصدر ہے: بھیجنا۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
       "id": "ch36-l03-ex04",
-      "left_column": [
+      "mode": "TAP",
+      "sentence_ar": "آمَنَ ← ___",
+      "hint": {
+        "en": "he believed ← belief",
+        "ur": "وہ ایمان لایا ← ایمان"
+      },
+      "options": [
         {
           "ar": "إِيمَانٌ",
-          "ar_plain": "ايمان",
-          "translit": "ii'maanun",
-          "en": "faith",
+          "ar_plain": "إيمان",
+          "translit": "īmānun",
+          "en": "belief",
           "ur": "ایمان"
         },
         {
-          "ar": "إِخْلَاصٌ",
-          "ar_plain": "اخلاص",
-          "translit": "ikhlaasun",
-          "en": "sincerity",
-          "ur": "خلوص"
+          "ar": "تَعْلِيمٌ",
+          "ar_plain": "تعليم",
+          "translit": "taʿlīmun",
+          "en": "teaching",
+          "ur": "سکھانا"
         },
         {
-          "ar": "ذِكْرٌ",
-          "ar_plain": "ذكر",
-          "translit": "dhikrun",
-          "en": "remembrance",
-          "ur": "یاد"
+          "ar": "إِرْسَالٌ",
+          "ar_plain": "إرسال",
+          "translit": "irsālun",
+          "en": "sending",
+          "ur": "بھیجنا"
         },
         {
-          "ar": "تَوْحِيدٌ",
-          "ar_plain": "توحيد",
-          "translit": "tawhiidun",
-          "en": "oneness",
-          "ur": "توحید"
+          "ar": "تَسْبِيحٌ",
+          "ar_plain": "تسبيح",
+          "translit": "tasbīḥun",
+          "en": "glorifying",
+          "ur": "تسبیح کرنا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "إِيمَانٌ",
+        "ar_plain": "إيمان",
+        "translit": "īmānun",
+        "en": "belief",
+        "ur": "ایمان"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "آمَنَ ← إِيمَانٌ.",
+        "ur": "آمَنَ ← إِيمَانٌ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch36-l03-ex05",
+      "prompt": {
+        "ar": "تَسْبِيحٌ",
+        "ar_plain": "تسبيح",
+        "translit": "tasbīḥun",
+        "en": "glorifying",
+        "ur": "تسبیح کرنا"
+      },
+      "options": [
+        {
+          "en": "he glorified",
+          "ur": "اس نے تسبیح کی"
+        },
+        {
+          "en": "teaching",
+          "ur": "سکھانا"
+        },
+        {
+          "en": "belief",
+          "ur": "ایمان"
+        },
+        {
+          "en": "glorifying",
+          "ur": "تسبیح کرنا"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "تَسْبِيحٌ is the maṣdar of سَبَّحَ.",
+        "ur": "تَسْبِيحٌ سَبَّحَ کا مصدر ہے۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch36-l03-ex06",
+      "left_column": [
+        {
+          "ar": "سَبَّحَ",
+          "ar_plain": "سبح",
+          "translit": "sabbaḥa",
+          "en": "he glorified",
+          "ur": "اس نے تسبیح کی"
+        },
+        {
+          "ar": "عَلَّمَ",
+          "ar_plain": "علم",
+          "translit": "ʿallama",
+          "en": "he taught",
+          "ur": "اس نے سکھایا"
+        },
+        {
+          "ar": "أَرْسَلَ",
+          "ar_plain": "أرسل",
+          "translit": "arsala",
+          "en": "he sent",
+          "ur": "اس نے بھیجا"
+        },
+        {
+          "ar": "آمَنَ",
+          "ar_plain": "آمن",
+          "translit": "āmana",
+          "en": "he believed",
+          "ur": "وہ ایمان لایا"
         }
       ],
       "right_column": [
         {
-          "en": "sincerity",
-          "ur": "خلوص"
+          "en": "sending",
+          "ur": "بھیجنا"
         },
         {
-          "en": "faith",
+          "en": "belief",
           "ur": "ایمان"
         },
         {
-          "en": "oneness",
-          "ur": "توحید"
+          "en": "glorifying",
+          "ur": "تسبیح کرنا"
         },
         {
-          "en": "remembrance",
-          "ur": "یاد"
+          "en": "teaching",
+          "ur": "سکھانا"
         }
       ],
       "correct_pairs": [
         [
           0,
-          1
+          2
         ],
         [
           1,
-          0
-        ],
-        [
-          2,
           3
         ],
         [
+          2,
+          0
+        ],
+        [
           3,
-          2
+          1
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch36-l03-ex05",
-      "target_translation": {
-        "en": "Faith in Allah is the foundation.",
-        "ur": "اللہ پر ایمان بنیاد ہے۔"
-      },
-      "tiles": [
-        {
-          "ar": "إِيمَانٌ",
-          "ar_plain": "ايمان",
-          "translit": "ii'maanun",
-          "en": "faith",
-          "ur": "ایمان"
-        },
-        {
-          "ar": "بِاللَّهِ",
-          "ar_plain": "بالله",
-          "translit": "bi-Allahi",
-          "en": "in Allah",
-          "ur": "اللہ پر"
-        },
-        {
-          "ar": "هُوَ",
-          "ar_plain": "هو",
-          "translit": "huwa",
-          "en": "it is",
-          "ur": "یہ ہے"
-        },
-        {
-          "ar": "اللَّبِيكَ",
-          "ar_plain": "لبيك",
-          "translit": "labbayka",
-          "en": "at your service",
-          "ur": "حاضر ہوں"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch36-l03-ex06",
-      "prompt": {
-        "ar": "ذِكْرُ اللَّهِ",
-        "ar_plain": "ذكر الله",
-        "translit": "dhikru Allahi",
-        "en": "the remembrance of Allah",
-        "ur": "اللہ کی یاد"
-      },
-      "options": [
-        {
-          "en": "the remembrance of Allah",
-          "ur": "اللہ کی یاد"
-        },
-        {
-          "en": "the knowledge of Allah",
-          "ur": "اللہ کا علم"
-        },
-        {
-          "en": "the faith of Allah",
-          "ur": "اللہ کا ایمان"
-        },
-        {
-          "en": "the glorification of Allah",
-          "ur": "اللہ کی تسبیح"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
+      "xp_value": 2,
       "explanation_on_wrong": {
-        "en": "ذِكْرٌ is the مصدر of ذَكَرَ — 'remembrance.' ذِكْرُ اللَّهِ = 'the remembrance of Allah.'",
-        "ur": "ذِكْرٌ ذَكَرَ کا مصدر ہے — 'یاد'۔ ذِكْرُ اللَّهِ = 'اللہ کی یاد'۔"
+        "en": "Match each verb with its own maṣdar.",
+        "ur": "ہر فعل کو اس کے اپنے مصدر سے ملائیں۔"
       }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch36-l03-ex07",
       "statement": {
-        "en": "The construction مصدر + ال + noun means 'the [action] of the [noun].'",
-        "ur": "ساخت مصدر + ال + اسم کا مطلب 'اسم کا فعل' ہے۔",
-        "ar_example": {
-          "ar": "تَعْلِيمُ الْإِنْسَانِ",
-          "ar_plain": "تعليم الانسي",
-          "translit": "ta'liimu al-insi",
-          "en": "the teaching of the human",
-          "ur": "انسان کو سکھانا"
-        }
+        "en": "تَسْبِيحٌ appears in Al-A'la 87:1, سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى.",
+        "ur": "تَسْبِيحٌ سورۃ الأعلى 87:1 میں آیا ہے: سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى۔"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The verse has the command سَبِّحِ. تَسْبِيحٌ is its related maṣdar and is not in the verse.",
+        "ur": "آیت میں حکم سَبِّحِ ہے۔ تَسْبِيحٌ اس کا متعلقہ مصدر ہے اور آیت میں نہیں۔"
+      }
     },
     {
-      "type": "BUILD_SENTENCE",
+      "type": "TAP_TRANSLATION",
       "id": "ch36-l03-ex08",
-      "target_translation": {
-        "en": "Sincerity in worship is from Allah.",
-        "ur": "عبادت میں خلوص اللہ کی طرف سے ہے۔"
+      "prompt": {
+        "ar": "تَعْلِيمٌ · تَسْبِيحٌ",
+        "ar_plain": "تعليم · تسبيح",
+        "translit": "taʿlīmun · tasbīḥun",
+        "en": "two Form II maṣdars",
+        "ur": "دوسری صورت کے دو مصدر"
       },
-      "tiles": [
+      "options": [
         {
-          "ar": "إِخْلَاصٌ",
-          "ar_plain": "اخلاص",
-          "translit": "ikhlaasun",
-          "en": "sincerity",
-          "ur": "خلوص"
+          "en": "the pattern تَفْعِيلٌ",
+          "ur": "وزن تَفْعِيلٌ"
         },
         {
-          "ar": "فِي",
-          "ar_plain": "في",
-          "translit": "fii",
-          "en": "in",
-          "ur": "میں"
+          "en": "the pattern إِفْعَالٌ",
+          "ur": "وزن إِفْعَالٌ"
         },
         {
-          "ar": "الْعِبَادَةِ",
-          "ar_plain": "العبادة",
-          "translit": "al-ibaadati",
-          "en": "worship",
-          "ur": "عبادت"
+          "en": "the pattern فَاعِلٌ",
+          "ur": "وزن فَاعِلٌ"
         },
         {
-          "ar": "مِنَ",
-          "ar_plain": "من",
-          "translit": "mina",
-          "en": "from",
-          "ur": "سے"
-        },
-        {
-          "ar": "اللَّهِ",
-          "ar_plain": "الله",
-          "translit": "Allahi",
-          "en": "Allah",
-          "ur": "اللہ"
+          "en": "no pattern at all",
+          "ur": "کوئی وزن نہیں"
         }
       ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3,
-        4
-      ],
-      "xp_value": 1
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Both follow تَفْعِيلٌ; إِرْسَالٌ and إِيمَانٌ follow إِفْعَالٌ.",
+        "ur": "دونوں تَفْعِيلٌ پر ہیں؛ إِرْسَالٌ اور إِيمَانٌ إِفْعَالٌ پر ہیں۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "المصدر in Quran — التَّوْحِيد",
-      "ar": "قرآن میں المصدر — التَّوْحِيد",
-      "ur": "قرآن میں المصدر — التَّوْحِيد"
+      "en": "Verb and maṣdar, one pair at a time",
+      "ar": "تَسْبِيحٌ · تَعْلِيمٌ · إِرْسَالٌ · إِيمَانٌ",
+      "ur": "فعل اور مصدر، ایک ایک جوڑی"
     },
     "ayah": {
       "surah": 87,
       "ayah": 1,
       "label": "Al-A'la 87:1",
-      "ar": "سَبِّحْ اسْمَ رَبِّكَ الْأَعْلَى",
-      "en": "Glorify the name of your Lord, the Most High.",
-      "ur": "اپنے بلند ترین رب کا نام تسبیح کرو۔",
+      "ar": "سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى",
+      "en": "Glorify the name of your Lord, the Most High,",
+      "ur": "اپنے بلند ترین رب کے نام کی تسبیح کرو،",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087001.mp3"
     },
     "highlighted_word_indices": [
       0
     ],
+    "highlighted_words": [
+      "سَبِّحِ"
+    ],
     "noor_explanation": {
-      "en": "سَبِّحْ — the command to glorify — has the مصدر تَسْبِيحٌ. Key words like إِيمَانٌ, إِخْلَاصٌ, تَوْحِيدٌ and ذِكْرٌ are all مصادر: each names an action.",
-      "ur": "سَبِّحْ — تسبیح کا حکم — کا مصدر تَسْبِيحٌ ہے۔ إِيمَانٌ، إِخْلَاصٌ، تَوْحِيدٌ اور ذِكْرٌ جیسے بنیادی الفاظ سب مصادر ہیں: ہر ایک کسی کام کا نام ہے۔"
+      "en": "سَبِّحِ is the command from the pair سَبَّحَ / تَسْبِيحٌ. The ayah quotes the command; the maṣdar is its related noun.",
+      "ur": "سَبِّحِ جوڑی سَبَّحَ / تَسْبِيحٌ سے حکم ہے۔ آیت حکم نقل کرتی ہے؛ مصدر اس کا متعلقہ اسم ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Five مصادر: إِيمَانٌ (faith, from آمَنَ), إِخْلَاصٌ (sincerity, from أَخْلَصَ), تَوْحِيدٌ (affirming oneness, from وَحَّدَ), ذِكْرٌ (remembrance, from ذَكَرَ), تَسْبِيحٌ (glorification, from سَبَّحَ).",
-      "ur": "پانچ مصادر: إِيمَانٌ (ایمان، آمَنَ سے)، إِخْلَاصٌ (اخلاص، أَخْلَصَ سے)، تَوْحِيدٌ (توحید، وَحَّدَ سے)، ذِكْرٌ (ذکر، ذَكَرَ سے)، تَسْبِيحٌ (تسبیح، سَبَّحَ سے)۔"
+      "en": "Four pairs, two patterns. Next: the maṣdar working as a noun.",
+      "ur": "چار جوڑیاں، دو اوزان۔ آگے: مصدر اسم کے طور پر۔"
     }
   }
 }

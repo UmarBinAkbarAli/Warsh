@@ -1,0 +1,440 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 39, review (ch39-l06, new, display order 6). Added 2026-10-03 in the proposal harvest, batch 3 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-39-content-proposal.md and its review amendments. Two distinct instances for each of the six checkpoint strands: 106:1, 106:2, 106:3, 106:4, two whole-reading evidence decisions, and the two narrow retrievals (the season nouns are two singular nouns joined by وَ, not a dual; the referent of ـهُمْ). Only words from 106:1–4; no new vocabulary, route history or finer parsing. Lessons 1–5 were already corrected (only words from 106:1–4, qāfila marked as outside the surah, آمَنَهُمْ with the local sense, إِيلَاف's renderings attributed); two over-teaching lines about the lām of command were softened to a supplied chunk, because that form is Chapter 68's.",
+    "title": "Chapter 39 Review",
+    "titleAr": "مُرَاجَعَةُ الْفَصْلِ التَّاسِعِ وَالثَّلَاثِينَ",
+    "titleUr": "باب 39 کی دہرائی",
+    "chapter_order": 39,
+    "lesson_order": 6,
+    "estimated_minutes": 12,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 106,
+      "ayah": 1,
+      "label": "Quraysh 106:1",
+      "ar": "لِإِيلَافِ قُرَيْشٍ",
+      "en": "For the accustomed security of Quraysh —",
+      "ur": "قریش کو مانوس رکھنے کی وجہ سے —",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/106001.mp3"
+    },
+    "noor_intro": {
+      "en": "Review: Surah Quraysh, ayah by ayah.",
+      "ur": "دہرائی: سورۃ قریش، آیت بہ آیت۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Surah Quraysh at a glance",
+        "ar": "سُورَةُ قُرَيْشٍ",
+        "ur": "سورۃ قریش ایک نظر میں"
+      },
+      "explanation": {
+        "en": "1) لِإِيلَافِ قُرَيْشٍ 2) إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ 3) فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ 4) الَّذِي أَطْعَمَهُمْ مِنْ جُوعٍ وَآمَنَهُمْ مِنْ خَوْفٍ.",
+        "ur": "1) لِإِيلَافِ قُرَيْشٍ 2) إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ 3) فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ 4) الَّذِي أَطْعَمَهُمْ مِنْ جُوعٍ وَآمَنَهُمْ مِنْ خَوْفٍ۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "رَبَّ هَٰذَا الْبَيْتِ",
+        "ar_plain": "رب هذا البيت",
+        "translit": "rabba hādhā l-bayti",
+        "en": "the Lord of this House",
+        "ur": "اس گھر کا رب"
+      },
+      "explanation": {
+        "en": "The Lord of this House is the one who fed them and made them safe: الَّذِي in ayah 4 points back to him.",
+        "ur": "اس گھر کا رب وہی ہے جس نے انہیں کھلایا اور امن دیا: آیت 4 کا الَّذِي اسی کی طرف لوٹتا ہے۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch39-l06-ex01",
+      "prompt": {
+        "ar": "لِإِيلَافِ قُرَيْشٍ",
+        "ar_plain": "لإيلاف قريش",
+        "translit": "li-īlāfi quraysh",
+        "en": "For the accustomed security of Quraysh",
+        "ur": "قریش کو مانوس رکھنے کی وجہ سے"
+      },
+      "options": [
+        {
+          "en": "For the accustomed security of Quraysh",
+          "ur": "قریش کو مانوس رکھنے کی وجہ سے"
+        },
+        {
+          "en": "So let Quraysh worship",
+          "ur": "تو قریش عبادت کریں"
+        },
+        {
+          "en": "Quraysh went out in winter",
+          "ur": "قریش سردی میں نکلے"
+        },
+        {
+          "en": "Quraysh feared hunger",
+          "ur": "قریش بھوک سے ڈرے"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لِإِيلَافِ قُرَيْشٍ opens the surah. Translations of إِيلَاف vary; this course uses 'accustomed security'.",
+        "ur": "لِإِيلَافِ قُرَيْشٍ سورت کا آغاز ہے۔ إِيلَاف کے ترجمے مختلف ہیں؛ اس کورس میں 'مانوس رکھنا' لیا گیا ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch39-l06-ex02",
+      "mode": "TAP",
+      "sentence_ar": "لِإِيلَافِ ___",
+      "hint": {
+        "en": "For the accustomed security of Quraysh",
+        "ur": "قریش کو مانوس رکھنے کی وجہ سے"
+      },
+      "options": [
+        {
+          "ar": "رِحْلَةَ",
+          "ar_plain": "رحلة",
+          "translit": "riḥlata",
+          "en": "journey",
+          "ur": "سفر"
+        },
+        {
+          "ar": "الْبَيْتِ",
+          "ar_plain": "البيت",
+          "translit": "al-bayti",
+          "en": "the House",
+          "ur": "گھر"
+        },
+        {
+          "ar": "جُوعٍ",
+          "ar_plain": "جوع",
+          "translit": "jūʿin",
+          "en": "hunger",
+          "ur": "بھوک"
+        },
+        {
+          "ar": "قُرَيْشٍ",
+          "ar_plain": "قريش",
+          "translit": "quraysh",
+          "en": "Quraysh",
+          "ur": "قریش"
+        }
+      ],
+      "correct_answer": {
+        "ar": "قُرَيْشٍ",
+        "ar_plain": "قريش",
+        "translit": "quraysh",
+        "en": "Quraysh",
+        "ur": "قریش"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Quraysh: the people named in the first ayah.",
+        "ur": "قریش: وہ لوگ جن کا نام پہلی آیت میں ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch39-l06-ex03",
+      "prompt": {
+        "ar": "رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ",
+        "ar_plain": "رحلة الشتاء والصيف",
+        "translit": "riḥlata sh-shitāʾi wa-ṣ-ṣayfi",
+        "en": "the journey of winter and summer",
+        "ur": "سردی اور گرمی کا سفر"
+      },
+      "options": [
+        {
+          "en": "the winter of the House",
+          "ur": "گھر کی سردی"
+        },
+        {
+          "en": "the summer of hunger",
+          "ur": "بھوک کی گرمی"
+        },
+        {
+          "en": "the journey of winter and summer",
+          "ur": "سردی اور گرمی کا سفر"
+        },
+        {
+          "en": "the Lord of winter and summer",
+          "ur": "سردی اور گرمی کا رب"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "رِحْلَةَ: journey; الشِّتَاءِ: winter; الصَّيْفِ: summer.",
+        "ur": "رِحْلَةَ: سفر؛ الشِّتَاءِ: سردی؛ الصَّيْفِ: گرمی۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch39-l06-ex04",
+      "left_column": [
+        {
+          "ar": "الشِّتَاءِ",
+          "ar_plain": "الشتاء",
+          "translit": "ash-shitāʾi",
+          "en": "winter",
+          "ur": "سردی"
+        },
+        {
+          "ar": "الصَّيْفِ",
+          "ar_plain": "الصيف",
+          "translit": "aṣ-ṣayfi",
+          "en": "summer",
+          "ur": "گرمی"
+        },
+        {
+          "ar": "رِحْلَةَ",
+          "ar_plain": "رحلة",
+          "translit": "riḥlata",
+          "en": "journey",
+          "ur": "سفر"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "summer",
+          "ur": "گرمی"
+        },
+        {
+          "en": "journey",
+          "ur": "سفر"
+        },
+        {
+          "en": "winter",
+          "ur": "سردی"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "Winter, summer and the journey of 106:2.",
+        "ur": "106:2 کی سردی، گرمی اور سفر۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch39-l06-ex05",
+      "mode": "TAP",
+      "sentence_ar": "فَلْيَعْبُدُوا ___ هَٰذَا الْبَيْتِ",
+      "hint": {
+        "en": "so let them worship the Lord of this House",
+        "ur": "تو وہ اس گھر کے رب کی عبادت کریں"
+      },
+      "options": [
+        {
+          "ar": "رَبَّ",
+          "ar_plain": "رب",
+          "translit": "rabba",
+          "en": "Lord",
+          "ur": "رب"
+        },
+        {
+          "ar": "جُوعٍ",
+          "ar_plain": "جوع",
+          "translit": "jūʿin",
+          "en": "hunger",
+          "ur": "بھوک"
+        },
+        {
+          "ar": "خَوْفٍ",
+          "ar_plain": "خوف",
+          "translit": "khawfin",
+          "en": "fear",
+          "ur": "خوف"
+        },
+        {
+          "ar": "الشِّتَاءِ",
+          "ar_plain": "الشتاء",
+          "translit": "ash-shitāʾi",
+          "en": "winter",
+          "ur": "سردی"
+        }
+      ],
+      "correct_answer": {
+        "ar": "رَبَّ",
+        "ar_plain": "رب",
+        "translit": "rabba",
+        "en": "Lord",
+        "ur": "رب"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "رَبَّ هَٰذَا الْبَيْتِ: the Lord of this House.",
+        "ur": "رَبَّ هَٰذَا الْبَيْتِ: اس گھر کا رب۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch39-l06-ex06",
+      "statement": {
+        "en": "فَلْيَعْبُدُوا is a command: 'so let them worship'.",
+        "ur": "فَلْيَعْبُدُوا ایک حکم ہے: 'تو وہ عبادت کریں'۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Correct. Here it is learned as a whole phrase.",
+        "ur": "درست۔ یہاں اسے پورے ٹکڑے کے طور پر سیکھا گیا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch39-l06-ex07",
+      "prompt": {
+        "ar": "أَطْعَمَهُمْ مِنْ جُوعٍ",
+        "ar_plain": "أطعمهم من جوع",
+        "translit": "aṭʿamahum min jūʿin",
+        "en": "He fed them against hunger",
+        "ur": "اس نے انہیں بھوک میں کھلایا"
+      },
+      "options": [
+        {
+          "en": "He fed them against hunger",
+          "ur": "اس نے انہیں بھوک میں کھلایا"
+        },
+        {
+          "en": "He made them safe from fear",
+          "ur": "اس نے انہیں خوف سے امن دیا"
+        },
+        {
+          "en": "They fed Him against hunger",
+          "ur": "انہوں نے اسے بھوک میں کھلایا"
+        },
+        {
+          "en": "He fed the House",
+          "ur": "اس نے گھر کو کھلایا"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَطْعَمَ + هُمْ: He fed them; مِنْ جُوعٍ: against hunger.",
+        "ur": "أَطْعَمَ + هُمْ: اس نے انہیں کھلایا؛ مِنْ جُوعٍ: بھوک میں۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch39-l06-ex08",
+      "statement": {
+        "en": "In وَآمَنَهُمْ مِنْ خَوْفٍ the verb means 'they believed'.",
+        "ur": "وَآمَنَهُمْ مِنْ خَوْفٍ میں فعل کا مطلب 'وہ ایمان لائے' ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Here it is 'He made them safe from fear'. The context, with مِنْ خَوْفٍ, decides the sense.",
+        "ur": "یہاں مطلب ہے 'اس نے انہیں خوف سے امن دیا'۔ مِنْ خَوْفٍ کے ساتھ سیاق معنی طے کرتا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch39-l06-ex09",
+      "statement": {
+        "en": "Ayat 3 and 4 together: the one who fed them and made them safe is the Lord of this House.",
+        "ur": "آیات 3 اور 4 مل کر: جس نے انہیں کھلایا اور امن دیا وہ اس گھر کا رب ہے۔",
+        "ar_example": {
+          "ar": "فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ ۝ الَّذِي أَطْعَمَهُمْ مِنْ جُوعٍ وَآمَنَهُمْ مِنْ خَوْفٍ",
+          "ar_plain": "فليعبدوا رب هذا البيت ۝ الذي أطعمهم من جوع وآمنهم من خوف",
+          "translit": "falyaʿbudū rabba hādhā l-bayti ۝ alladhī aṭʿamahum min jūʿin wa-āmanahum min khawfin",
+          "en": "So let them worship the Lord of this House, who fed them against hunger and made them safe from fear.",
+          "ur": "تو وہ اس گھر کے رب کی عبادت کریں، جس نے انہیں بھوک میں کھلایا اور خوف سے امن دیا۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الَّذِي in ayah 4 points back to رَبَّ هَٰذَا الْبَيْتِ in ayah 3.",
+        "ur": "آیت 4 کا الَّذِي آیت 3 کے رَبَّ هَٰذَا الْبَيْتِ کی طرف لوٹتا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch39-l06-ex10",
+      "statement": {
+        "en": "The surah tells them to make the winter and summer journeys.",
+        "ur": "سورت انہیں سردی اور گرمی کے سفر کرنے کا حکم دیتی ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The journeys are described in ayah 2. The command, in ayah 3, is to worship the Lord of this House.",
+        "ur": "سفر آیت 2 میں بیان ہوئے ہیں۔ حکم، آیت 3 میں، اس گھر کے رب کی عبادت کا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch39-l06-ex11",
+      "statement": {
+        "en": "الشِّتَاءِ وَالصَّيْفِ is one dual noun.",
+        "ur": "الشِّتَاءِ وَالصَّيْفِ ایک مثنی اسم ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Two singular nouns joined by وَ — a dual is one word ending in ـَانِ or ـَيْنِ (Chapter 38).",
+        "ur": "وَ سے جڑے دو واحد اسم — مثنی ایک لفظ ہوتا ہے جو ـَانِ یا ـَيْنِ پر ختم ہو (باب 38)۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Surah Quraysh",
+      "ar": "سُورَةُ قُرَيْشٍ",
+      "ur": "سورۃ قریش"
+    },
+    "ayah": {
+      "surah": 106,
+      "ayah": 1,
+      "label": "Quraysh 106:1",
+      "ar": "لِإِيلَافِ قُرَيْشٍ",
+      "en": "For the accustomed security of Quraysh —",
+      "ur": "قریش کو مانوس رکھنے کی وجہ سے —",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/106001.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "لِإِيلَافِ",
+      "قُرَيْشٍ"
+    ],
+    "noor_explanation": {
+      "en": "You can read the four ayat in order and follow how they connect: the journeys, the worship, the food and the safety.",
+      "ur": "آپ چاروں آیات کو ترتیب سے پڑھ سکتے ہیں اور سمجھ سکتے ہیں کہ وہ کیسے جڑتی ہیں: سفر، عبادت، کھانا اور امن۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Review done. Next: the chapter test.",
+      "ur": "دہرائی مکمل۔ آگے: باب کا امتحان۔"
+    }
+  }
+}

@@ -1,0 +1,557 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 40, review (ch40-l07, new, display order 9). Added 2026-10-03 in the proposal harvest, batch 3 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-40-content-proposal.md and its review amendments. Two adjective, two construct, two prepositional-phrase, three group-relative, two Quran-layer decisions and one combined sentence, all different instances from the final test. No dual relatives, no resumptive-pronoun analysis.",
+    "title": "Chapter 40 Review",
+    "titleAr": "مُرَاجَعَةُ الْفَصْلِ الْأَرْبَعِينَ",
+    "titleUr": "باب 40 کی دہرائی",
+    "chapter_order": 40,
+    "lesson_order": 9,
+    "estimated_minutes": 12,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 87,
+      "ayah": 1,
+      "label": "Al-A'la 87:1",
+      "ar": "سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى",
+      "en": "Glorify the name of your Lord, the Most High,",
+      "ur": "اپنے بلند ترین رب کے نام کی تسبیح کرو،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087001.mp3"
+    },
+    "noor_intro": {
+      "en": "Review: longer descriptions.",
+      "ur": "دہرائی: لمبی وضاحتیں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 40 at a glance",
+        "ar": "الْأَوْصَافُ",
+        "ur": "باب 40 ایک نظر میں"
+      },
+      "explanation": {
+        "en": "Adjectives match the noun. كِتَابُ هَذَا الطَّالِبِ: possessed noun + 'this student'. A prepositional phrase after a definite noun is the statement; after an indefinite noun it describes. Groups: الَّذِينَ, اللَّاتِي, الَّتِي.",
+        "ur": "صفات اسم کے ساتھ ملتی ہیں۔ كِتَابُ هَذَا الطَّالِبِ: مضاف + 'یہ طالب علم'۔ معرفہ اسم کے بعد حرفِ جر والا ٹکڑا جملہ ہے؛ نکرہ کے بعد وضاحت۔ گروہ: الَّذِينَ، اللَّاتِي، الَّتِي۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "الطُّلَّابُ الَّذِينَ يَكْتُبُونَ فِي الْفَصْلِ",
+        "ar_plain": "الطلاب الذين يكتبون في الفصل",
+        "translit": "aṭ-ṭullābu lladhīna yaktubūna fī l-faṣli",
+        "en": "the students who write in the classroom",
+        "ur": "وہ طالب علم جو کلاس میں لکھتے ہیں"
+      },
+      "explanation": {
+        "en": "A group relative with a clause that carries its own prepositional phrase.",
+        "ur": "گروہ والا اسم موصول، ایسے جملے کے ساتھ جس میں اپنا حرفِ جر والا ٹکڑا ہے۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "FILL_BLANK",
+      "id": "ch40-l07-ex01",
+      "mode": "TAP",
+      "sentence_ar": "الطَّالِبَةُ الْمُجْتَهِدَةُ ___",
+      "hint": {
+        "en": "the diligent, noble student (f.)",
+        "ur": "محنتی، شریف طالبہ"
+      },
+      "options": [
+        {
+          "ar": "الْكَرِيمُ",
+          "ar_plain": "الكريم",
+          "translit": "al-karīmu",
+          "en": "the noble (m.)",
+          "ur": "شریف (مذکر)"
+        },
+        {
+          "ar": "الْكَرِيمَةُ",
+          "ar_plain": "الكريمة",
+          "translit": "al-karīmatu",
+          "en": "the noble (f.)",
+          "ur": "شریف (مؤنث)"
+        },
+        {
+          "ar": "كَرِيمٌ",
+          "ar_plain": "كريم",
+          "translit": "karīmun",
+          "en": "a noble (m.)",
+          "ur": "ایک شریف (مذکر)"
+        },
+        {
+          "ar": "الْكَرِيمَانِ",
+          "ar_plain": "الكريمان",
+          "translit": "al-karīmāni",
+          "en": "the two noble",
+          "ur": "دو شریف"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الْكَرِيمَةُ",
+        "ar_plain": "الكريمة",
+        "translit": "al-karīmatu",
+        "en": "the noble (f.)",
+        "ur": "شریف (مؤنث)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The adjective matches: feminine, definite, singular.",
+        "ur": "صفت ملتی ہے: مؤنث، معرفہ، واحد۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch40-l07-ex02",
+      "prompt": {
+        "ar": "الطَّالِبُ الْمُجْتَهِدُ الْكَرِيمُ",
+        "ar_plain": "الطالب المجتهد الكريم",
+        "translit": "aṭ-ṭālibu l-mujtahidu l-karīmu",
+        "en": "the diligent, noble student",
+        "ur": "محنتی، شریف طالب علم"
+      },
+      "options": [
+        {
+          "en": "the diligent, noble student",
+          "ur": "محنتی، شریف طالب علم"
+        },
+        {
+          "en": "the two diligent students",
+          "ur": "دو محنتی طالب علم"
+        },
+        {
+          "en": "the diligent students (f.)",
+          "ur": "محنتی طالبات"
+        },
+        {
+          "en": "a noble teacher",
+          "ur": "ایک شریف استاد"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A noun and two matching adjectives.",
+        "ur": "ایک اسم اور دو ملتی ہوئی صفات۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch40-l07-ex03",
+      "prompt": {
+        "ar": "كِتَابُ هَذَا الطَّالِبِ",
+        "ar_plain": "كتاب هذا الطالب",
+        "translit": "kitābu hādhā ṭ-ṭālibi",
+        "en": "the book of this student",
+        "ur": "اس طالب علم کی کتاب"
+      },
+      "options": [
+        {
+          "en": "this book of the student",
+          "ur": "طالب علم کی یہ کتاب"
+        },
+        {
+          "en": "the book of this student",
+          "ur": "اس طالب علم کی کتاب"
+        },
+        {
+          "en": "the student of this book",
+          "ur": "اس کتاب کا طالب علم"
+        },
+        {
+          "en": "the student wrote this",
+          "ur": "طالب علم نے یہ لکھا"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كِتَابُ is the possessed noun; هَذَا الطَّالِبِ is the possessor phrase.",
+        "ur": "كِتَابُ مضاف ہے؛ هَذَا الطَّالِبِ مضاف الیہ کا ٹکڑا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch40-l07-ex04",
+      "prompt": {
+        "ar": "اسْمُ هَذِهِ الْمَدِينَةِ الْجَمِيلَةِ",
+        "ar_plain": "اسم هذه المدينة الجميلة",
+        "translit": "ismu hādhihi l-madīnati l-jamīlati",
+        "en": "the name of this beautiful city",
+        "ur": "اس خوبصورت شہر کا نام"
+      },
+      "options": [
+        {
+          "en": "the name of this beautiful city",
+          "ur": "اس خوبصورت شہر کا نام"
+        },
+        {
+          "en": "this beautiful name of the city",
+          "ur": "شہر کا یہ خوبصورت نام"
+        },
+        {
+          "en": "the city of this beautiful name",
+          "ur": "اس خوبصورت نام کا شہر"
+        },
+        {
+          "en": "the beautiful city's names",
+          "ur": "خوبصورت شہر کے نام"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْجَمِيلَةِ describes الْمَدِينَةِ: both feminine and genitive.",
+        "ur": "الْجَمِيلَةِ الْمَدِينَةِ کی صفت ہے: دونوں مؤنث اور مجرور۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch40-l07-ex05",
+      "prompt": {
+        "ar": "طَالِبٌ فِي الْفَصْلِ",
+        "ar_plain": "طالب في الفصل",
+        "translit": "ṭālibun fī l-faṣli",
+        "en": "a student in the classroom",
+        "ur": "کلاس میں ایک طالب علم"
+      },
+      "options": [
+        {
+          "en": "The student is in the classroom.",
+          "ur": "طالب علم کلاس میں ہے۔"
+        },
+        {
+          "en": "the classroom of a student",
+          "ur": "ایک طالب علم کی کلاس"
+        },
+        {
+          "en": "a student in the classroom",
+          "ur": "کلاس میں ایک طالب علم"
+        },
+        {
+          "en": "The classroom is in the student.",
+          "ur": "کلاس طالب علم میں ہے۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "An indefinite noun + the phrase: a description, not a sentence.",
+        "ur": "نکرہ اسم + ٹکڑا: وضاحت، جملہ نہیں۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch40-l07-ex06",
+      "statement": {
+        "en": "الطَّالِبُ فِي الْفَصْلِ is a complete statement.",
+        "ur": "الطَّالِبُ فِي الْفَصْلِ ایک مکمل جملہ ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Definite noun + the phrase: the phrase is the statement.",
+        "ur": "معرفہ اسم + ٹکڑا: ٹکڑا ہی بات ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch40-l07-ex07",
+      "mode": "TAP",
+      "sentence_ar": "الطُّلَّابُ ___ يَكْتُبُونَ.",
+      "hint": {
+        "en": "The students who write.",
+        "ur": "وہ طالب علم جو لکھتے ہیں۔"
+      },
+      "options": [
+        {
+          "ar": "اللَّاتِي",
+          "ar_plain": "اللاتي",
+          "translit": "allātī",
+          "en": "who (women)",
+          "ur": "جو (عورتیں)"
+        },
+        {
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "alladhī",
+          "en": "who (m. sg.)",
+          "ur": "جو (مذکر واحد)"
+        },
+        {
+          "ar": "الَّتِي",
+          "ar_plain": "التي",
+          "translit": "allatī",
+          "en": "that (f. sg.)",
+          "ur": "جو (مؤنث واحد)"
+        },
+        {
+          "ar": "الَّذِينَ",
+          "ar_plain": "الذين",
+          "translit": "alladhīna",
+          "en": "who (men)",
+          "ur": "جو (مرد)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الَّذِينَ",
+        "ar_plain": "الذين",
+        "translit": "alladhīna",
+        "en": "who (men)",
+        "ur": "جو (مرد)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A group of men: الَّذِينَ.",
+        "ur": "مردوں کا گروہ: الَّذِينَ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch40-l07-ex08",
+      "mode": "TAP",
+      "sentence_ar": "الطَّالِبَاتُ ___ فِي الْمَدْرَسَةِ.",
+      "hint": {
+        "en": "The students (f.) who are in the school.",
+        "ur": "وہ طالبات جو اسکول میں ہیں۔"
+      },
+      "options": [
+        {
+          "ar": "الَّذِينَ",
+          "ar_plain": "الذين",
+          "translit": "alladhīna",
+          "en": "who (men)",
+          "ur": "جو (مرد)"
+        },
+        {
+          "ar": "اللَّاتِي",
+          "ar_plain": "اللاتي",
+          "translit": "allātī",
+          "en": "who (women)",
+          "ur": "جو (عورتیں)"
+        },
+        {
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "alladhī",
+          "en": "who (m. sg.)",
+          "ur": "جو (مذکر واحد)"
+        },
+        {
+          "ar": "الَّتِي",
+          "ar_plain": "التي",
+          "translit": "allatī",
+          "en": "that (f. sg.)",
+          "ur": "جو (مؤنث واحد)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "اللَّاتِي",
+        "ar_plain": "اللاتي",
+        "translit": "allātī",
+        "en": "who (women)",
+        "ur": "جو (عورتیں)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A group of women: اللَّاتِي.",
+        "ur": "عورتوں کا گروہ: اللَّاتِي۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch40-l07-ex09",
+      "mode": "TAP",
+      "sentence_ar": "الْكُتُبُ ___ عَلَى الْمَكْتَبِ.",
+      "hint": {
+        "en": "The books that are on the desk.",
+        "ur": "وہ کتابیں جو میز پر ہیں۔"
+      },
+      "options": [
+        {
+          "ar": "الَّذِينَ",
+          "ar_plain": "الذين",
+          "translit": "alladhīna",
+          "en": "who (men)",
+          "ur": "جو (مرد)"
+        },
+        {
+          "ar": "اللَّاتِي",
+          "ar_plain": "اللاتي",
+          "translit": "allātī",
+          "en": "who (women)",
+          "ur": "جو (عورتیں)"
+        },
+        {
+          "ar": "الَّتِي",
+          "ar_plain": "التي",
+          "translit": "allatī",
+          "en": "that (things)",
+          "ur": "جو (چیزیں)"
+        },
+        {
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "alladhī",
+          "en": "that (m. sg.)",
+          "ur": "جو (مذکر واحد)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الَّتِي",
+        "ar_plain": "التي",
+        "translit": "allatī",
+        "en": "that (things)",
+        "ur": "جو (چیزیں)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Plural things: الَّتِي.",
+        "ur": "چیزوں کی جمع: الَّتِي۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch40-l07-ex10",
+      "ayah_fragment": {
+        "ar": "سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى",
+        "surah_ref": "Al-A'la 87:1"
+      },
+      "options": [
+        {
+          "en": "الْأَعْلَى describes رَبِّكَ — your Lord, the Most High",
+          "ur": "الْأَعْلَى رَبِّكَ کی صفت ہے — تیرا رب، سب سے بلند"
+        },
+        {
+          "en": "الْأَعْلَى describes اسْمَ",
+          "ur": "الْأَعْلَى اسْمَ کی صفت ہے"
+        },
+        {
+          "en": "الْأَعْلَى is a verb",
+          "ur": "الْأَعْلَى فعل ہے"
+        },
+        {
+          "en": "الْأَعْلَى is the subject",
+          "ur": "الْأَعْلَى فاعل ہے"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "رَبِّكَ is in an iḍāfa with اسْمَ and الْأَعْلَى describes رَبِّكَ.",
+        "ur": "رَبِّكَ اسْمَ کے ساتھ اضافت میں ہے اور الْأَعْلَى رَبِّكَ کی صفت ہے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch40-l07-ex11",
+      "ayah_fragment": {
+        "ar": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ",
+        "surah_ref": "Al-Fatiha 1:7"
+      },
+      "options": [
+        {
+          "en": "the path of the one who has favour",
+          "ur": "صاحبِ انعام کا راستہ"
+        },
+        {
+          "en": "the path of those upon whom You bestowed favour",
+          "ur": "ان کا راستہ جن پر تو نے انعام کیا"
+        },
+        {
+          "en": "You bestowed favour on the path",
+          "ur": "تو نے راستے پر انعام کیا"
+        },
+        {
+          "en": "the paths of the books",
+          "ur": "کتابوں کے راستے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الَّذِينَ opens the description of a group.",
+        "ur": "الَّذِينَ ایک گروہ کا وصف شروع کرتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch40-l07-ex12",
+      "prompt": {
+        "ar": "كِتَابُ هَذَا الطَّالِبِ الْمُجْتَهِدِ عَلَى الْمَكْتَبِ.",
+        "ar_plain": "كتاب هذا الطالب المجتهد على المكتب.",
+        "translit": "kitābu hādhā ṭ-ṭālibi l-mujtahidi ʿalā l-maktabi.",
+        "en": "The book of this diligent student is on the desk.",
+        "ur": "اس محنتی طالب علم کی کتاب میز پر ہے۔"
+      },
+      "options": [
+        {
+          "en": "The book of this diligent student is on the desk.",
+          "ur": "اس محنتی طالب علم کی کتاب میز پر ہے۔"
+        },
+        {
+          "en": "The desk of this diligent student is on the book.",
+          "ur": "اس محنتی طالب علم کی میز کتاب پر ہے۔"
+        },
+        {
+          "en": "This diligent student is on the book's desk.",
+          "ur": "یہ محنتی طالب علم کتاب کی میز پر ہے۔"
+        },
+        {
+          "en": "The diligent book is on this student.",
+          "ur": "محنتی کتاب اس طالب علم پر ہے۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A construct phrase with an adjective, then the phrase that completes the statement.",
+        "ur": "صفت کے ساتھ اضافت، پھر وہ ٹکڑا جو بات پوری کرتا ہے۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Longer descriptions",
+      "ar": "تَوْسِيعُ الْأَوْصَافِ",
+      "ur": "لمبی وضاحتیں"
+    },
+    "ayah": {
+      "surah": 87,
+      "ayah": 1,
+      "label": "Al-A'la 87:1",
+      "ar": "سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى",
+      "en": "Glorify the name of your Lord, the Most High,",
+      "ur": "اپنے بلند ترین رب کے نام کی تسبیح کرو،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087001.mp3"
+    },
+    "highlighted_word_indices": [
+      1,
+      2,
+      3
+    ],
+    "highlighted_words": [
+      "اسْمَ",
+      "رَبِّكَ",
+      "الْأَعْلَى"
+    ],
+    "noor_explanation": {
+      "en": "اسْمَ رَبِّكَ الْأَعْلَى: an iḍāfa and an adjective in one short phrase. You read the layers one at a time.",
+      "ur": "اسْمَ رَبِّكَ الْأَعْلَى: ایک مختصر ٹکڑے میں اضافت اور صفت۔ آپ تہوں کو ایک ایک کر کے پڑھتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Review done. Next: the chapter test.",
+      "ur": "دہرائی مکمل۔ آگے: باب کا امتحان۔"
+    }
+  }
+}
