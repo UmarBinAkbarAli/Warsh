@@ -2,386 +2,428 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 45, Lesson 4 — telling the three states apart by their governor and ending; a selected trigger chart.",
+    "_note": "Chapter 45, Lesson 4 (ch45-l09, new). The bounded future-endpoint use of حَتَّى + a verb (a continuing action, a not-yet-reached event, a fatḥa ending) with the supplied stems أَدْرُسُ / أَنْجَحُ / يَحْضُرُ; other uses of حَتَّى are explicitly out of scope. Added 2026-10-03 in the proposal harvest, batch 4 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-45-content-proposal.md and its review amendments.",
+    "title": "Until — حَتَّى and a Verb",
+    "titleAr": "حَتَّى لِلْغَايَةِ",
+    "titleUr": "یہاں تک کہ / جب تک — حَتَّى",
     "chapter_order": 45,
     "lesson_order": 4,
-    "chapter_title": "The Three States of المضارع (مرفوع/منصوب/مجزوم)",
-    "title": "Distinguishing the Three States",
-    "titleAr": "الْمُضَارِعُ — التَّمْيِيزُ بَيْنَ الثَّلَاثِ حَالَاتٍ",
     "estimated_minutes": 10,
-    "xp_reward": 10
+    "xp_reward": 15
   },
   "hook": {
     "ayah": {
       "surah": 20,
       "ayah": 91,
       "label": "Ta-Ha 20:91",
-      "ar": "قَالُوا لَنْ نَبْرَحَ عَلَيْهِ عَاكِفِينَ حَتَّىٰ يَرْجِعَ إِلَيْنَا مُوسَىٰ",
-      "en": "They said, 'We will not stop being devoted to it until Musa returns to us.'",
-      "ur": "انہوں نے کہا: 'ہم اسی پر جمے رہیں گے یہاں تک کہ موسیٰ ہمارے پاس لوٹ آئیں۔'",
+      "ar": "حَتَّىٰ يَرْجِعَ إِلَيْنَا مُوسَىٰ",
+      "en": "until Moses returns to us",
+      "ur": "جب تک موسیٰ ہمارے پاس لوٹ نہ آئیں",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020091.mp3"
     },
-    "autoplay": true,
     "noor_intro": {
-      "en": "Find the governor, then check the ending. Today you sort verbs into the three states.",
-      "ur": "عامل تلاش کریں، پھر آخر دیکھیں۔ آج آپ افعال کو تین حالتوں میں تقسیم کریں گے۔"
-    }
+      "en": "One more frame: حَتَّى + a verb — an action that continues up to an event not yet reached.",
+      "ur": "ایک اور سانچہ: حَتَّى + فعل — ایسا کام جو اس واقعے تک جاری رہتا ہے جو ابھی نہیں آیا۔"
+    },
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Governor → state → ending",
-        "ar": "الْعَامِلُ وَالْحَالَةُ",
-        "ur": "عامل ← حالت ← آخر"
+        "en": "'Until': a verb after حَتَّى",
+        "ar": "حَتَّى لِلْغَايَةِ",
+        "ur": "'یہاں تک کہ / جب تک': حَتَّى کے بعد فعل"
       },
       "explanation": {
-        "en": "The present-tense (imperfect) verb has three states. مَرْفُوع — ending ḍamma — when nothing governs it: يَذْهَبُ. مَنْصُوب — fatḥa — after أَنْ or لَنْ: أَنْ يَذْهَبَ. مَجْزُوم — sukūn — after لَمْ, لَمَّا or the لَا of prohibition: لَمْ يَذْهَبْ. Only the ending changes; the prefix stays.",
-        "ur": "مضارع فعل کی تین حالتیں ہیں۔ مَرْفُوع — آخر میں ضمہ — جب کوئی عامل نہ ہو: يَذْهَبُ۔ مَنْصُوب — فتحہ — أَنْ یا لَنْ کے بعد: أَنْ يَذْهَبَ۔ مَجْزُوم — سکون — لَمْ، لَمَّا یا لائے نہی کے بعد: لَمْ يَذْهَبْ۔ صرف آخر بدلتا ہے؛ سابقہ وہی رہتا ہے۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Selected governors (not a complete list)",
-        "ur": "منتخب عوامل (مکمل فہرست نہیں)"
-      },
-      "body": {
-        "en": "No governor → مَرْفُوع (ḍamma). أَنْ, لَنْ → مَنْصُوب (fatḥa). لَمْ, لَمَّا, لَا of prohibition → مَجْزُوم (sukūn).",
-        "ur": "کوئی عامل نہیں ← مرفوع (ضمہ)۔ أَنْ، لَنْ ← منصوب (فتحہ)۔ لَمْ، لَمَّا، نہی کا لَا ← مجزوم (سکون)۔"
+        "en": "In this lesson حَتَّى + a verb has one meaning: an action keeps going up to an event that has not happened yet — 'I sit here until the teacher arrives.' The verb after حَتَّى ends in fatḥa. Other uses of حَتَّى (and حَتَّى before a noun) are not part of this lesson.",
+        "ur": "اس سبق میں حَتَّى + فعل کا ایک ہی مطلب ہے: کوئی کام ایسے واقعے تک جاری رہتا ہے جو ابھی ہوا نہیں — 'میں یہاں بیٹھتا ہوں جب تک معلم نہ آئے۔' حَتَّى کے بعد فعل کے آخر میں فتحہ آتا ہے۔ حَتَّى کے دوسرے استعمال (اور اسم سے پہلے حَتَّى) اس سبق کا حصہ نہیں۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "لَا يَذْهَبُ — لَا تَذْهَبْ",
-        "ar_plain": "لا يذهب لا تذهب",
-        "translit": "laa yadh-habu — laa tadh-hab",
-        "en": "he does not go — don't go",
-        "ur": "وہ نہیں جاتا — مت جاؤ"
+        "ar": "أَجْلِسُ هُنَا حَتَّى يَحْضُرَ الْمُعَلِّمُ.",
+        "ar_plain": "اجلس هنا حتى يحضر المعلم.",
+        "translit": "ʾajlisu hunā ḥattā yaḥḍura al-muʿallimu",
+        "en": "I sit here until the teacher arrives.",
+        "ur": "میں یہاں بیٹھتا ہوں جب تک معلم آ نہ جائے۔"
       },
       "explanation": {
-        "en": "The same لَا: as plain negation it governs nothing (ḍamma); as prohibition it makes the verb مَجْزُوم (sukūn).",
-        "ur": "وہی لَا: سادہ نفی میں کوئی عمل نہیں (ضمہ)؛ نہی میں فعل کو مجزوم کرتا ہے (سکون)۔"
+        "en": "Constructed. Two things are shown: the continuing action (أَجْلِسُ) and the event not yet reached (يَحْضُرَ الْمُعَلِّمُ). يَحْضُرُ is supplied; after حَتَّى it ends in fatḥa.",
+        "ur": "بنایا ہوا۔ دو باتیں دکھائی گئی ہیں: جاری کام (أَجْلِسُ) اور وہ واقعہ جو ابھی نہیں پہنچا (يَحْضُرَ الْمُعَلِّمُ)۔ يَحْضُرُ دیا ہوا ہے؛ حَتَّى کے بعد اس کے آخر میں فتحہ ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "لَنْ نَبْرَحَ",
-        "ar_plain": "لن نبرح",
-        "translit": "lan nabraha",
-        "en": "we will not stop (20:91)",
-        "ur": "ہم نہیں رکیں گے (20:91)"
+        "ar": "أَدْرُسُ حَتَّى أَنْجَحَ.",
+        "ar_plain": "ادرس حتى انجح.",
+        "translit": "ʾadrusu ḥattā ʾanjaḥa",
+        "en": "I study until I succeed.",
+        "ur": "میں پڑھتا ہوں یہاں تک کہ کامیاب ہوں۔"
       },
       "explanation": {
-        "en": "لَنْ → fatḥa: مَنْصُوب.",
-        "ur": "لَنْ ← فتحہ: منصوب۔"
+        "en": "Constructed. The studying continues up to the point of success, which has not yet been reached.",
+        "ur": "بنایا ہوا۔ پڑھائی کامیابی کے نکتے تک جاری رہتی ہے، جو ابھی تک نہیں آیا۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Aim or endpoint?",
+        "ur": "مقصد یا انتہا؟"
+      },
+      "examples": [
+        {
+          "ar": "أَدْرُسُ كَيْ أَنْجَحَ.",
+          "ar_plain": "ادرس كي انجح.",
+          "translit": "ʾadrusu kay ʾanjaḥa",
+          "en": "I study so that I succeed. (the aim)",
+          "ur": "میں پڑھتا ہوں تاکہ کامیاب ہوں۔ (مقصد)"
+        },
+        {
+          "ar": "أَدْرُسُ حَتَّى أَنْجَحَ.",
+          "ar_plain": "ادرس حتى انجح.",
+          "translit": "ʾadrusu ḥattā ʾanjaḥa",
+          "en": "I study until I succeed. (the endpoint)",
+          "ur": "میں پڑھتا ہوں یہاں تک کہ کامیاب ہوں۔ (انتہا)"
+        }
+      ],
+      "explanation": {
+        "en": "كَيْ gives the reason for studying; حَتَّى gives the point where studying stops. The sentence and its situation decide — not the spelling of حَتَّى alone.",
+        "ur": "كَيْ پڑھنے کی وجہ بتاتا ہے؛ حَتَّى وہ نکتہ بتاتا ہے جہاں پڑھائی رکتی ہے۔ جملہ اور اس کا موقع فیصلہ کرتے ہیں — صرف حَتَّى کی املا نہیں۔"
       }
     },
     {
       "type": "GRAMMAR_NOTE",
       "title": {
-        "en": "Scope",
-        "ur": "دائرہ"
+        "en": "Spelling is not enough",
+        "ur": "صرف املا کافی نہیں"
       },
       "body": {
-        "en": "These rules are for regular verbs like يَذْهَبُ. Verbs ending in a long vowel and the five verbs (يَذْهَبُونَ …) show their states differently — studied later.",
-        "ur": "یہ قاعدے يَذْهَبُ جیسے عام افعال کے لیے ہیں۔ لمبی آواز پر ختم ہونے والے افعال اور افعالِ خمسہ (يَذْهَبُونَ …) اپنی حالتیں الگ طرح دکھاتے ہیں — آگے پڑھیں گے۔"
+        "en": "حَتَّى is spelled the same in all its uses. Look for the pattern: a continuing action, a not-yet-reached event, and a verb ending in fatḥa. If the situation does not fit, do not assume this meaning.",
+        "ur": "حَتَّى اپنے تمام استعمالات میں ایک ہی طرح لکھا جاتا ہے۔ یہ نمونہ دیکھیں: جاری کام، ایسا واقعہ جو ابھی نہیں آیا، اور فتحہ پر ختم ہونے والا فعل۔ اگر موقع نہ بیٹھے تو یہ مطلب فرض نہ کریں۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "حَتَّىٰ يَرْجِعَ إِلَيْنَا مُوسَىٰ",
+        "ar_plain": "حتى يرجع الينا موسى",
+        "translit": "ḥattā yarjiʿa ʾilaynā mūsā",
+        "en": "until Moses returns to us",
+        "ur": "جب تک موسیٰ ہمارے پاس لوٹ نہ آئیں"
+      },
+      "explanation": {
+        "en": "In 20:91 the people say they will keep on 'until Moses returns to us': حَتَّىٰ يَرْجِعَ إِلَيْنَا مُوسَىٰ. The endpoint is an event not yet reached, and يَرْجِعَ ends in fatḥa. (Ta-Ha 20:91)",
+        "ur": "20:91 میں لوگ کہتے ہیں کہ وہ جاری رکھیں گے 'جب تک موسیٰ ہمارے پاس لوٹ نہ آئیں': حَتَّىٰ يَرْجِعَ إِلَيْنَا مُوسَىٰ۔ انتہا ایک ایسا واقعہ ہے جو ابھی نہیں ہوا، اور يَرْجِعَ کے آخر میں فتحہ ہے۔ (Ta-Ha 20:91)"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "لَنْ نَبْرَحَ … حَتَّىٰ يَرْجِعَ",
+        "ar_plain": "لن نبرح … حتى يرجع",
+        "translit": "lan nabraḥa … ḥattā yarjiʿa",
+        "en": "we will not cease … until he returns (20:91)",
+        "ur": "ہم نہیں ہٹیں گے … جب تک وہ لوٹ نہ آئیں (20:91)"
+      },
+      "explanation": {
+        "en": "Two verbs in the same ayah, both ending in fatḥa: نَبْرَحَ after لَنْ, and يَرْجِعَ after حَتَّىٰ.",
+        "ur": "ایک ہی آیت میں دو فعل، دونوں فتحہ پر ختم: لَنْ کے بعد نَبْرَحَ، اور حَتَّىٰ کے بعد يَرْجِعَ۔"
       }
     }
   ],
   "exercises": [
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch45-l04-ex01",
+      "id": "ch45-l09-ex01",
       "prompt": {
-        "ar": "لَنْ نَبْرَحَ",
-        "ar_plain": "لن نبرح",
-        "translit": "lan nabraha",
-        "en": "we will not stop",
-        "ur": "ہم نہیں رکیں گے"
+        "ar": "أَجْلِسُ هُنَا حَتَّى يَحْضُرَ الْمُعَلِّمُ.",
+        "ar_plain": "اجلس هنا حتى يحضر المعلم.",
+        "translit": "ʾajlisu hunā ḥattā yaḥḍura al-muʿallimu",
+        "en": "I sit here until the teacher arrives.",
+        "ur": "میں یہاں بیٹھتا ہوں جب تک معلم آ نہ جائے۔"
       },
       "options": [
         {
-          "en": "we will not stop",
-          "ur": "ہم نہیں رکیں گے"
+          "en": "I sit here because the teacher arrived.",
+          "ur": "میں یہاں بیٹھتا ہوں کیونکہ معلم آ گیا۔"
         },
         {
-          "en": "we did not stop",
-          "ur": "ہم نہیں رکے"
+          "en": "I sat here after the teacher arrived.",
+          "ur": "میں معلم کے آنے کے بعد یہاں بیٹھا۔"
         },
         {
-          "en": "don't stop",
-          "ur": "مت رکو"
+          "en": "I sit here until the teacher arrives.",
+          "ur": "میں یہاں بیٹھتا ہوں جب تک معلم آ نہ جائے۔"
         },
         {
-          "en": "we stop",
-          "ur": "ہم رکتے ہیں"
+          "en": "The teacher sits here until I arrive.",
+          "ur": "معلم یہاں بیٹھتا ہے جب تک میں نہ آؤں۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "حَتَّى marks the point the sitting continues up to: the teacher's arrival.",
+        "ur": "حَتَّى وہ نکتہ بتاتا ہے جہاں تک بیٹھنا جاری رہتا ہے: معلم کا آنا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch45-l09-ex02",
+      "prompt": {
+        "ar": "أَدْرُسُ حَتَّى أَنْجَحَ.",
+        "ar_plain": "ادرس حتى انجح.",
+        "translit": "ʾadrusu ḥattā ʾanjaḥa",
+        "en": "I study until I succeed.",
+        "ur": "میں پڑھتا ہوں یہاں تک کہ کامیاب ہوں۔"
+      },
+      "options": [
+        {
+          "en": "I study until I succeed.",
+          "ur": "میں پڑھتا ہوں یہاں تک کہ کامیاب ہوں۔"
+        },
+        {
+          "en": "I study so that I do not succeed.",
+          "ur": "میں پڑھتا ہوں تاکہ کامیاب نہ ہوں۔"
+        },
+        {
+          "en": "I succeeded and then studied.",
+          "ur": "میں کامیاب ہوا اور پھر پڑھا۔"
+        },
+        {
+          "en": "I study after I succeed.",
+          "ur": "میں کامیاب ہونے کے بعد پڑھتا ہوں۔"
         }
       ],
       "correct_index": 0,
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch45-l04-ex02",
-      "statement": {
-        "en": "In لَا يَذْهَبُ (\"he does not go\"), the verb is مَجْزُوم.",
-        "ur": "لَا يَذْهَبُ (\"وہ نہیں جاتا\") میں فعل مجزوم ہے۔"
-      },
-      "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "False. This لَا only negates; the verb stays مَرْفُوع (ḍamma).",
-        "ur": "غلط۔ یہ لَا صرف نفی کرتا ہے؛ فعل مرفوع (ضمہ) رہتا ہے۔"
+        "en": "Studying continues up to the point of success.",
+        "ur": "پڑھائی کامیابی کے نکتے تک جاری رہتی ہے۔"
       }
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch45-l04-ex03",
+      "id": "ch45-l09-ex03",
       "mode": "TAP",
-      "sentence_ar": "لَنْ ___ الْحَقَّ",
+      "sentence_ar": "أَجْلِسُ هُنَا حَتَّى ___ أَخِي.",
       "hint": {
-        "en": "He will not leave the truth.",
-        "ur": "وہ حق کو نہیں چھوڑے گا۔"
+        "en": "I sit here until my brother arrives.",
+        "ur": "میں یہاں بیٹھتا ہوں جب تک میرا بھائی آ نہ جائے۔"
       },
       "options": [
         {
-          "ar": "يَتْرُكَ",
-          "ar_plain": "يترك",
-          "translit": "yatruka",
-          "en": "(مَنْصُوب)",
-          "ur": "(منصوب)"
+          "ar": "يَحْضُرُ",
+          "ar_plain": "يحضر",
+          "translit": "yaḥḍuru",
+          "en": "he arrives",
+          "ur": "وہ آتا ہے"
         },
         {
-          "ar": "يَتْرُكُ",
-          "ar_plain": "يترك",
-          "translit": "yatruku",
-          "en": "(مَرْفُوع)",
-          "ur": "(مرفوع)"
+          "ar": "يَحْضُرَ",
+          "ar_plain": "يحضر",
+          "translit": "yaḥḍura",
+          "en": "(that) he arrives",
+          "ur": "(کہ) وہ آئے"
         },
         {
-          "ar": "يَتْرُكْ",
-          "ar_plain": "يترك",
-          "translit": "yatruk",
-          "en": "(مَجْزُوم)",
-          "ur": "(مجزوم)"
+          "ar": "يَحْضُرْ",
+          "ar_plain": "يحضر",
+          "translit": "yaḥḍur",
+          "en": "(sukūn form)",
+          "ur": "(سکون والا روپ)"
         },
         {
-          "ar": "تَرَكَ",
-          "ar_plain": "ترك",
-          "translit": "taraka",
-          "en": "left (past)",
-          "ur": "چھوڑا (ماضی)"
+          "ar": "حَضَرَ",
+          "ar_plain": "حضر",
+          "translit": "ḥaḍara",
+          "en": "he arrived",
+          "ur": "وہ آیا"
         }
       ],
       "correct_answer": {
-        "ar": "يَتْرُكَ",
-        "ar_plain": "يترك",
-        "translit": "yatruka",
-        "en": "(مَنْصُوب)",
-        "ur": "(منصوب)"
+        "ar": "يَحْضُرَ",
+        "ar_plain": "يحضر",
+        "translit": "yaḥḍura",
+        "en": "(that) he arrives",
+        "ur": "(کہ) وہ آئے"
       },
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَنْ → مَنْصُوب: يَتْرُكَ.",
-        "ur": "لَنْ ← منصوب: يَتْرُكَ۔"
+        "en": "After حَتَّى (in this use) the verb ends in fatḥa: يَحْضُرَ.",
+        "ur": "حَتَّى کے بعد (اس استعمال میں) فعل کے آخر میں فتحہ ہے: يَحْضُرَ۔"
       }
     },
     {
-      "type": "MATCHING",
-      "id": "ch45-l04-ex04",
-      "left_column": [
-        {
-          "ar": "يَذْهَبُ",
-          "ar_plain": "يذهب",
-          "translit": "yadh-habu",
-          "en": "he goes (مَرْفُوع)",
-          "ur": "وہ جاتا ہے (مرفوع)"
-        },
-        {
-          "ar": "لَنْ يَذْهَبَ",
-          "ar_plain": "لن يذهب",
-          "translit": "lan yadh-haba",
-          "en": "he will not go (مَنْصُوب)",
-          "ur": "وہ نہیں جائے گا (منصوب)"
-        },
-        {
-          "ar": "لَمْ يَذْهَبْ",
-          "ar_plain": "لم يذهب",
-          "translit": "lam yadh-hab",
-          "en": "he did not go (مَجْزُوم)",
-          "ur": "وہ نہیں گیا (مجزوم)"
-        },
-        {
-          "ar": "لَا تَذْهَبْ",
-          "ar_plain": "لا تذهب",
-          "translit": "laa tadh-hab",
-          "en": "don't go (مَجْزُوم)",
-          "ur": "مت جاؤ (مجزوم)"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "fatḥa — لَنْ",
-          "ur": "فتحہ — لَنْ"
-        },
-        {
-          "en": "sukūn — لَا of prohibition",
-          "ur": "سکون — نہی کا لَا"
-        },
-        {
-          "en": "ḍamma — no governor",
-          "ur": "ضمہ — کوئی عامل نہیں"
-        },
-        {
-          "en": "sukūn — لَمْ",
-          "ur": "سکون — لَمْ"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          2
-        ],
-        [
-          1,
-          0
-        ],
-        [
-          2,
-          3
-        ],
-        [
-          3,
-          1
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch45-l04-ex05",
-      "target_translation": {
-        "en": "Don't leave the truth.",
-        "ur": "حق کو مت چھوڑو۔"
+      "type": "FILL_BLANK",
+      "id": "ch45-l09-ex04",
+      "mode": "TAP",
+      "sentence_ar": "أَدْرُسُ حَتَّى ___.",
+      "hint": {
+        "en": "I study until I succeed.",
+        "ur": "میں پڑھتا ہوں یہاں تک کہ کامیاب ہوں۔"
       },
-      "tiles": [
+      "options": [
         {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "don't",
-          "ur": "مت"
+          "ar": "أَنْجَحُ",
+          "ar_plain": "انجح",
+          "translit": "ʾanjaḥu",
+          "en": "I succeed",
+          "ur": "میں کامیاب ہوتا ہوں"
         },
         {
-          "ar": "تَتْرُكِ",
-          "ar_plain": "تترك",
-          "translit": "tatruki",
-          "en": "leave (مَجْزُوم)",
-          "ur": "چھوڑو (مجزوم)"
+          "ar": "أَنْجَحْ",
+          "ar_plain": "انجح",
+          "translit": "ʾanjaḥ",
+          "en": "(sukūn form)",
+          "ur": "(سکون والا روپ)"
         },
         {
-          "ar": "الْحَقَّ",
-          "ar_plain": "الحق",
-          "translit": "al-haqqa",
-          "en": "the truth",
-          "ur": "حق"
+          "ar": "نَجَحْتُ",
+          "ar_plain": "نجحت",
+          "translit": "najaḥtu",
+          "en": "I succeeded",
+          "ur": "میں کامیاب ہوا"
         },
         {
-          "ar": "تَتْرُكُ",
-          "ar_plain": "تترك",
-          "translit": "tatruku",
-          "en": "you leave (مَرْفُوع)",
-          "ur": "تم چھوڑتے ہو"
+          "ar": "أَنْجَحَ",
+          "ar_plain": "انجح",
+          "translit": "ʾanjaḥa",
+          "en": "(that) I succeed",
+          "ur": "(کہ) میں کامیاب ہوں"
         }
       ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
+      "correct_answer": {
+        "ar": "أَنْجَحَ",
+        "ar_plain": "انجح",
+        "translit": "ʾanjaḥa",
+        "en": "(that) I succeed",
+        "ur": "(کہ) میں کامیاب ہوں"
+      },
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "Prohibition: لَا + مَجْزُوم. The sukūn becomes kasra before الْحَقَّ.",
-        "ur": "نہی: لَا + مجزوم۔ الْحَقَّ سے پہلے سکون کسرہ بن جاتا ہے۔"
+        "en": "The verb after حَتَّى ends in fatḥa.",
+        "ur": "حَتَّى کے بعد فعل کے آخر میں فتحہ ہوتا ہے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch45-l04-ex06",
+      "id": "ch45-l09-ex05",
       "statement": {
-        "en": "A verb with no governor is مَرْفُوع.",
-        "ur": "جس فعل پر کوئی عامل نہ ہو وہ مرفوع ہوتا ہے۔"
+        "en": "In حَتَّىٰ يَرْجِعَ (20:91), the verb ends in fatḥa.",
+        "ur": "حَتَّىٰ يَرْجِعَ (20:91) میں فعل کے آخر میں فتحہ ہے۔",
+        "ar_example": {
+          "ar": "حَتَّىٰ يَرْجِعَ إِلَيْنَا مُوسَىٰ",
+          "ar_plain": "حتى يرجع الينا موسى",
+          "translit": "ḥattā yarjiʿa ʾilaynā mūsā",
+          "en": "until Moses returns to us",
+          "ur": "جب تک موسیٰ ہمارے پاس لوٹ نہ آئیں"
+        }
       },
       "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes: يَرْجِعَ.",
+        "ur": "جی ہاں: يَرْجِعَ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch45-l09-ex06",
+      "statement": {
+        "en": "أَجْلِسُ هُنَا حَتَّى يَحْضُرَ الْمُعَلِّمُ says the teacher has already arrived.",
+        "ur": "أَجْلِسُ هُنَا حَتَّى يَحْضُرَ الْمُعَلِّمُ کہتا ہے کہ معلم آ چکا ہے۔",
+        "ar_example": {
+          "ar": "أَجْلِسُ هُنَا حَتَّى يَحْضُرَ الْمُعَلِّمُ.",
+          "ar_plain": "اجلس هنا حتى يحضر المعلم.",
+          "translit": "ʾajlisu hunā ḥattā yaḥḍura al-muʿallimu",
+          "en": "I sit here until the teacher arrives.",
+          "ur": "میں یہاں بیٹھتا ہوں جب تک معلم آ نہ جائے۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "No: the arrival is the not-yet-reached endpoint.",
+        "ur": "نہیں: آنا وہ انتہا ہے جو ابھی نہیں آئی۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch45-l04-ex07",
+      "id": "ch45-l09-ex07",
       "prompt": {
-        "ar": "أُرِيدُ أَنْ أَفْهَمَ",
-        "ar_plain": "اريد ان افهم",
-        "translit": "uriidu an afhama",
-        "en": "I want to understand.",
-        "ur": "میں سمجھنا چاہتا ہوں۔"
+        "ar": "قَالُوا لَن نَّبْرَحَ عَلَيْهِ عَاكِفِينَ حَتَّىٰ يَرْجِعَ إِلَيْنَا مُوسَىٰ",
+        "ar_plain": "قالوا لن نبرح عليه عاكفين حتى يرجع الينا موسى",
+        "translit": "qālū lan nnabraḥa ʿalayhi ʿākifīna ḥattā yarjiʿa ʾilaynā mūsā",
+        "en": "(20:91)",
+        "ur": "(20:91)"
       },
       "options": [
         {
-          "en": "I want to understand.",
-          "ur": "میں سمجھنا چاہتا ہوں۔"
+          "en": "They said, 'We will never cease being devoted to it until Moses returns to us.'",
+          "ur": "انہوں نے کہا: 'ہم اس پر جمے رہیں گے جب تک موسیٰ ہمارے پاس لوٹ نہ آئیں۔'"
         },
         {
-          "en": "I did not understand.",
-          "ur": "میں نہیں سمجھا۔"
+          "en": "They said, 'Moses returned to us, so we ceased.'",
+          "ur": "انہوں نے کہا: 'موسیٰ ہمارے پاس لوٹ آئے، تو ہم رک گئے۔'"
         },
         {
-          "en": "I understand.",
-          "ur": "میں سمجھتا ہوں۔"
+          "en": "They said, 'Do not return to us, Moses.'",
+          "ur": "انہوں نے کہا: 'اے موسیٰ، ہمارے پاس نہ لوٹنا۔'"
         },
         {
-          "en": "Don't understand.",
-          "ur": "مت سمجھو۔"
+          "en": "They said, 'We will go to Moses tomorrow.'",
+          "ur": "انہوں نے کہا: 'ہم کل موسیٰ کے پاس جائیں گے۔'"
         }
       ],
       "correct_index": 0,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَنْ نَبْرَحَ = 'we will never cease'; حَتَّىٰ يَرْجِعَ = 'until he returns'.",
+        "ur": "لَنْ نَبْرَحَ = 'ہم ہرگز نہیں ہٹیں گے'؛ حَتَّىٰ يَرْجِعَ = 'جب تک وہ لوٹ نہ آئیں'۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Two مَنْصُوب verbs",
-      "ar": "فِعْلَانِ مَنْصُوبَانِ",
-      "ur": "دو منصوب فعل"
+      "en": "Up to an event not yet reached",
+      "ar": "حَتَّىٰ يَرْجِعَ",
+      "ur": "ایسے واقعے تک جو ابھی نہیں آیا"
     },
     "ayah": {
       "surah": 20,
       "ayah": 91,
       "label": "Ta-Ha 20:91",
-      "ar": "قَالُوا لَنْ نَبْرَحَ عَلَيْهِ عَاكِفِينَ حَتَّىٰ يَرْجِعَ إِلَيْنَا مُوسَىٰ",
-      "en": "They said, 'We will not stop being devoted to it until Musa returns to us.'",
-      "ur": "انہوں نے کہا: 'ہم اسی پر جمے رہیں گے یہاں تک کہ موسیٰ ہمارے پاس لوٹ آئیں۔'",
+      "ar": "قَالُوا لَن نَّبْرَحَ عَلَيْهِ عَاكِفِينَ حَتَّىٰ يَرْجِعَ إِلَيْنَا مُوسَىٰ",
+      "en": "They said, 'We will never cease being devoted to it until Moses returns to us.'",
+      "ur": "انہوں نے کہا: 'ہم اس پر جمے رہیں گے جب تک موسیٰ ہمارے پاس لوٹ نہ آئیں۔'",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020091.mp3"
     },
     "highlighted_word_indices": [
+      1,
       2,
+      5,
       6
     ],
     "highlighted_words": [
-      "نَبْرَحَ",
+      "لَن",
+      "نَّبْرَحَ",
+      "حَتَّىٰ",
       "يَرْجِعَ"
     ],
     "noor_explanation": {
-      "en": "نَبْرَحَ after لَنْ and يَرْجِعَ after حَتَّىٰ: both end in fatḥa.",
-      "ur": "لَنْ کے بعد نَبْرَحَ اور حَتَّىٰ کے بعد يَرْجِعَ: دونوں فتحہ پر ختم ہوتے ہیں۔"
+      "en": "لَنْ نَبْرَحَ … حَتَّىٰ يَرْجِعَ — two fatḥa verbs: after لَنْ, and after حَتَّىٰ. The second names the endpoint.",
+      "ur": "لَنْ نَبْرَحَ … حَتَّىٰ يَرْجِعَ — دو فتحہ والے فعل: لَنْ کے بعد، اور حَتَّىٰ کے بعد۔ دوسرا انتہا بتاتا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Governor → state → ending. ḍamma (no governor), fatḥa (أَنْ, لَنْ), sukūn (لَمْ, لَمَّا, لَا of prohibition).",
-      "ur": "عامل ← حالت ← آخر۔ ضمہ (کوئی عامل نہیں)، فتحہ (أَنْ، لَنْ)، سکون (لَمْ، لَمَّا، نہی کا لَا)۔"
+      "en": "You can read 'until' with a verb. Next: the Selected Forms table.",
+      "ur": "آپ فعل کے ساتھ 'جب تک' پڑھ سکتے ہیں۔ اگلا: منتخب صورتوں کا جدول۔"
     }
   }
 }

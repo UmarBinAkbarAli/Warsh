@@ -1,0 +1,466 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 43, review (ch43-l05, kept as the REVIEW row, display order 9, rebuilt from the old 'Tadabbur R9' lesson). Two time/form, two sentence-part, three reading, two CL13 response and three fresh integration decisions, all different instances from ch43-test. Rebuilt 2026-10-03 in the proposal harvest, batch 4 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-43-content-proposal.md and its review amendments.",
+    "title": "Chapter 43 Review",
+    "titleAr": "مُرَاجَعَةُ الْفَصْلِ الثَّالِثِ وَالْأَرْبَعِينَ",
+    "titleUr": "باب 43 کی دہرائی",
+    "chapter_order": 43,
+    "lesson_order": 9,
+    "estimated_minutes": 12,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 107,
+      "ayah": 7,
+      "label": "Al-Ma'un 107:7",
+      "ar": "وَيَمْنَعُونَ الْمَاعُونَ",
+      "en": "And withhold [simple] assistance.",
+      "ur": "اور برتنے کی چیزیں عاریتہً نہیں دیتے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/107007.mp3"
+    },
+    "noor_intro": {
+      "en": "Review time and verb, the parts of a sentence, the three surahs and the hospitality exchange.",
+      "ur": "وقت اور فعل، جملے کے حصے، تینوں سورتیں اور مہمان نوازی کی گفتگو کی دہرائی کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 43 at a glance",
+        "ar": "الْفَصْلُ الثَّالِثُ وَالْأَرْبَعُونَ",
+        "ur": "باب 43 ایک نظر میں"
+      },
+      "explanation": {
+        "en": "Time word + verb form; parts of a sentence and what ـهَا points to; Al-Kawthar, Al-Humazah and Al-Ma'un read in full; and the polite exchange of the Food and Hospitality lab.",
+        "ur": "وقت کا لفظ + فعل کا روپ؛ جملے کے حصے اور ـهَا کس کی طرف ہے؛ الکوثر، الہمزہ اور الماعون مکمل پڑھی گئیں؛ اور کھانا اور مہمان نوازی لیب کی مہذب گفتگو۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "أَمْسِ قَرَأَ يُوسُفُ كِتَابًا. غَدًا سَيَكْتُبُ الدَّرْسَ.",
+        "ar_plain": "امس قرا يوسف كتابا. غدا سيكتب الدرس.",
+        "translit": "ʾamsi qaraʾa yuūsufu kitāban ghadan sayaktubu ad-darsa",
+        "en": "Yesterday Yusuf read a book. Tomorrow he will write the lesson.",
+        "ur": "کل (گزشتہ) یوسف نے ایک کتاب پڑھی۔ کل (آنے والا) وہ سبق لکھے گا۔"
+      },
+      "explanation": {
+        "en": "A fresh record: yesterday – read; tomorrow – will write.",
+        "ur": "نیا ریکارڈ: گزشتہ کل – پڑھا؛ آنے والا کل – لکھے گا۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "سَلْمَى مُعَلِّمَةٌ. قَلَمُهَا فِي الْفَصْلِ.",
+        "ar_plain": "سلمى معلمة. قلمها في الفصل.",
+        "translit": "salmā muʿallimatun qalamuhā fī al-faṣli",
+        "en": "Salma is a teacher. Her pen is in the class.",
+        "ur": "سلمیٰ معلمہ ہے۔ اس کا قلم کلاس میں ہے۔"
+      },
+      "explanation": {
+        "en": "A fresh pair of sentences: Salma, and her pen.",
+        "ur": "جملوں کی نئی جوڑی: سلمیٰ اور اس کا قلم۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch43-l05-ex01",
+      "prompt": {
+        "ar": "أَمْسِ قَرَأَ يُوسُفُ كِتَابًا. غَدًا سَيَكْتُبُ الدَّرْسَ.",
+        "ar_plain": "امس قرا يوسف كتابا. غدا سيكتب الدرس.",
+        "translit": "ʾamsi qaraʾa yuūsufu kitāban ghadan sayaktubu ad-darsa",
+        "en": "Yesterday Yusuf read a book. Tomorrow he will write the lesson.",
+        "ur": "کل (گزشتہ) یوسف نے ایک کتاب پڑھی۔ کل (آنے والا) وہ سبق لکھے گا۔"
+      },
+      "options": [
+        {
+          "en": "Yesterday Yusuf read a book, and tomorrow he will write the lesson.",
+          "ur": "کل (گزشتہ) یوسف نے کتاب پڑھی اور کل (آنے والا) وہ سبق لکھے گا۔"
+        },
+        {
+          "en": "Yesterday Yusuf wrote the lesson, and tomorrow he will read a book.",
+          "ur": "کل (گزشتہ) یوسف نے سبق لکھا اور کل (آنے والا) وہ کتاب پڑھے گا۔"
+        },
+        {
+          "en": "Today Yusuf reads a book and writes the lesson.",
+          "ur": "آج یوسف کتاب پڑھتا ہے اور سبق لکھتا ہے۔"
+        },
+        {
+          "en": "Yusuf read the lesson yesterday and will go home tomorrow.",
+          "ur": "یوسف نے کل (گزشتہ) سبق پڑھا اور کل (آنے والا) گھر جائے گا۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Match time word and verb: yesterday – read; tomorrow – will write.",
+        "ur": "وقت کے لفظ اور فعل کو ملائیں: گزشتہ کل – پڑھا؛ آنے والا کل – لکھے گا۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch43-l05-ex02",
+      "mode": "TAP",
+      "sentence_ar": "أَمْسِ ___ يُوسُفُ الدَّرْسَ.",
+      "hint": {
+        "en": "Yesterday Yusuf wrote the lesson.",
+        "ur": "کل (گزشتہ) یوسف نے سبق لکھا۔"
+      },
+      "options": [
+        {
+          "ar": "سَيَكْتُبُ",
+          "ar_plain": "سيكتب",
+          "translit": "sayaktubu",
+          "en": "he will write",
+          "ur": "وہ لکھے گا"
+        },
+        {
+          "ar": "كَتَبَ",
+          "ar_plain": "كتب",
+          "translit": "kataba",
+          "en": "he wrote",
+          "ur": "اس نے لکھا"
+        },
+        {
+          "ar": "اكْتُبْ",
+          "ar_plain": "اكتب",
+          "translit": "aktub",
+          "en": "write!",
+          "ur": "لکھو!"
+        },
+        {
+          "ar": "كَتَبَتْ",
+          "ar_plain": "كتبت",
+          "translit": "katabat",
+          "en": "she wrote",
+          "ur": "اس (مؤنث) نے لکھا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "كَتَبَ",
+        "ar_plain": "كتب",
+        "translit": "kataba",
+        "en": "he wrote",
+        "ur": "اس نے لکھا"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَمْسِ (yesterday) goes with a past verb.",
+        "ur": "أَمْسِ (گزشتہ کل) ماضی کے فعل کے ساتھ آتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch43-l05-ex03",
+      "prompt": {
+        "ar": "جَلَسَتِ الطَّالِبَةُ الْمُجْتَهِدَةُ فِي الْفَصْلِ.",
+        "ar_plain": "جلست الطالبة المجتهدة في الفصل.",
+        "translit": "jalasati aṭ-ṭālibatu al-mujtahidatu fī al-faṣli",
+        "en": "The diligent female student sat in the class.",
+        "ur": "محنتی طالبہ کلاس میں بیٹھی۔"
+      },
+      "options": [
+        {
+          "en": "The diligent teacher sat in the class.",
+          "ur": "محنتی معلم کلاس میں بیٹھا۔"
+        },
+        {
+          "en": "The female student sat in the diligent class.",
+          "ur": "طالبہ محنتی کلاس میں بیٹھی۔"
+        },
+        {
+          "en": "The diligent female student sat in the class.",
+          "ur": "محنتی طالبہ کلاس میں بیٹھی۔"
+        },
+        {
+          "en": "The diligent female student went to the class.",
+          "ur": "محنتی طالبہ کلاس میں گئی۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "جَلَسَتْ = she sat; الْمُجْتَهِدَةُ describes the female student.",
+        "ur": "جَلَسَتْ = وہ بیٹھی؛ الْمُجْتَهِدَةُ طالبہ کا وصف ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch43-l05-ex04",
+      "statement": {
+        "en": "In the pair of sentences about Salma, ـهَا in قَلَمُهَا points to Salma.",
+        "ur": "سلمیٰ والی جوڑی میں قَلَمُهَا کا ـهَا سلمیٰ کی طرف اشارہ کرتا ہے۔",
+        "ar_example": {
+          "ar": "سَلْمَى مُعَلِّمَةٌ. قَلَمُهَا فِي الْفَصْلِ.",
+          "ar_plain": "سلمى معلمة. قلمها في الفصل.",
+          "translit": "salmā muʿallimatun qalamuhā fī al-faṣli",
+          "en": "Salma is a teacher. Her pen is in the class.",
+          "ur": "سلمیٰ معلمہ ہے۔ اس کا قلم کلاس میں ہے۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Salma is the feminine noun before it.",
+        "ur": "سلمیٰ ہی اس سے پہلے والا مؤنث اسم ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch43-l05-ex05",
+      "prompt": {
+        "ar": "فَصَلِّ لِرَبِّكَ وَانْحَرْ",
+        "ar_plain": "فصل لربك وانحر",
+        "translit": "faṣalli lirabbika waānḥar",
+        "en": "(108:2)",
+        "ur": "(108:2)"
+      },
+      "options": [
+        {
+          "en": "So pray to your Lord and sacrifice.",
+          "ur": "تو اپنے رب کے لیے نماز پڑھو اور قربانی کرو۔"
+        },
+        {
+          "en": "So he prayed to his Lord and sacrificed.",
+          "ur": "تو اس نے اپنے رب کے لیے نماز پڑھی اور قربانی کی۔"
+        },
+        {
+          "en": "So pray to the house and sacrifice.",
+          "ur": "تو گھر کے لیے نماز پڑھو اور قربانی کرو۔"
+        },
+        {
+          "en": "Do not pray to your Lord.",
+          "ur": "اپنے رب کے لیے نماز نہ پڑھو۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Two commands in 108:2: pray, sacrifice.",
+        "ur": "108:2 میں دو حکم: نماز پڑھو، قربانی کرو۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch43-l05-ex06",
+      "statement": {
+        "en": "In 104:8, ـهَا in إِنَّهَا points back to the fire.",
+        "ur": "104:8 میں إِنَّهَا کا ـهَا آگ کی طرف لوٹتا ہے۔",
+        "ar_example": {
+          "ar": "نَارُ اللَّهِ الْمُوقَدَةُ الَّتِي تَطَّلِعُ عَلَى الْأَفْئِدَةِ إِنَّهَا عَلَيْهِم مُّؤْصَدَةٌ",
+          "ar_plain": "نار الله الموقدة التي تطلع على الافئدة انها عليهم مؤصدة",
+          "translit": "nāru al-lahi al-mūqadatu allatī taṭṭaliʿu ʿalā al-ʾafʾidati ʾinnahā ʿalayhim mmuʾṣadatun",
+          "en": "(104:6–8)",
+          "ur": "(104:6–8)"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "نَارُ (the fire) in 104:6 is the feminine noun.",
+        "ur": "104:6 کا نَارُ (آگ) مؤنث اسم ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch43-l05-ex07",
+      "statement": {
+        "en": "In 107:2–3, the actions of driving away the orphan and not urging feeding belong to the person of 107:1.",
+        "ur": "107:2–3 میں یتیم کو دھکے دینے اور کھلانے کی ترغیب نہ دینے کے کام 107:1 کے شخص کے ہیں۔",
+        "ar_example": {
+          "ar": "أَرَأَيْتَ الَّذِي يُكَذِّبُ بِالدِّينِ فَذَٰلِكَ الَّذِي يَدُعُّ الْيَتِيمَ وَلَا يَحُضُّ عَلَىٰ طَعَامِ الْمِسْكِينِ",
+          "ar_plain": "ارايت الذي يكذب بالدين فذلك الذي يدع اليتيم ولا يحض على طعام المسكين",
+          "translit": "ʾaraʾayta alladhī yukaddhibu bi-d-dīni fadhālika alladhī yaduʿʿu al-yatīma walā yaḥuḍḍu ʿalā ṭaʿāmi al-miskīni",
+          "en": "(107:1–3)",
+          "ur": "(107:1–3)"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "فَذَلِكَ الَّذِي points back to that person.",
+        "ur": "فَذَلِكَ الَّذِي اسی شخص کی طرف لوٹتا ہے۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch43-l05-ex08",
+      "prompt_line": {
+        "ar": "تَفَضَّلْ. هَلْ تُرِيدُ طَعَامًا؟",
+        "ar_plain": "تفضل. هل تريد طعاما؟",
+        "translit": "tafaḍḍal hal turīdu ṭaʿāman",
+        "en": "Here you are. Do you want some food? (You do not want any.)",
+        "ur": "تفضل۔ کیا آپ کھانا چاہتے ہیں؟ (آپ نہیں چاہتے۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "نَعَمْ، شُكْرًا.",
+          "ar_plain": "نعم، شكرا.",
+          "translit": "naʿam shukran",
+          "en": "Yes, thank you.",
+          "ur": "جی ہاں، شکریہ۔"
+        },
+        {
+          "ar": "لَا، شُكْرًا.",
+          "ar_plain": "لا، شكرا.",
+          "translit": "lā shukran",
+          "en": "No, thank you.",
+          "ur": "نہیں، شکریہ۔"
+        },
+        {
+          "ar": "وَإِيَّاكَ.",
+          "ar_plain": "واياك.",
+          "translit": "waʾiyyaāka",
+          "en": "And you too.",
+          "ur": "اور آپ کو بھی۔"
+        },
+        {
+          "ar": "هَلْ تُرِيدُ مَاءً؟",
+          "ar_plain": "هل تريد ماء؟",
+          "translit": "hal turīdu māʾan",
+          "en": "Do you want water?",
+          "ur": "کیا آپ پانی چاہتے ہیں؟"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Declining politely: لَا، شُكْرًا.",
+        "ur": "ادب سے انکار: لَا، شُكْرًا۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch43-l05-ex09",
+      "prompt_line": {
+        "ar": "هَلْ تُرِيدُ مَاءً؟",
+        "ar_plain": "هل تريد ماء؟",
+        "translit": "hal turīdu māʾan",
+        "en": "Do you want water? (You want some.)",
+        "ur": "کیا آپ پانی چاہتے ہیں؟ (آپ چاہتے ہیں۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "لَا، شُكْرًا.",
+          "ar_plain": "لا، شكرا.",
+          "translit": "lā shukran",
+          "en": "No, thank you.",
+          "ur": "نہیں، شکریہ۔"
+        },
+        {
+          "ar": "كَمَا تُرِيدُ.",
+          "ar_plain": "كما تريد.",
+          "translit": "kamā turīdu",
+          "en": "As you wish.",
+          "ur": "جیسے آپ چاہیں۔"
+        },
+        {
+          "ar": "وَإِيَّاكَ.",
+          "ar_plain": "واياك.",
+          "translit": "waʾiyyaāka",
+          "en": "And you too.",
+          "ur": "اور آپ کو بھی۔"
+        },
+        {
+          "ar": "نَعَمْ، شُكْرًا.",
+          "ar_plain": "نعم، شكرا.",
+          "translit": "naʿam shukran",
+          "en": "Yes, thank you.",
+          "ur": "جی ہاں، شکریہ۔"
+        }
+      ],
+      "correct_option_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Accepting: نَعَمْ، شُكْرًا.",
+        "ur": "قبول کرنا: نَعَمْ، شُكْرًا۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch43-l05-ex10",
+      "statement": {
+        "en": "In the record about Yusuf, he will write the lesson tomorrow.",
+        "ur": "یوسف والے ریکارڈ میں وہ کل (آنے والا) سبق لکھے گا۔",
+        "ar_example": {
+          "ar": "أَمْسِ قَرَأَ يُوسُفُ كِتَابًا. غَدًا سَيَكْتُبُ الدَّرْسَ.",
+          "ar_plain": "امس قرا يوسف كتابا. غدا سيكتب الدرس.",
+          "translit": "ʾamsi qaraʾa yuūsufu kitāban ghadan sayaktubu ad-darsa",
+          "en": "Yesterday Yusuf read a book. Tomorrow he will write the lesson.",
+          "ur": "کل (گزشتہ) یوسف نے ایک کتاب پڑھی۔ کل (آنے والا) وہ سبق لکھے گا۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "غَدًا سَيَكْتُبُ الدَّرْسَ — yes.",
+        "ur": "غَدًا سَيَكْتُبُ الدَّرْسَ — جی ہاں۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch43-l05-ex11",
+      "statement": {
+        "en": "The sentences about Salma say that she bought the pen yesterday.",
+        "ur": "سلمیٰ والے جملے کہتے ہیں کہ اس نے قلم کل (گزشتہ) خریدا۔",
+        "ar_example": {
+          "ar": "سَلْمَى مُعَلِّمَةٌ. قَلَمُهَا فِي الْفَصْلِ.",
+          "ar_plain": "سلمى معلمة. قلمها في الفصل.",
+          "translit": "salmā muʿallimatun qalamuhā fī al-faṣli",
+          "en": "Salma is a teacher. Her pen is in the class.",
+          "ur": "سلمیٰ معلمہ ہے۔ اس کا قلم کلاس میں ہے۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "It is not stated: they only say the pen is in the class.",
+        "ur": "یہ بیان نہیں ہوا: وہ صرف کہتے ہیں کہ قلم کلاس میں ہے۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Everything works together",
+      "ar": "الْفَصْلُ الثَّالِثُ وَالْأَرْبَعُونَ",
+      "ur": "سب کچھ مل کر کام کرتا ہے"
+    },
+    "ayah": {
+      "surah": 107,
+      "ayah": 7,
+      "label": "Al-Ma'un 107:7",
+      "ar": "وَيَمْنَعُونَ الْمَاعُونَ",
+      "en": "And withhold [simple] assistance.",
+      "ur": "اور برتنے کی چیزیں عاریتہً نہیں دیتے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/107007.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "وَيَمْنَعُونَ",
+      "الْمَاعُونَ"
+    ],
+    "noor_explanation": {
+      "en": "From a three-line record to a whole surah, the same skills work together: time, parts, references, evidence.",
+      "ur": "تین سطروں کے ریکارڈ سے پوری سورت تک، وہی مہارتیں مل کر کام کرتی ہیں: وقت، حصے، حوالے، ثبوت۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 43 review done. Next: the chapter test.",
+      "ur": "باب 43 کی دہرائی مکمل۔ اگلا: باب کا امتحان۔"
+    }
+  }
+}

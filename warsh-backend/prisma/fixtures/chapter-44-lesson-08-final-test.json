@@ -1,0 +1,443 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 44, final test (ch44-test, new). Added 2026-10-03 in the proposal harvest, batch 4, from Docs/proposals/chapter-44-content-proposal.md. Twelve multiple-choice questions in six strands of two: the sound-verb form after لَمْ (q01–02, stems يَذْهَبُ / يَكْتُبُ only), لَمْ / لَمَّا meaning (q03–04), repair (q05–06), the complete Al-Ikhlas reading (q07–08), the 49:14 excerpts (q09–10) and two fresh sound contexts (q11–12). Weak, plural and passive forms are given, never derived. Pass mark 80 %: 9/12 fails, 10/12 passes.",
+    "title": "Chapter 44 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الرَّابِعِ وَالْأَرْبَعِينَ",
+    "titleUr": "باب 44 کا آخری امتحان",
+    "chapter_order": 44,
+    "lesson_order": 8,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 112,
+      "ayah": 3,
+      "label": "Al-Ikhlas 112:3",
+      "ar": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+      "en": "He neither begets nor is born,",
+      "ur": "نہ کسی کا باپ ہے اور نہ کسی کا بیٹا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/112003.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 44.",
+      "ur": "باب 44 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 44,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch44-test-q01",
+        "topic": {
+          "en": "لَمْ with a verb",
+          "ur": "لَمْ کے ساتھ فعل"
+        },
+        "prompt": {
+          "en": "Which verb completes 'Ahmad did not go to the school'?",
+          "ur": "کون سا فعل جملہ 'احمد اسکول نہیں گیا' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "لَمْ ___ أَحْمَدُ إِلَى الْمَدْرَسَةِ.",
+        "options": [
+          {
+            "en": "يَذْهَبُ",
+            "ur": "يَذْهَبُ"
+          },
+          {
+            "en": "يَذْهَبَ",
+            "ur": "يَذْهَبَ"
+          },
+          {
+            "en": "ذَهَبَ",
+            "ur": "ذَهَبَ"
+          },
+          {
+            "en": "يَذْهَبْ",
+            "ur": "يَذْهَبْ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch44-test-q02",
+        "topic": {
+          "en": "لَمْ with a verb",
+          "ur": "لَمْ کے ساتھ فعل"
+        },
+        "prompt": {
+          "en": "Which verb completes 'Ahmad did not write the lesson'?",
+          "ur": "کون سا فعل جملہ 'احمد نے سبق نہیں لکھا' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "لَمْ ___ أَحْمَدُ الدَّرْسَ.",
+        "options": [
+          {
+            "en": "يَكْتُبْ",
+            "ur": "يَكْتُبْ"
+          },
+          {
+            "en": "يَكْتُبُ",
+            "ur": "يَكْتُبُ"
+          },
+          {
+            "en": "يَكْتُبَ",
+            "ur": "يَكْتُبَ"
+          },
+          {
+            "en": "كَتَبَ",
+            "ur": "كَتَبَ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch44-test-q03",
+        "topic": {
+          "en": "لَمَّا meaning",
+          "ur": "لَمَّا کا مفہوم"
+        },
+        "prompt": {
+          "en": "What does this sentence say?",
+          "ur": "یہ جملہ کیا کہتا ہے؟"
+        },
+        "arabic": "لَمَّا يَكْتُبْ أَحْمَدُ الدَّرْسَ",
+        "options": [
+          {
+            "en": "Ahmad did not write the lesson.",
+            "ur": "احمد نے سبق نہیں لکھا۔"
+          },
+          {
+            "en": "Ahmad has not written the lesson yet.",
+            "ur": "احمد نے ابھی تک سبق نہیں لکھا۔"
+          },
+          {
+            "en": "Ahmad will write the lesson.",
+            "ur": "احمد سبق لکھے گا۔"
+          },
+          {
+            "en": "When Ahmad wrote the lesson.",
+            "ur": "جب احمد نے سبق لکھا۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch44-test-q04",
+        "topic": {
+          "en": "لَمْ or لَمَّا",
+          "ur": "لَمْ یا لَمَّا"
+        },
+        "prompt": {
+          "en": "Which sentence is a simple denial of a past action, with no 'yet'?",
+          "ur": "کون سا جملہ ماضی کے کام کی سادہ نفی ہے، 'ابھی تک' کے بغیر؟"
+        },
+        "options": [
+          {
+            "en": "لَمَّا يَذْهَبْ أَحْمَدُ.",
+            "ur": "لَمَّا يَذْهَبْ أَحْمَدُ."
+          },
+          {
+            "en": "لَا يَذْهَبُ أَحْمَدُ.",
+            "ur": "لَا يَذْهَبُ أَحْمَدُ."
+          },
+          {
+            "en": "لَمْ يَذْهَبْ أَحْمَدُ.",
+            "ur": "لَمْ يَذْهَبْ أَحْمَدُ."
+          },
+          {
+            "en": "لَنْ يَذْهَبَ أَحْمَدُ.",
+            "ur": "لَنْ يَذْهَبَ أَحْمَدُ."
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch44-test-q05",
+        "topic": {
+          "en": "Repairing a form",
+          "ur": "روپ کی درستی"
+        },
+        "prompt": {
+          "en": "Which correction fixes this sentence?",
+          "ur": "کون سی درستی اس جملے کو ٹھیک کرتی ہے؟"
+        },
+        "arabic": "لَمْ يَكْتُبُ أَحْمَدُ الدَّرْسَ",
+        "options": [
+          {
+            "en": "لَمْ يَكْتُبَ أَحْمَدُ الدَّرْسَ",
+            "ur": "لَمْ يَكْتُبَ أَحْمَدُ الدَّرْسَ"
+          },
+          {
+            "en": "لَنْ يَكْتُبْ أَحْمَدُ الدَّرْسَ",
+            "ur": "لَنْ يَكْتُبْ أَحْمَدُ الدَّرْسَ"
+          },
+          {
+            "en": "لَمْ كَتَبَ أَحْمَدُ الدَّرْسَ",
+            "ur": "لَمْ كَتَبَ أَحْمَدُ الدَّرْسَ"
+          },
+          {
+            "en": "لَمْ يَكْتُبْ أَحْمَدُ الدَّرْسَ",
+            "ur": "لَمْ يَكْتُبْ أَحْمَدُ الدَّرْسَ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch44-test-q06",
+        "topic": {
+          "en": "Repairing a form",
+          "ur": "روپ کی درستی"
+        },
+        "prompt": {
+          "en": "The sentence should mean 'Ahmad has not gone yet'. What is wrong with it?",
+          "ur": "جملے کا مطلب 'احمد ابھی تک نہیں گیا' ہونا چاہیے۔ اس میں کیا غلط ہے؟"
+        },
+        "arabic": "لَمَّا يَذْهَبُ أَحْمَدُ",
+        "options": [
+          {
+            "en": "لَمَّا should be لَنْ",
+            "ur": "لَمَّا کی جگہ لَنْ ہونا چاہیے"
+          },
+          {
+            "en": "The verb should end in sukūn: لَمَّا يَذْهَبْ",
+            "ur": "فعل کے آخر میں سکون ہونا چاہیے: لَمَّا يَذْهَبْ"
+          },
+          {
+            "en": "The verb should be in the past tense",
+            "ur": "فعل ماضی میں ہونا چاہیے"
+          },
+          {
+            "en": "Nothing is wrong",
+            "ur": "کچھ غلط نہیں"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch44-test-q07",
+        "topic": {
+          "en": "Al-Ikhlas",
+          "ur": "الاخلاص"
+        },
+        "prompt": {
+          "en": "Read 112:3. يَلِدْ means 'beget' and يُولَدْ means 'be begotten'. What does it say?",
+          "ur": "112:3 پڑھیں۔ يَلِدْ کا مطلب 'جنم دینا' اور يُولَدْ کا مطلب 'جنا جانا' ہے۔ یہ کیا کہتی ہے؟"
+        },
+        "arabic": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+        "options": [
+          {
+            "en": "He did not beget, nor was He begotten.",
+            "ur": "نہ اس نے کسی کو جنا اور نہ وہ جنا گیا۔"
+          },
+          {
+            "en": "He begets and is begotten.",
+            "ur": "وہ جنم دیتا ہے اور جنا جاتا ہے۔"
+          },
+          {
+            "en": "He has not begotten yet.",
+            "ur": "اس نے ابھی تک کسی کو نہیں جنا۔"
+          },
+          {
+            "en": "He will not beget tomorrow.",
+            "ur": "وہ کل کسی کو نہیں جنے گا۔"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch44-test-q08",
+        "topic": {
+          "en": "Al-Ikhlas",
+          "ur": "الاخلاص"
+        },
+        "prompt": {
+          "en": "Read all four ayat of Al-Ikhlas. أَحَدٌ means 'one', الصَّمَدُ 'the Self-Sufficient', كُفُوًا 'comparable'. Which sentence states them together?",
+          "ur": "الاخلاص کی چاروں آیات پڑھیں۔ أَحَدٌ کا مطلب 'ایک'، الصَّمَدُ 'بے نیاز'، كُفُوًا 'ہمسر' ہے۔ کون سا جملہ انہیں ملا کر بیان کرتا ہے؟"
+        },
+        "arabic": "قُلْ هُوَ اللَّهُ أَحَدٌ اللَّهُ الصَّمَدُ لَمْ يَلِدْ وَلَمْ يُولَدْ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
+        "options": [
+          {
+            "en": "Allah is One, and He begets and is begotten; none is comparable to Him.",
+            "ur": "اللہ ایک ہے، وہ جنم دیتا ہے اور جنا جاتا ہے؛ کوئی اس کا ہمسر نہیں۔"
+          },
+          {
+            "en": "Allah is the Self-Sufficient and has a comparable one.",
+            "ur": "اللہ بے نیاز ہے اور اس کا ایک ہمسر ہے۔"
+          },
+          {
+            "en": "Allah is One, the Self-Sufficient; He did not beget and was not begotten; and none is comparable to Him.",
+            "ur": "اللہ ایک ہے، بے نیاز ہے؛ نہ اس نے کسی کو جنا اور نہ وہ جنا گیا؛ اور کوئی اس کا ہمسر نہیں۔"
+          },
+          {
+            "en": "Allah has not yet begotten anyone and none is comparable yet.",
+            "ur": "اللہ نے ابھی تک کسی کو نہیں جنا اور ابھی تک کوئی ہمسر نہیں۔"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch44-test-q09",
+        "topic": {
+          "en": "49:14",
+          "ur": "49:14"
+        },
+        "prompt": {
+          "en": "Read this excerpt of 49:14. يَدْخُلِ means 'enters' and الْإِيمَانُ 'faith'. What does it say?",
+          "ur": "49:14 کا یہ اقتباس پڑھیں۔ يَدْخُلِ کا مطلب 'داخل ہوتا ہے' اور الْإِيمَانُ 'ایمان' ہے۔ یہ کیا کہتا ہے؟"
+        },
+        "arabic": "وَلَمَّا يَدْخُلِ الْإِيمَانُ فِي قُلُوبِكُمْ",
+        "options": [
+          {
+            "en": "and faith has not yet entered your hearts",
+            "ur": "اور ایمان ابھی تک تمہارے دلوں میں داخل نہیں ہوا"
+          },
+          {
+            "en": "and faith entered your hearts",
+            "ur": "اور ایمان تمہارے دلوں میں داخل ہوا"
+          },
+          {
+            "en": "and faith will enter your hearts tomorrow",
+            "ur": "اور ایمان کل تمہارے دلوں میں داخل ہوگا"
+          },
+          {
+            "en": "and your hearts do not hold faith",
+            "ur": "اور تمہارے دل ایمان نہیں رکھتے"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch44-test-q10",
+        "topic": {
+          "en": "49:14",
+          "ur": "49:14"
+        },
+        "prompt": {
+          "en": "Read this excerpt of 49:14. تُؤْمِنُوا means 'you believe'. Which particle does it use?",
+          "ur": "49:14 کا یہ اقتباس پڑھیں۔ تُؤْمِنُوا کا مطلب 'تم ایمان لاتے ہو' ہے۔ یہ کون سا حرف استعمال کرتا ہے؟"
+        },
+        "arabic": "قُل لَّمْ تُؤْمِنُوا",
+        "options": [
+          {
+            "en": "لَمَّا",
+            "ur": "لَمَّا"
+          },
+          {
+            "en": "لَنْ",
+            "ur": "لَنْ"
+          },
+          {
+            "en": "لَمْ",
+            "ur": "لَمْ"
+          },
+          {
+            "en": "لَا",
+            "ur": "لَا"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch44-test-q11",
+        "topic": {
+          "en": "Fresh sound-verb context",
+          "ur": "نیا سادہ فعل"
+        },
+        "prompt": {
+          "en": "Which verb completes 'My brother did not write the book'?",
+          "ur": "کون سا فعل جملہ 'میرے بھائی نے کتاب نہیں لکھی' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "لَمْ ___ أَخِي الْكِتَابَ.",
+        "options": [
+          {
+            "en": "يَكْتُبُ",
+            "ur": "يَكْتُبُ"
+          },
+          {
+            "en": "يَكْتُبَ",
+            "ur": "يَكْتُبَ"
+          },
+          {
+            "en": "كَتَبَ",
+            "ur": "كَتَبَ"
+          },
+          {
+            "en": "يَكْتُبْ",
+            "ur": "يَكْتُبْ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch44-test-q12",
+        "topic": {
+          "en": "Fresh sound-verb context",
+          "ur": "نیا سادہ فعل"
+        },
+        "prompt": {
+          "en": "Which verb completes 'Ahmad has not yet gone to the market'?",
+          "ur": "کون سا فعل جملہ 'احمد ابھی تک بازار نہیں گیا' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "لَمَّا ___ أَحْمَدُ إِلَى السُّوقِ بَعْدُ.",
+        "options": [
+          {
+            "en": "يَذْهَبُ",
+            "ur": "يَذْهَبُ"
+          },
+          {
+            "en": "يَذْهَبْ",
+            "ur": "يَذْهَبْ"
+          },
+          {
+            "en": "يَذْهَبَ",
+            "ur": "يَذْهَبَ"
+          },
+          {
+            "en": "ذَهَبَ",
+            "ur": "ذَهَبَ"
+          }
+        ],
+        "correct_index": 1
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 44 — negating the past",
+      "ar": "نَفْيُ الْمَاضِي",
+      "ur": "باب 44 — ماضی کی نفی"
+    },
+    "ayah": {
+      "surah": 112,
+      "ayah": 3,
+      "label": "Al-Ikhlas 112:3",
+      "ar": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+      "en": "He neither begets nor is born,",
+      "ur": "نہ کسی کا باپ ہے اور نہ کسی کا بیٹا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/112003.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "لَمْ",
+      "يَلِدْ"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 44 able to put a sound verb after لَمْ or لَمَّا, tell the two meanings apart, and read Al-Ikhlas and the 49:14 excerpts.",
+      "ur": "آپ باب 44 اس حال میں مکمل کرتے ہیں کہ سادہ فعل کو لَمْ یا لَمَّا کے بعد لگا سکیں، دونوں مفہوم الگ پہچان سکیں، اور الاخلاص اور 49:14 کے اقتباسات پڑھ سکیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 44 complete. Chapter 45: the three states of the present-tense verb.",
+      "ur": "باب 44 مکمل۔ باب 45: مضارع فعل کی تین حالتیں۔"
+    }
+  }
+}

@@ -2,96 +2,118 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 43, Lesson 2 - Number constructions in Book 4 integration context.",
+    "_note": "Chapter 43, Lesson 2 (ch43-l02). Retrieval of Chapter 26/27/40 sentence parts: actor, action, object, attachment, a modifier tied to its own noun by its ending, and stated versus unsupported. No numbers (those belong to Chapter 48). Rebuilt 2026-10-03 in the proposal harvest, batch 4 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-43-content-proposal.md and its review amendments.",
+    "title": "Putting a Sentence Together",
+    "titleAr": "تَرْكِيبُ الْجُمْلَةِ",
+    "titleUr": "جملے کو جوڑ کر پڑھنا",
     "chapter_order": 43,
     "lesson_order": 2,
-    "chapter_title": "Book 4 Integration",
-    "title": "Numbers in Context",
-    "titleAr": "الْأَعْدَادُ فِي السِّيَاقِ",
-    "source": "madina_reader_book4_integration.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 107,
-      "ayah": 1,
-      "label": "Al-Ma'un 107:1",
-      "ar": "أَرَأَيْتَ الَّذِي يُكَذِّبُ بِالدِّينِ",
-      "en": "Have you seen the one who denies the recompense?",
-      "ur": "کیا آپ نے اسے دیکھا جو بدلے کو جھٹلاتا ہے؟",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/107001.mp3"
+      "surah": 55,
+      "ayah": 46,
+      "label": "Ar-Rahman 55:46",
+      "ar": "وَلِمَنْ خَافَ مَقَامَ رَبِّهِ جَنَّتَانِ",
+      "en": "But for he who has feared the position of his Lord are two gardens -",
+      "ur": "اور جو شخص اپنے پروردگار کے سامنے کھڑے ہونے سے ڈرا اس کے لئے دو باغ ہیں",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/055046.mp3"
     },
     "noor_intro": {
-      "en": "Numbers appear everywhere in Arabic — from Quranic verses to everyday counting. Today you practise them in passage context.",
-      "ur": "اعداد ہر جگہ عربی میں نظر آتے ہیں — قرآنی آیتوں سے لے کر روزمرہ شماری تک۔ آج آپ انہیں متن کے سیاق و سباق میں مشق کرتے ہیں۔"
+      "en": "A long sentence is built from small parts you already know. Today you take it apart, then put it back together.",
+      "ur": "لمبا جملہ ان چھوٹے حصوں سے بنتا ہے جو آپ پہلے سے جانتے ہیں۔ آج آپ اسے کھولیں گے، پھر دوبارہ جوڑیں گے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Numbers in Arabic",
-        "ar": "الْأَعْدَادُ فِي الْعَرَبِيَّةِ",
-        "ur": "عربی میں اعداد"
+        "en": "Who did what, to what, where",
+        "ar": "أَجْزَاءُ الْجُمْلَةِ",
+        "ur": "کس نے کیا، کس پر، کہاں"
       },
       "explanation": {
-        "en": "Arabic numbers from 1 to 10 are commonly used. وَاحِدٌ (1), اِثْنَانِ (2), ثَلَاثَةٌ (3), أَرْبَعَةٌ (4), خَمْسَةٌ (5), سِتَّةٌ (6), سَبْعَةٌ (7), ثَمَانِيَةٌ (8), تِسْعَةٌ (9), عَشَرَةٌ (10).",
-        "ur": "عربی میں 1 سے 10 تک کے اعداد عام طور پر استعمال ہوتے ہیں۔"
+        "en": "Read a longer sentence in parts: the action, who does it, what it is done to, and any place phrase. A describing word or a possessor sits with its own noun. You are reviewing Chapters 26, 27 and 40.",
+        "ur": "لمبے جملے کو حصوں میں پڑھیں: کام، کرنے والا، جس پر کیا گیا، اور جگہ کا ٹکڑا۔ وصف یا مضاف الیہ اپنے ہی اسم کے ساتھ بیٹھتا ہے۔ آپ باب 26، 27 اور 40 کی دہرائی کر رہے ہیں۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "عِشْرُونَ كِتَابًا",
-        "ar_plain": "عشرون كتابا",
-        "translit": "'ishruuna kitaaban",
-        "en": "twenty books",
-        "ur": "بیس کتابیں"
+        "ar": "قَرَأَ الطَّالِبُ الْمُجْتَهِدُ كِتَابَ الْمُعَلِّمِ فِي الْفَصْلِ.",
+        "ar_plain": "قرا الطالب المجتهد كتاب المعلم في الفصل.",
+        "translit": "qaraʾa aṭ-ṭālibu al-mujtahidu kitāba al-muʿallimi fī al-faṣli",
+        "en": "The diligent student read the teacher's book in the class.",
+        "ur": "محنتی طالب علم نے کلاس میں معلم کی کتاب پڑھی۔"
       },
       "explanation": {
-        "en": "عِشْرُونَ is 20. It takes the noun in the accusative singular: كِتَابًا, not كُتُبٌ.",
-        "ur": "عِشْرُونَ 20 ہے۔ یہ اسم کو نصب واحد میں لیتا ہے: كِتَابًا، نہ كُتُبٌ۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "كَمْ سَنَةً عِشْتَ؟ — عِشْرُونَ سَنَةً",
-        "ar_plain": "كم سنة عشت — عشرون سنة",
-        "translit": "kam sanatan 'ishita? — 'ishruuna sanatan",
-        "en": "How many years did you live? — Twenty years.",
-        "ur": "تم کتنے سال جیے؟ — بیس سال۔"
-      },
-      "explanation": {
-        "en": "Numbers in answers follow the same كَمْ pattern from Chapter 42.",
-        "ur": "جوابات میں اعداد Chapter 42 کے کَمْ وزن پر چلتے ہیں۔"
+        "en": "قَرَأَ = the action. الطَّالِبُ = who reads. الْمُجْتَهِدُ = describes the student. كِتَابَ الْمُعَلِّمِ = what he read: the teacher's book. فِي الْفَصْلِ = where.",
+        "ur": "قَرَأَ = کام۔ الطَّالِبُ = پڑھنے والا۔ الْمُجْتَهِدُ = طالب علم کا وصف۔ كِتَابَ الْمُعَلِّمِ = جو اس نے پڑھا: معلم کی کتاب۔ فِي الْفَصْلِ = کہاں۔"
       }
     },
     {
       "type": "GRAMMAR_NOTE",
       "title": {
-        "en": "Numbers govern nouns in accusative",
-        "ur": "اعداد اسم کو نصب میں لیتے ہیں"
+        "en": "A describing word matches its own noun",
+        "ur": "وصف اپنے ہی اسم سے ملتا ہے"
       },
       "body": {
-        "en": "In Arabic, numbers from 3 to 10 govern the noun in the plural genitive. Numbers 11+ take the noun in the singular accusative. عِشْرُونَ (20) takes singular accusative.",
-        "ur": "عربی میں 3 سے 10 تک کے اعداد اسم کو جمع مجرور میں لیتے ہیں۔ 11+ کے اعداد واحد نصب میں لیتے ہیں۔ عِشْرُونَ (20) واحد نصب لیتا ہے۔"
+        "en": "الْمُجْتَهِدُ ends in ـُ, like الطَّالِبُ — so it describes the student. الْمُعَلِّمِ ends in ـِ because it is the possessor in كِتَابَ الْمُعَلِّمِ. The endings tell you which word goes with which.",
+        "ur": "الْمُجْتَهِدُ کے آخر میں ـُ ہے، جیسے الطَّالِبُ میں — اس لیے یہ طالب علم کا وصف ہے۔ الْمُعَلِّمِ کے آخر میں ـِ ہے کیونکہ یہ كِتَابَ الْمُعَلِّمِ میں مضاف الیہ ہے۔ آخری حرکات بتاتی ہیں کہ کون سا لفظ کس کے ساتھ ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "ثَلَاثِينَ لَيْلَةً",
-        "ar_plain": "ثلاثين ليلة",
-        "translit": "thalaathiina laylatan",
-        "en": "thirty nights (Al-A'raf 7:142)",
-        "ur": "تیس راتیں (الاعراف 7:142)"
+        "ar": "فَاطِمَةُ طَالِبَةٌ. كِتَابُهَا عَلَى الْمَكْتَبِ.",
+        "ar_plain": "فاطمة طالبة. كتابها على المكتب.",
+        "translit": "fāṭimatu ṭālibatun kitābuhā ʿalā al-maktabi",
+        "en": "Fatima is a student. Her book is on the desk.",
+        "ur": "فاطمہ ایک طالبہ ہے۔ اس کی کتاب میز پر ہے۔"
       },
       "explanation": {
-        "en": "In 7:142: وَوَاعَدْنَا مُوسَىٰ ثَلَاثِينَ لَيْلَةً — \"We appointed for Musa thirty nights\". Like عِشْرُونَ, the tens take a singular noun ending in ـًا: لَيْلَةً.",
-        "ur": "7:142 میں: وَوَاعَدْنَا مُوسَىٰ ثَلَاثِينَ لَيْلَةً — \"ہم نے موسیٰ سے تیس راتوں کا وعدہ کیا\"۔ عِشْرُونَ کی طرح دہائیوں کے بعد ـًا والا واحد اسم آتا ہے: لَيْلَةً۔"
+        "en": "Fatima is a student. Her book is on the desk.",
+        "ur": "فاطمہ ایک طالبہ ہے۔ اس کی کتاب میز پر ہے۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Where does ـهَا point?",
+        "ar": "ـهَا",
+        "ur": "ـهَا کس کی طرف ہے؟"
+      },
+      "explanation": {
+        "en": "The attached ـهَا in كِتَابُهَا ('her book') points back to the feminine noun in the sentence before: فَاطِمَةُ.",
+        "ur": "كِتَابُهَا ('اس کی کتاب') میں جڑا ہوا ـهَا پچھلے جملے کے مؤنث اسم کی طرف لوٹتا ہے: فَاطِمَةُ۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Stated or not stated?",
+        "ur": "بیان ہوا یا نہیں؟"
+      },
+      "body": {
+        "en": "The text says her book is on the desk. It does not say she put it there, or when. A supported conclusion uses only what is stated.",
+        "ur": "متن کہتا ہے کہ اس کی کتاب میز پر ہے۔ یہ نہیں کہتا کہ اس نے وہاں رکھی، یا کب۔ ثابت شدہ نتیجہ صرف وہی لیتا ہے جو بیان ہوا۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "كَتَبَ الْمُعَلِّمُ الْكَرِيمُ دَرْسَ الطَّالِبَةِ فِي الْبَيْتِ.",
+        "ar_plain": "كتب المعلم الكريم درس الطالبة في البيت.",
+        "translit": "kataba al-muʿallimu al-karīmu darsa aṭ-ṭālibati fī al-bayti",
+        "en": "The generous teacher wrote the female student's lesson at home.",
+        "ur": "سخی معلم نے گھر میں طالبہ کا سبق لکھا۔"
+      },
+      "explanation": {
+        "en": "Another constructed sentence for practice: who wrote, what was written, whose it is, where.",
+        "ur": "مشق کے لیے ایک اور بنایا ہوا جملہ: کس نے لکھا، کیا لکھا، کس کا ہے، کہاں۔"
       }
     }
   ],
@@ -100,282 +122,245 @@
       "type": "TAP_TRANSLATION",
       "id": "ch43-l02-ex01",
       "prompt": {
-        "ar": "عِشْرُونَ كِتَابًا",
-        "ar_plain": "عشرون كتابا",
-        "translit": "'ishruuna kitaaban",
-        "en": "twenty books",
-        "ur": "بیس کتابیں"
+        "ar": "قَرَأَ الطَّالِبُ الْمُجْتَهِدُ كِتَابَ الْمُعَلِّمِ فِي الْفَصْلِ.",
+        "ar_plain": "قرا الطالب المجتهد كتاب المعلم في الفصل.",
+        "translit": "qaraʾa aṭ-ṭālibu al-mujtahidu kitāba al-muʿallimi fī al-faṣli",
+        "en": "The diligent student read the teacher's book in the class.",
+        "ur": "محنتی طالب علم نے کلاس میں معلم کی کتاب پڑھی۔"
       },
       "options": [
         {
-          "en": "twenty books",
-          "ur": "بیس کتابیں"
+          "en": "The diligent student read the teacher's book in the class.",
+          "ur": "محنتی طالب علم نے کلاس میں معلم کی کتاب پڑھی۔"
         },
         {
-          "en": "twenty years",
-          "ur": "بیس سال"
+          "en": "The diligent teacher read the student's book in the class.",
+          "ur": "محنتی معلم نے کلاس میں طالب علم کی کتاب پڑھی۔"
         },
         {
-          "en": "ten books",
-          "ur": "دس کتابیں"
+          "en": "The student read the diligent teacher's book at home.",
+          "ur": "طالب علم نے گھر میں محنتی معلم کی کتاب پڑھی۔"
         },
         {
-          "en": "twenty houses",
-          "ur": "بیس گھر"
+          "en": "The teacher's student wrote a book in the class.",
+          "ur": "معلم کے طالب علم نے کلاس میں کتاب لکھی۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "عِشْرُونَ is twenty. كِتَابًا is the accusative singular noun — the number marker makes the noun accusative.",
-        "ur": "عِشْرُونَ بیس ہے۔ كِتَابًا واحد نصب اسم ہے — عدد کی علامت اسم کو نصب میں لیتی ہے۔"
+        "en": "Check each part: who read (the student), who is diligent (the student), whose book (the teacher's), where (the class).",
+        "ur": "ہر حصہ جانچیں: کس نے پڑھا (طالب علم)، کون محنتی ہے (طالب علم)، کس کی کتاب (معلم کی)، کہاں (کلاس میں)۔"
       }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch43-l02-ex02",
       "statement": {
-        "en": "Numbers from 3 to 10 govern the noun in the plural genitive case.",
-        "ur": "3 سے 10 تک کے اعداد اسم کو جمع مجرور میں لیتے ہیں۔"
+        "en": "In the first sentence, الْمُجْتَهِدُ describes the student.",
+        "ur": "پہلے جملے میں الْمُجْتَهِدُ طالب علم کا وصف بیان کرتا ہے۔",
+        "ar_example": {
+          "ar": "قَرَأَ الطَّالِبُ الْمُجْتَهِدُ كِتَابَ الْمُعَلِّمِ فِي الْفَصْلِ.",
+          "ar_plain": "قرا الطالب المجتهد كتاب المعلم في الفصل.",
+          "translit": "qaraʾa aṭ-ṭālibu al-mujtahidu kitāba al-muʿallimi fī al-faṣli",
+          "en": "The diligent student read the teacher's book in the class.",
+          "ur": "محنتی طالب علم نے کلاس میں معلم کی کتاب پڑھی۔"
+        }
       },
       "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Its ending ـُ matches الطَّالِبُ.",
+        "ur": "اس کی آخری حرکت ـُ، الطَّالِبُ سے ملتی ہے۔"
+      }
     },
     {
-      "type": "FILL_BLANK",
+      "type": "TRUE_FALSE",
       "id": "ch43-l02-ex03",
-      "mode": "TAP",
-      "sentence_ar": "كَمْ ___ لَدَيْكَ؟ — عِشْرُونَ",
-      "hint": {
-        "en": "How many do you have? — Twenty (something).",
-        "ur": "تم کے پاس کتنے ہیں؟ — بیس۔"
+      "statement": {
+        "en": "In the first sentence, the book belongs to the student.",
+        "ur": "پہلے جملے میں کتاب طالب علم کی ہے۔",
+        "ar_example": {
+          "ar": "قَرَأَ الطَّالِبُ الْمُجْتَهِدُ كِتَابَ الْمُعَلِّمِ فِي الْفَصْلِ.",
+          "ar_plain": "قرا الطالب المجتهد كتاب المعلم في الفصل.",
+          "translit": "qaraʾa aṭ-ṭālibu al-mujtahidu kitāba al-muʿallimi fī al-faṣli",
+          "en": "The diligent student read the teacher's book in the class.",
+          "ur": "محنتی طالب علم نے کلاس میں معلم کی کتاب پڑھی۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كِتَابَ الْمُعَلِّمِ — the book of the teacher.",
+        "ur": "كِتَابَ الْمُعَلِّمِ — معلم کی کتاب۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch43-l02-ex04",
+      "prompt": {
+        "ar": "فَاطِمَةُ طَالِبَةٌ. كِتَابُهَا عَلَى الْمَكْتَبِ.",
+        "ar_plain": "فاطمة طالبة. كتابها على المكتب.",
+        "translit": "fāṭimatu ṭālibatun kitābuhā ʿalā al-maktabi",
+        "en": "Fatima is a student. Her book is on the desk.",
+        "ur": "فاطمہ ایک طالبہ ہے۔ اس کی کتاب میز پر ہے۔"
       },
       "options": [
         {
-          "ar": "كِتَابًا",
-          "ar_plain": "كتابا",
-          "translit": "kitaaban",
-          "en": "books",
-          "ur": "کتابیں"
+          "en": "Fatima is a teacher, and her desk is on the book.",
+          "ur": "فاطمہ ایک معلمہ ہے اور اس کی میز کتاب پر ہے۔"
         },
         {
-          "ar": "كُتُبٌ",
-          "ar_plain": "كتب",
-          "translit": "kutubun",
-          "en": "books (plural)",
-          "ur": "کتابیں (جمع)"
+          "en": "Fatima is a student, and the desk is her book.",
+          "ur": "فاطمہ ایک طالبہ ہے اور میز اس کی کتاب ہے۔"
         },
         {
-          "ar": "بَيْتٌ",
-          "ar_plain": "بيت",
-          "translit": "baytun",
-          "en": "house",
-          "ur": "گھر"
+          "en": "A student put the book on Fatima's desk.",
+          "ur": "ایک طالبہ نے فاطمہ کی میز پر کتاب رکھی۔"
         },
         {
-          "ar": "سَنَةً",
-          "ar_plain": "سنة",
-          "translit": "sanatan",
-          "en": "year",
-          "ur": "سال"
+          "en": "Fatima is a student, and her book is on the desk.",
+          "ur": "فاطمہ ایک طالبہ ہے اور اس کی کتاب میز پر ہے۔"
         }
       ],
-      "correct_answer": {
-        "ar": "كِتَابًا",
-        "ar_plain": "كتابا",
-        "translit": "kitaaban",
-        "en": "books",
-        "ur": "کتابیں"
-      },
-      "xp_value": 1
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كِتَابُهَا = 'her book' (her = Fatima).",
+        "ur": "كِتَابُهَا = 'اس کی کتاب' (اس = فاطمہ)۔"
+      }
     },
     {
-      "type": "MATCHING",
-      "id": "ch43-l02-ex04",
-      "left_column": [
-        {
-          "ar": "عِشْرُونَ",
-          "ar_plain": "عشرون",
-          "translit": "'ishruuna",
-          "en": "20",
-          "ur": "بیس"
-        },
-        {
-          "ar": "عَشَرَةٌ",
-          "ar_plain": "عشرة",
-          "translit": "'asharatun",
-          "en": "10",
-          "ur": "دس"
-        },
-        {
-          "ar": "ثَلَاثُونَ",
-          "ar_plain": "ثلاثون",
-          "translit": "thalathuuna",
-          "en": "30",
-          "ur": "تیس"
-        },
-        {
-          "ar": "أَرْبَعُونَ",
-          "ar_plain": "أربعون",
-          "translit": "arba'uuna",
-          "en": "40",
-          "ur": "چالیس"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "20",
-          "ur": "بیس"
-        },
-        {
-          "en": "10",
-          "ur": "دس"
-        },
-        {
-          "en": "30",
-          "ur": "تیس"
-        },
-        {
-          "en": "40",
-          "ur": "چالیس"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
+      "type": "TRUE_FALSE",
       "id": "ch43-l02-ex05",
-      "target_translation": {
-        "en": "I have ten students.",
-        "ur": "میرے پاس دس طلبہ ہیں۔"
-      },
-      "tiles": [
-        {
-          "ar": "لَدَيَّ",
-          "ar_plain": "لدي",
-          "translit": "ladayya",
-          "en": "I have",
-          "ur": "میرے پاس"
-        },
-        {
-          "ar": "عَشَرَةُ",
-          "ar_plain": "عشرة",
-          "translit": "'asharatu",
-          "en": "ten",
-          "ur": "دس"
-        },
-        {
-          "ar": "طُلَّابٍ",
-          "ar_plain": "طلاب",
-          "translit": "tullaabin",
-          "en": "students",
-          "ur": "طلبہ"
-        },
-        {
-          "ar": "كِتَابٌ",
-          "ar_plain": "كتاب",
-          "translit": "kitaabun",
-          "en": "book",
-          "ur": "کتاب"
+      "statement": {
+        "en": "In the second pair of sentences, ـهَا in كِتَابُهَا refers to Fatima.",
+        "ur": "دوسرے جملوں کی جوڑی میں كِتَابُهَا کا ـهَا فاطمہ کی طرف اشارہ کرتا ہے۔",
+        "ar_example": {
+          "ar": "فَاطِمَةُ طَالِبَةٌ. كِتَابُهَا عَلَى الْمَكْتَبِ.",
+          "ar_plain": "فاطمة طالبة. كتابها على المكتب.",
+          "translit": "fāṭimatu ṭālibatun kitābuhā ʿalā al-maktabi",
+          "en": "Fatima is a student. Her book is on the desk.",
+          "ur": "فاطمہ ایک طالبہ ہے۔ اس کی کتاب میز پر ہے۔"
         }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Fatima is the feminine noun just before.",
+        "ur": "فاطمہ ہی پہلے والا مؤنث اسم ہے۔"
+      }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch43-l02-ex06",
       "statement": {
-        "en": "عِشْرُونَ takes the noun in the accusative singular.",
-        "ur": "عِشْرُونَ اسم کو واحد نصب میں لیتا ہے۔"
+        "en": "The sentences about Fatima say that she put her book on the desk.",
+        "ur": "فاطمہ والے جملے کہتے ہیں کہ اس نے اپنی کتاب میز پر رکھی۔",
+        "ar_example": {
+          "ar": "فَاطِمَةُ طَالِبَةٌ. كِتَابُهَا عَلَى الْمَكْتَبِ.",
+          "ar_plain": "فاطمة طالبة. كتابها على المكتب.",
+          "translit": "fāṭimatu ṭālibatun kitābuhā ʿalā al-maktabi",
+          "en": "Fatima is a student. Her book is on the desk.",
+          "ur": "فاطمہ ایک طالبہ ہے۔ اس کی کتاب میز پر ہے۔"
+        }
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "They only say it is on the desk; who put it there is not stated.",
+        "ur": "وہ صرف کہتے ہیں کہ وہ میز پر ہے؛ وہاں کس نے رکھی یہ بیان نہیں ہوا۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch43-l02-ex07",
       "prompt": {
-        "ar": "كَمْ كِتَابًا قَرَأْتَ؟",
-        "ar_plain": "كم كتابا قرأت",
-        "translit": "kam kitaaban qara'ta?",
-        "en": "How many books did you read?",
-        "ur": "تم نے کتنی کتابیں پڑھیں؟"
+        "ar": "كَتَبَ الْمُعَلِّمُ الْكَرِيمُ دَرْسَ الطَّالِبَةِ فِي الْبَيْتِ.",
+        "ar_plain": "كتب المعلم الكريم درس الطالبة في البيت.",
+        "translit": "kataba al-muʿallimu al-karīmu darsa aṭ-ṭālibati fī al-bayti",
+        "en": "The generous teacher wrote the female student's lesson at home.",
+        "ur": "سخی معلم نے گھر میں طالبہ کا سبق لکھا۔"
       },
       "options": [
         {
-          "en": "How many books did you read?",
-          "ur": "تم نے کتنی کتابیں پڑھیں؟"
+          "en": "The generous female student wrote the teacher's lesson at home.",
+          "ur": "سخی طالبہ نے گھر میں معلم کا سبق لکھا۔"
         },
         {
-          "en": "How many years did you read?",
-          "ur": "تم نے کتنے سال پڑھے؟"
+          "en": "The generous teacher wrote the female student's lesson at home.",
+          "ur": "سخی معلم نے گھر میں طالبہ کا سبق لکھا۔"
         },
         {
-          "en": "How much did you read?",
-          "ur": "تم نے کتنا پڑھا؟"
+          "en": "The teacher wrote the lesson for the generous student in the class.",
+          "ur": "معلم نے کلاس میں سخی طالبہ کے لیے سبق لکھا۔"
         },
         {
-          "en": "When did you read books?",
-          "ur": "تم نے کب کتابیں پڑھیں؟"
+          "en": "The female student's teacher read the lesson at home.",
+          "ur": "طالبہ کے معلم نے گھر میں سبق پڑھا۔"
         }
       ],
-      "correct_index": 0,
-      "xp_value": 1
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كَتَبَ الْمُعَلِّمُ الْكَرِيمُ = the generous teacher wrote; دَرْسَ الطَّالِبَةِ = the female student's lesson.",
+        "ur": "كَتَبَ الْمُعَلِّمُ الْكَرِيمُ = سخی معلم نے لکھا؛ دَرْسَ الطَّالِبَةِ = طالبہ کا سبق۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch43-l02-ex08",
+      "statement": {
+        "en": "In the third sentence, الْكَرِيمُ describes the teacher.",
+        "ur": "تیسرے جملے میں الْكَرِيمُ معلم کا وصف بیان کرتا ہے۔",
+        "ar_example": {
+          "ar": "كَتَبَ الْمُعَلِّمُ الْكَرِيمُ دَرْسَ الطَّالِبَةِ فِي الْبَيْتِ.",
+          "ar_plain": "كتب المعلم الكريم درس الطالبة في البيت.",
+          "translit": "kataba al-muʿallimu al-karīmu darsa aṭ-ṭālibati fī al-bayti",
+          "en": "The generous teacher wrote the female student's lesson at home.",
+          "ur": "سخی معلم نے گھر میں طالبہ کا سبق لکھا۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْكَرِيمُ ends in ـُ, like الْمُعَلِّمُ; الطَّالِبَةِ ends in ـِ.",
+        "ur": "الْكَرِيمُ کے آخر میں ـُ ہے، جیسے الْمُعَلِّمُ میں؛ الطَّالِبَةِ کے آخر میں ـِ ہے۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Numbers in passage context",
-      "ar": "الْأَعْدَادُ فِي السِّيَاقِ",
-      "ur": "سیاق و سباق میں اعداد"
+      "en": "Parts of one phrase",
+      "ar": "وَلِمَنْ خَافَ مَقَامَ رَبِّهِ جَنَّتَانِ",
+      "ur": "ایک ٹکڑے کے حصے"
     },
     "ayah": {
-      "surah": 107,
-      "ayah": 1,
-      "label": "Al-Ma'un 107:1",
-      "ar": "أَرَأَيْتَ الَّذِي يُكَذِّبُ بِالدِّينِ",
-      "en": "Have you seen the one who denies the recompense?",
-      "ur": "کیا آپ نے اسے دیکھا جو بدلے کو جھٹلاتا ہے؟",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/107001.mp3"
+      "surah": 55,
+      "ayah": 46,
+      "label": "Ar-Rahman 55:46",
+      "ar": "وَلِمَنْ خَافَ مَقَامَ رَبِّهِ جَنَّتَانِ",
+      "en": "But for he who has feared the position of his Lord are two gardens -",
+      "ur": "اور جو شخص اپنے پروردگار کے سامنے کھڑے ہونے سے ڈرا اس کے لئے دو باغ ہیں",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/055046.mp3"
     },
     "highlighted_word_indices": [
-      0
+      2,
+      3
+    ],
+    "highlighted_words": [
+      "مَقَامَ",
+      "رَبِّهِ"
     ],
     "noor_explanation": {
-      "en": "أَرَأَيْتَ = أَ (question: \"have …?\") + رَأَيْتَ (\"you saw\", past tense of رَأَى). So: \"Have you seen …?\"",
-      "ur": "أَرَأَيْتَ = أَ (سوال: \"کیا …؟\") + رَأَيْتَ (\"تم نے دیکھا\"، رَأَى کا ماضی)۔ یعنی: \"کیا تم نے دیکھا …؟\""
-    },
-    "highlighted_words": [
-      "أَرَأَيْتَ"
-    ]
+      "en": "مَقَامَ رَبِّهِ — a possessed noun and its possessor with an attached ـهِ. Small parts, read in order, make the whole meaning.",
+      "ur": "مَقَامَ رَبِّهِ — ایک مضاف اور اس کا مضاف الیہ جڑے ہوئے ـهِ کے ساتھ۔ چھوٹے حصے ترتیب سے پڑھیں تو پورا مفہوم بنتا ہے۔"
+    }
   },
   "close": {
     "noor_message": {
-      "en": "Numbers in Arabic are precise: عِشْرُونَ كِتَابًا, ثَلَاثُونَ سَنَةً. The noun always follows in the correct case. Now you can count in Arabic.",
-      "ur": "عربی میں اعداد درست ہیں: عِشْرُونَ كِتَابًا، ثَلَاثُونَ سَنَةً۔ اسم ہمیشہ صحیح حکم میں folgt۔ اب آپ عربی میں شمار کر سکتے ہیں۔"
+      "en": "You can take a sentence apart and read each part. Next: three short surahs, starting with Al-Kawthar.",
+      "ur": "آپ جملے کو کھول کر ہر حصہ پڑھ سکتے ہیں۔ اگلا: تین مختصر سورتیں، پہلے الکوثر۔"
     }
   }
 }

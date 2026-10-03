@@ -1,0 +1,444 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 41, final test (ch41-test, new). Added 2026-10-03 in the proposal harvest, batch 4, from Docs/proposals/chapter-41-content-proposal.md. Twelve multiple-choice questions in six strands of two: gist (q01–02), sequence (q03–04), reference (q05 on a constructed text, q06 on 2:3), phrase meaning (q07–08), textual evidence (q09–10) and the complete readings (q11 Al-Fil, q12 Al-Qari'ah). Two short constructed texts, distinct from the lesson and review texts, are repeated in full on every item that uses them — the player has no shared passage field. Pass mark 80 %: 9/12 fails, 10/12 passes.",
+    "title": "Chapter 41 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الْحَادِي وَالْأَرْبَعِينَ",
+    "titleUr": "باب 41 کا آخری امتحان",
+    "chapter_order": 41,
+    "lesson_order": 9,
+    "estimated_minutes": 12,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 101,
+      "ayah": 1,
+      "label": "Al-Qari'ah 101:1",
+      "ar": "الْقَارِعَةُ",
+      "en": "The Striking Calamity -",
+      "ur": "کھڑ کھڑانے والی",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/101001.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 41.",
+      "ur": "باب 41 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 41,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch41-test-q01",
+        "topic": {
+          "en": "Gist",
+          "ur": "مفہوم"
+        },
+        "prompt": {
+          "en": "Read the text. What is it mostly about?",
+          "ur": "متن پڑھیں۔ یہ زیادہ تر کس بارے میں ہے؟"
+        },
+        "arabic": "دَخَلَ الْمُعَلِّمُ الْمَسْجِدَ بَعْدَ الصَّلَاةِ. ثُمَّ جَلَسَ مَعَ طَالِبَةٍ. هِيَ قَرَأَتْ كِتَابًا.",
+        "options": [
+          {
+            "en": "A student goes to the market with her teacher.",
+            "ur": "ایک طالبہ اپنے معلم کے ساتھ بازار جاتی ہے۔"
+          },
+          {
+            "en": "A teacher enters the masjid, sits with a student, and she reads a book.",
+            "ur": "ایک معلم مسجد میں داخل ہوتا ہے، ایک طالبہ کے ساتھ بیٹھتا ہے اور وہ کتاب پڑھتی ہے۔"
+          },
+          {
+            "en": "A teacher writes a lesson and goes home.",
+            "ur": "ایک معلم سبق لکھتا ہے اور گھر جاتا ہے۔"
+          },
+          {
+            "en": "Two students read in a village school.",
+            "ur": "دو طالبات گاؤں کے اسکول میں پڑھتی ہیں۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch41-test-q02",
+        "topic": {
+          "en": "Gist",
+          "ur": "مفہوم"
+        },
+        "prompt": {
+          "en": "Read the text. What is it mostly about?",
+          "ur": "متن پڑھیں۔ یہ زیادہ تر کس بارے میں ہے؟"
+        },
+        "arabic": "فِي الْقَرْيَةِ طَالِبَةٌ مُجْتَهِدَةٌ. هِيَ قَرَأَتْ كِتَابًا فِي الْبَيْتِ قَبْلَ الصَّلَاةِ، ثُمَّ ذَهَبَتْ إِلَى الْمَسْجِدِ مَعَ أُمِّهَا.",
+        "options": [
+          {
+            "en": "A student and her mother read in the village school.",
+            "ur": "ایک طالبہ اور اس کی والدہ گاؤں کے اسکول میں پڑھتی ہیں۔"
+          },
+          {
+            "en": "A diligent student writes a book in the masjid.",
+            "ur": "ایک محنتی طالبہ مسجد میں کتاب لکھتی ہے۔"
+          },
+          {
+            "en": "A mother takes her son to the market.",
+            "ur": "ایک ماں اپنے بیٹے کو بازار لے جاتی ہے۔"
+          },
+          {
+            "en": "A diligent student reads at home, then goes to the masjid with her mother.",
+            "ur": "ایک محنتی طالبہ گھر میں پڑھتی ہے، پھر اپنی والدہ کے ساتھ مسجد جاتی ہے۔"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch41-test-q03",
+        "topic": {
+          "en": "Sequence",
+          "ur": "ترتیب"
+        },
+        "prompt": {
+          "en": "Read the text. What happened after the prayer?",
+          "ur": "متن پڑھیں۔ نماز کے بعد کیا ہوا؟"
+        },
+        "arabic": "دَخَلَ الْمُعَلِّمُ الْمَسْجِدَ بَعْدَ الصَّلَاةِ. ثُمَّ جَلَسَ مَعَ طَالِبَةٍ. هِيَ قَرَأَتْ كِتَابًا.",
+        "options": [
+          {
+            "en": "The teacher entered the masjid.",
+            "ur": "معلم مسجد میں داخل ہوا۔"
+          },
+          {
+            "en": "The student read a book at home.",
+            "ur": "طالبہ نے گھر میں کتاب پڑھی۔"
+          },
+          {
+            "en": "The teacher wrote the lesson.",
+            "ur": "معلم نے سبق لکھا۔"
+          },
+          {
+            "en": "The teacher left for the market.",
+            "ur": "معلم بازار چلا گیا۔"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch41-test-q04",
+        "topic": {
+          "en": "Sequence",
+          "ur": "ترتیب"
+        },
+        "prompt": {
+          "en": "Read the text. What did she do first?",
+          "ur": "متن پڑھیں۔ اس نے سب سے پہلے کیا کیا؟"
+        },
+        "arabic": "فِي الْقَرْيَةِ طَالِبَةٌ مُجْتَهِدَةٌ. هِيَ قَرَأَتْ كِتَابًا فِي الْبَيْتِ قَبْلَ الصَّلَاةِ، ثُمَّ ذَهَبَتْ إِلَى الْمَسْجِدِ مَعَ أُمِّهَا.",
+        "options": [
+          {
+            "en": "She went to the masjid.",
+            "ur": "وہ مسجد گئی۔"
+          },
+          {
+            "en": "She prayed in the village.",
+            "ur": "اس نے گاؤں میں نماز پڑھی۔"
+          },
+          {
+            "en": "She read a book at home.",
+            "ur": "اس نے گھر میں کتاب پڑھی۔"
+          },
+          {
+            "en": "She went home with her mother.",
+            "ur": "وہ اپنی والدہ کے ساتھ گھر گئی۔"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch41-test-q05",
+        "topic": {
+          "en": "Reference",
+          "ur": "حوالہ"
+        },
+        "prompt": {
+          "en": "Read the text. Who does هِيَ point to?",
+          "ur": "متن پڑھیں۔ هِيَ کس کی طرف اشارہ کرتا ہے؟"
+        },
+        "arabic": "دَخَلَ الْمُعَلِّمُ الْمَسْجِدَ بَعْدَ الصَّلَاةِ. ثُمَّ جَلَسَ مَعَ طَالِبَةٍ. هِيَ قَرَأَتْ كِتَابًا.",
+        "options": [
+          {
+            "en": "The teacher",
+            "ur": "معلم"
+          },
+          {
+            "en": "The masjid",
+            "ur": "مسجد"
+          },
+          {
+            "en": "The book",
+            "ur": "کتاب"
+          },
+          {
+            "en": "The female student",
+            "ur": "طالبہ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch41-test-q06",
+        "topic": {
+          "en": "Reference (2:3)",
+          "ur": "حوالہ (2:3)"
+        },
+        "prompt": {
+          "en": "In 2:3, يُؤْمِنُونَ means 'they believe', يُقِيمُونَ 'they establish', يُنفِقُونَ 'they spend'. Whose actions are these?",
+          "ur": "2:3 میں يُؤْمِنُونَ کا مطلب 'وہ ایمان لاتے ہیں'، يُقِيمُونَ 'وہ قائم کرتے ہیں'، يُنفِقُونَ 'وہ خرچ کرتے ہیں' ہے۔ یہ کس کے کام ہیں؟"
+        },
+        "arabic": "الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلَاةَ وَمِمَّا رَزَقْنَاهُمْ يُنفِقُونَ",
+        "options": [
+          {
+            "en": "One group: الَّذِينَ",
+            "ur": "ایک ہی گروہ: الَّذِينَ"
+          },
+          {
+            "en": "Three different groups",
+            "ur": "تین مختلف گروہ"
+          },
+          {
+            "en": "The unseen",
+            "ur": "غیب"
+          },
+          {
+            "en": "The prayer",
+            "ur": "نماز"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch41-test-q07",
+        "topic": {
+          "en": "Phrase meaning",
+          "ur": "ٹکڑے کا مفہوم"
+        },
+        "prompt": {
+          "en": "Read the text. What does بَعْدَ الصَّلَاةِ tell us?",
+          "ur": "متن پڑھیں۔ بَعْدَ الصَّلَاةِ ہمیں کیا بتاتا ہے؟"
+        },
+        "arabic": "دَخَلَ الْمُعَلِّمُ الْمَسْجِدَ بَعْدَ الصَّلَاةِ. ثُمَّ جَلَسَ مَعَ طَالِبَةٍ. هِيَ قَرَأَتْ كِتَابًا.",
+        "options": [
+          {
+            "en": "Where the teacher entered",
+            "ur": "معلم کہاں داخل ہوا"
+          },
+          {
+            "en": "When the teacher entered",
+            "ur": "معلم کب داخل ہوا"
+          },
+          {
+            "en": "With whom the teacher entered",
+            "ur": "معلم کس کے ساتھ داخل ہوا"
+          },
+          {
+            "en": "Why the teacher entered",
+            "ur": "معلم کیوں داخل ہوا"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch41-test-q08",
+        "topic": {
+          "en": "Phrase meaning",
+          "ur": "ٹکڑے کا مفہوم"
+        },
+        "prompt": {
+          "en": "Read the text. What does مَعَ أُمِّهَا tell us?",
+          "ur": "متن پڑھیں۔ مَعَ أُمِّهَا ہمیں کیا بتاتا ہے؟"
+        },
+        "arabic": "فِي الْقَرْيَةِ طَالِبَةٌ مُجْتَهِدَةٌ. هِيَ قَرَأَتْ كِتَابًا فِي الْبَيْتِ قَبْلَ الصَّلَاةِ، ثُمَّ ذَهَبَتْ إِلَى الْمَسْجِدِ مَعَ أُمِّهَا.",
+        "options": [
+          {
+            "en": "Who went to the masjid with the student",
+            "ur": "طالبہ کے ساتھ مسجد کون گیا"
+          },
+          {
+            "en": "When she went to the masjid",
+            "ur": "وہ مسجد کب گئی"
+          },
+          {
+            "en": "Where she read the book",
+            "ur": "اس نے کتاب کہاں پڑھی"
+          },
+          {
+            "en": "Which book she read",
+            "ur": "اس نے کون سی کتاب پڑھی"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch41-test-q09",
+        "topic": {
+          "en": "Evidence",
+          "ur": "ثبوت"
+        },
+        "prompt": {
+          "en": "Read the text. Which words say what the student did?",
+          "ur": "متن پڑھیں۔ کون سے الفاظ بتاتے ہیں کہ طالبہ نے کیا کیا؟"
+        },
+        "arabic": "دَخَلَ الْمُعَلِّمُ الْمَسْجِدَ بَعْدَ الصَّلَاةِ. ثُمَّ جَلَسَ مَعَ طَالِبَةٍ. هِيَ قَرَأَتْ كِتَابًا.",
+        "options": [
+          {
+            "en": "دَخَلَ الْمُعَلِّمُ الْمَسْجِدَ",
+            "ur": "دَخَلَ الْمُعَلِّمُ الْمَسْجِدَ"
+          },
+          {
+            "en": "بَعْدَ الصَّلَاةِ",
+            "ur": "بَعْدَ الصَّلَاةِ"
+          },
+          {
+            "en": "ثُمَّ جَلَسَ",
+            "ur": "ثُمَّ جَلَسَ"
+          },
+          {
+            "en": "هِيَ قَرَأَتْ كِتَابًا",
+            "ur": "هِيَ قَرَأَتْ كِتَابًا"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch41-test-q10",
+        "topic": {
+          "en": "Evidence",
+          "ur": "ثبوت"
+        },
+        "prompt": {
+          "en": "Read the text. Which statement is NOT given in it?",
+          "ur": "متن پڑھیں۔ کون سی بات اس میں نہیں دی گئی؟"
+        },
+        "arabic": "فِي الْقَرْيَةِ طَالِبَةٌ مُجْتَهِدَةٌ. هِيَ قَرَأَتْ كِتَابًا فِي الْبَيْتِ قَبْلَ الصَّلَاةِ، ثُمَّ ذَهَبَتْ إِلَى الْمَسْجِدِ مَعَ أُمِّهَا.",
+        "options": [
+          {
+            "en": "That she read a book",
+            "ur": "کہ اس نے کتاب پڑھی"
+          },
+          {
+            "en": "Why the student went to the masjid",
+            "ur": "طالبہ مسجد کیوں گئی"
+          },
+          {
+            "en": "That her mother went with her",
+            "ur": "کہ اس کی والدہ اس کے ساتھ گئی"
+          },
+          {
+            "en": "That she is diligent",
+            "ur": "کہ وہ محنتی ہے"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch41-test-q11",
+        "topic": {
+          "en": "Al-Fil",
+          "ur": "الفیل"
+        },
+        "prompt": {
+          "en": "Read 105:3–5 (given). Which sentence follows the order the ayat state?",
+          "ur": "105:3–5 پڑھیں (دی گئی ہیں)۔ کون سا جملہ آیات کی بیان کردہ ترتیب پر ہے؟"
+        },
+        "arabic": "وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ تَرْمِيهِم بِحِجَارَةٍ مِّن سِجِّيلٍ فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍ",
+        "options": [
+          {
+            "en": "They became like straw, then birds were sent, then stones struck them.",
+            "ur": "وہ بھس کی طرح ہو گئے، پھر پرندے بھیجے گئے، پھر پتھر مارے گئے۔"
+          },
+          {
+            "en": "Stones were sent, then birds, and the straw was eaten.",
+            "ur": "پتھر بھیجے گئے، پھر پرندے، اور بھس کھایا گیا۔"
+          },
+          {
+            "en": "Birds were sent, they struck them with stones, and they became like eaten straw.",
+            "ur": "پرندے بھیجے گئے، انہوں نے انہیں پتھر مارے، اور وہ کھائے ہوئے بھس کی طرح ہو گئے۔"
+          },
+          {
+            "en": "Birds ate the stones and then the straw.",
+            "ur": "پرندوں نے پتھر کھائے اور پھر بھس۔"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch41-test-q12",
+        "topic": {
+          "en": "Al-Qari'ah",
+          "ur": "القارعہ"
+        },
+        "prompt": {
+          "en": "Read 101:6–9 (given). heavy = ثَقُلَتْ, light = خَفَّتْ. Which sentence matches the ayat?",
+          "ur": "101:6–9 پڑھیں (دی گئی ہیں)۔ بھاری = ثَقُلَتْ، ہلکا = خَفَّتْ۔ کون سا جملہ آیات سے ملتا ہے؟"
+        },
+        "arabic": "فَأَمَّا مَن ثَقُلَتْ مَوَازِينُهُ فَهُوَ فِي عِيشَةٍ رَّاضِيَةٍ وَأَمَّا مَنْ خَفَّتْ مَوَازِينُهُ فَأُمُّهُ هَاوِيَةٌ",
+        "options": [
+          {
+            "en": "Heavy scales: an abyss. Light scales: a pleasant life.",
+            "ur": "بھاری وزن: ہاویہ۔ ہلکے وزن: پسندیدہ زندگی۔"
+          },
+          {
+            "en": "Heavy and light scales: a pleasant life.",
+            "ur": "بھاری اور ہلکے وزن: پسندیدہ زندگی۔"
+          },
+          {
+            "en": "Heavy scales: a pleasant life. Light scales: an abyss as refuge.",
+            "ur": "بھاری وزن: پسندیدہ زندگی۔ ہلکے وزن: ہاویہ بطور ٹھکانا۔"
+          },
+          {
+            "en": "The ayat do not mention scales.",
+            "ur": "آیات وزن کا ذکر نہیں کرتیں۔"
+          }
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 41 — reading connected text",
+      "ar": "الْقِرَاءَةُ الْمُتَّصِلَةُ",
+      "ur": "باب 41 — جڑی ہوئی عبارت پڑھنا"
+    },
+    "ayah": {
+      "surah": 105,
+      "ayah": 5,
+      "label": "Al-Fil 105:5",
+      "ar": "فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍ",
+      "en": "And He made them like eaten straw.",
+      "ur": "تو ان کو ایسا کر دیا جیسے کھایا ہوا بھس",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/105005.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "فَجَعَلَهُمْ",
+      "كَعَصْفٍ"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 41 able to read a short text for gist, order, reference, phrases and evidence, and to read two complete surahs.",
+      "ur": "آپ باب 41 اس حال میں مکمل کرتے ہیں کہ مختصر متن کو مفہوم، ترتیب، حوالہ، ٹکڑوں اور ثبوت کے ساتھ پڑھ سکیں اور دو مکمل سورتیں پڑھ سکیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 41 complete. Chapter 42: questions and answers.",
+      "ur": "باب 41 مکمل۔ باب 42: سوال اور جواب۔"
+    }
+  }
+}

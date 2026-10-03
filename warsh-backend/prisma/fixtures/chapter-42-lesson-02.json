@@ -2,14 +2,13 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 42, Lesson 2 - Interrogative adverb مَتَى (when).",
+    "_note": "Chapter 42, Lesson 2 (ch42-l02). Rebuilt 2026-10-03 in the proposal harvest, batch 4 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-42-content-proposal.md and its review amendments.",
+    "title": "When? — مَتَى",
+    "titleAr": "مَتَى؟",
+    "titleUr": "کب؟ — مَتَى",
     "chapter_order": 42,
     "lesson_order": 2,
-    "chapter_title": "Advanced Q&A (كَمْ/مَتَى/لِمَاذَا)",
-    "title": "When? — مَتَى",
-    "titleAr": "مَتَى — كَمْ؟",
-    "source": "madina_reader_grammar_qa.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
@@ -17,96 +16,109 @@
       "surah": 2,
       "ayah": 214,
       "label": "Al-Baqarah 2:214",
-      "ar": "مَتَىٰ نَصْرُ اللَّهِ ۗ أَلَا إِنَّ نَصْرَ اللَّهِ قَرِيبٌ",
-      "en": "'When is the help of Allah?' Surely the help of Allah is near.",
-      "ur": "'اللہ کی مدد کب آئے گی؟' سن لو، اللہ کی مدد قریب ہے۔",
+      "ar": "مَتَىٰ نَصْرُ اللَّهِ ۗ أَلَا إِنَّ نَصْرَ اللَّهِ قَرِيبٌ",
+      "en": "'When is Allah's help?' — Indeed, Allah's help is near.",
+      "ur": "'اللہ کی مدد کب آئے گی؟' — سنو، اللہ کی مدد قریب ہے۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002214.mp3"
     },
     "noor_intro": {
-      "en": "مَتَى asks one specific question: when? It is used for time — a moment, a day, a year.",
-      "ur": "مَتَى ایک مخصوص سوال پوچھتا ہے: کب؟ یہ وقت کے لیے استعمال ہوتا ہے — ایک لمحہ، ایک دن، ایک سال۔"
+      "en": "مَتَى asks when. The verb in the question tells you which kind of time the answer needs.",
+      "ur": "مَتَى پوچھتا ہے کب۔ سوال میں فعل بتاتا ہے کہ جواب کو کس طرح کا وقت چاہیے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
         "en": "When? — مَتَى",
-        "ar": "مَتَى — كَب؟",
+        "ar": "مَتَى؟",
         "ur": "کب؟ — مَتَى"
       },
       "explanation": {
-        "en": "مَتَى asks about time. The answer names a time: غَدًا (tomorrow), أَمْسِ (yesterday), a day, in the morning.",
-        "ur": "مَتَى وقت کے بارے میں پوچھتا ہے۔ جواب ایک وقت بتاتا ہے: غَدًا (آنے والا کل)، أَمْسِ (گزرا ہوا کل)، کوئی دن، صبح میں۔"
+        "en": "مَتَى asks for a time. The answer names a moment: أَمْسِ (yesterday), غَدًا (tomorrow), كُلَّ صَبَاحٍ (every morning).",
+        "ur": "مَتَى وقت پوچھتا ہے۔ جواب ایک وقت بتاتا ہے: أَمْسِ (کل گزشتہ)، غَدًا (آنے والا کل)، كُلَّ صَبَاحٍ (ہر صبح)۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "مَتَى ذَهَبْتَ إِلَى الْمَسْجِدِ؟",
-        "ar_plain": "متى ذهبت الى المسجد",
-        "translit": "mataa dhahabta ilal-masjid?",
-        "en": "When did you go to the masjid?",
-        "ur": "تم کب مسجد گئے؟"
+        "ar": "مَتَى ذَهَبْتَ إِلَى الْمَدْرَسَةِ؟",
+        "ar_plain": "متى ذهبت الى المدرسة؟",
+        "translit": "matā dhahabta ʾilā al-madrasati",
+        "en": "When did you go to the school?",
+        "ur": "آپ اسکول کب گئے؟"
       },
       "explanation": {
-        "en": "مَتَى is the question word. ذَهَبْتَ is past tense second-person masculine: you went. إِلَى الْمَسْجِدِ means to the masjid.",
-        "ur": "مَتَى سوالی لفظ ہے۔ ذَهَبْتَ ماضی دوسرے شخص مذکر ہے: تم گئے۔ إِلَى الْمَسْجِدِ کا مطلب مسجد کی طرف۔"
+        "en": "ذَهَبْتَ is a past verb (Chapter 5), so the answer must be a past time.",
+        "ur": "ذَهَبْتَ ماضی کا فعل ہے (باب 5)، اس لیے جواب ماضی کا وقت ہونا چاہیے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "ذَهَبْتُ أَمْسِ — سَأَذْهَبُ غَدًا",
-        "ar_plain": "ذهبت امس ساذهب غدا",
-        "translit": "dhahabtu amsi — sa-adh-habu ghadan",
-        "en": "I went yesterday — I will go tomorrow",
-        "ur": "میں کل (گزشتہ) گیا — میں کل (آئندہ) جاؤں گا"
+        "ar": "ذَهَبْتُ أَمْسِ.",
+        "ar_plain": "ذهبت امس.",
+        "translit": "dhahabtu ʾamsi",
+        "en": "I went yesterday.",
+        "ur": "میں کل (گزشتہ) گیا۔"
       },
       "explanation": {
-        "en": "أَمْسِ = yesterday, with a past verb (ذَهَبْتُ). غَدًا = tomorrow, with a future verb (سَأَذْهَبُ). The time word and the verb agree.",
-        "ur": "أَمْسِ = گزرا ہوا کل، ماضی کے فعل کے ساتھ (ذَهَبْتُ)۔ غَدًا = آنے والا کل، مستقبل کے فعل کے ساتھ (سَأَذْهَبُ)۔ وقت کا لفظ اور فعل ہم آہنگ ہیں۔"
+        "en": "أَمْسِ (yesterday) matches a past verb: ذَهَبْتُ أَمْسِ.",
+        "ur": "أَمْسِ (گزشتہ کل) ماضی کے فعل کے ساتھ ملتا ہے: ذَهَبْتُ أَمْسِ۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "مَتَى تَقُومُ؟",
-        "ar_plain": "متى تقوم",
-        "translit": "mataa taquum?",
-        "en": "When do you wake up?",
-        "ur": "تم کب اٹھتے ہو؟"
+        "ar": "مَتَى سَتَذْهَبُ إِلَى الْمَدْرَسَةِ؟ — سَأَذْهَبُ غَدًا.",
+        "ar_plain": "متى ستذهب الى المدرسة؟ — ساذهب غدا.",
+        "translit": "matā satadhhabu ʾilā al-madrasati — saʾadhhabu ghadan",
+        "en": "When will you go to the school? — I will go tomorrow.",
+        "ur": "آپ اسکول کب جائیں گے؟ — میں کل جاؤں گا۔"
       },
       "explanation": {
-        "en": "تَقُومُ is present tense of قَامَ — to stand / to wake. Present tense keeps the question in current time.",
-        "ur": "تَقُومُ قَامَ کا مستقبل ہے — کھڑے ہونا / اٹھنا ۔ مستقبل زمانے میں سوال موجودہ وقت میں رہتا ہے۔"
+        "en": "سَـ marks the future (Chapter 35), so the answer must be a future time: غَدًا (tomorrow).",
+        "ur": "سَـ مستقبل کی علامت ہے (باب 35)، اس لیے جواب مستقبل کا وقت ہونا چاہیے: غَدًا (آنے والا کل)۔"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "مَتَى vs. other question words",
-        "ar": "مَتَى مُقَابَل سَائِرِ أَدَوَاتِ الِاسْتِفْهَام",
-        "ur": "مَتَى بمقابلہ دیگر سوالی الفاظ"
-      },
-      "explanation": {
-        "en": "مَتَى asks time. أَيْنَ asks place. هَلْ is yes/no questions. لِمَاذَا asks why. كَمْ asks quantity.",
-        "ur": "مَتَى وقت پوچھتا ہے۔ أَيْنَ جگہ پوچھتا ہے۔ هَلْ ہاں/نہیں کے سوالات ہیں۔ لِمَاذَا کیوں پوچھتا ہے۔ كَمْ مقدار پوچھتا ہے۔"
-      }
-    },
-    {
-      "type": "WORD",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "غَدًا",
-        "ar_plain": "غدا",
-        "translit": "ghadan",
-        "en": "tomorrow",
-        "ur": "آنے والا کل"
+        "ar": "مَتَى تَذْهَبُ إِلَى الْمَدْرَسَةِ؟ — أَذْهَبُ كُلَّ صَبَاحٍ.",
+        "ar_plain": "متى تذهب الى المدرسة؟ — اذهب كل صباح.",
+        "translit": "matā tadhhabu ʾilā al-madrasati — ʾadhhabu kulla ṣabāḥin",
+        "en": "When do you go to the school? — I go every morning.",
+        "ur": "آپ اسکول کب جاتے ہیں؟ — میں ہر صبح جاتا ہوں۔"
       },
       "explanation": {
-        "en": "غَدًا always means \"tomorrow\". \"Yesterday\" is a different word: أَمْسِ.",
-        "ur": "غَدًا کا مطلب ہمیشہ \"آنے والا کل\" ہے۔ \"گزرا ہوا کل\" الگ لفظ ہے: أَمْسِ۔"
+        "en": "The plain present verb asks about a habit. Habit answers: كُلَّ صَبَاحٍ (every morning), كُلَّ يَوْمٍ (every day).",
+        "ur": "سادہ حال کا فعل عادت کے بارے میں پوچھتا ہے۔ عادت کے جواب: كُلَّ صَبَاحٍ (ہر صبح)، كُلَّ يَوْمٍ (ہر دن)۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Let the verb guide the answer",
+        "ur": "فعل کو جواب کی رہنمائی کرنے دیں"
+      },
+      "body": {
+        "en": "A time word fits only when its time matches the verb. أَمْسِ fits a past verb; غَدًا fits سَـ + verb. غَدًا is not a good answer to مَتَى ذَهَبْتَ؟ — going is already done.",
+        "ur": "وقت کا لفظ تبھی درست بیٹھتا ہے جب اس کا زمانہ فعل سے ملے۔ أَمْسِ ماضی کے فعل کے ساتھ ملتا ہے؛ غَدًا سَـ + فعل کے ساتھ۔ مَتَى ذَهَبْتَ؟ کا جواب غَدًا مناسب نہیں — جانا تو ہو چکا۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "مَتَىٰ نَصْرُ اللَّهِ ۗ أَلَا إِنَّ نَصْرَ اللَّهِ قَرِيبٌ",
+        "ar_plain": "متى نصر الله  الا ان نصر الله قريب",
+        "translit": "matā naṣru al-lahi ۗ ʾalā ʾinna naṣra al-lahi qarībun",
+        "en": "'When is Allah's help?' — Indeed, Allah's help is near.",
+        "ur": "'اللہ کی مدد کب آئے گی؟' — سنو، اللہ کی مدد قریب ہے۔"
+      },
+      "explanation": {
+        "en": "In 2:214 the question مَتَىٰ نَصْرُ اللَّهِ gets a reply about nearness, not a date. A reply to مَتَى is not always a time word — here it is a reassurance. (Al-Baqarah 2:214)",
+        "ur": "2:214 میں سوال مَتَىٰ نَصْرُ اللَّهِ کا جواب قرب کے بارے میں ہے، تاریخ کے بارے میں نہیں۔ مَتَى کا جواب ہمیشہ وقت کا لفظ نہیں ہوتا — یہاں تسلی ہے۔ (Al-Baqarah 2:214)"
       }
     }
   ],
@@ -115,61 +127,58 @@
       "type": "TAP_TRANSLATION",
       "id": "ch42-l02-ex01",
       "prompt": {
-        "ar": "مَتَى ذَهَبْتَ؟",
-        "ar_plain": "متى ذهبت",
-        "translit": "mataa dhahabta?",
-        "en": "When did you go?",
-        "ur": "تم کب گئے؟"
+        "ar": "مَتَى ذَهَبْتَ إِلَى الْمَدْرَسَةِ؟",
+        "ar_plain": "متى ذهبت الى المدرسة؟",
+        "translit": "matā dhahabta ʾilā al-madrasati",
+        "en": "When did you go to the school?",
+        "ur": "آپ اسکول کب گئے؟"
       },
       "options": [
         {
-          "en": "When did you go?",
-          "ur": "تم کب گئے؟"
+          "en": "When did you go to school?",
+          "ur": "آپ اسکول کب گئے؟"
         },
         {
           "en": "Where did you go?",
-          "ur": "تم کہاں گئے؟"
+          "ur": "آپ کہاں گئے؟"
         },
         {
-          "en": "How many went?",
-          "ur": "کتنے گئے؟"
+          "en": "When will you go to school?",
+          "ur": "آپ اسکول کب جائیں گے؟"
         },
         {
-          "en": "Why did you go?",
-          "ur": "تم کیوں گئے؟"
+          "en": "How many went to school?",
+          "ur": "کتنے اسکول گئے؟"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "مَتَى is the time question word. It asks when something happened.",
-        "ur": "مَتَى وقت کا سوالی لفظ ہے۔ یہ پوچھتا ہے کہ کوئی بات کب ہوئی۔"
+        "en": "ذَهَبْتَ is past, so this asks about a past time.",
+        "ur": "ذَهَبْتَ ماضی ہے، اس لیے یہ ماضی کے وقت کے بارے میں ہے۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch42-l02-ex02",
-      "statement": {
-        "en": "مَتَى asks about time. أَيْنَ asks about place.",
-        "ur": "مَتَى وقت کے بارے میں پوچھتا ہے۔ أَيْنَ جگہ کے بارے میں پوچھتا ہے۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
       "type": "FILL_BLANK",
-      "id": "ch42-l02-ex03",
+      "id": "ch42-l02-ex02",
       "mode": "TAP",
-      "sentence_ar": "___ ذَهَبْتَ إِلَى السُّوقِ؟",
+      "sentence_ar": "___ سَتَذْهَبُ إِلَى الْمَسْجِدِ؟",
       "hint": {
-        "en": "When did you go to the market?",
-        "ur": "تم کب بازار گئے؟"
+        "en": "When will you go to the masjid?",
+        "ur": "آپ مسجد کب جائیں گے؟"
       },
       "options": [
         {
+          "ar": "أَيْنَ",
+          "ar_plain": "اين",
+          "translit": "ʾayna",
+          "en": "where",
+          "ur": "کہاں"
+        },
+        {
           "ar": "مَتَى",
           "ar_plain": "متى",
-          "translit": "mataa",
+          "translit": "matā",
           "en": "when",
           "ur": "کب"
         },
@@ -183,196 +192,285 @@
         {
           "ar": "لِمَاذَا",
           "ar_plain": "لماذا",
-          "translit": "limazaa",
+          "translit": "limādhā",
           "en": "why",
           "ur": "کیوں"
-        },
-        {
-          "ar": "مَا",
-          "ar_plain": "ما",
-          "translit": "maa",
-          "en": "what",
-          "ur": "کیا"
         }
       ],
       "correct_answer": {
         "ar": "مَتَى",
         "ar_plain": "متى",
-        "translit": "mataa",
+        "translit": "matā",
         "en": "when",
         "ur": "کب"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "You want a time, so use مَتَى.",
+        "ur": "آپ کو وقت چاہیے، اس لیے مَتَى استعمال کریں۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch42-l02-ex03",
+      "prompt_line": {
+        "ar": "مَتَى ذَهَبْتَ إِلَى السُّوقِ؟",
+        "ar_plain": "متى ذهبت الى السوق؟",
+        "translit": "matā dhahabta ʾilā as-sūqi",
+        "en": "When did you go to the market?",
+        "ur": "آپ بازار کب گئے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "سَأَذْهَبُ غَدًا.",
+          "ar_plain": "ساذهب غدا.",
+          "translit": "saʾadhhabu ghadan",
+          "en": "I will go tomorrow.",
+          "ur": "میں کل جاؤں گا۔"
+        },
+        {
+          "ar": "ذَهَبْتُ إِلَى الْبَيْتِ.",
+          "ar_plain": "ذهبت الى البيت.",
+          "translit": "dhahabtu ʾilā al-bayti",
+          "en": "I went to the house.",
+          "ur": "میں گھر گیا۔"
+        },
+        {
+          "ar": "ذَهَبْتُ أَمْسِ.",
+          "ar_plain": "ذهبت امس.",
+          "translit": "dhahabtu ʾamsi",
+          "en": "I went yesterday.",
+          "ur": "میں کل (گزشتہ) گیا۔"
+        },
+        {
+          "ar": "٣.",
+          "ar_plain": "٣.",
+          "translit": "٣",
+          "en": "3.",
+          "ur": "۳۔"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A past question needs a past time: أَمْسِ.",
+        "ur": "ماضی کے سوال کو ماضی کا وقت چاہیے: أَمْسِ۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch42-l02-ex04",
+      "prompt_line": {
+        "ar": "مَتَى سَتَذْهَبُ إِلَى الْمَدْرَسَةِ؟",
+        "ar_plain": "متى ستذهب الى المدرسة؟",
+        "translit": "matā satadhhabu ʾilā al-madrasati",
+        "en": "When will you go to the school?",
+        "ur": "آپ اسکول کب جائیں گے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "ذَهَبْتُ أَمْسِ.",
+          "ar_plain": "ذهبت امس.",
+          "translit": "dhahabtu ʾamsi",
+          "en": "I went yesterday.",
+          "ur": "میں کل (گزشتہ) گیا۔"
+        },
+        {
+          "ar": "أَنَا فِي الْمَدْرَسَةِ.",
+          "ar_plain": "انا في المدرسة.",
+          "translit": "ʾanā fī al-madrasati",
+          "en": "I am in the school.",
+          "ur": "میں اسکول میں ہوں۔"
+        },
+        {
+          "ar": "كِتَابٌ كَبِيرٌ.",
+          "ar_plain": "كتاب كبير.",
+          "translit": "kitābun kabīrun",
+          "en": "A big book.",
+          "ur": "ایک بڑی کتاب۔"
+        },
+        {
+          "ar": "سَأَذْهَبُ غَدًا.",
+          "ar_plain": "ساذهب غدا.",
+          "translit": "saʾadhhabu ghadan",
+          "en": "I will go tomorrow.",
+          "ur": "میں کل جاؤں گا۔"
+        }
+      ],
+      "correct_option_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "سَتَذْهَبُ is future, so the answer is a future time: غَدًا.",
+        "ur": "سَتَذْهَبُ مستقبل ہے، اس لیے جواب مستقبل کا وقت ہے: غَدًا۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch42-l02-ex05",
+      "statement": {
+        "en": "أَمْسِ is a fitting answer to مَتَى ذَهَبْتَ؟",
+        "ur": "أَمْسِ مَتَى ذَهَبْتَ؟ کا مناسب جواب ہے۔",
+        "ar_example": {
+          "ar": "مَتَى ذَهَبْتَ؟ — أَمْسِ.",
+          "ar_plain": "متى ذهبت؟ — امس.",
+          "translit": "matā dhahabta — ʾamsi",
+          "en": "When did you go? — Yesterday.",
+          "ur": "آپ کب گئے؟ — کل (گزشتہ)۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes: yesterday matches a past verb.",
+        "ur": "جی ہاں: گزشتہ کل ماضی کے فعل سے ملتا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch42-l02-ex06",
+      "statement": {
+        "en": "غَدًا is a fitting answer to مَتَى ذَهَبْتَ؟",
+        "ur": "غَدًا مَتَى ذَهَبْتَ؟ کا مناسب جواب ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "No: ذَهَبْتَ is past; غَدًا (tomorrow) is future.",
+        "ur": "نہیں: ذَهَبْتَ ماضی ہے؛ غَدًا (آنے والا کل) مستقبل ہے۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch42-l02-ex04",
+      "id": "ch42-l02-ex07",
       "left_column": [
         {
-          "ar": "مَتَى",
-          "ar_plain": "متى",
-          "translit": "mataa",
-          "en": "when",
-          "ur": "کب"
+          "ar": "مَتَى ذَهَبْتَ؟",
+          "ar_plain": "متى ذهبت؟",
+          "translit": "matā dhahabta",
+          "en": "When did you go?",
+          "ur": "آپ کب گئے؟"
         },
         {
-          "ar": "أَيْنَ",
-          "ar_plain": "أين",
-          "translit": "ayna",
-          "en": "where",
-          "ur": "کہاں"
+          "ar": "مَتَى سَتَذْهَبُ؟",
+          "ar_plain": "متى ستذهب؟",
+          "translit": "matā satadhhabu",
+          "en": "When will you go?",
+          "ur": "آپ کب جائیں گے؟"
         },
         {
-          "ar": "لِمَاذَا",
-          "ar_plain": "لماذا",
-          "translit": "limazaa",
-          "en": "why",
-          "ur": "کیوں"
+          "ar": "مَتَى تَذْهَبُ؟",
+          "ar_plain": "متى تذهب؟",
+          "translit": "matā tadhhabu",
+          "en": "When do you go?",
+          "ur": "آپ کب جاتے ہیں؟"
         },
         {
-          "ar": "كَمْ",
-          "ar_plain": "كم",
-          "translit": "kam",
-          "en": "how many",
-          "ur": "کتنے"
+          "ar": "أَيْنَ ذَهَبْتَ؟",
+          "ar_plain": "اين ذهبت؟",
+          "translit": "ʾayna dhahabta",
+          "en": "Where did you go?",
+          "ur": "آپ کہاں گئے؟"
         }
       ],
       "right_column": [
         {
-          "en": "when",
-          "ur": "کب"
+          "en": "I will go tomorrow.",
+          "ur": "میں کل جاؤں گا۔"
         },
         {
-          "en": "where",
-          "ur": "کہاں"
+          "en": "To the market.",
+          "ur": "بازار۔"
         },
         {
-          "en": "why",
-          "ur": "کیوں"
+          "en": "I went yesterday.",
+          "ur": "میں کل (گزشتہ) گیا۔"
         },
         {
-          "en": "how many",
-          "ur": "کتنے"
+          "en": "I go every morning.",
+          "ur": "میں ہر صبح جاتا ہوں۔"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
           2
         ],
         [
-          3,
+          1,
+          0
+        ],
+        [
+          2,
           3
+        ],
+        [
+          3,
+          1
         ]
       ],
       "xp_value": 1
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch42-l02-ex05",
+      "id": "ch42-l02-ex08",
       "target_translation": {
-        "en": "When do you wake up?",
-        "ur": "تم کب اٹھتے ہو؟"
+        "en": "When will you go to the school?",
+        "ur": "آپ اسکول کب جائیں گے؟"
       },
       "tiles": [
         {
+          "ar": "الْمَدْرَسَةِ",
+          "ar_plain": "المدرسة",
+          "translit": "al-madrasati",
+          "en": "the school",
+          "ur": "اسکول"
+        },
+        {
           "ar": "مَتَى",
           "ar_plain": "متى",
-          "translit": "mataa",
+          "translit": "matā",
           "en": "when",
           "ur": "کب"
         },
         {
-          "ar": "تَقُومُ",
-          "ar_plain": "تقوم",
-          "translit": "taquum",
-          "en": "you wake up",
-          "ur": "تم اٹھتے ہو"
+          "ar": "إِلَى",
+          "ar_plain": "الى",
+          "translit": "ʾilā",
+          "en": "to",
+          "ur": "کی طرف"
         },
         {
-          "ar": "تَذْهَبُ",
-          "ar_plain": "تذهب",
-          "translit": "tadhahabu",
-          "en": "you go",
-          "ur": "تم جاتے ہو"
-        },
-        {
-          "ar": "ذَهَبْتَ",
-          "ar_plain": "ذهبت",
-          "translit": "dhahabta",
-          "en": "you went",
-          "ur": "تم گئے"
+          "ar": "سَتَذْهَبُ",
+          "ar_plain": "ستذهب",
+          "translit": "satadhhabu",
+          "en": "will you go",
+          "ur": "آپ جائیں گے"
         }
       ],
       "correct_order": [
-        0,
-        1
+        1,
+        3,
+        2,
+        0
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch42-l02-ex06",
-      "statement": {
-        "en": "مَتَى is used for asking about time in Arabic.",
-        "ur": "مَتَى عربی میں وقت کے بارے میں پوچھنے کے لیے استعمال ہوتا ہے۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch42-l02-ex07",
-      "prompt": {
-        "ar": "ذَهَبْتُ الْيَوْمَ",
-        "ar_plain": "ذهت اليوم",
-        "translit": "dhahabtu al-yawma",
-        "en": "I went today",
-        "ur": "میں آج گیا"
-      },
-      "options": [
-        {
-          "en": "I went today",
-          "ur": "میں آج گیا"
-        },
-        {
-          "en": "I will go today",
-          "ur": "میں آج جاؤں گا"
-        },
-        {
-          "en": "I went yesterday",
-          "ur": "میں کل گیا"
-        },
-        {
-          "en": "I go every day",
-          "ur": "میں ہر روز جاتا ہوں"
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "مَتَى — when?",
+      "en": "مَتَى — when",
       "ar": "مَتَى",
-      "ur": "مَتَى — کب؟"
+      "ur": "مَتَى — کب"
     },
     "ayah": {
       "surah": 2,
       "ayah": 214,
       "label": "Al-Baqarah 2:214",
-      "ar": "مَتَىٰ نَصْرُ اللَّهِ ۗ أَلَا إِنَّ نَصْرَ اللَّهِ قَرِيبٌ",
-      "en": "'When is the help of Allah?' Surely the help of Allah is near.",
-      "ur": "'اللہ کی مدد کب آئے گی؟' سن لو، اللہ کی مدد قریب ہے۔",
+      "ar": "مَتَىٰ نَصْرُ اللَّهِ ۗ أَلَا إِنَّ نَصْرَ اللَّهِ قَرِيبٌ",
+      "en": "'When is Allah's help?' — Indeed, Allah's help is near.",
+      "ur": "'اللہ کی مدد کب آئے گی؟' — سنو، اللہ کی مدد قریب ہے۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002214.mp3"
     },
     "highlighted_word_indices": [
@@ -384,14 +482,14 @@
       "نَصْرُ"
     ],
     "noor_explanation": {
-      "en": "مَتَىٰ نَصْرُ اللَّهِ — \"when is the help of Allah?\" The answer follows: إِنَّ نَصْرَ اللَّهِ قَرِيبٌ, \"the help of Allah is near\".",
-      "ur": "مَتَىٰ نَصْرُ اللَّهِ — \"اللہ کی مدد کب ہے؟\" جواب آگے ہے: إِنَّ نَصْرَ اللَّهِ قَرِيبٌ، \"اللہ کی مدد قریب ہے\"۔"
+      "en": "مَتَىٰ نَصْرُ اللَّهِ asks 'when is Allah's help?' and the reply is أَلَا إِنَّ نَصْرَ اللَّهِ قَرِيبٌ — it is near.",
+      "ur": "مَتَىٰ نَصْرُ اللَّهِ پوچھتا ہے 'اللہ کی مدد کب آئے گی؟' اور جواب ہے أَلَا إِنَّ نَصْرَ اللَّهِ قَرِيبٌ — وہ قریب ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "مَتَى is now yours — the word that opens the door to asking when in Arabic. When did you go? When will you return? When does the session begin?",
-      "ur": "مَتَى اب آپ کا ہے — وہ لفظ جو عربی میں کب پوچھنے کا دروازہ کھولتا ہے۔ تم کب گئے؟ تم کب واپس آؤ گے؟ کلاس کب شروع ہوتی ہے؟"
+      "en": "مَتَى asks for a time that fits the verb. Next: لِمَاذَا asks for a reason.",
+      "ur": "مَتَى فعل سے ملتا ہوا وقت پوچھتا ہے۔ اگلا: لِمَاذَا وجہ پوچھتا ہے۔"
     }
   }
 }

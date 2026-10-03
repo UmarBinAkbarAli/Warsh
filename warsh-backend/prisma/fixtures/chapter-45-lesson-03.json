@@ -2,403 +2,548 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 45, Lesson 3 — مَجْزُوم after لَمْ, لَمَّا and the لَا of prohibition (sukūn on regular verbs); the positive command is a separate form.",
+    "_note": "Chapter 45, Lesson 3 (ch45-l08, new). Purpose frames كَيْ and لِـ + verb with the supplied stems أَدْرُسُ / أَنْجَحُ / أَجْلِسُ / أَكْتُبُ; the noun-governing لِـ is contrasted; no implicit-أَنْ terminology and no command lām (Chapter 68). Added 2026-10-03 in the proposal harvest, batch 4 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-45-content-proposal.md and its review amendments.",
+    "title": "Purpose — كَيْ and لِـ",
+    "titleAr": "الْغَرَضُ — كَيْ وَلِـ",
+    "titleUr": "مقصد — كَيْ اور لِـ",
     "chapter_order": 45,
     "lesson_order": 3,
-    "chapter_title": "The Three States of المضارع (مرفوع/منصوب/مجزوم)",
-    "title": "The مَجْزُوم State",
-    "titleAr": "الْمُضَارِعُ — حَالَةُ الْجَزْمِ",
-    "estimated_minutes": 9,
-    "xp_reward": 10,
-    "titleUr": "حالتِ جزم"
+    "estimated_minutes": 11,
+    "xp_reward": 15
   },
   "hook": {
     "ayah": {
-      "surah": 31,
-      "ayah": 13,
-      "label": "Luqman 31:13",
-      "ar": "يَا بُنَيَّ لَا تُشْرِكْ بِاللَّهِ",
-      "en": "O my son, do not associate anything with Allah.",
-      "ur": "اے میرے بیٹے! اللہ کے ساتھ شریک نہ ٹھہرانا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/031013.mp3"
+      "surah": 20,
+      "ayah": 33,
+      "label": "Ta-Ha 20:33",
+      "ar": "كَيْ نُسَبِّحَكَ كَثِيرًا",
+      "en": "so that we may exalt You much",
+      "ur": "تاکہ ہم تیری بہت تسبیح کریں",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020033.mp3"
     },
-    "autoplay": true,
     "noor_intro": {
-      "en": "لَا تُشْرِكْ — \"do not associate\". The لَا of prohibition makes the verb مَجْزُوم: sukūn at the end.",
-      "ur": "لَا تُشْرِكْ — \"شریک نہ ٹھہراؤ\"۔ نہی کا لَا فعل کو مَجْزُوم کرتا ہے: آخر میں سکون۔"
-    }
+      "en": "Why do you do something? Arabic has two frames for the aim — كَيْ and لِـ — and the verb after each ends in fatḥa.",
+      "ur": "آپ کوئی کام کیوں کرتے ہیں؟ عربی میں مقصد کے دو سانچے ہیں — كَيْ اور لِـ — اور دونوں کے بعد فعل کے آخر میں فتحہ آتا ہے۔"
+    },
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "مَجْزُوم — sukūn",
-        "ar": "الْجَزْمُ",
-        "ur": "مَجْزُوم — سکون"
+        "en": "Purpose: 'in order to'",
+        "ar": "الْغَرَضُ: كَيْ وَلِـ",
+        "ur": "مقصد: 'تاکہ'"
       },
       "explanation": {
-        "en": "After لَمْ (\"did not\"), لَمَّا (\"not yet\") and the لَا of prohibition (\"do not\"), a regular present-tense verb ends in sukūn: لَمْ يَذْهَبْ, لَا تَذْهَبْ.",
-        "ur": "لَمْ (\"نہیں کیا\")، لَمَّا (\"ابھی تک نہیں\") اور نہی کے لَا (\"مت\") کے بعد عام مضارع فعل سکون پر ختم ہوتا ہے: لَمْ يَذْهَبْ، لَا تَذْهَبْ۔"
+        "en": "Two frames say 'in order to / so that': كَيْ + a verb, and لِـ + a verb. The verb after either frame ends in fatḥa — the مَنْصُوب state you learned in Lesson 2. The sound stems used here (أَدْرُسُ 'I study', أَنْجَحُ 'I succeed', أَجْلِسُ 'I sit', أَكْتُبُ 'I write') are given to you.",
+        "ur": "دو سانچے 'تاکہ' کا مطلب دیتے ہیں: كَيْ + فعل، اور لِـ + فعل۔ دونوں کے بعد فعل کے آخر میں فتحہ آتا ہے — وہی مَنْصُوب حالت جو آپ نے سبق 2 میں سیکھی۔ یہاں استعمال ہونے والے سادہ مادّے (أَدْرُسُ 'میں پڑھتا ہوں'، أَنْجَحُ 'میں کامیاب ہوتا ہوں'، أَجْلِسُ 'میں بیٹھتا ہوں'، أَكْتُبُ 'میں لکھتا ہوں') آپ کو دیے جاتے ہیں۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "لَمْ يَذْهَبْ",
-        "ar_plain": "لم يذهب",
-        "translit": "lam yadh-hab",
-        "en": "he did not go (مَجْزُوم)",
-        "ur": "وہ نہیں گیا (مجزوم)"
+        "ar": "أَدْرُسُ كَيْ أَنْجَحَ.",
+        "ar_plain": "ادرس كي انجح.",
+        "translit": "ʾadrusu kay ʾanjaḥa",
+        "en": "I study so that I succeed.",
+        "ur": "میں پڑھتا ہوں تاکہ کامیاب ہوں۔"
       },
       "explanation": {
-        "en": "يَذْهَبُ → لَمْ يَذْهَبْ: the ending changes; يَـ stays.",
-        "ur": "يَذْهَبُ ← لَمْ يَذْهَبْ: آخر بدلتا ہے؛ يَـ وہی رہتا ہے۔"
+        "en": "Constructed. أَدْرُسُ is the action; كَيْ introduces the aim; the verb after it changes from أَنْجَحُ to أَنْجَحَ.",
+        "ur": "بنایا ہوا۔ أَدْرُسُ کام ہے؛ كَيْ مقصد شروع کرتا ہے؛ اس کے بعد فعل أَنْجَحُ سے أَنْجَحَ ہو جاتا ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "لَا تَذْهَبْ",
-        "ar_plain": "لا تذهب",
-        "translit": "laa tadh-hab",
-        "en": "don't go (مَجْزُوم)",
-        "ur": "مت جاؤ (مجزوم)"
+        "ar": "أَدْرُسُ لِأَنْجَحَ.",
+        "ar_plain": "ادرس لانجح.",
+        "translit": "ʾadrusu liʾanjaḥa",
+        "en": "I study so that I succeed.",
+        "ur": "میں پڑھتا ہوں تاکہ کامیاب ہوں۔"
       },
       "explanation": {
-        "en": "لَا of prohibition + تَذْهَبْ = \"don't go\". Compare لَا تَذْهَبُ (\"you do not go\") — plain negation, مَرْفُوع.",
-        "ur": "نہی کا لَا + تَذْهَبْ = \"مت جاؤ\"۔ لَا تَذْهَبُ (\"تم نہیں جاتے\") سے موازنہ کریں — سادہ نفی، مرفوع۔"
+        "en": "The same meaning with لِـ joined to the verb: لِأَنْجَحَ. Again the verb ends in fatḥa.",
+        "ur": "وہی مفہوم، لِـ فعل سے جڑا ہوا: لِأَنْجَحَ۔ پھر فعل کے آخر میں فتحہ ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "يَا بُنَيَّ لَا تُشْرِكْ بِاللَّهِ",
-        "ar_plain": "يا بني لا تشرك بالله",
-        "translit": "yaa bunayya laa tushrik billaah",
-        "en": "O my son, do not associate anything with Allah. (Luqman 31:13)",
-        "ur": "اے میرے بیٹے! اللہ کے ساتھ شریک نہ ٹھہرانا۔ (لقمان 31:13)"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Two jobs for لِـ",
+        "ar": "لِـ لِلِاسْمِ وَلِلْفِعْلِ",
+        "ur": "لِـ کے دو کام"
       },
+      "examples": [
+        {
+          "ar": "الْكِتَابُ لِلطَّالِبِ.",
+          "ar_plain": "الكتاب للطالب.",
+          "translit": "al-kitābu lilṭṭālibi",
+          "en": "The book is for the student. (لِـ + noun: genitive)",
+          "ur": "کتاب طالب علم کے لیے ہے۔ (لِـ + اسم: مجرور)"
+        },
+        {
+          "ar": "أَجْلِسُ لِأَكْتُبَ.",
+          "ar_plain": "اجلس لاكتب.",
+          "translit": "ʾajlisu liʾaktuba",
+          "en": "I sit so that I write. (لِـ + verb: fatḥa)",
+          "ur": "میں بیٹھتا ہوں تاکہ لکھوں۔ (لِـ + فعل: فتحہ)"
+        }
+      ],
       "explanation": {
-        "en": "لَا + تُشْرِكْ (sukūn): a prohibition.",
-        "ur": "لَا + تُشْرِكْ (سکون): نہی۔"
+        "en": "With a noun, لِـ means 'for' and the noun is genitive. With a verb, لِـ means 'in order to' and the verb ends in fatḥa.",
+        "ur": "اسم کے ساتھ لِـ کا مطلب 'کے لیے' ہے اور اسم مجرور ہوتا ہے۔ فعل کے ساتھ لِـ کا مطلب 'تاکہ' ہے اور فعل کے آخر میں فتحہ آتا ہے۔"
       }
     },
     {
       "type": "GRAMMAR_NOTE",
       "title": {
-        "en": "A command is a different form",
-        "ur": "امر الگ صورت ہے"
+        "en": "Two frames, one meaning",
+        "ur": "دو سانچے، ایک مفہوم"
       },
       "body": {
-        "en": "\"Go!\" is اِذْهَبْ — a command form, made differently. It is not the مَجْزُوم imperfect. ذَهَبْ on its own is not a correct word for \"go\".",
-        "ur": "\"جاؤ!\" اِذْهَبْ ہے — امر کی صورت، جو الگ طرح بنتی ہے۔ یہ مجزوم مضارع نہیں۔ صرف ذَهَبْ \"جاؤ\" کے لیے درست لفظ نہیں۔"
+        "en": "كَيْ and لِـ + verb both say 'in order to'. For now you do not need to name what governs the verb — you need the rule of thumb: a purpose frame means the verb ends in fatḥa. Command lām (لِيَكْتُبْ, 'let him write') is a different thing and belongs to Chapter 68.",
+        "ur": "كَيْ اور لِـ + فعل دونوں 'تاکہ' کہتے ہیں۔ ابھی آپ کو یہ نام لینے کی ضرورت نہیں کہ فعل کو کون زبر دیتا ہے — آپ کو بس یہ قاعدہ چاہیے: مقصد کا سانچہ ہو تو فعل کے آخر میں فتحہ آتا ہے۔ لامِ امر (لِيَكْتُبْ، 'وہ لکھے') ایک الگ چیز ہے اور باب 68 کا حصہ ہے۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "كَيْ نُسَبِّحَكَ كَثِيرًا",
+        "ar_plain": "كي نسبحك كثيرا",
+        "translit": "kay nusabbiḥaka kathīran",
+        "en": "so that we may exalt You much",
+        "ur": "تاکہ ہم تیری بہت تسبیح کریں"
+      },
+      "explanation": {
+        "en": "In 20:33 كَيْ + نُسَبِّحَكَ ('we exalt You'): the verb ends in fatḥa after كَيْ. The form is supplied; read the frame and the ending. (Ta-Ha 20:33)",
+        "ur": "20:33 میں كَيْ + نُسَبِّحَكَ ('ہم تیری تسبیح کرتے ہیں'): كَيْ کے بعد فعل کے آخر میں فتحہ ہے۔ روپ دیا ہوا ہے؛ سانچہ اور انجام پڑھیں۔ (Ta-Ha 20:33)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "لِتُخْرِجَ النَّاسَ مِنَ الظُّلُمَاتِ إِلَى النُّورِ",
+        "ar_plain": "لتخرج الناس من الظلمات الى النور",
+        "translit": "litukhrija an-nāsa mina aẓ-ẓulumāti ʾilā an-nūri",
+        "en": "that you might bring mankind out of darknesses into the light",
+        "ur": "تاکہ تم لوگوں کو اندھیروں سے روشنی کی طرف نکالو"
+      },
+      "explanation": {
+        "en": "In 14:1 لِتُخْرِجَ is لِـ + a verb: 'so that you bring out' — again fatḥa on the verb. The form is supplied. (Ibrahim 14:1)",
+        "ur": "14:1 میں لِتُخْرِجَ، لِـ + فعل ہے: 'تاکہ تم نکالو' — پھر فعل پر فتحہ۔ روپ دیا ہوا ہے۔ (Ibrahim 14:1)"
       }
     }
   ],
   "exercises": [
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch45-l03-ex01",
+      "id": "ch45-l08-ex01",
       "prompt": {
-        "ar": "لَا تَذْهَبْ",
-        "ar_plain": "لا تذهب",
-        "translit": "laa tadh-hab",
-        "en": "Don't go.",
-        "ur": "مت جاؤ۔"
+        "ar": "أَدْرُسُ كَيْ أَنْجَحَ.",
+        "ar_plain": "ادرس كي انجح.",
+        "translit": "ʾadrusu kay ʾanjaḥa",
+        "en": "I study so that I succeed.",
+        "ur": "میں پڑھتا ہوں تاکہ کامیاب ہوں۔"
       },
       "options": [
         {
-          "en": "Don't go.",
-          "ur": "مت جاؤ۔"
+          "en": "I studied and then succeeded.",
+          "ur": "میں نے پڑھا اور پھر کامیاب ہوا۔"
         },
         {
-          "en": "You do not go.",
-          "ur": "تم نہیں جاتے۔"
+          "en": "I study so that I succeed.",
+          "ur": "میں پڑھتا ہوں تاکہ کامیاب ہوں۔"
         },
         {
-          "en": "Go!",
-          "ur": "جاؤ!"
+          "en": "I succeed so that I study.",
+          "ur": "میں کامیاب ہوتا ہوں تاکہ پڑھوں۔"
         },
         {
-          "en": "You did not go.",
-          "ur": "تم نہیں گئے۔"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "لَا + مَجْزُوم = a prohibition: \"don't\".",
-        "ur": "لَا + مجزوم = نہی: \"مت\"۔"
-      }
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch45-l03-ex02",
-      "statement": {
-        "en": "After لَمْ, a regular present-tense verb ends in sukūn.",
-        "ur": "لَمْ کے بعد عام مضارع فعل سکون پر ختم ہوتا ہے۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch45-l03-ex03",
-      "mode": "TAP",
-      "sentence_ar": "لَمْ ___ الدَّرْسَ",
-      "hint": {
-        "en": "I did not understand the lesson.",
-        "ur": "میں سبق نہیں سمجھا۔"
-      },
-      "options": [
-        {
-          "ar": "أَفْهَمِ",
-          "ar_plain": "افهم",
-          "translit": "afhami",
-          "en": "understand (مَجْزُوم)",
-          "ur": "سمجھا (مجزوم)"
-        },
-        {
-          "ar": "أَفْهَمُ",
-          "ar_plain": "افهم",
-          "translit": "afhamu",
-          "en": "(مَرْفُوع)",
-          "ur": "(مرفوع)"
-        },
-        {
-          "ar": "أَفْهَمَ",
-          "ar_plain": "افهم",
-          "translit": "afhama",
-          "en": "(مَنْصُوب)",
-          "ur": "(منصوب)"
-        },
-        {
-          "ar": "فَهِمْتُ",
-          "ar_plain": "فهمت",
-          "translit": "fahimtu",
-          "en": "I understood",
-          "ur": "میں سمجھا"
-        }
-      ],
-      "correct_answer": {
-        "ar": "أَفْهَمِ",
-        "ar_plain": "افهم",
-        "translit": "afhami",
-        "en": "understand (مَجْزُوم)",
-        "ur": "سمجھا (مجزوم)"
-      },
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "لَمْ + مَجْزُوم: أَفْهَمْ — said with kasra before الدَّرْسَ.",
-        "ur": "لَمْ + مجزوم: أَفْهَمْ — الدَّرْسَ سے پہلے کسرہ کے ساتھ پڑھا جاتا ہے۔"
-      }
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch45-l03-ex04",
-      "left_column": [
-        {
-          "ar": "لَمْ يَذْهَبْ",
-          "ar_plain": "لم يذهب",
-          "translit": "lam yadh-hab",
-          "en": "he did not go (مَجْزُوم)",
-          "ur": "وہ نہیں گیا (مجزوم)"
-        },
-        {
-          "ar": "لَا تَذْهَبْ",
-          "ar_plain": "لا تذهب",
-          "translit": "laa tadh-hab",
-          "en": "don't go (مَجْزُوم)",
-          "ur": "مت جاؤ (مجزوم)"
-        },
-        {
-          "ar": "اِذْهَبْ",
-          "ar_plain": "اذهب",
-          "translit": "idh-hab",
-          "en": "go! (a command form)",
-          "ur": "جاؤ! (امر)"
-        },
-        {
-          "ar": "لَا تَذْهَبُ",
-          "ar_plain": "لا تذهب",
-          "translit": "laa tadh-habu",
-          "en": "you do not go",
-          "ur": "تم نہیں جاتے"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "prohibition — مَجْزُوم",
-          "ur": "نہی — مجزوم"
-        },
-        {
-          "en": "plain negation — مَرْفُوع",
-          "ur": "سادہ نفی — مرفوع"
-        },
-        {
-          "en": "did not — مَجْزُوم",
-          "ur": "نہیں کیا — مجزوم"
-        },
-        {
-          "en": "command form",
-          "ur": "امر"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          2
-        ],
-        [
-          1,
-          0
-        ],
-        [
-          2,
-          3
-        ],
-        [
-          3,
-          1
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch45-l03-ex05",
-      "target_translation": {
-        "en": "O my son, do not associate anything with Allah. (31:13)",
-        "ur": "اے میرے بیٹے! اللہ کے ساتھ شریک نہ ٹھہرانا۔ (31:13)"
-      },
-      "tiles": [
-        {
-          "ar": "يَا",
-          "ar_plain": "يا",
-          "translit": "yaa",
-          "en": "O",
-          "ur": "اے"
-        },
-        {
-          "ar": "بُنَيَّ",
-          "ar_plain": "بني",
-          "translit": "bunayya",
-          "en": "my son",
-          "ur": "میرے بیٹے"
-        },
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "do not",
-          "ur": "مت"
-        },
-        {
-          "ar": "تُشْرِكْ",
-          "ar_plain": "تشرك",
-          "translit": "tushrik",
-          "en": "associate",
-          "ur": "شریک ٹھہراؤ"
-        },
-        {
-          "ar": "بِاللَّهِ",
-          "ar_plain": "بالله",
-          "translit": "billaah",
-          "en": "with Allah",
-          "ur": "اللہ کے ساتھ"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3,
-        4
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch45-l03-ex06",
-      "statement": {
-        "en": "اِذْهَبْ (\"go!\") is an example of the مَجْزُوم imperfect.",
-        "ur": "اِذْهَبْ (\"جاؤ!\") مجزوم مضارع کی مثال ہے۔"
-      },
-      "correct_answer": false,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "False. اِذْهَبْ is a command form, not an imperfect verb.",
-        "ur": "غلط۔ اِذْهَبْ امر ہے، مضارع نہیں۔"
-      }
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch45-l03-ex07",
-      "prompt": {
-        "ar": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
-        "ar_plain": "لم يلد ولم يولد",
-        "translit": "lam yalid wa lam yuulad",
-        "en": "He did not beget, nor was He begotten.",
-        "ur": "نہ اس نے کسی کو جنا اور نہ وہ جنا گیا۔"
-      },
-      "options": [
-        {
-          "en": "He begets and is begotten.",
-          "ur": "وہ جنتا ہے اور جنا جاتا ہے۔"
-        },
-        {
-          "en": "He did not beget, nor was He begotten.",
-          "ur": "نہ اس نے کسی کو جنا اور نہ وہ جنا گیا۔"
-        },
-        {
-          "en": "Do not beget.",
-          "ur": "مت جنو۔"
-        },
-        {
-          "en": "He will not beget.",
-          "ur": "وہ نہیں جنے گا۔"
+          "en": "I study and I do not succeed.",
+          "ur": "میں پڑھتا ہوں اور کامیاب نہیں ہوتا۔"
         }
       ],
       "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَمْ + مَجْزُوم = \"did not\".",
-        "ur": "لَمْ + مجزوم = \"نہیں کیا\"۔"
+        "en": "كَيْ introduces the aim: succeeding is why he studies.",
+        "ur": "كَيْ مقصد شروع کرتا ہے: کامیاب ہونا ہی پڑھنے کی وجہ ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch45-l08-ex02",
+      "mode": "TAP",
+      "sentence_ar": "أَدْرُسُ كَيْ ___.",
+      "hint": {
+        "en": "I study so that I succeed.",
+        "ur": "میں پڑھتا ہوں تاکہ کامیاب ہوں۔"
+      },
+      "options": [
+        {
+          "ar": "أَنْجَحُ",
+          "ar_plain": "انجح",
+          "translit": "ʾanjaḥu",
+          "en": "I succeed",
+          "ur": "میں کامیاب ہوتا ہوں"
+        },
+        {
+          "ar": "أَنْجَحْ",
+          "ar_plain": "انجح",
+          "translit": "ʾanjaḥ",
+          "en": "(sukūn form)",
+          "ur": "(سکون والا روپ)"
+        },
+        {
+          "ar": "أَنْجَحَ",
+          "ar_plain": "انجح",
+          "translit": "ʾanjaḥa",
+          "en": "(that) I succeed",
+          "ur": "(کہ) میں کامیاب ہوں"
+        },
+        {
+          "ar": "نَجَحْتُ",
+          "ar_plain": "نجحت",
+          "translit": "najaḥtu",
+          "en": "I succeeded",
+          "ur": "میں کامیاب ہوا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "أَنْجَحَ",
+        "ar_plain": "انجح",
+        "translit": "ʾanjaḥa",
+        "en": "(that) I succeed",
+        "ur": "(کہ) میں کامیاب ہوں"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After كَيْ the verb ends in fatḥa: أَنْجَحَ.",
+        "ur": "كَيْ کے بعد فعل کے آخر میں فتحہ آتا ہے: أَنْجَحَ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch45-l08-ex03",
+      "prompt": {
+        "ar": "أَجْلِسُ لِأَكْتُبَ الدَّرْسَ.",
+        "ar_plain": "اجلس لاكتب الدرس.",
+        "translit": "ʾajlisu liʾaktuba ad-darsa",
+        "en": "I sit so that I write the lesson.",
+        "ur": "میں بیٹھتا ہوں تاکہ سبق لکھوں۔"
+      },
+      "options": [
+        {
+          "en": "I sit so that I write the lesson.",
+          "ur": "میں بیٹھتا ہوں تاکہ سبق لکھوں۔"
+        },
+        {
+          "en": "I sit for the lesson.",
+          "ur": "میں سبق کے لیے بیٹھتا ہوں۔"
+        },
+        {
+          "en": "I wrote the lesson and then sat.",
+          "ur": "میں نے سبق لکھا اور پھر بیٹھا۔"
+        },
+        {
+          "en": "I write so that I sit.",
+          "ur": "میں لکھتا ہوں تاکہ بیٹھوں۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لِأَكْتُبَ is لِـ + verb: the aim of sitting.",
+        "ur": "لِأَكْتُبَ لِـ + فعل ہے: بیٹھنے کا مقصد۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch45-l08-ex04",
+      "mode": "TAP",
+      "sentence_ar": "أَجْلِسُ ___ الدَّرْسَ.",
+      "hint": {
+        "en": "I sit so that I write the lesson.",
+        "ur": "میں بیٹھتا ہوں تاکہ سبق لکھوں۔"
+      },
+      "options": [
+        {
+          "ar": "لِأَكْتُبَ",
+          "ar_plain": "لاكتب",
+          "translit": "liʾaktuba",
+          "en": "so that I write",
+          "ur": "تاکہ میں لکھوں"
+        },
+        {
+          "ar": "لِأَكْتُبُ",
+          "ar_plain": "لاكتب",
+          "translit": "liʾaktubu",
+          "en": "(ḍamma form)",
+          "ur": "(ضمہ والا روپ)"
+        },
+        {
+          "ar": "لِأَكْتُبْ",
+          "ar_plain": "لاكتب",
+          "translit": "liʾaktub",
+          "en": "(sukūn form)",
+          "ur": "(سکون والا روپ)"
+        },
+        {
+          "ar": "كَتَبْتُ",
+          "ar_plain": "كتبت",
+          "translit": "katabtu",
+          "en": "I wrote",
+          "ur": "میں نے لکھا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "لِأَكْتُبَ",
+        "ar_plain": "لاكتب",
+        "translit": "liʾaktuba",
+        "en": "so that I write",
+        "ur": "تاکہ میں لکھوں"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لِـ + verb: the verb ends in fatḥa — لِأَكْتُبَ.",
+        "ur": "لِـ + فعل: فعل کے آخر میں فتحہ — لِأَكْتُبَ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch45-l08-ex05",
+      "mode": "TAP",
+      "sentence_ar": "أَذْهَبُ إِلَى الْمَدْرَسَةِ كَيْ ___.",
+      "hint": {
+        "en": "I go to the school so that I study.",
+        "ur": "میں اسکول جاتا ہوں تاکہ پڑھوں۔"
+      },
+      "options": [
+        {
+          "ar": "أَدْرُسُ",
+          "ar_plain": "ادرس",
+          "translit": "ʾadrusu",
+          "en": "I study",
+          "ur": "میں پڑھتا ہوں"
+        },
+        {
+          "ar": "أَدْرُسْ",
+          "ar_plain": "ادرس",
+          "translit": "ʾadrus",
+          "en": "(sukūn form)",
+          "ur": "(سکون والا روپ)"
+        },
+        {
+          "ar": "دَرَسْتُ",
+          "ar_plain": "درست",
+          "translit": "darastu",
+          "en": "I studied",
+          "ur": "میں نے پڑھا"
+        },
+        {
+          "ar": "أَدْرُسَ",
+          "ar_plain": "ادرس",
+          "translit": "ʾadrusa",
+          "en": "(that) I study",
+          "ur": "(کہ) میں پڑھوں"
+        }
+      ],
+      "correct_answer": {
+        "ar": "أَدْرُسَ",
+        "ar_plain": "ادرس",
+        "translit": "ʾadrusa",
+        "en": "(that) I study",
+        "ur": "(کہ) میں پڑھوں"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After كَيْ: أَدْرُسَ with fatḥa.",
+        "ur": "كَيْ کے بعد: فتحہ کے ساتھ أَدْرُسَ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch45-l08-ex06",
+      "statement": {
+        "en": "In الْكِتَابُ لِلطَّالِبِ, the لِـ goes with a noun and the noun is genitive.",
+        "ur": "الْكِتَابُ لِلطَّالِبِ میں لِـ اسم کے ساتھ ہے اور اسم مجرور ہے۔",
+        "ar_example": {
+          "ar": "الْكِتَابُ لِلطَّالِبِ.",
+          "ar_plain": "الكتاب للطالب.",
+          "translit": "al-kitābu lilṭṭālibi",
+          "en": "The book is for the student.",
+          "ur": "کتاب طالب علم کے لیے ہے۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes: 'the book is for the student'.",
+        "ur": "جی ہاں: 'کتاب طالب علم کے لیے ہے'۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch45-l08-ex07",
+      "statement": {
+        "en": "In أَدْرُسُ لِأَنْجَحَ, the verb after لِـ ends in ḍamma.",
+        "ur": "أَدْرُسُ لِأَنْجَحَ میں لِـ کے بعد فعل کے آخر میں ضمہ ہے۔",
+        "ar_example": {
+          "ar": "أَدْرُسُ لِأَنْجَحَ.",
+          "ar_plain": "ادرس لانجح.",
+          "translit": "ʾadrusu liʾanjaḥa",
+          "en": "I study so that I succeed.",
+          "ur": "میں پڑھتا ہوں تاکہ کامیاب ہوں۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "It ends in fatḥa: لِأَنْجَحَ.",
+        "ur": "اس کے آخر میں فتحہ ہے: لِأَنْجَحَ۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch45-l08-ex08",
+      "left_column": [
+        {
+          "ar": "كَيْ + فِعْل",
+          "ar_plain": "كي + فعل",
+          "translit": "kay + fiʿl",
+          "en": "kay + verb",
+          "ur": "كَيْ + فعل"
+        },
+        {
+          "ar": "لِـ + فِعْل",
+          "ar_plain": "ل + فعل",
+          "translit": "li + fiʿl",
+          "en": "li + verb",
+          "ur": "لِـ + فعل"
+        },
+        {
+          "ar": "لِـ + اسْم",
+          "ar_plain": "ل + اسم",
+          "translit": "li + asm",
+          "en": "li + noun",
+          "ur": "لِـ + اسم"
+        },
+        {
+          "ar": "لَمْ + فِعْل",
+          "ar_plain": "لم + فعل",
+          "translit": "lam + fiʿl",
+          "en": "lam + verb",
+          "ur": "لَمْ + فعل"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "did not — verb ends in sukūn",
+          "ur": "نہیں (ماضی) — فعل کے آخر میں سکون"
+        },
+        {
+          "en": "in order to — the frame كَيْ",
+          "ur": "تاکہ — سانچہ كَيْ"
+        },
+        {
+          "en": "for — the noun is genitive",
+          "ur": "کے لیے — اسم مجرور"
+        },
+        {
+          "en": "in order to — لِـ joined to the verb",
+          "ur": "تاکہ — لِـ فعل سے جڑا ہوا"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch45-l08-ex09",
+      "prompt": {
+        "ar": "كَيْ نُسَبِّحَكَ كَثِيرًا",
+        "ar_plain": "كي نسبحك كثيرا",
+        "translit": "kay nusabbiḥaka kathīran",
+        "en": "(20:33)",
+        "ur": "(20:33)"
+      },
+      "options": [
+        {
+          "en": "so that You exalt us much",
+          "ur": "تاکہ تو ہماری بہت تسبیح کرے"
+        },
+        {
+          "en": "so that we may study much",
+          "ur": "تاکہ ہم بہت پڑھیں"
+        },
+        {
+          "en": "so that we may exalt You much",
+          "ur": "تاکہ ہم تیری بہت تسبیح کریں"
+        },
+        {
+          "en": "because we exalted You much",
+          "ur": "کیونکہ ہم نے تیری بہت تسبیح کی"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كَيْ introduces the aim; نُسَبِّحَكَ is 'we exalt You' (supplied).",
+        "ur": "كَيْ مقصد شروع کرتا ہے؛ نُسَبِّحَكَ 'ہم تیری تسبیح کرتے ہیں' (دیا ہوا)۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "مَجْزُوم: sukūn",
-      "ar": "الْمُضَارِعُ الْمَجْزُومُ",
-      "ur": "مجزوم: سکون"
+      "en": "Purpose frame, fatḥa ending",
+      "ar": "كَيْ نُسَبِّحَكَ",
+      "ur": "مقصد کا سانچہ، فتحہ والا انجام"
     },
     "ayah": {
-      "surah": 31,
-      "ayah": 13,
-      "label": "Luqman 31:13",
-      "ar": "يَا بُنَيَّ لَا تُشْرِكْ بِاللَّهِ",
-      "en": "O my son, do not associate anything with Allah.",
-      "ur": "اے میرے بیٹے! اللہ کے ساتھ شریک نہ ٹھہرانا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/031013.mp3"
+      "surah": 20,
+      "ayah": 33,
+      "label": "Ta-Ha 20:33",
+      "ar": "كَيْ نُسَبِّحَكَ كَثِيرًا",
+      "en": "so that we may exalt You much",
+      "ur": "تاکہ ہم تیری بہت تسبیح کریں",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020033.mp3"
     },
     "highlighted_word_indices": [
-      2,
-      3
+      0,
+      1
     ],
     "highlighted_words": [
-      "لَا",
-      "تُشْرِكْ"
+      "كَيْ",
+      "نُسَبِّحَكَ"
     ],
     "noor_explanation": {
-      "en": "لَا تُشْرِكْ — the لَا of prohibition makes تُشْرِكْ مَجْزُوم.",
-      "ur": "لَا تُشْرِكْ — نہی کا لَا، تُشْرِكْ کو مجزوم کرتا ہے۔"
+      "en": "كَيْ نُسَبِّحَكَ كَثِيرًا — 'so that we may exalt You much': the aim, and a verb that ends in fatḥa after كَيْ.",
+      "ur": "كَيْ نُسَبِّحَكَ كَثِيرًا — 'تاکہ ہم تیری بہت تسبیح کریں': مقصد، اور كَيْ کے بعد فتحہ پر ختم ہونے والا فعل۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "لَمْ يَذْهَبْ, لَمَّا يَذْهَبْ, لَا تَذْهَبْ — مَجْزُوم, sukūn. اِذْهَبْ is a command form of its own.",
-      "ur": "لَمْ يَذْهَبْ، لَمَّا يَذْهَبْ، لَا تَذْهَبْ — مجزوم، سکون۔ اِذْهَبْ امر کی الگ صورت ہے۔"
+      "en": "Purpose frames mean a fatḥa on the verb. Next: حَتَّى — 'until'.",
+      "ur": "مقصد کے سانچوں کا مطلب فعل پر فتحہ ہے۔ اگلا: حَتَّى — 'یہاں تک کہ / جب تک'۔"
     }
   }
 }

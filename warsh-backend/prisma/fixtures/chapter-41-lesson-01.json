@@ -2,110 +2,121 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 41, Lesson 1 - Extended reading passage using mixed structures from Book 4.",
+    "_note": "Chapter 41, Lesson 1 (ch41-l01). Two constructed texts; the order is always stated by ثُمَّ / بَعْدَ / قَبْلَ, never inferred from وَ. Rebuilt 2026-10-03 in the proposal harvest, batch 4 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-41-content-proposal.md and its review amendments.",
+    "title": "Read for the Gist and the Order",
+    "titleAr": "قِرَاءَةُ الْفِكْرَةِ وَالتَّرْتِيبِ",
+    "titleUr": "مفہوم اور ترتیب کے لیے پڑھنا",
     "chapter_order": 41,
     "lesson_order": 1,
-    "chapter_title": "Book 4 Tail — Reading Comprehension",
-    "title": "A Passage from Our Journey",
-    "titleAr": "مُمَارَسَةُ الْقِرَاءَةِ",
-    "source": "madina_reader_book4_consolidation.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 68,
+      "surah": 96,
       "ayah": 1,
-      "label": "Al-Qalam 68:1",
-      "ar": "ن ۚ وَالْقَلَمِ وَمَا يَسْطُرُونَ",
-      "en": "Nūn. By the pen and what they inscribe,",
-      "ur": "نٓ۔ قلم کی اور جو (اہل قلم) لکھتے ہیں اس کی قسم",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/068001.mp3"
+      "label": "Al-Alaq 96:1",
+      "ar": "اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ",
+      "en": "Recite in the name of your Lord who created",
+      "ur": "(اے محمدﷺ) اپنے پروردگار کا نام لے کر پڑھو جس نے (عالم کو) پیدا کیا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/096001.mp3"
     },
     "noor_intro": {
-      "en": "Today you read your first extended Arabic passage. You know all the structures — now it is time to bring them together.",
-      "ur": "آج آپ اپنا پہلا طویل عربی متن پڑھیں گے۔ آپ کو ساری ساختیں آتی ہیں — اب انہیں اکٹھا کرنے کا وقت ہے۔"
+      "en": "Chapter 41 is about reading connected text. First, get the gist — then place the events in order.",
+      "ur": "باب 41 جڑی ہوئی عبارت پڑھنے کے بارے میں ہے۔ پہلے مجموعی مفہوم لیں — پھر واقعات کو ترتیب میں رکھیں۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Extended reading in Arabic",
-        "ar": "الْمُمَارَسَةُ الطَّوِيلَةُ فِي الْقِرَاءَةِ",
-        "ur": "عربی میں طولانی پڑھائی"
+        "en": "Read a text for its gist",
+        "ar": "الْفِكْرَةُ الْعَامَّةُ",
+        "ur": "متن کا مجموعی مفہوم پڑھیں"
       },
       "explanation": {
-        "en": "When you read a long Arabic passage, each sentence uses a structure you already know. Pull them together like pieces of a puzzle.",
-        "ur": "جب آپ کوئی طولانی عربی متن پڑھتے ہیں تو ہر جملہ ایک ایسی ساخت استعمال کرتا ہے جو آپ پہلے سے جانتے ہیں۔ انہیں پہیلے کے ٹکڑوں کی طرح اکٹھا کریں۔"
+        "en": "Before you analyse every word, ask: who is in the text, what do they do, and where? That is the gist. The sentences below are constructed practice texts, not Quran.",
+        "ur": "ہر لفظ کا تجزیہ کرنے سے پہلے پوچھیں: متن میں کون ہے، وہ کیا کرتا ہے اور کہاں؟ یہی مجموعی مفہوم ہے۔ نیچے کے جملے بنائے ہوئے مشقی متن ہیں، قرآن نہیں۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "ذَهَبَ الْوَلَدُ إِلَى السُّوقِ",
-        "ar_plain": "ذهب الولد الى السوق",
-        "translit": "dhahaba al-waladu ilaa as-suq",
-        "en": "The boy went to the market",
-        "ur": "لڑکا بازار گیا"
+        "ar": "ذَهَبَ يُوسُفُ إِلَى الْمَسْجِدِ صَبَاحًا. ثُمَّ رَجَعَ إِلَى الْبَيْتِ. بَعْدَ ذَلِكَ قَرَأَ كِتَابًا.",
+        "ar_plain": "ذهب يوسف الى المسجد صباحا. ثم رجع الى البيت. بعد ذلك قرا كتابا.",
+        "translit": "dhahaba yuūsufu ʾilā al-masjidi ṣabāḥan thumma rajaʿa ʾilā al-bayti baʿda dhalika qaraʾa kitāban",
+        "en": "Yusuf went to the masjid in the morning. Then he returned to the house. After that he read a book.",
+        "ur": "یوسف صبح مسجد گیا۔ پھر وہ گھر لوٹ آیا۔ اس کے بعد اس نے ایک کتاب پڑھی۔"
       },
       "explanation": {
-        "en": "This sentence uses past tense + prepositionphrase. You know both pieces.",
-        "ur": "یہ جملہ ماضی + حرف جر استعمال کرتی ہے۔ آپ دونوں ٹکڑے جانتے ہیں۔"
+        "en": "Constructed text. Who? Yusuf. Where? the masjid, then the house. What? he went, returned and read.",
+        "ur": "بنایا ہوا متن۔ کون؟ یوسف۔ کہاں؟ مسجد، پھر گھر۔ کیا؟ وہ گیا، لوٹا اور اس نے پڑھا۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "الطُّلَّابُ الْمُجْتَهِدُونَ فِي الْمَدْرَسَةِ",
-        "ar_plain": "الطلاب المجتهدون في المدرسة",
-        "translit": "at-tullaabul mujtahidoona fi al-madrasa",
-        "en": "The diligent students are in the school",
-        "ur": "محنتی طالب علم اسکول میں ہیں"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Words that give the order",
+        "ar": "ثُمَّ، بَعْدَ ذَلِكَ، قَبْلَ",
+        "ur": "ترتیب بتانے والے الفاظ"
       },
       "explanation": {
-        "en": "Here human plural + adjective agreement and a preposition phrase combine.",
-        "ur": "یہاں انسانی جمع + صفت کا ملنا اور حرف جر کی جملہ مل کر آتی ہے۔"
+        "en": "ثُمَّ = then. بَعْدَ ذَلِكَ = after that. قَبْلَ = before. These words tell you what happened first. You met قَبْلَ and بَعْدَ in Chapter 3.",
+        "ur": "ثُمَّ = پھر۔ بَعْدَ ذَلِكَ = اس کے بعد۔ قَبْلَ = پہلے۔ یہ الفاظ بتاتے ہیں کہ پہلے کیا ہوا۔ آپ قَبْلَ اور بَعْدَ سے باب 3 میں مل چکے ہیں۔"
       }
     },
     {
       "type": "GRAMMAR_NOTE",
       "title": {
-        "en": "How to approach a long passage",
-        "ur": "طویل متن پڑھنے کا طریقہ"
+        "en": "وَ does not give the order",
+        "ur": "وَ ترتیب نہیں بتاتا"
       },
       "body": {
-        "en": "Step 1: Identify the verb. Step 2: Find each noun and its role. Step 3: Note any attached pronouns. Step 4: Read the full meaning.",
-        "ur": "پہلا قدم: فعل پہچانیں۔ دوسرا: ہر اسم اور اس کا کام تلاش کریں۔ تیسرا: جڑے ہوئے ضمائر نوٹ کریں۔ چوتھا: مکمل معنی پڑھیں۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "السُّوقُ",
-        "ar_plain": "السوق",
-        "translit": "as-suqu",
-        "en": "the market",
-        "ur": "بازار"
-      },
-      "explanation": {
-        "en": "السُّوقُ is a common noun in Quran and daily Arabic. It appears in Al-Ahzab 33:28.",
-        "ur": "السُّوقُ قرآن اور روزمرہ عربی دونوں میں ایک عام اسم ہے۔ یہ الاحزاب 33:28 میں بھی آتا ہے۔"
+        "en": "وَ means 'and'. ذَهَبَ وَقَرَأَ does not say which came first. Take the order from ثُمَّ, بَعْدَ, قَبْلَ, or from what the text states — never from وَ alone.",
+        "ur": "وَ کا مطلب ہے 'اور'۔ ذَهَبَ وَقَرَأَ یہ نہیں بتاتا کہ پہلے کیا ہوا۔ ترتیب ثُمَّ، بَعْدَ، قَبْلَ سے یا متن کے بیان سے لیں — صرف وَ سے کبھی نہیں۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "كَتَبَ الْمُعَلِّمُ رَسَالَةً",
-        "ar_plain": "كتب المعلم رسالة",
-        "translit": "kataba al-mu'allimu risaalatan",
-        "en": "The teacher wrote a letter",
-        "ur": "استاد نے خط لکھا"
+        "ar": "قَبْلَ الْفَصْلِ قَرَأَتْ فَاطِمَةُ كِتَابًا فِي الْبَيْتِ. ثُمَّ ذَهَبَتْ إِلَى الْمَدْرَسَةِ.",
+        "ar_plain": "قبل الفصل قرات فاطمة كتابا في البيت. ثم ذهبت الى المدرسة.",
+        "translit": "qabla al-faṣli qaraʾat fāṭimatu kitāban fī al-bayti thumma dhahabat ʾilā al-madrasati",
+        "en": "Before class Fatima read a book at home. Then she went to the school.",
+        "ur": "کلاس سے پہلے فاطمہ نے گھر میں ایک کتاب پڑھی۔ پھر وہ اسکول گئی۔"
       },
       "explanation": {
-        "en": "Here the verb takes a direct object رَسَالَةً in the accusative (tanween).",
-        "ur": "یہاں فعل ایک مفعول بSentential رَسَالَةً کا حکم رکھتا ہے (تنوین کے ساتھ)۔"
+        "en": "A second constructed text. قَبْلَ الْفَصْلِ says the reading came before class; ثُمَّ says she then went to school.",
+        "ur": "دوسرا بنایا ہوا متن۔ قَبْلَ الْفَصْلِ بتاتا ہے کہ پڑھنا کلاس سے پہلے ہوا؛ ثُمَّ بتاتا ہے کہ پھر وہ اسکول گئی۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Gist or order?",
+        "ar": "الْفِكْرَةُ أَمِ التَّرْتِيبُ؟",
+        "ur": "مفہوم یا ترتیب؟"
+      },
+      "examples": [
+        {
+          "ar": "الْفِكْرَةُ: مَنْ؟ أَيْنَ؟ مَاذَا؟",
+          "ar_plain": "الفكرة: من؟ اين؟ ماذا؟",
+          "translit": "al-fikratu man ʾayna mādhā",
+          "en": "Gist: who? where? what?",
+          "ur": "مفہوم: کون؟ کہاں؟ کیا؟"
+        },
+        {
+          "ar": "التَّرْتِيبُ: ثُمَّ، بَعْدَ، قَبْلَ",
+          "ar_plain": "الترتيب: ثم، بعد، قبل",
+          "translit": "at-tartību thumma baʿda qabla",
+          "en": "Order: then, after, before",
+          "ur": "ترتیب: پھر، بعد، پہلے"
+        }
+      ],
+      "explanation": {
+        "en": "Two different questions about one text. First get the gist; then use the order words to place the events.",
+        "ur": "ایک متن کے بارے میں دو مختلف سوال۔ پہلے مجموعی مفہوم لیں؛ پھر ترتیب والے الفاظ سے واقعات کو ترتیب دیں۔"
       }
     }
   ],
@@ -114,161 +125,229 @@
       "type": "TAP_TRANSLATION",
       "id": "ch41-l01-ex01",
       "prompt": {
-        "ar": "ذَهَبَ الْوَلَدُ إِلَى السُّوقِ",
-        "ar_plain": "ذهب الولد الى السوق",
-        "translit": "dhahaba al-waladu ilaa as-suq",
-        "en": "The boy went to the market",
-        "ur": "لڑکا بازار گیا"
+        "ar": "ذَهَبَ يُوسُفُ إِلَى الْمَسْجِدِ صَبَاحًا. ثُمَّ رَجَعَ إِلَى الْبَيْتِ. بَعْدَ ذَلِكَ قَرَأَ كِتَابًا.",
+        "ar_plain": "ذهب يوسف الى المسجد صباحا. ثم رجع الى البيت. بعد ذلك قرا كتابا.",
+        "translit": "dhahaba yuūsufu ʾilā al-masjidi ṣabāḥan thumma rajaʿa ʾilā al-bayti baʿda dhalika qaraʾa kitāban",
+        "en": "Yusuf went to the masjid in the morning. Then he returned to the house. After that he read a book.",
+        "ur": "یوسف صبح مسجد گیا۔ پھر وہ گھر لوٹ آیا۔ اس کے بعد اس نے ایک کتاب پڑھی۔"
       },
       "options": [
         {
-          "en": "The boy went to the market",
-          "ur": "لڑکا بازار گیا"
+          "en": "Yusuf read a book at the masjid and then went to school.",
+          "ur": "یوسف نے مسجد میں کتاب پڑھی اور پھر اسکول گیا۔"
         },
         {
-          "en": "The girl went to the school",
-          "ur": "لڑکی اسکول گئی"
+          "en": "Yusuf went to the masjid, came back home and read a book.",
+          "ur": "یوسف مسجد گیا، گھر لوٹ آیا اور اس نے ایک کتاب پڑھی۔"
         },
         {
-          "en": "The boy is in the market",
-          "ur": "لڑکا بازار میں ہے"
+          "en": "Yusuf and his father went to the market.",
+          "ur": "یوسف اور اس کے والد بازار گئے۔"
         },
         {
-          "en": "The market is big",
-          "ur": "بازار بڑا ہے"
+          "en": "Yusuf wrote a letter in the evening.",
+          "ur": "یوسف نے شام کو ایک خط لکھا۔"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "ذَهَبَ is past tense go-verb. الْوَلَدُ is the masculine singular subject. إِلَى is the preposition to. السُّوقِ is the market.",
-        "ur": "ذَهَبَ ماضی کا فعل ہے۔ الْوَلَدُ مذکر واحد فاعل ہے۔ إِلَى حرف جر ہے۔ السُّوقِ بازار ہے۔"
+        "en": "The text names three events: the masjid, the return home, the book.",
+        "ur": "متن تین واقعات بتاتا ہے: مسجد، گھر لوٹنا، کتاب۔"
       }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch41-l01-ex02",
       "statement": {
-        "en": "In ذَهَبَ الْوَلَدُ إِلَى السُّوقِ, الطُّلَّابُ is the subject.",
-        "ur": "ذَهَبَ الْوَلَدُ إِلَى السُّوقِ میں الطُّلَّابُ فاعل ہے۔",
+        "en": "Yusuf went to the masjid before he returned to the house.",
+        "ur": "یوسف گھر لوٹنے سے پہلے مسجد گیا۔",
         "ar_example": {
-          "ar": "ذَهَبَ الْوَلَدُ إِلَى السُّوقِ",
-          "ar_plain": "ذهب الولد الى السوق",
-          "translit": "dhahaba al-waladu ilaa as-suq",
-          "en": "The boy went to the market",
-          "ur": "لڑکا بازار گیا"
+          "ar": "ذَهَبَ يُوسُفُ إِلَى الْمَسْجِدِ صَبَاحًا. ثُمَّ رَجَعَ إِلَى الْبَيْتِ. بَعْدَ ذَلِكَ قَرَأَ كِتَابًا.",
+          "ar_plain": "ذهب يوسف الى المسجد صباحا. ثم رجع الى البيت. بعد ذلك قرا كتابا.",
+          "translit": "dhahaba yuūsufu ʾilā al-masjidi ṣabāḥan thumma rajaʿa ʾilā al-bayti baʿda dhalika qaraʾa kitāban",
+          "en": "Yusuf went to the masjid in the morning. Then he returned to the house. After that he read a book.",
+          "ur": "یوسف صبح مسجد گیا۔ پھر وہ گھر لوٹ آیا۔ اس کے بعد اس نے ایک کتاب پڑھی۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ثُمَّ رَجَعَ إِلَى الْبَيْتِ — 'then he returned' — comes after the masjid.",
+        "ur": "ثُمَّ رَجَعَ إِلَى الْبَيْتِ — 'پھر وہ لوٹا' — مسجد کے بعد آتا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch41-l01-ex03",
+      "statement": {
+        "en": "Yusuf read the book before he went to the masjid.",
+        "ur": "یوسف نے مسجد جانے سے پہلے کتاب پڑھی۔",
+        "ar_example": {
+          "ar": "ذَهَبَ يُوسُفُ إِلَى الْمَسْجِدِ صَبَاحًا. ثُمَّ رَجَعَ إِلَى الْبَيْتِ. بَعْدَ ذَلِكَ قَرَأَ كِتَابًا.",
+          "ar_plain": "ذهب يوسف الى المسجد صباحا. ثم رجع الى البيت. بعد ذلك قرا كتابا.",
+          "translit": "dhahaba yuūsufu ʾilā al-masjidi ṣabāḥan thumma rajaʿa ʾilā al-bayti baʿda dhalika qaraʾa kitāban",
+          "en": "Yusuf went to the masjid in the morning. Then he returned to the house. After that he read a book.",
+          "ur": "یوسف صبح مسجد گیا۔ پھر وہ گھر لوٹ آیا۔ اس کے بعد اس نے ایک کتاب پڑھی۔"
         }
       },
       "correct_answer": false,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "بَعْدَ ذَلِكَ — 'after that' — puts the reading last.",
+        "ur": "بَعْدَ ذَلِكَ — 'اس کے بعد' — پڑھنے کو آخر میں رکھتا ہے۔"
+      }
     },
     {
-      "type": "FILL_BLANK",
-      "id": "ch41-l01-ex03",
-      "mode": "TAP",
-      "sentence_ar": "الْمُعَلِّمُ ___ رَسَالَةً",
-      "hint": {
-        "en": "The teacher wrote a letter.",
-        "ur": "استاد نے خط لکھا۔"
+      "type": "TAP_TRANSLATION",
+      "id": "ch41-l01-ex04",
+      "prompt": {
+        "ar": "بَعْدَ ذَلِكَ قَرَأَ كِتَابًا",
+        "ar_plain": "بعد ذلك قرا كتابا",
+        "translit": "baʿda dhalika qaraʾa kitāban",
+        "en": "After that he read a book",
+        "ur": "اس کے بعد اس نے ایک کتاب پڑھی"
       },
       "options": [
         {
-          "ar": "كَتَبَ",
-          "ar_plain": "كتب",
-          "translit": "kataba",
-          "en": "wrote",
-          "ur": "لکھا"
+          "en": "Before that he read a book.",
+          "ur": "اس سے پہلے اس نے ایک کتاب پڑھی۔"
         },
         {
-          "ar": "يَكْتُبُ",
-          "ar_plain": "يكتب",
-          "translit": "yaktubu",
-          "en": "writes",
-          "ur": "لکھتا ہے"
+          "en": "After that he wrote a book.",
+          "ur": "اس کے بعد اس نے ایک کتاب لکھی۔"
         },
         {
-          "ar": "ذَهَبَ",
-          "ar_plain": "ذهب",
-          "translit": "dhahaba",
-          "en": "went",
-          "ur": "گیا"
+          "en": "After that he went to a book.",
+          "ur": "اس کے بعد وہ ایک کتاب کی طرف گیا۔"
         },
         {
-          "ar": "قَرَأَ",
-          "ar_plain": "قرأ",
-          "translit": "qara'a",
-          "en": "read",
-          "ur": "پڑھا"
+          "en": "After that he read a book.",
+          "ur": "اس کے بعد اس نے ایک کتاب پڑھی۔"
         }
       ],
-      "correct_answer": {
-        "ar": "كَتَبَ",
-        "ar_plain": "كتب",
-        "translit": "kataba",
-        "en": "wrote",
-        "ur": "لکھا"
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "بَعْدَ ذَلِكَ means 'after that'.",
+        "ur": "بَعْدَ ذَلِكَ کا مطلب ہے 'اس کے بعد'۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch41-l01-ex05",
+      "prompt": {
+        "ar": "قَبْلَ الْفَصْلِ قَرَأَتْ فَاطِمَةُ كِتَابًا فِي الْبَيْتِ. ثُمَّ ذَهَبَتْ إِلَى الْمَدْرَسَةِ.",
+        "ar_plain": "قبل الفصل قرات فاطمة كتابا في البيت. ثم ذهبت الى المدرسة.",
+        "translit": "qabla al-faṣli qaraʾat fāṭimatu kitāban fī al-bayti thumma dhahabat ʾilā al-madrasati",
+        "en": "Before class Fatima read a book at home. Then she went to the school.",
+        "ur": "کلاس سے پہلے فاطمہ نے گھر میں ایک کتاب پڑھی۔ پھر وہ اسکول گئی۔"
       },
-      "xp_value": 1
+      "options": [
+        {
+          "en": "Before class Fatima read a book at home, then she went to school.",
+          "ur": "کلاس سے پہلے فاطمہ نے گھر میں کتاب پڑھی، پھر وہ اسکول گئی۔"
+        },
+        {
+          "en": "Fatima went to school, then she read a book at home.",
+          "ur": "فاطمہ اسکول گئی، پھر اس نے گھر میں کتاب پڑھی۔"
+        },
+        {
+          "en": "Fatima read a book at school before class.",
+          "ur": "فاطمہ نے کلاس سے پہلے اسکول میں کتاب پڑھی۔"
+        },
+        {
+          "en": "Fatima and her mother went home after class.",
+          "ur": "فاطمہ اور اس کی والدہ کلاس کے بعد گھر گئیں۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "قَبْلَ الْفَصْلِ and ثُمَّ give the order: read, then school.",
+        "ur": "قَبْلَ الْفَصْلِ اور ثُمَّ ترتیب دیتے ہیں: پڑھنا، پھر اسکول۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch41-l01-ex06",
+      "statement": {
+        "en": "Fatima went to the school before she read the book.",
+        "ur": "فاطمہ نے کتاب پڑھنے سے پہلے اسکول گئی۔",
+        "ar_example": {
+          "ar": "قَبْلَ الْفَصْلِ قَرَأَتْ فَاطِمَةُ كِتَابًا فِي الْبَيْتِ. ثُمَّ ذَهَبَتْ إِلَى الْمَدْرَسَةِ.",
+          "ar_plain": "قبل الفصل قرات فاطمة كتابا في البيت. ثم ذهبت الى المدرسة.",
+          "translit": "qabla al-faṣli qaraʾat fāṭimatu kitāban fī al-bayti thumma dhahabat ʾilā al-madrasati",
+          "en": "Before class Fatima read a book at home. Then she went to the school.",
+          "ur": "کلاس سے پہلے فاطمہ نے گھر میں ایک کتاب پڑھی۔ پھر وہ اسکول گئی۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "She read at home first; ثُمَّ ذَهَبَتْ إِلَى الْمَدْرَسَةِ comes second.",
+        "ur": "اس نے پہلے گھر میں پڑھا؛ ثُمَّ ذَهَبَتْ إِلَى الْمَدْرَسَةِ دوسرے نمبر پر ہے۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch41-l01-ex04",
+      "id": "ch41-l01-ex07",
       "left_column": [
         {
-          "ar": "ذَهَبَ الْوَلَدُ",
-          "ar_plain": "ذهب الولد",
-          "translit": "dhahaba al-waladu",
-          "en": "the boy went",
-          "ur": "لڑکا گیا"
+          "ar": "ثُمَّ",
+          "ar_plain": "ثم",
+          "translit": "thumma",
+          "en": "then",
+          "ur": "پھر"
         },
         {
-          "ar": "كَتَبَ الْمُعَلِّمُ",
-          "ar_plain": "كتب المعلم",
-          "translit": "kataba al-mu'allimu",
-          "en": "the teacher wrote",
-          "ur": "استاد نے لکھا"
+          "ar": "بَعْدَ ذَلِكَ",
+          "ar_plain": "بعد ذلك",
+          "translit": "baʿda dhalika",
+          "en": "after that",
+          "ur": "اس کے بعد"
         },
         {
-          "ar": "الطُّلَّابُ مُجْتَهِدُونَ",
-          "ar_plain": "الطلاب مجتهدون",
-          "translit": "at-tullaabu mujtahidoona",
-          "en": "the students are diligent",
-          "ur": "طلبہ محنتی ہیں"
+          "ar": "قَبْلَ",
+          "ar_plain": "قبل",
+          "translit": "qabla",
+          "en": "before",
+          "ur": "پہلے"
         },
         {
-          "ar": "هِيَ فِي الْمَدْرَسَةِ",
-          "ar_plain": "هي في المدرسة",
-          "translit": "hiya fi al-madrasa",
-          "en": "she is in the school",
-          "ur": "وہ اسکول میں ہے"
+          "ar": "وَ",
+          "ar_plain": "و",
+          "translit": "wa",
+          "en": "and",
+          "ur": "اور"
         }
       ],
       "right_column": [
         {
-          "en": "the boy went",
-          "ur": "لڑکا گیا"
+          "en": "and — joins, but gives no order",
+          "ur": "اور — جوڑتا ہے، مگر ترتیب نہیں دیتا"
         },
         {
-          "en": "the teacher wrote",
-          "ur": "استاد نے لکھا"
+          "en": "then — the next event",
+          "ur": "پھر — اگلا واقعہ"
         },
         {
-          "en": "the students are diligent",
-          "ur": "طلبہ محنتی ہیں"
+          "en": "before — an earlier event",
+          "ur": "پہلے — پہلے کا واقعہ"
         },
         {
-          "en": "she is in the school",
-          "ur": "وہ اسکول میں ہے"
+          "en": "after that — a later event",
+          "ur": "اس کے بعد — بعد کا واقعہ"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
+          1
         ],
         [
           1,
-          1
+          3
         ],
         [
           2,
@@ -276,139 +355,113 @@
         ],
         [
           3,
-          3
+          0
         ]
       ],
       "xp_value": 1
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch41-l01-ex05",
+      "id": "ch41-l01-ex08",
       "target_translation": {
-        "en": "The diligent students are in the school.",
-        "ur": "محنتیطالب علم اسکول میں ہیں۔"
+        "en": "He went to the masjid, then he returned to the house.",
+        "ur": "وہ مسجد گیا، پھر وہ گھر لوٹ آیا۔"
       },
       "tiles": [
         {
-          "ar": "الطُّلَّابُ",
-          "ar_plain": "الطلاب",
-          "translit": "at-tullaabu",
-          "en": "the students",
-          "ur": "طلبہ"
+          "ar": "رَجَعَ",
+          "ar_plain": "رجع",
+          "translit": "rajaʿa",
+          "en": "he returned",
+          "ur": "وہ لوٹا"
         },
         {
-          "ar": "الْمُجْتَهِدُونَ",
-          "ar_plain": "المجتهدون",
-          "translit": "al-mujtahidoona",
-          "en": "the diligent (pl.)",
-          "ur": "محنتی (جمع)"
+          "ar": "ثُمَّ",
+          "ar_plain": "ثم",
+          "translit": "thumma",
+          "en": "then",
+          "ur": "پھر"
         },
         {
-          "ar": "فِي",
-          "ar_plain": "في",
-          "translit": "fi",
-          "en": "in",
-          "ur": "میں"
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "he went",
+          "ur": "وہ گیا"
         },
         {
-          "ar": "الْمَدْرَسَةِ",
-          "ar_plain": "المدرسة",
-          "translit": "al-madrasa",
-          "en": "the school",
-          "ur": "اسکول"
+          "ar": "الْبَيْتِ",
+          "ar_plain": "البيت",
+          "translit": "al-bayti",
+          "en": "the house",
+          "ur": "گھر"
+        },
+        {
+          "ar": "إِلَى",
+          "ar_plain": "الى",
+          "translit": "ʾilā",
+          "en": "to",
+          "ur": "کی طرف"
+        },
+        {
+          "ar": "إِلَى",
+          "ar_plain": "الى",
+          "translit": "ʾilā",
+          "en": "to",
+          "ur": "کی طرف"
+        },
+        {
+          "ar": "الْمَسْجِدِ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjidi",
+          "en": "the masjid",
+          "ur": "مسجد"
         }
       ],
       "correct_order": [
-        0,
-        1,
         2,
+        4,
+        6,
+        1,
+        0,
+        5,
         3
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch41-l01-ex06",
-      "prompt": {
-        "ar": "كَتَبَ الْمُعَلِّمُ رَسَالَةً",
-        "ar_plain": "كتب المعلم رسالة",
-        "translit": "kataba al-mu'allimu risaalatan",
-        "en": "The teacher wrote a letter",
-        "ur": "استاد نے خط لکھا"
-      },
-      "options": [
-        {
-          "en": "The teacher wrote a letter",
-          "ur": "استاد نے خط لکھا"
-        },
-        {
-          "en": "The teacher read a letter",
-          "ur": "استاد نے خط پڑھا"
-        },
-        {
-          "en": "The student wrote a letter",
-          "ur": "طالب علم نے خط لکھا"
-        },
-        {
-          "en": "The letter is with the teacher",
-          "ur": "خط استاد کے پاس ہے"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "كَتَبَ is past tense of write. الْمُعَلِّمُ is the subject. رَسَالَةً is the direct object with tanween = a letter.",
-        "ur": "كَتَبَ لکھنے کا ماضی ہے۔ الْمُعَلِّمُ فاعل ہے۔ رَسَالَةً مفعول ہے (تنوین کے ساتھ) = ایک خط۔"
-      }
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch41-l01-ex07",
-      "statement": {
-        "en": "الطُّلَّابُ الْمُجْتَهِدُونَ uses human plural agreement: the adjective is also plural masculine.",
-        "ur": "الطُّلَّابُ الْمُجْتَهِدُونَ میں انسانی جمع کا قاعدہ ہے: صفت بھی جمع مذکر ہے۔",
-        "ar_example": {
-          "ar": "الطُّلَّابُ الْمُجْتَهِدُونَ",
-          "ar_plain": "الطلاب المجتهدون",
-          "translit": "at-tullaabul mujtahidoona",
-          "en": "the diligent students",
-          "ur": "محنتی طلبہ"
-        }
-      },
-      "correct_answer": true,
       "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Reading comprehension — mixed structures",
-      "ar": "الْمُمَارَسَةُ الطَّوِيلَةُ — هَيَاكِل مُخْتَلِطَة",
-      "ur": "متن سمجھنا — مختلف ساختیں"
+      "en": "Read — then place what you read",
+      "ar": "اقْرَأْ",
+      "ur": "پڑھیں — پھر جو پڑھا اسے ترتیب دیں"
     },
     "ayah": {
-      "surah": 68,
+      "surah": 96,
       "ayah": 1,
-      "label": "Al-Qalam 68:1",
-      "ar": "ن ۚ وَالْقَلَمِ وَمَا يَسْطُرُونَ",
-      "en": "Nun. By the pen and what they inscribe.",
-      "ur": "ن۔ قسم ہے قلم کی اور اس کی جو وہ لکھتے ہیں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/068001.mp3"
+      "label": "Al-Alaq 96:1",
+      "ar": "اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ",
+      "en": "Recite in the name of your Lord who created",
+      "ur": "(اے محمدﷺ) اپنے پروردگار کا نام لے کر پڑھو جس نے (عالم کو) پیدا کیا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/096001.mp3"
     },
     "highlighted_word_indices": [
+      0,
       2
     ],
     "highlighted_words": [
-      "وَالْقَلَمِ"
+      "اقْرَأْ",
+      "رَبِّكَ"
     ],
     "noor_explanation": {
-      "en": "وَالْقَلَمِ — \"by the pen\": وَ of oath + الْقَلَمِ (genitive). Reading a passage means reading each piece like this, one by one.",
-      "ur": "وَالْقَلَمِ — \"قسم ہے قلم کی\": قسم کا وَ + الْقَلَمِ (مجرور)۔ کسی عبارت کو پڑھنے کا مطلب ہے ہر حصے کو اسی طرح ایک ایک کر کے پڑھنا۔"
+      "en": "اقْرَأْ — 'read!' — is where reading begins. Gist first, then order: who, where, what, and what came first.",
+      "ur": "اقْرَأْ — 'پڑھو!' — یہیں سے پڑھنا شروع ہوتا ہے۔ پہلے مفہوم، پھر ترتیب: کون، کہاں، کیا، اور پہلے کیا ہوا۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You just read your first real Arabic passage. Each structure inside it was already yours. This is comprehension.",
-      "ur": "آپ نے ابھی اپنا پہلا اصل عربی متن پڑھا۔ اس کے اندر ہر ساخت پہلے سے آپ کی تھی۔ یہی سمجھ ہے۔"
+      "en": "You can read for gist and order. Next: who is being described, and who is 'he' or 'she'.",
+      "ur": "آپ مفہوم اور ترتیب کے لیے پڑھ سکتے ہیں۔ اگلا: کس کا وصف بیان ہو رہا ہے، اور 'وہ' (هُوَ/هِيَ) کون ہے۔"
     }
   }
 }

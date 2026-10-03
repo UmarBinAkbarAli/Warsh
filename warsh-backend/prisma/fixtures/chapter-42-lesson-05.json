@@ -1,340 +1,462 @@
 {
   "schema_version": "1.0",
-  "template": "REVIEW",
+  "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 42, Lesson 5 - REVIEW. Consolidates كَمْ, مَتَى, لِمَاذَا interrogative adverbs.",
+    "_note": "Chapter 42, Lesson 5 (ch42-l07, new). Complete At-Takathur 102:1–8 in four sections plus a continuous reading; every unfamiliar form is supplied as a chunk (the emphatic ـنَّ forms are never built). The proposal's eight-decision board is realised as one four-pair matching exercise, four meaning taps, one evidence statement and two whole-surah tasks. Rebuilt 2026-10-03 in the proposal harvest, batch 4 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-42-content-proposal.md and its review amendments.",
+    "title": "Reading Surah At-Takathur",
+    "titleAr": "قِرَاءَةُ سُورَةِ التَّكَاثُرِ",
+    "titleUr": "سورۃ التکاثر پڑھنا",
     "chapter_order": 42,
     "lesson_order": 5,
-    "chapter_title": "Advanced Q&A (كَمْ/مَتَى/لِمَاذَا)",
-    "title": "Chapter 42 Review — Interrogatives",
-    "titleAr": "مُرَاجَعَةٌ — كَمْ وَ مَتَى وَ لِمَاذَا",
-    "source": "madina_reader_grammar_qa.md",
-    "estimated_minutes": 7,
-    "xp_reward": 5
+    "estimated_minutes": 12,
+    "xp_reward": 15
   },
   "hook": {
     "ayah": {
-      "surah": 2,
-      "ayah": 189,
-      "label": "Al-Baqarah 2:189",
-      "ar": "يَسْأَلُونَكَ عَنِ الْأَهِلَّةِ ۖ قُلْ هِيَ مَوَاقِيتُ لِلنَّاسِ وَالْحَجِّ",
-      "en": "They ask you about the new moons. Say, \"They are markers of time for people and for Hajj.\"",
-      "ur": "وہ آپ سے نئے چاندوں کے بارے میں پوچھتے ہیں۔ کہہ دیجیے: \"یہ لوگوں اور حج کے لیے وقت کی علامتیں ہیں۔\"",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002189.mp3"
+      "surah": 102,
+      "ayah": 1,
+      "label": "At-Takathur 102:1",
+      "ar": "أَلْهَاكُمُ التَّكَاثُرُ",
+      "en": "Competition in [worldly] increase diverts you",
+      "ur": "(لوگو) تم کو(مال کی) بہت سی طلب نے غافل کر دیا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/102001.mp3"
     },
     "noor_intro": {
-      "en": "Review time. Three interrogatives — كَمْ, مَتَى, لِمَاذَا — each with a different job. Let us lock them in.",
-      "ur": "مراجعے کا وقت۔ تین استفہامیہ — كَمْ، مَتَى، لِمَاذَا — ہر ایک کا اپنا کام۔ آئیے انہیں مضبوط کریں۔"
+      "en": "Today you read a whole surah in four steps and then as one text. Unfamiliar words are given to you — read for the message.",
+      "ur": "آج آپ ایک پوری سورت چار مرحلوں میں اور پھر ایک متن کے طور پر پڑھیں گے۔ اجنبی الفاظ آپ کو دیے جاتے ہیں — پیغام کے لیے پڑھیں۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Chapter 42 — Three interrogative tools",
-        "ar": "الْبَاب 42 — ثَلَاثَةُ أَدَوَاتِ الِاسْتِفْهَام",
-        "ur": "باب 42 — تین استفہامی اوزار"
+        "en": "Reading a whole surah",
+        "ar": "سُورَةُ التَّكَاثُرِ",
+        "ur": "پوری سورۃ پڑھنا"
       },
       "explanation": {
-        "en": "كَمْ asks quantity: how much / how many. مَتَى asks time: when. لِمَاذَا asks reason: why. Each one expects a different kind of answer.",
-        "ur": "كَمْ مقدار پوچھتا ہے: کتنا / کتنے۔ مَتَى وقت پوچھتا ہے: کب۔ لِمَاذَا سبب پوچھتا ہے: کیوں۔ ہر ایک ایک مختلف قسم کا جواب Expect کرتا ہے۔"
+        "en": "At-Takathur has eight ayat. You read it in sections — 1–2, 3–4, 5–6, 7–8 — and then as one text. Every unfamiliar word is given to you as a meaning, so you can follow the message.",
+        "ur": "سورۃ التکاثر کی آٹھ آیات ہیں۔ آپ اسے حصوں میں پڑھتے ہیں — 1–2، 3–4، 5–6، 7–8 — اور پھر ایک متن کے طور پر۔ ہر اجنبی لفظ کا مطلب آپ کو دیا جاتا ہے تاکہ آپ پیغام سمجھ سکیں۔"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Key question-answer pairs",
-        "ar": "أَزْوَاجُ السُّؤَالِ وَالْجَوَابِ الْمُهِمَّةُ",
-        "ur": "اہم سوال-جواب جوڑے"
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "أَلْهَاكُمُ التَّكَاثُرُ حَتَّىٰ زُرْتُمُ الْمَقَابِرَ",
+        "ar_plain": "الهاكم التكاثر حتى زرتم المقابر",
+        "translit": "ʾalhākumu at-takāthuru ḥattā zurtumu al-maqābira",
+        "en": "Competition in [worldly] increase diverts you until you visit the graveyards.",
+        "ur": "(مال کی) زیادہ طلب نے تمہیں غافل کر دیا، یہاں تک کہ تم قبروں تک جا پہنچے۔"
       },
       "explanation": {
-        "en": "How many books? → كَمْ كِتَابًا. When did you go? → مَتَى ذَهَبْتَ؟ Why did you read? → لِمَاذَا قَرَأْتَ؟",
-        "ur": "کتنی کتابیں؟ → كَمْ كِتَابًا۔ تم کب گئے؟ → مَتَى ذَهَبْتَ؟ تم کیوں پڑھے؟ → لِمَاذَا قَرَأْتَ؟"
+        "en": "أَلْهَاكُمُ = 'kept you busy / distracted you'; التَّكَاثُرُ = 'competing to have more'; زُرْتُمُ الْمَقَابِرَ = 'you visited the graves'. (102:1–2)",
+        "ur": "أَلْهَاكُمُ = 'تمہیں مشغول/غافل رکھا'؛ التَّكَاثُرُ = 'زیادہ پانے کی دوڑ'؛ زُرْتُمُ الْمَقَابِرَ = 'تم قبروں تک جا پہنچے'۔ (102:1–2)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "كَلَّا سَوْفَ تَعْلَمُونَ ثُمَّ كَلَّا سَوْفَ تَعْلَمُونَ",
+        "ar_plain": "كلا سوف تعلمون ثم كلا سوف تعلمون",
+        "translit": "kallā sawfa taʿlamūna thumma kallā sawfa taʿlamūna",
+        "en": "No! You are going to know. Then, no! You are going to know.",
+        "ur": "ہرگز نہیں! تمہیں جلد معلوم ہو جائے گا۔ پھر ہرگز نہیں! تمہیں جلد معلوم ہو جائے گا۔"
+      },
+      "explanation": {
+        "en": "كَلَّا = 'No! / Never!'; سَوْفَ marks the future (Chapter 35); تَعْلَمُونَ = 'you know'; ثُمَّ = 'then'. The warning is repeated for emphasis. (102:3–4)",
+        "ur": "كَلَّا = 'ہرگز نہیں!'؛ سَوْفَ مستقبل کی علامت ہے (باب 35)؛ تَعْلَمُونَ = 'تم جانتے ہو'؛ ثُمَّ = 'پھر'۔ تنبیہ زور کے لیے دہرائی گئی ہے۔ (102:3–4)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "كَلَّا لَوْ تَعْلَمُونَ عِلْمَ الْيَقِينِ لَتَرَوُنَّ الْجَحِيمَ",
+        "ar_plain": "كلا لو تعلمون علم اليقين لترون الجحيم",
+        "translit": "kallā law taʿlamūna ʿilma al-yaqīni latarawunna al-jaḥīma",
+        "en": "No! If you only knew with knowledge of certainty — you will surely see the Hellfire.",
+        "ur": "ہرگز نہیں! کاش تم یقینی علم کے ساتھ جانتے — تم ضرور دوزخ کو دیکھو گے۔"
+      },
+      "explanation": {
+        "en": "لَوْ تَعْلَمُونَ عِلْمَ الْيَقِينِ = 'if you only knew with certain knowledge'; لَتَرَوُنَّ الْجَحِيمَ = 'you will surely see the Hellfire' — an emphatic form, learn it as one chunk. (102:5–6)",
+        "ur": "لَوْ تَعْلَمُونَ عِلْمَ الْيَقِينِ = 'اگر تم یقینی علم کے ساتھ جانتے'؛ لَتَرَوُنَّ الْجَحِيمَ = 'تم ضرور دوزخ کو دیکھو گے' — تاکیدی صورت، اسے ایک ٹکڑے کے طور پر سیکھیں۔ (102:5–6)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "ثُمَّ لَتَرَوُنَّهَا عَيْنَ الْيَقِينِ ثُمَّ لَتُسْأَلُنَّ يَوْمَئِذٍ عَنِ النَّعِيمِ",
+        "ar_plain": "ثم لترونها عين اليقين ثم لتسالن يومئذ عن النعيم",
+        "translit": "thumma latarawunnahā ʿayna al-yaqīni thumma latusʾalunna yawmaʾidhin ʿani an-naʿīmi",
+        "en": "Then you will surely see it with the eye of certainty. Then you will surely be asked that Day about pleasure.",
+        "ur": "پھر تم اسے ضرور یقین کی آنکھ سے دیکھو گے۔ پھر اس دن تم سے نعمتوں کے بارے میں ضرور پوچھا جائے گا۔"
+      },
+      "explanation": {
+        "en": "عَيْنَ الْيَقِينِ = 'the eye of certainty'; لَتُسْأَلُنَّ = 'you will surely be asked'; يَوْمَئِذٍ = 'on that Day'; النَّعِيمِ = 'pleasure / blessings'. (102:7–8)",
+        "ur": "عَيْنَ الْيَقِينِ = 'یقین کی آنکھ'؛ لَتُسْأَلُنَّ = 'تم سے ضرور پوچھا جائے گا'؛ يَوْمَئِذٍ = 'اس دن'؛ النَّعِيمِ = 'نعمتیں'۔ (102:7–8)"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Emphatic endings are not the ordinary present",
+        "ur": "تاکیدی انجام عام حال نہیں ہیں"
+      },
+      "body": {
+        "en": "لَتَرَوُنَّ and لَتُسْأَلُنَّ end in an emphatic ـنَّ. This is not the ordinary present-tense ending of Chapter 34. Read each one as a supplied chunk; you are not asked to build it.",
+        "ur": "لَتَرَوُنَّ اور لَتُسْأَلُنَّ کے آخر میں تاکیدی ـنَّ ہے۔ یہ باب 34 کا عام حال کا انجام نہیں ہے۔ ہر ایک کو دیا ہوا ٹکڑا سمجھ کر پڑھیں؛ آپ سے اسے بنانا نہیں کہا جاتا۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Say what the text says",
+        "ur": "وہی کہیں جو متن کہتا ہے"
+      },
+      "body": {
+        "en": "The order is: a warning that busyness with more kept people distracted (1–2); 'you will know' (3–4); 'if you knew…' and what they will see (5–7); being asked about blessings (8). Report only what the ayat state — do not add reasons they do not give.",
+        "ur": "ترتیب یہ ہے: زیادہ کی دوڑ میں مشغولیت کی تنبیہ (1–2)؛ 'تمہیں معلوم ہو جائے گا' (3–4)؛ 'اگر تم جانتے…' اور جو وہ دیکھیں گے (5–7)؛ نعمتوں کے بارے میں پوچھ گچھ (8)۔ وہی بتائیں جو آیات کہتی ہیں — وہ وجوہات نہ جوڑیں جو وہ نہیں دیتیں۔"
       }
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
-      "id": "ch42-l05-ex01",
-      "prompt": {
-        "ar": "كَمْ سَنَةً عِشْتَ؟",
-        "ar_plain": "كم سنة عشت",
-        "translit": "kam sanatan 'ishita?",
-        "en": "How many years did you live?",
-        "ur": "تم کتنے سال جیے؟"
-      },
-      "options": [
-        {
-          "en": "How many years did you live?",
-          "ur": "تم کتنے سال جیے؟"
-        },
-        {
-          "en": "How much water did you drink?",
-          "ur": "تم نے کتنا پانی پیا؟"
-        },
-        {
-          "en": "When did you live?",
-          "ur": "تم کب جیے؟"
-        },
-        {
-          "en": "Why did you live?",
-          "ur": "تم کیوں جیے؟"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "كَمْ asks for a quantity — سَنَةً (years). The answer is a number.",
-        "ur": "كَمْ مقدار کے لیے پوچھتا ہے — سَنَةً (سال)۔ جواب ایک عدد ہے۔"
-      }
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch42-l05-ex02",
-      "statement": {
-        "en": "مَتَى asks about time. لِمَاذَا asks about a reason.",
-        "ur": "مَتَى وقت کے بارے میں پوچھتا ہے۔ لِمَاذَا وجہ کے بارے میں پوچھتا ہے۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch42-l05-ex03",
-      "mode": "TAP",
-      "sentence_ar": "___ تَذْهَبُ إِلَى الْمَسْجِدِ؟",
-      "hint": {
-        "en": "Why do you go to the masjid?",
-        "ur": "تم کیوں مسجد جاتے ہو؟"
-      },
-      "options": [
-        {
-          "ar": "لِمَاذَا",
-          "ar_plain": "لماذا",
-          "translit": "limazaa",
-          "en": "why",
-          "ur": "کیوں"
-        },
-        {
-          "ar": "مَتَى",
-          "ar_plain": "متى",
-          "translit": "mataa",
-          "en": "when",
-          "ur": "کب"
-        },
-        {
-          "ar": "كَمْ",
-          "ar_plain": "كم",
-          "translit": "kam",
-          "en": "how many",
-          "ur": "کتنے"
-        },
-        {
-          "ar": "أَيْنَ",
-          "ar_plain": "أين",
-          "translit": "ayna",
-          "en": "where",
-          "ur": "کہاں"
-        }
-      ],
-      "correct_answer": {
-        "ar": "لِمَاذَا",
-        "ar_plain": "لماذا",
-        "translit": "limazaa",
-        "en": "why",
-        "ur": "کیوں"
-      },
-      "xp_value": 1
-    },
-    {
       "type": "MATCHING",
-      "id": "ch42-l05-ex04",
+      "id": "ch42-l07-ex01",
       "left_column": [
         {
-          "ar": "كَمْ مَالًا",
-          "ar_plain": "كم ما لا",
-          "translit": "kam maalan",
-          "en": "how much wealth",
-          "ur": "کتنی دولت"
+          "ar": "أَلْهَاكُمُ التَّكَاثُرُ",
+          "ar_plain": "الهاكم التكاثر",
+          "translit": "ʾalhākumu at-takāthuru",
+          "en": "(102:1)",
+          "ur": "(102:1)"
         },
         {
-          "ar": "مَتَى بَدَأْتَ",
-          "ar_plain": "متى بدأت",
-          "translit": "mataa bada't",
-          "en": "when did you begin",
-          "ur": "تم نے کب شروع کیا"
+          "ar": "حَتَّىٰ زُرْتُمُ الْمَقَابِرَ",
+          "ar_plain": "حتى زرتم المقابر",
+          "translit": "ḥattā zurtumu al-maqābira",
+          "en": "(102:2)",
+          "ur": "(102:2)"
         },
         {
-          "ar": "لِمَاذَا تَعْلَمُ",
-          "ar_plain": "لماذا تتعلم",
-          "translit": "limazaa ta'allamu",
-          "en": "why are you learning",
-          "ur": "تم کیوں سیکھ رہے ہو"
+          "ar": "كَلَّا سَوْفَ تَعْلَمُونَ",
+          "ar_plain": "كلا سوف تعلمون",
+          "translit": "kallā sawfa taʿlamūna",
+          "en": "(102:3)",
+          "ur": "(102:3)"
         },
         {
-          "ar": "كَمْ طَالِبًا",
-          "ar_plain": "كم طالبا",
-          "translit": "kam taaliban",
-          "en": "how many students",
-          "ur": "کتنے طالب علم"
+          "ar": "ثُمَّ لَتُسْأَلُنَّ يَوْمَئِذٍ عَنِ النَّعِيمِ",
+          "ar_plain": "ثم لتسالن يومئذ عن النعيم",
+          "translit": "thumma latusʾalunna yawmaʾidhin ʿani an-naʿīmi",
+          "en": "(102:8)",
+          "ur": "(102:8)"
         }
       ],
       "right_column": [
         {
-          "en": "how much wealth",
-          "ur": "کتنی دولت"
+          "en": "No! You will know.",
+          "ur": "ہرگز نہیں! تمہیں معلوم ہو جائے گا۔"
         },
         {
-          "en": "when did you begin",
-          "ur": "تم نے کب شروع کیا"
+          "en": "Then on that Day you will be asked about the blessings.",
+          "ur": "پھر اس دن تم سے نعمتوں کے بارے میں پوچھا جائے گا۔"
         },
         {
-          "en": "why are you learning",
-          "ur": "تم کیوں سیکھ رہے ہو"
+          "en": "Competing to have more kept you busy.",
+          "ur": "زیادہ پانے کی دوڑ نے تمہیں مشغول رکھا۔"
         },
         {
-          "en": "how many students",
-          "ur": "کتنے طلبہ"
+          "en": "Until you visited the graves.",
+          "ur": "یہاں تک کہ تم قبروں تک جا پہنچے۔"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
           2
         ],
         [
-          3,
+          1,
           3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          1
         ]
       ],
       "xp_value": 1
     },
     {
-      "type": "BUILD_SENTENCE",
-      "id": "ch42-l05-ex05",
-      "target_translation": {
-        "en": "Because I love the masjid.",
-        "ur": "کیونکہ میں مسجد سے محبت کرتا ہوں۔"
-      },
-      "tiles": [
-        {
-          "ar": "لِأَنَّنِي",
-          "ar_plain": "لأنني",
-          "translit": "li'annanii",
-          "en": "because I",
-          "ur": "کیونکہ میں"
-        },
-        {
-          "ar": "مَحَّبُّ",
-          "ar_plain": "محب",
-          "translit": "muhabbitu",
-          "en": "love",
-          "ur": "محبت کرنے والا"
-        },
-        {
-          "ar": "الْمَسْجِدَ",
-          "ar_plain": "المسجد",
-          "translit": "al-masjida",
-          "en": "the masjid",
-          "ur": "مسجد"
-        },
-        {
-          "ar": "كَمْ",
-          "ar_plain": "كم",
-          "translit": "kam",
-          "en": "how many",
-          "ur": "کتنے"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch42-l05-ex06",
-      "statement": {
-        "en": "لِأَنَّ is how Arabic answers a why question.",
-        "ur": "لِأَنَّ عربی میں کیوں کے سوال کا جواب ہے۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
       "type": "TAP_TRANSLATION",
-      "id": "ch42-l05-ex07",
+      "id": "ch42-l07-ex02",
       "prompt": {
-        "ar": "مَتَى تَقُومُ كُلَّ صَبَاحٍ؟",
-        "ar_plain": "متى تقوم كل صباح",
-        "translit": "mataa taquumu kulla subaaHin?",
-        "en": "When do you wake up every morning?",
-        "ur": "تم کب ہر صبح اٹھتے ہو؟"
+        "ar": "حَتَّىٰ زُرْتُمُ الْمَقَابِرَ",
+        "ar_plain": "حتى زرتم المقابر",
+        "translit": "ḥattā zurtumu al-maqābira",
+        "en": "(102:2)",
+        "ur": "(102:2)"
       },
       "options": [
         {
-          "en": "When do you wake up every morning?",
-          "ur": "تم کب ہر صبح اٹھتے ہو؟"
+          "en": "Until you went to the school.",
+          "ur": "یہاں تک کہ تم اسکول گئے۔"
         },
         {
-          "en": "Why do you wake up every morning?",
-          "ur": "تم کیوں ہر صبح اٹھتے ہو؟"
+          "en": "Until you visited the graves.",
+          "ur": "یہاں تک کہ تم قبروں تک جا پہنچے۔"
         },
         {
-          "en": "How many mornings do you wake up?",
-          "ur": "تم کتنی صبحیں اٹھتے ہو؟"
+          "en": "Until you counted the books.",
+          "ur": "یہاں تک کہ تم نے کتابیں گنیں۔"
         },
         {
-          "en": "Where do you wake up every morning?",
-          "ur": "تم ہر صبح کہاں اٹھتے ہو؟"
+          "en": "Until you reached the market.",
+          "ur": "یہاں تک کہ تم بازار پہنچے۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "زُرْتُمُ الْمَقَابِرَ = 'you visited the graves'.",
+        "ur": "زُرْتُمُ الْمَقَابِرَ = 'تم قبروں تک گئے'۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch42-l07-ex03",
+      "prompt": {
+        "ar": "كَلَّا سَوْفَ تَعْلَمُونَ",
+        "ar_plain": "كلا سوف تعلمون",
+        "translit": "kallā sawfa taʿlamūna",
+        "en": "(102:3)",
+        "ur": "(102:3)"
+      },
+      "options": [
+        {
+          "en": "No! You knew.",
+          "ur": "ہرگز نہیں! تم جانتے تھے۔"
+        },
+        {
+          "en": "Yes, you know.",
+          "ur": "ہاں، تم جانتے ہو۔"
+        },
+        {
+          "en": "No! You did not know.",
+          "ur": "ہرگز نہیں! تم نہیں جانتے تھے۔"
+        },
+        {
+          "en": "No! You will know.",
+          "ur": "ہرگز نہیں! تمہیں معلوم ہو جائے گا۔"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "سَوْفَ marks the future: 'you will know'.",
+        "ur": "سَوْفَ مستقبل کی علامت ہے: 'تمہیں معلوم ہو جائے گا'۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch42-l07-ex04",
+      "prompt": {
+        "ar": "كَلَّا لَوْ تَعْلَمُونَ عِلْمَ الْيَقِينِ",
+        "ar_plain": "كلا لو تعلمون علم اليقين",
+        "translit": "kallā law taʿlamūna ʿilma al-yaqīni",
+        "en": "(102:5)",
+        "ur": "(102:5)"
+      },
+      "options": [
+        {
+          "en": "No! If you only knew with knowledge of certainty.",
+          "ur": "ہرگز نہیں! کاش تم یقینی علم کے ساتھ جانتے۔"
+        },
+        {
+          "en": "No! You know it for certain.",
+          "ur": "ہرگز نہیں! تم اسے یقین سے جانتے ہو۔"
+        },
+        {
+          "en": "Yes! You will learn certainty.",
+          "ur": "ہاں! تم یقین سیکھو گے۔"
+        },
+        {
+          "en": "No! You did not ask for knowledge.",
+          "ur": "ہرگز نہیں! تم نے علم نہیں مانگا۔"
         }
       ],
       "correct_index": 0,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَوْ introduces an 'if only' wish: 'if you only knew…'.",
+        "ur": "لَوْ 'کاش' والی بات شروع کرتا ہے: 'اگر تم جانتے…'۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch42-l07-ex05",
+      "prompt": {
+        "ar": "لَتَرَوُنَّ الْجَحِيمَ",
+        "ar_plain": "لترون الجحيم",
+        "translit": "latarawunna al-jaḥīma",
+        "en": "(102:6)",
+        "ur": "(102:6)"
+      },
+      "options": [
+        {
+          "en": "You have seen the garden.",
+          "ur": "تم نے باغ دیکھا ہے۔"
+        },
+        {
+          "en": "You do not see the Hellfire.",
+          "ur": "تم دوزخ کو نہیں دیکھتے۔"
+        },
+        {
+          "en": "You will surely see the Hellfire.",
+          "ur": "تم ضرور دوزخ کو دیکھو گے۔"
+        },
+        {
+          "en": "Do you see the Hellfire?",
+          "ur": "کیا تم دوزخ کو دیکھتے ہو؟"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The emphatic form means 'you will surely see'.",
+        "ur": "تاکیدی صورت کا مطلب ہے 'تم ضرور دیکھو گے'۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch42-l07-ex06",
+      "statement": {
+        "en": "According to 102:8, on that Day you will be asked about the blessings.",
+        "ur": "102:8 کے مطابق اس دن تم سے نعمتوں کے بارے میں پوچھا جائے گا۔",
+        "ar_example": {
+          "ar": "ثُمَّ لَتُسْأَلُنَّ يَوْمَئِذٍ عَنِ النَّعِيمِ",
+          "ar_plain": "ثم لتسالن يومئذ عن النعيم",
+          "translit": "thumma latusʾalunna yawmaʾidhin ʿani an-naʿīmi",
+          "en": "(102:8)",
+          "ur": "(102:8)"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes: ثُمَّ لَتُسْأَلُنَّ يَوْمَئِذٍ عَنِ النَّعِيمِ.",
+        "ur": "جی ہاں: ثُمَّ لَتُسْأَلُنَّ يَوْمَئِذٍ عَنِ النَّعِيمِ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch42-l07-ex07",
+      "prompt": {
+        "ar": "أَلْهَاكُمُ التَّكَاثُرُ … ثُمَّ لَتُسْأَلُنَّ يَوْمَئِذٍ عَنِ النَّعِيمِ",
+        "ar_plain": "الهاكم التكاثر … ثم لتسالن يومئذ عن النعيم",
+        "translit": "ʾalhākumu at-takāthuru … thumma latusʾalunna yawmaʾidhin ʿani an-naʿīmi",
+        "en": "(102:1 … 102:8)",
+        "ur": "(102:1 … 102:8)"
+      },
+      "options": [
+        {
+          "en": "Only the poor will be asked about the blessings.",
+          "ur": "صرف غریبوں سے نعمتوں کے بارے میں پوچھا جائے گا۔"
+        },
+        {
+          "en": "The surah counts the days of the week.",
+          "ur": "سورت ہفتے کے دن گنتی ہے۔"
+        },
+        {
+          "en": "Competing for more kept people busy, they will know, and they will be asked about the blessings.",
+          "ur": "زیادہ کی دوڑ نے لوگوں کو مشغول رکھا، انہیں معلوم ہو جائے گا اور ان سے نعمتوں کے بارے میں پوچھا جائے گا۔"
+        },
+        {
+          "en": "The surah tells a journey to the market.",
+          "ur": "سورت بازار کے سفر کی کہانی سناتی ہے۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The surah's message runs from busyness, to 'you will know', to being asked.",
+        "ur": "سورت کا پیغام مشغولیت سے 'تمہیں معلوم ہو جائے گا' تک اور پھر پوچھ گچھ تک جاتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch42-l07-ex08",
+      "prompt": {
+        "ar": "كَلَّا سَوْفَ تَعْلَمُونَ … ثُمَّ كَلَّا سَوْفَ تَعْلَمُونَ",
+        "ar_plain": "كلا سوف تعلمون … ثم كلا سوف تعلمون",
+        "translit": "kallā sawfa taʿlamūna … thumma kallā sawfa taʿlamūna",
+        "en": "(102:3 … 102:4)",
+        "ur": "(102:3 … 102:4)"
+      },
+      "options": [
+        {
+          "en": "102:3 and 102:4 repeat the same warning.",
+          "ur": "102:3 اور 102:4 ایک ہی تنبیہ دہراتی ہیں۔"
+        },
+        {
+          "en": "102:1 and 102:2 repeat the same warning.",
+          "ur": "102:1 اور 102:2 ایک ہی تنبیہ دہراتی ہیں۔"
+        },
+        {
+          "en": "102:6 and 102:7 repeat the same warning.",
+          "ur": "102:6 اور 102:7 ایک ہی تنبیہ دہراتی ہیں۔"
+        },
+        {
+          "en": "102:5 and 102:8 repeat the same warning.",
+          "ur": "102:5 اور 102:8 ایک ہی تنبیہ دہراتی ہیں۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Only 102:3 and 102:4 repeat كَلَّا سَوْفَ تَعْلَمُونَ.",
+        "ur": "صرف 102:3 اور 102:4 كَلَّا سَوْفَ تَعْلَمُونَ دہراتی ہیں۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Three question words — mastered",
-      "ar": "ثَلَاثَةُ أَسْئِلَةٍ — مُتْقَنَةٌ",
-      "ur": "تین سوالی الفاظ — مہارت حاصل"
+      "en": "كَلَّا سَوْفَ تَعْلَمُونَ — a repeated warning",
+      "ar": "كَلَّا سَوْفَ تَعْلَمُونَ",
+      "ur": "كَلَّا سَوْفَ تَعْلَمُونَ — دہرائی ہوئی تنبیہ"
     },
     "ayah": {
-      "surah": 2,
-      "ayah": 189,
-      "label": "Al-Baqarah 2:189",
-      "ar": "يَسْأَلُونَكَ عَنِ الْأَهِلَّةِ ۖ قُلْ هِيَ مَوَاقِيتُ لِلنَّاسِ وَالْحَجِّ",
-      "en": "They ask you about the new moons. Say, \"They are markers of time for people and for Hajj.\"",
-      "ur": "وہ آپ سے نئے چاندوں کے بارے میں پوچھتے ہیں۔ کہہ دیجیے: \"یہ لوگوں اور حج کے لیے وقت کی علامتیں ہیں۔\"",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002189.mp3"
+      "surah": 102,
+      "ayah": 3,
+      "label": "At-Takathur 102:3",
+      "ar": "كَلَّا سَوْفَ تَعْلَمُونَ",
+      "en": "No! You are going to know.",
+      "ur": "دیکھو تمہیں عنقریب معلوم ہو جائے گا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/102003.mp3"
     },
     "highlighted_word_indices": [
-      0
+      0,
+      1,
+      2
     ],
     "highlighted_words": [
-      "يَسْأَلُونَكَ"
+      "كَلَّا",
+      "سَوْفَ",
+      "تَعْلَمُونَ"
     ],
     "noor_explanation": {
-      "en": "يَسْأَلُونَكَ — \"they ask you\" (present tense, root س-أ-ل). The Quran then gives the answer: قُلْ هِيَ مَوَاقِيتُ لِلنَّاسِ.",
-      "ur": "يَسْأَلُونَكَ — \"وہ آپ سے پوچھتے ہیں\" (مضارع، مادہ س-أ-ل)۔ پھر قرآن جواب دیتا ہے: قُلْ هِيَ مَوَاقِيتُ لِلنَّاسِ۔"
+      "en": "The warning is said twice — كَلَّا سَوْفَ تَعْلَمُونَ, then ثُمَّ كَلَّا سَوْفَ تَعْلَمُونَ. You can follow a whole surah when you read its sections one by one.",
+      "ur": "تنبیہ دو بار کہی گئی ہے — كَلَّا سَوْفَ تَعْلَمُونَ، پھر ثُمَّ كَلَّا سَوْفَ تَعْلَمُونَ۔ جب آپ حصے ایک ایک کر کے پڑھتے ہیں تو پوری سورت سمجھ سکتے ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "كَمْ, مَتَى, لِمَاذَا — three words, unlimited questions. You can now ask and answer about quantity, time, and reason in Arabic. Chapter 42 complete.",
-      "ur": "كَمْ، مَتَى، لِمَاذَا — تین الفاظ، بے حد سوالات۔ اب آپ عربی میں مقدار، وقت، اور وجہ کے بارے میں پوچھ سکتے ہیں اور جواب دے سکتے ہیں۔ باب 42 مکمل۔"
+      "en": "You read At-Takathur from the first ayah to the last. Next: the chapter review.",
+      "ur": "آپ نے التکاثر کو پہلی آیت سے آخری تک پڑھا۔ اگلا: باب کی دہرائی۔"
     }
   }
 }

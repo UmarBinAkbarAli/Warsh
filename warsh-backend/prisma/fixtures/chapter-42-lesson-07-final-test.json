@@ -1,0 +1,446 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 42, final test (ch42-test, new). Added 2026-10-03 in the proposal harvest, batch 4, from Docs/proposals/chapter-42-content-proposal.md. Twelve multiple-choice questions in six strands of two: quantity (q01–02), time (q03–04), reason question and reason reply (q05–06), the لِأَنَّ starter (q07–08), state and manner (q09–10), two At-Takathur items (q11–12). Every item shows its own question text; Arabic-comprehension items give neutral Arabic options. Pass mark 80 %: 9/12 fails, 10/12 passes.",
+    "title": "Chapter 42 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الثَّانِي وَالْأَرْبَعِينَ",
+    "titleUr": "باب 42 کا آخری امتحان",
+    "chapter_order": 42,
+    "lesson_order": 7,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 102,
+      "ayah": 1,
+      "label": "At-Takathur 102:1",
+      "ar": "أَلْهَاكُمُ التَّكَاثُرُ",
+      "en": "Competition in [worldly] increase diverts you",
+      "ur": "(لوگو) تم کو(مال کی) بہت سی طلب نے غافل کر دیا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/102001.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 42.",
+      "ur": "باب 42 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 42,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch42-test-q01",
+        "topic": {
+          "en": "Quantity",
+          "ur": "مقدار"
+        },
+        "prompt": {
+          "en": "Which reply answers this question?",
+          "ur": "یہ جواب اس سوال کا ہے؟"
+        },
+        "arabic": "كَمْ طَالِبًا فِي الْفَصْلِ؟",
+        "options": [
+          {
+            "en": "أَمْسِ.",
+            "ur": "أَمْسِ."
+          },
+          {
+            "en": "فِي الْمَدْرَسَةِ.",
+            "ur": "فِي الْمَدْرَسَةِ."
+          },
+          {
+            "en": "٢٠.",
+            "ur": "٢٠."
+          },
+          {
+            "en": "لِأَنَّ الْفَصْلَ كَبِيرٌ.",
+            "ur": "لِأَنَّ الْفَصْلَ كَبِيرٌ."
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch42-test-q02",
+        "topic": {
+          "en": "Quantity",
+          "ur": "مقدار"
+        },
+        "prompt": {
+          "en": "Which noun completes the question 'How many books did you read?'",
+          "ur": "کون سا اسم سوال 'آپ نے کتنی کتابیں پڑھیں؟' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "كَمْ ___ قَرَأْتَ؟",
+        "options": [
+          {
+            "en": "كِتَابًا",
+            "ur": "كِتَابًا"
+          },
+          {
+            "en": "كُتُبٌ",
+            "ur": "كُتُبٌ"
+          },
+          {
+            "en": "الْكِتَابُ",
+            "ur": "الْكِتَابُ"
+          },
+          {
+            "en": "كِتَابٌ",
+            "ur": "كِتَابٌ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch42-test-q03",
+        "topic": {
+          "en": "Time",
+          "ur": "وقت"
+        },
+        "prompt": {
+          "en": "Which reply fits this question?",
+          "ur": "کون سا جواب اس سوال کے مطابق ہے؟"
+        },
+        "arabic": "مَتَى سَتَذْهَبُ إِلَى السُّوقِ؟",
+        "options": [
+          {
+            "en": "ذَهَبْتُ أَمْسِ.",
+            "ur": "ذَهَبْتُ أَمْسِ."
+          },
+          {
+            "en": "٣.",
+            "ur": "٣."
+          },
+          {
+            "en": "لِأَنَّ السُّوقَ قَرِيبٌ.",
+            "ur": "لِأَنَّ السُّوقَ قَرِيبٌ."
+          },
+          {
+            "en": "سَأَذْهَبُ غَدًا.",
+            "ur": "سَأَذْهَبُ غَدًا."
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch42-test-q04",
+        "topic": {
+          "en": "Time",
+          "ur": "وقت"
+        },
+        "prompt": {
+          "en": "Which reply fits this question?",
+          "ur": "کون سا جواب اس سوال کے مطابق ہے؟"
+        },
+        "arabic": "مَتَى ذَهَبْتَ إِلَى الْمَدْرَسَةِ؟",
+        "options": [
+          {
+            "en": "سَأَذْهَبُ غَدًا.",
+            "ur": "سَأَذْهَبُ غَدًا."
+          },
+          {
+            "en": "ذَهَبْتُ أَمْسِ.",
+            "ur": "ذَهَبْتُ أَمْسِ."
+          },
+          {
+            "en": "بِالسَّيَّارَةِ.",
+            "ur": "بِالسَّيَّارَةِ."
+          },
+          {
+            "en": "٢٠.",
+            "ur": "٢٠."
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch42-test-q05",
+        "topic": {
+          "en": "Reason question",
+          "ur": "وجہ کا سوال"
+        },
+        "prompt": {
+          "en": "What does this question ask for? (تَدْرُسُ means 'you study'.)",
+          "ur": "یہ سوال کیا پوچھتا ہے؟ (تَدْرُسُ کا مطلب 'آپ پڑھتے ہیں' ہے۔)"
+        },
+        "arabic": "لِمَاذَا تَدْرُسُ الْعَرَبِيَّةَ؟",
+        "options": [
+          {
+            "en": "A number",
+            "ur": "ایک تعداد"
+          },
+          {
+            "en": "A time",
+            "ur": "ایک وقت"
+          },
+          {
+            "en": "A place",
+            "ur": "ایک جگہ"
+          },
+          {
+            "en": "A reason",
+            "ur": "ایک وجہ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch42-test-q06",
+        "topic": {
+          "en": "Reason question",
+          "ur": "وجہ کا سوال"
+        },
+        "prompt": {
+          "en": "Which reply gives a reason?",
+          "ur": "کون سا جواب وجہ بتاتا ہے؟"
+        },
+        "arabic": "لِمَاذَا ذَهَبْتَ إِلَى الْمَسْجِدِ؟",
+        "options": [
+          {
+            "en": "لِأَنَّ الْمَسْجِدَ قَرِيبٌ.",
+            "ur": "لِأَنَّ الْمَسْجِدَ قَرِيبٌ."
+          },
+          {
+            "en": "أَمْسِ.",
+            "ur": "أَمْسِ."
+          },
+          {
+            "en": "٣.",
+            "ur": "٣."
+          },
+          {
+            "en": "إِلَى الْمَسْجِدِ.",
+            "ur": "إِلَى الْمَسْجِدِ."
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch42-test-q07",
+        "topic": {
+          "en": "Reply starter",
+          "ur": "جواب کا آغاز"
+        },
+        "prompt": {
+          "en": "Which word starts a reply that means 'because the book is beautiful'?",
+          "ur": "کون سا لفظ ایسے جواب کو شروع کرتا ہے جس کا مطلب 'کیونکہ کتاب خوبصورت ہے' ہے؟"
+        },
+        "arabic": "___ الْكِتَابَ جَمِيلٌ.",
+        "options": [
+          {
+            "en": "مَتَى",
+            "ur": "مَتَى"
+          },
+          {
+            "en": "كَمْ",
+            "ur": "كَمْ"
+          },
+          {
+            "en": "لِأَنَّ",
+            "ur": "لِأَنَّ"
+          },
+          {
+            "en": "كَيْفَ",
+            "ur": "كَيْفَ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch42-test-q08",
+        "topic": {
+          "en": "Reply starter",
+          "ur": "جواب کا آغاز"
+        },
+        "prompt": {
+          "en": "Which reply starts with the word for 'because'?",
+          "ur": "کون سا جواب 'کیونکہ' والے لفظ سے شروع ہوتا ہے؟"
+        },
+        "arabic": "لِمَاذَا تَقْرَأُ هَذَا الْكِتَابَ؟",
+        "options": [
+          {
+            "en": "أَقْرَأُ غَدًا.",
+            "ur": "أَقْرَأُ غَدًا."
+          },
+          {
+            "en": "ثَلَاثَةٌ.",
+            "ur": "ثَلَاثَةٌ."
+          },
+          {
+            "en": "فِي الْبَيْتِ.",
+            "ur": "فِي الْبَيْتِ."
+          },
+          {
+            "en": "لِأَنَّ الْكِتَابَ جَمِيلٌ.",
+            "ur": "لِأَنَّ الْكِتَابَ جَمِيلٌ."
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch42-test-q09",
+        "topic": {
+          "en": "State",
+          "ur": "حالت"
+        },
+        "prompt": {
+          "en": "Which reply tells how the person is?",
+          "ur": "کون سا جواب بتاتا ہے کہ شخص کیسا ہے؟"
+        },
+        "arabic": "كَيْفَ حَالُكَ؟",
+        "options": [
+          {
+            "en": "أَمْسِ.",
+            "ur": "أَمْسِ."
+          },
+          {
+            "en": "بِخَيْرٍ.",
+            "ur": "بِخَيْرٍ."
+          },
+          {
+            "en": "٣.",
+            "ur": "٣."
+          },
+          {
+            "en": "لِأَنَّ الْمَسْجِدَ قَرِيبٌ.",
+            "ur": "لِأَنَّ الْمَسْجِدَ قَرِيبٌ."
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch42-test-q10",
+        "topic": {
+          "en": "Manner",
+          "ur": "طریقہ"
+        },
+        "prompt": {
+          "en": "Which reply gives the way?",
+          "ur": "کون سا جواب طریقہ بتاتا ہے؟"
+        },
+        "arabic": "كَيْفَ تَذْهَبُ إِلَى الْمَدْرَسَةِ؟",
+        "options": [
+          {
+            "en": "غَدًا.",
+            "ur": "غَدًا."
+          },
+          {
+            "en": "٢٠.",
+            "ur": "٢٠."
+          },
+          {
+            "en": "بِالسَّيَّارَةِ.",
+            "ur": "بِالسَّيَّارَةِ."
+          },
+          {
+            "en": "لِأَنَّ الْمَدْرَسَةَ قَرِيبَةٌ.",
+            "ur": "لِأَنَّ الْمَدْرَسَةَ قَرِيبَةٌ."
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch42-test-q11",
+        "topic": {
+          "en": "At-Takathur",
+          "ur": "التکاثر"
+        },
+        "prompt": {
+          "en": "Read 102:3. كَلَّا means 'No!' and تَعْلَمُونَ means 'you know'. What does the ayah say?",
+          "ur": "102:3 پڑھیں۔ كَلَّا کا مطلب 'ہرگز نہیں!' اور تَعْلَمُونَ کا مطلب 'تم جانتے ہو' ہے۔ آیت کیا کہتی ہے؟"
+        },
+        "arabic": "كَلَّا سَوْفَ تَعْلَمُونَ",
+        "options": [
+          {
+            "en": "No! You will know.",
+            "ur": "ہرگز نہیں! تمہیں معلوم ہو جائے گا۔"
+          },
+          {
+            "en": "No! You knew.",
+            "ur": "ہرگز نہیں! تم جانتے تھے۔"
+          },
+          {
+            "en": "Yes! You know.",
+            "ur": "ہاں! تم جانتے ہو۔"
+          },
+          {
+            "en": "No! You will not know.",
+            "ur": "ہرگز نہیں! تمہیں معلوم نہیں ہوگا۔"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch42-test-q12",
+        "topic": {
+          "en": "At-Takathur",
+          "ur": "التکاثر"
+        },
+        "prompt": {
+          "en": "Read 102:1–2 and 102:8. التَّكَاثُرُ means 'competing for more'; لَتُسْأَلُنَّ means 'you will surely be asked'; النَّعِيمِ means 'the blessings'. Which sentence states what they say together?",
+          "ur": "102:1–2 اور 102:8 پڑھیں۔ التَّكَاثُرُ کا مطلب 'زیادہ کی دوڑ'؛ لَتُسْأَلُنَّ کا مطلب 'تم سے ضرور پوچھا جائے گا'؛ النَّعِيمِ کا مطلب 'نعمتیں'۔ کون سا جملہ ان کا مشترکہ مفہوم بتاتا ہے؟"
+        },
+        "arabic": "أَلْهَاكُمُ التَّكَاثُرُ حَتَّىٰ زُرْتُمُ الْمَقَابِرَ … ثُمَّ لَتُسْأَلُنَّ يَوْمَئِذٍ عَنِ النَّعِيمِ",
+        "options": [
+          {
+            "en": "Only the rich will visit the graves and be asked.",
+            "ur": "صرف امیر قبروں تک جائیں گے اور ان سے پوچھا جائے گا۔"
+          },
+          {
+            "en": "Competing for more kept them busy until the graves, and they will be asked about the blessings.",
+            "ur": "زیادہ کی دوڑ نے انہیں قبروں تک مشغول رکھا اور ان سے نعمتوں کے بارے میں پوچھا جائے گا۔"
+          },
+          {
+            "en": "They counted the graves and were not asked anything.",
+            "ur": "انہوں نے قبریں گنیں اور ان سے کچھ نہیں پوچھا گیا۔"
+          },
+          {
+            "en": "They visited the graves and then went to the market.",
+            "ur": "وہ قبروں تک گئے اور پھر بازار چلے گئے۔"
+          }
+        ],
+        "correct_index": 1
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 42 — questions and answers",
+      "ar": "الْأَسْئِلَةُ وَالْأَجْوِبَةُ",
+      "ur": "باب 42 — سوال اور جواب"
+    },
+    "ayah": {
+      "surah": 102,
+      "ayah": 3,
+      "label": "At-Takathur 102:3",
+      "ar": "كَلَّا سَوْفَ تَعْلَمُونَ",
+      "en": "No! You are going to know.",
+      "ur": "دیکھو تمہیں عنقریب معلوم ہو جائے گا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/102003.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "كَلَّا",
+      "سَوْفَ",
+      "تَعْلَمُونَ"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 42 able to ask how many, when, why and how, to choose the answer each needs, and to read At-Takathur from start to end.",
+      "ur": "آپ باب 42 اس حال میں مکمل کرتے ہیں کہ کتنے، کب، کیوں اور کیسے پوچھ سکیں، ہر ایک کا جواب چن سکیں اور التکاثر کو شروع سے آخر تک پڑھ سکیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 42 complete. Chapter 43: Book 4 capstone.",
+      "ur": "باب 42 مکمل۔ باب 43: کتاب 4 کا اختتامی باب۔"
+    }
+  }
+}

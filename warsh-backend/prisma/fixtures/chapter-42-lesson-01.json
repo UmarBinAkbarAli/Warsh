@@ -2,13 +2,12 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 42, Lesson 1 - Interrogative adverb كَمْ (how much / how many).",
+    "_note": "Chapter 42, Lesson 1 (ch42-l01). Rebuilt 2026-10-03 in the proposal harvest, batch 4 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-42-content-proposal.md and its review amendments.",
+    "title": "How Many? — كَمْ",
+    "titleAr": "كَمْ؟",
+    "titleUr": "کتنے؟ — كَمْ",
     "chapter_order": 42,
     "lesson_order": 1,
-    "chapter_title": "Advanced Q&A (كَمْ/مَتَى/لِمَاذَا)",
-    "title": "How Much? How Many? — كَمْ",
-    "titleAr": "كَمْ — كَمْ؟",
-    "source": "madina_reader_grammar_qa.md",
     "estimated_minutes": 8,
     "xp_reward": 10
   },
@@ -17,82 +16,123 @@
       "surah": 18,
       "ayah": 19,
       "label": "Al-Kahf 18:19",
-      "ar": "قَالَ قَائِلٌ مِنْهُمْ كَمْ لَبِثْتُمْ ۖ قَالُوا لَبِثْنَا يَوْمًا أَوْ بَعْضَ يَوْمٍ",
-      "en": "One of them said, 'How long have you stayed?' They said, 'We stayed a day or part of a day.'",
-      "ur": "ان میں سے ایک نے کہا: 'تم کتنی دیر ٹھہرے؟' انہوں نے کہا: 'ہم ایک دن یا دن کا کچھ حصہ ٹھہرے۔'",
+      "ar": "قَالَ قَائِلٌ مِّنْهُمْ كَمْ لَبِثْتُمْ ۖ قَالُوا لَبِثْنَا يَوْمًا أَوْ بَعْضَ يَوْمٍ ۚ قَالُوا رَبُّكُمْ أَعْلَمُ بِمَا لَبِثْتُمْ",
+      "en": "One of them said, 'How long have you stayed?'",
+      "ur": "ان میں سے ایک کہنے والے نے کہا: تم کتنی مدت رہے؟",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/018019.mp3"
     },
     "noor_intro": {
-      "en": "Arabic has different ways to ask why, when, and how much. Today: كَمْ — how much? or how many?",
-      "ur": "عربی میں پوچھنے کے مختلف طریقے ہیں۔ آج: كَمْ — کتنا؟ یا کتنے؟"
+      "en": "You met كَمْ in Chapter 31. Today you use it to ask for a number and to choose the answer it needs.",
+      "ur": "آپ كَمْ سے باب 31 میں مل چکے ہیں۔ آج آپ اسے تعداد پوچھنے کے لیے اور اس کے مطابق جواب چننے کے لیے استعمال کریں گے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "How much / How many? — كَمْ",
-        "ar": "كَمْ — كَمْ؟",
-        "ur": "کتنا؟ کتنے؟ — كَمْ"
+        "en": "How many? — كَمْ",
+        "ar": "كَمْ؟",
+        "ur": "کتنے؟ — كَمْ"
       },
       "explanation": {
-        "en": "كَمْ asks about quantity: how many books? how much water? It is followed by a noun in the genitive case (مجرور).",
-        "ur": "كَمْ مقدار کے بارے میں پوچھتا ہے: کتنی کتابیں؟ کتنا پانی؟ اس کے بعد اسم مجرور میں آتا ہے۔"
+        "en": "You learned كَمْ in Chapter 31. It asks for a number: how many, how much. The answer is a number — not a name, a place or a time.",
+        "ur": "آپ نے باب 31 میں كَمْ سیکھا تھا۔ یہ تعداد پوچھتا ہے: کتنے، کتنا۔ جواب تعداد ہوتا ہے — نام، جگہ یا وقت نہیں۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "كَمْ كِتَابًا لَدَيْكَ؟",
-        "ar_plain": "كم كتابا لديك",
-        "translit": "kam kitaaban ladayka?",
-        "en": "How many books do you have?",
-        "ur": "تم کے پاس کتنی کتابیں ہیں؟"
+        "ar": "كَمْ كِتَابًا قَرَأْتَ؟",
+        "ar_plain": "كم كتابا قرات؟",
+        "translit": "kam kitāban qaraʾta",
+        "en": "How many books did you read?",
+        "ur": "آپ نے کتنی کتابیں پڑھیں؟"
       },
       "explanation": {
-        "en": "كَمْ asks \"how many\". كِتَابًا is the thing being counted: after a question كَمْ it is singular and ends in ـًا. لَدَيْكَ means \"with you / in your possession\".",
-        "ur": "كَمْ \"کتنے\" پوچھتا ہے۔ كِتَابًا وہ چیز ہے جو گنی جا رہی ہے: سوالیہ كَمْ کے بعد یہ واحد اور ـًا پر ختم ہوتی ہے۔ لَدَيْكَ = \"تمہارے پاس\"۔"
+        "en": "The thing being counted comes right after كَمْ: one singular noun ending in ـًا (كِتَابًا). This is the pattern from Chapter 31.",
+        "ur": "جس چیز کو گنا جا رہا ہے وہ كَمْ کے فوراً بعد آتی ہے: ایک واحد اسم جس کے آخر میں ـًا ہو (كِتَابًا)۔ یہ باب 31 کا انداز ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "كَمْ سَنَةً عِشْتَ؟",
-        "ar_plain": "كم سنة عشت",
-        "translit": "kam sanatan 'ishita?",
-        "en": "How many years did you live?",
-        "ur": "تم کتنے سال جیے؟"
+        "ar": "كَمْ كِتَابًا قَرَأْتَ؟ — ٣",
+        "ar_plain": "كم كتابا قرات؟ — ٣",
+        "translit": "kam kitāban qaraʾta — ٣",
+        "en": "How many books did you read? — 3",
+        "ur": "آپ نے کتنی کتابیں پڑھیں؟ — ۳"
       },
       "explanation": {
-        "en": "سَنَةً in the accusative with tanween = a period of time being asked about.",
-        "ur": "سَنَةً تنوین کے ساتھ نصب میں = ایک وقت کی مدت جس کے بارے میں پوچھا جا رہا ہے۔"
+        "en": "Answer with a number. For now a digit is enough. Number words, and how they go with nouns, are the work of Chapter 48.",
+        "ur": "تعداد سے جواب دیں۔ ابھی ہندسہ کافی ہے۔ عدد کے الفاظ اور اسم کے ساتھ ان کا میل باب 48 کا کام ہے۔"
       }
     },
     {
-      "type": "CONCEPT",
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "كَمْ طَالِبًا فِي الْفَصْلِ؟",
+        "ar_plain": "كم طالبا في الفصل؟",
+        "translit": "kam ṭāliban fī al-faṣli",
+        "en": "How many students are in the class?",
+        "ur": "کلاس میں کتنے طالب علم ہیں؟"
+      },
+      "explanation": {
+        "en": "كَمْ + the counted noun طَالِبًا + the place فِي الْفَصْلِ. The answer is again a number: ٢٠.",
+        "ur": "كَمْ + گنا جانے والا اسم طَالِبًا + جگہ فِي الْفَصْلِ۔ جواب پھر تعداد ہے: ۲۰۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "كَمْ لَبِثْتُمْ؟",
+        "ar_plain": "كم لبثتم؟",
+        "translit": "kam labithtum",
+        "en": "How long did you stay?",
+        "ur": "آپ کتنی دیر ٹھہرے؟"
+      },
+      "explanation": {
+        "en": "In 18:19 كَمْ asks for an amount of time. The reply gives the amount: يَوْمًا أَوْ بَعْضَ يَوْمٍ — 'a day or part of a day'.",
+        "ur": "18:19 میں كَمْ وقت کی مقدار پوچھتا ہے۔ جواب مقدار بتاتا ہے: يَوْمًا أَوْ بَعْضَ يَوْمٍ — 'ایک دن یا دن کا کچھ حصہ'۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "What follows كَمْ",
+        "ur": "كَمْ کے بعد کیا آتا ہے"
+      },
+      "body": {
+        "en": "In a question the counted noun is singular and ends in ـًا: كَمْ كِتَابًا، كَمْ قَلَمًا، كَمْ طَالِبًا. Do not put a plural (كُتُبٌ) or الـ after كَمْ. The grammar name for this noun comes much later (Chapter 71).",
+        "ur": "سوال میں گنا جانے والا اسم واحد ہوتا ہے اور اس کے آخر میں ـًا آتا ہے: كَمْ كِتَابًا، كَمْ قَلَمًا، كَمْ طَالِبًا۔ كَمْ کے بعد جمع (كُتُبٌ) یا الـ نہ لگائیں۔ اس اسم کا نحوی نام بہت بعد میں آئے گا (باب 71)۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
       "concept": {
-        "en": "كَمْ + noun in genitive",
-        "ar": "كَمْ + اسم مجرور",
-        "ur": "كَمْ + اسم مجرور"
+        "en": "Which information is missing?",
+        "ar": "كَمْ أَمْ أَيْنَ؟",
+        "ur": "کون سی معلومات نہیں ہیں؟"
       },
+      "examples": [
+        {
+          "ar": "كَمْ كِتَابًا عِنْدَكَ؟",
+          "ar_plain": "كم كتابا عندك؟",
+          "translit": "kam kitāban ʿindaka",
+          "en": "How many books do you have?",
+          "ur": "آپ کے پاس کتنی کتابیں ہیں؟"
+        },
+        {
+          "ar": "أَيْنَ كِتَابُكَ؟",
+          "ar_plain": "اين كتابك؟",
+          "translit": "ʾayna kitābuka",
+          "en": "Where is your book?",
+          "ur": "آپ کی کتاب کہاں ہے؟"
+        }
+      ],
       "explanation": {
-        "en": "In a question, كَمْ is followed by a singular noun ending in ـًا: كَمْ كِتَابًا قَرَأْتَ؟ (\"how many books did you read?\"), كَمْ رَجُلًا رَأَيْتَ؟ Think of that noun as \"the thing being counted\"; its formal grammar name comes in Chapter 71.",
-        "ur": "سوال میں كَمْ کے بعد ـًا والا واحد اسم آتا ہے: كَمْ كِتَابًا قَرَأْتَ؟ (\"تم نے کتنی کتابیں پڑھیں؟\")، كَمْ رَجُلًا رَأَيْتَ؟ اس اسم کو \"گنی جانے والی چیز\" سمجھیں؛ اس کا گرامری نام باب 71 میں آئے گا۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "سَنَةٌ",
-        "ar_plain": "سنة",
-        "translit": "sanatun",
-        "en": "a year",
-        "ur": "ایک سال"
-      },
-      "explanation": {
-        "en": "سَنَةٌ appears in the Quran in expressions of time and in asking about lifespans. Used with كَمْ.",
-        "ur": "سَنَةٌ قرآن میں وقت اور عمر کے اظہار میں آتا ہے۔ كَمْ کے ساتھ استعمال ہوتا ہے۔"
+        "en": "Same noun, two questions. كَمْ asks for a number; أَيْنَ asks for a place. Choose by what you do not yet know.",
+        "ur": "ایک ہی اسم، دو سوال۔ كَمْ تعداد پوچھتا ہے؛ أَيْنَ جگہ پوچھتا ہے۔ اس کے مطابق چنیں جو آپ ابھی نہیں جانتے۔"
       }
     }
   ],
@@ -101,174 +141,244 @@
       "type": "TAP_TRANSLATION",
       "id": "ch42-l01-ex01",
       "prompt": {
-        "ar": "كَمْ كِتَابًا لَدَيْكَ؟",
-        "ar_plain": "كم كتابا لدبك",
-        "translit": "kam kitaaban ladayka?",
-        "en": "How many books do you have?",
-        "ur": "تم کے پاس کتنی کتابیں ہیں؟"
+        "ar": "كَمْ طَالِبًا فِي الْفَصْلِ؟",
+        "ar_plain": "كم طالبا في الفصل؟",
+        "translit": "kam ṭāliban fī al-faṣli",
+        "en": "How many students are in the class?",
+        "ur": "کلاس میں کتنے طالب علم ہیں؟"
       },
       "options": [
         {
-          "en": "How many books do you have?",
-          "ur": "تم کے پاس کتنی کتابیں ہیں؟"
+          "en": "Where are the students in the class?",
+          "ur": "کلاس میں طالب علم کہاں ہیں؟"
         },
         {
-          "en": "How much is this book?",
-          "ur": "یہ کتاب کتنا ہے؟"
+          "en": "How many students are in the class?",
+          "ur": "کلاس میں کتنے طالب علم ہیں؟"
         },
         {
-          "en": "Where are your books?",
-          "ur": "تمہاری کتابیں کہاں ہیں؟"
+          "en": "Who is in the class?",
+          "ur": "کلاس میں کون ہے؟"
         },
         {
-          "en": "Do you have books?",
-          "ur": "کیا تمہارے پاس کتابیں ہیں؟"
+          "en": "Why are the students in the class?",
+          "ur": "طالب علم کلاس میں کیوں ہیں؟"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "كَمْ means how many when asking about countable things like books. لَدَيْكَ means in your possession.",
-        "ur": "كَمْ کتابوں جیسی گنتی والی چیزوں کے لیے کتنے/کتنی ma'anās detā hai۔ لَدَيْكَ ma'anā hai āp ke pās۔"
+        "en": "كَمْ asks for a number, so this is 'How many students…?'",
+        "ur": "كَمْ تعداد پوچھتا ہے، اس لیے یہ 'کتنے طالب علم…؟' ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch42-l01-ex02",
+      "mode": "TAP",
+      "sentence_ar": "كَمْ ___ قَرَأْتَ؟",
+      "hint": {
+        "en": "How many books did you read?",
+        "ur": "آپ نے کتنی کتابیں پڑھیں؟"
+      },
+      "options": [
+        {
+          "ar": "كِتَابٌ",
+          "ar_plain": "كتاب",
+          "translit": "kitābun",
+          "en": "a book",
+          "ur": "ایک کتاب"
+        },
+        {
+          "ar": "كُتُبًا",
+          "ar_plain": "كتبا",
+          "translit": "kutuban",
+          "en": "books",
+          "ur": "کتابیں"
+        },
+        {
+          "ar": "كِتَابًا",
+          "ar_plain": "كتابا",
+          "translit": "kitāban",
+          "en": "book (counted)",
+          "ur": "کتاب (گنی جانے والی)"
+        },
+        {
+          "ar": "الْكِتَابَ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitāba",
+          "en": "the book",
+          "ur": "وہ کتاب"
+        }
+      ],
+      "correct_answer": {
+        "ar": "كِتَابًا",
+        "ar_plain": "كتابا",
+        "translit": "kitāban",
+        "en": "book (counted)",
+        "ur": "کتاب (گنی جانے والی)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After كَمْ use one singular noun ending in ـًا: كِتَابًا.",
+        "ur": "كَمْ کے بعد ایک واحد اسم ـًا کے ساتھ آتا ہے: كِتَابًا۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch42-l01-ex03",
+      "prompt_line": {
+        "ar": "عِنْدِي كُتُبٌ فِي الْبَيْتِ.",
+        "ar_plain": "عندي كتب في البيت.",
+        "translit": "ʿindī kutubun fī al-bayti",
+        "en": "I have books at home. (You want to know the number.)",
+        "ur": "میرے پاس گھر میں کتابیں ہیں۔ (آپ تعداد جاننا چاہتے ہیں۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "كَمْ كِتَابًا عِنْدَكَ؟",
+          "ar_plain": "كم كتابا عندك؟",
+          "translit": "kam kitāban ʿindaka",
+          "en": "How many books do you have?",
+          "ur": "آپ کے پاس کتنی کتابیں ہیں؟"
+        },
+        {
+          "ar": "أَيْنَ كِتَابُكَ؟",
+          "ar_plain": "اين كتابك؟",
+          "translit": "ʾayna kitābuka",
+          "en": "Where is your book?",
+          "ur": "آپ کی کتاب کہاں ہے؟"
+        },
+        {
+          "ar": "مَتَى قَرَأْتَ؟",
+          "ar_plain": "متى قرات؟",
+          "translit": "matā qaraʾta",
+          "en": "When did you read?",
+          "ur": "آپ نے کب پڑھا؟"
+        },
+        {
+          "ar": "لِمَاذَا قَرَأْتَ؟",
+          "ar_plain": "لماذا قرات؟",
+          "translit": "limādhā qaraʾta",
+          "en": "Why did you read?",
+          "ur": "آپ نے کیوں پڑھا؟"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "You want a number, so ask with كَمْ.",
+        "ur": "آپ کو تعداد چاہیے، اس لیے كَمْ سے پوچھیں۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch42-l01-ex02",
+      "id": "ch42-l01-ex04",
       "statement": {
-        "en": "In كَمْ كِتَابًا, the noun كِتَابًا is in the accusative case.",
-        "ur": "كَمْ كِتَابًا میں اسم كِتَابًا نصب میں ہے۔"
+        "en": "In كَمْ كِتَابًا قَرَأْتَ؟ the noun after كَمْ is singular.",
+        "ur": "كَمْ كِتَابًا قَرَأْتَ؟ میں كَمْ کے بعد اسم واحد ہے۔",
+        "ar_example": {
+          "ar": "كَمْ كِتَابًا قَرَأْتَ؟",
+          "ar_plain": "كم كتابا قرات؟",
+          "translit": "kam kitāban qaraʾta",
+          "en": "How many books did you read?",
+          "ur": "آپ نے کتنی کتابیں پڑھیں؟"
+        }
       },
       "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch42-l01-ex03",
-      "mode": "TAP",
-      "sentence_ar": "___ سَنَةً عِشْتَ؟",
-      "hint": {
-        "en": "How many years did you live?",
-        "ur": "تم کتنے سال جیے؟"
-      },
-      "options": [
-        {
-          "ar": "كَمْ",
-          "ar_plain": "كم",
-          "translit": "kam",
-          "en": "how many",
-          "ur": "کتنے"
-        },
-        {
-          "ar": "مَتَى",
-          "ar_plain": "متى",
-          "translit": "mataa",
-          "en": "when",
-          "ur": "کب"
-        },
-        {
-          "ar": "لِمَاذَا",
-          "ar_plain": "لماذا",
-          "translit": "limazaa",
-          "en": "why",
-          "ur": "کیوں"
-        },
-        {
-          "ar": "أَيْنَ",
-          "ar_plain": "أين",
-          "translit": "ayna",
-          "en": "where",
-          "ur": "کہاں"
-        }
-      ],
-      "correct_answer": {
-        "ar": "كَمْ",
-        "ar_plain": "كم",
-        "translit": "kam",
-        "en": "how many",
-        "ur": "کتنے"
-      },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes: كِتَابًا is one singular noun ending in ـًا.",
+        "ur": "جی ہاں: كِتَابًا واحد اسم ہے جس کے آخر میں ـًا ہے۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch42-l01-ex04",
+      "id": "ch42-l01-ex05",
       "left_column": [
         {
-          "ar": "كَمْ كِتَابًا",
-          "ar_plain": "كم كتابا",
-          "translit": "kam kitaaban",
-          "en": "how many books",
-          "ur": "کتنی کتابیں"
+          "ar": "كَمْ كِتَابًا قَرَأْتَ؟",
+          "ar_plain": "كم كتابا قرات؟",
+          "translit": "kam kitāban qaraʾta",
+          "en": "How many books did you read?",
+          "ur": "آپ نے کتنی کتابیں پڑھیں؟"
         },
         {
-          "ar": "كَمْ سَنَةً",
-          "ar_plain": "كم سنة",
-          "translit": "kam sanatan",
-          "en": "how many years",
-          "ur": "کتنے سال"
+          "ar": "مَتَى قَرَأْتَ؟",
+          "ar_plain": "متى قرات؟",
+          "translit": "matā qaraʾta",
+          "en": "When did you read?",
+          "ur": "آپ نے کب پڑھا؟"
         },
         {
-          "ar": "كَمْ مَالًا",
-          "ar_plain": "كم ما لا",
-          "translit": "kam maalan",
-          "en": "how much wealth",
-          "ur": "کتنی دولت"
+          "ar": "أَيْنَ قَرَأْتَ؟",
+          "ar_plain": "اين قرات؟",
+          "translit": "ʾayna qaraʾta",
+          "en": "Where did you read?",
+          "ur": "آپ نے کہاں پڑھا؟"
         },
         {
-          "ar": "كَمْ صَبِيًّا",
-          "ar_plain": "كم صبيا",
-          "translit": "kam sabiyyan",
-          "en": "how many children",
-          "ur": "کتنے بچے"
+          "ar": "لِمَاذَا قَرَأْتَ؟",
+          "ar_plain": "لماذا قرات؟",
+          "translit": "limādhā qaraʾta",
+          "en": "Why did you read?",
+          "ur": "آپ نے کیوں پڑھا؟"
         }
       ],
       "right_column": [
         {
-          "en": "how many books",
-          "ur": "کتنی کتابیں"
+          "en": "a place",
+          "ur": "ایک جگہ"
         },
         {
-          "en": "how many years",
-          "ur": "کتنے سال"
+          "en": "a number",
+          "ur": "ایک تعداد"
         },
         {
-          "en": "how much wealth",
-          "ur": "کتنی دولت"
+          "en": "a reason",
+          "ur": "ایک وجہ"
         },
         {
-          "en": "how many children",
-          "ur": "کتنے بچے"
+          "en": "a time",
+          "ur": "ایک وقت"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
           1
         ],
         [
+          1,
+          3
+        ],
+        [
           2,
-          2
+          0
         ],
         [
           3,
-          3
+          2
         ]
       ],
       "xp_value": 1
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch42-l01-ex05",
+      "id": "ch42-l01-ex06",
       "target_translation": {
-        "en": "How many students are in the school?",
-        "ur": "اسکول میں کتنے طالب علم ہیں؟"
+        "en": "How many pens do you have?",
+        "ur": "آپ کے پاس کتنے قلم ہیں؟"
       },
       "tiles": [
+        {
+          "ar": "عِنْدَكَ",
+          "ar_plain": "عندك",
+          "translit": "ʿindaka",
+          "en": "with you",
+          "ur": "آپ کے پاس"
+        },
         {
           "ar": "كَمْ",
           "ar_plain": "كم",
@@ -277,90 +387,83 @@
           "ur": "کتنے"
         },
         {
-          "ar": "طَالِبًا",
-          "ar_plain": "طالبا",
-          "translit": "taaliban",
-          "en": "student (counted)",
-          "ur": "طالب علم (گنتی میں)"
-        },
-        {
-          "ar": "فُي",
-          "ar_plain": "في",
-          "translit": "fii",
-          "en": "in",
-          "ur": "میں"
-        },
-        {
-          "ar": "الْمَدْرَسَةِ",
-          "ar_plain": "المدرسة",
-          "translit": "al-madrasa",
-          "en": "the school",
-          "ur": "اسکول"
+          "ar": "قَلَمًا",
+          "ar_plain": "قلما",
+          "translit": "qalaman",
+          "en": "pen (counted)",
+          "ur": "قلم (گنا جانے والا)"
         }
       ],
       "correct_order": [
-        0,
+        1,
         2,
-        3,
-        1
+        0
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch42-l01-ex06",
-      "statement": {
-        "en": "In a question, كَمْ is followed by a singular noun ending in ـًا, as in كَمْ كِتَابًا؟",
-        "ur": "سوال میں كَمْ کے بعد ـًا والا واحد اسم آتا ہے، جیسے كَمْ كِتَابًا؟"
-      },
-      "correct_answer": true,
       "xp_value": 1
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch42-l01-ex07",
       "prompt": {
-        "ar": "كَمْ مَالًا لَدَيْكَ؟",
-        "ar_plain": "كم مالا لدبك",
-        "translit": "kam maalan ladayka?",
-        "en": "How much wealth do you have?",
-        "ur": "تم کے پاس کتنی دولت ہے؟"
+        "ar": "كَمْ لَبِثْتُمْ؟",
+        "ar_plain": "كم لبثتم؟",
+        "translit": "kam labithtum",
+        "en": "How long did you stay?",
+        "ur": "آپ کتنی دیر ٹھہرے؟"
       },
       "options": [
         {
-          "en": "How much wealth do you have?",
-          "ur": "تم کے پاس کتنی دولت ہے؟"
+          "en": "Where did you stay?",
+          "ur": "آپ کہاں ٹھہرے؟"
         },
         {
-          "en": "How many friends do you have?",
-          "ur": "تم کتنے دوست ہیں؟"
+          "en": "When did you stay?",
+          "ur": "آپ کب ٹھہرے؟"
         },
         {
-          "en": "Where is your wealth?",
-          "ur": "تمہاری دولت کہاں ہے؟"
+          "en": "Why did you stay?",
+          "ur": "آپ کیوں ٹھہرے؟"
         },
         {
-          "en": "How old are you?",
-          "ur": "تمہاری عمر کتنا ہے؟"
+          "en": "How long did you stay?",
+          "ur": "آپ کتنی دیر ٹھہرے؟"
         }
       ],
-      "correct_index": 0,
-      "xp_value": 1
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "In 18:19 كَمْ asks for an amount of time.",
+        "ur": "18:19 میں كَمْ وقت کی مقدار پوچھتا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch42-l01-ex08",
+      "statement": {
+        "en": "After كَمْ you put the plural noun, for example كُتُبٌ.",
+        "ur": "كَمْ کے بعد جمع اسم آتا ہے، مثلاً كُتُبٌ۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "No: after كَمْ the counted noun is singular and ends in ـًا.",
+        "ur": "نہیں: كَمْ کے بعد گنا جانے والا اسم واحد ہوتا ہے اور اس کے آخر میں ـًا آتا ہے۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
       "en": "كَمْ — how many / how long",
       "ar": "كَمْ",
-      "ur": "كَمْ — کتنا / کتنی دیر"
+      "ur": "كَمْ — کتنے / کتنی دیر"
     },
     "ayah": {
       "surah": 18,
       "ayah": 19,
       "label": "Al-Kahf 18:19",
-      "ar": "قَالَ قَائِلٌ مِنْهُمْ كَمْ لَبِثْتُمْ ۖ قَالُوا لَبِثْنَا يَوْمًا أَوْ بَعْضَ يَوْمٍ",
+      "ar": "قَالَ قَائِلٌ مِّنْهُمْ كَمْ لَبِثْتُمْ ۖ قَالُوا لَبِثْنَا يَوْمًا أَوْ بَعْضَ يَوْمٍ",
       "en": "One of them said, 'How long have you stayed?' They said, 'We stayed a day or part of a day.'",
-      "ur": "ان میں سے ایک نے کہا: 'تم کتنی دیر ٹھہرے؟' انہوں نے کہا: 'ہم ایک دن یا دن کا کچھ حصہ ٹھہرے۔'",
+      "ur": "ایک کہنے والے نے کہا: تم کتنی دیر ٹھہرے؟ انہوں نے کہا: ہم ایک دن یا دن کا کچھ حصہ ٹھہرے۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/018019.mp3"
     },
     "highlighted_word_indices": [
@@ -372,14 +475,14 @@
       "لَبِثْتُمْ"
     ],
     "noor_explanation": {
-      "en": "كَمْ لَبِثْتُمْ — \"how long have you stayed?\" The answer gives the amount: يَوْمًا أَوْ بَعْضَ يَوْمٍ, \"a day or part of a day\".",
-      "ur": "كَمْ لَبِثْتُمْ — \"تم کتنی دیر ٹھہرے؟\" جواب مقدار بتاتا ہے: يَوْمًا أَوْ بَعْضَ يَوْمٍ، \"ایک دن یا دن کا کچھ حصہ\"۔"
+      "en": "كَمْ لَبِثْتُمْ asks for an amount of time, and the answer gives it: يَوْمًا أَوْ بَعْضَ يَوْمٍ.",
+      "ur": "كَمْ لَبِثْتُمْ وقت کی مقدار پوچھتا ہے اور جواب وہ مقدار بتاتا ہے: يَوْمًا أَوْ بَعْضَ يَوْمٍ۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "كَمْ is your key to asking about quantities in Arabic. How many books? How many years? How much water? All with كَمْ.",
-      "ur": "كَمْ عربی میں مقدار پوچھنے کا کلید ہے۔ کتنی کتابیں؟ کتنے سال؟ کتنا پانی؟ سب كَمْ سے۔"
+      "en": "كَمْ asks for a number. Next: مَتَى asks for a time.",
+      "ur": "كَمْ تعداد پوچھتا ہے۔ اگلا: مَتَى وقت پوچھتا ہے۔"
     }
   }
 }

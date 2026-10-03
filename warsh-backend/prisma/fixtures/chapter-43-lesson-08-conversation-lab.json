@@ -1,0 +1,810 @@
+{
+  "schema_version": "1.0",
+  "template": "SPOKEN_PHRASES",
+  "_meta": {
+    "_note": "Chapter 43, Lesson 8 (ch43-l04 converted in place to the CL13 Conversation Lab, display order 8). A host (A) offers water and food; the learner (B) accepts, declines and thanks, then a signposted role rehearsal has B offer water to a practice guest (A). تُرِيدُ and تَفَضَّلْ are supplied whole; the host's lines, the food offer and the final وَإِيَّاكَ are heard_only; devotional wording is limited to the single courtesy جَزَاكَ اللَّهُ خَيْرًا. Phrase clips ch43-cl-p01…p10 are listed in Docs/lesson-audio-needed.md and are not generated here. Rebuilt 2026-10-03 in the proposal harvest, batch 4 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-43-content-proposal.md and its review amendments.",
+    "title": "Food and Hospitality — Conversation Lab",
+    "titleAr": "الطَّعَامُ وَالضِّيَافَةُ",
+    "titleUr": "کھانا اور مہمان نوازی — گفتگو لیب",
+    "chapter_order": 43,
+    "lesson_order": 8,
+    "estimated_minutes": 10,
+    "xp_reward": 15
+  },
+  "hook": {
+    "ayah": {
+      "surah": 51,
+      "ayah": 27,
+      "label": "Adh-Dhariyat 51:27",
+      "ar": "فَقَرَّبَهُ إِلَيْهِمْ قَالَ أَلَا تَأْكُلُونَ",
+      "en": "And placed it near them; he said, \"Will you not eat?\"",
+      "ur": "(اور کھانے کے لئے) ان کے آگے رکھ دیا۔ کہنے لگے کہ آپ تناول کیوں نہیں کرتے؟",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/051027.mp3"
+    },
+    "noor_intro": {
+      "en": "Today you are a guest — and then the host. Accept a drink, decline food politely, thank the host, then offer water yourself.",
+      "ur": "آج آپ مہمان ہیں — اور پھر میزبان۔ مشروب قبول کریں، ادب سے کھانے سے انکار کریں، میزبان کا شکریہ ادا کریں، پھر خود پانی پیش کریں۔"
+    },
+    "autoplay": false
+  },
+  "exercises": [
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch43-l04-ex01",
+      "prompt_line": {
+        "ar": "هَلْ تُرِيدُ مَاءً؟",
+        "ar_plain": "هل تريد ماء؟",
+        "translit": "hal turīdu māʾan",
+        "en": "Do you want water? (You want it.)",
+        "ur": "کیا آپ پانی چاہتے ہیں؟ (آپ چاہتے ہیں۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "نَعَمْ، شُكْرًا.",
+          "ar_plain": "نعم، شكرا.",
+          "translit": "naʿam shukran",
+          "en": "Yes, thank you.",
+          "ur": "جی ہاں، شکریہ۔"
+        },
+        {
+          "ar": "لَا، شُكْرًا.",
+          "ar_plain": "لا، شكرا.",
+          "translit": "lā shukran",
+          "en": "No, thank you.",
+          "ur": "نہیں، شکریہ۔"
+        },
+        {
+          "ar": "كَمَا تُرِيدُ.",
+          "ar_plain": "كما تريد.",
+          "translit": "kamā turīdu",
+          "en": "As you wish.",
+          "ur": "جیسے آپ چاہیں۔"
+        },
+        {
+          "ar": "وَإِيَّاكَ.",
+          "ar_plain": "واياك.",
+          "translit": "waʾiyyaāka",
+          "en": "And you too.",
+          "ur": "اور آپ کو بھی۔"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "To accept an offer, say نَعَمْ، شُكْرًا.",
+        "ur": "پیشکش قبول کرنے کے لیے کہیں نَعَمْ، شُكْرًا۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch43-l04-ex02",
+      "prompt_line": {
+        "ar": "تَفَضَّلْ. هَلْ تُرِيدُ طَعَامًا؟",
+        "ar_plain": "تفضل. هل تريد طعاما؟",
+        "translit": "tafaḍḍal hal turīdu ṭaʿāman",
+        "en": "Here you are. Do you want some food? (You do not.)",
+        "ur": "تفضل۔ کیا آپ کھانا چاہتے ہیں؟ (آپ نہیں چاہتے۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "نَعَمْ، شُكْرًا.",
+          "ar_plain": "نعم، شكرا.",
+          "translit": "naʿam shukran",
+          "en": "Yes, thank you.",
+          "ur": "جی ہاں، شکریہ۔"
+        },
+        {
+          "ar": "هَلْ تُرِيدُ مَاءً؟",
+          "ar_plain": "هل تريد ماء؟",
+          "translit": "hal turīdu māʾan",
+          "en": "Do you want water?",
+          "ur": "کیا آپ پانی چاہتے ہیں؟"
+        },
+        {
+          "ar": "لَا، شُكْرًا.",
+          "ar_plain": "لا، شكرا.",
+          "translit": "lā shukran",
+          "en": "No, thank you.",
+          "ur": "نہیں، شکریہ۔"
+        },
+        {
+          "ar": "وَعَلَيْكُمُ السَّلَامُ.",
+          "ar_plain": "وعليكم السلام.",
+          "translit": "waʿalaykumu as-salāmu",
+          "en": "And upon you be peace.",
+          "ur": "اور آپ پر سلامتی ہو۔"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "To decline politely, say لَا، شُكْرًا.",
+        "ur": "ادب سے انکار کے لیے کہیں لَا، شُكْرًا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch43-l04-ex03",
+      "prompt": {
+        "ar": "هَلْ تُرِيدُ مَاءً؟",
+        "ar_plain": "هل تريد ماء؟",
+        "translit": "hal turīdu māʾan",
+        "en": "Do you want water?",
+        "ur": "کیا آپ پانی چاہتے ہیں؟"
+      },
+      "options": [
+        {
+          "en": "Where is the water?",
+          "ur": "پانی کہاں ہے؟"
+        },
+        {
+          "en": "I want water.",
+          "ur": "میں پانی چاہتا ہوں۔"
+        },
+        {
+          "en": "Is the water cold?",
+          "ur": "کیا پانی ٹھنڈا ہے؟"
+        },
+        {
+          "en": "Do you want water?",
+          "ur": "کیا آپ پانی چاہتے ہیں؟"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هَلْ makes it a yes/no question: 'do you want water?'.",
+        "ur": "هَلْ اسے ہاں/نہیں کا سوال بناتا ہے: 'کیا آپ پانی چاہتے ہیں؟'۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch43-l04-ex04",
+      "prompt": {
+        "ar": "لَا، شُكْرًا.",
+        "ar_plain": "لا، شكرا.",
+        "translit": "lā shukran",
+        "en": "No, thank you.",
+        "ur": "نہیں، شکریہ۔"
+      },
+      "options": [
+        {
+          "en": "Yes, thank you.",
+          "ur": "جی ہاں، شکریہ۔"
+        },
+        {
+          "en": "No, thank you.",
+          "ur": "نہیں، شکریہ۔"
+        },
+        {
+          "en": "No, I want it.",
+          "ur": "نہیں، میں اسے چاہتا ہوں۔"
+        },
+        {
+          "en": "Please come in.",
+          "ur": "تشریف لائیے۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَا = no; شُكْرًا = thank you.",
+        "ur": "لَا = نہیں؛ شُكْرًا = شکریہ۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch43-l04-ex05",
+      "prompt_line": {
+        "ar": "كَمَا تُرِيدُ.",
+        "ar_plain": "كما تريد.",
+        "translit": "kamā turīdu",
+        "en": "As you wish. (The host accepted your refusal.)",
+        "ur": "جیسے آپ چاہیں۔ (میزبان نے آپ کا انکار قبول کر لیا۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "نَعَمْ، شُكْرًا.",
+          "ar_plain": "نعم، شكرا.",
+          "translit": "naʿam shukran",
+          "en": "Yes, thank you.",
+          "ur": "جی ہاں، شکریہ۔"
+        },
+        {
+          "ar": "لَا، شُكْرًا.",
+          "ar_plain": "لا، شكرا.",
+          "translit": "lā shukran",
+          "en": "No, thank you.",
+          "ur": "نہیں، شکریہ۔"
+        },
+        {
+          "ar": "هَلْ تُرِيدُ مَاءً؟",
+          "ar_plain": "هل تريد ماء؟",
+          "translit": "hal turīdu māʾan",
+          "en": "Do you want water?",
+          "ur": "کیا آپ پانی چاہتے ہیں؟"
+        },
+        {
+          "ar": "جَزَاكَ اللَّهُ خَيْرًا.",
+          "ar_plain": "جزاك الله خيرا.",
+          "translit": "jazāka al-lahu khayran",
+          "en": "May Allah reward you with good.",
+          "ur": "اللہ آپ کو جزائے خیر دے۔"
+        }
+      ],
+      "correct_option_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "To thank the host: جَزَاكَ اللَّهُ خَيْرًا.",
+        "ur": "میزبان کا شکریہ ادا کرنے کے لیے: جَزَاكَ اللَّهُ خَيْرًا۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch43-l04-ex06",
+      "statement": {
+        "en": "نَعَمْ، شُكْرًا and لَا، شُكْرًا are both polite answers to an offer.",
+        "ur": "نَعَمْ، شُكْرًا اور لَا، شُكْرًا دونوں پیشکش کے مہذب جواب ہیں۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes: the goal of the situation tells you which to choose.",
+        "ur": "جی ہاں: صورتِ حال کا مقصد بتاتا ہے کہ کون سا چننا ہے۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch43-l04-ex07",
+      "target_translation": {
+        "en": "Do you want water?",
+        "ur": "کیا آپ پانی چاہتے ہیں؟"
+      },
+      "tiles": [
+        {
+          "ar": "مَاءً",
+          "ar_plain": "ماء",
+          "translit": "māʾan",
+          "en": "water",
+          "ur": "پانی"
+        },
+        {
+          "ar": "هَلْ",
+          "ar_plain": "هل",
+          "translit": "hal",
+          "en": "(question)",
+          "ur": "(سوالیہ)"
+        },
+        {
+          "ar": "تُرِيدُ",
+          "ar_plain": "تريد",
+          "translit": "turīdu",
+          "en": "you want",
+          "ur": "آپ چاہتے ہیں"
+        }
+      ],
+      "correct_order": [
+        1,
+        2,
+        0
+      ],
+      "xp_value": 1
+    }
+  ],
+  "spoken_phrases": {
+    "scene": {
+      "en": "A host (A) welcomes you (B) into the house on a warm afternoon. A offers you water, then food. You answer politely. Afterwards you practise the other side: you are the host, and A is the guest.",
+      "ur": "ایک گرم دوپہر میں میزبان (A) آپ (B) کا گھر میں استقبال کرتا ہے۔ A آپ کو پانی پیش کرتا ہے، پھر کھانا۔ آپ ادب سے جواب دیتے ہیں۔ بعد میں آپ دوسری طرف کی مشق کرتے ہیں: آپ میزبان ہیں اور A مہمان۔"
+    },
+    "phrases": [
+      {
+        "id": "ch43-cl-p01",
+        "phrase": {
+          "ar": "السَّلَامُ عَلَيْكُمْ.",
+          "ar_plain": "السلام عليكم.",
+          "translit": "as-salāmu ʿalaykum",
+          "en": "Peace be upon you.",
+          "ur": "آپ پر سلامتی ہو۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch43-cl-p01.mp3",
+        "context": {
+          "en": "The host greets you at the door (Chapter 12).",
+          "ur": "میزبان دروازے پر آپ کو سلام کرتا ہے (باب 12)۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch43-cl-p02",
+        "phrase": {
+          "ar": "وَعَلَيْكُمُ السَّلَامُ.",
+          "ar_plain": "وعليكم السلام.",
+          "translit": "waʿalaykumu as-salāmu",
+          "en": "And upon you be peace.",
+          "ur": "اور آپ پر سلامتی ہو۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch43-cl-p02.mp3",
+        "context": {
+          "en": "You return the greeting (Chapter 12).",
+          "ur": "آپ سلام کا جواب دیتے ہیں (باب 12)۔"
+        }
+      },
+      {
+        "id": "ch43-cl-p03",
+        "phrase": {
+          "ar": "هَلْ تُرِيدُ مَاءً؟",
+          "ar_plain": "هل تريد ماء؟",
+          "translit": "hal turīdu māʾan",
+          "en": "Do you want water?",
+          "ur": "کیا آپ پانی چاہتے ہیں؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch43-cl-p03.mp3",
+        "context": {
+          "en": "The host offers water. You will use this phrase yourself in the host role.",
+          "ur": "میزبان پانی پیش کرتا ہے۔ میزبان کے کردار میں آپ خود یہ جملہ بولیں گے۔"
+        }
+      },
+      {
+        "id": "ch43-cl-p04",
+        "phrase": {
+          "ar": "نَعَمْ، شُكْرًا.",
+          "ar_plain": "نعم، شكرا.",
+          "translit": "naʿam shukran",
+          "en": "Yes, thank you.",
+          "ur": "جی ہاں، شکریہ۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch43-cl-p04.mp3",
+        "context": {
+          "en": "You accept the water.",
+          "ur": "آپ پانی قبول کرتے ہیں۔"
+        }
+      },
+      {
+        "id": "ch43-cl-p05",
+        "phrase": {
+          "ar": "تَفَضَّلْ. هَلْ تُرِيدُ طَعَامًا؟",
+          "ar_plain": "تفضل. هل تريد طعاما؟",
+          "translit": "tafaḍḍal hal turīdu ṭaʿāman",
+          "en": "Here you are. Do you want some food?",
+          "ur": "تفضل۔ کیا آپ کھانا چاہتے ہیں؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch43-cl-p05.mp3",
+        "context": {
+          "en": "The host hands you the water and offers food.",
+          "ur": "میزبان آپ کو پانی دیتا ہے اور کھانا پیش کرتا ہے۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch43-cl-p06",
+        "phrase": {
+          "ar": "لَا، شُكْرًا.",
+          "ar_plain": "لا، شكرا.",
+          "translit": "lā shukran",
+          "en": "No, thank you.",
+          "ur": "نہیں، شکریہ۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch43-cl-p06.mp3",
+        "context": {
+          "en": "You decline the food politely.",
+          "ur": "آپ ادب سے کھانے سے انکار کرتے ہیں۔"
+        }
+      },
+      {
+        "id": "ch43-cl-p07",
+        "phrase": {
+          "ar": "كَمَا تُرِيدُ.",
+          "ar_plain": "كما تريد.",
+          "translit": "kamā turīdu",
+          "en": "As you wish.",
+          "ur": "جیسے آپ چاہیں۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch43-cl-p07.mp3",
+        "context": {
+          "en": "The host accepts your refusal.",
+          "ur": "میزبان آپ کا انکار قبول کرتا ہے۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch43-cl-p08",
+        "phrase": {
+          "ar": "جَزَاكَ اللَّهُ خَيْرًا.",
+          "ar_plain": "جزاك الله خيرا.",
+          "translit": "jazāka al-lahu khayran",
+          "en": "May Allah reward you with good.",
+          "ur": "اللہ آپ کو جزائے خیر دے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch43-cl-p08.mp3",
+        "context": {
+          "en": "You thank the host.",
+          "ur": "آپ میزبان کا شکریہ ادا کرتے ہیں۔"
+        }
+      },
+      {
+        "id": "ch43-cl-p09",
+        "phrase": {
+          "ar": "وَإِيَّاكَ.",
+          "ar_plain": "واياك.",
+          "translit": "waʾiyyaāka",
+          "en": "And you too.",
+          "ur": "اور آپ کو بھی۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch43-cl-p09.mp3",
+        "context": {
+          "en": "The host answers your thanks.",
+          "ur": "میزبان آپ کے شکریے کا جواب دیتا ہے۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch43-cl-p10",
+        "phrase": {
+          "ar": "السَّلَامُ عَلَيْكُمْ، يَا أَخِي.",
+          "ar_plain": "السلام عليكم، يا اخي.",
+          "translit": "as-salāmu ʿalaykum yaā ʾakhī",
+          "en": "Peace be upon you, my brother.",
+          "ur": "آپ پر سلامتی ہو، میرے بھائی۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch43-cl-p10.mp3",
+        "context": {
+          "en": "Role practice: now your guest (A) greets you, the host.",
+          "ur": "کردار کی مشق: اب آپ کا مہمان (A) آپ کو، میزبان کو، سلام کرتا ہے۔"
+        },
+        "heard_only": true
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "A",
+        "phrase_id": "ch43-cl-p01"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch43-cl-p02"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch43-cl-p03"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch43-cl-p04"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch43-cl-p05"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch43-cl-p06"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch43-cl-p07"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch43-cl-p08"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch43-cl-p09"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch43-cl-p10"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch43-cl-p02"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch43-cl-p03"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch43-cl-p04"
+      }
+    ],
+    "lab": {
+      "title": {
+        "en": "Food and Hospitality",
+        "ur": "کھانا اور مہمان نوازی"
+      },
+      "mission": {
+        "en": "You are the guest. Accept a drink, politely decline food and thank the host. Then you switch: now you are the host and offer water to your guest.",
+        "ur": "آپ مہمان ہیں۔ مشروب قبول کریں، ادب سے کھانے سے انکار کریں اور میزبان کا شکریہ ادا کریں۔ پھر آپ کردار بدلتے ہیں: اب آپ میزبان ہیں اور اپنے مہمان کو پانی پیش کرتے ہیں۔"
+      },
+      "toolkit": [
+        "هَلْ تُرِيدُ",
+        "مَاءً",
+        "طَعَامًا",
+        "نَعَمْ، شُكْرًا",
+        "لَا، شُكْرًا",
+        "تَفَضَّلْ",
+        "جَزَاكَ اللَّهُ خَيْرًا"
+      ],
+      "goals": [
+        {
+          "en": "Make an offer (as the host)",
+          "ur": "پیشکش کریں (میزبان کے طور پر)"
+        },
+        {
+          "en": "Accept an offer",
+          "ur": "پیشکش قبول کریں"
+        },
+        {
+          "en": "Decline an offer politely",
+          "ur": "ادب سے پیشکش سے انکار کریں"
+        },
+        {
+          "en": "Thank the host",
+          "ur": "میزبان کا شکریہ ادا کریں"
+        }
+      ],
+      "pattern": {
+        "after_phrase_id": "ch43-cl-p03",
+        "items": [
+          {
+            "ar": "هَلْ تُرِيدُ …؟",
+            "meaning": {
+              "en": "do you want …?",
+              "ur": "کیا آپ … چاہتے ہیں؟"
+            },
+            "source": {
+              "en": "هَلْ: Chapter 12; تُرِيدُ is supplied whole here",
+              "ur": "هَلْ: باب 12؛ تُرِيدُ یہاں پورا دیا گیا ہے"
+            }
+          },
+          {
+            "ar": "نَعَمْ، شُكْرًا / لَا، شُكْرًا",
+            "meaning": {
+              "en": "yes, thank you / no, thank you",
+              "ur": "جی ہاں، شکریہ / نہیں، شکریہ"
+            },
+            "source": {
+              "en": "A polite answer to any offer",
+              "ur": "ہر پیشکش کا مہذب جواب"
+            }
+          }
+        ],
+        "note": {
+          "en": "An offer, an acceptance and a refusal each have their own short phrase. Accepting and declining are both polite; the goal of each turn tells you which one to choose.",
+          "ur": "پیشکش، قبولیت اور انکار کا ہر ایک اپنا مختصر جملہ ہے۔ قبول کرنا اور انکار کرنا دونوں مہذب ہیں؛ ہر موڑ کا مقصد بتاتا ہے کہ کون سا چننا ہے۔"
+        }
+      },
+      "shadow_phrase_ids": [
+        "ch43-cl-p03",
+        "ch43-cl-p04",
+        "ch43-cl-p06",
+        "ch43-cl-p08"
+      ],
+      "mission_turns": [
+        {
+          "prompt_phrase_id": "ch43-cl-p03",
+          "goal_index": 1,
+          "cue": {
+            "en": "You are thirsty. Accept the offer of water.",
+            "ur": "آپ کو پیاس لگی ہے۔ پانی کی پیشکش قبول کریں۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "لَا، شُكْرًا.",
+              "ar_plain": "لا، شكرا.",
+              "translit": "lā shukran",
+              "en": "No, thank you.",
+              "ur": "نہیں، شکریہ۔"
+            },
+            {
+              "ar": "نَعَمْ، شُكْرًا.",
+              "ar_plain": "نعم، شكرا.",
+              "translit": "naʿam shukran",
+              "en": "Yes, thank you.",
+              "ur": "جی ہاں، شکریہ۔"
+            },
+            {
+              "ar": "جَزَاكَ اللَّهُ خَيْرًا.",
+              "ar_plain": "جزاك الله خيرا.",
+              "translit": "jazāka al-lahu khayran",
+              "en": "May Allah reward you with good.",
+              "ur": "اللہ آپ کو جزائے خیر دے۔"
+            }
+          ],
+          "correct_option_index": 1
+        },
+        {
+          "prompt_phrase_id": "ch43-cl-p05",
+          "goal_index": 2,
+          "cue": {
+            "en": "You have just eaten. Decline the food politely.",
+            "ur": "آپ ابھی کھانا کھا چکے ہیں۔ ادب سے کھانے سے انکار کریں۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "نَعَمْ، شُكْرًا.",
+              "ar_plain": "نعم، شكرا.",
+              "translit": "naʿam shukran",
+              "en": "Yes, thank you.",
+              "ur": "جی ہاں، شکریہ۔"
+            },
+            {
+              "ar": "هَلْ تُرِيدُ مَاءً؟",
+              "ar_plain": "هل تريد ماء؟",
+              "translit": "hal turīdu māʾan",
+              "en": "Do you want water?",
+              "ur": "کیا آپ پانی چاہتے ہیں؟"
+            },
+            {
+              "ar": "لَا، شُكْرًا.",
+              "ar_plain": "لا، شكرا.",
+              "translit": "lā shukran",
+              "en": "No, thank you.",
+              "ur": "نہیں، شکریہ۔"
+            }
+          ],
+          "correct_option_index": 2
+        },
+        {
+          "prompt_phrase_id": "ch43-cl-p07",
+          "goal_index": 3,
+          "cue": {
+            "en": "The host accepted your refusal. Thank him.",
+            "ur": "میزبان نے آپ کا انکار قبول کر لیا۔ ان کا شکریہ ادا کریں۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "جَزَاكَ اللَّهُ خَيْرًا.",
+              "ar_plain": "جزاك الله خيرا.",
+              "translit": "jazāka al-lahu khayran",
+              "en": "May Allah reward you with good.",
+              "ur": "اللہ آپ کو جزائے خیر دے۔"
+            },
+            {
+              "ar": "لَا، شُكْرًا.",
+              "ar_plain": "لا، شكرا.",
+              "translit": "lā shukran",
+              "en": "No, thank you.",
+              "ur": "نہیں، شکریہ۔"
+            },
+            {
+              "ar": "هَلْ تُرِيدُ مَاءً؟",
+              "ar_plain": "هل تريد ماء؟",
+              "translit": "hal turīdu māʾan",
+              "en": "Do you want water?",
+              "ur": "کیا آپ پانی چاہتے ہیں؟"
+            }
+          ],
+          "correct_option_index": 0
+        },
+        {
+          "prompt_phrase_id": "ch43-cl-p10",
+          "goal_index": 0,
+          "cue": {
+            "en": "Role practice: you are now the host. Your guest has greeted you. Return the greeting and offer water.",
+            "ur": "کردار کی مشق: اب آپ میزبان ہیں۔ آپ کے مہمان نے سلام کیا۔ سلام کا جواب دیں اور پانی پیش کریں۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "نَعَمْ، شُكْرًا.",
+              "ar_plain": "نعم، شكرا.",
+              "translit": "naʿam shukran",
+              "en": "Yes, thank you.",
+              "ur": "جی ہاں، شکریہ۔"
+            },
+            {
+              "ar": "وَعَلَيْكُمُ السَّلَامُ. هَلْ تُرِيدُ مَاءً؟",
+              "ar_plain": "وعليكم السلام. هل تريد ماء؟",
+              "translit": "waʿalaykumu as-salāmu hal turīdu māʾan",
+              "en": "And upon you be peace. Do you want water?",
+              "ur": "اور آپ پر سلامتی ہو۔ کیا آپ پانی چاہتے ہیں؟"
+            },
+            {
+              "ar": "لَا، شُكْرًا.",
+              "ar_plain": "لا، شكرا.",
+              "translit": "lā shukran",
+              "en": "No, thank you.",
+              "ur": "نہیں، شکریہ۔"
+            }
+          ],
+          "correct_option_index": 1
+        }
+      ],
+      "answer_it": {
+        "turns": [
+          {
+            "prompt_phrase_id": "ch43-cl-p03",
+            "cue": {
+              "en": "Accept the water.",
+              "ur": "پانی قبول کریں۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "نَعَمْ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "شُكْرًا"
+              }
+            ],
+            "model_phrase_id": "ch43-cl-p04",
+            "tip": {
+              "en": "نَعَمْ, then شُكْرًا.",
+              "ur": "نَعَمْ، پھر شُكْرًا۔"
+            }
+          },
+          {
+            "prompt_phrase_id": "ch43-cl-p05",
+            "cue": {
+              "en": "Decline the food.",
+              "ur": "کھانے سے انکار کریں۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "لَا"
+              },
+              {
+                "kind": "WORD",
+                "ar": "شُكْرًا"
+              }
+            ],
+            "model_phrase_id": "ch43-cl-p06",
+            "tip": {
+              "en": "لَا, then شُكْرًا.",
+              "ur": "لَا، پھر شُكْرًا۔"
+            }
+          }
+        ]
+      },
+      "can_do": [
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Offer water",
+            "ur": "پانی پیش کرنا"
+          },
+          "ar": "هَلْ تُرِيدُ مَاءً؟"
+        },
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Accept an offer",
+            "ur": "پیشکش قبول کرنا"
+          },
+          "ar": "نَعَمْ، شُكْرًا"
+        },
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Decline politely",
+            "ur": "ادب سے انکار کرنا"
+          },
+          "ar": "لَا، شُكْرًا"
+        },
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Thank the host",
+            "ur": "میزبان کا شکریہ ادا کرنا"
+          },
+          "ar": "جَزَاكَ اللَّهُ خَيْرًا"
+        }
+      ]
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You offered, accepted, declined and thanked — as a guest and as a host.",
+      "ur": "آپ نے پیشکش کی، قبول کیا، انکار کیا اور شکریہ ادا کیا — مہمان کے طور پر بھی اور میزبان کے طور پر بھی۔"
+    }
+  }
+}

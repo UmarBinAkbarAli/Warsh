@@ -2,14 +2,13 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 42, Lesson 4 - Mixed Q&A practice using all three interrogatives: كَمْ, مَتَى, لِمَاذَا.",
+    "_note": "Chapter 42, Lesson 4 (ch42-l04). Teaches the state versus manner jobs of كَيْفَ (Chapter 31 only introduced it), then interleaves all four question words. Rebuilt 2026-10-03 in the proposal harvest, batch 4 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-42-content-proposal.md and its review amendments.",
+    "title": "How? — كَيْفَ, and Mixed Questions",
+    "titleAr": "كَيْفَ وَالْأَسْئِلَةُ الْمُخْتَلِطَةُ",
+    "titleUr": "کیسے؟ — كَيْفَ اور ملے جلے سوال",
     "chapter_order": 42,
     "lesson_order": 4,
-    "chapter_title": "Advanced Q&A (كَمْ/مَتَى/لِمَاذَا)",
-    "title": "Mixed Q&A Practice",
-    "titleAr": "مُمَارَسَةُ الْأَسْئِلَةِ الْمُخْتَلِطَةِ",
-    "source": "madina_reader_grammar_qa.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
@@ -17,122 +16,123 @@
       "surah": 2,
       "ayah": 28,
       "label": "Al-Baqarah 2:28",
-      "ar": "كَيْفَ تَكْفُرُونَ بِاللَّهِ وَكُنْتُمْ أَمْوَاتًا فَأَحْيَاكُمْ",
-      "en": "How can you disbelieve in Allah when you were lifeless and He gave you life?",
-      "ur": "تم اللہ کا انکار کیسے کرتے ہو حالانکہ تم بے جان تھے تو اس نے تمہیں زندگی دی؟",
+      "ar": "كَيْفَ تَكْفُرُونَ بِاللَّهِ",
+      "en": "How can you disbelieve in Allah?",
+      "ur": "تم اللہ کا انکار کیسے کرتے ہو؟",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002028.mp3"
     },
     "noor_intro": {
-      "en": "Time to practise all three question words together. Each one asks a different thing — now you can use them all.",
-      "ur": "تینوں سوالی الفاظ کو اکٹھا مشق کرنے کا وقت۔ ہر ایک ایک مختلف چیز پوچھتا ہے — اب آپ سب کو استعمال کر سکتے ہیں۔"
+      "en": "كَيْفَ asks about a state or a way. Today you also sort all four question words by the answer each one needs.",
+      "ur": "كَيْفَ حالت یا طریقہ پوچھتا ہے۔ آج آپ چاروں سوالی الفاظ کو اس جواب کے مطابق بھی چھانٹیں گے جو ہر ایک مانگتا ہے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Three question words — three answers",
-        "ar": "ثَلَاثَةُ أَسْئِلَةٍ وَأَجْوِبَتُهَا",
-        "ur": "تین سوالی الفاظ — تین جوابات"
+        "en": "How? — كَيْفَ",
+        "ar": "كَيْفَ؟",
+        "ur": "کیسے؟ — كَيْفَ"
       },
       "explanation": {
-        "en": "كَمْ asks quantity. مَتَى asks time. لِمَاذَا asks reason. Each has its own place in Arabic.",
-        "ur": "كَمْ مقدار پوچھتا ہے۔ مَتَى وقت پوچھتا ہے۔ لِمَاذَا سبب پوچھتا ہے۔ ہر ایک کی عربی میں اپنی جگہ ہے۔"
+        "en": "كَيْفَ asks about a state (how someone is) or a manner (how something is done). You met it in Chapter 31; now it joins كَمْ, مَتَى and لِمَاذَا.",
+        "ur": "كَيْفَ حالت (کوئی کیسا ہے) یا طریقہ (کام کیسے ہوتا ہے) پوچھتا ہے۔ آپ اس سے باب 31 میں مل چکے ہیں؛ اب یہ كَمْ، مَتَى اور لِمَاذَا کے ساتھ شامل ہوتا ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "كَمْ عَلَّمْتَ؟",
-        "ar_plain": "كم علمنت",
-        "translit": "kam 'allamt?",
-        "en": "How many did you teach?",
-        "ur": "تم نے کتنوں کو پڑھایا؟"
+        "ar": "كَيْفَ حَالُكَ؟ — بِخَيْرٍ.",
+        "ar_plain": "كيف حالك؟ — بخير.",
+        "translit": "kayfa ḥāluka — bikhayrin",
+        "en": "How are you? — Well.",
+        "ur": "آپ کا کیا حال ہے؟ — خیریت سے۔"
       },
       "explanation": {
-        "en": "كَمْ here asks number of students taught. عَلَّمْتَ is the past tense: you taught.",
-        "ur": "كَمْ یہاں پڑھائے گئے طلبہ کی تعداد پوچھتا ہے۔ عَلَّمْتَ ماضی ہے: تم نے پڑھایا۔"
+        "en": "A state question gets a state answer: بِخَيْرٍ ('well'). A greeting alone is not an answer to كَيْفَ حَالُكَ؟",
+        "ur": "حالت کے سوال کا جواب حالت ہے: بِخَيْرٍ ('خیریت سے')۔ صرف سلام كَيْفَ حَالُكَ؟ کا جواب نہیں۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "مَتَى بَدَأْتَ؟",
-        "ar_plain": "متى بدأت",
-        "translit": "mataa bada't?",
-        "en": "When did you begin?",
-        "ur": "تم نے کب شروع کیا؟"
+        "ar": "كَيْفَ تَذْهَبُ إِلَى الْمَدْرَسَةِ؟ — بِالسَّيَّارَةِ.",
+        "ar_plain": "كيف تذهب الى المدرسة؟ — بالسيارة.",
+        "translit": "kayfa tadhhabu ʾilā al-madrasati — bi-s-sayyaārati",
+        "en": "How do you go to the school? — By car.",
+        "ur": "آپ اسکول کیسے جاتے ہیں؟ — گاڑی سے۔"
       },
       "explanation": {
-        "en": "مَتَى asks time. بَدَأْتَ is past tense of بَدَأَ (to begin).",
-        "ur": "مَتَى وقت پوچھتا ہے۔ بَدَأْتَ بَدَأَ کا ماضی ہے (شروع کرنا)۔"
+        "en": "A manner question gets a way: بِالسَّيَّارَةِ ('by car'). بِـ here means 'by / with'.",
+        "ur": "طریقے کے سوال کا جواب طریقہ ہے: بِالسَّيَّارَةِ ('گاڑی سے')۔ یہاں بِـ کا مطلب 'سے' ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "State and manner are two jobs",
+        "ur": "حالت اور طریقہ دو الگ کام ہیں"
+      },
+      "body": {
+        "en": "State answers say how someone is: بِخَيْرٍ. Manner answers say the way something is done: بِالسَّيَّارَةِ. Check which one the question asks before you answer.",
+        "ur": "حالت کے جواب بتاتے ہیں کہ کوئی کیسا ہے: بِخَيْرٍ۔ طریقے کے جواب بتاتے ہیں کہ کام کیسے ہوتا ہے: بِالسَّيَّارَةِ۔ جواب سے پہلے دیکھیں کہ سوال کون سا پوچھ رہا ہے۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "لِمَاذَا تَعْلَمُ؟",
-        "ar_plain": "لماذا تتعلم",
-        "translit": "limazaa ta'allamu?",
-        "en": "Why are you learning?",
-        "ur": "تم کیوں سیکھ رہے ہو؟"
-      },
-      "explanation": {
-        "en": "لِمَاذَا asks reason in present tense. تَعْلَمُ is the present tense of عَلِمَ.",
-        "ur": "لِمَاذَا وجہ پوچھتا ہے مستقبل زمانے میں۔ تَعْلَمُ عَلِمَ کا مستقبل ہے۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Choosing the right question word",
-        "ar": "اخْتِيَارُ لَفْظِ الِاسْتِفْهَامِ الصَّحِيحِ",
-        "ur": "صحیح سوالی لفظ کا انتخاب"
-      },
-      "explanation": {
-        "en": "If answer mentions a number → كَمْ. If answer mentions a time word → مَتَى. If answer mentions a reason → لِمَاذَا.",
-        "ur": "اگر جواب میں عدد ہو → كَمْ۔ اگر جواب میں وقت کی بات ہو → مَتَى۔ اگر جواب میں وجہ ہو → لِمَاذَا۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "عَلَّمَ",
-        "ar_plain": "علّم",
-        "translit": "'allama",
-        "en": "he taught",
-        "ur": "اس نے پڑھایا"
-      },
-      "explanation": {
-        "en": "عَلَّمَ is the past tense of the root ع-ل-م, related to عِلْمٌ (knowledge). It means to teach systematically.",
-        "ur": "عَلَّمَ مادہ ع-ل-م کا ماضی ہے، عِلْمٌ (علم) سے متعلق۔ اس کا مطلب ہے منظم طریقے سے پڑھانا۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "كَيْفَ — how?",
-        "ar": "كَيْفَ",
-        "ur": "كَيْفَ — کیسے؟"
-      },
-      "explanation": {
-        "en": "كَيْفَ asks about manner (\"how is it done?\") or state (\"how is someone?\"): كَيْفَ تَذْهَبُ؟ — بِالسَّيَّارَةِ (\"by car\"). كَيْفَ حَالُكَ؟ — بِخَيْرٍ (\"well\"). You met كَيْفَ in Chapter 31; here it joins كَمْ, مَتَى and لِمَاذَا.",
-        "ur": "كَيْفَ طریقہ (\"کیسے کیا جاتا ہے؟\") یا حالت (\"کوئی کیسا ہے؟\") پوچھتا ہے: كَيْفَ تَذْهَبُ؟ — بِالسَّيَّارَةِ (\"گاڑی سے\")۔ كَيْفَ حَالُكَ؟ — بِخَيْرٍ (\"خیریت سے\")۔ آپ كَيْفَ باب 31 میں پڑھ چکے ہیں؛ یہاں یہ كَمْ، مَتَى اور لِمَاذَا کے ساتھ آتا ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "كَيْفَ تَكْفُرُونَ بِاللَّهِ",
+        "ar": "كَيْفَ تَكْفُرُونَ بِاللَّهِ",
         "ar_plain": "كيف تكفرون بالله",
-        "translit": "kayfa takfuruuna billaah",
-        "en": "How can you disbelieve in Allah? (Al-Baqarah 2:28)",
-        "ur": "تم اللہ کا انکار کیسے کرتے ہو؟ (البقرہ 2:28)"
+        "translit": "kayfa takfurūna bi-l-lahi",
+        "en": "How can you disbelieve in Allah?",
+        "ur": "تم اللہ کا انکار کیسے کرتے ہو؟"
       },
       "explanation": {
-        "en": "Here كَيْفَ is a question of wonder: \"how can you …?\" — it does not expect a \"by car\" answer.",
-        "ur": "یہاں كَيْفَ تعجب کا سوال ہے: \"تم کیسے …؟\" — اس میں \"گاڑی سے\" جیسا جواب مطلوب نہیں۔"
+        "en": "In 2:28 كَيْفَ expresses wonder: 'how can you…?'. It asks the listener to think; it does not ask for a way such as 'by car'. (Al-Baqarah 2:28)",
+        "ur": "2:28 میں كَيْفَ حیرت ظاہر کرتا ہے: 'تم کیسے…؟'۔ یہ سننے والے کو سوچنے کے لیے کہتا ہے؛ 'گاڑی سے' جیسا طریقہ نہیں پوچھتا۔ (Al-Baqarah 2:28)"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Four questions, four answers",
+        "ar": "كَمْ، مَتَى، لِمَاذَا، كَيْفَ",
+        "ur": "چار سوال، چار جواب"
+      },
+      "examples": [
+        {
+          "ar": "كَمْ كِتَابًا؟",
+          "ar_plain": "كم كتابا؟",
+          "translit": "kam kitāban",
+          "en": "How many books? → a number",
+          "ur": "کتنی کتابیں؟ → تعداد"
+        },
+        {
+          "ar": "مَتَى؟",
+          "ar_plain": "متى؟",
+          "translit": "matā",
+          "en": "When? → a time",
+          "ur": "کب؟ → وقت"
+        },
+        {
+          "ar": "لِمَاذَا؟",
+          "ar_plain": "لماذا؟",
+          "translit": "limādhā",
+          "en": "Why? → لِأَنَّ + a reason",
+          "ur": "کیوں؟ → لِأَنَّ + وجہ"
+        },
+        {
+          "ar": "كَيْفَ؟",
+          "ar_plain": "كيف؟",
+          "translit": "kayfa",
+          "en": "How? → a state or a way",
+          "ur": "کیسے؟ → حالت یا طریقہ"
+        }
+      ],
+      "explanation": {
+        "en": "Pick the question word by the kind of answer you need.",
+        "ur": "جس طرح کا جواب چاہیے اس کے مطابق سوال کا لفظ چنیں۔"
       }
     }
   ],
@@ -141,61 +141,147 @@
       "type": "TAP_TRANSLATION",
       "id": "ch42-l04-ex01",
       "prompt": {
-        "ar": "كَمْ عَلَّمْتَ؟",
-        "ar_plain": "كم علمنت",
-        "translit": "kam 'allamt?",
-        "en": "How many did you teach?",
-        "ur": "تم نے کتنوں کو پڑھایا؟"
+        "ar": "كَيْفَ تَذْهَبُ إِلَى الْمَدْرَسَةِ؟",
+        "ar_plain": "كيف تذهب الى المدرسة؟",
+        "translit": "kayfa tadhhabu ʾilā al-madrasati",
+        "en": "How do you go to the school?",
+        "ur": "آپ اسکول کیسے جاتے ہیں؟"
       },
       "options": [
         {
-          "en": "How many did you teach?",
-          "ur": "تم نے کتنوں کو پڑھایا؟"
+          "en": "How do you go to school?",
+          "ur": "آپ اسکول کیسے جاتے ہیں؟"
         },
         {
-          "en": "When did you teach?",
-          "ur": "تم نے کب پڑھایا؟"
+          "en": "When do you go to school?",
+          "ur": "آپ اسکول کب جاتے ہیں؟"
         },
         {
-          "en": "Why did you teach?",
-          "ur": "تم نے کیوں پڑھایا؟"
+          "en": "Why do you go to school?",
+          "ur": "آپ اسکول کیوں جاتے ہیں؟"
         },
         {
-          "en": "What did you teach?",
-          "ur": "تم نے کیا پڑھایا؟"
+          "en": "How many go to school?",
+          "ur": "کتنے اسکول جاتے ہیں؟"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "كَمْ asks about quantity — how many students you taught.",
-        "ur": "كَمْ مقدار کے بارے میں پوچھتا ہے — تم نے کتنے طلبہ کو پڑھایا۔"
+        "en": "كَيْفَ asks for the way: 'how'.",
+        "ur": "كَيْفَ طریقہ پوچھتا ہے: 'کیسے'۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "CONVERSATION_BUILDER",
       "id": "ch42-l04-ex02",
-      "statement": {
-        "en": "مَتَى is used to ask about time.",
-        "ur": "مَتَى وقت کے بارے میں پوچھنے کے لیے استعمال ہوتا ہے۔"
+      "prompt_line": {
+        "ar": "كَيْفَ حَالُكَ؟",
+        "ar_plain": "كيف حالك؟",
+        "translit": "kayfa ḥāluka",
+        "en": "How are you?",
+        "ur": "آپ کا کیا حال ہے؟"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "أَمْسِ.",
+          "ar_plain": "امس.",
+          "translit": "ʾamsi",
+          "en": "Yesterday.",
+          "ur": "کل (گزشتہ)۔"
+        },
+        {
+          "ar": "٣.",
+          "ar_plain": "٣.",
+          "translit": "٣",
+          "en": "3.",
+          "ur": "۳۔"
+        },
+        {
+          "ar": "بِخَيْرٍ.",
+          "ar_plain": "بخير.",
+          "translit": "bikhayrin",
+          "en": "Well.",
+          "ur": "خیریت سے۔"
+        },
+        {
+          "ar": "لِأَنَّ الْمَسْجِدَ قَرِيبٌ.",
+          "ar_plain": "لان المسجد قريب.",
+          "translit": "liʾanna al-masjida qarībun",
+          "en": "Because the masjid is near.",
+          "ur": "کیونکہ مسجد قریب ہے۔"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A state question needs a state: بِخَيْرٍ.",
+        "ur": "حالت کے سوال کو حالت چاہیے: بِخَيْرٍ۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch42-l04-ex03",
+      "prompt_line": {
+        "ar": "كَيْفَ تَذْهَبُ إِلَى السُّوقِ؟",
+        "ar_plain": "كيف تذهب الى السوق؟",
+        "translit": "kayfa tadhhabu ʾilā as-sūqi",
+        "en": "How do you go to the market?",
+        "ur": "آپ بازار کیسے جاتے ہیں؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "غَدًا.",
+          "ar_plain": "غدا.",
+          "translit": "ghadan",
+          "en": "Tomorrow.",
+          "ur": "آنے والا کل۔"
+        },
+        {
+          "ar": "بِالسَّيَّارَةِ.",
+          "ar_plain": "بالسيارة.",
+          "translit": "bi-s-sayyaārati",
+          "en": "By car.",
+          "ur": "گاڑی سے۔"
+        },
+        {
+          "ar": "٣.",
+          "ar_plain": "٣.",
+          "translit": "٣",
+          "en": "3.",
+          "ur": "۳۔"
+        },
+        {
+          "ar": "لِأَنَّ السُّوقَ قَرِيبٌ.",
+          "ar_plain": "لان السوق قريب.",
+          "translit": "liʾanna as-sūqa qarībun",
+          "en": "Because the market is near.",
+          "ur": "کیونکہ بازار قریب ہے۔"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A manner question needs a way: بِالسَّيَّارَةِ.",
+        "ur": "طریقے کے سوال کو طریقہ چاہیے: بِالسَّيَّارَةِ۔"
+      }
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch42-l04-ex03",
+      "id": "ch42-l04-ex04",
       "mode": "TAP",
-      "sentence_ar": "___ بَدَأْتَ؟",
+      "sentence_ar": "___ تَذْهَبُ إِلَى الْمَدْرَسَةِ؟ — بِالسَّيَّارَةِ.",
       "hint": {
-        "en": "When did you begin?",
-        "ur": "تم نے کب شروع کیا؟"
+        "en": "How do you go to school? — By car.",
+        "ur": "آپ اسکول کیسے جاتے ہیں؟ — گاڑی سے۔"
       },
       "options": [
         {
           "ar": "مَتَى",
           "ar_plain": "متى",
-          "translit": "mataa",
+          "translit": "matā",
           "en": "when",
           "ur": "کب"
         },
@@ -209,214 +295,253 @@
         {
           "ar": "لِمَاذَا",
           "ar_plain": "لماذا",
-          "translit": "limazaa",
+          "translit": "limādhā",
           "en": "why",
           "ur": "کیوں"
         },
         {
-          "ar": "هَلْ",
-          "ar_plain": "هل",
-          "translit": "hal",
-          "en": "yes/no",
-          "ur": "کیا"
+          "ar": "كَيْفَ",
+          "ar_plain": "كيف",
+          "translit": "kayfa",
+          "en": "how",
+          "ur": "کیسے"
+        }
+      ],
+      "correct_answer": {
+        "ar": "كَيْفَ",
+        "ar_plain": "كيف",
+        "translit": "kayfa",
+        "en": "how",
+        "ur": "کیسے"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The answer is a way, so the question is كَيْفَ.",
+        "ur": "جواب ایک طریقہ ہے، اس لیے سوال كَيْفَ ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch42-l04-ex05",
+      "mode": "TAP",
+      "sentence_ar": "___ تَذْهَبُ إِلَى الْمَدْرَسَةِ؟ — أَذْهَبُ كُلَّ صَبَاحٍ.",
+      "hint": {
+        "en": "When do you go to school? — I go every morning.",
+        "ur": "آپ اسکول کب جاتے ہیں؟ — میں ہر صبح جاتا ہوں۔"
+      },
+      "options": [
+        {
+          "ar": "مَتَى",
+          "ar_plain": "متى",
+          "translit": "matā",
+          "en": "when",
+          "ur": "کب"
+        },
+        {
+          "ar": "كَيْفَ",
+          "ar_plain": "كيف",
+          "translit": "kayfa",
+          "en": "how",
+          "ur": "کیسے"
+        },
+        {
+          "ar": "كَمْ",
+          "ar_plain": "كم",
+          "translit": "kam",
+          "en": "how many",
+          "ur": "کتنے"
+        },
+        {
+          "ar": "لِمَاذَا",
+          "ar_plain": "لماذا",
+          "translit": "limādhā",
+          "en": "why",
+          "ur": "کیوں"
         }
       ],
       "correct_answer": {
         "ar": "مَتَى",
         "ar_plain": "متى",
-        "translit": "mataa",
+        "translit": "matā",
         "en": "when",
         "ur": "کب"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "'Every morning' is a time, so the question is مَتَى.",
+        "ur": "'ہر صبح' ایک وقت ہے، اس لیے سوال مَتَى ہے۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch42-l04-ex04",
+      "id": "ch42-l04-ex06",
       "left_column": [
         {
-          "ar": "كَمْ",
-          "ar_plain": "كم",
-          "translit": "kam",
-          "en": "how many",
-          "ur": "کتنے"
+          "ar": "٣",
+          "ar_plain": "٣",
+          "translit": "٣",
+          "en": "3",
+          "ur": "۳"
         },
         {
-          "ar": "مَتَى",
-          "ar_plain": "متى",
-          "translit": "mataa",
-          "en": "when",
-          "ur": "کب"
+          "ar": "أَمْسِ",
+          "ar_plain": "امس",
+          "translit": "ʾamsi",
+          "en": "yesterday",
+          "ur": "کل (گزشتہ)"
         },
         {
-          "ar": "لِمَاذَا",
-          "ar_plain": "لماذا",
-          "translit": "limazaa",
-          "en": "why",
-          "ur": "کیوں"
+          "ar": "لِأَنَّ الْمَسْجِدَ قَرِيبٌ",
+          "ar_plain": "لان المسجد قريب",
+          "translit": "liʾanna al-masjida qarībun",
+          "en": "because the masjid is near",
+          "ur": "کیونکہ مسجد قریب ہے"
         },
         {
-          "ar": "أَيْنَ",
-          "ar_plain": "أين",
-          "translit": "ayna",
-          "en": "where",
-          "ur": "کہاں"
+          "ar": "بِالسَّيَّارَةِ",
+          "ar_plain": "بالسيارة",
+          "translit": "bi-s-sayyaārati",
+          "en": "by car",
+          "ur": "گاڑی سے"
         }
       ],
       "right_column": [
         {
-          "en": "how many / how much",
-          "ur": "کتنے / کتنا"
+          "en": "لِمَاذَا — why",
+          "ur": "لِمَاذَا — کیوں"
         },
         {
-          "en": "when",
-          "ur": "کب"
+          "en": "كَيْفَ — how",
+          "ur": "كَيْفَ — کیسے"
         },
         {
-          "en": "why",
-          "ur": "کیوں"
+          "en": "كَمْ — how many",
+          "ur": "كَمْ — کتنے"
         },
         {
-          "en": "where",
-          "ur": "کہاں"
+          "en": "مَتَى — when",
+          "ur": "مَتَى — کب"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
           2
         ],
         [
-          3,
+          1,
           3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          1
         ]
       ],
       "xp_value": 1
     },
     {
+      "type": "TRUE_FALSE",
+      "id": "ch42-l04-ex07",
+      "statement": {
+        "en": "كَيْفَ حَالُكَ؟ asks for a number.",
+        "ur": "كَيْفَ حَالُكَ؟ تعداد پوچھتا ہے۔",
+        "ar_example": {
+          "ar": "كَيْفَ حَالُكَ؟",
+          "ar_plain": "كيف حالك؟",
+          "translit": "kayfa ḥāluka",
+          "en": "How are you?",
+          "ur": "آپ کا کیا حال ہے؟"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "No: it asks for a state, how you are. A number is the answer to كَمْ.",
+        "ur": "نہیں: یہ حالت پوچھتا ہے، یعنی آپ کیسے ہیں۔ تعداد كَمْ کا جواب ہے۔"
+      }
+    },
+    {
       "type": "BUILD_SENTENCE",
-      "id": "ch42-l04-ex05",
+      "id": "ch42-l04-ex08",
       "target_translation": {
-        "en": "Why are you learning Arabic?",
-        "ur": "تم کیوں عربی سیکھ رہے ہو؟"
+        "en": "How do you go to the school?",
+        "ur": "آپ اسکول کیسے جاتے ہیں؟"
       },
       "tiles": [
         {
-          "ar": "لِمَاذَا",
-          "ar_plain": "لماذا",
-          "translit": "limazaa",
-          "en": "why",
-          "ur": "کیوں"
+          "ar": "إِلَى",
+          "ar_plain": "الى",
+          "translit": "ʾilā",
+          "en": "to",
+          "ur": "کی طرف"
         },
         {
-          "ar": "تَعْلَمُ",
-          "ar_plain": "تعلم",
-          "translit": "ta'allamu",
-          "en": "you learn",
-          "ur": "تم سیکھتے ہو"
+          "ar": "الْمَدْرَسَةِ",
+          "ar_plain": "المدرسة",
+          "translit": "al-madrasati",
+          "en": "the school",
+          "ur": "اسکول"
         },
         {
-          "ar": "الْعَرَبِيَّةَ",
-          "ar_plain": "العربية",
-          "translit": "al-'arabiyyata",
-          "en": "Arabic",
-          "ur": "عربی"
+          "ar": "كَيْفَ",
+          "ar_plain": "كيف",
+          "translit": "kayfa",
+          "en": "how",
+          "ur": "کیسے"
         },
         {
-          "ar": "مَتَى",
-          "ar_plain": "متى",
-          "translit": "mataa",
-          "en": "when",
-          "ur": "کب"
+          "ar": "تَذْهَبُ",
+          "ar_plain": "تذهب",
+          "translit": "tadhhabu",
+          "en": "do you go",
+          "ur": "آپ جاتے ہیں"
         }
       ],
       "correct_order": [
+        2,
+        3,
         0,
-        1,
-        2
+        1
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch42-l04-ex06",
-      "statement": {
-        "en": "If the answer mentions a reason, use لِمَاذَا.",
-        "ur": "اگر جواب میں وجہ بیان ہو تو لِمَاذَا استعمال کریں۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch42-l04-ex07",
-      "prompt": {
-        "ar": "لِمَاذَا تَسْأَلُ؟",
-        "ar_plain": "لماذا تسأل",
-        "translit": "limazaa tas'alu?",
-        "en": "Why are you asking?",
-        "ur": "تم کیوں پوچھ رہے ہو؟"
-      },
-      "options": [
-        {
-          "en": "Why are you asking?",
-          "ur": "تم کیوں پوچھ رہے ہو؟"
-        },
-        {
-          "en": "When are you asking?",
-          "ur": "تم کب پوچھ رہے ہو؟"
-        },
-        {
-          "en": "How many are you asking?",
-          "ur": "تم کتنے پوچھ رہے ہو؟"
-        },
-        {
-          "en": "What are you asking?",
-          "ur": "تم کیا پوچھ رہے ہو؟"
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "كَيْفَ — how?",
+      "en": "كَيْفَ — how",
       "ar": "كَيْفَ",
-      "ur": "كَيْفَ — کیسے؟"
+      "ur": "كَيْفَ — کیسے"
     },
     "ayah": {
       "surah": 2,
       "ayah": 28,
       "label": "Al-Baqarah 2:28",
-      "ar": "كَيْفَ تَكْفُرُونَ بِاللَّهِ وَكُنْتُمْ أَمْوَاتًا فَأَحْيَاكُمْ",
-      "en": "How can you disbelieve in Allah when you were lifeless and He gave you life?",
-      "ur": "تم اللہ کا انکار کیسے کرتے ہو حالانکہ تم بے جان تھے تو اس نے تمہیں زندگی دی؟",
+      "ar": "كَيْفَ تَكْفُرُونَ بِاللَّهِ وَكُنتُمْ أَمْوَاتًا فَأَحْيَاكُمْ",
+      "en": "How can you disbelieve in Allah when you were lifeless and He brought you to life?",
+      "ur": "تم اللہ کا انکار کیسے کرتے ہو جب کہ تم بے جان تھے پھر اس نے تمہیں زندہ کیا؟",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002028.mp3"
     },
     "highlighted_word_indices": [
-      0
+      0,
+      1
     ],
     "highlighted_words": [
-      "كَيْفَ"
+      "كَيْفَ",
+      "تَكْفُرُونَ"
     ],
     "noor_explanation": {
-      "en": "كَيْفَ تَكْفُرُونَ بِاللَّهِ — \"how can you disbelieve in Allah?\" A question that asks the listener to think.",
-      "ur": "كَيْفَ تَكْفُرُونَ بِاللَّهِ — \"تم اللہ کا انکار کیسے کرتے ہو؟\" ایسا سوال جو سننے والے کو سوچنے پر آمادہ کرتا ہے۔"
+      "en": "كَيْفَ تَكْفُرُونَ بِاللَّهِ is a question of wonder: it makes the listener think, and no 'by car' answer fits.",
+      "ur": "كَيْفَ تَكْفُرُونَ بِاللَّهِ حیرت کا سوال ہے: یہ سننے والے کو سوچنے پر لاتا ہے اور 'گاڑی سے' جیسا جواب اس پر نہیں بیٹھتا۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Three question words, one conversation. كَمْ, مَتَى, لِمَاذَا — you now hold the keys to asking anything in Arabic.",
-      "ur": "تین سوالی الفاظ، ایک گفتگو۔ كَمْ، مَتَى، لِمَاذَا — اب آپ عربی میں کچھ بھی پوچھنے کے کلید رکھتے ہیں۔"
+      "en": "You can now ask how many, when, why and how — and know the answer each needs. Next: the whole of Surah At-Takathur.",
+      "ur": "اب آپ پوچھ سکتے ہیں کتنے، کب، کیوں اور کیسے — اور جانتے ہیں کہ ہر ایک کو کون سا جواب چاہیے۔ اگلا: پوری سورۃ التکاثر۔"
     }
   }
 }

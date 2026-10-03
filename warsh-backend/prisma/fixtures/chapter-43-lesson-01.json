@@ -2,110 +2,109 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 43, Lesson 1 - Time expressions used in Book 4 integration context.",
+    "_note": "Chapter 43, Lesson 1 (ch43-l01). Retrieval of the Chapter 16/34/35 time words and verb forms in a short constructed record; the old 'numbers' content moved to Chapter 48. Rebuilt 2026-10-03 in the proposal harvest, batch 4 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-43-content-proposal.md and its review amendments.",
+    "title": "Time and Action in Context",
+    "titleAr": "الزَّمَنُ وَالْفِعْلُ فِي السِّيَاقِ",
+    "titleUr": "وقت اور فعل سیاق میں",
     "chapter_order": 43,
     "lesson_order": 1,
-    "chapter_title": "Book 4 Integration",
-    "title": "Time Expressions in Context",
-    "titleAr": "تَعْبِيرَاتُ الزَّمَنِ فِي السِّيَاقِ",
-    "source": "madina_reader_book4_integration.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 107,
-      "ayah": 1,
-      "label": "Al-Ma'un 107:1",
-      "ar": "أَرَأَيْتَ الَّذِي يُكَذِّبُ بِالدِّينِ",
-      "en": "Have you seen the one who denies the recompense?",
-      "ur": "کیا آپ نے اسے دیکھا جو بدلے کو جھٹلاتا ہے؟",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/107001.mp3"
+      "surah": 99,
+      "ayah": 7,
+      "label": "Az-Zalzalah 99:7",
+      "ar": "فَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًا يَرَهُ",
+      "en": "So whoever does an atom's weight of good will see it,",
+      "ur": "تو جس نے ذرہ بھر نیکی کی ہو گی وہ اس کو دیکھ لے گا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/099007.mp3"
     },
     "noor_intro": {
-      "en": "Time expressions bring a passage to life. Today: yesterday, today, tomorrow, and the words that locate events in time.",
-      "ur": "وقت کے اظہار متن کو زندہ بناتے ہیں۔ آج: کل، آج، کل پروش، اور الفاظ جو واقعات کو وقت میں مقید کرتے ہیں۔"
+      "en": "A sentence tells time twice: with a time word and with its verb. Today you read both together.",
+      "ur": "جملہ وقت دو بار بتاتا ہے: وقت کے لفظ سے اور اپنے فعل سے۔ آج آپ دونوں کو ساتھ پڑھیں گے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Time expressions in Arabic",
-        "ar": "تَعْبِيرَاتُ الزَّمَنِ فِي الْعَرَبِيَّةِ",
-        "ur": "عربی میں وقت کے اظہار"
+        "en": "Two clues for time",
+        "ar": "الزَّمَنُ فِي الْجُمْلَةِ",
+        "ur": "وقت کے دو اشارے"
       },
       "explanation": {
-        "en": "Arabic uses nouns in the accusative to express when something happens: الْيَوْمَ (today), غَدًا (tomorrow), أَمْسِ (yesterday).",
-        "ur": "عربی اسم کو نصب میں رکھ کر وقت ظاہر کرتی ہے: الْيَوْمَ (آج)، غَدًا (کل پروش)، أَمْسِ (کل)۔"
+        "en": "A sentence gives you two clues about time: the time word (أَمْسِ، الْيَوْمَ، غَدًا) and the verb form (past, present, سَـ-future). When they agree, you know when it happened. You are reviewing Chapters 16, 34 and 35 — nothing new is taught here.",
+        "ur": "جملہ وقت کے بارے میں دو اشارے دیتا ہے: وقت کا لفظ (أَمْسِ، الْيَوْمَ، غَدًا) اور فعل کا روپ (ماضی، حال، سَـ والا مستقبل)۔ جب دونوں ملیں تو آپ جانتے ہیں کہ کب ہوا۔ آپ باب 16، 34 اور 35 کی دہرائی کر رہے ہیں — یہاں کچھ نیا نہیں پڑھایا جاتا۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "أَمْسِ ذَهَبْتُ إِلَى السُّوقِ",
-        "ar_plain": "أمشي ذهبت الى السوق",
-        "translit": "amsi dhahabtu ilaa as-suqi",
-        "en": "Yesterday I went to the market",
-        "ur": "کل میں بازار گیا"
+        "ar": "أَمْسِ كَتَبَ أَحْمَدُ الدَّرْسَ.",
+        "ar_plain": "امس كتب احمد الدرس.",
+        "translit": "ʾamsi kataba ʾaḥmadu ad-darsa",
+        "en": "Yesterday Ahmad wrote the lesson.",
+        "ur": "کل (گزشتہ) احمد نے سبق لکھا۔"
       },
       "explanation": {
-        "en": "أَمْسِ means yesterday. The accusative noun shows the time frame without needing a preposition.",
-        "ur": "أَمْسِ کا مطلب ہے کل۔ نصب میں اسم وقت کا مطلب ہے کہ کوئی حرف جر کے بغیر وقت کا تعین ہو رہا ہے۔"
+        "en": "أَمْسِ + a past verb (كَتَبَ): the time is yesterday and the verb agrees.",
+        "ur": "أَمْسِ + ماضی کا فعل (كَتَبَ): وقت گزشتہ کل ہے اور فعل اس سے ملتا ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "غَدًا سَأَذْهَبُ إِلَى الْمَسْجِدِ",
-        "ar_plain": "غدا سأذهب إلى المسجد",
-        "translit": "ghadan sa-adhahabu ilal-masjid",
-        "en": "Tomorrow I will go to the masjid",
-        "ur": "کل پروش میں مسجد جاؤں گا"
+        "ar": "الْيَوْمَ يَقْرَأُ أَحْمَدُ كِتَابًا.",
+        "ar_plain": "اليوم يقرا احمد كتابا.",
+        "translit": "al-yawma yaqraʾu ʾaḥmadu kitāban",
+        "en": "Today Ahmad is reading a book.",
+        "ur": "آج احمد ایک کتاب پڑھ رہا ہے۔"
       },
       "explanation": {
-        "en": "غَدًا in accusative = tomorrow. سَأَذْهَبُ is the future tense: will go. غدًا + future = tomorrow.",
-        "ur": "غَدًا نصب میں = کل پروش۔ سَأَذْهَبُ مستقبل ہے: جاؤں گا۔ غدًا + مستقبل = کل پروش۔"
+        "en": "الْيَوْمَ + a present verb (يَقْرَأُ): today, happening now.",
+        "ur": "الْيَوْمَ + حال کا فعل (يَقْرَأُ): آج، ابھی ہو رہا ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "الْيَوْمَ أَنَا فِي الْمَدْرَسَةِ",
-        "ar_plain": "اليوم أنا في المدرسة",
-        "translit": "al-yawma anaa fi al-madrasa",
-        "en": "Today I am in the school",
-        "ur": "آج میں اسکول میں ہوں"
+        "ar": "غَدًا سَيَذْهَبُ أَحْمَدُ إِلَى الْمَدْرَسَةِ.",
+        "ar_plain": "غدا سيذهب احمد الى المدرسة.",
+        "translit": "ghadan sayadhhabu ʾaḥmadu ʾilā al-madrasati",
+        "en": "Tomorrow Ahmad will go to the school.",
+        "ur": "کل (آنے والا) احمد اسکول جائے گا۔"
       },
       "explanation": {
-        "en": "الْيَوْمَ is always in the accusative when meaning today. أَنَا is the subject pronoun.",
-        "ur": "الْيَوْمَ آج کا مطلب دیتے وقت ہمیشہ نصب میں ہوتا ہے۔ أَنَا ضمیر فاعل ہے۔"
+        "en": "غَدًا + سَـ + a verb (سَيَذْهَبُ): tomorrow, and the سَـ marks the future.",
+        "ur": "غَدًا + سَـ + فعل (سَيَذْهَبُ): آنے والا کل، اور سَـ مستقبل کی علامت ہے۔"
       }
     },
     {
       "type": "GRAMMAR_NOTE",
       "title": {
-        "en": "Time nouns in accusative",
-        "ur": "اسماء الوقت نصب میں"
+        "en": "Check both clues",
+        "ur": "دونوں اشارے دیکھیں"
       },
       "body": {
-        "en": "Time nouns in Arabic are often in the accusative: الْيَوْمَ, غَدًا, أَمْسِ, سَاعَةً, صَبَاحًا, مَسَاءً. They act as adverbs of time.",
-        "ur": "عربی میں اسماء وقت اکثر نصب میں ہوتے ہیں: الْيَوْمَ، غَدًا، أَمْسِ، سَاعَةً، صَبَاحًا، مَسَاءً۔ یہمتعلق adverb کے طور پر کام کرتے ہیں۔"
+        "en": "A plain present verb can mean 'now' or a habit (يَذْهَبُ كُلَّ يَوْمٍ — 'he goes every day'). The time word says which. If a time word and a verb form disagree, re-read before you answer.",
+        "ur": "سادہ حال کا فعل 'ابھی' یا عادت کا مطلب دے سکتا ہے (يَذْهَبُ كُلَّ يَوْمٍ — 'وہ ہر دن جاتا ہے')۔ وقت کا لفظ بتاتا ہے کہ کون سا۔ اگر وقت کا لفظ اور فعل کا روپ نہ ملیں تو جواب سے پہلے دوبارہ پڑھیں۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "صَبَاحٌ",
-        "ar_plain": "صباح",
-        "translit": "subaahun",
-        "en": "morning",
-        "ur": "صبح"
+        "ar": "أَمْسِ ذَهَبَ أَحْمَدُ إِلَى الْمَسْجِدِ. الْيَوْمَ هُوَ فِي الْمَدْرَسَةِ. غَدًا سَيَذْهَبُ إِلَى الْبَيْتِ.",
+        "ar_plain": "امس ذهب احمد الى المسجد. اليوم هو في المدرسة. غدا سيذهب الى البيت.",
+        "translit": "ʾamsi dhahaba ʾaḥmadu ʾilā al-masjidi al-yawma huwa fī al-madrasati ghadan sayadhhabu ʾilā al-bayti",
+        "en": "Yesterday Ahmad went to the masjid. Today he is at the school. Tomorrow he will go home.",
+        "ur": "کل (گزشتہ) احمد مسجد گیا۔ آج وہ اسکول میں ہے۔ کل (آنے والا) وہ گھر جائے گا۔"
       },
       "explanation": {
-        "en": "صَبَاحٌ in the accusative: صَبَاحًا (in the morning). Used in daily Arabic: صَبَاحُ الْخَيْرِ — good morning.",
-        "ur": "صَبَاحٌ نصب میں: صَبَاحًا (صبح کے وقت)۔ روزمرہ عربی میں: صَبَاحُ الْخَيْرِ — صبح بخیر۔"
+        "en": "A short record in three lines. Read it as one text: who, what and when are stated line by line.",
+        "ur": "تین سطروں کا مختصر ریکارڈ۔ اسے ایک متن کے طور پر پڑھیں: کون، کیا اور کب ہر سطر میں بیان ہے۔"
       }
     }
   ],
@@ -114,105 +113,197 @@
       "type": "TAP_TRANSLATION",
       "id": "ch43-l01-ex01",
       "prompt": {
-        "ar": "أَمْسِ ذَهَبْتُ إِلَى السُّوقِ",
-        "ar_plain": "أمشي ذهبت إلى السوق",
-        "translit": "amsi dhahabtu ilaa as-suqi",
-        "en": "Yesterday I went to the market",
-        "ur": "کل میں بازار گیا"
+        "ar": "أَمْسِ كَتَبَ أَحْمَدُ الدَّرْسَ.",
+        "ar_plain": "امس كتب احمد الدرس.",
+        "translit": "ʾamsi kataba ʾaḥmadu ad-darsa",
+        "en": "Yesterday Ahmad wrote the lesson.",
+        "ur": "کل (گزشتہ) احمد نے سبق لکھا۔"
       },
       "options": [
         {
-          "en": "Yesterday I went to the market",
-          "ur": "کل میں بازار گیا"
+          "en": "Tomorrow Ahmad will write the lesson.",
+          "ur": "کل (آنے والا) احمد سبق لکھے گا۔"
         },
         {
-          "en": "Tomorrow I will go to the market",
-          "ur": "کل پروش میں بازار جاؤں گا"
+          "en": "Yesterday Ahmad wrote the lesson.",
+          "ur": "کل (گزشتہ) احمد نے سبق لکھا۔"
         },
         {
-          "en": "Today I am in the market",
-          "ur": "آج میں بازار میں ہوں"
+          "en": "Today Ahmad is writing the lesson.",
+          "ur": "آج احمد سبق لکھ رہا ہے۔"
         },
         {
-          "en": "Yesterday I read a book",
-          "ur": "کل میں نے کتاب پڑھی"
+          "en": "Yesterday Ahmad read the lesson.",
+          "ur": "کل (گزشتہ) احمد نے سبق پڑھا۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَمْسِ and the past verb كَتَبَ both say 'yesterday'.",
+        "ur": "أَمْسِ اور ماضی کا فعل كَتَبَ دونوں 'گزشتہ کل' بتاتے ہیں۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch43-l01-ex02",
+      "mode": "TAP",
+      "sentence_ar": "غَدًا ___ أَحْمَدُ إِلَى الْمَدْرَسَةِ.",
+      "hint": {
+        "en": "Tomorrow Ahmad will go to the school.",
+        "ur": "کل (آنے والا) احمد اسکول جائے گا۔"
+      },
+      "options": [
+        {
+          "ar": "سَيَذْهَبُ",
+          "ar_plain": "سيذهب",
+          "translit": "sayadhhabu",
+          "en": "he will go",
+          "ur": "وہ جائے گا"
+        },
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "he went",
+          "ur": "وہ گیا"
+        },
+        {
+          "ar": "ذَهَبَتْ",
+          "ar_plain": "ذهبت",
+          "translit": "dhahabat",
+          "en": "she went",
+          "ur": "وہ (مؤنث) گئی"
+        },
+        {
+          "ar": "اذْهَبْ",
+          "ar_plain": "اذهب",
+          "translit": "adhhab",
+          "en": "go!",
+          "ur": "جاؤ!"
+        }
+      ],
+      "correct_answer": {
+        "ar": "سَيَذْهَبُ",
+        "ar_plain": "سيذهب",
+        "translit": "sayadhhabu",
+        "en": "he will go",
+        "ur": "وہ جائے گا"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "غَدًا (tomorrow) needs the future: سَيَذْهَبُ.",
+        "ur": "غَدًا (آنے والا کل) کو مستقبل چاہیے: سَيَذْهَبُ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch43-l01-ex03",
+      "statement": {
+        "en": "In the three-line record, Ahmad is at the school today.",
+        "ur": "تین سطروں کے ریکارڈ میں احمد آج اسکول میں ہے۔",
+        "ar_example": {
+          "ar": "أَمْسِ ذَهَبَ أَحْمَدُ إِلَى الْمَسْجِدِ. الْيَوْمَ هُوَ فِي الْمَدْرَسَةِ. غَدًا سَيَذْهَبُ إِلَى الْبَيْتِ.",
+          "ar_plain": "امس ذهب احمد الى المسجد. اليوم هو في المدرسة. غدا سيذهب الى البيت.",
+          "translit": "ʾamsi dhahaba ʾaḥmadu ʾilā al-masjidi al-yawma huwa fī al-madrasati ghadan sayadhhabu ʾilā al-bayti",
+          "en": "Yesterday Ahmad went to the masjid. Today he is at the school. Tomorrow he will go home.",
+          "ur": "کل (گزشتہ) احمد مسجد گیا۔ آج وہ اسکول میں ہے۔ کل (آنے والا) وہ گھر جائے گا۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْيَوْمَ هُوَ فِي الْمَدْرَسَةِ — 'today he is at the school'.",
+        "ur": "الْيَوْمَ هُوَ فِي الْمَدْرَسَةِ — 'آج وہ اسکول میں ہے'۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch43-l01-ex04",
+      "statement": {
+        "en": "In the record, Ahmad went to the masjid tomorrow.",
+        "ur": "ریکارڈ میں احمد کل (آنے والا) مسجد گیا۔",
+        "ar_example": {
+          "ar": "أَمْسِ ذَهَبَ أَحْمَدُ إِلَى الْمَسْجِدِ. الْيَوْمَ هُوَ فِي الْمَدْرَسَةِ. غَدًا سَيَذْهَبُ إِلَى الْبَيْتِ.",
+          "ar_plain": "امس ذهب احمد الى المسجد. اليوم هو في المدرسة. غدا سيذهب الى البيت.",
+          "translit": "ʾamsi dhahaba ʾaḥmadu ʾilā al-masjidi al-yawma huwa fī al-madrasati ghadan sayadhhabu ʾilā al-bayti",
+          "en": "Yesterday Ahmad went to the masjid. Today he is at the school. Tomorrow he will go home.",
+          "ur": "کل (گزشتہ) احمد مسجد گیا۔ آج وہ اسکول میں ہے۔ کل (آنے والا) وہ گھر جائے گا۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "He went to the masjid yesterday (أَمْسِ, past verb). Tomorrow he will go home.",
+        "ur": "وہ گزشتہ کل مسجد گیا (أَمْسِ، ماضی)۔ آنے والے کل وہ گھر جائے گا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch43-l01-ex05",
+      "prompt": {
+        "ar": "أَمْسِ قَرَأَتْ سَلْمَى كِتَابًا. الْيَوْمَ هِيَ تَكْتُبُ الدَّرْسَ. غَدًا سَتَذْهَبُ إِلَى السُّوقِ.",
+        "ar_plain": "امس قرات سلمى كتابا. اليوم هي تكتب الدرس. غدا ستذهب الى السوق.",
+        "translit": "ʾamsi qaraʾat salmā kitāban al-yawma hiya taktubu ad-darsa ghadan satadhhabu ʾilā as-sūqi",
+        "en": "Yesterday Salma read a book. Today she is writing the lesson. Tomorrow she will go to the market.",
+        "ur": "کل (گزشتہ) سلمیٰ نے ایک کتاب پڑھی۔ آج وہ سبق لکھ رہی ہے۔ کل (آنے والا) وہ بازار جائے گی۔"
+      },
+      "options": [
+        {
+          "en": "Salma read a book yesterday, is writing the lesson today and will go to the market tomorrow.",
+          "ur": "سلمیٰ نے کل (گزشتہ) کتاب پڑھی، آج سبق لکھ رہی ہے اور کل (آنے والا) بازار جائے گی۔"
+        },
+        {
+          "en": "Salma will read a book tomorrow and went to the market yesterday.",
+          "ur": "سلمیٰ کل (آنے والا) کتاب پڑھے گی اور کل (گزشتہ) بازار گئی۔"
+        },
+        {
+          "en": "Salma writes the lesson every day and reads in the market.",
+          "ur": "سلمیٰ ہر دن سبق لکھتی ہے اور بازار میں پڑھتی ہے۔"
+        },
+        {
+          "en": "Salma went to the market yesterday and wrote a book today.",
+          "ur": "سلمیٰ کل (گزشتہ) بازار گئی اور آج کتاب لکھی۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "أَمْسِ means yesterday. The past tense verb ذَهَبْتُ confirms it is about a past event.",
-        "ur": "أَمْسِ کا مطلب ہے کل۔ ماضی فعل ذَهَبْتُ سے ثابت ہوتا ہے کہ یہ ایک ماضی واقعہ ہے۔"
+        "en": "Match each time word and verb: yesterday – read; today – writing; tomorrow – will go.",
+        "ur": "ہر وقت کے لفظ اور فعل کو ملائیں: گزشتہ کل – پڑھا؛ آج – لکھ رہی ہے؛ آنے والا کل – جائے گی۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch43-l01-ex02",
+      "id": "ch43-l01-ex06",
       "statement": {
-        "en": "غَدًا is used for tomorrow in Arabic.",
-        "ur": "غَدًا عربی میں کل پروش کے لیے استعمال ہوتا ہے۔"
+        "en": "In Salma's record, she will go to the market tomorrow.",
+        "ur": "سلمیٰ کے ریکارڈ میں وہ کل (آنے والا) بازار جائے گی۔",
+        "ar_example": {
+          "ar": "أَمْسِ قَرَأَتْ سَلْمَى كِتَابًا. الْيَوْمَ هِيَ تَكْتُبُ الدَّرْسَ. غَدًا سَتَذْهَبُ إِلَى السُّوقِ.",
+          "ar_plain": "امس قرات سلمى كتابا. اليوم هي تكتب الدرس. غدا ستذهب الى السوق.",
+          "translit": "ʾamsi qaraʾat salmā kitāban al-yawma hiya taktubu ad-darsa ghadan satadhhabu ʾilā as-sūqi",
+          "en": "Yesterday Salma read a book. Today she is writing the lesson. Tomorrow she will go to the market.",
+          "ur": "کل (گزشتہ) سلمیٰ نے ایک کتاب پڑھی۔ آج وہ سبق لکھ رہی ہے۔ کل (آنے والا) وہ بازار جائے گی۔"
+        }
       },
       "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch43-l01-ex03",
-      "mode": "TAP",
-      "sentence_ar": "___ سَأَذْهَبُ إِلَى الْمَسْجِدِ",
-      "hint": {
-        "en": "Tomorrow I will go to the masjid.",
-        "ur": "کل پروش میں مسجد جاؤں گا۔"
-      },
-      "options": [
-        {
-          "ar": "غَدًا",
-          "ar_plain": "غدا",
-          "translit": "ghadan",
-          "en": "tomorrow",
-          "ur": "کل پروش"
-        },
-        {
-          "ar": "أَمْسِ",
-          "ar_plain": "أمسي",
-          "translit": "amsi",
-          "en": "yesterday",
-          "ur": "کل"
-        },
-        {
-          "ar": "الْيَوْمَ",
-          "ar_plain": "اليوم",
-          "translit": "al-yawma",
-          "en": "today",
-          "ur": "آج"
-        },
-        {
-          "ar": "صَبَاحًا",
-          "ar_plain": "صباحا",
-          "translit": "sabaahan",
-          "en": "in the morning",
-          "ur": "صبح"
-        }
-      ],
-      "correct_answer": {
-        "ar": "غَدًا",
-        "ar_plain": "غدا",
-        "translit": "ghadan",
-        "en": "tomorrow",
-        "ur": "کل پروش"
-      },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "غَدًا سَتَذْهَبُ إِلَى السُّوقِ.",
+        "ur": "غَدًا سَتَذْهَبُ إِلَى السُّوقِ۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch43-l01-ex04",
+      "id": "ch43-l01-ex07",
       "left_column": [
         {
           "ar": "أَمْسِ",
-          "ar_plain": "أمسي",
-          "translit": "amsi",
+          "ar_plain": "امس",
+          "translit": "ʾamsi",
           "en": "yesterday",
-          "ur": "کل"
+          "ur": "کل (گزشتہ)"
         },
         {
           "ar": "الْيَوْمَ",
@@ -226,38 +317,38 @@
           "ar_plain": "غدا",
           "translit": "ghadan",
           "en": "tomorrow",
-          "ur": "کل پروش"
+          "ur": "کل (آنے والا)"
         },
         {
-          "ar": "صَبَاحًا",
-          "ar_plain": "صباحا",
-          "translit": "sabaahan",
-          "en": "in the morning",
-          "ur": "صبح"
+          "ar": "كُلَّ يَوْمٍ",
+          "ar_plain": "كل يوم",
+          "translit": "kulla yawmin",
+          "en": "every day",
+          "ur": "ہر دن"
         }
       ],
       "right_column": [
         {
-          "en": "yesterday",
-          "ur": "کل"
+          "en": "with a plain present verb: يَذْهَبُ",
+          "ur": "سادہ حال کے فعل کے ساتھ: يَذْهَبُ"
         },
         {
-          "en": "today",
-          "ur": "آج"
+          "en": "with a present verb: يَقْرَأُ",
+          "ur": "حال کے فعل کے ساتھ: يَقْرَأُ"
         },
         {
-          "en": "tomorrow",
-          "ur": "کل پروش"
+          "en": "with a past verb: كَتَبَ",
+          "ur": "ماضی کے فعل کے ساتھ: كَتَبَ"
         },
         {
-          "en": "in the morning",
-          "ur": "صبح"
+          "en": "with سَـ + verb: سَيَذْهَبُ",
+          "ur": "سَـ + فعل کے ساتھ: سَيَذْهَبُ"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
+          2
         ],
         [
           1,
@@ -265,132 +356,48 @@
         ],
         [
           2,
-          2
+          3
         ],
         [
           3,
-          3
+          0
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch43-l01-ex05",
-      "target_translation": {
-        "en": "Today I am in the school.",
-        "ur": "آج میں اسکول میں ہوں۔"
-      },
-      "tiles": [
-        {
-          "ar": "الْيَوْمَ",
-          "ar_plain": "اليوم",
-          "translit": "al-yawma",
-          "en": "today",
-          "ur": "آج"
-        },
-        {
-          "ar": "أَنَا",
-          "ar_plain": "أنا",
-          "translit": "anaa",
-          "en": "I am",
-          "ur": "میں ہوں"
-        },
-        {
-          "ar": "فِي",
-          "ar_plain": "في",
-          "translit": "fi",
-          "en": "in",
-          "ur": "میں"
-        },
-        {
-          "ar": "الْمَدْرَسَةِ",
-          "ar_plain": "المدرسة",
-          "translit": "al-madrasa",
-          "en": "the school",
-          "ur": "اسکول"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch43-l01-ex06",
-      "statement": {
-        "en": "Time nouns in Arabic are often placed in the accusative case.",
-        "ur": "عربی میں اسماء وقت اکثر نصب میں رکھے جاتے ہیں۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch43-l01-ex07",
-      "prompt": {
-        "ar": "صَبَاحًا ذَهَبْتُ إِلَى الْمَسْجِدِ",
-        "ar_plain": "صباحا ذهبت إلى المسجد",
-        "translit": "sabaahan dhahabtu ilal-masjid",
-        "en": "In the morning I went to the masjid",
-        "ur": "صبح میں مسجد گیا"
-      },
-      "options": [
-        {
-          "en": "In the morning I went to the masjid",
-          "ur": "صبح میں مسجد گیا"
-        },
-        {
-          "en": "In the evening I went to the masjid",
-          "ur": "شام کو مسجد گیا"
-        },
-        {
-          "en": "Tomorrow I go to the masjid",
-          "ur": "کل پروش میں مسجد جاتا ہوں"
-        },
-        {
-          "en": "Yesterday I went to the masjid",
-          "ur": "کل میں مسجد گیا"
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Time expressions in context",
-      "ar": "تَعْبِيرَاتُ الزَّمَنِ فِي السِّيَاقِ",
-      "ur": "سیاق و سباق میں وقت کے اظہار"
+      "en": "The verb carries time too",
+      "ar": "فَمَنْ يَعْمَلْ … يَرَهُ",
+      "ur": "فعل بھی وقت بتاتا ہے"
     },
     "ayah": {
-      "surah": 107,
-      "ayah": 1,
-      "label": "Al-Ma'un 107:1",
-      "ar": "أَرَأَيْتَ الَّذِي يُكَذِّبُ بِالدِّينِ",
-      "en": "Have you seen the one who denies the recompense?",
-      "ur": "کیا آپ نے اسے دیکھا جو بدلے کو جھٹلاتا ہے؟",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/107001.mp3"
+      "surah": 99,
+      "ayah": 7,
+      "label": "Az-Zalzalah 99:7",
+      "ar": "فَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًا يَرَهُ",
+      "en": "So whoever does an atom's weight of good will see it,",
+      "ur": "تو جس نے ذرہ بھر نیکی کی ہو گی وہ اس کو دیکھ لے گا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/099007.mp3"
     },
     "highlighted_word_indices": [
-      0
+      1,
+      5
+    ],
+    "highlighted_words": [
+      "يَعْمَلْ",
+      "يَرَهُ"
     ],
     "noor_explanation": {
-      "en": "أَرَأَيْتَ = أَ (question: \"have …?\") + رَأَيْتَ (\"you saw\", past tense of رَأَى). So: \"Have you seen …?\"",
-      "ur": "أَرَأَيْتَ = أَ (سوال: \"کیا …؟\") + رَأَيْتَ (\"تم نے دیکھا\"، رَأَى کا ماضی)۔ یعنی: \"کیا تم نے دیکھا …؟\""
-    },
-    "highlighted_words": [
-      "أَرَأَيْتَ"
-    ]
+      "en": "فَمَنْ يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًا يَرَهُ — the verbs here look ahead: whoever does an atom's weight of good will see it.",
+      "ur": "فَمَنْ يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًا يَرَهُ — یہاں فعل آگے کی طرف دیکھتے ہیں: جو ذرّے کے برابر نیکی کرے گا وہ اسے دیکھے گا۔"
+    }
   },
   "close": {
     "noor_message": {
-      "en": "Time expressions are now yours: أَمْسِ, الْيَوْمَ, غَدًا, صَبَاحًا. When you read a passage, these will locate every event on the calendar of your understanding.",
-      "ur": "وقت کا اظہار اب آپ کا ہے: أَمْسِ، الْيَوْمَ، غَدًا، صَبَاحًا۔ جب آپ کوئی متن پڑھیں گے، یہ ہر واقعے کو آپ سمجھنے کے تقویم پر مقید کریں گے۔"
+      "en": "Time word plus verb form: you read both. Next: putting a sentence together.",
+      "ur": "وقت کا لفظ اور فعل کا روپ: آپ دونوں پڑھتے ہیں۔ اگلا: جملے کو جوڑ کر پڑھنا۔"
     }
   }
 }

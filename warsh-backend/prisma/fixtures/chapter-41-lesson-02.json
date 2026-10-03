@@ -2,110 +2,121 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 41, Lesson 2 - Reading comprehension passage with mixed noun-adjective structures.",
+    "_note": "Chapter 41, Lesson 2 (ch41-l02). Descriptions and هُوَ / هِيَ references; every antecedent is made unique by gender, not by an arbitrary key. Rebuilt 2026-10-03 in the proposal harvest, batch 4 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-41-content-proposal.md and its review amendments.",
+    "title": "Who Is Described? Descriptions and References",
+    "titleAr": "مَنِ الْمَوْصُوفُ؟",
+    "titleUr": "کس کا وصف ہے؟ وصف اور حوالہ",
     "chapter_order": 41,
     "lesson_order": 2,
-    "chapter_title": "Book 4 Tail — Reading Comprehension",
-    "title": "Descriptions in the Passage",
-    "titleAr": "الْأَوْصَافُ فِي الْمُمَارَسَةِ",
-    "source": "madina_reader_book4_consolidation.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 68,
-      "ayah": 1,
-      "label": "Al-Qalam 68:1",
-      "ar": "ن ۚ وَالْقَلَمِ وَمَا يَسْطُرُونَ",
-      "en": "Nūn. By the pen and what they inscribe,",
-      "ur": "نٓ۔ قلم کی اور جو (اہل قلم) لکھتے ہیں اس کی قسم",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/068001.mp3"
+      "surah": 87,
+      "ayah": 2,
+      "label": "Al-A'la 87:2",
+      "ar": "الَّذِي خَلَقَ فَسَوَّىٰ",
+      "en": "Who created and proportioned",
+      "ur": "جس نے (انسان کو) بنایا پھر( اس کے اعضاء کو) درست کیا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087002.mp3"
     },
     "noor_intro": {
-      "en": "Descriptions make a passage alive. In this lesson: describing people and places inside a reading passage.",
-      "ur": "تفصیلی بیان متن کو زندہ بناتے ہیں۔ اس درس میں: ایک متن کے اندر لوگوں اور جگہوں کا بیان۔"
+      "en": "A description belongs to one noun, and هُوَ / هِيَ point back to one noun. Today you find which.",
+      "ur": "ہر وصف ایک اسم کا ہوتا ہے اور هُوَ / هِيَ ایک اسم کی طرف لوٹتے ہیں۔ آج آپ ڈھونڈیں گے کہ کون سا۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Descriptions of people",
-        "ar": "الْأَوْصَافُ الْبَشَرِيَّة",
-        "ur": "لوگوں کی تفصیلیں"
+        "en": "Who is described?",
+        "ar": "الْوَصْفُ",
+        "ur": "کس کا وصف بیان ہوا؟"
       },
       "explanation": {
-        "en": "When describing people, Arabic uses the adjective agreement rules you learned: human plural gets plural adjective.",
-        "ur": "لوگوں کی تفصیل کرتے وقت عربی وہی صفت کے قاعدے استعمال کرتی ہے جو آپ نے سیکھے: انسانی جمع کو جمع صفت ملتی ہے۔"
+        "en": "An adjective matches its noun in gender: مُجْتَهِدٌ goes with a boy student, مُجْتَهِدَةٌ with a girl student. Read the description with the noun it fits.",
+        "ur": "صفت اپنے اسم سے جنس میں ملتی ہے: مُجْتَهِدٌ طالب علم (لڑکے) کے ساتھ، مُجْتَهِدَةٌ طالبہ کے ساتھ۔ وصف کو اسی اسم کے ساتھ پڑھیں جس کا وہ ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "الْمُؤْمِنُونَ الصَّادِقُونَ",
-        "ar_plain": "المؤمنون الصادقون",
-        "translit": "al-mu'minoona as-saadiqoona",
-        "en": "the sincere believers",
-        "ur": "سچے مومنین"
+        "ar": "فِي الْفَصْلِ طَالِبٌ مُجْتَهِدٌ وَطَالِبَةٌ مُجْتَهِدَةٌ. هُوَ كَتَبَ الدَّرْسَ، وَهِيَ قَرَأَتْ كِتَابًا.",
+        "ar_plain": "في الفصل طالب مجتهد وطالبة مجتهدة. هو كتب الدرس، وهي قرات كتابا.",
+        "translit": "fī al-faṣli ṭālibun mujtahidun waṭālibatun mujtahidatun huwa kataba ad-darsa wahiya qaraʾat kitāban",
+        "en": "In the class there is a diligent boy student and a diligent girl student. He wrote the lesson, and she read a book.",
+        "ur": "کلاس میں ایک محنتی طالب علم (لڑکا) اور ایک محنتی طالبہ ہے۔ اس نے سبق لکھا اور اس نے ایک کتاب پڑھی۔"
       },
       "explanation": {
-        "en": "Human plural noun الْمُؤْمِنُونَ with definite plural adjective الصَّادِقُونَ — both ال and ونَ together.",
-        "ur": "انسانی جمع اسم الْمُؤْمِنُونَ کے ساتھ معرفہ جمع صفت الصَّادِقُونَ — ال اور ونَ دونوں ایک ساتھ۔"
+        "en": "Constructed text. Two students, told apart by gender: طَالِبٌ مُجْتَهِدٌ and طَالِبَةٌ مُجْتَهِدَةٌ.",
+        "ur": "بنایا ہوا متن۔ دو طالب علم، جنس سے پہچانے جاتے ہیں: طَالِبٌ مُجْتَهِدٌ اور طَالِبَةٌ مُجْتَهِدَةٌ۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Who is 'he' and 'she'?",
+        "ar": "هُوَ، هِيَ",
+        "ur": "'وہ' (مذکر) اور 'وہ' (مؤنث) کون؟"
+      },
+      "explanation": {
+        "en": "هُوَ (he) points back to the masculine noun; هِيَ (she) points back to the feminine noun. In the text above, هُوَ is the boy student and هِيَ is the girl student — the gender decides.",
+        "ur": "هُوَ (وہ، مذکر) مذکر اسم کی طرف لوٹتا ہے؛ هِيَ (وہ، مؤنث) مؤنث اسم کی طرف۔ اوپر کے متن میں هُوَ لڑکا طالب علم ہے اور هِيَ طالبہ — جنس فیصلہ کرتی ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "الْمَرْأَةُ الصَّالِحَةُ",
-        "ar_plain": "المرأة الصالحة",
-        "translit": "al-mar'atu as-saalihatu",
-        "en": "the virtuous woman",
-        "ur": "نیک عورت"
+        "ar": "الطَّالِبُ الَّذِي كَتَبَ الدَّرْسَ",
+        "ar_plain": "الطالب الذي كتب الدرس",
+        "translit": "aṭ-ṭālibu alladhī kataba ad-darsa",
+        "en": "the boy student who wrote the lesson",
+        "ur": "وہ طالب علم جس نے سبق لکھا"
       },
       "explanation": {
-        "en": "Singular feminine: صَالِحَةُ matches الْمَرْأَةُ in gender, definiteness, and case.",
-        "ur": "واحد مؤنث: صَالِحَةُ میں الْمَرْأَةُ کے ساتھ جنس، تعریف اور حکم میں ملتی ہے۔"
+        "en": "A description by a sentence: الَّذِي points back to الطَّالِبُ (Chapter 6). The description comes after the noun it describes.",
+        "ur": "جملے سے وصف: الَّذِي، الطَّالِبُ کی طرف لوٹتا ہے (باب 6)۔ وصف اس اسم کے بعد آتا ہے جس کا وہ ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "الطَّالِبَةُ الَّتِي قَرَأَتْ كِتَابًا",
+        "ar_plain": "الطالبة التي قرات كتابا",
+        "translit": "aṭ-ṭālibatu allatī qaraʾat kitāban",
+        "en": "the girl student who read a book",
+        "ur": "وہ طالبہ جس نے ایک کتاب پڑھی"
+      },
+      "explanation": {
+        "en": "The feminine pair: الَّتِي goes back to الطَّالِبَةُ (Chapter 8).",
+        "ur": "مؤنث جوڑی: الَّتِي، الطَّالِبَةُ کی طرف لوٹتا ہے (باب 8)۔"
       }
     },
     {
       "type": "GRAMMAR_NOTE",
       "title": {
-        "en": "Definite adjective rule",
-        "ur": "معرفہ صفت کا قاعدہ"
+        "en": "Context decides, not guessing",
+        "ur": "سیاق فیصلہ کرتا ہے، اندازہ نہیں"
       },
       "body": {
-        "en": "When a noun has ال, its adjective must also have ال. When a noun is indefinite, its adjective is also indefinite. Match in number, gender, case, and definiteness.",
-        "ur": "جب اسم پر ال ہو، تو اس کی صفت پر بھی ال ہونا چاہیے۔ جب اسم نکرہ ہو، تو صفت بھی نکرہ ہوتی ہے۔ تعداد، جنس، حکم اور تعریف میں ملانا۔"
+        "en": "If two nouns of the same gender could fit, the text itself must say which one is meant. When the gender of هُوَ / هِيَ picks out exactly one noun, that is your evidence.",
+        "ur": "اگر ایک ہی جنس کے دو اسم بیٹھ سکتے ہوں تو متن کو خود بتانا ہوگا کہ کون مراد ہے۔ جب هُوَ / هِيَ کی جنس بالکل ایک اسم کو چنتی ہو تو وہی آپ کا ثبوت ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "بَيْتٌ كَبِيرٌ",
-        "ar_plain": "بيت كبير",
-        "translit": "baytun kabirun",
-        "en": "a big house",
-        "ur": "ایک بڑا گھر"
+        "ar": "الَّذِي خَلَقَ فَسَوَّىٰ",
+        "ar_plain": "الذي خلق فسوى",
+        "translit": "alladhī khalaqa fasawwaā",
+        "en": "Who created and proportioned",
+        "ur": "جس نے پیدا کیا اور درست بنایا"
       },
       "explanation": {
-        "en": "Non-human singular: بَيْتٌ (indefinite) with كَبِيرٌ (indefinite). Both agree in indefiniteness.",
-        "ur": "غیر انسانی واحد: بَيْتٌ (نکرہ) کے ساتھ كَبِيرٌ (نکرہ)۔ دونوں نکرہ ہونے میں ملتے ہیں۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "صَادِقٌ",
-        "ar_plain": "صادق",
-        "translit": "saadiqun",
-        "en": "sincere / truthful",
-        "ur": "سچا"
-      },
-      "explanation": {
-        "en": "صَادِقٌ appears in the Quran in context of sincere believers. Root ص-د-ق.",
-        "ur": "صَادِقٌ قرآن میں سچے مومنین کے سياق میں آتا ہے۔ مادہ ص-د-ق۔"
+        "en": "In 87:1–2, الَّذِي points back to رَبِّكَ ('your Lord'): the description says who created. A reference reaches back to the noun it describes. (Al-A'la 87:2)",
+        "ur": "87:1–2 میں الَّذِي، رَبِّكَ ('تیرے رب') کی طرف لوٹتا ہے: وصف بتاتا ہے کہ کس نے پیدا کیا۔ حوالہ اس اسم کی طرف لوٹتا ہے جس کا وہ وصف ہے۔ (Al-A'la 87:2)"
       }
     }
   ],
@@ -114,285 +125,286 @@
       "type": "TAP_TRANSLATION",
       "id": "ch41-l02-ex01",
       "prompt": {
-        "ar": "الْمُؤْمِنُونَ الصَّادِقُونَ",
-        "ar_plain": "المؤمنون الصادقون",
-        "translit": "al-mu'minoona as-saadiqoona",
-        "en": "the sincere believers",
-        "ur": "سچے مومنین"
+        "ar": "طَالِبٌ مُجْتَهِدٌ وَطَالِبَةٌ مُجْتَهِدَةٌ",
+        "ar_plain": "طالب مجتهد وطالبة مجتهدة",
+        "translit": "ṭālibun mujtahidun waṭālibatun mujtahidatun",
+        "en": "a diligent boy student and a diligent girl student",
+        "ur": "ایک محنتی طالب علم اور ایک محنتی طالبہ"
       },
       "options": [
         {
-          "en": "the sincere believers",
-          "ur": "سچے مومنین"
+          "en": "a diligent girl student and a lazy boy student",
+          "ur": "ایک محنتی طالبہ اور ایک سست طالب علم"
         },
         {
-          "en": "the big believers",
-          "ur": "بڑے مومنین"
+          "en": "two diligent boy students",
+          "ur": "دو محنتی طالب علم"
         },
         {
-          "en": "sincere believers",
-          "ur": "سچے مومنین (نکرہ)"
+          "en": "a diligent boy student and a diligent girl student",
+          "ur": "ایک محنتی طالب علم اور ایک محنتی طالبہ"
         },
         {
-          "en": "the sincere women",
-          "ur": "سچی عورتیں"
+          "en": "the diligent students are in the class",
+          "ur": "محنتی طالب علم کلاس میں ہیں"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "الْمُؤْمِنُونَ is definite human plural. الْصَّادِقُونَ is its definite plural adjective. Both have ال.",
-        "ur": "الْمُؤْمِنُونَ معرفہ انسانی جمع ہے۔ الْصَّادِقُونَ اس کی معرفہ جمع صفت ہے۔ دونوں پر ال ہے۔"
+        "en": "Two nouns, each with its own matching adjective.",
+        "ur": "دو اسم، ہر ایک کی اپنی مطابقت رکھنے والی صفت۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch41-l02-ex02",
+      "mode": "TAP",
+      "sentence_ar": "طَالِبَةٌ ___",
+      "hint": {
+        "en": "a diligent girl student",
+        "ur": "ایک محنتی طالبہ"
+      },
+      "options": [
+        {
+          "ar": "مُجْتَهِدَةٌ",
+          "ar_plain": "مجتهدة",
+          "translit": "mujtahidatun",
+          "en": "diligent (f.)",
+          "ur": "محنتی (مؤنث)"
+        },
+        {
+          "ar": "مُجْتَهِدٌ",
+          "ar_plain": "مجتهد",
+          "translit": "mujtahidun",
+          "en": "diligent (m.)",
+          "ur": "محنتی (مذکر)"
+        },
+        {
+          "ar": "مُجْتَهِدُونَ",
+          "ar_plain": "مجتهدون",
+          "translit": "mujtahidūna",
+          "en": "diligent (m. pl.)",
+          "ur": "محنتی (مذکر جمع)"
+        },
+        {
+          "ar": "الْمُجْتَهِدُ",
+          "ar_plain": "المجتهد",
+          "translit": "al-mujtahidu",
+          "en": "the diligent (m.)",
+          "ur": "وہ محنتی (مذکر)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "مُجْتَهِدَةٌ",
+        "ar_plain": "مجتهدة",
+        "translit": "mujtahidatun",
+        "en": "diligent (f.)",
+        "ur": "محنتی (مؤنث)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The adjective takes the noun's gender: طَالِبَةٌ → مُجْتَهِدَةٌ.",
+        "ur": "صفت اسم کی جنس لیتی ہے: طَالِبَةٌ → مُجْتَهِدَةٌ۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch41-l02-ex02",
+      "id": "ch41-l02-ex03",
       "statement": {
-        "en": "In بَيْتٌ كَبِيرٌ, the noun and adjective are both indefinite — this is correct.",
-        "ur": "بَيْتٌ كَبِيرٌ میں اسم اور صفت دونوں نکرہ ہیں — یہ درست ہے۔"
+        "en": "In the text, هِيَ points to the girl student.",
+        "ur": "متن میں هِيَ طالبہ کی طرف اشارہ کرتا ہے۔",
+        "ar_example": {
+          "ar": "فِي الْفَصْلِ طَالِبٌ مُجْتَهِدٌ وَطَالِبَةٌ مُجْتَهِدَةٌ. هُوَ كَتَبَ الدَّرْسَ، وَهِيَ قَرَأَتْ كِتَابًا.",
+          "ar_plain": "في الفصل طالب مجتهد وطالبة مجتهدة. هو كتب الدرس، وهي قرات كتابا.",
+          "translit": "fī al-faṣli ṭālibun mujtahidun waṭālibatun mujtahidatun huwa kataba ad-darsa wahiya qaraʾat kitāban",
+          "en": "In the class there is a diligent boy student and a diligent girl student. He wrote the lesson, and she read a book.",
+          "ur": "کلاس میں ایک محنتی طالب علم (لڑکا) اور ایک محنتی طالبہ ہے۔ اس نے سبق لکھا اور اس نے ایک کتاب پڑھی۔"
+        }
       },
       "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هِيَ is feminine, and only the girl student is feminine in the text.",
+        "ur": "هِيَ مؤنث ہے اور متن میں صرف طالبہ مؤنث ہے۔"
+      }
     },
     {
-      "type": "FILL_BLANK",
-      "id": "ch41-l02-ex03",
-      "mode": "TAP",
-      "sentence_ar": "الْمَرْأَةُ ___",
-      "hint": {
-        "en": "The virtuous woman.",
-        "ur": "نیک عورت۔"
+      "type": "TRUE_FALSE",
+      "id": "ch41-l02-ex04",
+      "statement": {
+        "en": "In the text, هُوَ كَتَبَ الدَّرْسَ means the girl student wrote the lesson.",
+        "ur": "متن میں هُوَ كَتَبَ الدَّرْسَ کا مطلب ہے کہ طالبہ نے سبق لکھا۔",
+        "ar_example": {
+          "ar": "فِي الْفَصْلِ طَالِبٌ مُجْتَهِدٌ وَطَالِبَةٌ مُجْتَهِدَةٌ. هُوَ كَتَبَ الدَّرْسَ، وَهِيَ قَرَأَتْ كِتَابًا.",
+          "ar_plain": "في الفصل طالب مجتهد وطالبة مجتهدة. هو كتب الدرس، وهي قرات كتابا.",
+          "translit": "fī al-faṣli ṭālibun mujtahidun waṭālibatun mujtahidatun huwa kataba ad-darsa wahiya qaraʾat kitāban",
+          "en": "In the class there is a diligent boy student and a diligent girl student. He wrote the lesson, and she read a book.",
+          "ur": "کلاس میں ایک محنتی طالب علم (لڑکا) اور ایک محنتی طالبہ ہے۔ اس نے سبق لکھا اور اس نے ایک کتاب پڑھی۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هُوَ is masculine: the boy student wrote the lesson.",
+        "ur": "هُوَ مذکر ہے: طالب علم (لڑکے) نے سبق لکھا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch41-l02-ex05",
+      "prompt": {
+        "ar": "الطَّالِبَةُ الَّتِي قَرَأَتْ كِتَابًا",
+        "ar_plain": "الطالبة التي قرات كتابا",
+        "translit": "aṭ-ṭālibatu allatī qaraʾat kitāban",
+        "en": "the girl student who read a book",
+        "ur": "وہ طالبہ جس نے کتاب پڑھی"
       },
       "options": [
         {
-          "ar": "الصَّالِحَةُ",
-          "ar_plain": "الصالحة",
-          "translit": "as-saalihatu",
-          "en": "the virtuous",
-          "ur": "نیک"
+          "en": "the girl student who wrote a book",
+          "ur": "وہ طالبہ جس نے ایک کتاب لکھی"
         },
         {
-          "ar": "صَالِحَةٌ",
-          "ar_plain": "صالح",
-          "translit": "saalihatun",
-          "en": "virtuous (indef.)",
-          "ur": "نیک (نکرہ)"
+          "en": "the girl student who read a book",
+          "ur": "وہ طالبہ جس نے ایک کتاب پڑھی"
         },
         {
-          "ar": "صَالِحُونَ",
-          "ar_plain": "صالحون",
-          "translit": "saalihuuna",
-          "en": "virtuous (pl.)",
-          "ur": "نیک (جمع)"
+          "en": "the boy student who read a book",
+          "ur": "وہ طالب علم جس نے ایک کتاب پڑھی"
         },
         {
-          "ar": "كَبِيرَةٌ",
-          "ar_plain": "كبيرة",
-          "translit": "kabiiratun",
-          "en": "big (fem. sg.)",
-          "ur": "بڑی"
+          "en": "The girl student read a book.",
+          "ur": "طالبہ نے ایک کتاب پڑھی۔"
         }
       ],
-      "correct_answer": {
-        "ar": "الصَّالِحَةُ",
-        "ar_plain": "الصالحة",
-        "translit": "as-saalihatu",
-        "en": "the virtuous",
-        "ur": "نیک"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch41-l02-ex04",
-      "left_column": [
-        {
-          "ar": "الْمُؤْمِنُونَ الصَّادِقُونَ",
-          "ar_plain": "المؤمنون الصادقون",
-          "translit": "al-mu'minoona as-saadiqoona",
-          "en": "the sincere believers",
-          "ur": "سچے مومنین"
-        },
-        {
-          "ar": "بَيْتٌ كَبِيرٌ",
-          "ar_plain": "بيت كبير",
-          "translit": "baytun kabirun",
-          "en": "a big house",
-          "ur": "ایک بڑا گھر"
-        },
-        {
-          "ar": "الْمَرْأَةُ الصَّالِحَةُ",
-          "ar_plain": "المرأة الصالحة",
-          "translit": "al-mar'atu as-saalihatu",
-          "en": "the virtuous woman",
-          "ur": "نیک عورت"
-        },
-        {
-          "ar": "الطُّلَّابُ الْمُجْتَهِدُونَ",
-          "ar_plain": "الطلاب المجتهدون",
-          "translit": "at-tullaabul mujtahidoona",
-          "en": "the diligent students",
-          "ur": "محنتی طلبہ"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "the sincere believers",
-          "ur": "سچے مومنین"
-        },
-        {
-          "en": "a big house",
-          "ur": "ایک بڑا گھر"
-        },
-        {
-          "en": "the virtuous woman",
-          "ur": "نیک عورت"
-        },
-        {
-          "en": "the diligent students",
-          "ur": "محنتی طلبہ"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch41-l02-ex05",
-      "target_translation": {
-        "en": "The big house is in the city.",
-        "ur": "بڑا گھر شہر میں ہے۔"
-      },
-      "tiles": [
-        {
-          "ar": "بَيْتٌ",
-          "ar_plain": "بيت",
-          "translit": "baytun",
-          "en": "a house",
-          "ur": "گھر"
-        },
-        {
-          "ar": "كَبِيرٌ",
-          "ar_plain": "كبير",
-          "translit": "kabirun",
-          "en": "big",
-          "ur": "بڑا"
-        },
-        {
-          "ar": "فِي",
-          "ar_plain": "في",
-          "translit": "fi",
-          "en": "in",
-          "ur": "میں"
-        },
-        {
-          "ar": "الْمَدِينَةِ",
-          "ar_plain": "المدينة",
-          "translit": "al-madiinati",
-          "en": "the city",
-          "ur": "شہر"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "xp_value": 1
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A noun plus الَّتِي… is a description, not a full sentence.",
+        "ur": "اسم اور الَّتِي… ایک وصف ہے، مکمل جملہ نہیں۔"
+      }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch41-l02-ex06",
       "statement": {
-        "en": "When a noun has ال, the adjective must also have ال.",
-        "ur": "جب اسم پر ال ہو، تو اس کی صفت پر بھی ال ہونا چاہیے۔"
+        "en": "In the new text, هُوَ in the second sentence points to Fatima's brother.",
+        "ur": "نئے متن میں دوسرے جملے میں هُوَ فاطمہ کے بھائی کی طرف اشارہ کرتا ہے۔",
+        "ar_example": {
+          "ar": "جَلَسَتْ فَاطِمَةُ مَعَ أَخِيهَا فِي الْبَيْتِ. هِيَ قَرَأَتْ كِتَابًا، وَهُوَ كَتَبَ الدَّرْسَ.",
+          "ar_plain": "جلست فاطمة مع اخيها في البيت. هي قرات كتابا، وهو كتب الدرس.",
+          "translit": "jalasat fāṭimatu maʿa ʾakhīhā fī al-bayti hiya qaraʾat kitāban wahuwa kataba ad-darsa",
+          "en": "Fatima sat with her brother at home. She read a book, and he wrote the lesson.",
+          "ur": "فاطمہ اپنے بھائی کے ساتھ گھر میں بیٹھی۔ اس نے کتاب پڑھی اور اس نے سبق لکھا۔"
+        }
       },
       "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Fatima is feminine (هِيَ); her brother is the masculine one (هُوَ).",
+        "ur": "فاطمہ مؤنث ہے (هِيَ)؛ اس کا بھائی مذکر ہے (هُوَ)۔"
+      }
     },
     {
-      "type": "TAP_TRANSLATION",
+      "type": "TRUE_FALSE",
       "id": "ch41-l02-ex07",
-      "prompt": {
-        "ar": "بَيْتٌ كَبِيرٌ",
-        "ar_plain": "بيت كبير",
-        "translit": "baytun kabirun",
-        "en": "a big house",
-        "ur": "ایک بڑا گھر"
+      "statement": {
+        "en": "In the new text, Fatima's brother read a book.",
+        "ur": "نئے متن میں فاطمہ کے بھائی نے کتاب پڑھی۔",
+        "ar_example": {
+          "ar": "جَلَسَتْ فَاطِمَةُ مَعَ أَخِيهَا فِي الْبَيْتِ. هِيَ قَرَأَتْ كِتَابًا، وَهُوَ كَتَبَ الدَّرْسَ.",
+          "ar_plain": "جلست فاطمة مع اخيها في البيت. هي قرات كتابا، وهو كتب الدرس.",
+          "translit": "jalasat fāṭimatu maʿa ʾakhīhā fī al-bayti hiya qaraʾat kitāban wahuwa kataba ad-darsa",
+          "en": "Fatima sat with her brother at home. She read a book, and he wrote the lesson.",
+          "ur": "فاطمہ اپنے بھائی کے ساتھ گھر میں بیٹھی۔ اس نے کتاب پڑھی اور اس نے سبق لکھا۔"
+        }
       },
-      "options": [
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هِيَ قَرَأَتْ كِتَابًا — she (Fatima) read a book; he wrote the lesson.",
+        "ur": "هِيَ قَرَأَتْ كِتَابًا — اس (فاطمہ) نے کتاب پڑھی؛ بھائی نے سبق لکھا۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch41-l02-ex08",
+      "target_translation": {
+        "en": "the boy student who wrote the lesson",
+        "ur": "وہ طالب علم جس نے سبق لکھا"
+      },
+      "tiles": [
         {
-          "en": "a big house",
-          "ur": "ایک بڑا گھر"
+          "ar": "كَتَبَ",
+          "ar_plain": "كتب",
+          "translit": "kataba",
+          "en": "wrote",
+          "ur": "لکھا"
         },
         {
-          "en": "the big house",
-          "ur": "بڑا گھر"
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibu",
+          "en": "the boy student",
+          "ur": "طالب علم"
         },
         {
-          "en": "a house is big",
-          "ur": "گھر بڑا ہے"
+          "ar": "الدَّرْسَ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsa",
+          "en": "the lesson",
+          "ur": "سبق"
         },
         {
-          "en": "big houses",
-          "ur": "بڑے گھر"
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "alladhī",
+          "en": "who",
+          "ur": "جس نے"
         }
       ],
-      "correct_index": 0,
+      "correct_order": [
+        1,
+        3,
+        0,
+        2
+      ],
       "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Adjective agreement — singular and plural",
-      "ar": "مُطَابَقَةُ الصِّفَةِ — وَاحِد وَ جَمْع",
-      "ur": "صفت کا ملانا — واحد اور جمع"
+      "en": "A reference points back",
+      "ar": "الَّذِي",
+      "ur": "حوالہ پیچھے کی طرف لوٹتا ہے"
     },
     "ayah": {
-      "surah": 68,
-      "ayah": 4,
-      "label": "Al-Qalam 68:4",
-      "ar": "وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ",
-      "en": "And indeed, you are of a great moral character.",
-      "ur": "اور بے شک آپ اخلاق کے بڑے مرتبے پر ہیں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/068004.mp3"
+      "surah": 87,
+      "ayah": 2,
+      "label": "Al-A'la 87:2",
+      "ar": "الَّذِي خَلَقَ فَسَوَّىٰ",
+      "en": "Who created and proportioned",
+      "ur": "جس نے (انسان کو) بنایا پھر( اس کے اعضاء کو) درست کیا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087002.mp3"
     },
     "highlighted_word_indices": [
-      2,
-      3
+      0,
+      1
     ],
     "highlighted_words": [
-      "خُلُقٍ",
-      "عَظِيمٍ"
+      "الَّذِي",
+      "خَلَقَ"
     ],
     "noor_explanation": {
-      "en": "خُلُقٍ عَظِيمٍ — \"a great character\": the adjective عَظِيمٍ matches خُلُقٍ — indefinite, masculine, singular, genitive.",
-      "ur": "خُلُقٍ عَظِيمٍ — \"بڑا اخلاق\": صفت عَظِيمٍ، خُلُقٍ کے مطابق ہے — نکرہ، مذکر، واحد، مجرور۔"
+      "en": "الَّذِي points back to رَبِّكَ of the ayah before (87:1) — the description says who created. Find the noun a description or pronoun belongs to.",
+      "ur": "الَّذِي پچھلی آیت (87:1) کے رَبِّكَ کی طرف لوٹتا ہے — وصف بتاتا ہے کہ کس نے پیدا کیا۔ وہ اسم ڈھونڈیں جس کا وصف یا ضمیر ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Now you can describe any person or thing in Arabic — singular or plural, definite or indefinite. Your passage reading just became richer.",
-      "ur": "اب آپ کسی بھی شخص یا چیز کی عربی میں تفصیل دے سکتے ہیں — واحد یا جمع، معرفہ یا نکرہ۔ آپ کا متن پڑھنا اب پہلے سے بھروسے والا ہو گیا۔"
+      "en": "You can tell who is described and who 'he' or 'she' is. Next: phrases of place, time and company.",
+      "ur": "آپ بتا سکتے ہیں کہ کس کا وصف ہے اور 'وہ' کون ہے۔ اگلا: جگہ، وقت اور ساتھ کے ٹکڑے۔"
     }
   }
 }

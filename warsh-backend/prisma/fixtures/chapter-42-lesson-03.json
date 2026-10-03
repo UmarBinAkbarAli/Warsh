@@ -2,14 +2,13 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 42, Lesson 3 - Interrogative adverb لِمَاذَا (why).",
+    "_note": "Chapter 42, Lesson 3 (ch42-l03). Rebuilt 2026-10-03 in the proposal harvest, batch 4 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-42-content-proposal.md and its review amendments.",
+    "title": "Why? — لِمَاذَا",
+    "titleAr": "لِمَاذَا؟",
+    "titleUr": "کیوں؟ — لِمَاذَا",
     "chapter_order": 42,
     "lesson_order": 3,
-    "chapter_title": "Advanced Q&A (كَمْ/مَتَى/لِمَاذَا)",
-    "title": "Why? — لِمَاذَا",
-    "titleAr": "لِمَاذَا — كَيْفَ؟",
-    "source": "madina_reader_grammar_qa.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
@@ -17,82 +16,123 @@
       "surah": 61,
       "ayah": 2,
       "label": "As-Saff 61:2",
-      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا لِمَ تَقُولُونَ مَا لَا تَفْعَلُونَ",
-      "en": "O you who believe, why do you say what you do not do?",
-      "ur": "اے ایمان والو! تم وہ بات کیوں کہتے ہو جو کرتے نہیں؟",
+      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا لِمَ تَقُولُونَ مَا لَا تَفْعَلُونَ",
+      "en": "O you who have believed, why do you say what you do not do?",
+      "ur": "مومنو! تم ایسی باتیں کیوں کہا کرتے ہو جو کیا نہیں کرتے",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/061002.mp3"
     },
     "noor_intro": {
-      "en": "لِمَاذَا asks the deepest question: why? It asks for a reason, a purpose, a cause.",
-      "ur": "لِمَاذَا سب سے گہرا سوال پوچھتا ہے: کیوں؟ یہ وجہ، مقصد، سبب مانگتا ہے۔"
+      "en": "لِمَاذَا asks why — and the answer has a starter of its own, لِأَنَّ. The Quran asks 'why?' with the short form لِمَ.",
+      "ur": "لِمَاذَا پوچھتا ہے کیوں — اور جواب کا اپنا آغاز ہے، لِأَنَّ۔ قرآن مختصر روپ لِمَ سے 'کیوں؟' پوچھتا ہے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
         "en": "Why? — لِمَاذَا",
-        "ar": "لِمَاذَا — كَيْوَن؟",
+        "ar": "لِمَاذَا؟",
         "ur": "کیوں؟ — لِمَاذَا"
       },
       "explanation": {
-        "en": "لِمَاذَا means why? It is made from لِ (for) + مَاذَا (what). The answer usually starts with a لِ preposition: because, in order to.",
-        "ur": "لِمَاذَا کا مطلب کیوں؟ یہ لِ (کے لیے) + مَاذَا (کیا) سے بنا ہے۔ جواب عمومًا لِ preposition سے شروع ہوتا ہے: کیونکہ، اس لیے کہ۔"
+        "en": "لِمَاذَا asks for a reason. The answer is a statement that explains, not a single word.",
+        "ur": "لِمَاذَا وجہ پوچھتا ہے۔ جواب ایک پورا بیان ہوتا ہے جو وضاحت کرے، ایک لفظ نہیں۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
         "ar": "لِمَاذَا ذَهَبْتَ إِلَى الْمَسْجِدِ؟",
-        "ar_plain": "لماذا ذهبت الى المسجد",
-        "translit": "limazaa dhahabta ilal-masjid?",
+        "ar_plain": "لماذا ذهبت الى المسجد؟",
+        "translit": "limādhā dhahabta ʾilā al-masjidi",
         "en": "Why did you go to the masjid?",
-        "ur": "تم کیوں مسجد گئے؟"
+        "ur": "آپ مسجد کیوں گئے؟"
       },
       "explanation": {
-        "en": "لِمَاذَا asks for a reason. The answer might be: لِأَنَّ صَلَاتِي فِيهِ — because my prayer is in it.",
-        "ur": "لِمَاذَا وجہ مانگتا ہے۔ جواب یہ ہو سکتا ہے: لِأَنَّ صَلَاتِي فِيهِ — کیونکہ میری نماز اس میں ہے۔"
+        "en": "The verb is the same as in Lesson 2, but the question word is different — so the answer is different.",
+        "ur": "فعل وہی ہے جو سبق 2 میں تھا، مگر سوال کا لفظ مختلف ہے — اس لیے جواب بھی مختلف ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "لِأَنَّنِي أُحِبُّ الْعِلْمَ",
-        "ar_plain": "لأنني أحب العلم",
-        "translit": "li'annanii uhibbu al-'ilma",
-        "en": "Because I love knowledge",
-        "ur": "کیونکہ میں علم سے محبت کرتا ہوں"
+        "ar": "لِأَنَّ الْمَسْجِدَ قَرِيبٌ.",
+        "ar_plain": "لان المسجد قريب.",
+        "translit": "liʾanna al-masjida qarībun",
+        "en": "Because the masjid is near.",
+        "ur": "کیونکہ مسجد قریب ہے۔"
       },
       "explanation": {
-        "en": "لِأَنَّنِي is because I. This is how Arabic gives reasons — لِ + أَنَّ + subject.",
-        "ur": "لِأَنَّنِي کا مطلب کیونکہ میں۔ یہ عربی میں وجوہات دینے کا طریقہ ہے — لِ + أَنَّ + فاعل۔"
+        "en": "لِأَنَّ means 'because'. It starts the answer and a statement follows it. Learn لِأَنَّ as one unit for now.",
+        "ur": "لِأَنَّ کا مطلب ہے 'کیونکہ'۔ یہ جواب شروع کرتا ہے اور اس کے بعد ایک بیان آتا ہے۔ ابھی لِأَنَّ کو ایک اکائی کے طور پر سیکھیں۔"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Answering why questions",
-        "ar": "الْجَوَابُ عَنْ سُؤَالِ لِمَاذَا",
-        "ur": "کیوں کے سوالات کے جوابات"
-      },
-      "explanation": {
-        "en": "لِمَاذَا (why?) answers with لِ (because) — لِأَنَّ (because that). Example: لِمَاذَا تَقُومُ؟ — لِأَنَّنِي أُرِيدُ أَنْ أَصُومَ — Why do you wake? — Because I want to fast.",
-        "ur": "لِمَاذَا (کیوں؟) کا جواب لِ (کیونکہ) سے ہوتا ہے — لِأَنَّ (کیونکہ)۔ مثال: لِمَاذَا تَقُومُ؟ — لِأَنَّنِي أُرِيدُ أَنْ أَصُومَ — تم کیوں اٹھتے ہو؟ — کیونکہ میں روزہ رکھنا چاہتا ہوں۔"
-      }
-    },
-    {
-      "type": "WORD",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "عِلْمٌ",
-        "ar_plain": "علم",
-        "translit": "ilmun",
-        "en": "knowledge",
-        "ur": "علم"
+        "ar": "لِمَاذَا تَدْرُسُ الْعَرَبِيَّةَ؟ — لِأَنَّ الْعَرَبِيَّةَ لُغَةُ الْقُرْآنِ.",
+        "ar_plain": "لماذا تدرس العربية؟ — لان العربية لغة القران.",
+        "translit": "limādhā tadrusu al-ʿarabiyyata — liʾanna al-ʿarabiyyata lughatu al-qurʾāni",
+        "en": "Why do you study Arabic? — Because Arabic is the language of the Quran.",
+        "ur": "آپ عربی کیوں پڑھتے ہیں؟ — کیونکہ عربی قرآن کی زبان ہے۔"
       },
       "explanation": {
-        "en": "عِلْمٌ appears throughout the Quran. The phrase طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ — seeking knowledge is obligatory on every Muslim — is well known.",
-        "ur": "عِلْمٌ قرآن میں ہر جگہ آتا ہے۔ یہ عبارت مشہور ہے: طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ — علم حاصل کرنا ہر مسلمان پر فرض ہے۔"
+        "en": "تَدْرُسُ means 'you study' and لُغَةٌ means 'language'. The reason is a full statement: Arabic is the language of the Quran.",
+        "ur": "تَدْرُسُ کا مطلب ہے 'آپ پڑھتے ہیں (مطالعہ کرتے ہیں)' اور لُغَةٌ کا مطلب ہے 'زبان'۔ وجہ ایک پورا بیان ہے: عربی قرآن کی زبان ہے۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Same verb, different question",
+        "ar": "لِمَاذَا أَمْ مَتَى؟",
+        "ur": "ایک فعل، مختلف سوال"
+      },
+      "examples": [
+        {
+          "ar": "لِمَاذَا ذَهَبْتَ؟",
+          "ar_plain": "لماذا ذهبت؟",
+          "translit": "limādhā dhahabta",
+          "en": "Why did you go?",
+          "ur": "آپ کیوں گئے؟"
+        },
+        {
+          "ar": "مَتَى ذَهَبْتَ؟",
+          "ar_plain": "متى ذهبت؟",
+          "translit": "matā dhahabta",
+          "en": "When did you go?",
+          "ur": "آپ کب گئے؟"
+        }
+      ],
+      "explanation": {
+        "en": "The question word decides what the answer must give: لِمَاذَا → a reason, مَتَى → a time.",
+        "ur": "سوال کا لفظ طے کرتا ہے کہ جواب میں کیا ہونا چاہیے: لِمَاذَا → وجہ، مَتَى → وقت۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "A reason is a statement",
+        "ur": "وجہ ایک بیان ہے"
+      },
+      "body": {
+        "en": "Answer لِمَاذَا with لِأَنَّ + a statement. A bare word such as أَمْسِ or ٣ does not answer لِمَاذَا. In the Quran لِمَ is a shorter way to say لِمَاذَا.",
+        "ur": "لِمَاذَا کا جواب لِأَنَّ + ایک بیان سے دیں۔ صرف أَمْسِ یا ٣ جیسا لفظ لِمَاذَا کا جواب نہیں۔ قرآن میں لِمَ، لِمَاذَا کا مختصر روپ ہے۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "لِمَ تَقُولُونَ مَا لَا تَفْعَلُونَ",
+        "ar_plain": "لم تقولون ما لا تفعلون",
+        "translit": "lima taqūlūna mā lā tafʿalūna",
+        "en": "Why do you say what you do not do?",
+        "ur": "تم وہ بات کیوں کہتے ہو جو کرتے نہیں؟"
+      },
+      "explanation": {
+        "en": "In 61:2 لِمَ is the short form of لِمَاذَا: 'why?'. The ayah asks the question; it does not hand you a reason. (As-Saff 61:2)",
+        "ur": "61:2 میں لِمَ، لِمَاذَا کا مختصر روپ ہے: 'کیوں؟'۔ آیت سوال کرتی ہے؛ وجہ نہیں بتاتی۔ (As-Saff 61:2)"
       }
     }
   ],
@@ -101,119 +141,122 @@
       "type": "TAP_TRANSLATION",
       "id": "ch42-l03-ex01",
       "prompt": {
-        "ar": "لِمَاذَا ذَهَبْتَ؟",
-        "ar_plain": "لماذا ذهبت",
-        "translit": "limazaa dhahabta?",
-        "en": "Why did you go?",
-        "ur": "تم کیوں گئے؟"
+        "ar": "لِمَاذَا ذَهَبْتَ إِلَى الْمَسْجِدِ؟",
+        "ar_plain": "لماذا ذهبت الى المسجد؟",
+        "translit": "limādhā dhahabta ʾilā al-masjidi",
+        "en": "Why did you go to the masjid?",
+        "ur": "آپ مسجد کیوں گئے؟"
       },
       "options": [
         {
-          "en": "Why did you go?",
-          "ur": "تم کیوں گئے؟"
-        },
-        {
-          "en": "When did you go?",
-          "ur": "تم کب گئے؟"
+          "en": "When did you go to the masjid?",
+          "ur": "آپ مسجد کب گئے؟"
         },
         {
           "en": "Where did you go?",
-          "ur": "تم کہاں گئے؟"
+          "ur": "آپ کہاں گئے؟"
         },
         {
-          "en": "How many went?",
-          "ur": "کتنے گئے؟"
+          "en": "Why did you go to the masjid?",
+          "ur": "آپ مسجد کیوں گئے؟"
+        },
+        {
+          "en": "How many went to the masjid?",
+          "ur": "کتنے مسجد گئے؟"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لِمَاذَا is the why question word — it asks for a reason or purpose.",
-        "ur": "لِمَاذَا کیوں کا سوالی لفظ ہے — یہ وجہ یا مقصد مانگتا ہے۔"
+        "en": "لِمَاذَا asks for a reason: 'why'.",
+        "ur": "لِمَاذَا وجہ پوچھتا ہے: 'کیوں'۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch42-l03-ex02",
+      "prompt_line": {
+        "ar": "لِمَاذَا ذَهَبْتَ إِلَى الْمَسْجِدِ؟",
+        "ar_plain": "لماذا ذهبت الى المسجد؟",
+        "translit": "limādhā dhahabta ʾilā al-masjidi",
+        "en": "Why did you go to the masjid?",
+        "ur": "آپ مسجد کیوں گئے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "ذَهَبْتُ أَمْسِ.",
+          "ar_plain": "ذهبت امس.",
+          "translit": "dhahabtu ʾamsi",
+          "en": "I went yesterday.",
+          "ur": "میں کل (گزشتہ) گیا۔"
+        },
+        {
+          "ar": "لِأَنَّ الْمَسْجِدَ قَرِيبٌ.",
+          "ar_plain": "لان المسجد قريب.",
+          "translit": "liʾanna al-masjida qarībun",
+          "en": "Because the masjid is near.",
+          "ur": "کیونکہ مسجد قریب ہے۔"
+        },
+        {
+          "ar": "فِي الْمَسْجِدِ.",
+          "ar_plain": "في المسجد.",
+          "translit": "fī al-masjidi",
+          "en": "In the masjid.",
+          "ur": "مسجد میں۔"
+        },
+        {
+          "ar": "٣.",
+          "ar_plain": "٣.",
+          "translit": "٣",
+          "en": "3.",
+          "ur": "۳۔"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A why-question needs a reason, and a reason starts with لِأَنَّ.",
+        "ur": "کیوں کے سوال کو وجہ چاہیے اور وجہ لِأَنَّ سے شروع ہوتی ہے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch42-l03-ex02",
+      "id": "ch42-l03-ex03",
       "statement": {
-        "en": "لِأَنَّنِي means because I. It answers a why question.",
-        "ur": "لِأَنَّنِي کا مطلب ہے کیونکہ میں۔ یہ کیوں کے سوال کا جواب ہے۔"
+        "en": "لِأَنَّ starts the answer to لِمَاذَا.",
+        "ur": "لِأَنَّ، لِمَاذَا کے جواب کو شروع کرتا ہے۔",
+        "ar_example": {
+          "ar": "لِأَنَّ الْمَسْجِدَ قَرِيبٌ.",
+          "ar_plain": "لان المسجد قريب.",
+          "translit": "liʾanna al-masjida qarībun",
+          "en": "Because the masjid is near.",
+          "ur": "کیونکہ مسجد قریب ہے۔"
+        }
       },
       "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes: لِأَنَّ means 'because' and begins the reason.",
+        "ur": "جی ہاں: لِأَنَّ کا مطلب 'کیونکہ' ہے اور وجہ کو شروع کرتا ہے۔"
+      }
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch42-l03-ex03",
+      "id": "ch42-l03-ex04",
       "mode": "TAP",
-      "sentence_ar": "لِمَاذَا ___؟",
+      "sentence_ar": "لِمَاذَا تَدْرُسُ الْعَرَبِيَّةَ؟ — ___ الْعَرَبِيَّةَ لُغَةُ الْقُرْآنِ.",
       "hint": {
-        "en": "Why are you reading?",
-        "ur": "تم کیوں پڑھ رہے ہو؟"
+        "en": "Because Arabic is the language of the Quran.",
+        "ur": "کیونکہ عربی قرآن کی زبان ہے۔"
       },
       "options": [
         {
-          "ar": "تَقْرَأُ",
-          "ar_plain": "تقرأ",
-          "translit": "taqra'u",
-          "en": "you read",
-          "ur": "تم پڑھتے ہو"
-        },
-        {
-          "ar": "مَا اسْمُكَ",
-          "ar_plain": "ما اسمك",
-          "translit": "maa ismuka",
-          "en": "what is your name",
-          "ur": "آپ کا نام کیا ہے"
-        },
-        {
-          "ar": "ذَهَبْتَ",
-          "ar_plain": "ذهبت",
-          "translit": "dhahabta",
-          "en": "you went",
-          "ur": "تم گئے"
-        },
-        {
-          "ar": "كَمْ سَنَةً",
-          "ar_plain": "كم سنة",
-          "translit": "kam sanatan",
-          "en": "how many years",
-          "ur": "کتنے سال"
-        }
-      ],
-      "correct_answer": {
-        "ar": "تَقْرَأُ",
-        "ar_plain": "تقرأ",
-        "translit": "taqra'u",
-        "en": "you read",
-        "ur": "تم پڑھتے ہو"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch42-l03-ex04",
-      "left_column": [
-        {
-          "ar": "لِمَاذَا",
-          "ar_plain": "لماذا",
-          "translit": "limazaa",
-          "en": "why",
-          "ur": "کیوں"
-        },
-        {
           "ar": "مَتَى",
           "ar_plain": "متى",
-          "translit": "mataa",
+          "translit": "matā",
           "en": "when",
           "ur": "کب"
-        },
-        {
-          "ar": "أَيْنَ",
-          "ar_plain": "أين",
-          "translit": "ayna",
-          "en": "where",
-          "ur": "کہاں"
         },
         {
           "ar": "كَمْ",
@@ -221,30 +264,138 @@
           "translit": "kam",
           "en": "how many",
           "ur": "کتنے"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "why",
-          "ur": "کیوں"
         },
         {
-          "en": "when",
-          "ur": "کب"
-        },
-        {
+          "ar": "أَيْنَ",
+          "ar_plain": "اين",
+          "translit": "ʾayna",
           "en": "where",
           "ur": "کہاں"
         },
         {
-          "en": "how many",
-          "ur": "کتنے"
+          "ar": "لِأَنَّ",
+          "ar_plain": "لان",
+          "translit": "liʾanna",
+          "en": "because",
+          "ur": "کیونکہ"
+        }
+      ],
+      "correct_answer": {
+        "ar": "لِأَنَّ",
+        "ar_plain": "لان",
+        "translit": "liʾanna",
+        "en": "because",
+        "ur": "کیونکہ"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The reason starts with لِأَنَّ.",
+        "ur": "وجہ لِأَنَّ سے شروع ہوتی ہے۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch42-l03-ex05",
+      "prompt_line": {
+        "ar": "لِمَاذَا تَقْرَأُ هَذَا الْكِتَابَ؟",
+        "ar_plain": "لماذا تقرا هذا الكتاب؟",
+        "translit": "limādhā taqraʾu hadhā al-kitāba",
+        "en": "Why do you read this book?",
+        "ur": "آپ یہ کتاب کیوں پڑھتے ہیں؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "لِأَنَّ الْكِتَابَ جَمِيلٌ.",
+          "ar_plain": "لان الكتاب جميل.",
+          "translit": "liʾanna al-kitāba jamīlun",
+          "en": "Because the book is beautiful.",
+          "ur": "کیونکہ کتاب خوبصورت ہے۔"
+        },
+        {
+          "ar": "أَقْرَأُ غَدًا.",
+          "ar_plain": "اقرا غدا.",
+          "translit": "ʾaqraʾu ghadan",
+          "en": "I read tomorrow.",
+          "ur": "میں کل پڑھتا ہوں۔"
+        },
+        {
+          "ar": "ثَلَاثَةُ كُتُبٍ.",
+          "ar_plain": "ثلاثة كتب.",
+          "translit": "thalāthatu kutubin",
+          "en": "Three books.",
+          "ur": "تین کتابیں۔"
+        },
+        {
+          "ar": "فِي الْبَيْتِ.",
+          "ar_plain": "في البيت.",
+          "translit": "fī al-bayti",
+          "en": "At home.",
+          "ur": "گھر میں۔"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A reason starts with لِأَنَّ and explains.",
+        "ur": "وجہ لِأَنَّ سے شروع ہوتی ہے اور وضاحت کرتی ہے۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch42-l03-ex06",
+      "left_column": [
+        {
+          "ar": "لِمَاذَا ذَهَبْتَ؟",
+          "ar_plain": "لماذا ذهبت؟",
+          "translit": "limādhā dhahabta",
+          "en": "Why did you go?",
+          "ur": "آپ کیوں گئے؟"
+        },
+        {
+          "ar": "مَتَى ذَهَبْتَ؟",
+          "ar_plain": "متى ذهبت؟",
+          "translit": "matā dhahabta",
+          "en": "When did you go?",
+          "ur": "آپ کب گئے؟"
+        },
+        {
+          "ar": "أَيْنَ ذَهَبْتَ؟",
+          "ar_plain": "اين ذهبت؟",
+          "translit": "ʾayna dhahabta",
+          "en": "Where did you go?",
+          "ur": "آپ کہاں گئے؟"
+        },
+        {
+          "ar": "كَمْ كِتَابًا قَرَأْتَ؟",
+          "ar_plain": "كم كتابا قرات؟",
+          "translit": "kam kitāban qaraʾta",
+          "en": "How many books did you read?",
+          "ur": "آپ نے کتنی کتابیں پڑھیں؟"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "a number",
+          "ur": "ایک تعداد"
+        },
+        {
+          "en": "a time",
+          "ur": "ایک وقت"
+        },
+        {
+          "en": "a reason",
+          "ur": "ایک وجہ"
+        },
+        {
+          "en": "a place",
+          "ur": "ایک جگہ"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
+          2
         ],
         [
           1,
@@ -252,131 +403,120 @@
         ],
         [
           2,
-          2
+          3
         ],
         [
           3,
-          3
+          0
         ]
       ],
       "xp_value": 1
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch42-l03-ex05",
+      "id": "ch42-l03-ex07",
       "target_translation": {
-        "en": "Because I love knowledge.",
-        "ur": "کیونکہ میں علم سے محبت کرتا ہوں۔"
+        "en": "Because the masjid is near.",
+        "ur": "کیونکہ مسجد قریب ہے۔"
       },
       "tiles": [
         {
-          "ar": "لِأَنَّنِي",
-          "ar_plain": "لأنني",
-          "translit": "li'annanii",
-          "en": "because I",
-          "ur": "کیونکہ میں"
+          "ar": "الْمَسْجِدَ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjida",
+          "en": "the masjid",
+          "ur": "مسجد"
         },
         {
-          "ar": "مُحِبُّ",
-          "ar_plain": "محب",
-          "translit": "muhibb",
-          "en": "love",
-          "ur": "محبت کرنے والا"
+          "ar": "قَرِيبٌ",
+          "ar_plain": "قريب",
+          "translit": "qarībun",
+          "en": "near",
+          "ur": "قریب"
         },
         {
-          "ar": "الْعِلْمَ",
-          "ar_plain": "العلم",
-          "translit": "al-'ilma",
-          "en": "knowledge",
-          "ur": "علم"
-        },
-        {
-          "ar": "الْكِتَابَ",
-          "ar_plain": "الكتاب",
-          "translit": "al-kitaaba",
-          "en": "the book",
-          "ur": "کتاب"
+          "ar": "لِأَنَّ",
+          "ar_plain": "لان",
+          "translit": "liʾanna",
+          "en": "because",
+          "ur": "کیونکہ"
         }
       ],
       "correct_order": [
+        2,
         0,
-        1,
-        2
+        1
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch42-l03-ex06",
-      "statement": {
-        "en": "لِمَاذَا asks for a reason. لِأَنَّ answers with a reason.",
-        "ur": "لِمَاذَا وجہ پوچھتا ہے۔ لِأَنَّ وجہ سے جواب دیتا ہے۔"
-      },
-      "correct_answer": true,
       "xp_value": 1
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch42-l03-ex07",
+      "id": "ch42-l03-ex08",
       "prompt": {
-        "ar": "لِأَنَّ الْمَاءَ ضَرُورِيُّ لِلْحَيَاةِ",
-        "ar_plain": "لأن الماء ضروري للحياة",
-        "translit": "li'anna al-maa'a daruuriiyu lil-hayaati",
-        "en": "Because water is necessary for life",
-        "ur": "کیونکہ پانی زندگی کے لیے ضروری ہے"
+        "ar": "لِمَ تَقُولُونَ مَا لَا تَفْعَلُونَ؟",
+        "ar_plain": "لم تقولون ما لا تفعلون؟",
+        "translit": "lima taqūlūna mā lā tafʿalūna",
+        "en": "Why do you say what you do not do?",
+        "ur": "تم وہ بات کیوں کہتے ہو جو کرتے نہیں؟"
       },
       "options": [
         {
-          "en": "Because water is necessary for life",
-          "ur": "کیونکہ پانی زندگی کے لیے ضروری ہے"
+          "en": "When will you say what you will do?",
+          "ur": "تم وہ بات کب کہو گے جو کرو گے؟"
         },
         {
-          "en": "Because water is beautiful",
-          "ur": "کیونکہ پانی خوبصورت ہے"
+          "en": "Why do you say what you do not do?",
+          "ur": "تم وہ بات کیوں کہتے ہو جو کرتے نہیں؟"
         },
         {
-          "en": "Water is life",
-          "ur": "پانی زندگی ہے"
+          "en": "How many words do you say?",
+          "ur": "تم کتنے الفاظ کہتے ہو؟"
         },
         {
-          "en": "Is water necessary?",
-          "ur": "کیا پانی ضروری ہے؟"
+          "en": "Where do you say it?",
+          "ur": "تم اسے کہاں کہتے ہو؟"
         }
       ],
-      "correct_index": 0,
-      "xp_value": 1
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لِمَ is a short form of لِمَاذَا: 'why'.",
+        "ur": "لِمَ، لِمَاذَا کا مختصر روپ ہے: 'کیوں'۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Why? — لِمَاذَا",
-      "ar": "لِمَاذَا — كَيْوَن؟",
-      "ur": "کیوں؟ — لِمَاذَا"
+      "en": "لِمَ — why?",
+      "ar": "لِمَاذَا",
+      "ur": "لِمَ — کیوں؟"
     },
     "ayah": {
       "surah": 61,
       "ayah": 2,
       "label": "As-Saff 61:2",
-      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا لِمَ تَقُولُونَ مَا لَا تَفْعَلُونَ",
-      "en": "O you who believe, why do you say what you do not do?",
-      "ur": "اے ایمان والو! تم وہ بات کیوں کہتے ہو جو کرتے نہیں؟",
+      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا لِمَ تَقُولُونَ مَا لَا تَفْعَلُونَ",
+      "en": "O you who have believed, why do you say what you do not do?",
+      "ur": "مومنو! تم ایسی باتیں کیوں کہا کرتے ہو جو کیا نہیں کرتے",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/061002.mp3"
     },
     "highlighted_word_indices": [
-      4
+      4,
+      5
     ],
     "highlighted_words": [
-      "لِمَ"
+      "لِمَ",
+      "تَقُولُونَ"
     ],
     "noor_explanation": {
-      "en": "لِمَ is a short form of لِمَاذَا — \"why?\". لِمَ تَقُولُونَ مَا لَا تَفْعَلُونَ = \"why do you say what you do not do?\"",
-      "ur": "لِمَ، لِمَاذَا کی مختصر صورت ہے — \"کیوں؟\"۔ لِمَ تَقُولُونَ مَا لَا تَفْعَلُونَ = \"تم وہ بات کیوں کہتے ہو جو کرتے نہیں؟\""
+      "en": "لِمَ is a short form of لِمَاذَا: 'why do you say what you do not do?'. The ayah poses the question and leaves you to think.",
+      "ur": "لِمَ، لِمَاذَا کا مختصر روپ ہے: 'تم وہ بات کیوں کہتے ہو جو کرتے نہیں؟'۔ آیت سوال رکھتی ہے اور سوچنے کو چھوڑ دیتی ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "لِمَاذَا and لِأَنَّ now complete your question toolkit. Why? Because. The conversation in Arabic just became much deeper.",
-      "ur": "لِمَاذَا اور لِأَنَّ اب آپ کے سوالی اوزاروں کو مکمل کرتے ہیں۔ کیوں؟ کیونکہ۔ عربی میں گفتگو اب کہیں زیادہ گہری ہو گئی۔"
+      "en": "لِمَاذَا asks for a reason; لِأَنَّ starts it. Next: كَيْفَ and mixed questions.",
+      "ur": "لِمَاذَا وجہ پوچھتا ہے؛ لِأَنَّ اسے شروع کرتا ہے۔ اگلا: كَيْفَ اور ملے جلے سوال۔"
     }
   }
 }

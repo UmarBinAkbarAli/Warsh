@@ -1,0 +1,448 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 45, final test (ch45-test, new). Added 2026-10-03 in the proposal harvest, batch 4, from Docs/proposals/chapter-45-content-proposal.md. Twelve multiple-choice questions in six strands of two: the default ending (q01–02), أَنْ / لَنْ (q03–04), purpose كَيْ / لِـ (q05–06), the حَتَّى endpoint (q07–08), prohibition (q09–10) and governor-to-ending matching (q11–12). One supplied stem family per item (يَذْهَبُ / يَكْتُبُ / أَجْلِسُ / يَحْضُرُ); options are neutral Arabic so no label gives the mood away. Pass mark 80 %: 9/12 fails, 10/12 passes.",
+    "title": "Chapter 45 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الْخَامِسِ وَالْأَرْبَعِينَ",
+    "titleUr": "باب 45 کا آخری امتحان",
+    "chapter_order": 45,
+    "lesson_order": 10,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 3,
+      "ayah": 92,
+      "label": "Al Imran 3:92",
+      "ar": "لَن تَنَالُوا الْبِرَّ حَتَّىٰ تُنفِقُوا مِمَّا تُحِبُّونَ ۚ وَمَا تُنفِقُوا مِن شَيْءٍ فَإِنَّ اللَّهَ بِهِ عَلِيمٌ",
+      "en": "Never will you attain the good [reward] until you spend [in the way of Allāh] from that which you love. And whatever you spend - indeed, Allāh is Knowing of it.",
+      "ur": "(مومنو!) جب تک تم ان چیزوں میں سے جو تمھیں عزیز ہیں (راہِ خدا میں) صرف نہ کرو گے کبھی نیکی حاصل نہ کر سکو گے اور جو چیز تم صرف کرو گے خدا اس کو جانتا ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003092.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 45.",
+      "ur": "باب 45 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 45,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch45-test-q01",
+        "topic": {
+          "en": "Default state",
+          "ur": "بنیادی حالت"
+        },
+        "prompt": {
+          "en": "Which verb completes 'The student goes to the school' (nothing governs it)?",
+          "ur": "کون سا فعل جملہ 'طالب علم اسکول جاتا ہے' کو مکمل کرتا ہے (اسے کوئی عامل نہیں)؟"
+        },
+        "arabic": "الطَّالِبُ ___ إِلَى الْمَدْرَسَةِ.",
+        "options": [
+          {
+            "en": "يَذْهَبُ",
+            "ur": "يَذْهَبُ"
+          },
+          {
+            "en": "يَذْهَبَ",
+            "ur": "يَذْهَبَ"
+          },
+          {
+            "en": "يَذْهَبْ",
+            "ur": "يَذْهَبْ"
+          },
+          {
+            "en": "اذْهَبْ",
+            "ur": "اذْهَبْ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch45-test-q02",
+        "topic": {
+          "en": "Default state",
+          "ur": "بنیادی حالت"
+        },
+        "prompt": {
+          "en": "Which verb completes 'Ahmad writes the lesson every day'?",
+          "ur": "کون سا فعل جملہ 'احمد ہر دن سبق لکھتا ہے' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "أَحْمَدُ ___ الدَّرْسَ كُلَّ يَوْمٍ.",
+        "options": [
+          {
+            "en": "يَكْتُبَ",
+            "ur": "يَكْتُبَ"
+          },
+          {
+            "en": "يَكْتُبُ",
+            "ur": "يَكْتُبُ"
+          },
+          {
+            "en": "يَكْتُبْ",
+            "ur": "يَكْتُبْ"
+          },
+          {
+            "en": "كَتَبَ",
+            "ur": "كَتَبَ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch45-test-q03",
+        "topic": {
+          "en": "أَنْ",
+          "ur": "أَنْ"
+        },
+        "prompt": {
+          "en": "Which verb completes 'I want to go'?",
+          "ur": "کون سا فعل جملہ 'میں جانا چاہتا ہوں' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "أُرِيدُ أَنْ ___.",
+        "options": [
+          {
+            "en": "أَذْهَبُ",
+            "ur": "أَذْهَبُ"
+          },
+          {
+            "en": "أَذْهَبْ",
+            "ur": "أَذْهَبْ"
+          },
+          {
+            "en": "ذَهَبْتُ",
+            "ur": "ذَهَبْتُ"
+          },
+          {
+            "en": "أَذْهَبَ",
+            "ur": "أَذْهَبَ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch45-test-q04",
+        "topic": {
+          "en": "لَنْ",
+          "ur": "لَنْ"
+        },
+        "prompt": {
+          "en": "Which verb completes 'Ahmad will not go to the market'?",
+          "ur": "کون سا فعل جملہ 'احمد بازار نہیں جائے گا' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "لَنْ ___ أَحْمَدُ إِلَى السُّوقِ.",
+        "options": [
+          {
+            "en": "يَذْهَبُ",
+            "ur": "يَذْهَبُ"
+          },
+          {
+            "en": "يَذْهَبْ",
+            "ur": "يَذْهَبْ"
+          },
+          {
+            "en": "يَذْهَبَ",
+            "ur": "يَذْهَبَ"
+          },
+          {
+            "en": "ذَهَبَ",
+            "ur": "ذَهَبَ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch45-test-q05",
+        "topic": {
+          "en": "Purpose with كَيْ",
+          "ur": "كَيْ سے مقصد"
+        },
+        "prompt": {
+          "en": "Which verb completes 'I sit so that I write the lesson'?",
+          "ur": "کون سا فعل جملہ 'میں بیٹھتا ہوں تاکہ سبق لکھوں' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "أَجْلِسُ كَيْ ___ الدَّرْسَ.",
+        "options": [
+          {
+            "en": "أَكْتُبُ",
+            "ur": "أَكْتُبُ"
+          },
+          {
+            "en": "أَكْتُبْ",
+            "ur": "أَكْتُبْ"
+          },
+          {
+            "en": "أَكْتُبَ",
+            "ur": "أَكْتُبَ"
+          },
+          {
+            "en": "كَتَبْتُ",
+            "ur": "كَتَبْتُ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch45-test-q06",
+        "topic": {
+          "en": "Purpose with لِـ",
+          "ur": "لِـ سے مقصد"
+        },
+        "prompt": {
+          "en": "Which choice completes the same meaning with لِـ?",
+          "ur": "کون سا انتخاب لِـ کے ساتھ وہی مفہوم مکمل کرتا ہے؟"
+        },
+        "arabic": "أَجْلِسُ ___ الدَّرْسَ.",
+        "options": [
+          {
+            "en": "لِأَكْتُبَ",
+            "ur": "لِأَكْتُبَ"
+          },
+          {
+            "en": "لِأَكْتُبُ",
+            "ur": "لِأَكْتُبُ"
+          },
+          {
+            "en": "لِأَكْتُبْ",
+            "ur": "لِأَكْتُبْ"
+          },
+          {
+            "en": "كَتَبْتُ",
+            "ur": "كَتَبْتُ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch45-test-q07",
+        "topic": {
+          "en": "Endpoint with حَتَّى",
+          "ur": "حَتَّى سے انتہا"
+        },
+        "prompt": {
+          "en": "Which verb completes 'I sit here until my brother arrives'?",
+          "ur": "کون سا فعل جملہ 'میں یہاں بیٹھتا ہوں جب تک میرا بھائی آ نہ جائے' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "أَجْلِسُ هُنَا حَتَّى ___ أَخِي.",
+        "options": [
+          {
+            "en": "يَحْضُرُ",
+            "ur": "يَحْضُرُ"
+          },
+          {
+            "en": "يَحْضُرْ",
+            "ur": "يَحْضُرْ"
+          },
+          {
+            "en": "حَضَرَ",
+            "ur": "حَضَرَ"
+          },
+          {
+            "en": "يَحْضُرَ",
+            "ur": "يَحْضُرَ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch45-test-q08",
+        "topic": {
+          "en": "Endpoint with حَتَّى",
+          "ur": "حَتَّى سے انتہا"
+        },
+        "prompt": {
+          "en": "In this sentence, what does حَتَّى express?",
+          "ur": "اس جملے میں حَتَّى کیا ظاہر کرتا ہے؟"
+        },
+        "arabic": "أَدْرُسُ حَتَّى أَنْجَحَ.",
+        "options": [
+          {
+            "en": "The reason he studied yesterday",
+            "ur": "وہ وجہ جس کے لیے اس نے کل پڑھا"
+          },
+          {
+            "en": "The point the studying continues up to",
+            "ur": "وہ نکتہ جہاں تک پڑھائی جاری رہتی ہے"
+          },
+          {
+            "en": "The place where he studies",
+            "ur": "وہ جگہ جہاں وہ پڑھتا ہے"
+          },
+          {
+            "en": "That he did not study",
+            "ur": "کہ اس نے نہیں پڑھا"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch45-test-q09",
+        "topic": {
+          "en": "Prohibition",
+          "ur": "نہی"
+        },
+        "prompt": {
+          "en": "Which verb completes 'Do not sit here'?",
+          "ur": "کون سا فعل جملہ 'یہاں مت بیٹھو' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "لَا ___ هُنَا.",
+        "options": [
+          {
+            "en": "تَجْلِسُ",
+            "ur": "تَجْلِسُ"
+          },
+          {
+            "en": "تَجْلِسَ",
+            "ur": "تَجْلِسَ"
+          },
+          {
+            "en": "تَجْلِسْ",
+            "ur": "تَجْلِسْ"
+          },
+          {
+            "en": "اجْلِسْ",
+            "ur": "اجْلِسْ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch45-test-q10",
+        "topic": {
+          "en": "Prohibition",
+          "ur": "نہی"
+        },
+        "prompt": {
+          "en": "What does this say?",
+          "ur": "یہ کیا کہتا ہے؟"
+        },
+        "arabic": "لَا تَذْهَبْ",
+        "options": [
+          {
+            "en": "Don't go.",
+            "ur": "مت جاؤ۔"
+          },
+          {
+            "en": "You do not go.",
+            "ur": "تم نہیں جاتے۔"
+          },
+          {
+            "en": "You did not go.",
+            "ur": "تم نہیں گئے۔"
+          },
+          {
+            "en": "You will not go.",
+            "ur": "تم نہیں جاؤ گے۔"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch45-test-q11",
+        "topic": {
+          "en": "Governor and ending",
+          "ur": "عامل اور انجام"
+        },
+        "prompt": {
+          "en": "Which particle can come before يَذْهَبَ (ending in fatḥa)?",
+          "ur": "یَذْهَبَ (فتحہ پر ختم) سے پہلے کون سا حرف آ سکتا ہے؟"
+        },
+        "arabic": "___ يَذْهَبَ",
+        "options": [
+          {
+            "en": "لَمْ",
+            "ur": "لَمْ"
+          },
+          {
+            "en": "لَنْ",
+            "ur": "لَنْ"
+          },
+          {
+            "en": "لَمَّا",
+            "ur": "لَمَّا"
+          },
+          {
+            "en": "هَلْ",
+            "ur": "هَلْ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch45-test-q12",
+        "topic": {
+          "en": "Governor and ending",
+          "ur": "عامل اور انجام"
+        },
+        "prompt": {
+          "en": "Which form of the verb follows لَمْ?",
+          "ur": "لَمْ کے بعد فعل کی کون سی صورت آتی ہے؟"
+        },
+        "arabic": "لَمْ ___",
+        "options": [
+          {
+            "en": "يَذْهَبُ",
+            "ur": "يَذْهَبُ"
+          },
+          {
+            "en": "يَذْهَبَ",
+            "ur": "يَذْهَبَ"
+          },
+          {
+            "en": "ذَهَبَ",
+            "ur": "ذَهَبَ"
+          },
+          {
+            "en": "يَذْهَبْ",
+            "ur": "يَذْهَبْ"
+          }
+        ],
+        "correct_index": 3
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 45 — three states of the verb",
+      "ar": "الْمُضَارِعُ — ثَلَاثُ حَالَاتٍ",
+      "ur": "باب 45 — فعل کی تین حالتیں"
+    },
+    "ayah": {
+      "surah": 3,
+      "ayah": 92,
+      "label": "Al Imran 3:92",
+      "ar": "لَن تَنَالُوا الْبِرَّ حَتَّىٰ تُنفِقُوا مِمَّا تُحِبُّونَ ۚ وَمَا تُنفِقُوا مِن شَيْءٍ فَإِنَّ اللَّهَ بِهِ عَلِيمٌ",
+      "en": "Never will you attain the good [reward] until you spend [in the way of Allāh] from that which you love. And whatever you spend - indeed, Allāh is Knowing of it.",
+      "ur": "(مومنو!) جب تک تم ان چیزوں میں سے جو تمھیں عزیز ہیں (راہِ خدا میں) صرف نہ کرو گے کبھی نیکی حاصل نہ کر سکو گے اور جو چیز تم صرف کرو گے خدا اس کو جانتا ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003092.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1,
+      3,
+      4
+    ],
+    "highlighted_words": [
+      "لَن",
+      "تَنَالُوا",
+      "حَتَّىٰ",
+      "تُنفِقُوا"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 45 able to pick the ending of a present-tense verb from what comes before it: nothing, أَنْ / لَنْ / كَيْ / لِـ / حَتَّى, or لَمْ / لَا.",
+      "ur": "آپ باب 45 اس حال میں مکمل کرتے ہیں کہ مضارع فعل کا انجام اس سے پہلے کی چیز دیکھ کر چن سکیں: کچھ نہیں، أَنْ / لَنْ / كَيْ / لِـ / حَتَّى، یا لَمْ / لَا۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 45 complete. Chapter 46: applying the three states.",
+      "ur": "باب 45 مکمل۔ باب 46: تین حالتوں کا اطلاق۔"
+    }
+  }
+}

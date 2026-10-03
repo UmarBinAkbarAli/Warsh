@@ -1,0 +1,447 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 41, review (ch41-l05, kept as the REVIEW row, display order 8). Two decisions each for gist, sequence, reference, phrase meaning and textual evidence on two fresh constructed texts, then one decision each on Al-Fil and Al-Qari'ah; different texts from the lessons and from ch41-test. Rebuilt 2026-10-03 in the proposal harvest, batch 4 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-41-content-proposal.md and its review amendments.",
+    "title": "Chapter 41 Review",
+    "titleAr": "مُرَاجَعَةُ الْفَصْلِ الْحَادِي وَالْأَرْبَعِينَ",
+    "titleUr": "باب 41 کی دہرائی",
+    "chapter_order": 41,
+    "lesson_order": 8,
+    "estimated_minutes": 12,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 105,
+      "ayah": 5,
+      "label": "Al-Fil 105:5",
+      "ar": "فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍ",
+      "en": "And He made them like eaten straw.",
+      "ur": "تو ان کو ایسا کر دیا جیسے کھایا ہوا بھس",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/105005.mp3"
+    },
+    "noor_intro": {
+      "en": "Review reading connected text — the gist, the order, who is meant, the phrases, the evidence — and then two surahs.",
+      "ur": "جڑی ہوئی عبارت پڑھنے کی دہرائی کریں — مفہوم، ترتیب، کون مراد ہے، ٹکڑے، ثبوت — اور پھر دو سورتیں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 41 at a glance",
+        "ar": "الْقِرَاءَةُ الْمُتَّصِلَةُ",
+        "ur": "باب 41 ایک نظر میں"
+      },
+      "explanation": {
+        "en": "Read for the gist, place events with ثُمَّ / بَعْدَ / قَبْلَ, find who a description or هُوَ / هِيَ points to, read place / time / company phrases with their event, and back every answer with words from the text. Then read complete surahs: Al-Fil and Al-Qari'ah.",
+        "ur": "مفہوم کے لیے پڑھیں، ثُمَّ / بَعْدَ / قَبْلَ سے واقعات کو ترتیب دیں، دیکھیں کہ وصف یا هُوَ / هِيَ کس کی طرف ہے، جگہ / وقت / ساتھ کے ٹکڑے ان کے واقعے کے ساتھ پڑھیں، اور ہر جواب متن کے الفاظ سے ثابت کریں۔ پھر مکمل سورتیں پڑھیں: الفیل اور القارعہ۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "ذَهَبَتْ سَلْمَى إِلَى السُّوقِ صَبَاحًا. بَعْدَ ذَلِكَ رَجَعَتْ إِلَى الْبَيْتِ وَجَلَسَتْ مَعَ أُمِّهَا.",
+        "ar_plain": "ذهبت سلمى الى السوق صباحا. بعد ذلك رجعت الى البيت وجلست مع امها.",
+        "translit": "dhahabat salmā ʾilā as-sūqi ṣabāḥan baʿda dhalika rajaʿat ʾilā al-bayti wajalasat maʿa ʾummihā",
+        "en": "Salma went to the market in the morning. After that she returned to the house and sat with her mother.",
+        "ur": "سلمیٰ صبح بازار گئی۔ اس کے بعد وہ گھر لوٹی اور اپنی والدہ کے ساتھ بیٹھی۔"
+      },
+      "explanation": {
+        "en": "A fresh constructed text for review.",
+        "ur": "مراجعہ کے لیے نیا بنایا ہوا متن۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "فِي الْقَرْيَةِ مُعَلِّمٌ كَرِيمٌ وَمُعَلِّمَةٌ كَرِيمَةٌ. هِيَ قَرَأَتْ كِتَابًا، وَهُوَ كَتَبَ الدَّرْسَ فِي الْمَسْجِدِ.",
+        "ar_plain": "في القرية معلم كريم ومعلمة كريمة. هي قرات كتابا، وهو كتب الدرس في المسجد.",
+        "translit": "fī al-qaryati muʿallimun karīmun wamuʿallimatun karīmatun hiya qaraʾat kitāban wahuwa kataba ad-darsa fī al-masjidi",
+        "en": "In the village there is a generous male teacher and a generous female teacher. She read a book, and he wrote the lesson in the masjid.",
+        "ur": "گاؤں میں ایک سخی معلم اور ایک سخی معلمہ ہے۔ اس نے کتاب پڑھی اور اس نے مسجد میں سبق لکھا۔"
+      },
+      "explanation": {
+        "en": "A second fresh constructed text for review.",
+        "ur": "مراجعہ کے لیے دوسرا نیا بنایا ہوا متن۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch41-l05-ex01",
+      "prompt": {
+        "ar": "ذَهَبَتْ سَلْمَى إِلَى السُّوقِ صَبَاحًا. بَعْدَ ذَلِكَ رَجَعَتْ إِلَى الْبَيْتِ وَجَلَسَتْ مَعَ أُمِّهَا.",
+        "ar_plain": "ذهبت سلمى الى السوق صباحا. بعد ذلك رجعت الى البيت وجلست مع امها.",
+        "translit": "dhahabat salmā ʾilā as-sūqi ṣabāḥan baʿda dhalika rajaʿat ʾilā al-bayti wajalasat maʿa ʾummihā",
+        "en": "Salma went to the market in the morning. After that she returned to the house and sat with her mother.",
+        "ur": "سلمیٰ صبح بازار گئی۔ اس کے بعد وہ گھر لوٹی اور اپنی والدہ کے ساتھ بیٹھی۔"
+      },
+      "options": [
+        {
+          "en": "Salma went to the market, then came home and sat with her mother.",
+          "ur": "سلمیٰ بازار گئی، پھر گھر آئی اور اپنی والدہ کے ساتھ بیٹھی۔"
+        },
+        {
+          "en": "Salma and her mother went to the market together.",
+          "ur": "سلمیٰ اور اس کی والدہ ساتھ بازار گئیں۔"
+        },
+        {
+          "en": "Salma sat with her mother, then went to the market.",
+          "ur": "سلمیٰ اپنی والدہ کے ساتھ بیٹھی، پھر بازار گئی۔"
+        },
+        {
+          "en": "Salma wrote a letter at home in the morning.",
+          "ur": "سلمیٰ نے صبح گھر میں خط لکھا۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Gist: market first, then home, sitting with her mother.",
+        "ur": "مفہوم: پہلے بازار، پھر گھر، والدہ کے ساتھ بیٹھنا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch41-l05-ex02",
+      "prompt": {
+        "ar": "فِي الْقَرْيَةِ مُعَلِّمٌ كَرِيمٌ وَمُعَلِّمَةٌ كَرِيمَةٌ. هِيَ قَرَأَتْ كِتَابًا، وَهُوَ كَتَبَ الدَّرْسَ فِي الْمَسْجِدِ.",
+        "ar_plain": "في القرية معلم كريم ومعلمة كريمة. هي قرات كتابا، وهو كتب الدرس في المسجد.",
+        "translit": "fī al-qaryati muʿallimun karīmun wamuʿallimatun karīmatun hiya qaraʾat kitāban wahuwa kataba ad-darsa fī al-masjidi",
+        "en": "In the village there is a generous male teacher and a generous female teacher. She read a book, and he wrote the lesson in the masjid.",
+        "ur": "گاؤں میں ایک سخی معلم اور ایک سخی معلمہ ہے۔ اس نے کتاب پڑھی اور اس نے مسجد میں سبق لکھا۔"
+      },
+      "options": [
+        {
+          "en": "Two teachers went to the market together.",
+          "ur": "دو معلم ساتھ بازار گئے۔"
+        },
+        {
+          "en": "A teacher read in the masjid and wrote in the village.",
+          "ur": "ایک معلم نے مسجد میں پڑھا اور گاؤں میں لکھا۔"
+        },
+        {
+          "en": "Both teachers wrote a book in the village.",
+          "ur": "دونوں معلموں نے گاؤں میں کتاب لکھی۔"
+        },
+        {
+          "en": "A teacher read a book and another wrote a lesson in the masjid.",
+          "ur": "ایک معلمہ نے کتاب پڑھی اور ایک معلم نے مسجد میں سبق لکھا۔"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Two teachers, two actions: she read a book, he wrote the lesson.",
+        "ur": "دو معلم، دو کام: اس نے کتاب پڑھی، اس نے سبق لکھا۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch41-l05-ex03",
+      "statement": {
+        "en": "Salma sat with her mother after she went to the market.",
+        "ur": "سلمیٰ بازار جانے کے بعد اپنی والدہ کے ساتھ بیٹھی۔",
+        "ar_example": {
+          "ar": "ذَهَبَتْ سَلْمَى إِلَى السُّوقِ صَبَاحًا. بَعْدَ ذَلِكَ رَجَعَتْ إِلَى الْبَيْتِ وَجَلَسَتْ مَعَ أُمِّهَا.",
+          "ar_plain": "ذهبت سلمى الى السوق صباحا. بعد ذلك رجعت الى البيت وجلست مع امها.",
+          "translit": "dhahabat salmā ʾilā as-sūqi ṣabāḥan baʿda dhalika rajaʿat ʾilā al-bayti wajalasat maʿa ʾummihā",
+          "en": "Salma went to the market in the morning. After that she returned to the house and sat with her mother.",
+          "ur": "سلمیٰ صبح بازار گئی۔ اس کے بعد وہ گھر لوٹی اور اپنی والدہ کے ساتھ بیٹھی۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "بَعْدَ ذَلِكَ puts the return home and the sitting after the market.",
+        "ur": "بَعْدَ ذَلِكَ واپسی اور بیٹھنے کو بازار کے بعد رکھتا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch41-l05-ex04",
+      "statement": {
+        "en": "Salma went to the market after she returned to the house.",
+        "ur": "سلمیٰ گھر لوٹنے کے بعد بازار گئی۔",
+        "ar_example": {
+          "ar": "ذَهَبَتْ سَلْمَى إِلَى السُّوقِ صَبَاحًا. بَعْدَ ذَلِكَ رَجَعَتْ إِلَى الْبَيْتِ وَجَلَسَتْ مَعَ أُمِّهَا.",
+          "ar_plain": "ذهبت سلمى الى السوق صباحا. بعد ذلك رجعت الى البيت وجلست مع امها.",
+          "translit": "dhahabat salmā ʾilā as-sūqi ṣabāḥan baʿda dhalika rajaʿat ʾilā al-bayti wajalasat maʿa ʾummihā",
+          "en": "Salma went to the market in the morning. After that she returned to the house and sat with her mother.",
+          "ur": "سلمیٰ صبح بازار گئی۔ اس کے بعد وہ گھر لوٹی اور اپنی والدہ کے ساتھ بیٹھی۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The market came first: ذَهَبَتْ إِلَى السُّوقِ صَبَاحًا, then بَعْدَ ذَلِكَ.",
+        "ur": "بازار پہلے آیا: ذَهَبَتْ إِلَى السُّوقِ صَبَاحًا، پھر بَعْدَ ذَلِكَ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch41-l05-ex05",
+      "statement": {
+        "en": "In the second text, هُوَ points to the male teacher.",
+        "ur": "دوسرے متن میں هُوَ معلم (مرد) کی طرف اشارہ کرتا ہے۔",
+        "ar_example": {
+          "ar": "فِي الْقَرْيَةِ مُعَلِّمٌ كَرِيمٌ وَمُعَلِّمَةٌ كَرِيمَةٌ. هِيَ قَرَأَتْ كِتَابًا، وَهُوَ كَتَبَ الدَّرْسَ فِي الْمَسْجِدِ.",
+          "ar_plain": "في القرية معلم كريم ومعلمة كريمة. هي قرات كتابا، وهو كتب الدرس في المسجد.",
+          "translit": "fī al-qaryati muʿallimun karīmun wamuʿallimatun karīmatun hiya qaraʾat kitāban wahuwa kataba ad-darsa fī al-masjidi",
+          "en": "In the village there is a generous male teacher and a generous female teacher. She read a book, and he wrote the lesson in the masjid.",
+          "ur": "گاؤں میں ایک سخی معلم اور ایک سخی معلمہ ہے۔ اس نے کتاب پڑھی اور اس نے مسجد میں سبق لکھا۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هُوَ is masculine; only the male teacher fits.",
+        "ur": "هُوَ مذکر ہے؛ صرف معلم (مرد) بیٹھتا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch41-l05-ex06",
+      "statement": {
+        "en": "In the second text, the female teacher wrote the lesson in the masjid.",
+        "ur": "دوسرے متن میں معلمہ نے مسجد میں سبق لکھا۔",
+        "ar_example": {
+          "ar": "فِي الْقَرْيَةِ مُعَلِّمٌ كَرِيمٌ وَمُعَلِّمَةٌ كَرِيمَةٌ. هِيَ قَرَأَتْ كِتَابًا، وَهُوَ كَتَبَ الدَّرْسَ فِي الْمَسْجِدِ.",
+          "ar_plain": "في القرية معلم كريم ومعلمة كريمة. هي قرات كتابا، وهو كتب الدرس في المسجد.",
+          "translit": "fī al-qaryati muʿallimun karīmun wamuʿallimatun karīmatun hiya qaraʾat kitāban wahuwa kataba ad-darsa fī al-masjidi",
+          "en": "In the village there is a generous male teacher and a generous female teacher. She read a book, and he wrote the lesson in the masjid.",
+          "ur": "گاؤں میں ایک سخی معلم اور ایک سخی معلمہ ہے۔ اس نے کتاب پڑھی اور اس نے مسجد میں سبق لکھا۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "وَهُوَ كَتَبَ الدَّرْسَ — the male teacher wrote the lesson.",
+        "ur": "وَهُوَ كَتَبَ الدَّرْسَ — معلم (مرد) نے سبق لکھا۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch41-l05-ex07",
+      "mode": "TAP",
+      "sentence_ar": "ذَهَبَتْ سَلْمَى إِلَى السُّوقِ ___.",
+      "hint": {
+        "en": "Salma went to the market in the morning.",
+        "ur": "سلمیٰ صبح بازار گئی۔"
+      },
+      "options": [
+        {
+          "ar": "صَبَاحًا",
+          "ar_plain": "صباحا",
+          "translit": "ṣabāḥan",
+          "en": "in the morning",
+          "ur": "صبح"
+        },
+        {
+          "ar": "مَعَ أُمِّهَا",
+          "ar_plain": "مع امها",
+          "translit": "maʿa ʾummihā",
+          "en": "with her mother",
+          "ur": "اپنی والدہ کے ساتھ"
+        },
+        {
+          "ar": "فِي الْبَيْتِ",
+          "ar_plain": "في البيت",
+          "translit": "fī al-bayti",
+          "en": "in the house",
+          "ur": "گھر میں"
+        },
+        {
+          "ar": "عَلَى الْمَكْتَبِ",
+          "ar_plain": "على المكتب",
+          "translit": "ʿalā al-maktabi",
+          "en": "on the desk",
+          "ur": "میز پر"
+        }
+      ],
+      "correct_answer": {
+        "ar": "صَبَاحًا",
+        "ar_plain": "صباحا",
+        "translit": "ṣabāḥan",
+        "en": "in the morning",
+        "ur": "صبح"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The meaning asks for a time phrase: صَبَاحًا.",
+        "ur": "مفہوم وقت کا ٹکڑا مانگتا ہے: صَبَاحًا۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch41-l05-ex08",
+      "statement": {
+        "en": "The phrase مَعَ أُمِّهَا tells with whom Salma sat.",
+        "ur": "ٹکڑا مَعَ أُمِّهَا بتاتا ہے کہ سلمیٰ کس کے ساتھ بیٹھی۔",
+        "ar_example": {
+          "ar": "ذَهَبَتْ سَلْمَى إِلَى السُّوقِ صَبَاحًا. بَعْدَ ذَلِكَ رَجَعَتْ إِلَى الْبَيْتِ وَجَلَسَتْ مَعَ أُمِّهَا.",
+          "ar_plain": "ذهبت سلمى الى السوق صباحا. بعد ذلك رجعت الى البيت وجلست مع امها.",
+          "translit": "dhahabat salmā ʾilā as-sūqi ṣabāḥan baʿda dhalika rajaʿat ʾilā al-bayti wajalasat maʿa ʾummihā",
+          "en": "Salma went to the market in the morning. After that she returned to the house and sat with her mother.",
+          "ur": "سلمیٰ صبح بازار گئی۔ اس کے بعد وہ گھر لوٹی اور اپنی والدہ کے ساتھ بیٹھی۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَعَ marks the company: 'with her mother'.",
+        "ur": "مَعَ ساتھی ظاہر کرتا ہے: 'اپنی والدہ کے ساتھ'۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch41-l05-ex09",
+      "statement": {
+        "en": "Evidence for 'the male teacher wrote the lesson' is the words وَهُوَ كَتَبَ الدَّرْسَ.",
+        "ur": "'معلم (مرد) نے سبق لکھا' کا ثبوت الفاظ وَهُوَ كَتَبَ الدَّرْسَ ہیں۔",
+        "ar_example": {
+          "ar": "فِي الْقَرْيَةِ مُعَلِّمٌ كَرِيمٌ وَمُعَلِّمَةٌ كَرِيمَةٌ. هِيَ قَرَأَتْ كِتَابًا، وَهُوَ كَتَبَ الدَّرْسَ فِي الْمَسْجِدِ.",
+          "ar_plain": "في القرية معلم كريم ومعلمة كريمة. هي قرات كتابا، وهو كتب الدرس في المسجد.",
+          "translit": "fī al-qaryati muʿallimun karīmun wamuʿallimatun karīmatun hiya qaraʾat kitāban wahuwa kataba ad-darsa fī al-masjidi",
+          "en": "In the village there is a generous male teacher and a generous female teacher. She read a book, and he wrote the lesson in the masjid.",
+          "ur": "گاؤں میں ایک سخی معلم اور ایک سخی معلمہ ہے۔ اس نے کتاب پڑھی اور اس نے مسجد میں سبق لکھا۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes: those words say it directly.",
+        "ur": "جی ہاں: یہ الفاظ اسے سیدھا کہتے ہیں۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch41-l05-ex10",
+      "statement": {
+        "en": "The second text says why the teachers were in the village.",
+        "ur": "دوسرا متن بتاتا ہے کہ معلم گاؤں میں کیوں تھے۔",
+        "ar_example": {
+          "ar": "فِي الْقَرْيَةِ مُعَلِّمٌ كَرِيمٌ وَمُعَلِّمَةٌ كَرِيمَةٌ. هِيَ قَرَأَتْ كِتَابًا، وَهُوَ كَتَبَ الدَّرْسَ فِي الْمَسْجِدِ.",
+          "ar_plain": "في القرية معلم كريم ومعلمة كريمة. هي قرات كتابا، وهو كتب الدرس في المسجد.",
+          "translit": "fī al-qaryati muʿallimun karīmun wamuʿallimatun karīmatun hiya qaraʾat kitāban wahuwa kataba ad-darsa fī al-masjidi",
+          "en": "In the village there is a generous male teacher and a generous female teacher. She read a book, and he wrote the lesson in the masjid.",
+          "ur": "گاؤں میں ایک سخی معلم اور ایک سخی معلمہ ہے۔ اس نے کتاب پڑھی اور اس نے مسجد میں سبق لکھا۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The text gives no reason; 'it is not stated' is the answer.",
+        "ur": "متن کوئی وجہ نہیں دیتا؛ 'بیان نہیں ہوا' ہی جواب ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch41-l05-ex11",
+      "prompt": {
+        "ar": "وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ تَرْمِيهِم بِحِجَارَةٍ مِّن سِجِّيلٍ فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍ",
+        "ar_plain": "وارسل عليهم طيرا ابابيل ترميهم بحجارة من سجيل فجعلهم كعصف ماكول",
+        "translit": "waʾarsala ʿalayhim ṭayran ʾabābīla tarmīhim biḥijāratin mmin sijjīlin fajaʿalahum kaʿaṣfin mmaʾkūlin",
+        "en": "(105:3–5)",
+        "ur": "(105:3–5)"
+      },
+      "options": [
+        {
+          "en": "Birds were sent with them, and they threw straw at the stones.",
+          "ur": "ان کے ساتھ پرندے بھیجے گئے اور انہوں نے پتھروں پر بھس مارا۔"
+        },
+        {
+          "en": "Birds were sent against them, they struck them with stones, and He made them like eaten straw.",
+          "ur": "ان پر پرندے بھیجے گئے، انہوں نے انہیں پتھر مارے، اور اس نے انہیں کھائے ہوئے بھس کی طرح کر دیا۔"
+        },
+        {
+          "en": "He made the birds like straw, then they ate the stones.",
+          "ur": "اس نے پرندوں کو بھس کی طرح کر دیا، پھر انہوں نے پتھر کھائے۔"
+        },
+        {
+          "en": "They sent birds to the stones and made straw from them.",
+          "ur": "انہوں نے پتھروں کی طرف پرندے بھیجے اور ان سے بھس بنایا۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "105:3 birds, 105:4 stones, 105:5 like eaten straw.",
+        "ur": "105:3 پرندے، 105:4 پتھر، 105:5 کھایا ہوا بھس۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch41-l05-ex12",
+      "prompt": {
+        "ar": "فَأَمَّا مَنْ ثَقُلَتْ مَوَازِينُهُ فَهُوَ فِي عِيشَةٍ رَاضِيَةٍ … وَأَمَّا مَنْ خَفَّتْ مَوَازِينُهُ فَأُمُّهُ هَاوِيَةٌ",
+        "ar_plain": "فاما من ثقلت موازينه فهو في عيشة راضية … واما من خفت موازينه فامه هاوية",
+        "translit": "faʾammā man thaqulat mawaāzīnuhu fahuwa fī ʿīshatin rāḍiyatin … waʾammā man khaffat mawaāzīnuhu faʾummuhu hāwiyatun",
+        "en": "(101:6–9)",
+        "ur": "(101:6–9)"
+      },
+      "options": [
+        {
+          "en": "Heavy scales lead to an abyss; light scales lead to a pleasant life.",
+          "ur": "بھاری وزن ہاویہ کی طرف لے جاتے ہیں؛ ہلکے وزن پسندیدہ زندگی کی طرف۔"
+        },
+        {
+          "en": "Both heavy and light scales lead to a pleasant life.",
+          "ur": "بھاری اور ہلکے دونوں وزن پسندیدہ زندگی کی طرف لے جاتے ہیں۔"
+        },
+        {
+          "en": "Heavy scales lead to a pleasant life; light scales lead to an abyss as refuge.",
+          "ur": "بھاری وزن پسندیدہ زندگی کی طرف لے جاتے ہیں؛ ہلکے وزن ہاویہ بطور ٹھکانا۔"
+        },
+        {
+          "en": "Scales have nothing to do with the outcomes.",
+          "ur": "وزن کا انجام سے کوئی تعلق نہیں۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Match each branch with the outcome the ayat give it.",
+        "ur": "ہر شاخ کو وہ انجام دیں جو آیات اسے دیتی ہیں۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Reading a whole text",
+      "ar": "الْقِرَاءَةُ الْمُتَّصِلَةُ",
+      "ur": "پوری عبارت پڑھنا"
+    },
+    "ayah": {
+      "surah": 105,
+      "ayah": 5,
+      "label": "Al-Fil 105:5",
+      "ar": "فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍ",
+      "en": "And He made them like eaten straw.",
+      "ur": "تو ان کو ایسا کر دیا جیسے کھایا ہوا بھس",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/105005.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "فَجَعَلَهُمْ",
+      "كَعَصْفٍ"
+    ],
+    "noor_explanation": {
+      "en": "From a short constructed text to a complete surah, the same habits apply: gist, order, reference, phrases, evidence.",
+      "ur": "مختصر بنائے ہوئے متن سے پوری سورت تک، وہی عادتیں کام آتی ہیں: مفہوم، ترتیب، حوالہ، ٹکڑے، ثبوت۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 41 review done. Next: the chapter test.",
+      "ur": "باب 41 کی دہرائی مکمل۔ اگلا: باب کا امتحان۔"
+    }
+  }
+}

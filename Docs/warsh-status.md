@@ -864,6 +864,33 @@ Everything below this list is either done and verified, or one of these:
    lessons are not mapped yet). Discarded: the separate Ch 37 Quran lesson, the
    She/You split, a separate Ch 40 الَّذِينَ lesson, the dual relatives (Ch 56)
    and all process text. Not done: scholarly review, Android pass.
+   **Proposal harvest, batch 4 (Chapters 41–45): live in production
+   2026-10-03.** Ch 41 rebuilt in full (the old lessons were generic filler with
+   errors): gist and order with ثُمَّ / بَعْدَ / قَبْلَ, descriptions and
+   هُوَ / هِيَ references, place / time / company phrases, reading with evidence
+   (2:3 plus a constructed text), new complete readings Al-Fil (`ch41-l06`) and
+   Al-Qari'ah in two parts (`ch41-l07`, `ch41-l08`), the REVIEW and
+   `ch41-test`. Ch 42 rebuilt: كَمْ, مَتَى, لِمَاذَا with لِأَنَّ, كَيْفَ (state
+   versus manner) and mixed practice, new At-Takathur reading `ch42-l07`, review
+   and test. Ch 43 lessons 1–2 rebuilt (time cue versus verb, sentence parts),
+   new Al-Kawthar, Al-Humazah ×2 and Al-Ma'un ×2 readings, **CL13 Food and
+   Hospitality** (`ch43-l04` converted in place), a rebuilt review and test —
+   the complete Al-Ma'un reading follows the proposal's recommended owner option
+   and was built under the harvest instruction (unpublish `ch43-l09` if
+   unwanted). Ch 44 kept its lessons (reordered, review last, two Arabic title
+   typos fixed, `ch44-l05` set to REVIEW) and gained `ch44-test`; Ch 45 kept
+   its lessons and gained purpose `ch45-l08` (كَيْ / لِـ), the bounded 'until'
+   lesson `ch45-l09` (حَتَّى) and `ch45-test`. Published with
+   `scripts/promote-chapters-41-45.cjs` after a staging API walk (order, test
+   locked until the lessons are done, key stripped, 9/12 fails, 10/12 passes,
+   replay 0 XP); `content:check` 499/499 and `content:baseline` 499. **No TTS
+   was generated** (owner rule, 2026-10-03): the 197 missing catalogue clips and
+   the 10 CL13 phrase clips are listed in `Docs/lesson-audio-needed.md`. 86 new
+   scenes for 150 cards requested in `Docs/lesson-illustrations-needed.md` (the
+   cards of the kept Ch 44 lessons and Ch 45 lessons 1–7 are a later pass).
+   Map entries for Ch 41–45 rewritten (S10). Not done: scholarly review, Android
+   pass; `quran:audit-fixtures` still flags `chapter-50-lesson-05.json` 55:1
+   (batch 5).
    **Chapter 25 (`Docs/proposals/chapter-25-content-correction.md`) is
    corrected, staging-verified and promoted to production 2026-09-24** on the
    owner's instruction. The first rewrite was reviewed and fixed before

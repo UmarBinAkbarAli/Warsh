@@ -2,44 +2,67 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 45, Lesson 6 — the three states in cited ayat: 104:3 (مَرْفُوع), 20:91 (مَنْصُوب), 31:13 and 112:3 (مَجْزُوم).",
+    "_note": "Chapter 45, Lesson 4 — telling the three states apart by their governor and ending; a selected trigger chart.",
     "chapter_order": 45,
     "lesson_order": 6,
     "chapter_title": "The Three States of المضارع (مرفوع/منصوب/مجزوم)",
-    "title": "All Three States — Quranic Application",
-    "titleAr": "الثَّلَاثُ حَالَاتٌ — تَطْبِيقٌ قُرْآنِيٌّ",
-    "estimated_minutes": 11,
+    "title": "Distinguishing the Three States",
+    "titleAr": "الْمُضَارِعُ — التَّمْيِيزُ بَيْنَ الثَّلَاثِ حَالَاتٍ",
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 112,
-      "ayah": 3,
-      "label": "Al-Ikhlas 112:3",
-      "ar": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
-      "en": "He did not beget, nor was He begotten.",
-      "ur": "نہ اس نے کسی کو جنا اور نہ وہ جنا گیا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/112003.mp3"
+      "surah": 20,
+      "ayah": 91,
+      "label": "Ta-Ha 20:91",
+      "ar": "قَالُوا لَنْ نَبْرَحَ عَلَيْهِ عَاكِفِينَ حَتَّىٰ يَرْجِعَ إِلَيْنَا مُوسَىٰ",
+      "en": "They said, 'We will not stop being devoted to it until Musa returns to us.'",
+      "ur": "انہوں نے کہا: 'ہم اسی پر جمے رہیں گے یہاں تک کہ موسیٰ ہمارے پاس لوٹ آئیں۔'",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020091.mp3"
     },
     "autoplay": true,
     "noor_intro": {
-      "en": "Today you find all three states in real ayat.",
-      "ur": "آج آپ اصل آیات میں تینوں حالتیں تلاش کریں گے۔"
+      "en": "Find the governor, then check the ending. Today you sort verbs into the three states.",
+      "ur": "عامل تلاش کریں، پھر آخر دیکھیں۔ آج آپ افعال کو تین حالتوں میں تقسیم کریں گے۔"
     }
   },
   "discover_cards": [
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "يَحْسَبُ",
-        "ar_plain": "يحسب",
-        "translit": "yahsabu",
-        "en": "he thinks (104:3) — مَرْفُوع",
-        "ur": "وہ سمجھتا ہے (104:3) — مرفوع"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Governor → state → ending",
+        "ar": "الْعَامِلُ وَالْحَالَةُ",
+        "ur": "عامل ← حالت ← آخر"
       },
       "explanation": {
-        "en": "No governor: ḍamma.",
-        "ur": "کوئی عامل نہیں: ضمہ۔"
+        "en": "The present-tense (imperfect) verb has three states. مَرْفُوع — ending ḍamma — when nothing governs it: يَذْهَبُ. مَنْصُوب — fatḥa — after أَنْ or لَنْ: أَنْ يَذْهَبَ. مَجْزُوم — sukūn — after لَمْ, لَمَّا or the لَا of prohibition: لَمْ يَذْهَبْ. Only the ending changes; the prefix stays.",
+        "ur": "مضارع فعل کی تین حالتیں ہیں۔ مَرْفُوع — آخر میں ضمہ — جب کوئی عامل نہ ہو: يَذْهَبُ۔ مَنْصُوب — فتحہ — أَنْ یا لَنْ کے بعد: أَنْ يَذْهَبَ۔ مَجْزُوم — سکون — لَمْ، لَمَّا یا لائے نہی کے بعد: لَمْ يَذْهَبْ۔ صرف آخر بدلتا ہے؛ سابقہ وہی رہتا ہے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Selected governors (not a complete list)",
+        "ur": "منتخب عوامل (مکمل فہرست نہیں)"
+      },
+      "body": {
+        "en": "No governor → مَرْفُوع (ḍamma). أَنْ, لَنْ → مَنْصُوب (fatḥa). لَمْ, لَمَّا, لَا of prohibition → مَجْزُوم (sukūn).",
+        "ur": "کوئی عامل نہیں ← مرفوع (ضمہ)۔ أَنْ، لَنْ ← منصوب (فتحہ)۔ لَمْ، لَمَّا، نہی کا لَا ← مجزوم (سکون)۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "لَا يَذْهَبُ — لَا تَذْهَبْ",
+        "ar_plain": "لا يذهب لا تذهب",
+        "translit": "laa yadh-habu — laa tadh-hab",
+        "en": "he does not go — don't go",
+        "ur": "وہ نہیں جاتا — مت جاؤ"
+      },
+      "explanation": {
+        "en": "The same لَا: as plain negation it governs nothing (ḍamma); as prohibition it makes the verb مَجْزُوم (sukūn).",
+        "ur": "وہی لَا: سادہ نفی میں کوئی عمل نہیں (ضمہ)؛ نہی میں فعل کو مجزوم کرتا ہے (سکون)۔"
       }
     },
     {
@@ -48,81 +71,53 @@
         "ar": "لَنْ نَبْرَحَ",
         "ar_plain": "لن نبرح",
         "translit": "lan nabraha",
-        "en": "we will not stop (20:91) — مَنْصُوب",
-        "ur": "ہم نہیں رکیں گے (20:91) — منصوب"
+        "en": "we will not stop (20:91)",
+        "ur": "ہم نہیں رکیں گے (20:91)"
       },
       "explanation": {
-        "en": "After لَنْ: fatḥa.",
-        "ur": "لَنْ کے بعد: فتحہ۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "لَا تُشْرِكْ",
-        "ar_plain": "لا تشرك",
-        "translit": "laa tushrik",
-        "en": "do not associate (31:13) — مَجْزُوم",
-        "ur": "شریک نہ ٹھہراؤ (31:13) — مجزوم"
-      },
-      "explanation": {
-        "en": "After the لَا of prohibition: sukūn.",
-        "ur": "نہی کے لَا کے بعد: سکون۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "لَمْ يَلِدْ",
-        "ar_plain": "لم يلد",
-        "translit": "lam yalid",
-        "en": "He did not beget (112:3) — مَجْزُوم",
-        "ur": "اس نے نہیں جنا (112:3) — مجزوم"
-      },
-      "explanation": {
-        "en": "After لَمْ: sukūn.",
-        "ur": "لَمْ کے بعد: سکون۔"
+        "en": "لَنْ → fatḥa: مَنْصُوب.",
+        "ur": "لَنْ ← فتحہ: منصوب۔"
       }
     },
     {
       "type": "GRAMMAR_NOTE",
       "title": {
-        "en": "How to read a verb in an ayah",
-        "ur": "آیت میں فعل کیسے پڑھیں"
+        "en": "Scope",
+        "ur": "دائرہ"
       },
       "body": {
-        "en": "1) Is it a present-tense verb? 2) Is there a governor just before it? 3) Check the ending.",
-        "ur": "1) کیا یہ مضارع فعل ہے؟ 2) کیا اس سے فوراً پہلے کوئی عامل ہے؟ 3) آخر دیکھیں۔"
+        "en": "These rules are for regular verbs like يَذْهَبُ. Verbs ending in a long vowel and the five verbs (يَذْهَبُونَ …) show their states differently — studied later.",
+        "ur": "یہ قاعدے يَذْهَبُ جیسے عام افعال کے لیے ہیں۔ لمبی آواز پر ختم ہونے والے افعال اور افعالِ خمسہ (يَذْهَبُونَ …) اپنی حالتیں الگ طرح دکھاتے ہیں — آگے پڑھیں گے۔"
       }
     }
   ],
   "exercises": [
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch45-l06-ex01",
+      "id": "ch45-l04-ex01",
       "prompt": {
-        "ar": "يَا بُنَيَّ لَا تُشْرِكْ بِاللَّهِ",
-        "ar_plain": "يا بني لا تشرك بالله",
-        "translit": "yaa bunayya laa tushrik billaah",
-        "en": "O my son, do not associate anything with Allah.",
-        "ur": "اے میرے بیٹے! اللہ کے ساتھ شریک نہ ٹھہرانا۔"
+        "ar": "لَنْ نَبْرَحَ",
+        "ar_plain": "لن نبرح",
+        "translit": "lan nabraha",
+        "en": "we will not stop",
+        "ur": "ہم نہیں رکیں گے"
       },
       "options": [
         {
-          "en": "O my son, do not associate anything with Allah.",
-          "ur": "اے میرے بیٹے! اللہ کے ساتھ شریک نہ ٹھہرانا۔"
+          "en": "we will not stop",
+          "ur": "ہم نہیں رکیں گے"
         },
         {
-          "en": "O my son, you do not associate with Allah.",
-          "ur": "اے میرے بیٹے، تم اللہ کے ساتھ شریک نہیں ٹھہراتے۔"
+          "en": "we did not stop",
+          "ur": "ہم نہیں رکے"
         },
         {
-          "en": "My son did not associate with Allah.",
-          "ur": "میرے بیٹے نے اللہ کے ساتھ شریک نہیں ٹھہرایا۔"
+          "en": "don't stop",
+          "ur": "مت رکو"
         },
         {
-          "en": "O my son, worship Allah.",
-          "ur": "اے میرے بیٹے، اللہ کی عبادت کرو۔"
+          "en": "we stop",
+          "ur": "ہم رکتے ہیں"
         }
       ],
       "correct_index": 0,
@@ -130,111 +125,119 @@
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch45-l06-ex02",
+      "id": "ch45-l04-ex02",
       "statement": {
-        "en": "In لَنْ نَبْرَحَ (20:91), نَبْرَحَ is مَنْصُوب.",
-        "ur": "لَنْ نَبْرَحَ (20:91) میں نَبْرَحَ منصوب ہے۔"
+        "en": "In لَا يَذْهَبُ (\"he does not go\"), the verb is مَجْزُوم.",
+        "ur": "لَا يَذْهَبُ (\"وہ نہیں جاتا\") میں فعل مجزوم ہے۔"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. This لَا only negates; the verb stays مَرْفُوع (ḍamma).",
+        "ur": "غلط۔ یہ لَا صرف نفی کرتا ہے؛ فعل مرفوع (ضمہ) رہتا ہے۔"
+      }
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch45-l06-ex03",
+      "id": "ch45-l04-ex03",
       "mode": "TAP",
-      "sentence_ar": "لَمْ ___ وَلَمْ يُولَدْ",
+      "sentence_ar": "لَنْ ___ الْحَقَّ",
       "hint": {
-        "en": "He did not beget, nor was He begotten. (112:3)",
-        "ur": "نہ اس نے کسی کو جنا اور نہ وہ جنا گیا۔ (112:3)"
+        "en": "He will not leave the truth.",
+        "ur": "وہ حق کو نہیں چھوڑے گا۔"
       },
       "options": [
         {
-          "ar": "يَلِدْ",
-          "ar_plain": "يلد",
-          "translit": "yalid",
-          "en": "beget (مَجْزُوم)",
-          "ur": "جنا (مجزوم)"
-        },
-        {
-          "ar": "يَلِدُ",
-          "ar_plain": "يلد",
-          "translit": "yalidu",
-          "en": "(مَرْفُوع)",
-          "ur": "(مرفوع)"
-        },
-        {
-          "ar": "يَلِدَ",
-          "ar_plain": "يلد",
-          "translit": "yalida",
+          "ar": "يَتْرُكَ",
+          "ar_plain": "يترك",
+          "translit": "yatruka",
           "en": "(مَنْصُوب)",
           "ur": "(منصوب)"
         },
         {
-          "ar": "وَلَدَ",
-          "ar_plain": "ولد",
-          "translit": "walada",
-          "en": "begot (past)",
-          "ur": "جنا (ماضی)"
+          "ar": "يَتْرُكُ",
+          "ar_plain": "يترك",
+          "translit": "yatruku",
+          "en": "(مَرْفُوع)",
+          "ur": "(مرفوع)"
+        },
+        {
+          "ar": "يَتْرُكْ",
+          "ar_plain": "يترك",
+          "translit": "yatruk",
+          "en": "(مَجْزُوم)",
+          "ur": "(مجزوم)"
+        },
+        {
+          "ar": "تَرَكَ",
+          "ar_plain": "ترك",
+          "translit": "taraka",
+          "en": "left (past)",
+          "ur": "چھوڑا (ماضی)"
         }
       ],
       "correct_answer": {
-        "ar": "يَلِدْ",
-        "ar_plain": "يلد",
-        "translit": "yalid",
-        "en": "beget (مَجْزُوم)",
-        "ur": "جنا (مجزوم)"
+        "ar": "يَتْرُكَ",
+        "ar_plain": "يترك",
+        "translit": "yatruka",
+        "en": "(مَنْصُوب)",
+        "ur": "(منصوب)"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَنْ → مَنْصُوب: يَتْرُكَ.",
+        "ur": "لَنْ ← منصوب: يَتْرُكَ۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch45-l06-ex04",
+      "id": "ch45-l04-ex04",
       "left_column": [
         {
-          "ar": "يَحْسَبُ",
-          "ar_plain": "يحسب",
-          "translit": "yahsabu",
-          "en": "he thinks",
-          "ur": "وہ سمجھتا ہے"
+          "ar": "يَذْهَبُ",
+          "ar_plain": "يذهب",
+          "translit": "yadh-habu",
+          "en": "he goes (مَرْفُوع)",
+          "ur": "وہ جاتا ہے (مرفوع)"
         },
         {
-          "ar": "نَبْرَحَ",
-          "ar_plain": "نبرح",
-          "translit": "nabraha",
-          "en": "we stop",
-          "ur": "ہم رکیں"
+          "ar": "لَنْ يَذْهَبَ",
+          "ar_plain": "لن يذهب",
+          "translit": "lan yadh-haba",
+          "en": "he will not go (مَنْصُوب)",
+          "ur": "وہ نہیں جائے گا (منصوب)"
         },
         {
-          "ar": "تُشْرِكْ",
-          "ar_plain": "تشرك",
-          "translit": "tushrik",
-          "en": "associate",
-          "ur": "شریک ٹھہراؤ"
+          "ar": "لَمْ يَذْهَبْ",
+          "ar_plain": "لم يذهب",
+          "translit": "lam yadh-hab",
+          "en": "he did not go (مَجْزُوم)",
+          "ur": "وہ نہیں گیا (مجزوم)"
         },
         {
-          "ar": "يَرْجِعَ",
-          "ar_plain": "يرجع",
-          "translit": "yarji'a",
-          "en": "returns",
-          "ur": "لوٹ آئیں"
+          "ar": "لَا تَذْهَبْ",
+          "ar_plain": "لا تذهب",
+          "translit": "laa tadh-hab",
+          "en": "don't go (مَجْزُوم)",
+          "ur": "مت جاؤ (مجزوم)"
         }
       ],
       "right_column": [
         {
-          "en": "20:91 — مَنْصُوب after لَنْ",
-          "ur": "20:91 — لَنْ کے بعد منصوب"
+          "en": "fatḥa — لَنْ",
+          "ur": "فتحہ — لَنْ"
         },
         {
-          "en": "20:91 — مَنْصُوب after حَتَّىٰ",
-          "ur": "20:91 — حَتَّىٰ کے بعد منصوب"
+          "en": "sukūn — لَا of prohibition",
+          "ur": "سکون — نہی کا لَا"
         },
         {
-          "en": "104:3 — مَرْفُوع",
-          "ur": "104:3 — مرفوع"
+          "en": "ḍamma — no governor",
+          "ur": "ضمہ — کوئی عامل نہیں"
         },
         {
-          "en": "31:13 — مَجْزُوم",
-          "ur": "31:13 — مجزوم"
+          "en": "sukūn — لَمْ",
+          "ur": "سکون — لَمْ"
         }
       ],
       "correct_pairs": [
@@ -259,162 +262,126 @@
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch45-l06-ex05",
+      "id": "ch45-l04-ex05",
       "target_translation": {
-        "en": "We will not stop. (20:91)",
-        "ur": "ہم نہیں رکیں گے۔ (20:91)"
+        "en": "Don't leave the truth.",
+        "ur": "حق کو مت چھوڑو۔"
       },
       "tiles": [
-        {
-          "ar": "لَنْ",
-          "ar_plain": "لن",
-          "translit": "lan",
-          "en": "will not",
-          "ur": "نہیں … گے"
-        },
-        {
-          "ar": "نَبْرَحَ",
-          "ar_plain": "نبرح",
-          "translit": "nabraha",
-          "en": "stop",
-          "ur": "رکیں"
-        },
-        {
-          "ar": "نَبْرَحُ",
-          "ar_plain": "نبرح",
-          "translit": "nabrahu",
-          "en": "we stop (مَرْفُوع)",
-          "ur": "ہم رکتے ہیں"
-        }
-      ],
-      "correct_order": [
-        0,
-        1
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch45-l06-ex06",
-      "statement": {
-        "en": "يَحْسَبُ in 104:3 is مَجْزُوم.",
-        "ur": "104:3 میں يَحْسَبُ مجزوم ہے۔"
-      },
-      "correct_answer": false,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "False: no governor, ḍamma — مَرْفُوع.",
-        "ur": "غلط: کوئی عامل نہیں، ضمہ — مرفوع۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch45-l06-ex07",
-      "sentence_ar": "لَا تُشْرِكْ بِاللَّهِ",
-      "words": [
         {
           "ar": "لَا",
           "ar_plain": "لا",
           "translit": "laa",
-          "en": "do not",
+          "en": "don't",
           "ur": "مت"
         },
         {
-          "ar": "تُشْرِكْ",
-          "ar_plain": "تشرك",
-          "translit": "tushrik",
-          "en": "associate",
-          "ur": "شریک ٹھہراؤ"
+          "ar": "تَتْرُكِ",
+          "ar_plain": "تترك",
+          "translit": "tatruki",
+          "en": "leave (مَجْزُوم)",
+          "ur": "چھوڑو (مجزوم)"
         },
         {
-          "ar": "بِاللَّهِ",
-          "ar_plain": "بالله",
-          "translit": "billaah",
-          "en": "with Allah",
-          "ur": "اللہ کے ساتھ"
+          "ar": "الْحَقَّ",
+          "ar_plain": "الحق",
+          "translit": "al-haqqa",
+          "en": "the truth",
+          "ur": "حق"
+        },
+        {
+          "ar": "تَتْرُكُ",
+          "ar_plain": "تترك",
+          "translit": "tatruku",
+          "en": "you leave (مَرْفُوع)",
+          "ur": "تم چھوڑتے ہو"
         }
       ],
-      "available_roles": [
-        "PARTICLE",
-        "VERB",
-        "SUBJECT",
-        "OBJECT"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "VERB",
-        "PARTICLE"
+      "correct_order": [
+        0,
+        1,
+        2
       ],
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَا = particle (prohibition); تُشْرِكْ = verb (مَجْزُوم); بِاللَّهِ = preposition + noun.",
-        "ur": "لَا = حرف (نہی)؛ تُشْرِكْ = فعل (مجزوم)؛ بِاللَّهِ = حرفِ جر + اسم۔"
+        "en": "Prohibition: لَا + مَجْزُوم. The sukūn becomes kasra before الْحَقَّ.",
+        "ur": "نہی: لَا + مجزوم۔ الْحَقَّ سے پہلے سکون کسرہ بن جاتا ہے۔"
       }
     },
     {
+      "type": "TRUE_FALSE",
+      "id": "ch45-l04-ex06",
+      "statement": {
+        "en": "A verb with no governor is مَرْفُوع.",
+        "ur": "جس فعل پر کوئی عامل نہ ہو وہ مرفوع ہوتا ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
       "type": "TAP_TRANSLATION",
-      "id": "ch45-l06-ex08",
+      "id": "ch45-l04-ex07",
       "prompt": {
-        "ar": "قَالُوا لَنْ نَبْرَحَ عَلَيْهِ عَاكِفِينَ",
-        "ar_plain": "قالوا لن نبرح عليه عاكفين",
-        "translit": "qaaluu lan nabraha 'alayhi 'aakifiin",
-        "en": "They said, 'We will not stop being devoted to it.'",
-        "ur": "انہوں نے کہا: 'ہم اسی پر جمے رہیں گے۔'"
+        "ar": "أُرِيدُ أَنْ أَفْهَمَ",
+        "ar_plain": "اريد ان افهم",
+        "translit": "uriidu an afhama",
+        "en": "I want to understand.",
+        "ur": "میں سمجھنا چاہتا ہوں۔"
       },
       "options": [
         {
-          "en": "They said, 'We did not stay.'",
-          "ur": "انہوں نے کہا: 'ہم نہیں ٹھہرے۔'"
+          "en": "I want to understand.",
+          "ur": "میں سمجھنا چاہتا ہوں۔"
         },
         {
-          "en": "They said, 'Do not stay.'",
-          "ur": "انہوں نے کہا: 'مت ٹھہرو۔'"
+          "en": "I did not understand.",
+          "ur": "میں نہیں سمجھا۔"
         },
         {
-          "en": "They said, 'We will not stop being devoted to it.'",
-          "ur": "انہوں نے کہا: 'ہم اسی پر جمے رہیں گے۔'"
+          "en": "I understand.",
+          "ur": "میں سمجھتا ہوں۔"
         },
         {
-          "en": "They said, 'We stay with him.'",
-          "ur": "انہوں نے کہا: 'ہم اس کے ساتھ رہتے ہیں۔'"
+          "en": "Don't understand.",
+          "ur": "مت سمجھو۔"
         }
       ],
-      "correct_index": 2,
+      "correct_index": 0,
       "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "مَجْزُوم in Al-Ikhlas",
-      "ar": "الْجَزْمُ فِي الْإِخْلَاصِ",
-      "ur": "الاخلاص میں جزم"
+      "en": "Two مَنْصُوب verbs",
+      "ar": "فِعْلَانِ مَنْصُوبَانِ",
+      "ur": "دو منصوب فعل"
     },
     "ayah": {
-      "surah": 112,
-      "ayah": 3,
-      "label": "Al-Ikhlas 112:3",
-      "ar": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
-      "en": "He did not beget, nor was He begotten.",
-      "ur": "نہ اس نے کسی کو جنا اور نہ وہ جنا گیا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/112003.mp3"
+      "surah": 20,
+      "ayah": 91,
+      "label": "Ta-Ha 20:91",
+      "ar": "قَالُوا لَنْ نَبْرَحَ عَلَيْهِ عَاكِفِينَ حَتَّىٰ يَرْجِعَ إِلَيْنَا مُوسَىٰ",
+      "en": "They said, 'We will not stop being devoted to it until Musa returns to us.'",
+      "ur": "انہوں نے کہا: 'ہم اسی پر جمے رہیں گے یہاں تک کہ موسیٰ ہمارے پاس لوٹ آئیں۔'",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020091.mp3"
     },
     "highlighted_word_indices": [
-      1,
-      3
+      2,
+      6
     ],
     "highlighted_words": [
-      "يَلِدْ",
-      "يُولَدْ"
+      "نَبْرَحَ",
+      "يَرْجِعَ"
     ],
     "noor_explanation": {
-      "en": "Both verbs follow لَمْ and end in sukūn.",
-      "ur": "دونوں فعل لَمْ کے بعد ہیں اور سکون پر ختم ہوتے ہیں۔"
+      "en": "نَبْرَحَ after لَنْ and يَرْجِعَ after حَتَّىٰ: both end in fatḥa.",
+      "ur": "لَنْ کے بعد نَبْرَحَ اور حَتَّىٰ کے بعد يَرْجِعَ: دونوں فتحہ پر ختم ہوتے ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "In real ayat: يَحْسَبُ (مَرْفُوع), لَنْ نَبْرَحَ (مَنْصُوب), لَا تُشْرِكْ and لَمْ يَلِدْ (مَجْزُوم).",
-      "ur": "اصل آیات میں: يَحْسَبُ (مرفوع)، لَنْ نَبْرَحَ (منصوب)، لَا تُشْرِكْ اور لَمْ يَلِدْ (مجزوم)۔"
+      "en": "Governor → state → ending. ḍamma (no governor), fatḥa (أَنْ, لَنْ), sukūn (لَمْ, لَمَّا, لَا of prohibition).",
+      "ur": "عامل ← حالت ← آخر۔ ضمہ (کوئی عامل نہیں)، فتحہ (أَنْ، لَنْ)، سکون (لَمْ، لَمَّا، نہی کا لَا)۔"
     }
   }
 }
