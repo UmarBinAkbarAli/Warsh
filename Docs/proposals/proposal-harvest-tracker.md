@@ -62,6 +62,8 @@ Do not touch Codex's uncommitted edits to the proposal files themselves.
 | 9 | 66–70 | | | |
 | 10 | 71–72 | | | |
 
+**Owner decisions after batch 6 (2026-10-04).** (1) Anything already taught in an earlier chapter is never repeated later — a proposal item that only re-reads known material is discarded (this is why Ch 52's dialogue lesson stays unbuilt). (2) **المفعول المطلق stays in Chapter 55** (`ch55-l06` already teaches it with 4:164, 48:3 and the not-every-accusative-is-an-object contrast). Chapter 58 must NOT get its own absolute-object lesson (`ch58-l07` of the Ch 58 proposal is discarded); where Ch 58/59 proposals mention it, treat it as retrieval of `ch55-l06` only.
+
 **Batch 1 notes for later batches.** Builder scripts live in the session
 scratchpad only; the reusable pieces are `scripts/promote-chapters-26-30.cjs`
 (copy it for the next range) and this recipe: write fixtures → `db:validate-fixtures`
