@@ -1,0 +1,439 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 51, final test (ch51-test, new). Added 2026-10-04 in the proposal harvest, batch 6, from Docs/proposals/chapter-51-content-proposal.md. Twelve multiple-choice questions: past dual (q01), present person (q02), mood (q03), the command (q04), Form II (q05), Form IV (q06), passive past and receiver role (q07–08), passive present and voice versus mood (q09–10), and two reading decisions (q11–12). Pass mark 80 %: 9/12 fails, 10/12 passes.",
+    "title": "Chapter 51 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الْحَادِي وَالْخَمْسِينَ",
+    "titleUr": "باب 51 کا آخری امتحان",
+    "chapter_order": 51,
+    "lesson_order": 11,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 62,
+      "ayah": 1,
+      "label": "Al-Jumu'ah 62:1",
+      "ar": "يُسَبِّحُ لِلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ الْمَلِكِ الْقُدُّوسِ الْعَزِيزِ الْحَكِيمِ",
+      "en": "Whatever is in the heavens and whatever is on the earth is exalting Allāh, the Sovereign, the Pure, the Exalted in Might, the Wise.",
+      "ur": "جو چیز آسمانوں میں ہے اور جو چیز زمین میں ہے سب خدا کی تسبیح کرتی ہے جو بادشاہ حقیقی پاک ذات زبردست حکمت والا ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/062001.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 51.",
+      "ur": "باب 51 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 51,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch51-test-q01",
+        "topic": {
+          "en": "Past dual",
+          "ur": "ماضی تثنیہ"
+        },
+        "prompt": {
+          "en": "Which verb completes 'The two boys went to the school'?",
+          "ur": "کون سا فعل جملہ 'دونوں لڑکے اسکول گئے' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "الْوَلَدَانِ ___ إِلَى الْمَدْرَسَةِ.",
+        "options": [
+          {
+            "en": "ذَهَبَ",
+            "ur": "ذَهَبَ"
+          },
+          {
+            "en": "ذَهَبُوا",
+            "ur": "ذَهَبُوا"
+          },
+          {
+            "en": "ذَهَبَا",
+            "ur": "ذَهَبَا"
+          },
+          {
+            "en": "ذَهَبَتَا",
+            "ur": "ذَهَبَتَا"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch51-test-q02",
+        "topic": {
+          "en": "Present person",
+          "ur": "مضارع کا شخص"
+        },
+        "prompt": {
+          "en": "Which verb completes 'She writes the lesson'?",
+          "ur": "کون سا فعل جملہ 'وہ (مؤنث) سبق لکھتی ہے' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "هِيَ ___ الدَّرْسَ.",
+        "options": [
+          {
+            "en": "تَكْتُبُ",
+            "ur": "تَكْتُبُ"
+          },
+          {
+            "en": "يَكْتُبُ",
+            "ur": "يَكْتُبُ"
+          },
+          {
+            "en": "أَكْتُبُ",
+            "ur": "أَكْتُبُ"
+          },
+          {
+            "en": "نَكْتُبُ",
+            "ur": "نَكْتُبُ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch51-test-q03",
+        "topic": {
+          "en": "Mood after لَنْ",
+          "ur": "لَنْ کے بعد حالت"
+        },
+        "prompt": {
+          "en": "Which verb completes 'Ahmad will not go to the school'?",
+          "ur": "کون سا فعل جملہ 'احمد اسکول نہیں جائے گا' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "لَنْ ___ أَحْمَدُ إِلَى الْمَدْرَسَةِ.",
+        "options": [
+          {
+            "en": "يَذْهَبُ",
+            "ur": "يَذْهَبُ"
+          },
+          {
+            "en": "يَذْهَبْ",
+            "ur": "يَذْهَبْ"
+          },
+          {
+            "en": "ذَهَبَ",
+            "ur": "ذَهَبَ"
+          },
+          {
+            "en": "يَذْهَبَ",
+            "ur": "يَذْهَبَ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch51-test-q04",
+        "topic": {
+          "en": "The command",
+          "ur": "امر"
+        },
+        "prompt": {
+          "en": "Which is the command 'Write!' (to one man), built from تَكْتُبْ?",
+          "ur": "تَكْتُبْ سے بنا ہوا امر 'لکھو!' (ایک مرد سے) کون سا ہے؟"
+        },
+        "options": [
+          {
+            "en": "اِكْتُبْ",
+            "ur": "اِكْتُبْ"
+          },
+          {
+            "en": "اُكْتُبْ",
+            "ur": "اُكْتُبْ"
+          },
+          {
+            "en": "كْتُبْ",
+            "ur": "كْتُبْ"
+          },
+          {
+            "en": "كَتَبَ",
+            "ur": "كَتَبَ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch51-test-q05",
+        "topic": {
+          "en": "Form II",
+          "ur": "وزن ثانی"
+        },
+        "prompt": {
+          "en": "Which verb means 'he teaches'?",
+          "ur": "کون سا فعل 'وہ سکھاتا ہے' کا مطلب دیتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "يَعْلَمُ",
+            "ur": "يَعْلَمُ"
+          },
+          {
+            "en": "عَلَّمَ",
+            "ur": "عَلَّمَ"
+          },
+          {
+            "en": "يُعَلِّمُ",
+            "ur": "يُعَلِّمُ"
+          },
+          {
+            "en": "عَلِمَ",
+            "ur": "عَلِمَ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch51-test-q06",
+        "topic": {
+          "en": "Form IV",
+          "ur": "وزن رابع"
+        },
+        "prompt": {
+          "en": "Which verb completes 'My father sent the book'?",
+          "ur": "کون سا فعل جملہ 'میرے والد نے کتاب بھیجی' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "___ أَبِي الْكِتَابَ.",
+        "options": [
+          {
+            "en": "يُرْسِلُ",
+            "ur": "يُرْسِلُ"
+          },
+          {
+            "en": "أَرْسَلَ",
+            "ur": "أَرْسَلَ"
+          },
+          {
+            "en": "لَمْ يُرْسِلْ",
+            "ur": "لَمْ يُرْسِلْ"
+          },
+          {
+            "en": "أَكْتُبُ",
+            "ur": "أَكْتُبُ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch51-test-q07",
+        "topic": {
+          "en": "Passive past",
+          "ur": "ماضی مجہول"
+        },
+        "prompt": {
+          "en": "Which verb completes 'The door was opened'?",
+          "ur": "کون سا فعل جملہ 'دروازہ کھولا گیا' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "___ الْبَابُ.",
+        "options": [
+          {
+            "en": "فُتِحَ",
+            "ur": "فُتِحَ"
+          },
+          {
+            "en": "فَتَحَ",
+            "ur": "فَتَحَ"
+          },
+          {
+            "en": "يُفْتَحُ",
+            "ur": "يُفْتَحُ"
+          },
+          {
+            "en": "فَتَحْتُ",
+            "ur": "فَتَحْتُ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch51-test-q08",
+        "topic": {
+          "en": "Receiver role",
+          "ur": "نائب فاعل"
+        },
+        "prompt": {
+          "en": "In كُتِبَ الدَّرْسُ, what is الدَّرْسُ?",
+          "ur": "كُتِبَ الدَّرْسُ میں الدَّرْسُ کیا ہے؟"
+        },
+        "options": [
+          {
+            "en": "The doer who wrote",
+            "ur": "کرنے والا جس نے لکھا"
+          },
+          {
+            "en": "An object in fatḥa",
+            "ur": "فتحہ والا مفعول"
+          },
+          {
+            "en": "A verb",
+            "ur": "ایک فعل"
+          },
+          {
+            "en": "The receiver that stands in for the doer, with ḍamma",
+            "ur": "نائب فاعل جو کرنے والے کی جگہ ہے، ضمہ کے ساتھ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch51-test-q09",
+        "topic": {
+          "en": "Passive present",
+          "ur": "مضارع مجہول"
+        },
+        "prompt": {
+          "en": "Which verb completes 'The lesson is written'?",
+          "ur": "کون سا فعل جملہ 'سبق لکھا جاتا ہے' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "___ الدَّرْسُ.",
+        "options": [
+          {
+            "en": "يَكْتُبُ",
+            "ur": "يَكْتُبُ"
+          },
+          {
+            "en": "كُتِبَ",
+            "ur": "كُتِبَ"
+          },
+          {
+            "en": "يُكْتَبُ",
+            "ur": "يُكْتَبُ"
+          },
+          {
+            "en": "يُكْتَبَ",
+            "ur": "يُكْتَبَ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch51-test-q10",
+        "topic": {
+          "en": "Voice and mood",
+          "ur": "وزن اور حالت"
+        },
+        "prompt": {
+          "en": "Which verb completes 'The door will not be opened'?",
+          "ur": "کون سا فعل جملہ 'دروازہ نہیں کھولا جائے گا' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "الْبَابُ لَنْ ___.",
+        "options": [
+          {
+            "en": "يُفْتَحُ",
+            "ur": "يُفْتَحُ"
+          },
+          {
+            "en": "يُفْتَحَ",
+            "ur": "يُفْتَحَ"
+          },
+          {
+            "en": "يَفْتَحَ",
+            "ur": "يَفْتَحَ"
+          },
+          {
+            "en": "يُفْتَحْ",
+            "ur": "يُفْتَحْ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch51-test-q11",
+        "topic": {
+          "en": "Reading 2:183",
+          "ur": "2:183 پڑھنا"
+        },
+        "prompt": {
+          "en": "Read this excerpt of 2:183. What kind of verb is كُتِبَ and what is الصِّيَامُ?",
+          "ur": "2:183 کا یہ اقتباس پڑھیں۔ كُتِبَ کس قسم کا فعل ہے اور الصِّيَامُ کیا ہے؟"
+        },
+        "arabic": "كُتِبَ عَلَيْكُمُ الصِّيَامُ",
+        "options": [
+          {
+            "en": "A passive past verb; الصِّيَامُ is the receiver, with ḍamma",
+            "ur": "ماضی مجہول فعل؛ الصِّيَامُ نائب فاعل ہے، ضمہ کے ساتھ"
+          },
+          {
+            "en": "An active past verb; الصِّيَامُ is the doer who wrote",
+            "ur": "معروف ماضی فعل؛ الصِّيَامُ لکھنے والا ہے"
+          },
+          {
+            "en": "A present verb; الصِّيَامُ is an object in fatḥa",
+            "ur": "مضارع فعل؛ الصِّيَامُ فتحہ والا مفعول ہے"
+          },
+          {
+            "en": "A command; الصِّيَامُ is a particle",
+            "ur": "امر؛ الصِّيَامُ حرف ہے"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch51-test-q12",
+        "topic": {
+          "en": "Reading 96:5",
+          "ur": "96:5 پڑھنا"
+        },
+        "prompt": {
+          "en": "Read 96:5. What does عَلَّمَ mean here, and how does it differ from يَعْلَمْ?",
+          "ur": "96:5 پڑھیں۔ یہاں عَلَّمَ کا کیا مطلب ہے اور يَعْلَمْ سے اس کا فرق کیا ہے؟"
+        },
+        "arabic": "عَلَّمَ الْإِنسَانَ مَا لَمْ يَعْلَمْ",
+        "options": [
+          {
+            "en": "'knew' — the same stem as يَعْلَمْ",
+            "ur": "'جانا' — يَعْلَمْ جیسا ہی وزن"
+          },
+          {
+            "en": "'was taught' — a passive verb",
+            "ur": "'سکھایا گیا' — مجہول فعل"
+          },
+          {
+            "en": "'taught' — a Form II stem; يَعْلَمْ is Form I 'know'",
+            "ur": "'سکھایا' — وزن ثانی؛ يَعْلَمْ ثلاثی 'جانتا'"
+          },
+          {
+            "en": "'will teach' — a future verb",
+            "ur": "'سکھائے گا' — مستقبل کا فعل"
+          }
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 51 — verb forms",
+      "ar": "صُوَرُ الْفِعْلِ",
+      "ur": "باب 51 — فعل کی صورتیں"
+    },
+    "ayah": {
+      "surah": 62,
+      "ayah": 1,
+      "label": "Al-Jumu'ah 62:1",
+      "ar": "يُسَبِّحُ لِلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ الْمَلِكِ الْقُدُّوسِ الْعَزِيزِ الْحَكِيمِ",
+      "en": "Whatever is in the heavens and whatever is on the earth is exalting Allāh, the Sovereign, the Pure, the Exalted in Might, the Wise.",
+      "ur": "جو چیز آسمانوں میں ہے اور جو چیز زمین میں ہے سب خدا کی تسبیح کرتی ہے جو بادشاہ حقیقی پاک ذات زبردست حکمت والا ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/062001.mp3"
+    },
+    "highlighted_word_indices": [
+      0
+    ],
+    "highlighted_words": [
+      "يُسَبِّحُ"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 51 able to read past and present endings, moods, commands, two derived stems and the passive.",
+      "ur": "آپ باب 51 اس حال میں مکمل کرتے ہیں کہ ماضی و مضارع کی علامتیں، حالتیں، امر، دو مزید فیہ اوزان اور مجہول پڑھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 51 complete. Chapter 52 puts these forms to work in connected sentences.",
+      "ur": "باب 51 مکمل۔ باب 52 ان صورتوں کو مربوط جملوں میں استعمال کرتا ہے۔"
+    }
+  }
+}

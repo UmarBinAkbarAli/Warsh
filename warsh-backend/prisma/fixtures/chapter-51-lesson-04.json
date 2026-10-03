@@ -84,6 +84,17 @@
       }
     },
     {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Which vowel: اِ or اُ?",
+        "ur": "کون سی حرکت: اِ یا اُ؟"
+      },
+      "body": {
+        "en": "To build the command from a sound verb, take the 'you (m. sg.)' imperfect in jussive form, drop the prefix تَـ and add a helper vowel at the front. Look at the vowel on the middle root letter: ḍamma gives اُ — تَكْتُبْ → اُكْتُبْ (write!), تَنْصُرْ → اُنْصُرْ (help!). Fatḥa or kasra gives اِ — تَذْهَبْ → اِذْهَبْ (go!), تَجْلِسْ → اِجْلِسْ (sit!), تَفْتَحْ → اِفْتَحْ (open!). This is the rule for sound Form I verbs addressed to one man; other addressees and weak or derived verbs are not covered here.",
+        "ur": "صحیح فعل سے امر بنانے کے لیے 'تم (مذکر واحد)' کا مجزوم مضارع لیں، سابقہ تَـ ہٹائیں اور آغاز میں سہارے کی حرکت لگائیں۔ درمیانے مادّہ حرف کی حرکت دیکھیں: ضمہ ہو تو اُ — تَكْتُبْ ← اُكْتُبْ (لکھو!)، تَنْصُرْ ← اُنْصُرْ (مدد کرو!)۔ فتحہ یا کسرہ ہو تو اِ — تَذْهَبْ ← اِذْهَبْ (جاؤ!)، تَجْلِسْ ← اِجْلِسْ (بیٹھو!)، تَفْتَحْ ← اِفْتَحْ (کھولو!)۔ یہ قاعدہ ایک مرد سے خطاب کے صحیح ثلاثی افعال کے لیے ہے؛ دوسرے مخاطب اور معتل یا مزید فیہ افعال یہاں شامل نہیں۔"
+      }
+    },
+    {
       "type": "AYAH_PREVIEW",
       "text": {
         "ar": "وَلَا تَتَّبِعْ أَهْوَاءَهُمْ",
@@ -375,6 +386,145 @@
       "explanation_on_wrong": {
         "en": "لَمْ = particle (\"did not\"); it puts the verb in jazm. يَغْفِرْ = verb, final sukūn. لَمْ يَغْفِرْ = \"he did not forgive\".",
         "ur": "لَمْ = حرف (\"نہیں\")؛ یہ فعل کو مجزوم کرتا ہے۔ يَغْفِرْ = فعل، آخر میں سکون۔ لَمْ يَغْفِرْ = \"اس نے معاف نہیں کیا\"۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch51-l04-ex08",
+      "prompt": {
+        "ar": "اُكْتُبْ",
+        "ar_plain": "اكتب",
+        "translit": "uktub",
+        "en": "Write! (to one man)",
+        "ur": "لکھو! (ایک مرد سے)"
+      },
+      "options": [
+        {
+          "en": "Write! (to one man)",
+          "ur": "لکھو! (ایک مرد سے)"
+        },
+        {
+          "en": "He wrote.",
+          "ur": "اس نے لکھا۔"
+        },
+        {
+          "en": "He did not write.",
+          "ur": "اس نے نہیں لکھا۔"
+        },
+        {
+          "en": "He writes.",
+          "ur": "وہ لکھتا ہے۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "اُكْتُبْ comes from تَكْتُبْ: drop تَـ, the middle letter has ḍamma, so the helper vowel is اُ.",
+        "ur": "اُكْتُبْ تَكْتُبْ سے بنتا ہے: تَـ ہٹائیں، درمیانے حرف پر ضمہ ہے، اس لیے سہارے کی حرکت اُ ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch51-l04-ex09",
+      "mode": "TAP",
+      "sentence_ar": "تَجْلِسْ ← ___",
+      "hint": {
+        "en": "Make the command 'Sit!' from تَجْلِسْ.",
+        "ur": "تَجْلِسْ سے امر 'بیٹھو!' بنائیں۔"
+      },
+      "options": [
+        {
+          "ar": "اُجْلِسْ",
+          "ar_plain": "اجلس",
+          "translit": "ujlis",
+          "en": "(wrong helper vowel)",
+          "ur": "(غلط سہارے کی حرکت)"
+        },
+        {
+          "ar": "جْلِسْ",
+          "ar_plain": "جلس",
+          "translit": "jlis",
+          "en": "(cannot start with sukūn)",
+          "ur": "(ساکن سے شروع نہیں ہو سکتا)"
+        },
+        {
+          "ar": "اِجْلِسْ",
+          "ar_plain": "اجلس",
+          "translit": "ijlis",
+          "en": "sit!",
+          "ur": "بیٹھو!"
+        },
+        {
+          "ar": "جَلَسَ",
+          "ar_plain": "جلس",
+          "translit": "jalasa",
+          "en": "he sat",
+          "ur": "وہ بیٹھا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "اِجْلِسْ",
+        "ar_plain": "اجلس",
+        "translit": "ijlis",
+        "en": "sit!",
+        "ur": "بیٹھو!"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The middle letter of تَجْلِسْ has kasra, so the helper vowel is اِ: اِجْلِسْ.",
+        "ur": "تَجْلِسْ کے درمیانے حرف پر کسرہ ہے، اس لیے سہارے کی حرکت اِ ہے: اِجْلِسْ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch51-l04-ex10",
+      "mode": "TAP",
+      "sentence_ar": "تَنْصُرْ ← ___",
+      "hint": {
+        "en": "Make the command 'Help!' from تَنْصُرْ.",
+        "ur": "تَنْصُرْ سے امر 'مدد کرو!' بنائیں۔"
+      },
+      "options": [
+        {
+          "ar": "اِنْصُرْ",
+          "ar_plain": "انصر",
+          "translit": "inṣur",
+          "en": "(wrong helper vowel)",
+          "ur": "(غلط سہارے کی حرکت)"
+        },
+        {
+          "ar": "اُنْصُرْ",
+          "ar_plain": "انصر",
+          "translit": "unṣur",
+          "en": "help!",
+          "ur": "مدد کرو!"
+        },
+        {
+          "ar": "نْصُرْ",
+          "ar_plain": "نصر",
+          "translit": "nṣur",
+          "en": "(cannot start with sukūn)",
+          "ur": "(ساکن سے شروع نہیں ہو سکتا)"
+        },
+        {
+          "ar": "نَصَرَ",
+          "ar_plain": "نصر",
+          "translit": "naṣara",
+          "en": "he helped",
+          "ur": "اس نے مدد کی"
+        }
+      ],
+      "correct_answer": {
+        "ar": "اُنْصُرْ",
+        "ar_plain": "انصر",
+        "translit": "unṣur",
+        "en": "help!",
+        "ur": "مدد کرو!"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The middle letter of تَنْصُرْ has ḍamma, so the helper vowel is اُ: اُنْصُرْ.",
+        "ur": "تَنْصُرْ کے درمیانے حرف پر ضمہ ہے، اس لیے سہارے کی حرکت اُ ہے: اُنْصُرْ۔"
       }
     }
   ],

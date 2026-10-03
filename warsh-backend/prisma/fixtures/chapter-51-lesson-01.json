@@ -31,7 +31,7 @@
   "conjugation_table": {
     "root": "ف-ع-ل",
     "pattern_name": {
-      "en": "Past tense (فعل ماضٍ) — فَعَلَ",
+      "en": "Past tense (فعل ماضٍ) — فَعَلَ, with dual forms",
       "ar": "الفعل الماضي — فَعَلَ",
       "ur": "زمان ماضی (فعل ماضٍ) — فَعَلَ"
     },
@@ -194,6 +194,54 @@
           "translit": "fa'alna",
           "en": "they (f.) did",
           "ur": "انہوں نے (f.) کیا۔"
+        }
+      },
+      {
+        "pronoun": {
+          "ar": "هُمَا (مذكر)",
+          "ar_plain": "هما (مذكر)",
+          "translit": "humā (mdhkr)",
+          "en": "they two (m.)",
+          "ur": "وہ دونوں (مذکر)"
+        },
+        "conjugated": {
+          "ar": "فَعَلَا",
+          "ar_plain": "فعلا",
+          "translit": "faʿalā",
+          "en": "they two (m.) did",
+          "ur": "ان دونوں (مذکر) نے کیا"
+        }
+      },
+      {
+        "pronoun": {
+          "ar": "هُمَا (مؤنث)",
+          "ar_plain": "هما (مؤنث)",
+          "translit": "humā (mʾnth)",
+          "en": "they two (f.)",
+          "ur": "وہ دونوں (مؤنث)"
+        },
+        "conjugated": {
+          "ar": "فَعَلَتَا",
+          "ar_plain": "فعلتا",
+          "translit": "faʿalatā",
+          "en": "they two (f.) did",
+          "ur": "ان دونوں (مؤنث) نے کیا"
+        }
+      },
+      {
+        "pronoun": {
+          "ar": "أَنْتُمَا (للمذكر والمؤنث)",
+          "ar_plain": "انتما (للمذكر والمؤنث)",
+          "translit": "ʾantumā (llmdhkr wlmʾnth)",
+          "en": "you two (m. or f.)",
+          "ur": "تم دونوں (مذکر یا مؤنث)"
+        },
+        "conjugated": {
+          "ar": "فَعَلْتُمَا",
+          "ar_plain": "فعلتما",
+          "translit": "faʿaltumā",
+          "en": "you two did",
+          "ur": "تم دونوں نے کیا"
         }
       }
     ]
@@ -469,6 +517,114 @@
         "en": "فَعَلَ is the past tense verb 'he did.' رَجُلٌ is the subject in nominative. شَيْئًا is the object in accusative.",
         "ur": "فَعَلَ past tense verb 'اس نے کیا' ہے۔ رَجُلٌ nominative میں subject ہے۔ شَيْئًا accusative میں object ہے۔"
       }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch51-l01-ex08",
+      "prompt": {
+        "ar": "قَالَا رَبَّنَا",
+        "ar_plain": "قالا ربنا",
+        "translit": "qālā rabbanā",
+        "en": "The two of them said: Our Lord (7:23)",
+        "ur": "ان دونوں نے کہا: اے ہمارے رب (7:23)"
+      },
+      "options": [
+        {
+          "en": "I said",
+          "ur": "میں نے کہا"
+        },
+        {
+          "en": "The two of them said",
+          "ur": "ان دونوں نے کہا"
+        },
+        {
+          "en": "they (many) said",
+          "ur": "انہوں نے (سب نے) کہا"
+        },
+        {
+          "en": "she said",
+          "ur": "اس نے (مؤنث) کہا"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The ending ـا after the verb marks 'the two of them': قَالَا. Adam and his wife are the two (7:23).",
+        "ur": "فعل کے بعد ـا 'ان دونوں' کی علامت ہے: قَالَا۔ آدم اور ان کی بیوی وہ دونوں ہیں (7:23)۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch51-l01-ex09",
+      "mode": "TAP",
+      "sentence_ar": "هُمَا ذَهَبَ ___",
+      "hint": {
+        "en": "The two of them went.",
+        "ur": "وہ دونوں گئے۔"
+      },
+      "options": [
+        {
+          "ar": "ا",
+          "ar_plain": "ا",
+          "translit": "a",
+          "en": "two (m.)",
+          "ur": "دو (مذکر)"
+        },
+        {
+          "ar": "وا",
+          "ar_plain": "وا",
+          "translit": "w",
+          "en": "many",
+          "ur": "کئی"
+        },
+        {
+          "ar": "تَا",
+          "ar_plain": "تا",
+          "translit": "tā",
+          "en": "two (f.)",
+          "ur": "دو (مؤنث)"
+        },
+        {
+          "ar": "نَ",
+          "ar_plain": "ن",
+          "translit": "na",
+          "en": "many (f.)",
+          "ur": "کئی (مؤنث)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "ا",
+        "ar_plain": "ا",
+        "translit": "a",
+        "en": "two (m.)",
+        "ur": "دو (مذکر)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "For two male doers the verb takes ـا: ذَهَبَا — fatḥa on ب, then an alif.",
+        "ur": "دو مذکر کرنے والوں کے لیے فعل پر ـا آتا ہے: ذَهَبَا۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch51-l01-ex10",
+      "statement": {
+        "en": "فَعَلَتَا is the past verb for 'the two of them (f.)'.",
+        "ur": "فَعَلَتَا 'ان دونوں (مؤنث) نے کیا' کا ماضی فعل ہے۔",
+        "ar_example": {
+          "ar": "فَعَلَتَا",
+          "ar_plain": "فعلتا",
+          "translit": "faʿalatā",
+          "en": "the two (f.) did",
+          "ur": "ان دونوں (مؤنث) نے کیا"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes: the feminine dual adds تَا. First person has no dual — 'we' (فَعَلْنَا) covers two or more.",
+        "ur": "جی ہاں: مؤنث تثنیہ میں تَا لگتا ہے۔ متکلم کا تثنیہ نہیں — 'ہم' (فَعَلْنَا) دو یا زیادہ کے لیے ہے۔"
+      }
     }
   ],
   "reveal": {
@@ -496,8 +652,8 @@
   },
   "close": {
     "noor_message": {
-      "en": "فَعَلَ, فَعَلْتُ, فَعَلُوا — the endings tell you who did the action. This table works for regular (sound) Form I verbs like كَتَبَ and ذَهَبَ; weak and derived verbs change shape and come later.",
-      "ur": "فَعَلَ، فَعَلْتُ، فَعَلُوا — آخر کی علامتیں بتاتی ہیں کہ کام کس نے کیا۔ یہ جدول كَتَبَ اور ذَهَبَ جیسے باقاعدہ (صحیح) ثلاثی افعال پر لاگو ہوتا ہے؛ معتل اور مزید فیہ افعال کی شکل بدلتی ہے، وہ بعد میں آئیں گے۔"
+      "en": "فَعَلَ, فَعَلْتُ, فَعَلُوا — and the dual فَعَلَا, فَعَلَتَا, فَعَلْتُمَا: the endings tell you who did the action. First person has no dual form. This table works for regular (sound) Form I verbs like كَتَبَ and ذَهَبَ; weak and derived verbs change shape and come later.",
+      "ur": "فَعَلَ، فَعَلْتُ، فَعَلُوا — اور تثنیہ فَعَلَا، فَعَلَتَا، فَعَلْتُمَا: آخر کی علامتیں بتاتی ہیں کہ کام کس نے کیا۔ متکلم کا تثنیہ نہیں ہوتا۔ یہ جدول كَتَبَ اور ذَهَبَ جیسے باقاعدہ (صحیح) ثلاثی افعال پر لاگو ہوتا ہے؛ معتل اور مزید فیہ افعال کی شکل بدلتی ہے، وہ بعد میں آئیں گے۔"
     }
   }
 }

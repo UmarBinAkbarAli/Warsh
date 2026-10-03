@@ -2,29 +2,28 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 54, Lesson 2 — Preview of Book 6: the analytical grammar phase. Introduces what comes next.",
+    "_note": "Chapter 54, Lesson 2 (ch54-l08, new). The capstone anchor from the proposal: Luqman 31:12 in its three parts, the condition/response reading of Chapter 52 transferred to two different responses (فَإِنَّمَا يَشْكُرُ لِنَفْسِهِ, فَإِنَّ اللَّهَ غَنِيٌّ حَمِيدٌ), and the new word إِنَّمَا taught at recognition level only. The verb forms after مَنْ are supplied and no label for them is scored. Added 2026-10-04 in the proposal harvest, batch 6 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-54-content-proposal.md and its review amendments.",
+    "title": "Luqman 31:12 — Condition, Response and إِنَّمَا",
+    "titleAr": "لُقْمَانُ ١٢ — الشَّرْطُ وَالْجَوَابُ وَإِنَّمَا",
+    "titleUr": "لقمان 12 — شرط، جواب اور إِنَّمَا",
     "chapter_order": 54,
     "lesson_order": 2,
-    "chapter_title": "Book 5 Capstone & Transition to Book 6",
-    "title": "Book 6 Preview — The Grammar Science",
-    "titleAr": "مُعايَنَةُ الْكِتَابِ السَّادِسِ — عِلْمُ النَّحْوِ",
-    "source": "book5_lesson11_consolidation.md",
-    "estimated_minutes": 8,
-    "xp_reward": 10
+    "estimated_minutes": 11,
+    "xp_reward": 15
   },
   "hook": {
     "ayah": {
-      "surah": 56,
-      "ayah": 1,
-      "label": "Al-Waqi'ah 56:1",
-      "ar": "إِذَا وَقَعَتِ الْوَاقِعَةُ",
-      "en": "When the Occurrence occurs,",
-      "ur": "جب واقع ہونے والی واقع ہوجائے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/056001.mp3"
+      "surah": 31,
+      "ayah": 12,
+      "label": "Luqman 31:12",
+      "ar": "وَمَن يَشْكُرْ فَإِنَّمَا يَشْكُرُ لِنَفْسِهِ",
+      "en": "And whoever is grateful — he is grateful only for himself",
+      "ur": "اور جو شکر کرے تو وہ اپنے ہی لیے شکر کرتا ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/031012.mp3"
     },
     "noor_intro": {
-      "en": "Today we look ahead to Book 6. After the applied grammar of Book 5, Book 6 teaches you to analyze Arabic grammatically — to name the parts of speech and explain why they take their case markings. This is the science of Arabic grammar.",
-      "ur": "آج ہم Book 6 کی طرف آگے دیکھتے ہیں۔ Book 5 کے applied grammar کے بعد، Book 6 آپکو عربی کو grammatically analyze کرنا سکھاتا ہے — speech کے parts کا نام دینا اور بتانا کہ وہ کیوں اپنے case markings لیتے ہیں۔ یہ عربی grammar کا science ہے۔"
+      "en": "One verse, three parts: a command and two conditions. Read each condition, find where its response begins, and meet one new word.",
+      "ur": "ایک آیت، تین حصے: ایک حکم اور دو شرطیں۔ ہر شرط پڑھیں، دیکھیں جواب کہاں سے شروع ہوتا ہے، اور ایک نیا لفظ سیکھیں۔"
     },
     "autoplay": true
   },
@@ -32,271 +31,415 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Book 5 vs Book 6 — what changes",
-        "ar": "الْكِتَابُ الْخَامِسُ وَالسَّادِسُ — مَا الَّذِي يَتَغَيَّرُ",
-        "ur": "Book 5 اور Book 6 — کیا بدلتا ہے"
+        "en": "Luqman's wisdom in three parts",
+        "ar": "حِكْمَةُ لُقْمَانَ فِي ثَلَاثَةِ أَجْزَاءٍ",
+        "ur": "لقمان کی حکمت تین حصوں میں"
       },
       "explanation": {
-        "en": "Book 5 taught you to READ Arabic — to identify structures and understand meaning. Book 6 teaches you to ANALYZE Arabic — to name why a word takes raf', nasb, or jazm, to identify which nouns are مَبْنِيّ and which are مُعْرَب, and to fully parse complex sentences.",
-        "ur": "Book 5 نے آپکو عربی READ کرنا سکھایا — structures identify کرنا اور meaning سمجھنا۔ Book 6 آپکو عربی ANALYZE کرنا سکھاتا ہے — بتانا کہ ایک word کیوں raf'، nasb، یا jazm لیتا ہے، identify کرنا کہ کون سے nouns مَبْنِيّ ہیں اور کون سے مُعْرَب ہیں، اور complex sentences کو fully parse کرنا۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "الإِعْرَابُ وَالْبِنَاءُ — the two fundamental categories",
-        "ar": "الْإِعْرَابُ وَالْبِنَاءُ — الْفَئَتَانِ الْأَسَاسِيَّتَانِ",
-        "ur": "الْإِعْرَابُ اور الْبِنَاءُ — دو بنیادی categories"
-      },
-      "explanation": {
-        "en": "Every Arabic word is either مُعْرَب (its ending changes to show case) or مَبْنِيّ (its ending is fixed). This is the most fundamental distinction in Arabic grammar — the difference between words that decline and words that do not.",
-        "ur": "ہر عربی word یا تو مُعْرَب ہے (اسکا ending case دکھانے کے لیے بدلتا ہے) یا مَبْنِيّ ہے (اسکا ending fixed ہے)۔ یہ عربی grammar میں سب سے بنیادی distinction ہے — ان words کے درمیان فرق جنہیں decline ہوتی ہیں اور جنہیں نہیں۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Coming in Book 6: الإِعْرَابُ الْكَامِلُ",
-        "ur": "Book 6 میں آنے والا: مکمل إِعْرَابُ"
-      },
-      "body": {
-        "en": "In Book 6 you will learn: the full system of iʿrāb — raf', naṣb and jarr for nouns, raf', naṣb and jazm for verbs — and their signs; which words are مَبْنِيّ (particles, most pronouns, demonstratives and relative pronouns); and the five special nouns (الْأَسْمَاءُ الْخَمْسَةُ).",
-        "ur": "کتاب 6 میں آپ سیکھیں گے: اعراب کا پورا نظام — اسموں کے لیے رفع، نصب اور جر، افعال کے لیے رفع، نصب اور جزم — اور ان کی علامتیں؛ کون سے الفاظ مبنی ہیں (حروف، اکثر ضمائر، اسمائے اشارہ اور اسمائے موصولہ)؛ اور اسمائے خمسہ۔"
+        "en": "31:12 has a command (be grateful), then two conditions, each with its response: 'whoever is grateful …' and 'whoever denies …'. You read a condition and its response in Chapter 52; here the responses are different, and one new word appears: إِنَّمَا. The words you have not met are given as meanings.",
+        "ur": "31:12 میں ایک حکم ہے (شکر کرو)، پھر دو شرطیں، ہر ایک اپنے جواب کے ساتھ: 'جو شکر کرے …' اور 'جو ناشکری کرے …'۔ شرط اور جواب آپ نے باب 52 میں پڑھے؛ یہاں جواب مختلف ہیں، اور ایک نیا لفظ آتا ہے: إِنَّمَا۔ جو الفاظ آپ نے نہیں دیکھے وہ معنی کے ساتھ دیے گئے ہیں۔"
       }
     },
     {
       "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "إِذَا وَقَعَتِ الْوَاقِعَةُ",
-        "ar_plain": "إذا وقعت الواقعة",
-        "translit": "idhaa waqa'ati al-waaqi'ah",
-        "en": "When the Occurrence occurs",
-        "ur": "جب ہونے والی (قیامت) ہو پڑے گی"
+        "ar": "وَلَقَدْ آتَيْنَا لُقْمَانَ الْحِكْمَةَ أَنِ اشْكُرْ لِلَّهِ",
+        "ar_plain": "ولقد اتينا لقمان الحكمة ان اشكر لله",
+        "translit": "walaqad ʾātaynā luqmāna al-ḥikmata ʾani ashkur lillahi",
+        "en": "And We had certainly given Luqman wisdom: Be grateful to Allah",
+        "ur": "اور ہم نے لقمان کو حکمت دی کہ اللہ کا شکر کرو"
       },
       "explanation": {
-        "en": "Al-Wāqiʿah 56:1. إِذَا = \"when\" (a time word). وَقَعَتِ = past verb with the feminine ـتْ (given a kasra to join the next word). الْوَاقِعَةُ = \"the Occurrence\", its subject (nominative). Book 6 will teach you to name each of these roles.",
-        "ur": "سورۃ الواقعہ 56:1۔ إِذَا = \"جب\" (ظرف زمان)۔ وَقَعَتِ = ماضی کا فعل، مؤنث کی ـتْ کے ساتھ (اگلے لفظ سے ملانے کے لیے کسرہ)۔ الْوَاقِعَةُ = \"واقع ہونے والی\"، اس کا فاعل (مرفوع)۔ کتاب 6 آپ کو ان کرداروں کے نام سکھائے گی۔"
+        "en": "آتَيْنَا = 'We gave' (given); الْحِكْمَةَ = 'wisdom'; أَنِ اشْكُرْ لِلَّهِ = 'that: be grateful to Allah' — the command is given. (Luqman 31:12)",
+        "ur": "آتَيْنَا = 'ہم نے دیا' (دیا ہوا)؛ الْحِكْمَةَ = 'حکمت'؛ أَنِ اشْكُرْ لِلَّهِ = 'کہ اللہ کا شکر کرو' — حکم دیا ہوا ہے۔ (Luqman 31:12)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "وَمَن يَشْكُرْ فَإِنَّمَا يَشْكُرُ لِنَفْسِهِ",
+        "ar_plain": "ومن يشكر فانما يشكر لنفسه",
+        "translit": "waman yashkur faʾinnamā yashkuru linafsihi",
+        "en": "And whoever is grateful — he is grateful only for himself",
+        "ur": "اور جو شکر کرے تو وہ اپنے ہی لیے شکر کرتا ہے"
+      },
+      "explanation": {
+        "en": "The condition is وَمَن يَشْكُرْ ('and whoever is grateful'); the response is فَإِنَّمَا يَشْكُرُ لِنَفْسِهِ — 'he is grateful only for himself'. إِنَّمَا means 'only / it is simply that' (new, recognition); لِنَفْسِهِ = 'for himself'. (Luqman 31:12)",
+        "ur": "شرط وَمَن يَشْكُرْ ہے ('اور جو شکر کرے')؛ جواب فَإِنَّمَا يَشْكُرُ لِنَفْسِهِ ہے — 'وہ اپنے ہی لیے شکر کرتا ہے'۔ إِنَّمَا کا مطلب 'صرف / بات یہی ہے کہ' ہے (نیا، پہچان کی سطح پر)؛ لِنَفْسِهِ = 'اپنے لیے'۔ (Luqman 31:12)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "وَمَن كَفَرَ فَإِنَّ اللَّهَ غَنِيٌّ حَمِيدٌ",
+        "ar_plain": "ومن كفر فان الله غني حميد",
+        "translit": "waman kafara faʾinna al-laha ghaniyyun ḥamīdun",
+        "en": "And whoever denies — then indeed, Allah is Free of need, Praiseworthy",
+        "ur": "اور جو ناشکری کرے تو بے شک اللہ بے نیاز، تعریف والا ہے"
+      },
+      "explanation": {
+        "en": "The condition is وَمَن كَفَرَ ('and whoever denies' — كَفَرَ is given); the response is فَإِنَّ اللَّهَ غَنِيٌّ حَمِيدٌ — 'then indeed, Allah is Free of need, Praiseworthy'. The response begins at فَإِنَّ, as in Chapter 53. (Luqman 31:12)",
+        "ur": "شرط وَمَن كَفَرَ ہے ('اور جو ناشکری کرے' — كَفَرَ دیا ہوا ہے)؛ جواب فَإِنَّ اللَّهَ غَنِيٌّ حَمِيدٌ ہے — 'تو بے شک اللہ بے نیاز، تعریف والا ہے'۔ جواب فَإِنَّ سے شروع ہوتا ہے، جیسے باب 53 میں۔ (Luqman 31:12)"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "إِنَّ or إِنَّمَا?",
+        "ur": "إِنَّ یا إِنَّمَا؟"
+      },
+      "examples": [
+        {
+          "ar": "إِنَّ اللَّهَ غَنِيٌّ.",
+          "ar_plain": "ان الله غني.",
+          "translit": "ʾinna al-laha ghaniyyun",
+          "en": "Indeed, Allah is Free of need. (إِنَّ = indeed)",
+          "ur": "بے شک اللہ بے نیاز ہے۔ (إِنَّ = بے شک)"
+        },
+        {
+          "ar": "إِنَّمَا يَشْكُرُ لِنَفْسِهِ.",
+          "ar_plain": "انما يشكر لنفسه.",
+          "translit": "ʾinnamā yashkuru linafsihi",
+          "en": "He is grateful only for himself. (إِنَّمَا = only)",
+          "ur": "وہ صرف اپنے ہی لیے شکر کرتا ہے۔ (إِنَّمَا = صرف)"
+        }
+      ],
+      "explanation": {
+        "en": "إِنَّ adds emphasis; إِنَّمَا, written as one word, narrows the statement: 'only'. In this verse you recognise it by meaning — no more is asked.",
+        "ur": "إِنَّ زور دیتا ہے؛ إِنَّمَا، ایک لفظ کی طرح لکھا ہوا، بات کو محدود کرتا ہے: 'صرف'۔ اس آیت میں آپ اسے معنی سے پہچانتے ہیں — اس سے زیادہ کچھ نہیں پوچھا جاتا۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Find where the response begins",
+        "ur": "دیکھیں جواب کہاں سے شروع ہوتا ہے"
+      },
+      "body": {
+        "en": "In each half the response begins at فَـ (فَإِنَّمَا, فَإِنَّ). You do not need to name the verb forms after مَنْ: read the condition, find فَـ, read what follows.",
+        "ur": "ہر نصف میں جواب فَـ سے شروع ہوتا ہے (فَإِنَّمَا، فَإِنَّ)۔ مَنْ کے بعد فعل کے روپ کے نام لینا ضروری نہیں: شرط پڑھیں، فَـ ڈھونڈیں، اس کے بعد جو ہے پڑھیں۔"
       }
     }
   ],
   "exercises": [
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch54-l02-ex01",
+      "id": "ch54-l08-ex01",
       "prompt": {
-        "ar": "إِذَا وَقَعَتِ الْوَاقِعَةُ",
-        "ar_plain": "إذا وقعت الواقعة",
-        "translit": "idhaa waqa'ati al-waaqi'ah",
-        "en": "When the Occurrence occurs",
-        "ur": "جب ہونے والی (قیامت) ہو پڑے گی"
+        "ar": "وَلَقَدْ آتَيْنَا لُقْمَانَ الْحِكْمَةَ أَنِ اشْكُرْ لِلَّهِ",
+        "ar_plain": "ولقد اتينا لقمان الحكمة ان اشكر لله",
+        "translit": "walaqad ʾātaynā luqmāna al-ḥikmata ʾani ashkur lillahi",
+        "en": "(31:12)",
+        "ur": "(31:12)"
       },
       "options": [
         {
-          "en": "When the Occurrence occurs",
-          "ur": "جب ہونے والی (قیامت) ہو پڑے گی"
+          "en": "And We had certainly given Luqman wisdom: Be grateful to Allah",
+          "ur": "اور ہم نے لقمان کو حکمت دی کہ اللہ کا شکر کرو"
         },
         {
-          "en": "The Occurrence did not occur",
-          "ur": "ہونے والی واقع نہیں ہوئی"
+          "en": "And Luqman gave Us wisdom: be grateful to Allah",
+          "ur": "اور لقمان نے ہمیں حکمت دی کہ اللہ کا شکر کرو"
         },
         {
-          "en": "What is the Occurrence?",
-          "ur": "ہونے والی کیا ہے؟"
+          "en": "And We did not give Luqman wisdom",
+          "ur": "اور ہم نے لقمان کو حکمت نہیں دی"
         },
         {
-          "en": "The Occurrence will never occur",
-          "ur": "ہونے والی کبھی واقع نہیں ہوگی"
+          "en": "And Luqman was grateful to Allah",
+          "ur": "اور لقمان نے اللہ کا شکر کیا"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "إِذَا = \"when\". وَقَعَتِ = past verb, feminine. الْوَاقِعَةُ = its subject. After إِذَا a past-form verb usually describes the future: \"when it occurs\". This is the opening of Al-Wāqiʿah.",
-        "ur": "إِذَا = \"جب\"۔ وَقَعَتِ = ماضی کا فعل، مؤنث۔ الْوَاقِعَةُ = اس کا فاعل۔ إِذَا کے بعد ماضی کی صورت عموماً مستقبل بتاتی ہے: \"جب وہ واقع ہوگی\"۔ یہ سورۃ الواقعہ کا آغاز ہے۔"
+        "en": "آتَيْنَا لُقْمَانَ الْحِكْمَةَ — 'We gave Luqman wisdom'; أَنِ اشْكُرْ لِلَّهِ — the command 'be grateful to Allah'.",
+        "ur": "آتَيْنَا لُقْمَانَ الْحِكْمَةَ — 'ہم نے لقمان کو حکمت دی'؛ أَنِ اشْكُرْ لِلَّهِ — حکم 'اللہ کا شکر کرو'۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch54-l08-ex02",
+      "mode": "TAP",
+      "sentence_ar": "وَمَن يَشْكُرْ ___ يَشْكُرُ لِنَفْسِهِ.",
+      "hint": {
+        "en": "Whoever is grateful is grateful only for himself.",
+        "ur": "جو شکر کرے وہ صرف اپنے ہی لیے شکر کرتا ہے۔"
+      },
+      "options": [
+        {
+          "ar": "فَإِنَّ",
+          "ar_plain": "فان",
+          "translit": "faʾinna",
+          "en": "then indeed",
+          "ur": "تو بے شک"
+        },
+        {
+          "ar": "فَإِنَّمَا",
+          "ar_plain": "فانما",
+          "translit": "faʾinnamā",
+          "en": "then only",
+          "ur": "تو صرف"
+        },
+        {
+          "ar": "فَهُوَ",
+          "ar_plain": "فهو",
+          "translit": "fahuwa",
+          "en": "then he",
+          "ur": "تو وہ"
+        },
+        {
+          "ar": "لَنْ",
+          "ar_plain": "لن",
+          "translit": "lan",
+          "en": "will not",
+          "ur": "نہیں"
+        }
+      ],
+      "correct_answer": {
+        "ar": "فَإِنَّمَا",
+        "ar_plain": "فانما",
+        "translit": "faʾinnamā",
+        "en": "then only",
+        "ur": "تو صرف"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The response opens with فَإِنَّمَا — 'only' narrows it to 'for himself'.",
+        "ur": "جواب فَإِنَّمَا سے شروع ہوتا ہے — 'صرف' اسے 'اپنے لیے' تک محدود کرتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch54-l08-ex03",
+      "prompt": {
+        "ar": "إِنَّمَا يَشْكُرُ لِنَفْسِهِ",
+        "ar_plain": "انما يشكر لنفسه",
+        "translit": "ʾinnamā yashkuru linafsihi",
+        "en": "(31:12)",
+        "ur": "(31:12)"
+      },
+      "options": [
+        {
+          "en": "He is grateful for himself and for others",
+          "ur": "وہ اپنے لیے اور دوسروں کے لیے شکر کرتا ہے"
+        },
+        {
+          "en": "He is not grateful for himself",
+          "ur": "وہ اپنے لیے شکر نہیں کرتا"
+        },
+        {
+          "en": "Indeed, himself is grateful",
+          "ur": "بے شک وہ خود شکر گزار ہے"
+        },
+        {
+          "en": "He is grateful only for himself",
+          "ur": "وہ صرف اپنے ہی لیے شکر کرتا ہے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "إِنَّمَا = 'only'; لِنَفْسِهِ = 'for himself'.",
+        "ur": "إِنَّمَا = 'صرف'؛ لِنَفْسِهِ = 'اپنے لیے'۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch54-l02-ex02",
+      "id": "ch54-l08-ex04",
       "statement": {
-        "en": "In Book 6, you learn to name grammatical roles: which word is the فَاعِل, the مَفْعُول, the مُبْتَدَأ, and the خَبَر.",
-        "ur": "Book 6 میں، آپ grammatical roles کا نام سیکھتے ہیں: کون سا word فَاعِل ہے، کون سا مَفْعُول، کون سا مُبْتَدَأ، اور کون سا خَبَر۔"
+        "en": "In وَمَن يَشْكُرْ فَإِنَّمَا يَشْكُرُ لِنَفْسِهِ, the response begins at فَإِنَّمَا.",
+        "ur": "وَمَن يَشْكُرْ فَإِنَّمَا يَشْكُرُ لِنَفْسِهِ میں جواب فَإِنَّمَا سے شروع ہوتا ہے۔",
+        "ar_example": {
+          "ar": "فَإِنَّمَا يَشْكُرُ لِنَفْسِهِ",
+          "ar_plain": "فانما يشكر لنفسه",
+          "translit": "faʾinnamā yashkuru linafsihi",
+          "en": "he is grateful only for himself",
+          "ur": "وہ صرف اپنے لیے شکر کرتا ہے"
+        }
       },
       "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch54-l02-ex03",
-      "left_column": [
-        {
-          "ar": "مُعْرَب",
-          "ar_plain": "معرب",
-          "translit": "mu'rab",
-          "en": "declinable",
-          "ur": "قابل انکار"
-        },
-        {
-          "ar": "مَبْنِيّ",
-          "ar_plain": "مبني",
-          "translit": "mabniy",
-          "en": "indeclinable",
-          "ur": "ناقابل قبول"
-        },
-        {
-          "ar": "فَاعِل",
-          "ar_plain": "فاعل",
-          "translit": "faa'il",
-          "en": "subject of a verb",
-          "ur": "فعل کا موضوع"
-        },
-        {
-          "ar": "خَبَر",
-          "ar_plain": "خبر",
-          "translit": "khabar",
-          "en": "predicate of a noun",
-          "ur": "ایک اسم کی پیش گوئی"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "Word whose ending changes",
-          "ur": "Word جسکا ending بدلتا ہے"
-        },
-        {
-          "en": "Word with fixed ending",
-          "ur": "Word جسکا ending fixed ہے"
-        },
-        {
-          "en": "Role: the doer of a verb",
-          "ur": "کردار: فعل کرنے والا"
-        },
-        {
-          "en": "Role: what is said about the subject",
-          "ur": "کردار: مبتدأ کے بارے میں خبر"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch54-l02-ex04",
-      "target_translation": {
-        "en": "When the Occurrence occurs.",
-        "ur": "جب ہونے والی (قیامت) ہو پڑے گی۔"
-      },
-      "tiles": [
-        {
-          "ar": "إِذَا",
-          "ar_plain": "إذا",
-          "translit": "idhaa",
-          "en": "when",
-          "ur": "جب"
-        },
-        {
-          "ar": "وَقَعَتِ",
-          "ar_plain": "وقعت",
-          "translit": "waqa'ati",
-          "en": "occurs (fem.)",
-          "ur": "واقع ہو"
-        },
-        {
-          "ar": "الْوَاقِعَةُ",
-          "ar_plain": "الواقعة",
-          "translit": "al-waaqi'atu",
-          "en": "the Occurrence (nom.)",
-          "ur": "ہونے والی (مرفوع)"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes: the condition is وَمَن يَشْكُرْ; the response is فَإِنَّمَا يَشْكُرُ لِنَفْسِهِ.",
+        "ur": "جی ہاں: شرط وَمَن يَشْكُرْ ہے؛ جواب فَإِنَّمَا يَشْكُرُ لِنَفْسِهِ ہے۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch54-l02-ex05",
+      "id": "ch54-l08-ex05",
       "prompt": {
-        "ar": "الْقَارِعَةُ مَا الْقَارِعَةُ",
-        "ar_plain": "القارعة ما القارعة",
-        "translit": "al-qaari'atu maa al-qaari'atu",
-        "en": "The Striking Calamity — what is the Striking Calamity?",
-        "ur": "مارنے والی آفت — مارنے والی آفت کیا ہے؟"
+        "ar": "وَمَن كَفَرَ فَإِنَّ اللَّهَ غَنِيٌّ حَمِيدٌ",
+        "ar_plain": "ومن كفر فان الله غني حميد",
+        "translit": "waman kafara faʾinna al-laha ghaniyyun ḥamīdun",
+        "en": "(31:12)",
+        "ur": "(31:12)"
       },
       "options": [
         {
-          "en": "The Striking Calamity — what is the Striking Calamity?",
-          "ur": "مارنے والی آفت — مارنے والی آفت کیا ہے؟"
+          "en": "And whoever denies — then indeed, Allah is Free of need, Praiseworthy",
+          "ur": "اور جو ناشکری کرے تو بے شک اللہ بے نیاز، تعریف والا ہے"
         },
         {
-          "en": "The calamity struck — this is the calamity",
-          "ur": "آفت نے مارا — یہ آفت ہے"
+          "en": "And whoever denies — then Allah is in need of him",
+          "ur": "اور جو ناشکری کرے تو اللہ کو اس کی حاجت ہے"
         },
         {
-          "en": "The Striking Calamity struck",
-          "ur": "مارنے والی آفت نے مارا"
+          "en": "And Allah denies — then whoever is Free of need",
+          "ur": "اور اللہ ناشکری کرے تو جو بے نیاز ہے"
         },
         {
-          "en": "What did the Striking Calamity strike?",
-          "ur": "مارنے والی آفت نے کیا مارا؟"
+          "en": "And whoever is grateful — then indeed, Allah is Praiseworthy",
+          "ur": "اور جو شکر کرے تو بے شک اللہ تعریف والا ہے"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "Al-Qāriʿah 101:1–2. The first الْقَارِعَةُ is the subject. مَا الْقَارِعَةُ (\"what is the Striking Calamity?\") is a small nominal sentence that serves as its predicate — a question that stresses how great it is.",
-        "ur": "سورۃ القارعہ 101:1–2۔ پہلا الْقَارِعَةُ مبتدا ہے۔ مَا الْقَارِعَةُ (\"کھڑکھڑانے والی کیا ہے؟\") ایک چھوٹا جملہ اسمیہ ہے جو اس کی خبر ہے — ایک سوال جو اس کی ہولناکی پر زور دیتا ہے۔"
+        "en": "وَمَن كَفَرَ — the condition; فَإِنَّ اللَّهَ غَنِيٌّ حَمِيدٌ — the response.",
+        "ur": "وَمَن كَفَرَ — شرط؛ فَإِنَّ اللَّهَ غَنِيٌّ حَمِيدٌ — جواب۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch54-l08-ex06",
+      "prompt": {
+        "ar": "وَمَن كَفَرَ فَإِنَّ اللَّهَ غَنِيٌّ حَمِيدٌ",
+        "ar_plain": "ومن كفر فان الله غني حميد",
+        "translit": "waman kafara faʾinna al-laha ghaniyyun ḥamīdun",
+        "en": "(31:12: where does the response begin?)",
+        "ur": "(31:12: جواب کہاں سے شروع ہوتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "at وَمَن — 'and whoever'",
+          "ur": "وَمَن سے — 'اور جو'"
+        },
+        {
+          "en": "at فَإِنَّ — 'then indeed Allah is Free of need'",
+          "ur": "فَإِنَّ سے — 'تو بے شک اللہ بے نیاز ہے'"
+        },
+        {
+          "en": "at كَفَرَ — 'denies'",
+          "ur": "كَفَرَ سے — 'ناشکری کرے'"
+        },
+        {
+          "en": "there is no response",
+          "ur": "کوئی جواب نہیں"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The response opens at فَإِنَّ; before it, وَمَن كَفَرَ is the condition.",
+        "ur": "جواب فَإِنَّ سے شروع ہوتا ہے؛ اس سے پہلے وَمَن كَفَرَ شرط ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch54-l08-ex07",
+      "prompt": {
+        "ar": "مَنْ يَدْرُسْ فَإِنَّمَا يَدْرُسُ لِنَفْسِهِ.",
+        "ar_plain": "من يدرس فانما يدرس لنفسه.",
+        "translit": "man yadrus faʾinnamā yadrusu linafsihi",
+        "en": "(constructed)",
+        "ur": "(بنایا ہوا)"
+      },
+      "options": [
+        {
+          "en": "Whoever studies does not study for himself.",
+          "ur": "جو پڑھتا ہے وہ اپنے لیے نہیں پڑھتا۔"
+        },
+        {
+          "en": "Whoever studies does not study at all.",
+          "ur": "جو پڑھتا ہے وہ بالکل نہیں پڑھتا۔"
+        },
+        {
+          "en": "Whoever studies studies only for himself.",
+          "ur": "جو پڑھتا ہے وہ صرف اپنے ہی لیے پڑھتا ہے۔"
+        },
+        {
+          "en": "Indeed, he studies for everyone.",
+          "ur": "بے شک وہ سب کے لیے پڑھتا ہے۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The same frame as 31:12, with a verb you know: condition مَنْ يَدْرُسْ, response فَإِنَّمَا يَدْرُسُ لِنَفْسِهِ.",
+        "ur": "31:12 کا وہی سانچہ، ایک جانے پہچانے فعل کے ساتھ: شرط مَنْ يَدْرُسْ، جواب فَإِنَّمَا يَدْرُسُ لِنَفْسِهِ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch54-l08-ex08",
+      "prompt": {
+        "ar": "أَنِ اشْكُرْ لِلَّهِ … فَإِنَّ اللَّهَ غَنِيٌّ حَمِيدٌ",
+        "ar_plain": "ان اشكر لله … فان الله غني حميد",
+        "translit": "ʾani ashkur lillahi … faʾinna al-laha ghaniyyun ḥamīdun",
+        "en": "(31:12)",
+        "ur": "(31:12)"
+      },
+      "options": [
+        {
+          "en": "Be grateful: gratitude benefits the grateful person, and Allah is Free of need.",
+          "ur": "شکر کرو: شکر کا فائدہ شکر کرنے والے کو ہے، اور اللہ بے نیاز ہے۔"
+        },
+        {
+          "en": "Be grateful, because Allah needs your thanks.",
+          "ur": "شکر کرو، کیونکہ اللہ کو تمہارے شکر کی حاجت ہے۔"
+        },
+        {
+          "en": "Do not be grateful, because Allah is Free of need.",
+          "ur": "شکر مت کرو، کیونکہ اللہ بے نیاز ہے۔"
+        },
+        {
+          "en": "Only Luqman should be grateful.",
+          "ur": "صرف لقمان کو شکر کرنا چاہیے۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Gist: the command, the benefit to the grateful person, and Allah's being Free of need.",
+        "ur": "خلاصہ: حکم، شکر کرنے والے کا فائدہ، اور اللہ کا بے نیاز ہونا۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Book 6 preview — the analytical depth begins",
-      "ar": "مُعايَنَةُ الْكِتَابِ السَّادِسِ — تَبْدَأُ التَّحْلِيلِ",
-      "ur": "Book 6 preview — analytical depth شروع ہوتی ہے"
+      "en": "Only — إِنَّمَا",
+      "ar": "فَإِنَّمَا يَشْكُرُ لِنَفْسِهِ",
+      "ur": "صرف — إِنَّمَا"
     },
     "ayah": {
-      "surah": 56,
-      "ayah": 1,
-      "label": "Al-Waqi'ah 56:1",
-      "ar": "إِذَا وَقَعَتِ الْوَاقِعَةُ",
-      "en": "When the Occurrence occurs,",
-      "ur": "جب واقع ہونے والی واقع ہوجائے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/056001.mp3"
+      "surah": 31,
+      "ayah": 12,
+      "label": "Luqman 31:12",
+      "ar": "وَمَن يَشْكُرْ فَإِنَّمَا يَشْكُرُ لِنَفْسِهِ",
+      "en": "And whoever is grateful — he is grateful only for himself",
+      "ur": "اور جو شکر کرے تو وہ اپنے ہی لیے شکر کرتا ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/031012.mp3"
     },
     "highlighted_word_indices": [
-      0,
-      1
+      2,
+      1,
+      4
+    ],
+    "highlighted_words": [
+      "فَإِنَّمَا",
+      "يَشْكُرْ",
+      "لِنَفْسِهِ"
     ],
     "noor_explanation": {
-      "en": "Book 6 will teach you to ask and answer: 'What is the grammatical role of this word?' and 'Why does this word take this case ending?' This is the difference between reading Arabic and analyzing it scientifically.",
-      "ur": "Book 6 آپکو پوچھنا اور جواب دینا سکھائے گا: 'اس word کا grammatical role کیا ہے؟' اور 'یہ word کیوں یہ case ending لیتا ہے؟' یہ عربی پڑھنے اور اسے scientifically analyze کرنے کے درمیان فرق ہے۔"
+      "en": "فَإِنَّمَا يَشْكُرُ لِنَفْسِهِ — the response narrows the statement: he is grateful only for himself; the benefit returns to him.",
+      "ur": "فَإِنَّمَا يَشْكُرُ لِنَفْسِهِ — جواب بات کو محدود کرتا ہے: وہ صرف اپنے ہی لیے شکر کرتا ہے؛ فائدہ اسی کو لوٹتا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Book 5 taught you to read Arabic through its structures. Book 6 teaches you to analyse it — to name a word's role and explain its case ending.",
-      "ur": "کتاب 5 نے آپ کو ساخت کے ذریعے عربی پڑھنا سکھایا۔ کتاب 6 اس کا تجزیہ سکھاتی ہے — لفظ کا کردار بتانا اور اس کے اعراب کی وجہ سمجھانا۔"
+      "en": "A command, two conditions, two responses — and إِنَّمَا, 'only'. Next: selected forms and word patterns.",
+      "ur": "ایک حکم، دو شرطیں، دو جواب — اور إِنَّمَا، 'صرف'۔ اگلا: منتخب روپ اور الفاظ کے نمونے۔"
     }
   }
 }

@@ -1,0 +1,443 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 52, final test (ch52-test, new). Added 2026-10-04 in the proposal harvest, batch 6, from Docs/proposals/chapter-52-content-proposal.md. Twelve multiple-choice questions: clause boundaries (q01–02), phrase relationships (q03–04), noun and verb governance (q05–06), the condition and its nominal response (q07–08), two connected-text decisions from Ayat al-Kursi and 67:1 (q09–10) and one decision each from Al-Qadr and At-Tin (q11–12). Pass mark 80 %: 9/12 fails, 10/12 passes.",
+    "title": "Chapter 52 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الثَّانِي وَالْخَمْسِينَ",
+    "titleUr": "باب 52 کا آخری امتحان",
+    "chapter_order": 52,
+    "lesson_order": 10,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 97,
+      "ayah": 5,
+      "label": "Al-Qadr 97:5",
+      "ar": "سَلَامٌ هِيَ حَتَّىٰ مَطْلَعِ الْفَجْرِ",
+      "en": "Peace it is until the emergence of dawn.",
+      "ur": "یہ( رات) طلوع صبح تک (امان اور) سلامتی ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/097005.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 52.",
+      "ur": "باب 52 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 52,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch52-test-q01",
+        "topic": {
+          "en": "Clause boundaries",
+          "ur": "جملے کی حدیں"
+        },
+        "prompt": {
+          "en": "Read قَالُوا نَحْنُ مُسْلِمُونَ. Which part is a nominal sentence?",
+          "ur": "قَالُوا نَحْنُ مُسْلِمُونَ پڑھیں۔ کون سا حصہ جملہ اسمیہ ہے؟"
+        },
+        "arabic": "قَالُوا نَحْنُ مُسْلِمُونَ",
+        "options": [
+          {
+            "en": "قَالُوا",
+            "ur": "قَالُوا"
+          },
+          {
+            "en": "The whole sentence is nominal.",
+            "ur": "پورا جملہ اسمیہ ہے۔"
+          },
+          {
+            "en": "نَحْنُ مُسْلِمُونَ — what they said",
+            "ur": "نَحْنُ مُسْلِمُونَ — جو انہوں نے کہا"
+          },
+          {
+            "en": "No part is nominal.",
+            "ur": "کوئی حصہ اسمیہ نہیں۔"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch52-test-q02",
+        "topic": {
+          "en": "Clause boundaries",
+          "ur": "جملے کی حدیں"
+        },
+        "prompt": {
+          "en": "Which sentence is a verbal sentence?",
+          "ur": "کون سا جملہ فعلیہ ہے؟"
+        },
+        "options": [
+          {
+            "en": "الطَّالِبُ فِي الْمَدْرَسَةِ.",
+            "ur": "الطَّالِبُ فِي الْمَدْرَسَةِ."
+          },
+          {
+            "en": "ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ.",
+            "ur": "ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ."
+          },
+          {
+            "en": "إِنَّ اللَّهَ عَزِيزٌ حَكِيمٌ.",
+            "ur": "إِنَّ اللَّهَ عَزِيزٌ حَكِيمٌ."
+          },
+          {
+            "en": "وَاللَّهُ مُحِيطٌ.",
+            "ur": "وَاللَّهُ مُحِيطٌ."
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch52-test-q03",
+        "topic": {
+          "en": "Iḍāfa",
+          "ur": "اضافت"
+        },
+        "prompt": {
+          "en": "In رَبِّ الْعَالَمِينَ, which word is the second term, always genitive?",
+          "ur": "رَبِّ الْعَالَمِينَ میں دوسرا جز، جو ہمیشہ مجرور ہوتا ہے، کون سا لفظ ہے؟"
+        },
+        "arabic": "رَبِّ الْعَالَمِينَ",
+        "options": [
+          {
+            "en": "الْعَالَمِينَ",
+            "ur": "الْعَالَمِينَ"
+          },
+          {
+            "en": "رَبِّ",
+            "ur": "رَبِّ"
+          },
+          {
+            "en": "Both words",
+            "ur": "دونوں الفاظ"
+          },
+          {
+            "en": "Neither word",
+            "ur": "کوئی لفظ نہیں"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch52-test-q04",
+        "topic": {
+          "en": "Preposition and noun",
+          "ur": "حرف جر اور اسم"
+        },
+        "prompt": {
+          "en": "In بِسْمِ اللَّهِ, which word is genitive because of the preposition بِ?",
+          "ur": "بِسْمِ اللَّهِ میں حرف جر بِ کی وجہ سے کون سا لفظ مجرور ہے؟"
+        },
+        "arabic": "بِسْمِ اللَّهِ",
+        "options": [
+          {
+            "en": "اللَّهِ",
+            "ur": "اللَّهِ"
+          },
+          {
+            "en": "Neither word",
+            "ur": "کوئی لفظ نہیں"
+          },
+          {
+            "en": "اسْمِ",
+            "ur": "اسْمِ"
+          },
+          {
+            "en": "Only the preposition",
+            "ur": "صرف حرف جر"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch52-test-q05",
+        "topic": {
+          "en": "What governs the noun",
+          "ur": "اسم پر کون اثر کرتا ہے"
+        },
+        "prompt": {
+          "en": "In يُؤْمِنُونَ بِاللَّهِ, what does the preposition بِ govern?",
+          "ur": "يُؤْمِنُونَ بِاللَّهِ میں حرف جر بِ کس پر اثر کرتا ہے؟"
+        },
+        "arabic": "يُؤْمِنُونَ بِاللَّهِ",
+        "options": [
+          {
+            "en": "The verb يُؤْمِنُونَ, in naṣb",
+            "ur": "فعل يُؤْمِنُونَ پر، نصب میں"
+          },
+          {
+            "en": "The noun اللَّهِ, in the genitive",
+            "ur": "اسم اللَّهِ پر، مجرور کی حالت میں"
+          },
+          {
+            "en": "The verb يُؤْمِنُونَ, in jazm",
+            "ur": "فعل يُؤْمِنُونَ پر، جزم میں"
+          },
+          {
+            "en": "Nothing at all",
+            "ur": "کچھ بھی نہیں"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch52-test-q06",
+        "topic": {
+          "en": "What governs the verb",
+          "ur": "فعل پر کون اثر کرتا ہے"
+        },
+        "prompt": {
+          "en": "Which verb completes 'We will not believe in you'?",
+          "ur": "کون سا فعل جملہ 'ہم تم پر ایمان نہیں لائیں گے' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "لَنْ ___ بِكُمْ.",
+        "options": [
+          {
+            "en": "نُؤْمِنُ",
+            "ur": "نُؤْمِنُ"
+          },
+          {
+            "en": "نُؤْمِنْ",
+            "ur": "نُؤْمِنْ"
+          },
+          {
+            "en": "آمَنَّا",
+            "ur": "آمَنَّا"
+          },
+          {
+            "en": "نُؤْمِنَ",
+            "ur": "نُؤْمِنَ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch52-test-q07",
+        "topic": {
+          "en": "Condition",
+          "ur": "شرط"
+        },
+        "prompt": {
+          "en": "Read 65:3. Which words are the response?",
+          "ur": "65:3 پڑھیں۔ جواب کون سے الفاظ ہیں؟"
+        },
+        "arabic": "وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ",
+        "options": [
+          {
+            "en": "وَمَن يَتَوَكَّلْ",
+            "ur": "وَمَن يَتَوَكَّلْ"
+          },
+          {
+            "en": "فَهُوَ حَسْبُهُ",
+            "ur": "فَهُوَ حَسْبُهُ"
+          },
+          {
+            "en": "عَلَى اللَّهِ",
+            "ur": "عَلَى اللَّهِ"
+          },
+          {
+            "en": "There is no response.",
+            "ur": "کوئی جواب نہیں۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch52-test-q08",
+        "topic": {
+          "en": "Response",
+          "ur": "جواب"
+        },
+        "prompt": {
+          "en": "In 65:3, what kind of sentence is the response فَهُوَ حَسْبُهُ?",
+          "ur": "65:3 میں جواب فَهُوَ حَسْبُهُ کس قسم کا جملہ ہے؟"
+        },
+        "arabic": "فَهُوَ حَسْبُهُ",
+        "options": [
+          {
+            "en": "A verbal sentence with a jussive verb",
+            "ur": "مجزوم فعل والا جملہ فعلیہ"
+          },
+          {
+            "en": "A question",
+            "ur": "ایک سوال"
+          },
+          {
+            "en": "A nominal sentence after فَـ — no verb",
+            "ur": "فَـ کے بعد جملہ اسمیہ — فعل کے بغیر"
+          },
+          {
+            "en": "A command",
+            "ur": "ایک حکم"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch52-test-q09",
+        "topic": {
+          "en": "Reading Ayat al-Kursi",
+          "ur": "آیت الکرسی پڑھنا"
+        },
+        "prompt": {
+          "en": "Read this clause of 2:255. What kind of sentence is it?",
+          "ur": "2:255 کا یہ جملہ پڑھیں۔ یہ کس قسم کا جملہ ہے؟"
+        },
+        "arabic": "لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ",
+        "options": [
+          {
+            "en": "A verbal sentence: the verb تَأْخُذُهُ, then its subject",
+            "ur": "جملہ فعلیہ: فعل تَأْخُذُهُ، پھر اس کا فاعل"
+          },
+          {
+            "en": "A nominal sentence with a predicate first",
+            "ur": "جملہ اسمیہ جس میں خبر پہلے ہے"
+          },
+          {
+            "en": "A condition and its response",
+            "ur": "شرط اور جواب"
+          },
+          {
+            "en": "A question",
+            "ur": "ایک سوال"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch52-test-q10",
+        "topic": {
+          "en": "Reading 67:1",
+          "ur": "67:1 پڑھنا"
+        },
+        "prompt": {
+          "en": "In بِيَدِهِ الْمُلْكُ, which word group is the predicate placed first?",
+          "ur": "بِيَدِهِ الْمُلْكُ میں پہلے آنے والی خبر کون سا ٹکڑا ہے؟"
+        },
+        "arabic": "بِيَدِهِ الْمُلْكُ",
+        "options": [
+          {
+            "en": "الْمُلْكُ — 'the dominion'",
+            "ur": "الْمُلْكُ — 'بادشاہی'"
+          },
+          {
+            "en": "Both words are predicates.",
+            "ur": "دونوں الفاظ خبر ہیں۔"
+          },
+          {
+            "en": "Neither word is a predicate.",
+            "ur": "کوئی لفظ خبر نہیں۔"
+          },
+          {
+            "en": "بِيَدِهِ — 'in His hand'",
+            "ur": "بِيَدِهِ — 'اس کے ہاتھ میں'"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch52-test-q11",
+        "topic": {
+          "en": "Al-Qadr",
+          "ur": "القدر"
+        },
+        "prompt": {
+          "en": "Read 97:5. What does هِيَ point back to, and how long does the peace last?",
+          "ur": "97:5 پڑھیں۔ هِيَ کس کی طرف لوٹتا ہے اور سلامتی کب تک رہتی ہے؟"
+        },
+        "arabic": "سَلَامٌ هِيَ حَتَّىٰ مَطْلَعِ الْفَجْرِ",
+        "options": [
+          {
+            "en": "The Night of Decree; for a thousand months",
+            "ur": "قدر کی رات؛ ہزار مہینوں تک"
+          },
+          {
+            "en": "The angels; until the emergence of dawn",
+            "ur": "فرشتے؛ فجر کے طلوع ہونے تک"
+          },
+          {
+            "en": "The Night of Decree; until the emergence of dawn",
+            "ur": "قدر کی رات؛ فجر کے طلوع ہونے تک"
+          },
+          {
+            "en": "The dawn; until the night comes",
+            "ur": "فجر؛ جب تک رات نہ آئے"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch52-test-q12",
+        "topic": {
+          "en": "At-Tin",
+          "ur": "التین"
+        },
+        "prompt": {
+          "en": "Read 95:6. Whom does the exception apply to?",
+          "ur": "95:6 پڑھیں۔ استثنا کن پر لاگو ہوتا ہے؟"
+        },
+        "arabic": "إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ",
+        "options": [
+          {
+            "en": "The fig and the olive",
+            "ur": "انجیر اور زیتون"
+          },
+          {
+            "en": "Those who believed and did righteous deeds",
+            "ur": "جو ایمان لائے اور نیک عمل کیے"
+          },
+          {
+            "en": "Those who deny the Recompense",
+            "ur": "جو جزا کو جھٹلاتے ہیں"
+          },
+          {
+            "en": "The secure city",
+            "ur": "امن والا شہر"
+          }
+        ],
+        "correct_index": 1
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 52 — integration",
+      "ar": "التَّكَامُلُ",
+      "ur": "باب 52 — سب کچھ ایک ساتھ"
+    },
+    "ayah": {
+      "surah": 97,
+      "ayah": 5,
+      "label": "Al-Qadr 97:5",
+      "ar": "سَلَامٌ هِيَ حَتَّىٰ مَطْلَعِ الْفَجْرِ",
+      "en": "Peace it is until the emergence of dawn.",
+      "ur": "یہ( رات) طلوع صبح تک (امان اور) سلامتی ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/097005.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "سَلَامٌ",
+      "هِيَ"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 52 able to see clause boundaries, phrases, governance and a condition, and to read two whole surahs.",
+      "ur": "آپ باب 52 اس حال میں مکمل کرتے ہیں کہ جملوں کی حدیں، ٹکڑے، عمل اور شرط دیکھ سکتے ہیں اور دو پوری سورتیں پڑھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 52 complete. Chapter 53: vocabulary and fluent reading.",
+      "ur": "باب 52 مکمل۔ باب 53: الفاظ اور روانی سے پڑھنا۔"
+    }
+  }
+}

@@ -2,29 +2,28 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 54, Lesson 3 — Noor's message about the journey through Book 5 and the transition to Book 6.",
+    "_note": "Chapter 54, Lesson 3 (ch54-l07, new). Retrieval of the taught forms one strand at a time — particle and ending (Ch 44–46), noun ending versus verb form (Ch 47, 51), past dual, the command and the passive (Ch 51) — plus قَدْ before a perfect verb (23:1), locally modelled. No new paradigms; ten exercises. Added 2026-10-04 in the proposal harvest, batch 6 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-54-content-proposal.md and its review amendments.",
+    "title": "Selected Forms and Word Patterns",
+    "titleAr": "صُوَرٌ مُخْتَارَةٌ وَأَوْزَانُ الْكَلِمَاتِ",
+    "titleUr": "منتخب روپ اور الفاظ کے وزن",
     "chapter_order": 54,
     "lesson_order": 3,
-    "chapter_title": "Book 5 Capstone & Transition to Book 6",
-    "title": "Noor's Message — The Journey So Far",
-    "titleAr": "رِسَالَةُ الْأُسْتَاذِ نُورٍ — مَسِيرُ الطَّرِيقِ حَتَّى الْآنَ",
-    "source": "book5_lesson11_consolidation.md",
-    "estimated_minutes": 8,
-    "xp_reward": 10
+    "estimated_minutes": 12,
+    "xp_reward": 15
   },
   "hook": {
     "ayah": {
-      "surah": 18,
-      "ayah": 109,
-      "label": "Al-Kahf 18:109",
-      "ar": "قُلْ لَوْ كَانَ الْبَحْرُ مِدَادًا لِكَلِمَاتِ رَبِّي لَنَفِدَ الْبَحْرُ قَبْلَ أَنْ تَنْفَدَ كَلِمَاتُ رَبِّي",
-      "en": "Say: If the sea were ink for the words of my Lord, the sea would be exhausted before the words of my Lord were exhausted",
-      "ur": "کہو: اگر سمندر مشکی ہوتا اللہ کے کلمات کے لیے تو سمندر ختم ہو جاتا اللہ کے کلمات ختم ہونے سے پہلے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/018109.mp3"
+      "surah": 23,
+      "ayah": 1,
+      "label": "Al-Mu'minun 23:1",
+      "ar": "قَدْ أَفْلَحَ الْمُؤْمِنُونَ",
+      "en": "Certainly will the believers have succeeded:",
+      "ur": "بےشک ایمان والے رستگار ہوگئے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/023001.mp3"
     },
     "noor_intro": {
-      "en": "Today Noor looks back with you over Books 1–5. You started with the alphabet; now you can follow the grammar of many ayahs. Let's see how far you have come.",
-      "ur": "آج نور آپ کے ساتھ کتاب 1 سے 5 تک کا سفر دیکھتا ہے۔ آپ نے حروف تہجی سے آغاز کیا؛ اب آپ بہت سی آیات کی گرامر سمجھ سکتے ہیں۔ دیکھیں آپ کتنا آگے آ گئے۔"
+      "en": "Before the capstone, tell apart what you have learned about verbs and nouns — one thing at a time. Start with a small new word: قَدْ.",
+      "ur": "اختتام سے پہلے فعل اور اسم کے بارے میں جو سیکھا اسے الگ الگ پہچانیں — ایک ایک بات۔ ایک چھوٹے نئے لفظ سے شروع کریں: قَدْ۔"
     },
     "autoplay": true
   },
@@ -32,299 +31,464 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "The journey from Book 1 to Book 5",
-        "ar": "الْمَسِيرُ مِنَ الْكِتَابِ الْأَوَّلِ إِلَى الْخَامِسِ",
-        "ur": "Book 1 سے Book 5 تک کا سفر"
+        "en": "Selected forms, one at a time",
+        "ar": "صُوَرٌ مُخْتَارَةٌ، وَاحِدَةً وَاحِدَةً",
+        "ur": "منتخب روپ، ایک ایک کر کے"
       },
       "explanation": {
-        "en": "Book 1: reading Arabic letters, words and basic sentences. Book 2: iḍāfa, demonstratives and plurals. Book 3: إِنَّ, لَيْسَ, and nominal versus verbal sentences. Book 4: the present tense (الْمُضَارِع) and the future. Book 5: the three states of the present tense, and how they show up in the Quran.",
-        "ur": "کتاب 1: عربی حروف، الفاظ اور سادہ جملے پڑھنا۔ کتاب 2: اضافت، اسمائے اشارہ اور جمع۔ کتاب 3: إِنَّ، لَيْسَ، اور جملہ اسمیہ و فعلیہ۔ کتاب 4: مضارع اور مستقبل۔ کتاب 5: مضارع کی تین حالتیں، اور قرآن میں ان کا ظہور۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "What you can now do",
-        "ar": "مَا تَسْتَطِيعُ الْآنَ فِعْلُهُ",
-        "ur": "جو آپ اب کر سکتے ہیں"
-      },
-      "explanation": {
-        "en": "You can now: tell a nominal sentence from a verbal one; recognise raf', naṣb and jazm on a regular present-tense verb; read the exception لَا إِلَٰهَ إِلَّا اللَّهُ; follow an iḍāfa such as رَبُّ الْعَالَمِينَ; recognise إِنَّ and its sisters; and follow connectors through a passage.",
-        "ur": "اب آپ: جملہ اسمیہ اور فعلیہ میں فرق کر سکتے ہیں؛ باقاعدہ مضارع پر رفع، نصب اور جزم پہچان سکتے ہیں؛ استثنا لَا إِلَٰهَ إِلَّا اللَّهُ پڑھ سکتے ہیں؛ رَبُّ الْعَالَمِينَ جیسی اضافت سمجھ سکتے ہیں؛ إِنَّ اور اس کی بہنیں پہچان سکتے ہیں؛ اور عبارت میں ربط کے الفاظ کے ساتھ چل سکتے ہیں۔"
-      }
-    },
-    {
-      "type": "AYAH_PREVIEW",
-      "text": {
-        "ar": "لَوْ كَانَ الْبَحْرُ مِدَادًا",
-        "ar_plain": "لو كان البحر مدادا",
-        "translit": "law kaana al-bahru midaadan",
-        "en": "If the sea were ink",
-        "ur": "اگر سمندر مشکی ہوتا"
-      },
-      "explanation": {
-        "en": "لَوْ is the counterfactual particle 'if' (introducing an impossible hypothetical). كَانَ is the incomplete verb 'to be.' الْبَحْرُ is its subject (مرفوع). مِدَادًا is its predicate (منصوب). This structure — كَانَ + subject + predicate — will be fully analyzed in Book 6.",
-        "ur": "لَوْ counterfactual particle 'اگر' ہے (ایک impossible hypothetical متعارف کراتی ہے)۔ كَانَ incomplete verb 'ہونا' ہے۔ الْبَحْرُ اسکا subject ہے (مرفوع)۔ مِدَادًا اسکا predicate ہے (منصوب)۔ یہ structure — كَانَ + subject + predicate — Book 6 میں fully analyze کیا جائے گا۔"
+        "en": "Book 5 gave you several things to tell apart in a verb or a noun: a particle before the verb and its ending (Chapters 44–46); a noun ending against a verb form (Chapters 47 and 51); who did it and when (past endings, the command, the passive); and a new small word, قَدْ. This lesson revisits each one on its own, then mixes them. It covers the forms you met, not every form.",
+        "ur": "کتاب 5 نے آپ کو فعل یا اسم میں کئی چیزیں الگ پہچاننے کو دیں: فعل سے پہلے حرف اور اس کا انجام (باب 44–46)؛ اسم کا انجام بمقابلہ فعل کا روپ (باب 47 اور 51)؛ کس نے کیا اور کب (ماضی کی علامتیں، امر، مجہول)؛ اور ایک نیا چھوٹا لفظ، قَدْ۔ یہ سبق ہر ایک کو الگ دہراتا ہے، پھر ملاتا ہے۔ یہ ان روپوں کا احاطہ کرتا ہے جو آپ نے دیکھے، ہر روپ کا نہیں۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "كَانَ اللَّهُ غَفُورًا رَحِيمًا",
-        "ar_plain": "كان الله غفورا رحيما",
-        "translit": "kaana allaahu ghafuuran rahiiman",
-        "en": "Allah is ever Forgiving and Merciful",
-        "ur": "اللہ بڑا بخشنے والا، مہربان ہے"
+        "ar": "قَدْ أَفْلَحَ الْمُؤْمِنُونَ",
+        "ar_plain": "قد افلح المؤمنون",
+        "translit": "qad ʾaflaḥa al-muʾminūna",
+        "en": "The believers have certainly succeeded (23:1)",
+        "ur": "ایمان والے یقیناً کامیاب ہو گئے (23:1)"
       },
       "explanation": {
-        "en": "e.g. An-Nisāʾ 4:96. كَانَ is the incomplete verb (كَانَ وَأَخَوَاتُهَا). اللَّهُ is its subject (nominative). غَفُورًا رَحِيمًا is its predicate (accusative). Said of Allah, كَانَ means \"has always been / is ever\", not \"was once\".",
-        "ur": "مثلاً سورۃ النساء 4:96۔ كَانَ فعل ناقص ہے (كَانَ وَأَخَوَاتُهَا)۔ اللَّهُ اس کا اسم ہے (مرفوع)۔ غَفُورًا رَحِيمًا اس کی خبر ہے (منصوب)۔ اللہ کے لیے كَانَ کا مطلب \"ہمیشہ سے ہے\" ہوتا ہے، \"کبھی تھا\" نہیں۔"
+        "en": "قَدْ here is a particle before a past verb — 'certainly, indeed'. It is not a preposition like فِي or مِنْ, and it governs no noun. أَفْلَحَ is the past verb and الْمُؤْمِنُونَ its doer.",
+        "ur": "قَدْ یہاں ماضی فعل سے پہلے حرف ہے — 'یقیناً'۔ یہ فِي یا مِنْ کی طرح حرف جر نہیں اور کسی اسم پر اثر نہیں کرتا۔ أَفْلَحَ ماضی فعل ہے اور الْمُؤْمِنُونَ اس کا فاعل۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Particle and ending",
+        "ur": "حرف اور انجام"
+      },
+      "examples": [
+        {
+          "ar": "يَكْتُبُ",
+          "ar_plain": "يكتب",
+          "translit": "yaktubu",
+          "en": "he writes (nothing before it: ḍamma)",
+          "ur": "وہ لکھتا ہے (پہلے کچھ نہیں: ضمہ)"
+        },
+        {
+          "ar": "لَنْ يَكْتُبَ · لَمْ يَكْتُبْ",
+          "ar_plain": "لن يكتب · لم يكتب",
+          "translit": "lan yaktuba · lam yaktub",
+          "en": "he will not write (fatḥa) · he did not write (sukūn)",
+          "ur": "وہ نہیں لکھے گا (فتحہ) · اس نے نہیں لکھا (سکون)"
+        }
+      ],
+      "explanation": {
+        "en": "The particle tells you the ending: nothing → ḍamma, لَنْ or أَنْ → fatḥa, لَمْ → sukūn.",
+        "ur": "حرف انجام بتاتا ہے: کچھ نہیں ← ضمہ، لَنْ یا أَنْ ← فتحہ، لَمْ ← سکون۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "A noun ending or a verb form?",
+        "ur": "اسم کا انجام یا فعل کا روپ؟"
+      },
+      "examples": [
+        {
+          "ar": "مُسْلِمُو الْمَدِينَةِ",
+          "ar_plain": "مسلمو المدينة",
+          "translit": "muslimū al-madīnati",
+          "en": "the Muslims of the city (the ن of مُسْلِمُونَ drops in an iḍāfa)",
+          "ur": "شہر کے مسلمان (اضافت میں مُسْلِمُونَ کا ن گر جاتا ہے)"
+        },
+        {
+          "ar": "ذَهَبَا · ذَهَبَتَا",
+          "ar_plain": "ذهبا · ذهبتا",
+          "translit": "dhahabā · dhahabatā",
+          "en": "the two went (m.) · the two went (f.) (verb endings)",
+          "ur": "وہ دونوں گئے (مذکر) · وہ دونوں گئیں (مؤنث) (فعل کے انجام)"
+        }
+      ],
+      "explanation": {
+        "en": "Different jobs for an ending: on a noun it shows number or the iḍāfa; on a verb it shows who did it. Do not read one as the other.",
+        "ur": "انجام کے الگ کام ہیں: اسم پر وہ تعداد یا اضافت دکھاتا ہے؛ فعل پر وہ بتاتا ہے کہ کس نے کیا۔ ایک کو دوسرا مت پڑھیں۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Command, active, passive",
+        "ur": "امر، معروف، مجہول"
+      },
+      "body": {
+        "en": "اُكْتُبْ is a command; يُرْسِلُ and يُعَلِّمُ are active; يُكْتَبُ and فُتِحَ are passive. Judge the whole stem, not the first letter: a يُـ or an initial أَ does not decide the voice or the person.",
+        "ur": "اُكْتُبْ امر ہے؛ يُرْسِلُ اور يُعَلِّمُ معروف ہیں؛ يُكْتَبُ اور فُتِحَ مجہول ہیں۔ پورا وزن دیکھیں، پہلا حرف نہیں: يُـ یا شروع کا أَ معروف و مجہول یا شخص طے نہیں کرتا۔"
       }
     }
   ],
   "exercises": [
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch54-l03-ex01",
+      "id": "ch54-l07-ex01",
       "prompt": {
-        "ar": "لَوْ كَانَ الْبَحْرُ مِدَادًا",
-        "ar_plain": "لو كان البحر مدادا",
-        "translit": "law kaana al-bahru midaadan",
-        "en": "If the sea were ink",
-        "ur": "اگر سمندر مشکی ہوتا"
+        "ar": "قَدْ أَفْلَحَ الْمُؤْمِنُونَ",
+        "ar_plain": "قد افلح المؤمنون",
+        "translit": "qad ʾaflaḥa al-muʾminūna",
+        "en": "(23:1)",
+        "ur": "(23:1)"
       },
       "options": [
         {
-          "en": "If the sea were ink",
-          "ur": "اگر سمندر مشکی ہوتا"
+          "en": "The believers have certainly succeeded.",
+          "ur": "ایمان والے یقیناً کامیاب ہو گئے۔"
         },
         {
-          "en": "The sea is ink",
-          "ur": "سمندر مشک ہے"
+          "en": "The believers will not succeed.",
+          "ur": "ایمان والے کامیاب نہیں ہوں گے۔"
         },
         {
-          "en": "The sea was ink",
-          "ur": "سمندر مشک تھا"
+          "en": "In the believers is success.",
+          "ur": "ایمان والوں میں کامیابی ہے۔"
         },
         {
-          "en": "The sea became ink",
-          "ur": "سمندر مشک بن گیا"
+          "en": "Who will succeed? The believers.",
+          "ur": "کون کامیاب ہو گا؟ ایمان والے۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَوْ introduces a counterfactual 'if' — something impossible. كَانَ الْبَحْرُ 'the sea was/were.' مِدَادًا is the predicate in the accusative (because كَانَ is an incomplete verb).",
-        "ur": "لَوْ ایک counterfactual 'اگر' متعارف کراتا ہے — کوئی impossible چیز۔ كَانَ الْبَحْرُ 'سمندر تھا/ہوتا'۔ مِدَادًا predicate ہے accusative میں (کیونکہ كَانَ ایک incomplete verb ہے)۔"
+        "en": "قَدْ + a past verb: 'has certainly …'; أَفْلَحَ is the verb, الْمُؤْمِنُونَ the doer.",
+        "ur": "قَدْ + ماضی فعل: 'یقیناً … ہو گیا'؛ أَفْلَحَ فعل ہے، الْمُؤْمِنُونَ فاعل۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch54-l03-ex02",
+      "id": "ch54-l07-ex02",
       "statement": {
-        "en": "لَوْ introduces a real, possible condition.",
-        "ur": "لَوْ ایک real، possible condition متعارف کراتا ہے۔"
+        "en": "In قَدْ أَفْلَحَ الْمُؤْمِنُونَ, قَدْ is a preposition like فِي.",
+        "ur": "قَدْ أَفْلَحَ الْمُؤْمِنُونَ میں قَدْ فِي کی طرح حرف جر ہے۔",
+        "ar_example": {
+          "ar": "قَدْ أَفْلَحَ",
+          "ar_plain": "قد افلح",
+          "translit": "qad ʾaflaḥa",
+          "en": "has certainly succeeded",
+          "ur": "یقیناً کامیاب ہوا"
+        }
       },
       "correct_answer": false,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "No: قَدْ is a particle before a past verb; it does not put a noun in the genitive.",
+        "ur": "نہیں: قَدْ ماضی فعل سے پہلے حرف ہے؛ یہ کسی اسم کو مجرور نہیں کرتا۔"
+      }
     },
     {
-      "type": "MATCHING",
-      "id": "ch54-l03-ex03",
-      "left_column": [
-        {
-          "ar": "كَانَ",
-          "ar_plain": "كان",
-          "translit": "kaana",
-          "en": "incomplete verb: needs a predicate",
-          "ur": "فعل ناقص: خبر چاہتا ہے"
-        },
-        {
-          "ar": "إِنَّ",
-          "ar_plain": "إن",
-          "translit": "inna",
-          "en": "particle: makes its subject accusative",
-          "ur": "حرف: اپنے اسم کو منصوب کرتا ہے"
-        },
-        {
-          "ar": "لَمْ",
-          "ar_plain": "لم",
-          "translit": "lam",
-          "en": "particle: causes jazm",
-          "ur": "حرف: جزم دیتا ہے"
-        },
-        {
-          "ar": "لَوْ",
-          "ar_plain": "لو",
-          "translit": "law",
-          "en": "conditional: unreal 'if'",
-          "ur": "شرطیہ: فرضی 'اگر'"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "Needs خَبَر in accusative",
-          "ur": " accusative میں خَبَر چاہیے"
-        },
-        {
-          "en": "On subject noun",
-          "ur": "Subject noun پر"
-        },
-        {
-          "en": "On المضارع verb",
-          "ur": "المضارع verb پر"
-        },
-        {
-          "en": "Impossible hypothesis",
-          "ur": "Impossible hypothesis"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch54-l03-ex04",
-      "target_translation": {
-        "en": "If the sea were ink for the words of my Lord.",
-        "ur": "اگر سمندر میرے رب کی باتوں کے لیے سیاہی ہو۔"
-      },
-      "tiles": [
-        {
-          "ar": "لَوْ",
-          "ar_plain": "لو",
-          "translit": "law",
-          "en": "if",
-          "ur": "اگر"
-        },
-        {
-          "ar": "كَانَ",
-          "ar_plain": "كان",
-          "translit": "kaana",
-          "en": "were",
-          "ur": "تھے"
-        },
-        {
-          "ar": "الْبَحْرُ",
-          "ar_plain": "البحر",
-          "translit": "al-bahru",
-          "en": "the sea",
-          "ur": "سمندر"
-        },
-        {
-          "ar": "مِدَادًا",
-          "ar_plain": "مدادا",
-          "translit": "midaadan",
-          "en": "ink",
-          "ur": "سیاہی"
-        },
-        {
-          "ar": "لِكَلِمَاتِ",
-          "ar_plain": "لكلمات",
-          "translit": "li-kalimaati",
-          "en": "for the words of",
-          "ur": "کے الفاظ کے لئے"
-        },
-        {
-          "ar": "رَبِّي",
-          "ar_plain": "ربي",
-          "translit": "rabbii",
-          "en": "my Lord",
-          "ur": "میرا رب"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch54-l03-ex05",
-      "prompt": {
-        "ar": "كَانَ اللَّهُ غَفُورًا رَحِيمًا",
-        "ar_plain": "كان الله غفورا رحيما",
-        "translit": "kaana allaahu ghafuuran rahiiman",
-        "en": "Allah is ever Forgiving and Merciful",
-        "ur": "اللہ بڑا بخشنے والا، مہربان ہے"
+      "type": "FILL_BLANK",
+      "id": "ch54-l07-ex03",
+      "mode": "TAP",
+      "sentence_ar": "لَنْ ___ أَحْمَدُ الدَّرْسَ.",
+      "hint": {
+        "en": "Ahmad will not write the lesson.",
+        "ur": "احمد سبق نہیں لکھے گا۔"
       },
       "options": [
         {
-          "en": "Allah is ever Forgiving and Merciful",
-          "ur": "اللہ بڑا بخشنے والا، مہربان ہے"
+          "ar": "يَكْتُبَ",
+          "ar_plain": "يكتب",
+          "translit": "yaktuba",
+          "en": "(that) he write",
+          "ur": "(کہ) وہ لکھے"
         },
         {
-          "en": "Allah forgave with mercy",
-          "ur": "اللہ نے رحمت سے بخش دیا"
+          "ar": "يَكْتُبُ",
+          "ar_plain": "يكتب",
+          "translit": "yaktubu",
+          "en": "he writes",
+          "ur": "وہ لکھتا ہے"
         },
         {
-          "en": "Allah will forgive the merciful",
-          "ur": "اللہ رحم کرنے والوں کو بخشے گا"
+          "ar": "يَكْتُبْ",
+          "ar_plain": "يكتب",
+          "translit": "yaktub",
+          "en": "(sukūn form)",
+          "ur": "(سکون والا روپ)"
         },
         {
-          "en": "Forgive, O Merciful",
-          "ur": "بخش دے، اے مہربان"
+          "ar": "كَتَبَ",
+          "ar_plain": "كتب",
+          "translit": "kataba",
+          "en": "he wrote",
+          "ur": "اس نے لکھا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يَكْتُبَ",
+        "ar_plain": "يكتب",
+        "translit": "yaktuba",
+        "en": "(that) he write",
+        "ur": "(کہ) وہ لکھے"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After لَنْ the last letter takes fatḥa: يَكْتُبَ.",
+        "ur": "لَنْ کے بعد آخری حرف پر فتحہ آتا ہے: يَكْتُبَ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch54-l07-ex04",
+      "mode": "TAP",
+      "sentence_ar": "لَمْ ___ أَحْمَدُ الدَّرْسَ.",
+      "hint": {
+        "en": "Ahmad did not write the lesson.",
+        "ur": "احمد نے سبق نہیں لکھا۔"
+      },
+      "options": [
+        {
+          "ar": "يَكْتُبُ",
+          "ar_plain": "يكتب",
+          "translit": "yaktubu",
+          "en": "he writes",
+          "ur": "وہ لکھتا ہے"
+        },
+        {
+          "ar": "يَكْتُبَ",
+          "ar_plain": "يكتب",
+          "translit": "yaktuba",
+          "en": "(fatḥa form)",
+          "ur": "(فتحہ والا روپ)"
+        },
+        {
+          "ar": "يَكْتُبْ",
+          "ar_plain": "يكتب",
+          "translit": "yaktub",
+          "en": "he did not write",
+          "ur": "اس نے نہیں لکھا"
+        },
+        {
+          "ar": "كَتَبَ",
+          "ar_plain": "كتب",
+          "translit": "kataba",
+          "en": "he wrote",
+          "ur": "اس نے لکھا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يَكْتُبْ",
+        "ar_plain": "يكتب",
+        "translit": "yaktub",
+        "en": "he did not write",
+        "ur": "اس نے نہیں لکھا"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After لَمْ the last letter takes sukūn: يَكْتُبْ.",
+        "ur": "لَمْ کے بعد آخری حرف پر سکون آتا ہے: يَكْتُبْ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch54-l07-ex05",
+      "prompt": {
+        "ar": "مُسْلِمُو الْمَدِينَةِ",
+        "ar_plain": "مسلمو المدينة",
+        "translit": "muslimū al-madīnati",
+        "en": "the Muslims of the city",
+        "ur": "شہر کے مسلمان"
+      },
+      "options": [
+        {
+          "en": "the Muslims of the city",
+          "ur": "شہر کے مسلمان"
+        },
+        {
+          "en": "the city of the Muslims in fatḥa",
+          "ur": "مسلمانوں کا شہر، فتحہ میں"
+        },
+        {
+          "en": "a Muslim in the city",
+          "ur": "شہر میں ایک مسلمان"
+        },
+        {
+          "en": "the city is Muslim",
+          "ur": "شہر مسلمان ہے"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "كَانَ = incomplete verb. اللَّهُ = its subject (nominative). غَفُورًا رَحِيمًا = its predicate (accusative). Of Allah, كَانَ means \"is ever\" — these qualities are always His.",
-        "ur": "كَانَ = فعل ناقص۔ اللَّهُ = اس کا اسم (مرفوع)۔ غَفُورًا رَحِيمًا = اس کی خبر (منصوب)۔ اللہ کے لیے كَانَ کا مطلب \"ہمیشہ سے ہے\" — یہ صفات ہمیشہ اسی کی ہیں۔"
+        "en": "مُسْلِمُو loses its ن because it is the first term of an iḍāfa with الْمَدِينَةِ.",
+        "ur": "مُسْلِمُو کا ن گر گیا کیونکہ یہ الْمَدِينَةِ کے ساتھ اضافت کا پہلا جز ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch54-l07-ex06",
+      "prompt": {
+        "ar": "ذَهَبَتَا",
+        "ar_plain": "ذهبتا",
+        "translit": "dhahabatā",
+        "en": "the two (f.) went",
+        "ur": "وہ دونوں (مؤنث) گئیں"
+      },
+      "options": [
+        {
+          "en": "she went",
+          "ur": "وہ (مؤنث) گئی"
+        },
+        {
+          "en": "the two (f.) went",
+          "ur": "وہ دونوں (مؤنث) گئیں"
+        },
+        {
+          "en": "they (m.) went",
+          "ur": "وہ (مذکر) گئے"
+        },
+        {
+          "en": "we went",
+          "ur": "ہم گئے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The ending تَا marks the feminine dual in the past.",
+        "ur": "آخر کا تَا ماضی میں مؤنث تثنیہ کی علامت ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch54-l07-ex07",
+      "prompt": {
+        "ar": "اُكْتُبْ",
+        "ar_plain": "اكتب",
+        "translit": "uktub",
+        "en": "Write! (to one man)",
+        "ur": "لکھو! (ایک مرد سے)"
+      },
+      "options": [
+        {
+          "en": "He wrote.",
+          "ur": "اس نے لکھا۔"
+        },
+        {
+          "en": "He did not write.",
+          "ur": "اس نے نہیں لکھا۔"
+        },
+        {
+          "en": "Write! (to one man)",
+          "ur": "لکھو! (ایک مرد سے)"
+        },
+        {
+          "en": "He writes.",
+          "ur": "وہ لکھتا ہے۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "اُكْتُبْ is the command, built from تَكْتُبْ.",
+        "ur": "اُكْتُبْ امر ہے، تَكْتُبْ سے بنا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch54-l07-ex08",
+      "prompt": {
+        "ar": "يُكْتَبُ الدَّرْسُ.",
+        "ar_plain": "يكتب الدرس.",
+        "translit": "yuktabu ad-darsu",
+        "en": "The lesson is written.",
+        "ur": "سبق لکھا جاتا ہے۔"
+      },
+      "options": [
+        {
+          "en": "The lesson is written.",
+          "ur": "سبق لکھا جاتا ہے۔"
+        },
+        {
+          "en": "He writes the lesson.",
+          "ur": "وہ سبق لکھتا ہے۔"
+        },
+        {
+          "en": "The lesson was written.",
+          "ur": "سبق لکھا گیا۔"
+        },
+        {
+          "en": "The lesson will not be written.",
+          "ur": "سبق نہیں لکھا جائے گا۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يُكْتَبُ — sukūn, fatḥa — is the passive present.",
+        "ur": "يُكْتَبُ — سکون، فتحہ — مضارع مجہول ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch54-l07-ex09",
+      "prompt": {
+        "ar": "لَنْ يُرْسِلَ أَبِي الْكِتَابَ.",
+        "ar_plain": "لن يرسل ابي الكتاب.",
+        "translit": "lan yursila ʾabī al-kitāba",
+        "en": "My father will not send the book.",
+        "ur": "میرے والد کتاب نہیں بھیجیں گے۔"
+      },
+      "options": [
+        {
+          "en": "My father did not send the book.",
+          "ur": "میرے والد نے کتاب نہیں بھیجی۔"
+        },
+        {
+          "en": "The book will not be sent.",
+          "ur": "کتاب نہیں بھیجی جائے گی۔"
+        },
+        {
+          "en": "My father sends the book.",
+          "ur": "میرے والد کتاب بھیجتے ہیں۔"
+        },
+        {
+          "en": "My father will not send the book.",
+          "ur": "میرے والد کتاب نہیں بھیجیں گے۔"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يُرْسِلُ is an active Form IV present; after لَنْ it takes fatḥa: يُرْسِلَ.",
+        "ur": "يُرْسِلُ معروف وزن رابع کا مضارع ہے؛ لَنْ کے بعد فتحہ آتا ہے: يُرْسِلَ۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "كَانَ وأخواتها — the incomplete verb",
-      "ar": "كَانَ وَأَخَوَاتُهَا — الْفِعْلُ النَّاقِصُ",
-      "ur": "كَانَ وأخواتها — incomplete verb"
+      "en": "A particle before a past verb",
+      "ar": "قَدْ أَفْلَحَ",
+      "ur": "ماضی فعل سے پہلے حرف"
     },
     "ayah": {
-      "surah": 18,
-      "ayah": 109,
-      "label": "Al-Kahf 18:109",
-      "ar": "قُلْ لَوْ كَانَ الْبَحْرُ مِدَادًا لِكَلِمَاتِ رَبِّي",
-      "en": "Say: If the sea were ink for the words of my Lord",
-      "ur": "کہو: اگر سمندر مشکی ہوتا اللہ کے کلمات کے لیے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/018109.mp3"
+      "surah": 23,
+      "ayah": 1,
+      "label": "Al-Mu'minun 23:1",
+      "ar": "قَدْ أَفْلَحَ الْمُؤْمِنُونَ",
+      "en": "Certainly will the believers have succeeded:",
+      "ur": "بےشک ایمان والے رستگار ہوگئے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/023001.mp3"
     },
     "highlighted_word_indices": [
-      1,
-      2,
-      3
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "قَدْ",
+      "أَفْلَحَ"
     ],
     "noor_explanation": {
-      "en": "لَوْ كَانَ — \"if it were\": لَوْ sets up something that is not real. كَانَ needs a subject and a predicate: الْبَحْرُ (\"the sea\") is its subject, nominative; مِدَادًا (\"ink\") its predicate, accusative.",
-      "ur": "لَوْ كَانَ — \"اگر ہوتا\": لَوْ ایک غیر حقیقی صورت بتاتا ہے۔ كَانَ کو اسم اور خبر چاہیے: الْبَحْرُ (\"سمندر\") اس کا اسم، مرفوع؛ مِدَادًا (\"سیاہی\") اس کی خبر، منصوب۔"
+      "en": "قَدْ أَفْلَحَ — the particle قَدْ before a past verb says 'certainly'; it is not a preposition.",
+      "ur": "قَدْ أَفْلَحَ — ماضی فعل سے پہلے حرف قَدْ 'یقیناً' کہتا ہے؛ یہ حرف جر نہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You have travelled far — from الْحَمْدُ لِلَّهِ to reading the opening of Ayat al-Kursi, from single letters to the three states of the present tense. Book 6 begins the next phase: naming each word's role. I am proud of you.",
-      "ur": "آپ نے لمبا سفر طے کیا ہے — الْحَمْدُ لِلَّهِ سے آیت الکرسی کے آغاز تک، اکیلے حروف سے مضارع کی تین حالتوں تک۔ کتاب 6 اگلا مرحلہ شروع کرتی ہے: ہر لفظ کا کردار پہچاننا۔ مجھے آپ پر فخر ہے۔"
+      "en": "Particle and ending, noun and verb, past, command and passive — each in its own place. Next: numbers, quantities and clauses.",
+      "ur": "حرف اور انجام، اسم اور فعل، ماضی، امر اور مجہول — ہر ایک اپنی جگہ۔ اگلا: اعداد، مقداریں اور جملے۔"
     }
   }
 }

@@ -1,0 +1,444 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 52, Retrieval review (ch52-l06, new). Ten tasks across the chapter: clause boundaries (2), phrase relationships (2), noun versus verb governance (2), conditional مَنْ (2) and one reference or exception decision from each of Al-Qadr and At-Tin. No new material. Added 2026-10-04 in the proposal harvest, batch 6 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-52-content-proposal.md and its review amendments.",
+    "title": "Chapter 52 Review — Integration",
+    "titleAr": "مُرَاجَعَةُ الْبَابِ 52 — التَّكَامُلُ",
+    "titleUr": "باب 52 کا جائزہ — سب کچھ ایک ساتھ",
+    "chapter_order": 52,
+    "lesson_order": 9,
+    "estimated_minutes": 10,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 97,
+      "ayah": 5,
+      "label": "Al-Qadr 97:5",
+      "ar": "سَلَامٌ هِيَ حَتَّىٰ مَطْلَعِ الْفَجْرِ",
+      "en": "Peace it is until the emergence of dawn.",
+      "ur": "یہ( رات) طلوع صبح تک (امان اور) سلامتی ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/097005.mp3"
+    },
+    "noor_intro": {
+      "en": "Review Chapter 52: boundaries, phrases, governance, a condition and two whole surahs.",
+      "ur": "باب 52 کا جائزہ: حدود، ٹکڑے، عمل، شرط اور دو پوری سورتیں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 52 summary",
+        "ar": "خُلَاصَةُ الْبَابِ",
+        "ur": "باب 52 کا خلاصہ"
+      },
+      "explanation": {
+        "en": "Find where each clause starts and stops (nominal, verbal, and a nominal sentence inside a verbal one). Keep track of phrases: the first term of an iḍāfa, the adjective, the preposition and the noun it governs. Prepositions govern nouns; particles such as لَنْ and لَمْ govern verbs. مَنْ can open a condition; look for فَـ and the response. Then read whole surahs, following pronouns back to what they name.",
+        "ur": "دیکھیں ہر جملہ کہاں شروع اور کہاں ختم ہوتا ہے (اسمیہ، فعلیہ، اور فعلیہ کے اندر اسمیہ)۔ ٹکڑوں کا حساب رکھیں: اضافت کا پہلا جز، صفت، حرف جر اور وہ اسم جسے وہ جر دیتا ہے۔ حروف جر اسم پر اثر کرتے ہیں؛ لَنْ اور لَمْ جیسے حروف فعل پر۔ مَنْ شرط شروع کر سکتا ہے؛ فَـ اور جواب دیکھیں۔ پھر پوری سورتیں پڑھیں، ضمیروں کو ان کی طرف لوٹائیں جن کا وہ نام لیتی ہیں۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Boundaries first",
+        "ur": "پہلے حدود"
+      },
+      "body": {
+        "en": "Before you translate, say where a clause begins and ends, which word each pronoun points back to, and what governs what.",
+        "ur": "ترجمہ سے پہلے بتائیں کہ جملہ کہاں شروع اور ختم ہوتا ہے، ہر ضمیر کس لفظ کی طرف لوٹتی ہے، اور کون کس پر اثر کرتا ہے۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch52-l06-ex01",
+      "prompt": {
+        "ar": "قَالُوا نَحْنُ مُسْلِمُونَ",
+        "ar_plain": "قالوا نحن مسلمون",
+        "translit": "qālū naḥnu muslimūna",
+        "en": "They said: we are Muslims",
+        "ur": "انہوں نے کہا: ہم مسلمان ہیں"
+      },
+      "options": [
+        {
+          "en": "قَالُوا is a verbal sentence; نَحْنُ مُسْلِمُونَ, what they said, is a nominal sentence inside it.",
+          "ur": "قَالُوا جملہ فعلیہ ہے؛ نَحْنُ مُسْلِمُونَ، جو انہوں نے کہا، اس کے اندر جملہ اسمیہ ہے۔"
+        },
+        {
+          "en": "The whole thing is one nominal sentence.",
+          "ur": "پورا ایک ہی جملہ اسمیہ ہے۔"
+        },
+        {
+          "en": "مُسْلِمُونَ is the verb.",
+          "ur": "مُسْلِمُونَ فعل ہے۔"
+        },
+        {
+          "en": "نَحْنُ is the object of قَالُوا.",
+          "ur": "نَحْنُ قَالُوا کا مفعول ہے۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A verbal sentence can hold a nominal one: قَالُوا opens, نَحْنُ مُسْلِمُونَ is what was said.",
+        "ur": "جملہ فعلیہ کے اندر جملہ اسمیہ آ سکتا ہے: قَالُوا شروع کرتا ہے، نَحْنُ مُسْلِمُونَ جو کہا گیا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch52-l06-ex02",
+      "prompt": {
+        "ar": "وَاللَّهُ مِنْ وَرَائِهِمْ مُحِيطٌ",
+        "ar_plain": "والله من ورائهم محيط",
+        "translit": "wa-l-lahu min warāʾihim muḥīṭun",
+        "en": "And Allah encompasses them from behind",
+        "ur": "اور اللہ ان کو پیچھے سے گھیرے ہوئے ہے"
+      },
+      "options": [
+        {
+          "en": "a verbal sentence that begins with وَاللَّهُ",
+          "ur": "جملہ فعلیہ جو وَاللَّهُ سے شروع ہوتا ہے"
+        },
+        {
+          "en": "a nominal sentence: اللَّهُ is the subject, مُحِيطٌ the predicate",
+          "ur": "جملہ اسمیہ: اللَّهُ مبتدا، مُحِيطٌ خبر"
+        },
+        {
+          "en": "a condition with its response",
+          "ur": "شرط اور جواب"
+        },
+        {
+          "en": "a command",
+          "ur": "ایک حکم"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "No verb opens it, so it is nominal; the phrase مِنْ وَرَائِهِمْ stands between subject and predicate.",
+        "ur": "کوئی فعل اسے شروع نہیں کرتا، اس لیے یہ اسمیہ ہے؛ مِنْ وَرَائِهِمْ مبتدا اور خبر کے بیچ میں ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch52-l06-ex03",
+      "prompt": {
+        "ar": "رَبِّ الْعَالَمِينَ",
+        "ar_plain": "رب العالمين",
+        "translit": "rabbi al-ʿālamīna",
+        "en": "Lord of the worlds",
+        "ur": "جہانوں کا رب"
+      },
+      "options": [
+        {
+          "en": "رَبِّ is the second term, with الْ",
+          "ur": "رَبِّ دوسرا جز ہے، ال کے ساتھ"
+        },
+        {
+          "en": "الْعَالَمِينَ is an adjective of رَبِّ",
+          "ur": "الْعَالَمِينَ رَبِّ کی صفت ہے"
+        },
+        {
+          "en": "الْعَالَمِينَ is the second term, always genitive",
+          "ur": "الْعَالَمِينَ دوسرا جز ہے، ہمیشہ مجرور"
+        },
+        {
+          "en": "Neither word is genitive",
+          "ur": "کوئی لفظ مجرور نہیں"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "In an iḍāfa the first term (رَبِّ) takes no الْ and the second term is genitive.",
+        "ur": "اضافت میں پہلا جز (رَبِّ) ال نہیں لیتا اور دوسرا جز مجرور ہوتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch52-l06-ex04",
+      "prompt": {
+        "ar": "بِسْمِ اللَّهِ",
+        "ar_plain": "بسم الله",
+        "translit": "bismi al-lahi",
+        "en": "In the name of Allah",
+        "ur": "اللہ کے نام سے"
+      },
+      "options": [
+        {
+          "en": "اللَّهِ makes بِ genitive",
+          "ur": "اللَّهِ بِ کو مجرور کرتا ہے"
+        },
+        {
+          "en": "بِ makes اسْمِ genitive",
+          "ur": "بِ اسْمِ کو مجرور کرتا ہے"
+        },
+        {
+          "en": "بِ makes the verb change",
+          "ur": "بِ فعل کو بدلتا ہے"
+        },
+        {
+          "en": "Nothing is genitive here",
+          "ur": "یہاں کچھ بھی مجرور نہیں"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The preposition بِ governs the noun after it: اسْمِ is genitive (and اللَّهِ, the second term, too).",
+        "ur": "حرف جر بِ اپنے بعد والے اسم پر اثر کرتا ہے: اسْمِ مجرور ہے (اور اللَّهِ، دوسرا جز، بھی)۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch52-l06-ex05",
+      "mode": "TAP",
+      "sentence_ar": "لَنْ ___ بِكُمْ.",
+      "hint": {
+        "en": "We will not believe in you.",
+        "ur": "ہم تم پر ایمان نہیں لائیں گے۔"
+      },
+      "options": [
+        {
+          "ar": "نُؤْمِنَ",
+          "ar_plain": "نؤمن",
+          "translit": "nuʾmina",
+          "en": "(that) we believe",
+          "ur": "(کہ) ہم ایمان لائیں"
+        },
+        {
+          "ar": "نُؤْمِنُ",
+          "ar_plain": "نؤمن",
+          "translit": "nuʾminu",
+          "en": "we believe",
+          "ur": "ہم ایمان لاتے ہیں"
+        },
+        {
+          "ar": "نُؤْمِنْ",
+          "ar_plain": "نؤمن",
+          "translit": "nuʾmin",
+          "en": "(sukūn form)",
+          "ur": "(سکون والا روپ)"
+        },
+        {
+          "ar": "آمَنَّا",
+          "ar_plain": "امنا",
+          "translit": "ʾāmannā",
+          "en": "we believed",
+          "ur": "ہم ایمان لائے"
+        }
+      ],
+      "correct_answer": {
+        "ar": "نُؤْمِنَ",
+        "ar_plain": "نؤمن",
+        "translit": "nuʾmina",
+        "en": "(that) we believe",
+        "ur": "(کہ) ہم ایمان لائیں"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَنْ governs the verb: fatḥa — نُؤْمِنَ. بِ governs the pronoun كُمْ.",
+        "ur": "لَنْ فعل پر اثر کرتا ہے: فتحہ — نُؤْمِنَ۔ بِ ضمیر كُمْ پر اثر کرتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch52-l06-ex06",
+      "prompt": {
+        "ar": "يُؤْمِنُونَ بِاللَّهِ",
+        "ar_plain": "يؤمنون بالله",
+        "translit": "yuʾminūna bi-l-lahi",
+        "en": "They believe in Allah",
+        "ur": "وہ اللہ پر ایمان لاتے ہیں"
+      },
+      "options": [
+        {
+          "en": "بِ puts the verb in naṣb",
+          "ur": "بِ فعل کو نصب دیتا ہے"
+        },
+        {
+          "en": "بِ puts the verb in jazm",
+          "ur": "بِ فعل کو جزم دیتا ہے"
+        },
+        {
+          "en": "بِ governs the noun اللَّهِ; the verb is unchanged",
+          "ur": "بِ اسم اللَّهِ پر اثر کرتا ہے؛ فعل نہیں بدلتا"
+        },
+        {
+          "en": "بِ governs both the verb and the noun",
+          "ur": "بِ فعل اور اسم دونوں پر اثر کرتا ہے"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Prepositions govern nouns, not verbs.",
+        "ur": "حروف جر اسموں پر اثر کرتے ہیں، فعلوں پر نہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch52-l06-ex07",
+      "prompt": {
+        "ar": "مَنْ يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ",
+        "ar_plain": "من يتوكل على الله فهو حسبه",
+        "translit": "man yatawakkal ʿalā al-lahi fahuwa ḥasbuhu",
+        "en": "(65:3)",
+        "ur": "(65:3)"
+      },
+      "options": [
+        {
+          "en": "the condition is فَهُوَ حَسْبُهُ; the response is مَنْ يَتَوَكَّلْ",
+          "ur": "شرط فَهُوَ حَسْبُهُ ہے؛ جواب مَنْ يَتَوَكَّلْ"
+        },
+        {
+          "en": "both halves are questions",
+          "ur": "دونوں حصے سوال ہیں"
+        },
+        {
+          "en": "there is no response",
+          "ur": "کوئی جواب نہیں"
+        },
+        {
+          "en": "the condition is مَنْ يَتَوَكَّلْ عَلَى اللَّهِ; the response is فَهُوَ حَسْبُهُ",
+          "ur": "شرط مَنْ يَتَوَكَّلْ عَلَى اللَّهِ ہے؛ جواب فَهُوَ حَسْبُهُ"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَنْ يَتَوَكَّلْ … is the condition; فَـ opens the response.",
+        "ur": "مَنْ يَتَوَكَّلْ … شرط ہے؛ فَـ جواب کھولتا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch52-l06-ex08",
+      "statement": {
+        "en": "The response in 65:3 contains a second jussive verb.",
+        "ur": "65:3 کے جواب میں ایک دوسرا مجزوم فعل ہے۔",
+        "ar_example": {
+          "ar": "فَهُوَ حَسْبُهُ",
+          "ar_plain": "فهو حسبه",
+          "translit": "fahuwa ḥasbuhu",
+          "en": "then He is sufficient for him",
+          "ur": "تو وہ اسے کافی ہے"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "No: فَهُوَ حَسْبُهُ is a nominal sentence — هُوَ and حَسْبُهُ — with no verb.",
+        "ur": "نہیں: فَهُوَ حَسْبُهُ جملہ اسمیہ ہے — هُوَ اور حَسْبُهُ — فعل کے بغیر۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch52-l06-ex09",
+      "prompt": {
+        "ar": "سَلَامٌ هِيَ حَتَّىٰ مَطْلَعِ الْفَجْرِ",
+        "ar_plain": "سلام هي حتى مطلع الفجر",
+        "translit": "salāmun hiya ḥattā maṭlaʿi al-fajri",
+        "en": "(97:5: what does هِيَ point back to?)",
+        "ur": "(97:5: هِيَ کس کی طرف لوٹتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "the Night of Decree",
+          "ur": "قدر کی رات"
+        },
+        {
+          "en": "the dawn",
+          "ur": "فجر"
+        },
+        {
+          "en": "the angels",
+          "ur": "فرشتے"
+        },
+        {
+          "en": "the thousand months",
+          "ur": "ہزار مہینے"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هِيَ is feminine and points back to the night named in 97:1–3.",
+        "ur": "هِيَ مؤنث ہے اور 97:1–3 میں مذکور رات کی طرف لوٹتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch52-l06-ex10",
+      "prompt": {
+        "ar": "إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ",
+        "ar_plain": "الا الذين امنوا وعملوا الصالحات",
+        "translit": "ʾillā alladhīna ʾāmanū waʿamilū aṣ-ṣāliḥāti",
+        "en": "(95:6)",
+        "ur": "(95:6)"
+      },
+      "options": [
+        {
+          "en": "After إِلَّا come the ones punished.",
+          "ur": "إِلَّا کے بعد وہ آتے ہیں جنہیں سزا دی گئی۔"
+        },
+        {
+          "en": "After إِلَّا come the ones excepted: those who believed and did righteous deeds.",
+          "ur": "إِلَّا کے بعد مستثنیٰ آتے ہیں: جو ایمان لائے اور نیک عمل کیے۔"
+        },
+        {
+          "en": "After إِلَّا come the oaths.",
+          "ur": "إِلَّا کے بعد قسمیں آتی ہیں۔"
+        },
+        {
+          "en": "إِلَّا opens a question.",
+          "ur": "إِلَّا سوال شروع کرتا ہے۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The exception names the people who are excluded from the 'lowest of the low'.",
+        "ur": "استثنا ان لوگوں کا نام لیتا ہے جو 'پستیوں میں سب سے پست' سے الگ ہیں۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Pointing back",
+      "ar": "هِيَ — اللَّيْلَةُ",
+      "ur": "ضمیر کا لوٹنا"
+    },
+    "ayah": {
+      "surah": 97,
+      "ayah": 5,
+      "label": "Al-Qadr 97:5",
+      "ar": "سَلَامٌ هِيَ حَتَّىٰ مَطْلَعِ الْفَجْرِ",
+      "en": "Peace it is until the emergence of dawn.",
+      "ur": "یہ( رات) طلوع صبح تک (امان اور) سلامتی ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/097005.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "سَلَامٌ",
+      "هِيَ"
+    ],
+    "noor_explanation": {
+      "en": "Following a pronoun back to what it names is part of reading connected text.",
+      "ur": "ضمیر کو اس کی طرف لوٹانا جس کا وہ نام لیتی ہے، مربوط متن پڑھنے کا حصہ ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Boundaries, phrases, governance, a condition and two surahs — Chapter 52 in one review.",
+      "ur": "حدود، ٹکڑے، عمل، شرط اور دو سورتیں — باب 52 ایک جائزے میں۔"
+    }
+  }
+}

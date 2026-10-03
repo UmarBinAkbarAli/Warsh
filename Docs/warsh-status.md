@@ -918,6 +918,35 @@ Everything below this list is either done and verified, or one of these:
    done: scholarly review, Android pass, the proposal's optional metric-unit
    bank (meter, kilometre, kilogram, litre) and a Studio read-through of the
    rebuilt Ch 49 / Ch 50 lessons.
+   **Proposal harvest, batch 6 (Chapters 51–55): live in production
+   2026-10-04.** Ch 51 kept its five lessons (past duals added to `ch51-l01`,
+   the choice of اِ / اُ for the command added to `ch51-l04`, `ch51-l05` moved to
+   display 9) and gained Form II عَلَّمَ / يُعَلِّمُ (`ch51-l09`), Form IV
+   أَرْسَلَ / يُرْسِلُ (`ch51-l10`), the sound passive past (`ch51-l07`) and
+   present (`ch51-l08`), the review and `ch51-test`. Ch 52 kept its five lessons
+   and gained the condition-and-response lesson on 65:3 (`ch52-l09`), complete
+   Al-Qadr (`ch52-l07`) and At-Tin (`ch52-l08`), the review and `ch52-test`.
+   Ch 53 gained reading in chunks on 3:190–191 (`ch53-l05`), the whole of
+   Ash-Sharh (`ch53-l08`), Ad-Duha in two parts (`ch53-l06`, `ch53-l07`) and
+   `ch53-test`. Ch 54 gained Luqman 31:12 with إِنَّمَا (`ch54-l08`), a forms
+   retrieval lesson with قَدْ (`ch54-l07`), Al-Fatiha in two parts (`ch54-l05`,
+   `ch54-l06`), its narrative lesson `ch54-l03` rewritten as numbers / openers /
+   condition retrieval, and a **16-question capstone test** (13/16 passes). Ch 55
+   gained the sound feminine plural (`ch55-l12`: ḍamma, then one kasra for the
+   accusative and the genitive), all of At-Takwir in three parts (`ch55-l09`,
+   `l10`, `l11`), a review `ch55-l13` and a **16-question test**; its eight
+   existing lessons are kept (`ch55-l06`, the accusative lesson that also
+   teaches المفعول المطلق, stays live although the proposal defers that to
+   Chapter 58). Published with `scripts/promote-chapters-51-55.cjs` after a
+   staging API walk (order, test locked until the lessons are done, key
+   stripped, 9/12 and 12/16 fail, 10/12 and 13/16 pass, replay 0 XP, all five
+   chapters); `content:check` 541/541 and `content:baseline` 541. **No TTS was
+   generated:** the missing catalogue list in `Docs/lesson-audio-needed.md` is
+   now 511 clips (198 new). 99 new scenes for 145 cards requested in
+   `Docs/lesson-illustrations-needed.md` (the cards of the kept lessons are a
+   later pass). Map entries for Ch 51–55 rewritten (S10). Not done: scholarly
+   review, Android pass, Chapter 52's constructed dialogue lesson, and turning
+   `ch55-l06` into the review.
    **Chapter 25 (`Docs/proposals/chapter-25-content-correction.md`) is
    corrected, staging-verified and promoted to production 2026-09-24** on the
    owner's instruction. The first rewrite was reviewed and fixed before

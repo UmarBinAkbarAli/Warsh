@@ -1,0 +1,445 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 53, final test (ch53-test, new). Added 2026-10-04 in the proposal harvest, batch 6, from Docs/proposals/chapter-53-content-proposal.md. Twelve multiple-choice questions, two per strand: connectors (q01–02), reading in chunks (q03–04), the gist and evidence of Al-Asr (q05–06), Ash-Sharh vocabulary and 94:1–4 (q07–08), Ad-Duha part one (q09–10) and part two (q11–12). Pass mark 80 %: 9/12 fails, 10/12 passes.",
+    "title": "Chapter 53 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الثَّالِثِ وَالْخَمْسِينَ",
+    "titleUr": "باب 53 کا آخری امتحان",
+    "chapter_order": 53,
+    "lesson_order": 9,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 94,
+      "ayah": 5,
+      "label": "Ash-Sharh 94:5",
+      "ar": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
+      "en": "For indeed, with hardship [will be] ease [i.e., relief].",
+      "ur": "ہاں ہاں مشکل کے ساتھ آسانی بھی ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/094005.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 53.",
+      "ur": "باب 53 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 53,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch53-test-q01",
+        "topic": {
+          "en": "أَمَّا",
+          "ur": "أَمَّا"
+        },
+        "prompt": {
+          "en": "In فَأَمَّا الْيَتِيمَ فَلَا تَقْهَرْ (93:9), what does أَمَّا do?",
+          "ur": "فَأَمَّا الْيَتِيمَ فَلَا تَقْهَرْ (93:9) میں أَمَّا کیا کرتا ہے؟"
+        },
+        "arabic": "فَأَمَّا الْيَتِيمَ فَلَا تَقْهَرْ",
+        "options": [
+          {
+            "en": "It is a question word",
+            "ur": "یہ سوالیہ لفظ ہے"
+          },
+          {
+            "en": "It names a topic — 'as for the orphan' — and فَـ opens what to do about it",
+            "ur": "یہ موضوع بتاتا ہے — 'رہا یتیم' — اور فَـ بتاتا ہے اس کا کیا کرنا ہے"
+          },
+          {
+            "en": "It means 'and' and adds a new fact",
+            "ur": "اس کا مطلب 'اور' ہے اور نئی بات جوڑتا ہے"
+          },
+          {
+            "en": "It negates the verb",
+            "ur": "یہ فعل کی نفی کرتا ہے"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch53-test-q02",
+        "topic": {
+          "en": "فَإِنَّ",
+          "ur": "فَإِنَّ"
+        },
+        "prompt": {
+          "en": "In فَإِنَّ مَعَ الْعُسْرِ يُسْرًا (94:5), what are the two parts of فَإِنَّ?",
+          "ur": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا (94:5) میں فَإِنَّ کے دو حصے کیا ہیں؟"
+        },
+        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
+        "options": [
+          {
+            "en": "فَ links to what came before; إِنَّ adds emphasis",
+            "ur": "فَ پچھلی بات سے جوڑتا ہے؛ إِنَّ زور دیتا ہے"
+          },
+          {
+            "en": "فَ negates; إِنَّ asks a question",
+            "ur": "فَ نفی کرتا ہے؛ إِنَّ سوال کرتا ہے"
+          },
+          {
+            "en": "فَ means 'by'; إِنَّ means 'except'",
+            "ur": "فَ کا مطلب 'قسم'؛ إِنَّ کا مطلب 'سوائے'"
+          },
+          {
+            "en": "Both parts mean 'and'",
+            "ur": "دونوں حصوں کا مطلب 'اور' ہے"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch53-test-q03",
+        "topic": {
+          "en": "Following الَّذِينَ",
+          "ur": "الَّذِينَ کا پیچھا"
+        },
+        "prompt": {
+          "en": "In 3:191, whom does الَّذِينَ يَذْكُرُونَ اللَّهَ describe?",
+          "ur": "3:191 میں الَّذِينَ يَذْكُرُونَ اللَّهَ کس کا بیان ہے؟"
+        },
+        "arabic": "الَّذِينَ يَذْكُرُونَ اللَّهَ",
+        "options": [
+          {
+            "en": "The heavens and the earth",
+            "ur": "آسمان اور زمین"
+          },
+          {
+            "en": "The night and the day",
+            "ur": "رات اور دن"
+          },
+          {
+            "en": "The people of understanding named in 3:190",
+            "ur": "3:190 میں مذکور عقل والے"
+          },
+          {
+            "en": "The Fire",
+            "ur": "آگ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch53-test-q04",
+        "topic": {
+          "en": "Chunk meaning",
+          "ur": "ٹکڑے کا مطلب"
+        },
+        "prompt": {
+          "en": "What does this chunk of 3:191 mean?",
+          "ur": "3:191 کے اس ٹکڑے کا کیا مطلب ہے؟"
+        },
+        "arabic": "قِيَامًا وَقُعُودًا وَعَلَىٰ جُنُوبِهِمْ",
+        "options": [
+          {
+            "en": "walking and running and resting",
+            "ur": "چلتے اور دوڑتے اور آرام کرتے"
+          },
+          {
+            "en": "standing only",
+            "ur": "صرف کھڑے"
+          },
+          {
+            "en": "sleeping through the night",
+            "ur": "ساری رات سوتے"
+          },
+          {
+            "en": "standing and sitting and on their sides",
+            "ur": "کھڑے اور بیٹھے اور اپنے پہلوؤں پر"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch53-test-q05",
+        "topic": {
+          "en": "Gist of Al-Asr",
+          "ur": "العصر کا خلاصہ"
+        },
+        "prompt": {
+          "en": "Which sentence gives the gist of Al-Asr (103:1–3)?",
+          "ur": "العصر (103:1–3) کا خلاصہ کون سا جملہ ہے؟"
+        },
+        "options": [
+          {
+            "en": "By time, mankind is in loss — except those who believe, do righteous deeds, and urge truth and patience.",
+            "ur": "زمانے کی قسم، انسان خسارے میں ہے — سوائے ان کے جو ایمان لائیں، نیک عمل کریں اور حق اور صبر کی تلقین کریں۔"
+          },
+          {
+            "en": "Time passes, so mankind is always successful.",
+            "ur": "وقت گزرتا ہے، اس لیے انسان ہمیشہ کامیاب ہے۔"
+          },
+          {
+            "en": "Only the believers are in loss.",
+            "ur": "صرف ایمان والے خسارے میں ہیں۔"
+          },
+          {
+            "en": "Mankind is in loss and nothing can change it.",
+            "ur": "انسان خسارے میں ہے اور کچھ اسے بدل نہیں سکتا۔"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch53-test-q06",
+        "topic": {
+          "en": "Evidence in Al-Asr",
+          "ur": "العصر میں شہادت"
+        },
+        "prompt": {
+          "en": "Which words in 103:3 give the exception to 'mankind is in loss'?",
+          "ur": "103:3 کے کون سے الفاظ 'انسان خسارے میں ہے' سے استثنا دیتے ہیں؟"
+        },
+        "arabic": "إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ",
+        "options": [
+          {
+            "en": "وَالْعَصْرِ",
+            "ur": "وَالْعَصْرِ"
+          },
+          {
+            "en": "إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ",
+            "ur": "إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ"
+          },
+          {
+            "en": "لَفِي خُسْرٍ",
+            "ur": "لَفِي خُسْرٍ"
+          },
+          {
+            "en": "إِنَّ الْإِنْسَانَ",
+            "ur": "إِنَّ الْإِنْسَانَ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch53-test-q07",
+        "topic": {
+          "en": "Ash-Sharh vocabulary",
+          "ur": "الشرح کے الفاظ"
+        },
+        "prompt": {
+          "en": "What does يُسْرًا mean in 94:5, and what does it come with?",
+          "ur": "94:5 میں يُسْرًا کا کیا مطلب ہے اور یہ کس کے ساتھ آتا ہے؟"
+        },
+        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
+        "options": [
+          {
+            "en": "'hardship' — it comes with ease",
+            "ur": "'مشکل' — یہ آسانی کے ساتھ آتی ہے"
+          },
+          {
+            "en": "'ease' — it comes with hardship",
+            "ur": "'آسانی' — یہ مشکل کے ساتھ آتی ہے"
+          },
+          {
+            "en": "'ease' — it comes after sleep",
+            "ur": "'آسانی' — یہ نیند کے بعد آتی ہے"
+          },
+          {
+            "en": "'burden' — it comes with the back",
+            "ur": "'بوجھ' — یہ پیٹھ کے ساتھ آتا ہے"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch53-test-q08",
+        "topic": {
+          "en": "Ash-Sharh 94:1–4",
+          "ur": "الشرح 94:1–4"
+        },
+        "prompt": {
+          "en": "In 94:3, what does الَّذِي point back to?",
+          "ur": "94:3 میں الَّذِي کس کی طرف لوٹتا ہے؟"
+        },
+        "arabic": "وَوَضَعْنَا عَنكَ وِزْرَكَ الَّذِي أَنقَضَ ظَهْرَكَ",
+        "options": [
+          {
+            "en": "وِزْرَكَ — 'your burden'",
+            "ur": "وِزْرَكَ — 'آپ کا بوجھ'"
+          },
+          {
+            "en": "ظَهْرَكَ — 'your back'",
+            "ur": "ظَهْرَكَ — 'آپ کی پیٹھ'"
+          },
+          {
+            "en": "نَحْنُ — 'We'",
+            "ur": "نَحْنُ — 'ہم'"
+          },
+          {
+            "en": "Nothing in the ayah",
+            "ur": "آیت میں کوئی چیز نہیں"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch53-test-q09",
+        "topic": {
+          "en": "Ad-Duha 93:3",
+          "ur": "الضحیٰ 93:3"
+        },
+        "prompt": {
+          "en": "What does 93:3 say?",
+          "ur": "93:3 کیا کہتی ہے؟"
+        },
+        "arabic": "مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ",
+        "options": [
+          {
+            "en": "Your Lord has left you and detested you.",
+            "ur": "آپ کے رب نے آپ کو چھوڑ دیا اور ناپسند کیا۔"
+          },
+          {
+            "en": "You have not left your Lord.",
+            "ur": "آپ نے اپنے رب کو نہیں چھوڑا۔"
+          },
+          {
+            "en": "Your Lord has not left you, nor has He detested you.",
+            "ur": "آپ کے رب نے آپ کو نہ چھوڑا اور نہ ناپسند کیا۔"
+          },
+          {
+            "en": "Your Lord will not give you.",
+            "ur": "آپ کا رب آپ کو نہیں دے گا۔"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch53-test-q10",
+        "topic": {
+          "en": "Ad-Duha 93:5",
+          "ur": "الضحیٰ 93:5"
+        },
+        "prompt": {
+          "en": "What does 93:5 promise?",
+          "ur": "93:5 کیا وعدہ کرتی ہے؟"
+        },
+        "arabic": "وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰ",
+        "options": [
+          {
+            "en": "Your Lord did not give you, so you were not satisfied.",
+            "ur": "آپ کے رب نے آپ کو نہ دیا تو آپ راضی نہ ہوئے۔"
+          },
+          {
+            "en": "Your Lord will surely give you, and you will be satisfied.",
+            "ur": "آپ کا رب ضرور آپ کو دے گا اور آپ راضی ہو جائیں گے۔"
+          },
+          {
+            "en": "You will give your Lord, and He will be satisfied.",
+            "ur": "آپ اپنے رب کو دیں گے اور وہ راضی ہو گا۔"
+          },
+          {
+            "en": "Your Lord is giving you nothing.",
+            "ur": "آپ کا رب آپ کو کچھ نہیں دے رہا۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch53-test-q11",
+        "topic": {
+          "en": "Ad-Duha 93:6–8",
+          "ur": "الضحیٰ 93:6–8"
+        },
+        "prompt": {
+          "en": "What does 93:7 say He did?",
+          "ur": "93:7 کے مطابق اس نے کیا کیا؟"
+        },
+        "arabic": "وَوَجَدَكَ ضَالًّا فَهَدَىٰ",
+        "options": [
+          {
+            "en": "He found you guided and left you lost.",
+            "ur": "اس نے آپ کو راہ پر پایا اور چھوڑ دیا۔"
+          },
+          {
+            "en": "He found you poor and enriched you.",
+            "ur": "اس نے آپ کو محتاج پایا تو غنی کیا۔"
+          },
+          {
+            "en": "He did not find you.",
+            "ur": "اس نے آپ کو نہیں پایا۔"
+          },
+          {
+            "en": "He found you lost and guided you.",
+            "ur": "اس نے آپ کو ناواقف پایا تو راہ دکھائی۔"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch53-test-q12",
+        "topic": {
+          "en": "Ad-Duha 93:9–11",
+          "ur": "الضحیٰ 93:9–11"
+        },
+        "prompt": {
+          "en": "Which request does 93:10 make?",
+          "ur": "93:10 کون سا حکم دیتی ہے؟"
+        },
+        "arabic": "وَأَمَّا السَّائِلَ فَلَا تَنْهَرْ",
+        "options": [
+          {
+            "en": "Do not oppress the orphan.",
+            "ur": "یتیم کو مت دباؤ۔"
+          },
+          {
+            "en": "Speak of your Lord's favor.",
+            "ur": "اپنے رب کی نعمت کا ذکر کرو۔"
+          },
+          {
+            "en": "Do not repel the petitioner.",
+            "ur": "سوالی کو مت جھڑکو۔"
+          },
+          {
+            "en": "Repel the petitioner.",
+            "ur": "سوالی کو جھڑکو۔"
+          }
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 53 — fluent reading",
+      "ar": "الطَّلَاقَةُ فِي الْقِرَاءَةِ",
+      "ur": "باب 53 — روانی سے پڑھنا"
+    },
+    "ayah": {
+      "surah": 94,
+      "ayah": 5,
+      "label": "Ash-Sharh 94:5",
+      "ar": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
+      "en": "For indeed, with hardship [will be] ease [i.e., relief].",
+      "ur": "ہاں ہاں مشکل کے ساتھ آسانی بھی ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/094005.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "فَإِنَّ",
+      "مَعَ",
+      "الْعُسْرِ"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 53 able to follow connectors, read in chunks, hold a surah's gist and read Ash-Sharh and Ad-Duha whole.",
+      "ur": "آپ باب 53 اس حال میں مکمل کرتے ہیں کہ رابطوں کو سمجھ سکتے ہیں، ٹکڑوں میں پڑھ سکتے ہیں، سورت کا خلاصہ تھام سکتے ہیں اور الشرح اور الضحیٰ پوری پڑھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 53 complete. Chapter 54: the Book 5 capstone.",
+      "ur": "باب 53 مکمل۔ باب 54: کتاب 5 کا اختتامی باب۔"
+    }
+  }
+}

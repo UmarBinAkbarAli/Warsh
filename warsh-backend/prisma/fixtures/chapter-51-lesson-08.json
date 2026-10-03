@@ -1,0 +1,577 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "_note": "Chapter 51, Lesson 8 (ch51-l08, new). Sound Form I passive present (يُكْتَبُ, يُفْتَحُ, تُفْتَحُ) with singular receivers; voice versus mood on the same stem (لَنْ / لَمْ); the active derived stems يُعَلِّمُ / يُرْسِلُ contrasted so that يُـ alone never decides the voice. Scored distractors never differ only by gender agreement with a figuratively feminine noun. No derived or weak passive. Added 2026-10-04 in the proposal harvest, batch 6 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-51-content-proposal.md and its review amendments.",
+    "title": "The Passive Present — يُفْعَلُ",
+    "titleAr": "الْمُضَارِعُ الْمَجْهُولُ — يُفْعَلُ",
+    "titleUr": "مضارع مجہول — يُفْعَلُ",
+    "chapter_order": 51,
+    "lesson_order": 8,
+    "estimated_minutes": 12,
+    "xp_reward": 15
+  },
+  "hook": {
+    "ayah": {
+      "surah": 2,
+      "ayah": 48,
+      "label": "Al-Baqarah 2:48",
+      "ar": "يُؤْخَذُ مِنْهَا عَدْلٌ",
+      "en": "nor will any compensation be taken from it",
+      "ur": "اور نہ اس سے کوئی بدلہ لیا جائے گا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002048.mp3"
+    },
+    "noor_intro": {
+      "en": "Voice or mood? The same verb can change its stem to become passive, and then its last letter can change again.",
+      "ur": "معروف و مجہول یا حالت؟ ایک ہی فعل اپنا وزن بدل کر مجہول بن سکتا ہے، اور پھر اس کا آخری حرف دوبارہ بدل سکتا ہے۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The passive present: يُفْعَلُ",
+        "ar": "الْمُضَارِعُ الْمَجْهُولُ: يُفْعَلُ",
+        "ur": "مضارع مجہول: يُفْعَلُ"
+      },
+      "explanation": {
+        "en": "The active present is يَكْتُبُ — 'he writes'. The passive present is يُكْتَبُ — 'is written': ḍamma on the prefix, a sukūn on the first root letter, fatḥa on the second, and the usual ḍamma at the end. Voice changes the stem vowels. As in the past, the receiver takes ḍamma: يُكْتَبُ الدَّرْسُ — 'the lesson is written'. Sound Form I verbs and singular receivers only.",
+        "ur": "معروف مضارع يَكْتُبُ ہے — 'وہ لکھتا ہے'۔ مجہول مضارع يُكْتَبُ ہے — 'لکھا جاتا ہے': سابقہ پر ضمہ، پہلے مادّہ حرف پر سکون، دوسرے پر فتحہ، اور آخر میں حسبِ معمول ضمہ۔ مجہول بنانے سے وزن کی حرکات بدلتی ہیں۔ ماضی کی طرح نائب فاعل پر ضمہ آتا ہے: يُكْتَبُ الدَّرْسُ — 'سبق لکھا جاتا ہے'۔ صرف صحیح ثلاثی افعال اور واحد نائب فاعل۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "يُفْتَحُ الْبَابُ. · تُفْتَحُ النَّافِذَةُ.",
+        "ar_plain": "يفتح الباب. · تفتح النافذة.",
+        "translit": "yuftaḥu al-bābu · tuftaḥu an-nāfidhatu",
+        "en": "The door is opened. · The window is opened.",
+        "ur": "دروازہ کھولا جاتا ہے۔ · کھڑکی کھولی جاتی ہے۔"
+      },
+      "explanation": {
+        "en": "Constructed. For a masculine receiver the prefix is يُـ: يُفْتَحُ. For a feminine receiver it is تُـ: تُفْتَحُ.",
+        "ur": "بنایا ہوا۔ مذکر نائب فاعل کے لیے سابقہ يُـ ہے: يُفْتَحُ۔ مؤنث کے لیے تُـ ہے: تُفْتَحُ۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Voice changes the stem, mood changes the end",
+        "ur": "مجہول وزن بدلتا ہے، حالت آخر بدلتی ہے"
+      },
+      "examples": [
+        {
+          "ar": "يُكْتَبُ الدَّرْسُ.",
+          "ar_plain": "يكتب الدرس.",
+          "translit": "yuktabu ad-darsu",
+          "en": "The lesson is written.",
+          "ur": "سبق لکھا جاتا ہے۔"
+        },
+        {
+          "ar": "الدَّرْسُ لَنْ يُكْتَبَ. · الدَّرْسُ لَمْ يُكْتَبْ.",
+          "ar_plain": "الدرس لن يكتب. · الدرس لم يكتب.",
+          "translit": "ad-darsu lan yuktaba · ad-darsu lam yuktab",
+          "en": "The lesson will not be written. · The lesson was not written.",
+          "ur": "سبق نہیں لکھا جائے گا۔ · سبق نہیں لکھا گیا۔"
+        }
+      ],
+      "explanation": {
+        "en": "The passive stem يُكْتَبُ stays the same. After لَنْ the last letter takes fatḥa (يُكْتَبَ); after لَمْ it takes sukūn (يُكْتَبْ) — exactly as with the active verb.",
+        "ur": "مجہول وزن يُكْتَبُ وہی رہتا ہے۔ لَنْ کے بعد آخری حرف پر فتحہ آتا ہے (يُكْتَبَ)؛ لَمْ کے بعد سکون (يُكْتَبْ) — بالکل معروف فعل کی طرح۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Three verbs that all start with يُـ",
+        "ur": "تین افعال جو سب يُـ سے شروع ہوتے ہیں"
+      },
+      "examples": [
+        {
+          "ar": "يُعَلِّمُ · يُرْسِلُ",
+          "ar_plain": "يعلم · يرسل",
+          "translit": "yuʿallimu · yursilu",
+          "en": "he teaches · he sends (active)",
+          "ur": "وہ سکھاتا ہے · وہ بھیجتا ہے (معروف)"
+        },
+        {
+          "ar": "يُكْتَبُ",
+          "ar_plain": "يكتب",
+          "translit": "yuktabu",
+          "en": "is written (passive)",
+          "ur": "لکھا جاتا ہے (مجہول)"
+        }
+      ],
+      "explanation": {
+        "en": "The first vowel is the same, so it cannot decide the voice. Read the stem: يُعَلِّمُ has a shadda and kasra, يُرْسِلُ has a sukūn then kasra — both active. يُكْتَبُ has a sukūn then fatḥa — passive. The passives of the first two exist but are not formed here.",
+        "ur": "پہلی حرکت ایک جیسی ہے، اس لیے یہ معروف و مجہول طے نہیں کر سکتی۔ وزن پڑھیں: يُعَلِّمُ میں شدّہ اور کسرہ ہے، يُرْسِلُ میں سکون پھر کسرہ — دونوں معروف۔ يُكْتَبُ میں سکون پھر فتحہ — مجہول۔ پہلے دو کے مجہول موجود ہیں مگر یہاں بنائے نہیں جاتے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "A verb, not a noun form",
+        "ur": "فعل ہے، اسم کی صورت نہیں"
+      },
+      "body": {
+        "en": "يُكْتَبُ is a verb — 'is written'. مَكْتُوبٌ, which you met in Chapter 36, is a noun-form — 'written' or 'something written'. Here we only tell them apart; we do not form either one.",
+        "ur": "يُكْتَبُ فعل ہے — 'لکھا جاتا ہے'۔ مَكْتُوبٌ، جو آپ نے باب 36 میں دیکھا، اسم کی صورت ہے — 'لکھا ہوا' یا 'لکھی ہوئی چیز'۔ یہاں ہم دونوں میں صرف فرق کرتے ہیں؛ کوئی بھی بناتے نہیں۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "يُؤْخَذُ مِنْهَا عَدْلٌ",
+        "ar_plain": "يؤخذ منها عدل",
+        "translit": "yuʾkhadhu minhā ʿadlun",
+        "en": "nor will any compensation be taken from it",
+        "ur": "اور نہ اس سے کوئی بدلہ لیا جائے گا"
+      },
+      "explanation": {
+        "en": "In 2:48 يُؤْخَذُ is the passive present of أَخَذَ: 'is taken'. عَدْلٌ ('compensation') is the receiver and ends in ḍamma (tanwīn). The form is supplied; read the stem: يُ + ؤْ + خَ + ذُ. (Al-Baqarah 2:48)",
+        "ur": "2:48 میں يُؤْخَذُ أَخَذَ کا مضارع مجہول ہے: 'لیا جاتا ہے'۔ عَدْلٌ ('بدلہ') نائب فاعل ہے اور ضمہ (تنوین) پر ختم ہوتا ہے۔ روپ دیا ہوا ہے؛ وزن پڑھیں: يُ + ؤْ + خَ + ذُ۔ (Al-Baqarah 2:48)"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch51-l08-ex01",
+      "prompt": {
+        "ar": "يُكْتَبُ الدَّرْسُ.",
+        "ar_plain": "يكتب الدرس.",
+        "translit": "yuktabu ad-darsu",
+        "en": "The lesson is written.",
+        "ur": "سبق لکھا جاتا ہے۔"
+      },
+      "options": [
+        {
+          "en": "The lesson is written.",
+          "ur": "سبق لکھا جاتا ہے۔"
+        },
+        {
+          "en": "The student writes the lesson.",
+          "ur": "طالب علم سبق لکھتا ہے۔"
+        },
+        {
+          "en": "The lesson was written.",
+          "ur": "سبق لکھا گیا۔"
+        },
+        {
+          "en": "The lesson will not be written.",
+          "ur": "سبق نہیں لکھا جائے گا۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يُكْتَبُ — sukūn then fatḥa — is the passive present: 'is written'.",
+        "ur": "يُكْتَبُ — سکون پھر فتحہ — مضارع مجہول ہے: 'لکھا جاتا ہے'۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch51-l08-ex02",
+      "prompt": {
+        "ar": "يُفْتَحُ الْبَابُ.",
+        "ar_plain": "يفتح الباب.",
+        "translit": "yuftaḥu al-bābu",
+        "en": "The door is opened.",
+        "ur": "دروازہ کھولا جاتا ہے۔"
+      },
+      "options": [
+        {
+          "en": "The door opens the boy.",
+          "ur": "دروازہ لڑکے کو کھولتا ہے۔"
+        },
+        {
+          "en": "The door is opened.",
+          "ur": "دروازہ کھولا جاتا ہے۔"
+        },
+        {
+          "en": "The door was opened.",
+          "ur": "دروازہ کھولا گیا۔"
+        },
+        {
+          "en": "He opens the door.",
+          "ur": "وہ دروازہ کھولتا ہے۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يُفْتَحُ is passive present: 'is opened'.",
+        "ur": "يُفْتَحُ مضارع مجہول ہے: 'کھولا جاتا ہے'۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch51-l08-ex03",
+      "prompt": {
+        "ar": "تُفْتَحُ النَّافِذَةُ.",
+        "ar_plain": "تفتح النافذة.",
+        "translit": "tuftaḥu an-nāfidhatu",
+        "en": "The window is opened.",
+        "ur": "کھڑکی کھولی جاتی ہے۔"
+      },
+      "options": [
+        {
+          "en": "The window was opened.",
+          "ur": "کھڑکی کھولی گئی۔"
+        },
+        {
+          "en": "She opens the window.",
+          "ur": "وہ کھڑکی کھولتی ہے۔"
+        },
+        {
+          "en": "The window is opened.",
+          "ur": "کھڑکی کھولی جاتی ہے۔"
+        },
+        {
+          "en": "The window is not opened.",
+          "ur": "کھڑکی نہیں کھولی جاتی۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A feminine receiver brings the prefix تُـ: تُفْتَحُ.",
+        "ur": "مؤنث نائب فاعل کے ساتھ سابقہ تُـ آتا ہے: تُفْتَحُ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch51-l08-ex04",
+      "mode": "TAP",
+      "sentence_ar": "___ الْبَابُ.",
+      "hint": {
+        "en": "The door is opened.",
+        "ur": "دروازہ کھولا جاتا ہے۔"
+      },
+      "options": [
+        {
+          "ar": "يُفْتَحُ",
+          "ar_plain": "يفتح",
+          "translit": "yuftaḥu",
+          "en": "is opened",
+          "ur": "کھولا جاتا ہے"
+        },
+        {
+          "ar": "يَفْتَحُ",
+          "ar_plain": "يفتح",
+          "translit": "yaftaḥu",
+          "en": "he opens",
+          "ur": "وہ کھولتا ہے"
+        },
+        {
+          "ar": "فُتِحَ",
+          "ar_plain": "فتح",
+          "translit": "futiḥa",
+          "en": "was opened",
+          "ur": "کھولا گیا"
+        },
+        {
+          "ar": "يُفْتَحَ",
+          "ar_plain": "يفتح",
+          "translit": "yuftaḥa",
+          "en": "(fatḥa form)",
+          "ur": "(فتحہ والا روپ)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يُفْتَحُ",
+        "ar_plain": "يفتح",
+        "translit": "yuftaḥu",
+        "en": "is opened",
+        "ur": "کھولا جاتا ہے"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Passive present: ḍamma on the prefix, sukūn, fatḥa, ḍamma — يُفْتَحُ.",
+        "ur": "مضارع مجہول: سابقہ پر ضمہ، سکون، فتحہ، ضمہ — يُفْتَحُ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch51-l08-ex05",
+      "mode": "TAP",
+      "sentence_ar": "___ النَّافِذَةُ.",
+      "hint": {
+        "en": "The window is opened.",
+        "ur": "کھڑکی کھولی جاتی ہے۔"
+      },
+      "options": [
+        {
+          "ar": "تَفْتَحُ",
+          "ar_plain": "تفتح",
+          "translit": "taftaḥu",
+          "en": "she opens",
+          "ur": "وہ کھولتی ہے"
+        },
+        {
+          "ar": "فُتِحَتْ",
+          "ar_plain": "فتحت",
+          "translit": "futiḥat",
+          "en": "was opened (f.)",
+          "ur": "کھولی گئی (مؤنث)"
+        },
+        {
+          "ar": "يَفْتَحُ",
+          "ar_plain": "يفتح",
+          "translit": "yaftaḥu",
+          "en": "he opens",
+          "ur": "وہ کھولتا ہے"
+        },
+        {
+          "ar": "تُفْتَحُ",
+          "ar_plain": "تفتح",
+          "translit": "tuftaḥu",
+          "en": "is opened (f.)",
+          "ur": "کھولی جاتی ہے (مؤنث)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "تُفْتَحُ",
+        "ar_plain": "تفتح",
+        "translit": "tuftaḥu",
+        "en": "is opened (f.)",
+        "ur": "کھولی جاتی ہے (مؤنث)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The feminine passive present is تُفْتَحُ — compare the active تَفْتَحُ, which means 'she opens'.",
+        "ur": "مؤنث مضارع مجہول تُفْتَحُ ہے — معروف تَفْتَحُ سے موازنہ کریں جس کا مطلب 'وہ کھولتی ہے' ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch51-l08-ex06",
+      "mode": "TAP",
+      "sentence_ar": "الْبَابُ لَنْ ___.",
+      "hint": {
+        "en": "The door will not be opened.",
+        "ur": "دروازہ نہیں کھولا جائے گا۔"
+      },
+      "options": [
+        {
+          "ar": "يُفْتَحُ",
+          "ar_plain": "يفتح",
+          "translit": "yuftaḥu",
+          "en": "is opened",
+          "ur": "کھولا جاتا ہے"
+        },
+        {
+          "ar": "يُفْتَحْ",
+          "ar_plain": "يفتح",
+          "translit": "yuftaḥ",
+          "en": "(sukūn form)",
+          "ur": "(سکون والا روپ)"
+        },
+        {
+          "ar": "يُفْتَحَ",
+          "ar_plain": "يفتح",
+          "translit": "yuftaḥa",
+          "en": "(that) it be opened",
+          "ur": "(کہ) وہ کھولا جائے"
+        },
+        {
+          "ar": "يَفْتَحَ",
+          "ar_plain": "يفتح",
+          "translit": "yaftaḥa",
+          "en": "(that) he open",
+          "ur": "(کہ) وہ کھولے"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يُفْتَحَ",
+        "ar_plain": "يفتح",
+        "translit": "yuftaḥa",
+        "en": "(that) it be opened",
+        "ur": "(کہ) وہ کھولا جائے"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After لَنْ the last letter takes fatḥa; the passive stem stays: يُفْتَحَ. يَفْتَحَ would be active.",
+        "ur": "لَنْ کے بعد آخری حرف پر فتحہ آتا ہے؛ مجہول وزن وہی رہتا ہے: يُفْتَحَ۔ يَفْتَحَ معروف ہوتا۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch51-l08-ex07",
+      "mode": "TAP",
+      "sentence_ar": "الدَّرْسُ لَمْ ___.",
+      "hint": {
+        "en": "The lesson was not written.",
+        "ur": "سبق نہیں لکھا گیا۔"
+      },
+      "options": [
+        {
+          "ar": "يُكْتَبْ",
+          "ar_plain": "يكتب",
+          "translit": "yuktab",
+          "en": "was not written",
+          "ur": "نہیں لکھا گیا"
+        },
+        {
+          "ar": "يُكْتَبُ",
+          "ar_plain": "يكتب",
+          "translit": "yuktabu",
+          "en": "is written",
+          "ur": "لکھا جاتا ہے"
+        },
+        {
+          "ar": "يُكْتَبَ",
+          "ar_plain": "يكتب",
+          "translit": "yuktaba",
+          "en": "(fatḥa form)",
+          "ur": "(فتحہ والا روپ)"
+        },
+        {
+          "ar": "كُتِبَ",
+          "ar_plain": "كتب",
+          "translit": "kutiba",
+          "en": "was written",
+          "ur": "لکھا گیا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يُكْتَبْ",
+        "ar_plain": "يكتب",
+        "translit": "yuktab",
+        "en": "was not written",
+        "ur": "نہیں لکھا گیا"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After لَمْ the last letter takes sukūn: يُكْتَبْ.",
+        "ur": "لَمْ کے بعد آخری حرف پر سکون آتا ہے: يُكْتَبْ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch51-l08-ex08",
+      "statement": {
+        "en": "Because يُعَلِّمُ begins with يُـ, it is a passive verb.",
+        "ur": "چونکہ يُعَلِّمُ يُـ سے شروع ہوتا ہے، یہ مجہول فعل ہے۔",
+        "ar_example": {
+          "ar": "يُعَلِّمُ",
+          "ar_plain": "يعلم",
+          "translit": "yuʿallimu",
+          "en": "he teaches (active)",
+          "ur": "وہ سکھاتا ہے (معروف)"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "It is active — 'he teaches'. The first vowel does not decide the voice; the whole stem does.",
+        "ur": "یہ معروف ہے — 'وہ سکھاتا ہے'۔ پہلی حرکت معروف و مجہول طے نہیں کرتی؛ پورا وزن کرتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch51-l08-ex09",
+      "prompt": {
+        "ar": "يُرْسِلُ أَبِي الْكِتَابَ.",
+        "ar_plain": "يرسل ابي الكتاب.",
+        "translit": "yursilu ʾabī al-kitāba",
+        "en": "My father sends the book.",
+        "ur": "میرے والد کتاب بھیجتے ہیں۔"
+      },
+      "options": [
+        {
+          "en": "My father sends the book.",
+          "ur": "میرے والد کتاب بھیجتے ہیں۔"
+        },
+        {
+          "en": "The book is sent.",
+          "ur": "کتاب بھیجی جاتی ہے۔"
+        },
+        {
+          "en": "My father was sent.",
+          "ur": "میرے والد بھیجے گئے۔"
+        },
+        {
+          "en": "The book sends my father.",
+          "ur": "کتاب میرے والد کو بھیجتی ہے۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يُرْسِلُ (sukūn, then kasra) is active; the doer أَبِي is named and الْكِتَابَ ends in fatḥa.",
+        "ur": "يُرْسِلُ (سکون پھر کسرہ) معروف ہے؛ کرنے والا أَبِي مذکور ہے اور الْكِتَابَ فتحہ پر ختم ہوتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch51-l08-ex10",
+      "prompt": {
+        "ar": "وَلَا يُؤْخَذُ مِنْهَا عَدْلٌ",
+        "ar_plain": "ولا يؤخذ منها عدل",
+        "translit": "walā yuʾkhadhu minhā ʿadlun",
+        "en": "nor will any compensation be taken from it (2:48)",
+        "ur": "اور نہ اس سے کوئی بدلہ لیا جائے گا (2:48)"
+      },
+      "options": [
+        {
+          "en": "nor does it take any compensation",
+          "ur": "اور نہ وہ کوئی بدلہ لیتا ہے"
+        },
+        {
+          "en": "nor will any compensation be taken from it",
+          "ur": "اور نہ اس سے کوئی بدلہ لیا جائے گا"
+        },
+        {
+          "en": "nor was any compensation taken",
+          "ur": "اور نہ کوئی بدلہ لیا گیا"
+        },
+        {
+          "en": "and compensation is taken from it",
+          "ur": "اور اس سے بدلہ لیا جاتا ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يُؤْخَذُ is a passive present, and لَا negates it: 'is not taken'; عَدْلٌ is the receiver.",
+        "ur": "يُؤْخَذُ مضارع مجہول ہے اور لَا اس کی نفی کرتا ہے: 'نہیں لیا جاتا'؛ عَدْلٌ نائب فاعل ہے۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Passive present, receiver in ḍamma",
+      "ar": "يُؤْخَذُ مِنْهَا عَدْلٌ",
+      "ur": "مضارع مجہول، ضمہ والا نائب فاعل"
+    },
+    "ayah": {
+      "surah": 2,
+      "ayah": 48,
+      "label": "Al-Baqarah 2:48",
+      "ar": "يُؤْخَذُ مِنْهَا عَدْلٌ",
+      "en": "nor will any compensation be taken from it",
+      "ur": "اور نہ اس سے کوئی بدلہ لیا جائے گا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002048.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      2
+    ],
+    "highlighted_words": [
+      "يُؤْخَذُ",
+      "عَدْلٌ"
+    ],
+    "noor_explanation": {
+      "en": "يُؤْخَذُ is the passive present — 'is taken'. عَدْلٌ, the compensation, is the receiver, with ḍamma.",
+      "ur": "يُؤْخَذُ مضارع مجہول ہے — 'لیا جاتا ہے'۔ عَدْلٌ، بدلہ، نائب فاعل ہے، ضمہ کے ساتھ۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "يَكْتُبُ → يُكْتَبُ: the stem changes for voice, the last letter changes for mood. Next: reading verbs in the Quran.",
+      "ur": "يَكْتُبُ ← يُكْتَبُ: وزن معروف و مجہول کے لیے بدلتا ہے، آخری حرف حالت کے لیے۔ اگلا: قرآن میں افعال پڑھنا۔"
+    }
+  }
+}
