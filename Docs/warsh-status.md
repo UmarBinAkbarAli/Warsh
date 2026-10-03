@@ -1778,9 +1778,10 @@ the Upstash Redis limiter that went live 2026-09-15. Login, register,
 forgot/reset-password, Google sign-in/link, restore, Noor burst and the admin session
 route all share it. A database error logs and degrades to the in-process limiter
 rather than failing open; `RATE_LIMIT_STORE=memory` forces that limiter (tests).
-Migration `20261003120000_rate_limit_bucket` is applied to local staging only —
-**apply it to production before deploying**, then delete the `warsh-rate-limit`
-Upstash resource and its `KV_REST_API_*` env vars from the `warsh` Vercel project.
+Migration `20261003120000_rate_limit_bucket` is applied to production and the
+limiter is live (2026-10-04: 10 bad logins returned 401, the 11th 429). The
+`warsh-rate-limit` Upstash resource and its `KV_*` / `REDIS_URL` env vars are
+deleted from the `warsh` Vercel project.
 
 `/api/chat` joined it on 2026-09-16 (`068508b`) with a burst limit distinct
 from the daily quota: 15 messages/min per user and 60/min per IP, checked
