@@ -769,7 +769,7 @@ artifact validation, and the runtime checklist — lives in `AGENTS.md` under
 
 ## 14. Scaling and deferred infrastructure
 
-- Current Noor rate limiting uses database message counting. Measure before adding Redis.
+- Current Noor rate limiting uses database message counting. Auth and Noor burst limits use the Postgres `RateLimitBucket` table (`lib/rateLimit.ts`); measure before adding Redis.
 - Prisma uses direct PostgreSQL pooling through the adapter; observe connection/load behavior before changing architecture.
 - Media should remain CDN-backed and cached on clients.
 - Avoid speculative queues, microservices, or data replicas before production evidence warrants them.

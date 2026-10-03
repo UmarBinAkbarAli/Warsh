@@ -14,17 +14,15 @@ import assert from "node:assert/strict";
  */
 
 const previousJwtSecret = process.env.JWT_SECRET;
-const previousRedisUrl = process.env.UPSTASH_REDIS_REST_URL;
-const previousKvUrl = process.env.KV_REST_API_URL;
+const previousStore = process.env.RATE_LIMIT_STORE;
 
 let POST: (request: Request) => Promise<Response>;
 let signToken: (userId: string) => string;
 
 before(async () => {
   process.env.JWT_SECRET = "test-only-noor-burst-secret";
-  // Force the in-process limiter so the test never reaches a shared Redis.
-  delete process.env.UPSTASH_REDIS_REST_URL;
-  delete process.env.KV_REST_API_URL;
+  // Force the in-process limiter so the test never reaches the database.
+  process.env.RATE_LIMIT_STORE = "memory";
   ({ POST } = await import("../app/api/chat/route"));
   ({ signToken } = await import("../lib/auth"));
 });
@@ -32,8 +30,8 @@ before(async () => {
 after(() => {
   if (previousJwtSecret === undefined) delete process.env.JWT_SECRET;
   else process.env.JWT_SECRET = previousJwtSecret;
-  if (previousRedisUrl !== undefined) process.env.UPSTASH_REDIS_REST_URL = previousRedisUrl;
-  if (previousKvUrl !== undefined) process.env.KV_REST_API_URL = previousKvUrl;
+  if (previousStore === undefined) delete process.env.RATE_LIMIT_STORE;
+  else process.env.RATE_LIMIT_STORE = previousStore;
 });
 
 function send(userId: string, ip: string) {

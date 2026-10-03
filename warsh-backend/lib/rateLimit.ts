@@ -1,20 +1,19 @@
-// Rate limiter with a shared Redis backing store when configured, and an
-// in-process fallback when it is not.
+// Rate limiter backed by one Postgres row per key, with an in-process fallback
+// for local tests and for a database that cannot be reached.
 //
 // The in-process path is best-effort only: on serverless (Vercel) each instance
 // has its own memory, so the effective ceiling is `limit x concurrent
-// instances` and every deploy resets the counters. That is fine for local dev
-// and acceptable as a floor, but it is NOT a real limit for a production auth
-// endpoint — most importantly POST /api/admin/session, which guards a single
-// shared secret with no second factor.
+// instances` and every deploy resets the counters. It is NOT a real limit for a
+// production auth endpoint — most importantly POST /api/admin/session, which
+// guards a single shared secret with no second factor — so it is only the
+// fallback, never the default. Set RATE_LIMIT_STORE=memory to force it (tests).
 //
-// Set UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN to get true
-// cross-instance limits. The Vercel Marketplace install of Upstash injects the
-// same credentials as KV_REST_API_URL / KV_REST_API_TOKEN instead, so those are
-// accepted as a fallback. Nothing else needs to change: `hit()` keeps the same
-// signature and transparently upgrades.
-import { Ratelimit } from "@upstash/ratelimit";
-import { Redis } from "@upstash/redis";
+// The shared path is a fixed window: one atomic upsert per hit either opens a
+// new window or increments the open one, so concurrent instances agree without
+// any locking. Redis (Upstash) used to back this; every limited route is a
+// low-volume auth or Noor endpoint, so the extra write is not worth a vendor.
+import { Prisma } from "@prisma/client";
+import { prisma } from "./prisma";
 
 interface Bucket {
   count: number;
@@ -54,28 +53,39 @@ function hitInMemory(key: string, limit: number, windowMs: number): RateLimitRes
   return { allowed: true, retryAfterSeconds: 0 };
 }
 
-const redisUrl = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
-const redisToken = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
+const useMemoryOnly = process.env.RATE_LIMIT_STORE === "memory";
 
-const redis = redisUrl && redisToken ? new Redis({ url: redisUrl, token: redisToken }) : null;
+// Expired rows are only ever read to be overwritten, so they are harmless; this
+// just keeps the table from growing. Roughly one hit in a hundred sweeps.
+const SWEEP_ONE_IN = 100;
 
-// One Ratelimit instance per (limit, window) pair, built lazily and reused so
-// the sliding-window script is only registered once per shape.
-const limiters = new Map<string, Ratelimit>();
+interface BucketRow {
+  count: number;
+  retryAfterSeconds: number;
+}
 
-function getLimiter(limit: number, windowMs: number): Ratelimit {
-  const id = `${limit}:${windowMs}`;
-  let limiter = limiters.get(id);
-  if (!limiter) {
-    limiter = new Ratelimit({
-      redis: redis!,
-      limiter: Ratelimit.slidingWindow(limit, `${windowMs} ms`),
-      prefix: `warsh-rl:${id}`,
-      analytics: false,
-    });
-    limiters.set(id, limiter);
+async function hitDatabase(key: string, limit: number, windowMs: number): Promise<RateLimitResult> {
+  const rows = await prisma.$queryRaw<BucketRow[]>(Prisma.sql`
+    INSERT INTO "RateLimitBucket" ("key", "count", "resetAt")
+    VALUES (${key}, 1, now() + ${windowMs} * interval '1 millisecond')
+    ON CONFLICT ("key") DO UPDATE SET
+      "count" = CASE WHEN "RateLimitBucket"."resetAt" <= now() THEN 1 ELSE "RateLimitBucket"."count" + 1 END,
+      "resetAt" = CASE WHEN "RateLimitBucket"."resetAt" <= now()
+        THEN now() + ${windowMs} * interval '1 millisecond'
+        ELSE "RateLimitBucket"."resetAt" END
+    RETURNING "count",
+      CEIL(EXTRACT(EPOCH FROM ("resetAt" - now())))::int AS "retryAfterSeconds"
+  `);
+
+  if (Math.random() * SWEEP_ONE_IN < 1) {
+    void prisma
+      .$executeRaw`DELETE FROM "RateLimitBucket" WHERE "resetAt" < now() - interval '1 hour'`
+      .catch(() => undefined);
   }
-  return limiter;
+
+  const row = rows[0];
+  if (!row || Number(row.count) <= limit) return { allowed: true, retryAfterSeconds: 0 };
+  return { allowed: false, retryAfterSeconds: Math.max(1, Number(row.retryAfterSeconds)) };
 }
 
 /**
@@ -83,18 +93,14 @@ function getLimiter(limit: number, windowMs: number): Ratelimit {
  * if not, how long (seconds) until capacity frees up.
  */
 export async function hit(key: string, limit: number, windowMs: number): Promise<RateLimitResult> {
-  if (!redis) return hitInMemory(key, limit, windowMs);
+  if (useMemoryOnly) return hitInMemory(key, limit, windowMs);
 
   try {
-    const { success, reset } = await getLimiter(limit, windowMs).limit(key);
-    return {
-      allowed: success,
-      retryAfterSeconds: success ? 0 : Math.max(1, Math.ceil((reset - Date.now()) / 1000)),
-    };
+    return await hitDatabase(key, limit, windowMs);
   } catch (error) {
-    // Redis being unreachable must not take authentication down with it. Fall
-    // back to the in-process limiter rather than failing open entirely.
-    console.error("[rate-limit] Redis unavailable, falling back to in-process limiter:", error);
+    // The database being unreachable must not take authentication down with it.
+    // Fall back to the in-process limiter rather than failing open entirely.
+    console.error("[rate-limit] database unavailable, falling back to in-process limiter:", error);
     return hitInMemory(key, limit, windowMs);
   }
 }

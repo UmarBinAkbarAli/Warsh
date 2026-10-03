@@ -449,3 +449,13 @@ model BlogPost {
 
     @@index([status, publishedAt])
 }
+
+// One row per rate-limit key (see lib/rateLimit.ts): a fixed window that
+// restarts the first hit after `resetAt`. Replaces the Upstash Redis limiter.
+model RateLimitBucket {
+    key     String   @id
+    count   Int
+    resetAt DateTime
+
+    @@index([resetAt])
+}

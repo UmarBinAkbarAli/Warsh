@@ -2,315 +2,320 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 48, Lesson 2 — numbers 1–10: 1 and 2 as fixed chunks; 3–10 with gender polarity and a plural genitive counted noun (2:196). 11–20 for recognition only.",
+    "_note": "Chapter 48, Lesson 4 — Telling time in Arabic and time-related expressions.",
     "chapter_order": 48,
-    "lesson_order": 2,
+    "lesson_order": 4,
     "chapter_title": "Time, Numbers, and Measurements",
-    "title": "Numbers 1–10",
-    "titleAr": "الْأَعْدَادُ مِنْ ١ إِلَى ١٠",
+    "title": "Telling Time and Daily Schedule",
+    "titleAr": "إِخْبَارُ الْوَقْتِ وَالْيَوْمُ الْعَادِيُّ",
+    "source": "book5_lesson4_time_numbers.md",
     "estimated_minutes": 8,
-    "xp_reward": 10,
-    "titleUr": "اعداد 1 سے 10"
+    "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 2,
-      "ayah": 196,
-      "label": "Al-Baqarah 2:196",
-      "ar": "فَمَنْ لَمْ يَجِدْ فَصِيَامُ ثَلَاثَةِ أَيَّامٍ",
-      "en": "And whoever cannot find [one], then a fast of three days.",
-      "ur": "اور جو نہ پائے تو تین دن کے روزے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002196.mp3"
+      "surah": 89,
+      "ayah": 1,
+      "label": "Al-Fajr 89:1",
+      "ar": "وَالْفَجْرِ",
+      "en": "By the dawn,",
+      "ur": "الفجر کی قسم سے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/089001.mp3"
     },
-    "autoplay": true,
     "noor_intro": {
-      "en": "ثَلَاثَةِ أَيَّامٍ — \"three days\". The number ends in ة, and the counted noun is plural. Today: numbers 1–10 and how they join a noun.",
-      "ur": "ثَلَاثَةِ أَيَّامٍ — \"تین دن\"۔ عدد ة پر ختم ہوتا ہے، اور معدود جمع ہے۔ آج: 1 سے 10 تک اعداد اور اسم کے ساتھ ان کا استعمال۔"
-    }
+      "en": "In this lesson we practice telling time in Arabic — both the formal clock time and the natural time divisions of the day. Understanding these expressions is essential for daily conversation.",
+      "ur": "اس lesson میں ہم عربی میں وقت بتانے کی practice کرتے ہیں — formal clock time اور دن کی natural time divisions دونوں۔ ان expressions کو سمجھنا روزانہ conversation کے لیے ضروری ہے۔"
+    },
+    "autoplay": true
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Number words",
-        "ar": "أَسْمَاءُ الْأَعْدَادِ",
-        "ur": "اعداد کے الفاظ"
+        "en": "Telling time in Arabic",
+        "ar": "إِخْبَارُ الْوَقْتِ فِي الْعَرَبِيَّةِ",
+        "ur": "عربی میں وقت بتانا"
       },
       "explanation": {
-        "en": "وَاحِدٌ 1 · اثْنَانِ 2 · ثَلَاثَةٌ 3 · أَرْبَعَةٌ 4 · خَمْسَةٌ 5 · سِتَّةٌ 6 · سَبْعَةٌ 7 · ثَمَانِيَةٌ 8 · تِسْعَةٌ 9 · عَشَرَةٌ 10. These are number words (numerals), not plural nouns.",
-        "ur": "وَاحِدٌ 1 · اثْنَانِ 2 · ثَلَاثَةٌ 3 · أَرْبَعَةٌ 4 · خَمْسَةٌ 5 · سِتَّةٌ 6 · سَبْعَةٌ 7 · ثَمَانِيَةٌ 8 · تِسْعَةٌ 9 · عَشَرَةٌ 10۔ یہ اعداد کے الفاظ ہیں، جمع اسم نہیں۔"
+        "en": "To ask the time: كَمِ السَّاعَةُ؟ or مَا السَّاعَةُ؟ To answer, use the feminine ordinal after السَّاعَةُ: السَّاعَةُ الثَّالِثَةُ (\"it is three o'clock\"), السَّاعَةُ الثَّانِيَةُ (\"two o'clock\"). A quarter: رُبْعٌ; a half: نِصْفٌ.",
+        "ur": "وقت پوچھنا: كَمِ السَّاعَةُ؟ یا مَا السَّاعَةُ؟ جواب میں السَّاعَةُ کے بعد مؤنث ترتیبی عدد: السَّاعَةُ الثَّالِثَةُ (\"تین بجے ہیں\")، السَّاعَةُ الثَّانِيَةُ (\"دو بجے\")۔ چوتھائی: رُبْعٌ؛ آدھا: نِصْفٌ۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "WORD",
       "text": {
-        "ar": "كِتَابٌ وَاحِدٌ — كِتَابَانِ اثْنَانِ",
-        "ar_plain": "كتاب واحد كتابان اثنان",
-        "translit": "kitaabun waahid — kitaabaani-thnaan",
-        "en": "one book — two books",
-        "ur": "ایک کتاب — دو کتابیں"
+        "ar": "الثَّانِيَةُ",
+        "ar_plain": "الثانية",
+        "translit": "ath-thaaniyatu",
+        "en": "two o'clock",
+        "ur": "دو بجے"
       },
       "explanation": {
-        "en": "1 and 2 come after the noun, like adjectives. (Learn these as fixed phrases for now.)",
-        "ur": "1 اور 2 اسم کے بعد صفت کی طرح آتے ہیں۔ (فی الحال انہیں مقررہ جملوں کے طور پر یاد کریں۔)"
+        "en": "الثَّانِيَةُ means 'two o'clock' (2:00). The feminine ordinal form is used for clock time: الثَّالِثَةُ (3:00), الرَّابِعَةُ (4:00), الْخَامِسَةُ (5:00). This follows the pattern: ordinal number + ة for clock hours.",
+        "ur": "الثَّانِيَةُ کا مطلب 'دو بجے' (2:00) ہے۔ feminine ordinal form clock time کے لیے used ہوتی ہے: الثَّالِثَةُ (3:00), الرَّابِعَةُ (4:00), الْخَامِسَةُ (5:00)۔ یہ pattern follow کرتی ہے: ordinal number + ة گھنٹوں کے لیے۔"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "3–10: opposite gender, plural noun",
-        "ar": "الْأَعْدَادُ مِنْ ٣ إِلَى ١٠",
-        "ur": "3–10: الٹی جنس، جمع اسم"
-      },
-      "explanation": {
-        "en": "3–10: the number takes the opposite gender ending to the singular of the counted noun, and the counted noun is plural and genitive: ثَلَاثَةُ أَيَّامٍ (يَوْمٌ is masculine → number with ة), ثَلَاثُ لَيَالٍ (لَيْلَةٌ is feminine → number without ة).",
-        "ur": "3 سے 10: عدد معدود کے واحد کے الٹ جنس کا لاحقہ لیتا ہے، اور معدود جمع اور مجرور ہوتا ہے: ثَلَاثَةُ أَيَّامٍ (يَوْمٌ مذکر ہے ← عدد ة کے ساتھ)، ثَلَاثُ لَيَالٍ (لَيْلَةٌ مؤنث ہے ← عدد ة کے بغیر)۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
+      "type": "WORD",
       "text": {
-        "ar": "ثَلَاثَةُ أَيَّامٍ",
-        "ar_plain": "ثلاثة ايام",
-        "translit": "thalaathatu ayyaam",
-        "en": "three days (Al-Baqarah 2:196)",
-        "ur": "تین دن (البقرہ 2:196)"
+        "ar": "الصُّبْحُ",
+        "ar_plain": "الصبح",
+        "translit": "as-subhu",
+        "en": "morning (early)",
+        "ur": "صبح (اُوار)"
       },
       "explanation": {
-        "en": "يَوْمٌ (day) is masculine, so the number is ثَلَاثَةُ (with ة). The counted noun is plural and genitive: أَيَّامٍ.",
-        "ur": "يَوْمٌ (دن) مذکر ہے، اس لیے عدد ثَلَاثَةُ (ة کے ساتھ) ہے۔ معدود جمع اور مجرور ہے: أَيَّامٍ۔"
+        "en": "الصُّبْحُ is the early morning — from fajr (dawn) until a couple hours after sunrise. It is distinct from صَبَاحٌ which is the general morning period. The Quran swears by الْفَجْرِ (the dawn) in Surah Al-Fajr.",
+        "ur": "الصُّبْحُ early morning ہے — fajr (الفجر) سے لے کر sunrise کے کچھ گھنٹے بعد تک۔ یہ صَبَاحٌ سے different ہے جو general morning period ہے۔ قرآن نے سورۃ الفجر میں الْفَجْرِ (الفجر) کی قسم کھائی ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "WORD",
       "text": {
-        "ar": "أَرْبَعَةُ أَشْهُرٍ",
-        "ar_plain": "اربعة اشهر",
-        "translit": "arba'atu ash-hur",
-        "en": "four months (Al-Baqarah 2:226)",
-        "ur": "چار مہینے (البقرہ 2:226)"
+        "ar": "الظَّهِيرَةُ",
+        "ar_plain": "الظهيرة",
+        "translit": "az-zahiiratu",
+        "en": "midday / noon",
+        "ur": "دوپہر / lunch وقت"
       },
       "explanation": {
-        "en": "شَهْرٌ is masculine → أَرْبَعَةُ; counted noun plural genitive: أَشْهُرٍ.",
-        "ur": "شَهْرٌ مذکر ہے ← أَرْبَعَةُ؛ معدود جمع مجرور: أَشْهُرٍ۔"
+        "en": "الظَّهِيرَةُ is midday — the hottest part of the day. The root ظ-ه-ر relates to ' الظَّاهِرُ' meaning 'the apparent/visible one' — noon is when the sun is at its highest and most visible. The Quran uses this concept when describing the heat of Hell.",
+        "ur": "الظَّهِيرَةُ midday ہے — دن کا hottest حصہ۔ Root ظ-ه-ر ' الظَّاهِرُ' سے related ہے جس کا مطلب 'واضح/نمایاں' — noon وہ وقت ہے جب سورج اپنی highest اور most visible ہوتا ہے۔ قرآن اس concept کو Hell کی گرمی describe کرتے وقت use کرتا ہے۔"
       }
     },
     {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "11–20, for recognition",
-        "ur": "11–20، پہچان کے لیے"
+      "type": "WORD",
+      "text": {
+        "ar": "الْمَسَاءُ",
+        "ar_plain": "المساء",
+        "translit": "al-masaa'u",
+        "en": "evening / afternoon",
+        "ur": "شام / evening"
       },
-      "body": {
-        "en": "أَحَدَ عَشَرَ (11), اثْنَا عَشَرَ (12), ثَلَاثَةَ عَشَرَ (13) … عِشْرُونَ (20). These have their own rules — just recognise them for now.",
-        "ur": "أَحَدَ عَشَرَ (11)، اثْنَا عَشَرَ (12)، ثَلَاثَةَ عَشَرَ (13) … عِشْرُونَ (20)۔ ان کے اپنے قاعدے ہیں — فی الحال صرف پہچانیں۔"
+      "explanation": {
+        "en": "الْمَسَاءُ is the evening — from afternoon until sunset. It is the time between الظَّهِيرَةُ (midday) and sunset. In Islamic culture, the evening is associated with family gatherings and the adhan for Maghrib.",
+        "ur": "الْمَسَاءُ evening ہے — afternoon سے لے کر sunset تک۔ یہ الظَّهِيرَةُ (دوپہر) اور sunset کے درمیان وقت ہے۔ اسلامی ثقافت میں، evening family gatherings اور مغرب کی azan سے associated ہے۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "اللَّيْلُ",
+        "ar_plain": "الليل",
+        "translit": "al-laylu",
+        "en": "the night",
+        "ur": "رات"
+      },
+      "explanation": {
+        "en": "اللَّيْلُ is the night — from sunset to sunrise. The Quran frequently uses night as a metaphor for darkness, rest, and divine signs: وَجَعَلْنَا اللَّيْلَ لِبَاسًا (and we made the night as a covering garment).",
+        "ur": "اللَّيْلُ رات ہے — sunset سے لے کر sunrise تک۔ قرآن بار بار night کو metaphor کے طور پر use کرتا ہے darkness، rest، اور الٰہی signs کے لیے: وَجَعَلْنَا اللَّيْلَ لِبَاسًا (اور ہم نے رات کو لباس بنایا)۔"
       }
     }
   ],
   "exercises": [
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch48-l02-ex01",
+      "id": "ch48-l04-ex01",
       "prompt": {
-        "ar": "ثَلَاثَةُ أَيَّامٍ",
-        "ar_plain": "ثلاثة ايام",
-        "translit": "thalaathatu ayyaam",
-        "en": "three days",
-        "ur": "تین دن"
+        "ar": "مَا هِيَ السَّاعَةُ؟",
+        "ar_plain": "ما هي الساعة",
+        "translit": "maa hiya as-saa'atu?",
+        "en": "What time is it?",
+        "ur": "کتنے بجے ہیں؟"
       },
       "options": [
         {
-          "en": "three days",
-          "ur": "تین دن"
+          "en": "What time is it?",
+          "ur": "کتنے بجے ہیں؟"
         },
         {
-          "en": "three nights",
-          "ur": "تین راتیں"
+          "en": "Where is the clock?",
+          "ur": "clock کہاں ہے؟"
         },
         {
-          "en": "the third day",
-          "ur": "تیسرا دن"
+          "en": "How many hours?",
+          "ur": "کتنے گھنٹے؟"
         },
         {
-          "en": "thirty days",
-          "ur": "تیس دن"
+          "en": "What is the hour?",
+          "ur": "گھنٹہ کیا ہے؟"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "ثَلَاثَةُ = three; أَيَّامٍ = days (plural genitive).",
-        "ur": "ثَلَاثَةُ = تین؛ أَيَّامٍ = دن (جمع مجرور)۔"
+        "en": "مَا هِيَ السَّاعَةُ؟ is the standard way to ask 'what time is it?' in Arabic. The word السَّاعَةُ means both 'hour' and 'time/clock.'",
+        "ur": "مَا هِيَ السَّاعَةُ؟ عربی میں 'کتنے بجے ہیں؟' پوچھنے کا standard طریقہ ہے۔ لفظ السَّاعَةُ 'گھنٹہ' اور 'وقت/clock' دونوں کا مطلب ہے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch48-l02-ex02",
+      "id": "ch48-l04-ex02",
       "statement": {
-        "en": "After the numbers 3–10, the counted noun is plural and genitive.",
-        "ur": "3 سے 10 کے بعد معدود جمع اور مجرور ہوتا ہے۔"
+        "en": "الثَّانِيَةُ means 'two o'clock' in Arabic time-telling.",
+        "ur": "الثَّانِيَةُ عربی time-telling میں 'دو بجے' کا مطلب ہے۔"
       },
       "correct_answer": true,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "True: ثَلَاثَةُ أَيَّامٍ, خَمْسَةُ كُتُبٍ.",
-        "ur": "درست: ثَلَاثَةُ أَيَّامٍ، خَمْسَةُ كُتُبٍ۔"
-      }
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch48-l02-ex03",
-      "mode": "TAP",
-      "sentence_ar": "أَرْبَعَةُ ___",
-      "hint": {
-        "en": "four months",
-        "ur": "چار مہینے"
-      },
-      "options": [
-        {
-          "ar": "أَشْهُرٍ",
-          "ar_plain": "اشهر",
-          "translit": "ash-hurin",
-          "en": "months (plural genitive)",
-          "ur": "مہینے (جمع مجرور)"
-        },
-        {
-          "ar": "شَهْرٌ",
-          "ar_plain": "شهر",
-          "translit": "shahrun",
-          "en": "a month (singular)",
-          "ur": "ایک مہینہ (واحد)"
-        },
-        {
-          "ar": "شَهْرٍ",
-          "ar_plain": "شهر",
-          "translit": "shahrin",
-          "en": "a month (singular genitive)",
-          "ur": "ایک مہینہ (واحد مجرور)"
-        },
-        {
-          "ar": "شَهْرًا",
-          "ar_plain": "شهرا",
-          "translit": "shahran",
-          "en": "a month (singular accusative)",
-          "ur": "ایک مہینہ (واحد منصوب)"
-        }
-      ],
-      "correct_answer": {
-        "ar": "أَشْهُرٍ",
-        "ar_plain": "اشهر",
-        "translit": "ash-hurin",
-        "en": "months (plural genitive)",
-        "ur": "مہینے (جمع مجرور)"
-      },
       "xp_value": 1
     },
     {
+      "type": "FILL_BLANK",
+      "id": "ch48-l04-ex03",
+      "mode": "TAP",
+      "sentence_ar": "السَّاعَةُ ___",
+      "hint": {
+        "en": "It is three o'clock.",
+        "ur": "تین بجے ہیں۔"
+      },
+      "options": [
+        {
+          "ar": "الثَّالِثَةُ",
+          "ar_plain": "الثالثة",
+          "translit": "ath-thaalithah",
+          "en": "three o'clock",
+          "ur": "تین بجے"
+        },
+        {
+          "ar": "ثَلَاثٌ",
+          "ar_plain": "ثلاث",
+          "translit": "thalaath",
+          "en": "three (cardinal)",
+          "ur": "تین (عدد)"
+        },
+        {
+          "ar": "ثَلَاثَةٌ",
+          "ar_plain": "ثلاثة",
+          "translit": "thalaathah",
+          "en": "three (cardinal)",
+          "ur": "تین (عدد)"
+        },
+        {
+          "ar": "الثَّالِثُ",
+          "ar_plain": "الثالث",
+          "translit": "ath-thaalith",
+          "en": "the third (m.)",
+          "ur": "تیسرا (مذکر)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الثَّالِثَةُ",
+        "ar_plain": "الثالثة",
+        "translit": "ath-thaalithah",
+        "en": "three o'clock",
+        "ur": "تین بجے"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Clock time uses the feminine ordinal: السَّاعَةُ الثَّالِثَةُ.",
+        "ur": "گھڑی کے وقت میں مؤنث ترتیبی عدد آتا ہے: السَّاعَةُ الثَّالِثَةُ۔"
+      }
+    },
+    {
       "type": "MATCHING",
-      "id": "ch48-l02-ex04",
+      "id": "ch48-l04-ex04",
       "left_column": [
         {
-          "ar": "ثَلَاثَةُ أَيَّامٍ",
-          "ar_plain": "ثلاثة ايام",
-          "translit": "thalaathatu ayyaam",
-          "en": "three days",
-          "ur": "تین دن"
+          "ar": "الصُّبْحُ",
+          "ar_plain": "الصبح",
+          "translit": "as-subhu",
+          "en": "early morning",
+          "ur": "اُوار صبح"
         },
         {
-          "ar": "ثَلَاثُ لَيَالٍ",
-          "ar_plain": "ثلاث ليال",
-          "translit": "thalaathu layaal",
-          "en": "three nights",
-          "ur": "تین راتیں"
+          "ar": "الظَّهِيرَةُ",
+          "ar_plain": "الظهيرة",
+          "translit": "az-zahiiratu",
+          "en": "midday",
+          "ur": "دوپہر"
         },
         {
-          "ar": "كِتَابٌ وَاحِدٌ",
-          "ar_plain": "كتاب واحد",
-          "translit": "kitaabun waahid",
-          "en": "one book",
-          "ur": "ایک کتاب"
+          "ar": "الْمَسَاءُ",
+          "ar_plain": "المساء",
+          "translit": "al-masaa'u",
+          "en": "evening",
+          "ur": "شام"
         },
         {
-          "ar": "عَشَرَةُ رِجَالٍ",
-          "ar_plain": "عشرة رجال",
-          "translit": "'asharatu rijaal",
-          "en": "ten men",
-          "ur": "دس آدمی"
+          "ar": "اللَّيْلُ",
+          "ar_plain": "الليل",
+          "translit": "al-laylu",
+          "en": "night",
+          "ur": "رات"
         }
       ],
       "right_column": [
         {
-          "en": "feminine noun → number without ة",
-          "ur": "مؤنث اسم ← بغیر ة کا عدد"
+          "en": "early morning",
+          "ur": "اُوار صبح"
         },
         {
-          "en": "10 + plural genitive",
-          "ur": "10 + جمع مجرور"
+          "en": "midday",
+          "ur": "دوپہر"
         },
         {
-          "en": "masculine noun → number with ة",
-          "ur": "مذکر اسم ← ة والا عدد"
+          "en": "evening",
+          "ur": "شام"
         },
         {
-          "en": "1 after the noun, like an adjective",
-          "ur": "1 اسم کے بعد، صفت کی طرح"
+          "en": "night",
+          "ur": "رات"
         }
       ],
       "correct_pairs": [
         [
           0,
-          2
-        ],
-        [
-          1,
           0
         ],
         [
+          1,
+          1
+        ],
+        [
           2,
-          3
+          2
         ],
         [
           3,
-          1
+          3
         ]
       ],
       "xp_value": 1
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch48-l02-ex05",
+      "id": "ch48-l04-ex05",
       "target_translation": {
-        "en": "I have five books.",
-        "ur": "میرے پاس پانچ کتابیں ہیں۔"
+        "en": "It is ten o'clock at night.",
+        "ur": "رات کے دس بجے ہیں۔"
       },
       "tiles": [
         {
-          "ar": "عِنْدِي",
-          "ar_plain": "عندي",
-          "translit": "'indii",
-          "en": "I have",
-          "ur": "میرے پاس"
+          "ar": "السَّاعَةُ",
+          "ar_plain": "الساعة",
+          "translit": "as-saa'atu",
+          "en": "the time",
+          "ur": "وقت"
         },
         {
-          "ar": "خَمْسَةُ",
-          "ar_plain": "خمسة",
-          "translit": "khamsatu",
-          "en": "five",
-          "ur": "پانچ"
+          "ar": "عَشَرَةٌ",
+          "ar_plain": "عشرة",
+          "translit": "'asharatu",
+          "en": "ten",
+          "ur": "دس"
         },
         {
-          "ar": "كُتُبٍ",
-          "ar_plain": "كتب",
-          "translit": "kutubin",
-          "en": "books (plural genitive)",
-          "ur": "کتابیں"
+          "ar": "اللَّيْلِ",
+          "ar_plain": "الليلي",
+          "translit": "al-layli",
+          "en": "at night (gen.)",
+          "ur": "رات کو (جر)"
         },
         {
-          "ar": "كِتَابٍ",
-          "ar_plain": "كتاب",
-          "translit": "kitaabin",
-          "en": "book (singular)",
-          "ur": "کتاب (واحد)"
+          "ar": "الْيَوْمِ",
+          "ar_plain": "اليوم",
+          "translit": "al-yawmi",
+          "en": "during the day",
+          "ur": "دن میں"
         }
       ],
       "correct_order": [
@@ -322,106 +327,107 @@
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch48-l02-ex06",
+      "id": "ch48-l04-ex06",
       "prompt": {
-        "ar": "فَمَنْ لَمْ يَجِدْ فَصِيَامُ ثَلَاثَةِ أَيَّامٍ",
-        "ar_plain": "فمن لم يجد فصيام ثلاثة ايام",
-        "translit": "faman lam yajid fa-siyaamu thalaathati ayyaam",
-        "en": "And whoever cannot find [one], then a fast of three days.",
-        "ur": "اور جو نہ پائے تو تین دن کے روزے۔"
+        "ar": "وَاللَّيْلِ إِذَا يَغْشَىٰ",
+        "ar_plain": "والليل إذا يغشى",
+        "translit": "wal-layli idhaa yaghshaa",
+        "en": "By the night when it covers [everything].",
+        "ur": "رات کی قسم جب وہ ہر چیز کو ڈھانپ لے۔",
+        "audio_url": "https://everyayah.com/data/Alafasy_128kbps/092001.mp3"
       },
       "options": [
         {
-          "en": "And whoever cannot find [one], then a fast of three days.",
-          "ur": "اور جو نہ پائے تو تین دن کے روزے۔"
+          "en": "By the night when it covers [everything].",
+          "ur": "رات کی قسم جب وہ ہر چیز کو ڈھانپ لے۔"
         },
         {
-          "en": "Whoever finds three days should fast.",
-          "ur": "جو تین دن پائے وہ روزہ رکھے۔"
+          "en": "By the day when it shines.",
+          "ur": "دن کی قسم جب وہ چمکتا ہے۔"
         },
         {
-          "en": "He did not fast for three days.",
-          "ur": "اس نے تین دن روزہ نہیں رکھا۔"
+          "en": "And the night covers everything.",
+          "ur": "اور رات ہر چیز کو ڈھانپتی ہے۔"
         },
         {
-          "en": "Fasting is three days a month.",
-          "ur": "روزہ مہینے میں تین دن ہے۔"
+          "en": "The night is covering.",
+          "ur": "رات ڈھانپ رہی ہے۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "صِيَامُ ثَلَاثَةِ أَيَّامٍ = \"a fast of three days\" — ثَلَاثَةِ is genitive here (after صِيَامُ), and أَيَّامٍ is plural genitive.",
-        "ur": "صِيَامُ ثَلَاثَةِ أَيَّامٍ = \"تین دن کے روزے\" — یہاں ثَلَاثَةِ مجرور ہے (صِيَامُ کے بعد)، اور أَيَّامٍ جمع مجرور ہے۔"
+        "en": "وَاللَّيْلِ is 'by the night.' إِذَا يَغْشَىٰ means 'when it covers/overwhelms.' This is from Surah Al-Layl (92:1), which contrasts the night with the day in a series of cosmic oaths.",
+        "ur": "وَاللَّيْلِ 'رات کی قسم' ہے۔ إِذَا يَغْشَىٰ کا مطلب 'جب وہ ڈھانپ/overwhelm کرتی ہے'۔ یہ سورۃ اللیل (92:1) سے ہے، جو cosmic oaths کی ایک series میں night کو day سے contrast کرتی ہے۔"
       }
     },
     {
       "type": "MATCHING",
-      "id": "ch48-l02-ex07",
+      "id": "ch48-l04-ex07",
       "left_column": [
         {
-          "ar": "أَحَدَ عَشَرَ",
-          "ar_plain": "احد عشر",
-          "translit": "ahada 'ashar",
-          "en": "eleven",
-          "ur": "گیارہ"
+          "ar": "الصَّبَاحُ",
+          "ar_plain": "الصباح",
+          "translit": "as-sabaahu",
+          "en": "morning",
+          "ur": "صبح"
         },
         {
-          "ar": "اثْنَا عَشَرَ",
-          "ar_plain": "اثنا عشر",
-          "translit": "ithnaa 'ashar",
-          "en": "twelve",
-          "ur": "بارہ"
+          "ar": "الظَّهِيرَةُ",
+          "ar_plain": "الظهيرة",
+          "translit": "az-zahiiratu",
+          "en": "midday",
+          "ur": "دوپہر"
         },
         {
-          "ar": "عِشْرُونَ",
-          "ar_plain": "عشرون",
-          "translit": "'ishruun",
-          "en": "twenty",
-          "ur": "بیس"
+          "ar": "الْمَسَاءُ",
+          "ar_plain": "المساء",
+          "translit": "al-masaa'u",
+          "en": "evening",
+          "ur": "شام"
         },
         {
-          "ar": "عَشَرَةٌ",
-          "ar_plain": "عشرة",
-          "translit": "'asharah",
-          "en": "ten",
-          "ur": "دس"
+          "ar": "اللَّيْلُ",
+          "ar_plain": "الليل",
+          "translit": "al-laylu",
+          "en": "night",
+          "ur": "رات"
         }
       ],
       "right_column": [
         {
-          "en": "12",
-          "ur": "12"
+          "en": "morning",
+          "ur": "صبح"
         },
         {
-          "en": "10",
-          "ur": "10"
+          "en": "midday",
+          "ur": "دوپہر"
         },
         {
-          "en": "11",
-          "ur": "11"
+          "en": "evening",
+          "ur": "شام"
         },
         {
-          "en": "20",
-          "ur": "20"
+          "en": "night",
+          "ur": "رات"
         }
       ],
       "correct_pairs": [
         [
           0,
-          2
-        ],
-        [
-          1,
           0
         ],
         [
+          1,
+          1
+        ],
+        [
           2,
-          3
+          2
         ],
         [
           3,
-          1
+          3
         ]
       ],
       "xp_value": 1
@@ -429,36 +435,34 @@
   ],
   "reveal": {
     "concept_name": {
-      "en": "3–10 + plural genitive",
-      "ar": "الْعَدَدُ وَالْمَعْدُودُ",
-      "ur": "3–10 + جمع مجرور"
+      "en": "Time divisions in Arabic",
+      "ar": "أَقْسَامُ الْوَقْتِ فِي الْعَرَبِيَّةِ",
+      "ur": "عربی میں وقت کی تقسیم"
     },
     "ayah": {
-      "surah": 2,
-      "ayah": 196,
-      "label": "Al-Baqarah 2:196",
-      "ar": "فَمَنْ لَمْ يَجِدْ فَصِيَامُ ثَلَاثَةِ أَيَّامٍ",
-      "en": "And whoever cannot find [one], then a fast of three days.",
-      "ur": "اور جو نہ پائے تو تین دن کے روزے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002196.mp3"
+      "surah": 89,
+      "ayah": 1,
+      "label": "Al-Fajr 89:1",
+      "ar": "وَالْفَجْرِ",
+      "en": "By the dawn,",
+      "ur": "الفجر کی قسم سے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/089001.mp3"
     },
     "highlighted_word_indices": [
-      4,
-      5
-    ],
-    "highlighted_words": [
-      "ثَلَاثَةِ",
-      "أَيَّامٍ"
+      0
     ],
     "noor_explanation": {
-      "en": "ثَلَاثَةِ أَيَّامٍ: يَوْمٌ is masculine, so the number has ة; أَيَّامٍ is plural and genitive.",
-      "ur": "ثَلَاثَةِ أَيَّامٍ: يَوْمٌ مذکر ہے، اس لیے عدد پر ة ہے؛ أَيَّامٍ جمع اور مجرور ہے۔"
-    }
+      "en": "الْفَجْرِ is the dawn — the moment when night ends and day begins. The Quran swears by this liminal moment, as it represents the transition from darkness to light. Time expressions like these are woven throughout the Quran.",
+      "ur": "الْفَجْرِ الفجر ہے — وہ لمحہ جب رات ختم ہوتی ہے اور دن شروع ہوتا ہے۔ قرآن اس boundary moment کی قسم کھاتا ہے، کیونکہ یہ darkness سے light میں transition کو represents کرتا ہے۔ وقت expressions اس طرح سے پورے قرآن میں woven ہیں۔"
+    },
+    "highlighted_words": [
+      "وَالْفَجْرِ"
+    ]
   },
   "close": {
     "noor_message": {
-      "en": "1 and 2 follow the noun; 3–10 take the opposite gender ending and a plural genitive noun: ثَلَاثَةُ أَيَّامٍ, ثَلَاثُ لَيَالٍ.",
-      "ur": "1 اور 2 اسم کے بعد آتے ہیں؛ 3–10 الٹی جنس کا لاحقہ اور جمع مجرور اسم لیتے ہیں: ثَلَاثَةُ أَيَّامٍ، ثَلَاثُ لَيَالٍ۔"
+      "en": "Time vocabulary closes Chapter 48. You now know الصُّبْحُ, الظَّهِيرَةُ, الْمَسَاءُ, واللَّيْلُ — the four divisions of the Arabic day. This chapter was your pause after the heavy grammar of Chapters 46-47. Chapter 49 brings us back to advanced sentence construction.",
+      "ur": "وقت vocabulary Chapter 48 بند کرتا ہے۔ اب آپ جانتے ہیں الصُّبْحُ, الظَّهِيرَةُ, الْمَسَاءُ, واللَّيْلُ — عربی دن کی چار تقسیمیں۔ یہ chapter آپ کا pause تھا Chapters 46-47 کے heavy grammar کے بعد۔ Chapter 49 ہمیں advanced sentence construction کے لیے واپس لاتا ہے۔"
     }
   }
 }

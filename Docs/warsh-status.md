@@ -1745,20 +1745,15 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
 - Persistent Noor memory
 - Social profiles, leaderboards, or family accounts
 
-Redis-backed rate limiting is **live in production (2026-09-15)**. `lib/rateLimit.ts`
-(`f260be5`, 2026-08-26) uses Upstash Redis when credentials are present and falls
-back to the in-process limiter otherwise. The Upstash database `warsh-rate-limit`
-(Vercel Marketplace, free plan, `iad1`, eviction off, auto-upgrade off) was created
-in the `warshapp-projects` team on 2026-09-15 and connected to the `warsh` project
-for Production and Preview. The marketplace injects the credentials as
-`KV_REST_API_URL` / `KV_REST_API_TOKEN`, so `41dc4a8` made the limiter accept
-those names alongside `UPSTASH_REDIS_REST_*`. Verified after deploy: 13 bad
-logins from one browser returned `401 ×10` then `429` with `Retry-After: 45`, and
-the `warsh-rl:10:60000:login:<ip>` sliding-window key was present in the Upstash
-database — the count is global, not per serverless instance. Login, register,
-forgot/reset-password, Google sign-in/link and the admin session route all share
-it. Redis being unreachable logs an error and degrades to the in-process limiter
-rather than failing open.
+Rate limiting is stored in Postgres (2026-10-03). `lib/rateLimit.ts` upserts one
+`RateLimitBucket` row per key (fixed window, one atomic statement per hit), replacing
+the Upstash Redis limiter that went live 2026-09-15. Login, register,
+forgot/reset-password, Google sign-in/link, restore, Noor burst and the admin session
+route all share it. A database error logs and degrades to the in-process limiter
+rather than failing open; `RATE_LIMIT_STORE=memory` forces that limiter (tests).
+Migration `20261003120000_rate_limit_bucket` is applied to local staging only —
+**apply it to production before deploying**, then delete the `warsh-rate-limit`
+Upstash resource and its `KV_REST_API_*` env vars from the `warsh` Vercel project.
 
 `/api/chat` joined it on 2026-09-16 (`068508b`) with a burst limit distinct
 from the daily quota: 15 messages/min per user and 60/min per IP, checked
