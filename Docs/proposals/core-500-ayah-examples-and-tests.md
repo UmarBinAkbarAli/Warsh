@@ -1,6 +1,6 @@
 # Core 500: three ayah examples and five-word set tests
 
-Status: Owner authorized Core 500-only production promotion on 2026-10-04; rollout in progress.
+Status: Implemented; production API, migration, example content and web deployed on 2026-10-04. Google Play release pending; production browser test completion blocked by a Vercel Security Checkpoint during verification.
 Date: 2026-10-04.
 
 The owner authorized work on Core 500 only. On 2026-10-04, the owner explicitly
@@ -15,7 +15,8 @@ missed-word practice, completion, Urdu, resuming practice and desktop web.
 Preview images are exported separately for review. The Pencil tool has no
 document-save operation; save the open Pen document in Pencil before closing it.
 The feature code, additive migration, content pipeline and Studio review screen
-are now implemented. Production has not been migrated, seeded or deployed.
+are implemented and deployed. The production rollout and verification limits
+are recorded below; the full production seed was never run.
 
 ## Required Pen review
 
@@ -65,7 +66,7 @@ after the Pen design review, as required by AGENTS.md.
 
 ### Content
 
-Add a `VocabularyAyahExample` model linked to the existing vocabulary ID. Store
+Add a `Core500AyahExample` model linked to the existing vocabulary ID. Store
 Surah/ayah numbers, canonical Arabic, English/Urdu translations, display order,
 the actual surface form and verified highlighting coordinates, source metadata,
 and review state. Enforce unique verse references per word and example order.
@@ -247,8 +248,9 @@ save returned 200 in the browser. The styled Studio page was also rechecked.
 After the owner's request to run the remaining checks and show the emulator,
 the maintained `start-warsh.ps1 -dev` launcher started the local backend and
 Metro. The dedicated loopback `warsh_core500_test` database holds the preview
-account and locally published examples; the versioned content mirror remains
-DRAFT. No shared staging database or production content was changed.
+account and locally published examples; that preview's content mirror remains
+DRAFT. This preview phase changed no shared staging database or production
+content; the production release mirror was published in the later scoped rollout.
 
 Android runtime checks verified all five cards, three-reference display,
 highlighting, the meaning test, wrong-answer feedback, resume after force-stop,
@@ -263,10 +265,9 @@ Gradle init file outside the repository. It is installed alongside the existing
 release on `Warsh_API_34`, preserving that app and its data. Native build files
 were not edited. The backend and Metro remain running for owner review.
 
-No production migration, content publish, seed, deployment, release APK build or
-commit was performed. The mixed working tree contains other developers' work;
-release must use only the reviewed Core 500 changes after content approval and
-the release gate.
+The preview phase performed no production migration, publish or deployment.
+The subsequent owner-authorized rollout used a clean checkout containing only
+the reviewed Core 500 changes. No full seed or production release APK was built.
 
 ## Production promotion — 2026-10-04
 
@@ -279,12 +280,49 @@ included; the mixed Pen file is excluded from the production commit.
 Core 500's 23 tests, complete 1,500-reference validation, backend build, app
 TypeScript/lint and the production Urdu audit pass. Existing fixture metadata
 errors in chapter-51-lesson-09 and chapter-52-lesson-06 are outside this rollout.
-No lesson fixtures will be synced or seeded. Production has exactly one pending
-migration: the new Core 500 tables. The old shared Neon staging branch lacks
-several unrelated migrations; it is left untouched. The scoped import was
+No lesson fixtures were synced or seeded. Production had exactly one pending
+migration before deployment: the new Core 500 tables. The old shared Neon staging
+branch lacks several unrelated migrations; it is left untouched. The scoped import was
 verified twice against a separate local staging copy, including idempotency.
 
 The importer uses one ordered vocabulary-row lock and a bulk insert, preserving
 Studio conflict checks while avoiding hundreds of remote database round trips.
 Production vocabulary, chapter, lesson and Tadabbur hashes were captured before
 rollout; all 500 ranked headwords, publication states and set assignments match.
+
+### Completed production rollout and live verification
+
+- Commit `bf806231a0f8cac2b81ee2cc1a431575b6b7db2b` contains 26 scoped files
+  and was pushed to `origin/main`. Other developers' local edits and five
+  unpublished curriculum commits were excluded.
+- Migration `20261004120000_core500_examples_assessments` applied successfully;
+  the scoped importer published exactly 1,500 examples for the 500 existing words.
+  No word IDs were recreated and no lesson fixture sync or full seed ran.
+- Backend deployment `dpl_57oL8AdXbDXNAqgZFBEaAEzgoDYm` reached READY at
+  `https://api.warsh.app`, with Git metadata matching the feature commit. Web
+  deployment `dpl_evF9uvP21doPVbd8C8frP8N13bor` reached READY at
+  `https://app.warsh.app` through the maintained `npm run deploy:web` script.
+  These identify the feature rollout; subsequent deployments can advance aliases.
+- Protected table fingerprints matched exactly before/after: VocabularyWord
+  (920), Chapter (72), Lesson (607) and TadabburSurah (11). Historical progress,
+  lesson content and media IDs were preserved.
+- Live API checks passed authentication, locked-set enforcement, three examples
+  per word, private answer keys, missed-word review/retry/resume, completion and
+  next-set unlocking, duplicate answer idempotency and Urdu practice. Practice
+  left the test account's SRS, completion and streak rows exactly unchanged.
+  The temporary live account and all dependent test data were deleted and verified.
+- The production browser rendered the example cards. Start-test POST requests
+  returned HTML 403 Vercel Security Checkpoint responses on both attempts, before
+  reaching the feature API. Direct API verification passed, but production browser
+  test completion remains unverified. Shared firewall/routing was not changed.
+- Unrelated release checks remain separate: fixture metadata validation errors
+  in chapter-51-lesson-09 and chapter-52-lesson-06; `content:check` reported 99
+  database-ahead and 93 missing lesson mirrors. No curriculum export or publication
+  was included to resolve those checks.
+- No Google Play release was submitted. Existing Android installations need a
+  separate release to receive the new learner screens. The isolated emulator
+  preview demonstrated the Android implementation without replacing the installed
+  production app or its data.
+
+Current implementation/deployment status is also recorded in
+[`Docs/warsh-status.md`](../warsh-status.md).
