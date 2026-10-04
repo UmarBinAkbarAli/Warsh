@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="theme-color" content="#F8F4ED" />
     <title>%WEB_TITLE%</title>
+    <link rel="preload" href="/warsh-logo.png" as="image" />
     <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
     <style id="expo-reset">
       html,
@@ -38,8 +39,10 @@
         color: #85672C;
       }
       .warsh-boot-mark {
-        font-size: 64px;
-        line-height: 1;
+        display: block;
+        width: 144px;
+        height: 98px;
+        object-fit: contain;
       }
       .warsh-boot-bar {
         width: 120px;
@@ -73,7 +76,7 @@
     </noscript>
     <div id="root">
       <div class="warsh-boot" role="status" aria-label="Loading Warsh">
-        <div class="warsh-boot-mark" lang="ar" dir="rtl">وَرْش</div>
+        <img class="warsh-boot-mark" src="/warsh-logo.png" width="144" height="98" alt="Warsh" />
         <div class="warsh-boot-bar"></div>
       </div>
     </div>
