@@ -19,8 +19,8 @@ export async function GET(request: Request, { params }: Props) {
     return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
   }
 
-  const setNumber = Number.parseInt(params.setNumber, 10);
-  if (!Number.isInteger(setNumber) || setNumber < 1 || setNumber > CORE_SET_COUNT) {
+  const setNumber = Number(params.setNumber);
+  if (!/^\d+$/.test(params.setNumber) || !Number.isInteger(setNumber) || setNumber < 1 || setNumber > CORE_SET_COUNT) {
     return NextResponse.json(
       { error: "That set does not exist.", code: "set_not_found" },
       { status: 404 },
@@ -40,6 +40,12 @@ export async function GET(request: Request, { params }: Props) {
         quranicRank: true,
         isCorePrefix: true,
         audioUrl: true,
+        coreAyahExamples: {
+          where: { status: "PUBLISHED" }, orderBy: { position: "asc" },
+          select: { id: true, surahNumber: true, ayahNumber: true, surahName: true,
+            arabic: true, translationEn: true, translationUr: true, wordPosition: true,
+            surface: true, matchKind: true, source: true, corpusPosition: true },
+        },
       },
       orderBy: { quranicRank: "asc" },
     }),
@@ -75,8 +81,11 @@ export async function GET(request: Request, { params }: Props) {
     data: {
       setNumber,
       completed: completedSets.has(setNumber),
-      words: words.map((word) => ({
+      assessmentSupported: true,
+      examplesReady: words.length === 5 && words.every(w => w.coreAyahExamples.length === 3),
+      words: words.map(({ coreAyahExamples, ...word }) => ({
         ...word,
+        ayahExamples: coreAyahExamples.length === 3 ? coreAyahExamples : [],
         known: (known.get(word.id) ?? 0) >= CORE_KNOWN_MIN_REPETITIONS,
         coverageGain: coveragePercent(word.frequencyInQuran ?? 0),
       })),
