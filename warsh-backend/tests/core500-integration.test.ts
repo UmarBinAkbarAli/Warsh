@@ -29,7 +29,7 @@ test("Core 500 routes: auth, locks, resume, retry, concurrency, legacy compatibi
     assert.equal(await prisma.vocabularyWord.count({ where: { quranicRank: { lte: 10 } } }), 0, "Use an empty dedicated test DB.");
     for (let rank = 1; rank <= 10; rank++) {
       const word = await prisma.vocabularyWord.create({ data: { arabic: `كلمة ${rank}`, arabicPlain: `test-${id}-${rank}`, transliteration: `test ${rank}`,
-        translationEn: `meaning ${rank}`, translationUr: `معنی ${rank}`, wordType: "noun", topicCategories: [], status: "PUBLISHED", quranicRank: rank, coreSetNumber: rank <= 5 ? 1 : 2, frequencyInQuran: 100 } });
+        translationEn: ["water", "mountain", "journey", "patience", "light", "night", "stone", "garden", "bread", "gate"][rank - 1], translationUr: `معنی ${["پانی", "پہاڑ", "سفر", "صبر", "روشنی", "رات", "پتھر", "باغ", "روٹی", "دروازہ"][rank - 1]}`, wordType: "noun", topicCategories: [], status: "PUBLISHED", quranicRank: rank, coreSetNumber: rank <= 5 ? 1 : 2, frequencyInQuran: 100 } });
       wordIds.push(word.id);
     }
     for (let i = 0; i < 3; i++) users.push((await prisma.user.create({ data: { email: `core500-${id}-${i}@example.invalid`, passwordHash: "local-test", name: "Core test" } })).id);

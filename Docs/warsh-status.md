@@ -330,7 +330,8 @@ unpublished curriculum commits and unrelated working-tree edits.
 - **Word cards:** all 500 existing words have three distinct published ayah
   references (1,500 links across 1,183 ayahs). Expandable examples show canonical
   Arabic with the occurrence highlighted, English/Urdu translation, Surah/ayah
-  reference, human recitation and source attribution. Corpus lemma/prefix matching
+  reference and source attribution (no ayah audio in Core 500, by owner decision
+  2026-10-05). Corpus lemma/prefix matching
   distinguishes inflected forms and attached prefixes; ayahs have no transliteration.
 - **Five-word test:** after studying the cards, learners answer five shuffled
   multiple-choice meaning questions. The server grades option IDs and keeps the
@@ -340,9 +341,11 @@ unpublished curriculum commits and unrelated working-tree edits.
 - **Progress safety:** server authentication and set locks apply to every test
   action. Completion/streak credit is transactional and safe under duplicate or
   concurrent requests. Practice preserves prior completion timestamps and existing
-  SRS schedules, repetitions, favourites and hidden state. The compatible legacy
-  completion endpoint remains available for installed clients and now deduplicates
-  submitted word IDs.
+  SRS schedules, repetitions, favourites and hidden state. The old
+  `POST .../complete` endpoint no longer completes a set or grants coverage (it
+  would skip the test): it answers `409 test_required` until the set is passed and
+  is a read-only summary afterwards. Wrong options never share a content word with
+  the answer or each other (checked against all 100 sets in English and Urdu).
 - **Implementation:** additive `Core500AyahExample` and `Core500Assessment`
   models, migration `20261004120000_core500_examples_assessments`, enhanced set
   GET responses, and GET/POST `/api/core500/sets/[setNumber]/assessment` for
@@ -956,6 +959,27 @@ Everything below this list is either done and verified, or one of these:
    cards of the kept Ch 44 lessons and Ch 45 lessons 1–7 are a later pass).
    Map entries for Ch 41–45 rewritten (S10). Not done: scholarly review, Android
    pass.
+   **Proposal harvest, batch 10 (Chapters 71–72, the last): live in production
+   2026-10-04.** Ch 71 had `ch71-l01`–`l06` rebuilt (a single-word state and its
+   owner, a state clause, the noun that clears up a number or measure, the
+   sentence-level clarifier, telling the four jobs of a word ending in -an apart,
+   and one short integrated text) and gained all of Al-Fajr in three parts
+   (`ch71-l08`–`l10`), a rebuilt review (`ch71-l07`) and a 16-question
+   `ch71-test`. Ch 72 had `ch72-l01`–`l06` rebuilt (who is called, a name or a
+   pointed-at word, يَا أَيُّهَا as a bridge, the noun or relative after it, calling
+   Allah, and 9:119), gained the accusative kinds of call (`ch72-l09`), had
+   `ch72-l07` converted in place to the CL18 Conversation Lab "A Visit to a
+   Learning Centre", and gained all of An-Nazi'at in four parts (`ch72-l10`–`l13`)
+   and An-Naba in three (`ch72-l14`–`l16`), a rebuilt review (`ch72-l08`) and a
+   16-question `ch72-test`. Published with `scripts/promote-chapters-71-72.cjs`;
+   `content:check` 607/607 (in sync, nothing ahead either way),
+   `db:validate-fixtures` 607 and backend `npm test` 198 pass / 0 fail / 1 skipped.
+   **No TTS was generated:** the missing catalogue list in
+   `Docs/lesson-audio-needed.md` is now 1440 clips (171 new; the 23 CL18 phrase
+   clips are listed separately, outside the catalogue audit). 66 new scenes for 120 cards are requested
+   in `Docs/lesson-illustrations-needed.md` (every discover card of these chapters
+   is mapped; no figures or faces). **The proposal harvest is finished: Ch 26–72 are
+   all done.** Not done: scholarly review and the Android pass.
    **Proposal harvest, batch 5 (Chapters 46–50): live in production
    2026-10-03.** Ch 46 kept its six lessons (a line saying سَيَصْلَى "stays
    مَرْفُوع" in `ch46-l05` is corrected: its ending is hidden until Chapter 57)
@@ -984,143 +1008,6 @@ Everything below this list is either done and verified, or one of these:
    done: scholarly review, Android pass, the proposal's optional metric-unit
    bank (meter, kilometre, kilogram, litre) and a Studio read-through of the
    rebuilt Ch 49 / Ch 50 lessons.
-   **Proposal harvest, batch 6 (Chapters 51–55): live in production
-   2026-10-04.** Ch 51 kept its five lessons (past duals added to `ch51-l01`,
-   the choice of اِ / اُ for the command added to `ch51-l04`, `ch51-l05` moved to
-   display 9) and gained Form II عَلَّمَ / يُعَلِّمُ (`ch51-l09`), Form IV
-   أَرْسَلَ / يُرْسِلُ (`ch51-l10`), the sound passive past (`ch51-l07`) and
-   present (`ch51-l08`), the review and `ch51-test`. Ch 52 kept its five lessons
-   and gained the condition-and-response lesson on 65:3 (`ch52-l09`), complete
-   Al-Qadr (`ch52-l07`) and At-Tin (`ch52-l08`), the review and `ch52-test`.
-   Ch 53 gained reading in chunks on 3:190–191 (`ch53-l05`), the whole of
-   Ash-Sharh (`ch53-l08`), Ad-Duha in two parts (`ch53-l06`, `ch53-l07`) and
-   `ch53-test`. Ch 54 gained Luqman 31:12 with إِنَّمَا (`ch54-l08`), a forms
-   retrieval lesson with قَدْ (`ch54-l07`), Al-Fatiha in two parts (`ch54-l05`,
-   `ch54-l06`), its narrative lesson `ch54-l03` rewritten as numbers / openers /
-   condition retrieval, and a **16-question capstone test** (13/16 passes). Ch 55
-   gained the sound feminine plural (`ch55-l12`: ḍamma, then one kasra for the
-   accusative and the genitive), all of At-Takwir in three parts (`ch55-l09`,
-   `l10`, `l11`), a review `ch55-l13` and a **16-question test**; its eight
-   existing lessons are kept (`ch55-l06`, the accusative lesson that also
-   teaches المفعول المطلق, stays live although the proposal defers that to
-   Chapter 58). Published with `scripts/promote-chapters-51-55.cjs` after a
-   staging API walk (order, test locked until the lessons are done, key
-   stripped, 9/12 and 12/16 fail, 10/12 and 13/16 pass, replay 0 XP, all five
-   chapters); `content:check` 541/541 and `content:baseline` 541. **No TTS was
-   generated:** the missing catalogue list in `Docs/lesson-audio-needed.md` is
-   now 511 clips (198 new). 99 new scenes for 145 cards requested in
-   `Docs/lesson-illustrations-needed.md` (the cards of the kept lessons are a
-   later pass). Map entries for Ch 51–55 rewritten (S10). Not done: scholarly
-   review, Android pass, Chapter 52's constructed dialogue lesson, and turning
-   `ch55-l06` into the review.
-   **Proposal harvest, batch 10 (Chapters 71–72, the last): live in production
-   2026-10-04.** Ch 71 had `ch71-l01`–`l06` rebuilt (a single-word state and its
-   owner, a state clause, the noun that clears up a number or measure, the
-   sentence-level clarifier, telling the four jobs of a word ending in -an apart,
-   and one short integrated text) and gained all of Al-Fajr in three parts
-   (`ch71-l08`–`l10`), a rebuilt review (`ch71-l07`) and a 16-question
-   `ch71-test`. Ch 72 had `ch72-l01`–`l06` rebuilt (who is called, a name or a
-   pointed-at word, يَا أَيُّهَا as a bridge, the noun or relative after it, calling
-   Allah, and 9:119), gained the accusative kinds of call (`ch72-l09`), had
-   `ch72-l07` converted in place to the CL18 Conversation Lab "A Visit to a
-   Learning Centre", and gained all of An-Nazi'at in four parts (`ch72-l10`–`l13`)
-   and An-Naba in three (`ch72-l14`–`l16`), a rebuilt review (`ch72-l08`) and a
-   16-question `ch72-test`. Published with `scripts/promote-chapters-71-72.cjs`;
-   `content:check` 607/607 (in sync, nothing ahead either way),
-   `db:validate-fixtures` 607 and backend `npm test` 198 pass / 0 fail / 1 skipped.
-   **No TTS was generated:** the missing catalogue list in
-   `Docs/lesson-audio-needed.md` is now 1440 clips (171 new; the 23 CL18 phrase
-   clips are listed separately, outside the catalogue audit). 66 new scenes for 120 cards are requested
-   in `Docs/lesson-illustrations-needed.md` (every discover card of these chapters
-   is mapped; no figures or faces). **The proposal harvest is finished: Ch 26–72 are
-   all done.** Not done: scholarly review and the Android pass.
-   **Proposal harvest, batch 9 (Chapters 66–70): live in production
-   2026-10-04.** Ch 66 had `ch66-l01`–`l05` rebuilt around the job of a ظرف (the
-   old rows said it is always accusative and taught ḥāl, Chapter 71's), and gained
-   all of Al-Infitar in two parts (`ch66-l08`, `l09`), a rebuilt review and
-   `ch66-test`. Ch 67 had `ch67-l01`–`l04` rebuilt (لَوْ as a pictured condition, its
-   condition and result, verb form and meaning, لَوْ لَمْ and لَوْلَا), and gained a
-   short exchange (`ch67-l06`), Al-Alaq in two parts (`ch67-l07`, `l08`), a rebuilt
-   review and `ch67-test`. Ch 68 had `ch68-l01`–`l05` rebuilt (the three jussive signs,
-   لَمْ / لَمَّا, prohibitive and negative لَا, command lām against the direct
-   command, and the two-verb condition of owner decision D6 in `ch68-l05`), and
-   gained Al-Layl in two parts (`ch68-l08`, `l09`), a rebuilt review and `ch68-test`.
-   Ch 69 had `ch69-l01`–`l04` rebuilt around the jussive response to a request, and
-   gained At-Tariq in two parts (`ch69-l07`, `l08`), Al-Inshiqaq in three
-   (`ch69-l09`–`l11`), a rebuilt review and `ch69-test`. Ch 70 had `ch70-l01`–`l05`
-   rebuilt as three exception patterns plus غَيْر and سِوَى (the old rows taught a
-   four-type grid), and gained Al-Buruj in two parts (`ch70-l08`, `l09`), a rebuilt
-   review and `ch70-test`; the old SP11 phrase row `ch70-l07` is unpublished (DRAFT,
-   progress kept). Published with `scripts/promote-chapters-66-70.cjs` after a
-   staging API walk (test locked until the lessons are done, key stripped, 9/12
-   fails, 10/12 passes, replay 0 XP, all five chapters); `content:check` 594/594
-   and `content:baseline` 594. **No TTS was generated:** the missing catalogue list
-   in `Docs/lesson-audio-needed.md` is now 1269 clips (335 new). 134 new scenes for
-   207 cards requested in `Docs/lesson-illustrations-needed.md` (every card of
-   these chapters is mapped). Map entries for Ch 66–70 rewritten (S10). Owner
-   decision D6 (`ch68-l05`) was built under the harvest instruction and can be
-   unpublished, though Chapter 69 then needs another prerequisite home. Learners who
-   finished `ch66-l01`–`l06`, `ch67-l01`–`l05`, `ch68-l01`–`l06`, `ch69-l01`–`l05` or
-   `ch70-l01`–`l06` see an "Updated" notice. Not done: scholarly review and the
-   Android pass.
-   **Proposal harvest, batch 8 (Chapters 61–65): live in production
-   2026-10-04.** Ch 61 was rebuilt in full: trade words (`ch61-l01`), weighing
-   against measuring (`ch61-l02`), the **CL17 Conversation Lab "At the Market"**
-   (`ch61-l03`), a bounded instrument-noun lesson of six real words
-   (`ch61-l04`), all of Al-Mutaffifin in four parts (`ch61-l05`, `l08`–`l10`), a
-   rebuilt review and `ch61-test`; the old `ch61-l06` is unpublished (progress
-   kept). Ch 62 gained لَا النَّافِيَة لِلْجِنْس (`ch62-l02`, rebuilt), a classroom
-   exchange (`ch62-l04`, rebuilt), Al-Bayyinah in two parts (`ch62-l06`, `l07`), a
-   review (`ch62-l05`, the old Hajj phrase row) and `ch62-test`. Ch 63 gained
-   Ash-Shams in two parts (`ch63-l06`, `l07`), a rebuilt review and `ch63-test`.
-   Ch 64 gained a sentence-inside-the-predicate lesson (`ch64-l03`, rebuilt),
-   layered-sentence reading (`ch64-l04`, rebuilt), Al-Balad in two parts
-   (`ch64-l06`, `l07`), Al-Ghashiyah in three (`ch64-l08`–`l10`), a rebuilt review
-   and `ch64-test`. Ch 65 had all six lessons rebuilt (the old ones re-taught كَانَ,
-   Chapter 57's), gained the second three sisters (`ch65-l07`), a focused review
-   (`ch65-l09`), a rebuilt R14 and `ch65-test`, and now previews Chapter 66's
-   words of time and place instead of instrument nouns. Published with
-   `scripts/promote-chapters-61-65.cjs` after a staging API walk (test locked
-   until the lessons are done, key stripped, 9/12 fails, 10/12 passes, replay 0
-   XP, all five chapters); `content:check` 575/575 and `content:baseline` 575.
-   **No TTS was generated:** the missing catalogue list in
-   `Docs/lesson-audio-needed.md` is now 934 clips (271 new) and the eleven CL17
-   phrase clips are listed. 80 new scenes for 173 cards requested in
-   `Docs/lesson-illustrations-needed.md` (the cards of the kept lessons are a
-   later pass). Map entries for Ch 61–65 rewritten (S10). Owner decisions D4
-   (`ch61-l04`) and D5 (`ch62-l02`) and CL17 were built under the harvest
-   instruction and can each be unpublished without touching the rest of their
-   chapter. Learners who finished `ch61-l01`–`l05`, `l07`, `ch62-l02`, `l04`,
-   `l05`, `ch63-l05`, `ch64-l03`–`l05` or `ch65-l01`–`l06` see an "Updated" notice.
-   Not done: scholarly review, Android pass, and the CL17 phrase recordings.
-   **Proposal harvest, batch 7 (Chapters 56–60): live in production
-   2026-10-04.** Ch 56 gained the dual as the first term of an iḍāfa
-   (`ch56-l04`, rebuilt), the four dual relatives (`ch56-l05`, rebuilt), all of
-   Abasa in four parts (`ch56-l10`–`l13`), a rebuilt review and a **16-question
-   test**; the misplaced five-verbs row `ch56-l09` is unpublished (progress kept).
-   Ch 57 gained hollow verbs (`ch57-l11`) and final-weak verbs (`ch57-l12`) under
-   لَنْ and لَمْ, `ch57-l04` now teaches كَانَ alone, a rebuilt review and
-   `ch57-test`. Ch 58 gained the participle that takes an object (`ch58-l09`),
-   reported speech (`ch58-l04`, rebuilt), a rebuilt review and `ch58-test`. Ch 59
-   gained all of Al-A'la in two parts (`ch59-l07`, `l08`), a rebuilt review and
-   the **16-question Book 6 capstone test**; the label حال was removed from
-   `ch59-l02` / `l03` (Chapter 71's). Ch 60 converted `ch60-l04` into the CL16
-   Conversation Lab "Travel and Hajj", swapped `l02` / `l03`, and gained a
-   review and `ch60-test`. **Owner decisions of 2026-10-04:** nothing taught in
-   an earlier chapter is repeated, so Ch 58's absolute-object lesson (taught in
-   `ch55-l06`), Ch 58's Al-Masad reading (`ch46-l06`), Ch 59's synthesis lesson
-   and Ch 52's dialogue lesson are not built; المفعول المطلق stays in Chapter 55.
-   Published with `scripts/promote-chapters-56-60.cjs` after a staging API walk
-   (test locked until the lessons are done, key stripped, 9/12 and 12/16 fail,
-   10/12 and 13/16 pass, replay 0 XP, all five chapters); `content:check`
-   556/556 and `content:baseline` 556. **No TTS was generated:** the missing
-   catalogue list in `Docs/lesson-audio-needed.md` is now 663 clips (152 new) and
-   the nine CL16 phrase clips are listed. 67 new scenes for 94 cards requested in
-   `Docs/lesson-illustrations-needed.md` (the cards of the kept lessons are a
-   later pass). Map entries for Ch 56–60 rewritten (S10). Learners who finished
-   `ch56-l04`, `l05`, `l08`, `ch57-l04`, `l09`, `l10`, `ch58-l04`, `l06`,
-   `ch59-l02`, `l03`, `l05` or `ch60-l04` see an "Updated" notice. Not done:
-   scholarly review, Android pass, and the CL16 phrase recordings.
    **Chapter 25 (`Docs/proposals/chapter-25-content-correction.md`) is
    corrected, staging-verified and promoted to production 2026-09-24** on the
    owner's instruction. The first rewrite was reviewed and fixed before

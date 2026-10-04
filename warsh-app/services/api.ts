@@ -115,11 +115,6 @@ export function getCore500Set(setNumber: number) {
   return api.get(`/api/core500/sets/${setNumber}`);
 }
 
-/** Completing a full set also advances the daily streak, server-side. */
-export function completeCore500Set(setNumber: number, knownWordIds: string[]) {
-  return api.post(`/api/core500/sets/${setNumber}/complete`, { knownWordIds });
-}
-
 export function getCore500Words(filter: "known" | "all" = "known") {
   return api.get("/api/core500/words", { params: { filter } });
 }

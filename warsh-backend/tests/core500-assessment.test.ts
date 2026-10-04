@@ -1,12 +1,14 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { buildQuestions, gradeAnswer, pendingQuestion, publicAssessment, retryMissed, type AssessmentState } from "../lib/core500Assessment";
+import { buildQuestions, gradeAnswer, meaningsOverlap, pendingQuestion, publicAssessment, retryMissed, type AssessmentState } from "../lib/core500Assessment";
 import { coreExampleSetSchema } from "../lib/core500Examples";
 import fs from "node:fs";
 import path from "node:path";
 import { alignCorpusOccurrence } from "../lib/core500Alignment";
 
-const words = Array.from({ length: 5 }, (_, i) => ({ id: `word-${i}`, arabic: `كلمة ${i}`, translationEn: `meaning ${i}`, translationUr: `معنی ${i}` }));
+const glossEn = ["water", "mountain", "journey", "patience", "light"];
+const glossUr = ["پانی", "پہاڑ", "سفر", "صبر", "روشنی"];
+const words = Array.from({ length: 5 }, (_, i) => ({ id: `word-${i}`, arabic: `كلمة ${i}`, translationEn: glossEn[i], translationUr: glossUr[i] }));
 const initial = (): AssessmentState => {
   const questions = buildQuestions(words, words, "en");
   return { language: "en", phase: "QUIZ", questions, activeIds: questions.map(q => q.id), passedIds: [], answers: {}, round: 1 };
@@ -55,9 +57,22 @@ test("same-meaning glosses are not offered twice and a test fails closed without
   const qs = buildQuestions(duplicates, words, "en");
   qs.forEach(q => assert.equal(new Set(q.options.map(o => o.text)).size, 4));
 });
+test("options that share a content word with the answer or each other are never offered", () => {
+  assert.equal(meaningsOverlap("Lord", "the Lord of the worlds"), true);
+  assert.equal(meaningsOverlap("to create", "creating"), true);
+  assert.equal(meaningsOverlap("to say", "to do"), false);
+  const set = ["to say", "to go", "earth", "heaven", "book"].map((en, i) => ({ id: `s${i}`, arabic: `ك${i}`, translationEn: en, translationUr: `ا${i}` }));
+  const pool = [...set, { id: "p1", arabic: "ر", translationEn: "to say clearly", translationUr: "ب" },
+    ...["night", "day", "sea", "fire", "stone"].map((en, i) => ({ id: `p${i + 2}`, arabic: `ر${i}`, translationEn: en, translationUr: `ب${i}` }))];
+  for (const q of buildQuestions(set, pool, "en")) {
+    for (let i = 0; i < q.options.length; i++) for (let j = i + 1; j < q.options.length; j++) assert.equal(meaningsOverlap(q.options[i].text, q.options[j].text), false, `${q.options[i].text} / ${q.options[j].text}`);
+  }
+  const forms = ["love", "loving", "lover", "loved", "loves"].map((en, i) => ({ id: `l${i}`, arabic: `ل${i}`, translationEn: en, translationUr: `م${i}` }));
+  assert.throws(() => buildQuestions(forms, [], "en"), /distinct meanings/);
+});
 test("Urdu tests snapshot Urdu meanings and do not depend on later gloss edits", () => {
   const qs = buildQuestions(words, words, "ur");
-  assert.ok(qs.every(q => q.meaning.startsWith("معنی")));
+  assert.ok(qs.every(q => glossUr.includes(q.meaning)));
   const before = qs[0].meaning;
   words[0].translationUr = "changed";
   assert.equal(qs[0].meaning, before);

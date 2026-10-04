@@ -5,7 +5,7 @@
 The 2026-10-02 content hotfix cleaned the corrupted Urdu in both lessons, but the
 Arabic they teach is still wrong. Both are listed as **Critical** in their chapter
 proposals ([Ch 46](chapter-46-content-proposal.md) rows 35–36,
-[Ch 69](chapter-69-content-proposal.md) rows 30–32). This file is the **interim**
+Ch 69 rows 30–32 (proposal file since removed)). This file is the **interim**
 fix: it keeps each lesson's ID, place, template and exercise count, and swaps the
 wrong material for verified material. The full chapter rebuilds still supersede it.
 
