@@ -1,131 +1,379 @@
 {
   "schema_version": "1.0",
-  "template": "REVIEW",
+  "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 71, Lesson 7 — REVIEW lesson for الحال والتمييز.",
+    "_note": "Chapter 71, Lesson 7 (ch71-l08, new). Al-Fajr 89:1–14 in three groups (1–5, 6–10, 11–14): three boards of four (89:1–4; 89:5, 6, 9, 10; 89:11–14), two single ayat (89:7, 89:8) and one fresh reference decision (who الَّذِينَ in 89:11 points back to). The oath expressions (الْفَجْرِ, لَيَالٍ عَشْرٍ, الشَّفْعِ وَالْوَتْرِ, يَسْرِ), حِجْرٍ, ذَاتِ الْعِمَادِ, جَابُوا, الْأَوْتَادِ, سَوْطَ and لَبِالْمِرْصَادِ are supplied whole with their meanings. Aad, Iram, Thamud and Pharaoh are names only: no historical or geographic fact about them is asked, and no interpretation of the oaths is keyed. Every board has four different Arabic ayat and four different meanings. Added 2026-10-04 in the proposal harvest, batch 10 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-71-content-proposal.md and its review amendments.",
+    "title": "Al-Fajr I — 89:1–14",
+    "titleAr": "الْفَجْرُ ١ — ١–١٤",
+    "titleUr": "الفجر (1) — 89:1–14",
     "chapter_order": 71,
     "lesson_order": 7,
-    "chapter_title": "الحال والتمييز",
-    "title": "Review: الحال and التمييز",
-    "titleAr": "مُرَاجَعَةٌ: الْحَالُ وَالتَّمْيِيزُ",
-    "source": "arabai-backend/prisma/fixtures",
-    "estimated_minutes": 10,
-    "xp_reward": 5
+    "estimated_minutes": 12,
+    "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 48,
-      "ayah": 29,
-      "label": "Al-Fath 48:29",
-      "ar": "مُحَمَّدٌ رَسُولُ اللَّهِ وَالَّذِينَ مَعَهُ أَشِدَّاءُ عَلَى الْكُفَّارِ رُحَمَاءُ بَيْنَهُمْ تَرَاهُمْ رُكَّعًا سُجَّدًا يَبْتَغُونَ فَضْلًا مِنَ اللَّهِ وَرِضْوَانًا",
-      "en": "Muhammad is the Messenger of Allah, and those with him are firm against the disbelievers and merciful among themselves. You see them bowing and prostrating, seeking grace from Allah and His pleasure.",
-      "ur": "محمد اللہ کے رسول ہیں، اور جو ان کے ساتھ ہیں وہ کافروں پر سخت اور آپس میں رحم کرنے والے ہیں۔ آپ انہیں رکوع اور سجود میں دیکھتے ہیں اللہ کا فضل اور رضوان مانگتے ہیں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/048029.mp3"
+      "surah": 89,
+      "ayah": 1,
+      "label": "Al-Fajr 89:1",
+      "ar": "وَالْفَجْرِ",
+      "en": "By the dawn",
+      "ur": "فجر کی قسم",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/089001.mp3"
     },
     "noor_intro": {
-      "en": "Chapter 71 review: تَرَاهُمْ رُكَّعًا سُجَّدًا — two حَال for one group. Today we consolidate the حَال, the تَمْيِيز, and the counted noun after numbers.",
-      "ur": "باب 71 کا جائزہ: تَرَاهُمْ رُكَّعًا سُجَّدًا — ایک گروہ کے دو حال۔ آج ہم حال، تمییز اور اعداد کے بعد گنی جانے والی چیز کو یکجا کرتے ہیں۔"
+      "en": "Surat Al-Fajr opens with four oaths, then asks whether you have seen how your Lord dealt with three peoples who transgressed. Read it by meaning: what is sworn by, who is named, and how it ends.",
+      "ur": "سورۃ الفجر چار قسموں سے کھلتی ہے، پھر پوچھتی ہے کہ کیا تم نے دیکھا کہ تمہارے رب نے تین سرکش قوموں کے ساتھ کیا کیا۔ اسے معنی سے پڑھیں: کس کی قسم ہے، کن کے نام آئے، اور بات کہاں ختم ہوتی ہے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Review: حَال vs تَمْيِيز",
-        "ar": "مُرَاجَعَةٌ: الْحَالُ وَالتَّمْيِيزُ",
-        "ur": "جائزہ: حال اور تمییز"
+        "en": "Oaths, three peoples, and a lash",
+        "ar": "قَسَمٌ وَثَلَاثُ أُمَمٍ",
+        "ur": "قسمیں، تین قومیں، اور کوڑا"
       },
       "explanation": {
-        "en": "الْحَال answers 'in what state?' and describes its صَاحِب during the action (خَرَجَ خَائِفًا). التَّمْيِيز answers 'of what? in what respect?' and removes vagueness (عِشْرُونَ يَوْمًا، اشْتَعَلَ الرَّأْسُ شَيْبًا). Both are indefinite accusatives.",
-        "ur": "حال 'کس حال میں؟' کا جواب دیتا ہے اور کام کے وقت اپنے صاحب کی حالت بتاتا ہے (خَرَجَ خَائِفًا)۔ تمییز 'کس چیز کا؟ کس لحاظ سے؟' کا جواب دیتی ہے اور ابہام دور کرتی ہے (عِشْرُونَ يَوْمًا، اشْتَعَلَ الرَّأْسُ شَيْبًا)۔ دونوں نکرہ منصوب ہیں۔"
+        "en": "89:1–5 swear four oaths and ask whether that is enough for someone who understands. 89:6–10 ask whether you have seen how your Lord dealt with Aad, Thamud and Pharaoh. 89:11–14 say what they did and what followed: transgression, corruption, a lash of punishment, and 'your Lord is watching'.",
+        "ur": "89:1–5 چار قسمیں کھاتی ہیں اور پوچھتی ہیں کہ کیا عقل والے کے لیے یہ کافی ہے۔ 89:6–10 پوچھتی ہیں کہ کیا تم نے دیکھا کہ تمہارے رب نے عاد، ثمود اور فرعون کے ساتھ کیا کیا۔ 89:11–14 بتاتی ہیں کہ انہوں نے کیا کیا اور پھر کیا ہوا: سرکشی، فساد، عذاب کا کوڑا، اور 'تمہارا رب نگاہ رکھے ہوئے ہے'۔"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Numbers",
-        "ar": "الْعَدَدُ",
-        "ur": "اعداد"
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "وَالْفَجْرِ وَلَيَالٍ عَشْرٍ وَالشَّفْعِ وَالْوَتْرِ وَاللَّيْلِ إِذَا يَسْرِ هَلْ فِي ذَٰلِكَ قَسَمٌ لِّذِي حِجْرٍ",
+        "ar_plain": "والفجر وليال عشر والشفع والوتر والليل اذا يسر هل في ذلك قسم لذي حجر",
+        "translit": "wa-l-fajri walayaālin ʿashrin wa-sh-shafʿi wa-l-watri wa-l-layli ʾidhā yasri hal fī dhālika qasamun llidhī ḥijrin",
+        "en": "By the dawn And [by] ten nights And [by] the even [number] and the odd And [by] the night when it passes, Is there [not] in [all] that an oath [sufficient] for one of perception?",
+        "ur": "فجر کی قسم اور دس راتوں کی اور جفت اور طاق کی اور رات کی جب جانے لگے اور بے شک یہ چیزیں عقلمندوں کے نزدیک قسم کھانے کے لائق ہیں کہ (کافروں کو ضرور عذاب ہو گا)"
       },
       "explanation": {
-        "en": "3–10: plural genitive (ثَلَاثَةُ أَيَّامٍ). 11–99: singular accusative (أَحَدَ عَشَرَ كَوْكَبًا، أَرْبَعِينَ لَيْلَةً). 100 and 1000: singular genitive (مِائَةَ عَامٍ، أَلْفَ سَنَةٍ).",
-        "ur": "3 تا 10: جمع مجرور (ثَلَاثَةُ أَيَّامٍ)۔ 11 تا 99: واحد منصوب (أَحَدَ عَشَرَ كَوْكَبًا، أَرْبَعِينَ لَيْلَةً)۔ 100 اور 1000: واحد مجرور (مِائَةَ عَامٍ، أَلْفَ سَنَةٍ)۔"
+        "en": "89:1 — By the dawn; 89:2 — and by ten nights; 89:3 — and by the even and the odd; 89:4 — and by the night when it passes; 89:5 — Is there in that an oath for one who has understanding?. (Al-Fajr 89:1–5)",
+        "ur": "89:1 — فجر کی قسم؛ 89:2 — اور دس راتوں کی قسم؛ 89:3 — اور جفت اور طاق کی قسم؛ 89:4 — اور رات کی قسم جب وہ گزرتی ہے؛ 89:5 — کیا اس میں عقل والے کے لیے کوئی قسم ہے؟۔ (Al-Fajr 89:1–5)"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Look-alikes",
-        "ar": "مَا يُشْبِهُ الْحَالَ",
-        "ur": "ملتی جلتی چیزیں"
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِعَادٍ إِرَمَ ذَاتِ الْعِمَادِ الَّتِي لَمْ يُخْلَقْ مِثْلُهَا فِي الْبِلَادِ وَثَمُودَ الَّذِينَ جَابُوا الصَّخْرَ بِالْوَادِ وَفِرْعَوْنَ ذِي الْأَوْتَادِ",
+        "ar_plain": "الم تر كيف فعل ربك بعاد ارم ذات العماد التي لم يخلق مثلها في البلاد وثمود الذين جابوا الصخر بالواد وفرعون ذي الاوتاد",
+        "translit": "ʾalam tara kayfa faʿala rabbuka biʿādin ʾirama dhāti al-ʿimādi allatī lam yukhlaq mithluhā fī al-bilādi wathamūda alladhīna jābū aṣ-ṣakhra bi-l-waādi wafirʿawna dhī al-ʾawtādi",
+        "en": "Have you not considered how your Lord dealt with ʿAad - [With] Iram - who had lofty pillars, The likes of whom had never been created in the land? And [with] Thamūd, who carved out the rocks in the valley? And [with] Pharaoh, owner of the stakes?",
+        "ur": "کیا تم نے نہیں دیکھا کہ تمہارے پروردگار نے عاد کے ساتھ کیا کیا (جو) ارم (کہلاتے تھے اتنے) دراز قد کہ تمام ملک میں ایسے پیدا نہیں ہوئے تھے اور ثمود کے ساتھ (کیا کیا) جو وادئِ (قریٰ) میں پتھر تراشتے تھے (اور گھر بناتے) تھے اور فرعون کے ساتھ (کیا کیا) جو خیمے اور میخیں رکھتا تھا"
       },
       "explanation": {
-        "en": "An adjective matches its noun (الرَّجُلُ الضَّاحِكُ). A مَفْعُول مُطْلَق is the verb's own noun (قَامَ قِيَامًا). A nominative is never a حَال (أَشِدَّاءُ in 48:29 is a خَبَر).",
-        "ur": "صفت اپنے موصوف کے مطابق ہوتی ہے (الرَّجُلُ الضَّاحِكُ)۔ مفعولِ مطلق فعل کا اپنا مصدر ہے (قَامَ قِيَامًا)۔ مرفوع لفظ کبھی حال نہیں ہوتا (48:29 میں أَشِدَّاءُ خبر ہے)۔"
+        "en": "89:6 — Have you not seen how your Lord dealt with Aad; 89:7 — Iram, with the lofty pillars; 89:8 — the like of whom was never created in the lands; 89:9 — and Thamud, who carved the rocks in the valley; 89:10 — and Pharaoh, owner of the stakes. (Al-Fajr 89:6–10)",
+        "ur": "89:6 — کیا تم نے نہیں دیکھا کہ تمہارے رب نے عاد کے ساتھ کیا کیا؛ 89:7 — ارم، بلند ستونوں والے؛ 89:8 — جن جیسا شہروں میں کوئی پیدا نہیں کیا گیا؛ 89:9 — اور ثمود، جنہوں نے وادی میں چٹانیں تراشیں؛ 89:10 — اور فرعون، میخوں والا۔ (Al-Fajr 89:6–10)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "الَّذِينَ طَغَوْا فِي الْبِلَادِ فَأَكْثَرُوا فِيهَا الْفَسَادَ فَصَبَّ عَلَيْهِمْ رَبُّكَ سَوْطَ عَذَابٍ إِنَّ رَبَّكَ لَبِالْمِرْصَادِ",
+        "ar_plain": "الذين طغوا في البلاد فاكثروا فيها الفساد فصب عليهم ربك سوط عذاب ان ربك لبالمرصاد",
+        "translit": "alladhīna ṭaghaw fī al-bilādi faʾaktharū fīhā al-fasāda faṣabba ʿalayhim rabbuka sawṭa ʿadhābin ʾinna rabbaka labi-l-mirṣādi",
+        "en": "[All of] whom oppressed within the lands And increased therein the corruption. So your Lord poured upon them a scourge of punishment. Indeed, your Lord is in observation.",
+        "ur": "یہ لوگ ملکوں میں سرکش ہو رہے تھے اور ان میں بہت سی خرابیاں کرتے تھے تو تمہارے پروردگار نے ان پر عذاب کا کوڑا نازل کیا بے شک تمہارا پروردگار تاک میں ہے"
+      },
+      "explanation": {
+        "en": "89:11 — who all transgressed in the lands; 89:12 — and increased corruption in them; 89:13 — so your Lord poured on them a lash of punishment; 89:14 — Indeed, your Lord is watching. (Al-Fajr 89:11–14)",
+        "ur": "89:11 — جنہوں نے شہروں میں سرکشی کی؛ 89:12 — پھر ان میں بہت فساد پھیلایا؛ 89:13 — تو تمہارے رب نے ان پر عذاب کا کوڑا برسایا؛ 89:14 — بے شک تمہارا رب نگاہ رکھے ہوئے ہے۔ (Al-Fajr 89:11–14)"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Given whole",
+        "ur": "پورے دیے گئے"
+      },
+      "body": {
+        "en": "الْفَجْرِ 'the dawn', لَيَالٍ عَشْرٍ 'ten nights', الشَّفْعِ وَالْوَتْرِ 'the even and the odd', يَسْرِ 'it passes', حِجْرٍ 'understanding', ذَاتِ الْعِمَادِ 'with the pillars', جَابُوا 'they carved', الْأَوْتَادِ 'the stakes', سَوْطَ 'a lash', لَبِالْمِرْصَادِ 'watching'. Aad, Iram, Thamud and Pharaoh are names; nothing about who or where they were is asked.",
+        "ur": "الْفَجْرِ 'صبح'، لَيَالٍ عَشْرٍ 'دس راتیں'، الشَّفْعِ وَالْوَتْرِ 'جفت اور طاق'، يَسْرِ 'وہ گزرتی ہے'، حِجْرٍ 'عقل'، ذَاتِ الْعِمَادِ 'ستونوں والے'، جَابُوا 'انہوں نے تراشا'، الْأَوْتَادِ 'میخیں'، سَوْطَ 'کوڑا'، لَبِالْمِرْصَادِ 'نگاہ رکھنے والا'۔ عاد، ارم، ثمود اور فرعون نام ہیں؛ یہ نہیں پوچھا جاتا کہ وہ کون تھے یا کہاں تھے۔"
       }
     }
   ],
   "exercises": [
     {
       "type": "MATCHING",
-      "id": "ch71-l07-ex01",
+      "id": "ch71-l08-ex01",
       "left_column": [
         {
-          "ar": "جَلَسَ زَيْدٌ وَحْدَهُ",
-          "ar_plain": "جلس زيد وحده",
-          "translit": "jalasa zaydun wahdahu",
-          "en": "Zayd sat alone",
-          "ur": "زید اکیلا بیٹھا"
+          "ar": "وَالْفَجْرِ",
+          "ar_plain": "والفجر",
+          "translit": "wa-l-fajri",
+          "en": "(89:1)",
+          "ur": "(89:1)"
         },
         {
-          "ar": "عِشْرُونَ كِتَابًا",
-          "ar_plain": "عشرون كتابا",
-          "translit": "'ishruuna kitaaban",
-          "en": "twenty books",
-          "ur": "بیس کتابیں"
+          "ar": "وَلَيَالٍ عَشْرٍ",
+          "ar_plain": "وليال عشر",
+          "translit": "walayaālin ʿashrin",
+          "en": "(89:2)",
+          "ur": "(89:2)"
         },
         {
-          "ar": "ثَلَاثَةُ أَيَّامٍ",
-          "ar_plain": "ثلاثة أيام",
-          "translit": "thalaathatu ayyaamin",
-          "en": "three days",
-          "ur": "تین دن"
+          "ar": "وَالشَّفْعِ وَالْوَتْرِ",
+          "ar_plain": "والشفع والوتر",
+          "translit": "wa-sh-shafʿi wa-l-watri",
+          "en": "(89:3)",
+          "ur": "(89:3)"
         },
         {
-          "ar": "أَكْثَرُ مِنْكَ مَالًا",
-          "ar_plain": "أكثر منك مالا",
-          "translit": "aktharu minka maalan",
-          "en": "more than you in wealth",
-          "ur": "مال میں تجھ سے زیادہ"
+          "ar": "وَاللَّيْلِ إِذَا يَسْرِ",
+          "ar_plain": "والليل اذا يسر",
+          "translit": "wa-l-layli ʾidhā yasri",
+          "en": "(89:4)",
+          "ur": "(89:4)"
         }
       ],
       "right_column": [
         {
-          "en": "حَال",
-          "ur": "حال"
+          "en": "and by the even and the odd",
+          "ur": "اور جفت اور طاق کی قسم"
         },
         {
-          "en": "تَمْيِيز after 20–99: singular accusative",
-          "ur": "20 تا 99 کے بعد تمییز: واحد منصوب"
+          "en": "By the dawn",
+          "ur": "فجر کی قسم"
         },
         {
-          "en": "after 3–10: plural genitive",
-          "ur": "3 تا 10 کے بعد: جمع مجرور"
+          "en": "and by the night when it passes",
+          "ur": "اور رات کی قسم جب وہ گزرتی ہے"
         },
         {
-          "en": "تَمْيِيز after a comparison",
-          "ur": "موازنے کے بعد تمییز"
+          "en": "and by ten nights",
+          "ur": "اور دس راتوں کی قسم"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
+          1
         ],
         [
           1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Four oaths: the dawn; ten nights; the even and the odd; the night when it passes.",
+        "ur": "چار قسمیں: فجر؛ دس راتیں؛ جفت اور طاق؛ رات جب وہ گزرتی ہے۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch71-l08-ex02",
+      "left_column": [
+        {
+          "ar": "هَلْ فِي ذَٰلِكَ قَسَمٌ لِّذِي حِجْرٍ",
+          "ar_plain": "هل في ذلك قسم لذي حجر",
+          "translit": "hal fī dhālika qasamun llidhī ḥijrin",
+          "en": "(89:5)",
+          "ur": "(89:5)"
+        },
+        {
+          "ar": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِعَادٍ",
+          "ar_plain": "الم تر كيف فعل ربك بعاد",
+          "translit": "ʾalam tara kayfa faʿala rabbuka biʿādin",
+          "en": "(89:6)",
+          "ur": "(89:6)"
+        },
+        {
+          "ar": "وَثَمُودَ الَّذِينَ جَابُوا الصَّخْرَ بِالْوَادِ",
+          "ar_plain": "وثمود الذين جابوا الصخر بالواد",
+          "translit": "wathamūda alladhīna jābū aṣ-ṣakhra bi-l-waādi",
+          "en": "(89:9)",
+          "ur": "(89:9)"
+        },
+        {
+          "ar": "وَفِرْعَوْنَ ذِي الْأَوْتَادِ",
+          "ar_plain": "وفرعون ذي الاوتاد",
+          "translit": "wafirʿawna dhī al-ʾawtādi",
+          "en": "(89:10)",
+          "ur": "(89:10)"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "Have you not seen how your Lord dealt with Aad",
+          "ur": "کیا تم نے نہیں دیکھا کہ تمہارے رب نے عاد کے ساتھ کیا کیا"
+        },
+        {
+          "en": "and Pharaoh, owner of the stakes",
+          "ur": "اور فرعون، میخوں والا"
+        },
+        {
+          "en": "Is there in that an oath for one who has understanding?",
+          "ur": "کیا اس میں عقل والے کے لیے کوئی قسم ہے؟"
+        },
+        {
+          "en": "and Thamud, who carved the rocks in the valley",
+          "ur": "اور ثمود، جنہوں نے وادی میں چٹانیں تراشیں"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
           1
+        ]
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Four statements: an oath for one who understands; how your Lord dealt with Aad; Thamud who carved the rocks; Pharaoh, owner of the stakes.",
+        "ur": "چار بیان: عقل والے کے لیے قسم؛ تمہارے رب نے عاد کے ساتھ کیا کیا؛ ثمود جنہوں نے چٹانیں تراشیں؛ فرعون، میخوں والا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch71-l08-ex03",
+      "prompt": {
+        "ar": "إِرَمَ ذَاتِ الْعِمَادِ",
+        "ar_plain": "ارم ذات العماد",
+        "translit": "ʾirama dhāti al-ʿimādi",
+        "en": "(89:7)",
+        "ur": "(89:7)"
+      },
+      "options": [
+        {
+          "en": "Have you not seen how your Lord dealt with Aad",
+          "ur": "کیا تم نے نہیں دیکھا کہ تمہارے رب نے عاد کے ساتھ کیا کیا"
+        },
+        {
+          "en": "the like of whom was never created in the lands",
+          "ur": "جن جیسا شہروں میں کوئی پیدا نہیں کیا گیا"
+        },
+        {
+          "en": "Iram, with the lofty pillars",
+          "ur": "ارم، بلند ستونوں والے"
+        },
+        {
+          "en": "Is there in that an oath for one who has understanding?",
+          "ur": "کیا اس میں عقل والے کے لیے کوئی قسم ہے؟"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "This ayah says: Iram, with the lofty pillars.",
+        "ur": "یہ آیت کہتی ہے: ارم، بلند ستونوں والے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch71-l08-ex04",
+      "prompt": {
+        "ar": "الَّتِي لَمْ يُخْلَقْ مِثْلُهَا فِي الْبِلَادِ",
+        "ar_plain": "التي لم يخلق مثلها في البلاد",
+        "translit": "allatī lam yukhlaq mithluhā fī al-bilādi",
+        "en": "(89:8)",
+        "ur": "(89:8)"
+      },
+      "options": [
+        {
+          "en": "Iram, with the lofty pillars",
+          "ur": "ارم، بلند ستونوں والے"
+        },
+        {
+          "en": "the like of whom was never created in the lands",
+          "ur": "جن جیسا شہروں میں کوئی پیدا نہیں کیا گیا"
+        },
+        {
+          "en": "and Thamud, who carved the rocks in the valley",
+          "ur": "اور ثمود، جنہوں نے وادی میں چٹانیں تراشیں"
+        },
+        {
+          "en": "Have you not seen how your Lord dealt with Aad",
+          "ur": "کیا تم نے نہیں دیکھا کہ تمہارے رب نے عاد کے ساتھ کیا کیا"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "This ayah says: the like of whom was never created in the lands.",
+        "ur": "یہ آیت کہتی ہے: جن جیسا شہروں میں کوئی پیدا نہیں کیا گیا۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch71-l08-ex05",
+      "left_column": [
+        {
+          "ar": "الَّذِينَ طَغَوْا فِي الْبِلَادِ",
+          "ar_plain": "الذين طغوا في البلاد",
+          "translit": "alladhīna ṭaghaw fī al-bilādi",
+          "en": "(89:11)",
+          "ur": "(89:11)"
+        },
+        {
+          "ar": "فَأَكْثَرُوا فِيهَا الْفَسَادَ",
+          "ar_plain": "فاكثروا فيها الفساد",
+          "translit": "faʾaktharū fīhā al-fasāda",
+          "en": "(89:12)",
+          "ur": "(89:12)"
+        },
+        {
+          "ar": "فَصَبَّ عَلَيْهِمْ رَبُّكَ سَوْطَ عَذَابٍ",
+          "ar_plain": "فصب عليهم ربك سوط عذاب",
+          "translit": "faṣabba ʿalayhim rabbuka sawṭa ʿadhābin",
+          "en": "(89:13)",
+          "ur": "(89:13)"
+        },
+        {
+          "ar": "إِنَّ رَبَّكَ لَبِالْمِرْصَادِ",
+          "ar_plain": "ان ربك لبالمرصاد",
+          "translit": "ʾinna rabbaka labi-l-mirṣādi",
+          "en": "(89:14)",
+          "ur": "(89:14)"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "Indeed, your Lord is watching",
+          "ur": "بے شک تمہارا رب نگاہ رکھے ہوئے ہے"
+        },
+        {
+          "en": "who all transgressed in the lands",
+          "ur": "جنہوں نے شہروں میں سرکشی کی"
+        },
+        {
+          "en": "so your Lord poured on them a lash of punishment",
+          "ur": "تو تمہارے رب نے ان پر عذاب کا کوڑا برسایا"
+        },
+        {
+          "en": "and increased corruption in them",
+          "ur": "پھر ان میں بہت فساد پھیلایا"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
         ],
         [
           2,
@@ -133,289 +381,83 @@
         ],
         [
           3,
-          3
+          0
         ]
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Four statements: they transgressed in the lands; they increased corruption; a lash of punishment was poured on them; your Lord is watching.",
+        "ur": "چار بیان: انہوں نے شہروں میں سرکشی کی؛ فساد بڑھایا؛ ان پر عذاب کا کوڑا برسایا گیا؛ تمہارا رب نگاہ رکھے ہوئے ہے۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch71-l07-ex02",
+      "id": "ch71-l08-ex06",
       "prompt": {
-        "ar": "تَرَاهُمْ رُكَّعًا سُجَّدًا",
-        "ar_plain": "تراهم ركعا سجدا",
-        "translit": "taraahum rukka'an sujjadan",
-        "en": "You see them bowing and prostrating.",
-        "ur": "تم انہیں رکوع اور سجدے میں دیکھو گے۔"
+        "ar": "الَّذِينَ طَغَوْا فِي الْبِلَادِ",
+        "ar_plain": "الذين طغوا في البلاد",
+        "translit": "alladhīna ṭaghaw fī al-bilādi",
+        "en": "(89:11: who are الَّذِينَ, 'who all transgressed'?)",
+        "ur": "(89:11: الَّذِينَ، 'جنہوں نے سرکشی کی'، کون ہیں؟)"
       },
       "options": [
         {
-          "en": "two حَال for the same people",
-          "ur": "ایک ہی لوگوں کے دو حال"
+          "en": "The peoples named just before: Aad, Thamud and Pharaoh",
+          "ur": "وہ قومیں جن کے نام ابھی آئے: عاد، ثمود اور فرعون"
         },
         {
-          "en": "two تَمْيِيز of a number",
-          "ur": "عدد کی دو تمییزیں"
+          "en": "The oaths of 89:1–4",
+          "ur": "89:1–4 کی قسمیں"
         },
         {
-          "en": "two adjectives",
-          "ur": "دو صفتیں"
+          "en": "Only Pharaoh",
+          "ur": "صرف فرعون"
         },
         {
-          "en": "two objects of تَرَى",
-          "ur": "تَرَى کے دو مفعول"
+          "en": "The reader of the surah",
+          "ur": "سورت پڑھنے والا"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "رُكَّعًا and سُجَّدًا both describe the state of هُمْ as you see them — two حَال.",
-        "ur": "رُكَّعًا اور سُجَّدًا دونوں دیکھتے وقت هُمْ کی حالت بتاتے ہیں — دو حال۔"
+        "en": "الَّذِينَ points back to the three peoples of 89:6–10, so 89:11 says what they all did.",
+        "ur": "الَّذِينَ 89:6–10 کی تین قوموں کی طرف لوٹتا ہے، اس لیے 89:11 بتاتی ہے کہ سب نے کیا کیا۔"
       }
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch71-l07-ex03",
-      "statement": {
-        "en": "الْحَال describes the state of its صَاحِب at the time of the action, and التَّمْيِيز removes vagueness from what comes before it.",
-        "ur": "حال کام کے وقت اپنے صاحب کی حالت بتاتا ہے، اور تمییز اپنے سے پہلے کا ابہام دور کرتی ہے۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch71-l07-ex04",
-      "statement": {
-        "en": "In خَمْسَةٌ وَعِشْرُونَ يَوْمًا, يَوْمًا is genitive.",
-        "ur": "خَمْسَةٌ وَعِشْرُونَ يَوْمًا میں يَوْمًا مجرور ہے۔"
-      },
-      "correct_answer": false,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "False. After 11–99 the counted noun is singular and accusative: يَوْمًا. A genitive comes after 3–10 (ثَلَاثَةِ أَيَّامٍ) and after 100 / 1000 (مِائَةِ يَوْمٍ).",
-        "ur": "غلط۔ 11 سے 99 کے بعد گنی جانے والی چیز واحد اور منصوب ہوتی ہے: يَوْمًا۔ مجرور 3 تا 10 کے بعد (ثَلَاثَةِ أَيَّامٍ) اور 100 / 1000 کے بعد (مِائَةِ يَوْمٍ) آتا ہے۔"
-      }
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch71-l07-ex05",
-      "mode": "TAP",
-      "sentence_ar": "ثَلَاثَةُ ___",
-      "hint": {
-        "en": "'Three men.' After 3–10 the counted noun is plural and genitive.",
-        "ur": "'تین آدمی۔' 3 تا 10 کے بعد گنی جانے والی چیز جمع اور مجرور ہوتی ہے۔"
-      },
-      "options": [
-        {
-          "ar": "رِجَالٍ",
-          "ar_plain": "رجال",
-          "translit": "rijaalin",
-          "en": "men (plural, genitive)",
-          "ur": "آدمی (جمع، مجرور)"
-        },
-        {
-          "ar": "رَجُلًا",
-          "ar_plain": "رجلا",
-          "translit": "rajulan",
-          "en": "man (singular, accusative)",
-          "ur": "آدمی (واحد، منصوب)"
-        },
-        {
-          "ar": "رِجَالًا",
-          "ar_plain": "رجالا",
-          "translit": "rijaalan",
-          "en": "men (accusative)",
-          "ur": "آدمی (منصوب)"
-        },
-        {
-          "ar": "رَجُلٍ",
-          "ar_plain": "رجل",
-          "translit": "rajulin",
-          "en": "man (singular, genitive)",
-          "ur": "آدمی (واحد، مجرور)"
-        }
-      ],
-      "correct_answer": {
-        "ar": "رِجَالٍ",
-        "ar_plain": "رجال",
-        "translit": "rijaalin",
-        "en": "men (plural, genitive)",
-        "ur": "آدمی (جمع، مجرور)"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch71-l07-ex06",
-      "target_translation": {
-        "en": "The Muslim fasted twenty-seven days.",
-        "ur": "مسلمان نے ستائیس دن روزے رکھے۔"
-      },
-      "tiles": [
-        {
-          "ar": "صَامَ",
-          "ar_plain": "صام",
-          "translit": "saama",
-          "en": "fasted",
-          "ur": "روزے رکھے"
-        },
-        {
-          "ar": "الْمُسْلِمُ",
-          "ar_plain": "المسلم",
-          "translit": "al-muslimu",
-          "en": "the Muslim",
-          "ur": "مسلمان"
-        },
-        {
-          "ar": "سَبْعَةً",
-          "ar_plain": "سبعة",
-          "translit": "sab'atan",
-          "en": "seven",
-          "ur": "سات"
-        },
-        {
-          "ar": "وَعِشْرِينَ",
-          "ar_plain": "وعشرين",
-          "translit": "wa-'ishriina",
-          "en": "and twenty",
-          "ur": "اور بیس"
-        },
-        {
-          "ar": "يَوْمًا",
-          "ar_plain": "يوما",
-          "translit": "yawman",
-          "en": "day",
-          "ur": "دن"
-        },
-        {
-          "ar": "أَيَّامٍ",
-          "ar_plain": "أيام",
-          "translit": "ayyaamin",
-          "en": "days (genitive)",
-          "ur": "دن (مجرور)"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3,
-        4
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch71-l07-ex07",
-      "prompt": {
-        "ar": "وَاشْتَعَلَ الرَّأْسُ شَيْبًا",
-        "ar_plain": "واشتعل الرأس شيبا",
-        "translit": "wa-shta'ala ar-ra'su shayban",
-        "en": "And my head has filled with white.",
-        "ur": "اور سر سفیدی سے بھڑک اٹھا۔"
-      },
-      "options": [
-        {
-          "en": "تَمْيِيز of the statement — 'blazed with what?'",
-          "ur": "جملے کی تمییز — 'کس چیز سے بھڑکا؟'"
-        },
-        {
-          "en": "حَال — 'in what state?'",
-          "ur": "حال — 'کس حال میں؟'"
-        },
-        {
-          "en": "مَفْعُول مُطْلَق",
-          "ur": "مفعولِ مطلق"
-        },
-        {
-          "en": "an adjective of الرَّأْسُ",
-          "ur": "الرَّأْسُ کی صفت"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "شَيْبًا removes the vagueness of 'the head blazed' — with white hair. It is a plain noun, not a describing word, so it is a تَمْيِيز.",
-        "ur": "شَيْبًا 'سر بھڑک اٹھا' کا ابہام دور کرتا ہے — سفید بالوں سے۔ یہ سادہ اسم ہے، صفت جیسا لفظ نہیں، اس لیے تمییز ہے۔"
-      }
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch71-l07-ex08",
-      "mode": "TAP",
-      "sentence_ar": "جَاءَ الضَّيْفُ ___",
-      "hint": {
-        "en": "'The guest came smiling.' Choose the حَال.",
-        "ur": "'مہمان مسکراتا ہوا آیا۔' حال چنیے۔"
-      },
-      "options": [
-        {
-          "ar": "مُبْتَسِمًا",
-          "ar_plain": "مبتسما",
-          "translit": "mubtasiman",
-          "en": "smiling (حَال)",
-          "ur": "مسکراتا ہوا (حال)"
-        },
-        {
-          "ar": "الْمُبْتَسِمُ",
-          "ar_plain": "المبتسم",
-          "translit": "al-mubtasimu",
-          "en": "the smiling one",
-          "ur": "مسکرانے والا"
-        },
-        {
-          "ar": "ابْتِسَامٌ",
-          "ar_plain": "ابتسام",
-          "translit": "ibtisaamun",
-          "en": "a smile (nominative)",
-          "ur": "مسکراہٹ (مرفوع)"
-        },
-        {
-          "ar": "مُبْتَسِمٍ",
-          "ar_plain": "مبتسم",
-          "translit": "mubtasimin",
-          "en": "smiling (genitive)",
-          "ur": "مسکراتا (مجرور)"
-        }
-      ],
-      "correct_answer": {
-        "ar": "مُبْتَسِمًا",
-        "ar_plain": "مبتسما",
-        "translit": "mubtasiman",
-        "en": "smiling (حَال)",
-        "ur": "مسکراتا ہوا (حال)"
-      },
-      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "الْحَال and التَّمْيِيز — review",
-      "ar": "الْحَالُ وَالتَّمْيِيزُ — مُرَاجَعَةٌ",
-      "ur": "حال اور تمییز — جائزہ"
+      "en": "Your Lord is watching",
+      "ar": "إِنَّ رَبَّكَ لَبِالْمِرْصَادِ",
+      "ur": "تمہارا رب نگاہ رکھے ہوئے ہے"
     },
     "ayah": {
-      "surah": 2,
-      "ayah": 185,
-      "label": "Al-Baqarah 2:185",
-      "ar": "شَهْرُ رَمَضَانَ الَّذِي أُنْزِلَ فِيهِ الْقُرْآنُ هُدًى لِّلنَّاسِ وَبَيِّنَاتٍ مِّنَ الْهُدَىٰ وَالْفُرْقَانِ",
-      "en": "The month of Ramadan in which the Quran was revealed as guidance for mankind and clear proofs of guidance and the criterion.",
-      "ur": "رمضان کا مہینہ جس میں قرآن نازل ہوا ہدایت کے لیے اور ہدایت اور فرقان کی کھلی دلیلیں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002185.mp3"
+      "surah": 89,
+      "ayah": 14,
+      "label": "Al-Fajr 89:14",
+      "ar": "إِنَّ رَبَّكَ لَبِالْمِرْصَادِ",
+      "en": "Indeed, your Lord is in observation.",
+      "ur": "بے شک تمہارا پروردگار تاک میں ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/089014.mp3"
     },
     "highlighted_word_indices": [
-      6
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "رَبَّكَ",
+      "لَبِالْمِرْصَادِ"
     ],
     "noor_explanation": {
-      "en": "أُنْزِلَ فِيهِ الْقُرْآنُ هُدًى لِلنَّاسِ — 'in which the Quran was revealed, as guidance for mankind'. هُدًى is a حَال of الْقُرْآنُ: the state in which it was sent down. Its accusative does not show, because هُدًى ends in alif — the ending is hidden, the job is the same.",
-      "ur": "أُنْزِلَ فِيهِ الْقُرْآنُ هُدًى لِلنَّاسِ — 'جس میں قرآن اتارا گیا، لوگوں کے لیے ہدایت بن کر'۔ هُدًى، الْقُرْآنُ کا حال ہے: وہ حالت جس میں یہ نازل ہوا۔ اس کا نصب ظاہر نہیں ہوتا کیونکہ هُدًى کے آخر میں الف ہے — حرکت چھپی ہے، کام وہی ہے۔"
+      "en": "إِنَّ رَبَّكَ لَبِالْمِرْصَادِ — the first part ends here: after the lash of punishment, 'your Lord is watching'.",
+      "ur": "إِنَّ رَبَّكَ لَبِالْمِرْصَادِ — پہلا حصہ یہاں ختم ہوتا ہے: عذاب کے کوڑے کے بعد، 'تمہارا رب نگاہ رکھے ہوئے ہے'۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Chapter 71 is complete. You can tell a حَال from a تَمْيِيز, handle the counted noun after any number, and avoid the look-alikes. Chapter 72 — النِّدَاء — is the grand finale.",
-      "ur": "باب 71 مکمل۔ اب آپ حال اور تمییز میں فرق کر سکتے ہیں، کسی بھی عدد کے بعد گنی جانے والی چیز سنبھال سکتے ہیں، اور ملتی جلتی چیزوں سے بچ سکتے ہیں۔ باب 72 — نداء — آخری باب ہے۔"
+      "en": "You read 89:1–14: the oaths, the three peoples, what they did and the closing line.",
+      "ur": "آپ نے 89:1–14 پڑھیں: قسمیں، تین قومیں، انہوں نے کیا کیا اور آخری جملہ۔"
     }
   }
 }

@@ -2,81 +2,122 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 71, Lesson 3 — Introduction to التمييز: removing vagueness.",
+    "_note": "Chapter 71, Lesson 3 (ch71-l03, rebuilt). The function of the noun after a number or a measure: it clears up what the amount is of. Retrieves Chapter 48's اشْتَرَيْتُ عِشْرِينَ كِتَابًا and its unit رِطْل, and 7:142 (وَوَاعَدْنَا مُوسَىٰ ثَلَاثِينَ لَيْلَةً). The old row said التَّمْيِيز 'takes only fatḥa' and posed 54:12 (فَفَجَّرْنَاهَا عُيُونًا) as a prototype; neither is taught. The lesson names the role and does not re-teach number agreement: the ending of the clarifier follows Chapter 48 and the examples here end in -an. A measure is shown with its clarifier (رِطْلًا عَسَلًا) and the iḍāfa wording (رِطْلَ عَسَلٍ) is named as also correct, so no item rejects it. Direct object and clarifier are marked separately. Added 2026-10-04 in the proposal harvest, batch 10 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-71-content-proposal.md and its review amendments.",
+    "title": "A Noun That Clarifies a Quantity",
+    "titleAr": "التَّمْيِيزُ بَعْدَ الْعَدَدِ وَالْمِقْدَارِ",
+    "titleUr": "تمییز: تعداد اور مقدار کے بعد",
     "chapter_order": 71,
     "lesson_order": 3,
-    "chapter_title": "الحال والتمييز",
-    "title": "Introduction to التَّمْيِيز — Specification",
-    "titleAr": "مُقَدِّمَةٌ فِي التَّمْيِيزِ",
-    "source": "arabai-backend/prisma/fixtures",
-    "estimated_minutes": 10,
+    "estimated_minutes": 12,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 19,
-      "ayah": 4,
-      "label": "Maryam 19:4",
-      "ar": "قَالَ رَبِّ إِنِّي وَهَنَ الْعَظْمُ مِنِّي وَاشْتَعَلَ الرَّأْسُ شَيْبًا وَلَمْ أَكُن بِدُعَائِكَ رَبِّ شَقِيًّا",
-      "en": "He said, 'My Lord, indeed my bones have weakened, and my head has filled with white, and never have I been in my supplication to You, my Lord, unhappy.'",
-      "ur": "عرض کیا: اے میرے رب! میری ہڈیاں کمزور ہو گئیں اور سر بڑھاپے کی سفیدی سے بھڑک اٹھا، اور اے میرے رب! میں تجھ سے دعا کر کے کبھی محروم نہیں رہا",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/019004.mp3"
+      "surah": 7,
+      "ayah": 142,
+      "label": "Al-A'raf 7:142",
+      "ar": "وَوَاعَدْنَا مُوسَىٰ ثَلَاثِينَ لَيْلَةً",
+      "en": "and We appointed for Moses thirty nights",
+      "ur": "اور ہم نے موسیٰ سے تیس راتوں کا وعدہ کیا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/007142.mp3"
     },
     "noor_intro": {
-      "en": "وَاشْتَعَلَ الرَّأْسُ شَيْبًا — Zakariyya's words: 'and my head has blazed with white'. 'Blazed' alone is vague; شَيْبًا says with what. A word that removes vagueness like this is called التَّمْيِيز.",
-      "ur": "وَاشْتَعَلَ الرَّأْسُ شَيْبًا — زکریا علیہ السلام کے الفاظ: 'اور سر سفیدی سے بھڑک اٹھا'۔ صرف 'بھڑک اٹھا' مبہم ہے؛ شَيْبًا بتاتا ہے کس چیز سے۔ ایسا ابہام دور کرنے والا لفظ تمییز کہلاتا ہے۔"
+      "en": "Thirty what? The ayah answers inside itself: thirty nights. The noun after the number says what is counted, and that job has a name, التَّمْيِيز.",
+      "ur": "تیس کیا؟ آیت اپنے اندر جواب دیتی ہے: تیس راتیں۔ عدد کے بعد کا اسم بتاتا ہے کہ کیا گنا جا رہا ہے، اور اس کام کا نام التَّمْيِيز ہے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "التَّمْيِيز — removing vagueness",
+        "en": "A noun that clears up an amount",
         "ar": "التَّمْيِيزُ",
-        "ur": "تمییز"
+        "ur": "مقدار واضح کرنے والا اسم"
       },
       "explanation": {
-        "en": "A تَمْيِيز is an indefinite accusative noun that removes vagueness from what comes before it. It answers 'of what?' or 'in what respect?': عِشْرُونَ يَوْمًا — 'twenty days'; وَاشْتَعَلَ الرَّأْسُ شَيْبًا.",
-        "ur": "تمییز ایک نکرہ منصوب اسم ہے جو اپنے سے پہلے کا ابہام دور کرتا ہے۔ یہ 'کس چیز کا؟' یا 'کس لحاظ سے؟' کا جواب دیتا ہے: عِشْرُونَ يَوْمًا — 'بیس دن'؛ وَاشْتَعَلَ الرَّأْسُ شَيْبًا۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "تمييز of a word: numbers and measures",
-        "ar": "تَمْيِيزُ الذَّاتِ (الْمُفْرَدِ)",
-        "ur": "ذات کی تمییز: عدد اور پیمانے"
-      },
-      "explanation": {
-        "en": "Numbers, weights, measures and areas are vague on their own. The تَمْيِيز names what is counted or measured: عِشْرُونَ يَوْمًا; رِطْلٌ زَيْتًا ('a pound of oil'); شِبْرٌ أَرْضًا ('a span of land').",
-        "ur": "عدد، وزن، پیمانے اور رقبے اکیلے مبہم ہیں۔ تمییز بتاتی ہے کیا گنا یا ناپا گیا: عِشْرُونَ يَوْمًا؛ رِطْلٌ زَيْتًا ('ایک رطل تیل')؛ شِبْرٌ أَرْضًا ('ایک بالشت زمین')۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "تمييز of a statement",
-        "ar": "تَمْيِيزُ النِّسْبَةِ",
-        "ur": "نسبت کی تمییز"
-      },
-      "explanation": {
-        "en": "Sometimes the whole statement is vague: 'the head blazed', 'We made the earth burst'. The تَمْيِيز says in what respect: شَيْبًا (19:4), عُيُونًا (54:12), أَنَا أَكْثَرُ مِنْكَ مَالًا — 'I am greater than you in wealth' (18:34).",
-        "ur": "کبھی پورا جملہ مبہم ہوتا ہے: 'سر بھڑک اٹھا'، 'ہم نے زمین پھاڑ دی'۔ تمییز بتاتی ہے کس لحاظ سے: شَيْبًا (19:4)، عُيُونًا (54:12)، أَنَا أَكْثَرُ مِنْكَ مَالًا — 'میں مال میں تجھ سے زیادہ ہوں' (18:34)۔"
+        "en": "A number alone leaves a question: عِشْرِينَ is 'twenty', but twenty what? In اشْتَرَيْتُ عِشْرِينَ كِتَابًا, كِتَابًا answers: twenty books. A noun that clears up what a preceding expression leaves open is called التَّمْيِيز, 'clarification'. It does not tell anyone's state while acting; it names what is counted or measured.",
+        "ur": "عدد اکیلا ایک سوال چھوڑتا ہے: عِشْرِينَ 'بیس' ہے، مگر بیس کیا؟ اشْتَرَيْتُ عِشْرِينَ كِتَابًا میں كِتَابًا جواب دیتا ہے: بیس کتابیں۔ جو اسم پہلے کی عبارت کے چھوڑے ہوئے ابہام کو واضح کرے اسے التَّمْيِيز، 'وضاحت'، کہتے ہیں۔ یہ کسی کی کام کرتے وقت کی حالت نہیں بتاتا؛ یہ بتاتا ہے کہ کیا گنا یا ناپا جا رہا ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "وَاشْتَعَلَ الرَّأْسُ شَيْبًا",
-        "ar_plain": "واشتعل الرأس شيبا",
-        "translit": "wa-shta'ala ar-ra'su shayban",
-        "en": "And my head has blazed with white.",
-        "ur": "اور سر سفیدی سے بھڑک اٹھا۔"
+        "ar": "اشْتَرَيْتُ عِشْرِينَ كِتَابًا",
+        "ar_plain": "اشتريت عشرين كتابا",
+        "translit": "ashtaraytu ʿishrīna kitāban",
+        "en": "I bought twenty books.",
+        "ur": "میں نے بیس کتابیں خریدیں۔"
       },
       "explanation": {
-        "en": "Zakariyya's words in 19:4. شَيْبًا is a plain noun ('white hair'), indefinite and accusative. It does not describe anyone's state; it says with what the head 'blazed'.",
-        "ur": "19:4 میں زکریا علیہ السلام کے الفاظ۔ شَيْبًا سادہ اسم ہے ('سفید بال')، نکرہ اور منصوب۔ یہ کسی کی حالت بیان نہیں کرتا؛ بتاتا ہے کہ سر کس چیز سے 'بھڑک' اٹھا۔"
+        "en": "You met this pattern in Chapter 48. The thing bought is عِشْرِينَ, the number; كِتَابًا is the clarifier that says what the twenty are. This lesson names that job; it does not teach the number pattern again.",
+        "ur": "یہ ساخت آپ نے باب 48 میں دیکھی۔ خریدی ہوئی چیز عِشْرِينَ، یعنی عدد، ہے؛ كِتَابًا وضاحت کرنے والا ہے جو بتاتا ہے کہ بیس کیا ہیں۔ یہ سبق اس کام کا نام بتاتا ہے؛ عدد کی ساخت دوبارہ نہیں سکھاتا۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "اشْتَرَيْتُ رِطْلًا عَسَلًا",
+        "ar_plain": "اشتريت رطلا عسلا",
+        "translit": "ashtaraytu riṭlan ʿasalan",
+        "en": "I bought a pound of honey.",
+        "ur": "میں نے ایک رطل شہد خریدا۔"
+      },
+      "explanation": {
+        "en": "A measure works the same way. رِطْلًا, a pound from Chapter 48, is the amount bought; عَسَلًا clarifies what the pound is of. The same meaning can be worded with an iḍāfa, اشْتَرَيْتُ رِطْلَ عَسَلٍ, and that is also correct Arabic. Here you read the construction that is shown.",
+        "ur": "ناپ بھی اسی طرح کام کرتی ہے۔ رِطْلًا، باب 48 کا رطل، خریدی ہوئی مقدار ہے؛ عَسَلًا وضاحت کرتا ہے کہ رطل کس چیز کا ہے۔ یہی مطلب اضافت سے بھی کہا جا سکتا ہے، اشْتَرَيْتُ رِطْلَ عَسَلٍ، اور وہ بھی درست عربی ہے۔ یہاں آپ وہ ساخت پڑھتے ہیں جو دکھائی گئی ہے۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "وَوَاعَدْنَا مُوسَىٰ ثَلَاثِينَ لَيْلَةً",
+        "ar_plain": "وواعدنا موسى ثلاثين ليلة",
+        "translit": "wawaāʿadnā mūsā thalāthīna laylatan",
+        "en": "and We appointed for Moses thirty nights",
+        "ur": "اور ہم نے موسیٰ سے تیس راتوں کا وعدہ کیا"
+      },
+      "explanation": {
+        "en": "وَوَاعَدْنَا مُوسَىٰ ثَلَاثِينَ لَيْلَةً: 'and We appointed for Moses thirty nights'. لَيْلَةً clears up what the thirty are. This is an exact excerpt of a longer ayah; you read this part only. (Al-A'raf 7:142) (Al-A'raf 7:142)",
+        "ur": "وَوَاعَدْنَا مُوسَىٰ ثَلَاثِينَ لَيْلَةً: 'اور ہم نے موسیٰ سے تیس راتوں کا وعدہ کیا'۔ لَيْلَةً وضاحت کرتا ہے کہ تیس کیا ہیں۔ یہ ایک لمبی آیت کا ٹھیک ٹکڑا ہے؛ آپ یہی حصہ پڑھتے ہیں۔ (الاعراف 7:142) (Al-A'raf 7:142)"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "An ordinary object, or a clarifier",
+        "ur": "عام مفعول، یا وضاحت کرنے والا"
+      },
+      "examples": [
+        {
+          "ar": "اشْتَرَيْتُ كِتَابًا",
+          "ar_plain": "اشتريت كتابا",
+          "translit": "ashtaraytu kitāban",
+          "en": "I bought a book.",
+          "ur": "میں نے ایک کتاب خریدی۔"
+        },
+        {
+          "ar": "اشْتَرَيْتُ عِشْرِينَ كِتَابًا",
+          "ar_plain": "اشتريت عشرين كتابا",
+          "translit": "ashtaraytu ʿishrīna kitāban",
+          "en": "I bought twenty books.",
+          "ur": "میں نے بیس کتابیں خریدیں۔"
+        }
+      ],
+      "explanation": {
+        "en": "In the first, كِتَابًا is the thing bought: an ordinary object. In the second, the thing bought is the twenty, and كِتَابًا clears up what the twenty are.",
+        "ur": "پہلے میں كِتَابًا خریدی ہوئی چیز ہے: عام مفعول۔ دوسرے میں خریدی ہوئی چیز بیس ہے، اور كِتَابًا وضاحت کرتا ہے کہ بیس کیا ہیں۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "The role, not the ending",
+        "ur": "کردار، ختم نہیں"
+      },
+      "body": {
+        "en": "The clarifiers here end in -an, but that is not what makes them clarifiers: a state word and an object end in -an too. A clarifier is the noun that clears up the amount before it. Other numbers follow the patterns of Chapter 48.",
+        "ur": "یہاں کے وضاحت کرنے والے -اً پر ختم ہوتے ہیں، مگر اسی وجہ سے وہ وضاحت کرنے والے نہیں بنتے: حال اور مفعول بھی -اً پر ختم ہوتے ہیں۔ وضاحت کرنے والا وہ اسم ہے جو اپنے سے پہلے کی مقدار واضح کرے۔ دوسرے اعداد باب 48 کی ساختوں کی پیروی کرتے ہیں۔"
       }
     }
   ],
@@ -85,264 +126,300 @@
       "type": "TAP_TRANSLATION",
       "id": "ch71-l03-ex01",
       "prompt": {
-        "ar": "وَاشْتَعَلَ الرَّأْسُ شَيْبًا",
-        "ar_plain": "واشتعل الرأس شيبا",
-        "translit": "wa-shta'ala ar-ra'su shayban",
-        "en": "And my head has filled with white.",
-        "ur": "اور سر بڑھاپے کی سفیدی سے بھڑک اٹھا۔"
+        "ar": "اشْتَرَيْتُ عِشْرِينَ كِتَابًا",
+        "ar_plain": "اشتريت عشرين كتابا",
+        "translit": "ashtaraytu ʿishrīna kitāban",
+        "en": "(what does كِتَابًا do?)",
+        "ur": "(كِتَابًا کیا کام کرتا ہے؟)"
       },
       "options": [
         {
-          "en": "شَيْبًا — it tells in what way the head \"blazed\"",
-          "ur": "شَيْبًا — بتاتا ہے کہ سر کس چیز سے \"بھڑکا\""
+          "en": "It clears up what the twenty are: twenty books",
+          "ur": "یہ واضح کرتا ہے کہ بیس کیا ہیں: بیس کتابیں"
         },
         {
-          "en": "الرَّأْسُ — it is the تَمْيِيز",
-          "ur": "الرَّأْسُ — یہ تمییز ہے"
+          "en": "It tells the state of the buyer",
+          "ur": "یہ خریدار کی حالت بتاتا ہے"
         },
         {
-          "en": "اشْتَعَلَ — it is the تَمْيِيز",
-          "ur": "اشْتَعَلَ — یہ تمییز ہے"
+          "en": "It tells when he bought",
+          "ur": "یہ بتاتا ہے کہ اس نے کب خریدا"
         },
         {
-          "en": "There is no تَمْيِيز here",
-          "ur": "یہاں کوئی تمییز نہیں"
+          "en": "It is the one who buys",
+          "ur": "یہ خریدنے والا ہے"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "'The head blazed' is vague — blazed with what? شَيْبًا ('with white hair') removes the vagueness. That is a تَمْيِيز: an indefinite accusative that specifies (19:4).",
-        "ur": "'سر بھڑک اٹھا' مبہم ہے — کس چیز سے؟ شَيْبًا ('بڑھاپے کی سفیدی سے') ابہام دور کرتا ہے۔ یہی تمییز ہے: نکرہ منصوب جو وضاحت کرے (19:4)۔"
+        "en": "The twenty needs 'what?', and كِتَابًا answers it.",
+        "ur": "بیس کو 'کیا؟' چاہیے، اور كِتَابًا اس کا جواب دیتا ہے۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch71-l03-ex02",
-      "statement": {
-        "en": "A تَمْيِيز answers 'in what state?', just like a حَال.",
-        "ur": "تمییز بھی حال کی طرح 'کس حال میں؟' کا جواب دیتا ہے۔"
-      },
-      "correct_answer": false,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "False. A حَال answers 'in what state?'. A تَمْيِيز answers 'of what? / in what respect?' — it removes vagueness from a number, a measure, or a whole statement.",
-        "ur": "غلط۔ 'کس حال میں؟' کا جواب حال دیتا ہے۔ تمییز 'کس چیز کا؟ / کس لحاظ سے؟' کا جواب دیتا ہے — یہ عدد، پیمانے یا پورے جملے کا ابہام دور کرتا ہے۔"
-      }
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch71-l03-ex03",
-      "mode": "TAP",
-      "sentence_ar": "اشْتَرَيْتُ رِطْلًا ___",
-      "hint": {
-        "en": "'I bought a pound of oil.' A measure is vague until a تَمْيِيز says what was measured.",
-        "ur": "'میں نے ایک رطل تیل خریدا۔' پیمانہ مبہم رہتا ہے جب تک تمییز نہ بتائے کہ کیا ناپا گیا۔"
+      "prompt": {
+        "ar": "اشْتَرَيْتُ رِطْلًا عَسَلًا",
+        "ar_plain": "اشتريت رطلا عسلا",
+        "translit": "ashtaraytu riṭlan ʿasalan",
+        "en": "(what does عَسَلًا do?)",
+        "ur": "(عَسَلًا کیا کام کرتا ہے؟)"
       },
       "options": [
         {
-          "ar": "زَيْتًا",
-          "ar_plain": "زيتا",
-          "translit": "zaytan",
-          "en": "oil (accusative)",
-          "ur": "تیل (منصوب)"
+          "en": "It tells the state of the buyer",
+          "ur": "یہ خریدار کی حالت بتاتا ہے"
         },
         {
-          "ar": "الزَّيْتُ",
-          "ar_plain": "الزيت",
-          "translit": "az-zaytu",
-          "en": "the oil (nominative)",
-          "ur": "تیل (مرفوع)"
+          "en": "It tells where he bought",
+          "ur": "یہ بتاتا ہے کہ اس نے کہاں خریدا"
         },
         {
-          "ar": "زَيْتٌ",
-          "ar_plain": "زيت",
-          "translit": "zaytun",
-          "en": "oil (nominative)",
-          "ur": "تیل (مرفوع)"
+          "en": "It says what the pound is of: honey",
+          "ur": "یہ بتاتا ہے کہ رطل کس چیز کا ہے: شہد"
         },
         {
-          "ar": "بِزَيْتٍ",
-          "ar_plain": "بزيت",
-          "translit": "bi-zaytin",
-          "en": "with oil",
-          "ur": "تیل کے ساتھ"
+          "en": "It is the one who buys",
+          "ur": "یہ خریدنے والا ہے"
         }
       ],
-      "correct_answer": {
-        "ar": "زَيْتًا",
-        "ar_plain": "زيتا",
-        "translit": "zaytan",
-        "en": "oil (accusative)",
-        "ur": "تیل (منصوب)"
-      },
-      "xp_value": 1
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The measure رِطْلًا is the amount; عَسَلًا clears up what it is made of.",
+        "ur": "ناپ رِطْلًا مقدار ہے؛ عَسَلًا واضح کرتا ہے کہ وہ کس چیز کی ہے۔"
+      }
     },
     {
-      "type": "MATCHING",
+      "type": "TAP_TRANSLATION",
+      "id": "ch71-l03-ex03",
+      "prompt": {
+        "ar": "اشْتَرَيْتُ رِطْلًا عَسَلًا",
+        "ar_plain": "اشتريت رطلا عسلا",
+        "translit": "ashtaraytu riṭlan ʿasalan",
+        "en": "(which word is the amount he bought, the direct object?)",
+        "ur": "(کون سا لفظ خریدی ہوئی مقدار، یعنی مفعول، ہے؟)"
+      },
+      "options": [
+        {
+          "en": "عَسَلًا — honey",
+          "ur": "عَسَلًا — شہد"
+        },
+        {
+          "en": "رِطْلًا — a pound",
+          "ur": "رِطْلًا — ایک رطل"
+        },
+        {
+          "en": "اشْتَرَيْتُ — I bought",
+          "ur": "اشْتَرَيْتُ — میں نے خریدا"
+        },
+        {
+          "en": "Neither: there is no object",
+          "ur": "کوئی نہیں: مفعول نہیں ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "In this construction the pound is the thing bought, and the honey clears up what it is a pound of.",
+        "ur": "اس ساخت میں رطل خریدی ہوئی چیز ہے، اور شہد واضح کرتا ہے کہ وہ کس چیز کا رطل ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
       "id": "ch71-l03-ex04",
-      "left_column": [
+      "prompt": {
+        "ar": "اشْتَرَيْتُ كِتَابًا · اشْتَرَيْتُ عِشْرِينَ كِتَابًا",
+        "ar_plain": "اشتريت كتابا · اشتريت عشرين كتابا",
+        "translit": "ashtaraytu kitāban · ashtaraytu ʿishrīna kitāban",
+        "en": "(in which sentence does كِتَابًا clear up a number?)",
+        "ur": "(کس جملے میں كِتَابًا عدد کی وضاحت کرتا ہے؟)"
+      },
+      "options": [
         {
-          "ar": "عِشْرُونَ يَوْمًا",
-          "ar_plain": "عشرون يوما",
-          "translit": "'ishruuna yawman",
-          "en": "twenty days",
-          "ur": "بیس دن"
+          "en": "In the first",
+          "ur": "پہلے میں"
         },
         {
-          "ar": "رِطْلٌ زَيْتًا",
-          "ar_plain": "رطل زيتا",
-          "translit": "ratlun zaytan",
-          "en": "a pound of oil",
-          "ur": "ایک رطل تیل"
+          "en": "In both",
+          "ur": "دونوں میں"
         },
         {
-          "ar": "وَاشْتَعَلَ الرَّأْسُ شَيْبًا",
-          "ar_plain": "واشتعل الرأس شيبا",
-          "translit": "wa-shta'ala ar-ra'su shayban",
-          "en": "the head blazed with white",
-          "ur": "سر سفیدی سے بھڑک اٹھا"
+          "en": "In neither",
+          "ur": "کسی میں نہیں"
+        },
+        {
+          "en": "In the second",
+          "ur": "دوسرے میں"
         }
       ],
-      "right_column": [
-        {
-          "en": "تَمْيِيز of a number",
-          "ur": "عدد کی تمییز"
-        },
-        {
-          "en": "تَمْيِيز of a measure",
-          "ur": "پیمانے کی تمییز"
-        },
-        {
-          "en": "تَمْيِيز of a whole statement",
-          "ur": "پورے جملے کی تمییز"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ]
-      ],
-      "xp_value": 1
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Only the second has a number for كِتَابًا to clear up; in the first it is the thing bought.",
+        "ur": "صرف دوسرے میں عدد ہے جس کی وضاحت كِتَابًا کرے؛ پہلے میں یہ خریدی ہوئی چیز ہے۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch71-l03-ex05",
       "prompt": {
-        "ar": "وَفَجَّرْنَا الْأَرْضَ عُيُونًا",
-        "ar_plain": "وفجرنا الأرض عيونا",
-        "translit": "wa-fajjarnaa al-arda 'uyuunan",
-        "en": "And We caused the earth to burst with springs.",
-        "ur": "اور ہم نے زمین سے چشمے جاری کر دیے۔"
+        "ar": "ثَلَاثِينَ لَيْلَةً",
+        "ar_plain": "ثلاثين ليلة",
+        "translit": "thalāthīna laylatan",
+        "en": "(7:142: what does لَيْلَةً do?)",
+        "ur": "(7:142: لَيْلَةً کیا کام کرتا ہے؟)"
       },
       "options": [
         {
-          "en": "And We caused the earth to burst with springs.",
-          "ur": "اور ہم نے زمین سے چشمے جاری کر دیے۔"
+          "en": "It tells the state of Moses",
+          "ur": "یہ موسیٰ کی حالت بتاتا ہے"
         },
         {
-          "en": "And We burst the springs of the earth.",
-          "ur": "اور ہم نے زمین کے چشمے پھاڑ دیے۔"
+          "en": "It clears up what the thirty are: thirty nights",
+          "ur": "یہ واضح کرتا ہے کہ تیس کیا ہیں: تیس راتیں"
         },
         {
-          "en": "And We saw the earth and its springs.",
-          "ur": "اور ہم نے زمین اور اس کے چشمے دیکھے۔"
+          "en": "It tells where they met",
+          "ur": "یہ بتاتا ہے کہ وہ کہاں ملے"
         },
         {
-          "en": "And the earth burst Our springs.",
-          "ur": "اور زمین نے ہمارے چشمے پھاڑ دیے۔"
+          "en": "It is the one who appointed",
+          "ur": "یہ وعدہ کرنے والا ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After ثَلَاثِينَ comes the noun that says what is counted.",
+        "ur": "ثَلَاثِينَ کے بعد وہ اسم آتا ہے جو بتاتا ہے کہ کیا گنا جا رہا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch71-l03-ex06",
+      "prompt": {
+        "ar": "قَرَأَ الطَّالِبُ ثَلَاثِينَ صَفْحَةً",
+        "ar_plain": "قرا الطالب ثلاثين صفحة",
+        "translit": "qaraʾa aṭ-ṭālibu thalāthīna ṣafḥatan",
+        "en": "(which word clears up what the thirty are?)",
+        "ur": "(کون سا لفظ واضح کرتا ہے کہ تیس کیا ہیں؟)"
+      },
+      "options": [
+        {
+          "en": "صَفْحَةً — pages",
+          "ur": "صَفْحَةً — صفحے"
+        },
+        {
+          "en": "الطَّالِبُ — the student",
+          "ur": "الطَّالِبُ — طالب علم"
+        },
+        {
+          "en": "قَرَأَ — read",
+          "ur": "قَرَأَ — پڑھا"
+        },
+        {
+          "en": "ثَلَاثِينَ — thirty",
+          "ur": "ثَلَاثِينَ — تیس"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "'We made the earth burst' is vague — burst with what? عُيُونًا ('with springs') is the تَمْيِيز: the whole earth became springs (54:12).",
-        "ur": "'ہم نے زمین کو پھاڑ دیا' مبہم ہے — کس چیز سے؟ عُيُونًا ('چشموں سے') تمییز ہے: گویا پوری زمین چشمے بن گئی (54:12)۔"
+        "en": "A fresh sentence, the same job: the noun after the number says what is counted.",
+        "ur": "نیا جملہ، وہی کام: عدد کے بعد کا اسم بتاتا ہے کہ کیا گنا جا رہا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch71-l03-ex07",
+      "statement": {
+        "en": "In اشْتَرَيْتُ عِشْرِينَ كِتَابًا, كِتَابًا ends in -an, so it must be a state word.",
+        "ur": "اشْتَرَيْتُ عِشْرِينَ كِتَابًا میں كِتَابًا -اً پر ختم ہوتا ہے، اس لیے یہ حال ہونا ضروری ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. A clarifier and a state word can both end in -an. كِتَابًا names what the twenty are; it does not tell anyone's state.",
+        "ur": "غلط۔ وضاحت کرنے والا اور حال دونوں -اً پر ختم ہو سکتے ہیں۔ كِتَابًا بتاتا ہے کہ بیس کیا ہیں؛ یہ کسی کی حالت نہیں بتاتا۔"
       }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch71-l03-ex06",
+      "id": "ch71-l03-ex08",
       "target_translation": {
-        "en": "The head blazed with white.",
-        "ur": "سر سفیدی سے بھڑک اٹھا۔"
+        "en": "I bought twenty books.",
+        "ur": "میں نے بیس کتابیں خریدیں۔"
       },
       "tiles": [
         {
-          "ar": "اشْتَعَلَ",
-          "ar_plain": "اشتعل",
-          "translit": "ishta'ala",
-          "en": "blazed",
-          "ur": "بھڑک اٹھا"
+          "ar": "عِشْرِينَ",
+          "ar_plain": "عشرين",
+          "translit": "ʿishrīna",
+          "en": "twenty",
+          "ur": "بیس"
         },
         {
-          "ar": "الرَّأْسُ",
-          "ar_plain": "الرأس",
-          "translit": "ar-ra'su",
-          "en": "the head",
-          "ur": "سر"
+          "ar": "كِتَابًا",
+          "ar_plain": "كتابا",
+          "translit": "kitāban",
+          "en": "books",
+          "ur": "کتابیں"
         },
         {
-          "ar": "شَيْبًا",
-          "ar_plain": "شيبا",
-          "translit": "shayban",
-          "en": "with white (hair)",
-          "ur": "سفیدی سے"
-        },
-        {
-          "ar": "الشَّيْبُ",
-          "ar_plain": "الشيب",
-          "translit": "ash-shaybu",
-          "en": "the white hair",
-          "ur": "سفیدی"
+          "ar": "اشْتَرَيْتُ",
+          "ar_plain": "اشتريت",
+          "translit": "ashtaraytu",
+          "en": "I bought",
+          "ur": "میں نے خریدا"
         }
       ],
       "correct_order": [
+        2,
         0,
-        1,
-        2
+        1
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The action, the number, then the noun that clears it up.",
+        "ur": "کام، عدد، پھر وہ اسم جو اس کی وضاحت کرے۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "التَّمْيِيز — clarification",
-      "ar": "التَّمْيِيزُ — رَفْعُ الْإِبْهَامِ",
-      "ur": "تمییز — ابہام دور کرنا"
+      "en": "A noun that clears up an amount",
+      "ar": "التَّمْيِيزُ",
+      "ur": "مقدار واضح کرنے والا اسم"
     },
     "ayah": {
-      "surah": 54,
-      "ayah": 12,
-      "label": "Al-Qamar 54:12",
-      "ar": "وَفَجَّرْنَا الْأَرْضَ عُيُونًا فَالْتَقَى الْمَاءُ عَلَىٰ أَمْرٍ قَدْ قُدِرَ",
-      "en": "And caused the earth to burst with springs, and the waters met for a matter already predestined.",
-      "ur": "اور ہم نے زمین سے چشمے جاری کر دیے، تو پانی اس کام کے لیے مل گیا جو مقدر ہو چکا تھا",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/054012.mp3"
+      "surah": 7,
+      "ayah": 142,
+      "label": "Al-A'raf 7:142",
+      "ar": "وَوَاعَدْنَا مُوسَىٰ ثَلَاثِينَ لَيْلَةً",
+      "en": "and We appointed for Moses thirty nights",
+      "ur": "اور ہم نے موسیٰ سے تیس راتوں کا وعدہ کیا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/007142.mp3"
     },
     "highlighted_word_indices": [
-      0,
-      1,
-      2
+      2,
+      3
+    ],
+    "highlighted_words": [
+      "ثَلَاثِينَ",
+      "لَيْلَةً"
     ],
     "noor_explanation": {
-      "en": "وَفَجَّرْنَا الْأَرْضَ عُيُونًا — at the Flood of Nuh, 'We made the earth burst — with springs'. عُيُونًا is the تَمْيِيز of the statement: it is as if the whole earth turned into springs, a stronger picture than 'We made springs burst from the earth'.",
-      "ur": "وَفَجَّرْنَا الْأَرْضَ عُيُونًا — نوح علیہ السلام کے طوفان میں 'ہم نے زمین کو پھاڑ دیا — چشموں سے'۔ عُيُونًا جملے کی تمییز ہے: گویا پوری زمین چشمے بن گئی، جو 'ہم نے زمین سے چشمے نکالے' سے زیادہ زوردار تصویر ہے۔"
+      "en": "ثَلَاثِينَ لَيْلَةً — the number leaves a question, and the noun after it answers it: thirty nights.",
+      "ur": "ثَلَاثِينَ لَيْلَةً — عدد ایک سوال چھوڑتا ہے، اور اس کے بعد کا اسم اس کا جواب دیتا ہے: تیس راتیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "A تَمْيِيز is an indefinite accusative that answers 'of what?' — after a number or measure (عِشْرُونَ يَوْمًا, رِطْلٌ زَيْتًا) or after a vague statement (اشْتَعَلَ الرَّأْسُ شَيْبًا). Next: numbers and their تَمْيِيز.",
-      "ur": "تمییز نکرہ منصوب ہے جو 'کس چیز کا؟' کا جواب دیتی ہے — عدد یا پیمانے کے بعد (عِشْرُونَ يَوْمًا، رِطْلٌ زَيْتًا) یا مبہم جملے کے بعد (اشْتَعَلَ الرَّأْسُ شَيْبًا)۔ آگے: اعداد اور ان کی تمییز۔"
+      "en": "You named the job of the noun after a number or a measure, and told it from an ordinary object and from a state.",
+      "ur": "آپ نے عدد یا ناپ کے بعد آنے والے اسم کا کام بتایا، اور اسے عام مفعول اور حال سے الگ کیا۔"
     }
   }
 }

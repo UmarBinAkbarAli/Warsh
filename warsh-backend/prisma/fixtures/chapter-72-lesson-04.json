@@ -2,14 +2,13 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 72, Lesson 4 — يا أيها / يا أيتها before a noun with ال; the following noun is marfūʿ (نعت).",
+    "_note": "Chapter 72, Lesson 4 (ch72-l03). A word that begins with ال is not called straight after يَا; the pattern is يَا أَيُّهَا + the ال-noun for a masculine, يَا أَيَّتُهَا + the ال-noun for a feminine, and 89:27 (يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ) is the feminine example the learner already met as meaning only in Chapter 71. One consistent beginner framework is used: يَا the call; أَيُّ / أَيَّةُ the called word, with هَا that alerts joined to it; the ال-noun that says exactly who is meant. The ال-noun is not called genitive (the old lesson's blanket rule) and no case rule beyond its ending as seen is asked. A name needs no bridge (يَا زَيْدُ), so the old claim that every name needs أَيُّهَا is gone. This framework needs the Arabic reviewer's sign-off before release (the proposal says so). Added 2026-10-04 in the proposal harvest, batch 10 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-72-content-proposal.md and its review amendments.",
+    "title": "Calling a Word with ال: يَا أَيُّهَا",
+    "titleAr": "يَا أَيُّهَا وَيَا أَيَّتُهَا",
+    "titleUr": "ال والے لفظ کو پکارنا: يَا أَيُّهَا",
     "chapter_order": 72,
     "lesson_order": 4,
-    "chapter_title": "المنادى",
-    "title": "يَا أَيُّهَا and يَا أَيَّتُهَا — Calling a Noun with ال",
-    "titleAr": "يَا أَيُّهَا وَيَا أَيَّتُهَا",
-    "source": "arabai-backend/prisma/fixtures",
-    "estimated_minutes": 10,
+    "estimated_minutes": 12,
     "xp_reward": 10
   },
   "hook": {
@@ -17,445 +16,438 @@
       "surah": 89,
       "ayah": 27,
       "label": "Al-Fajr 89:27",
-      "ar": "يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ",
-      "en": "O reassured soul,",
-      "ur": "اے اطمینان والی جان!",
+      "ar": "يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ",
+      "en": "O reassured soul",
+      "ur": "اے مطمئن جان",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/089027.mp3"
     },
     "noor_intro": {
-      "en": "يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ — 'O reassured soul'. النَّفْسُ has ال, and يَا does not go straight onto ال. Arabic puts أَيُّهَا (or أَيَّتُهَا) in between.",
-      "ur": "يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ — 'اے اطمینان والی جان'۔ النَّفْسُ پر ال ہے، اور يَا براہِ راست ال والے اسم پر نہیں آتا۔ عربی بیچ میں أَيُّهَا (یا أَيَّتُهَا) لاتی ہے۔"
+      "en": "In Chapter 71 you read يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ as 'O soul at peace'. Now you see how a call like it is built, and why a word with ال cannot follow يَا straight away.",
+      "ur": "باب 71 میں آپ نے يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ کو 'اے مطمئن جان' پڑھا۔ اب آپ دیکھتے ہیں کہ ایسی پکار کیسے بنتی ہے، اور ال والا لفظ يَا کے فوراً بعد کیوں نہیں آ سکتا۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "يَا does not go straight onto ال",
-        "ar": "يَا لَا تَدْخُلُ عَلَى مَا فِيهِ ال",
-        "ur": "يَا براہِ راست ال پر نہیں آتا"
+        "en": "A word with ال needs a bridge",
+        "ar": "أَيُّهَا جِسْرٌ",
+        "ur": "ال والے لفظ کو پل چاہیے"
       },
       "explanation": {
-        "en": "You do not say يَا النَّاسُ. To call a noun with ال, Arabic places أَيُّهَا between: يَا أَيُّهَا النَّاسُ — 'O mankind'. (The name of Allah is the one exception; see the next lesson.)",
-        "ur": "يَا النَّاسُ نہیں کہا جاتا۔ ال والے اسم کو پکارنے کے لیے عربی بیچ میں أَيُّهَا لاتی ہے: يَا أَيُّهَا النَّاسُ — 'اے لوگو'۔ (اللہ کا نام واحد استثنا ہے؛ اگلا سبق دیکھیے۔)"
-      },
-      "examples": [
-        {
-          "ar": "يَا أَيُّهَا النَّاسُ",
-          "ar_plain": "يا أيها الناس",
-          "translit": "yaa ayyuhaa an-naasu",
-          "en": "O mankind!",
-          "ur": "اے لوگو!"
-        }
-      ]
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Three pieces: يَا + أَيُّ + هَا",
-        "ar": "يَا + أَيُّ + هَا",
-        "ur": "تین حصے: يَا + أَيُّ + هَا"
-      },
-      "explanation": {
-        "en": "يَا is the particle of calling. أَيُّ is the الْمُنَادَى, built on ḍamma like يَا نُوحُ. هَا is a small particle of attention (حَرْفُ تَنْبِيهٍ). The ال noun after it describes أَيُّ: it is a نَعْت.",
-        "ur": "يَا حرفِ ندا ہے۔ أَيُّ منادیٰ ہے، يَا نُوحُ کی طرح ضمہ پر مبنی۔ هَا توجہ دلانے کا چھوٹا سا حرف (حرفِ تنبیہ) ہے۔ اس کے بعد ال والا اسم أَيُّ کی صفت ہے: یعنی نعت۔"
+        "en": "You say يَا زَيْدُ and يَا طَالِبُ straight after يَا. But a word that begins with ال, like الطَّالِبُ, is not said straight after يَا. You put أَيُّهَا between them: يَا أَيُّهَا الطَّالِبُ, 'O student'. For a woman you say أَيَّتُهَا: يَا أَيَّتُهَا الطَّالِبَةُ.",
+        "ur": "آپ يَا زَيْدُ اور يَا طَالِبُ يَا کے فوراً بعد کہتے ہیں۔ لیکن جو لفظ ال سے شروع ہو، جیسے الطَّالِبُ، وہ يَا کے فوراً بعد نہیں کہا جاتا۔ آپ ان کے درمیان أَيُّهَا رکھتے ہیں: يَا أَيُّهَا الطَّالِبُ، 'اے طالب علم'۔ عورت کے لیے أَيَّتُهَا کہتے ہیں: يَا أَيَّتُهَا الطَّالِبَةُ۔"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "The noun after أَيُّهَا is marfūʿ",
-        "ar": "مَا بَعْدَ أَيُّهَا مَرْفُوعٌ",
-        "ur": "أَيُّهَا کے بعد والا اسم مرفوع"
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "يَا أَيُّهَا الطَّالِبُ",
+        "ar_plain": "يا ايها الطالب",
+        "translit": "yaā ʾayyuhā aṭ-ṭālibu",
+        "en": "O student",
+        "ur": "اے طالب علم"
       },
       "explanation": {
-        "en": "The ال noun follows the ḍamma of أَيُّ, so it is always marfūʿ: يَا أَيُّهَا النَّاسُ، يَا أَيُّهَا النَّبِيُّ، يَا أَيُّهَا الْإِنسَانُ. It is never genitive — أَيُّهَا is not a muḍāf. (Some books call this noun بَدَل rather than نَعْت; either way it is marfūʿ.)",
-        "ur": "ال والا اسم أَيُّ کے ضمہ کے پیچھے چلتا ہے، اس لیے ہمیشہ مرفوع ہوتا ہے: يَا أَيُّهَا النَّاسُ، يَا أَيُّهَا النَّبِيُّ، يَا أَيُّهَا الْإِنسَانُ۔ یہ کبھی مجرور نہیں ہوتا — أَيُّهَا مضاف نہیں۔ (بعض کتابیں اسے نعت کے بجائے بدل کہتی ہیں؛ دونوں صورتوں میں یہ مرفوع ہے۔)"
+        "en": "Three parts: يَا, the call; أَيُّهَا, the called word, with هَا joined to alert the listener; and الطَّالِبُ, the noun that says exactly who is meant. The noun keeps the ending you see.",
+        "ur": "تین حصے: يَا، پکار؛ أَيُّهَا، پکارا ہوا لفظ، جس کے ساتھ ہَا سننے والے کو متوجہ کرنے کے لیے جڑا ہے؛ اور الطَّالِبُ، وہ اسم جو بتاتا ہے کہ ٹھیک کسے مراد ہے۔ اسم اپنا نظر آنے والا ختم رکھتا ہے۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ",
+        "ar_plain": "يا ايتها النفس المطمئنة",
+        "translit": "yaā ʾayyatuhā an-nafsu al-muṭmaʾinnatu",
+        "en": "O reassured soul",
+        "ur": "اے مطمئن جان"
+      },
+      "explanation": {
+        "en": "يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ: 'O reassured soul'. النَّفْسُ is feminine, so the bridge is أَيَّتُهَا; النَّفْسُ الْمُطْمَئِنَّةُ is the soul that is meant. (Al-Fajr 89:27) (Al-Fajr 89:27)",
+        "ur": "يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ: 'اے مطمئن جان'۔ النَّفْسُ مؤنث ہے، اس لیے پل أَيَّتُهَا ہے؛ النَّفْسُ الْمُطْمَئِنَّةُ وہ جان ہے جو مراد ہے۔ (الفجر 89:27) (Al-Fajr 89:27)"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "A name, or a word with ال",
+        "ur": "نام، یا ال والا لفظ"
       },
       "examples": [
         {
-          "ar": "يَا أَيُّهَا النَّبِيُّ",
-          "ar_plain": "يا أيها النبي",
-          "translit": "yaa ayyuhaa an-nabiyyu",
-          "en": "O Prophet!",
-          "ur": "اے نبی!"
+          "ar": "يَا زَيْدُ",
+          "ar_plain": "يا زيد",
+          "translit": "yaā zaydu",
+          "en": "O Zayd",
+          "ur": "اے زید"
+        },
+        {
+          "ar": "يَا أَيُّهَا الطَّالِبُ",
+          "ar_plain": "يا ايها الطالب",
+          "translit": "yaā ʾayyuhā aṭ-ṭālibu",
+          "en": "O student",
+          "ur": "اے طالب علم"
         }
-      ]
+      ],
+      "explanation": {
+        "en": "A name needs no bridge: يَا زَيْدُ. The bridge is for a word that begins with ال. So not every call needs أَيُّهَا, and not every name does.",
+        "ur": "نام کو پل نہیں چاہیے: يَا زَيْدُ۔ پل اس لفظ کے لیے ہے جو ال سے شروع ہو۔ اس لیے ہر پکار کو أَيُّهَا نہیں چاہیے، اور ہر نام کو بھی نہیں۔"
+      }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "أَيَّتُهَا for a feminine noun",
-        "ar": "أَيَّتُهَا لِلْمُؤَنَّثِ",
-        "ur": "مؤنث کے لیے أَيَّتُهَا"
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "One way of reading it",
+        "ur": "پڑھنے کا ایک طریقہ"
       },
-      "explanation": {
-        "en": "Before a feminine noun, أَيُّ becomes أَيَّتُ: يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ. For masculine nouns, singular or plural, it stays أَيُّهَا: يَا أَيُّهَا النَّبِيُّ، يَا أَيُّهَا النَّاسُ.",
-        "ur": "مؤنث اسم سے پہلے أَيُّ، أَيَّتُ بن جاتا ہے: يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ۔ مذکر کے لیے، واحد ہو یا جمع، أَيُّهَا ہی رہتا ہے: يَا أَيُّهَا النَّبِيُّ، يَا أَيُّهَا النَّاسُ۔"
+      "body": {
+        "en": "This course reads the parts like this: the call, the called word with its alert, and the noun that says who. Grammar books describe the noun after أَيُّهَا in more detail; here you are asked to recognise the pattern and what each part does. A few fixed ways of calling Allah have their own forms, which Lesson 6 shows.",
+        "ur": "یہ کورس حصوں کو یوں پڑھتا ہے: پکار، پکارا ہوا لفظ اپنے متوجہ کرنے والے حصے کے ساتھ، اور وہ اسم جو بتاتا ہے کہ کسے مراد ہے۔ نحو کی کتابیں أَيُّهَا کے بعد کے اسم کا زیادہ تفصیل سے بیان کرتی ہیں؛ یہاں آپ سے یہ پہچاننا مطلوب ہے کہ ساخت کیا ہے اور ہر حصہ کیا کام کرتا ہے۔ اللہ کو پکارنے کی کچھ ٹھہری ہوئی صورتوں کی اپنی شکلیں ہیں، جو سبق 6 دکھاتا ہے۔"
       }
     }
   ],
   "exercises": [
     {
       "type": "FILL_BLANK",
-      "id": "ch72-l04-ex01",
+      "id": "ch72-l03-ex01",
       "mode": "TAP",
-      "sentence_ar": "يَا أَيُّهَا ___ اعْبُدُوا رَبَّكُمُ",
+      "sentence_ar": "يَا ___ الطَّالِبُ",
       "hint": {
-        "en": "'O mankind, worship your Lord' (2:21). The ال noun after أَيُّهَا.",
-        "ur": "'اے لوگو، اپنے رب کی عبادت کرو' (2:21)۔ أَيُّهَا کے بعد ال والا اسم۔"
+        "en": "O student (a man).",
+        "ur": "اے طالب علم (مرد)۔"
       },
       "options": [
         {
-          "ar": "النَّاسُ",
-          "ar_plain": "الناس",
-          "translit": "an-naasu",
-          "en": "mankind (ḍamma)",
-          "ur": "لوگ (ضمہ)"
+          "ar": "أَيُّهَا",
+          "ar_plain": "ايها",
+          "translit": "ʾayyuhā",
+          "en": "the bridge for a man",
+          "ur": "مرد کے لیے پل"
         },
         {
-          "ar": "النَّاسِ",
-          "ar_plain": "الناس",
-          "translit": "an-naasi",
-          "en": "mankind (kasra)",
-          "ur": "لوگ (کسرہ)"
+          "ar": "أَيَّتُهَا",
+          "ar_plain": "ايتها",
+          "translit": "ʾayyatuhā",
+          "en": "the bridge for a woman",
+          "ur": "عورت کے لیے پل"
         },
         {
-          "ar": "النَّاسَ",
-          "ar_plain": "الناس",
-          "translit": "an-naasa",
-          "en": "mankind (fatḥa)",
-          "ur": "لوگ (فتحہ)"
+          "ar": "أَيْنَ",
+          "ar_plain": "اين",
+          "translit": "ʾayna",
+          "en": "where",
+          "ur": "کہاں"
         },
         {
-          "ar": "نَاسٌ",
-          "ar_plain": "ناس",
-          "translit": "naasun",
-          "en": "people (no ال)",
-          "ur": "لوگ (بغیر ال)"
+          "ar": "هَذَا",
+          "ar_plain": "هذا",
+          "translit": "hadhā",
+          "en": "this",
+          "ur": "یہ"
         }
       ],
       "correct_answer": {
-        "ar": "النَّاسُ",
-        "ar_plain": "الناس",
-        "translit": "an-naasu",
-        "en": "mankind (ḍamma)",
-        "ur": "لوگ (ضمہ)"
+        "ar": "أَيُّهَا",
+        "ar_plain": "ايها",
+        "translit": "ʾayyuhā",
+        "en": "the bridge for a man",
+        "ur": "مرد کے لیے پل"
       },
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "The ال noun after أَيُّهَا is marfūʿ: يَا أَيُّهَا النَّاسُ.",
-        "ur": "أَيُّهَا کے بعد ال والا اسم مرفوع ہوتا ہے: يَا أَيُّهَا النَّاسُ۔"
-      }
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch72-l04-ex02",
-      "statement": {
-        "en": "The noun after أَيُّهَا is genitive, because it is a مُضَافٌ إِلَيْهِ.",
-        "ur": "أَيُّهَا کے بعد والا اسم مجرور ہوتا ہے کیونکہ وہ مضاف الیہ ہے۔"
-      },
-      "correct_answer": false,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "أَيُّهَا is not a muḍāf. The ال noun after it describes أَيُّ and is marfūʿ: يَا أَيُّهَا النَّاسُ.",
-        "ur": "أَيُّهَا مضاف نہیں۔ اس کے بعد ال والا اسم أَيُّ کی صفت ہے اور مرفوع ہے: يَا أَيُّهَا النَّاسُ۔"
+        "en": "A masculine word with ال takes أَيُّهَا.",
+        "ur": "ال والا مذکر لفظ أَيُّهَا لیتا ہے۔"
       }
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch72-l04-ex03",
+      "id": "ch72-l03-ex02",
       "mode": "TAP",
-      "sentence_ar": "يَا ___ النَّفْسُ الْمُطْمَئِنَّةُ",
+      "sentence_ar": "يَا ___ الطَّالِبَةُ",
       "hint": {
-        "en": "'O reassured soul' (89:27). نَفْس is feminine.",
-        "ur": "'اے اطمینان والی جان' (89:27)۔ نَفْس مؤنث ہے۔"
+        "en": "O student (a woman).",
+        "ur": "اے طالبہ۔"
       },
       "options": [
         {
-          "ar": "أَيَّتُهَا",
-          "ar_plain": "أيتها",
-          "translit": "ayyatuhaa",
-          "en": "(feminine)",
-          "ur": "(مؤنث)"
-        },
-        {
           "ar": "أَيُّهَا",
-          "ar_plain": "أيها",
-          "translit": "ayyuhaa",
-          "en": "(masculine)",
-          "ur": "(مذکر)"
-        },
-        {
-          "ar": "أَمَّا",
-          "ar_plain": "أما",
-          "translit": "ammaa",
-          "en": "as for",
-          "ur": "رہا"
+          "ar_plain": "ايها",
+          "translit": "ʾayyuhā",
+          "en": "the bridge for a man",
+          "ur": "مرد کے لیے پل"
         },
         {
           "ar": "أَيْنَ",
-          "ar_plain": "أين",
-          "translit": "ayna",
+          "ar_plain": "اين",
+          "translit": "ʾayna",
           "en": "where",
           "ur": "کہاں"
+        },
+        {
+          "ar": "أَيَّتُهَا",
+          "ar_plain": "ايتها",
+          "translit": "ʾayyatuhā",
+          "en": "the bridge for a woman",
+          "ur": "عورت کے لیے پل"
+        },
+        {
+          "ar": "هَذِهِ",
+          "ar_plain": "هذه",
+          "translit": "hadhihi",
+          "en": "this (feminine)",
+          "ur": "یہ (مؤنث)"
         }
       ],
       "correct_answer": {
         "ar": "أَيَّتُهَا",
-        "ar_plain": "أيتها",
-        "translit": "ayyatuhaa",
-        "en": "(feminine)",
-        "ur": "(مؤنث)"
+        "ar_plain": "ايتها",
+        "translit": "ʾayyatuhā",
+        "en": "the bridge for a woman",
+        "ur": "عورت کے لیے پل"
       },
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "Before a feminine noun, use أَيَّتُهَا.",
-        "ur": "مؤنث اسم سے پہلے أَيَّتُهَا آتا ہے۔"
+        "en": "A feminine word with ال takes أَيَّتُهَا.",
+        "ur": "ال والا مؤنث لفظ أَيَّتُهَا لیتا ہے۔"
       }
     },
     {
-      "type": "MATCHING",
-      "id": "ch72-l04-ex04",
-      "left_column": [
-        {
-          "ar": "يَا",
-          "ar_plain": "يا",
-          "translit": "yaa",
-          "en": "O (particle of calling)",
-          "ur": "اے (حرفِ ندا)"
-        },
-        {
-          "ar": "أَيُّ",
-          "ar_plain": "أي",
-          "translit": "ayyu",
-          "en": "ayy",
-          "ur": "أَيُّ"
-        },
-        {
-          "ar": "هَا",
-          "ar_plain": "ها",
-          "translit": "haa",
-          "en": "haa",
-          "ur": "هَا"
-        },
-        {
-          "ar": "النَّاسُ",
-          "ar_plain": "الناس",
-          "translit": "an-naasu",
-          "en": "mankind",
-          "ur": "لوگ"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "Particle of calling",
-          "ur": "حرفِ ندا"
-        },
-        {
-          "en": "The one called (built on ḍamma)",
-          "ur": "منادیٰ (ضمہ پر مبنی)"
-        },
-        {
-          "en": "Particle of attention",
-          "ur": "حرفِ تنبیہ"
-        },
-        {
-          "en": "Describes أَيُّ (نَعْت), marfūʿ",
-          "ur": "أَيُّ کی صفت (نعت)، مرفوع"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
       "type": "TAP_TRANSLATION",
-      "id": "ch72-l04-ex05",
+      "id": "ch72-l03-ex03",
       "prompt": {
-        "ar": "يَا أَيُّهَا الْإِنسَانُ مَا غَرَّكَ بِرَبِّكَ الْكَرِيمِ",
-        "ar_plain": "يا أيها الإنسان ما غرك بربك الكريم",
-        "translit": "yaa ayyuhaa al-insaanu maa gharraka bi-rabbika al-kariimi",
-        "en": "O mankind, what has deceived you concerning your Lord, the Generous?",
-        "ur": "اے انسان، تجھے اپنے کریم رب کے بارے میں کس چیز نے دھوکے میں ڈالا؟"
+        "ar": "يَا الطَّالِبُ · يَا أَيُّهَا الطَّالِبُ",
+        "ar_plain": "يا الطالب · يا ايها الطالب",
+        "translit": "yaā aṭ-ṭālibu · yaā ʾayyuhā aṭ-ṭālibu",
+        "en": "(which one is said?)",
+        "ur": "(کون سا کہا جاتا ہے؟)"
       },
       "options": [
         {
-          "en": "O mankind, what has deceived you concerning your Lord, the Generous?",
-          "ur": "اے انسان، تجھے اپنے کریم رب کے بارے میں کس چیز نے دھوکے میں ڈالا؟"
+          "en": "يَا الطَّالِبُ: nothing is needed",
+          "ur": "يَا الطَّالِبُ: کچھ نہیں چاہیے"
         },
         {
-          "en": "O man, how did your generous Lord deceive you?",
-          "ur": "اے انسان، تیرے کریم رب نے تجھے کیسے دھوکا دیا؟"
+          "en": "يَا أَيُّهَا الطَّالِبُ: a word with ال needs the bridge",
+          "ur": "يَا أَيُّهَا الطَّالِبُ: ال والے لفظ کو پل چاہیے"
         },
         {
-          "en": "Mankind was deceived by a generous man.",
-          "ur": "انسان کو ایک کریم آدمی نے دھوکا دیا۔"
+          "en": "Both are said",
+          "ur": "دونوں کہے جاتے ہیں"
         },
         {
-          "en": "As for man, his Lord is generous.",
-          "ur": "رہا انسان، تو اس کا رب کریم ہے۔"
+          "en": "Neither is said",
+          "ur": "کوئی نہیں کہا جاتا"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The bridge comes between يَا and a word that begins with ال.",
+        "ur": "پل يَا اور ال سے شروع ہونے والے لفظ کے درمیان آتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch72-l03-ex04",
+      "prompt": {
+        "ar": "يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ",
+        "ar_plain": "يا ايتها النفس المطمئنة",
+        "translit": "yaā ʾayyatuhā an-nafsu al-muṭmaʾinnatu",
+        "en": "(89:27: who is called, and what is the bridge?)",
+        "ur": "(89:27: کسے پکارا گیا، اور پل کون سا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "The soul at peace; the bridge is أَيُّهَا",
+          "ur": "مطمئن جان؛ پل أَيُّهَا ہے"
+        },
+        {
+          "en": "Peace; the bridge is يَا",
+          "ur": "اطمینان؛ پل يَا ہے"
+        },
+        {
+          "en": "Nobody is called",
+          "ur": "کسی کو نہیں پکارا گیا"
+        },
+        {
+          "en": "The soul at peace; the bridge is أَيَّتُهَا because the soul is feminine",
+          "ur": "مطمئن جان؛ پل أَيَّتُهَا ہے کیونکہ جان مؤنث ہے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "النَّفْسُ is feminine, so the bridge is أَيَّتُهَا.",
+        "ur": "النَّفْسُ مؤنث ہے، اس لیے پل أَيَّتُهَا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch72-l03-ex05",
+      "statement": {
+        "en": "A name like زَيْدٌ also needs أَيُّهَا: one must say يَا أَيُّهَا زَيْدُ.",
+        "ur": "زَيْدٌ جیسے نام کو بھی أَيُّهَا چاہیے: يَا أَيُّهَا زَيْدُ کہنا ضروری ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. A name follows يَا directly: يَا زَيْدُ. The bridge is for a word that begins with ال.",
+        "ur": "غلط۔ نام يَا کے فوراً بعد آتا ہے: يَا زَيْدُ۔ پل اس لفظ کے لیے ہے جو ال سے شروع ہو۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch72-l03-ex06",
+      "prompt": {
+        "ar": "يَا زَيْدُ · يَا أَيُّهَا الطَّالِبُ",
+        "ar_plain": "يا زيد · يا ايها الطالب",
+        "translit": "yaā zaydu · yaā ʾayyuhā aṭ-ṭālibu",
+        "en": "(why does only the second have أَيُّهَا?)",
+        "ur": "(صرف دوسری میں أَيُّهَا کیوں ہے؟)"
+      },
+      "options": [
+        {
+          "en": "Its noun begins with ال, so it needs the bridge; the name does not",
+          "ur": "اس کا اسم ال سے شروع ہوتا ہے، اس لیے پل چاہیے؛ نام کو نہیں"
+        },
+        {
+          "en": "Because the second is a woman",
+          "ur": "کیونکہ دوسری عورت ہے"
+        },
+        {
+          "en": "Because the first is a question",
+          "ur": "کیونکہ پہلی سوال ہے"
+        },
+        {
+          "en": "There is no reason",
+          "ur": "کوئی وجہ نہیں"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "82:6. يَا أَيُّهَا الْإِنسَانُ is the call; مَا غَرَّكَ ('what deceived you') is the question put to the one called.",
-        "ur": "82:6۔ يَا أَيُّهَا الْإِنسَانُ ندا ہے؛ مَا غَرَّكَ ('تجھے کس چیز نے دھوکا دیا') منادیٰ سے پوچھا گیا سوال ہے۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch72-l04-ex06",
-      "sentence_ar": "يَا أَيُّهَا النَّاسُ",
-      "words": [
-        {
-          "ar": "يَا",
-          "ar_plain": "يا",
-          "translit": "yaa",
-          "en": "O (particle of calling)",
-          "ur": "اے (حرفِ ندا)"
-        },
-        {
-          "ar": "أَيُّهَا",
-          "ar_plain": "أيها",
-          "translit": "ayyuhaa",
-          "en": "O you",
-          "ur": "اے"
-        },
-        {
-          "ar": "النَّاسُ",
-          "ar_plain": "الناس",
-          "translit": "an-naasu",
-          "en": "mankind",
-          "ur": "لوگو"
-        }
-      ],
-      "available_roles": [
-        "PARTICLE",
-        "VOCATIVE",
-        "ADJECTIVE",
-        "POSSESSIVE",
-        "SUBJECT"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "VOCATIVE",
-        "ADJECTIVE"
-      ],
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "يَا is the particle, أَيُّ(هَا) the vocative, and النَّاسُ its نَعْت — marfūʿ, not a مُضَافٌ إِلَيْهِ.",
-        "ur": "يَا حرف ہے، أَيُّ(هَا) منادیٰ، اور النَّاسُ اس کی نعت — مرفوع، مضاف الیہ نہیں۔"
+        "en": "The bridge depends on ال, not on being a name or a person.",
+        "ur": "پل ال پر منحصر ہے، نام یا شخص ہونے پر نہیں۔"
       }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch72-l04-ex07",
+      "id": "ch72-l03-ex07",
       "target_translation": {
-        "en": "O Prophet, Allah is sufficient for you.",
-        "ur": "اے نبی، تمہارے لیے اللہ کافی ہے۔"
+        "en": "O student (a man)",
+        "ur": "اے طالب علم (مرد)"
       },
       "tiles": [
         {
-          "ar": "يَا",
-          "ar_plain": "يا",
-          "translit": "yaa",
-          "en": "O (particle of calling)",
-          "ur": "اے (حرفِ ندا)"
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibu",
+          "en": "the student",
+          "ur": "طالب علم"
         },
         {
-          "ar": "أَيُّهَا",
-          "ar_plain": "أيها",
-          "translit": "ayyuhaa",
-          "en": "O you",
+          "ar": "يَا",
+          "ar_plain": "يا",
+          "translit": "yaā",
+          "en": "O",
           "ur": "اے"
         },
         {
-          "ar": "النَّبِيُّ",
-          "ar_plain": "النبي",
-          "translit": "an-nabiyyu",
-          "en": "Prophet",
-          "ur": "نبی"
-        },
-        {
-          "ar": "حَسْبُكَ",
-          "ar_plain": "حسبك",
-          "translit": "hasbuka",
-          "en": "sufficient for you",
-          "ur": "تمہارے لیے کافی"
-        },
-        {
-          "ar": "اللَّهُ",
-          "ar_plain": "الله",
-          "translit": "allaahu",
-          "en": "Allah",
-          "ur": "اللہ"
-        },
-        {
-          "ar": "النَّبِيِّ",
-          "ar_plain": "النبي",
-          "translit": "an-nabiyyi",
-          "en": "Prophet (kasra)",
-          "ur": "نبی (کسرہ)"
+          "ar": "أَيُّهَا",
+          "ar_plain": "ايها",
+          "translit": "ʾayyuhā",
+          "en": "the bridge",
+          "ur": "پل"
         }
       ],
       "correct_order": [
-        0,
         1,
         2,
-        3,
-        4
+        0
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The call, the bridge, then the noun that says who.",
+        "ur": "پکار، پل، پھر وہ اسم جو بتائے کہ کسے مراد ہے۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch72-l03-ex08",
+      "target_translation": {
+        "en": "O student (a woman)",
+        "ur": "اے طالبہ"
+      },
+      "tiles": [
+        {
+          "ar": "أَيَّتُهَا",
+          "ar_plain": "ايتها",
+          "translit": "ʾayyatuhā",
+          "en": "the bridge (feminine)",
+          "ur": "پل (مؤنث)"
+        },
+        {
+          "ar": "الطَّالِبَةُ",
+          "ar_plain": "الطالبة",
+          "translit": "aṭ-ṭālibatu",
+          "en": "the student (f.)",
+          "ur": "طالبہ"
+        },
+        {
+          "ar": "يَا",
+          "ar_plain": "يا",
+          "translit": "yaā",
+          "en": "O",
+          "ur": "اے"
+        }
+      ],
+      "correct_order": [
+        2,
+        0,
+        1
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The same pattern with the feminine bridge.",
+        "ur": "وہی ساخت مؤنث پل کے ساتھ۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "يَا أَيُّهَا + ال noun (marfūʿ)",
-      "ar": "يَا أَيُّهَا + الِاسْمُ الْمُعَرَّفُ بِأَلْ",
-      "ur": "يَا أَيُّهَا + ال والا اسم (مرفوع)"
+      "en": "A bridge for a word with ال",
+      "ar": "يَا أَيَّتُهَا",
+      "ur": "ال والے لفظ کے لیے پل"
     },
     "ayah": {
-      "surah": 2,
-      "ayah": 21,
-      "label": "Al-Baqarah 2:21",
-      "ar": "يَا أَيُّهَا النَّاسُ اعْبُدُوا رَبَّكُمُ الَّذِي خَلَقَكُمْ وَالَّذِينَ مِن قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ",
-      "en": "O mankind, worship your Lord, who created you and those before you, that you may become righteous.",
-      "ur": "اے لوگو، اپنے رب کی عبادت کرو جس نے تمہیں اور تم سے پہلے لوگوں کو پیدا کیا، تاکہ تم پرہیزگار بنو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002021.mp3"
+      "surah": 89,
+      "ayah": 27,
+      "label": "Al-Fajr 89:27",
+      "ar": "يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ",
+      "en": "O reassured soul",
+      "ur": "اے مطمئن جان",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/089027.mp3"
     },
     "highlighted_word_indices": [
       0,
       1,
       2
     ],
+    "highlighted_words": [
+      "يَا",
+      "أَيَّتُهَا",
+      "النَّفْسُ"
+    ],
     "noor_explanation": {
-      "en": "يَا أَيُّهَا النَّاسُ — يَا calls, أَيُّ is the one called, هَا draws attention, and النَّاسُ (marfūʿ) says who is meant: all people. The command اعْبُدُوا follows, addressed to them.",
-      "ur": "يَا أَيُّهَا النَّاسُ — يَا پکارتا ہے، أَيُّ منادیٰ ہے، هَا توجہ دلاتا ہے، اور النَّاسُ (مرفوع) بتاتا ہے کہ مراد کون ہے: تمام لوگ۔ پھر انہی کے لیے حکم اعْبُدُوا آتا ہے۔"
+      "en": "يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ — the call, the feminine bridge, and the noun that says who is meant.",
+      "ur": "يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ — پکار، مؤنث پل، اور وہ اسم جو بتاتا ہے کہ کسے مراد ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "To call an ال noun: يَا أَيُّهَا (masculine) or يَا أَيَّتُهَا (feminine), then the noun in ḍamma. Next: calling Allah — رَبِّ، رَبَّنَا، اللَّهُمَّ.",
-      "ur": "ال والے اسم کو پکارنے کے لیے: يَا أَيُّهَا (مذکر) یا يَا أَيَّتُهَا (مؤنث)، پھر اسم ضمہ کے ساتھ۔ آگے: اللہ کو پکارنا — رَبِّ، رَبَّنَا، اللَّهُمَّ۔"
+      "en": "You called a word with ال through the bridge أَيُّهَا or أَيَّتُهَا, and saw that a name needs no bridge.",
+      "ur": "آپ نے ال والے لفظ کو پل أَيُّهَا یا أَيَّتُهَا کے ذریعے پکارا، اور دیکھا کہ نام کو پل نہیں چاہیے۔"
     }
   }
 }

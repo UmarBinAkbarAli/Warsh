@@ -2,83 +2,106 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 71, Lesson 2 — الحال in the Quran: more than one حال, and a verb clause as حال.",
+    "_note": "Chapter 71, Lesson 2 (ch71-l02, rebuilt). The verbal-clause حال, read in the exact 12:16 (وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ). عِشَاءً is a time word (Chapter 66's job) and يَبْكُونَ is the clause that tells the state of those who came; the old map spotlighted يَبْكُونَ as a single-word حال and added a motive ('hiding their crime') that the text does not give — none of that is taught. The clause has an accusative position as a whole, but its imperfect verb keeps its nūn and its indicative ending. A state clause is set against an independent statement (جَاءَ الْوَلَدُ يَضْحَكُ against جَاءَ الْوَلَدُ ثُمَّ جَلَسَ). No claim that every imperfect after a past verb is a state; no nominal-clause حال. Added 2026-10-04 in the proposal harvest, batch 10 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-71-content-proposal.md and its review amendments.",
+    "title": "A State in a Short Clause",
+    "titleAr": "الْحَالُ جُمْلَةً",
+    "titleUr": "حال: چھوٹا جملہ",
     "chapter_order": 71,
     "lesson_order": 2,
-    "chapter_title": "الحال والتمييز",
-    "title": "الْحَال in the Quran — Examples",
-    "titleAr": "الْحَالُ فِي الْقُرْآنِ — أَمْثِلَةٌ",
-    "source": "arabai-backend/prisma/fixtures",
-    "estimated_minutes": 10,
+    "estimated_minutes": 12,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 48,
-      "ayah": 29,
-      "label": "Al-Fath 48:29",
-      "ar": "مُّحَمَّدٌ رَّسُولُ اللَّهِ ۚ وَالَّذِينَ مَعَهُ أَشِدَّاءُ عَلَى الْكُفَّارِ رُحَمَاءُ بَيْنَهُمْ ۖ تَرَاهُمْ رُكَّعًا سُجَّدًا يَبْتَغُونَ فَضْلًا مِّنَ اللَّهِ وَرِضْوَانًا",
-      "en": "Muhammad is the Messenger of Allah; and those with him are forceful against the disbelievers, merciful among themselves. You see them bowing and prostrating [in prayer], seeking bounty from Allah and [His] pleasure.",
-      "ur": "محمد اللہ کے رسول ہیں، اور جو لوگ ان کے ساتھ ہیں وہ کافروں پر سخت اور آپس میں رحم دل ہیں۔ تم انہیں رکوع اور سجدے میں دیکھو گے، اللہ کا فضل اور اس کی رضا تلاش کرتے ہوئے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/048029.mp3"
+      "surah": 12,
+      "ayah": 16,
+      "label": "Yusuf 12:16",
+      "ar": "وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ",
+      "en": "And they came to their father at night, weeping.",
+      "ur": "(یہ حرکت کرکے) وہ رات کے وقت باپ کے پاس روتے ہوئے آئے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012016.mp3"
     },
     "noor_intro": {
-      "en": "تَرَاهُمْ رُكَّعًا سُجَّدًا — 'you see them bowing and prostrating'. The Quran describes the Companions through their states. But watch the case: أَشِدَّاءُ and رُحَمَاءُ are nominative — they are not حَال.",
-      "ur": "تَرَاهُمْ رُكَّعًا سُجَّدًا — 'تم انہیں رکوع اور سجدے میں دیکھو گے'۔ قرآن صحابہ کو ان کی حالتوں سے بیان کرتا ہے۔ مگر اعراب پر دھیان دیجیے: أَشِدَّاءُ اور رُحَمَاءُ مرفوع ہیں — یہ حال نہیں۔"
+      "en": "The brothers came to their father in the evening, and then one clause tells in what state they came: weeping. Read the clause, and read what عِشَاءً adds.",
+      "ur": "بھائی شام کو اپنے والد کے پاس آئے، اور پھر ایک جملہ بتاتا ہے کہ وہ کس حالت میں آئے: روتے ہوئے۔ جملہ پڑھیں، اور دیکھیں کہ عِشَاءً کیا بتاتا ہے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
-      "type": "WORD",
-      "text": {
-        "ar": "رُكَّعًا سُجَّدًا",
-        "ar_plain": "ركعا سجدا",
-        "translit": "rukka'an sujjadan",
-        "en": "bowing, prostrating",
-        "ur": "رکوع کرتے، سجدہ کرتے"
-      },
-      "explanation": {
-        "en": "Two حَال, both accusative plurals (of رَاكِع and سَاجِد), describing the هُمْ of تَرَاهُمْ: you see them in the state of bowing and prostrating.",
-        "ur": "دو حال، دونوں منصوب جمع (رَاكِع اور سَاجِد کی)، تَرَاهُمْ کے هُمْ کی حالت بتاتے ہیں: تم انہیں رکوع اور سجدے کی حالت میں دیکھو گے۔"
-      }
-    },
-    {
       "type": "CONCEPT",
       "concept": {
-        "en": "أَشِدَّاءُ … رُحَمَاءُ — predicates, not حَال",
-        "ar": "أَشِدَّاءُ … رُحَمَاءُ خَبَرَانِ",
-        "ur": "أَشِدَّاءُ … رُحَمَاءُ — خبریں، حال نہیں"
-      },
-      "explanation": {
-        "en": "وَالَّذِينَ مَعَهُ is the subject and أَشِدَّاءُ عَلَى الْكُفَّارِ رُحَمَاءُ بَيْنَهُمْ are its predicates, nominative. A حَال is never nominative — the ending tells you at once.",
-        "ur": "وَالَّذِينَ مَعَهُ مبتدا ہے اور أَشِدَّاءُ عَلَى الْكُفَّارِ رُحَمَاءُ بَيْنَهُمْ اس کی خبریں، مرفوع۔ حال کبھی مرفوع نہیں ہوتا — آخری حرکت فوراً بتا دیتی ہے۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "A verb clause as حَال",
+        "en": "A whole clause can tell the state",
         "ar": "الْحَالُ جُمْلَةً",
-        "ur": "جملہ بطور حال"
+        "ur": "پورا جملہ حالت بتا سکتا ہے"
       },
       "explanation": {
-        "en": "A حَال can be a whole clause, often a present-tense verb: يَبْتَغُونَ فَضْلًا مِّنَ اللَّهِ — 'seeking bounty from Allah'; وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ — 'they came weeping' (12:16). The clause is in the position of an accusative.",
-        "ur": "حال پورا جملہ بھی ہو سکتا ہے، اکثر مضارع فعل: يَبْتَغُونَ فَضْلًا مِّنَ اللَّهِ — 'اللہ کا فضل تلاش کرتے ہوئے'؛ وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ — 'وہ روتے ہوئے آئے' (12:16)۔ یہ جملہ محلاً منصوب ہوتا ہے۔"
+        "en": "A state does not have to be one word. A short clause can say in what state the doers acted: وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ. The clause يَبْكُونَ tells that they were weeping as they came. Its 'they' is the same people as the و of جَاءُوا.",
+        "ur": "حالت ایک لفظ ہی ہو، ضروری نہیں۔ ایک چھوٹا جملہ بتا سکتا ہے کہ کرنے والے کس حالت میں تھے: وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ۔ جملہ يَبْكُونَ بتاتا ہے کہ وہ آتے وقت رو رہے تھے۔ اس کا 'وہ' وہی لوگ ہیں جو جَاءُوا کا و ہیں۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "رَأَيْتُهُمْ لِي سَاجِدِينَ",
-        "ar_plain": "رأيتهم لي ساجدين",
-        "translit": "ra'aytuhum lii saajidiina",
-        "en": "I saw them prostrating to me.",
-        "ur": "میں نے انہیں اپنے آگے سجدہ کرتے دیکھا۔"
+        "ar": "وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ",
+        "ar_plain": "وجاءوا اباهم عشاء يبكون",
+        "translit": "wajāʾū ʾabāhum ʿishāʾan yabkūna",
+        "en": "And they came to their father at night, weeping.",
+        "ur": "(یہ حرکت کرکے) وہ رات کے وقت باپ کے پاس روتے ہوئے آئے"
       },
       "explanation": {
-        "en": "From Yusuf's dream (12:4). سَاجِدِينَ is the حَال of هُمْ: the stars, sun and moon as he saw them. A sound masculine plural shows its accusative with ـِينَ.",
-        "ur": "یوسف علیہ السلام کے خواب سے (12:4)۔ سَاجِدِينَ، هُمْ کا حال ہے: ستارے، سورج اور چاند جس حالت میں انہوں نے دیکھے۔ جمع مذکر سالم کا نصب ـِينَ سے ظاہر ہوتا ہے۔"
+        "en": "وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ: 'and they came to their father in the evening, weeping'. عِشَاءً is a time word: it tells when they came. يَبْكُونَ is the clause that tells in what state they came. Two words, two jobs; the text gives no reason for the weeping and none is added here. (Yusuf 12:16)",
+        "ur": "وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ: 'اور وہ شام کو اپنے والد کے پاس روتے ہوئے آئے'۔ عِشَاءً وقت کا لفظ ہے: یہ بتاتا ہے کہ وہ کب آئے۔ يَبْكُونَ وہ جملہ ہے جو بتاتا ہے کہ وہ کس حالت میں آئے۔ دو لفظ، دو کام؛ متن رونے کی کوئی وجہ نہیں دیتا اور یہاں بھی نہیں جوڑی گئی۔ (Yusuf 12:16)"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The verb does not change",
+        "ar": "الْفِعْلُ لَا يَتَغَيَّرُ",
+        "ur": "فعل نہیں بدلتا"
+      },
+      "explanation": {
+        "en": "The clause as a whole stands where a state word would stand, but its verb is unchanged: يَبْكُونَ keeps its nūn and its indicative ending. You do not drop the nūn or add a fatḥa to it.",
+        "ur": "پورا جملہ اس جگہ کھڑا ہے جہاں حال کا لفظ کھڑا ہوتا، مگر اس کا فعل جیسا تھا ویسا رہتا ہے: يَبْكُونَ اپنا نون اور اپنا مرفوع ختم رکھتا ہے۔ آپ اس کا نون نہیں گراتے اور اس پر فتحہ نہیں لگاتے۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "A state clause, or a separate event",
+        "ur": "حال والا جملہ، یا الگ واقعہ"
+      },
+      "examples": [
+        {
+          "ar": "جَاءَ الْوَلَدُ يَضْحَكُ",
+          "ar_plain": "جاء الولد يضحك",
+          "translit": "jāʾa al-waladu yaḍḥaku",
+          "en": "The boy came laughing.",
+          "ur": "لڑکا ہنستا ہوا آیا۔"
+        },
+        {
+          "ar": "جَاءَ الْوَلَدُ ثُمَّ جَلَسَ",
+          "ar_plain": "جاء الولد ثم جلس",
+          "translit": "jāʾa al-waladu thumma jalasa",
+          "en": "The boy came, then he sat.",
+          "ur": "لڑکا آیا، پھر بیٹھ گیا۔"
+        }
+      ],
+      "explanation": {
+        "en": "In the first, the laughing goes with the coming: one event with a state. In the second, ثُمَّ starts a second event after the first. The question is whether the clause describes the doer while he acts.",
+        "ur": "پہلے میں ہنسنا آنے کے ساتھ ہے: ایک کام اور ایک حالت۔ دوسرے میں ثُمَّ پہلے کے بعد دوسرا کام شروع کرتا ہے۔ سوال یہ ہے کہ کیا جملہ کرنے والے کی حالت اس کے کام کرتے وقت بتاتا ہے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Not every verb after a verb is a state",
+        "ur": "ہر فعل جو فعل کے بعد آئے حال نہیں"
+      },
+      "body": {
+        "en": "An imperfect verb after a past verb may be a state, as in 12:16, or the start of a separate statement. This lesson only asks you to decide by the meaning in front of you: does the clause tell the state of the doer while he acts?",
+        "ur": "فعلِ ماضی کے بعد فعلِ مضارع حال ہو سکتا ہے، جیسے 12:16 میں، یا الگ بیان کی ابتدا۔ یہ سبق صرف اتنا کہتا ہے کہ آپ سامنے کے معنی سے فیصلہ کریں: کیا جملہ کرنے والے کی حالت اس کے کام کرتے وقت بتاتا ہے؟"
       }
     }
   ],
@@ -87,249 +110,290 @@
       "type": "TAP_TRANSLATION",
       "id": "ch71-l02-ex01",
       "prompt": {
-        "ar": "تَرَاهُمْ رُكَّعًا سُجَّدًا",
-        "ar_plain": "تراهم ركعا سجدا",
-        "translit": "taraahum rukka'an sujjadan",
-        "en": "You see them bowing and prostrating.",
-        "ur": "تم انہیں رکوع اور سجدے میں دیکھو گے۔"
+        "ar": "وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ",
+        "ar_plain": "وجاءوا اباهم عشاء يبكون",
+        "translit": "wajāʾū ʾabāhum ʿishāʾan yabkūna",
+        "en": "(12:16: which word is the clause that tells their state?)",
+        "ur": "(12:16: کون سا لفظ وہ جملہ ہے جو ان کی حالت بتاتا ہے؟)"
       },
       "options": [
         {
-          "en": "رُكَّعًا and سُجَّدًا — both are حَال",
-          "ur": "رُكَّعًا اور سُجَّدًا — دونوں حال"
+          "en": "عِشَاءً — in the evening",
+          "ur": "عِشَاءً — شام کو"
         },
         {
-          "en": "تَرَاهُمْ is the حَال",
-          "ur": "تَرَاهُمْ حال ہے"
+          "en": "يَبْكُونَ — they were weeping",
+          "ur": "يَبْكُونَ — وہ رو رہے تھے"
         },
         {
-          "en": "Only رُكَّعًا is a حَال",
-          "ur": "صرف رُكَّعًا حال ہے"
+          "en": "أَبَاهُمْ — their father",
+          "ur": "أَبَاهُمْ — ان کے والد"
         },
         {
-          "en": "There is no حَال here",
-          "ur": "یہاں کوئی حال نہیں"
+          "en": "جَاءُوا — they came",
+          "ur": "جَاءُوا — وہ آئے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يَبْكُونَ tells the state they were in as they came; عِشَاءً tells when.",
+        "ur": "يَبْكُونَ بتاتا ہے کہ وہ آتے وقت کس حالت میں تھے؛ عِشَاءً بتاتا ہے کب۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch71-l02-ex02",
+      "prompt": {
+        "ar": "وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ",
+        "ar_plain": "وجاءوا اباهم عشاء يبكون",
+        "translit": "wajāʾū ʾabāhum ʿishāʾan yabkūna",
+        "en": "(12:16: what does عِشَاءً tell?)",
+        "ur": "(12:16: عِشَاءً کیا بتاتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "When they came: in the evening",
+          "ur": "وہ کب آئے: شام کو"
+        },
+        {
+          "en": "The state they were in",
+          "ur": "وہ کس حالت میں تھے"
+        },
+        {
+          "en": "Who came",
+          "ur": "کون آیا"
+        },
+        {
+          "en": "Where they came from",
+          "ur": "وہ کہاں سے آئے"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "رُكَّعًا ('bowing') and سُجَّدًا ('prostrating') are two حَال for the same صَاحِب الْحَال — the هُمْ of تَرَاهُمْ. One person or group can have more than one حَال.",
-        "ur": "رُكَّعًا ('رکوع کرتے') اور سُجَّدًا ('سجدہ کرتے') ایک ہی صاحبِ حال — تَرَاهُمْ کے هُمْ — کے دو حال ہیں۔ ایک شخص یا گروہ کے ایک سے زیادہ حال ہو سکتے ہیں۔"
+        "en": "عِشَاءً is a time word; it is not the state.",
+        "ur": "عِشَاءً وقت کا لفظ ہے؛ یہ حالت نہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch71-l02-ex03",
+      "prompt": {
+        "ar": "وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ",
+        "ar_plain": "وجاءوا اباهم عشاء يبكون",
+        "translit": "wajāʾū ʾabāhum ʿishāʾan yabkūna",
+        "en": "(who are 'they' in يَبْكُونَ?)",
+        "ur": "(يَبْكُونَ میں 'وہ' کون ہیں؟)"
+      },
+      "options": [
+        {
+          "en": "Their father",
+          "ur": "ان کے والد"
+        },
+        {
+          "en": "The evening",
+          "ur": "شام"
+        },
+        {
+          "en": "The same people as the و of جَاءُوا",
+          "ur": "وہی لوگ جو جَاءُوا کا و ہیں"
+        },
+        {
+          "en": "Nobody: the verb has no doer",
+          "ur": "کوئی نہیں: فعل کا کوئی کرنے والا نہیں"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The clause is about those who came, so its 'they' points back to the و of جَاءُوا.",
+        "ur": "جملہ آنے والوں کے بارے میں ہے، اس لیے اس کا 'وہ' جَاءُوا کے و کی طرف لوٹتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch71-l02-ex04",
+      "prompt": {
+        "ar": "جَاءَ الْوَلَدُ يَضْحَكُ",
+        "ar_plain": "جاء الولد يضحك",
+        "translit": "jāʾa al-waladu yaḍḥaku",
+        "en": "(what does it say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "The boy came, then he laughed",
+          "ur": "لڑکا آیا، پھر ہنسا"
+        },
+        {
+          "en": "The boy did not come",
+          "ur": "لڑکا نہیں آیا"
+        },
+        {
+          "en": "The boy laughs at the coming",
+          "ur": "لڑکا آنے پر ہنستا ہے"
+        },
+        {
+          "en": "The boy came laughing: the laughing goes with the coming",
+          "ur": "لڑکا ہنستا ہوا آیا: ہنسنا آنے کے ساتھ ہے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "With no ثُمَّ the verb يَضْحَكُ describes the boy while he comes.",
+        "ur": "ثُمَّ کے بغیر فعل يَضْحَكُ لڑکے کی آتے وقت کی حالت بتاتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch71-l02-ex05",
+      "prompt": {
+        "ar": "جَاءَ الْوَلَدُ ثُمَّ جَلَسَ",
+        "ar_plain": "جاء الولد ثم جلس",
+        "translit": "jāʾa al-waladu thumma jalasa",
+        "en": "(does جَلَسَ tell his state while coming?)",
+        "ur": "(کیا جَلَسَ آتے وقت اس کی حالت بتاتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "No: ثُمَّ starts a second event, he came and then he sat",
+          "ur": "نہیں: ثُمَّ دوسرا کام شروع کرتا ہے، وہ آیا اور پھر بیٹھا"
+        },
+        {
+          "en": "Yes: it is his state while he comes",
+          "ur": "ہاں: یہ آتے وقت اس کی حالت ہے"
+        },
+        {
+          "en": "Yes: it is the doer of جَاءَ",
+          "ur": "ہاں: یہ جَاءَ کا کرنے والا ہے"
+        },
+        {
+          "en": "It is a time word",
+          "ur": "یہ وقت کا لفظ ہے"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Sitting comes after coming, so it is a separate event.",
+        "ur": "بیٹھنا آنے کے بعد ہے، اس لیے یہ الگ کام ہے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch71-l02-ex02",
+      "id": "ch71-l02-ex06",
       "statement": {
-        "en": "In وَالَّذِينَ مَعَهُ أَشِدَّاءُ عَلَى الْكُفَّارِ رُحَمَاءُ بَيْنَهُمْ, أَشِدَّاءُ and رُحَمَاءُ are حَال.",
-        "ur": "وَالَّذِينَ مَعَهُ أَشِدَّاءُ عَلَى الْكُفَّارِ رُحَمَاءُ بَيْنَهُمْ میں أَشِدَّاءُ اور رُحَمَاءُ حال ہیں۔"
+        "en": "In يَبْكُونَ, the nūn must be dropped because the clause stands where a state word stands.",
+        "ur": "يَبْكُونَ میں نون گرنا ضروری ہے کیونکہ جملہ حال کی جگہ کھڑا ہے۔"
       },
       "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "False. They are nominative (ـُ), so they cannot be حَال. They are the predicates (خَبَر) of الَّذِينَ مَعَهُ: 'those with him ARE firm … merciful'. The حَال in this ayah come after تَرَاهُمْ.",
-        "ur": "غلط۔ یہ مرفوع (ـُ) ہیں، اس لیے حال نہیں ہو سکتے۔ یہ الَّذِينَ مَعَهُ کی خبریں ہیں: 'ان کے ساتھ والے سخت … رحم دل ہیں'۔ اس آیت میں حال تَرَاهُمْ کے بعد آتے ہیں۔"
+        "en": "False. The clause has the position as a whole; its verb keeps its nūn and its indicative ending.",
+        "ur": "غلط۔ پورے جملے کو وہ مقام حاصل ہے؛ اس کا فعل اپنا نون اور مرفوع ختم رکھتا ہے۔"
       }
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch71-l02-ex03",
+      "id": "ch71-l02-ex07",
       "mode": "TAP",
-      "sentence_ar": "وَجَاءُوا أَبَاهُمْ عِشَاءً ___",
+      "sentence_ar": "جَاءَ الطُّلَّابُ ___",
       "hint": {
-        "en": "12:16 — 'And they came to their father at night, weeping.' The حَال here is a verb.",
-        "ur": "12:16 — 'اور وہ رات کو روتے ہوئے اپنے باپ کے پاس آئے۔' یہاں حال ایک فعل ہے۔"
+        "en": "The students came laughing.",
+        "ur": "طلبہ ہنستے ہوئے آئے۔"
       },
       "options": [
         {
-          "ar": "يَبْكُونَ",
-          "ar_plain": "يبكون",
-          "translit": "yabkuuna",
-          "en": "weeping",
-          "ur": "روتے ہوئے"
+          "ar": "يَضْحَكُونَ",
+          "ar_plain": "يضحكون",
+          "translit": "yaḍḥakūna",
+          "en": "they laugh (plural, indicative)",
+          "ur": "وہ ہنستے ہیں (جمع، مرفوع)"
         },
         {
-          "ar": "بَكَوْا",
-          "ar_plain": "بكوا",
-          "translit": "bakaw",
-          "en": "they wept",
-          "ur": "وہ روئے"
+          "ar": "يَضْحَكُ",
+          "ar_plain": "يضحك",
+          "translit": "yaḍḥaku",
+          "en": "he laughs (singular)",
+          "ur": "وہ ہنستا ہے (واحد)"
         },
         {
-          "ar": "ابْكُوا",
-          "ar_plain": "ابكوا",
-          "translit": "ubkuu",
-          "en": "weep!",
-          "ur": "روؤ!"
+          "ar": "يَضْحَكَ",
+          "ar_plain": "يضحك",
+          "translit": "yaḍḥaka",
+          "en": "that he laugh",
+          "ur": "کہ وہ ہنسے"
         },
         {
-          "ar": "بُكَاءٌ",
-          "ar_plain": "بكاء",
-          "translit": "bukaa'un",
-          "en": "weeping (noun, nominative)",
-          "ur": "رونا (اسم، مرفوع)"
+          "ar": "يَضْحَكْ",
+          "ar_plain": "يضحك",
+          "translit": "yaḍḥak",
+          "en": "let him laugh",
+          "ur": "وہ ہنسے"
         }
       ],
       "correct_answer": {
-        "ar": "يَبْكُونَ",
-        "ar_plain": "يبكون",
-        "translit": "yabkuuna",
-        "en": "weeping",
-        "ur": "روتے ہوئے"
+        "ar": "يَضْحَكُونَ",
+        "ar_plain": "يضحكون",
+        "translit": "yaḍḥakūna",
+        "en": "they laugh (plural, indicative)",
+        "ur": "وہ ہنستے ہیں (جمع، مرفوع)"
       },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch71-l02-ex04",
-      "left_column": [
-        {
-          "ar": "رُكَّعًا",
-          "ar_plain": "ركعا",
-          "translit": "rukka'an",
-          "en": "bowing",
-          "ur": "رکوع کرتے"
-        },
-        {
-          "ar": "يَبْتَغُونَ فَضْلًا",
-          "ar_plain": "يبتغون فضلا",
-          "translit": "yabtaghuuna fadlan",
-          "en": "seeking bounty",
-          "ur": "فضل تلاش کرتے"
-        },
-        {
-          "ar": "أَشِدَّاءُ",
-          "ar_plain": "أشداء",
-          "translit": "ashiddaa'u",
-          "en": "firm",
-          "ur": "سخت"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "حَال — a single word",
-          "ur": "حال — ایک لفظ"
-        },
-        {
-          "en": "حَال — a whole verb clause",
-          "ur": "حال — پورا فعلیہ جملہ"
-        },
-        {
-          "en": "not a حَال — a nominative خَبَر",
-          "ur": "حال نہیں — مرفوع خبر"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ]
-      ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The clause is about the students, so the verb agrees with them: plural, and it keeps its nūn.",
+        "ur": "جملہ طلبہ کے بارے میں ہے، اس لیے فعل ان سے مطابقت رکھتا ہے: جمع، اور نون باقی رہتا ہے۔"
+      }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch71-l02-ex05",
+      "id": "ch71-l02-ex08",
       "target_translation": {
-        "en": "I saw the student reading the Quran humbly.",
-        "ur": "میں نے طالب علم کو خشوع سے قرآن پڑھتے دیکھا۔"
+        "en": "The girl came laughing.",
+        "ur": "لڑکی ہنستی ہوئی آئی۔"
       },
       "tiles": [
         {
-          "ar": "رَأَيْتُ",
-          "ar_plain": "رأيت",
-          "translit": "ra'aytu",
-          "en": "I saw",
-          "ur": "میں نے دیکھا"
+          "ar": "تَضْحَكُ",
+          "ar_plain": "تضحك",
+          "translit": "taḍḥaku",
+          "en": "laughing",
+          "ur": "ہنستی ہوئی"
         },
         {
-          "ar": "الطَّالِبَ",
-          "ar_plain": "الطالب",
-          "translit": "at-taaliba",
-          "en": "the student",
-          "ur": "طالب علم"
+          "ar": "جَاءَتِ",
+          "ar_plain": "جاءت",
+          "translit": "jāʾati",
+          "en": "came",
+          "ur": "آئی"
         },
         {
-          "ar": "يَقْرَأُ",
-          "ar_plain": "يقرأ",
-          "translit": "yaqra'u",
-          "en": "reading",
-          "ur": "پڑھتے"
-        },
-        {
-          "ar": "الْقُرْآنَ",
-          "ar_plain": "القرآن",
-          "translit": "al-qur'aana",
-          "en": "the Quran",
-          "ur": "قرآن"
-        },
-        {
-          "ar": "خَاشِعًا",
-          "ar_plain": "خاشعا",
-          "translit": "khaashi'an",
-          "en": "humbly",
-          "ur": "خشوع سے"
+          "ar": "الْبِنْتُ",
+          "ar_plain": "البنت",
+          "translit": "al-bintu",
+          "en": "the girl",
+          "ur": "لڑکی"
         }
       ],
       "correct_order": [
-        0,
         1,
         2,
-        3,
-        4
+        0
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch71-l02-ex06",
-      "prompt": {
-        "ar": "وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ",
-        "ar_plain": "وجاءوا أباهم عشاء يبكون",
-        "translit": "wa-jaa'uu abaahum 'ishaa'an yabkuuna",
-        "en": "And they came to their father at night, weeping.",
-        "ur": "اور وہ رات کو روتے ہوئے اپنے باپ کے پاس آئے۔"
-      },
-      "options": [
-        {
-          "en": "And they came to their father at night, weeping.",
-          "ur": "اور وہ رات کو روتے ہوئے اپنے باپ کے پاس آئے۔"
-        },
-        {
-          "en": "Their father came to them weeping at night.",
-          "ur": "ان کا باپ رات کو روتا ہوا ان کے پاس آیا۔"
-        },
-        {
-          "en": "They wept, then came to their father.",
-          "ur": "وہ روئے، پھر باپ کے پاس آئے۔"
-        },
-        {
-          "en": "They came at night to make their father weep.",
-          "ur": "وہ رات کو آئے تاکہ باپ کو رلائیں۔"
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "يَبْكُونَ is a حَال in the form of a sentence: it describes the brothers as they came — weeping (a show, as the story goes on to reveal). عِشَاءً ('at night') is a time ظَرْف.",
-        "ur": "يَبْكُونَ جملے کی شکل میں حال ہے: یہ آتے وقت بھائیوں کی حالت بتاتا ہے — روتے ہوئے (جو بعد میں دکھاوا ثابت ہوا)۔ عِشَاءً ('رات کو') ظرفِ زمان ہے۔"
+        "en": "The action, the doer, then the clause that tells her state.",
+        "ur": "کام، کرنے والی، پھر وہ جملہ جو اس کی حالت بتاتا ہے۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "The حَال in the Quran — a living picture",
-      "ar": "الْحَالُ فِي الْقُرْآنِ — صُورَةٌ حَيَّةٌ",
-      "ur": "قرآن میں حال — زندہ تصویر"
+      "en": "A clause that tells the state",
+      "ar": "الْحَالُ جُمْلَةً",
+      "ur": "حالت بتانے والا جملہ"
     },
     "ayah": {
       "surah": 12,
@@ -337,21 +401,26 @@
       "label": "Yusuf 12:16",
       "ar": "وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ",
       "en": "And they came to their father at night, weeping.",
-      "ur": "اور وہ رات کے وقت روتے ہوئے اپنے باپ کے پاس آئے",
+      "ur": "(یہ حرکت کرکے) وہ رات کے وقت باپ کے پاس روتے ہوئے آئے",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012016.mp3"
     },
     "highlighted_word_indices": [
+      2,
       3
     ],
+    "highlighted_words": [
+      "عِشَاءً",
+      "يَبْكُونَ"
+    ],
     "noor_explanation": {
-      "en": "وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ — Yusuf's brothers came at night, weeping. يَبْكُونَ is a حَال in sentence form: it shows the state they put on as they came. The grammar paints the scene the brothers wanted their father to see.",
-      "ur": "وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ — یوسف علیہ السلام کے بھائی رات کو روتے ہوئے آئے۔ يَبْكُونَ جملے کی شکل میں حال ہے: یہ بتاتا ہے کہ آتے وقت انہوں نے کون سی حالت بنائی ہوئی تھی۔ ترکیب وہی منظر دکھاتی ہے جو بھائی اپنے باپ کو دکھانا چاہتے تھے۔"
+      "en": "عِشَاءً يَبْكُونَ — one word tells when they came, and one clause tells in what state. Two jobs, and the verb of the clause stays as it is.",
+      "ur": "عِشَاءً يَبْكُونَ — ایک لفظ بتاتا ہے کہ وہ کب آئے، اور ایک جملہ بتاتا ہے کہ وہ کس حالت میں۔ دو کام، اور جملے کا فعل جیسا ہے ویسا رہتا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "A حَال can be one word (رُكَّعًا), two words for one person (رُكَّعًا سُجَّدًا), or a whole clause (يَبْكُونَ). And a nominative is never a حَال. Next: التَّمْيِيز.",
-      "ur": "حال ایک لفظ ہو سکتا ہے (رُكَّعًا)، ایک ہی شخص کے دو لفظ (رُكَّعًا سُجَّدًا)، یا پورا جملہ (يَبْكُونَ)۔ اور مرفوع لفظ کبھی حال نہیں ہوتا۔ آگے: تمییز۔"
+      "en": "You read a state that is a whole clause, told it from a time word, and kept its verb unchanged.",
+      "ur": "آپ نے ایسی حالت پڑھی جو پورا جملہ ہے، اسے وقت کے لفظ سے الگ کیا، اور اس کا فعل بدلے بغیر رکھا۔"
     }
   }
 }

@@ -2,78 +2,119 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 71, Lesson 4 — Numbers and the counted noun (تمييز العدد).",
+    "_note": "Chapter 71, Lesson 4 (ch71-l04, rebuilt; the old row's Quran title changes with its scope). One bounded sentence-level clarifier, the proposal's source example ازْدَادَ الْمُوَظَّفُ خِبْرَةً: the noun says in what respect the increase happened and is not a temporary state of the doer. ازْدَادَ, الْمُوَظَّفُ and خِبْرَةً are supplied whole, so no derived verb is formed. It is compared with the state prototype of Lesson 1, then a fresh instance of the same pattern (ازْدَادَ الطَّالِبُ عِلْمًا) is scored; the name تَمْيِيزُ النِّسْبَةِ comes only after the meaning is clear and there is no transformed-origin taxonomy, no superlative and no new conjugation. 19:4 (وَاشْتَعَلَ الرَّأْسُ شَيْبًا) is read as a supported excerpt; 54:12 is not used. Added 2026-10-04 in the proposal harvest, batch 10 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-71-content-proposal.md and its review amendments.",
+    "title": "Beyond Numbers: Clarifying a Statement",
+    "titleAr": "تَمْيِيزُ النِّسْبَةِ",
+    "titleUr": "تمییز: پورے بیان کی وضاحت",
     "chapter_order": 71,
     "lesson_order": 4,
-    "chapter_title": "الحال والتمييز",
-    "title": "Numbers and Their تمييز",
-    "titleAr": "تَمْيِيزُ الْعَدَدِ",
-    "source": "arabai-backend/prisma/fixtures",
-    "estimated_minutes": 10,
+    "estimated_minutes": 12,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 12,
+      "surah": 19,
       "ayah": 4,
-      "label": "Yusuf 12:4",
-      "ar": "إِذْ قَالَ يُوسُفُ لِأَبِيهِ يَا أَبَتِ إِنِّي رَأَيْتُ أَحَدَ عَشَرَ كَوْكَبًا وَالشَّمْسَ وَالْقَمَرَ رَأَيْتُهُمْ لِي سَاجِدِينَ",
-      "en": "When Joseph said to his father, 'O my father, indeed I have seen [in a dream] eleven stars and the sun and the moon; I saw them prostrating to me.'",
-      "ur": "جب یوسف نے اپنے باپ سے کہا: ابا جان! میں نے (خواب میں) گیارہ ستاروں اور سورج اور چاند کو دیکھا، میں نے انہیں اپنے آگے سجدہ کرتے دیکھا",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012004.mp3"
+      "label": "Maryam 19:4",
+      "ar": "وَاشْتَعَلَ الرَّأْسُ شَيْبًا",
+      "en": "and the head has blazed with white",
+      "ur": "اور سر بڑھاپے سے بھڑک اٹھا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/019004.mp3"
     },
     "noor_intro": {
-      "en": "إِنِّي رَأَيْتُ أَحَدَ عَشَرَ كَوْكَبًا — Yusuf saw 'eleven stars'. كَوْكَبًا is singular and accusative, even though there are eleven. The rule for the counted noun depends on the number — today you learn all three cases.",
-      "ur": "إِنِّي رَأَيْتُ أَحَدَ عَشَرَ كَوْكَبًا — یوسف علیہ السلام نے 'گیارہ ستارے' دیکھے۔ كَوْكَبًا واحد اور منصوب ہے، حالانکہ ستارے گیارہ ہیں۔ گنی جانے والی چیز کا قاعدہ عدد پر منحصر ہے — آج تینوں صورتیں سیکھیں گے۔"
+      "en": "The head blazed — with what? One noun answers: white hair. Here the noun does not describe a passing state; it says in what respect the statement is true.",
+      "ur": "سر بھڑک اٹھا — کس چیز سے؟ ایک اسم جواب دیتا ہے: سفید بالوں سے۔ یہاں اسم کوئی گزرتی حالت نہیں بتاتا؛ یہ بتاتا ہے کہ بیان کس لحاظ سے درست ہے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "3 to 10: plural, genitive",
-        "ar": "مِنْ ثَلَاثَةٍ إِلَى عَشَرَةٍ: جَمْعٌ مَجْرُورٌ",
-        "ur": "3 تا 10: جمع، مجرور"
+        "en": "Clarifying a whole statement",
+        "ar": "تَمْيِيزُ النِّسْبَةِ",
+        "ur": "پورے بیان کی وضاحت"
       },
       "explanation": {
-        "en": "After 3–10 the counted noun is plural and genitive, as the second term of an إضافة: ثَلَاثَةَ أَيَّامٍ (3:41), سَبْعَ سَمَاوَاتٍ, عَشْرُ لَيَالٍ.",
-        "ur": "3 سے 10 کے بعد گنی جانے والی چیز جمع اور مجرور ہوتی ہے، اضافت کے دوسرے جز کے طور پر: ثَلَاثَةَ أَيَّامٍ (3:41)، سَبْعَ سَمَاوَاتٍ، عَشْرُ لَيَالٍ۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "11 to 99: singular, accusative",
-        "ar": "مِنْ أَحَدَ عَشَرَ إِلَى تِسْعَةٍ وَتِسْعِينَ: مُفْرَدٌ مَنْصُوبٌ",
-        "ur": "11 تا 99: واحد، منصوب"
-      },
-      "explanation": {
-        "en": "After 11–99 the counted noun is a true تَمْيِيز: singular and accusative. أَحَدَ عَشَرَ كَوْكَبًا (12:4), ثَلَاثِينَ لَيْلَةً (7:142), تِسْعٌ وَتِسْعُونَ نَعْجَةً (38:23).",
-        "ur": "11 سے 99 کے بعد گنی جانے والی چیز اصل تمییز ہوتی ہے: واحد اور منصوب۔ أَحَدَ عَشَرَ كَوْكَبًا (12:4)، ثَلَاثِينَ لَيْلَةً (7:142)، تِسْعٌ وَتِسْعُونَ نَعْجَةً (38:23)۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "100 and 1000: singular, genitive",
-        "ar": "الْمِائَةُ وَالْأَلْفُ: مُفْرَدٌ مَجْرُورٌ",
-        "ur": "100 اور 1000: واحد، مجرور"
-      },
-      "explanation": {
-        "en": "After مِائَة and أَلْف the counted noun is singular and genitive: مِائَةَ عَامٍ (2:259), أَلْفَ سَنَةٍ (2:96).",
-        "ur": "مِائَة اور أَلْف کے بعد گنی جانے والی چیز واحد اور مجرور ہوتی ہے: مِائَةَ عَامٍ (2:259)، أَلْفَ سَنَةٍ (2:96)۔"
+        "en": "ازْدَادَ الْمُوَظَّفُ means 'the employee increased', and the question is: increased in what? The noun خِبْرَةً answers: in experience. It does not describe a passing state of the employee while he acted; it clears up in what respect the statement is true. This is again التَّمْيِيز, now clearing up a whole statement and not a number.",
+        "ur": "ازْدَادَ الْمُوَظَّفُ کا مطلب ہے 'ملازم بڑھا'، اور سوال ہے: کس چیز میں بڑھا؟ اسم خِبْرَةً جواب دیتا ہے: تجربے میں۔ یہ کام کرتے وقت ملازم کی کوئی گزرتی حالت نہیں بتاتا؛ یہ واضح کرتا ہے کہ بیان کس لحاظ سے درست ہے۔ یہ پھر التَّمْيِيز ہے، اب پورے بیان کی وضاحت کرتا ہے، عدد کی نہیں۔"
       }
     },
     {
       "type": "GRAMMAR_NOTE",
       "title": {
-        "en": "Quick check",
-        "ur": "فوری جانچ"
+        "en": "Given whole",
+        "ur": "پورے دیے گئے"
       },
       "body": {
-        "en": "3–10 → أَيَّامٍ (plural, genitive). 11–99 → يَوْمًا (singular, accusative). 100 / 1000 → يَوْمٍ (singular, genitive).",
-        "ur": "3 تا 10 → أَيَّامٍ (جمع، مجرور)۔ 11 تا 99 → يَوْمًا (واحد، منصوب)۔ 100 / 1000 → يَوْمٍ (واحد، مجرور)۔"
+        "en": "ازْدَادَ means 'increased', الْمُوَظَّفُ means 'the employee' and خِبْرَةً means 'experience'. They are given to you with their meanings; you are not asked to form ازْدَادَ or any other derived verb.",
+        "ur": "ازْدَادَ کا مطلب 'بڑھا'، الْمُوَظَّفُ کا 'ملازم' اور خِبْرَةً کا 'تجربہ' ہے۔ یہ آپ کو معنی کے ساتھ دیے جاتے ہیں؛ آپ سے ازْدَادَ یا کوئی اور مشتق فعل بنانے کو نہیں کہا جاتا۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "ازْدَادَ الْمُوَظَّفُ خِبْرَةً",
+        "ar_plain": "ازداد الموظف خبرة",
+        "translit": "azdāda al-muwaẓẓafu khibratan",
+        "en": "The employee increased in experience.",
+        "ur": "ملازم تجربے میں بڑھا۔"
+      },
+      "explanation": {
+        "en": "The action is ازْدَادَ, the one who increased is الْمُوَظَّفُ, and خِبْرَةً says in what respect: in experience. Ask 'increased in what?' and the noun answers.",
+        "ur": "کام ازْدَادَ ہے، بڑھنے والا الْمُوَظَّفُ ہے، اور خِبْرَةً بتاتا ہے کس لحاظ سے: تجربے میں۔ پوچھیں 'کس چیز میں بڑھا؟' اور اسم جواب دیتا ہے۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "A passing state, or a respect",
+        "ur": "گزرتی حالت، یا لحاظ"
+      },
+      "examples": [
+        {
+          "ar": "جَاءَ الْمُوَظَّفُ مُبْتَسِمًا",
+          "ar_plain": "جاء الموظف مبتسما",
+          "translit": "jāʾa al-muwaẓẓafu mubtasiman",
+          "en": "The employee came smiling.",
+          "ur": "ملازم مسکراتا ہوا آیا۔"
+        },
+        {
+          "ar": "ازْدَادَ الْمُوَظَّفُ خِبْرَةً",
+          "ar_plain": "ازداد الموظف خبرة",
+          "translit": "azdāda al-muwaẓẓafu khibratan",
+          "en": "The employee increased in experience.",
+          "ur": "ملازم تجربے میں بڑھا۔"
+        }
+      ],
+      "explanation": {
+        "en": "مُبْتَسِمًا is the state he was in while coming, and it could pass. خِبْرَةً is not a state of his body or mood; it says in what respect he increased. The first is Lesson 1's state word; the second clarifies the statement.",
+        "ur": "مُبْتَسِمًا وہ حالت ہے جس میں وہ آتے وقت تھا، اور وہ گزر سکتی ہے۔ خِبْرَةً اس کے جسم یا مزاج کی حالت نہیں؛ یہ بتاتا ہے کہ وہ کس لحاظ سے بڑھا۔ پہلا سبق 1 کا حال ہے؛ دوسرا بیان کی وضاحت کرتا ہے۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "وَاشْتَعَلَ الرَّأْسُ شَيْبًا",
+        "ar_plain": "واشتعل الراس شيبا",
+        "translit": "waāshtaʿala ar-raʾsu shayban",
+        "en": "and the head has blazed with white",
+        "ur": "اور سر بڑھاپے سے بھڑک اٹھا"
+      },
+      "explanation": {
+        "en": "وَاشْتَعَلَ الرَّأْسُ شَيْبًا: 'and the head has blazed with white'. The question 'blazed in what?' is answered by شَيْبًا, white hair: it says in what respect the head blazed. You read it with its meaning; you do not build it. (Maryam 19:4) (Maryam 19:4)",
+        "ur": "وَاشْتَعَلَ الرَّأْسُ شَيْبًا: 'اور سر بڑھاپے سے بھڑک اٹھا'۔ سوال 'کس چیز سے بھڑکا؟' کا جواب شَيْبًا، سفید بال، ہے: یہ بتاتا ہے کہ سر کس لحاظ سے بھڑکا۔ آپ اسے اس کے معنی کے ساتھ پڑھتے ہیں؛ بناتے نہیں۔ (مریم 19:4) (Maryam 19:4)"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "The name",
+        "ur": "نام"
+      },
+      "body": {
+        "en": "Grammar books call this kind of clarifier تَمْيِيزُ النِّسْبَةِ, 'clarifier of the relation', and the number and measure kind of Lesson 3 are the other group. You are asked what a noun does in its sentence; you are not asked to sort every sub-kind.",
+        "ur": "نحو کی کتابیں اس قسم کی وضاحت کو تَمْيِيزُ النِّسْبَةِ، 'نسبت کی وضاحت'، کہتی ہیں، اور سبق 3 کے عدد اور ناپ والے دوسرا گروہ ہیں۔ آپ سے یہ پوچھا جاتا ہے کہ اسم اپنے جملے میں کیا کام کرتا ہے؛ ہر ذیلی قسم الگ کرنے کو نہیں کہا جاتا۔"
       }
     }
   ],
@@ -82,342 +123,279 @@
       "type": "TAP_TRANSLATION",
       "id": "ch71-l04-ex01",
       "prompt": {
-        "ar": "أَحَدَ عَشَرَ كَوْكَبًا",
-        "ar_plain": "أحد عشر كوكبا",
-        "translit": "ahada 'ashara kawkaban",
-        "en": "eleven stars",
-        "ur": "گیارہ ستارے"
+        "ar": "ازْدَادَ الْمُوَظَّفُ خِبْرَةً",
+        "ar_plain": "ازداد الموظف خبرة",
+        "translit": "azdāda al-muwaẓẓafu khibratan",
+        "en": "(what does خِبْرَةً tell?)",
+        "ur": "(خِبْرَةً کیا بتاتا ہے؟)"
       },
       "options": [
         {
-          "en": "eleven stars",
-          "ur": "گیارہ ستارے"
+          "en": "In what respect he increased: in experience",
+          "ur": "وہ کس لحاظ سے بڑھا: تجربے میں"
         },
         {
-          "en": "one star",
-          "ur": "ایک ستارہ"
+          "en": "The state he was in while he increased",
+          "ur": "بڑھتے وقت وہ کس حالت میں تھا"
         },
         {
-          "en": "the eleventh star",
-          "ur": "گیارہواں ستارہ"
+          "en": "Who increased",
+          "ur": "کون بڑھا"
         },
         {
-          "en": "ten stars and one more",
-          "ur": "دس ستارے اور ایک"
+          "en": "When he increased",
+          "ur": "وہ کب بڑھا"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "From 12:4. With 11–99 the counted noun is a singular accusative تَمْيِيز: كَوْكَبًا ('star'), even though the meaning is plural.",
-        "ur": "12:4 سے۔ 11 سے 99 تک گنی جانے والی چیز واحد منصوب تمییز ہوتی ہے: كَوْكَبًا ('ستارہ')، اگرچہ معنی جمع کا ہے۔"
+        "en": "Ask 'increased in what?' and خِبْرَةً answers.",
+        "ur": "پوچھیں 'کس چیز میں بڑھا؟' اور خِبْرَةً جواب دیتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch71-l04-ex02",
+      "prompt": {
+        "ar": "جَاءَ الْمُوَظَّفُ مُبْتَسِمًا · ازْدَادَ الْمُوَظَّفُ خِبْرَةً",
+        "ar_plain": "جاء الموظف مبتسما · ازداد الموظف خبرة",
+        "translit": "jāʾa al-muwaẓẓafu mubtasiman · azdāda al-muwaẓẓafu khibratan",
+        "en": "(which word tells a passing state during the action?)",
+        "ur": "(کون سا لفظ کام کے دوران گزرتی حالت بتاتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "خِبْرَةً — experience",
+          "ur": "خِبْرَةً — تجربہ"
+        },
+        {
+          "en": "الْمُوَظَّفُ — the employee",
+          "ur": "الْمُوَظَّفُ — ملازم"
+        },
+        {
+          "en": "مُبْتَسِمًا — smiling",
+          "ur": "مُبْتَسِمًا — مسکراتا ہوا"
+        },
+        {
+          "en": "ازْدَادَ — increased",
+          "ur": "ازْدَادَ — بڑھا"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Smiling is a state while coming. Experience is the respect in which he increased.",
+        "ur": "مسکرانا آتے وقت کی حالت ہے۔ تجربہ وہ لحاظ ہے جس میں وہ بڑھا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch71-l04-ex03",
+      "prompt": {
+        "ar": "ازْدَادَ الطَّالِبُ عِلْمًا",
+        "ar_plain": "ازداد الطالب علما",
+        "translit": "azdāda aṭ-ṭālibu ʿilman",
+        "en": "(a new sentence, the same pattern: what does عِلْمًا tell?)",
+        "ur": "(نیا جملہ، وہی ساخت: عِلْمًا کیا بتاتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "The state the student was in while he increased",
+          "ur": "بڑھتے وقت طالب علم کس حالت میں تھا"
+        },
+        {
+          "en": "Where the student increased",
+          "ur": "طالب علم کہاں بڑھا"
+        },
+        {
+          "en": "Who the student is",
+          "ur": "طالب علم کون ہے"
+        },
+        {
+          "en": "In what respect the student increased: in knowledge",
+          "ur": "طالب علم کس لحاظ سے بڑھا: علم میں"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The same job as خِبْرَةً: it says in what respect the statement is true.",
+        "ur": "وہی کام جو خِبْرَةً کا ہے: یہ بتاتا ہے کہ بیان کس لحاظ سے درست ہے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch71-l04-ex02",
+      "id": "ch71-l04-ex04",
       "statement": {
-        "en": "With the numbers 3 to 10, the counted noun is a singular accusative.",
-        "ur": "3 سے 10 تک کے اعداد کے ساتھ گنی جانے والی چیز واحد منصوب ہوتی ہے۔",
-        "ar_example": {
-          "ar": "ثَلَاثَةَ أَيَّامٍ",
-          "ar_plain": "ثلاثة أيام",
-          "translit": "thalaathata ayyaamin",
-          "en": "three days",
-          "ur": "تین دن"
-        }
+        "en": "خِبْرَةً tells how the employee looked at the moment he increased.",
+        "ur": "خِبْرَةً بتاتا ہے کہ بڑھتے وقت ملازم کیسا دکھائی دیتا تھا۔"
       },
       "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "False. With 3–10 the counted noun is plural and genitive: ثَلَاثَةَ أَيَّامٍ (3:41). The singular accusative belongs to 11–99: أَحَدَ عَشَرَ كَوْكَبًا, ثَلَاثِينَ لَيْلَةً.",
-        "ur": "غلط۔ 3 سے 10 تک گنی جانے والی چیز جمع اور مجرور ہوتی ہے: ثَلَاثَةَ أَيَّامٍ (3:41)۔ واحد منصوب 11 سے 99 تک کے لیے ہے: أَحَدَ عَشَرَ كَوْكَبًا، ثَلَاثِينَ لَيْلَةً۔"
+        "en": "False. It does not describe how he looked; it says in what respect he increased.",
+        "ur": "غلط۔ یہ نہیں بتاتا کہ وہ کیسا دکھائی دیتا تھا؛ یہ بتاتا ہے کہ وہ کس لحاظ سے بڑھا۔"
       }
     },
     {
-      "type": "FILL_BLANK",
-      "id": "ch71-l04-ex03",
-      "mode": "TAP",
-      "sentence_ar": "وَوَاعَدْنَا مُوسَىٰ ثَلَاثِينَ ___",
-      "hint": {
-        "en": "7:142 — 'And We made an appointment with Musa for thirty nights.' After 11–99: singular accusative.",
-        "ur": "7:142 — 'اور ہم نے موسیٰ سے تیس راتوں کا وعدہ کیا۔' 11 سے 99 کے بعد: واحد منصوب۔"
-      },
-      "options": [
-        {
-          "ar": "لَيْلَةً",
-          "ar_plain": "ليلة",
-          "translit": "laylatan",
-          "en": "night (singular, accusative)",
-          "ur": "رات (واحد، منصوب)"
-        },
-        {
-          "ar": "لَيَالٍ",
-          "ar_plain": "ليال",
-          "translit": "layaalin",
-          "en": "nights (plural)",
-          "ur": "راتیں (جمع)"
-        },
-        {
-          "ar": "لَيْلَةٍ",
-          "ar_plain": "ليلة",
-          "translit": "laylatin",
-          "en": "night (genitive)",
-          "ur": "رات (مجرور)"
-        },
-        {
-          "ar": "اللَّيْلَةَ",
-          "ar_plain": "الليلة",
-          "translit": "al-laylata",
-          "en": "tonight",
-          "ur": "آج رات"
-        }
-      ],
-      "correct_answer": {
-        "ar": "لَيْلَةً",
-        "ar_plain": "ليلة",
-        "translit": "laylatan",
-        "en": "night (singular, accusative)",
-        "ur": "رات (واحد، منصوب)"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch71-l04-ex04",
-      "mode": "TAP",
-      "sentence_ar": "آيَتُكَ أَلَّا تُكَلِّمَ النَّاسَ ثَلَاثَةَ ___",
-      "hint": {
-        "en": "3:41 — 'that you will not speak to the people for three days'. After 3–10: plural genitive.",
-        "ur": "3:41 — 'کہ تم تین دن لوگوں سے بات نہ کرو گے'۔ 3 سے 10 کے بعد: جمع مجرور۔"
-      },
-      "options": [
-        {
-          "ar": "أَيَّامٍ",
-          "ar_plain": "أيام",
-          "translit": "ayyaamin",
-          "en": "days (plural, genitive)",
-          "ur": "دن (جمع، مجرور)"
-        },
-        {
-          "ar": "يَوْمًا",
-          "ar_plain": "يوما",
-          "translit": "yawman",
-          "en": "day (singular, accusative)",
-          "ur": "دن (واحد، منصوب)"
-        },
-        {
-          "ar": "أَيَّامًا",
-          "ar_plain": "أياما",
-          "translit": "ayyaaman",
-          "en": "days (accusative)",
-          "ur": "دن (منصوب)"
-        },
-        {
-          "ar": "يَوْمٍ",
-          "ar_plain": "يوم",
-          "translit": "yawmin",
-          "en": "day (singular, genitive)",
-          "ur": "دن (واحد، مجرور)"
-        }
-      ],
-      "correct_answer": {
-        "ar": "أَيَّامٍ",
-        "ar_plain": "أيام",
-        "translit": "ayyaamin",
-        "en": "days (plural, genitive)",
-        "ur": "دن (جمع، مجرور)"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
+      "type": "TAP_TRANSLATION",
       "id": "ch71-l04-ex05",
-      "left_column": [
-        {
-          "ar": "ثَلَاثَةُ أَيَّامٍ",
-          "ar_plain": "ثلاثة أيام",
-          "translit": "thalaathatu ayyaamin",
-          "en": "three days",
-          "ur": "تین دن"
-        },
-        {
-          "ar": "أَحَدَ عَشَرَ كَوْكَبًا",
-          "ar_plain": "أحد عشر كوكبا",
-          "translit": "ahada 'ashara kawkaban",
-          "en": "eleven stars",
-          "ur": "گیارہ ستارے"
-        },
-        {
-          "ar": "مِائَةَ عَامٍ",
-          "ar_plain": "مائة عام",
-          "translit": "mi'ata 'aamin",
-          "en": "a hundred years",
-          "ur": "سو سال"
-        },
-        {
-          "ar": "أَرْبَعِينَ لَيْلَةً",
-          "ar_plain": "أربعين ليلة",
-          "translit": "arba'iina laylatan",
-          "en": "forty nights",
-          "ur": "چالیس راتیں"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "3–10: plural, genitive",
-          "ur": "3 تا 10: جمع، مجرور"
-        },
-        {
-          "en": "11–19: singular accusative",
-          "ur": "11 تا 19: واحد منصوب"
-        },
-        {
-          "en": "100 and 1000: singular, genitive",
-          "ur": "100 اور 1000: واحد، مجرور"
-        },
-        {
-          "en": "20–99: singular accusative",
-          "ur": "20 تا 99: واحد منصوب"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch71-l04-ex06",
-      "target_translation": {
-        "en": "Musa completed forty nights.",
-        "ur": "موسیٰ نے چالیس راتیں پوری کیں۔"
+      "prompt": {
+        "ar": "وَاشْتَعَلَ الرَّأْسُ شَيْبًا",
+        "ar_plain": "واشتعل الراس شيبا",
+        "translit": "waāshtaʿala ar-raʾsu shayban",
+        "en": "(19:4: what does شَيْبًا tell?)",
+        "ur": "(19:4: شَيْبًا کیا بتاتا ہے؟)"
       },
-      "tiles": [
+      "options": [
         {
-          "ar": "أَتَمَّ",
-          "ar_plain": "أتم",
-          "translit": "atamma",
-          "en": "completed",
-          "ur": "پوری کیں"
+          "en": "The state of the one who prays",
+          "ur": "دعا کرنے والے کی حالت"
         },
         {
-          "ar": "مُوسَىٰ",
-          "ar_plain": "موسى",
-          "translit": "muusaa",
-          "en": "Musa",
-          "ur": "موسیٰ"
+          "en": "In what respect the head blazed: with white hair",
+          "ur": "سر کس لحاظ سے بھڑکا: سفید بالوں سے"
         },
         {
-          "ar": "أَرْبَعِينَ",
-          "ar_plain": "أربعين",
-          "translit": "arba'iina",
-          "en": "forty",
-          "ur": "چالیس"
+          "en": "When the head blazed",
+          "ur": "سر کب بھڑکا"
         },
         {
-          "ar": "لَيْلَةً",
-          "ar_plain": "ليلة",
-          "translit": "laylatan",
-          "en": "night",
-          "ur": "رات"
-        },
-        {
-          "ar": "لَيَالٍ",
-          "ar_plain": "ليال",
-          "translit": "layaalin",
-          "en": "nights",
-          "ur": "راتیں"
+          "en": "The one who blazed",
+          "ur": "جو بھڑکا"
         }
       ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "xp_value": 1
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "It clears up what the blazing was: white hair.",
+        "ur": "یہ واضح کرتا ہے کہ بھڑکنا کس چیز کا تھا: سفید بال۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch71-l04-ex07",
+      "id": "ch71-l04-ex06",
       "prompt": {
-        "ar": "فَأَمَاتَهُ اللَّهُ مِائَةَ عَامٍ",
-        "ar_plain": "فأماته الله مائة عام",
-        "translit": "fa-amaatahu allaahu mi'ata 'aamin",
-        "en": "So Allah caused him to die for a hundred years.",
-        "ur": "تو اللہ نے اسے سو برس تک مردہ رکھا۔"
+        "ar": "ازْدَادَ الْمُوَظَّفُ خِبْرَةً",
+        "ar_plain": "ازداد الموظف خبرة",
+        "translit": "azdāda al-muwaẓẓafu khibratan",
+        "en": "(which question does خِبْرَةً answer?)",
+        "ur": "(خِبْرَةً کس سوال کا جواب ہے؟)"
       },
       "options": [
         {
-          "en": "So Allah caused him to die for a hundred years.",
-          "ur": "تو اللہ نے اسے سو برس تک مردہ رکھا۔"
+          "en": "'In what state was he while he came?'",
+          "ur": "'آتے وقت وہ کس حالت میں تھا؟'"
         },
         {
-          "en": "So Allah gave him a hundred years of life.",
-          "ur": "تو اللہ نے اسے سو برس کی زندگی دی۔"
+          "en": "'Whom did he increase?'",
+          "ur": "'اس نے کسے بڑھایا؟'"
         },
         {
-          "en": "A hundred years later he died.",
-          "ur": "سو برس بعد وہ مر گیا۔"
+          "en": "'Increased in what?'",
+          "ur": "'کس چیز میں بڑھا؟'"
         },
         {
-          "en": "Allah caused a hundred to die in one year.",
-          "ur": "اللہ نے ایک سال میں سو کو موت دی۔"
+          "en": "'When did he increase?'",
+          "ur": "'وہ کب بڑھا؟'"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "From 2:259. With مِائَة and أَلْف the counted noun is singular and genitive: مِائَةَ عَامٍ, أَلْفَ سَنَةٍ.",
-        "ur": "2:259 سے۔ مِائَة اور أَلْف کے ساتھ گنی جانے والی چیز واحد اور مجرور ہوتی ہے: مِائَةَ عَامٍ، أَلْفَ سَنَةٍ۔"
+        "en": "The state question belongs to Lesson 1's state word; this noun answers 'in what?'.",
+        "ur": "حالت کا سوال سبق 1 کے حال کا ہے؛ یہ اسم 'کس چیز میں؟' کا جواب دیتا ہے۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch71-l04-ex07",
+      "target_translation": {
+        "en": "The student increased in knowledge.",
+        "ur": "طالب علم علم میں بڑھا۔"
+      },
+      "tiles": [
+        {
+          "ar": "عِلْمًا",
+          "ar_plain": "علما",
+          "translit": "ʿilman",
+          "en": "in knowledge",
+          "ur": "علم میں"
+        },
+        {
+          "ar": "ازْدَادَ",
+          "ar_plain": "ازداد",
+          "translit": "azdāda",
+          "en": "increased",
+          "ur": "بڑھا"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibu",
+          "en": "the student",
+          "ur": "طالب علم"
+        }
+      ],
+      "correct_order": [
+        1,
+        2,
+        0
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The action, the one who increased, then the noun that clears up the respect.",
+        "ur": "کام، بڑھنے والا، پھر وہ اسم جو لحاظ واضح کرے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch71-l04-ex08",
+      "statement": {
+        "en": "In both جَاءَ الْمُوَظَّفُ مُبْتَسِمًا and ازْدَادَ الْمُوَظَّفُ خِبْرَةً, the last word is a state word.",
+        "ur": "جَاءَ الْمُوَظَّفُ مُبْتَسِمًا اور ازْدَادَ الْمُوَظَّفُ خِبْرَةً دونوں میں آخری لفظ حال ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. Only مُبْتَسِمًا is a state; خِبْرَةً clears up in what respect he increased.",
+        "ur": "غلط۔ صرف مُبْتَسِمًا حال ہے؛ خِبْرَةً واضح کرتا ہے کہ وہ کس لحاظ سے بڑھا۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Numbers and the counted noun",
-      "ar": "الْعَدَدُ وَتَمْيِيزُهُ",
-      "ur": "عدد اور اس کی تمییز"
+      "en": "A noun that clears up a statement",
+      "ar": "تَمْيِيزُ النِّسْبَةِ",
+      "ur": "بیان کی وضاحت کرنے والا اسم"
     },
     "ayah": {
-      "surah": 7,
-      "ayah": 142,
-      "label": "Al-A'raf 7:142",
-      "ar": "وَوَاعَدْنَا مُوسَىٰ ثَلَاثِينَ لَيْلَةً وَأَتْمَمْنَاهَا بِعَشْرٍ فَتَمَّ مِيقَاتُ رَبِّهِ أَرْبَعِينَ لَيْلَةً",
-      "en": "And We made an appointment with Moses for thirty nights and perfected them by [the addition of] ten; so the term of his Lord was completed as forty nights.",
-      "ur": "اور ہم نے موسیٰ سے تیس راتوں کا وعدہ کیا اور دس (راتیں) ملا کر اسے پورا کیا، تو ان کے رب کی مقررہ مدت چالیس راتیں پوری ہوئی",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/007142.mp3"
+      "surah": 19,
+      "ayah": 4,
+      "label": "Maryam 19:4",
+      "ar": "وَاشْتَعَلَ الرَّأْسُ شَيْبًا",
+      "en": "and the head has blazed with white",
+      "ur": "اور سر بڑھاپے سے بھڑک اٹھا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/019004.mp3"
     },
     "highlighted_word_indices": [
-      2,
-      3,
-      9
+      0,
+      2
+    ],
+    "highlighted_words": [
+      "وَاشْتَعَلَ",
+      "شَيْبًا"
     ],
     "noor_explanation": {
-      "en": "ثَلَاثِينَ لَيْلَةً … أَرْبَعِينَ لَيْلَةً — thirty nights, completed to forty. Both times لَيْلَةً is singular and accusative, the تَمْيِيز of a number between 11 and 99. The appointment of Musa with his Lord is counted in the grammar of number.",
-      "ur": "ثَلَاثِينَ لَيْلَةً … أَرْبَعِينَ لَيْلَةً — تیس راتیں، چالیس تک پوری کی گئیں۔ دونوں بار لَيْلَةً واحد اور منصوب ہے، 11 اور 99 کے بیچ کے عدد کی تمییز۔ موسیٰ علیہ السلام کی اپنے رب سے ملاقات کی مدت عدد کی ترکیب میں گنی گئی ہے۔"
+      "en": "وَاشْتَعَلَ الرَّأْسُ شَيْبًا — the statement says the head blazed, and the noun says with what: white hair.",
+      "ur": "وَاشْتَعَلَ الرَّأْسُ شَيْبًا — بیان کہتا ہے کہ سر بھڑکا، اور اسم بتاتا ہے کس چیز سے: سفید بالوں سے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "The counted noun follows the number: 3–10 plural genitive, 11–99 singular accusative, 100 and 1000 singular genitive. Next: telling a حَال from a تَمْيِيز.",
-      "ur": "گنی جانے والی چیز عدد کے تابع ہے: 3 تا 10 جمع مجرور، 11 تا 99 واحد منصوب، 100 اور 1000 واحد مجرور۔ آگے: حال اور تمییز میں فرق۔"
+      "en": "You told a noun that clears up a statement from a passing state, and applied the same pattern to a new sentence.",
+      "ur": "آپ نے بیان کی وضاحت کرنے والے اسم کو گزرتی حالت سے الگ کیا، اور وہی ساخت نئے جملے پر لگائی۔"
     }
   }
 }

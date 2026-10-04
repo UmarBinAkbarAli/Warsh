@@ -2,391 +2,403 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 72, Lesson 7 — Address in the Quran's family stories: يَا أَبَتِ، يَا بُنَيَّ، and calls without يَا.",
+    "_note": "Chapter 72, Lesson 7 (ch72-l06). The exact whole of 9:119 (يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَكُونُوا مَعَ الصَّادِقِينَ): the call, then two coordinated commands. The old map joined the opening of the ayah to its later command and dropped اتَّقُوا اللَّهَ وَ; the whole ayah is used here. Only the address and the words in the ayah are taught: no 'emotional climax', no history, no riba, no reason for revelation, and no claim that the course ends in 'all of Quranic grammar'. A fresh authored address and a second exact Quran excerpt (4:1) follow. The old ch72-l07 'emotional climax' content is not moved here; the row itself becomes CL18 (Lesson 8). Added 2026-10-04 in the proposal harvest, batch 10 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-72-content-proposal.md and its review amendments.",
+    "title": "A Call in the Quran — 9:119",
+    "titleAr": "النِّدَاءُ فِي الْقُرْآنِ — التَّوْبَةِ ١١٩",
+    "titleUr": "قرآن میں ایک پکار — 9:119",
     "chapter_order": 72,
     "lesson_order": 7,
-    "chapter_title": "المنادى",
-    "title": "Calling Family — يَا أَبَتِ، يَا بُنَيَّ",
-    "titleAr": "نِدَاءُ الْأَهْلِ: يَا أَبَتِ، يَا بُنَيَّ",
-    "source": "arabai-backend/prisma/fixtures",
-    "estimated_minutes": 10,
+    "estimated_minutes": 12,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 12,
-      "ayah": 4,
-      "label": "Yusuf 12:4",
-      "ar": "إِذْ قَالَ يُوسُفُ لِأَبِيهِ يَا أَبَتِ إِنِّي رَأَيْتُ أَحَدَ عَشَرَ كَوْكَبًا وَالشَّمْسَ وَالْقَمَرَ رَأَيْتُهُمْ لِي سَاجِدِينَ",
-      "en": "When Joseph said to his father, 'O my father, indeed I have seen eleven stars and the sun and the moon; I saw them prostrating to me.'",
-      "ur": "جب یوسف نے اپنے والد سے کہا: اے میرے ابا، میں نے گیارہ ستاروں اور سورج اور چاند کو دیکھا، میں نے انہیں اپنے آگے سجدہ کرتے دیکھا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012004.mp3"
+      "surah": 9,
+      "ayah": 119,
+      "label": "At-Tawbah 9:119",
+      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَكُونُوا مَعَ الصَّادِقِينَ",
+      "en": "O you who have believed, fear Allāh and be with those who are true.",
+      "ur": "اے اہل ایمان! خدا سے ڈرتے رہو اور راست بازوں کے ساتھ رہو",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/009119.mp3"
     },
     "noor_intro": {
-      "en": "يَا أَبَتِ — 'O my father'. Yusuf speaks to Yaʿqub. Family members in the Quran call one another with special forms: يَا أَبَتِ، يَا بُنَيَّ. Today you read them in their stories.",
-      "ur": "يَا أَبَتِ — 'اے میرے ابا'۔ یوسف علیہ السلام یعقوب علیہ السلام سے بات کر رہے ہیں۔ قرآن میں گھر والے ایک دوسرے کو خاص صیغوں سے پکارتے ہیں: يَا أَبَتِ، يَا بُنَيَّ۔ آج آپ انہیں ان کے قصوں میں پڑھیں گے۔"
+      "en": "One ayah, three parts: a call, and two things that those who are called are told. Read where the call ends and where each command begins.",
+      "ur": "ایک آیت، تین حصے: ایک پکار، اور دو باتیں جو پکارے ہوؤں سے کہی گئیں۔ دیکھیں پکار کہاں ختم ہوتی ہے اور ہر حکم کہاں سے شروع ہوتا ہے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "يَا أَبَتِ — 'O my father'",
-        "ar": "يَا أَبَتِ",
-        "ur": "يَا أَبَتِ — 'اے میرے ابا'"
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَكُونُوا مَعَ الصَّادِقِينَ",
+        "ar_plain": "يا ايها الذين امنوا اتقوا الله وكونوا مع الصادقين",
+        "translit": "yaā ʾayyuhā alladhīna ʾāmanū attaqū al-laha wakūnū maʿa aṣ-ṣādiqīna",
+        "en": "O you who have believed, fear Allāh and be with those who are true.",
+        "ur": "اے اہل ایمان! خدا سے ڈرتے رہو اور راست بازوں کے ساتھ رہو"
       },
       "explanation": {
-        "en": "يَا أَبَتِ means يَا أَبِي, 'O my father': the تِ takes the place of 'my'. Yusuf uses it with Yaʿqub (12:4), and Ibrahim uses it again and again with his father (19:42–45).",
-        "ur": "يَا أَبَتِ کا مطلب ہے يَا أَبِي، 'اے میرے ابا': تِ 'میرے' کی جگہ ہے۔ یوسف علیہ السلام یعقوب علیہ السلام کے لیے اسے استعمال کرتے ہیں (12:4)، اور ابراہیم علیہ السلام اپنے والد سے بار بار (19:42–45)۔"
-      },
-      "examples": [
-        {
-          "ar": "يَا أَبَتِ",
-          "ar_plain": "يا أبت",
-          "translit": "yaa abati",
-          "en": "O my father!",
-          "ur": "اے میرے ابا!"
-        }
-      ]
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "يَا بُنَيَّ — 'O my dear son'",
-        "ar": "يَا بُنَيَّ",
-        "ur": "يَا بُنَيَّ — 'اے میرے پیارے بیٹے'"
-      },
-      "explanation": {
-        "en": "بُنَيّ is a small, tender form of ابْن ('son'), and the final يَّ is 'my': 'my dear son'. Luqman uses it with his son: يَا بُنَيَّ لَا تُشْرِكْ بِاللَّهِ (31:13). Like يَا قَوْمِ, it is muḍāf to 'my'.",
-        "ur": "بُنَيّ لفظ ابْن ('بیٹا') کی چھوٹی، پیار بھری شکل ہے، اور آخر کا يَّ 'میرا' ہے: 'میرے پیارے بیٹے'۔ لقمان اپنے بیٹے سے کہتے ہیں: يَا بُنَيَّ لَا تُشْرِكْ بِاللَّهِ (31:13)۔ يَا قَوْمِ کی طرح یہ بھی 'میرے' کی طرف مضاف ہے۔"
-      },
-      "examples": [
-        {
-          "ar": "يَا بُنَيَّ",
-          "ar_plain": "يا بني",
-          "translit": "yaa bunayya",
-          "en": "O my dear son!",
-          "ur": "اے میرے پیارے بیٹے!"
-        }
-      ]
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "A call without يَا",
-        "ar": "حَذْفُ حَرْفِ النِّدَاءِ",
-        "ur": "حرفِ ندا کے بغیر ندا"
-      },
-      "explanation": {
-        "en": "يَا can be left out when the context makes the call clear: يُوسُفُ أَعْرِضْ عَنْ هَٰذَا — 'Yusuf, turn away from this' (12:29). The name keeps its vocative ḍamma, and a command follows. You saw the same with رَبِّ and رَبَّنَا.",
-        "ur": "جب سیاق سے ندا واضح ہو تو يَا چھوڑا جا سکتا ہے: يُوسُفُ أَعْرِضْ عَنْ هَٰذَا — 'یوسف، اس بات کو جانے دو' (12:29)۔ نام پر منادیٰ کا ضمہ رہتا ہے، اور بعد میں حکم آتا ہے۔ یہی آپ رَبِّ اور رَبَّنَا میں دیکھ چکے ہیں۔"
+        "en": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَكُونُوا مَعَ الصَّادِقِينَ: 'O you who believe, fear Allah and be with the truthful'. The call is يَا أَيُّهَا الَّذِينَ آمَنُوا. Then two commands, joined by وَ: اتَّقُوا اللَّهَ and كُونُوا مَعَ الصَّادِقِينَ. (At-Tawbah 9:119) (At-Tawbah 9:119)",
+        "ur": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَكُونُوا مَعَ الصَّادِقِينَ: 'اے ایمان والو، اللہ سے ڈرو اور سچوں کے ساتھ رہو'۔ پکار يَا أَيُّهَا الَّذِينَ آمَنُوا ہے۔ پھر دو حکم، وَ سے جڑے ہوئے: اتَّقُوا اللَّهَ اور كُونُوا مَعَ الصَّادِقِينَ۔ (التوبہ 9:119) (At-Tawbah 9:119)"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "يُوسُفُ أَيُّهَا الصِّدِّيقُ أَفْتِنَا",
-        "ar_plain": "يوسف أيها الصديق أفتنا",
-        "translit": "yuusufu ayyuhaa as-siddiiqu aftinaa",
-        "en": "Yusuf, O man of truth, explain to us.",
-        "ur": "یوسف، اے بڑے سچے، ہمیں بتائیے۔"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Three parts",
+        "ar": "ثَلَاثَةُ أَجْزَاءٍ",
+        "ur": "تین حصے"
       },
       "explanation": {
-        "en": "12:46. Two calls: يُوسُفُ (no يَا), then أَيُّهَا الصِّدِّيقُ, with الصِّدِّيقُ marfūʿ as in Lesson 4. Then the request أَفْتِنَا.",
-        "ur": "12:46۔ دو ندائیں: يُوسُفُ (يَا کے بغیر)، پھر أَيُّهَا الصِّدِّيقُ، جس میں الصِّدِّيقُ سبق 4 کی طرح مرفوع ہے۔ پھر درخواست أَفْتِنَا۔"
+        "en": "The call: يَا أَيُّهَا الَّذِينَ آمَنُوا, 'O you who believe'. The first command: اتَّقُوا اللَّهَ, 'fear Allah'. The second command: وَكُونُوا مَعَ الصَّادِقِينَ, 'and be with the truthful'. The وَ joins the two commands; neither command is part of the call.",
+        "ur": "پکار: يَا أَيُّهَا الَّذِينَ آمَنُوا، 'اے ایمان والو'۔ پہلا حکم: اتَّقُوا اللَّهَ، 'اللہ سے ڈرو'۔ دوسرا حکم: وَكُونُوا مَعَ الصَّادِقِينَ، 'اور سچوں کے ساتھ رہو'۔ وَ دونوں حکموں کو جوڑتا ہے؛ کوئی حکم پکار کا حصہ نہیں۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "يَا أَيُّهَا النَّاسُ اتَّقُوا رَبَّكُمُ",
+        "ar_plain": "يا ايها الناس اتقوا ربكم",
+        "translit": "yaā ʾayyuhā an-nāsu attaqū rabbakumu",
+        "en": "O people, fear your Lord",
+        "ur": "اے لوگو، اپنے رب سے ڈرو"
+      },
+      "explanation": {
+        "en": "يَا أَيُّهَا النَّاسُ اتَّقُوا رَبَّكُمُ: 'O people, fear your Lord'. The same pattern with a different group: the call, then what they are told. (An-Nisa 4:1) (An-Nisa 4:1)",
+        "ur": "يَا أَيُّهَا النَّاسُ اتَّقُوا رَبَّكُمُ: 'اے لوگو، اپنے رب سے ڈرو'۔ وہی ساخت دوسرے گروہ کے ساتھ: پکار، پھر جو انہیں کہا گیا۔ (النساء 4:1) (An-Nisa 4:1)"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Only what the ayah says",
+        "ur": "صرف وہ جو آیت کہتی ہے"
+      },
+      "body": {
+        "en": "You read the words that are in the ayah and how it is built. Nothing is added about when it came or what it was about, and no word of it is turned into a rule beyond what you can see in the text.",
+        "ur": "آپ وہ الفاظ پڑھتے ہیں جو آیت میں ہیں اور جیسے وہ بنی ہے۔ یہ نہیں جوڑا گیا کہ وہ کب آئی یا کس بارے میں تھی، اور اس کا کوئی لفظ اس سے بڑھ کر قاعدہ نہیں بنایا گیا جو آپ متن میں دیکھ سکتے ہیں۔"
       }
     }
   ],
   "exercises": [
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch72-l07-ex01",
+      "id": "ch72-l06-ex01",
       "prompt": {
-        "ar": "يَا بُنَيَّ لَا تُشْرِكْ بِاللَّهِ",
-        "ar_plain": "يا بني لا تشرك بالله",
-        "translit": "yaa bunayya laa tushrik billaahi",
-        "en": "O my son, do not associate [anything] with Allah.",
-        "ur": "اے میرے بیٹے، اللہ کے ساتھ شرک نہ کرنا۔"
+        "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَكُونُوا مَعَ الصَّادِقِينَ",
+        "ar_plain": "يا ايها الذين امنوا اتقوا الله وكونوا مع الصادقين",
+        "translit": "yaā ʾayyuhā alladhīna ʾāmanū attaqū al-laha wakūnū maʿa aṣ-ṣādiqīna",
+        "en": "(9:119: who is called?)",
+        "ur": "(9:119: کسے پکارا گیا؟)"
       },
       "options": [
         {
-          "en": "O my son, do not associate [anything] with Allah.",
-          "ur": "اے میرے بیٹے، اللہ کے ساتھ شرک نہ کرنا۔"
+          "en": "The truthful",
+          "ur": "سچے"
         },
         {
-          "en": "O my father, do not associate [anything] with Allah.",
-          "ur": "اے میرے ابا، اللہ کے ساتھ شرک نہ کیجیے۔"
+          "en": "Allah",
+          "ur": "اللہ"
         },
         {
-          "en": "My son did not associate anything with Allah.",
-          "ur": "میرے بیٹے نے اللہ کے ساتھ شرک نہیں کیا۔"
+          "en": "Those who believed",
+          "ur": "جو ایمان لائے"
         },
         {
-          "en": "O people, do not associate [anything] with Allah.",
-          "ur": "اے لوگو، اللہ کے ساتھ شرک نہ کرو۔"
+          "en": "The speaker",
+          "ur": "بولنے والا"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "31:13. يَا بُنَيَّ is Luqman calling his son; لَا تُشْرِكْ is a prohibition.",
-        "ur": "31:13۔ يَا بُنَيَّ میں لقمان اپنے بیٹے کو پکار رہے ہیں؛ لَا تُشْرِكْ نہی ہے۔"
+        "en": "The truthful are what they are told to be with; the called are those who believed.",
+        "ur": "سچے وہ ہیں جن کے ساتھ رہنے کو کہا گیا؛ جنہیں پکارا گیا وہ ایمان والے ہیں۔"
       }
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch72-l07-ex02",
-      "statement": {
-        "en": "In يُوسُفُ أَعْرِضْ عَنْ هَٰذَا, يُوسُفُ is a vocative even though there is no يَا.",
-        "ur": "يُوسُفُ أَعْرِضْ عَنْ هَٰذَا میں يُوسُفُ منادیٰ ہے حالانکہ يَا نہیں ہے۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "Yes. The command أَعْرِضْ is addressed to Yusuf, so يُوسُفُ is a call with يَا left out.",
-        "ur": "جی ہاں۔ حکم أَعْرِضْ یوسف کو دیا گیا ہے، اس لیے يُوسُفُ ندا ہے جس میں يَا چھوڑا گیا ہے۔"
-      }
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch72-l07-ex03",
-      "left_column": [
-        {
-          "ar": "يَا أَبَتِ",
-          "ar_plain": "يا أبت",
-          "translit": "yaa abati",
-          "en": "yaa abati",
-          "ur": "يَا أَبَتِ"
-        },
-        {
-          "ar": "يَا بُنَيَّ",
-          "ar_plain": "يا بني",
-          "translit": "yaa bunayya",
-          "en": "yaa bunayya",
-          "ur": "يَا بُنَيَّ"
-        },
-        {
-          "ar": "يَا قَوْمِ",
-          "ar_plain": "يا قوم",
-          "translit": "yaa qawmi",
-          "en": "yaa qawmi",
-          "ur": "يَا قَوْمِ"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "O my father",
-          "ur": "اے میرے ابا"
-        },
-        {
-          "en": "O my dear son",
-          "ur": "اے میرے پیارے بیٹے"
-        },
-        {
-          "en": "O my people",
-          "ur": "اے میری قوم"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ]
-      ],
-      "xp_value": 1
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch72-l07-ex04",
+      "id": "ch72-l06-ex02",
       "prompt": {
-        "ar": "يَا أَبَتِ لِمَ تَعْبُدُ مَا لَا يَسْمَعُ وَلَا يُبْصِرُ",
-        "ar_plain": "يا أبت لم تعبد ما لا يسمع ولا يبصر",
-        "translit": "yaa abati lima ta'budu maa laa yasma'u wa-laa yubsiru",
-        "en": "O my father, why do you worship that which does not hear and does not see?",
-        "ur": "اے میرے ابا، آپ ان کی عبادت کیوں کرتے ہیں جو نہ سنتے ہیں نہ دیکھتے ہیں؟"
+        "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَكُونُوا مَعَ الصَّادِقِينَ",
+        "ar_plain": "يا ايها الذين امنوا اتقوا الله وكونوا مع الصادقين",
+        "translit": "yaā ʾayyuhā alladhīna ʾāmanū attaqū al-laha wakūnū maʿa aṣ-ṣādiqīna",
+        "en": "(how many commands follow the call?)",
+        "ur": "(پکار کے بعد کتنے حکم ہیں؟)"
       },
       "options": [
         {
-          "en": "His father — Ibrahim is speaking to him",
-          "ur": "ان کے والد — ابراہیم ان سے بات کر رہے ہیں"
+          "en": "Two: اتَّقُوا اللَّهَ and كُونُوا مَعَ الصَّادِقِينَ",
+          "ur": "دو: اتَّقُوا اللَّهَ اور كُونُوا مَعَ الصَّادِقِينَ"
         },
         {
-          "en": "His son — the father is speaking",
-          "ur": "ان کا بیٹا — والد بات کر رہے ہیں"
+          "en": "One",
+          "ur": "ایک"
         },
         {
-          "en": "His people as a whole",
-          "ur": "ان کی پوری قوم"
+          "en": "Three",
+          "ur": "تین"
         },
         {
-          "en": "The idols",
-          "ur": "بت"
+          "en": "None",
+          "ur": "کوئی نہیں"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "19:42. يَا أَبَتِ means 'O my father': Ibrahim is calling his father, then asks him a question (لِمَ).",
-        "ur": "19:42۔ يَا أَبَتِ کا مطلب ہے 'اے میرے ابا': ابراہیم اپنے والد کو پکار کر ان سے سوال (لِمَ) کرتے ہیں۔"
+        "en": "Two commands, joined by وَ.",
+        "ur": "دو حکم، وَ سے جڑے ہوئے۔"
       }
     },
     {
-      "type": "FILL_BLANK",
-      "id": "ch72-l07-ex05",
-      "mode": "TAP",
-      "sentence_ar": "إِذْ قَالَ يُوسُفُ لِأَبِيهِ يَا ___",
-      "hint": {
-        "en": "'When Yusuf said to his father, O my father…' (12:4).",
-        "ur": "'جب یوسف نے اپنے والد سے کہا: اے میرے ابا…' (12:4)۔"
+      "type": "TAP_TRANSLATION",
+      "id": "ch72-l06-ex03",
+      "prompt": {
+        "ar": "اتَّقُوا اللَّهَ",
+        "ar_plain": "اتقوا الله",
+        "translit": "attaqū al-laha",
+        "en": "(what does it say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
       },
       "options": [
         {
-          "ar": "أَبَتِ",
-          "ar_plain": "أبت",
-          "translit": "abati",
-          "en": "my father (call)",
-          "ur": "اے میرے ابا"
+          "en": "Be with the truthful",
+          "ur": "سچوں کے ساتھ رہو"
         },
         {
-          "ar": "أَبُو",
-          "ar_plain": "أبو",
-          "translit": "abuu",
-          "en": "father (nominative)",
-          "ur": "باپ (مرفوع)"
+          "en": "Fear Allah",
+          "ur": "اللہ سے ڈرو"
         },
         {
-          "ar": "أَبٌ",
-          "ar_plain": "أب",
-          "translit": "abun",
-          "en": "a father",
-          "ur": "کوئی باپ"
+          "en": "Those who believed",
+          "ur": "جو ایمان لائے"
         },
         {
-          "ar": "أَبِيهِ",
-          "ar_plain": "أبيه",
-          "translit": "abiihi",
-          "en": "his father",
-          "ur": "اس کے والد"
+          "en": "Allah feared them",
+          "ur": "اللہ ان سے ڈرا"
         }
       ],
-      "correct_answer": {
-        "ar": "أَبَتِ",
-        "ar_plain": "أبت",
-        "translit": "abati",
-        "en": "my father (call)",
-        "ur": "اے میرے ابا"
-      },
+      "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "The call 'O my father' is يَا أَبَتِ.",
-        "ur": "'اے میرے ابا' کی ندا يَا أَبَتِ ہے۔"
+        "en": "اتَّقُوا is the first command and اللَّهَ what it is about.",
+        "ur": "اتَّقُوا پہلا حکم ہے اور اللَّهَ وہ جس کے بارے میں ہے۔"
       }
     },
     {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch72-l07-ex06",
-      "sentence_ar": "يُوسُفُ أَعْرِضْ عَنْ هَٰذَا",
-      "words": [
+      "type": "TAP_TRANSLATION",
+      "id": "ch72-l06-ex04",
+      "prompt": {
+        "ar": "وَكُونُوا مَعَ الصَّادِقِينَ",
+        "ar_plain": "وكونوا مع الصادقين",
+        "translit": "wakūnū maʿa aṣ-ṣādiqīna",
+        "en": "(what does it say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
+      },
+      "options": [
         {
-          "ar": "يُوسُفُ",
-          "ar_plain": "يوسف",
-          "translit": "yuusufu",
-          "en": "Yusuf",
-          "ur": "یوسف"
+          "en": "And fear Allah",
+          "ur": "اور اللہ سے ڈرو"
         },
         {
-          "ar": "أَعْرِضْ",
-          "ar_plain": "أعرض",
-          "translit": "a'rid",
-          "en": "turn away",
-          "ur": "جانے دو"
+          "en": "And the truthful believed",
+          "ur": "اور سچے ایمان لائے"
         },
         {
-          "ar": "عَنْ",
-          "ar_plain": "عن",
-          "translit": "'an",
-          "en": "from",
-          "ur": "سے"
+          "en": "And do not be with the truthful",
+          "ur": "اور سچوں کے ساتھ نہ رہو"
         },
         {
-          "ar": "هَٰذَا",
-          "ar_plain": "هذا",
-          "translit": "haadhaa",
-          "en": "this",
-          "ur": "اس"
+          "en": "And be with the truthful",
+          "ur": "اور سچوں کے ساتھ رہو"
         }
       ],
-      "available_roles": [
-        "VOCATIVE",
-        "SUBJECT",
-        "VERB",
-        "PREPOSITION",
-        "DEMONSTRATIVE"
-      ],
-      "correct_roles": [
-        "VOCATIVE",
-        "VERB",
-        "PREPOSITION",
-        "DEMONSTRATIVE"
-      ],
+      "correct_index": 3,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "يُوسُفُ is a vocative without يَا; أَعْرِضْ the command; عَنْ a preposition; هَٰذَا a demonstrative.",
-        "ur": "يُوسُفُ يَا کے بغیر منادیٰ ہے؛ أَعْرِضْ حکم؛ عَنْ حرفِ جر؛ هَٰذَا اسمِ اشارہ۔"
+        "en": "وَكُونُوا مَعَ الصَّادِقِينَ is the second command.",
+        "ur": "وَكُونُوا مَعَ الصَّادِقِينَ دوسرا حکم ہے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch72-l07-ex07",
+      "id": "ch72-l06-ex05",
       "statement": {
-        "en": "In يُوسُفُ أَيُّهَا الصِّدِّيقُ, the word الصِّدِّيقُ is genitive.",
-        "ur": "يُوسُفُ أَيُّهَا الصِّدِّيقُ میں الصِّدِّيقُ مجرور ہے۔"
+        "en": "In 9:119 the two commands are part of the call.",
+        "ur": "9:119 میں دونوں حکم پکار کا حصہ ہیں۔"
       },
       "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "After أَيُّهَا the ال noun is marfūʿ: الصِّدِّيقُ, with ḍamma.",
-        "ur": "أَيُّهَا کے بعد ال والا اسم مرفوع ہوتا ہے: الصِّدِّيقُ، ضمہ کے ساتھ۔"
+        "en": "False. The call is يَا أَيُّهَا الَّذِينَ آمَنُوا; the two commands are what they are told.",
+        "ur": "غلط۔ پکار يَا أَيُّهَا الَّذِينَ آمَنُوا ہے؛ دونوں حکم وہ ہیں جو انہیں کہا گیا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch72-l06-ex06",
+      "prompt": {
+        "ar": "يَا أَيُّهَا الطُّلَّابُ، اقْرَؤُوا الدَّرْسَ",
+        "ar_plain": "يا ايها الطلاب، اقرؤوا الدرس",
+        "translit": "yaā ʾayyuhā aṭ-ṭullābu aqraʾū ad-darsa",
+        "en": "(an authored call: who is called?)",
+        "ur": "(ایک خود لکھی ہوئی پکار: کسے پکارا گیا؟)"
+      },
+      "options": [
+        {
+          "en": "The lesson",
+          "ur": "سبق"
+        },
+        {
+          "en": "The students",
+          "ur": "طلبہ"
+        },
+        {
+          "en": "The teacher",
+          "ur": "استاد"
+        },
+        {
+          "en": "Nobody",
+          "ur": "کوئی نہیں"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Same pattern: the bridge, the group, then what they are told.",
+        "ur": "وہی ساخت: پل، گروہ، پھر جو انہیں کہا گیا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch72-l06-ex07",
+      "prompt": {
+        "ar": "يَا أَيُّهَا النَّاسُ اتَّقُوا رَبَّكُمُ",
+        "ar_plain": "يا ايها الناس اتقوا ربكم",
+        "translit": "yaā ʾayyuhā an-nāsu attaqū rabbakumu",
+        "en": "(4:1: who is called, and what are they told?)",
+        "ur": "(4:1: کسے پکارا گیا، اور انہیں کیا کہا گیا؟)"
+      },
+      "options": [
+        {
+          "en": "The believers: be with the truthful",
+          "ur": "ایمان والے: سچوں کے ساتھ رہو"
+        },
+        {
+          "en": "The truthful: fear your Lord",
+          "ur": "سچے: اپنے رب سے ڈرو"
+        },
+        {
+          "en": "The people: fear your Lord",
+          "ur": "لوگ: اپنے رب سے ڈرو"
+        },
+        {
+          "en": "The Lord: fear the people",
+          "ur": "رب: لوگوں سے ڈرو"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "النَّاسُ is called; اتَّقُوا رَبَّكُمُ is what they are told.",
+        "ur": "النَّاسُ کو پکارا گیا؛ اتَّقُوا رَبَّكُمُ وہ ہے جو انہیں کہا گیا۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch72-l06-ex08",
+      "target_translation": {
+        "en": "O students, write the lesson. (an authored call)",
+        "ur": "اے طلبہ، سبق لکھو۔ (ایک خود لکھی ہوئی پکار)"
+      },
+      "tiles": [
+        {
+          "ar": "اكْتُبُوا",
+          "ar_plain": "اكتبوا",
+          "translit": "aktubū",
+          "en": "write",
+          "ur": "لکھو"
+        },
+        {
+          "ar": "يَا",
+          "ar_plain": "يا",
+          "translit": "yaā",
+          "en": "O",
+          "ur": "اے"
+        },
+        {
+          "ar": "الدَّرْسَ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsa",
+          "en": "the lesson",
+          "ur": "سبق"
+        },
+        {
+          "ar": "أَيُّهَا",
+          "ar_plain": "ايها",
+          "translit": "ʾayyuhā",
+          "en": "the bridge",
+          "ur": "پل"
+        },
+        {
+          "ar": "الطُّلَّابُ",
+          "ar_plain": "الطلاب",
+          "translit": "aṭ-ṭullābu",
+          "en": "the students",
+          "ur": "طلبہ"
+        }
+      ],
+      "correct_order": [
+        1,
+        3,
+        4,
+        0,
+        2
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The call, who is called, then what they are told.",
+        "ur": "پکار، جسے پکارا گیا، پھر جو انہیں کہا گیا۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Family address: يَا أَبَتِ، يَا بُنَيَّ, and calls without يَا",
-      "ar": "يَا أَبَتِ، يَا بُنَيَّ، وَحَذْفُ يَا",
-      "ur": "گھر والوں کی ندا: يَا أَبَتِ، يَا بُنَيَّ، اور يَا کے بغیر ندا"
+      "en": "A call and two commands",
+      "ar": "نِدَاءٌ وَأَمْرَانِ",
+      "ur": "ایک پکار اور دو حکم"
     },
     "ayah": {
-      "surah": 19,
-      "ayah": 43,
-      "label": "Maryam 19:43",
-      "ar": "يَا أَبَتِ إِنِّي قَدْ جَاءَنِي مِنَ الْعِلْمِ مَا لَمْ يَأْتِكَ فَاتَّبِعْنِي أَهْدِكَ صِرَاطًا سَوِيًّا",
-      "en": "O my father, indeed there has come to me of knowledge that which has not come to you, so follow me; I will guide you to an even path.",
-      "ur": "اے میرے ابا، میرے پاس وہ علم آیا ہے جو آپ کے پاس نہیں آیا، تو میری پیروی کیجیے، میں آپ کو سیدھی راہ دکھاؤں گا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/019043.mp3"
+      "surah": 9,
+      "ayah": 119,
+      "label": "At-Tawbah 9:119",
+      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَكُونُوا مَعَ الصَّادِقِينَ",
+      "en": "O you who have believed, fear Allāh and be with those who are true.",
+      "ur": "اے اہل ایمان! خدا سے ڈرتے رہو اور راست بازوں کے ساتھ رہو",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/009119.mp3"
     },
     "highlighted_word_indices": [
       0,
-      1
+      2,
+      4,
+      6
+    ],
+    "highlighted_words": [
+      "يَا",
+      "الَّذِينَ",
+      "اتَّقُوا",
+      "وَكُونُوا"
     ],
     "noor_explanation": {
-      "en": "يَا أَبَتِ — Ibrahim opens with the same tender call each time he speaks to his father (19:42, 43, 44, 45). Notice also فَاتَّبِعْنِي أَهْدِكَ: a command, then a jussive answer, as in Chapter 69.",
-      "ur": "يَا أَبَتِ — ابراہیم علیہ السلام ہر بار اپنے والد سے بات کرتے ہوئے یہی نرم ندا استعمال کرتے ہیں (19:42، 43، 44، 45)۔ فَاتَّبِعْنِي أَهْدِكَ پر بھی غور کیجیے: حکم، پھر مجزوم جواب، جیسا کہ باب 69 میں تھا۔"
+      "en": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَكُونُوا مَعَ الصَّادِقِينَ — a call, then two commands joined by وَ.",
+      "ur": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَكُونُوا مَعَ الصَّادِقِينَ — ایک پکار، پھر وَ سے جڑے دو حکم۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "يَا أَبَتِ، يَا بُنَيَّ, and a name alone can each open a conversation in the Quran. Next: the chapter review.",
-      "ur": "قرآن میں يَا أَبَتِ، يَا بُنَيَّ، اور صرف نام — ہر ایک گفتگو شروع کر سکتا ہے۔ آگے: باب کا جائزہ۔"
+      "en": "You read a whole ayah of address: the call, and the two things its people are told. Next: a closing conversation.",
+      "ur": "آپ نے پوری آیت پڑھی جس میں پکار ہے: پکار، اور دو باتیں جو پکارے ہوؤں سے کہی گئیں۔ آگے: ایک آخری گفتگو۔"
     }
   }
 }

@@ -1,0 +1,1224 @@
+{
+  "schema_version": "1.0",
+  "template": "SPOKEN_PHRASES",
+  "_meta": {
+    "_note": "Chapter 72, Lesson 8 (ch72-l07 converted in place to CL18, the final integrated conversation; the old 'emotional climax' STANDARD content is dropped, not moved). One visit to an Arabic learning centre in three linked scenes — reception, the lesson, the book desk — with A the member of staff in each scene and B the learner. Three goals and six PICK mission turns, two per scene, the schema's limits. The eight functions (greeting, name and origin, location, start time, a learning question, a help request, a price and a purchase, a polite close) each have their own earlier-chapter home — Chapters 3, 12, 5, 31, 31, 50, 61 and the Chapter 31/40 closing — and each has its own practice decision in the ten exercises (Maryam's name, the office, and the book facts are fresh), so the short mission does not stand in for them. Every learner line is an existing phrase of an earlier lab; the new combinations are أَيْنَ الْفَصْلُ؟ and مَتَى يَبْدَأُ الدَّرْسُ؟ (known patterns with new nouns). The timetable (lesson at four, ten riyals each) is invented. Twenty-three phrase clips are listed in Docs/lesson-audio-needed.md; none is generated. No pronunciation is graded; shadowing is optional. This lab is separate from Chapter 70's SP11 and is not scored by the Chapter 72 test. Added 2026-10-04 in the proposal harvest, batch 10 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-72-content-proposal.md and its review amendments.",
+    "title": "A Visit to a Learning Centre — Conversation Lab (CL18)",
+    "titleAr": "زِيَارَةٌ إِلَى مَرْكَزِ تَعَلُّمِ الْعَرَبِيَّةِ",
+    "titleUr": "تعلیمی مرکز کا دورہ — گفتگو لیب",
+    "chapter_order": 72,
+    "lesson_order": 8,
+    "estimated_minutes": 15,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 2,
+      "ayah": 83,
+      "label": "Al-Baqarah 2:83",
+      "ar": "وَقُولُوا لِلنَّاسِ حُسْنًا",
+      "en": "and speak to people good words",
+      "ur": "اور لوگوں سے اچھی بات کہو",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002083.mp3"
+    },
+    "noor_intro": {
+      "en": "'And speak to people good words.' This last lab is one visit to a learning centre, and every line in it is one you have already learned.",
+      "ur": "'اور لوگوں سے اچھی بات کہو۔' یہ آخری لیب ایک تعلیمی مرکز کا ایک دورہ ہے، اور اس کی ہر سطر وہ ہے جو آپ پہلے سیکھ چکے ہیں۔"
+    },
+    "autoplay": false
+  },
+  "exercises": [
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch72-l07-ex01",
+      "prompt_line": {
+        "ar": "تَفَضَّلْ.",
+        "ar_plain": "تفضل.",
+        "translit": "tafaḍḍal",
+        "en": "Please, go ahead. (You arrive at the reception desk of the learning centre. The receptionist looks up.)",
+        "ur": "تشریف لائیے۔ (آپ تعلیمی مرکز کے استقبالیہ پر پہنچتے ہیں۔ استقبالیہ والا نظر اٹھاتا ہے۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "جَزَاكَ اللَّهُ خَيْرًا.",
+          "ar_plain": "جزاك الله خيرا.",
+          "translit": "jazāka al-lahu khayran",
+          "en": "May Allah reward you with good.",
+          "ur": "اللہ آپ کو بھلائی دے۔"
+        },
+        {
+          "ar": "السَّلَامُ عَلَيْكُمْ.",
+          "ar_plain": "السلام عليكم.",
+          "translit": "as-salāmu ʿalaykum",
+          "en": "Peace be upon you.",
+          "ur": "آپ پر سلامتی ہو۔"
+        },
+        {
+          "ar": "نَعَمْ، شُكْرًا.",
+          "ar_plain": "نعم، شكرا.",
+          "translit": "naʿam shukran",
+          "en": "Yes, thank you.",
+          "ur": "جی ہاں، شکریہ۔"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Greet first: السَّلَامُ عَلَيْكُمْ.",
+        "ur": "پہلے سلام کریں: السَّلَامُ عَلَيْكُمْ۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch72-l07-ex02",
+      "prompt_line": {
+        "ar": "مَا اسْمُكَ؟",
+        "ar_plain": "ما اسمك؟",
+        "translit": "mā asmuka",
+        "en": "What is your name? (This time you are Maryam.)",
+        "ur": "آپ کا نام کیا ہے؟ (اس بار آپ مریم ہیں۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "اِسْمِي مَرْيَمُ.",
+          "ar_plain": "اسمي مريم.",
+          "translit": "ismī maryamu",
+          "en": "My name is Maryam.",
+          "ur": "میرا نام مریم ہے۔"
+        },
+        {
+          "ar": "أَنَا مِنْ بَاكِسْتَانَ.",
+          "ar_plain": "انا من باكستان.",
+          "translit": "ʾanā min bākistāna",
+          "en": "I am from Pakistan.",
+          "ur": "میں پاکستان سے ہوں۔"
+        },
+        {
+          "ar": "أَيْنَ الْفَصْلُ؟",
+          "ar_plain": "اين الفصل؟",
+          "translit": "ʾayna al-faṣlu",
+          "en": "Where is the classroom?",
+          "ur": "کمرۂ جماعت کہاں ہے؟"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Give the name in the scene: اِسْمِي مَرْيَمُ.",
+        "ur": "منظر والا نام بتائیں: اِسْمِي مَرْيَمُ۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch72-l07-ex03",
+      "prompt_line": {
+        "ar": "مِنْ أَيْنَ أَنْتَ؟",
+        "ar_plain": "من اين انت؟",
+        "translit": "min ʾayna ʾanta",
+        "en": "Where are you from? (You are from Pakistan.)",
+        "ur": "آپ کہاں سے ہیں؟ (آپ پاکستان سے ہیں۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "اِسْمِي عُمَرُ.",
+          "ar_plain": "اسمي عمر.",
+          "translit": "ismī ʿumaru",
+          "en": "My name is Umar.",
+          "ur": "میرا نام عمر ہے۔"
+        },
+        {
+          "ar": "أَيْنَ الْفَصْلُ؟",
+          "ar_plain": "اين الفصل؟",
+          "translit": "ʾayna al-faṣlu",
+          "en": "Where is the classroom?",
+          "ur": "کمرۂ جماعت کہاں ہے؟"
+        },
+        {
+          "ar": "أَنَا مِنْ بَاكِسْتَانَ.",
+          "ar_plain": "انا من باكستان.",
+          "translit": "ʾanā min bākistāna",
+          "en": "I am from Pakistan.",
+          "ur": "میں پاکستان سے ہوں۔"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Say where you are from: أَنَا مِنْ بَاكِسْتَانَ.",
+        "ur": "بتائیں آپ کہاں سے ہیں: أَنَا مِنْ بَاكِسْتَانَ۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch72-l07-ex04",
+      "prompt_line": {
+        "ar": "تَفَضَّلْ.",
+        "ar_plain": "تفضل.",
+        "translit": "tafaḍḍal",
+        "en": "Please, go ahead. (You need to find the classroom.)",
+        "ur": "تشریف لائیے۔ (آپ کو کمرۂ جماعت ڈھونڈنا ہے۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "أَيْنَ الْفَصْلُ؟",
+          "ar_plain": "اين الفصل؟",
+          "translit": "ʾayna al-faṣlu",
+          "en": "Where is the classroom?",
+          "ur": "کمرۂ جماعت کہاں ہے؟"
+        },
+        {
+          "ar": "مَتَى يَبْدَأُ الدَّرْسُ؟",
+          "ar_plain": "متى يبدا الدرس؟",
+          "translit": "matā yabdaʾu ad-darsu",
+          "en": "When does the lesson begin?",
+          "ur": "سبق کب شروع ہوتا ہے؟"
+        },
+        {
+          "ar": "كَمْ ثَمَنُ هَذَا الْكِتَابِ؟",
+          "ar_plain": "كم ثمن هذا الكتاب؟",
+          "translit": "kam thamanu hadhā al-kitābi",
+          "en": "How much is the price of this book?",
+          "ur": "اس کتاب کی قیمت کتنی ہے؟"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Ask where it is: أَيْنَ الْفَصْلُ؟",
+        "ur": "پوچھیں کہاں ہے: أَيْنَ الْفَصْلُ؟"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch72-l07-ex05",
+      "prompt_line": {
+        "ar": "الْفَصْلُ هُنَاكَ.",
+        "ar_plain": "الفصل هناك.",
+        "translit": "al-faṣlu hunāka",
+        "en": "The classroom is over there. (The notice says the lesson begins at four; you want to confirm when.)",
+        "ur": "کمرۂ جماعت وہاں ہے۔ (نوٹس کہتا ہے سبق چار بجے شروع ہوتا ہے؛ آپ وقت پوچھنا چاہتے ہیں۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "أَيْنَ الْفَصْلُ؟",
+          "ar_plain": "اين الفصل؟",
+          "translit": "ʾayna al-faṣlu",
+          "en": "Where is the classroom?",
+          "ur": "کمرۂ جماعت کہاں ہے؟"
+        },
+        {
+          "ar": "مَتَى يَبْدَأُ الدَّرْسُ؟",
+          "ar_plain": "متى يبدا الدرس؟",
+          "translit": "matā yabdaʾu ad-darsu",
+          "en": "When does the lesson begin?",
+          "ur": "سبق کب شروع ہوتا ہے؟"
+        },
+        {
+          "ar": "أُرِيدُ كِتَابَيْنِ.",
+          "ar_plain": "اريد كتابين.",
+          "translit": "ʾurīdu kitābayni",
+          "en": "I want two books.",
+          "ur": "مجھے دو کتابیں چاہئیں۔"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Ask when: مَتَى يَبْدَأُ الدَّرْسُ؟",
+        "ur": "پوچھیں کب: مَتَى يَبْدَأُ الدَّرْسُ؟"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch72-l07-ex06",
+      "prompt_line": {
+        "ar": "هَلْ عِنْدَكُمْ أَسْئِلَةٌ؟",
+        "ar_plain": "هل عندكم اسئلة؟",
+        "translit": "hal ʿindakum ʾasʾilatun",
+        "en": "Do you have any questions? (The word صَدِيقٌ is on the board.)",
+        "ur": "کیا آپ کے پاس کوئی سوال ہے؟ (تختے پر لفظ صَدِيقٌ لکھا ہے۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "فَقَدْتُ حَقِيبَتِي.",
+          "ar_plain": "فقدت حقيبتي.",
+          "translit": "faqadtu ḥaqībatī",
+          "en": "I lost my bag.",
+          "ur": "میری تھیلی کھو گئی ہے۔"
+        },
+        {
+          "ar": "كَمْ ثَمَنُ هَذَا الْكِتَابِ؟",
+          "ar_plain": "كم ثمن هذا الكتاب؟",
+          "translit": "kam thamanu hadhā al-kitābi",
+          "en": "How much is the price of this book?",
+          "ur": "اس کتاب کی قیمت کتنی ہے؟"
+        },
+        {
+          "ar": "مَا مَعْنَى هَذِهِ الْكَلِمَةِ؟",
+          "ar_plain": "ما معنى هذه الكلمة؟",
+          "translit": "mā maʿnā hadhihi al-kalimati",
+          "en": "What does this word mean?",
+          "ur": "اس لفظ کا مطلب کیا ہے؟"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Ask about the word: مَا مَعْنَى هَذِهِ الْكَلِمَةِ؟",
+        "ur": "لفظ کے بارے میں پوچھیں: مَا مَعْنَى هَذِهِ الْكَلِمَةِ؟"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch72-l07-ex07",
+      "prompt_line": {
+        "ar": "تَفَضَّلْ.",
+        "ar_plain": "تفضل.",
+        "translit": "tafaḍḍal",
+        "en": "Please, go ahead. (After the lesson you cannot find your bag. Tell your teacher.)",
+        "ur": "تشریف لائیے۔ (سبق کے بعد آپ کو اپنی تھیلی نہیں ملتی۔ استاد کو بتائیں۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "فَقَدْتُ حَقِيبَتِي.",
+          "ar_plain": "فقدت حقيبتي.",
+          "translit": "faqadtu ḥaqībatī",
+          "en": "I lost my bag.",
+          "ur": "میری تھیلی کھو گئی ہے۔"
+        },
+        {
+          "ar": "أُرِيدُ كِتَابَيْنِ.",
+          "ar_plain": "اريد كتابين.",
+          "translit": "ʾurīdu kitābayni",
+          "en": "I want two books.",
+          "ur": "مجھے دو کتابیں چاہئیں۔"
+        },
+        {
+          "ar": "مَا مَعْنَى هَذِهِ الْكَلِمَةِ؟",
+          "ar_plain": "ما معنى هذه الكلمة؟",
+          "translit": "mā maʿnā hadhihi al-kalimati",
+          "en": "What does this word mean?",
+          "ur": "اس لفظ کا مطلب کیا ہے؟"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Say what you need: فَقَدْتُ حَقِيبَتِي.",
+        "ur": "بتائیں آپ کو کیا چاہیے: فَقَدْتُ حَقِيبَتِي۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch72-l07-ex08",
+      "prompt_line": {
+        "ar": "تَفَضَّلْ.",
+        "ar_plain": "تفضل.",
+        "translit": "tafaḍḍal",
+        "en": "Please, go ahead. (At the book desk the bookseller invites you to speak. The book has a label.)",
+        "ur": "تشریف لائیے۔ (کتابوں کی میز پر کتاب فروش آپ کو بات کرنے کی دعوت دیتا ہے۔ کتاب پر لیبل ہے۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "مَتَى يَبْدَأُ الدَّرْسُ؟",
+          "ar_plain": "متى يبدا الدرس؟",
+          "translit": "matā yabdaʾu ad-darsu",
+          "en": "When does the lesson begin?",
+          "ur": "سبق کب شروع ہوتا ہے؟"
+        },
+        {
+          "ar": "كَمْ ثَمَنُ هَذَا الْكِتَابِ؟",
+          "ar_plain": "كم ثمن هذا الكتاب؟",
+          "translit": "kam thamanu hadhā al-kitābi",
+          "en": "How much is the price of this book?",
+          "ur": "اس کتاب کی قیمت کتنی ہے؟"
+        },
+        {
+          "ar": "فَقَدْتُ حَقِيبَتِي.",
+          "ar_plain": "فقدت حقيبتي.",
+          "translit": "faqadtu ḥaqībatī",
+          "en": "I lost my bag.",
+          "ur": "میری تھیلی کھو گئی ہے۔"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Ask the price: كَمْ ثَمَنُ هَذَا الْكِتَابِ؟",
+        "ur": "قیمت پوچھیں: كَمْ ثَمَنُ هَذَا الْكِتَابِ؟"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch72-l07-ex09",
+      "prompt_line": {
+        "ar": "ثَمَنُهُ عَشَرَةُ رِيَالَاتٍ.",
+        "ar_plain": "ثمنه عشرة ريالات.",
+        "translit": "thamanuhu ʿasharatu riyaālātin",
+        "en": "Its price is ten riyals. (You want two books.)",
+        "ur": "اس کی قیمت دس ریال ہے۔ (آپ کو دو کتابیں چاہئیں۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "نَعَمْ، شُكْرًا.",
+          "ar_plain": "نعم، شكرا.",
+          "translit": "naʿam shukran",
+          "en": "Yes, thank you.",
+          "ur": "جی ہاں، شکریہ۔"
+        },
+        {
+          "ar": "كَمْ ثَمَنُ هَذَا الْكِتَابِ؟",
+          "ar_plain": "كم ثمن هذا الكتاب؟",
+          "translit": "kam thamanu hadhā al-kitābi",
+          "en": "How much is the price of this book?",
+          "ur": "اس کتاب کی قیمت کتنی ہے؟"
+        },
+        {
+          "ar": "أُرِيدُ كِتَابَيْنِ.",
+          "ar_plain": "اريد كتابين.",
+          "translit": "ʾurīdu kitābayni",
+          "en": "I want two books.",
+          "ur": "مجھے دو کتابیں چاہئیں۔"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Say how many you want: أُرِيدُ كِتَابَيْنِ.",
+        "ur": "بتائیں کتنی چاہئیں: أُرِيدُ كِتَابَيْنِ۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch72-l07-ex10",
+      "prompt_line": {
+        "ar": "تَفَضَّلْ.",
+        "ar_plain": "تفضل.",
+        "translit": "tafaḍḍal",
+        "en": "Please, go ahead. (New scene: you need the office, not the classroom.)",
+        "ur": "تشریف لائیے۔ (نیا منظر: آپ کو دفتر چاہیے، کمرۂ جماعت نہیں۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "أَيْنَ الْمَكْتَبُ؟",
+          "ar_plain": "اين المكتب؟",
+          "translit": "ʾayna al-maktabu",
+          "en": "Where is the office?",
+          "ur": "دفتر کہاں ہے؟"
+        },
+        {
+          "ar": "أَيْنَ الْفَصْلُ؟",
+          "ar_plain": "اين الفصل؟",
+          "translit": "ʾayna al-faṣlu",
+          "en": "Where is the classroom?",
+          "ur": "کمرۂ جماعت کہاں ہے؟"
+        },
+        {
+          "ar": "مَرَّةً أُخْرَى، لَوْ سَمَحْتَ.",
+          "ar_plain": "مرة اخرى، لو سمحت.",
+          "translit": "marratan ʾukhrā law samaḥta",
+          "en": "Once again, please.",
+          "ur": "ایک بار پھر، براہِ کرم۔"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Same question, a different place: أَيْنَ الْمَكْتَبُ؟",
+        "ur": "وہی سوال، دوسری جگہ: أَيْنَ الْمَكْتَبُ؟"
+      }
+    }
+  ],
+  "spoken_phrases": {
+    "scene": {
+      "en": "One visit to an Arabic learning centre. You (B) are the learner. A is the member of staff in each scene: the receptionist first, then your teacher, then the bookseller at the book desk. The notice says the lesson begins at four o'clock. The book label says ten riyals each, and you want two.",
+      "ur": "عربی سیکھنے کے مرکز کا ایک دورہ۔ آپ (B) سیکھنے والے ہیں۔ A ہر منظر میں عملے کا فرد ہے: پہلے استقبالیہ والا، پھر آپ کا استاد، پھر کتابوں کی میز پر کتاب فروش۔ نوٹس کہتا ہے سبق چار بجے شروع ہوتا ہے۔ کتاب کے لیبل پر دس ریال فی عدد لکھا ہے، اور آپ کو دو چاہئیں۔"
+    },
+    "phrases": [
+      {
+        "id": "ch72-cl-p01",
+        "phrase": {
+          "ar": "السَّلَامُ عَلَيْكُمْ.",
+          "ar_plain": "السلام عليكم.",
+          "translit": "as-salāmu ʿalaykum",
+          "en": "Peace be upon you.",
+          "ur": "آپ پر سلامتی ہو۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p01.mp3",
+        "context": {
+          "en": "Scene 1, reception: you (B) greet the receptionist (A) first.",
+          "ur": "منظر 1، استقبالیہ: آپ (B) پہلے استقبالیہ والے (A) کو سلام کرتے ہیں۔"
+        }
+      },
+      {
+        "id": "ch72-cl-p02",
+        "phrase": {
+          "ar": "وَعَلَيْكُمُ السَّلَامُ وَرَحْمَةُ اللَّهِ.",
+          "ar_plain": "وعليكم السلام ورحمة الله.",
+          "translit": "waʿalaykumu as-salāmu waraḥmatu al-lahi",
+          "en": "And upon you be peace and Allah's mercy.",
+          "ur": "اور آپ پر سلامتی اور اللہ کی رحمت ہو۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p02.mp3",
+        "context": {
+          "en": "The receptionist (A) answers your greeting.",
+          "ur": "استقبالیہ والا (A) آپ کے سلام کا جواب دیتا ہے۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch72-cl-p03",
+        "phrase": {
+          "ar": "مَا اسْمُكَ؟",
+          "ar_plain": "ما اسمك؟",
+          "translit": "mā asmuka",
+          "en": "What is your name?",
+          "ur": "آپ کا نام کیا ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p03.mp3",
+        "context": {
+          "en": "The receptionist asks your name.",
+          "ur": "استقبالیہ والا آپ کا نام پوچھتا ہے۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch72-cl-p04",
+        "phrase": {
+          "ar": "اِسْمِي عُمَرُ.",
+          "ar_plain": "اسمي عمر.",
+          "translit": "ismī ʿumaru",
+          "en": "My name is Umar.",
+          "ur": "میرا نام عمر ہے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p04.mp3",
+        "context": {
+          "en": "You give your name: اِسْمِي and your name, from Chapter 3.",
+          "ur": "آپ اپنا نام بتاتے ہیں: اِسْمِي اور آپ کا نام، باب 3 سے۔"
+        }
+      },
+      {
+        "id": "ch72-cl-p05",
+        "phrase": {
+          "ar": "مِنْ أَيْنَ أَنْتَ؟",
+          "ar_plain": "من اين انت؟",
+          "translit": "min ʾayna ʾanta",
+          "en": "Where are you from?",
+          "ur": "آپ کہاں سے ہیں؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p05.mp3",
+        "context": {
+          "en": "He asks where you come from.",
+          "ur": "وہ پوچھتا ہے کہ آپ کہاں سے آئے ہیں۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch72-cl-p06",
+        "phrase": {
+          "ar": "أَنَا مِنْ بَاكِسْتَانَ.",
+          "ar_plain": "انا من باكستان.",
+          "translit": "ʾanā min bākistāna",
+          "en": "I am from Pakistan.",
+          "ur": "میں پاکستان سے ہوں۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p06.mp3",
+        "context": {
+          "en": "You say your country: أَنَا مِنْ and the place, from Chapter 12.",
+          "ur": "آپ اپنا ملک بتاتے ہیں: أَنَا مِنْ اور جگہ، باب 12 سے۔"
+        }
+      },
+      {
+        "id": "ch72-cl-p07",
+        "phrase": {
+          "ar": "أَيْنَ الْفَصْلُ؟",
+          "ar_plain": "اين الفصل؟",
+          "translit": "ʾayna al-faṣlu",
+          "en": "Where is the classroom?",
+          "ur": "کمرۂ جماعت کہاں ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p07.mp3",
+        "context": {
+          "en": "You ask where the classroom is. أَيْنَ is the question word of Chapters 5 and 12.",
+          "ur": "آپ پوچھتے ہیں کہ کمرۂ جماعت کہاں ہے۔ أَيْنَ باب 5 اور 12 کا سوالیہ لفظ ہے۔"
+        }
+      },
+      {
+        "id": "ch72-cl-p08",
+        "phrase": {
+          "ar": "الْفَصْلُ هُنَاكَ.",
+          "ar_plain": "الفصل هناك.",
+          "translit": "al-faṣlu hunāka",
+          "en": "The classroom is over there.",
+          "ur": "کمرۂ جماعت وہاں ہے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p08.mp3",
+        "context": {
+          "en": "He points the way.",
+          "ur": "وہ راستہ بتاتا ہے۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch72-cl-p09",
+        "phrase": {
+          "ar": "مَتَى يَبْدَأُ الدَّرْسُ؟",
+          "ar_plain": "متى يبدا الدرس؟",
+          "translit": "matā yabdaʾu ad-darsu",
+          "en": "When does the lesson begin?",
+          "ur": "سبق کب شروع ہوتا ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p09.mp3",
+        "context": {
+          "en": "You ask the start time. مَتَى is from Chapter 31.",
+          "ur": "آپ شروع ہونے کا وقت پوچھتے ہیں۔ مَتَى باب 31 سے ہے۔"
+        }
+      },
+      {
+        "id": "ch72-cl-p10",
+        "phrase": {
+          "ar": "يَبْدَأُ الدَّرْسُ فِي السَّاعَةِ الرَّابِعَةِ.",
+          "ar_plain": "يبدا الدرس في الساعة الرابعة.",
+          "translit": "yabdaʾu ad-darsu fī as-sāʿati ar-rābiʿati",
+          "en": "The lesson begins at four o'clock.",
+          "ur": "سبق چار بجے شروع ہوتا ہے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p10.mp3",
+        "context": {
+          "en": "He answers with the time on the notice (an invented timetable for practice).",
+          "ur": "وہ نوٹس پر لکھے وقت کے ساتھ جواب دیتا ہے (مشق کے لیے گھڑا ہوا وقت)۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch72-cl-p11",
+        "phrase": {
+          "ar": "هَلْ عِنْدَكُمْ أَسْئِلَةٌ؟",
+          "ar_plain": "هل عندكم اسئلة؟",
+          "translit": "hal ʿindakum ʾasʾilatun",
+          "en": "Do you have any questions?",
+          "ur": "کیا آپ کے پاس کوئی سوال ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p11.mp3",
+        "context": {
+          "en": "Scene 2, the lesson: the teacher (A) asks the class.",
+          "ur": "منظر 2، سبق: استاد (A) جماعت سے پوچھتا ہے۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch72-cl-p12",
+        "phrase": {
+          "ar": "مَا مَعْنَى هَذِهِ الْكَلِمَةِ؟",
+          "ar_plain": "ما معنى هذه الكلمة؟",
+          "translit": "mā maʿnā hadhihi al-kalimati",
+          "en": "What does this word mean?",
+          "ur": "اس لفظ کا مطلب کیا ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p12.mp3",
+        "context": {
+          "en": "You ask about the word on the board, صَدِيقٌ (Chapter 31's lab).",
+          "ur": "آپ تختے پر لکھے لفظ صَدِيقٌ کے بارے میں پوچھتے ہیں (باب 31 کی لیب)۔"
+        }
+      },
+      {
+        "id": "ch72-cl-p13",
+        "phrase": {
+          "ar": "صَدِيقٌ: أَخٌ لَكَ، وَلَيْسَ مِنْ أُسْرَتِكَ.",
+          "ar_plain": "صديق: اخ لك، وليس من اسرتك.",
+          "translit": "ṣadīqun ʾakhun laka walaysa min ʾusratika",
+          "en": "Ṣadīq: like a brother to you, but not from your family.",
+          "ur": "صَدِيق: آپ کے لیے بھائی جیسا، لیکن آپ کے خاندان سے نہیں۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p13.mp3",
+        "context": {
+          "en": "The teacher explains the word.",
+          "ur": "استاد لفظ کی وضاحت کرتا ہے۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch72-cl-p14",
+        "phrase": {
+          "ar": "فَقَدْتُ حَقِيبَتِي.",
+          "ar_plain": "فقدت حقيبتي.",
+          "translit": "faqadtu ḥaqībatī",
+          "en": "I lost my bag.",
+          "ur": "میری تھیلی کھو گئی ہے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p14.mp3",
+        "context": {
+          "en": "After the lesson you tell the teacher what you need: Chapter 50's lab.",
+          "ur": "سبق کے بعد آپ استاد کو بتاتے ہیں کہ آپ کو کیا چاہیے: باب 50 کی لیب۔"
+        }
+      },
+      {
+        "id": "ch72-cl-p15",
+        "phrase": {
+          "ar": "سَأُسَاعِدُكَ.",
+          "ar_plain": "ساساعدك.",
+          "translit": "saʾusāʿiduka",
+          "en": "I will help you.",
+          "ur": "میں آپ کی مدد کروں گا۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p15.mp3",
+        "context": {
+          "en": "The teacher offers to help.",
+          "ur": "استاد مدد کی پیشکش کرتا ہے۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch72-cl-p16",
+        "phrase": {
+          "ar": "تَفَضَّلْ.",
+          "ar_plain": "تفضل.",
+          "translit": "tafaḍḍal",
+          "en": "Please, go ahead.",
+          "ur": "تشریف لائیے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p16.mp3",
+        "context": {
+          "en": "Scene 3, the book desk: the bookseller (A) invites you to speak.",
+          "ur": "منظر 3، کتابوں کی میز: کتاب فروش (A) آپ کو بات کرنے کی دعوت دیتا ہے۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch72-cl-p17",
+        "phrase": {
+          "ar": "كَمْ ثَمَنُ هَذَا الْكِتَابِ؟",
+          "ar_plain": "كم ثمن هذا الكتاب؟",
+          "translit": "kam thamanu hadhā al-kitābi",
+          "en": "How much is the price of this book?",
+          "ur": "اس کتاب کی قیمت کتنی ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p17.mp3",
+        "context": {
+          "en": "You ask the price printed on the label: Chapter 61's lab.",
+          "ur": "آپ لیبل پر لکھی قیمت پوچھتے ہیں: باب 61 کی لیب۔"
+        }
+      },
+      {
+        "id": "ch72-cl-p18",
+        "phrase": {
+          "ar": "ثَمَنُهُ عَشَرَةُ رِيَالَاتٍ.",
+          "ar_plain": "ثمنه عشرة ريالات.",
+          "translit": "thamanuhu ʿasharatu riyaālātin",
+          "en": "Its price is ten riyals.",
+          "ur": "اس کی قیمت دس ریال ہے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p18.mp3",
+        "context": {
+          "en": "He states the label price (made up for practice).",
+          "ur": "وہ لیبل کی قیمت بتاتا ہے (مشق کے لیے گھڑی ہوئی)۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch72-cl-p19",
+        "phrase": {
+          "ar": "أُرِيدُ كِتَابَيْنِ.",
+          "ar_plain": "اريد كتابين.",
+          "translit": "ʾurīdu kitābayni",
+          "en": "I want two books.",
+          "ur": "مجھے دو کتابیں چاہئیں۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p19.mp3",
+        "context": {
+          "en": "You say how many you want. أُرِيدُ is given whole.",
+          "ur": "آپ بتاتے ہیں کہ کتنی چاہئیں۔ أُرِيدُ پورا دیا گیا ہے۔"
+        }
+      },
+      {
+        "id": "ch72-cl-p20",
+        "phrase": {
+          "ar": "الْمَجْمُوعُ عِشْرُونَ رِيَالًا.",
+          "ar_plain": "المجموع عشرون ريالا.",
+          "translit": "al-majmūʿu ʿishrūna riyaālan",
+          "en": "The total is twenty riyals.",
+          "ur": "کل رقم بیس ریال ہے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p20.mp3",
+        "context": {
+          "en": "He gives the total. No sum is asked of you.",
+          "ur": "وہ کل رقم بتاتا ہے۔ آپ سے کوئی حساب نہیں پوچھا جاتا۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch72-cl-p21",
+        "phrase": {
+          "ar": "نَعَمْ، شُكْرًا.",
+          "ar_plain": "نعم، شكرا.",
+          "translit": "naʿam shukran",
+          "en": "Yes, thank you.",
+          "ur": "جی ہاں، شکریہ۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p21.mp3",
+        "context": {
+          "en": "You accept the total.",
+          "ur": "آپ کل رقم قبول کرتے ہیں۔"
+        }
+      },
+      {
+        "id": "ch72-cl-p22",
+        "phrase": {
+          "ar": "جَزَاكَ اللَّهُ خَيْرًا.",
+          "ar_plain": "جزاك الله خيرا.",
+          "translit": "jazāka al-lahu khayran",
+          "en": "May Allah reward you with good.",
+          "ur": "اللہ آپ کو بھلائی دے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p22.mp3",
+        "context": {
+          "en": "You close politely when he hands you the books.",
+          "ur": "جب وہ آپ کو کتابیں دیتا ہے تو آپ شائستگی سے بات ختم کرتے ہیں۔"
+        }
+      },
+      {
+        "id": "ch72-cl-p23",
+        "phrase": {
+          "ar": "وَإِيَّاكَ.",
+          "ar_plain": "واياك.",
+          "translit": "waʾiyyaāka",
+          "en": "And you too.",
+          "ur": "اور آپ کو بھی۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch72-cl-p23.mp3",
+        "context": {
+          "en": "The bookseller replies.",
+          "ur": "کتاب فروش جواب دیتا ہے۔"
+        },
+        "heard_only": true
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "B",
+        "phrase_id": "ch72-cl-p01"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch72-cl-p02"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch72-cl-p03"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch72-cl-p04"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch72-cl-p05"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch72-cl-p06"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch72-cl-p07"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch72-cl-p08"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch72-cl-p09"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch72-cl-p10"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch72-cl-p11"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch72-cl-p12"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch72-cl-p13"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch72-cl-p14"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch72-cl-p15"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch72-cl-p16"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch72-cl-p17"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch72-cl-p18"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch72-cl-p19"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch72-cl-p20"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch72-cl-p21"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch72-cl-p22"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch72-cl-p23"
+      }
+    ],
+    "lab": {
+      "title": {
+        "en": "A Visit to a Learning Centre",
+        "ur": "تعلیمی مرکز کا دورہ"
+      },
+      "mission": {
+        "en": "Move through one visit to an Arabic learning centre. At reception greet, give your name and country, and ask where the classroom is and when the lesson begins. In the lesson ask what a word means and say you have lost your bag. At the book desk ask a price, say how many you want, and close politely.",
+        "ur": "عربی سیکھنے کے ایک مرکز کے ایک دورے سے گزریں۔ استقبالیہ پر سلام کریں، اپنا نام اور ملک بتائیں، اور پوچھیں کہ کمرۂ جماعت کہاں ہے اور سبق کب شروع ہوتا ہے۔ سبق میں پوچھیں کہ لفظ کا مطلب کیا ہے اور بتائیں کہ آپ کی تھیلی کھو گئی ہے۔ کتابوں کی میز پر قیمت پوچھیں، بتائیں کہ کتنی چاہئیں، اور شائستگی سے بات ختم کریں۔"
+      },
+      "toolkit": [
+        "السَّلَامُ عَلَيْكُمْ",
+        "اِسْمِي …",
+        "أَنَا مِنْ …",
+        "أَيْنَ …؟",
+        "مَتَى يَبْدَأُ …؟",
+        "مَا مَعْنَى …؟",
+        "كَمْ ثَمَنُ …؟",
+        "جَزَاكَ اللَّهُ خَيْرًا"
+      ],
+      "goals": [
+        {
+          "en": "Reception: greet, give your name and country, ask where and when",
+          "ur": "استقبالیہ: سلام کریں، نام اور ملک بتائیں، کہاں اور کب پوچھیں"
+        },
+        {
+          "en": "Lesson: ask what a word means and say what you need",
+          "ur": "سبق: لفظ کا مطلب پوچھیں اور بتائیں کہ آپ کو کیا چاہیے"
+        },
+        {
+          "en": "Book desk: ask the price, say how many, and close politely",
+          "ur": "کتابوں کی میز: قیمت پوچھیں، تعداد بتائیں، اور شائستگی سے بات ختم کریں"
+        }
+      ],
+      "pattern": {
+        "after_phrase_id": "ch72-cl-p07",
+        "items": [
+          {
+            "ar": "أَيْنَ الْفَصْلُ؟ / مَتَى يَبْدَأُ الدَّرْسُ؟",
+            "meaning": {
+              "en": "where is the classroom? / when does the lesson begin?",
+              "ur": "کمرۂ جماعت کہاں ہے؟ / سبق کب شروع ہوتا ہے؟"
+            },
+            "source": {
+              "en": "أَيْنَ: Chapters 5 and 12; مَتَى: Chapter 31",
+              "ur": "أَيْنَ: باب 5 اور 12؛ مَتَى: باب 31"
+            }
+          },
+          {
+            "ar": "مَا مَعْنَى هَذِهِ الْكَلِمَةِ؟ / فَقَدْتُ حَقِيبَتِي",
+            "meaning": {
+              "en": "what does this word mean? / I lost my bag",
+              "ur": "اس لفظ کا مطلب کیا ہے؟ / میری تھیلی کھو گئی ہے"
+            },
+            "source": {
+              "en": "Chapter 31's lab and Chapter 50's lab",
+              "ur": "باب 31 کی لیب اور باب 50 کی لیب"
+            }
+          },
+          {
+            "ar": "كَمْ ثَمَنُ هَذَا الْكِتَابِ؟ / أُرِيدُ كِتَابَيْنِ",
+            "meaning": {
+              "en": "how much is the price of this book? / I want two books",
+              "ur": "اس کتاب کی قیمت کتنی ہے؟ / مجھے دو کتابیں چاہئیں"
+            },
+            "source": {
+              "en": "Chapter 61's lab",
+              "ur": "باب 61 کی لیب"
+            }
+          }
+        ],
+        "note": {
+          "en": "Every line of this visit comes from an earlier chapter, and nothing new is taught. The facts written in each scene decide your reply: the classroom you want, the word on the board, the label on the book.",
+          "ur": "اس دورے کی ہر سطر پچھلے باب سے ہے، اور کوئی نئی چیز نہیں سکھائی گئی۔ ہر منظر میں لکھی ہوئی باتیں آپ کا جواب طے کرتی ہیں: جو کمرۂ جماعت آپ چاہتے ہیں، تختے پر لکھا لفظ، کتاب پر لگا لیبل۔"
+        }
+      },
+      "shadow_phrase_ids": [
+        "ch72-cl-p04",
+        "ch72-cl-p07",
+        "ch72-cl-p12",
+        "ch72-cl-p17",
+        "ch72-cl-p22"
+      ],
+      "mission_turns": [
+        {
+          "prompt_phrase_id": "ch72-cl-p03",
+          "goal_index": 0,
+          "cue": {
+            "en": "The receptionist asks your name. You are Umar.",
+            "ur": "استقبالیہ والا آپ کا نام پوچھتا ہے۔ آپ عمر ہیں۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "اِسْمِي عُمَرُ.",
+              "ar_plain": "اسمي عمر.",
+              "translit": "ismī ʿumaru",
+              "en": "My name is Umar.",
+              "ur": "میرا نام عمر ہے۔"
+            },
+            {
+              "ar": "أَنَا مِنْ بَاكِسْتَانَ.",
+              "ar_plain": "انا من باكستان.",
+              "translit": "ʾanā min bākistāna",
+              "en": "I am from Pakistan.",
+              "ur": "میں پاکستان سے ہوں۔"
+            },
+            {
+              "ar": "أَيْنَ الْفَصْلُ؟",
+              "ar_plain": "اين الفصل؟",
+              "translit": "ʾayna al-faṣlu",
+              "en": "Where is the classroom?",
+              "ur": "کمرۂ جماعت کہاں ہے؟"
+            }
+          ],
+          "correct_option_index": 0
+        },
+        {
+          "prompt_phrase_id": "ch72-cl-p08",
+          "goal_index": 0,
+          "cue": {
+            "en": "He says the classroom is over there. The notice says the lesson starts at four. Ask when it begins.",
+            "ur": "وہ کہتا ہے کمرۂ جماعت وہاں ہے۔ نوٹس کہتا ہے سبق چار بجے شروع ہوتا ہے۔ پوچھیں کب شروع ہوتا ہے۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "أَيْنَ الْفَصْلُ؟",
+              "ar_plain": "اين الفصل؟",
+              "translit": "ʾayna al-faṣlu",
+              "en": "Where is the classroom?",
+              "ur": "کمرۂ جماعت کہاں ہے؟"
+            },
+            {
+              "ar": "جَزَاكَ اللَّهُ خَيْرًا.",
+              "ar_plain": "جزاك الله خيرا.",
+              "translit": "jazāka al-lahu khayran",
+              "en": "May Allah reward you with good.",
+              "ur": "اللہ آپ کو بھلائی دے۔"
+            },
+            {
+              "ar": "مَتَى يَبْدَأُ الدَّرْسُ؟",
+              "ar_plain": "متى يبدا الدرس؟",
+              "translit": "matā yabdaʾu ad-darsu",
+              "en": "When does the lesson begin?",
+              "ur": "سبق کب شروع ہوتا ہے؟"
+            }
+          ],
+          "correct_option_index": 2
+        },
+        {
+          "prompt_phrase_id": "ch72-cl-p11",
+          "goal_index": 1,
+          "cue": {
+            "en": "The word صَدِيقٌ is on the board. Ask what it means.",
+            "ur": "تختے پر لفظ صَدِيقٌ لکھا ہے۔ پوچھیں اس کا مطلب کیا ہے۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "فَقَدْتُ حَقِيبَتِي.",
+              "ar_plain": "فقدت حقيبتي.",
+              "translit": "faqadtu ḥaqībatī",
+              "en": "I lost my bag.",
+              "ur": "میری تھیلی کھو گئی ہے۔"
+            },
+            {
+              "ar": "مَا مَعْنَى هَذِهِ الْكَلِمَةِ؟",
+              "ar_plain": "ما معنى هذه الكلمة؟",
+              "translit": "mā maʿnā hadhihi al-kalimati",
+              "en": "What does this word mean?",
+              "ur": "اس لفظ کا مطلب کیا ہے؟"
+            },
+            {
+              "ar": "كَمْ ثَمَنُ هَذَا الْكِتَابِ؟",
+              "ar_plain": "كم ثمن هذا الكتاب؟",
+              "translit": "kam thamanu hadhā al-kitābi",
+              "en": "How much is the price of this book?",
+              "ur": "اس کتاب کی قیمت کتنی ہے؟"
+            }
+          ],
+          "correct_option_index": 1
+        },
+        {
+          "prompt_phrase_id": "ch72-cl-p13",
+          "goal_index": 1,
+          "cue": {
+            "en": "After the lesson you cannot find your bag. Tell the teacher.",
+            "ur": "سبق کے بعد آپ کو اپنی تھیلی نہیں ملتی۔ استاد کو بتائیں۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "فَقَدْتُ حَقِيبَتِي.",
+              "ar_plain": "فقدت حقيبتي.",
+              "translit": "faqadtu ḥaqībatī",
+              "en": "I lost my bag.",
+              "ur": "میری تھیلی کھو گئی ہے۔"
+            },
+            {
+              "ar": "أُرِيدُ كِتَابَيْنِ.",
+              "ar_plain": "اريد كتابين.",
+              "translit": "ʾurīdu kitābayni",
+              "en": "I want two books.",
+              "ur": "مجھے دو کتابیں چاہئیں۔"
+            },
+            {
+              "ar": "مَتَى يَبْدَأُ الدَّرْسُ؟",
+              "ar_plain": "متى يبدا الدرس؟",
+              "translit": "matā yabdaʾu ad-darsu",
+              "en": "When does the lesson begin?",
+              "ur": "سبق کب شروع ہوتا ہے؟"
+            }
+          ],
+          "correct_option_index": 0
+        },
+        {
+          "prompt_phrase_id": "ch72-cl-p16",
+          "goal_index": 2,
+          "cue": {
+            "en": "At the book desk, ask the price of the book.",
+            "ur": "کتابوں کی میز پر کتاب کی قیمت پوچھیں۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "أُرِيدُ كِتَابَيْنِ.",
+              "ar_plain": "اريد كتابين.",
+              "translit": "ʾurīdu kitābayni",
+              "en": "I want two books.",
+              "ur": "مجھے دو کتابیں چاہئیں۔"
+            },
+            {
+              "ar": "نَعَمْ، شُكْرًا.",
+              "ar_plain": "نعم، شكرا.",
+              "translit": "naʿam shukran",
+              "en": "Yes, thank you.",
+              "ur": "جی ہاں، شکریہ۔"
+            },
+            {
+              "ar": "كَمْ ثَمَنُ هَذَا الْكِتَابِ؟",
+              "ar_plain": "كم ثمن هذا الكتاب؟",
+              "translit": "kam thamanu hadhā al-kitābi",
+              "en": "How much is the price of this book?",
+              "ur": "اس کتاب کی قیمت کتنی ہے؟"
+            }
+          ],
+          "correct_option_index": 2
+        },
+        {
+          "prompt_phrase_id": "ch72-cl-p20",
+          "goal_index": 2,
+          "cue": {
+            "en": "Twenty riyals for two books is what you expected. Accept and thank him.",
+            "ur": "دو کتابوں کے بیس ریال وہی ہیں جس کی آپ کو توقع تھی۔ قبول کریں اور شکریہ ادا کریں۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "لَا، شُكْرًا.",
+              "ar_plain": "لا، شكرا.",
+              "translit": "lā shukran",
+              "en": "No, thank you.",
+              "ur": "نہیں، شکریہ۔"
+            },
+            {
+              "ar": "نَعَمْ، شُكْرًا.",
+              "ar_plain": "نعم، شكرا.",
+              "translit": "naʿam shukran",
+              "en": "Yes, thank you.",
+              "ur": "جی ہاں، شکریہ۔"
+            },
+            {
+              "ar": "أَيْنَ الْفَصْلُ؟",
+              "ar_plain": "اين الفصل؟",
+              "translit": "ʾayna al-faṣlu",
+              "en": "Where is the classroom?",
+              "ur": "کمرۂ جماعت کہاں ہے؟"
+            }
+          ],
+          "correct_option_index": 1
+        }
+      ],
+      "can_do": [
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Greet and give your name and country",
+            "ur": "سلام کرنا اور نام اور ملک بتانا"
+          },
+          "ar": "السَّلَامُ عَلَيْكُمْ، اِسْمِي عُمَرُ"
+        },
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Ask where a place is and when a lesson begins",
+            "ur": "پوچھنا کہ جگہ کہاں ہے اور سبق کب شروع ہوتا ہے"
+          },
+          "ar": "أَيْنَ الْفَصْلُ؟"
+        },
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Ask what a word means and say what you need",
+            "ur": "لفظ کا مطلب پوچھنا اور بتانا کہ آپ کو کیا چاہیے"
+          },
+          "ar": "مَا مَعْنَى هَذِهِ الْكَلِمَةِ؟"
+        },
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Ask a price, say how many, and thank politely",
+            "ur": "قیمت پوچھنا، تعداد بتانا، اور شائستگی سے شکریہ ادا کرنا"
+          },
+          "ar": "جَزَاكَ اللَّهُ خَيْرًا"
+        }
+      ]
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You greeted, gave your name and country, asked where and when, asked a word's meaning, said what you needed, asked a price and closed politely: one visit, from lines you already knew.",
+      "ur": "آپ نے سلام کیا، نام اور ملک بتایا، کہاں اور کب پوچھا، لفظ کا مطلب پوچھا، بتایا کہ آپ کو کیا چاہیے، قیمت پوچھی اور شائستگی سے بات ختم کی: ایک دورہ، ان سطروں سے جو آپ پہلے جانتے تھے۔"
+    }
+  }
+}

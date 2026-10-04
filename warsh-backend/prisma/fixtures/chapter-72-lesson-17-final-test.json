@@ -1,0 +1,578 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 72, Final test (ch72-test, new). Sixteen multiple-choice questions at 80 % (12/16 fails, 13/16 passes): a name and an aimed call (q01–02), a called iḍāfa and a participle with its object (q03–04), the bridge أَيُّهَا / أَيَّتُهَا (q05–06), who is called and the call particle in an exact excerpt (q07–08), calling Allah (q09–10), a new authored call and an exact Quran call (q11–12), two An-Nazi'at decisions — a narrative reference and a cross-surah question (q13–14) — and two An-Naba decisions — a link from the opening question to the Day and a reference after the complete reading (q15–16). It is the Chapter 72 test, not a certificate for the course, and it does not score CL18. Every item is a fresh sentence. Correct options are placed 4 / 4 / 4 / 4. Added 2026-10-04 in the proposal harvest, batch 10 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-72-content-proposal.md and its review amendments.",
+    "title": "Chapter 72 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الثَّانِي وَالسَّبْعِينَ",
+    "titleUr": "باب 72 کا آخری امتحان",
+    "chapter_order": 72,
+    "lesson_order": 17,
+    "estimated_minutes": 12,
+    "xp_reward": 25
+  },
+  "hook": {
+    "ayah": {
+      "surah": 9,
+      "ayah": 119,
+      "label": "At-Tawbah 9:119",
+      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَكُونُوا مَعَ الصَّادِقِينَ",
+      "en": "O you who have believed, fear Allāh and be with those who are true.",
+      "ur": "اے اہل ایمان! خدا سے ڈرتے رہو اور راست بازوں کے ساتھ رہو",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/009119.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 72, the last chapter.",
+      "ur": "باب 72، آخری باب، مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 72,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch72-test-q01",
+        "topic": {
+          "en": "A name that is called",
+          "ur": "پکارا ہوا نام"
+        },
+        "prompt": {
+          "en": "The teacher points at Bilal. Which call is right?",
+          "ur": "استاد بلال کی طرف اشارہ کرتا ہے۔ کون سی پکار ٹھیک ہے؟"
+        },
+        "options": [
+          {
+            "en": "O Bilal, come!",
+            "ur": "اے بلال، آؤ!",
+            "arabic": "يَا بِلَالُ، اقْتَرِبْ"
+          },
+          {
+            "en": "O Bilal (tanwīn)",
+            "ur": "اے بلال (تنوین)",
+            "arabic": "يَا بِلَالٌ، اقْتَرِبْ"
+          },
+          {
+            "en": "O Bilal (-an)",
+            "ur": "اے بلال (-اً)",
+            "arabic": "يَا بِلَالًا، اقْتَرِبْ"
+          },
+          {
+            "en": "O Bilal (kasra)",
+            "ur": "اے بلال (کسرہ)",
+            "arabic": "يَا بِلَالِ، اقْتَرِبْ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch72-test-q02",
+        "topic": {
+          "en": "A call that points at no one",
+          "ur": "جو پکار کسی خاص کو نہ ہو"
+        },
+        "prompt": {
+          "en": "A voice in an empty hall calls to whoever is a student. Which call fits?",
+          "ur": "خالی ہال میں ایک آواز ہر اس شخص کو پکارتی ہے جو طالب علم ہو۔ کون سی پکار ٹھیک ہے؟"
+        },
+        "options": [
+          {
+            "en": "O student (ḍamma)",
+            "ur": "اے طالب علم (ضمہ)",
+            "arabic": "يَا طَالِبُ، اسْمَعْ"
+          },
+          {
+            "en": "O student, listen!",
+            "ur": "اے طالب علم، سنو!",
+            "arabic": "يَا طَالِبًا، اسْمَعْ"
+          },
+          {
+            "en": "O student (tanwīn)",
+            "ur": "اے طالب علم (تنوین)",
+            "arabic": "يَا طَالِبٌ، اسْمَعْ"
+          },
+          {
+            "en": "O student (kasra)",
+            "ur": "اے طالب علم (کسرہ)",
+            "arabic": "يَا طَالِبِ، اسْمَعْ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch72-test-q03",
+        "topic": {
+          "en": "A called iḍāfa",
+          "ur": "پکاری ہوئی اضافت"
+        },
+        "prompt": {
+          "en": "In which call is the first word the first term of a real iḍāfa?",
+          "ur": "کس پکار میں پہلا لفظ حقیقی اضافت کا پہلا جزو ہے؟"
+        },
+        "options": [
+          {
+            "en": "O student, take your book",
+            "ur": "اے طالب علم، اپنی کتاب لو",
+            "arabic": "يَا طَالِبًا، خُذْ كِتَابَكَ"
+          },
+          {
+            "en": "O Zayd",
+            "ur": "اے زید",
+            "arabic": "يَا زَيْدُ"
+          },
+          {
+            "en": "O seeker of knowledge",
+            "ur": "اے علم کے طالب",
+            "arabic": "يَا طَالِبَ الْعِلْمِ"
+          },
+          {
+            "en": "O student (pointed at)",
+            "ur": "اے طالب علم (اشارہ کیا ہوا)",
+            "arabic": "يَا طَالِبُ، اكْتُبْ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch72-test-q04",
+        "topic": {
+          "en": "A participle with its own object",
+          "ur": "اپنے مفعول والا اسمِ فاعل"
+        },
+        "prompt": {
+          "en": "In يَا حَافِظًا الْقُرْآنَ, 'O one who is memorising the Quran', what is الْقُرْآنَ?",
+          "ur": "يَا حَافِظًا الْقُرْآنَ، 'اے قرآن یاد کرتے ہوئے شخص'، میں الْقُرْآنَ کیا ہے؟"
+        },
+        "arabic": "يَا حَافِظًا الْقُرْآنَ",
+        "options": [
+          {
+            "en": "The genitive second term of an iḍāfa",
+            "ur": "اضافت کا مجرور دوسرا جزو"
+          },
+          {
+            "en": "The one who is called",
+            "ur": "وہ جسے پکارا گیا"
+          },
+          {
+            "en": "A state word",
+            "ur": "حال"
+          },
+          {
+            "en": "The accusative object of the participle (Chapter 58)",
+            "ur": "اسمِ فاعل کا منصوب مفعول (باب 58)"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch72-test-q05",
+        "topic": {
+          "en": "The bridge for a woman",
+          "ur": "عورت کے لیے پل"
+        },
+        "prompt": {
+          "en": "Which word completes 'O teacher (a woman)'?",
+          "ur": "کون سا لفظ 'اے استاد (عورت)' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "يَا ___ الْمُعَلِّمَةُ",
+        "options": [
+          {
+            "en": "أَيُّهَا",
+            "ur": "أَيُّهَا"
+          },
+          {
+            "en": "أَيْنَ",
+            "ur": "أَيْنَ"
+          },
+          {
+            "en": "هَذِهِ",
+            "ur": "هَذِهِ"
+          },
+          {
+            "en": "أَيَّتُهَا",
+            "ur": "أَيَّتُهَا"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch72-test-q06",
+        "topic": {
+          "en": "A word with ال",
+          "ur": "ال والا لفظ"
+        },
+        "prompt": {
+          "en": "Which call is said, 'O boy'?",
+          "ur": "کون سی پکار کہی جاتی ہے، 'اے لڑکے'؟"
+        },
+        "options": [
+          {
+            "en": "O boy (directly)",
+            "ur": "اے لڑکے (براہِ راست)",
+            "arabic": "يَا الْوَلَدُ"
+          },
+          {
+            "en": "O boy (feminine bridge)",
+            "ur": "اے لڑکے (مؤنث پل)",
+            "arabic": "يَا أَيَّتُهَا الْوَلَدُ"
+          },
+          {
+            "en": "O boy",
+            "ur": "اے لڑکے",
+            "arabic": "يَا أَيُّهَا الْوَلَدُ"
+          },
+          {
+            "en": "O boy (bridge first)",
+            "ur": "اے لڑکے (پہلے پل)",
+            "arabic": "أَيُّهَا يَا الْوَلَدُ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch72-test-q07",
+        "topic": {
+          "en": "Who is called",
+          "ur": "کسے پکارا گیا"
+        },
+        "prompt": {
+          "en": "In this excerpt, which part is the call?",
+          "ur": "اس ٹکڑے میں کون سا حصہ پکار ہے؟"
+        },
+        "arabic": "يَا أَيُّهَا النَّاسُ إِنَّا",
+        "options": [
+          {
+            "en": "النَّاسُ إِنَّا",
+            "ur": "النَّاسُ إِنَّا"
+          },
+          {
+            "en": "يَا أَيُّهَا النَّاسُ",
+            "ur": "يَا أَيُّهَا النَّاسُ"
+          },
+          {
+            "en": "إِنَّا خَلَقْنَاكُم",
+            "ur": "إِنَّا خَلَقْنَاكُم"
+          },
+          {
+            "en": "The whole excerpt is a statement, not a call",
+            "ur": "پورا ٹکڑا بیان ہے، پکار نہیں"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch72-test-q08",
+        "topic": {
+          "en": "The call particle",
+          "ur": "پکار کا حرف"
+        },
+        "prompt": {
+          "en": "In this ayah, which word is the call particle?",
+          "ur": "اس آیت میں پکار کا حرف کون سا لفظ ہے؟"
+        },
+        "arabic": "يَا أَيُّهَا الَّذِينَ آمَنُوا",
+        "options": [
+          {
+            "en": "يَا",
+            "ur": "يَا"
+          },
+          {
+            "en": "الَّذِينَ",
+            "ur": "الَّذِينَ"
+          },
+          {
+            "en": "آمَنُوا",
+            "ur": "آمَنُوا"
+          },
+          {
+            "en": "أَيُّهَا",
+            "ur": "أَيُّهَا"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch72-test-q09",
+        "topic": {
+          "en": "A form that holds the call",
+          "ur": "ایک صورت جس میں پکار شامل ہے"
+        },
+        "prompt": {
+          "en": "Which of these already holds the call and takes no يَا?",
+          "ur": "ان میں سے کون سا پکار پہلے سے رکھتا ہے اور اسے يَا نہیں لگتا؟"
+        },
+        "options": [
+          {
+            "en": "رَبَّنَا",
+            "ur": "رَبَّنَا"
+          },
+          {
+            "en": "رَبِّ",
+            "ur": "رَبِّ"
+          },
+          {
+            "en": "اللَّهُمَّ",
+            "ur": "اللَّهُمَّ"
+          },
+          {
+            "en": "All of them",
+            "ur": "ان میں سے سب"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch72-test-q10",
+        "topic": {
+          "en": "Our Lord, called",
+          "ur": "ہمارے رب، پکارا ہوا"
+        },
+        "prompt": {
+          "en": "What does رَبَّنَا do in this excerpt?",
+          "ur": "اس ٹکڑے میں رَبَّنَا کیا کام کرتا ہے؟"
+        },
+        "arabic": "رَبَّنَا لَا تُزِغْ قُلُوبَنَا",
+        "options": [
+          {
+            "en": "It is what is asked",
+            "ur": "یہ وہ ہے جو مانگا گیا"
+          },
+          {
+            "en": "It tells when",
+            "ur": "یہ بتاتا ہے کب"
+          },
+          {
+            "en": "It is the doer of تُزِغْ",
+            "ur": "یہ تُزِغْ کا کرنے والا ہے"
+          },
+          {
+            "en": "It calls Allah: 'our Lord'",
+            "ur": "یہ اللہ کو پکارتا ہے: 'ہمارے رب'"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch72-test-q11",
+        "topic": {
+          "en": "A new authored call",
+          "ur": "نئی خود لکھی ہوئی پکار"
+        },
+        "prompt": {
+          "en": "In this call, who is called? الْحَاضِرُونَ is given as 'those present'.",
+          "ur": "اس پکار میں کسے پکارا گیا؟ الْحَاضِرُونَ کا مطلب 'حاضر لوگ' دیا گیا ہے۔"
+        },
+        "arabic": "يَا أَيُّهَا الْحَاضِرُونَ، اسْمَعُوا",
+        "options": [
+          {
+            "en": "Those present",
+            "ur": "حاضر لوگ"
+          },
+          {
+            "en": "The listeners' teacher",
+            "ur": "سننے والوں کا استاد"
+          },
+          {
+            "en": "Nobody: it is a statement",
+            "ur": "کوئی نہیں: یہ ایک بیان ہے"
+          },
+          {
+            "en": "The speaker",
+            "ur": "بولنے والا"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch72-test-q12",
+        "topic": {
+          "en": "A Quranic call",
+          "ur": "قرآنی پکار"
+        },
+        "prompt": {
+          "en": "Who is called, and what is he told?",
+          "ur": "کسے پکارا گیا، اور اسے کیا کہا گیا؟"
+        },
+        "arabic": "يَا يَحْيَىٰ خُذِ الْكِتَابَ",
+        "options": [
+          {
+            "en": "The Scripture: take Yahya",
+            "ur": "کتاب: یحییٰ کو لو"
+          },
+          {
+            "en": "Yahya: take the Scripture",
+            "ur": "یحییٰ: کتاب کو تھامو"
+          },
+          {
+            "en": "The people: take the Scripture",
+            "ur": "لوگ: کتاب کو تھامو"
+          },
+          {
+            "en": "Nobody is called",
+            "ur": "کسی کو نہیں پکارا گیا"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch72-test-q13",
+        "topic": {
+          "en": "An-Nazi'at, a story",
+          "ur": "النازعات، قصہ"
+        },
+        "prompt": {
+          "en": "In 79:17, who is told to go to Pharaoh, and by whom?",
+          "ur": "79:17 میں کسے فرعون کے پاس جانے کو کہا گیا، اور کس نے؟"
+        },
+        "arabic": "اذْهَبْ إِلَىٰ فِرْعَوْنَ إِنَّهُ طَغَىٰ",
+        "options": [
+          {
+            "en": "Pharaoh, by Moses",
+            "ur": "فرعون، موسیٰ کی طرف سے"
+          },
+          {
+            "en": "Moses, by his Lord",
+            "ur": "موسیٰ، ان کے رب کی طرف سے"
+          },
+          {
+            "en": "Moses, by Pharaoh",
+            "ur": "موسیٰ، فرعون کی طرف سے"
+          },
+          {
+            "en": "The people, by the narrator",
+            "ur": "لوگ، بیان کرنے والے کی طرف سے"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch72-test-q14",
+        "topic": {
+          "en": "An-Nazi'at, across the surah",
+          "ur": "النازعات، پوری سورت میں"
+        },
+        "prompt": {
+          "en": "79:10 and 79:42 are both about people who ask. What do they ask about?",
+          "ur": "79:10 اور 79:42 دونوں ان لوگوں کے بارے میں ہیں جو پوچھتے ہیں۔ وہ کس بارے میں پوچھتے ہیں؟"
+        },
+        "options": [
+          {
+            "en": "79:10: being returned; 79:42: the Hour",
+            "ur": "79:10: لوٹائے جانا؛ 79:42: قیامت"
+          },
+          {
+            "en": "79:10: the mountains; 79:42: Moses",
+            "ur": "79:10: پہاڑ؛ 79:42: موسیٰ"
+          },
+          {
+            "en": "79:10: Pharaoh; 79:42: the night",
+            "ur": "79:10: فرعون؛ 79:42: رات"
+          },
+          {
+            "en": "Both ask about food",
+            "ur": "دونوں کھانے کے بارے میں پوچھتے ہیں"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch72-test-q15",
+        "topic": {
+          "en": "An-Naba, from the question to the Day",
+          "ur": "النبأ، سوال سے اس دن تک"
+        },
+        "prompt": {
+          "en": "78:1–5 ask about the great news. Which ayah says when the matter is decided?",
+          "ur": "78:1–5 بڑی خبر کے بارے میں پوچھتی ہیں۔ کون سی آیت بتاتی ہے کہ معاملہ کب طے ہوگا؟"
+        },
+        "arabic": "إِنَّ يَوْمَ الْفَصْلِ كَانَ مِيقَاتًا",
+        "options": [
+          {
+            "en": "78:7: the mountains are stakes",
+            "ur": "78:7: پہاڑ میخیں ہیں"
+          },
+          {
+            "en": "78:10: the night is a covering",
+            "ur": "78:10: رات پردہ ہے"
+          },
+          {
+            "en": "78:32: gardens and grapevines",
+            "ur": "78:32: باغات اور انگور"
+          },
+          {
+            "en": "78:17: the Day of Decision is an appointed time",
+            "ur": "78:17: فیصلے کا دن ایک مقرر وقت ہے"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch72-test-q16",
+        "topic": {
+          "en": "An-Naba, who is told",
+          "ur": "النبأ، کسے کہا گیا"
+        },
+        "prompt": {
+          "en": "Who is told 'So taste! We will never increase you except in punishment'?",
+          "ur": "کسے کہا گیا 'پس چکھو! ہم تمہیں عذاب ہی میں بڑھائیں گے'؟"
+        },
+        "arabic": "فَذُوقُوا فَلَن نَّزِيدَكُمْ إِلَّا عَذَابًا",
+        "options": [
+          {
+            "en": "The righteous",
+            "ur": "پرہیزگار"
+          },
+          {
+            "en": "The angels",
+            "ur": "فرشتے"
+          },
+          {
+            "en": "The transgressors who denied the signs and did not expect a reckoning",
+            "ur": "وہ سرکش جنہوں نے آیات جھٹلائیں اور حساب کی امید نہ رکھی"
+          },
+          {
+            "en": "Moses",
+            "ur": "موسیٰ"
+          }
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 72 — calling",
+      "ar": "الْمُنَادَى",
+      "ur": "باب 72 — پکار"
+    },
+    "ayah": {
+      "surah": 9,
+      "ayah": 119,
+      "label": "At-Tawbah 9:119",
+      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَكُونُوا مَعَ الصَّادِقِينَ",
+      "en": "O you who have believed, fear Allāh and be with those who are true.",
+      "ur": "اے اہل ایمان! خدا سے ڈرتے رہو اور راست بازوں کے ساتھ رہو",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/009119.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      2
+    ],
+    "highlighted_words": [
+      "يَا",
+      "الَّذِينَ"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 72 able to read the main kinds of call, the bridge أَيُّهَا, the calls to Allah, and two long surahs. This measures what the chapter taught; it does not claim every construction of the Quran.",
+      "ur": "آپ باب 72 اس حال میں مکمل کرتے ہیں کہ پکار کی اہم قسمیں، پل أَيُّهَا، اللہ کو پکارنے والی صورتیں، اور دو لمبی سورتیں پڑھ سکتے ہیں۔ یہ اسے ناپتا ہے جو اس باب نے سکھایا؛ یہ قرآن کی ہر ساخت کا دعویٰ نہیں کرتا۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 72 complete. You have reached the end of the course: keep reading, and keep returning to what you have learned.",
+      "ur": "باب 72 مکمل۔ آپ کورس کے آخر تک پہنچ گئے: پڑھتے رہیں، اور جو سیکھا ہے اس کی طرف لوٹتے رہیں۔"
+    }
+  }
+}

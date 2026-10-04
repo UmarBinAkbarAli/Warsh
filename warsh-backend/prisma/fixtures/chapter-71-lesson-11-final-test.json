@@ -1,0 +1,573 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 71, Final test (ch71-test, new). Sixteen multiple-choice questions at 80 % (12/16 fails, 13/16 passes): a single-word state and whose state it is (q01–02), a state clause and its contrast with a separate event (q03–04), a number and a measure (q05–06), a clarified statement and its contrast with a state (q07–08), a time word and an emphatic verbal noun (q09–10), a new sentence and a short text (q11–12) and one decision from each part of Al-Fajr plus a whole-surah decision (q13–16). Every item is a fresh sentence, not a verbatim repeat of a guided check. Correct options are placed 4 / 4 / 4 / 4. Added 2026-10-04 in the proposal harvest, batch 10 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-71-content-proposal.md and its review amendments.",
+    "title": "Chapter 71 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الْحَادِي وَالسَّبْعِينَ",
+    "titleUr": "باب 71 کا آخری امتحان",
+    "chapter_order": 71,
+    "lesson_order": 11,
+    "estimated_minutes": 12,
+    "xp_reward": 25
+  },
+  "hook": {
+    "ayah": {
+      "surah": 12,
+      "ayah": 16,
+      "label": "Yusuf 12:16",
+      "ar": "وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ",
+      "en": "And they came to their father at night, weeping.",
+      "ur": "(یہ حرکت کرکے) وہ رات کے وقت باپ کے پاس روتے ہوئے آئے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012016.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 71.",
+      "ur": "باب 71 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 71,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch71-test-q01",
+        "topic": {
+          "en": "A state word",
+          "ur": "حال کا لفظ"
+        },
+        "prompt": {
+          "en": "Which word tells the state of the traveller?",
+          "ur": "کون سا لفظ مسافر کی حالت بتاتا ہے؟"
+        },
+        "arabic": "وَصَلَ الْمُسَافِرُ مُتْعَبًا",
+        "options": [
+          {
+            "en": "مُتْعَبًا — tired",
+            "ur": "مُتْعَبًا — تھکا ہوا"
+          },
+          {
+            "en": "الْمُسَافِرُ — the traveller",
+            "ur": "الْمُسَافِرُ — مسافر"
+          },
+          {
+            "en": "وَصَلَ — arrived",
+            "ur": "وَصَلَ — پہنچا"
+          },
+          {
+            "en": "There is no state word here",
+            "ur": "یہاں کوئی حال کا لفظ نہیں"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch71-test-q02",
+        "topic": {
+          "en": "Whose state",
+          "ur": "کس کی حالت"
+        },
+        "prompt": {
+          "en": "Whose state does صَامِتِينَ, 'silent', tell?",
+          "ur": "صَامِتِينَ، 'خاموش'، کس کی حالت بتاتا ہے؟"
+        },
+        "arabic": "اسْتَمَعَ الطُّلَّابُ إِلَى الدَّرْسِ صَامِتِينَ",
+        "options": [
+          {
+            "en": "The lesson's",
+            "ur": "سبق کی"
+          },
+          {
+            "en": "The students who listened",
+            "ur": "طلبہ کی جنہوں نے سنا"
+          },
+          {
+            "en": "Nobody's",
+            "ur": "کسی کی نہیں"
+          },
+          {
+            "en": "The teacher's",
+            "ur": "استاد کی"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch71-test-q03",
+        "topic": {
+          "en": "A state clause",
+          "ur": "حال والا جملہ"
+        },
+        "prompt": {
+          "en": "What does يَلْعَبُونَ tell?",
+          "ur": "يَلْعَبُونَ کیا بتاتا ہے؟"
+        },
+        "arabic": "رَأَيْتُ الْأَوْلَادَ يَلْعَبُونَ",
+        "options": [
+          {
+            "en": "A separate event that came after seeing",
+            "ur": "ایک الگ کام جو دیکھنے کے بعد ہوا"
+          },
+          {
+            "en": "Who saw",
+            "ur": "کس نے دیکھا"
+          },
+          {
+            "en": "The state of the boys while I saw them: playing",
+            "ur": "لڑکوں کی حالت جب میں نے انہیں دیکھا: کھیلتے ہوئے"
+          },
+          {
+            "en": "When I saw",
+            "ur": "میں نے کب دیکھا"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch71-test-q04",
+        "topic": {
+          "en": "A state clause or a separate event",
+          "ur": "حال والا جملہ یا الگ کام"
+        },
+        "prompt": {
+          "en": "In which sentence does the second verb tell a state of the doers?",
+          "ur": "کس جملے میں دوسرا فعل کرنے والوں کی حالت بتاتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "The students came, then they cried",
+            "ur": "طلبہ آئے، پھر روئے",
+            "arabic": "جَاءَ الطُّلَّابُ ثُمَّ بَكَوْا"
+          },
+          {
+            "en": "The students came and cried",
+            "ur": "طلبہ آئے اور روئے",
+            "arabic": "جَاءَ الطُّلَّابُ وَبَكَوْا"
+          },
+          {
+            "en": "The students did not come",
+            "ur": "طلبہ نہیں آئے",
+            "arabic": "لَمْ يَأْتِ الطُّلَّابُ"
+          },
+          {
+            "en": "The students came crying",
+            "ur": "طلبہ روتے ہوئے آئے",
+            "arabic": "جَاءَ الطُّلَّابُ يَبْكُونَ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch71-test-q05",
+        "topic": {
+          "en": "A number and what it counts",
+          "ur": "عدد اور جو وہ گنتا ہے"
+        },
+        "prompt": {
+          "en": "What does صَفْحَةً do?",
+          "ur": "صَفْحَةً کیا کام کرتا ہے؟"
+        },
+        "arabic": "قَرَأَ الطَّالِبُ أَرْبَعِينَ صَفْحَةً",
+        "options": [
+          {
+            "en": "It tells the state of the reader",
+            "ur": "یہ پڑھنے والے کی حالت بتاتا ہے"
+          },
+          {
+            "en": "It tells when he read",
+            "ur": "یہ بتاتا ہے کہ اس نے کب پڑھا"
+          },
+          {
+            "en": "It repeats the action of the verb",
+            "ur": "یہ فعل کا کام دہراتا ہے"
+          },
+          {
+            "en": "It clears up what the forty are: forty pages",
+            "ur": "یہ واضح کرتا ہے کہ چالیس کیا ہیں: چالیس صفحے"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch71-test-q06",
+        "topic": {
+          "en": "A measure and what it is of",
+          "ur": "ناپ اور وہ کس چیز کی ہے"
+        },
+        "prompt": {
+          "en": "Which word says what the amount is of?",
+          "ur": "کون سا لفظ بتاتا ہے کہ مقدار کس چیز کی ہے؟"
+        },
+        "arabic": "اشْتَرَيْتُ ذِرَاعًا حَرِيرًا",
+        "options": [
+          {
+            "en": "ذِرَاعًا — a cubit",
+            "ur": "ذِرَاعًا — ایک ذراع"
+          },
+          {
+            "en": "اشْتَرَيْتُ — I bought",
+            "ur": "اشْتَرَيْتُ — میں نے خریدا"
+          },
+          {
+            "en": "حَرِيرًا — silk",
+            "ur": "حَرِيرًا — ریشم"
+          },
+          {
+            "en": "None of them",
+            "ur": "ان میں سے کوئی نہیں"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch71-test-q07",
+        "topic": {
+          "en": "A clarified statement",
+          "ur": "بیان کی وضاحت"
+        },
+        "prompt": {
+          "en": "What does أَدَبًا tell?",
+          "ur": "أَدَبًا کیا بتاتا ہے؟"
+        },
+        "arabic": "ازْدَادَ الْوَلَدُ أَدَبًا",
+        "options": [
+          {
+            "en": "The state the boy was in while he increased",
+            "ur": "بڑھتے وقت لڑکا کس حالت میں تھا"
+          },
+          {
+            "en": "In what respect the boy increased: in good manners",
+            "ur": "لڑکا کس لحاظ سے بڑھا: ادب میں"
+          },
+          {
+            "en": "When the boy increased",
+            "ur": "لڑکا کب بڑھا"
+          },
+          {
+            "en": "Who the boy is",
+            "ur": "لڑکا کون ہے"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch71-test-q08",
+        "topic": {
+          "en": "A state or a respect",
+          "ur": "حالت یا لحاظ"
+        },
+        "prompt": {
+          "en": "In which sentence is the last word a state and not a respect?",
+          "ur": "کس جملے میں آخری لفظ حالت ہے، لحاظ نہیں؟"
+        },
+        "options": [
+          {
+            "en": "The boy came smiling",
+            "ur": "لڑکا مسکراتا ہوا آیا",
+            "arabic": "جَاءَ الْوَلَدُ مُبْتَسِمًا"
+          },
+          {
+            "en": "The boy increased in good manners",
+            "ur": "لڑکا ادب میں بڑھا",
+            "arabic": "ازْدَادَ الْوَلَدُ أَدَبًا"
+          },
+          {
+            "en": "The boy increased in knowledge",
+            "ur": "لڑکا علم میں بڑھا",
+            "arabic": "ازْدَادَ الْوَلَدُ عِلْمًا"
+          },
+          {
+            "en": "The boy increased in patience",
+            "ur": "لڑکا صبر میں بڑھا",
+            "arabic": "ازْدَادَ الْوَلَدُ صَبْرًا"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch71-test-q09",
+        "topic": {
+          "en": "A time word",
+          "ur": "وقت کا لفظ"
+        },
+        "prompt": {
+          "en": "What job does يَوْمَ الْخَمِيسِ do?",
+          "ur": "يَوْمَ الْخَمِيسِ کیا کام کرتا ہے؟"
+        },
+        "arabic": "سَافَرَ الْمُعَلِّمُ يَوْمَ الْخَمِيسِ",
+        "options": [
+          {
+            "en": "It tells his state",
+            "ur": "یہ اس کی حالت بتاتا ہے"
+          },
+          {
+            "en": "It clears up a number",
+            "ur": "یہ عدد کی وضاحت کرتا ہے"
+          },
+          {
+            "en": "It tells when he travelled",
+            "ur": "یہ بتاتا ہے کہ اس نے کب سفر کیا"
+          },
+          {
+            "en": "It repeats the action of the verb",
+            "ur": "یہ فعل کا کام دہراتا ہے"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch71-test-q10",
+        "topic": {
+          "en": "An emphatic verbal noun",
+          "ur": "تاکید والا مصدر"
+        },
+        "prompt": {
+          "en": "What job does نَصْرًا do?",
+          "ur": "نَصْرًا کیا کام کرتا ہے؟"
+        },
+        "arabic": "وَيَنصُرَكَ اللَّهُ نَصْرًا عَزِيزًا",
+        "options": [
+          {
+            "en": "It tells the state of the one who is helped",
+            "ur": "یہ مدد پانے والے کی حالت بتاتا ہے"
+          },
+          {
+            "en": "It clears up a number",
+            "ur": "یہ عدد کی وضاحت کرتا ہے"
+          },
+          {
+            "en": "It tells when",
+            "ur": "یہ بتاتا ہے کب"
+          },
+          {
+            "en": "It repeats the action of the verb for emphasis (Chapter 55)",
+            "ur": "یہ تاکید کے لیے فعل کا کام دہراتا ہے (باب 55)"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch71-test-q11",
+        "topic": {
+          "en": "A new sentence",
+          "ur": "نیا جملہ"
+        },
+        "prompt": {
+          "en": "Which word tells the state of the pilgrims? شَاكِرِينَ is given as 'grateful'.",
+          "ur": "کون سا لفظ حاجیوں کی حالت بتاتا ہے؟ شَاكِرِينَ کا مطلب 'شکر گزار' دیا گیا ہے۔"
+        },
+        "arabic": "عَادَ الْحُجَّاجُ إِلَى بُيُوتِهِمْ شَاكِرِينَ",
+        "options": [
+          {
+            "en": "شَاكِرِينَ — grateful",
+            "ur": "شَاكِرِينَ — شکر گزار"
+          },
+          {
+            "en": "بُيُوتِهِمْ — their homes",
+            "ur": "بُيُوتِهِمْ — ان کے گھر"
+          },
+          {
+            "en": "الْحُجَّاجُ — the pilgrims",
+            "ur": "الْحُجَّاجُ — حاجی"
+          },
+          {
+            "en": "عَادَ — returned",
+            "ur": "عَادَ — لوٹے"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch71-test-q12",
+        "topic": {
+          "en": "A short text",
+          "ur": "مختصر متن"
+        },
+        "prompt": {
+          "en": "In the second sentence of the text, what does آيَةً do? آيَةً is given as 'a verse'.",
+          "ur": "متن کے دوسرے جملے میں آيَةً کیا کام کرتا ہے؟ آيَةً کا مطلب 'آیت' دیا گیا ہے۔"
+        },
+        "arabic": "ذَهَبَ الطُّلَّابُ إِلَى الْمَسْجِدِ فَرِحِينَ. وَقَرَؤُوا ثَلَاثِينَ آيَةً.",
+        "options": [
+          {
+            "en": "It tells the state of the students",
+            "ur": "یہ طلبہ کی حالت بتاتا ہے"
+          },
+          {
+            "en": "It clears up what the thirty are: thirty verses",
+            "ur": "یہ واضح کرتا ہے کہ تیس کیا ہیں: تیس آیات"
+          },
+          {
+            "en": "It tells when they read",
+            "ur": "یہ بتاتا ہے کہ انہوں نے کب پڑھا"
+          },
+          {
+            "en": "It repeats the action of the verb",
+            "ur": "یہ فعل کا کام دہراتا ہے"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch71-test-q13",
+        "topic": {
+          "en": "Al-Fajr, first part",
+          "ur": "الفجر، پہلا حصہ"
+        },
+        "prompt": {
+          "en": "According to this ayah, what happened to them?",
+          "ur": "اس آیت کے مطابق ان کے ساتھ کیا ہوا؟"
+        },
+        "arabic": "فَصَبَّ عَلَيْهِمْ رَبُّكَ سَوْطَ عَذَابٍ",
+        "options": [
+          {
+            "en": "Your Lord honoured them",
+            "ur": "تمہارے رب نے انہیں عزت دی"
+          },
+          {
+            "en": "Your Lord poured on them a lash of punishment",
+            "ur": "تمہارے رب نے ان پر عذاب کا کوڑا برسایا"
+          },
+          {
+            "en": "They carved the rocks in the valley",
+            "ur": "انہوں نے وادی میں چٹانیں تراشیں"
+          },
+          {
+            "en": "They were given a full cup",
+            "ur": "انہیں بھرا ہوا جام دیا گیا"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch71-test-q14",
+        "topic": {
+          "en": "Al-Fajr, a quoted saying",
+          "ur": "الفجر، نقل کی گئی بات"
+        },
+        "prompt": {
+          "en": "Who says 'My Lord has humiliated me'?",
+          "ur": "'میرے رب نے مجھے ذلیل کیا' کون کہتا ہے؟"
+        },
+        "arabic": "وَأَمَّا إِذَا مَا ابْتَلَاهُ فَقَدَرَ عَلَيْهِ رِزْقَهُ فَيَقُولُ رَبِّي أَهَانَنِ",
+        "options": [
+          {
+            "en": "The human being whose provision is restricted",
+            "ur": "وہ انسان جس کا رزق تنگ کر دیا جائے"
+          },
+          {
+            "en": "The orphan",
+            "ur": "یتیم"
+          },
+          {
+            "en": "The angels",
+            "ur": "فرشتے"
+          },
+          {
+            "en": "The soul at peace",
+            "ur": "مطمئن جان"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch71-test-q15",
+        "topic": {
+          "en": "Al-Fajr, the close",
+          "ur": "الفجر، اختتام"
+        },
+        "prompt": {
+          "en": "What is the soul told to do at the end of these ayat?",
+          "ur": "ان آیات کے آخر میں جان کو کیا کہا گیا؟"
+        },
+        "arabic": "فَادْخُلِي فِي عِبَادِي وَادْخُلِي جَنَّتِي",
+        "options": [
+          {
+            "en": "Remember too late",
+            "ur": "بہت دیر سے یاد کرو"
+          },
+          {
+            "en": "Increase corruption",
+            "ur": "فساد بڑھاؤ"
+          },
+          {
+            "en": "Return to the dawn",
+            "ur": "فجر کی طرف لوٹ جا"
+          },
+          {
+            "en": "Enter among My servants and enter My Paradise",
+            "ur": "میرے بندوں میں شامل ہو جا اور میری جنت میں داخل ہو جا"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch71-test-q16",
+        "topic": {
+          "en": "Al-Fajr, the whole surah",
+          "ur": "الفجر، پوری سورت"
+        },
+        "prompt": {
+          "en": "After the oaths and the three peoples, how does the surah continue?",
+          "ur": "قسموں اور تین قوموں کے بعد سورت کیسے آگے بڑھتی ہے؟"
+        },
+        "options": [
+          {
+            "en": "With the same oaths again",
+            "ur": "انہی قسموں کے ساتھ دوبارہ"
+          },
+          {
+            "en": "With rules for trade",
+            "ur": "تجارت کے اصولوں کے ساتھ"
+          },
+          {
+            "en": "With the human being's two sayings and the correction, then the Day, then the call to the soul at peace",
+            "ur": "انسان کی دو باتوں اور تصحیح کے ساتھ، پھر اس دن، پھر مطمئن جان کی پکار"
+          },
+          {
+            "en": "It stops",
+            "ur": "یہ رک جاتی ہے"
+          }
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 71 — state and clarification",
+      "ar": "الْحَالُ وَالتَّمْيِيزُ",
+      "ur": "باب 71 — حال اور تمییز"
+    },
+    "ayah": {
+      "surah": 12,
+      "ayah": 16,
+      "label": "Yusuf 12:16",
+      "ar": "وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ",
+      "en": "And they came to their father at night, weeping.",
+      "ur": "(یہ حرکت کرکے) وہ رات کے وقت باپ کے پاس روتے ہوئے آئے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012016.mp3"
+    },
+    "highlighted_word_indices": [
+      2,
+      3
+    ],
+    "highlighted_words": [
+      "عِشَاءً",
+      "يَبْكُونَ"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 71 able to find a state and a clarifier, tell them from a time word and an emphatic verbal noun, and read Surat Al-Fajr.",
+      "ur": "آپ باب 71 اس حال میں مکمل کرتے ہیں کہ حال اور وضاحت کرنے والے کو پہچان سکتے ہیں، انہیں وقت کے لفظ اور تاکید والے مصدر سے الگ کر سکتے ہیں، اور سورۃ الفجر پڑھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 71 complete. Chapter 72: calling someone, a closing conversation, and two long surahs.",
+      "ur": "باب 71 مکمل۔ باب 72: کسی کو پکارنا، ایک آخری گفتگو، اور دو لمبی سورتیں۔"
+    }
+  }
+}

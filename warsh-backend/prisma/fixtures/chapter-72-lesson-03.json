@@ -2,446 +2,447 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 72, Lesson 3 — The accusative vocative: muḍāf, 'my …' shortened, and non-specific listeners.",
+    "_note": "Chapter 72, Lesson 3 (ch72-l09, new). The accusative kinds of called word: the indefinite word that points at no one (يَا طَالِبًا), the real iḍāfa (يَا طَالِبَ الْعِلْمِ, يَا عَبْدَ اللَّهِ) and one bounded شبيه بالمضاف (يَا قَارِئًا الْكِتَابَ, a participle with its own object, set against يَا قَارِئَ الْكِتَابِ). The complement of the participle is accusative as its object (Chapter 58's participle that takes an object) and is not called a genitive dependent; the real iḍāfa keeps its genitive (Chapters 26 and 63). The proposal's source example يَا كَثِيرًا فَضْلُهُ is not used as a new productive pattern. No dual or plural, and no rare particle. The match has three different kinds on the right, each used once. The fresh tasks give a scene before asking for the form. Added 2026-10-04 in the proposal harvest, batch 10 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-72-content-proposal.md and its review amendments.",
+    "title": "Calling Without Pointing",
+    "titleAr": "الْمُنَادَى الْمَنْصُوبُ",
+    "titleUr": "بغیر اشارے کے پکارنا",
     "chapter_order": 72,
     "lesson_order": 3,
-    "chapter_title": "المنادى",
-    "title": "The Accusative Vocative — يَا أَهْلَ الْكِتَابِ",
-    "titleAr": "الْمُنَادَى الْمَنْصُوبُ",
-    "source": "arabai-backend/prisma/fixtures",
-    "estimated_minutes": 10,
+    "estimated_minutes": 12,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 3,
-      "ayah": 64,
-      "label": "Aal Imran 3:64",
-      "ar": "قُلْ يَا أَهْلَ الْكِتَابِ تَعَالَوْا إِلَىٰ كَلِمَةٍ سَوَاءٍ بَيْنَنَا وَبَيْنَكُمْ",
-      "en": "Say, 'O People of the Scripture, come to a word that is equitable between us and you.'",
-      "ur": "کہہ دیجیے: اے اہلِ کتاب، ایک ایسی بات کی طرف آؤ جو ہمارے اور تمہارے درمیان برابر ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003064.mp3"
+      "surah": 19,
+      "ayah": 12,
+      "label": "Maryam 19:12",
+      "ar": "يَا يَحْيَىٰ",
+      "en": "O John",
+      "ur": "اے یحییٰ",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/019012.mp3"
     },
     "noor_intro": {
-      "en": "يَا أَهْلَ الْكِتَابِ — 'O People of the Book'. Here the one called, أَهْلَ, ends in fatḥa, not ḍamma. When the منادى is the first part of an iḍāfa, it is accusative.",
-      "ur": "يَا أَهْلَ الْكِتَابِ — 'اے اہلِ کتاب'۔ یہاں منادیٰ أَهْلَ پر فتحہ ہے، ضمہ نہیں۔ جب منادیٰ اضافت کا پہلا حصہ ہو تو منصوب ہوتا ہے۔"
+      "en": "Not every call points at someone. Sometimes you call whoever fits a description, and sometimes the called word is itself two words, like 'seeker of knowledge'. Both of these end differently from a name.",
+      "ur": "ہر پکار کسی کو متعین نہیں ہوتی۔ کبھی آپ اسے پکارتے ہیں جو بھی کسی وصف پر پورا اترے، اور کبھی پکارا ہوا لفظ خود دو لفظ ہوتا ہے، جیسے 'علم کا طالب'۔ دونوں کا ختم نام سے مختلف ہوتا ہے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "A muḍāf vocative is accusative",
-        "ar": "الْمُنَادَى الْمُضَافُ",
-        "ur": "مضاف منادیٰ"
+        "en": "No one in particular: the -an call",
+        "ar": "الْمُنَادَى النَّكِرَةُ غَيْرُ الْمَقْصُودَةِ",
+        "ur": "کسی خاص کو نہیں: -اً والی پکار"
       },
       "explanation": {
-        "en": "If the one called is a muḍāf — the first word of an iḍāfa — it is accusative and shows fatḥa: يَا أَهْلَ الْكِتَابِ، يَا عَبْدَ اللَّهِ، يَا رَسُولَ اللَّهِ. The second word stays genitive as مُضَافٌ إِلَيْهِ.",
-        "ur": "اگر منادیٰ مضاف ہو — یعنی اضافت کا پہلا لفظ — تو منصوب ہوتا ہے اور فتحہ دکھاتا ہے: يَا أَهْلَ الْكِتَابِ، يَا عَبْدَ اللَّهِ، يَا رَسُولَ اللَّهِ۔ دوسرا لفظ مضاف الیہ ہونے کی وجہ سے مجرور رہتا ہے۔"
-      },
-      "examples": [
-        {
-          "ar": "يَا عَبْدَ اللَّهِ",
-          "ar_plain": "يا عبد الله",
-          "translit": "yaa 'abda allaahi",
-          "en": "O servant of Allah!",
-          "ur": "اے اللہ کے بندے!"
-        }
-      ]
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Plurals show it with ي",
-        "ar": "يَا بَنِي إِسْرَائِيلَ",
-        "ur": "جمع میں ی"
-      },
-      "explanation": {
-        "en": "Words that mark case with letters show the accusative with ي: يَا بَنِي إِسْرَائِيلَ — 'O Children of Israel'. بَنِي is accusative, and the ن of بَنُونَ drops because it is muḍāf (Chapter 63).",
-        "ur": "جو الفاظ حروف سے اعراب دکھاتے ہیں ان کا نصب ي سے ہوتا ہے: يَا بَنِي إِسْرَائِيلَ — 'اے بنی اسرائیل'۔ بَنِي منصوب ہے، اور مضاف ہونے کی وجہ سے بَنُونَ کا ن گر گیا ہے (باب 63)۔"
+        "en": "When the speaker names no one in particular, the called word is indefinite and ends in -an: يَا طَالِبًا، خُذْ كِتَابَكَ, said in an empty hall to whoever is a student. This is the call of Lesson 1 that points at no one.",
+        "ur": "جب بولنے والا کسی خاص کو متعین نہیں کرتا تو پکارا ہوا لفظ نکرہ ہوتا ہے اور -اً پر ختم ہوتا ہے: يَا طَالِبًا، خُذْ كِتَابَكَ، خالی ہال میں ہر اس شخص سے جو طالب علم ہو۔ یہ سبق 1 کی وہ پکار ہے جو کسی خاص کو نہیں ہوتی۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "'My …' shortened: يَا قَوْمِ",
-        "ar": "الْمُضَافُ إِلَى يَاءِ الْمُتَكَلِّمِ",
-        "ur": "یائے متکلم کی طرف مضاف"
+        "en": "A called iḍāfa",
+        "ar": "الْمُنَادَى الْمُضَافُ",
+        "ur": "اضافت والی پکار"
       },
       "explanation": {
-        "en": "'My people' is قَوْمِي, a muḍāf. In a call the ي is often dropped and only its kasra remains: يَا قَوْمِ — 'O my people'. Likewise يَا عِبَادِ = يَا عِبَادِي, and رَبِّ = رَبِّي.",
-        "ur": "'میری قوم' قَوْمِي ہے، جو مضاف ہے۔ ندا میں یہ ي اکثر گر جاتی ہے اور صرف اس کا کسرہ رہ جاتا ہے: يَا قَوْمِ — 'اے میری قوم'۔ اسی طرح يَا عِبَادِ = يَا عِبَادِي، اور رَبِّ = رَبِّي۔"
-      },
-      "examples": [
-        {
-          "ar": "يَا قَوْمِ اعْبُدُوا اللَّهَ",
-          "ar_plain": "يا قوم اعبدوا الله",
-          "translit": "yaa qawmi u'buduu allaaha",
-          "en": "O my people, worship Allah!",
-          "ur": "اے میری قوم، اللہ کی عبادت کرو!"
-        }
-      ]
+        "en": "When the called word is a real iḍāfa, its first term ends in fatḥa and the second term stays genitive: يَا طَالِبَ الْعِلْمِ, 'O seeker of knowledge', and يَا عَبْدَ اللَّهِ, 'O servant of Allah'. You know the iḍāfa from Chapters 26 and 63; here it is called.",
+        "ur": "جب پکارا ہوا لفظ حقیقی اضافت ہو تو اس کے پہلے جزو کا ختم فتحہ ہوتا ہے اور دوسرا جزو مجرور رہتا ہے: يَا طَالِبَ الْعِلْمِ، 'اے علم کے طالب'، اور يَا عَبْدَ اللَّهِ، 'اے اللہ کے بندے'۔ اضافت آپ باب 26 اور 63 سے جانتے ہیں؛ یہاں اسے پکارا جا رہا ہے۔"
+      }
     },
     {
-      "type": "CONCEPT",
+      "type": "CONTRAST",
       "concept": {
-        "en": "No particular listener: fatḥa with tanwīn",
-        "ar": "النَّكِرَةُ غَيْرُ الْمَقْصُودَةِ",
-        "ur": "نکرہ غیر مقصودہ"
-      },
-      "explanation": {
-        "en": "If the call is not aimed at anyone in particular, the noun is accusative with tanwīn: يَا غَافِلًا تَنَبَّهْ — 'O heedless one (whoever you are), wake up!'. A noun with its own complement is also accusative: يَا طَالِعًا جَبَلًا — 'O you climbing a mountain'. In 36:30, يَا حَسْرَةً عَلَى الْعِبَادِ is accusative with tanwīn too. Recognise these; you will not be tested on telling them apart.",
-        "ur": "اگر پکار کسی خاص شخص کے لیے نہ ہو تو اسم تنوین کے ساتھ منصوب ہوتا ہے: يَا غَافِلًا تَنَبَّهْ — 'اے غافل (جو بھی ہو)، جاگ جا!'۔ جس اسم کے ساتھ اس کا متعلق جڑا ہو وہ بھی منصوب ہوتا ہے: يَا طَالِعًا جَبَلًا — 'اے پہاڑ پر چڑھنے والے'۔ 36:30 میں يَا حَسْرَةً عَلَى الْعِبَادِ بھی تنوین کے ساتھ منصوب ہے۔ انہیں پہچانیے؛ ان کا آپس میں فرق ٹیسٹ نہیں ہوگا۔"
+        "en": "A real iḍāfa, or a participle with its own object",
+        "ur": "حقیقی اضافت، یا اپنے مفعول والا اسمِ فاعل"
       },
       "examples": [
         {
-          "ar": "يَا غَافِلًا تَنَبَّهْ",
-          "ar_plain": "يا غافلا تنبه",
-          "translit": "yaa ghaafilan tanabbah",
-          "en": "O heedless one, wake up!",
-          "ur": "اے غافل، جاگ جا!"
+          "ar": "يَا قَارِئَ الْكِتَابِ",
+          "ar_plain": "يا قارئ الكتاب",
+          "translit": "yaā qāriʾa al-kitābi",
+          "en": "O reader of the book",
+          "ur": "اے کتاب کے پڑھنے والے"
+        },
+        {
+          "ar": "يَا قَارِئًا الْكِتَابَ",
+          "ar_plain": "يا قارئا الكتاب",
+          "translit": "yaā qāriʾan al-kitāba",
+          "en": "O one who is reading the book",
+          "ur": "اے کتاب پڑھتے ہوئے شخص"
         }
-      ]
+      ],
+      "explanation": {
+        "en": "Both are calls that end in fatḥa on the first word. In the first, الْكِتَابِ is the genitive second term of an iḍāfa. In the second, قَارِئًا is a participle that takes its own object, as in Chapter 58, and الْكِتَابَ is that accusative object, not a genitive. A participle with its object is read as one called phrase; it is called شَبِيهٌ بِالْمُضَافِ, 'like an iḍāfa'.",
+        "ur": "دونوں پکاریں ہیں جن کے پہلے لفظ کا ختم فتحہ ہے۔ پہلی میں الْكِتَابِ اضافت کا مجرور دوسرا جزو ہے۔ دوسری میں قَارِئًا اسمِ فاعل ہے جو اپنا مفعول لیتا ہے، جیسا باب 58 میں، اور الْكِتَابَ وہ منصوب مفعول ہے، مجرور نہیں۔ اسمِ فاعل اپنے مفعول کے ساتھ ایک پکارا ہوا فقرہ پڑھا جاتا ہے؛ اسے شَبِيهٌ بِالْمُضَافِ، 'اضافت جیسا'، کہتے ہیں۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "The scope",
+        "ur": "دائرہ"
+      },
+      "body": {
+        "en": "This lesson covers three kinds only: the call that points at no one, the real iḍāfa, and one participle with its object. It does not cover dual or plural calls or rare call particles. You are given the meaning of each word; you are never asked to build a participle.",
+        "ur": "یہ سبق صرف تین قسمیں لیتا ہے: کسی خاص کو نہ ہونے والی پکار، حقیقی اضافت، اور اپنے مفعول والا ایک اسمِ فاعل۔ اس میں مثنیٰ یا جمع کی پکار اور نادر حروفِ ندا نہیں۔ ہر لفظ کا معنی آپ کو دیا جاتا ہے؛ آپ سے اسمِ فاعل بنانے کو نہیں کہا جاتا۔"
+      }
     }
   ],
   "exercises": [
     {
-      "type": "FILL_BLANK",
-      "id": "ch72-l03-ex01",
-      "mode": "TAP",
-      "sentence_ar": "قُلْ يَا ___ الْكِتَابِ",
-      "hint": {
-        "en": "'Say, O People of the Book' (3:64). The one called is a muḍāf.",
-        "ur": "'کہہ دیجیے: اے اہلِ کتاب' (3:64)۔ منادیٰ مضاف ہے۔"
-      },
-      "options": [
-        {
-          "ar": "أَهْلَ",
-          "ar_plain": "أهل",
-          "translit": "ahla",
-          "en": "people (fatḥa)",
-          "ur": "اہل (فتحہ)"
-        },
-        {
-          "ar": "أَهْلُ",
-          "ar_plain": "أهل",
-          "translit": "ahlu",
-          "en": "people (ḍamma)",
-          "ur": "اہل (ضمہ)"
-        },
-        {
-          "ar": "أَهْلِ",
-          "ar_plain": "أهل",
-          "translit": "ahli",
-          "en": "people (kasra)",
-          "ur": "اہل (کسرہ)"
-        },
-        {
-          "ar": "أَهْلٌ",
-          "ar_plain": "أهل",
-          "translit": "ahlun",
-          "en": "people (tanwīn)",
-          "ur": "اہل (تنوین)"
-        }
-      ],
-      "correct_answer": {
-        "ar": "أَهْلَ",
-        "ar_plain": "أهل",
-        "translit": "ahla",
-        "en": "people (fatḥa)",
-        "ur": "اہل (فتحہ)"
-      },
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "A muḍāf vocative is accusative: يَا أَهْلَ الْكِتَابِ.",
-        "ur": "مضاف منادیٰ منصوب ہوتا ہے: يَا أَهْلَ الْكِتَابِ۔"
-      }
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch72-l03-ex02",
-      "statement": {
-        "en": "In يَا عَبْدَ اللَّهِ, عَبْدَ takes fatḥa because it is a muḍāf vocative.",
-        "ur": "يَا عَبْدَ اللَّهِ میں عَبْدَ پر فتحہ اس لیے ہے کہ یہ مضاف منادیٰ ہے۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "Yes. عَبْدَ is the first word of the iḍāfa عَبْدَ اللَّهِ, so as a vocative it is accusative.",
-        "ur": "جی ہاں۔ عَبْدَ اضافت عَبْدَ اللَّهِ کا پہلا لفظ ہے، اس لیے منادیٰ ہو کر منصوب ہے۔"
-      }
-    },
-    {
       "type": "TAP_TRANSLATION",
-      "id": "ch72-l03-ex03",
+      "id": "ch72-l09-ex01",
       "prompt": {
-        "ar": "يَا قَوْمِ اعْبُدُوا اللَّهَ",
-        "ar_plain": "يا قوم اعبدوا الله",
-        "translit": "yaa qawmi u'buduu allaaha",
-        "en": "O my people, worship Allah.",
-        "ur": "اے میری قوم، اللہ کی عبادت کرو۔"
+        "ar": "يَا طَالِبًا، خُذْ كِتَابَكَ",
+        "ar_plain": "يا طالبا، خذ كتابك",
+        "translit": "yaā ṭāliban khudh kitābaka",
+        "en": "(a voice in an empty hall: is the call aimed at one person?)",
+        "ur": "(خالی ہال میں ایک آواز: کیا پکار ایک شخص کو متعین ہے؟)"
       },
       "options": [
         {
-          "en": "O my people, worship Allah.",
-          "ur": "اے میری قوم، اللہ کی عبادت کرو۔"
+          "en": "No: it calls whoever is a student",
+          "ur": "نہیں: یہ ہر اس شخص کو پکارتی ہے جو طالب علم ہو"
         },
         {
-          "en": "O people of Allah, worship.",
-          "ur": "اے اللہ کے لوگو، عبادت کرو۔"
+          "en": "Yes: at one student he points at",
+          "ur": "ہاں: ایک طالب علم کو جس کی طرف وہ اشارہ کرتا ہے"
         },
         {
-          "en": "My people worshipped Allah.",
-          "ur": "میری قوم نے اللہ کی عبادت کی۔"
+          "en": "Yes: at the teacher",
+          "ur": "ہاں: استاد کو"
         },
         {
-          "en": "The people called on Allah.",
-          "ur": "لوگوں نے اللہ کو پکارا۔"
+          "en": "It calls the book",
+          "ur": "یہ کتاب کو پکارتی ہے"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "The kasra in قَوْمِ is what remains of قَوْمِي — 'my people'. اعْبُدُوا is a plural command.",
-        "ur": "قَوْمِ کا کسرہ قَوْمِي کا باقی حصہ ہے — 'میری قوم'۔ اعْبُدُوا جمع کا حکم ہے۔"
+        "en": "Nobody in particular is called, so the word is indefinite and ends in -an.",
+        "ur": "کوئی خاص شخص نہیں پکارا گیا، اس لیے لفظ نکرہ ہے اور -اً پر ختم ہوتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch72-l09-ex02",
+      "prompt": {
+        "ar": "يَا طَالِبَ الْعِلْمِ",
+        "ar_plain": "يا طالب العلم",
+        "translit": "yaā ṭāliba al-ʿilmi",
+        "en": "(what is طَالِبَ?)",
+        "ur": "(طَالِبَ کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "A single name with a fixed ḍamma",
+          "ur": "اکیلا نام جس پر ٹھہرا ہوا ضمہ ہے"
+        },
+        {
+          "en": "A doer",
+          "ur": "فاعل"
+        },
+        {
+          "en": "The first term of an iḍāfa that is being called: it ends in fatḥa",
+          "ur": "اضافت کا پہلا جزو جسے پکارا جا رہا ہے: اس کا ختم فتحہ ہے"
+        },
+        {
+          "en": "A state word",
+          "ur": "حال"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The first term of a called iḍāfa ends in fatḥa.",
+        "ur": "پکاری ہوئی اضافت کے پہلے جزو کا ختم فتحہ ہوتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch72-l09-ex03",
+      "prompt": {
+        "ar": "يَا عَبْدَ اللَّهِ",
+        "ar_plain": "يا عبد الله",
+        "translit": "yaā ʿabda al-lahi",
+        "en": "(what is اللَّهِ?)",
+        "ur": "(اللَّهِ کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "The one called, on its own",
+          "ur": "اکیلا جسے پکارا گیا"
+        },
+        {
+          "en": "The genitive second term of the called iḍāfa",
+          "ur": "پکاری ہوئی اضافت کا مجرور دوسرا جزو"
+        },
+        {
+          "en": "The call particle",
+          "ur": "پکار کا حرف"
+        },
+        {
+          "en": "A time word",
+          "ur": "وقت کا لفظ"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "عَبْدَ اللَّهِ is one called phrase: عَبْدَ the first term, اللَّهِ the genitive second.",
+        "ur": "عَبْدَ اللَّهِ ایک پکارا ہوا فقرہ ہے: عَبْدَ پہلا جزو، اللَّهِ مجرور دوسرا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch72-l09-ex04",
+      "prompt": {
+        "ar": "يَا قَارِئَ الْكِتَابِ · يَا قَارِئًا الْكِتَابَ",
+        "ar_plain": "يا قارئ الكتاب · يا قارئا الكتاب",
+        "translit": "yaā qāriʾa al-kitābi · yaā qāriʾan al-kitāba",
+        "en": "(how does الْكِتَابَ in the second differ from الْكِتَابِ in the first?)",
+        "ur": "(دوسری میں الْكِتَابَ پہلی کے الْكِتَابِ سے کیسے مختلف ہے؟)"
+      },
+      "options": [
+        {
+          "en": "Both are genitive second terms",
+          "ur": "دونوں مجرور دوسرے جزو ہیں"
+        },
+        {
+          "en": "Both are accusative objects",
+          "ur": "دونوں منصوب مفعول ہیں"
+        },
+        {
+          "en": "The second is the one called",
+          "ur": "دوسرا وہ ہے جسے پکارا گیا"
+        },
+        {
+          "en": "In the second it is the participle's own accusative object; in the first it is a genitive second term",
+          "ur": "دوسری میں یہ اسمِ فاعل کا اپنا منصوب مفعول ہے؛ پہلی میں مجرور دوسرا جزو"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A participle that takes an object keeps it accusative (Chapter 58).",
+        "ur": "اپنا مفعول لینے والا اسمِ فاعل اسے منصوب رکھتا ہے (باب 58)۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch72-l09-ex05",
+      "mode": "TAP",
+      "sentence_ar": "يَا ___، اسْمَعْ",
+      "hint": {
+        "en": "An unseen voice calls to any student who may be listening: O student, listen!",
+        "ur": "ایک نظر نہ آنے والی آواز ہر اس طالب علم کو پکارتی ہے جو سن رہا ہو: اے طالب علم، سنو!"
+      },
+      "options": [
+        {
+          "ar": "طَالِبُ",
+          "ar_plain": "طالب",
+          "translit": "ṭālibu",
+          "en": "student (ḍamma)",
+          "ur": "طالب علم (ضمہ)"
+        },
+        {
+          "ar": "طَالِبٌ",
+          "ar_plain": "طالب",
+          "translit": "ṭālibun",
+          "en": "student (tanwīn)",
+          "ur": "طالب علم (تنوین)"
+        },
+        {
+          "ar": "طَالِبًا",
+          "ar_plain": "طالبا",
+          "translit": "ṭāliban",
+          "en": "student (-an)",
+          "ur": "طالب علم (-اً)"
+        },
+        {
+          "ar": "طَالِبٍ",
+          "ar_plain": "طالب",
+          "translit": "ṭālibin",
+          "en": "student (tanwīn, kasra)",
+          "ur": "طالب علم (تنوین، کسرہ)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "طَالِبًا",
+        "ar_plain": "طالبا",
+        "translit": "ṭāliban",
+        "en": "student (-an)",
+        "ur": "طالب علم (-اً)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Nobody is pointed at, so the call that points at no one ends in -an.",
+        "ur": "کسی کی طرف اشارہ نہیں، اس لیے کسی خاص کو نہ ہونے والی پکار -اً پر ختم ہوتی ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch72-l09-ex06",
+      "mode": "TAP",
+      "sentence_ar": "يَا ___ الْعِلْمِ",
+      "hint": {
+        "en": "O seeker of knowledge.",
+        "ur": "اے علم کے طالب۔"
+      },
+      "options": [
+        {
+          "ar": "طَالِبَ",
+          "ar_plain": "طالب",
+          "translit": "ṭāliba",
+          "en": "seeker (fatḥa)",
+          "ur": "طالب (فتحہ)"
+        },
+        {
+          "ar": "طَالِبُ",
+          "ar_plain": "طالب",
+          "translit": "ṭālibu",
+          "en": "seeker (ḍamma)",
+          "ur": "طالب (ضمہ)"
+        },
+        {
+          "ar": "طَالِبٌ",
+          "ar_plain": "طالب",
+          "translit": "ṭālibun",
+          "en": "seeker (tanwīn)",
+          "ur": "طالب (تنوین)"
+        },
+        {
+          "ar": "طَالِبٍ",
+          "ar_plain": "طالب",
+          "translit": "ṭālibin",
+          "en": "seeker (kasra)",
+          "ur": "طالب (کسرہ)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "طَالِبَ",
+        "ar_plain": "طالب",
+        "translit": "ṭāliba",
+        "en": "seeker (fatḥa)",
+        "ur": "طالب (فتحہ)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The first term of a called iḍāfa takes a fatḥa.",
+        "ur": "پکاری ہوئی اضافت کا پہلا جزو فتحہ لیتا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch72-l09-ex07",
+      "statement": {
+        "en": "In يَا عَبْدَ اللَّهِ, عَبْدَ ends in fatḥa because it is a single name with a fixed ḍamma.",
+        "ur": "يَا عَبْدَ اللَّهِ میں عَبْدَ فتحہ پر ختم ہوتا ہے کیونکہ یہ اکیلا نام ہے جس پر ٹھہرا ہوا ضمہ ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. It is the first term of a called iḍāfa, so it takes a fatḥa; a single name would keep a ḍamma.",
+        "ur": "غلط۔ یہ پکاری ہوئی اضافت کا پہلا جزو ہے، اس لیے فتحہ لیتا ہے؛ اکیلا نام ضمہ رکھتا۔"
       }
     },
     {
       "type": "MATCHING",
-      "id": "ch72-l03-ex04",
+      "id": "ch72-l09-ex08",
       "left_column": [
         {
-          "ar": "يَا نُوحُ",
-          "ar_plain": "يا نوح",
-          "translit": "yaa nuuhu",
-          "en": "O Nuh",
-          "ur": "اے نوح"
+          "ar": "يَا طَالِبًا، خُذْ كِتَابَكَ",
+          "ar_plain": "يا طالبا، خذ كتابك",
+          "translit": "yaā ṭāliban khudh kitābaka",
+          "en": "an empty hall",
+          "ur": "خالی ہال"
         },
         {
-          "ar": "يَا أَهْلَ الْكِتَابِ",
-          "ar_plain": "يا أهل الكتاب",
-          "translit": "yaa ahla al-kitaabi",
-          "en": "O People of the Book",
-          "ur": "اے اہلِ کتاب"
+          "ar": "يَا طَالِبَ الْعِلْمِ",
+          "ar_plain": "يا طالب العلم",
+          "translit": "yaā ṭāliba al-ʿilmi",
+          "en": "a seeker of knowledge",
+          "ur": "علم کا طالب"
         },
         {
-          "ar": "يَا غَافِلًا",
-          "ar_plain": "يا غافلا",
-          "translit": "yaa ghaafilan",
-          "en": "O heedless one",
-          "ur": "اے غافل"
+          "ar": "يَا قَارِئًا الْكِتَابَ",
+          "ar_plain": "يا قارئا الكتاب",
+          "translit": "yaā qāriʾan al-kitāba",
+          "en": "one who is reading the book",
+          "ur": "کتاب پڑھتا ہوا شخص"
         }
       ],
       "right_column": [
         {
-          "en": "Name: ḍamma, no tanwīn",
-          "ur": "نام: ضمہ، بغیر تنوین"
+          "en": "a real iḍāfa",
+          "ur": "حقیقی اضافت"
         },
         {
-          "en": "Muḍāf: fatḥa",
-          "ur": "مضاف: فتحہ"
+          "en": "a participle with its own object",
+          "ur": "اپنے مفعول والا اسمِ فاعل"
         },
         {
-          "en": "No particular listener: fatḥa with tanwīn",
-          "ur": "کوئی خاص سننے والا نہیں: تنوین کے ساتھ فتحہ"
+          "en": "a call that points at no one",
+          "ur": "کسی خاص کو نہ ہونے والی پکار"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
+          2
         ],
         [
           1,
-          1
+          0
         ],
         [
           2,
-          2
+          1
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch72-l03-ex05",
-      "mode": "TAP",
-      "sentence_ar": "يَا ___ إِسْرَائِيلَ اذْكُرُوا نِعْمَتِيَ",
-      "hint": {
-        "en": "'O Children of Israel, remember My favour' (2:40). Muḍāf, plural.",
-        "ur": "'اے بنی اسرائیل، میری نعمت یاد کرو' (2:40)۔ مضاف، جمع۔"
-      },
-      "options": [
-        {
-          "ar": "بَنِي",
-          "ar_plain": "بني",
-          "translit": "banii",
-          "en": "children (accusative)",
-          "ur": "اولاد (منصوب)"
-        },
-        {
-          "ar": "بَنُو",
-          "ar_plain": "بنو",
-          "translit": "banuu",
-          "en": "children (nominative)",
-          "ur": "اولاد (مرفوع)"
-        },
-        {
-          "ar": "بَنُونَ",
-          "ar_plain": "بنون",
-          "translit": "banuuna",
-          "en": "sons (with ن)",
-          "ur": "بیٹے (ن کے ساتھ)"
-        },
-        {
-          "ar": "ابْنُ",
-          "ar_plain": "ابن",
-          "translit": "ibnu",
-          "en": "son (singular)",
-          "ur": "بیٹا (واحد)"
-        }
-      ],
-      "correct_answer": {
-        "ar": "بَنِي",
-        "ar_plain": "بني",
-        "translit": "banii",
-        "en": "children (accusative)",
-        "ur": "اولاد (منصوب)"
-      },
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "A muḍāf vocative is accusative, shown here by ي, and the ن drops: يَا بَنِي إِسْرَائِيلَ.",
-        "ur": "مضاف منادیٰ منصوب ہوتا ہے، یہاں ي سے، اور ن گر جاتا ہے: يَا بَنِي إِسْرَائِيلَ۔"
+        "en": "Three kinds of call, each used once.",
+        "ur": "پکار کی تین قسمیں، ہر ایک ایک بار۔"
       }
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch72-l03-ex06",
-      "sentence_ar": "يَا أَهْلَ الْكِتَابِ",
-      "words": [
-        {
-          "ar": "يَا",
-          "ar_plain": "يا",
-          "translit": "yaa",
-          "en": "O (particle of calling)",
-          "ur": "اے (حرفِ ندا)"
-        },
-        {
-          "ar": "أَهْلَ",
-          "ar_plain": "أهل",
-          "translit": "ahla",
-          "en": "people",
-          "ur": "اہل"
-        },
-        {
-          "ar": "الْكِتَابِ",
-          "ar_plain": "الكتاب",
-          "translit": "al-kitaabi",
-          "en": "of the Book",
-          "ur": "کتاب کے"
-        }
-      ],
-      "available_roles": [
-        "PARTICLE",
-        "VOCATIVE",
-        "POSSESSIVE",
-        "SUBJECT",
-        "ADJECTIVE"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "VOCATIVE",
-        "POSSESSIVE"
-      ],
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "يَا is the particle, أَهْلَ the vocative (muḍāf, accusative), and الْكِتَابِ the مُضَافٌ إِلَيْهِ (genitive).",
-        "ur": "يَا حرف ہے، أَهْلَ منادیٰ (مضاف، منصوب)، اور الْكِتَابِ مضاف الیہ (مجرور)۔"
-      }
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch72-l03-ex07",
-      "target_translation": {
-        "en": "O servant of Allah, listen!",
-        "ur": "اے اللہ کے بندے، سنو!"
-      },
-      "tiles": [
-        {
-          "ar": "يَا",
-          "ar_plain": "يا",
-          "translit": "yaa",
-          "en": "O (particle of calling)",
-          "ur": "اے (حرفِ ندا)"
-        },
-        {
-          "ar": "عَبْدَ",
-          "ar_plain": "عبد",
-          "translit": "'abda",
-          "en": "servant",
-          "ur": "بندے"
-        },
-        {
-          "ar": "اللَّهِ",
-          "ar_plain": "الله",
-          "translit": "allaahi",
-          "en": "of Allah",
-          "ur": "اللہ کے"
-        },
-        {
-          "ar": "اسْمَعْ",
-          "ar_plain": "اسمع",
-          "translit": "isma'",
-          "en": "listen",
-          "ur": "سنو"
-        },
-        {
-          "ar": "عَبْدُ",
-          "ar_plain": "عبد",
-          "translit": "'abdu",
-          "en": "servant (ḍamma)",
-          "ur": "بندہ (ضمہ)"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Accusative vocatives: muḍāf and non-specific",
-      "ar": "الْمُنَادَى الْمَنْصُوبُ",
-      "ur": "منصوب منادیٰ: مضاف اور غیر مقصود"
+      "en": "A call that points at no one",
+      "ar": "الْمُنَادَى النَّكِرَةُ",
+      "ur": "کسی خاص کو نہ ہونے والی پکار"
     },
     "ayah": {
-      "surah": 2,
-      "ayah": 40,
-      "label": "Al-Baqarah 2:40",
-      "ar": "يَا بَنِي إِسْرَائِيلَ اذْكُرُوا نِعْمَتِيَ الَّتِي أَنْعَمْتُ عَلَيْكُمْ",
-      "en": "O Children of Israel, remember My favor which I have bestowed upon you.",
-      "ur": "اے بنی اسرائیل، میری وہ نعمت یاد کرو جو میں نے تم پر کی۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002040.mp3"
+      "surah": 19,
+      "ayah": 12,
+      "label": "Maryam 19:12",
+      "ar": "يَا يَحْيَىٰ",
+      "en": "O John",
+      "ur": "اے یحییٰ",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/019012.mp3"
     },
     "highlighted_word_indices": [
       0,
-      1,
-      2
+      1
+    ],
+    "highlighted_words": [
+      "يَا",
+      "يَحْيَىٰ"
     ],
     "noor_explanation": {
-      "en": "يَا بَنِي إِسْرَائِيلَ — بَنِي is a muḍāf vocative, so it is accusative (with ي) and loses its ن. إِسْرَائِيلَ is the مُضَافٌ إِلَيْهِ; it shows fatḥa only because it is a foreign name that never takes kasra.",
-      "ur": "يَا بَنِي إِسْرَائِيلَ — بَنِي مضاف منادیٰ ہے، اس لیے منصوب (ي کے ساتھ) ہے اور اس کا ن گر گیا ہے۔ إِسْرَائِيلَ مضاف الیہ ہے؛ اس پر فتحہ صرف اس لیے ہے کہ یہ عجمی نام ہے جو کسرہ نہیں لیتا۔"
+      "en": "يَا يَحْيَىٰ — a single name, so a fixed ḍamma you cannot see on the final letter. The other kinds of call — one that points at no one and a called iḍāfa — end in -an and fatḥa.",
+      "ur": "يَا يَحْيَىٰ — اکیلا نام، اس لیے ٹھہرا ہوا ضمہ جو آخری حرف پر نظر نہیں آتا۔ دوسری قسم کی پکاریں — جو کسی خاص کو نہ ہوں اور اضافت والی — -اً اور فتحہ پر ختم ہوتی ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Two endings, two reasons: ḍamma for names and particular listeners, fatḥa for a muḍāf or a non-specific call. Next: how to call a noun that has ال.",
-      "ur": "دو آخر، دو وجہیں: نام اور خاص سننے والے کے لیے ضمہ، مضاف یا غیر مقصود پکار کے لیے فتحہ۔ آگے: ال والے اسم کو کیسے پکاریں۔"
+      "en": "You read three more kinds of call: one that points at no one, a called iḍāfa, and a participle with its own object.",
+      "ur": "آپ نے پکار کی تین اور قسمیں پڑھیں: جو کسی خاص کو نہ ہو، اضافت والی، اور اپنے مفعول والا اسمِ فاعل۔"
     }
   }
 }

@@ -2,445 +2,417 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 72, Lesson 2 — The built vocative: names and intended indefinites take one ḍamma, no tanwīn.",
+    "_note": "Chapter 72, Lesson 2 (ch72-l02, rebuilt in place with a built-form title; the old row mixed the أَيُّهَا analysis and the claim 'every vocative is nominative'). A single proper name (يَا زَيْدُ, يَا آدَمُ, يَا نُوحُ) and an intended indefinite noun (يَا طَالِبُ, with the teacher pointing) keep a ḍamma with no tanwīn. The ḍamma is fixed: it does not show a doer, and the word's position is that of a called word (the accusative position of a call). This is Chapter 55's surface form against grammatical position, retrieved. Every intended-indefinite task states who is pointed at, so intendedness is never guessed from an ending. The accusative kinds are Lesson 3's; أَيُّهَا is Lesson 4's. 11:46 is an exact excerpt. Added 2026-10-04 in the proposal harvest, batch 10 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-72-content-proposal.md and its review amendments.",
+    "title": "A Name, or Someone You Point At",
+    "titleAr": "الْعَلَمُ وَالنَّكِرَةُ الْمَقْصُودَةُ",
+    "titleUr": "نام، یا جس کی طرف اشارہ ہو",
     "chapter_order": 72,
     "lesson_order": 2,
-    "chapter_title": "المنادى",
-    "title": "The Built Vocative — يَا نُوحُ، يَا أَرْضُ",
-    "titleAr": "الْمُنَادَى الْمَبْنِيُّ عَلَى الضَّمِّ",
-    "source": "arabai-backend/prisma/fixtures",
-    "estimated_minutes": 10,
+    "estimated_minutes": 12,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
       "surah": 11,
-      "ayah": 44,
-      "label": "Hud 11:44",
-      "ar": "وَقِيلَ يَا أَرْضُ ابْلَعِي مَاءَكِ وَيَا سَمَاءُ أَقْلِعِي",
-      "en": "And it was said, 'O earth, swallow your water, and O sky, withhold [your rain].'",
-      "ur": "اور کہا گیا: اے زمین، اپنا پانی نگل لے، اور اے آسمان، تھم جا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/011044.mp3"
+      "ayah": 46,
+      "label": "Hud 11:46",
+      "ar": "قَالَ يَا نُوحُ",
+      "en": "He said, 'O Noah'",
+      "ur": "اس نے کہا: اے نوح",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/011046.mp3"
     },
     "noor_intro": {
-      "en": "يَا أَرْضُ … وَيَا سَمَاءُ — the earth and the sky are spoken to directly. Look at the endings: أَرْضُ and سَمَاءُ have one ḍamma and no tanwīn. Today you learn when a vocative looks like this.",
-      "ur": "يَا أَرْضُ … وَيَا سَمَاءُ — زمین اور آسمان سے براہِ راست بات کی گئی ہے۔ آخر دیکھیے: أَرْضُ اور سَمَاءُ پر ایک ضمہ ہے، تنوین نہیں۔ آج آپ سیکھیں گے کہ منادیٰ کب ایسا ہوتا ہے۔"
+      "en": "Every call you have read so far, يَا مُحَمَّدُ, يَا آدَمُ, يَا نُوحُ, has the same ending on the one called. Notice it, and then see what it does and does not mean.",
+      "ur": "اب تک جتنی پکاریں آپ نے پڑھیں، يَا مُحَمَّدُ، يَا آدَمُ، يَا نُوحُ، سب میں جسے پکارا گیا اس کا ختم ایک جیسا ہے۔ اسے دیکھیں، پھر دیکھیں کہ اس کا کیا مطلب ہے اور کیا نہیں۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "A one-word name: one ḍamma, no tanwīn",
-        "ar": "الْعَلَمُ الْمُفْرَدُ",
-        "ur": "ایک لفظ والا نام"
+        "en": "A name or a pointed-at word keeps a ḍamma",
+        "ar": "الْمَبْنِيُّ عَلَى الضَّمِّ",
+        "ur": "ضمہ پر ٹھہرا ہوا"
       },
       "explanation": {
-        "en": "When the one called is a single-word name, it ends in one ḍamma with no tanwīn: يَا نُوحُ، يَا دَاوُودُ، يَا زَيْدُ (not زَيْدٌ). Names ending in alif, like مُوسَى and عِيسَى, show no change at all.",
-        "ur": "جب منادیٰ ایک لفظ والا نام ہو تو اس کے آخر میں ایک ضمہ آتا ہے، تنوین نہیں: يَا نُوحُ، يَا دَاوُودُ، يَا زَيْدُ (زَيْدٌ نہیں)۔ الف پر ختم ہونے والے نام، جیسے مُوسَى اور عِيسَى، میں کوئی تبدیلی نظر نہیں آتی۔"
-      },
-      "examples": [
-        {
-          "ar": "يَا دَاوُودُ",
-          "ar_plain": "يا داوود",
-          "translit": "yaa daawuudu",
-          "en": "O Dawud!",
-          "ur": "اے داؤد!"
-        },
-        {
-          "ar": "يَا زَيْدُ",
-          "ar_plain": "يا زيد",
-          "translit": "yaa zaydu",
-          "en": "O Zayd!",
-          "ur": "اے زید!"
-        }
-      ]
+        "en": "When the one called is a single name, or a word for the person you point at, it ends in a ḍamma with no tanwīn: يَا زَيْدُ, يَا طَالِبُ. That ḍamma is fixed: it stays as it is whatever the sentence does around it.",
+        "ur": "جب جسے پکارا گیا وہ اکیلا نام ہو، یا اس شخص کے لیے لفظ ہو جس کی طرف آپ اشارہ کریں، تو اس کا ختم بغیر تنوین کے ضمہ ہوتا ہے: يَا زَيْدُ، يَا طَالِبُ۔ یہ ضمہ ٹھہرا ہوا ہے: جملے میں جو بھی ہو یہ ویسا ہی رہتا ہے۔"
+      }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "A specific listener without a name",
-        "ar": "النَّكِرَةُ الْمَقْصُودَةُ",
-        "ur": "نکرہ مقصودہ"
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "قَالَ يَا نُوحُ",
+        "ar_plain": "قال يا نوح",
+        "translit": "qāla yaā nūḥu",
+        "en": "He said, 'O Noah'",
+        "ur": "اس نے کہا: اے نوح"
       },
       "explanation": {
-        "en": "An ordinary noun aimed at one particular listener behaves like a name: يَا رَجُلُ — 'O man!' (to the man in front of you). In the Quran: يَا أَرْضُ، يَا سَمَاءُ، يَا نَارُ، يَا جِبَالُ — each one particular thing, spoken to directly.",
-        "ur": "عام اسم جب کسی خاص سننے والے کے لیے ہو تو نام کی طرح چلتا ہے: يَا رَجُلُ — 'اے آدمی!' (سامنے کھڑے آدمی سے)۔ قرآن میں: يَا أَرْضُ، يَا سَمَاءُ، يَا نَارُ، يَا جِبَالُ — ہر ایک خاص چیز، جس سے براہِ راست بات کی گئی۔"
-      },
-      "examples": [
-        {
-          "ar": "يَا رَجُلُ",
-          "ar_plain": "يا رجل",
-          "translit": "yaa rajulu",
-          "en": "O man! (a particular man)",
-          "ur": "اے آدمی! (ایک خاص آدمی)"
-        }
-      ]
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "'Built' on ḍamma",
-        "ar": "مَبْنِيٌّ عَلَى الضَّمِّ",
-        "ur": "مبنی بر ضمہ"
-      },
-      "explanation": {
-        "en": "Grammarians call this ending مَبْنِيٌّ عَلَى الضَّمِّ — 'built on ḍamma'. The ḍamma is fixed: it is not the nominative of a subject, and it does not change. The word's position is accusative (فِي مَحَلِّ نَصْبٍ), which is why other kinds of vocative show fatḥa.",
-        "ur": "نحوی اسے مَبْنِيٌّ عَلَى الضَّمِّ کہتے ہیں — 'ضمہ پر مبنی'۔ یہ ضمہ ثابت رہتا ہے: یہ فاعل کا رفع نہیں، اور بدلتا نہیں۔ لفظ کا مقام نصب کا ہے (فِي مَحَلِّ نَصْبٍ)، اسی لیے منادیٰ کی دوسری قسموں پر فتحہ آتا ہے۔"
+        "en": "قَالَ يَا نُوحُ: 'He said, O Noah'. نُوحُ is a single name, so it ends in a ḍamma with no tanwīn. (Hud 11:46) (Hud 11:46)",
+        "ur": "قَالَ يَا نُوحُ: 'اس نے کہا: اے نوح'۔ نُوحُ اکیلا نام ہے، اس لیے اس کا ختم بغیر تنوین کے ضمہ ہے۔ (ہود 11:46) (Hud 11:46)"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "قُلْنَا يَا نَارُ كُونِي بَرْدًا وَسَلَامًا عَلَىٰ إِبْرَاهِيمَ",
-        "ar_plain": "قلنا يا نار كوني بردا وسلاما على إبراهيم",
-        "translit": "qulnaa yaa naaru kuunii bardan wa-salaaman 'alaa ibraahiima",
-        "en": "We said, 'O fire, be coolness and safety upon Ibrahim.'",
-        "ur": "ہم نے کہا: اے آگ، ابراہیم پر ٹھنڈی اور سلامتی والی ہو جا۔"
+        "ar": "يَا طَالِبُ، اكْتُبْ",
+        "ar_plain": "يا طالب، اكتب",
+        "translit": "yaā ṭālibu aktub",
+        "en": "O student, write! (the teacher points at one student)",
+        "ur": "اے طالب علم، لکھو! (استاد ایک طالب علم کی طرف اشارہ کرتا ہے)"
       },
       "explanation": {
-        "en": "21:69. نَارُ is one particular fire, spoken to directly: one ḍamma, no tanwīn. نَار is feminine, so the command is كُونِي.",
-        "ur": "21:69۔ نَارُ ایک خاص آگ ہے جس سے براہِ راست بات کی گئی: ایک ضمہ، تنوین نہیں۔ نَار مؤنث ہے، اس لیے حکم كُونِي ہے۔"
+        "en": "طَالِبُ is a common noun, but the teacher points at one student, so it is the pointed-at kind and takes the same fixed ḍamma as a name. Without the pointing it would be the other kind of call, in Lesson 3.",
+        "ur": "طَالِبُ عام اسم ہے، لیکن استاد ایک طالب علم کی طرف اشارہ کرتا ہے، اس لیے یہ اشارہ کیے ہوئے کی قسم ہے اور نام کی طرح اسی ٹھہرے ہوئے ضمہ کو لیتا ہے۔ اشارے کے بغیر یہ دوسری قسم کی پکار ہوتی، سبق 3 میں۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "The ḍamma is not a doer's ḍamma",
+        "ur": "یہ فاعل کا ضمہ نہیں"
+      },
+      "body": {
+        "en": "You see a ḍamma, as on a doer, but nobody here is doing anything: the word is a called one. In Chapter 55 you learned that the ending you see and the job of the word are two different things. Here the ending is a fixed ḍamma, and the job is being called. You meet the form; you are not asked for the full grammar analysis.",
+        "ur": "آپ کو ضمہ نظر آتا ہے، جیسا فاعل پر ہوتا ہے، لیکن یہاں کوئی کام نہیں کر رہا: لفظ پکارا ہوا ہے۔ باب 55 میں آپ نے سیکھا کہ دکھائی دینے والا ختم اور لفظ کا کام دو الگ باتیں ہیں۔ یہاں ختم ٹھہرا ہوا ضمہ ہے، اور کام پکارا جانا۔ آپ صورت سے ملتے ہیں؛ آپ سے پورا نحوی تجزیہ نہیں پوچھا جاتا۔"
       }
     }
   ],
   "exercises": [
     {
-      "type": "FILL_BLANK",
+      "type": "TAP_TRANSLATION",
       "id": "ch72-l02-ex01",
-      "mode": "TAP",
-      "sentence_ar": "يَا ___ اهْبِطْ بِسَلَامٍ مِّنَّا",
-      "hint": {
-        "en": "'O Nuh, disembark in safety from Us' (11:48). A one-word name after يَا.",
-        "ur": "'اے نوح، ہماری طرف سے سلامتی کے ساتھ اتر جاؤ' (11:48)۔ يَا کے بعد ایک لفظ والا نام۔"
+      "prompt": {
+        "ar": "يَا زَيْدُ",
+        "ar_plain": "يا زيد",
+        "translit": "yaā zaydu",
+        "en": "(what ending does the called name show?)",
+        "ur": "(پکارا ہوا نام کون سا ختم دکھاتا ہے؟)"
       },
       "options": [
         {
-          "ar": "نُوحُ",
-          "ar_plain": "نوح",
-          "translit": "nuuhu",
-          "en": "Nuh (ḍamma, no tanwīn)",
-          "ur": "نوح (ضمہ، بغیر تنوین)"
+          "en": "A ḍamma with no tanwīn, kept as it is",
+          "ur": "بغیر تنوین کے ضمہ، جیسا ہے ویسا"
         },
         {
-          "ar": "نُوحٌ",
-          "ar_plain": "نوح",
-          "translit": "nuuhun",
-          "en": "Nuh (ḍamma with tanwīn)",
-          "ur": "نوح (تنوین والا ضمہ)"
+          "en": "A fatḥa with tanwīn",
+          "ur": "تنوین کے ساتھ فتحہ"
         },
         {
-          "ar": "نُوحًا",
-          "ar_plain": "نوحا",
-          "translit": "nuuhan",
-          "en": "Nuh (fatḥa with tanwīn)",
-          "ur": "نوح (تنوین والا فتحہ)"
+          "en": "A kasra",
+          "ur": "کسرہ"
         },
         {
-          "ar": "نُوحٍ",
-          "ar_plain": "نوح",
-          "translit": "nuuhin",
-          "en": "Nuh (kasra with tanwīn)",
-          "ur": "نوح (تنوین والا کسرہ)"
+          "en": "A sukūn",
+          "ur": "سکون"
         }
       ],
-      "correct_answer": {
-        "ar": "نُوحُ",
-        "ar_plain": "نوح",
-        "translit": "nuuhu",
-        "en": "Nuh (ḍamma, no tanwīn)",
-        "ur": "نوح (ضمہ، بغیر تنوین)"
-      },
+      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "A one-word name after يَا is built on one ḍamma with no tanwīn: يَا نُوحُ.",
-        "ur": "يَا کے بعد ایک لفظ والا نام ایک ضمہ پر مبنی ہوتا ہے، تنوین کے بغیر: يَا نُوحُ۔"
+        "en": "A single name keeps a fixed ḍamma after يَا.",
+        "ur": "اکیلا نام يَا کے بعد ٹھہرا ہوا ضمہ رکھتا ہے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch72-l02-ex02",
       "statement": {
-        "en": "In يَا زَيْدُ, the name should carry tanwīn: يَا زَيْدٌ.",
-        "ur": "يَا زَيْدُ میں نام پر تنوین ہونی چاہیے: يَا زَيْدٌ۔"
+        "en": "In يَا زَيْدُ, زَيْدُ is a doer, so its ḍamma is the nominative of a doer.",
+        "ur": "يَا زَيْدُ میں زَيْدُ فاعل ہے، اس لیے اس کا ضمہ فاعل کا مرفوع ہے۔"
       },
       "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "A name called with يَا loses its tanwīn: يَا زَيْدُ.",
-        "ur": "يَا کے ساتھ پکارا گیا نام تنوین کھو دیتا ہے: يَا زَيْدُ۔"
+        "en": "False. Nobody is doing anything: زَيْدُ is the one called, and its ḍamma is fixed.",
+        "ur": "غلط۔ کوئی کام نہیں کر رہا: زَيْدُ جسے پکارا گیا ہے، اور اس کا ضمہ ٹھہرا ہوا ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch72-l02-ex03",
+      "mode": "TAP",
+      "sentence_ar": "يَا ___، اجْلِسْ",
+      "hint": {
+        "en": "The teacher points at Ahmad and says: O Ahmad, sit!",
+        "ur": "استاد احمد کی طرف اشارہ کر کے کہتا ہے: اے احمد، بیٹھو!"
+      },
+      "options": [
+        {
+          "ar": "أَحْمَدٌ",
+          "ar_plain": "احمد",
+          "translit": "ʾaḥmadun",
+          "en": "Ahmad (tanwīn)",
+          "ur": "احمد (تنوین)"
+        },
+        {
+          "ar": "أَحْمَدُ",
+          "ar_plain": "احمد",
+          "translit": "ʾaḥmadu",
+          "en": "Ahmad (a ḍamma)",
+          "ur": "احمد (ضمہ)"
+        },
+        {
+          "ar": "أَحْمَدًا",
+          "ar_plain": "احمدا",
+          "translit": "ʾaḥmadan",
+          "en": "Ahmad (-an)",
+          "ur": "احمد (-اً)"
+        },
+        {
+          "ar": "أَحْمَدِ",
+          "ar_plain": "احمد",
+          "translit": "ʾaḥmadi",
+          "en": "Ahmad (kasra)",
+          "ur": "احمد (کسرہ)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "أَحْمَدُ",
+        "ar_plain": "احمد",
+        "translit": "ʾaḥmadu",
+        "en": "Ahmad (a ḍamma)",
+        "ur": "احمد (ضمہ)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A single name keeps a ḍamma with no tanwīn.",
+        "ur": "اکیلا نام بغیر تنوین کے ضمہ رکھتا ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch72-l02-ex04",
+      "mode": "TAP",
+      "sentence_ar": "يَا ___، اكْتُبْ",
+      "hint": {
+        "en": "The teacher points at one student in front of him: O student, write!",
+        "ur": "استاد اپنے سامنے ایک طالب علم کی طرف اشارہ کرتا ہے: اے طالب علم، لکھو!"
+      },
+      "options": [
+        {
+          "ar": "طَالِبُ",
+          "ar_plain": "طالب",
+          "translit": "ṭālibu",
+          "en": "student (a ḍamma)",
+          "ur": "طالب علم (ضمہ)"
+        },
+        {
+          "ar": "طَالِبًا",
+          "ar_plain": "طالبا",
+          "translit": "ṭāliban",
+          "en": "student (-an)",
+          "ur": "طالب علم (-اً)"
+        },
+        {
+          "ar": "طَالِبٌ",
+          "ar_plain": "طالب",
+          "translit": "ṭālibun",
+          "en": "student (tanwīn)",
+          "ur": "طالب علم (تنوین)"
+        },
+        {
+          "ar": "طَالِبٍ",
+          "ar_plain": "طالب",
+          "translit": "ṭālibin",
+          "en": "student (tanwīn, kasra)",
+          "ur": "طالب علم (تنوین، کسرہ)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "طَالِبُ",
+        "ar_plain": "طالب",
+        "translit": "ṭālibu",
+        "en": "student (a ḍamma)",
+        "ur": "طالب علم (ضمہ)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "He points at one student, so the call is aimed and the word keeps the fixed ḍamma.",
+        "ur": "وہ ایک طالب علم کی طرف اشارہ کرتا ہے، اس لیے پکار متعین ہے اور لفظ ٹھہرا ہوا ضمہ رکھتا ہے۔"
       }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch72-l02-ex03",
-      "prompt": {
-        "ar": "يَا جِبَالُ أَوِّبِي مَعَهُ",
-        "ar_plain": "يا جبال أوبي معه",
-        "translit": "yaa jibaalu awwibii ma'ahu",
-        "en": "O mountains, repeat [praises] with him.",
-        "ur": "اے پہاڑو، ان کے ساتھ تسبیح دہراؤ۔"
-      },
-      "options": [
-        {
-          "en": "جِبَالُ: particular mountains spoken to directly — ḍamma, no tanwīn",
-          "ur": "جِبَالُ: خاص پہاڑ جن سے براہِ راست بات ہوئی — ضمہ، تنوین نہیں"
-        },
-        {
-          "en": "جِبَالُ: a muḍāf — so it takes fatḥa",
-          "ur": "جِبَالُ: مضاف ہے — اس لیے فتحہ"
-        },
-        {
-          "en": "جِبَالُ: the subject of أَوِّبِي",
-          "ur": "جِبَالُ: أَوِّبِي کا فاعل"
-        },
-        {
-          "en": "جِبَالُ: genitive after a preposition",
-          "ur": "جِبَالُ: حرفِ جر کے بعد مجرور"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "34:10. The mountains are spoken to directly, so جِبَالُ is an intended indefinite, built on ḍamma.",
-        "ur": "34:10۔ پہاڑوں سے براہِ راست بات ہوئی، اس لیے جِبَالُ نکرہ مقصودہ ہے، ضمہ پر مبنی۔"
-      }
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch72-l02-ex04",
-      "left_column": [
-        {
-          "ar": "يَا دَاوُودُ",
-          "ar_plain": "يا داوود",
-          "translit": "yaa daawuudu",
-          "en": "O Dawud",
-          "ur": "اے داؤد"
-        },
-        {
-          "ar": "يَا سَمَاءُ",
-          "ar_plain": "يا سماء",
-          "translit": "yaa samaa'u",
-          "en": "O sky",
-          "ur": "اے آسمان"
-        },
-        {
-          "ar": "يَا رَجُلُ",
-          "ar_plain": "يا رجل",
-          "translit": "yaa rajulu",
-          "en": "O man",
-          "ur": "اے آدمی"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "A prophet's name",
-          "ur": "ایک نبی کا نام"
-        },
-        {
-          "en": "Part of nature, spoken to",
-          "ur": "فطرت کا ایک حصہ، جس سے بات ہوئی"
-        },
-        {
-          "en": "A person whose name is not used",
-          "ur": "ایک شخص جس کا نام نہیں لیا گیا"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
       "id": "ch72-l02-ex05",
-      "mode": "TAP",
-      "sentence_ar": "يَا ___ ، اجْلِسْ هُنَا",
-      "hint": {
-        "en": "'O man (the one in front of you), sit here.' A particular listener without a name.",
-        "ur": "'اے آدمی (جو سامنے ہے)، یہاں بیٹھو۔' ایک خاص سننے والا، نام کے بغیر۔"
+      "prompt": {
+        "ar": "قَالَ يَا نُوحُ",
+        "ar_plain": "قال يا نوح",
+        "translit": "qāla yaā nūḥu",
+        "en": "(11:46: which word is the one called?)",
+        "ur": "(11:46: کون سا لفظ جسے پکارا گیا ہے؟)"
       },
       "options": [
         {
-          "ar": "رَجُلُ",
-          "ar_plain": "رجل",
-          "translit": "rajulu",
-          "en": "man (ḍamma, no tanwīn)",
-          "ur": "آدمی (ضمہ، بغیر تنوین)"
+          "en": "قَالَ — he said",
+          "ur": "قَالَ — اس نے کہا"
         },
         {
-          "ar": "رَجُلٌ",
-          "ar_plain": "رجل",
-          "translit": "rajulun",
-          "en": "man (with tanwīn)",
-          "ur": "آدمی (تنوین کے ساتھ)"
+          "en": "يَا — the particle",
+          "ur": "يَا — حرف"
         },
         {
-          "ar": "الرَّجُلُ",
-          "ar_plain": "الرجل",
-          "translit": "ar-rajulu",
-          "en": "the man",
-          "ur": "وہ آدمی"
+          "en": "نُوحُ — Noah",
+          "ur": "نُوحُ — نوح"
         },
         {
-          "ar": "رَجُلٍ",
-          "ar_plain": "رجل",
-          "translit": "rajulin",
-          "en": "man (genitive)",
-          "ur": "آدمی (مجرور)"
+          "en": "None: there is no call",
+          "ur": "کوئی نہیں: پکار نہیں ہے"
         }
       ],
-      "correct_answer": {
-        "ar": "رَجُلُ",
-        "ar_plain": "رجل",
-        "translit": "rajulu",
-        "en": "man (ḍamma, no tanwīn)",
-        "ur": "آدمی (ضمہ، بغیر تنوین)"
-      },
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "A particular listener called by an ordinary noun takes one ḍamma with no tanwīn: يَا رَجُلُ. يَا does not go directly onto ال.",
-        "ur": "عام اسم سے کسی خاص سننے والے کو پکاریں تو ایک ضمہ آتا ہے، تنوین نہیں: يَا رَجُلُ۔ يَا براہِ راست ال والے اسم پر نہیں آتا۔"
+        "en": "The word after يَا is the one called: نُوحُ.",
+        "ur": "يَا کے بعد کا لفظ جسے پکارا گیا: نُوحُ۔"
       }
     },
     {
-      "type": "GRAMMAR_PARSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch72-l02-ex06",
-      "sentence_ar": "يَا نُوحُ اهْبِطْ",
-      "words": [
+      "prompt": {
+        "ar": "يَا مُحَمَّدُ · يَا أَحْمَدُ · يَا زَيْدُ",
+        "ar_plain": "يا محمد · يا احمد · يا زيد",
+        "translit": "yaā muḥammadu · yaā ʾaḥmadu · yaā zaydu",
+        "en": "(what do the three called names have in common?)",
+        "ur": "(تینوں پکارے ہوئے ناموں میں کیا مشترک ہے؟)"
+      },
+      "options": [
         {
-          "ar": "يَا",
-          "ar_plain": "يا",
-          "translit": "yaa",
-          "en": "O (particle of calling)",
-          "ur": "اے (حرفِ ندا)"
+          "en": "A kasra",
+          "ur": "کسرہ"
         },
         {
-          "ar": "نُوحُ",
-          "ar_plain": "نوح",
-          "translit": "nuuhu",
-          "en": "Nuh",
-          "ur": "نوح"
+          "en": "Tanwīn",
+          "ur": "تنوین"
         },
         {
-          "ar": "اهْبِطْ",
-          "ar_plain": "اهبط",
-          "translit": "ihbit",
-          "en": "disembark",
-          "ur": "اتر جاؤ"
+          "en": "Nothing: their endings differ",
+          "ur": "کچھ نہیں: ان کے ختم مختلف ہیں"
+        },
+        {
+          "en": "A fixed ḍamma with no tanwīn",
+          "ur": "بغیر تنوین کے ٹھہرا ہوا ضمہ"
         }
       ],
-      "available_roles": [
-        "PARTICLE",
-        "VOCATIVE",
-        "VERB",
-        "SUBJECT",
-        "PREPOSITION"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "VOCATIVE",
-        "VERB"
-      ],
+      "correct_index": 3,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "يَا is the particle, نُوحُ the vocative built on ḍamma, and اهْبِطْ the command.",
-        "ur": "يَا حرف ہے، نُوحُ ضمہ پر مبنی منادیٰ، اور اهْبِطْ حکم ہے۔"
+        "en": "Single names after يَا all keep the same fixed ḍamma.",
+        "ur": "يَا کے بعد اکیلے نام سب ایک ہی ٹھہرا ہوا ضمہ رکھتے ہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch72-l02-ex07",
+      "prompt": {
+        "ar": "يَا زَيْدُ",
+        "ar_plain": "يا زيد",
+        "translit": "yaā zaydu",
+        "en": "(the ḍamma on زَيْدُ: what does it show?)",
+        "ur": "(زَيْدُ پر ضمہ: یہ کیا دکھاتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "That زَيْدُ is the doer of a verb",
+          "ur": "کہ زَيْدُ کسی فعل کا کرنے والا ہے"
+        },
+        {
+          "en": "A fixed form of a called name: the word is being called, and nobody is doing anything",
+          "ur": "پکارے ہوئے نام کی ٹھہری ہوئی صورت: لفظ کو پکارا جا رہا ہے، اور کوئی کام نہیں کر رہا"
+        },
+        {
+          "en": "That زَيْدُ is the object",
+          "ur": "کہ زَيْدُ مفعول ہے"
+        },
+        {
+          "en": "That زَيْدُ is in an iḍāfa",
+          "ur": "کہ زَيْدُ اضافت میں ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The ending you see and the job of the word are different things, as in Chapter 55.",
+        "ur": "دکھائی دینے والا ختم اور لفظ کا کام الگ باتیں ہیں، جیسا باب 55 میں۔"
       }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch72-l02-ex07",
+      "id": "ch72-l02-ex08",
       "target_translation": {
-        "en": "O earth, swallow your water.",
-        "ur": "اے زمین، اپنا پانی نگل لے۔"
+        "en": "O Zayd, read!",
+        "ur": "اے زید، پڑھو!"
       },
       "tiles": [
         {
+          "ar": "زَيْدُ",
+          "ar_plain": "زيد",
+          "translit": "zaydu",
+          "en": "Zayd",
+          "ur": "زید"
+        },
+        {
+          "ar": "اقْرَأْ",
+          "ar_plain": "اقرا",
+          "translit": "aqraʾ",
+          "en": "read!",
+          "ur": "پڑھو!"
+        },
+        {
           "ar": "يَا",
           "ar_plain": "يا",
-          "translit": "yaa",
-          "en": "O (particle of calling)",
-          "ur": "اے (حرفِ ندا)"
-        },
-        {
-          "ar": "أَرْضُ",
-          "ar_plain": "أرض",
-          "translit": "ardu",
-          "en": "earth",
-          "ur": "زمین"
-        },
-        {
-          "ar": "ابْلَعِي",
-          "ar_plain": "ابلعي",
-          "translit": "ibla'ii",
-          "en": "swallow",
-          "ur": "نگل لے"
-        },
-        {
-          "ar": "مَاءَكِ",
-          "ar_plain": "ماءك",
-          "translit": "maa'aki",
-          "en": "your water",
-          "ur": "اپنا پانی"
-        },
-        {
-          "ar": "أَرْضٌ",
-          "ar_plain": "أرض",
-          "translit": "ardun",
-          "en": "earth (with tanwīn)",
-          "ur": "زمین (تنوین کے ساتھ)"
+          "translit": "yaā",
+          "en": "O",
+          "ur": "اے"
         }
       ],
       "correct_order": [
-        0,
-        1,
         2,
-        3
+        0,
+        1
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The particle, the name with its fixed ḍamma, then what he is told.",
+        "ur": "حرف، نام اپنے ٹھہرے ہوئے ضمہ کے ساتھ، پھر جو اسے کہا گیا۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Built on ḍamma: names and particular listeners",
-      "ar": "الْمُنَادَى الْمَبْنِيُّ عَلَى الضَّمِّ",
-      "ur": "ضمہ پر مبنی منادیٰ: نام اور خاص سننے والے"
+      "en": "A fixed ḍamma",
+      "ar": "الْمَبْنِيُّ عَلَى الضَّمِّ",
+      "ur": "ٹھہرا ہوا ضمہ"
     },
     "ayah": {
-      "surah": 38,
-      "ayah": 26,
-      "label": "Sad 38:26",
-      "ar": "يَا دَاوُودُ إِنَّا جَعَلْنَاكَ خَلِيفَةً فِي الْأَرْضِ",
-      "en": "O David, indeed We have made you a successor upon the earth.",
-      "ur": "اے داؤد، ہم نے تمہیں زمین میں خلیفہ بنایا ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/038026.mp3"
+      "surah": 11,
+      "ayah": 46,
+      "label": "Hud 11:46",
+      "ar": "قَالَ يَا نُوحُ",
+      "en": "He said, 'O Noah'",
+      "ur": "اس نے کہا: اے نوح",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/011046.mp3"
     },
     "highlighted_word_indices": [
-      0,
-      1
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "يَا",
+      "نُوحُ"
     ],
     "noor_explanation": {
-      "en": "يَا دَاوُودُ — a one-word name, so one ḍamma and no tanwīn. Compare 34:10, where Dawud is not called: آتَيْنَا دَاوُودَ, with fatḥa as an object. The vocative ending is fixed; the object ending comes from the verb.",
-      "ur": "يَا دَاوُودُ — ایک لفظ والا نام، اس لیے ایک ضمہ اور تنوین نہیں۔ 34:10 سے موازنہ کیجیے جہاں داؤد کو پکارا نہیں گیا: آتَيْنَا دَاوُودَ، مفعول ہونے کی وجہ سے فتحہ۔ منادیٰ کا آخر ثابت ہے؛ مفعول کا آخر فعل سے آتا ہے۔"
+      "en": "يَا نُوحُ — a single name keeps a ḍamma with no tanwīn. The ḍamma is fixed, and it is not a doer's ending.",
+      "ur": "يَا نُوحُ — اکیلا نام بغیر تنوین کے ضمہ رکھتا ہے۔ ضمہ ٹھہرا ہوا ہے، اور یہ فاعل کا ختم نہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Names and particular listeners are built on ḍamma: يَا نُوحُ، يَا أَرْضُ، يَا رَجُلُ. Next: the vocatives that show fatḥa.",
-      "ur": "نام اور خاص سننے والے ضمہ پر مبنی ہوتے ہیں: يَا نُوحُ، يَا أَرْضُ، يَا رَجُلُ۔ آگے: وہ منادیٰ جن پر فتحہ آتا ہے۔"
+      "en": "You read a name or a pointed-at word after يَا, and saw that its ḍamma is fixed and is not a doer's ending.",
+      "ur": "آپ نے يَا کے بعد نام یا اشارہ کیا ہوا لفظ پڑھا، اور دیکھا کہ اس کا ضمہ ٹھہرا ہوا ہے اور فاعل کا ختم نہیں۔"
     }
   }
 }

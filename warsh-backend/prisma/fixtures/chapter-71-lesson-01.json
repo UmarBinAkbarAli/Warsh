@@ -2,14 +2,13 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 71, Lesson 1 — Introduction to الحال: the accusative of state.",
+    "_note": "Chapter 71, Lesson 1 (ch71-l01, rebuilt). The common single-word حال and its صاحب الحال, told apart from an adjective and from another accusative word in the same sentence. The old row taught a fixed list ('always indefinite', 'answers كَيْفَ', the phrase وَحْدَهُ as always accusative) and a matching task with an unsupported key; the new one asks one question — what state was someone in while the verb happened — as a beginner aid, not a complete test. Participles (مُبْتَسِمًا, مَسْرُورًا, مُسْرِعًا, بَاكِيًا) are given whole with their meanings and never formed by the learner. Hook 28:21 (فَخَرَجَ مِنْهَا خَائِفًا) and 2:238 (وَقُومُوا لِلَّهِ قَانِتِينَ) are exact excerpts. The label حال is first taught and scored here (shared rule S12). Added 2026-10-04 in the proposal harvest, batch 10 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-71-content-proposal.md and its review amendments.",
+    "title": "A State During an Action",
+    "titleAr": "الْحَالُ: هَيْئَةٌ مَعَ الْفِعْلِ",
+    "titleUr": "حال: کام کے دوران حالت",
     "chapter_order": 71,
     "lesson_order": 1,
-    "chapter_title": "الحال والتمييز",
-    "title": "Introduction to الْحَال — The Accusative of State",
-    "titleAr": "مُقَدِّمَةٌ فِي الْحَالِ",
-    "source": "arabai-backend/prisma/fixtures",
-    "estimated_minutes": 10,
+    "estimated_minutes": 12,
     "xp_reward": 10
   },
   "hook": {
@@ -17,66 +16,108 @@
       "surah": 28,
       "ayah": 21,
       "label": "Al-Qasas 28:21",
-      "ar": "فَخَرَجَ مِنْهَا خَائِفًا يَتَرَقَّبُ ۖ قَالَ رَبِّ نَجِّنِي مِنَ الْقَوْمِ الظَّالِمِينَ",
-      "en": "So he left it, fearful and anticipating [apprehension]. He said, 'My Lord, save me from the wrongdoing people.'",
-      "ur": "تو موسیٰ وہاں سے ڈرتے ہوئے، چوکنا ہو کر نکلے۔ کہا: اے میرے رب! مجھے ظالم قوم سے نجات دے",
+      "ar": "فَخَرَجَ مِنْهَا خَائِفًا",
+      "en": "so he left it, afraid",
+      "ur": "تو وہ وہاں سے ڈرتا ہوا نکلا",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/028021.mp3"
     },
     "noor_intro": {
-      "en": "فَخَرَجَ مِنْهَا خَائِفًا — 'so he left it, afraid'. خَائِفًا tells us the state Musa was in as he left. A word that does this job is called الْحَال: it answers 'in what state?' and it is accusative.",
-      "ur": "فَخَرَجَ مِنْهَا خَائِفًا — 'تو وہ وہاں سے ڈرتے ہوئے نکلے'۔ خَائِفًا بتاتا ہے کہ نکلتے وقت موسیٰ علیہ السلام کس حال میں تھے۔ یہ کام کرنے والا لفظ حال کہلاتا ہے: یہ 'کس حال میں؟' کا جواب دیتا ہے اور منصوب ہوتا ہے۔"
+      "en": "Musa left the city, and one word tells in what state he left: afraid. A word that tells someone's state while an action happens has a name, الْحَال.",
+      "ur": "موسیٰ شہر سے نکلے، اور ایک لفظ بتاتا ہے کہ وہ کس حالت میں نکلے: ڈرے ہوئے۔ جو لفظ کام ہوتے وقت کسی کی حالت بتائے اس کا نام الْحَال ہے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "الْحَال — the accusative of state",
+        "en": "A state during an action",
         "ar": "الْحَالُ",
-        "ur": "حال"
+        "ur": "کام کے دوران حالت"
       },
       "explanation": {
-        "en": "A الْحَال is an accusative word — usually indefinite and usually a describing word — that shows the state of someone at the time of the action: جَاءَ زَيْدٌ ضَاحِكًا — 'Zayd came laughing'. It answers 'in what state?' (كَيْفَ؟).",
-        "ur": "حال ایک منصوب لفظ ہے — عموماً نکرہ اور عموماً صفت جیسا — جو کام کے وقت کسی کی حالت بتاتا ہے: جَاءَ زَيْدٌ ضَاحِكًا — 'زید ہنستا ہوا آیا'۔ یہ 'کس حال میں؟' (كَيْفَ؟) کا جواب دیتا ہے۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "صَاحِبُ الْحَالِ — whose state it is",
-        "ar": "صَاحِبُ الْحَالِ",
-        "ur": "صاحبِ حال"
-      },
-      "explanation": {
-        "en": "The person or thing whose state the حَال describes, usually definite: in جَاءَ زَيْدٌ ضَاحِكًا it is زَيْدٌ. It can be the doer, the object, or even an attached pronoun.",
-        "ur": "وہ شخص یا چیز جس کی حالت حال بتاتا ہے، عموماً معرفہ: جَاءَ زَيْدٌ ضَاحِكًا میں زَيْدٌ۔ یہ فاعل بھی ہو سکتا ہے، مفعول بھی، اور متصل ضمیر بھی۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "حَال vs adjective",
-        "ar": "الْحَالُ وَالنَّعْتُ",
-        "ur": "حال اور صفت"
-      },
-      "explanation": {
-        "en": "An adjective matches its noun in case and in ال: جَاءَ الرَّجُلُ الضَّاحِكُ — 'the laughing man came' (a description of who). A حَال is indefinite and accusative whatever its noun's case: جَاءَ الرَّجُلُ ضَاحِكًا — 'the man came laughing' (a description of how he was).",
-        "ur": "صفت اپنے موصوف کے ساتھ اعراب اور ال میں مطابقت رکھتی ہے: جَاءَ الرَّجُلُ الضَّاحِكُ — 'ہنسنے والا آدمی آیا' (کون آیا)۔ حال نکرہ اور منصوب ہوتا ہے، اس کے صاحب کا اعراب جو بھی ہو: جَاءَ الرَّجُلُ ضَاحِكًا — 'آدمی ہنستا ہوا آیا' (کس حال میں آیا)۔"
+        "en": "Sometimes one word tells in what state someone was while the action happened: جَاءَ الطَّالِبُ مُبْتَسِمًا, 'the student came smiling'. That word is called الْحَال. It is usually an indefinite word ending in -an. A good first question is: what state was he in while he did it?",
+        "ur": "کبھی ایک لفظ بتاتا ہے کہ کام ہوتے وقت کوئی کس حالت میں تھا: جَاءَ الطَّالِبُ مُبْتَسِمًا، 'طالب علم مسکراتا ہوا آیا'۔ اس لفظ کو الْحَال کہتے ہیں۔ یہ عموماً نکرہ لفظ ہوتا ہے جس کا ختم -اً ہوتا ہے۔ پہلا مفید سوال یہ ہے: کام کرتے وقت وہ کس حالت میں تھا؟"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "فَخَرَجَ مِنْهَا خَائِفًا",
-        "ar_plain": "فخرج منها خائفا",
-        "translit": "fa-kharaja minhaa khaa'ifan",
-        "en": "So he left it, afraid.",
-        "ur": "تو وہ وہاں سے ڈرتے ہوئے نکلے۔"
+        "ar": "جَاءَ الطَّالِبُ مُبْتَسِمًا",
+        "ar_plain": "جاء الطالب مبتسما",
+        "translit": "jāʾa aṭ-ṭālibu mubtasiman",
+        "en": "The student came smiling.",
+        "ur": "طالب علم مسکراتا ہوا آیا۔"
       },
       "explanation": {
-        "en": "From 28:21. خَائِفًا is the حَال of the hidden 'he' (Musa) in خَرَجَ — indefinite, accusative, and describing his state as he left.",
-        "ur": "28:21 سے۔ خَائِفًا، خَرَجَ میں پوشیدہ 'وہ' (موسیٰ) کا حال ہے — نکرہ، منصوب، اور نکلتے وقت ان کی حالت بتاتا ہے۔"
+        "en": "The action is جَاءَ. الطَّالِبُ is the one who came: صَاحِبُ الْحَالِ, 'the one whose state it is'. مُبْتَسِمًا is the حَال: the state of smiling while coming. Words like it are given to you with their meanings; you are never asked to build them.",
+        "ur": "کام جَاءَ ہے۔ الطَّالِبُ آنے والا ہے: صَاحِبُ الْحَالِ، 'جس کی حالت بیان ہو رہی ہے'۔ مُبْتَسِمًا حَال ہے: آتے وقت مسکرانے کی حالت۔ ایسے الفاظ آپ کو معنی کے ساتھ دیے جاتے ہیں؛ آپ سے انہیں بنانا نہیں کہا جاتا۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "A state, or a description of the noun",
+        "ur": "حالت، یا اسم کی صفت"
+      },
+      "examples": [
+        {
+          "ar": "جَاءَ الطَّالِبُ الْمُبْتَسِمُ",
+          "ar_plain": "جاء الطالب المبتسم",
+          "translit": "jāʾa aṭ-ṭālibu al-mubtasimu",
+          "en": "The smiling student came.",
+          "ur": "مسکراتا ہوا طالب علم آیا۔"
+        },
+        {
+          "ar": "جَاءَ الطَّالِبُ مُبْتَسِمًا",
+          "ar_plain": "جاء الطالب مبتسما",
+          "translit": "jāʾa aṭ-ṭālibu mubtasiman",
+          "en": "The student came smiling.",
+          "ur": "طالب علم مسکراتا ہوا آیا۔"
+        }
+      ],
+      "explanation": {
+        "en": "With الْمُبْتَسِمُ the word says which student came, and it matches الطَّالِبُ in ال and ending, as every adjective does. With مُبْتَسِمًا it tells the state he was in while coming.",
+        "ur": "الْمُبْتَسِمُ کے ساتھ لفظ بتاتا ہے کہ کون سا طالب علم آیا، اور وہ الطَّالِبُ سے ال اور ختم میں ملتا ہے، جیسا ہر صفت کرتی ہے۔ مُبْتَسِمًا کے ساتھ لفظ بتاتا ہے کہ وہ آتے وقت کس حالت میں تھا۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "فَخَرَجَ مِنْهَا خَائِفًا",
+        "ar_plain": "فخرج منها خائفا",
+        "translit": "fakharaja minhā khāʾifan",
+        "en": "so he left it, afraid",
+        "ur": "تو وہ وہاں سے ڈرتا ہوا نکلا"
+      },
+      "explanation": {
+        "en": "فَخَرَجَ مِنْهَا خَائِفًا: 'so he left it, afraid'. The one who left is the 'he' inside خَرَجَ, Musa; خَائِفًا is his state while leaving. (Al-Qasas 28:21)",
+        "ur": "فَخَرَجَ مِنْهَا خَائِفًا: 'تو وہ وہاں سے ڈرتا ہوا نکلا'۔ نکلنے والا خَرَجَ کے اندر کا 'وہ' ہے، موسیٰ؛ خَائِفًا نکلتے وقت ان کی حالت ہے۔ (Al-Qasas 28:21)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "وَقُومُوا لِلَّهِ قَانِتِينَ",
+        "ar_plain": "وقوموا لله قانتين",
+        "translit": "waqūmū lillahi qānitīna",
+        "en": "and stand before Allah, devoutly obedient",
+        "ur": "اور اللہ کے سامنے فرمانبردار ہو کر کھڑے ہو"
+      },
+      "explanation": {
+        "en": "وَقُومُوا لِلَّهِ قَانِتِينَ: 'and stand before Allah, devoutly obedient'. قَانِتِينَ is the state of those who stand, the و of قُومُوا; as a sound masculine plural in the accusative it ends in ـِينَ. (Al-Baqarah 2:238)",
+        "ur": "وَقُومُوا لِلَّهِ قَانِتِينَ: 'اور اللہ کے سامنے فرمانبردار ہو کر کھڑے ہو'۔ قَانِتِينَ کھڑے ہونے والوں، یعنی قُومُوا کے و، کی حالت ہے؛ جمع مذکر سالم منصوب ہونے کی وجہ سے اس کا ختم ـِينَ ہے۔ (Al-Baqarah 2:238)"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "The ending does not decide the job",
+        "ur": "ختم کام کا فیصلہ نہیں کرتا"
+      },
+      "body": {
+        "en": "A state word ends in -an, but so can an object, and a sentence can hold both: in دَخَلَ الْمُعَلِّمُ الْفَصْلَ مُسْرِعًا, both الْفَصْلَ and مُسْرِعًا are accusative, and only مُسْرِعًا tells the teacher's state. Ask what the word does, not only how it ends.",
+        "ur": "حال کا ختم -اً ہوتا ہے، لیکن مفعول کا بھی ہو سکتا ہے، اور ایک جملے میں دونوں آ سکتے ہیں: دَخَلَ الْمُعَلِّمُ الْفَصْلَ مُسْرِعًا میں الْفَصْلَ اور مُسْرِعًا دونوں منصوب ہیں، اور صرف مُسْرِعًا استاد کی حالت بتاتا ہے۔ پوچھیں کہ لفظ کیا کام کرتا ہے، صرف یہ نہیں کہ اس کا ختم کیا ہے۔"
       }
     }
   ],
@@ -87,291 +128,338 @@
       "prompt": {
         "ar": "خَرَجَ الضَّيْفُ مَسْرُورًا",
         "ar_plain": "خرج الضيف مسرورا",
-        "translit": "kharaja ad-dayfu masruuran",
-        "en": "The guest left happy.",
-        "ur": "مہمان خوش خوش نکلا۔"
+        "translit": "kharaja aḍ-ḍayfu masrūran",
+        "en": "(what does it say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
       },
       "options": [
         {
-          "en": "The guest left happy.",
-          "ur": "مہمان خوش خوش نکلا۔"
+          "en": "The happy guest left",
+          "ur": "خوش مہمان نکلا"
         },
         {
-          "en": "The happy guest left.",
-          "ur": "خوش مہمان نکلا۔"
+          "en": "The guest made him happy",
+          "ur": "مہمان نے اسے خوش کیا"
         },
         {
-          "en": "The guest made him happy.",
-          "ur": "مہمان نے اسے خوش کیا۔"
+          "en": "The guest left happy",
+          "ur": "مہمان خوش ہو کر نکلا"
         },
         {
-          "en": "The guest is happy.",
-          "ur": "مہمان خوش ہے۔"
+          "en": "The guest is happy",
+          "ur": "مہمان خوش ہے"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "مَسْرُورًا is a حَال: an indefinite accusative telling the guest's state while leaving. 'The happy guest' would be الضَّيْفُ الْمَسْرُورُ — an adjective, which matches its noun in case and in ال.",
-        "ur": "مَسْرُورًا حال ہے: نکرہ منصوب جو نکلتے وقت مہمان کی حالت بتاتا ہے۔ 'خوش مہمان' ہو تو الضَّيْفُ الْمَسْرُورُ — صفت، جو اعراب اور ال میں اپنے موصوف کے مطابق ہوتی ہے۔"
+        "en": "مَسْرُورًا tells the state he was in while leaving. The adjective version would be الضَّيْفُ الْمَسْرُورُ.",
+        "ur": "مَسْرُورًا نکلتے وقت اس کی حالت بتاتا ہے۔ صفت والی صورت الضَّيْفُ الْمَسْرُورُ ہوتی۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch71-l01-ex02",
-      "statement": {
-        "en": "In جَلَسَ الطَّالِبُ مُتَأَمِّلًا, الطَّالِبُ is صَاحِبُ الْحَالِ and مُتَأَمِّلًا is the حَال.",
-        "ur": "جَلَسَ الطَّالِبُ مُتَأَمِّلًا میں الطَّالِبُ صاحبِ حال اور مُتَأَمِّلًا حال ہے۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
       "type": "FILL_BLANK",
-      "id": "ch71-l01-ex03",
+      "id": "ch71-l01-ex02",
       "mode": "TAP",
       "sentence_ar": "عَادَ الْمُسَافِرُ ___",
       "hint": {
-        "en": "'The traveller returned happy.' Choose the حَال: indefinite and accusative.",
-        "ur": "'مسافر خوش لوٹا۔' حال چنیے: نکرہ اور منصوب۔"
+        "en": "The traveller returned happy.",
+        "ur": "مسافر خوش ہو کر لوٹا۔"
       },
       "options": [
         {
-          "ar": "مَسْرُورًا",
-          "ar_plain": "مسرورا",
-          "translit": "masruuran",
-          "en": "happy (indefinite, accusative)",
-          "ur": "خوش (نکرہ، منصوب)"
-        },
-        {
-          "ar": "الْمَسْرُورُ",
-          "ar_plain": "المسرور",
-          "translit": "al-masruuru",
-          "en": "the happy one",
-          "ur": "خوش والا"
-        },
-        {
           "ar": "مَسْرُورٌ",
           "ar_plain": "مسرور",
-          "translit": "masruurun",
+          "translit": "masrūrun",
           "en": "happy (nominative)",
           "ur": "خوش (مرفوع)"
         },
         {
           "ar": "مَسْرُورٍ",
           "ar_plain": "مسرور",
-          "translit": "masruurin",
+          "translit": "masrūrin",
           "en": "happy (genitive)",
           "ur": "خوش (مجرور)"
+        },
+        {
+          "ar": "مَسْرُورًا",
+          "ar_plain": "مسرورا",
+          "translit": "masrūran",
+          "en": "happy (a state, ending in -an)",
+          "ur": "خوش (حالت، -اً پر ختم)"
+        },
+        {
+          "ar": "مَسْرُورَةً",
+          "ar_plain": "مسرورة",
+          "translit": "masrūratan",
+          "en": "happy (feminine)",
+          "ur": "خوش (مؤنث)"
         }
       ],
       "correct_answer": {
         "ar": "مَسْرُورًا",
         "ar_plain": "مسرورا",
-        "translit": "masruuran",
-        "en": "happy (indefinite, accusative)",
-        "ur": "خوش (نکرہ، منصوب)"
+        "translit": "masrūran",
+        "en": "happy (a state, ending in -an)",
+        "ur": "خوش (حالت، -اً پر ختم)"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The state word ends in -an and agrees with the man who returned: masculine, singular.",
+        "ur": "حال -اً پر ختم ہوتا ہے اور لوٹنے والے آدمی سے مطابقت رکھتا ہے: مذکر، واحد۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch71-l01-ex04",
+      "id": "ch71-l01-ex03",
       "left_column": [
         {
           "ar": "عَادَ مُحَمَّدٌ فَرِحًا",
           "ar_plain": "عاد محمد فرحا",
-          "translit": "'aada muhammadun farihan",
+          "translit": "ʿāda muḥammadun fariḥan",
           "en": "Muhammad returned glad",
-          "ur": "محمد خوش لوٹا"
+          "ur": "محمد خوش ہو کر لوٹا"
         },
         {
           "ar": "نَامَ الطِّفْلُ هَادِئًا",
           "ar_plain": "نام الطفل هادئا",
-          "translit": "naama at-tiflu haadi'an",
+          "translit": "nāma aṭ-ṭiflu hādiʾan",
           "en": "the child slept calmly",
           "ur": "بچہ سکون سے سویا"
         },
         {
           "ar": "صَلَّيْتُ خَاشِعًا",
           "ar_plain": "صليت خاشعا",
-          "translit": "sallaytu khaashi'an",
+          "translit": "ṣallaytu khāshiʿan",
           "en": "I prayed humbly",
-          "ur": "میں نے خشوع سے نماز پڑھی"
+          "ur": "میں نے عاجزی سے نماز پڑھی"
         }
       ],
       "right_column": [
         {
-          "en": "صَاحِبُ الْحَالِ: مُحَمَّدٌ",
-          "ur": "صاحبِ حال: مُحَمَّدٌ"
+          "en": "the speaker (the تُ of صَلَّيْتُ)",
+          "ur": "بولنے والا (صَلَّيْتُ کا تُ)"
         },
         {
-          "en": "صَاحِبُ الْحَالِ: الطِّفْلُ",
-          "ur": "صاحبِ حال: الطِّفْلُ"
+          "en": "Muhammad",
+          "ur": "محمد"
         },
         {
-          "en": "صَاحِبُ الْحَالِ: the تُ of صَلَّيْتُ (I)",
-          "ur": "صاحبِ حال: صَلَّيْتُ کا تُ (میں)"
+          "en": "the child",
+          "ur": "بچہ"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
           1
         ],
         [
-          2,
+          1,
           2
+        ],
+        [
+          2,
+          0
         ]
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "In each sentence the state belongs to the one who acts: Muhammad, the child, and the speaker.",
+        "ur": "ہر جملے میں حالت کام کرنے والے کی ہے: محمد، بچہ، اور بولنے والا۔"
+      }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch71-l01-ex05",
+      "id": "ch71-l01-ex04",
       "target_translation": {
         "en": "The student travelled happy.",
-        "ur": "طالب علم خوشی خوشی سفر پر گیا۔"
+        "ur": "طالب علم خوش ہو کر سفر پر گیا۔"
       },
       "tiles": [
         {
-          "ar": "سَافَرَ",
-          "ar_plain": "سافر",
-          "translit": "saafara",
-          "en": "travelled",
-          "ur": "سفر کیا"
-        },
-        {
           "ar": "الطَّالِبُ",
           "ar_plain": "الطالب",
-          "translit": "at-taalibu",
+          "translit": "aṭ-ṭālibu",
           "en": "the student",
           "ur": "طالب علم"
         },
         {
           "ar": "سَعِيدًا",
           "ar_plain": "سعيدا",
-          "translit": "sa'iidan",
+          "translit": "saʿīdan",
           "en": "happy",
           "ur": "خوش"
         },
         {
-          "ar": "السَّعِيدُ",
-          "ar_plain": "السعيد",
-          "translit": "as-sa'iidu",
-          "en": "the happy one",
-          "ur": "خوش والا"
+          "ar": "سَافَرَ",
+          "ar_plain": "سافر",
+          "translit": "sāfara",
+          "en": "travelled",
+          "ur": "سفر کیا"
         }
       ],
       "correct_order": [
+        2,
         0,
-        1,
-        2
+        1
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The action, the one who acts, then his state.",
+        "ur": "کام، کرنے والا، پھر اس کی حالت۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch71-l01-ex05",
+      "statement": {
+        "en": "In جَلَسَ الطَّالِبُ مُتَأَمِّلًا, الطَّالِبُ is the one whose state it is and مُتَأَمِّلًا, 'thinking', is the state.",
+        "ur": "جَلَسَ الطَّالِبُ مُتَأَمِّلًا میں الطَّالِبُ وہ ہے جس کی حالت بیان ہو رہی ہے اور مُتَأَمِّلًا، 'غور کرتا ہوا'، حالت ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "True: he sat, and he was thinking while he sat.",
+        "ur": "درست: وہ بیٹھا، اور بیٹھتے وقت غور کر رہا تھا۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch71-l01-ex06",
       "prompt": {
-        "ar": "جَلَسَ زَيْدٌ وَحْدَهُ",
-        "ar_plain": "جلس زيد وحده",
-        "translit": "jalasa zaydun wahdahu",
-        "en": "Zayd sat alone.",
-        "ur": "زید اکیلا بیٹھا۔"
+        "ar": "جَاءَ الطَّالِبُ مُبْتَسِمًا",
+        "ar_plain": "جاء الطالب مبتسما",
+        "translit": "jāʾa aṭ-ṭālibu mubtasiman",
+        "en": "(what does مُبْتَسِمًا do?)",
+        "ur": "(مُبْتَسِمًا کیا کام کرتا ہے؟)"
       },
       "options": [
         {
-          "en": "Zayd sat alone.",
-          "ur": "زید اکیلا بیٹھا۔"
+          "en": "It tells the state of the student while he came",
+          "ur": "یہ بتاتا ہے کہ طالب علم آتے وقت کس حالت میں تھا"
         },
         {
-          "en": "Zayd sat with one other person.",
-          "ur": "زید ایک اور شخص کے ساتھ بیٹھا۔"
+          "en": "It says which student came",
+          "ur": "یہ بتاتا ہے کہ کون سا طالب علم آیا"
         },
         {
-          "en": "Only Zayd sat.",
-          "ur": "صرف زید بیٹھا۔"
+          "en": "It says where he came from",
+          "ur": "یہ بتاتا ہے کہ وہ کہاں سے آیا"
         },
         {
-          "en": "Zayd sat down once.",
-          "ur": "زید ایک بار بیٹھا۔"
+          "en": "It says when he came",
+          "ur": "یہ بتاتا ہے کہ وہ کب آیا"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "وَحْدَهُ ('on his own') is a حَال describing Zayd while sitting. It is a fixed phrase that is always accusative: وَحْدَهُ، وَحْدَهَا، وَحْدَكَ.",
-        "ur": "وَحْدَهُ ('اکیلا') حال ہے جو بیٹھتے وقت زید کی حالت بتاتا ہے۔ یہ ایک مقررہ لفظ ہے جو ہمیشہ منصوب رہتا ہے: وَحْدَهُ، وَحْدَهَا، وَحْدَكَ۔"
+        "en": "The smiling goes with the coming: it is a state, not a description of which student.",
+        "ur": "مسکرانا آنے کے ساتھ ہے: یہ حالت ہے، یہ نہیں بتاتا کہ کون سا طالب علم۔"
       }
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch71-l01-ex07",
       "prompt": {
-        "ar": "وَقُومُوا لِلَّهِ قَانِتِينَ",
+        "ar": "وَقُومُوا لِلَّهِ قَانِتِينَ",
         "ar_plain": "وقوموا لله قانتين",
-        "translit": "wa-quumuu lillaahi qaanitiina",
-        "en": "And stand before Allah, devoutly obedient.",
-        "ur": "اور اللہ کے سامنے فرماں بردار بن کر کھڑے ہو۔"
+        "translit": "waqūmū lillahi qānitīna",
+        "en": "(2:238: what is قَانِتِينَ?)",
+        "ur": "(2:238: قَانِتِينَ کیا ہے؟)"
       },
       "options": [
         {
-          "en": "قَانِتِينَ — how they should stand",
-          "ur": "قَانِتِينَ — کس حال میں کھڑے ہوں"
+          "en": "The one who commands them to stand",
+          "ur": "انہیں کھڑے ہونے کا حکم دینے والا"
         },
         {
-          "en": "لِلَّهِ — how they should stand",
-          "ur": "لِلَّهِ — کس حال میں کھڑے ہوں"
+          "en": "The place where they stand",
+          "ur": "وہ جگہ جہاں وہ کھڑے ہوں"
         },
         {
-          "en": "قُومُوا — how they should stand",
-          "ur": "قُومُوا — کس حال میں کھڑے ہوں"
+          "en": "The time when they stand",
+          "ur": "وہ وقت جب وہ کھڑے ہوں"
         },
         {
-          "en": "There is no حَال here",
-          "ur": "یہاں کوئی حال نہیں"
+          "en": "The state of those who stand: devoutly obedient",
+          "ur": "کھڑے ہونے والوں کی حالت: فرمانبردار ہو کر"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 3,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "قَانِتِينَ is the حَال: it describes the state of those standing (the واو of قُومُوا). It is a sound masculine plural, so its accusative ends in ـِينَ.",
-        "ur": "قَانِتِينَ حال ہے: یہ کھڑے ہونے والوں (قُومُوا کی واو) کی حالت بتاتا ہے۔ یہ جمع مذکر سالم ہے، اس لیے اس کا نصب ـِينَ سے ہے۔"
+        "en": "The command is to stand, and قَانِتِينَ says in what state: devoutly obedient.",
+        "ur": "حکم کھڑے ہونے کا ہے، اور قَانِتِينَ بتاتا ہے کس حالت میں: فرمانبردار ہو کر۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch71-l01-ex08",
+      "prompt": {
+        "ar": "دَخَلَ الْمُعَلِّمُ الْفَصْلَ مُسْرِعًا",
+        "ar_plain": "دخل المعلم الفصل مسرعا",
+        "translit": "dakhala al-muʿallimu al-faṣla musriʿan",
+        "en": "(two words end in -an: which one tells the teacher's state?)",
+        "ur": "(دو لفظ -اً پر ختم ہوتے ہیں: کون سا استاد کی حالت بتاتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "الْفَصْلَ — the classroom",
+          "ur": "الْفَصْلَ — کمرۂ جماعت"
+        },
+        {
+          "en": "مُسْرِعًا — hurrying",
+          "ur": "مُسْرِعًا — جلدی میں"
+        },
+        {
+          "en": "الْمُعَلِّمُ — the teacher",
+          "ur": "الْمُعَلِّمُ — استاد"
+        },
+        {
+          "en": "دَخَلَ — entered",
+          "ur": "دَخَلَ — داخل ہوا"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْفَصْلَ is accusative too, but it is the thing he entered. Only مُسْرِعًا tells his state.",
+        "ur": "الْفَصْلَ بھی منصوب ہے، مگر وہ جس میں وہ داخل ہوا۔ صرف مُسْرِعًا اس کی حالت بتاتا ہے۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "الْحَال — the state during the action",
-      "ar": "الْحَالُ — هَيْئَةُ صَاحِبِهَا",
-      "ur": "حال — کام کے وقت کی حالت"
+      "en": "A state during an action",
+      "ar": "الْحَالُ",
+      "ur": "کام کے دوران حالت"
     },
     "ayah": {
       "surah": 2,
       "ayah": 238,
       "label": "Al-Baqarah 2:238",
-      "ar": "حَافِظُوا عَلَى الصَّلَوَاتِ وَالصَّلَاةِ الْوُسْطَىٰ وَقُومُوا لِلَّهِ قَانِتِينَ",
-      "en": "Maintain with care the [obligatory] prayers and [in particular] the middle prayer and stand before Allah, devoutly obedient.",
-      "ur": "نمازوں کی حفاظت کرو اور خاص طور پر درمیانی نماز کی، اور اللہ کے سامنے ادب سے فرماں بردار بن کر کھڑے ہو",
+      "ar": "وَقُومُوا لِلَّهِ قَانِتِينَ",
+      "en": "and stand before Allah, devoutly obedient",
+      "ur": "اور اللہ کے سامنے فرمانبردار ہو کر کھڑے ہو",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002238.mp3"
     },
     "highlighted_word_indices": [
-      7
+      2
+    ],
+    "highlighted_words": [
+      "قَانِتِينَ"
     ],
     "noor_explanation": {
-      "en": "وَقُومُوا لِلَّهِ قَانِتِينَ — 'stand before Allah, devoutly obedient'. قَانِتِينَ is a حَال: it describes the state of the worshippers while standing. The command is not only to stand, but to stand in that state.",
-      "ur": "وَقُومُوا لِلَّهِ قَانِتِينَ — 'اللہ کے سامنے فرماں بردار بن کر کھڑے ہو'۔ قَانِتِينَ حال ہے: یہ کھڑے ہوتے وقت نمازیوں کی حالت بتاتا ہے۔ حکم صرف کھڑے ہونے کا نہیں، اس حالت میں کھڑے ہونے کا ہے۔"
+      "en": "وَقُومُوا لِلَّهِ قَانِتِينَ — the command is to stand, and قَانِتِينَ says in what state: the state of those who stand.",
+      "ur": "وَقُومُوا لِلَّهِ قَانِتِينَ — حکم کھڑے ہونے کا ہے، اور قَانِتِينَ بتاتا ہے کس حالت میں: کھڑے ہونے والوں کی حالت۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "The حَال paints the scene: خَرَجَ alone tells you he left; خَرَجَ خَائِفًا tells you how. Look for an indefinite accusative that answers 'in what state?'. Next: the حَال in the Quran.",
-      "ur": "حال منظر کھینچتا ہے: صرف خَرَجَ بتاتا ہے کہ وہ نکلے؛ خَرَجَ خَائِفًا بتاتا ہے کس حال میں۔ ایسا نکرہ منصوب ڈھونڈیے جو 'کس حال میں؟' کا جواب دے۔ آگے: قرآن میں حال۔"
+      "en": "You can find the state word in a sentence, name whose state it is, and tell it from an adjective and from another word ending in -an.",
+      "ur": "آپ جملے میں حال کا لفظ پہچان سکتے ہیں، بتا سکتے ہیں کہ یہ کس کی حالت ہے، اور اسے صفت اور -اً پر ختم ہونے والے دوسرے لفظ سے الگ کر سکتے ہیں۔"
     }
   }
 }

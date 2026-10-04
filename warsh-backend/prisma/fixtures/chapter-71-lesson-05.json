@@ -2,80 +2,107 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 71, Lesson 5 — Telling الحال from التمييز.",
+    "_note": "Chapter 71, Lesson 5 (ch71-l05, revised). Retrieval and contrast of four jobs a word ending in -an can do: a state (this chapter), a clarifier (this chapter), a time word (Chapter 66, يَوْمَ الْجُمُعَةِ) and the emphatic verbal noun (Chapter 55, 4:164 وَكَلَّمَ اللَّهُ مُوسَىٰ تَكْلِيمًا). Chapter 66's ظرف and Chapter 55's absolute object are retrieved by name only and never re-taught; the absolute object stays Chapter 55's (owner decision 2026-10-04), so it is not called a subtype of حال. The old 'Golden Rule' (how against how much) is gone: the lesson asks what the word relates to and what job it does, and says the ending alone never decides. The one-to-one matching has four different jobs on the right, so each label is used once. The hook 12:16 holds a time word and a state clause at once. Added 2026-10-04 in the proposal harvest, batch 10 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-71-content-proposal.md and its review amendments.",
+    "title": "Which Job Is It?",
+    "titleAr": "أَيُّ وَظِيفَةٍ هَذِهِ؟",
+    "titleUr": "یہ کون سا کام ہے؟",
     "chapter_order": 71,
     "lesson_order": 5,
-    "chapter_title": "الحال والتمييز",
-    "title": "Telling الْحَال from التَّمْيِيز",
-    "titleAr": "الْفَرْقُ بَيْنَ الْحَالِ وَالتَّمْيِيزِ",
-    "source": "arabai-backend/prisma/fixtures",
-    "estimated_minutes": 10,
+    "estimated_minutes": 12,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 3,
-      "ayah": 41,
-      "label": "Aal Imran 3:41",
-      "ar": "قَالَ رَبِّ اجْعَل لِّي آيَةً ۖ قَالَ آيَتُكَ أَلَّا تُكَلِّمَ النَّاسَ ثَلَاثَةَ أَيَّامٍ إِلَّا رَمْزًا ۗ وَاذْكُر رَّبَّكَ كَثِيرًا وَسَبِّحْ بِالْعَشِيِّ وَالْإِبْكَارِ",
-      "en": "He said, 'My Lord, make for me a sign.' He said, 'Your sign is that you will not [be able to] speak to the people for three days except by gesture. And remember your Lord much and exalt [Him with praise] in the evening and the morning.'",
-      "ur": "عرض کیا: اے میرے رب! میرے لیے کوئی نشانی مقرر کر دے۔ فرمایا: تمہاری نشانی یہ ہے کہ تم تین دن لوگوں سے اشارے کے سوا بات نہ کر سکو گے، اور اپنے رب کو بہت یاد کرو اور شام و صبح اس کی تسبیح کرو",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003041.mp3"
+      "surah": 12,
+      "ayah": 16,
+      "label": "Yusuf 12:16",
+      "ar": "وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ",
+      "en": "And they came to their father at night, weeping.",
+      "ur": "(یہ حرکت کرکے) وہ رات کے وقت باپ کے پاس روتے ہوئے آئے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012016.mp3"
     },
     "noor_intro": {
-      "en": "Both الْحَال and التَّمْيِيز are indefinite accusatives, so endings alone will not separate them. This ayah has a counted noun (ثَلَاثَةَ أَيَّامٍ) and accusatives of other kinds (رَمْزًا, كَثِيرًا). Today: the question that tells them apart.",
-      "ur": "حال اور تمییز دونوں نکرہ منصوب ہیں، اس لیے صرف آخری حرکت سے ان میں فرق نہیں ہوگا۔ اس آیت میں گنی ہوئی چیز (ثَلَاثَةَ أَيَّامٍ) اور دوسری قسم کے منصوب (رَمْزًا، كَثِيرًا) ہیں۔ آج: وہ سوال جو دونوں کو الگ کرتا ہے۔"
+      "en": "Look at 12:16 again: عِشَاءً tells when and يَبْكُونَ tells the state. Two parts of one ayah do two different jobs, and a word ending in -an can do several more.",
+      "ur": "12:16 پر دوبارہ نظر ڈالیں: عِشَاءً بتاتا ہے کب اور يَبْكُونَ حالت بتاتا ہے۔ ایک آیت کے دو حصے دو الگ کام کرتے ہیں، اور -اً پر ختم ہونے والا لفظ کئی اور کام بھی کر سکتا ہے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "حَال: 'in what state?'",
-        "ar": "الْحَالُ: كَيْفَ؟",
-        "ur": "حال: 'کس حال میں؟'"
+        "en": "Look at the job, not at the ending",
+        "ar": "انْظُرْ إِلَى الْوَظِيفَةِ",
+        "ur": "کام دیکھیں، ختم نہیں"
       },
       "explanation": {
-        "en": "A حَال describes the state of a person or thing at the time of the action. It is usually a describing word (ضَاحِكًا، خَائِفًا، قَانِتِينَ) and always has a صَاحِب whose state it is.",
-        "ur": "حال کام کے وقت کسی شخص یا چیز کی حالت بتاتا ہے۔ یہ عموماً صفت جیسا لفظ ہوتا ہے (ضَاحِكًا، خَائِفًا، قَانِتِينَ) اور ہمیشہ اس کا کوئی صاحب ہوتا ہے جس کی حالت بیان ہو۔"
+        "en": "Four jobs you now know can all show an accusative word: a state (جَاءَ الطَّالِبُ مُبْتَسِمًا), a clarifier (عِشْرِينَ كِتَابًا), a time word (Chapter 66: يَوْمَ الْجُمُعَةِ) and an emphatic verbal noun (Chapter 55: تَكْلِيمًا). A visible ending cannot tell them apart. Ask: what does this word relate to, and what does it do?",
+        "ur": "چار کام جو آپ اب جانتے ہیں، سب منصوب لفظ دکھا سکتے ہیں: حال (جَاءَ الطَّالِبُ مُبْتَسِمًا)، وضاحت (عِشْرِينَ كِتَابًا)، وقت کا لفظ (باب 66: يَوْمَ الْجُمُعَةِ) اور تاکید والا مصدر (باب 55: تَكْلِيمًا)۔ دکھائی دینے والا ختم انہیں الگ نہیں کر سکتا۔ پوچھیں: یہ لفظ کس سے متعلق ہے، اور کیا کام کرتا ہے؟"
       }
     },
     {
-      "type": "CONCEPT",
+      "type": "CONTRAST",
       "concept": {
-        "en": "تَمْيِيز: 'of what? in what respect?'",
-        "ar": "التَّمْيِيزُ: مِنْ أَيِّ شَيْءٍ؟",
-        "ur": "تمییز: 'کس چیز کا؟ کس لحاظ سے؟'"
+        "en": "A state, or a clarifier",
+        "ur": "حال، یا وضاحت"
       },
+      "examples": [
+        {
+          "ar": "جَاءَ الطَّالِبُ مُبْتَسِمًا",
+          "ar_plain": "جاء الطالب مبتسما",
+          "translit": "jāʾa aṭ-ṭālibu mubtasiman",
+          "en": "The student came smiling.",
+          "ur": "طالب علم مسکراتا ہوا آیا۔"
+        },
+        {
+          "ar": "اشْتَرَيْتُ عِشْرِينَ كِتَابًا",
+          "ar_plain": "اشتريت عشرين كتابا",
+          "translit": "ashtaraytu ʿishrīna kitāban",
+          "en": "I bought twenty books.",
+          "ur": "میں نے بیس کتابیں خریدیں۔"
+        }
+      ],
       "explanation": {
-        "en": "A تَمْيِيز removes vagueness. It is usually a plain noun (يَوْمًا، زَيْتًا، مَالًا، شَيْبًا) after a number, a measure, a comparison or a vague statement. It describes no one's state.",
-        "ur": "تمییز ابہام دور کرتی ہے۔ یہ عموماً سادہ اسم ہوتا ہے (يَوْمًا، زَيْتًا، مَالًا، شَيْبًا) جو عدد، پیمانے، موازنے یا مبہم جملے کے بعد آتا ہے۔ یہ کسی کی حالت بیان نہیں کرتا۔"
+        "en": "مُبْتَسِمًا tells the state of the one who came. كِتَابًا clears up what the twenty are. One relates to a person while he acts, the other to an amount.",
+        "ur": "مُبْتَسِمًا آنے والے کی حالت بتاتا ہے۔ كِتَابًا واضح کرتا ہے کہ بیس کیا ہیں۔ ایک کا تعلق کام کرتے ہوئے شخص سے ہے، دوسرے کا مقدار سے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "أَنَا أَكْثَرُ مِنْكَ مَالًا وَأَعَزُّ نَفَرًا",
-        "ar_plain": "أنا أكثر منك مالا وأعز نفرا",
-        "translit": "ana aktharu minka maalan wa-a'azzu nafaran",
-        "en": "I am greater than you in wealth and mightier in men.",
-        "ur": "میں تجھ سے مال میں زیادہ اور جتھے میں زیادہ طاقتور ہوں۔"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "A time word, or a repeated action",
+        "ur": "وقت کا لفظ، یا دہرایا گیا کام"
       },
+      "examples": [
+        {
+          "ar": "سَافَرَ الطَّالِبُ يَوْمَ الْجُمُعَةِ",
+          "ar_plain": "سافر الطالب يوم الجمعة",
+          "translit": "sāfara aṭ-ṭālibu yawma al-jumuʿati",
+          "en": "The student travelled on Friday.",
+          "ur": "طالب علم جمعہ کے دن سفر پر گیا۔"
+        },
+        {
+          "ar": "وَكَلَّمَ اللَّهُ مُوسَىٰ تَكْلِيمًا",
+          "ar_plain": "وكلم الله موسى تكليما",
+          "translit": "wakallama al-lahu mūsā taklīman",
+          "en": "and Allah spoke to Moses with direct speech",
+          "ur": "اور اللہ نے موسیٰ سے خوب کلام کیا"
+        }
+      ],
       "explanation": {
-        "en": "From 18:34. 'I am more' — in what? مَالًا. 'Mightier' — in what? نَفَرًا. Both are تَمْيِيز after a comparative.",
-        "ur": "18:34 سے۔ 'میں زیادہ ہوں' — کس چیز میں؟ مَالًا۔ 'زیادہ طاقتور' — کس لحاظ سے؟ نَفَرًا۔ دونوں اسمِ تفضیل کے بعد تمییز ہیں۔"
+        "en": "يَوْمَ tells when he travelled (Chapter 66). تَكْلِيمًا repeats the action of كَلَّمَ for emphasis (Chapter 55). Neither describes a state and neither clears up a number.",
+        "ur": "يَوْمَ بتاتا ہے کہ اس نے کب سفر کیا (باب 66)۔ تَكْلِيمًا كَلَّمَ کے کام کو تاکید کے لیے دہراتا ہے (باب 55)۔ ان میں سے کوئی حالت نہیں بتاتا اور کوئی عدد کی وضاحت نہیں کرتا۔"
       }
     },
     {
       "type": "GRAMMAR_NOTE",
       "title": {
-        "en": "The deciding question",
-        "ur": "فیصلہ کن سوال"
+        "en": "A routine",
+        "ur": "ایک طریقہ"
       },
       "body": {
-        "en": "Ask كَيْفَ؟ ('in what state?') — if the word answers it, it is a حَال. Ask مِنْ أَيِّ شَيْءٍ؟ ('of what? in what respect?') — if the word answers that, it is a تَمْيِيز.",
-        "ur": "پوچھیے كَيْفَ؟ ('کس حال میں؟') — اگر لفظ اس کا جواب دے تو حال ہے۔ پوچھیے مِنْ أَيِّ شَيْءٍ؟ ('کس چیز کا؟ کس لحاظ سے؟') — اگر لفظ اس کا جواب دے تو تمییز ہے۔"
+        "en": "Find the word. Ask what it relates to. Then ask: does it tell a state while the action happens? Does it clear up an amount or a respect? Does it tell when or where? Does it repeat the action of the verb? A word has one job in one sentence; the sentence decides.",
+        "ur": "لفظ ڈھونڈیں۔ پوچھیں کہ وہ کس سے متعلق ہے۔ پھر پوچھیں: کیا یہ کام ہوتے وقت حالت بتاتا ہے؟ کیا یہ مقدار یا لحاظ واضح کرتا ہے؟ کیا یہ کب یا کہاں بتاتا ہے؟ کیا یہ فعل کا کام دہراتا ہے؟ ایک جملے میں لفظ کا ایک کام ہوتا ہے؛ جملہ فیصلہ کرتا ہے۔"
       }
     }
   ],
@@ -84,150 +111,232 @@
       "type": "TAP_TRANSLATION",
       "id": "ch71-l05-ex01",
       "prompt": {
-        "ar": "خَرَجَ زَيْدٌ ضَاحِكًا",
-        "ar_plain": "خرج زيد ضاحكا",
-        "translit": "kharaja zaydun daahikan",
-        "en": "Zayd left laughing.",
-        "ur": "زید ہنستا ہوا نکلا۔"
+        "ar": "جَاءَ الطَّالِبُ مُبْتَسِمًا",
+        "ar_plain": "جاء الطالب مبتسما",
+        "translit": "jāʾa aṭ-ṭālibu mubtasiman",
+        "en": "(what job does مُبْتَسِمًا do?)",
+        "ur": "(مُبْتَسِمًا کیا کام کرتا ہے؟)"
       },
       "options": [
         {
-          "en": "حَال — it answers 'in what state?'",
-          "ur": "حال — 'کس حال میں؟' کا جواب"
+          "en": "It tells a state during the action",
+          "ur": "یہ کام کے دوران حالت بتاتا ہے"
         },
         {
-          "en": "تَمْيِيز — it answers 'of what?'",
-          "ur": "تمییز — 'کس چیز کا؟' کا جواب"
+          "en": "It clears up what a number counts",
+          "ur": "یہ واضح کرتا ہے کہ عدد کیا گنتا ہے"
         },
         {
-          "en": "an adjective of زَيْدٌ",
-          "ur": "زَيْدٌ کی صفت"
+          "en": "It tells when",
+          "ur": "یہ بتاتا ہے کب"
         },
         {
-          "en": "the object of خَرَجَ",
-          "ur": "خَرَجَ کا مفعول"
+          "en": "It repeats the action of the verb",
+          "ur": "یہ فعل کا کام دہراتا ہے"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "ضَاحِكًا describes Zayd's state while leaving — a حَال. It is a describing word (laughing), not a noun that names what is counted or measured.",
-        "ur": "ضَاحِكًا نکلتے وقت زید کی حالت بتاتا ہے — حال۔ یہ صفت جیسا لفظ ہے (ہنستا ہوا)، ایسا اسم نہیں جو بتائے کہ کیا گنا یا ناپا گیا۔"
+        "en": "The smiling goes with the coming: a state.",
+        "ur": "مسکرانا آنے کے ساتھ ہے: حالت۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch71-l05-ex02",
-      "statement": {
-        "en": "In أَنَا أَكْثَرُ مِنْكَ مَالًا, مَالًا is a تَمْيِيز: it says in what respect 'I am more'.",
-        "ur": "أَنَا أَكْثَرُ مِنْكَ مَالًا میں مَالًا تمییز ہے: یہ بتاتا ہے کہ 'میں زیادہ ہوں' کس لحاظ سے۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch71-l05-ex03",
-      "mode": "TAP",
-      "sentence_ar": "جَلَسَ الْعَالِمُ ___",
-      "hint": {
-        "en": "'The scholar sat reflecting.' Choose the word that gives his state.",
-        "ur": "'عالم غور کرتا ہوا بیٹھا۔' وہ لفظ چنیے جو اس کی حالت بتائے۔"
+      "prompt": {
+        "ar": "اشْتَرَيْتُ عِشْرِينَ كِتَابًا",
+        "ar_plain": "اشتريت عشرين كتابا",
+        "translit": "ashtaraytu ʿishrīna kitāban",
+        "en": "(what job does كِتَابًا do?)",
+        "ur": "(كِتَابًا کیا کام کرتا ہے؟)"
       },
       "options": [
         {
-          "ar": "مُتَأَمِّلًا",
-          "ar_plain": "متأملا",
-          "translit": "muta'ammilan",
-          "en": "reflecting (حَال)",
-          "ur": "غور کرتا ہوا (حال)"
+          "en": "It tells a state during the action",
+          "ur": "یہ کام کے دوران حالت بتاتا ہے"
         },
         {
-          "ar": "تَأَمُّلٌ",
-          "ar_plain": "تأمل",
-          "translit": "ta'ammulun",
-          "en": "reflection (noun, nominative)",
-          "ur": "غور (اسم، مرفوع)"
+          "en": "It clears up what the twenty are",
+          "ur": "یہ واضح کرتا ہے کہ بیس کیا ہیں"
         },
         {
-          "ar": "الْمُتَأَمِّلُ",
-          "ar_plain": "المتأمل",
-          "translit": "al-muta'ammilu",
-          "en": "the reflecting one",
-          "ur": "غور کرنے والا"
+          "en": "It tells when",
+          "ur": "یہ بتاتا ہے کب"
         },
         {
-          "ar": "عِشْرِينَ",
-          "ar_plain": "عشرين",
-          "translit": "'ishriina",
-          "en": "twenty",
-          "ur": "بیس"
+          "en": "It repeats the action of the verb",
+          "ur": "یہ فعل کا کام دہراتا ہے"
         }
       ],
-      "correct_answer": {
-        "ar": "مُتَأَمِّلًا",
-        "ar_plain": "متأملا",
-        "translit": "muta'ammilan",
-        "en": "reflecting (حَال)",
-        "ur": "غور کرتا ہوا (حال)"
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The amount before it needs 'what?', and the noun answers.",
+        "ur": "اس سے پہلے کی مقدار کو 'کیا؟' چاہیے، اور اسم جواب دیتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch71-l05-ex03",
+      "prompt": {
+        "ar": "سَافَرَ الطَّالِبُ يَوْمَ الْجُمُعَةِ",
+        "ar_plain": "سافر الطالب يوم الجمعة",
+        "translit": "sāfara aṭ-ṭālibu yawma al-jumuʿati",
+        "en": "(what job does يَوْمَ الْجُمُعَةِ do?)",
+        "ur": "(يَوْمَ الْجُمُعَةِ کیا کام کرتا ہے؟)"
       },
-      "xp_value": 1
+      "options": [
+        {
+          "en": "It tells a state during the action",
+          "ur": "یہ کام کے دوران حالت بتاتا ہے"
+        },
+        {
+          "en": "It clears up what a number counts",
+          "ur": "یہ واضح کرتا ہے کہ عدد کیا گنتا ہے"
+        },
+        {
+          "en": "It tells when he travelled",
+          "ur": "یہ بتاتا ہے کہ اس نے کب سفر کیا"
+        },
+        {
+          "en": "It repeats the action of the verb",
+          "ur": "یہ فعل کا کام دہراتا ہے"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A time word, as in Chapter 66; it is not a state.",
+        "ur": "وقت کا لفظ، جیسا باب 66 میں؛ یہ حالت نہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch71-l05-ex04",
+      "prompt": {
+        "ar": "وَكَلَّمَ اللَّهُ مُوسَىٰ تَكْلِيمًا",
+        "ar_plain": "وكلم الله موسى تكليما",
+        "translit": "wakallama al-lahu mūsā taklīman",
+        "en": "(4:164: what job does تَكْلِيمًا do?)",
+        "ur": "(4:164: تَكْلِيمًا کیا کام کرتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "It tells the state of Moses",
+          "ur": "یہ موسیٰ کی حالت بتاتا ہے"
+        },
+        {
+          "en": "It clears up what a number counts",
+          "ur": "یہ واضح کرتا ہے کہ عدد کیا گنتا ہے"
+        },
+        {
+          "en": "It tells when He spoke",
+          "ur": "یہ بتاتا ہے کہ اس نے کب کلام کیا"
+        },
+        {
+          "en": "It repeats the action of the verb for emphasis (Chapter 55)",
+          "ur": "یہ تاکید کے لیے فعل کا کام دہراتا ہے (باب 55)"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The noun is built from the same action as the verb and strengthens it; that is Chapter 55's emphatic verbal noun.",
+        "ur": "اسم اسی کام سے بنا ہے جس سے فعل بنا ہے اور اسے مضبوط کرتا ہے؛ یہ باب 55 کا تاکید والا مصدر ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch71-l05-ex05",
+      "prompt": {
+        "ar": "ذَهَبَ الطَّالِبُ أَمَامَ الْمُعَلِّمِ ضَاحِكًا",
+        "ar_plain": "ذهب الطالب امام المعلم ضاحكا",
+        "translit": "dhahaba aṭ-ṭālibu ʾamāma al-muʿallimi ḍāḥikan",
+        "en": "(two words follow the verb: which one tells the student's state?)",
+        "ur": "(فعل کے بعد دو لفظ ہیں: کون سا طالب علم کی حالت بتاتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "أَمَامَ — in front of",
+          "ur": "أَمَامَ — سامنے"
+        },
+        {
+          "en": "ضَاحِكًا — laughing",
+          "ur": "ضَاحِكًا — ہنستا ہوا"
+        },
+        {
+          "en": "الْمُعَلِّمِ — the teacher",
+          "ur": "الْمُعَلِّمِ — استاد"
+        },
+        {
+          "en": "ذَهَبَ — went",
+          "ur": "ذَهَبَ — گیا"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَمَامَ is a place word and also accusative, but it tells where. ضَاحِكًا tells his state.",
+        "ur": "أَمَامَ جگہ کا لفظ ہے اور وہ بھی منصوب ہے، مگر وہ بتاتا ہے کہاں۔ ضَاحِكًا اس کی حالت بتاتا ہے۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch71-l05-ex04",
+      "id": "ch71-l05-ex06",
       "left_column": [
         {
-          "ar": "مَشَى زَيْدٌ حَزِينًا",
-          "ar_plain": "مشى زيد حزينا",
-          "translit": "mashaa zaydun haziinan",
-          "en": "Zayd walked sadly",
-          "ur": "زید غمگین چلا"
+          "ar": "مُبْتَسِمًا",
+          "ar_plain": "مبتسما",
+          "translit": "mubtasiman",
+          "en": "in جَاءَ الطَّالِبُ مُبْتَسِمًا",
+          "ur": "جَاءَ الطَّالِبُ مُبْتَسِمًا میں"
         },
         {
-          "ar": "ثَمَانِيَةُ رِجَالٍ",
-          "ar_plain": "ثمانية رجال",
-          "translit": "thamaaniyatu rijaalin",
-          "en": "eight men",
-          "ur": "آٹھ آدمی"
+          "ar": "كِتَابًا",
+          "ar_plain": "كتابا",
+          "translit": "kitāban",
+          "en": "in عِشْرِينَ كِتَابًا",
+          "ur": "عِشْرِينَ كِتَابًا میں"
         },
         {
-          "ar": "أَكْثَرُ مِنْكَ مَالًا",
-          "ar_plain": "أكثر منك مالا",
-          "translit": "aktharu minka maalan",
-          "en": "more than you in wealth",
-          "ur": "مال میں تجھ سے زیادہ"
+          "ar": "يَوْمَ",
+          "ar_plain": "يوم",
+          "translit": "yawma",
+          "en": "in يَوْمَ الْجُمُعَةِ",
+          "ur": "يَوْمَ الْجُمُعَةِ میں"
         },
         {
-          "ar": "خَمْسَةٌ وَعِشْرُونَ رَجُلًا",
-          "ar_plain": "خمسة وعشرون رجلا",
-          "translit": "khamsatun wa-'ishruuna rajulan",
-          "en": "twenty-five men",
-          "ur": "پچیس آدمی"
+          "ar": "تَكْلِيمًا",
+          "ar_plain": "تكليما",
+          "translit": "taklīman",
+          "en": "in وَكَلَّمَ اللَّهُ مُوسَىٰ تَكْلِيمًا",
+          "ur": "وَكَلَّمَ اللَّهُ مُوسَىٰ تَكْلِيمًا میں"
         }
       ],
       "right_column": [
         {
-          "en": "حَال — 'in what state?'",
-          "ur": "حال — 'کس حال میں؟'"
+          "en": "repeats the action of the verb",
+          "ur": "فعل کا کام دہراتا ہے"
         },
         {
-          "en": "counted noun after 3–10: plural genitive",
-          "ur": "3 تا 10 کے بعد: جمع مجرور"
+          "en": "clears up what the twenty are",
+          "ur": "واضح کرتا ہے کہ بیس کیا ہیں"
         },
         {
-          "en": "تَمْيِيز of a statement — 'in what respect?'",
-          "ur": "جملے کی تمییز — 'کس لحاظ سے؟'"
+          "en": "tells a state during the action",
+          "ur": "کام کے دوران حالت بتاتا ہے"
         },
         {
-          "en": "تَمْيِيز after 11–99: singular accusative",
-          "ur": "11 تا 99 کے بعد تمییز: واحد منصوب"
+          "en": "tells when",
+          "ur": "بتاتا ہے کب"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
+          2
         ],
         [
           1,
@@ -235,125 +344,101 @@
         ],
         [
           2,
-          2
+          3
         ],
         [
           3,
-          3
+          0
         ]
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Four words, four jobs, and each job is used once.",
+        "ur": "چار لفظ، چار کام، اور ہر کام ایک بار آیا ہے۔"
+      }
     },
     {
-      "type": "BUILD_SENTENCE",
-      "id": "ch71-l05-ex05",
-      "target_translation": {
-        "en": "The scholar sat reflecting.",
-        "ur": "عالم غور کرتا ہوا بیٹھا۔"
+      "type": "TRUE_FALSE",
+      "id": "ch71-l05-ex07",
+      "statement": {
+        "en": "A word that ends in -an is a state word.",
+        "ur": "جو لفظ -اً پر ختم ہو وہ حال ہے۔"
       },
-      "tiles": [
-        {
-          "ar": "جَلَسَ",
-          "ar_plain": "جلس",
-          "translit": "jalasa",
-          "en": "sat",
-          "ur": "بیٹھا"
-        },
-        {
-          "ar": "الْعَالِمُ",
-          "ar_plain": "العالم",
-          "translit": "al-'aalimu",
-          "en": "the scholar",
-          "ur": "عالم"
-        },
-        {
-          "ar": "مُتَأَمِّلًا",
-          "ar_plain": "متأملا",
-          "translit": "muta'ammilan",
-          "en": "reflecting",
-          "ur": "غور کرتا ہوا"
-        },
-        {
-          "ar": "الْمُتَأَمِّلُ",
-          "ar_plain": "المتأمل",
-          "translit": "al-muta'ammilu",
-          "en": "the reflecting one",
-          "ur": "غور کرنے والا"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. A state, a clarifier, a time word, an object and an emphatic verbal noun can all end in -an. The job decides.",
+        "ur": "غلط۔ حال، وضاحت کرنے والا، وقت کا لفظ، مفعول اور تاکید والا مصدر سب -اً پر ختم ہو سکتے ہیں۔ کام فیصلہ کرتا ہے۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch71-l05-ex06",
+      "id": "ch71-l05-ex08",
       "prompt": {
-        "ar": "عَادَ الطَّالِبُ وَحْدَهُ",
-        "ar_plain": "عاد الطالب وحده",
-        "translit": "'aada at-taalibu wahdahu",
-        "en": "The student returned alone.",
-        "ur": "طالب علم اکیلا لوٹا۔"
+        "ar": "وَجَاءُوا أَبَاهُمْ عِشَاءً يَبْكُونَ",
+        "ar_plain": "وجاءوا اباهم عشاء يبكون",
+        "translit": "wajāʾū ʾabāhum ʿishāʾan yabkūna",
+        "en": "(12:16: which part is the time word and which the state?)",
+        "ur": "(12:16: کون سا حصہ وقت کا لفظ ہے اور کون سا حالت؟)"
       },
       "options": [
         {
-          "en": "حَال — how the student was as he returned",
-          "ur": "حال — لوٹتے وقت طالب علم کس حال میں تھا"
+          "en": "عِشَاءً tells when; يَبْكُونَ tells the state",
+          "ur": "عِشَاءً بتاتا ہے کب؛ يَبْكُونَ حالت بتاتا ہے"
         },
         {
-          "en": "تَمْيِيز of a number",
-          "ur": "عدد کی تمییز"
+          "en": "عِشَاءً tells the state; يَبْكُونَ tells when",
+          "ur": "عِشَاءً حالت بتاتا ہے؛ يَبْكُونَ بتاتا ہے کب"
         },
         {
-          "en": "an adjective",
-          "ur": "صفت"
+          "en": "Both tell when",
+          "ur": "دونوں بتاتے ہیں کب"
         },
         {
-          "en": "a demonstrative",
-          "ur": "اسمِ اشارہ"
+          "en": "Both tell a state",
+          "ur": "دونوں حالت بتاتے ہیں"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "وَحْدَهُ is a حَال: 'on his own'. It describes the student at the time of returning.",
-        "ur": "وَحْدَهُ حال ہے: 'اکیلا'۔ یہ لوٹتے وقت طالب علم کی حالت بتاتا ہے۔"
+        "en": "A time word and a state clause side by side in one ayah.",
+        "ur": "ایک آیت میں وقت کا لفظ اور حال والا جملہ ساتھ ساتھ۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "الْحَال vs التَّمْيِيز — the essential difference",
-      "ar": "الْحَالُ وَالتَّمْيِيزُ — الْفَرْقُ الْجَوْهَرِيُّ",
-      "ur": "حال اور تمییز — بنیادی فرق"
+      "en": "Four jobs, one kind of ending",
+      "ar": "أَرْبَعُ وَظَائِفَ",
+      "ur": "چار کام، ایک طرح کا ختم"
     },
     "ayah": {
-      "surah": 18,
-      "ayah": 34,
-      "label": "Al-Kahf 18:34",
-      "ar": "وَكَانَ لَهُ ثَمَرٌ فَقَالَ لِصَاحِبِهِ وَهُوَ يُحَاوِرُهُ أَنَا أَكْثَرُ مِنكَ مَالًا وَأَعَزُّ نَفَرًا",
-      "en": "And he had fruit, so he said to his companion while he was conversing with him, 'I am greater than you in wealth and mightier in [numbers of] men.'",
-      "ur": "اور اس کے پاس پھل تھے، تو اس نے اپنے ساتھی سے باتیں کرتے ہوئے کہا: میں تجھ سے مال میں زیادہ اور جتھے میں زیادہ طاقتور ہوں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/018034.mp3"
+      "surah": 4,
+      "ayah": 164,
+      "label": "An-Nisa 4:164",
+      "ar": "وَكَلَّمَ اللَّهُ مُوسَىٰ تَكْلِيمًا",
+      "en": "and Allah spoke to Moses with direct speech",
+      "ur": "اور اللہ نے موسیٰ سے خوب کلام کیا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/004164.mp3"
     },
     "highlighted_word_indices": [
-      5,
-      6,
-      10,
-      12
+      0,
+      3
+    ],
+    "highlighted_words": [
+      "وَكَلَّمَ",
+      "تَكْلِيمًا"
     ],
     "noor_explanation": {
-      "en": "Both in one ayah. وَهُوَ يُحَاوِرُهُ — 'while he was conversing with him' — is a حَال clause: the state of the speaker as he spoke. مَالًا and نَفَرًا are تَمْيِيز: 'more in wealth, mightier in men'. The garden owner's boast is built on تَمْيِيز — and the story shows how little that wealth was worth.",
-      "ur": "ایک آیت میں دونوں۔ وَهُوَ يُحَاوِرُهُ — 'اس سے باتیں کرتے ہوئے' — حالیہ جملہ ہے: بولتے وقت بولنے والے کی حالت۔ مَالًا اور نَفَرًا تمییز ہیں: 'مال میں زیادہ، جتھے میں زیادہ طاقتور'۔ باغ والے کا فخر تمییز پر قائم ہے — اور قصہ دکھاتا ہے کہ وہ مال کتنا بے وقعت تھا۔"
+      "en": "وَكَلَّمَ اللَّهُ مُوسَىٰ تَكْلِيمًا — an accusative word that is neither a state nor a clarifier: it repeats the action. The job decides, not the ending.",
+      "ur": "وَكَلَّمَ اللَّهُ مُوسَىٰ تَكْلِيمًا — ایسا منصوب لفظ جو نہ حال ہے نہ وضاحت: یہ کام کو دہراتا ہے۔ کام فیصلہ کرتا ہے، ختم نہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Two indefinite accusatives, two jobs. حَال answers 'in what state?' and has a صَاحِب. تَمْيِيز answers 'of what? in what respect?' and removes vagueness. Next: the حَال as a clause and other advanced forms.",
-      "ur": "دو نکرہ منصوب، دو کام۔ حال 'کس حال میں؟' کا جواب دیتا ہے اور اس کا صاحب ہوتا ہے۔ تمییز 'کس چیز کا؟ کس لحاظ سے؟' کا جواب دیتی ہے اور ابہام دور کرتی ہے۔ آگے: جملہ بطور حال اور دوسری صورتیں۔"
+      "en": "You told a state, a clarifier, a time word and an emphatic verbal noun apart by their jobs, not by their endings.",
+      "ur": "آپ نے حال، وضاحت کرنے والے، وقت کے لفظ اور تاکید والے مصدر کو ان کے کاموں سے الگ کیا، ان کے ختم سے نہیں۔"
     }
   }
 }

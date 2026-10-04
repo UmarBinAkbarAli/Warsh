@@ -947,6 +947,27 @@ Everything below this list is either done and verified, or one of these:
    later pass). Map entries for Ch 51–55 rewritten (S10). Not done: scholarly
    review, Android pass, Chapter 52's constructed dialogue lesson, and turning
    `ch55-l06` into the review.
+   **Proposal harvest, batch 10 (Chapters 71–72, the last): live in production
+   2026-10-04.** Ch 71 had `ch71-l01`–`l06` rebuilt (a single-word state and its
+   owner, a state clause, the noun that clears up a number or measure, the
+   sentence-level clarifier, telling the four jobs of a word ending in -an apart,
+   and one short integrated text) and gained all of Al-Fajr in three parts
+   (`ch71-l08`–`l10`), a rebuilt review (`ch71-l07`) and a 16-question
+   `ch71-test`. Ch 72 had `ch72-l01`–`l06` rebuilt (who is called, a name or a
+   pointed-at word, يَا أَيُّهَا as a bridge, the noun or relative after it, calling
+   Allah, and 9:119), gained the accusative kinds of call (`ch72-l09`), had
+   `ch72-l07` converted in place to the CL18 Conversation Lab "A Visit to a
+   Learning Centre", and gained all of An-Nazi'at in four parts (`ch72-l10`–`l13`)
+   and An-Naba in three (`ch72-l14`–`l16`), a rebuilt review (`ch72-l08`) and a
+   16-question `ch72-test`. Published with `scripts/promote-chapters-71-72.cjs`;
+   `content:check` 607/607 (in sync, nothing ahead either way),
+   `db:validate-fixtures` 607 and backend `npm test` 198 pass / 0 fail / 1 skipped.
+   **No TTS was generated:** the missing catalogue list in
+   `Docs/lesson-audio-needed.md` is now 1440 clips (171 new; the 23 CL18 phrase
+   clips are listed separately, outside the catalogue audit). 66 new scenes for 120 cards are requested
+   in `Docs/lesson-illustrations-needed.md` (every discover card of these chapters
+   is mapped; no figures or faces). **The proposal harvest is finished: Ch 26–72 are
+   all done.** Not done: scholarly review and the Android pass.
    **Proposal harvest, batch 9 (Chapters 66–70): live in production
    2026-10-04.** Ch 66 had `ch66-l01`–`l05` rebuilt around the job of a ظرف (the
    old rows said it is always accusative and taught ḥāl, Chapter 71's), and gained

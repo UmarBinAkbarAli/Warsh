@@ -2,397 +2,426 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 72, Lesson 5 — Calling Allah in duʿāʾ: رَبِّ، رَبَّنَا، اللَّهُمَّ.",
+    "_note": "Chapter 72, Lesson 5 (ch72-l04). The noun after أَيُّهَا says who is meant: an ordinary noun (يَا أَيُّهَا النَّاسُ, 2:21) or a group relative (يَا أَيُّهَا الَّذِينَ آمَنُوا, 2:104). Chapter 40's الَّذِينَ is retrieved and the supplied آمَنُوا is read by meaning (no new conjugation). The same framework as Lesson 4 is used. Nothing is said about how often the phrase occurs. The old row's 'the commands after the call are part of it' is avoided: the call is marked off from what the speaker says next, and 2:104's prohibition is read as what is told, with no mislabelling as a jussive response (Chapters 68 and 69 own those). 2:21, 2:104 and 4:1 are exact excerpts. Added 2026-10-04 in the proposal harvest, batch 10 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-72-content-proposal.md and its review amendments.",
+    "title": "Who Exactly? أَيُّهَا with a Relative",
+    "titleAr": "النِّدَاءُ بِالْمَوْصُولِ",
+    "titleUr": "ٹھیک کسے؟ أَيُّهَا کے ساتھ موصول",
     "chapter_order": 72,
     "lesson_order": 5,
-    "chapter_title": "المنادى",
-    "title": "Calling Allah — رَبِّ، رَبَّنَا، اللَّهُمَّ",
-    "titleAr": "نِدَاءُ اللَّهِ فِي الدُّعَاءِ",
-    "source": "arabai-backend/prisma/fixtures",
-    "estimated_minutes": 10,
+    "estimated_minutes": 12,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 3,
-      "ayah": 8,
-      "label": "Aal Imran 3:8",
-      "ar": "رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً ۚ إِنَّكَ أَنتَ الْوَهَّابُ",
-      "en": "Our Lord, let not our hearts deviate after You have guided us and grant us from Yourself mercy. Indeed, You are the Bestower.",
-      "ur": "اے ہمارے رب، ہمیں ہدایت دینے کے بعد ہمارے دلوں کو ٹیڑھا نہ کر، اور ہمیں اپنی طرف سے رحمت عطا فرما۔ بے شک تو ہی بہت عطا کرنے والا ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003008.mp3"
+      "surah": 2,
+      "ayah": 104,
+      "label": "Al-Baqarah 2:104",
+      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا",
+      "en": "O you who believe",
+      "ur": "اے ایمان والو",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002104.mp3"
     },
     "noor_intro": {
-      "en": "رَبَّنَا — 'our Lord'. There is no يَا, yet this is a call, and رَبَّ shows fatḥa. Most duʿāʾ in the Quran opens this way. Today: the forms used to call on Allah.",
-      "ur": "رَبَّنَا — 'اے ہمارے رب'۔ یہاں يَا نہیں، پھر بھی یہ ندا ہے، اور رَبَّ پر فتحہ ہے۔ قرآن کی اکثر دعائیں اسی طرح شروع ہوتی ہیں۔ آج: اللہ کو پکارنے کے صیغے۔"
+      "en": "'O you who believe' opens many ayat. After the bridge أَيُّهَا comes a group, 'those who believed', and then what they are told. Read where the call ends.",
+      "ur": "'اے ایمان والو' بہت سی آیات کھولتا ہے۔ پل أَيُّهَا کے بعد ایک گروہ آتا ہے، 'جو ایمان لائے'، اور پھر وہ جو انہیں کہا گیا۔ دیکھیں پکار کہاں ختم ہوتی ہے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "رَبَّنَا — a muḍāf vocative",
-        "ar": "رَبَّنَا",
-        "ur": "رَبَّنَا — مضاف منادیٰ"
+        "en": "The noun after أَيُّهَا says who",
+        "ar": "مَنِ الْمَقْصُودُ؟",
+        "ur": "ٹھیک کسے مراد ہے؟"
       },
       "explanation": {
-        "en": "رَبَّنَا is رَبَّ + نَا ('our'). It is a muḍāf vocative, so it is accusative with fatḥa (Lesson 3). In duʿāʾ the يَا is usually left out: رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً.",
-        "ur": "رَبَّنَا = رَبَّ + نَا ('ہمارا')۔ یہ مضاف منادیٰ ہے، اس لیے فتحہ کے ساتھ منصوب ہے (سبق 3)۔ دعا میں عام طور پر يَا چھوڑ دیا جاتا ہے: رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً۔"
-      },
-      "examples": [
-        {
-          "ar": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً",
-          "ar_plain": "ربنا آتنا في الدنيا حسنة",
-          "translit": "rabbanaa aatinaa fii ad-dunyaa hasanatan",
-          "en": "Our Lord, give us good in this world.",
-          "ur": "اے ہمارے رب، ہمیں دنیا میں بھلائی دے۔"
-        }
-      ]
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "رَبِّ — 'my Lord', shortened",
-        "ar": "رَبِّ",
-        "ur": "رَبِّ — 'میرے رب'، مختصر"
-      },
-      "explanation": {
-        "en": "رَبِّي ('my Lord') loses its ي in a call, leaving the kasra: رَبِّ اغْفِرْ لِي — 'My Lord, forgive me' (71:28). Same pattern as يَا قَوْمِ.",
-        "ur": "ندا میں رَبِّي ('میرا رب') کی ي گر جاتی ہے اور کسرہ رہ جاتا ہے: رَبِّ اغْفِرْ لِي — 'اے میرے رب، مجھے بخش دے' (71:28)۔ یہ يَا قَوْمِ والا طریقہ ہے۔"
-      },
-      "examples": [
-        {
-          "ar": "رَبِّ اغْفِرْ لِي",
-          "ar_plain": "رب اغفر لي",
-          "translit": "rabbi ighfir lii",
-          "en": "My Lord, forgive me.",
-          "ur": "اے میرے رب، مجھے بخش دے۔"
-        }
-      ]
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "اللَّهُمَّ — 'O Allah'",
-        "ar": "اللَّهُمَّ",
-        "ur": "اللَّهُمَّ — 'اے اللہ'"
-      },
-      "explanation": {
-        "en": "اللَّهُمَّ means 'O Allah'. The مَّ at the end takes the place of يَا at the start, so the two are not used together: say اللَّهُمَّ, not يَا اللَّهُمَّ. In the Quran: قُلِ اللَّهُمَّ مَالِكَ الْمُلْكِ (3:26).",
-        "ur": "اللَّهُمَّ کا مطلب ہے 'اے اللہ'۔ آخر کا مَّ شروع کے يَا کی جگہ ہے، اس لیے دونوں اکٹھے نہیں آتے: اللَّهُمَّ کہیے، يَا اللَّهُمَّ نہیں۔ قرآن میں: قُلِ اللَّهُمَّ مَالِكَ الْمُلْكِ (3:26)۔"
+        "en": "After يَا أَيُّهَا comes the word that says who is meant. It can be an ordinary noun with ال: يَا أَيُّهَا النَّاسُ, 'O people'. It can also be a group relative you know from Chapter 40: يَا أَيُّهَا الَّذِينَ آمَنُوا, 'O you who believe', where آمَنُوا, 'believed', describes who.",
+        "ur": "يَا أَيُّهَا کے بعد وہ لفظ آتا ہے جو بتاتا ہے کہ کسے مراد ہے۔ یہ ال والا عام اسم ہو سکتا ہے: يَا أَيُّهَا النَّاسُ، 'اے لوگو'۔ یہ باب 40 کا جانا ہوا گروہی موصول بھی ہو سکتا ہے: يَا أَيُّهَا الَّذِينَ آمَنُوا، 'اے ایمان والو'، جہاں آمَنُوا، 'ایمان لائے'، بتاتا ہے کہ کون۔"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "يَا اللَّهُ — the one ال word",
-        "ar": "يَا اللَّهُ",
-        "ur": "يَا اللَّهُ — واحد ال والا لفظ"
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "يَا أَيُّهَا النَّاسُ اعْبُدُوا رَبَّكُمُ",
+        "ar_plain": "يا ايها الناس اعبدوا ربكم",
+        "translit": "yaā ʾayyuhā an-nāsu aʿbudū rabbakumu",
+        "en": "O people, worship your Lord",
+        "ur": "اے لوگو، اپنے رب کی عبادت کرو"
       },
       "explanation": {
-        "en": "Lesson 4 said يَا does not go straight onto ال. The name of Allah is the exception: يَا اللَّهُ is correct. You will hear it in duʿāʾ; in the Quran's own prayers, the forms you will meet are رَبِّ، رَبَّنَا and اللَّهُمَّ.",
-        "ur": "سبق 4 میں تھا کہ يَا براہِ راست ال پر نہیں آتا۔ اللہ کا نام اس سے مستثنیٰ ہے: يَا اللَّهُ درست ہے۔ یہ آپ دعاؤں میں سنیں گے؛ قرآن کی اپنی دعاؤں میں آپ کو رَبِّ، رَبَّنَا اور اللَّهُمَّ ملیں گے۔"
+        "en": "يَا أَيُّهَا النَّاسُ اعْبُدُوا رَبَّكُمُ: 'O people, worship your Lord'. النَّاسُ says who is called; اعْبُدُوا رَبَّكُمُ is what they are told, and it is not part of the call. (Al-Baqarah 2:21) (Al-Baqarah 2:21)",
+        "ur": "يَا أَيُّهَا النَّاسُ اعْبُدُوا رَبَّكُمُ: 'اے لوگو، اپنے رب کی عبادت کرو'۔ النَّاسُ بتاتا ہے کہ کسے پکارا گیا؛ اعْبُدُوا رَبَّكُمُ وہ ہے جو انہیں کہا گیا، اور وہ پکار کا حصہ نہیں۔ (البقرہ 2:21) (Al-Baqarah 2:21)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تَقُولُوا رَاعِنَا",
+        "ar_plain": "يا ايها الذين امنوا لا تقولوا راعنا",
+        "translit": "yaā ʾayyuhā alladhīna ʾāmanū lā taqūlū rāʿinā",
+        "en": "O you who believe, do not say 'Ra'ina'",
+        "ur": "اے ایمان والو، 'راعنا' نہ کہو"
+      },
+      "explanation": {
+        "en": "يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تَقُولُوا رَاعِنَا: 'O you who believe, do not say Ra'ina'. The call is يَا أَيُّهَا الَّذِينَ آمَنُوا; لَا تَقُولُوا رَاعِنَا is what they are told. (Al-Baqarah 2:104) (Al-Baqarah 2:104)",
+        "ur": "يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تَقُولُوا رَاعِنَا: 'اے ایمان والو، راعنا نہ کہو'۔ پکار يَا أَيُّهَا الَّذِينَ آمَنُوا ہے؛ لَا تَقُولُوا رَاعِنَا وہ ہے جو انہیں کہا گیا۔ (البقرہ 2:104) (Al-Baqarah 2:104)"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "An ordinary noun, or a relative",
+        "ur": "عام اسم، یا موصول"
+      },
+      "examples": [
+        {
+          "ar": "يَا أَيُّهَا النَّاسُ",
+          "ar_plain": "يا ايها الناس",
+          "translit": "yaā ʾayyuhā an-nāsu",
+          "en": "O people",
+          "ur": "اے لوگو"
+        },
+        {
+          "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا",
+          "ar_plain": "يا ايها الذين امنوا",
+          "translit": "yaā ʾayyuhā alladhīna ʾāmanū",
+          "en": "O you who believe",
+          "ur": "اے ایمان والو"
+        }
+      ],
+      "explanation": {
+        "en": "Both say who is called after the same bridge. In the first it is a noun with ال. In the second it is الَّذِينَ, 'those who', with آمَنُوا saying which group. The bridge and what follows it are the same pattern.",
+        "ur": "دونوں ایک ہی پل کے بعد بتاتے ہیں کہ کسے پکارا گیا۔ پہلے میں یہ ال والا اسم ہے۔ دوسرے میں الَّذِينَ، 'جو'، ہے اور آمَنُوا بتاتا ہے کہ کون سا گروہ۔ پل اور اس کے بعد کا حصہ ایک ہی ساخت ہے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Where the call ends",
+        "ur": "پکار کہاں ختم ہوتی ہے"
+      },
+      "body": {
+        "en": "The call ends when the one who is called is named. What comes after is what the speaker says to them: here a command and a prohibition you know from earlier chapters. They are not part of the call and are not a response to it.",
+        "ur": "پکار وہاں ختم ہوتی ہے جہاں جسے پکارا گیا اس کا نام آ جاتا ہے۔ اس کے بعد وہ ہے جو بولنے والا ان سے کہتا ہے: یہاں حکم اور نہی جو آپ پچھلے ابواب سے جانتے ہیں۔ وہ پکار کا حصہ نہیں اور اس کا جواب بھی نہیں۔"
       }
     }
   ],
   "exercises": [
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch72-l05-ex01",
+      "id": "ch72-l04-ex01",
       "prompt": {
-        "ar": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً",
-        "ar_plain": "ربنا آتنا في الدنيا حسنة",
-        "translit": "rabbanaa aatinaa fii ad-dunyaa hasanatan",
-        "en": "Our Lord, give us good in this world.",
-        "ur": "اے ہمارے رب، ہمیں دنیا میں بھلائی دے۔"
+        "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا",
+        "ar_plain": "يا ايها الذين امنوا",
+        "translit": "yaā ʾayyuhā alladhīna ʾāmanū",
+        "en": "(2:104: who is called?)",
+        "ur": "(2:104: کسے پکارا گیا؟)"
       },
       "options": [
         {
-          "en": "Our Lord, give us good in this world.",
-          "ur": "اے ہمارے رب، ہمیں دنیا میں بھلائی دے۔"
+          "en": "Those who believed",
+          "ur": "جو ایمان لائے"
         },
         {
-          "en": "Our Lord gave us good in this world.",
-          "ur": "ہمارے رب نے ہمیں دنیا میں بھلائی دی۔"
+          "en": "The people who do not believe",
+          "ur": "جو ایمان نہیں لائے"
         },
         {
-          "en": "My Lord, give me good in this world.",
-          "ur": "اے میرے رب، مجھے دنیا میں بھلائی دے۔"
+          "en": "The speaker",
+          "ur": "بولنے والا"
         },
         {
-          "en": "Lord of the world, we have done good.",
-          "ur": "اے دنیا کے رب، ہم نے نیکی کی۔"
+          "en": "Nobody",
+          "ur": "کوئی نہیں"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "2:201. رَبَّنَا is a call ('Our Lord'), and آتِنَا is a request: 'give us'.",
-        "ur": "2:201۔ رَبَّنَا ندا ہے ('اے ہمارے رب')، اور آتِنَا درخواست ہے: 'ہمیں دے'۔"
+        "en": "الَّذِينَ آمَنُوا, 'those who believed', says who is called.",
+        "ur": "الَّذِينَ آمَنُوا، 'جو ایمان لائے'، بتاتا ہے کہ کسے پکارا گیا۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch72-l05-ex02",
-      "statement": {
-        "en": "In رَبَّنَا, the fatḥa on رَبَّ shows an accusative vocative, because رَبَّ is muḍāf to نَا.",
-        "ur": "رَبَّنَا میں رَبَّ کا فتحہ منصوب منادیٰ کی علامت ہے، کیونکہ رَبَّ، نَا کی طرف مضاف ہے۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "Yes. رَبَّنَا = يَا رَبَّنَا with يَا left out; a muḍāf vocative is accusative.",
-        "ur": "جی ہاں۔ رَبَّنَا = يَا رَبَّنَا، يَا کو چھوڑ کر؛ مضاف منادیٰ منصوب ہوتا ہے۔"
-      }
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch72-l05-ex03",
-      "mode": "TAP",
-      "sentence_ar": "___ اغْفِرْ لِي وَلِوَالِدَيَّ",
-      "hint": {
-        "en": "'My Lord, forgive me and my parents' (71:28).",
-        "ur": "'اے میرے رب، مجھے اور میرے والدین کو بخش دے' (71:28)۔"
+      "type": "TAP_TRANSLATION",
+      "id": "ch72-l04-ex02",
+      "prompt": {
+        "ar": "يَا أَيُّهَا النَّاسُ",
+        "ar_plain": "يا ايها الناس",
+        "translit": "yaā ʾayyuhā an-nāsu",
+        "en": "(2:21: who is called?)",
+        "ur": "(2:21: کسے پکارا گیا؟)"
       },
       "options": [
         {
-          "ar": "رَبِّ",
-          "ar_plain": "رب",
-          "translit": "rabbi",
-          "en": "my Lord (call)",
-          "ur": "اے میرے رب"
+          "en": "The believers only",
+          "ur": "صرف ایمان والے"
         },
         {
-          "ar": "رَبُّ",
-          "ar_plain": "رب",
-          "translit": "rabbu",
-          "en": "Lord (ḍamma)",
-          "ur": "رب (ضمہ)"
+          "en": "The Lord",
+          "ur": "رب"
         },
         {
-          "ar": "رَبٌّ",
-          "ar_plain": "رب",
-          "translit": "rabbun",
-          "en": "a lord",
-          "ur": "کوئی رب"
+          "en": "The people",
+          "ur": "لوگ"
         },
         {
-          "ar": "الرَّبُّ",
-          "ar_plain": "الرب",
-          "translit": "ar-rabbu",
-          "en": "the Lord",
-          "ur": "رب (ال کے ساتھ)"
+          "en": "The angels",
+          "ur": "فرشتے"
         }
       ],
-      "correct_answer": {
-        "ar": "رَبِّ",
-        "ar_plain": "رب",
-        "translit": "rabbi",
-        "en": "my Lord (call)",
-        "ur": "اے میرے رب"
-      },
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "رَبِّ is رَبِّي ('my Lord') with the ي dropped; only the kasra remains.",
-        "ur": "رَبِّ دراصل رَبِّي ('میرا رب') ہے جس کی ي گر گئی؛ صرف کسرہ باقی ہے۔"
+        "en": "النَّاسُ after the bridge says who is called: the people.",
+        "ur": "پل کے بعد النَّاسُ بتاتا ہے کہ کسے پکارا گیا: لوگ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch72-l04-ex03",
+      "prompt": {
+        "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا",
+        "ar_plain": "يا ايها الذين امنوا",
+        "translit": "yaā ʾayyuhā alladhīna ʾāmanū",
+        "en": "(what does آمَنُوا do?)",
+        "ur": "(آمَنُوا کیا کام کرتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "It is the call particle",
+          "ur": "یہ پکار کا حرف ہے"
+        },
+        {
+          "en": "It says which group: those who believed",
+          "ur": "یہ بتاتا ہے کہ کون سا گروہ: جو ایمان لائے"
+        },
+        {
+          "en": "It is what they are told to do",
+          "ur": "یہ وہ ہے جو انہیں کہا گیا"
+        },
+        {
+          "en": "It is the bridge",
+          "ur": "یہ پل ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After الَّذِينَ the verb says which group is meant.",
+        "ur": "الَّذِينَ کے بعد فعل بتاتا ہے کہ کون سا گروہ مراد ہے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch72-l05-ex04",
+      "id": "ch72-l04-ex04",
       "statement": {
-        "en": "يَا اللَّهُمَّ is the normal way to say 'O Allah'.",
-        "ur": "'اے اللہ' کہنے کا عام طریقہ يَا اللَّهُمَّ ہے۔"
+        "en": "In يَا أَيُّهَا الَّذِينَ آمَنُوا, the call particle is الَّذِينَ.",
+        "ur": "يَا أَيُّهَا الَّذِينَ آمَنُوا میں پکار کا حرف الَّذِينَ ہے۔"
       },
       "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "The مَّ of اللَّهُمَّ already does the job of يَا, so say اللَّهُمَّ alone (or يَا اللَّهُ).",
-        "ur": "اللَّهُمَّ کا مَّ پہلے ہی يَا کا کام کرتا ہے، اس لیے صرف اللَّهُمَّ کہیے (یا يَا اللَّهُ)۔"
+        "en": "False. The call particle is يَا; الَّذِينَ is part of who is called.",
+        "ur": "غلط۔ پکار کا حرف يَا ہے؛ الَّذِينَ اس کا حصہ ہے جسے پکارا گیا۔"
       }
     },
     {
-      "type": "MATCHING",
-      "id": "ch72-l05-ex05",
-      "left_column": [
-        {
-          "ar": "رَبِّ",
-          "ar_plain": "رب",
-          "translit": "rabbi",
-          "en": "rabbi",
-          "ur": "رَبِّ"
-        },
-        {
-          "ar": "رَبَّنَا",
-          "ar_plain": "ربنا",
-          "translit": "rabbanaa",
-          "en": "rabbanaa",
-          "ur": "رَبَّنَا"
-        },
-        {
-          "ar": "اللَّهُمَّ",
-          "ar_plain": "اللهم",
-          "translit": "allaahumma",
-          "en": "allaahumma",
-          "ur": "اللَّهُمَّ"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "My Lord",
-          "ur": "اے میرے رب"
-        },
-        {
-          "en": "Our Lord",
-          "ur": "اے ہمارے رب"
-        },
-        {
-          "en": "O Allah",
-          "ur": "اے اللہ"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch72-l05-ex06",
-      "mode": "TAP",
-      "sentence_ar": "قُلِ ___ مَالِكَ الْمُلْكِ",
-      "hint": {
-        "en": "'Say, O Allah, Owner of Sovereignty' (3:26).",
-        "ur": "'کہو: اے اللہ، بادشاہی کے مالک' (3:26)۔"
+      "type": "TAP_TRANSLATION",
+      "id": "ch72-l04-ex05",
+      "prompt": {
+        "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تَقُولُوا رَاعِنَا",
+        "ar_plain": "يا ايها الذين امنوا لا تقولوا راعنا",
+        "translit": "yaā ʾayyuhā alladhīna ʾāmanū lā taqūlū rāʿinā",
+        "en": "(2:104: which part is the call and which is what they are told?)",
+        "ur": "(2:104: کون سا حصہ پکار ہے اور کون سا وہ جو انہیں کہا گیا؟)"
       },
       "options": [
         {
-          "ar": "اللَّهُمَّ",
-          "ar_plain": "اللهم",
-          "translit": "allaahumma",
-          "en": "O Allah",
-          "ur": "اے اللہ"
+          "en": "لَا تَقُولُوا رَاعِنَا is the call; يَا أَيُّهَا الَّذِينَ آمَنُوا is what they are told",
+          "ur": "لَا تَقُولُوا رَاعِنَا پکار ہے؛ يَا أَيُّهَا الَّذِينَ آمَنُوا وہ ہے جو انہیں کہا گیا"
         },
         {
-          "ar": "يَا اللَّهُمَّ",
-          "ar_plain": "يا اللهم",
-          "translit": "yaa allaahumma",
-          "en": "yaa + allaahumma",
-          "ur": "يَا + اللَّهُمَّ"
+          "en": "All of it is the call",
+          "ur": "سب پکار ہے"
         },
         {
-          "ar": "أَيُّهَا اللَّهُ",
-          "ar_plain": "أيها الله",
-          "translit": "ayyuhaa allaahu",
-          "en": "ayyuhaa + Allah",
-          "ur": "أَيُّهَا + اللہ"
+          "en": "None of it is a call",
+          "ur": "اس میں کچھ بھی پکار نہیں"
         },
         {
-          "ar": "رَبُّنَا",
-          "ar_plain": "ربنا",
-          "translit": "rabbunaa",
-          "en": "our Lord (ḍamma)",
-          "ur": "ہمارا رب (ضمہ)"
+          "en": "يَا أَيُّهَا الَّذِينَ آمَنُوا is the call; لَا تَقُولُوا رَاعِنَا is what they are told",
+          "ur": "يَا أَيُّهَا الَّذِينَ آمَنُوا پکار ہے؛ لَا تَقُولُوا رَاعِنَا وہ ہے جو انہیں کہا گیا"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The call stops once the group is named; the prohibition is what is said to them.",
+        "ur": "گروہ کا نام آتے ہی پکار رک جاتی ہے؛ نہی وہ ہے جو ان سے کہی گئی۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch72-l04-ex06",
+      "mode": "TAP",
+      "sentence_ar": "يَا أَيُّهَا ___ آمَنُوا",
+      "hint": {
+        "en": "O you who believe.",
+        "ur": "اے ایمان والو۔"
+      },
+      "options": [
+        {
+          "ar": "الَّذِينَ",
+          "ar_plain": "الذين",
+          "translit": "alladhīna",
+          "en": "those who (masculine plural)",
+          "ur": "جو (جمع مذکر)"
+        },
+        {
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "alladhī",
+          "en": "the one who (masculine singular)",
+          "ur": "جو (واحد مذکر)"
+        },
+        {
+          "ar": "اللَّاتِي",
+          "ar_plain": "اللاتي",
+          "translit": "al-lātī",
+          "en": "those who (feminine plural)",
+          "ur": "جو (جمع مؤنث)"
+        },
+        {
+          "ar": "الَّتِي",
+          "ar_plain": "التي",
+          "translit": "allatī",
+          "en": "the one who (feminine singular)",
+          "ur": "جو (واحد مؤنث)"
         }
       ],
       "correct_answer": {
-        "ar": "اللَّهُمَّ",
-        "ar_plain": "اللهم",
-        "translit": "allaahumma",
-        "en": "O Allah",
-        "ur": "اے اللہ"
+        "ar": "الَّذِينَ",
+        "ar_plain": "الذين",
+        "translit": "alladhīna",
+        "en": "those who (masculine plural)",
+        "ur": "جو (جمع مذکر)"
       },
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "The Quran says قُلِ اللَّهُمَّ. مَالِكَ after it, with fatḥa, is read as a second call: '(O) Owner of Sovereignty'.",
-        "ur": "قرآن میں قُلِ اللَّهُمَّ ہے۔ اس کے بعد فتحہ والا مَالِكَ دوسری ندا کے طور پر پڑھا جاتا ہے: '(اے) بادشاہی کے مالک'۔"
+        "en": "A group of believers is plural, so the relative is الَّذِينَ (Chapter 40).",
+        "ur": "ایمان والوں کا گروہ جمع ہے، اس لیے موصول الَّذِينَ ہے (باب 40)۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch72-l04-ex07",
+      "statement": {
+        "en": "يَا أَيُّهَا النَّاسُ and يَا أَيُّهَا الَّذِينَ آمَنُوا follow the same pattern: after أَيُّهَا, a word says who is called.",
+        "ur": "يَا أَيُّهَا النَّاسُ اور يَا أَيُّهَا الَّذِينَ آمَنُوا ایک ہی ساخت پر ہیں: أَيُّهَا کے بعد ایک لفظ بتاتا ہے کہ کسے پکارا گیا۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "True: the same bridge, and a word or a group that says who.",
+        "ur": "درست: وہی پل، اور ایک لفظ یا گروہ جو بتاتا ہے کہ کسے۔"
       }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch72-l05-ex07",
+      "id": "ch72-l04-ex08",
       "target_translation": {
-        "en": "Our Lord, forgive us.",
-        "ur": "اے ہمارے رب، ہمیں بخش دے۔"
+        "en": "O people, worship your Lord.",
+        "ur": "اے لوگو، اپنے رب کی عبادت کرو۔"
       },
       "tiles": [
         {
-          "ar": "رَبَّنَا",
-          "ar_plain": "ربنا",
-          "translit": "rabbanaa",
-          "en": "our Lord",
-          "ur": "اے ہمارے رب"
+          "ar": "اعْبُدُوا",
+          "ar_plain": "اعبدوا",
+          "translit": "aʿbudū",
+          "en": "worship",
+          "ur": "عبادت کرو"
         },
         {
-          "ar": "اغْفِرْ",
-          "ar_plain": "اغفر",
-          "translit": "ighfir",
-          "en": "forgive",
-          "ur": "بخش دے"
+          "ar": "يَا",
+          "ar_plain": "يا",
+          "translit": "yaā",
+          "en": "O",
+          "ur": "اے"
         },
         {
-          "ar": "لَنَا",
-          "ar_plain": "لنا",
-          "translit": "lanaa",
-          "en": "us",
-          "ur": "ہمیں"
+          "ar": "رَبَّكُمُ",
+          "ar_plain": "ربكم",
+          "translit": "rabbakumu",
+          "en": "your Lord",
+          "ur": "اپنے رب"
         },
         {
-          "ar": "رَبُّنَا",
-          "ar_plain": "ربنا",
-          "translit": "rabbunaa",
-          "en": "our Lord (ḍamma)",
-          "ur": "ہمارا رب (ضمہ)"
+          "ar": "أَيُّهَا",
+          "ar_plain": "ايها",
+          "translit": "ʾayyuhā",
+          "en": "the bridge",
+          "ur": "پل"
+        },
+        {
+          "ar": "النَّاسُ",
+          "ar_plain": "الناس",
+          "translit": "an-nāsu",
+          "en": "people",
+          "ur": "لوگ"
         }
       ],
       "correct_order": [
-        0,
         1,
+        3,
+        4,
+        0,
         2
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The call, then who is called, then what they are told.",
+        "ur": "پکار، پھر جسے پکارا گیا، پھر جو انہیں کہا گیا۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Calling Allah: رَبِّ، رَبَّنَا، اللَّهُمَّ",
-      "ar": "رَبِّ، رَبَّنَا، اللَّهُمَّ",
-      "ur": "اللہ کو پکارنا: رَبِّ، رَبَّنَا، اللَّهُمَّ"
+      "en": "Who is called, then what they are told",
+      "ar": "مَنْ يُنَادَى وَمَاذَا يُقَالُ لَهُ",
+      "ur": "جسے پکارا گیا، پھر جو اسے کہا گیا"
     },
     "ayah": {
-      "surah": 3,
-      "ayah": 26,
-      "label": "Aal Imran 3:26",
-      "ar": "قُلِ اللَّهُمَّ مَالِكَ الْمُلْكِ تُؤْتِي الْمُلْكَ مَن تَشَاءُ وَتَنزِعُ الْمُلْكَ مِمَّن تَشَاءُ",
-      "en": "Say, 'O Allah, Owner of Sovereignty, You give sovereignty to whom You will and You take sovereignty away from whom You will.'",
-      "ur": "کہو: اے اللہ، بادشاہی کے مالک، تو جسے چاہے بادشاہی دیتا ہے اور جس سے چاہے بادشاہی چھین لیتا ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003026.mp3"
+      "surah": 2,
+      "ayah": 104,
+      "label": "Al-Baqarah 2:104",
+      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تَقُولُوا رَاعِنَا",
+      "en": "O you who believe, do not say 'Ra'ina'",
+      "ur": "اے ایمان والو، 'راعنا' نہ کہو",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002104.mp3"
     },
     "highlighted_word_indices": [
+      0,
       1,
-      2
+      2,
+      3
+    ],
+    "highlighted_words": [
+      "يَا",
+      "أَيُّهَا",
+      "الَّذِينَ",
+      "آمَنُوا"
     ],
     "noor_explanation": {
-      "en": "اللَّهُمَّ — 'O Allah'. Then مَالِكَ الْمُلْكِ with fatḥa: a muḍāf, read as a second call with يَا left out — '(O) Owner of Sovereignty'. The verbs that follow speak to Him directly: تُؤْتِي، تَنزِعُ — 'You give, You take'.",
-      "ur": "اللَّهُمَّ — 'اے اللہ'۔ پھر فتحہ کے ساتھ مَالِكَ الْمُلْكِ: مضاف، جسے يَا کے بغیر دوسری ندا کے طور پر پڑھا جاتا ہے — '(اے) بادشاہی کے مالک'۔ بعد کے افعال براہِ راست اسی سے خطاب ہیں: تُؤْتِي، تَنزِعُ — 'تو دیتا ہے، تو چھینتا ہے'۔"
+      "en": "يَا أَيُّهَا الَّذِينَ آمَنُوا — the call, the bridge, and the group named by الَّذِينَ آمَنُوا. What follows is what they are told.",
+      "ur": "يَا أَيُّهَا الَّذِينَ آمَنُوا — پکار، پل، اور الَّذِينَ آمَنُوا سے نام لیا ہوا گروہ۔ جو آگے آتا ہے وہ ہے جو انہیں کہا گیا۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "رَبِّ (my Lord), رَبَّنَا (our Lord), اللَّهُمَّ (O Allah): three ways to call on Allah, all without يَا. Next: the Quran's most frequent call, يَا أَيُّهَا الَّذِينَ آمَنُوا.",
-      "ur": "رَبِّ (اے میرے رب)، رَبَّنَا (اے ہمارے رب)، اللَّهُمَّ (اے اللہ): اللہ کو پکارنے کے تین طریقے، تینوں يَا کے بغیر۔ آگے: قرآن کی سب سے زیادہ آنے والی ندا، يَا أَيُّهَا الَّذِينَ آمَنُوا۔"
+      "en": "You read who is called after أَيُّهَا, a noun or a group, and where the call ends.",
+      "ur": "آپ نے أَيُّهَا کے بعد پڑھا کہ کسے پکارا گیا، اسم یا گروہ، اور پکار کہاں ختم ہوتی ہے۔"
     }
   }
 }
