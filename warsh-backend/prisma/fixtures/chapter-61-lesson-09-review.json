@@ -1,0 +1,523 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 61, Retrieval review (ch61-l07, rebuilt in place and moved to display order 9). Twelve tasks: trade (1), amount, unit and weight (2), the CL17 exchange (2), tool words and patterns (2), one local decision from each of the four Al-Mutaffifin parts (4) and one whole-surah link (1). The old row repeated the wrong tool patterns and has been replaced. Added 2026-10-04 in the proposal harvest, batch 8 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-61-content-proposal.md and its review amendments.",
+    "title": "Chapter 61 Review — Trade, Weights, Tools and Al-Mutaffifin",
+    "titleAr": "مُرَاجَعَةُ الْبَابِ 61 — التِّجَارَةُ وَالْمِيزَانُ وَالْمُطَفِّفِينَ",
+    "titleUr": "باب 61 کا جائزہ — تجارت، ترازو اور المطففین",
+    "chapter_order": 61,
+    "lesson_order": 9,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 83,
+      "ayah": 1,
+      "label": "Al-Mutaffifin 83:1",
+      "ar": "وَيْلٌ لِّلْمُطَفِّفِينَ",
+      "en": "Woe to those who give less [than due],",
+      "ur": "ناپ اور تول میں کمی کرنے والوں کے لیے خرابی ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/083001.mp3"
+    },
+    "noor_intro": {
+      "en": "Review Chapter 61: the market words, the scale and the measure, the exchange, six tool words and the surah.",
+      "ur": "باب 61 کا جائزہ: بازار کے الفاظ، ترازو اور پیمانہ، گفتگو، چھ آلاتی الفاظ اور سورت۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 61 summary",
+        "ar": "خُلَاصَةُ الْبَابِ",
+        "ur": "باب 61 کا خلاصہ"
+      },
+      "explanation": {
+        "en": "Words of a deal (بَائِعٌ, مُشْتَرٍ, بِضَاعَةٌ, ثَمَنٌ, رِبْحٌ, خَسَارَةٌ), weighing and measuring (وَزَنَ / مِيزَانٌ, كَالَ / مِكْيَالٌ), the market exchange (what is this? how much? I want two; no, two; yes, thank you), six tool words on three patterns, and the four parts of Al-Mutaffifin.",
+        "ur": "سودے کے الفاظ (بَائِعٌ، مُشْتَرٍ، بِضَاعَةٌ، ثَمَنٌ، رِبْحٌ، خَسَارَةٌ)، تولنا اور ناپنا (وَزَنَ / مِيزَانٌ، كَالَ / مِكْيَالٌ)، بازار کی گفتگو (یہ کیا ہے؟ کتنے کا ہے؟ مجھے دو چاہئیں؛ نہیں، دو؛ جی ہاں، شکریہ)، تین وزنوں پر چھ آلاتی الفاظ، اور المطففین کے چار حصے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Review the whole chapter",
+        "ur": "پورا باب دہرائیں"
+      },
+      "body": {
+        "en": "Twelve tasks: one on trade words, two on amount and weight, two on the market exchange, two on tool words, and one for each of the four parts of the surah plus a link across all of it. Prices and totals are made up for practice.",
+        "ur": "بارہ مشقیں: ایک تجارت کے الفاظ پر، دو مقدار اور وزن پر، دو بازار کی گفتگو پر، دو آلاتی الفاظ پر، اور سورت کے چاروں حصوں میں سے ہر ایک کے لیے ایک اور سب کو جوڑنے والی ایک۔ قیمتیں اور مجموعے مشق کے لیے گھڑے گئے ہیں۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch61-l07-ex01",
+      "prompt": {
+        "ar": "الْبَائِعُ يَبِيعُ الْبِضَاعَةَ",
+        "ar_plain": "البائع يبيع البضاعة",
+        "translit": "al-bāʾiʿu yabīʿu al-biḍāʿata",
+        "en": "(what does the seller do?)",
+        "ur": "(بیچنے والا کیا کرتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "The seller sells the goods",
+          "ur": "بیچنے والا سامان بیچتا ہے"
+        },
+        {
+          "en": "The seller buys the goods",
+          "ur": "بیچنے والا سامان خریدتا ہے"
+        },
+        {
+          "en": "The seller loses the goods",
+          "ur": "بیچنے والا سامان کھو دیتا ہے"
+        },
+        {
+          "en": "The seller counts the price",
+          "ur": "بیچنے والا قیمت گنتا ہے"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يَبِيعُ is 'he sells'.",
+        "ur": "يَبِيعُ کا مطلب 'وہ بیچتا ہے' ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch61-l07-ex02",
+      "prompt": {
+        "ar": "ثَمَنُ خَمْسَةِ أَرْطَالٍ ثَمَانِيَةُ رِيَالَاتٍ",
+        "ar_plain": "ثمن خمسة ارطال ثمانية ريالات",
+        "translit": "thamanu khamsati ʾarṭālin thamāniyatu riyaālātin",
+        "en": "(read the price)",
+        "ur": "(قیمت پڑھیں)"
+      },
+      "options": [
+        {
+          "en": "Eight ratls cost five riyals",
+          "ur": "آٹھ رطل کی قیمت پانچ ریال ہے"
+        },
+        {
+          "en": "Five ratls cost eight riyals",
+          "ur": "پانچ رطل کی قیمت آٹھ ریال ہے"
+        },
+        {
+          "en": "Five riyals weigh eight ratls",
+          "ur": "پانچ ریال کا وزن آٹھ رطل ہے"
+        },
+        {
+          "en": "Eight riyals is a loss of five",
+          "ur": "آٹھ ریال پانچ کا نقصان ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The amount is five ratls; the price is eight riyals (made-up numbers).",
+        "ur": "مقدار پانچ رطل ہے؛ قیمت آٹھ ریال ہے (گھڑے ہوئے اعداد)۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch61-l07-ex03",
+      "mode": "TAP",
+      "sentence_ar": "كَالَ التَّاجِرُ الْقَمْحَ بِـ___",
+      "hint": {
+        "en": "The merchant measured the wheat with the measure.",
+        "ur": "سوداگر نے گیہوں پیمانے سے ناپا۔"
+      },
+      "options": [
+        {
+          "ar": "الْمِيزَانِ",
+          "ar_plain": "الميزان",
+          "translit": "al-mīzāni",
+          "en": "the scale",
+          "ur": "ترازو"
+        },
+        {
+          "ar": "الثَّمَنِ",
+          "ar_plain": "الثمن",
+          "translit": "ath-thamani",
+          "en": "the price",
+          "ur": "قیمت"
+        },
+        {
+          "ar": "الْمِكْيَالِ",
+          "ar_plain": "المكيال",
+          "translit": "al-mikyaāli",
+          "en": "the measure",
+          "ur": "پیمانہ"
+        },
+        {
+          "ar": "الرِّبْحِ",
+          "ar_plain": "الربح",
+          "translit": "ar-ribḥi",
+          "en": "the profit",
+          "ur": "نفع"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الْمِكْيَالِ",
+        "ar_plain": "المكيال",
+        "translit": "al-mikyaāli",
+        "en": "the measure",
+        "ur": "پیمانہ"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Wheat by volume is measured with a مِكْيَالٌ.",
+        "ur": "حجم سے بکنے والا گیہوں مِكْيَالٌ سے ناپا جاتا ہے۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch61-l07-ex04",
+      "prompt_line": {
+        "ar": "ثَمَنُهُ خَمْسَةُ رِيَالَاتٍ.",
+        "ar_plain": "ثمنه خمسة ريالات.",
+        "translit": "thamanuhu khamsatu riyaālātin",
+        "en": "Its price is five riyals. (The label says: pen, five riyals each. You want two pens.)",
+        "ur": "اس کی قیمت پانچ ریال ہے۔ (لیبل پر لکھا ہے: قلم، پانچ ریال فی عدد۔ آپ کو دو قلم چاہئیں۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "مَا هَذَا؟",
+          "ar_plain": "ما هذا؟",
+          "translit": "mā hadhā",
+          "en": "What is this?",
+          "ur": "یہ کیا ہے؟"
+        },
+        {
+          "ar": "أُرِيدُ قَلَمَيْنِ.",
+          "ar_plain": "اريد قلمين.",
+          "translit": "ʾurīdu qalamayni",
+          "en": "I want two pens.",
+          "ur": "مجھے دو قلم چاہئیں۔"
+        },
+        {
+          "ar": "نَعَمْ، شُكْرًا.",
+          "ar_plain": "نعم، شكرا.",
+          "translit": "naʿam shukran",
+          "en": "Yes, thank you.",
+          "ur": "جی ہاں، شکریہ۔"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Say how many you want: أُرِيدُ قَلَمَيْنِ.",
+        "ur": "بتائیں کہ کتنے چاہئیں: أُرِيدُ قَلَمَيْنِ۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch61-l07-ex05",
+      "prompt_line": {
+        "ar": "قَلَمٌ وَاحِدٌ؟",
+        "ar_plain": "قلم واحد؟",
+        "translit": "qalamun waāḥidun",
+        "en": "One pen? (This time you DO want one pen.)",
+        "ur": "ایک قلم؟ (اس بار آپ کو ایک ہی قلم چاہیے۔)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "نَعَمْ، شُكْرًا.",
+          "ar_plain": "نعم، شكرا.",
+          "translit": "naʿam shukran",
+          "en": "Yes, thank you.",
+          "ur": "جی ہاں، شکریہ۔"
+        },
+        {
+          "ar": "لَا، قَلَمَيْنِ.",
+          "ar_plain": "لا، قلمين.",
+          "translit": "lā qalamayni",
+          "en": "No, two pens.",
+          "ur": "نہیں، دو قلم۔"
+        },
+        {
+          "ar": "لَا، شُكْرًا.",
+          "ar_plain": "لا، شكرا.",
+          "translit": "lā shukran",
+          "en": "No, thank you.",
+          "ur": "نہیں، شکریہ۔"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "He is right this time, so accept.",
+        "ur": "اس بار وہ درست ہے، اس لیے قبول کریں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch61-l07-ex06",
+      "prompt": {
+        "ar": "مِكْنَسَةٌ",
+        "ar_plain": "مكنسة",
+        "translit": "miknasatun",
+        "en": "(what is this tool?)",
+        "ur": "(یہ کون سا آلہ ہے؟)"
+      },
+      "options": [
+        {
+          "en": "a key",
+          "ur": "چابی"
+        },
+        {
+          "en": "scissors",
+          "ur": "قینچی"
+        },
+        {
+          "en": "a lamp",
+          "ur": "چراغ"
+        },
+        {
+          "en": "a broom",
+          "ur": "جھاڑو"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مِكْنَسَةٌ is a broom.",
+        "ur": "مِكْنَسَةٌ جھاڑو ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch61-l07-ex07",
+      "prompt": {
+        "ar": "مِقَصٌّ",
+        "ar_plain": "مقص",
+        "translit": "miqaṣṣun",
+        "en": "(which pattern is this word on?)",
+        "ur": "(یہ لفظ کس وزن پر ہے؟)"
+      },
+      "options": [
+        {
+          "en": "مِفْعَل",
+          "ur": "مِفْعَل"
+        },
+        {
+          "en": "مِفْعَال",
+          "ur": "مِفْعَال"
+        },
+        {
+          "en": "مِفْعَلَة",
+          "ur": "مِفْعَلَة"
+        },
+        {
+          "en": "فَاعِل",
+          "ur": "فَاعِل"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مِقَصٌّ is on مِفْعَل; مِفْتَاحٌ is on مِفْعَال; مِكْنَسَةٌ is on مِفْعَلَة.",
+        "ur": "مِقَصٌّ مِفْعَل پر ہے؛ مِفْتَاحٌ مِفْعَال پر؛ مِكْنَسَةٌ مِفْعَلَة پر۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch61-l07-ex08",
+      "prompt": {
+        "ar": "وَإِذَا كَالُوهُمْ أَو وَّزَنُوهُمْ يُخْسِرُونَ",
+        "ar_plain": "واذا كالوهم او وزنوهم يخسرون",
+        "translit": "waʾidhā kālūhum ʾaw wwazanūhum yukhsirūna",
+        "en": "(83:3)",
+        "ur": "(83:3)"
+      },
+      "options": [
+        {
+          "en": "who, when they take a measure from people, take in full",
+          "ur": "جو لوگوں سے ناپ کر لیں تو پورا لیتے ہیں"
+        },
+        {
+          "en": "but when they measure or weigh for them, they give less",
+          "ur": "اور جب انہیں ناپ کر یا تول کر دیں تو کم دیتے ہیں"
+        },
+        {
+          "en": "Do they not think that they will be raised up",
+          "ur": "کیا وہ گمان نہیں کرتے کہ انہیں اٹھایا جائے گا"
+        },
+        {
+          "en": "Woe to those who give less than full",
+          "ur": "ناپ تول میں کمی کرنے والوں کے لیے تباہی ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "83:3 says that when they measure or weigh for others, they give less.",
+        "ur": "83:3 کہتی ہے کہ جب وہ دوسروں کے لیے ناپتے یا تولتے ہیں تو کم دیتے ہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch61-l07-ex09",
+      "prompt": {
+        "ar": "كَلَّا ۖ بَلْ ۜ رَانَ عَلَىٰ قُلُوبِهِم مَّا كَانُوا يَكْسِبُونَ",
+        "ar_plain": "كلا  بل  ران على قلوبهم ما كانوا يكسبون",
+        "translit": "kallā ۖ bal ۜ rāna ʿalā qulūbihim mmā kānū yaksibūna",
+        "en": "(83:14)",
+        "ur": "(83:14)"
+      },
+      "options": [
+        {
+          "en": "When Our verses are recited to him, he says: legends of the ancients",
+          "ur": "جب اسے ہماری آیات سنائی جاتی ہیں تو کہتا ہے: پہلوں کی کہانیاں"
+        },
+        {
+          "en": "No! On that Day they will be shut off from their Lord",
+          "ur": "ہرگز نہیں! اس دن وہ اپنے رب سے اوٹ میں ہوں گے"
+        },
+        {
+          "en": "No! Rather, what they used to earn has covered their hearts like rust",
+          "ur": "ہرگز نہیں! بلکہ جو وہ کماتے تھے وہ ان کے دلوں پر زنگ بن کر چھا گیا"
+        },
+        {
+          "en": "None denies it except every sinful transgressor",
+          "ur": "اسے وہی جھٹلاتا ہے جو حد سے بڑھنے والا گنہگار ہو"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "83:14 says what covered their hearts, like rust.",
+        "ur": "83:14 بتاتی ہے کہ ان کے دلوں پر زنگ کی طرح کیا چھا گیا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch61-l07-ex10",
+      "prompt": {
+        "ar": "تَعْرِفُ فِي وُجُوهِهِمْ نَضْرَةَ النَّعِيمِ",
+        "ar_plain": "تعرف في وجوههم نضرة النعيم",
+        "translit": "taʿrifu fī wujūhihim naḍrata an-naʿīmi",
+        "en": "(83:24)",
+        "ur": "(83:24)"
+      },
+      "options": [
+        {
+          "en": "on couches, looking on",
+          "ur": "تختوں پر بیٹھے دیکھ رہے ہوں گے"
+        },
+        {
+          "en": "They will be given a sealed pure drink",
+          "ur": "انہیں مہر لگا ہوا خالص مشروب پلایا جائے گا"
+        },
+        {
+          "en": "The righteous will be in bliss",
+          "ur": "نیک لوگ نعمتوں میں ہوں گے"
+        },
+        {
+          "en": "You will know in their faces the glow of bliss",
+          "ur": "تم ان کے چہروں میں نعمت کی تازگی پہچان لو گے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "83:24 says you will know bliss in the faces of the righteous.",
+        "ur": "83:24 کہتی ہے کہ آپ نیکوں کے چہروں میں نعمت پہچان لیں گے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch61-l07-ex11",
+      "prompt": {
+        "ar": "فَالْيَوْمَ الَّذِينَ آمَنُوا مِنَ الْكُفَّارِ يَضْحَكُونَ",
+        "ar_plain": "فاليوم الذين امنوا من الكفار يضحكون",
+        "translit": "fa-l-yawma alladhīna ʾāmanū mina al-kuffāri yaḍḥakūna",
+        "en": "(83:34)",
+        "ur": "(83:34)"
+      },
+      "options": [
+        {
+          "en": "So Today those who believed laugh at the disbelievers",
+          "ur": "تو آج ایمان والے کافروں پر ہنس رہے ہیں"
+        },
+        {
+          "en": "Yet they were not sent as guardians over them",
+          "ur": "حالانکہ وہ ان پر نگران بنا کر نہیں بھیجے گئے تھے"
+        },
+        {
+          "en": "seated on couches, looking on",
+          "ur": "تختوں پر بیٹھے دیکھ رہے ہیں"
+        },
+        {
+          "en": "and when they saw them, they said: these are lost",
+          "ur": "اور جب انہیں دیکھتے تو کہتے: یہ تو گمراہ ہیں"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "83:34 says that Today the believers laugh at the disbelievers.",
+        "ur": "83:34 کہتی ہے کہ آج ایمان والے کافروں پر ہنس رہے ہیں۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch61-l07-ex12",
+      "statement": {
+        "en": "Al-Mutaffifin begins with those who give less in measure and ends with a question about being repaid for what one did.",
+        "ur": "المطففین ناپ تول میں کمی کرنے والوں سے شروع ہوتی ہے اور اس سوال پر ختم ہوتی ہے کہ کیا اپنے کیے کا بدلہ مل گیا۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes — 83:1–3 begin it and 83:36 ends it.",
+        "ur": "جی ہاں — 83:1–3 اسے شروع کرتی ہیں اور 83:36 ختم۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Full measure",
+      "ar": "أَوْفُوا الْكَيْلَ",
+      "ur": "ناپ پورا دو"
+    },
+    "ayah": {
+      "surah": 17,
+      "ayah": 35,
+      "label": "Al-Isra 17:35",
+      "ar": "وَأَوْفُوا الْكَيْلَ إِذَا كِلْتُمْ وَزِنُوا بِالْقِسْطَاسِ الْمُسْتَقِيمِ ۚ ذَٰلِكَ خَيْرٌ وَأَحْسَنُ تَأْوِيلًا",
+      "en": "And give full measure when you measure, and weigh with an even [i.e., honest] balance. That is the best [way] and best in result.",
+      "ur": "اور جب (کوئی چیز) ناپ کر دینے لگو تو پیمانہ پورا بھرا کرو اور (جب تول کر دو تو) ترازو سیدھی رکھ کر تولا کرو۔ یہ بہت اچھی بات اور انجام کے لحاظ سے بھی بہت بہتر ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/017035.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1,
+      3,
+      4
+    ],
+    "highlighted_words": [
+      "وَأَوْفُوا",
+      "الْكَيْلَ",
+      "كِلْتُمْ",
+      "وَزِنُوا"
+    ],
+    "noor_explanation": {
+      "en": "وَأَوْفُوا الْكَيْلَ إِذَا كِلْتُمْ وَزِنُوا — 'give full measure when you measure, and weigh': the whole chapter in one ayah.",
+      "ur": "وَأَوْفُوا الْكَيْلَ إِذَا كِلْتُمْ وَزِنُوا — 'جب ناپو تو ناپ پورا دو، اور تولو': پورا باب ایک آیت میں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Trade words, the scale and the measure, a market exchange, six tool words and a whole surah — Chapter 61 in one review.",
+      "ur": "تجارت کے الفاظ، ترازو اور پیمانہ، بازار کی گفتگو، چھ آلاتی الفاظ اور ایک پوری سورت — باب 61 ایک جائزے میں۔"
+    }
+  }
+}

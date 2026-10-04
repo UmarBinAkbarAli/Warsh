@@ -2,435 +2,370 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 65, Display 5 (ch65-l03, rebuilt in place; the old row, 'كَانَ in different tenses', claimed a three-tense table and مبني / معرب labels). Complete against incomplete use, shown on whole sentences: 4:17 (incomplete), 36:82 (complete: كُن فَيَكُونُ) and 42:53 (complete: تَصِيرُ with 'to Allah'), plus the authored صَارَ pair. كُنْ, فَيَكُونُ and تَصِيرُ are given whole; no form is asked. The key is always the displayed sentence: a fragment with nothing after the verb is never used as proof of a complete use. Three guided and three fresh tasks. Added 2026-10-04 in the proposal harvest, batch 8 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-65-content-proposal.md and its review amendments.",
+    "title": "Complete and Incomplete Use",
+    "titleAr": "النَّاقِصُ وَالتَّامُّ",
+    "titleUr": "ناقص اور تام استعمال",
     "chapter_order": 65,
     "lesson_order": 5,
-    "chapter_title": "كان وأخواتها — Incomplete Verbs",
-    "title": "إضافة inside كَانَ and إِنَّ sentences",
-    "titleAr": "الْإِضَافَةُ فِي جُمْلَةِ كَانَ وَإِنَّ",
-    "source": "book7_ch65_idafa_kana.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 33,
-      "ayah": 40,
-      "label": "Al-Ahzab 33:40",
-      "ar": "مَّا كَانَ مُحَمَّدٌ أَبَا أَحَدٍ مِّن رِّجَالِكُمْ وَلَٰكِن رَّسُولَ اللَّهِ وَخَاتَمَ النَّبِيِّينَ",
-      "en": "Muhammad is not the father of [any] one of your men, but [he is] the Messenger of Allah and seal [i.e., last] of the prophets.",
-      "ur": "محمد تمہارے مردوں میں سے کسی کے باپ نہیں ہیں، بلکہ وہ اللہ کے رسول اور خاتم النبیین ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033040.mp3"
+      "surah": 36,
+      "ayah": 82,
+      "label": "Ya-Sin 36:82",
+      "ar": "إِنَّمَا أَمْرُهُ إِذَا أَرَادَ شَيْئًا أَن يَقُولَ لَهُ كُن فَيَكُونُ",
+      "en": "His command is only when He intends a thing that He says to it, \"Be,\" and it is.",
+      "ur": "اس کی شان یہ ہے کہ جب وہ کسی چیز کا ارادہ کرتا ہے تو اس سے فرما دیتا ہے کہ ہوجا تو وہ ہوجاتی ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/036082.mp3"
     },
     "noor_intro": {
-      "en": "In this lesson we see what happens when the اِسْم or خَبَر of كَانَ is an إضافة. The اِسْم of كَانَ is nominative and its خَبَر accusative; that case falls on the first noun (the مضاف), while the مضاف إليه stays genitive. With إِنَّ and its sisters it is the reverse: the اِسْم is accusative and the خَبَر nominative.",
-      "ur": "اس سبق میں ہم دیکھتے ہیں کہ جب كَانَ کا اسم یا خبر إضافہ ہو تو کیا ہوتا ہے۔ كَانَ کا اسم مرفوع اور خبر منصوب ہوتی ہے؛ یہ اعراب إضافہ کے پہلے اسم (مضاف) پر آتا ہے، جبکہ مضاف الیہ مجرور ہی رہتا ہے۔ إِنَّ اور اس کی بہنوں میں اس کے برعکس اسم منصوب اور خبر مرفوع ہوتی ہے۔"
+      "en": "كُن فَيَكُونُ — the same verb that needs a predicate in other ayat stands alone here.",
+      "ur": "كُن فَيَكُونُ — وہی فعل جسے دوسری آیات میں خبر چاہیے یہاں اکیلا کھڑا ہے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "إضافة after كَانَ — when the اِسْم or خَبَر is an iḍāfa",
-        "ar": "الْإِضَافَةُ بَعْدَ كَانَ — إِذَا كَانَ الِاسْمُ أَوِ الْخَبَرُ مُضَافًا",
-        "ur": "إضافة كَانَ کے بعد — جب كَانَ ایک إضافة chain کو govern کرتی ہے"
+        "en": "Does it need a predicate?",
+        "ar": "هَلْ يَحْتَاجُ إِلَى خَبَرٍ؟",
+        "ur": "کیا اسے خبر چاہیے؟"
       },
       "explanation": {
-        "en": "When the اِسْم or خَبَر of كَانَ is an إضافة, the case of that role falls on the first noun (the مُضَاف) only. The مُضَاف إِلَيْه stays genitive. Example: كَانَ رَسُولُ اللَّهِ صَادِقًا — 'the Messenger of Allah was truthful': رَسُولُ is nominative as the اِسْم of كَانَ, اللَّهِ stays genitive, and صَادِقًا is the accusative خَبَر.",
-        "ur": "جب كَانَ کا اسم یا خبر مرکبِ اضافی ہو تو اس کردار کا اعراب صرف پہلے اسم (مضاف) پر آتا ہے۔ مضاف الیہ مجرور ہی رہتا ہے۔ مثال: كَانَ رَسُولُ اللَّهِ صَادِقًا — 'اللہ کے رسول سچے تھے': رَسُولُ كَانَ کا اسم ہونے سے مرفوع، اللَّهِ مجرور، اور صَادِقًا منصوب خبر۔"
+        "en": "The verbs of this chapter are usually 'incomplete': they need a predicate to finish the meaning (وَكَانَ اللَّهُ عَلِيمًا — 'was Knowing'). The same verbs can also be 'complete': they mean something by themselves, such as 'exist' or 'go' (كُن فَيَكُونُ — 'be, and it is'). The test is the sentence in front of you: is there a predicate that completes it? A short fragment with nothing after the verb does not prove it is complete.",
+        "ur": "اس باب کے فعل عموماً 'ناقص' ہوتے ہیں: معنی پورا کرنے کے لیے انہیں خبر چاہیے (وَكَانَ اللَّهُ عَلِيمًا — 'جاننے والا تھا')۔ یہی فعل 'تام' بھی ہو سکتے ہیں: یہ خود کچھ معنی رکھتے ہیں، جیسے 'ہونا' یا 'جانا' (كُن فَيَكُونُ — 'ہو جا، تو وہ ہو جاتا ہے')۔ آزمائش آپ کے سامنے کا جملہ ہے: کیا کوئی خبر ہے جو اسے پورا کرے؟ فعل کے بعد کچھ نہ ہونے والا مختصر ٹکڑا ثابت نہیں کرتا کہ وہ تام ہے۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "رَسُولُ اللَّهِ",
-        "ar_plain": "رسول الله",
-        "translit": "rasuulu allaahi",
-        "en": "the Messenger of Allah (an iḍāfa as the اِسْم of كَانَ)",
-        "ur": "اللہ کے رسول (ایک إضافة chain بطور اِسْمُ كَانَ)"
+        "ar": "وَكَانَ اللَّهُ عَلِيمًا حَكِيمًا",
+        "ar_plain": "وكان الله عليما حكيما",
+        "translit": "wakāna al-lahu ʿalīman ḥakīman",
+        "en": "And Allah is ever Knowing and Wise",
+        "ur": "اور اللہ ہمیشہ جاننے والا، حکمت والا ہے"
       },
       "explanation": {
-        "en": "رَسُولُ اللَّهِ is a two-term إضافة: رَسُول (messenger) + اللَّهِ (of Allah). As the اِسْم of كَانَ, رَسُولُ takes the nominative; اللَّهِ is genitive whatever happens, because it is the مُضَاف إِلَيْه. The two words are never separated.",
-        "ur": "رَسُولُ اللَّهِ دو لفظی اضافت ہے: رَسُول (پیغمبر) + اللَّهِ (اللہ کا)۔ كَانَ کا اسم ہونے پر رَسُولُ مرفوع ہوتا ہے؛ اللَّهِ ہر حال میں مجرور رہتا ہے کیونکہ وہ مضاف الیہ ہے۔ دونوں لفظ کبھی الگ نہیں ہوتے۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "رسول"
+        "en": "Incomplete: وَكَانَ اللَّهُ عَلِيمًا حَكِيمًا — the predicate عَلِيمًا حَكِيمًا completes it: 'Allah was Knowing and Wise'. (An-Nisa 4:17) (An-Nisa 4:17)",
+        "ur": "ناقص: وَكَانَ اللَّهُ عَلِيمًا حَكِيمًا — خبر عَلِيمًا حَكِيمًا اسے پورا کرتی ہے: 'اللہ جاننے والا، حکمت والا تھا'۔ (النساء 4:17) (An-Nisa 4:17)"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "إِنَّ and its sisters — the mirror of كَانَ",
-        "ar": "إِنَّ وَأَخَوَاتُهَا — عَكْسُ كَانَ",
-        "ur": "إِنَّ اور اس کی sisters — حرف کی شکل میں كَانَ family"
-      },
-      "explanation": {
-        "en": "إِنَّ is a particle (حَرْف), not a verb, so it never conjugates. Like كَانَ it needs an اِسْم and a خَبَر, but the cases are reversed: the اِسْم of إِنَّ is accusative (نَصْب) and its خَبَر nominative (رَفْع). Its sisters are أَنَّ، كَأَنَّ، لَكِنَّ، لَيْتَ، لَعَلَّ.",
-        "ur": "إِنَّ حرف ہے، فعل نہیں، اس لیے اس کی گردان نہیں ہوتی۔ كَانَ کی طرح اسے اسم اور خبر چاہیے، مگر اعراب الٹ ہے: إِنَّ کا اسم منصوب اور خبر مرفوع ہوتی ہے۔ اس کی بہنیں أَنَّ، كَأَنَّ، لَكِنَّ، لَيْتَ، لَعَلَّ ہیں۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ",
-        "ar_plain": "ان الله غفور رحيم",
-        "translit": "inna allaaha ghafoorun raheemun",
-        "en": "Indeed Allah is Forgiving, Most Merciful",
-        "ur": "بے شک اللہ بخشنے والا، بڑا مہربان ہے"
+        "ar": "كُن فَيَكُونُ",
+        "ar_plain": "كن فيكون",
+        "translit": "kun fayakūnu",
+        "en": "Be, and it is",
+        "ur": "ہو جا، تو وہ ہو جاتا ہے"
       },
       "explanation": {
-        "en": "One of the most repeated phrases in the Quran. اللَّهَ is the اِسْم of إِنَّ (accusative) and غَفُورٌ its خَبَر (nominative); رَحِيمٌ is a second خَبَر. Compare كَانَ اللَّهُ غَفُورًا رَحِيمًا: there اللَّهُ is nominative and the خَبَر accusative — the exact mirror.",
-        "ur": "قرآن کی بار بار آنے والی عبارتوں میں سے۔ اللَّهَ إِنَّ کا اسم (منصوب) اور غَفُورٌ اس کی خبر (مرفوع) ہے؛ رَحِيمٌ دوسری خبر ہے۔ كَانَ اللَّهُ غَفُورًا رَحِيمًا سے موازنہ کیجیے: وہاں اللَّهُ مرفوع اور خبر منصوب ہے — بالکل الٹ۔"
+        "en": "Complete: كُن فَيَكُونُ — 'be, and it is'. There is no predicate: كُنْ here means 'be (exist)' and فَيَكُونُ means 'and it comes to be'. كُنْ and يَكُونُ are given whole as the command and present forms of the same verb. (Ya-Sin 36:82) (Ya-Sin 36:82)",
+        "ur": "تام: كُن فَيَكُونُ — 'ہو جا، تو وہ ہو جاتا ہے'۔ کوئی خبر نہیں: كُنْ یہاں 'ہو جا (وجود میں آ)' ہے اور فَيَكُونُ 'تو وہ ہو جاتا ہے'۔ كُنْ اور يَكُونُ اسی فعل کی امر اور مضارع صورتیں پوری دی گئی ہیں۔ (یٰس 36:82) (Ya-Sin 36:82)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "أَلَا إِلَى اللَّهِ تَصِيرُ الْأُمُورُ",
+        "ar_plain": "الا الى الله تصير الامور",
+        "translit": "ʾalā ʾilā al-lahi taṣīru al-ʾumūru",
+        "en": "Unquestionably, to Allah all matters return",
+        "ur": "سنو، سب معاملات اللہ ہی کی طرف لوٹتے ہیں"
       },
-      "introduces_vocab": {
-        "ar_plain": "ان"
+      "explanation": {
+        "en": "Complete: إِلَى اللَّهِ تَصِيرُ الْأُمُورُ — 'to Allah all matters return'. Here تَصِيرُ (from صَارَ) means 'go, return to' and has no predicate. It is given whole. (Ash-Shura 42:53) (undefined 42:53)",
+        "ur": "تام: إِلَى اللَّهِ تَصِيرُ الْأُمُورُ — 'سب معاملات اللہ ہی کی طرف لوٹتے ہیں'۔ یہاں تَصِيرُ (صَارَ سے) کا مطلب 'جانا، لوٹنا' ہے اور اس کی کوئی خبر نہیں۔ یہ پورا دیا گیا ہے۔ (الشوریٰ 42:53) (undefined 42:53)"
       }
     },
     {
       "type": "CONTRAST",
       "concept": {
-        "en": "كَانَ vs. إِنَّ — Incomplete Verb vs. Incomplete Particle",
-        "ar": "كَانَ مُقَابِلُ إِنَّ — فِعْلٌ نَاقِصٌ مُقَابِلُ حَرْفٍ نَاقِصٍ",
-        "ur": "كَانَ بمقابلہ إِنَّ — ناقص فعل بمقابلہ ناقص حرف"
-      },
-      "explanation": {
-        "en": "Both need an اِسْم and a خَبَر; the cases are reversed. كَانَ: اِسْم nominative, خَبَر accusative. إِنَّ: اِسْم accusative, خَبَر nominative. In the examples, only the مُضَاف رَسُول changes (رَسُولُ ← رَسُولَ); اللَّهِ stays genitive in both.",
-        "ur": "دونوں کو اسم اور خبر چاہیے؛ اعراب الٹ ہے۔ كَانَ: اسم مرفوع، خبر منصوب۔ إِنَّ: اسم منصوب، خبر مرفوع۔ مثالوں میں صرف مضاف رَسُول بدلتا ہے (رَسُولُ ← رَسُولَ)؛ اللَّهِ دونوں میں مجرور رہتا ہے۔"
+        "en": "Same verb, two uses",
+        "ar": "صَارَ — نَاقِصٌ أَمْ تَامٌّ؟",
+        "ur": "ایک ہی فعل، دو استعمال"
       },
       "examples": [
         {
-          "ar": "كَانَ رَسُولُ اللَّهِ صَادِقًا",
-          "ar_plain": "رسول الله صادقا",
-          "translit": "kaana rasuulu allaahi saadiqan",
-          "en": "The Messenger of Allah was truthful",
-          "ur": "اللہ کے رسول سچے تھے"
+          "ar": "صَارَ الْوَلَدُ طَبِيبًا",
+          "ar_plain": "صار الولد طبيبا",
+          "translit": "ṣāra al-waladu ṭabīban",
+          "en": "the boy became a doctor (incomplete: طَبِيبًا is the predicate)",
+          "ur": "لڑکا ڈاکٹر بن گیا (ناقص: طَبِيبًا خبر ہے)"
         },
         {
-          "ar": "إِنَّ رَسُولَ اللَّهِ لَصَادِقٌ",
-          "ar_plain": "ان رسول الله لصادق",
-          "translit": "inna rasaula allaahi la-saadiqun",
-          "en": "Indeed the Messenger of Allah is truthful",
-          "ur": "بے شک اللہ کے رسول سچے ہیں"
+          "ar": "صَارَ الْوَلَدُ إِلَى الْبَيْتِ",
+          "ar_plain": "صار الولد الى البيت",
+          "translit": "ṣāra al-waladu ʾilā al-bayti",
+          "en": "the boy went to the house (complete: إِلَى الْبَيْتِ says where, not what he became)",
+          "ur": "لڑکا گھر گیا (تام: إِلَى الْبَيْتِ بتاتا ہے کہاں، یہ نہیں کہ کیا بنا)"
         }
-      ]
+      ],
+      "explanation": {
+        "en": "In the first, طَبِيبًا is accusative and says what he became. In the second, the phrase إِلَى الْبَيْتِ tells where he went, and no predicate is needed. Read the whole sentence before you decide.",
+        "ur": "پہلے میں طَبِيبًا منصوب ہے اور بتاتا ہے کہ وہ کیا بنا۔ دوسرے میں مرکب إِلَى الْبَيْتِ بتاتا ہے کہاں گیا، اور خبر کی ضرورت نہیں۔ فیصلہ کرنے سے پہلے پورا جملہ پڑھیں۔"
+      }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "كَانَ صَاحِبُ الْبَيْتِ كَرِيمًا",
-        "ar_plain": "كان صاحب البيت كريما",
-        "translit": "kaana saahibu al-bayti kariiman",
-        "en": "The owner of the house was generous",
-        "ur": "گھر کا مالک سخی تھا"
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Given whole",
+        "ur": "پورے دیے گئے"
       },
-      "explanation": {
-        "en": "صَاحِبُ الْبَيْتِ is the اِسْم of كَانَ: صَاحِبُ is nominative, الْبَيْتِ genitive (مُضَاف إِلَيْه), and كَرِيمًا is the accusative خَبَر. With إِنَّ: إِنَّ صَاحِبَ الْبَيْتِ كَرِيمٌ — now صَاحِبَ is accusative and كَرِيمٌ nominative, but الْبَيْتِ is still genitive.",
-        "ur": "صَاحِبُ الْبَيْتِ كَانَ کا اسم ہے: صَاحِبُ مرفوع، الْبَيْتِ مجرور (مضاف الیہ)، اور كَرِيمًا منصوب خبر۔ إِنَّ کے ساتھ: إِنَّ صَاحِبَ الْبَيْتِ كَرِيمٌ — اب صَاحِبَ منصوب اور كَرِيمٌ مرفوع ہے، مگر الْبَيْتِ پھر بھی مجرور۔"
+      "body": {
+        "en": "كُنْ ('be!'), فَيَكُونُ ('and it is') and تَصِيرُ ('they return') are given with their meaning. You are not asked to form them. The question is only: is there a predicate in this sentence that completes it?",
+        "ur": "كُنْ ('ہو جا!')، فَيَكُونُ ('تو وہ ہو جاتا ہے') اور تَصِيرُ ('وہ لوٹتے ہیں') معنی کے ساتھ دیے گئے ہیں۔ آپ سے انہیں بنانے کو نہیں کہا جاتا۔ سوال بس یہ ہے: کیا اس جملے میں کوئی خبر ہے جو اسے پورا کرے؟"
       }
     }
   ],
   "exercises": [
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch65-l05-ex01",
+      "id": "ch65-l03-ex01",
       "prompt": {
-        "ar": "كَانَ رَسُولُ اللَّهِ صَادِقًا",
-        "ar_plain": "رسول الله صادقا",
-        "translit": "kaana rasuulu allaahi saadiqan",
-        "en": "The Messenger of Allah was truthful",
-        "ur": "اللہ کے رسول سچے تھے"
+        "ar": "وَكَانَ اللَّهُ عَلِيمًا حَكِيمًا",
+        "ar_plain": "وكان الله عليما حكيما",
+        "translit": "wakāna al-lahu ʿalīman ḥakīman",
+        "en": "(4:17: what does this say?)",
+        "ur": "(4:17: یہ کیا کہتا ہے؟)"
       },
       "options": [
         {
-          "en": "The Messenger of Allah was truthful",
-          "ur": "اللہ کے رسول سچے تھے"
+          "en": "And Allah is ever Knowing and Wise",
+          "ur": "اور اللہ ہمیشہ جاننے والا، حکمت والا ہے"
         },
         {
-          "en": "The truthful Messenger of Allah",
-          "ur": "سچے اللہ کے رسول"
+          "en": "And Allah is not Knowing",
+          "ur": "اور اللہ جاننے والا نہیں"
         },
         {
-          "en": "The Messenger of Allah is truthful",
-          "ur": "اللہ کے رسول سچے ہیں"
+          "en": "And Allah exists and is Wise",
+          "ur": "اور اللہ موجود ہے اور حکمت والا ہے"
         },
         {
-          "en": "The Messenger was of Allah, truthful",
-          "ur": "رسول اللہ سے تعلق رکھنے والا سچا تھا"
+          "en": "And Knowing and Wise is Allah's name only",
+          "ur": "اور جاننے والا اور حکمت والا صرف اللہ کا نام ہے"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "رَسُولُ اللَّهِ is an إضافة serving as the اِسْم of كَانَ: رَسُولُ is nominative and اللَّهِ genitive. صَادِقًا is the accusative خَبَر. 'The truthful Messenger of Allah' would be رَسُولُ اللَّهِ الصَّادِقُ.",
-        "ur": "رَسُولُ اللَّهِ اضافت ہے جو كَانَ کا اسم ہے: رَسُولُ مرفوع اور اللَّهِ مجرور۔ صَادِقًا منصوب خبر ہے۔ 'اللہ کے سچے رسول' ہو تو رَسُولُ اللَّهِ الصَّادِقُ۔"
+        "en": "كَانَ with عَلِيمًا حَكِيمًا as its predicate: 'was / is ever Knowing, Wise'.",
+        "ur": "كَانَ اور عَلِيمًا حَكِيمًا اس کی خبر: 'ہمیشہ جاننے والا، حکمت والا تھا / ہے'۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch65-l05-ex02",
-      "statement": {
-        "en": "When إنَّ governs a sentence, its اِسْم takes the accusative (نَصْب) and its خَبَر takes the nominative (رَفْع) — the opposite of كَانَ.",
-        "ur": "جب إنَّ ایک جملے کو govern کرتی ہے، اس کا اِسْم accusative (نَصْب) لیتا ہے اور اس کا خَبَر nominative (رَفْع) لیتا ہے — كَانَ کے opposite میں۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch65-l05-ex03",
-      "left_column": [
-        {
-          "ar": "كَانَ رَسُولُ اللَّهِ صَادِقًا",
-          "ar_plain": "رسول الله صادقا",
-          "translit": "kaana rasuulu allaahi saadiqan",
-          "en": "The Messenger of Allah was truthful",
-          "ur": "اللہ کے رسول سچے تھے"
-        },
-        {
-          "ar": "إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ",
-          "ar_plain": "ان الله غفور رحيم",
-          "translit": "inna allaaha ghafoorun raheemun",
-          "en": "Indeed Allah is Forgiving, Most Merciful",
-          "ur": "بے شک اللہ بخشنے والا، بڑا مہربان ہے"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "اِسْم nominative (رَفْع), خَبَر accusative (نَصْب)",
-          "ur": "اسم مرفوع، خبر منصوب"
-        },
-        {
-          "en": "اِسْم accusative (نَصْب), خَبَر nominative (رَفْع)",
-          "ur": "اسم منصوب، خبر مرفوع"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch65-l05-ex04",
-      "target_translation": {
-        "en": "Indeed, man is most unjust.",
-        "ur": "بے شک انسان بڑا ظالم ہے۔"
-      },
-      "tiles": [
-        {
-          "ar": "إِنَّ",
-          "ar_plain": "إن",
-          "translit": "inna",
-          "en": "indeed",
-          "ur": "بے شک"
-        },
-        {
-          "ar": "الْإِنْسَانَ",
-          "ar_plain": "الإنسان",
-          "translit": "al-insaana",
-          "en": "man",
-          "ur": "انسان"
-        },
-        {
-          "ar": "لَظَلُومٌ",
-          "ar_plain": "لظلوم",
-          "translit": "la-zaluumun",
-          "en": "most unjust",
-          "ur": "بڑا ظالم"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch65-l05-ex05",
-      "sentence_ar": "إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ",
-      "words": [
-        {
-          "ar": "إِنَّ",
-          "ar_plain": "ان",
-          "translit": "inna",
-          "en": "indeed",
-          "ur": "بے شک"
-        },
-        {
-          "ar": "اللَّهَ",
-          "ar_plain": "الله",
-          "translit": "allaaha",
-          "en": "Allah",
-          "ur": "اللہ"
-        },
-        {
-          "ar": "غَفُورٌ",
-          "ar_plain": "غفور",
-          "translit": "ghafoorun",
-          "en": "Forgiving",
-          "ur": "بخشنے والا"
-        },
-        {
-          "ar": "رَحِيمٌ",
-          "ar_plain": "رحيم",
-          "translit": "raheemun",
-          "en": "Most Merciful",
-          "ur": "بڑا مہربان"
-        }
-      ],
-      "available_roles": [
-        "PARTICLE",
-        "SUBJECT",
-        "PREDICATE",
-        "OBJECT",
-        "ADJECTIVE",
-        "PREPOSITION"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "SUBJECT",
-        "PREDICATE",
-        "PREDICATE"
-      ],
-      "explanation_on_wrong": {
-        "en": "إِنَّ is the particle. اللَّهَ is its اِسْم (accusative). غَفُورٌ is its خَبَر (nominative), and رَحِيمٌ a second خَبَر, also nominative.",
-        "ur": "إِنَّ حرف ہے۔ اللَّهَ اس کا اسم (منصوب) ہے۔ غَفُورٌ اس کی خبر (مرفوع)، اور رَحِيمٌ دوسری خبر، یہ بھی مرفوع۔"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch65-l05-ex06",
-      "mode": "TAP",
-      "sentence_ar": "كَانَ ___ الْبَيْتِ كَرِيمًا",
-      "hint": {
-        "en": "'The owner of the house was generous.' The مُضَاف carries the case of the اِسْم of كَانَ, and a مُضَاف never takes tanwīn.",
-        "ur": "'گھر کا مالک سخی تھا۔' مضاف پر كَانَ کے اسم کا اعراب آتا ہے، اور مضاف پر کبھی تنوین نہیں آتی۔"
+      "type": "TAP_TRANSLATION",
+      "id": "ch65-l03-ex02",
+      "prompt": {
+        "ar": "وَكَانَ اللَّهُ عَلِيمًا حَكِيمًا",
+        "ar_plain": "وكان الله عليما حكيما",
+        "translit": "wakāna al-lahu ʿalīman ḥakīman",
+        "en": "(is كَانَ complete or incomplete here?)",
+        "ur": "(یہاں كَانَ تام ہے یا ناقص؟)"
       },
       "options": [
         {
-          "ar": "صَاحِبُ",
-          "ar_plain": "صاحب",
-          "translit": "saahibu",
-          "en": "owner (nominative)",
-          "ur": "مالک (مرفوع)"
+          "en": "Complete: it means 'exists' on its own",
+          "ur": "تام: یہ خود 'موجود ہے' کا مطلب دیتا ہے"
         },
         {
-          "ar": "صَاحِبَ",
-          "ar_plain": "صاحب",
-          "translit": "saahiba",
-          "en": "owner (accusative)",
-          "ur": "مالک (منصوب)"
+          "en": "Incomplete: it needs عَلِيمًا حَكِيمًا to finish the meaning",
+          "ur": "ناقص: اسے معنی پورا کرنے کے لیے عَلِيمًا حَكِيمًا چاہیے"
         },
         {
-          "ar": "صَاحِبِ",
-          "ar_plain": "صاحب",
-          "translit": "saahibi",
-          "en": "owner (genitive)",
-          "ur": "مالک (مجرور)"
+          "en": "Neither: it is not a verb",
+          "ur": "کوئی نہیں: یہ فعل نہیں"
         },
         {
-          "ar": "صَاحِبٌ",
-          "ar_plain": "صاحب",
-          "translit": "saahibun",
-          "en": "an owner (with tanwīn)",
-          "ur": "ایک مالک (تنوین کے ساتھ)"
+          "en": "It is a prohibition",
+          "ur": "یہ ممانعت ہے"
         }
       ],
-      "correct_answer": {
-        "ar": "صَاحِبُ",
-        "ar_plain": "صاحب",
-        "translit": "saahibu",
-        "en": "owner (nominative)",
-        "ur": "مالک (مرفوع)"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch65-l05-ex07",
-      "statement": {
-        "en": "إنَّ and its sisters (أَنَّ، كَأَنَّ، لَكِنَّ، لَيْتَ، لَعَلَّ) are particles (حروف) while كَانَ and its sisters (أَصْبَحَ، أَمْسَى، صَارَ) are verbs (أفعال). Both groups are ناقص and require اِسْمٌ and خَبَرٌ.",
-        "ur": "إِنَّ اور اس کی sisters (أَنَّ، كَأَنَّ، لَكِنَّ، لَيْتَ، لَعَلَّ) particles (حروف) ہیں جبکہ كَانَ اور اس کی sisters (أَصْبَحَ، أَمْسَى، صَارَ) verbs (أفعال) ہیں۔ دونوں groups ناقص ہیں اور اِسْمٌ اور خَبَرٌ دونوں کا تقاضا کرتی ہیں۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The predicate عَلِيمًا حَكِيمًا is there: the use is incomplete.",
+        "ur": "خبر عَلِيمًا حَكِيمًا موجود ہے: استعمال ناقص ہے۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch65-l05-ex08",
+      "id": "ch65-l03-ex03",
       "prompt": {
-        "ar": "إِنَّ الْمُسْلِمَ لَعَالِمٌ",
-        "ar_plain": "ان المسلم لعالم",
-        "translit": "inna al-muslima laa-ilmun",
-        "en": "Indeed the Muslim is a scholar",
-        "ur": "بے شک مسلمان عالم ہے"
+        "ar": "كُن فَيَكُونُ",
+        "ar_plain": "كن فيكون",
+        "translit": "kun fayakūnu",
+        "en": "(36:82: what does this say?)",
+        "ur": "(36:82: یہ کیا کہتا ہے؟)"
       },
       "options": [
         {
-          "en": "Indeed the Muslim is a scholar",
-          "ur": "بے شک مسلمان عالم ہے"
+          "en": "He was, and it was not",
+          "ur": "وہ تھا، اور وہ نہ ہوا"
         },
         {
-          "en": "The Muslim was a scholar",
-          "ur": "مسلمان عالم تھا"
+          "en": "Be a king and be wise",
+          "ur": "بادشاہ بن اور حکیم بن"
         },
         {
-          "en": "Indeed the scholar is a Muslim",
-          "ur": "بے شک عالم مسلمان ہے"
+          "en": "Be, and it is",
+          "ur": "ہو جا، تو وہ ہو جاتا ہے"
         },
         {
-          "en": "The Muslim became a scholar",
-          "ur": "مسلمان عالم بن گیا"
+          "en": "Do not be, and it is not",
+          "ur": "مت ہو، تو وہ نہیں ہوتا"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كُنْ is the command 'be!' and فَيَكُونُ is 'and it comes to be'.",
+        "ur": "كُنْ امر 'ہو جا!' ہے اور فَيَكُونُ 'تو وہ ہو جاتا ہے' ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch65-l03-ex04",
+      "prompt": {
+        "ar": "كُن فَيَكُونُ",
+        "ar_plain": "كن فيكون",
+        "translit": "kun fayakūnu",
+        "en": "(in 36:82, is the verb complete or incomplete?)",
+        "ur": "(36:82 میں فعل تام ہے یا ناقص؟)"
+      },
+      "options": [
+        {
+          "en": "Incomplete: it needs a predicate",
+          "ur": "ناقص: اسے خبر چاہیے"
+        },
+        {
+          "en": "Incomplete: the predicate is فَيَكُونُ",
+          "ur": "ناقص: خبر فَيَكُونُ ہے"
+        },
+        {
+          "en": "Neither",
+          "ur": "کوئی نہیں"
+        },
+        {
+          "en": "Complete: it means 'be (exist)' and there is no predicate",
+          "ur": "تام: یہ 'ہو جا (وجود میں آ)' کا مطلب دیتا ہے اور کوئی خبر نہیں"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "There is no predicate after كُنْ: the use is complete.",
+        "ur": "كُنْ کے بعد کوئی خبر نہیں: استعمال تام ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch65-l03-ex05",
+      "prompt": {
+        "ar": "أَلَا إِلَى اللَّهِ تَصِيرُ الْأُمُورُ",
+        "ar_plain": "الا الى الله تصير الامور",
+        "translit": "ʾalā ʾilā al-lahi taṣīru al-ʾumūru",
+        "en": "(42:53: what does this say?)",
+        "ur": "(42:53: یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "Unquestionably, to Allah all matters return",
+          "ur": "سنو، سب معاملات اللہ ہی کی طرف لوٹتے ہیں"
+        },
+        {
+          "en": "Unquestionably, all matters became Allah",
+          "ur": "سنو، سب معاملات اللہ بن گئے"
+        },
+        {
+          "en": "Unquestionably, Allah became all matters",
+          "ur": "سنو، اللہ سب معاملات بن گیا"
+        },
+        {
+          "en": "Unquestionably, matters are not Allah's",
+          "ur": "سنو، معاملات اللہ کے نہیں"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "إِنَّ marks this as a stressed nominal sentence. الْمُسْلِمَ is the اِسْم of إِنَّ (accusative نَصْب) and لَعَالِمٌ is the خَبَر of إِنَّ (nominative رَفْع with لام التأكيد). 'Was a scholar' would use كَانَ (no إنَّ): كَانَ الْمُسْلِمُ عَالِمًا.",
-        "ur": "إِنَّ اسے ایک stressed nominal sentence کے طور پر marks کرتی ہے۔ الْمُسْلِمَ إِنَّ کا اِسْم ہے (accusative نَصْب) اور لَعَالِمٌ إِنَّ کا خَبَر ہے (nominative رَفْع with لام التأكيد)۔ 'عالم تھا' کے لیے كَانَ use ہو گا (کوئی إنَّ نہیں): كَانَ الْمُسْلِمُ عَالِمًا۔"
+        "en": "إِلَى اللَّهِ is 'to Allah': تَصِيرُ here means 'return', not 'become'.",
+        "ur": "إِلَى اللَّهِ کا مطلب 'اللہ کی طرف': تَصِيرُ یہاں 'لوٹتا ہے' ہے، 'بنتا ہے' نہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch65-l03-ex06",
+      "prompt": {
+        "ar": "صَارَ الْوَلَدُ طَبِيبًا · صَارَ الْوَلَدُ إِلَى الْبَيْتِ",
+        "ar_plain": "صار الولد طبيبا · صار الولد الى البيت",
+        "translit": "ṣāra al-waladu ṭabīban · ṣāra al-waladu ʾilā al-bayti",
+        "en": "(in which sentence does صَارَ mean 'went' with no predicate needed?)",
+        "ur": "(کس جملے میں صَارَ کا مطلب 'گیا' ہے اور خبر کی ضرورت نہیں؟)"
+      },
+      "options": [
+        {
+          "en": "صَارَ الْوَلَدُ طَبِيبًا — 'the boy became a doctor'",
+          "ur": "صَارَ الْوَلَدُ طَبِيبًا — 'لڑکا ڈاکٹر بن گیا'"
+        },
+        {
+          "en": "صَارَ الْوَلَدُ إِلَى الْبَيْتِ — 'the boy went to the house'",
+          "ur": "صَارَ الْوَلَدُ إِلَى الْبَيْتِ — 'لڑکا گھر گیا'"
+        },
+        {
+          "en": "Both sentences",
+          "ur": "دونوں جملے"
+        },
+        {
+          "en": "Neither sentence",
+          "ur": "کوئی جملہ نہیں"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "In the second, إِلَى الْبَيْتِ tells where he went; no predicate is needed.",
+        "ur": "دوسرے میں إِلَى الْبَيْتِ بتاتا ہے کہاں گیا؛ خبر کی ضرورت نہیں۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "كَانَ and إِنَّ — Two Forms of the Same Incomplete Pattern",
-      "ar": "كَانَ وَإِنَّ — صُورَتَانِ لِنَفْسِ النَّمَطِ النَّاقِصِ",
-      "ur": "كَانَ اور إِنَّ — ایک ہی ناقص pattern کی دو شکلیں"
+      "en": "Be, and it is",
+      "ar": "كُن فَيَكُونُ",
+      "ur": "ہو جا، تو وہ ہو جاتا ہے"
     },
     "ayah": {
-      "surah": 33,
-      "ayah": 40,
-      "label": "Al-Ahzab 33:40",
-      "ar": "مَّا كَانَ مُحَمَّدٌ أَبَا أَحَدٍ مِّن رِّجَالِكُمْ وَلَٰكِن رَّسُولَ اللَّهِ وَخَاتَمَ النَّبِيِّينَ",
-      "en": "Muhammad is not the father of [any] one of your men, but [he is] the Messenger of Allah and seal [i.e., last] of the prophets.",
-      "ur": "محمد تمہارے مردوں میں سے کسی کے باپ نہیں ہیں، بلکہ وہ اللہ کے رسول اور خاتم النبیین ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033040.mp3"
+      "surah": 36,
+      "ayah": 82,
+      "label": "Ya-Sin 36:82",
+      "ar": "إِنَّمَا أَمْرُهُ إِذَا أَرَادَ شَيْئًا أَن يَقُولَ لَهُ كُن فَيَكُونُ",
+      "en": "His command is only when He intends a thing that He says to it, \"Be,\" and it is.",
+      "ur": "اس کی شان یہ ہے کہ جب وہ کسی چیز کا ارادہ کرتا ہے تو اس سے فرما دیتا ہے کہ ہوجا تو وہ ہوجاتی ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/036082.mp3"
     },
     "highlighted_word_indices": [
-      1,
-      2,
-      3,
-      4
+      8,
+      9
+    ],
+    "highlighted_words": [
+      "كُن",
+      "فَيَكُونُ"
     ],
     "noor_explanation": {
-      "en": "مَّا كَانَ مُحَمَّدٌ أَبَا أَحَدٍ — 'Muhammad is not the father of any one'. مُحَمَّدٌ is the اِسْم of كَانَ (nominative). The خَبَر is the إضافة أَبَا أَحَدٍ: its مُضَاف أَبَا carries the accusative — with alif, because أَب is one of the five nouns — and أَحَدٍ stays genitive. Then وَلَٰكِن رَّسُولَ اللَّهِ is joined to that خَبَر, so رَسُولَ is accusative too while اللَّهِ stays genitive.",
-      "ur": "مَّا كَانَ مُحَمَّدٌ أَبَا أَحَدٍ — 'محمد کسی کے باپ نہیں'۔ مُحَمَّدٌ كَانَ کا اسم (مرفوع) ہے۔ خبر اضافت أَبَا أَحَدٍ ہے: اس کا مضاف أَبَا نصب لیتا ہے — الف کے ساتھ، کیونکہ أَب اسمائے خمسہ میں سے ہے — اور أَحَدٍ مجرور رہتا ہے۔ پھر وَلَٰكِن رَّسُولَ اللَّهِ اسی خبر پر معطوف ہے، اس لیے رَسُولَ بھی منصوب اور اللَّهِ مجرور۔"
+      "en": "كُن فَيَكُونُ — a complete use: 'be' means 'come to exist', and no predicate follows.",
+      "ur": "كُن فَيَكُونُ — تام استعمال: 'ہو جا' کا مطلب 'وجود میں آ' ہے، اور کوئی خبر نہیں آتی۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "كَانَ and its sisters are incomplete verbs; إِنَّ and its sisters are incomplete particles. Both need an اِسْم and a خَبَر, with opposite cases: كَانَ = nominative اِسْم + accusative خَبَر; إِنَّ = accusative اِسْم + nominative خَبَر. When either part is an إضافة, the case lands on the مُضَاف and the مُضَاف إِلَيْه stays genitive. The next lesson brings everything together.",
-      "ur": "كَانَ اور اس کی بہنیں ناقص افعال ہیں؛ إِنَّ اور اس کی بہنیں ناقص حروف۔ دونوں کو اسم اور خبر چاہیے، الٹے اعراب کے ساتھ: كَانَ = اسم مرفوع + خبر منصوب؛ إِنَّ = اسم منصوب + خبر مرفوع۔ جب کوئی حصہ اضافت ہو تو اعراب مضاف پر آتا ہے اور مضاف الیہ مجرور رہتا ہے۔ اگلا سبق سب کچھ یکجا کرتا ہے۔"
+      "en": "You can tell a verb that needs a predicate from the same verb standing on its own — by reading the whole sentence.",
+      "ur": "آپ اس فعل کو جسے خبر چاہیے اسی فعل سے الگ پہچان سکتے ہیں جو اکیلا کھڑا ہو — پورا جملہ پڑھ کر۔"
     }
   }
 }

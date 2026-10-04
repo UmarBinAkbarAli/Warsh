@@ -1,0 +1,446 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 65, Final test (ch65-test, new). Twelve multiple-choice questions at 80 % (9/12 fails, 10/12 passes), two for each strand: كَانَ and إِنَّ (q01–02), the predicate as a phrase and as a clause (q03–04), the first set of sisters (q05–06), the second set (q07–08), incomplete and complete use (q09–10), and a Quran sentence and an authored construct sentence (q11–12). Correct options are placed 3 / 3 / 3 / 3, and every question supplies its own sentence or excerpt. Added 2026-10-04 in the proposal harvest, batch 8 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-65-content-proposal.md and its review amendments.",
+    "title": "Chapter 65 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الْخَامِسِ وَالسِّتِّينَ",
+    "titleUr": "باب 65 کا آخری امتحان",
+    "chapter_order": 65,
+    "lesson_order": 9,
+    "estimated_minutes": 10,
+    "xp_reward": 25
+  },
+  "hook": {
+    "ayah": {
+      "surah": 4,
+      "ayah": 17,
+      "label": "An-Nisa 4:17",
+      "ar": "إِنَّمَا التَّوْبَةُ عَلَى اللَّهِ لِلَّذِينَ يَعْمَلُونَ السُّوءَ بِجَهَالَةٍ ثُمَّ يَتُوبُونَ مِن قَرِيبٍ فَأُولَٰئِكَ يَتُوبُ اللَّهُ عَلَيْهِمْ ۗ وَكَانَ اللَّهُ عَلِيمًا حَكِيمًا",
+      "en": "The repentance accepted by Allāh is only for those who do wrong in ignorance [or carelessness] and then repent soon [after]. It is those to whom Allāh will turn in forgiveness, and Allāh is ever Knowing and Wise.",
+      "ur": "خدا انہیں لوگوں کی توبہ قبول فرماتا ہے جو نادانی سے بری حرکت کر بیٹھے ہیں۔ پھر جلد توبہ قبول کرلیتے ہیں پس ایسے لوگوں پر خدا مہربانی کرتا ہے۔ اور وہ سب کچھ جانتا (اور) حکمت والا ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/004017.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 65 — and Book 7.",
+      "ur": "باب 65 — اور کتاب 7 — مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 65,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch65-test-q01",
+        "topic": {
+          "en": "كَانَ and its خبر",
+          "ur": "كَانَ اور اس کی خبر"
+        },
+        "prompt": {
+          "en": "Which word completes 'The student was diligent'?",
+          "ur": "کون سا لفظ 'طالب علم محنتی تھا' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "كَانَ الطَّالِبُ ___",
+        "options": [
+          {
+            "en": "مُجْتَهِدًا",
+            "ur": "مُجْتَهِدًا"
+          },
+          {
+            "en": "مُجْتَهِدٌ",
+            "ur": "مُجْتَهِدٌ"
+          },
+          {
+            "en": "مُجْتَهِدٍ",
+            "ur": "مُجْتَهِدٍ"
+          },
+          {
+            "en": "مُجْتَهِدَةً",
+            "ur": "مُجْتَهِدَةً"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch65-test-q02",
+        "topic": {
+          "en": "إِنَّ against كَانَ",
+          "ur": "إِنَّ بمقابلہ كَانَ"
+        },
+        "prompt": {
+          "en": "Which word completes 'Indeed, the student is diligent'?",
+          "ur": "کون سا لفظ 'بے شک طالب علم محنتی ہے' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "إِنَّ الطَّالِبَ ___",
+        "options": [
+          {
+            "en": "مُجْتَهِدًا",
+            "ur": "مُجْتَهِدًا"
+          },
+          {
+            "en": "مُجْتَهِدٍ",
+            "ur": "مُجْتَهِدٍ"
+          },
+          {
+            "en": "مُجْتَهِدٌ",
+            "ur": "مُجْتَهِدٌ"
+          },
+          {
+            "en": "مُجْتَهِدَةٌ",
+            "ur": "مُجْتَهِدَةٌ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch65-test-q03",
+        "topic": {
+          "en": "A phrase as the predicate",
+          "ur": "مرکب بطور خبر"
+        },
+        "prompt": {
+          "en": "Which words are the predicate?",
+          "ur": "خبر کون سے الفاظ ہیں؟"
+        },
+        "arabic": "كَانَ الْكِتَابُ فِي الْبَيْتِ",
+        "options": [
+          {
+            "en": "الْكِتَابُ",
+            "ur": "الْكِتَابُ"
+          },
+          {
+            "en": "فِي الْبَيْتِ",
+            "ur": "فِي الْبَيْتِ"
+          },
+          {
+            "en": "الْبَيْتِ only",
+            "ur": "صرف الْبَيْتِ"
+          },
+          {
+            "en": "كَانَ الْكِتَابُ",
+            "ur": "كَانَ الْكِتَابُ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch65-test-q04",
+        "topic": {
+          "en": "A clause as the predicate",
+          "ur": "جملہ بطور خبر"
+        },
+        "prompt": {
+          "en": "Which words are the whole predicate?",
+          "ur": "پوری خبر کون سے الفاظ ہیں؟"
+        },
+        "arabic": "كَانَ الطَّالِبُ يَكْتُبُ الدَّرْسَ",
+        "options": [
+          {
+            "en": "يَكْتُبُ",
+            "ur": "يَكْتُبُ"
+          },
+          {
+            "en": "الدَّرْسَ",
+            "ur": "الدَّرْسَ"
+          },
+          {
+            "en": "الطَّالِبُ يَكْتُبُ",
+            "ur": "الطَّالِبُ يَكْتُبُ"
+          },
+          {
+            "en": "يَكْتُبُ الدَّرْسَ",
+            "ur": "يَكْتُبُ الدَّرْسَ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch65-test-q05",
+        "topic": {
+          "en": "An evening sister",
+          "ur": "شام والی بہن"
+        },
+        "prompt": {
+          "en": "What does this sentence say?",
+          "ur": "یہ جملہ کیا کہتا ہے؟"
+        },
+        "arabic": "أَمْسَى الْجَوُّ بَارِدًا",
+        "options": [
+          {
+            "en": "The weather became cold by morning",
+            "ur": "موسم صبح تک ٹھنڈا ہو گیا"
+          },
+          {
+            "en": "The weather stayed cold",
+            "ur": "موسم ٹھنڈا رہا"
+          },
+          {
+            "en": "The weather is not cold",
+            "ur": "موسم ٹھنڈا نہیں ہے"
+          },
+          {
+            "en": "The weather became cold by evening",
+            "ur": "موسم شام تک ٹھنڈا ہو گیا"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch65-test-q06",
+        "topic": {
+          "en": "A change into something",
+          "ur": "کسی چیز میں تبدیلی"
+        },
+        "prompt": {
+          "en": "Which word completes 'The poor man became rich'?",
+          "ur": "کون سا لفظ 'غریب آدمی امیر ہو گیا' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "صَارَ الْفَقِيرُ ___",
+        "options": [
+          {
+            "en": "غَنِيٌّ",
+            "ur": "غَنِيٌّ"
+          },
+          {
+            "en": "غَنِيًّا",
+            "ur": "غَنِيًّا"
+          },
+          {
+            "en": "غَنِيٍّ",
+            "ur": "غَنِيٍّ"
+          },
+          {
+            "en": "غَنِيَّةً",
+            "ur": "غَنِيَّةً"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch65-test-q07",
+        "topic": {
+          "en": "A staying sister",
+          "ur": "رہنے والی بہن"
+        },
+        "prompt": {
+          "en": "What does this sentence say?",
+          "ur": "یہ جملہ کیا کہتا ہے؟"
+        },
+        "arabic": "ظَلَّ الْبَابُ مُغْلَقًا",
+        "options": [
+          {
+            "en": "The door stayed closed",
+            "ur": "دروازہ بند رہا"
+          },
+          {
+            "en": "The door became closed",
+            "ur": "دروازہ بند ہو گیا"
+          },
+          {
+            "en": "The door is not closed",
+            "ur": "دروازہ بند نہیں ہے"
+          },
+          {
+            "en": "The closed door",
+            "ur": "بند دروازہ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch65-test-q08",
+        "topic": {
+          "en": "A night sister",
+          "ur": "رات والی بہن"
+        },
+        "prompt": {
+          "en": "Which word completes 'The boy spent the night safe'?",
+          "ur": "کون سا لفظ 'لڑکے نے رات محفوظ گزاری' کو مکمل کرتا ہے؟"
+        },
+        "arabic": "بَاتَ الْوَلَدُ ___",
+        "options": [
+          {
+            "en": "آمِنٌ",
+            "ur": "آمِنٌ"
+          },
+          {
+            "en": "آمِنٍ",
+            "ur": "آمِنٍ"
+          },
+          {
+            "en": "آمِنًا",
+            "ur": "آمِنًا"
+          },
+          {
+            "en": "آمِنَةً",
+            "ur": "آمِنَةً"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch65-test-q09",
+        "topic": {
+          "en": "An incomplete use",
+          "ur": "ناقص استعمال"
+        },
+        "prompt": {
+          "en": "In this ayah, is كَانَ complete or incomplete?",
+          "ur": "اس آیت میں كَانَ تام ہے یا ناقص؟"
+        },
+        "arabic": "وَكَانَ اللَّهُ عَلِيمًا حَكِيمًا",
+        "options": [
+          {
+            "en": "Complete: it means 'exists' on its own",
+            "ur": "تام: یہ خود 'موجود ہے' کا مطلب دیتا ہے"
+          },
+          {
+            "en": "Neither: it is not a verb",
+            "ur": "کوئی نہیں: یہ فعل نہیں"
+          },
+          {
+            "en": "Incomplete: it needs عَلِيمًا حَكِيمًا to finish the meaning",
+            "ur": "ناقص: اسے معنی پورا کرنے کے لیے عَلِيمًا حَكِيمًا چاہیے"
+          },
+          {
+            "en": "It is a prohibition",
+            "ur": "یہ ممانعت ہے"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch65-test-q10",
+        "topic": {
+          "en": "A complete use",
+          "ur": "تام استعمال"
+        },
+        "prompt": {
+          "en": "In this ayah, is the verb complete or incomplete?",
+          "ur": "اس آیت میں فعل تام ہے یا ناقص؟"
+        },
+        "arabic": "كُن فَيَكُونُ",
+        "options": [
+          {
+            "en": "Complete: it means 'be (exist)' and there is no predicate",
+            "ur": "تام: یہ 'ہو جا (وجود میں آ)' کا مطلب دیتا ہے اور کوئی خبر نہیں"
+          },
+          {
+            "en": "Incomplete: it needs a predicate",
+            "ur": "ناقص: اسے خبر چاہیے"
+          },
+          {
+            "en": "Incomplete: the predicate is فَيَكُونُ",
+            "ur": "ناقص: خبر فَيَكُونُ ہے"
+          },
+          {
+            "en": "Neither",
+            "ur": "کوئی نہیں"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch65-test-q11",
+        "topic": {
+          "en": "A sister in the Quran",
+          "ur": "قرآن میں ایک بہن"
+        },
+        "prompt": {
+          "en": "Which word is the اسم of ظَلَّ in this phrase?",
+          "ur": "اس جملے میں ظَلَّ کا اسم کون سا لفظ ہے؟"
+        },
+        "arabic": "ظَلَّ وَجْهُهُ مُسْوَدًّا",
+        "options": [
+          {
+            "en": "مُسْوَدًّا",
+            "ur": "مُسْوَدًّا"
+          },
+          {
+            "en": "وَجْهُهُ",
+            "ur": "وَجْهُهُ"
+          },
+          {
+            "en": "ظَلَّ",
+            "ur": "ظَلَّ"
+          },
+          {
+            "en": "There is none",
+            "ur": "کوئی نہیں"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch65-test-q12",
+        "topic": {
+          "en": "A sister with a construct",
+          "ur": "مضاف کے ساتھ ایک بہن"
+        },
+        "prompt": {
+          "en": "Which words make the اسم?",
+          "ur": "اسم میں کون سے الفاظ ہیں؟"
+        },
+        "arabic": "أَصْبَحَ وَجْهُ الْوَلَدِ سَعِيدًا",
+        "options": [
+          {
+            "en": "سَعِيدًا",
+            "ur": "سَعِيدًا"
+          },
+          {
+            "en": "أَصْبَحَ وَجْهُ",
+            "ur": "أَصْبَحَ وَجْهُ"
+          },
+          {
+            "en": "الْوَلَدِ سَعِيدًا",
+            "ur": "الْوَلَدِ سَعِيدًا"
+          },
+          {
+            "en": "وَجْهُ الْوَلَدِ",
+            "ur": "وَجْهُ الْوَلَدِ"
+          }
+        ],
+        "correct_index": 3
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 65 — كَانَ and its sisters",
+      "ar": "كَانَ وَأَخَوَاتُهَا",
+      "ur": "باب 65 — كَانَ اور اس کی بہنیں"
+    },
+    "ayah": {
+      "surah": 16,
+      "ayah": 58,
+      "label": "An-Nahl 16:58",
+      "ar": "وَإِذَا بُشِّرَ أَحَدُهُم بِالْأُنثَىٰ ظَلَّ وَجْهُهُ مُسْوَدًّا وَهُوَ كَظِيمٌ",
+      "en": "And when one of them is informed of [the birth of] a female, his face becomes dark, and he suppresses grief.",
+      "ur": "حالانکہ جب ان میں سے کسی کو بیٹی (کے پیدا ہونے) کی خبر ملتی ہے تو اس کا منہ (غم کے سبب) کالا پڑ جاتا ہے اور (اس کے دل کو دیکھو تو) وہ اندوہناک ہوجاتا ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/016058.mp3"
+    },
+    "highlighted_word_indices": [
+      4,
+      5,
+      6
+    ],
+    "highlighted_words": [
+      "ظَلَّ",
+      "وَجْهُهُ",
+      "مُسْوَدًّا"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 65 able to read كَانَ and six sisters with a nominative اسم and an accusative خبر, and to tell a complete use from an incomplete one.",
+      "ur": "آپ باب 65 اس حال میں مکمل کرتے ہیں کہ كَانَ اور چھ بہنوں کو مرفوع اسم اور منصوب خبر کے ساتھ پڑھ سکتے ہیں، اور تام استعمال کو ناقص سے الگ کر سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 65 complete — and Book 7 with it. Chapter 66 begins Book 8 with words of time and place.",
+      "ur": "باب 65 مکمل — اور اس کے ساتھ کتاب 7۔ باب 66 کتاب 8 کا آغاز وقت اور جگہ کے الفاظ سے کرتا ہے۔"
+    }
+  }
+}

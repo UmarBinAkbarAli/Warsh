@@ -947,6 +947,36 @@ Everything below this list is either done and verified, or one of these:
    later pass). Map entries for Ch 51–55 rewritten (S10). Not done: scholarly
    review, Android pass, Chapter 52's constructed dialogue lesson, and turning
    `ch55-l06` into the review.
+   **Proposal harvest, batch 8 (Chapters 61–65): live in production
+   2026-10-04.** Ch 61 was rebuilt in full: trade words (`ch61-l01`), weighing
+   against measuring (`ch61-l02`), the **CL17 Conversation Lab "At the Market"**
+   (`ch61-l03`), a bounded instrument-noun lesson of six real words
+   (`ch61-l04`), all of Al-Mutaffifin in four parts (`ch61-l05`, `l08`–`l10`), a
+   rebuilt review and `ch61-test`; the old `ch61-l06` is unpublished (progress
+   kept). Ch 62 gained لَا النَّافِيَة لِلْجِنْس (`ch62-l02`, rebuilt), a classroom
+   exchange (`ch62-l04`, rebuilt), Al-Bayyinah in two parts (`ch62-l06`, `l07`), a
+   review (`ch62-l05`, the old Hajj phrase row) and `ch62-test`. Ch 63 gained
+   Ash-Shams in two parts (`ch63-l06`, `l07`), a rebuilt review and `ch63-test`.
+   Ch 64 gained a sentence-inside-the-predicate lesson (`ch64-l03`, rebuilt),
+   layered-sentence reading (`ch64-l04`, rebuilt), Al-Balad in two parts
+   (`ch64-l06`, `l07`), Al-Ghashiyah in three (`ch64-l08`–`l10`), a rebuilt review
+   and `ch64-test`. Ch 65 had all six lessons rebuilt (the old ones re-taught كَانَ,
+   Chapter 57's), gained the second three sisters (`ch65-l07`), a focused review
+   (`ch65-l09`), a rebuilt R14 and `ch65-test`, and now previews Chapter 66's
+   words of time and place instead of instrument nouns. Published with
+   `scripts/promote-chapters-61-65.cjs` after a staging API walk (test locked
+   until the lessons are done, key stripped, 9/12 fails, 10/12 passes, replay 0
+   XP, all five chapters); `content:check` 575/575 and `content:baseline` 575.
+   **No TTS was generated:** the missing catalogue list in
+   `Docs/lesson-audio-needed.md` is now 934 clips (271 new) and the eleven CL17
+   phrase clips are listed. 80 new scenes for 173 cards requested in
+   `Docs/lesson-illustrations-needed.md` (the cards of the kept lessons are a
+   later pass). Map entries for Ch 61–65 rewritten (S10). Owner decisions D4
+   (`ch61-l04`) and D5 (`ch62-l02`) and CL17 were built under the harvest
+   instruction and can each be unpublished without touching the rest of their
+   chapter. Learners who finished `ch61-l01`–`l05`, `l07`, `ch62-l02`, `l04`,
+   `l05`, `ch63-l05`, `ch64-l03`–`l05` or `ch65-l01`–`l06` see an "Updated" notice.
+   Not done: scholarly review, Android pass, and the CL17 phrase recordings.
    **Proposal harvest, batch 7 (Chapters 56–60): live in production
    2026-10-04.** Ch 56 gained the dual as the first term of an iḍāfa
    (`ch56-l04`, rebuilt), the four dual relatives (`ch56-l05`, rebuilt), all of

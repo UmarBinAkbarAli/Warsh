@@ -1,252 +1,163 @@
 {
   "schema_version": "1.0",
-  "template": "REVIEW",
+  "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 64, Lesson 5 — REVIEW. Formal spiral closure: nominal vs verbal sentences, complete vs incomplete verbs (تام/ناقص intro for Ch65 handoff). Chapter 64 is the last formal syntax chapter before كان وأخواتها.",
+    "_note": "Chapter 64, Lesson 5 (ch64-l06, new). Al-Balad 90:1–10 in four groups (1–3, 4, 5–7, 8–10): one board of four (90:1–4), six single ayat (90:5–10) and one fresh question decision (the three questions of 90:8–10 and what they remind man of). Opening لَا أُقْسِمُ is given whole as 'I swear'; no claim is made about the opening لَا beyond that. The oath's referents (this city, the begetter and what was begotten) are given as the ayat state them; the 90:5–10 questions are read as questions. No weak-verb derivation is asked (يَقْدِرَ, أَهْلَكْتُ, اقْتَحَمَ, هَدَيْنَاهُ are supplied whole). Added 2026-10-04 in the proposal harvest, batch 8 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-64-content-proposal.md and its review amendments.",
+    "title": "Al-Balad I — 90:1–10",
+    "titleAr": "الْبَلَدِ ١ — ١–١٠",
+    "titleUr": "البلد (1) — 90:1–10",
     "chapter_order": 64,
     "lesson_order": 5,
-    "chapter_title": "Nominal vs Verbal Sentences (Formal Spiral)",
-    "title": "Chapter 64 Review — Two Sentences, Complete vs Incomplete",
-    "titleAr": "مُرَاجَعَةُ الْبَابِ 64 — الْجُمْلَتَانِ وَالْفِعْلُ التَّامُّ وَالنَّاقِصُ",
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 4,
-      "ayah": 1,
-      "label": "An-Nisa 4:1",
-      "ar": "إِنَّ اللَّهَ كَانَ عَلَيْكُمْ رَقِيبًا",
-      "en": "Indeed, Allah is ever over you an Observer.",
-      "ur": "بے شک اللہ ہمیشہ سے تم پر نگران ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/004001.mp3"
+      "surah": 90,
+      "ayah": 4,
+      "label": "Al-Balad 90:4",
+      "ar": "لَقَدْ خَلَقْنَا الْإِنسَانَ فِي كَبَدٍ",
+      "en": "We have certainly created man into hardship.",
+      "ur": "کہ ہم نے انسان کو تکلیف (کی حالت) میں (رہنے والا) بنایا ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/090004.mp3"
     },
     "noor_intro": {
-      "en": "كَانَ عَلَيْكُمْ رَقِيبًا — 'was over you an observer.' كَانَ is here an incomplete verb — its meaning is not complete without رَقِيبًا. Chapter 64 is done. Let us lock in the two sentence types and preview what كَانَ really means.",
-      "ur": "كَانَ عَلَيْكُمْ رَقِيبًا — 'آپ پر نگران تھا'۔ كَانَ یہاں ایک ناقص فعل ہے — اس کا مفہوم رَقِيبًا کے بغیر مکمل نہیں۔ باب 64 مکمل ہوا۔ دو جملوں کی اقسام کو lock کریں اور کانَ کا اصل مطلب دیکھیں۔"
+      "en": "Surat Al-Balad starts with an oath and says what man is made in. Then it asks him questions he cannot dodge.",
+      "ur": "سورۃ البلد قسم سے شروع ہو کر بتاتی ہے کہ انسان کس حال میں بنا ہے۔ پھر اس سے ایسے سوال کرتی ہے جن سے وہ بچ نہیں سکتا۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Two sentence types — locked",
-        "ar": "نَوْعَانِ مِنَ الْجُمْلَةِ — مُثَبَّتَانِ",
-        "ur": "دو جملے کی اقسام — مقفل"
+        "en": "An oath, hardship and questions",
+        "ar": "قَسَمٌ وَكَبَدٌ وَأَسْئِلَةٌ",
+        "ur": "قسم، مشقت اور سوالات"
       },
       "explanation": {
-        "en": "الْجُمْلَةُ الِاسْمِيَّةُ starts with a noun (مُبْتَدَأ). It asserts a state. الْجُمْلَةُ الْفِعْلِيَّةُ starts with a verb (فِعْل). It asserts an action. The difference is not just word order — it is a difference in meaning and emphasis.",
-        "ur": "الْجُمْلَةُ الِاسْمِيَّةُ اسم (مُبْتَدَأ) سے شروع ہوتی ہے۔ یہ حال کا بیان کرتی ہے۔ الْجُمْلَةُ الْفِعْلِيَّةُ فعل سے شروع ہوتی ہے۔ یہ عمل کا بیان کرتی ہے۔"
+        "en": "90:1–3 swear by a city, a person in it, and a father with what was born of him. 90:4 says: man was created in hardship. 90:5–7 give what man thinks (no one overpowers him; no one has seen him) and 90:8–10 answer with three questions: have We not given him eyes, a tongue and lips, and shown him the two ways? Read it in four groups.",
+        "ur": "90:1–3 ایک شہر، اس میں موجود ایک شخص، اور ایک والد اور اس سے پیدا ہونے والے کی قسم کھاتی ہیں۔ 90:4 کہتی ہے: انسان مشقت میں پیدا کیا گیا۔ 90:5–7 انسان کی سوچ بتاتی ہیں (کوئی اس پر قابو نہیں پائے گا؛ کسی نے اسے نہیں دیکھا) اور 90:8–10 تین سوالوں سے جواب دیتی ہیں: کیا ہم نے اسے آنکھیں، زبان اور ہونٹ نہیں دیے، اور دونوں راستے نہیں دکھائے؟ چار گروہوں میں پڑھیں۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "اللَّهُ غَفُورٌ رَحِيمٌ — اسمية | غَفَرَ اللَّهُ لَكُمْ — فعلية",
-        "ar_plain": "الله غفور رحيم — اسمية | غفر الله لكم — فعلية",
-        "translit": "Allahu ghafoorun raheem — ismiyya | ghafara Allahu lakum — fi'liyya",
-        "en": "Allah is All-Forgiving, Most Merciful (state) | Allah forgave you (action)",
-        "ur": "اللہ بخشنے والا، رحم کرنے والا (حال) | اللہ نے تمہیں بخش دیا (عمل)"
+        "ar": "لَا أُقْسِمُ بِهَٰذَا الْبَلَدِ وَأَنتَ حِلٌّ بِهَٰذَا الْبَلَدِ وَوَالِدٍ وَمَا وَلَدَ",
+        "ar_plain": "لا اقسم بهذا البلد وانت حل بهذا البلد ووالد وما ولد",
+        "translit": "lā ʾuqsimu bihādhā al-baladi waʾanta ḥillun bihādhā al-baladi wawaālidin wamā walada",
+        "en": "I swear by this city [i.e., Makkah] And you, [O Muḥammad], are free of restriction in this city And [by] the father and that which was born [of him],",
+        "ur": "ہمیں اس شہر (مکہ) کی قسم اور تم اسی شہر میں تو رہتے ہو اور باپ (یعنی آدم) اور اس کی اولاد کی قسم"
       },
       "explanation": {
-        "en": "Both use the same root غ-ف-ر. The nominal sentence asserts Allah's permanent attribute. The verbal sentence asserts a completed action of forgiveness at a specific time.",
-        "ur": "دونوں ایک ہی جڑ غ-ف-ر استعمال کرتے ہیں۔ اسمی جملہ اللہ کی دائمی صفت بیان کرتا ہے۔ فعلی جملہ ایک مخصوص وقت میں مغفرت کا مکمل عمل بیان کرتا ہے۔"
+        "en": "لَا أُقْسِمُ — 'I swear' (given whole) — بِهَٰذَا الْبَلَدِ, 'by this city'. وَأَنتَ حِلٌّ بِهَٰذَا الْبَلَدِ: 'and you are at liberty in this city'. 90:3: وَوَالِدٍ وَمَا وَلَدَ, 'and by a father and what he fathered'. (Al-Balad 90:1–3) (Al-Balad 90:1–3)",
+        "ur": "لَا أُقْسِمُ — 'میں قسم کھاتا ہوں' (پورا دیا گیا) — بِهَٰذَا الْبَلَدِ، 'اس شہر کی'۔ وَأَنتَ حِلٌّ بِهَٰذَا الْبَلَدِ: 'اور تم اس شہر میں آزادانہ رہ رہے ہو'۔ 90:3: وَوَالِدٍ وَمَا وَلَدَ، 'اور والد کی اور اس کی جو اس سے پیدا ہوا'۔ (البلد 90:1–3) (Al-Balad 90:1–3)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "لَقَدْ خَلَقْنَا الْإِنسَانَ فِي كَبَدٍ",
+        "ar_plain": "لقد خلقنا الانسان في كبد",
+        "translit": "laqad khalaqnā al-ʾinsāna fī kabadin",
+        "en": "We have certainly created man into hardship.",
+        "ur": "کہ ہم نے انسان کو تکلیف (کی حالت) میں (رہنے والا) بنایا ہے"
+      },
+      "explanation": {
+        "en": "The statement: لَقَدْ خَلَقْنَا الْإِنسَانَ فِي كَبَدٍ — 'We have created man in hardship'. Everything after it speaks about this man. (Al-Balad 90:4) (Al-Balad 90:4)",
+        "ur": "بیان: لَقَدْ خَلَقْنَا الْإِنسَانَ فِي كَبَدٍ — 'ہم نے انسان کو مشقت میں پیدا کیا'۔ اس کے بعد سب کچھ اسی انسان کے بارے میں ہے۔ (البلد 90:4) (Al-Balad 90:4)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "أَيَحْسَبُ أَن لَّن يَقْدِرَ عَلَيْهِ أَحَدٌ يَقُولُ أَهْلَكْتُ مَالًا لُّبَدًا أَيَحْسَبُ أَن لَّمْ يَرَهُ أَحَدٌ",
+        "ar_plain": "ايحسب ان لن يقدر عليه احد يقول اهلكت مالا لبدا ايحسب ان لم يره احد",
+        "translit": "ʾayaḥsabu ʾan llan yaqdira ʿalayhi ʾaḥadun yaqūlu ʾahlaktu mālan llubadan ʾayaḥsabu ʾan llam yarahu ʾaḥadun",
+        "en": "Does he think that never will anyone overcome him? He says, \"I have spent wealth in abundance.\" Does he think that no one has seen him?",
+        "ur": "کیا وہ خیال رکھتا ہے کہ اس پر کوئی قابو نہ پائے گا کہتا ہے کہ میں نے بہت سا مال برباد کیا کیا اسے یہ گمان ہے کہ اس کو کسی نے دیکھا نہیں"
+      },
+      "explanation": {
+        "en": "What man thinks: أَيَحْسَبُ, 'does he think', that no one will ever overpower him (90:5)? He says أَهْلَكْتُ مَالًا لُّبَدًا, 'I have wasted heaps of wealth' (90:6). Does he think that no one has seen him (90:7)? Two ayat start with the question أَيَحْسَبُ. (Al-Balad 90:5–7) (Al-Balad 90:5–7)",
+        "ur": "انسان کیا سمجھتا ہے: أَيَحْسَبُ، 'کیا وہ سمجھتا ہے'، کہ اس پر کوئی ہرگز قابو نہیں پائے گا (90:5)؟ وہ کہتا ہے أَهْلَكْتُ مَالًا لُّبَدًا، 'میں نے ڈھیروں مال اڑا دیا' (90:6)۔ کیا وہ سمجھتا ہے کہ کسی نے اسے نہیں دیکھا (90:7)؟ دو آیات سوال أَيَحْسَبُ سے شروع ہوتی ہیں۔ (البلد 90:5–7) (Al-Balad 90:5–7)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "أَلَمْ نَجْعَل لَّهُ عَيْنَيْنِ وَلِسَانًا وَشَفَتَيْنِ وَهَدَيْنَاهُ النَّجْدَيْنِ",
+        "ar_plain": "الم نجعل له عينين ولسانا وشفتين وهديناه النجدين",
+        "translit": "ʾalam najʿal llahu ʿaynayni walisānan washafatayni wahadaynāhu an-najdayni",
+        "en": "Have We not made for him two eyes? And a tongue and two lips? And have shown him the two ways?",
+        "ur": "بھلا ہم نےاس کو دو آنکھیں نہیں دیں؟ اور زبان اور دو ہونٹ (نہیں دیئے) (یہ چیزیں بھی دیں) اور اس کو (خیر و شر کے) دونوں رستے بھی دکھا دیئے"
+      },
+      "explanation": {
+        "en": "Three answering questions with أَلَمْ, 'have We not …': two eyes (عَيْنَيْنِ), a tongue and two lips (لِسَانًا وَشَفَتَيْنِ), and have We shown him النَّجْدَيْنِ, 'the two ways'. Each answers 'who has seen him'. (Al-Balad 90:8–10) (Al-Balad 90:8–10)",
+        "ur": "أَلَمْ، 'کیا ہم نے نہیں …'، کے ساتھ تین جواب دینے والے سوال: دو آنکھیں (عَيْنَيْنِ)، ایک زبان اور دو ہونٹ (لِسَانًا وَشَفَتَيْنِ)، اور کیا ہم نے اسے النَّجْدَيْنِ، 'دونوں راستے' نہیں دکھائے۔ ہر ایک جواب دیتا ہے 'کس نے اسے دیکھا'۔ (البلد 90:8–10) (Al-Balad 90:8–10)"
       }
     },
     {
       "type": "GRAMMAR_NOTE",
       "title": {
-        "en": "الفعل التام vs الفعل الناقص — preview",
-        "ur": "الفعل التام vs الفعل الناقص — جھلک"
+        "en": "Predicates in these ayat",
+        "ur": "ان آیات میں خبریں"
       },
       "body": {
-        "en": "A complete verb (الْفِعْل التَّامّ) gives complete meaning: ذَهَبَ الطَّالِبُ (the student went). An incomplete verb (الْفِعْل النَّاقِص) — like كَانَ — is not complete on its own: كَانَ الطَّالِبُ... (the student was... what?). It needs a predicate (خَبَر كَانَ) to complete the meaning: كَانَ الطَّالِبُ مُجْتَهِدًا (the student was diligent).",
-        "ur": "تام فعل (الْفِعْل التَّامّ) مکمل مفہوم دیتا ہے: ذَهَبَ الطَّالِبُ (طالب علم گیا)۔ ناقص فعل (الْفِعْل النَّاقِص) — جیسے كَانَ — خود مکمل نہیں: كَانَ الطَّالِبُ... (طالب علم تھا... کیا؟)۔ مفہوم مکمل کرنے کے لیے خبر کانَ چاہیے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "إِنَّ اللَّهَ كَانَ عَلَيْكُمْ رَقِيبًا",
-        "ar_plain": "ان الله كان عليكم رقيبا",
-        "translit": "inna Allaha kaana 'alaykum raqeban",
-        "en": "Indeed, Allah is ever over you an Observer.",
-        "ur": "بے شک اللہ ہمیشہ سے تم پر نگران ہے۔"
-      },
-      "explanation": {
-        "en": "Two major structures together: إِنَّ (nominalizes اللَّه → اسم إنَّ in نصب) + كَانَ (incomplete verb, needs رَقِيبًا to complete meaning). رَقِيبًا is خَبَر كَانَ. This is Chapter 65 territory — but you can already see the structure.",
-        "ur": "دو major structures اکٹھے: إِنَّ (اللَّه کو نصب دیتا ہے) + كَانَ (ناقص فعل، مکمل مفہوم کے لیے رَقِيبًا چاہیے)۔ رَقِيبًا خَبَر كَانَ ہے۔ یہ باب 65 کا میدان ہے — لیکن آپ structure پہلے سے دیکھ سکتے ہیں۔"
+        "en": "In 90:4 the sentence is verbal (خَلَقْنَا). In 90:18–20 later, nominal sentences appear with a phrase or a single word as predicate. Here the key words (يَقْدِرَ, أَهْلَكْتُ, هَدَيْنَاهُ) are given with their meaning and are not built.",
+        "ur": "90:4 میں جملہ فعلیہ ہے (خَلَقْنَا)۔ بعد کی آیات 90:18–20 میں اسمیہ جملے آتے ہیں جن کی خبر مرکب یا اکیلا لفظ ہے۔ یہاں اہم الفاظ (يَقْدِرَ، أَهْلَكْتُ، هَدَيْنَاهُ) معنی کے ساتھ دیے گئے ہیں اور بنائے نہیں جاتے۔"
       }
     }
   ],
   "exercises": [
     {
-      "type": "TRUE_FALSE",
-      "id": "ch64-l05-ex01",
-      "statement": {
-        "en": "الْجُمْلَةُ الْفِعْلِيَّةُ always starts with a verb.",
-        "ur": "الْجُمْلَةُ الْفِعْلِيَّةُ ہمیشہ فعل سے شروع ہوتی ہے۔",
-        "ar_example": {
-          "ar": "ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ",
-          "ar_plain": "ذهب الطالب الى المدرسة",
-          "translit": "dhahaba at-talibu ila al-madrasa",
-          "en": "The student went to school.",
-          "ur": "طالب علم مدرسے گیا۔"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch64-l05-ex02",
-      "prompt": {
-        "ar": "اللَّهُ غَفُورٌ رَحِيمٌ",
-        "ar_plain": "الله غفور رحيم",
-        "translit": "Allahu ghafoorun raheemun",
-        "en": "Allah is All-Forgiving, Most Merciful.",
-        "ur": "اللہ بہت بخشنے والا، رحم کرنے والا ہے۔"
-      },
-      "options": [
-        {
-          "en": "Allah is All-Forgiving, Most Merciful.",
-          "ur": "اللہ بہت بخشنے والا، رحم کرنے والا ہے۔"
-        },
-        {
-          "en": "Allah forgave and showed mercy.",
-          "ur": "اللہ نے بخشا اور رحم کیا۔"
-        },
-        {
-          "en": "Allah will forgive and have mercy.",
-          "ur": "اللہ بخشے گا اور رحم کرے گا۔"
-        },
-        {
-          "en": "Allah forgives those who are merciful.",
-          "ur": "اللہ رحمدلوں کو بخشتا ہے۔"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "اللَّهُ غَفُورٌ رَحِيمٌ is a nominal sentence (اسمية) — it states a permanent attribute of Allah. غَفُور and رَحِيم are both predicate adjectives (خبر).",
-        "ur": "اللَّهُ غَفُورٌ رَحِيمٌ ایک اسمی جملہ ہے — یہ اللہ کی دائمی صفت بیان کرتا ہے۔ غَفُور اور رَحِيم دونوں خبر (predicate adjectives) ہیں۔"
-      }
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch64-l05-ex03",
-      "statement": {
-        "en": "كَانَ is a complete verb — كَانَ زَيْدٌ gives a complete sentence.",
-        "ur": "كَانَ ایک تام فعل ہے — كَانَ زَيْدٌ ایک مکمل جملہ دیتا ہے۔",
-        "ar_example": {
-          "ar": "كَانَ اللَّهُ عَلَيْكُمْ رَقِيبًا",
-          "ar_plain": "كان الله عليكم رقيبا",
-          "translit": "kaana Allahu 'alaykum raqeban",
-          "en": "Allah was ever over you an Observer.",
-          "ur": "اللہ ہمیشہ سے تم پر نگران تھا۔"
-        }
-      },
-      "correct_answer": false,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch64-l05-ex04",
-      "mode": "TAP",
-      "sentence_ar": "إِنَّ اللَّهَ كَانَ عَلَيْكُمْ ___",
-      "hint": {
-        "en": "Indeed, Allah is ever over you an Observer.",
-        "ur": "بے شک اللہ ہمیشہ سے تم پر نگران ہے۔"
-      },
-      "options": [
-        {
-          "ar": "رَقِيبًا",
-          "ar_plain": "رقيبا",
-          "translit": "raqeban",
-          "en": "an Observer",
-          "ur": "نگران"
-        },
-        {
-          "ar": "رَحِيمًا",
-          "ar_plain": "رحيما",
-          "translit": "raheeman",
-          "en": "Merciful",
-          "ur": "رحیم"
-        },
-        {
-          "ar": "سَمِيعًا",
-          "ar_plain": "سميعا",
-          "translit": "samee'an",
-          "en": "All-Hearing",
-          "ur": "سننے والا"
-        },
-        {
-          "ar": "عَلِيمًا",
-          "ar_plain": "عليما",
-          "translit": "'aleeman",
-          "en": "All-Knowing",
-          "ur": "جاننے والا"
-        }
-      ],
-      "correct_answer": {
-        "ar": "رَقِيبًا",
-        "ar_plain": "رقيبا",
-        "translit": "raqeban",
-        "en": "an Observer",
-        "ur": "نگران"
-      },
-      "xp_value": 1
-    },
-    {
       "type": "MATCHING",
-      "id": "ch64-l05-ex05",
+      "id": "ch64-l06-ex01",
       "left_column": [
         {
-          "ar": "اللَّهُ سَمِيعٌ عَلِيمٌ",
-          "ar_plain": "الله سميع عليم",
-          "translit": "Allahu samee'un 'aleemun",
-          "en": "Nominal sentence",
-          "ur": "اسمی جملہ"
+          "ar": "لَا أُقْسِمُ بِهَٰذَا الْبَلَدِ",
+          "ar_plain": "لا اقسم بهذا البلد",
+          "translit": "lā ʾuqsimu bihādhā al-baladi",
+          "en": "(90:1)",
+          "ur": "(90:1)"
         },
         {
-          "ar": "قَالَ اللَّهُ",
-          "ar_plain": "قال الله",
-          "translit": "qaala Allahu",
-          "en": "Verbal sentence",
-          "ur": "فعلی جملہ"
+          "ar": "وَأَنتَ حِلٌّ بِهَٰذَا الْبَلَدِ",
+          "ar_plain": "وانت حل بهذا البلد",
+          "translit": "waʾanta ḥillun bihādhā al-baladi",
+          "en": "(90:2)",
+          "ur": "(90:2)"
         },
         {
-          "ar": "كَانَ اللَّهُ غَفُورًا",
-          "ar_plain": "كان الله غفورا",
-          "translit": "kaana Allahu ghafoorun",
-          "en": "Incomplete verb + predicate",
-          "ur": "ناقص فعل + خبر"
+          "ar": "وَوَالِدٍ وَمَا وَلَدَ",
+          "ar_plain": "ووالد وما ولد",
+          "translit": "wawaālidin wamā walada",
+          "en": "(90:3)",
+          "ur": "(90:3)"
         },
         {
-          "ar": "ذَهَبَ الطَّالِبُ",
-          "ar_plain": "ذهب الطالب",
-          "translit": "dhahaba at-talibu",
-          "en": "Complete verb",
-          "ur": "تام فعل"
+          "ar": "لَقَدْ خَلَقْنَا الْإِنسَانَ فِي كَبَدٍ",
+          "ar_plain": "لقد خلقنا الانسان في كبد",
+          "translit": "laqad khalaqnā al-ʾinsāna fī kabadin",
+          "en": "(90:4)",
+          "ur": "(90:4)"
         }
       ],
       "right_column": [
         {
-          "en": "Verbal sentence",
-          "ur": "فعلی جملہ"
+          "en": "and by a father and what he fathered",
+          "ur": "اور والد کی اور اس کی جو اس سے پیدا ہوا"
         },
         {
-          "en": "Nominal sentence",
-          "ur": "اسمی جملہ"
+          "en": "I swear by this city",
+          "ur": "میں اس شہر کی قسم کھاتا ہوں"
         },
         {
-          "en": "Complete verb",
-          "ur": "تام فعل"
+          "en": "We created man in hardship",
+          "ur": "ہم نے انسان کو مشقت میں پیدا کیا"
         },
         {
-          "en": "Incomplete verb + predicate",
-          "ur": "ناقص فعل + خبر"
+          "en": "and you are at liberty in this city",
+          "ur": "اور تم اس شہر میں آزادانہ رہ رہے ہو"
         }
       ],
       "correct_pairs": [
@@ -256,100 +167,303 @@
         ],
         [
           1,
-          0
+          3
         ],
         [
           2,
-          3
+          0
         ],
         [
           3,
           2
         ]
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "90:1 swears by the city, 90:2 says 'you' are at liberty in it, 90:3 swears by a father and what was born, and 90:4 says man is created in hardship.",
+        "ur": "90:1 شہر کی قسم کھاتی ہے، 90:2 کہتی ہے 'تم' اس میں آزاد ہو، 90:3 والد اور اولاد کی قسم کھاتی ہے، اور 90:4 کہتی ہے انسان مشقت میں پیدا ہوا۔"
+      }
     },
     {
-      "type": "BUILD_SENTENCE",
-      "id": "ch64-l05-ex06",
-      "target_translation": {
-        "en": "Indeed, Allah is ever over you an Observer.",
-        "ur": "بے شک اللہ ہمیشہ سے تم پر نگران ہے۔"
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l06-ex02",
+      "prompt": {
+        "ar": "أَيَحْسَبُ أَن لَّن يَقْدِرَ عَلَيْهِ أَحَدٌ",
+        "ar_plain": "ايحسب ان لن يقدر عليه احد",
+        "translit": "ʾayaḥsabu ʾan llan yaqdira ʿalayhi ʾaḥadun",
+        "en": "(90:5)",
+        "ur": "(90:5)"
       },
-      "tiles": [
+      "options": [
         {
-          "ar": "إِنَّ",
-          "ar_plain": "ان",
-          "translit": "inna",
-          "en": "Indeed",
-          "ur": "بے شک"
+          "en": "We created man in hardship",
+          "ur": "ہم نے انسان کو مشقت میں پیدا کیا"
         },
         {
-          "ar": "اللَّهَ",
-          "ar_plain": "الله",
-          "translit": "Allaha",
-          "en": "Allah",
-          "ur": "اللہ"
+          "en": "Does he think that no one will ever overpower him?",
+          "ur": "کیا وہ سمجھتا ہے کہ اس پر کوئی ہرگز قابو نہیں پا سکے گا؟"
         },
         {
-          "ar": "كَانَ",
-          "ar_plain": "كان",
-          "translit": "kaana",
-          "en": "is/was ever",
-          "ur": "ہمیشہ سے"
+          "en": "He says: I have wasted heaps of wealth",
+          "ur": "وہ کہتا ہے: میں نے ڈھیروں مال اڑا دیا"
         },
         {
-          "ar": "عَلَيْكُمْ",
-          "ar_plain": "عليكم",
-          "translit": "'alaykum",
-          "en": "over you",
-          "ur": "تم پر"
-        },
-        {
-          "ar": "رَقِيبًا",
-          "ar_plain": "رقيبا",
-          "translit": "raqeban",
-          "en": "an Observer",
-          "ur": "نگران"
+          "en": "and by a father and what he fathered",
+          "ur": "اور والد کی اور اس کی جو اس سے پیدا ہوا"
         }
       ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3,
-        4
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "This ayah says: Does he think that no one will ever overpower him?.",
+        "ur": "یہ آیت کہتی ہے: کیا وہ سمجھتا ہے کہ اس پر کوئی ہرگز قابو نہیں پا سکے گا؟۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l06-ex03",
+      "prompt": {
+        "ar": "يَقُولُ أَهْلَكْتُ مَالًا لُّبَدًا",
+        "ar_plain": "يقول اهلكت مالا لبدا",
+        "translit": "yaqūlu ʾahlaktu mālan llubadan",
+        "en": "(90:6)",
+        "ur": "(90:6)"
+      },
+      "options": [
+        {
+          "en": "Does he think that no one will ever overpower him?",
+          "ur": "کیا وہ سمجھتا ہے کہ اس پر کوئی ہرگز قابو نہیں پا سکے گا؟"
+        },
+        {
+          "en": "Does he think that no one has seen him?",
+          "ur": "کیا وہ سمجھتا ہے کہ کسی نے اسے نہیں دیکھا؟"
+        },
+        {
+          "en": "We created man in hardship",
+          "ur": "ہم نے انسان کو مشقت میں پیدا کیا"
+        },
+        {
+          "en": "He says: I have wasted heaps of wealth",
+          "ur": "وہ کہتا ہے: میں نے ڈھیروں مال اڑا دیا"
+        }
       ],
-      "xp_value": 1
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "This ayah says: He says: I have wasted heaps of wealth.",
+        "ur": "یہ آیت کہتی ہے: وہ کہتا ہے: میں نے ڈھیروں مال اڑا دیا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l06-ex04",
+      "prompt": {
+        "ar": "أَيَحْسَبُ أَن لَّمْ يَرَهُ أَحَدٌ",
+        "ar_plain": "ايحسب ان لم يره احد",
+        "translit": "ʾayaḥsabu ʾan llam yarahu ʾaḥadun",
+        "en": "(90:7)",
+        "ur": "(90:7)"
+      },
+      "options": [
+        {
+          "en": "Does he think that no one has seen him?",
+          "ur": "کیا وہ سمجھتا ہے کہ کسی نے اسے نہیں دیکھا؟"
+        },
+        {
+          "en": "He says: I have wasted heaps of wealth",
+          "ur": "وہ کہتا ہے: میں نے ڈھیروں مال اڑا دیا"
+        },
+        {
+          "en": "Have We not made for him two eyes?",
+          "ur": "کیا ہم نے اس کے لیے دو آنکھیں نہیں بنائیں؟"
+        },
+        {
+          "en": "Does he think that no one will ever overpower him?",
+          "ur": "کیا وہ سمجھتا ہے کہ اس پر کوئی ہرگز قابو نہیں پا سکے گا؟"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "This ayah says: Does he think that no one has seen him?.",
+        "ur": "یہ آیت کہتی ہے: کیا وہ سمجھتا ہے کہ کسی نے اسے نہیں دیکھا؟۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l06-ex05",
+      "prompt": {
+        "ar": "أَلَمْ نَجْعَل لَّهُ عَيْنَيْنِ",
+        "ar_plain": "الم نجعل له عينين",
+        "translit": "ʾalam najʿal llahu ʿaynayni",
+        "en": "(90:8)",
+        "ur": "(90:8)"
+      },
+      "options": [
+        {
+          "en": "Does he think that no one has seen him?",
+          "ur": "کیا وہ سمجھتا ہے کہ کسی نے اسے نہیں دیکھا؟"
+        },
+        {
+          "en": "and a tongue and two lips?",
+          "ur": "اور ایک زبان اور دو ہونٹ؟"
+        },
+        {
+          "en": "Have We not made for him two eyes?",
+          "ur": "کیا ہم نے اس کے لیے دو آنکھیں نہیں بنائیں؟"
+        },
+        {
+          "en": "He says: I have wasted heaps of wealth",
+          "ur": "وہ کہتا ہے: میں نے ڈھیروں مال اڑا دیا"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "This ayah says: Have We not made for him two eyes?.",
+        "ur": "یہ آیت کہتی ہے: کیا ہم نے اس کے لیے دو آنکھیں نہیں بنائیں؟۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l06-ex06",
+      "prompt": {
+        "ar": "وَلِسَانًا وَشَفَتَيْنِ",
+        "ar_plain": "ولسانا وشفتين",
+        "translit": "walisānan washafatayni",
+        "en": "(90:9)",
+        "ur": "(90:9)"
+      },
+      "options": [
+        {
+          "en": "Have We not made for him two eyes?",
+          "ur": "کیا ہم نے اس کے لیے دو آنکھیں نہیں بنائیں؟"
+        },
+        {
+          "en": "and a tongue and two lips?",
+          "ur": "اور ایک زبان اور دو ہونٹ؟"
+        },
+        {
+          "en": "and shown him the two ways?",
+          "ur": "اور اسے دونوں راستے نہیں دکھائے؟"
+        },
+        {
+          "en": "Does he think that no one has seen him?",
+          "ur": "کیا وہ سمجھتا ہے کہ کسی نے اسے نہیں دیکھا؟"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "This ayah says: and a tongue and two lips?.",
+        "ur": "یہ آیت کہتی ہے: اور ایک زبان اور دو ہونٹ؟۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l06-ex07",
+      "prompt": {
+        "ar": "وَهَدَيْنَاهُ النَّجْدَيْنِ",
+        "ar_plain": "وهديناه النجدين",
+        "translit": "wahadaynāhu an-najdayni",
+        "en": "(90:10)",
+        "ur": "(90:10)"
+      },
+      "options": [
+        {
+          "en": "and a tongue and two lips?",
+          "ur": "اور ایک زبان اور دو ہونٹ؟"
+        },
+        {
+          "en": "But he has not attempted the steep pass",
+          "ur": "مگر اس نے گھاٹی میں قدم نہ رکھا"
+        },
+        {
+          "en": "Have We not made for him two eyes?",
+          "ur": "کیا ہم نے اس کے لیے دو آنکھیں نہیں بنائیں؟"
+        },
+        {
+          "en": "and shown him the two ways?",
+          "ur": "اور اسے دونوں راستے نہیں دکھائے؟"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "This ayah says: and shown him the two ways?.",
+        "ur": "یہ آیت کہتی ہے: اور اسے دونوں راستے نہیں دکھائے؟۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l06-ex08",
+      "prompt": {
+        "ar": "أَلَمْ نَجْعَل لَّهُ عَيْنَيْنِ وَلِسَانًا وَشَفَتَيْنِ وَهَدَيْنَاهُ النَّجْدَيْنِ",
+        "ar_plain": "الم نجعل له عينين ولسانا وشفتين وهديناه النجدين",
+        "translit": "ʾalam najʿal llahu ʿaynayni walisānan washafatayni wahadaynāhu an-najdayni",
+        "en": "(90:8-10)",
+        "ur": "(90:8-10)"
+      },
+      "options": [
+        {
+          "en": "They ask him to count his wealth",
+          "ur": "یہ اس سے اس کا مال گننے کو کہتے ہیں"
+        },
+        {
+          "en": "They tell him that no one sees him",
+          "ur": "یہ اسے بتاتے ہیں کہ کوئی اسے نہیں دیکھتا"
+        },
+        {
+          "en": "They remind him that Allah gave him eyes, a tongue and lips, and showed him the two ways",
+          "ur": "یہ اسے یاد دلاتے ہیں کہ اللہ نے اسے آنکھیں، زبان اور ہونٹ دیے، اور دونوں راستے دکھائے"
+        },
+        {
+          "en": "They swear by a city",
+          "ur": "یہ ایک شہر کی قسم کھاتے ہیں"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The three أَلَمْ questions each name something given to man.",
+        "ur": "تینوں أَلَمْ سوال انسان کو دی گئی کسی چیز کا نام لیتے ہیں۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Nominal vs Verbal — Two windows on reality",
-      "ar": "الِاسْمِيَّةُ وَالْفِعْلِيَّةُ — نَافِذَتَانِ عَلَى الْوَاقِعِ",
-      "ur": "اسمی اور فعلی — حقیقت کی دو کھڑکیاں"
+      "en": "Created in hardship",
+      "ar": "فِي كَبَدٍ",
+      "ur": "مشقت میں"
     },
     "ayah": {
-      "surah": 4,
-      "ayah": 1,
-      "label": "An-Nisa 4:1",
-      "ar": "إِنَّ اللَّهَ كَانَ عَلَيْكُمْ رَقِيبًا",
-      "en": "Indeed, Allah is ever over you an Observer.",
-      "ur": "بے شک اللہ ہمیشہ سے تم پر نگران ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/004001.mp3"
+      "surah": 90,
+      "ayah": 4,
+      "label": "Al-Balad 90:4",
+      "ar": "لَقَدْ خَلَقْنَا الْإِنسَانَ فِي كَبَدٍ",
+      "en": "We have certainly created man into hardship.",
+      "ur": "کہ ہم نے انسان کو تکلیف (کی حالت) میں (رہنے والا) بنایا ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/090004.mp3"
     },
     "highlighted_word_indices": [
-      2
+      1,
+      2,
+      4
+    ],
+    "highlighted_words": [
+      "خَلَقْنَا",
+      "الْإِنسَانَ",
+      "كَبَدٍ"
     ],
     "noor_explanation": {
-      "en": "كَانَ — the incomplete verb — points you straight to Chapter 65. كَانَ وأخواتها will unlock the grammar of one of the most common Quranic patterns. You are ready.",
-      "ur": "كَانَ — ناقص فعل — آپ کو سیدھا باب 65 کی طرف اشارہ کرتا ہے۔ كَانَ وأخواتها قرآن کے سب سے عام patterns میں سے ایک کا grammar unlock کرے گا۔ آپ تیار ہیں۔"
+      "en": "لَقَدْ خَلَقْنَا الْإِنسَانَ فِي كَبَدٍ — the verbal sentence on which the whole first part rests: man is created in hardship.",
+      "ur": "لَقَدْ خَلَقْنَا الْإِنسَانَ فِي كَبَدٍ — وہ فعلیہ جملہ جس پر پورا پہلا حصہ ٹکا ہے: انسان مشقت میں پیدا ہوا۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Chapter 64 done. You know the two sentence types and can tell a complete verb from an incomplete one. كَانَ opens the door to Chapter 65 and to many Quranic descriptions of Allah.",
-      "ur": "باب 64 مکمل۔ آپ جملوں کی دونوں قسمیں جانتے ہیں اور تام و ناقص فعل میں فرق کر سکتے ہیں۔ كَانَ باب 65 کا اور اللہ کی بہت سی قرآنی صفات کا دروازہ کھولتا ہے۔"
+      "en": "You read 90:1–10: the oath, man in hardship, what he thinks, and three questions that answer him.",
+      "ur": "آپ نے 90:1–10 پڑھیں: قسم، مشقت میں انسان، وہ کیا سمجھتا ہے، اور تین سوال جو اسے جواب دیتے ہیں۔"
     }
   }
 }

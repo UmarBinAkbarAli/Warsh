@@ -1,0 +1,440 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 61, Final test (ch61-test, new). Twelve multiple-choice questions at 80 % (9/12 fails, 10/12 passes), two for each strand: trade words (q01–02), weight and price (q03–04), the CL17 exchange (q05–06), tools and patterns (q07–08), Al-Mutaffifin (q09–10) and a made-up exchange combining item, amount, total and reply (q11–12). Every scene fact is written in the question; no sum is asked and no price is judged unrealistic. Added 2026-10-04 in the proposal harvest, batch 8 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-61-content-proposal.md and its review amendments.",
+    "title": "Chapter 61 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الْحَادِي وَالسِّتِّينَ",
+    "titleUr": "باب 61 کا آخری امتحان",
+    "chapter_order": 61,
+    "lesson_order": 10,
+    "estimated_minutes": 10,
+    "xp_reward": 25
+  },
+  "hook": {
+    "ayah": {
+      "surah": 83,
+      "ayah": 1,
+      "label": "Al-Mutaffifin 83:1",
+      "ar": "وَيْلٌ لِّلْمُطَفِّفِينَ",
+      "en": "Woe to those who give less [than due],",
+      "ur": "ناپ اور تول میں کمی کرنے والوں کے لیے خرابی ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/083001.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 61.",
+      "ur": "باب 61 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 61,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch61-test-q01",
+        "topic": {
+          "en": "Seller and buyer",
+          "ur": "بیچنے والا اور خریدار"
+        },
+        "prompt": {
+          "en": "Which word means 'the buyer'?",
+          "ur": "کون سا لفظ 'خریدار' کا مطلب دیتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "الْبَائِعُ",
+            "ur": "الْبَائِعُ"
+          },
+          {
+            "en": "التَّاجِرُ",
+            "ur": "التَّاجِرُ"
+          },
+          {
+            "en": "الْمُشْتَرِي",
+            "ur": "الْمُشْتَرِي"
+          },
+          {
+            "en": "الثَّمَنُ",
+            "ur": "الثَّمَنُ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch61-test-q02",
+        "topic": {
+          "en": "A sale",
+          "ur": "ایک فروخت"
+        },
+        "prompt": {
+          "en": "What does this sentence say?",
+          "ur": "یہ جملہ کیا کہتا ہے؟"
+        },
+        "arabic": "بَاعَ التَّاجِرُ الْبِضَاعَةَ",
+        "options": [
+          {
+            "en": "The merchant sold the goods",
+            "ur": "سوداگر نے سامان بیچا"
+          },
+          {
+            "en": "The merchant bought the goods",
+            "ur": "سوداگر نے سامان خریدا"
+          },
+          {
+            "en": "The merchant lost the goods",
+            "ur": "سوداگر نے سامان کھو دیا"
+          },
+          {
+            "en": "The merchant weighed the goods",
+            "ur": "سوداگر نے سامان تولا"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch61-test-q03",
+        "topic": {
+          "en": "Weighing",
+          "ur": "تولنا"
+        },
+        "prompt": {
+          "en": "Which verb means 'he weighed'?",
+          "ur": "کون سا فعل 'اس نے تولا' کا مطلب دیتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "كَالَ",
+            "ur": "كَالَ"
+          },
+          {
+            "en": "بَاعَ",
+            "ur": "بَاعَ"
+          },
+          {
+            "en": "اشْتَرَى",
+            "ur": "اشْتَرَى"
+          },
+          {
+            "en": "وَزَنَ",
+            "ur": "وَزَنَ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch61-test-q04",
+        "topic": {
+          "en": "Amount and price",
+          "ur": "مقدار اور قیمت"
+        },
+        "prompt": {
+          "en": "What does this sentence say?",
+          "ur": "یہ جملہ کیا کہتا ہے؟"
+        },
+        "arabic": "ثَمَنُ ثَلَاثَةِ أَرْطَالٍ عَشَرَةُ رِيَالَاتٍ",
+        "options": [
+          {
+            "en": "Ten ratls cost three riyals",
+            "ur": "دس رطل کی قیمت تین ریال ہے"
+          },
+          {
+            "en": "Three ratls cost ten riyals",
+            "ur": "تین رطل کی قیمت دس ریال ہے"
+          },
+          {
+            "en": "Three riyals weigh ten ratls",
+            "ur": "تین ریال کا وزن دس رطل ہے"
+          },
+          {
+            "en": "Ten riyals is the loss of three ratls",
+            "ur": "دس ریال تین رطل کا نقصان ہے"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch61-test-q05",
+        "topic": {
+          "en": "Ordering at a stall",
+          "ur": "اسٹال پر آرڈر"
+        },
+        "prompt": {
+          "en": "The seller says the price. The label says: book, ten riyals each, and you want two books. What do you say?",
+          "ur": "بیچنے والا قیمت بتاتا ہے۔ لیبل پر لکھا ہے: کتاب، دس ریال فی عدد، اور آپ کو دو کتابیں چاہئیں۔ آپ کیا کہیں گے؟"
+        },
+        "arabic": "ثَمَنُهُ عَشَرَةُ رِيَالَاتٍ",
+        "options": [
+          {
+            "en": "أُرِيدُ كِتَابَيْنِ.",
+            "ur": "أُرِيدُ كِتَابَيْنِ."
+          },
+          {
+            "en": "مَا هَذَا؟",
+            "ur": "مَا هَذَا؟"
+          },
+          {
+            "en": "لَا، شُكْرًا.",
+            "ur": "لَا، شُكْرًا."
+          },
+          {
+            "en": "كَمْ ثَمَنُ هَذَا الْكِتَابِ؟",
+            "ur": "كَمْ ثَمَنُ هَذَا الْكِتَابِ؟"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch61-test-q06",
+        "topic": {
+          "en": "Correcting the order",
+          "ur": "آرڈر کی اصلاح"
+        },
+        "prompt": {
+          "en": "The seller says 'one book?' but you want two. What do you answer?",
+          "ur": "بیچنے والا کہتا ہے 'ایک کتاب؟' مگر آپ کو دو چاہئیں۔ آپ کیا جواب دیں گے؟"
+        },
+        "arabic": "كِتَابٌ وَاحِدٌ؟",
+        "options": [
+          {
+            "en": "نَعَمْ، شُكْرًا.",
+            "ur": "نَعَمْ، شُكْرًا."
+          },
+          {
+            "en": "كَمْ ثَمَنُ هَذَا الْكِتَابِ؟",
+            "ur": "كَمْ ثَمَنُ هَذَا الْكِتَابِ؟"
+          },
+          {
+            "en": "مَا هَذَا؟",
+            "ur": "مَا هَذَا؟"
+          },
+          {
+            "en": "لَا، كِتَابَيْنِ.",
+            "ur": "لَا، كِتَابَيْنِ."
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch61-test-q07",
+        "topic": {
+          "en": "A tool",
+          "ur": "ایک آلہ"
+        },
+        "prompt": {
+          "en": "Which word means 'scissors'?",
+          "ur": "کون سا لفظ 'قینچی' کا مطلب دیتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "مِفْتَاحٌ",
+            "ur": "مِفْتَاحٌ"
+          },
+          {
+            "en": "مِقَصٌّ",
+            "ur": "مِقَصٌّ"
+          },
+          {
+            "en": "مِكْنَسَةٌ",
+            "ur": "مِكْنَسَةٌ"
+          },
+          {
+            "en": "مِصْبَاحٌ",
+            "ur": "مِصْبَاحٌ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch61-test-q08",
+        "topic": {
+          "en": "A tool pattern",
+          "ur": "آلے کا وزن"
+        },
+        "prompt": {
+          "en": "Which pattern is مِكْنَسَةٌ on?",
+          "ur": "مِكْنَسَةٌ کس وزن پر ہے؟"
+        },
+        "arabic": "مِكْنَسَةٌ",
+        "options": [
+          {
+            "en": "مِفْعَل",
+            "ur": "مِفْعَل"
+          },
+          {
+            "en": "مِفْعَال",
+            "ur": "مِفْعَال"
+          },
+          {
+            "en": "مِفْعَلَة",
+            "ur": "مِفْعَلَة"
+          },
+          {
+            "en": "فَاعِل",
+            "ur": "فَاعِل"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch61-test-q09",
+        "topic": {
+          "en": "Today in Al-Mutaffifin",
+          "ur": "المطففین میں آج"
+        },
+        "prompt": {
+          "en": "According to this ayah, who laughs at whom Today?",
+          "ur": "اس آیت کے مطابق آج کون کس پر ہنس رہا ہے؟"
+        },
+        "arabic": "فَالْيَوْمَ الَّذِينَ آمَنُوا مِنَ الْكُفَّارِ يَضْحَكُونَ",
+        "options": [
+          {
+            "en": "The disbelievers laugh at those who believed",
+            "ur": "کافر ایمان والوں پر ہنس رہے ہیں"
+          },
+          {
+            "en": "Nobody laughs",
+            "ur": "کوئی نہیں ہنس رہا"
+          },
+          {
+            "en": "The sellers laugh at the buyers",
+            "ur": "بیچنے والے خریداروں پر ہنس رہے ہیں"
+          },
+          {
+            "en": "Those who believed laugh at the disbelievers",
+            "ur": "ایمان والے کافروں پر ہنس رہے ہیں"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch61-test-q10",
+        "topic": {
+          "en": "The opening warning",
+          "ur": "ابتدائی تنبیہ"
+        },
+        "prompt": {
+          "en": "What do these three ayat warn against?",
+          "ur": "یہ تین آیات کس چیز سے خبردار کرتی ہیں؟"
+        },
+        "arabic": "وَيْلٌ لِّلْمُطَفِّفِينَ الَّذِينَ إِذَا اكْتَالُوا عَلَى النَّاسِ يَسْتَوْفُونَ وَإِذَا كَالُوهُمْ أَو وَّزَنُوهُمْ يُخْسِرُونَ",
+        "options": [
+          {
+            "en": "Taking in full but giving less in measure and weight",
+            "ur": "پورا لینے مگر ناپ اور تول میں کم دینے سے"
+          },
+          {
+            "en": "Selling goods at a high price",
+            "ur": "سامان مہنگا بیچنے سے"
+          },
+          {
+            "en": "Buying goods without weighing them",
+            "ur": "سامان بغیر تولے خریدنے سے"
+          },
+          {
+            "en": "Trading on the Day of Recompense",
+            "ur": "جزا کے دن تجارت کرنے سے"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch61-test-q11",
+        "topic": {
+          "en": "Accepting a total",
+          "ur": "کل رقم قبول کرنا"
+        },
+        "prompt": {
+          "en": "The label says: pen, five riyals each. You want two pens. The seller says 'The total is ten riyals.' You agree. What do you say?",
+          "ur": "لیبل پر لکھا ہے: قلم، پانچ ریال فی عدد۔ آپ کو دو قلم چاہئیں۔ بیچنے والا کہتا ہے 'کل رقم دس ریال ہے۔' آپ راضی ہیں۔ آپ کیا کہیں گے؟"
+        },
+        "arabic": "الْمَجْمُوعُ عَشَرَةُ رِيَالَاتٍ",
+        "options": [
+          {
+            "en": "لَا، شُكْرًا.",
+            "ur": "لَا، شُكْرًا."
+          },
+          {
+            "en": "مَا هَذَا؟",
+            "ur": "مَا هَذَا؟"
+          },
+          {
+            "en": "نَعَمْ، شُكْرًا.",
+            "ur": "نَعَمْ، شُكْرًا."
+          },
+          {
+            "en": "لَا، قَلَمَيْنِ.",
+            "ur": "لَا، قَلَمَيْنِ."
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch61-test-q12",
+        "topic": {
+          "en": "Asking a price",
+          "ur": "قیمت پوچھنا"
+        },
+        "prompt": {
+          "en": "Which sentence asks 'How much is the price of this pen?'",
+          "ur": "کون سا جملہ پوچھتا ہے 'اس قلم کی قیمت کتنی ہے؟'"
+        },
+        "options": [
+          {
+            "en": "أُرِيدُ قَلَمَيْنِ.",
+            "ur": "أُرِيدُ قَلَمَيْنِ."
+          },
+          {
+            "en": "كَمْ ثَمَنُ هَذَا الْقَلَمِ؟",
+            "ur": "كَمْ ثَمَنُ هَذَا الْقَلَمِ؟"
+          },
+          {
+            "en": "هَذَا قَلَمٌ.",
+            "ur": "هَذَا قَلَمٌ."
+          },
+          {
+            "en": "نَعَمْ، شُكْرًا.",
+            "ur": "نَعَمْ، شُكْرًا."
+          }
+        ],
+        "correct_index": 1
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 61 — trade, weights and tools",
+      "ar": "التِّجَارَةُ وَالْمِيزَانُ",
+      "ur": "باب 61 — تجارت، ترازو اور آلات"
+    },
+    "ayah": {
+      "surah": 17,
+      "ayah": 35,
+      "label": "Al-Isra 17:35",
+      "ar": "وَأَوْفُوا الْكَيْلَ إِذَا كِلْتُمْ وَزِنُوا بِالْقِسْطَاسِ الْمُسْتَقِيمِ ۚ ذَٰلِكَ خَيْرٌ وَأَحْسَنُ تَأْوِيلًا",
+      "en": "And give full measure when you measure, and weigh with an even [i.e., honest] balance. That is the best [way] and best in result.",
+      "ur": "اور جب (کوئی چیز) ناپ کر دینے لگو تو پیمانہ پورا بھرا کرو اور (جب تول کر دو تو) ترازو سیدھی رکھ کر تولا کرو۔ یہ بہت اچھی بات اور انجام کے لحاظ سے بھی بہت بہتر ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/017035.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "وَأَوْفُوا",
+      "الْكَيْلَ"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 61 able to speak at a market stall, tell weighing from measuring, recognise six tool words and read Al-Mutaffifin.",
+      "ur": "آپ باب 61 اس حال میں مکمل کرتے ہیں کہ بازار کے اسٹال پر بات کر سکتے ہیں، تولنے اور ناپنے میں فرق کر سکتے ہیں، چھ آلاتی الفاظ پہچان سکتے ہیں اور المطففین پڑھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 61 complete. Chapter 62: pointing words and the word لَا.",
+      "ur": "باب 61 مکمل۔ باب 62: اشارے کے الفاظ اور لفظ لَا۔"
+    }
+  }
+}

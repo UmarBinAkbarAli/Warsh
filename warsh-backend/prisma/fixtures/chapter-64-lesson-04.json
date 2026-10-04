@@ -2,394 +2,426 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 64, Lesson 4 (ch64-l04, rebuilt in place; the old row was a plain review). Layered analysis with the source of each sentence stated: two from the Quran (3:2 — a whole clause as predicate, its exception left to Chapter 70; 2:284 — the phrase لِّلَّهِ first as predicate) and two written for practice (a place-phrase predicate with أَمَامَ, supplied from Chapter 60; a nominal-clause predicate with its linking ـهَا). Eight tasks: the clause span, the fronted phrase, the place phrase, the nominal clause, the link and the meaning. No other analysis of the Quran verses is asked. Added 2026-10-04 in the proposal harvest, batch 8 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-64-content-proposal.md and its review amendments.",
+    "title": "Reading Layered Sentences",
+    "titleAr": "قِرَاءَةُ الْجُمَلِ الْمُرَكَّبَةِ",
+    "titleUr": "تہہ دار جملے پڑھنا",
     "chapter_order": 64,
     "lesson_order": 4,
-    "chapter_title": "Nominal vs Verbal Sentences (Formal Spiral)",
-    "title": "Chapter Review — Nominal and Verbal Sentences",
-    "titleAr": "مُرَاجَعَةُ الْبَابِ — الْجُمْلَةُ الِاسْمِيَّةُ وَالْجُمْلَةُ الْفِعْلِيَّةُ",
-    "source": "book7_ch64_nominal_verbal.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
       "surah": 2,
-      "ayah": 164,
-      "label": "Al-Baqarah 2:164",
-      "ar": "إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالْأَرْضِ وَاخْتِلَافِ اللَّيْلِ وَالنَّهَارِ وَالْفُلْكِ الَّتِي تَجْرِي فِي الْبَحْرِ بِمَا يَنفَعُ النَّاسَ وَمَا أَنزَلَ اللَّهُ مِنَ السَّمَاءِ مِن مَّاءٍ فَأَحْيَا بِهِ الْأَرْضَ بَعْدَ مَوْتِهَا وَبَثَّ فِيهَا مِن كُلِّ دَابَّةٍ وَتَصْرِيفِ الرِّيَاحِ وَالسَّحَابِ الْمُسَخَّرِ بَيْنَ السَّمَاءِ وَالْأَرْضِ لَآيَاتٍ لِّقَوْمٍ يَعْقِلُونَ",
-      "en": "Indeed, in the creation of the heavens and the earth, and the alternation of the night and the day, and the [great] ships which sail through the sea with that which benefits people, and what Allāh has sent down from the heavens of rain, giving life thereby to the earth after its lifelessness and dispersing therein every [kind of] moving creature, and [His] directing of the winds and the clouds controlled between the heaven and earth are signs for a people who use reason.",
-      "ur": "بےشک آسمانوں اور زمین کے پیدا کرنے میں اور رات اور دن کے ایک دوسرے کے پیچھے آنے جانے میں اور کشتیوں اور جہازوں میں جو دریا میں لوگوں کے فائدے کی چیزیں لے کر رواں ہیں اور مینہ میں جس کو خدا آسمان سے برساتا اور اس سے زمین کو مرنے کے بعد زندہ (یعنی خشک ہوئے پیچھے سرسبز) کردیتا ہے اور زمین پر ہر قسم کے جانور پھیلانے میں اور ہواؤں کے چلانےمیں اور بادلوں میں جو آسمان اور زمین کے درمیان گھرے رہتے ہیں۔ عقلمندوں کے لئے (خدا کی قدرت کی) نشانیاں ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002164.mp3"
+      "ayah": 284,
+      "label": "Al-Baqarah 2:284",
+      "ar": "لِّلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ وَإِن تُبْدُوا مَا فِي أَنفُسِكُمْ أَوْ تُخْفُوهُ يُحَاسِبْكُم بِهِ اللَّهُ ۖ فَيَغْفِرُ لِمَن يَشَاءُ وَيُعَذِّبُ مَن يَشَاءُ ۗ وَاللَّهُ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",
+      "en": "To Allāh belongs whatever is in the heavens and whatever is in the earth. Whether you show what is within yourselves or conceal it, Allāh will bring you to account for it. Then He will forgive whom He wills and punish whom He wills, and Allāh is over all things competent.",
+      "ur": "جو کچھ آسمانوں میں اور جو کچھ زمین میں ہے سب خدا ہی کا ہے۔ تم اپنے دلوں کی بات کو ظاہر کرو گے تو یا چھپاؤ گے تو خدا تم سے اس کا حساب لے گا پھر وہ جسے چاہے مغفرت کرے اور جسے چاہے عذاب دے۔ اور خدا ہر چیز پر قادر ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002284.mp3"
     },
     "noor_intro": {
-      "en": "Chapter 64 has been about the two sentence types and كانَ وأخواتها. Let us bring everything together.",
-      "ur": "باب 64 دو sentence types اور كانَ وأخواتها کے بارے میں رہا ہے۔ آئیے سب کو اکٹھا کریں۔"
+      "en": "Some sentences begin with the predicate. لِّلَّهِ comes first, and what belongs to Him follows.",
+      "ur": "کچھ جملے خبر سے شروع ہوتے ہیں۔ لِّلَّهِ پہلے آتا ہے، اور جو اس کا ہے وہ بعد میں۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Chapter 64 Summary",
-        "ar": "مُلَخَّصُ بَابِ 64",
-        "ur": "باب 64 کا خلاصہ"
+        "en": "Read a layered sentence in three passes",
+        "ar": "قِرَاءَةُ الْجُمْلَةِ الْمُرَكَّبَةِ",
+        "ur": "تہہ دار جملہ تین بار پڑھیں"
       },
       "explanation": {
-        "en": "Key points: 1) Nominal sentence (جُمْلَةٌ اسْمِيَّة): starts with مُبْتَدَأٌ, has خَبَرٌ as predicate. 2) Verbal sentence (جُمْلَةٌ فِعْلِيَّة): starts with verb, فَاعِلٌ follows. 3) كانَ and sisters are incomplete verbs — need subject and predicate. 4) With كانَ: subject=nominative, predicate=accusative.",
-        "ur": "اہم نکات: 1) Nominal sentence (جُمْلَةٌ اسْمِيَّة): مُبْتَدَأٌ سے شروع، خَبَرٌ predicate ہے۔ 2) Verbal sentence (جُمْلَةٌ فِعْلِيَّة): verb سے شروع، فَاعِلٌ follows۔ 3) كانَ اور بہنیں نامکمل افعال ہیں — subject اور predicate چاہیئے۔ 4) كانَ کے ساتھ: subject=nominative، predicate=accusative۔"
+        "en": "First find the outer مبتدأ. Second, mark where the whole predicate starts and stops. Third, read what is inside. The cards below are marked: two are from the Quran (3:2 and 2:284) and two are written for practice.",
+        "ur": "پہلے باہر کا مبتدا ڈھونڈیں۔ دوسرے، نشان لگائیں کہ پوری خبر کہاں سے شروع اور کہاں ختم ہوتی ہے۔ تیسرے، پڑھیں کہ اندر کیا ہے۔ نیچے کے کارڈ نشان زد ہیں: دو قرآن سے (3:2 اور 2:284) اور دو مشق کے لیے لکھے گئے۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "الْجُمْلَةُ الِاسْمِيَّةُ",
-        "ar_plain": "الجملة الاسمية",
-        "translit": "al-jumlatu al-ismiyya",
-        "en": "the nominal sentence",
-        "ur": "nominal sentence"
+        "ar": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ",
+        "ar_plain": "الله لا اله الا هو",
+        "translit": "al-lahu lā ʾilāha ʾillā huwa",
+        "en": "Allah — there is no god except Him",
+        "ur": "اللہ — اس کے سوا کوئی معبود نہیں"
       },
       "explanation": {
-        "en": "A nominal sentence begins with a noun or pronoun (مُبْتَدَأٌ) and has a predicate (خَبَرٌ). Both are in the nominative case when both are single words. Example: اللَّهُ غَافِرٌ.",
-        "ur": "A nominal sentence noun یا pronoun (مُبْتَدَأٌ) سے شروع ہوتی ہے اور ایک predicate (خَبَرٌ) رکھتی ہے۔ دونوں single words ہونے پر nominative case میں ہوتے ہیں۔ مثال: اللَّهُ غَافِرٌ۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "جملة"
+        "en": "Quran. اللَّهُ is the outer مبتدأ. The whole predicate is the clause لَا إِلَٰهَ إِلَّا هُوَ, read as a whole; its inner parts (the exception) are Chapter 70's. (Aal Imran 3:2) (Al Imran 3:2)",
+        "ur": "قرآن۔ اللَّهُ باہر کا مبتدا ہے۔ پوری خبر جملہ لَا إِلَٰهَ إِلَّا هُوَ ہے، جو پورا پڑھا جاتا ہے؛ اس کے اندرونی حصے (استثنا) باب 70 کے ہیں۔ (آل عمران 3:2) (Al Imran 3:2)"
       }
     },
     {
-      "type": "WORD",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "خَبَرٌ",
-        "ar_plain": "خبر",
-        "translit": "khabarun",
-        "en": "predicate of a nominal sentence",
-        "ur": "nominal sentence کا predicate"
+        "ar": "لِّلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ",
+        "ar_plain": "لله ما في السماوات وما في الارض",
+        "translit": "llillahi mā fī as-samāwaāti wamā fī al-ʾarḍi",
+        "en": "To Allah belongs what is in the heavens and what is in the earth",
+        "ur": "اللہ ہی کا ہے جو آسمانوں میں ہے اور جو زمین میں ہے"
       },
       "explanation": {
-        "en": "The خَبَر is the predicate of a nominal sentence — it describes or defines the مُبْتَدَأٌ. Example: اللَّهُ غَافِرٌ — here غَافِرٌ is the خَبَر.",
-        "ur": "خَبَر ایک nominal sentence کا predicate ہے — یہ مُبْتَدَأٌ کو بیان یا تعریف کرتا ہے۔ مثال: اللَّهُ غَافِرٌ — یہاں غَافِرٌ خَبَر ہے۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "خبر"
+        "en": "Quran. The phrase لِّلَّهِ comes first and is the predicate ('to Allah belongs'); the مبتدأ comes after it: مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ, 'what is in the heavens and what is in the earth'. (Al-Baqarah 2:284) (Al-Baqarah 2:284)",
+        "ur": "قرآن۔ مرکب لِّلَّهِ پہلے آتا ہے اور خبر ہے ('اللہ کا ہے')؛ مبتدا اس کے بعد آتا ہے: مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ، 'جو آسمانوں میں ہے اور جو زمین میں ہے'۔ (البقرہ 2:284) (Al-Baqarah 2:284)"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "كانَ وأخواتها — The incomplete/sister verbs",
-        "ar": "كَانَ وَأَخَوَاتُهَا — الأَفْعَالُ النَّاقِصَةُ",
-        "ur": "كَانَ اور اس کی بہنیں — نامکمل افعال"
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "الْمَكْتَبَةُ أَمَامَ الْمَدْرَسَةِ",
+        "ar_plain": "المكتبة امام المدرسة",
+        "translit": "al-maktabatu ʾamāma al-madrasati",
+        "en": "The library is in front of the school.",
+        "ur": "لائبریری مدرسے کے سامنے ہے۔"
       },
       "explanation": {
-        "en": "كانَ and its sisters (صارَ، أَصْبَحَ، أَمْسَى، ظَلَّ، etc.) are incomplete verbs — they need a subject (in nominative) and a predicate (in accusative). Example: كَانَ اللَّهُ غَافِرًا — subject اللَّهُ is nominative, predicate غَافِرًا is accusative.",
-        "ur": "كَانَ اور اس کی بہنیں (صارَ، أَصْبَحَ، أَمْسَى، ظَلَّ، وغیرہ) نامکمل افعال ہیں — انہیں ایک subject (nominative میں) اور ایک predicate (accusative میں) چاہیئے۔ مثال: كَانَ اللَّهُ غَافِرًا — subject اللَّهُ nominative میں، predicate غَافِرًا accusative میں۔"
+        "en": "Written for practice, not from the Quran. الْمَكْتَبَةُ is the مبتدأ, and the predicate is the place phrase أَمَامَ الْمَدْرَسَةِ ('in front of the school'). Why a place word takes the ending it does is Chapter 66's.",
+        "ur": "مشق کے لیے لکھا گیا، قرآن سے نہیں۔ الْمَكْتَبَةُ مبتدا ہے، اور خبر جگہ کا مرکب أَمَامَ الْمَدْرَسَةِ ('مدرسے کے سامنے') ہے۔ جگہ کا لفظ اپنی حرکت کیوں لیتا ہے، یہ باب 66 کا موضوع ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "الْمَدْرَسَةُ طُلَّابُهَا كَثِيرُونَ",
+        "ar_plain": "المدرسة طلابها كثيرون",
+        "translit": "al-madrasatu ṭullābuhā kathīrūna",
+        "en": "The school — its students are many.",
+        "ur": "مدرسہ — اس کے طالب علم بہت ہیں۔"
+      },
+      "explanation": {
+        "en": "Written for practice, not from the Quran. الْمَدْرَسَةُ is the outer مبتدأ. The predicate is the whole nominal clause طُلَّابُهَا كَثِيرُونَ, and the ـهَا links it back to الْمَدْرَسَةُ.",
+        "ur": "مشق کے لیے لکھا گیا، قرآن سے نہیں۔ الْمَدْرَسَةُ باہر کا مبتدا ہے۔ خبر پورا اسمیہ جملہ طُلَّابُهَا كَثِيرُونَ ہے، اور ـهَا اسے الْمَدْرَسَةُ کی طرف لوٹاتا ہے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Quran and practice sentences",
+        "ur": "قرآن اور مشق کے جملے"
+      },
+      "body": {
+        "en": "The cards say which sentence is from the Quran and which was written for this lesson. Inside a phrase, the words keep their own endings: a noun after لِـ or أَمَامَ stays in its own case even though the whole phrase is the predicate.",
+        "ur": "کارڈ بتاتے ہیں کہ کون سا جملہ قرآن سے ہے اور کون سا اس سبق کے لیے لکھا گیا۔ مرکب کے اندر الفاظ اپنی حرکتیں خود رکھتے ہیں: لِـ یا أَمَامَ کے بعد اسم اپنی حالت میں رہتا ہے، چاہے پورا مرکب خبر ہو۔"
       }
     }
   ],
   "exercises": [
     {
-      "type": "MATCHING",
+      "type": "TAP_TRANSLATION",
       "id": "ch64-l04-ex01",
-      "left_column": [
-        {
-          "ar": "مُبْتَدَأٌ",
-          "ar_plain": "مبتدأ",
-          "translit": "mubtada'un",
-          "en": "subject of nominal sentence",
-          "ur": "nominal sentence کا subject"
-        },
-        {
-          "ar": "خَبَرٌ",
-          "ar_plain": "خبر",
-          "translit": "khabarun",
-          "en": "predicate",
-          "ur": "predicate"
-        },
-        {
-          "ar": "فَاعِلٌ",
-          "ar_plain": "فاعل",
-          "translit": "faa'ilun",
-          "en": "subject of verbal sentence",
-          "ur": "verbal sentence کا subject"
-        },
-        {
-          "ar": "كَانَ",
-          "ar_plain": "كان",
-          "translit": "kaana",
-          "en": "the incomplete verb 'was'",
-          "ur": "نامکمل فعل 'تھا'"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "predicate",
-          "ur": "predicate"
-        },
-        {
-          "en": "the incomplete verb 'was'",
-          "ur": "نامکمل فعل 'تھا'"
-        },
-        {
-          "en": "subject of nominal sentence",
-          "ur": "nominal sentence کا subject"
-        },
-        {
-          "en": "subject of verbal sentence",
-          "ur": "verbal sentence کا subject"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          2
-        ],
-        [
-          1,
-          0
-        ],
-        [
-          2,
-          3
-        ],
-        [
-          3,
-          1
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch64-l04-ex02",
-      "target_translation": {
-        "en": "The boy became patient.",
-        "ur": "لڑکا صابر بن گیا۔"
-      },
-      "tiles": [
-        {
-          "ar": "صَارَ",
-          "ar_plain": "صار",
-          "translit": "saara",
-          "en": "became",
-          "ur": "بن گیا"
-        },
-        {
-          "ar": "الْوَلَدُ",
-          "ar_plain": "الولد",
-          "translit": "al-waladu",
-          "en": "the boy",
-          "ur": "لڑکا"
-        },
-        {
-          "ar": "صَبُورًا",
-          "ar_plain": "صابرا",
-          "translit": "saabiran",
-          "en": "patient",
-          "ur": "صابر"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch64-l04-ex03",
-      "statement": {
-        "en": "In كَانَ اللَّهُ غَافِرًا, غَافِرًا is in the accusative case because it is the خَبَر of كَانَ.",
-        "ur": "كَانَ اللَّهُ غَافِرًا میں، غَافِرًا accusative case میں ہے کیونکہ یہ كَانَ کا خَبَر ہے۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch64-l04-ex04",
-      "mode": "TAP",
-      "sentence_ar": "لَيْسَ الْكَذَّابُ ___",
-      "hint": {
-        "en": "لَيْسَ takes a predicate in accusative. صَادِقًا is the predicate.",
-        "ur": "لَيْسَ ایک predicate accusative میں لیتا ہے۔ صَادِقًا predicate ہے۔"
+      "prompt": {
+        "ar": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ",
+        "ar_plain": "الله لا اله الا هو",
+        "translit": "al-lahu lā ʾilāha ʾillā huwa",
+        "en": "(3:2: what is the whole predicate of اللَّهُ?)",
+        "ur": "(3:2: اللَّهُ کی پوری خبر کیا ہے؟)"
       },
       "options": [
         {
-          "ar": "صَادِقًا",
-          "ar_plain": "صادقا",
-          "translit": "saadiqan",
-          "en": "truthful",
-          "ur": "سچا"
+          "en": "The whole clause لَا إِلَٰهَ إِلَّا هُوَ",
+          "ur": "پورا جملہ لَا إِلَٰهَ إِلَّا هُوَ"
         },
         {
-          "ar": "صَادِقٌ",
-          "ar_plain": "صادق",
-          "translit": "saadiqun",
-          "en": "truthful (nominative)",
-          "ur": "سچا (nominative)"
+          "en": "Only هُوَ",
+          "ur": "صرف هُوَ"
         },
         {
-          "ar": "صِدْقٌ",
-          "ar_plain": "صدق",
-          "translit": "Sidqun",
-          "en": "truthfulness",
-          "ur": "سچائی"
+          "en": "Only إِلَٰهَ",
+          "ur": "صرف إِلَٰهَ"
         },
         {
-          "ar": "كَاذِبٌ",
-          "ar_plain": "كاذب",
-          "translit": "kaadhibun",
-          "en": "lying",
-          "ur": "جھوٹ بولنے والا"
+          "en": "Only لَا",
+          "ur": "صرف لَا"
         }
       ],
-      "correct_answer": {
-        "ar": "صَادِقًا",
-        "ar_plain": "صادقا",
-        "translit": "saadiqan",
-        "en": "truthful",
-        "ur": "سچا"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch64-l04-ex05",
-      "sentence_ar": "كَانَ اللَّهُ غَافِرًا",
-      "words": [
-        {
-          "ar": "كَانَ",
-          "ar_plain": "كان",
-          "translit": "kaana",
-          "en": "was",
-          "ur": "تھا"
-        },
-        {
-          "ar": "اللَّهُ",
-          "ar_plain": "الله",
-          "translit": "allaahu",
-          "en": "Allah",
-          "ur": "اللہ"
-        },
-        {
-          "ar": "غَافِرًا",
-          "ar_plain": "غافرا",
-          "translit": "ghaafiran",
-          "en": "Forgiving",
-          "ur": "بخشنے والا"
-        }
-      ],
-      "available_roles": [
-        "VERB",
-        "SUBJECT",
-        "OBJECT",
-        "PREDICATE"
-      ],
-      "correct_roles": [
-        "VERB",
-        "SUBJECT",
-        "PREDICATE"
-      ],
+      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "كَانَ (incomplete verb), اللَّهُ (subject in nominative), غَافِرًا (predicate in accusative).",
-        "ur": "كَانَ (نامکمل verb)، اللَّهُ (subject nominative میں)، غَافِرًا (predicate accusative میں)۔"
+        "en": "After اللَّهُ the whole clause is the predicate; you read it as one block.",
+        "ur": "اللَّهُ کے بعد پورا جملہ خبر ہے؛ آپ اسے ایک ٹکڑے کی طرح پڑھتے ہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l04-ex02",
+      "prompt": {
+        "ar": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ",
+        "ar_plain": "الله لا اله الا هو",
+        "translit": "al-lahu lā ʾilāha ʾillā huwa",
+        "en": "(3:2: what does it say?)",
+        "ur": "(3:2: یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "Allah is one of the gods",
+          "ur": "اللہ معبودوں میں سے ایک ہے"
+        },
+        {
+          "en": "Allah — there is no god except Him",
+          "ur": "اللہ — اس کے سوا کوئی معبود نہیں"
+        },
+        {
+          "en": "There is no god, and Allah is not He",
+          "ur": "کوئی معبود نہیں، اور اللہ وہ نہیں"
+        },
+        {
+          "en": "Allah and He are two gods",
+          "ur": "اللہ اور وہ دو معبود ہیں"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The sentence says there is no god except Him.",
+        "ur": "جملہ کہتا ہے کہ اس کے سوا کوئی معبود نہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l04-ex03",
+      "prompt": {
+        "ar": "لِّلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ",
+        "ar_plain": "لله ما في السماوات وما في الارض",
+        "translit": "llillahi mā fī as-samāwaāti wamā fī al-ʾarḍi",
+        "en": "(2:284: which part comes first as the predicate?)",
+        "ur": "(2:284: کون سا حصہ پہلے خبر کے طور پر آتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "مَا فِي السَّمَاوَاتِ",
+          "ur": "مَا فِي السَّمَاوَاتِ"
+        },
+        {
+          "en": "فِي الْأَرْضِ",
+          "ur": "فِي الْأَرْضِ"
+        },
+        {
+          "en": "لِّلَّهِ — 'to Allah belongs'",
+          "ur": "لِّلَّهِ — 'اللہ کا ہے'"
+        },
+        {
+          "en": "الْأَرْضِ",
+          "ur": "الْأَرْضِ"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The phrase لِّلَّهِ comes first; the مبتدأ follows.",
+        "ur": "مرکب لِّلَّهِ پہلے آتا ہے؛ مبتدا بعد میں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l04-ex04",
+      "prompt": {
+        "ar": "لِّلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ",
+        "ar_plain": "لله ما في السماوات وما في الارض",
+        "translit": "llillahi mā fī as-samāwaāti wamā fī al-ʾarḍi",
+        "en": "(2:284: what does it say?)",
+        "ur": "(2:284: یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "Allah is in the heavens and in the earth",
+          "ur": "اللہ آسمانوں اور زمین میں ہے"
+        },
+        {
+          "en": "The heavens and the earth belong to people",
+          "ur": "آسمان اور زمین لوگوں کے ہیں"
+        },
+        {
+          "en": "Allah made the earth and not the heavens",
+          "ur": "اللہ نے زمین بنائی آسمان نہیں"
+        },
+        {
+          "en": "To Allah belongs what is in the heavens and what is in the earth",
+          "ur": "اللہ ہی کا ہے جو آسمانوں میں ہے اور جو زمین میں ہے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لِّلَّهِ is 'to Allah (belongs)', then what is in the heavens and the earth.",
+        "ur": "لِّلَّهِ کا مطلب 'اللہ کا (ہے)'، پھر جو آسمانوں اور زمین میں ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l04-ex05",
+      "prompt": {
+        "ar": "الْمَكْتَبَةُ أَمَامَ الْمَدْرَسَةِ",
+        "ar_plain": "المكتبة امام المدرسة",
+        "translit": "al-maktabatu ʾamāma al-madrasati",
+        "en": "(practice sentence: what kind of predicate is أَمَامَ الْمَدْرَسَةِ?)",
+        "ur": "(مشق کا جملہ: أَمَامَ الْمَدْرَسَةِ کس قسم کی خبر ہے؟)"
+      },
+      "options": [
+        {
+          "en": "A phrase that tells where the library is",
+          "ur": "ایک مرکب جو بتاتا ہے کہ لائبریری کہاں ہے"
+        },
+        {
+          "en": "A verbal sentence",
+          "ur": "فعلیہ جملہ"
+        },
+        {
+          "en": "A single describing word",
+          "ur": "ایک اکیلا وصف"
+        },
+        {
+          "en": "The مبتدأ of the sentence",
+          "ur": "جملے کا مبتدا"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَمَامَ الْمَدْرَسَةِ is a place phrase and it is the predicate.",
+        "ur": "أَمَامَ الْمَدْرَسَةِ جگہ کا مرکب ہے اور یہی خبر ہے۔"
       }
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch64-l04-ex06",
       "prompt": {
-        "ar": "الْكِتَابُ عَلَى الْمَكْتَبِ",
-        "ar_plain": "الكتاب على المكتب",
-        "translit": "al-kitaabu 'alaa al-maktabi",
-        "en": "The book is on the desk",
-        "ur": "کتاب میز پر ہے"
+        "ar": "الْمَدْرَسَةُ طُلَّابُهَا كَثِيرُونَ",
+        "ar_plain": "المدرسة طلابها كثيرون",
+        "translit": "al-madrasatu ṭullābuhā kathīrūna",
+        "en": "(practice sentence: which words are the whole predicate?)",
+        "ur": "(مشق کا جملہ: پوری خبر کون سے الفاظ ہیں؟)"
       },
       "options": [
         {
-          "en": "The book is on the desk",
-          "ur": "کتاب میز پر ہے"
+          "en": "كَثِيرُونَ",
+          "ur": "كَثِيرُونَ"
         },
         {
-          "en": "The book is useful",
-          "ur": "کتاب مفید ہے"
+          "en": "طُلَّابُهَا كَثِيرُونَ",
+          "ur": "طُلَّابُهَا كَثِيرُونَ"
         },
         {
-          "en": "The useful book",
-          "ur": "مفید کتاب"
+          "en": "الْمَدْرَسَةُ طُلَّابُهَا",
+          "ur": "الْمَدْرَسَةُ طُلَّابُهَا"
         },
         {
-          "en": "The book was on the desk",
-          "ur": "کتاب میز پر تھی"
+          "en": "طُلَّابُهَا",
+          "ur": "طُلَّابُهَا"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The whole clause طُلَّابُهَا كَثِيرُونَ is the predicate of الْمَدْرَسَةُ.",
+        "ur": "پورا جملہ طُلَّابُهَا كَثِيرُونَ الْمَدْرَسَةُ کی خبر ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l04-ex07",
+      "prompt": {
+        "ar": "طُلَّابُهَا",
+        "ar_plain": "طلابها",
+        "translit": "ṭullābuhā",
+        "en": "(in the same sentence, what does ـهَا link back to?)",
+        "ur": "(اسی جملے میں ـهَا کس کی طرف لوٹتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "كَثِيرُونَ — many",
+          "ur": "كَثِيرُونَ — بہت"
+        },
+        {
+          "en": "طُلَّابُ — students",
+          "ur": "طُلَّابُ — طالب علم"
+        },
+        {
+          "en": "Nothing",
+          "ur": "کچھ نہیں"
+        },
+        {
+          "en": "الْمَدْرَسَةُ — the school",
+          "ur": "الْمَدْرَسَةُ — مدرسہ"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ـهَا is 'its' and points back to the outer مبتدأ, الْمَدْرَسَةُ.",
+        "ur": "ـهَا کا مطلب 'اس کے' ہے اور یہ باہر کے مبتدا الْمَدْرَسَةُ کی طرف لوٹتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l04-ex08",
+      "prompt": {
+        "ar": "الْمَدْرَسَةُ طُلَّابُهَا كَثِيرُونَ",
+        "ar_plain": "المدرسة طلابها كثيرون",
+        "translit": "al-madrasatu ṭullābuhā kathīrūna",
+        "en": "(practice sentence: what does it say?)",
+        "ur": "(مشق کا جملہ: یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "The school has many students",
+          "ur": "مدرسے میں بہت طالب علم ہیں"
+        },
+        {
+          "en": "The school is one student",
+          "ur": "مدرسہ ایک طالب علم ہے"
+        },
+        {
+          "en": "The students have many schools",
+          "ur": "طالب علموں کے بہت مدرسے ہیں"
+        },
+        {
+          "en": "The school is many",
+          "ur": "مدرسہ بہت ہے"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "عَلَى الْمَكْتَبِ is a prepositional phrase خَبَر — 'on the desk.' This is a nominal sentence with a prepositional phrase as the predicate.",
-        "ur": "عَلَى الْمَكْتَبِ ایک prepositional phrase خَبَر ہے — 'میز پر'۔ یہ ایک nominal sentence ہے جس میں prepositional phrase predicate ہے۔"
+        "en": "Its students are many: the school has many students.",
+        "ur": "اس کے طالب علم بہت ہیں: مدرسے میں بہت طالب علم ہیں۔"
       }
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch64-l04-ex07",
-      "statement": {
-        "en": "أَصْبَحَ and أَمْسَى are sisters of كَانَ — incomplete verbs meaning 'became' (morning and evening variants).",
-        "ur": "أَصْبَحَ اور أَمْسَى كَانَ کی بہنیں ہیں — نامکمل افعال جن کا مطلب 'بن گیا' (صبح اور شام کے variants)۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch64-l04-ex08",
-      "mode": "TYPE",
-      "sentence_ar": "قَامَ الْوَلَدُ: الْوَلَدُ ___",
-      "hint": {
-        "en": "In a verbal sentence, the subject after the verb is called the فَاعِل.",
-        "ur": "verbal sentence میں، verb کے بعد subject کو فَاعِل کہتے ہیں۔"
-      },
-      "correct_answer": {
-        "ar": "فَاعِلٌ",
-        "ar_plain": "فاعل",
-        "translit": "faa'ilun",
-        "en": "doer/subject",
-        "ur": "فاعل"
-      },
-      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Chapter 64 Review — The two sentence types and incomplete verbs",
-      "ar": "مُرَاجَعَةُ الْبَابِ الرَّابِعِ وَالسِّتِّينَ — نَوْعَا الْجُمْلَةِ وَالْأَفْعَالُ النَّاقِصَةُ",
-      "ur": "باب 64 کا جائزہ — جملوں کے دو قسم اور نامکمل افعال"
+      "en": "The predicate comes first",
+      "ar": "الْخَبَرُ مُقَدَّمٌ",
+      "ur": "خبر پہلے"
     },
     "ayah": {
       "surah": 2,
-      "ayah": 164,
-      "label": "Al-Baqarah 2:164",
-      "ar": "إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالْأَرْضِ وَاخْتِلَافِ اللَّيْلِ وَالنَّهَارِ وَالْفُلْكِ الَّتِي تَجْرِي فِي الْبَحْرِ بِمَا يَنفَعُ النَّاسَ وَمَا أَنزَلَ اللَّهُ مِنَ السَّمَاءِ مِن مَّاءٍ فَأَحْيَا بِهِ الْأَرْضَ بَعْدَ مَوْتِهَا وَبَثَّ فِيهَا مِن كُلِّ دَابَّةٍ وَتَصْرِيفِ الرِّيَاحِ وَالسَّحَابِ الْمُسَخَّرِ بَيْنَ السَّمَاءِ وَالْأَرْضِ لَآيَاتٍ لِّقَوْمٍ يَعْقِلُونَ",
-      "en": "Indeed, in the creation of the heavens and the earth, and the alternation of the night and the day, and the [great] ships which sail through the sea with that which benefits people, and what Allāh has sent down from the heavens of rain, giving life thereby to the earth after its lifelessness and dispersing therein every [kind of] moving creature, and [His] directing of the winds and the clouds controlled between the heaven and earth are signs for a people who use reason.",
-      "ur": "بےشک آسمانوں اور زمین کے پیدا کرنے میں اور رات اور دن کے ایک دوسرے کے پیچھے آنے جانے میں اور کشتیوں اور جہازوں میں جو دریا میں لوگوں کے فائدے کی چیزیں لے کر رواں ہیں اور مینہ میں جس کو خدا آسمان سے برساتا اور اس سے زمین کو مرنے کے بعد زندہ (یعنی خشک ہوئے پیچھے سرسبز) کردیتا ہے اور زمین پر ہر قسم کے جانور پھیلانے میں اور ہواؤں کے چلانےمیں اور بادلوں میں جو آسمان اور زمین کے درمیان گھرے رہتے ہیں۔ عقلمندوں کے لئے (خدا کی قدرت کی) نشانیاں ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002164.mp3"
+      "ayah": 284,
+      "label": "Al-Baqarah 2:284",
+      "ar": "لِّلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ وَإِن تُبْدُوا مَا فِي أَنفُسِكُمْ أَوْ تُخْفُوهُ يُحَاسِبْكُم بِهِ اللَّهُ ۖ فَيَغْفِرُ لِمَن يَشَاءُ وَيُعَذِّبُ مَن يَشَاءُ ۗ وَاللَّهُ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",
+      "en": "To Allāh belongs whatever is in the heavens and whatever is in the earth. Whether you show what is within yourselves or conceal it, Allāh will bring you to account for it. Then He will forgive whom He wills and punish whom He wills, and Allāh is over all things competent.",
+      "ur": "جو کچھ آسمانوں میں اور جو کچھ زمین میں ہے سب خدا ہی کا ہے۔ تم اپنے دلوں کی بات کو ظاہر کرو گے تو یا چھپاؤ گے تو خدا تم سے اس کا حساب لے گا پھر وہ جسے چاہے مغفرت کرے اور جسے چاہے عذاب دے۔ اور خدا ہر چیز پر قادر ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002284.mp3"
     },
     "highlighted_word_indices": [
       0,
-      40
+      1
+    ],
+    "highlighted_words": [
+      "لِّلَّهِ",
+      "مَا"
     ],
     "noor_explanation": {
-      "en": "One long nominal sentence with إِنَّ: its predicate (فِي خَلْقِ السَّمَاوَاتِ … and everything joined to it) comes first; its subject, لَآيَاتٍ (\"signs\"), comes last. لِقَوْمٍ يَعْقِلُونَ = \"for people who reason\".",
-      "ur": "إِنَّ والا ایک لمبا جملہ اسمیہ: اس کی خبر (فِي خَلْقِ السَّمَاوَاتِ … اور جو اس سے جڑا ہے) پہلے آتی ہے؛ اس کا اسم، لَآيَاتٍ (\"نشانیاں\")، آخر میں۔ لِقَوْمٍ يَعْقِلُونَ = \"عقل والوں کے لیے\"۔"
+      "en": "لِّلَّهِ مَا فِي السَّمَاوَاتِ — the phrase لِّلَّهِ is the predicate and stands first; مَا فِي السَّمَاوَاتِ is what belongs to Him.",
+      "ur": "لِّلَّهِ مَا فِي السَّمَاوَاتِ — مرکب لِّلَّهِ خبر ہے اور پہلے آتا ہے؛ مَا فِي السَّمَاوَاتِ وہ ہے جو اس کا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Chapter 64 is complete. You now understand nominal vs verbal sentences and كانَ وأخواتها. These are the two pillars of Arabic sentence structure.",
-      "ur": "باب 64 مکمل ہو گیا۔ اب آپ nominal بمقابل verbal sentences اور كانَ وأخواتها سمجھتے ہیں۔ یہ عربی جملے کی ساخت کے دو ستون ہیں۔"
+      "en": "Three passes: the outer مبتدأ, the whole predicate, and what is inside. You read two Quran sentences and two practice sentences that way.",
+      "ur": "تین بار: باہر کا مبتدا، پوری خبر، اور جو اندر ہے۔ آپ نے دو قرآنی جملے اور دو مشق کے جملے اسی طرح پڑھے۔"
     }
   }
 }

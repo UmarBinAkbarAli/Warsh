@@ -2,438 +2,477 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 65, Display 3 (ch65-l02, rebuilt in place; the old row listed 'seven' sisters and a 'ten tenses' idea). Three sisters, each with a model, a guided and a fresh decision (6 tasks), then two set comparisons (the verb taught with 'by morning'; the one with no time of day) that ask for the taught association and never reject a grammatical alternative. Only third-person past forms are taught; أَصْبَحْتُم in 3:103 is given whole. The glosses are shades in context, not universal translations. Added 2026-10-04 in the proposal harvest, batch 8 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-65-content-proposal.md and its review amendments.",
+    "title": "Three Sisters of كَانَ — أَصْبَحَ, أَمْسَى, صَارَ",
+    "titleAr": "أَخَوَاتُ كَانَ — أَصْبَحَ وَأَمْسَى وَصَارَ",
+    "titleUr": "كَانَ کی تین بہنیں — أَصْبَحَ، أَمْسَى، صَارَ",
     "chapter_order": 65,
     "lesson_order": 3,
-    "chapter_title": "كان وأخواتها — Incomplete Verbs",
-    "title": "كَانَ in Different Tenses — Present, Past, and Command",
-    "titleAr": "كَانَ فِي الْأَزْمِنَةِ الْمُخْتَلِفَةِ",
-    "source": "book7_ch65_kana_tenses.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 57,
-      "ayah": 20,
-      "label": "Al-Hadid 57:20",
-      "ar": "اعْلَمُوا أَنَّمَا الْحَيَاةُ الدُّنْيَا لَعِبٌ وَلَهْوٌ وَزِينَةٌ وَتَفَاخُرٌ بَيْنَكُمْ وَتَكَاثُرٌ فِي الْأَمْوَالِ وَالْأَوْلَادِ ۖ كَمَثَلِ غَيْثٍ أَعْجَبَ الْكُفَّارَ نَبَاتُهُ ثُمَّ يَهِيجُ فَتَرَاهُ مُصْفَرًّا ثُمَّ يَكُونُ حُطَامًا ۖ وَفِي الْآخِرَةِ عَذَابٌ شَدِيدٌ وَمَغْفِرَةٌ مِّنَ اللَّهِ وَرِضْوَانٌ ۚ وَمَا الْحَيَاةُ الدُّنْيَا إِلَّا مَتَاعُ الْغُرُورِ",
-      "en": "Know that the life of this world is but amusement and diversion and adornment and boasting to one another and competition in increase of wealth and children - like the example of a rain whose [resulting] plant growth pleases the tillers; then it dries and you see it turned yellow; then it becomes [scattered] debris. And in the Hereafter is severe punishment and forgiveness from Allāh and approval. And what is the worldly life except the enjoyment of delusion.",
-      "ur": "جان رکھو کہ دنیا کی زندگی محض کھیل اور تماشا اور زینت (وآرائش) اور تمہارے آپس میں فخر (وستائش) اور مال واولاد کی ایک دوسرے سے زیادہ طلب (وخواہش) ہے (اس کی مثال ایسی ہے) جیسے بارش کہ (اس سے کھیتی اُگتی اور) کسانوں کو کھیتی بھلی لگتی ہے پھر وہ خوب زور پر آتی ہے پھر (اے دیکھنے والے) تو اس کو دیکھتا ہے کہ (پک کر) زرد پڑ جاتی ہے پھر چورا چورا ہوجاتی ہے اور آخرت میں (کافروں کے لئے) عذاب شدید اور (مومنوں کے لئے) خدا کی طرف سے بخشش اور خوشنودی ہے۔ اور دنیا کی زندگی تو متاع فریب ہے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/057020.mp3"
+      "surah": 3,
+      "ayah": 103,
+      "label": "Al Imran 3:103",
+      "ar": "وَاعْتَصِمُوا بِحَبْلِ اللَّهِ جَمِيعًا وَلَا تَفَرَّقُوا ۚ وَاذْكُرُوا نِعْمَتَ اللَّهِ عَلَيْكُمْ إِذْ كُنتُمْ أَعْدَاءً فَأَلَّفَ بَيْنَ قُلُوبِكُمْ فَأَصْبَحْتُم بِنِعْمَتِهِ إِخْوَانًا وَكُنتُمْ عَلَىٰ شَفَا حُفْرَةٍ مِّنَ النَّارِ فَأَنقَذَكُم مِّنْهَا ۗ كَذَٰلِكَ يُبَيِّنُ اللَّهُ لَكُمْ آيَاتِهِ لَعَلَّكُمْ تَهْتَدُونَ",
+      "en": "And hold firmly to the rope of Allāh all together and do not become divided. And remember the favor of Allāh upon you - when you were enemies and He brought your hearts together and you became, by His favor, brothers. And you were on the edge of a pit of the Fire, and He saved you from it. Thus does Allāh make clear to you His verses that you may be guided.",
+      "ur": "اور سب مل کر خدا کی (ہدایت کی رسی) کو مضبوط پکڑے رہنا اور متفرق نہ ہونا اور خدا کی اس مہربانی کو یاد کرو جب تم ایک دوسرے کے دشمن تھے تو اس نے تمہارے دلوں میں الفت ڈال دی اور تم اس کی مہربانی سے بھائی بھائی ہوگئے اور تم آگ کے گڑھے کے کنارے تک پہنچ چکے تھے تو خدا نے تم کو اس سے بچا لیا اس طرح خدا تم کو اپنی آیتیں کھول کھول کر سناتا ہے تاکہ تم ہدایت پاؤ",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003103.mp3"
     },
     "noor_intro": {
-      "en": "Today we see how كَانَ changes: past كَانَ, present يَكُونُ, and command كُنْ (be!). Near the end of this ayah: ثُمَّ يَكُونُ حُطَامًا — 'then it becomes debris': يَكُونُ with its accusative خَبَر حُطَامًا. The ayah also opens with اعْلَمُوا أَنَّ — أَنَّ takes an اِسْم and a خَبَر too, but it belongs to the إِنَّ family: إِنَّ makes its اِسْم accusative, while كَانَ makes its خَبَر accusative.",
-      "ur": "آج ہم دیکھیں گے کہ كَانَ کیسے بدلتا ہے: ماضی كَانَ، مضارع يَكُونُ اور امر كُنْ (ہو جا!)۔ اس آیت کے آخر کے قریب: ثُمَّ يَكُونُ حُطَامًا — 'پھر وہ چورا ہو جاتا ہے': يَكُونُ اپنی منصوب خبر حُطَامًا کے ساتھ۔ آیت اعْلَمُوا أَنَّ سے شروع ہوتی ہے — أَنَّ بھی اسم اور خبر لیتا ہے مگر وہ إِنَّ کے خاندان سے ہے: إِنَّ اپنے اسم کو منصوب کرتا ہے جبکہ كَانَ اپنی خبر کو۔"
+      "en": "Three small verbs that work like كَانَ — and add a shade of change.",
+      "ur": "تین چھوٹے فعل جو كَانَ کی طرح کام کرتے ہیں — اور تبدیلی کا ایک رنگ بڑھاتے ہیں۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "كَانَ Across Three Tenses",
-        "ar": "كَانَ فِي الْأَزْمِنَةِ الثَّلَاثَةِ: الْمَاضِي، الْمُضَارِعُ، الْأَمْرُ",
-        "ur": "كَانَ تینوں tenses میں: ماضی، مضارع، امر"
+        "en": "Three sisters: أَصْبَحَ, أَمْسَى, صَارَ",
+        "ar": "أَصْبَحَ وَأَمْسَى وَصَارَ",
+        "ur": "تین بہنیں: أَصْبَحَ، أَمْسَى، صَارَ"
       },
       "explanation": {
-        "en": "كَانَ has forms in all three tenses. Past: كَانَ (he was). Present/future: يَكُونُ (he is / will be). Command: كُنْ (be!). Arabic has no verb for a plain present 'is' — الْجَوُّ بَارِدٌ already means 'the weather is cold' — so يَكُونُ is used when the sentence needs a future, a habit, or a verb form after a particle such as لِ or أَنْ.",
-        "ur": "كَانَ کی تینوں زمانوں میں شکلیں ہیں۔ ماضی: كَانَ (وہ تھا)۔ مضارع: يَكُونُ (وہ ہے / ہو گا)۔ امر: كُنْ (ہو جا!)۔ عربی میں سادہ حال کے 'ہے' کے لیے فعل نہیں — الْجَوُّ بَارِدٌ خود 'موسم ٹھنڈا ہے' ہے — اس لیے يَكُونُ تب آتا ہے جب جملے کو مستقبل، عادت، یا لِ یا أَنْ جیسے حرف کے بعد فعل کی ضرورت ہو۔"
+        "en": "These three verbs work like كَانَ: the اسم stays nominative and the خبر is accusative. They add a shade: أَصْبَحَ, 'became (by morning)'; أَمْسَى, 'became (by evening)'; صَارَ, 'became (a change into something)'. These glosses show what the verbs usually carry in context; they are not universal translations. Only the third-person past forms are taught here.",
+        "ur": "یہ تین فعل كَانَ کی طرح کام کرتے ہیں: اسم مرفوع رہتا ہے اور خبر منصوب۔ یہ ایک رنگ بڑھاتے ہیں: أَصْبَحَ، 'بن گیا (صبح تک)'؛ أَمْسَى، 'بن گیا (شام تک)'؛ صَارَ، 'بن گیا (کسی چیز میں تبدیلی)'۔ یہ معنی بتاتے ہیں کہ یہ فعل سیاق میں عموماً کیا لاتے ہیں؛ یہ عالمگیر ترجمے نہیں۔ یہاں صرف غائب ماضی کی صورتیں سکھائی جاتی ہیں۔"
       }
     },
     {
       "type": "WORD",
       "text": {
-        "ar": "كَانَ",
-        "ar_plain": "كان",
-        "translit": "kaana",
-        "en": "was, were (past tense of كَانَ)",
-        "ur": "تھا، تھیں (كَانَ کا ماضی)"
+        "ar": "أَصْبَحَ",
+        "ar_plain": "اصبح",
+        "translit": "ʾaṣbaḥa",
+        "en": "he became (by morning)",
+        "ur": "وہ بن گیا (صبح تک)"
       },
       "explanation": {
-        "en": "The past tense كَانَ is the most common form. It describes a past state: كَانَ الطَّالِبُ مُجْتَهِدًا — 'the student was hardworking'. Its اِسْم is nominative and its خَبَر accusative. With a pronoun attached: كُنْتُ مُسْلِمًا — 'I was a Muslim'.",
-        "ur": "ماضی كَانَ سب سے عام شکل ہے۔ یہ گزری ہوئی حالت بتاتا ہے: كَانَ الطَّالِبُ مُجْتَهِدًا — 'طالب علم محنتی تھا'۔ اس کا اسم مرفوع اور خبر منصوب ہوتی ہے۔ ضمیر کے ساتھ: كُنْتُ مُسْلِمًا — 'میں مسلمان تھا'۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "كان"
+        "en": "أَصْبَحَ الْجَوُّ بَارِدًا — 'the weather became cold by morning'. الْجَوُّ is nominative (its اسم) and بَارِدًا accusative (its خبر).",
+        "ur": "أَصْبَحَ الْجَوُّ بَارِدًا — 'موسم صبح تک ٹھنڈا ہو گیا'۔ الْجَوُّ مرفوع (اس کا اسم) اور بَارِدًا منصوب (اس کی خبر) ہے۔"
       }
     },
     {
       "type": "WORD",
       "text": {
-        "ar": "يَكُونُ",
-        "ar_plain": "يكون",
-        "translit": "yakuunu",
-        "en": "is, will be, becomes (present/future of كَانَ)",
-        "ur": "ہے، ہو گا، بن جاتا ہے (كَانَ کا present/future)"
+        "ar": "أَمْسَى",
+        "ar_plain": "امسى",
+        "translit": "ʾamsā",
+        "en": "he became (by evening)",
+        "ur": "وہ بن گیا (شام تک)"
       },
       "explanation": {
-        "en": "يَكُونُ is the present-future form of كَانَ. It keeps the same pattern — اِسْم nominative, خَبَر accusative. Example: يَكُونُ الْجَوُّ بَارِدًا غَدًا — 'the weather will be cold tomorrow'. In 57:20: ثُمَّ يَكُونُ حُطَامًا — 'then it becomes debris'.",
-        "ur": "يَكُونُ، كَانَ کی مضارع شکل ہے۔ یہی انداز رہتا ہے — اسم مرفوع، خبر منصوب۔ مثال: يَكُونُ الْجَوُّ بَارِدًا غَدًا — 'کل موسم ٹھنڈا ہو گا'۔ 57:20 میں: ثُمَّ يَكُونُ حُطَامًا — 'پھر وہ چورا ہو جاتا ہے'۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "يكون"
+        "en": "أَمْسَى الْجَوُّ بَارِدًا — 'the weather became cold by evening'. The same shape; only the time of the change differs.",
+        "ur": "أَمْسَى الْجَوُّ بَارِدًا — 'موسم شام تک ٹھنڈا ہو گیا'۔ وہی شکل؛ صرف تبدیلی کا وقت مختلف ہے۔"
       }
     },
     {
       "type": "WORD",
       "text": {
-        "ar": "كُنْ",
-        "ar_plain": "كن",
-        "translit": "kun",
-        "en": "Be! (imperative of كَانَ)",
-        "ur": "ہو! (كَانَ کا امر)"
+        "ar": "صَارَ",
+        "ar_plain": "صار",
+        "translit": "ṣāra",
+        "en": "he became (changed into)",
+        "ur": "وہ بن گیا (بدل گیا)"
       },
       "explanation": {
-        "en": "كُنْ is the command form: 'be!'. As an incomplete verb it takes an accusative خَبَر: كُنْ صَادِقًا — 'be truthful!'. In Allah's creative command كُنْ فَيَكُونُ ('Be, and it is', 36:82), كَانَ is used as a complete verb meaning 'come into being', so there is no خَبَر at all.",
-        "ur": "كُنْ امر کی شکل ہے: 'ہو جا!'۔ ناقص فعل کے طور پر یہ منصوب خبر لیتا ہے: كُنْ صَادِقًا — 'سچے بنو!'۔ اللہ کے تخلیقی حکم كُنْ فَيَكُونُ ('ہو جا، تو وہ ہو جاتی ہے'، 36:82) میں كَانَ مکمل (تامّہ) فعل ہے جس کا معنی 'وجود میں آنا' ہے، اس لیے وہاں خبر ہے ہی نہیں۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "كن"
+        "en": "صَارَ الْمَاءُ ثَلْجًا — 'the water became ice'. A change from one thing into another, with no time of day in the verb. الْمَاءُ nominative, ثَلْجًا accusative.",
+        "ur": "صَارَ الْمَاءُ ثَلْجًا — 'پانی برف بن گیا'۔ ایک چیز سے دوسری میں تبدیلی، فعل میں دن کے کسی وقت کے بغیر۔ الْمَاءُ مرفوع، ثَلْجًا منصوب۔"
       }
     },
     {
-      "type": "CONTRAST",
-      "concept": {
-        "en": "كَانَ vs. يَكُونُ — Past vs Present/Future",
-        "ar": "كَانَ مُقَابِلُ يَكُونُ — الْمَاضِي مُقَابِلُ الْمُضَارِعُ",
-        "ur": "كَانَ بمقابلہ يَكُونُ — ماضی بمقابلہ مضارع"
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "فَأَصْبَحْتُم بِنِعْمَتِهِ إِخْوَانًا",
+        "ar_plain": "فاصبحتم بنعمته اخوانا",
+        "translit": "faʾaṣbaḥtum biniʿmatihi ʾikhwaānan",
+        "en": "and you became, by His favour, brothers",
+        "ur": "تو تم اس کے فضل سے بھائی بھائی بن گئے"
       },
       "explanation": {
-        "en": "كَانَ and يَكُونُ are both نَاقِص and both make their اِسْم nominative and their خَبَر accusative. The difference is time: كَانَ looks back, يَكُونُ looks at now or ahead.",
-        "ur": "كَانَ اور يَكُونُ دونوں ناقص ہیں اور دونوں اسم کو مرفوع اور خبر کو منصوب کرتے ہیں۔ فرق زمانے کا ہے: كَانَ ماضی کی بات کرتا ہے، يَكُونُ حال یا مستقبل کی۔"
-      },
-      "examples": [
-        {
-          "ar": "كَانَ الْجَوُّ بَارِدًا",
-          "ar_plain": "كان الجو باردا",
-          "translit": "kaana al-jawwu baaridan",
-          "en": "The weather was cold",
-          "ur": "موسم ٹھنڈا تھا"
-        },
-        {
-          "ar": "يَكُونُ الْجَوُّ بَارِدًا",
-          "ar_plain": "يكون الجو باردا",
-          "translit": "yakuunu al-jawwu baaridan",
-          "en": "The weather will be cold",
-          "ur": "موسم ٹھنڈا ہو گا"
-        }
-      ]
+        "en": "فَأَصْبَحْتُم بِنِعْمَتِهِ إِخْوَانًا — 'and you became, by His favour, brothers'. Here the اسم is the attached ـتُم ('you', plural) and the خبر is إِخْوَانًا, accusative. أَصْبَحْتُم is given whole. (Aal Imran 3:103) (Al Imran 3:103)",
+        "ur": "فَأَصْبَحْتُم بِنِعْمَتِهِ إِخْوَانًا — 'تو تم اس کے فضل سے بھائی بھائی بن گئے'۔ یہاں اسم جڑا ہوا ـتُم ('تم'، جمع) ہے اور خبر إِخْوَانًا منصوب ہے۔ أَصْبَحْتُم پورا دیا گیا ہے۔ (آل عمران 3:103) (Al Imran 3:103)"
+      }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "كُنْ فَيَكُونُ",
-        "ar_plain": "كن فيكون",
-        "translit": "kun fa-yakuunu",
-        "en": "Be, and it is",
-        "ur": "ہو جا، تو وہ ہو جاتی ہے"
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "A shade, not a rule",
+        "ur": "ایک رنگ، قاعدہ نہیں"
       },
-      "explanation": {
-        "en": "From Ya-Sin 36:82 (also 2:117). This is how Allah creates — with the command 'Be!'. كُنْ is the command, فَ links the result, and يَكُونُ is the present tense: 'and it is'. Here كَانَ is complete (تَامَّة), meaning 'to come into existence', which is why neither word has a خَبَر.",
-        "ur": "یس 36:82 سے (اور 2:117)۔ اللہ اسی طرح پیدا فرماتا ہے — 'ہو جا!' کے حکم سے۔ كُنْ امر ہے، فَ نتیجہ جوڑتی ہے، اور يَكُونُ مضارع ہے: 'تو وہ ہو جاتی ہے'۔ یہاں كَانَ تامّہ ہے یعنی 'وجود میں آنا'، اسی لیے کسی لفظ کی خبر نہیں۔"
+      "body": {
+        "en": "Do not take 'by morning' or 'by evening' as a fixed translation of every use. Read the sentence: what is the اسم, what is the خبر, and what changed? أَمْسَى and أَصْبَحَ keep the same two endings as كَانَ.",
+        "ur": "'صبح تک' یا 'شام تک' کو ہر استعمال کا مقررہ ترجمہ نہ سمجھیں۔ جملہ پڑھیں: اسم کیا ہے، خبر کیا ہے، اور کیا بدلا؟ أَمْسَى اور أَصْبَحَ كَانَ جیسی ہی دو حرکتیں رکھتے ہیں۔"
       }
     }
   ],
   "exercises": [
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch65-l03-ex01",
+      "id": "ch65-l02-ex01",
       "prompt": {
-        "ar": "كَانَ الطَّالِبُ مُجْتَهِدًا",
-        "ar_plain": "كان الطالب مجتهدا",
-        "translit": "kaana at-taalibu mujtahidan",
-        "en": "The student was hardworking",
-        "ur": "طالب علم محنتی تھا"
+        "ar": "أَصْبَحَ الْجَوُّ بَارِدًا",
+        "ar_plain": "اصبح الجو باردا",
+        "translit": "ʾaṣbaḥa al-jawwu bāridan",
+        "en": "(what does this say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
       },
       "options": [
         {
-          "en": "The student was hardworking",
-          "ur": "طالب علم محنتی تھا"
+          "en": "The weather became cold by morning",
+          "ur": "موسم صبح تک ٹھنڈا ہو گیا"
         },
         {
-          "en": "The student is hardworking",
-          "ur": "طالب علم محنتی ہے"
+          "en": "The weather became cold by evening",
+          "ur": "موسم شام تک ٹھنڈا ہو گیا"
         },
         {
-          "en": "The student will be hardworking",
-          "ur": "طالب علم محنتی ہو گا"
+          "en": "The weather is not cold",
+          "ur": "موسم ٹھنڈا نہیں ہے"
         },
         {
-          "en": "Be hardworking, student",
-          "ur": "اے طالب علم، محنتی بنو"
+          "en": "The cold weather became",
+          "ur": "ٹھنڈا موسم بن گیا"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "كَانَ is the past tense: 'was'. The present-future would be يَكُونُ, and the command كُنْ.",
-        "ur": "كَانَ ماضی ہے: 'تھا'۔ مضارع يَكُونُ ہوتا اور امر كُنْ۔"
+        "en": "أَصْبَحَ carries 'by morning'; بَارِدًا is its خبر, accusative.",
+        "ur": "أَصْبَحَ میں 'صبح تک' ہے؛ بَارِدًا اس کی خبر منصوب ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch65-l02-ex02",
+      "mode": "TAP",
+      "sentence_ar": "أَصْبَحَ الْوَلَدُ ___",
+      "hint": {
+        "en": "The boy became strong by morning.",
+        "ur": "لڑکا صبح تک مضبوط ہو گیا۔"
+      },
+      "options": [
+        {
+          "ar": "قَوِيٌّ",
+          "ar_plain": "قوي",
+          "translit": "qawiyyun",
+          "en": "strong (nominative)",
+          "ur": "مضبوط (مرفوع)"
+        },
+        {
+          "ar": "قَوِيًّا",
+          "ar_plain": "قويا",
+          "translit": "qawiyyan",
+          "en": "strong (accusative)",
+          "ur": "مضبوط (منصوب)"
+        },
+        {
+          "ar": "قَوِيٍّ",
+          "ar_plain": "قوي",
+          "translit": "qawiyyin",
+          "en": "strong (genitive)",
+          "ur": "مضبوط (مجرور)"
+        },
+        {
+          "ar": "قَوِيَّةً",
+          "ar_plain": "قوية",
+          "translit": "qawiyyatan",
+          "en": "strong (f., accusative)",
+          "ur": "مضبوط (مؤنث، منصوب)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "قَوِيًّا",
+        "ar_plain": "قويا",
+        "translit": "qawiyyan",
+        "en": "strong (accusative)",
+        "ur": "مضبوط (منصوب)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The خبر of أَصْبَحَ is accusative and agrees with the masculine الْوَلَدُ: قَوِيًّا.",
+        "ur": "أَصْبَحَ کی خبر منصوب ہے اور مذکر الْوَلَدُ کے مطابق ہے: قَوِيًّا۔"
       }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch65-l03-ex02",
+      "id": "ch65-l02-ex03",
       "prompt": {
-        "ar": "يَكُونُ الْجَوُّ بَارِدًا",
-        "ar_plain": "يكون الجو باردا",
-        "translit": "yakuunu al-jawwu baaridan",
-        "en": "The weather will be cold",
-        "ur": "موسم ٹھنڈا ہو گا"
+        "ar": "أَمْسَى الْجَوُّ بَارِدًا",
+        "ar_plain": "امسى الجو باردا",
+        "translit": "ʾamsā al-jawwu bāridan",
+        "en": "(what does this say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
       },
       "options": [
         {
-          "en": "The weather will be cold",
-          "ur": "موسم ٹھنڈا ہو گا"
+          "en": "The weather became cold by morning",
+          "ur": "موسم صبح تک ٹھنڈا ہو گیا"
         },
         {
-          "en": "The weather was cold",
-          "ur": "موسم ٹھنڈا تھا"
+          "en": "The weather was not cold",
+          "ur": "موسم ٹھنڈا نہیں تھا"
         },
         {
-          "en": "Be cold, weather",
-          "ur": "اے موسم، ٹھنڈا ہو جا"
+          "en": "The weather became cold by evening",
+          "ur": "موسم شام تک ٹھنڈا ہو گیا"
         },
         {
-          "en": "The cold weather",
-          "ur": "ٹھنڈا موسم"
+          "en": "Indeed, the weather is cold",
+          "ur": "بے شک موسم ٹھنڈا ہے"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَمْسَى carries 'by evening'.",
+        "ur": "أَمْسَى میں 'شام تک' ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch65-l02-ex04",
+      "mode": "TAP",
+      "sentence_ar": "أَمْسَى الطَّالِبُ ___",
+      "hint": {
+        "en": "The student became tired by evening.",
+        "ur": "طالب علم شام تک تھک گیا۔"
+      },
+      "options": [
+        {
+          "ar": "مُتْعَبٌ",
+          "ar_plain": "متعب",
+          "translit": "mutʿabun",
+          "en": "tired (nominative)",
+          "ur": "تھکا ہوا (مرفوع)"
+        },
+        {
+          "ar": "مُتْعَبٍ",
+          "ar_plain": "متعب",
+          "translit": "mutʿabin",
+          "en": "tired (genitive)",
+          "ur": "تھکا ہوا (مجرور)"
+        },
+        {
+          "ar": "مُتْعَبَةً",
+          "ar_plain": "متعبة",
+          "translit": "mutʿabatan",
+          "en": "tired (f., accusative)",
+          "ur": "تھکا ہوا (مؤنث، منصوب)"
+        },
+        {
+          "ar": "مُتْعَبًا",
+          "ar_plain": "متعبا",
+          "translit": "mutʿaban",
+          "en": "tired (accusative)",
+          "ur": "تھکا ہوا (منصوب)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "مُتْعَبًا",
+        "ar_plain": "متعبا",
+        "translit": "mutʿaban",
+        "en": "tired (accusative)",
+        "ur": "تھکا ہوا (منصوب)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The خبر of أَمْسَى is accusative: مُتْعَبًا.",
+        "ur": "أَمْسَى کی خبر منصوب ہے: مُتْعَبًا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch65-l02-ex05",
+      "prompt": {
+        "ar": "صَارَ الْمَاءُ ثَلْجًا",
+        "ar_plain": "صار الماء ثلجا",
+        "translit": "ṣāra al-māʾu thaljan",
+        "en": "(what does this say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "The water became ice",
+          "ur": "پانی برف بن گیا"
+        },
+        {
+          "en": "The water was ice",
+          "ur": "پانی برف تھا"
+        },
+        {
+          "en": "The ice became water",
+          "ur": "برف پانی بن گئی"
+        },
+        {
+          "en": "The water is not ice",
+          "ur": "پانی برف نہیں ہے"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "يَكُونُ is the present-future form of كَانَ: 'is / will be'. الْجَوُّ is its اِسْم (nominative) and بَارِدًا its خَبَر (accusative). 'Was' would be كَانَ.",
-        "ur": "يَكُونُ، كَانَ کی مضارع شکل ہے: 'ہے / ہو گا'۔ الْجَوُّ اس کا اسم (مرفوع) اور بَارِدًا خبر (منصوب) ہے۔ 'تھا' کے لیے كَانَ ہوتا۔"
+        "en": "صَارَ says it changed into ice.",
+        "ur": "صَارَ بتاتا ہے کہ وہ برف میں بدل گیا۔"
       }
     },
     {
-      "type": "BUILD_SENTENCE",
-      "id": "ch65-l03-ex03",
-      "target_translation": {
-        "en": "Be a Muslim!",
-        "ur": "مسلمان ہو جاؤ!"
-      },
-      "tiles": [
-        {
-          "ar": "كُنْ",
-          "ar_plain": "كن",
-          "translit": "kun",
-          "en": "Be!",
-          "ur": "ہو!"
-        },
-        {
-          "ar": "مُسْلِمًا",
-          "ar_plain": "مسالما",
-          "translit": "musliman",
-          "en": "a Muslim",
-          "ur": "ایک مسلمان"
-        }
-      ],
-      "correct_order": [
-        0,
-        1
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch65-l03-ex04",
-      "statement": {
-        "en": "كَانَ (past) and كُنْ (command) are مَبْنِيّ, while يَكُونُ (present) is مُعْرَب.",
-        "ur": "كَانَ (ماضی) اور كُنْ (امر) مبنی ہیں، جبکہ يَكُونُ (مضارع) معرب ہے۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch65-l03-ex05",
-      "left_column": [
-        {
-          "ar": "كَانَ",
-          "ar_plain": "كان",
-          "translit": "kaana",
-          "en": "was",
-          "ur": "تھا"
-        },
-        {
-          "ar": "يَكُونُ",
-          "ar_plain": "يكون",
-          "translit": "yakuunu",
-          "en": "is/will be",
-          "ur": "ہے/ہو گا"
-        },
-        {
-          "ar": "كُنْ",
-          "ar_plain": "كن",
-          "translit": "kun",
-          "en": "Be!",
-          "ur": "ہو!"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "Be!",
-          "ur": "ہو!"
-        },
-        {
-          "en": "was",
-          "ur": "تھا"
-        },
-        {
-          "en": "is/will be",
-          "ur": "ہے/ہو گا"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          1
-        ],
-        [
-          1,
-          2
-        ],
-        [
-          2,
-          0
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
       "type": "FILL_BLANK",
-      "id": "ch65-l03-ex06",
+      "id": "ch65-l02-ex06",
       "mode": "TAP",
-      "sentence_ar": "إِنَّمَا أَمْرُهُ إِذَا أَرَادَ شَيْئًا أَنْ يَقُولَ لَهُ كُنْ ___",
+      "sentence_ar": "صَارَ الْفَقِيرُ ___",
       "hint": {
-        "en": "36:82 — 'He says to it, \"Be,\" and it is.' فَ here links the command to its result.",
-        "ur": "36:82 — 'وہ اس سے کہتا ہے \"ہو جا\" تو وہ ہو جاتی ہے۔' یہاں فَ حکم کو اس کے نتیجے سے جوڑتی ہے۔"
+        "en": "The poor man became rich.",
+        "ur": "غریب آدمی امیر ہو گیا۔"
       },
       "options": [
         {
-          "ar": "فَيَكُونُ",
-          "ar_plain": "فيكون",
-          "translit": "fa-yakuunu",
-          "en": "and it is",
-          "ur": "تو وہ ہو جاتی ہے"
+          "ar": "غَنِيٌّ",
+          "ar_plain": "غني",
+          "translit": "ghaniyyun",
+          "en": "rich (nominative)",
+          "ur": "امیر (مرفوع)"
         },
         {
-          "ar": "وَكَانَ",
-          "ar_plain": "وكان",
-          "translit": "wa-kaana",
-          "en": "and he was",
-          "ur": "اور وہ تھا"
+          "ar": "غَنِيٍّ",
+          "ar_plain": "غني",
+          "translit": "ghaniyyin",
+          "en": "rich (genitive)",
+          "ur": "امیر (مجرور)"
         },
         {
-          "ar": "لِيَكُونَ",
-          "ar_plain": "ليكون",
-          "translit": "li-yakuuna",
-          "en": "in order to be",
-          "ur": "تاکہ ہو"
+          "ar": "غَنِيًّا",
+          "ar_plain": "غنيا",
+          "translit": "ghaniyyan",
+          "en": "rich (accusative)",
+          "ur": "امیر (منصوب)"
         },
         {
-          "ar": "بِكَانَ",
-          "ar_plain": "بكان",
-          "translit": "bi-kaana",
-          "en": "with was",
-          "ur": "تھا کے ساتھ"
+          "ar": "غَنِيَّةً",
+          "ar_plain": "غنية",
+          "translit": "ghaniyyatan",
+          "en": "rich (f., accusative)",
+          "ur": "امیر (مؤنث، منصوب)"
         }
       ],
       "correct_answer": {
-        "ar": "فَيَكُونُ",
-        "ar_plain": "فيكون",
-        "translit": "fa-yakuunu",
-        "en": "and it is",
-        "ur": "تو وہ ہو جاتی ہے"
+        "ar": "غَنِيًّا",
+        "ar_plain": "غنيا",
+        "translit": "ghaniyyan",
+        "en": "rich (accusative)",
+        "ur": "امیر (منصوب)"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The خبر of صَارَ is accusative: غَنِيًّا.",
+        "ur": "صَارَ کی خبر منصوب ہے: غَنِيًّا۔"
+      }
     },
     {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch65-l03-ex07",
-      "sentence_ar": "كَانَ الْمُسْلِمُ صَادِقًا",
-      "words": [
+      "type": "TAP_TRANSLATION",
+      "id": "ch65-l02-ex07",
+      "prompt": {
+        "ar": "أَصْبَحَ · أَمْسَى · صَارَ",
+        "ar_plain": "اصبح · امسى · صار",
+        "translit": "ʾaṣbaḥa · ʾamsā · ṣāra",
+        "en": "(which verb is taught with the idea 'by morning'?)",
+        "ur": "(کون سا فعل 'صبح تک' کے خیال کے ساتھ سکھایا گیا ہے؟)"
+      },
+      "options": [
         {
-          "ar": "كَانَ",
-          "ar_plain": "كان",
-          "translit": "kaana",
-          "en": "was",
-          "ur": "تھا"
+          "en": "أَمْسَى",
+          "ur": "أَمْسَى"
         },
         {
-          "ar": "الْمُسْلِمُ",
-          "ar_plain": "المسلم",
-          "translit": "al-muslimu",
-          "en": "the Muslim",
-          "ur": "مسلمان"
+          "en": "أَصْبَحَ",
+          "ur": "أَصْبَحَ"
         },
         {
-          "ar": "صَادِقًا",
-          "ar_plain": "صادقا",
-          "translit": "saadiqan",
-          "en": "truthful",
-          "ur": "سچا"
+          "en": "صَارَ",
+          "ur": "صَارَ"
+        },
+        {
+          "en": "كَانَ",
+          "ur": "كَانَ"
         }
       ],
-      "available_roles": [
-        "VERB",
-        "SUBJECT",
-        "PREDICATE",
-        "OBJECT",
-        "PARTICLE",
-        "PREPOSITION",
-        "ADJECTIVE"
-      ],
-      "correct_roles": [
-        "VERB",
-        "SUBJECT",
-        "PREDICATE"
-      ],
+      "correct_index": 1,
+      "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "كَانَ is the incomplete verb. الْمُسْلِمُ is its اِسْم (subject, nominative) and صَادِقًا its خَبَر (predicate, accusative).",
-        "ur": "كَانَ ناقص فعل ہے۔ الْمُسْلِمُ اس کا اسم (مرفوع) اور صَادِقًا اس کی خبر (منصوب) ہے۔"
-      },
-      "xp_value": 1
+        "en": "أَصْبَحَ is the one taught with 'by morning'; أَمْسَى with 'by evening'.",
+        "ur": "أَصْبَحَ وہ ہے جو 'صبح تک' کے ساتھ سکھایا گیا؛ أَمْسَى 'شام تک' کے ساتھ۔"
+      }
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch65-l03-ex08",
-      "statement": {
-        "en": "يَكُونُ works like كَانَ: its اِسْم is nominative and its خَبَر is accusative.",
-        "ur": "يَكُونُ، كَانَ کی طرح کام کرتا ہے: اس کا اسم مرفوع اور خبر منصوب ہوتی ہے۔"
+      "type": "TAP_TRANSLATION",
+      "id": "ch65-l02-ex08",
+      "prompt": {
+        "ar": "أَصْبَحَ · أَمْسَى · صَارَ",
+        "ar_plain": "اصبح · امسى · صار",
+        "translit": "ʾaṣbaḥa · ʾamsā · ṣāra",
+        "en": "(which of the three has no time of day in its taught meaning — it just says 'became'?)",
+        "ur": "(تینوں میں سے کس کے سکھائے گئے معنی میں دن کا کوئی وقت نہیں — یہ بس 'بن گیا' کہتا ہے؟)"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "options": [
+        {
+          "en": "أَصْبَحَ",
+          "ur": "أَصْبَحَ"
+        },
+        {
+          "en": "أَمْسَى",
+          "ur": "أَمْسَى"
+        },
+        {
+          "en": "لَيْسَ",
+          "ur": "لَيْسَ"
+        },
+        {
+          "en": "صَارَ",
+          "ur": "صَارَ"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "صَارَ is the plain 'became'; the other two carry a time of day.",
+        "ur": "صَارَ سادہ 'بن گیا' ہے؛ باقی دو میں دن کا ایک وقت ہے۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "كُنْ فَيَكُونُ — The Creative Command",
-      "ar": "كُنْ فَيَكُونُ — أَمْرُ الْإِيجَادِ",
-      "ur": "كُنْ فَيَكُونُ — پیدا کرنے کا حکم"
+      "en": "You became brothers",
+      "ar": "فَأَصْبَحْتُم إِخْوَانًا",
+      "ur": "تم بھائی بن گئے"
     },
     "ayah": {
-      "surah": 36,
-      "ayah": 82,
-      "label": "Ya-Sin 36:82",
-      "ar": "إِنَّمَا أَمْرُهُ إِذَا أَرَادَ شَيْئًا أَن يَقُولَ لَهُ كُن فَيَكُونُ",
-      "en": "His command is only when He intends a thing that He says to it, \"Be,\" and it is.",
-      "ur": "اس کا معاملہ تو بس یہ ہے کہ جب وہ کسی چیز کا ارادہ کرتا ہے تو اس سے کہتا ہے کہ \"ہو جا\" تو وہ ہو جاتی ہے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/036082.mp3"
+      "surah": 3,
+      "ayah": 103,
+      "label": "Al Imran 3:103",
+      "ar": "وَاعْتَصِمُوا بِحَبْلِ اللَّهِ جَمِيعًا وَلَا تَفَرَّقُوا ۚ وَاذْكُرُوا نِعْمَتَ اللَّهِ عَلَيْكُمْ إِذْ كُنتُمْ أَعْدَاءً فَأَلَّفَ بَيْنَ قُلُوبِكُمْ فَأَصْبَحْتُم بِنِعْمَتِهِ إِخْوَانًا وَكُنتُمْ عَلَىٰ شَفَا حُفْرَةٍ مِّنَ النَّارِ فَأَنقَذَكُم مِّنْهَا ۗ كَذَٰلِكَ يُبَيِّنُ اللَّهُ لَكُمْ آيَاتِهِ لَعَلَّكُمْ تَهْتَدُونَ",
+      "en": "And hold firmly to the rope of Allāh all together and do not become divided. And remember the favor of Allāh upon you - when you were enemies and He brought your hearts together and you became, by His favor, brothers. And you were on the edge of a pit of the Fire, and He saved you from it. Thus does Allāh make clear to you His verses that you may be guided.",
+      "ur": "اور سب مل کر خدا کی (ہدایت کی رسی) کو مضبوط پکڑے رہنا اور متفرق نہ ہونا اور خدا کی اس مہربانی کو یاد کرو جب تم ایک دوسرے کے دشمن تھے تو اس نے تمہارے دلوں میں الفت ڈال دی اور تم اس کی مہربانی سے بھائی بھائی ہوگئے اور تم آگ کے گڑھے کے کنارے تک پہنچ چکے تھے تو خدا نے تم کو اس سے بچا لیا اس طرح خدا تم کو اپنی آیتیں کھول کھول کر سناتا ہے تاکہ تم ہدایت پاؤ",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003103.mp3"
     },
     "highlighted_word_indices": [
-      8,
-      9
+      17,
+      19
+    ],
+    "highlighted_words": [
+      "فَأَصْبَحْتُم",
+      "إِخْوَانًا"
     ],
     "noor_explanation": {
-      "en": "كُن فَيَكُونُ — the command كُنْ (built on sukūn) and its result فَيَكُونُ (present tense, 'and it is'). Here كَانَ is complete, not incomplete: it means 'come into being', so it needs no خَبَر. Compare ثُمَّ يَكُونُ حُطَامًا in the hook ayah, where يَكُونُ is incomplete and حُطَامًا is its accusative خَبَر.",
-      "ur": "كُن فَيَكُونُ — امر كُنْ (سکون پر مبنی) اور اس کا نتیجہ فَيَكُونُ (مضارع، 'تو وہ ہو جاتی ہے')۔ یہاں كَانَ ناقص نہیں بلکہ تامّہ ہے: معنی 'وجود میں آنا'، اس لیے خبر کی ضرورت نہیں۔ ابتدائی آیت کے ثُمَّ يَكُونُ حُطَامًا سے موازنہ کیجیے، جہاں يَكُونُ ناقص ہے اور حُطَامًا اس کی منصوب خبر۔"
+      "en": "فَأَصْبَحْتُم بِنِعْمَتِهِ إِخْوَانًا — أَصْبَحْتُم is a sister of كَانَ: the attached ـتُم is the اسم and إِخْوَانًا, accusative, is the خبر.",
+      "ur": "فَأَصْبَحْتُم بِنِعْمَتِهِ إِخْوَانًا — أَصْبَحْتُم كَانَ کی بہن ہے: جڑا ہوا ـتُم اسم ہے اور إِخْوَانًا، منصوب، خبر ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "كَانَ, يَكُونُ and كُنْ form a complete set: past, present/future and command. As incomplete verbs, all three make their اِسْم nominative and their خَبَر accusative. Next, the sisters of كَانَ in Quranic context.",
-      "ur": "كَانَ، يَكُونُ اور كُنْ ایک مکمل سیٹ ہیں: ماضی، مضارع اور امر۔ ناقص افعال کے طور پر تینوں اسم کو مرفوع اور خبر کو منصوب کرتے ہیں۔ آگے: قرآنی سیاق میں كَانَ کی بہنیں۔"
+      "en": "أَصْبَحَ, أَمْسَى and صَارَ: the same two endings as كَانَ, with a shade of change.",
+      "ur": "أَصْبَحَ، أَمْسَى اور صَارَ: كَانَ جیسی وہی دو حرکتیں، تبدیلی کے ایک رنگ کے ساتھ۔"
     }
   }
 }

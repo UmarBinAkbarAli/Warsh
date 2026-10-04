@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 61, Lesson 2 (ch61-l02, rebuilt in place). The old row held a made-up 'تَكَالَانٌ', a wrong 'كُرْبٌ' load word and an unrelated 'رِضَاءُ اللَّهِ'. This one separates وَزَنَ / وَزْنٌ / مِيزَانٌ from كَالَ / كَيْلٌ / مِكْيَالٌ, adds one amount-unit-price sentence with the Chapter 48 unit رِطْلٌ (fictional price), and reads 83:3 and 17:35 as the Quran's own wording. كِلْتُمْ / زِنُوا are supplied whole. Added 2026-10-04 in the proposal harvest, batch 8 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-61-content-proposal.md and its review amendments.",
+    "title": "Weights and Measures",
+    "titleAr": "الْوَزْنُ وَالْكَيْلُ",
+    "titleUr": "وزن اور ناپ",
     "chapter_order": 61,
     "lesson_order": 2,
-    "chapter_title": "Trade, Weights, and Instrument Nouns (اسم الآلة)",
-    "title": "Weights and Measures",
-    "titleAr": "الْمِيزَانُ وَالْكَيْلُ",
-    "source": "book7_ch61_trade_weights.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
@@ -22,44 +22,36 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/083003.mp3"
     },
     "noor_intro": {
-      "en": "Al-Muṭaffifīn describes cheats who take full measure for themselves (83:2) but give short measure to others (83:3). Fair weights and measures are a matter of justice in Islam.",
-      "ur": "سورۃ المطففین ان دھوکے بازوں کا ذکر کرتی ہے جو اپنے لیے پورا ناپ لیتے ہیں (83:2) مگر دوسروں کو کم دیتے ہیں (83:3)۔ ناپ تول میں انصاف اسلام میں عدل کا معاملہ ہے۔"
+      "en": "The cheat in Al-Mutaffifin gives short by measure or by weight. Learn the two words so you can hear the warning.",
+      "ur": "المطففین کا دھوکے باز ناپ یا تول میں کم دیتا ہے۔ دونوں الفاظ سیکھیں تاکہ تنبیہ سمجھ سکیں۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
-      "type": "WORD",
-      "text": {
-        "ar": "مِيزَانٌ",
-        "ar_plain": "ميزان",
-        "translit": "miizaanun",
-        "en": "scales; balance",
-        "ur": "ترازو؛ ناپ"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Weighing and measuring",
+        "ar": "الْوَزْنُ وَالْكَيْلُ",
+        "ur": "تولنا اور ناپنا"
       },
       "explanation": {
-        "en": "مِيزَانٌ is a masculine noun meaning 'scales' or 'balance.' It comes from و ز ن (to weigh). مِيزَانٌ عَدْلٌ = 'just scales.' The phrase مِيزَانُ الْقِسْطِ means 'the scale of justice.'",
-        "ur": "مِيزَانٌ مذکر اسم ہے جس کا مطلب ہے 'ترازو' یا 'ناپ'۔ یہ و ز ن (ناپنا) سے آیا ہے۔ مِيزَانٌ عَدْلٌ = 'منصفانہ ترازو'۔ مِيزَانُ الْقِسْطِ کا مطلب ہے 'انصاف کا ترازو'۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "ميزان"
+        "en": "Arabic keeps two things apart. وَزَنَ / وَزْنٌ is weighing on a scale (مِيزَانٌ): gold, meat, goods. كَالَ / كَيْلٌ is measuring by volume with a measure (مِكْيَالٌ): grain, flour, oil. The Quran uses both verbs in the same warning.",
+        "ur": "عربی دو باتوں کو الگ رکھتی ہے۔ وَزَنَ / وَزْنٌ ترازو (مِيزَانٌ) پر تولنا ہے: سونا، گوشت، سامان۔ كَالَ / كَيْلٌ پیمانے (مِكْيَالٌ) سے حجم ناپنا ہے: اناج، آٹا، تیل۔ قرآن ایک ہی تنبیہ میں دونوں فعل لاتا ہے۔"
       }
     },
     {
       "type": "WORD",
       "text": {
-        "ar": "كَيْلٌ",
-        "ar_plain": "كيل",
-        "translit": "kaylun",
-        "en": "measuring by volume; measure",
-        "ur": "ناپنا (تول کرنا)؛ مقدار"
+        "ar": "مِيزَانٌ",
+        "ar_plain": "ميزان",
+        "translit": "mīzānun",
+        "en": "scale; balance",
+        "ur": "ترازو"
       },
       "explanation": {
-        "en": "كَيْلٌ is a masculine noun meaning \"measuring by volume\" (grain, flour). كَالَ means \"to measure\"; الْمَكِيلُ is \"what is measured\".",
-        "ur": "كَيْلٌ مذکر اسم ہے: \"پیمانے سے ناپنا\" (اناج، آٹا)۔ كَالَ = \"ناپنا\"؛ الْمَكِيلُ = \"جو ناپا جائے\"۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "كيل"
+        "en": "مِيزَانٌ is the scale you weigh with. The thing you do on it is وَزْنٌ (weighing): وَزَنَ التَّاجِرُ الذَّهَبَ بِالْمِيزَانِ — 'the merchant weighed the gold on the scale'.",
+        "ur": "مِيزَانٌ وہ ترازو ہے جس سے آپ تولتے ہیں۔ اس پر جو کام ہوتا ہے وہ وَزْنٌ (تولنا) ہے: وَزَنَ التَّاجِرُ الذَّهَبَ بِالْمِيزَانِ — 'سوداگر نے سونا ترازو پر تولا'۔"
       }
     },
     {
@@ -67,84 +59,94 @@
       "text": {
         "ar": "مِكْيَالٌ",
         "ar_plain": "مكيال",
-        "translit": "mikyaalun",
-        "en": "measuring container; measure",
-        "ur": "ناپنے کا برتن؛ پیمانہ"
+        "translit": "mikyaālun",
+        "en": "measure (a container)",
+        "ur": "پیمانہ"
       },
       "explanation": {
-        "en": "مِكْيَالٌ is a masculine noun — a container used for measuring volume. It comes from the root ك ي ل. مِكْيَالٌ مُسْتَوٍ = 'an accurate measure.'",
-        "ur": "مِكْيَالٌ مذکر اسم — مقدار ناپنے کے لیے استعمال ہونے والا برتن۔ یہ جذر ك ي ل سے آیا ہے۔ مِكْيَالٌ مُسْتَوٍ = 'درست پیمانہ'۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "مكيال"
+        "en": "مِكْيَالٌ is the measure you fill to count volume. The doing is كَيْلٌ (measuring): كَالَ التَّاجِرُ الْقَمْحَ بِالْمِكْيَالِ — 'the merchant measured the wheat with the measure'.",
+        "ur": "مِكْيَالٌ وہ پیمانہ ہے جسے بھر کر حجم گنا جاتا ہے۔ اس کا عمل كَيْلٌ (ناپنا) ہے: كَالَ التَّاجِرُ الْقَمْحَ بِالْمِكْيَالِ — 'سوداگر نے گیہوں پیمانے سے ناپا'۔"
       }
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "وَزْنٌ",
-        "ar_plain": "وزن",
-        "translit": "waznun",
-        "en": "weight",
-        "ur": "وزن"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Weigh or measure?",
+        "ar": "وَزْنٌ أَمْ كَيْلٌ؟",
+        "ur": "تولنا یا ناپنا؟"
       },
+      "examples": [
+        {
+          "ar": "وَزَنَ الذَّهَبَ",
+          "ar_plain": "وزن الذهب",
+          "translit": "wazana adh-dhahaba",
+          "en": "he weighed the gold",
+          "ur": "اس نے سونا تولا"
+        },
+        {
+          "ar": "كَالَ الْقَمْحَ",
+          "ar_plain": "كال القمح",
+          "translit": "kāla al-qamḥa",
+          "en": "he measured the wheat",
+          "ur": "اس نے گیہوں ناپا"
+        }
+      ],
       "explanation": {
-        "en": "وَزْنٌ is a masculine noun meaning \"weight\". The verb is وَزَنَ (to weigh). Quran 55:9: وَأَقِيمُوا الْوَزْنَ بِالْقِسْطِ, \"establish weight with justice\".",
-        "ur": "وَزْنٌ مذکر اسم ہے: \"وزن\"۔ فعل وَزَنَ (تولنا)۔ قرآن 55:9: وَأَقِيمُوا الْوَزْنَ بِالْقِسْطِ، \"انصاف کے ساتھ تول قائم رکھو\"۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "وزن"
+        "en": "Solid goods sold by weight are weighed (وَزَنَ); grain and liquids sold by volume are measured (كَالَ). The choice of verb follows how the goods are sold.",
+        "ur": "وزن سے بکنے والا ٹھوس سامان تولا جاتا ہے (وَزَنَ)؛ حجم سے بکنے والا اناج اور مائع ناپا جاتا ہے (كَالَ)۔ فعل کا انتخاب اس پر ہے کہ سامان کیسے بکتا ہے۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "حِمْلٌ",
-        "ar_plain": "حمل",
-        "translit": "Himlun",
-        "en": "a load",
-        "ur": "بوجھ"
+        "ar": "ثَمَنُ ثَلَاثَةِ أَرْطَالٍ عَشَرَةُ رِيَالَاتٍ",
+        "ar_plain": "ثمن ثلاثة ارطال عشرة ريالات",
+        "translit": "thamanu thalāthati ʾarṭālin ʿasharatu riyaālātin",
+        "en": "The price of three ratls is ten riyals.",
+        "ur": "تین رطل کی قیمت دس ریال ہے۔"
       },
       "explanation": {
-        "en": "حِمْلٌ is a masculine noun meaning \"a load\" (plural أَحْمَالٌ). In Yūsuf 12:72: وَلِمَنْ جَاءَ بِهِ حِمْلُ بَعِيرٍ, \"and for whoever brings it is a camel's load\".",
-        "ur": "حِمْلٌ مذکر اسم ہے: \"بوجھ\" (جمع أَحْمَالٌ)۔ سورۃ یوسف 12:72: وَلِمَنْ جَاءَ بِهِ حِمْلُ بَعِيرٍ، \"اور جو اسے لائے اس کے لیے اونٹ کا بوجھ\"۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "كرب"
+        "en": "Amount, unit and price in one sentence: ثَلَاثَةُ is the amount, رِطْلٌ (here أَرْطَالٍ) is the unit of weight from Chapter 48, and the price follows. The numbers here are made up for practice.",
+        "ur": "ایک جملے میں مقدار، اکائی اور قیمت: ثَلَاثَةُ مقدار ہے، رِطْلٌ (یہاں أَرْطَالٍ) باب 48 سے وزن کی اکائی ہے، اور اس کے بعد قیمت۔ یہاں اعداد صرف مشق کے لیے گھڑے گئے ہیں۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "رِضَاءٌ",
-        "ar_plain": "رضاء",
-        "translit": "ridaa'un",
-        "en": "satisfaction; contentment",
-        "ur": "رضا؛ اطمینان"
+        "ar": "وَإِذَا كَالُوهُمْ أَو وَّزَنُوهُمْ يُخْسِرُونَ",
+        "ar_plain": "واذا كالوهم او وزنوهم يخسرون",
+        "translit": "waʾidhā kālūhum ʾaw wwazanūhum yukhsirūna",
+        "en": "But if they give by measure or by weight to them, they cause loss.",
+        "ur": "اور جب ان کو ناپ کر یا تول کر دیں تو کم کر دیں"
       },
       "explanation": {
-        "en": "رِضَاءٌ is a masculine noun meaning 'satisfaction' or 'contentment.' رَضِيَ means 'to be pleased.' رَاضٍ means 'pleased/satisfied.' رِضَاءُ اللَّهِ = 'the pleasure of Allah.'",
-        "ur": "رِضَاءٌ مذکر اسم ہے جس کا مطلب ہے 'رضا' یا 'اطمینان'۔ رَضِيَ کا مطلب 'خوش ہونا' ہے۔ رَاضٍ کا مطلب 'خوش/رضا مند' ہے۔ رِضَاءُ اللَّهِ = 'اللہ کی رضا'۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "رضاء"
+        "en": "The Quran names both acts: كَالُوهُمْ ('they measure for them') or وَزَنُوهُمْ ('they weigh for them') — and then يُخْسِرُونَ, 'they cause loss'. The cheat gives less in either one. (Al-Mutaffifin 83:3)",
+        "ur": "قرآن دونوں عملوں کا نام لیتا ہے: كَالُوهُمْ ('وہ ان کے لیے ناپتے ہیں') یا وَزَنُوهُمْ ('وہ ان کے لیے تولتے ہیں') — اور پھر يُخْسِرُونَ، 'وہ کم دیتے ہیں'۔ دھوکے باز دونوں میں کم دیتا ہے۔ (Al-Mutaffifin 83:3)"
       }
     },
     {
-      "type": "WORD",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "اسْتَوْفَى",
-        "ar_plain": "استوفى",
-        "translit": "istawfaa",
-        "en": "to demand full; to take in full",
-        "ur": "پورا لینا؛ مکمل تقاضا کرنا"
+        "ar": "وَأَوْفُوا الْكَيْلَ إِذَا كِلْتُمْ وَزِنُوا بِالْقِسْطَاسِ الْمُسْتَقِيمِ ۚ ذَٰلِكَ خَيْرٌ وَأَحْسَنُ تَأْوِيلًا",
+        "ar_plain": "واوفوا الكيل اذا كلتم وزنوا بالقسطاس المستقيم  ذلك خير واحسن تاويلا",
+        "translit": "waʾawfū al-kayla ʾidhā kiltum wazinū bi-l-qisṭāsi al-mustaqīmi ۚ dhālika khayrun waʾaḥsanu taʾwiīlan",
+        "en": "And give full measure when you measure, and weigh with an even [i.e., honest] balance. That is the best [way] and best in result.",
+        "ur": "اور جب (کوئی چیز) ناپ کر دینے لگو تو پیمانہ پورا بھرا کرو اور (جب تول کر دو تو) ترازو سیدھی رکھ کر تولا کرو۔ یہ بہت اچھی بات اور انجام کے لحاظ سے بھی بہت بہتر ہے"
       },
       "explanation": {
-        "en": "اسْتَوْفَى means \"to take in full\". In 83:2, إِذَا اكْتَالُوا عَلَى النَّاسِ يَسْتَوْفُونَ — \"when they take a measure from people, they take in full\".",
-        "ur": "اسْتَوْفَى = \"پورا لینا\"۔ 83:2 میں: إِذَا اكْتَالُوا عَلَى النَّاسِ يَسْتَوْفُونَ — \"جب لوگوں سے ناپ کر لیتے ہیں تو پورا لیتے ہیں\"۔"
+        "en": "وَأَوْفُوا الْكَيْلَ — 'give full measure' — إِذَا كِلْتُمْ — 'when you measure' — وَزِنُوا — 'and weigh' — بِالْقِسْطَاسِ الْمُسْتَقِيمِ — 'with the straight balance'. Here the verbs are كِلْتُمْ and زِنُوا, the same two roots as كَالَ and وَزَنَ. (Al-Isra 17:35)",
+        "ur": "وَأَوْفُوا الْكَيْلَ — 'ناپ پورا دو' — إِذَا كِلْتُمْ — 'جب تم ناپو' — وَزِنُوا — 'اور تولو' — بِالْقِسْطَاسِ الْمُسْتَقِيمِ — 'سیدھے ترازو سے'۔ یہاں فعل كِلْتُمْ اور زِنُوا ہیں، یعنی وہی دو مادے جو كَالَ اور وَزَنَ کے ہیں۔ (Al-Isra 17:35)"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Roots, not tables",
+        "ur": "مادے، جدول نہیں"
       },
-      "introduces_vocab": {
-        "ar_plain": "استوفى"
+      "body": {
+        "en": "كِلْتُمْ and زِنُوا are not new forms for you to build. They are the Quran's own wording, given whole with their meaning: 'you measure' and 'weigh!'. What you keep from them is the pair كَيْلٌ and وَزْنٌ.",
+        "ur": "كِلْتُمْ اور زِنُوا ایسی نئی صورتیں نہیں جو آپ کو بنانی ہوں۔ یہ قرآن کے اپنے الفاظ ہیں جو معنی کے ساتھ پورے دیے گئے ہیں: 'تم ناپو' اور 'تولو!'۔ ان سے آپ کو صرف جوڑی كَيْلٌ اور وَزْنٌ یاد رکھنی ہے۔"
       }
     }
   ],
@@ -153,288 +155,324 @@
       "type": "TAP_TRANSLATION",
       "id": "ch61-l02-ex01",
       "prompt": {
-        "ar": "مِيزَانٌ عَدْلٌ",
-        "ar_plain": "ميزان عدل",
-        "translit": "miizaanun 'adlun",
-        "en": "just scales",
-        "ur": "منصفانہ ترازو"
+        "ar": "مِيزَانٌ",
+        "ar_plain": "ميزان",
+        "translit": "mīzānun",
+        "en": "(what is this?)",
+        "ur": "(یہ کیا ہے؟)"
       },
       "options": [
         {
-          "en": "just scales",
-          "ur": "منصفانہ ترازو"
+          "en": "a scale for weighing",
+          "ur": "تولنے کا ترازو"
         },
         {
-          "en": "heavy weight",
-          "ur": "بھاری وزن"
+          "en": "a measure for volume",
+          "ur": "حجم کا پیمانہ"
         },
         {
-          "en": "full measure",
-          "ur": "پورا ناپ"
+          "en": "a price",
+          "ur": "قیمت"
         },
         {
-          "en": "light measure",
-          "ur": "ہلکا ناپ"
+          "en": "a profit",
+          "ur": "نفع"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "مِيزَانٌ is 'scales' and عَدْلٌ means 'just/fair.' Together: just scales. وزن alone means 'weight.'",
-        "ur": "مِيزَانٌ 'ترازو' ہے اور عَدْلٌ کا مطلب 'منصفانہ' ہے۔ مل کر: منصفانہ ترازو۔ وزن alone کا مطلب 'وزن' ہے۔"
+        "en": "مِيزَانٌ is the scale; مِكْيَالٌ is the measure for volume.",
+        "ur": "مِيزَانٌ ترازو ہے؛ مِكْيَالٌ حجم کا پیمانہ ہے۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch61-l02-ex02",
-      "statement": {
-        "en": "وَزْنٌ means 'volume' in Arabic.",
-        "ur": "وَزْنٌ عربی میں 'حجم' کا مطلب ہے۔"
+      "prompt": {
+        "ar": "كَالَ التَّاجِرُ الْقَمْحَ بِالْمِكْيَالِ",
+        "ar_plain": "كال التاجر القمح بالمكيال",
+        "translit": "kāla at-tājiru al-qamḥa bi-l-mikyaāli",
+        "en": "(what did the merchant do?)",
+        "ur": "(سوداگر نے کیا کیا؟)"
       },
-      "correct_answer": false,
+      "options": [
+        {
+          "en": "He weighed the wheat on the scale",
+          "ur": "اس نے گیہوں ترازو پر تولا"
+        },
+        {
+          "en": "He measured the wheat with the measure",
+          "ur": "اس نے گیہوں پیمانے سے ناپا"
+        },
+        {
+          "en": "He bought the wheat for profit",
+          "ur": "اس نے گیہوں نفع کے لیے خریدا"
+        },
+        {
+          "en": "He sold the measure",
+          "ur": "اس نے پیمانہ بیچ دیا"
+        }
+      ],
+      "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "وَزْنٌ means 'weight.' كَيْلٌ means 'volume measure.'",
-        "ur": "وَزْنٌ کا مطلب 'وزن' ہے۔ كَيْلٌ کا مطلب 'مقدار کا ناپ' ہے۔"
+        "en": "كَالَ is 'measure by volume' and the tool is مِكْيَالٌ.",
+        "ur": "كَالَ کا مطلب 'حجم ناپنا' ہے اور اس کا آلہ مِكْيَالٌ ہے۔"
       }
     },
     {
       "type": "FILL_BLANK",
       "id": "ch61-l02-ex03",
       "mode": "TAP",
-      "sentence_ar": "كَالَ التَّاجِرُ بِ___",
+      "sentence_ar": "وَزَنَ التَّاجِرُ الذَّهَبَ بِـ___",
       "hint": {
-        "en": "The merchant measured with a full measure.",
-        "ur": "تاجر نے پورے پیمانے سے ناپا۔"
+        "en": "The merchant weighed the gold on the scale.",
+        "ur": "سوداگر نے سونا ترازو پر تولا۔"
       },
       "options": [
         {
-          "ar": "مِكْيَالٍ وَافٍ",
-          "ar_plain": "مكيال واف",
-          "translit": "mikyaalin waafin",
-          "en": "a full measure",
-          "ur": "پورا پیمانہ"
+          "ar": "الْمِكْيَالِ",
+          "ar_plain": "المكيال",
+          "translit": "al-mikyaāli",
+          "en": "the measure",
+          "ur": "پیمانہ"
         },
         {
-          "ar": "مِيزَانٍ ثَقِيلٍ",
-          "ar_plain": "ميزان ثقيل",
-          "translit": "miizaanin thaqiil",
-          "en": "a heavy scale",
-          "ur": "بھاری ترازو"
+          "ar": "الثَّمَنِ",
+          "ar_plain": "الثمن",
+          "translit": "ath-thamani",
+          "en": "the price",
+          "ur": "قیمت"
         },
         {
-          "ar": "وَزْنٍ خَفِيفٍ",
-          "ar_plain": "وزن خفيف",
-          "translit": "waznin khafiif",
-          "en": "light weight",
-          "ur": "ہلکا وزن"
+          "ar": "الْمِيزَانِ",
+          "ar_plain": "الميزان",
+          "translit": "al-mīzāni",
+          "en": "the scale",
+          "ur": "ترازو"
         },
         {
-          "ar": "حِمْلٍ كَبِيرٍ",
-          "ar_plain": "حمل كبير",
-          "translit": "Himlin kabiirin",
-          "en": "a big load",
-          "ur": "بڑا بوجھ"
+          "ar": "الرِّبْحِ",
+          "ar_plain": "الربح",
+          "translit": "ar-ribḥi",
+          "en": "the profit",
+          "ur": "نفع"
         }
       ],
       "correct_answer": {
-        "ar": "مِكْيَالٍ وَافٍ",
-        "ar_plain": "مكيال واف",
-        "translit": "mikyaalin waafin",
-        "en": "a full measure",
-        "ur": "پورا پیمانہ"
+        "ar": "الْمِيزَانِ",
+        "ar_plain": "الميزان",
+        "translit": "al-mīzāni",
+        "en": "the scale",
+        "ur": "ترازو"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Weighing gold needs a scale: بِالْمِيزَانِ.",
+        "ur": "سونا تولنے کے لیے ترازو چاہیے: بِالْمِيزَانِ۔"
+      }
     },
     {
       "type": "MATCHING",
       "id": "ch61-l02-ex04",
       "left_column": [
         {
+          "ar": "وَزَنَ",
+          "ar_plain": "وزن",
+          "translit": "wazana",
+          "en": "he weighed",
+          "ur": "اس نے تولا"
+        },
+        {
+          "ar": "كَالَ",
+          "ar_plain": "كال",
+          "translit": "kāla",
+          "en": "he measured",
+          "ur": "اس نے ناپا"
+        },
+        {
           "ar": "مِيزَانٌ",
           "ar_plain": "ميزان",
-          "translit": "miizaanun",
+          "translit": "mīzānun",
           "en": "scale",
           "ur": "ترازو"
         },
         {
           "ar": "مِكْيَالٌ",
           "ar_plain": "مكيال",
-          "translit": "mikyaalun",
+          "translit": "mikyaālun",
           "en": "measure",
           "ur": "پیمانہ"
-        },
-        {
-          "ar": "وَزْنٌ",
-          "ar_plain": "وزن",
-          "translit": "waznun",
-          "en": "weight",
-          "ur": "وزن"
-        },
-        {
-          "ar": "كَيْلٌ",
-          "ar_plain": "كيل",
-          "translit": "kaylun",
-          "en": "volume measure",
-          "ur": "مقدار ناپ"
         }
       ],
       "right_column": [
         {
-          "en": "weight",
-          "ur": "وزن"
+          "en": "measure",
+          "ur": "پیمانہ"
+        },
+        {
+          "en": "he measured",
+          "ur": "اس نے ناپا"
+        },
+        {
+          "en": "he weighed",
+          "ur": "اس نے تولا"
         },
         {
           "en": "scale",
           "ur": "ترازو"
-        },
-        {
-          "en": "volume measure",
-          "ur": "مقدار ناپ"
-        },
-        {
-          "en": "measure",
-          "ur": "پیمانہ"
         }
       ],
       "correct_pairs": [
         [
           0,
-          1
+          2
         ],
         [
           1,
-          3
+          1
         ],
         [
           2,
-          0
+          3
         ],
         [
           3,
-          2
+          0
         ]
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Two actions and their two tools.",
+        "ur": "دو عمل اور ان کے دو آلے۔"
+      }
     },
     {
-      "type": "BUILD_SENTENCE",
+      "type": "TRUE_FALSE",
       "id": "ch61-l02-ex05",
-      "target_translation": {
-        "en": "The merchant demanded full measure for himself.",
-        "ur": "تاجر نے خود کے لیے پورا ناپ لیا۔"
+      "statement": {
+        "en": "A merchant who sells grain by volume uses كَالَ and مِكْيَالٌ.",
+        "ur": "جو سوداگر اناج حجم کے حساب سے بیچتا ہے وہ كَالَ اور مِكْيَالٌ استعمال کرتا ہے۔"
       },
-      "tiles": [
-        {
-          "ar": "اسْتَوْفَى",
-          "ar_plain": "استوفى",
-          "translit": "istawfaa",
-          "en": "demanded full",
-          "ur": "نے پورا لیا"
-        },
-        {
-          "ar": "التَّاجِرُ",
-          "ar_plain": "التاجر",
-          "translit": "at-taajiru",
-          "en": "the merchant",
-          "ur": "تاجر"
-        },
-        {
-          "ar": "لِنَفْسِهِ",
-          "ar_plain": "لنفسه",
-          "translit": "linafsihi",
-          "en": "for himself",
-          "ur": "خود کے لیے"
-        },
-        {
-          "ar": "الْكَيْلَ",
-          "ar_plain": "الكيل",
-          "translit": "al-kayla",
-          "en": "the measure",
-          "ur": "ناپ"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "xp_value": 1
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes — grain by volume is measured (كَالَ) with a مِكْيَالٌ.",
+        "ur": "جی ہاں — حجم سے بکنے والا اناج مِكْيَالٌ سے ناپا (كَالَ) جاتا ہے۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch61-l02-ex06",
       "prompt": {
-        "ar": "رِضَاءُ اللَّهِ",
-        "ar_plain": "رضاء الله",
-        "translit": "ridaa'u allaahi",
-        "en": "the pleasure of Allah",
-        "ur": "اللہ کی رضا"
+        "ar": "ثَمَنُ ثَلَاثَةِ أَرْطَالٍ عَشَرَةُ رِيَالَاتٍ",
+        "ar_plain": "ثمن ثلاثة ارطال عشرة ريالات",
+        "translit": "thamanu thalāthati ʾarṭālin ʿasharatu riyaālātin",
+        "en": "(read the price)",
+        "ur": "(قیمت پڑھیں)"
       },
       "options": [
         {
-          "en": "the pleasure of Allah",
-          "ur": "اللہ کی رضا"
+          "en": "Ten ratls cost three riyals",
+          "ur": "دس رطل کی قیمت تین ریال ہے"
         },
         {
-          "en": "the weight of Allah",
-          "ur": "اللہ کا وزن"
+          "en": "Three riyals weigh ten ratls",
+          "ur": "تین ریال کا وزن دس رطل ہے"
         },
         {
-          "en": "the justice of Allah",
-          "ur": "اللہ کا انصاف"
+          "en": "The price of ten riyals is a loss",
+          "ur": "دس ریال کی قیمت نقصان ہے"
         },
         {
-          "en": "the measure of Allah",
-          "ur": "اللہ کا ناپ"
+          "en": "Three ratls cost ten riyals",
+          "ur": "تین رطل کی قیمت دس ریال ہے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The amount is three ratls and the price is ten riyals.",
+        "ur": "مقدار تین رطل ہے اور قیمت دس ریال۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch61-l02-ex07",
+      "prompt": {
+        "ar": "وَأَوْفُوا الْكَيْلَ إِذَا كِلْتُمْ",
+        "ar_plain": "واوفوا الكيل اذا كلتم",
+        "translit": "waʾawfū al-kayla ʾidhā kiltum",
+        "en": "(17:35: what does the ayah say first?)",
+        "ur": "(17:35: آیت پہلے کیا کہتی ہے؟)"
+      },
+      "options": [
+        {
+          "en": "give full measure when you measure",
+          "ur": "جب ناپو تو ناپ پورا دو"
+        },
+        {
+          "en": "take a measure when you buy",
+          "ur": "جب خریدو تو ناپ لو"
+        },
+        {
+          "en": "keep the scale for yourself",
+          "ur": "ترازو اپنے لیے رکھو"
+        },
+        {
+          "en": "measure less than you give",
+          "ur": "جتنا دو اس سے کم ناپو"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "رِضَاءٌ means 'pleasure/satisfaction' from رَضِيَ (to be pleased). رِضَاءُ اللَّهِ is 'the pleasure of Allah' — a key concept in submission.",
-        "ur": "رِضَاءٌ رَضِيَ (خوش ہونا) سے 'خوشی/اطمینان' کا مطلب ہے۔ رِضَاءُ اللَّهِ 'اللہ کی رضا' ہے — ایمان میں ایک اہم تصور۔"
+        "en": "أَوْفُوا الْكَيْلَ means 'give the measure in full'.",
+        "ur": "أَوْفُوا الْكَيْلَ کا مطلب 'ناپ پورا دو' ہے۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch61-l02-ex07",
-      "statement": {
-        "en": "اسْتَوْفَى means 'to give less than full measure.'",
-        "ur": "اسْتَوْفَى کا مطلب ہے 'کمتر ناپنا'۔"
+      "type": "TAP_TRANSLATION",
+      "id": "ch61-l02-ex08",
+      "prompt": {
+        "ar": "أَو وَّزَنُوهُمْ يُخْسِرُونَ",
+        "ar_plain": "او وزنوهم يخسرون",
+        "translit": "ʾaw wwazanūhum yukhsirūna",
+        "en": "(83:3: which two acts are named?)",
+        "ur": "(83:3: کون سے دو عمل مذکور ہیں؟)"
       },
-      "correct_answer": false,
+      "options": [
+        {
+          "en": "they sell to them or buy from them",
+          "ur": "وہ ان کو بیچتے ہیں یا ان سے خریدتے ہیں"
+        },
+        {
+          "en": "they count for them or write for them",
+          "ur": "وہ ان کے لیے گنتے ہیں یا لکھتے ہیں"
+        },
+        {
+          "en": "they measure for them or weigh for them",
+          "ur": "وہ ان کے لیے ناپتے ہیں یا تولتے ہیں"
+        },
+        {
+          "en": "they measure for themselves only",
+          "ur": "وہ صرف اپنے لیے ناپتے ہیں"
+        }
+      ],
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "اسْتَوْفَى means 'to demand/take full measure.' مُطَفِّفٌ is the one who gives less.",
-        "ur": "اسْتَوْفَى کا مطلب 'پورا لینا/مکمل تقاضا کرنا' ہے۔ مُطَفِّفٌ وہ ہے جو کمتر دے۔"
+        "en": "كَالُوهُمْ is 'they measure for them' and وَزَنُوهُمْ is 'they weigh for them'.",
+        "ur": "كَالُوهُمْ کا مطلب 'وہ ان کے لیے ناپتے ہیں' اور وَزَنُوهُمْ کا 'وہ ان کے لیے تولتے ہیں' ہے۔"
       }
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch61-l02-ex08",
-      "mode": "TYPE",
-      "sentence_ar": "وَزَنَ التَّاجِرُ الْبِضَاعَةَ بِ___ عَادِلٍ",
-      "hint": {
-        "en": "The merchant weighed the goods with fair scales.",
-        "ur": "تاجر نے مال کو منصفانہ ترازو سے تولا۔"
-      },
-      "correct_answer": {
-        "ar": "مِيزَانٍ",
-        "ar_plain": "ميزان",
-        "translit": "miizaanin",
-        "en": "scales",
-        "ur": "ترازو"
-      },
-      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Weights and Measures — مِيزَانٌ عَدْلٌ in the Quran",
-      "ar": "الْمِيزَانُ وَالْكَيْلُ — مِيزَانٌ عَدْلٌ فِي الْقُرْآنِ",
-      "ur": "ناپ اور تول — قرآن میں مِيزَانٌ عَدْلٌ"
+      "en": "Two acts, one warning",
+      "ar": "كَيْلٌ وَوَزْنٌ — تَحْذِيرٌ وَاحِدٌ",
+      "ur": "دو عمل، ایک تنبیہ"
     },
     "ayah": {
       "surah": 83,
@@ -450,15 +488,20 @@
       3,
       4
     ],
+    "highlighted_words": [
+      "كَالُوهُمْ",
+      "وَّزَنُوهُمْ",
+      "يُخْسِرُونَ"
+    ],
     "noor_explanation": {
-      "en": "كَالُوهُمْ = \"they measure for them\", وَزَنُوهُمْ = \"they weigh for them\", يُخْسِرُونَ = \"they give short\". The same people who demanded full measure for themselves give less to others — the opposite of a just scale.",
-      "ur": "كَالُوهُمْ = \"ان کے لیے ناپتے ہیں\"، وَزَنُوهُمْ = \"ان کے لیے تولتے ہیں\"، يُخْسِرُونَ = \"کم دیتے ہیں\"۔ وہی لوگ جو اپنے لیے پورا لیتے تھے دوسروں کو کم دیتے ہیں — عادل ترازو کا الٹ۔"
+      "en": "كَالُوهُمْ and وَزَنُوهُمْ are the two acts of this lesson, and يُخْسِرُونَ is the result: they cause loss.",
+      "ur": "كَالُوهُمْ اور وَزَنُوهُمْ اس سبق کے دو عمل ہیں، اور يُخْسِرُونَ نتیجہ ہے: وہ کم دیتے ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Justice in measure is a repeated theme in the Quran. مِيزَانٌ, كَيْلٌ, وَزْنٌ — these words remind us that fairness in trade is not just good business. It is worship.",
-      "ur": "ناپ میں انصاف قرآن میں بار بار آنے والا موضوع ہے۔ مِيزَانٌ، كَيْلٌ، وَزْنٌ — یہ الفاظ ہمیں یاد دلاتے ہیں کہ تجارت میں انصاف صرف اچھا کاروبار نہیں۔ یہ عبادت ہے۔"
+      "en": "Weighing on a scale and measuring with a measure: you can now keep them apart and read both in the Quran.",
+      "ur": "ترازو پر تولنا اور پیمانے سے ناپنا: اب آپ انہیں الگ رکھ سکتے ہیں اور قرآن میں دونوں پڑھ سکتے ہیں۔"
     }
   }
 }

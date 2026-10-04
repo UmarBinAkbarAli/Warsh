@@ -1,0 +1,545 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 62, Retrieval review (ch62-l05, rebuilt in place and moved to display order 7; the old row was the Hajj spoken-phrases lesson, whose phrases are dropped, not moved). Twelve tasks, two for each of the five grammar strands (pointing words, phrase against sentence, لَا + noun, the jobs of لَا, agreement) and one from each part of Al-Bayyinah. Added 2026-10-04 in the proposal harvest, batch 8 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-62-content-proposal.md and its review amendments.",
+    "title": "Chapter 62 Review — Pointing Words, لَا and Al-Bayyinah",
+    "titleAr": "مُرَاجَعَةُ الْبَابِ 62 — الْإِشَارَةُ وَلَا وَالْبَيِّنَةُ",
+    "titleUr": "باب 62 کا جائزہ — اشارے، لَا اور البینہ",
+    "chapter_order": 62,
+    "lesson_order": 7,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 98,
+      "ayah": 7,
+      "label": "Al-Bayyinah 98:7",
+      "ar": "إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ أُولَٰئِكَ هُمْ خَيْرُ الْبَرِيَّةِ",
+      "en": "Indeed, they who have believed and done righteous deeds - those are the best of creatures.",
+      "ur": "(اور) جو لوگ ایمان لائے اور نیک عمل کرتے رہے وہ تمام خلقت سے بہتر ہیں",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/098007.mp3"
+    },
+    "noor_intro": {
+      "en": "Review Chapter 62: pointing words, phrase and sentence, لَا, agreement and the surah.",
+      "ur": "باب 62 کا جائزہ: اشارے کے الفاظ، مرکب اور جملہ، لَا، مطابقت اور سورت۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 62 summary",
+        "ar": "خُلَاصَةُ الْبَابِ",
+        "ur": "باب 62 کا خلاصہ"
+      },
+      "explanation": {
+        "en": "Pointing words (هَؤُلَاءِ, أُولَئِكَ, تِلْكَ, ذَلِكَ, كَذَٰلِكَ), a pointing phrase against a sentence (هَذَا الْكِتَابُ جَدِيدٌ against هَذَا كِتَابٌ جَدِيدٌ), the shape لَا رَيْبَ, the three jobs of لَا, agreement of the describer, and the two parts of Al-Bayyinah.",
+        "ur": "اشارے کے الفاظ (هَؤُلَاءِ، أُولَئِكَ، تِلْكَ، ذَلِكَ، كَذَٰلِكَ)، اشارے کا مرکب اور جملہ (هَذَا الْكِتَابُ جَدِيدٌ بمقابلہ هَذَا كِتَابٌ جَدِيدٌ)، شکل لَا رَيْبَ، لَا کے تین کام، صفت کی مطابقت، اور سورۃ البینہ کے دو حصے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Twelve tasks",
+        "ur": "بارہ مشقیں"
+      },
+      "body": {
+        "en": "Two on pointing words, two on phrase against sentence, two on the shape لَا + noun, two on the jobs of لَا, two on agreement, and one from each part of Al-Bayyinah.",
+        "ur": "دو اشارے کے الفاظ پر، دو مرکب بمقابلہ جملہ پر، دو شکل لَا + اسم پر، دو لَا کے کاموں پر، دو مطابقت پر، اور سورۃ البینہ کے ہر حصے سے ایک۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch62-l05-ex01",
+      "prompt": {
+        "ar": "هَؤُلَاءِ الطُّلَّابُ فِي الْمَكْتَبَةِ",
+        "ar_plain": "هؤلاء الطلاب في المكتبة",
+        "translit": "haʾulāʾi aṭ-ṭullābu fī al-maktabati",
+        "en": "(what does this say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "These students are in the library",
+          "ur": "یہ طالب علم لائبریری میں ہیں"
+        },
+        {
+          "en": "Those students are in the library",
+          "ur": "وہ طالب علم لائبریری میں ہیں"
+        },
+        {
+          "en": "This student is in the library",
+          "ur": "یہ طالب علم لائبریری میں ہے"
+        },
+        {
+          "en": "These are students and a library",
+          "ur": "یہ طالب علم اور ایک لائبریری ہیں"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هَؤُلَاءِ is 'these' for near people.",
+        "ur": "هَؤُلَاءِ قریب کے لوگوں کے لیے 'یہ' ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch62-l05-ex02",
+      "prompt": {
+        "ar": "أُولَئِكَ الْمُعَلِّمُونَ فِي الْمَدْرَسَةِ",
+        "ar_plain": "اولئك المعلمون في المدرسة",
+        "translit": "ʾūlaʾika al-muʿallimūna fī al-madrasati",
+        "en": "(what does this say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "These teachers are in the school",
+          "ur": "یہ اساتذہ مدرسے میں ہیں"
+        },
+        {
+          "en": "Those teachers are in the school",
+          "ur": "وہ اساتذہ مدرسے میں ہیں"
+        },
+        {
+          "en": "That teacher is in the school",
+          "ur": "وہ استاد مدرسے میں ہے"
+        },
+        {
+          "en": "Those are teachers and a school",
+          "ur": "وہ اساتذہ اور ایک مدرسہ ہیں"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أُولَئِكَ is 'those' for far people.",
+        "ur": "أُولَئِكَ دور کے لوگوں کے لیے 'وہ' ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch62-l05-ex03",
+      "prompt": {
+        "ar": "هَذَا كِتَابٌ جَدِيدٌ",
+        "ar_plain": "هذا كتاب جديد",
+        "translit": "hadhā kitābun jadīdun",
+        "en": "(what does this say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "This new book",
+          "ur": "یہ نئی کتاب"
+        },
+        {
+          "en": "That is a new book",
+          "ur": "وہ ایک نئی کتاب ہے"
+        },
+        {
+          "en": "This is a new book",
+          "ur": "یہ ایک نئی کتاب ہے"
+        },
+        {
+          "en": "These are new books",
+          "ur": "یہ نئی کتابیں ہیں"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "No الْ on كِتَابٌ: هَذَا is the subject and كِتَابٌ جَدِيدٌ says what it is.",
+        "ur": "كِتَابٌ پر الْ نہیں: هَذَا مبتدا ہے اور كِتَابٌ جَدِيدٌ بتاتا ہے یہ کیا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch62-l05-ex04",
+      "prompt": {
+        "ar": "هَذَا الْكِتَابُ جَدِيدٌ",
+        "ar_plain": "هذا الكتاب جديد",
+        "translit": "hadhā al-kitābu jadīdun",
+        "en": "(what does this say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "This is a new book",
+          "ur": "یہ ایک نئی کتاب ہے"
+        },
+        {
+          "en": "These books are new",
+          "ur": "یہ کتابیں نئی ہیں"
+        },
+        {
+          "en": "That book is new",
+          "ur": "وہ کتاب نئی ہے"
+        },
+        {
+          "en": "This book is new",
+          "ur": "یہ کتاب نئی ہے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "With الْ the pointing phrase هَذَا الْكِتَابُ is the subject: 'this book is new'.",
+        "ur": "الْ کے ساتھ اشارے کا مرکب هَذَا الْكِتَابُ مبتدا ہے: 'یہ کتاب نئی ہے'۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch62-l05-ex05",
+      "mode": "TAP",
+      "sentence_ar": "لَا ___ فِي الْمَسْجِدِ",
+      "hint": {
+        "en": "There is no man in the mosque.",
+        "ur": "مسجد میں کوئی مرد نہیں ہے۔"
+      },
+      "options": [
+        {
+          "ar": "رَجُلَ",
+          "ar_plain": "رجل",
+          "translit": "rajula",
+          "en": "man (fatḥa, no tanwīn)",
+          "ur": "مرد (فتحہ، بغیر تنوین)"
+        },
+        {
+          "ar": "رَجُلٌ",
+          "ar_plain": "رجل",
+          "translit": "rajulun",
+          "en": "a man (ḍamma + tanwīn)",
+          "ur": "ایک مرد (ضمہ + تنوین)"
+        },
+        {
+          "ar": "رَجُلًا",
+          "ar_plain": "رجلا",
+          "translit": "rajulan",
+          "en": "a man (fatḥatān)",
+          "ur": "ایک مرد (دو فتحہ)"
+        },
+        {
+          "ar": "رَجُلٍ",
+          "ar_plain": "رجل",
+          "translit": "rajulin",
+          "en": "a man (kasra + tanwīn)",
+          "ur": "ایک مرد (کسرہ + تنوین)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "رَجُلَ",
+        "ar_plain": "رجل",
+        "translit": "rajula",
+        "en": "man (fatḥa, no tanwīn)",
+        "ur": "مرد (فتحہ، بغیر تنوین)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After this لَا the noun has a fatḥa and no tanwīn: لَا رَجُلَ.",
+        "ur": "اس لَا کے بعد اسم پر فتحہ ہوتا ہے اور تنوین نہیں: لَا رَجُلَ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch62-l05-ex06",
+      "prompt": {
+        "ar": "لَا رَيْبَ فِيهِ",
+        "ar_plain": "لا ريب فيه",
+        "translit": "lā rayba fīhi",
+        "en": "(what does this say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "There is some doubt in it",
+          "ur": "اس میں کچھ شک ہے"
+        },
+        {
+          "en": "There is no doubt in it",
+          "ur": "اس میں کوئی شک نہیں"
+        },
+        {
+          "en": "He has no doubt",
+          "ur": "اسے کوئی شک نہیں"
+        },
+        {
+          "en": "It is in doubt",
+          "ur": "یہ شک میں ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَا رَيْبَ denies doubt as a whole kind.",
+        "ur": "لَا رَيْبَ شک کی پوری جنس کی نفی کرتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch62-l05-ex07",
+      "prompt": {
+        "ar": "لَا يَعْلَمُونَ",
+        "ar_plain": "لا يعلمون",
+        "translit": "lā yaʿlamūna",
+        "en": "(what does this say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "Do not know!",
+          "ur": "مت جانو!"
+        },
+        {
+          "en": "There is no knowledge at all",
+          "ur": "بالکل کوئی علم نہیں"
+        },
+        {
+          "en": "They do not know",
+          "ur": "وہ نہیں جانتے"
+        },
+        {
+          "en": "They know",
+          "ur": "وہ جانتے ہیں"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَا before a verb negates the verb.",
+        "ur": "فعل سے پہلے لَا فعل کی نفی کرتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch62-l05-ex08",
+      "prompt": {
+        "ar": "لَا تَقُلْ",
+        "ar_plain": "لا تقل",
+        "translit": "lā taqul",
+        "en": "(what does this say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "He does not say",
+          "ur": "وہ نہیں کہتا"
+        },
+        {
+          "en": "There is no saying at all",
+          "ur": "بالکل کوئی کہنا نہیں"
+        },
+        {
+          "en": "You do not say",
+          "ur": "تم نہیں کہتے"
+        },
+        {
+          "en": "Do not say!",
+          "ur": "مت کہو!"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَا with the command form forbids.",
+        "ur": "امر کی شکل کے ساتھ لَا منع کرتا ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch62-l05-ex09",
+      "mode": "TAP",
+      "sentence_ar": "أُولَئِكَ الْمُؤْمِنُونَ ___",
+      "hint": {
+        "en": "Those noble believers.",
+        "ur": "وہ معزز ایمان والے۔"
+      },
+      "options": [
+        {
+          "ar": "الْكِرَامُ",
+          "ar_plain": "الكرام",
+          "translit": "al-kirāmu",
+          "en": "the noble (m. pl.)",
+          "ur": "معزز (مذکر جمع)"
+        },
+        {
+          "ar": "الْكَرِيمُ",
+          "ar_plain": "الكريم",
+          "translit": "al-karīmu",
+          "en": "the noble (m. sg.)",
+          "ur": "معزز (مذکر واحد)"
+        },
+        {
+          "ar": "الْكَرِيمَةُ",
+          "ar_plain": "الكريمة",
+          "translit": "al-karīmatu",
+          "en": "the noble (f. sg.)",
+          "ur": "معزز (مؤنث واحد)"
+        },
+        {
+          "ar": "الْكَرِيمَانِ",
+          "ar_plain": "الكريمان",
+          "translit": "al-karīmāni",
+          "en": "the noble (dual)",
+          "ur": "معزز (مثنیٰ)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الْكِرَامُ",
+        "ar_plain": "الكرام",
+        "translit": "al-kirāmu",
+        "en": "the noble (m. pl.)",
+        "ur": "معزز (مذکر جمع)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The describer agrees with الْمُؤْمِنُونَ: masculine plural.",
+        "ur": "صفت الْمُؤْمِنُونَ کے مطابق ہے: مذکر جمع۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch62-l05-ex10",
+      "prompt": {
+        "ar": "هَذِهِ الْمَرْأَةُ الْعَالِمَةُ",
+        "ar_plain": "هذه المراة العالمة",
+        "translit": "hadhihi al-marʾatu al-ʿālimatu",
+        "en": "(what does this say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "This is a knowledgeable woman",
+          "ur": "یہ ایک علم والی خاتون ہے"
+        },
+        {
+          "en": "This knowledgeable woman",
+          "ur": "یہ علم والی خاتون"
+        },
+        {
+          "en": "These knowledgeable women",
+          "ur": "یہ علم والی خواتین"
+        },
+        {
+          "en": "That knowledgeable woman",
+          "ur": "وہ علم والی خاتون"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هَذِهِ + a noun with الْ + a describer with الْ is a phrase: 'this knowledgeable woman'.",
+        "ur": "هَذِهِ + الْ والا اسم + الْ والی صفت ایک مرکب ہے: 'یہ علم والی خاتون'۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch62-l05-ex11",
+      "prompt": {
+        "ar": "وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا اللَّهَ مُخْلِصِينَ لَهُ الدِّينَ حُنَفَاءَ وَيُقِيمُوا الصَّلَاةَ وَيُؤْتُوا الزَّكَاةَ ۚ وَذَٰلِكَ دِينُ الْقَيِّمَةِ",
+        "ar_plain": "وما امروا الا ليعبدوا الله مخلصين له الدين حنفاء ويقيموا الصلاة ويؤتوا الزكاة  وذلك دين القيمة",
+        "translit": "wamā ʾumirū ʾillā liyaʿbudū al-laha mukhliṣīna lahu ad-dīna ḥunafāʾa wayuqīmū aṣ-ṣalāta wayuʾtū az-zakāta ۚ wadhālika dīnu al-qayyimati",
+        "en": "(98:5)",
+        "ur": "(98:5)"
+      },
+      "options": [
+        {
+          "en": "Those who were given the Book did not divide except after the clear proof came to them",
+          "ur": "جنہیں کتاب دی گئی وہ جدا نہ ہوئے مگر اس کے بعد کہ ان کے پاس کھلی دلیل آ چکی تھی"
+        },
+        {
+          "en": "Those who disbelieved among the People of the Scripture and the polytheists will be in the Fire of Hell, abiding in it — those are the worst of creatures",
+          "ur": "اہل کتاب اور مشرکین میں سے جنہوں نے کفر کیا وہ جہنم کی آگ میں ہوں گے، اس میں ہمیشہ رہنے والے — یہی بدترین مخلوق ہیں"
+        },
+        {
+          "en": "in them are straight, upright writings",
+          "ur": "ان میں سیدھی، مضبوط تحریریں ہیں"
+        },
+        {
+          "en": "They were commanded only to worship Allah, sincere to Him in religion, upright, to establish prayer and give zakah — and that is the straight religion",
+          "ur": "انہیں حکم صرف یہی دیا گیا تھا کہ اللہ کی عبادت کریں، دین کو اسی کے لیے خالص کر کے، یکسو ہو کر، نماز قائم کریں اور زکوٰۃ دیں — اور یہی سیدھا دین ہے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "98:5 says what they were commanded: to worship Allah, sincere to Him in religion.",
+        "ur": "98:5 بتاتی ہے کہ انہیں کیا حکم دیا گیا: اللہ کی عبادت، دین کو اسی کے لیے خالص کر کے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch62-l05-ex12",
+      "prompt": {
+        "ar": "جَزَاؤُهُمْ عِندَ رَبِّهِمْ جَنَّاتُ عَدْنٍ تَجْرِي مِن تَحْتِهَا الْأَنْهَارُ خَالِدِينَ فِيهَا أَبَدًا ۖ رَّضِيَ اللَّهُ عَنْهُمْ وَرَضُوا عَنْهُ ۚ ذَٰلِكَ لِمَنْ خَشِيَ رَبَّهُ",
+        "ar_plain": "جزاؤهم عند ربهم جنات عدن تجري من تحتها الانهار خالدين فيها ابدا  رضي الله عنهم ورضوا عنه  ذلك لمن خشي ربه",
+        "translit": "jazāʾuhum ʿinda rabbihim jannātu ʿadnin tajrī min taḥtihā al-ʾanhāru khālidīna fīhā ʾabadan ۖ rraḍiya al-lahu ʿanhum waraḍū ʿanhu ۚ dhālika liman khashiya rabbahu",
+        "en": "(98:8)",
+        "ur": "(98:8)"
+      },
+      "options": [
+        {
+          "en": "Their reward with their Lord is gardens of Eden with rivers flowing beneath them, abiding in them forever; Allah is pleased with them and they are pleased with Him — that is for whoever feared his Lord",
+          "ur": "ان کا بدلہ ان کے رب کے پاس عدن کے باغ ہیں جن کے نیچے نہریں بہتی ہیں، ان میں ہمیشہ رہنے والے؛ اللہ ان سے راضی ہوا اور وہ اس سے راضی ہوئے — یہ اس کے لیے ہے جو اپنے رب سے ڈرا"
+        },
+        {
+          "en": "Those who believed and did righteous deeds — those are the best of creatures",
+          "ur": "جو ایمان لائے اور نیک عمل کیے — یہی بہترین مخلوق ہیں"
+        },
+        {
+          "en": "Those who disbelieved among the People of the Scripture and the polytheists will be in the Fire of Hell, abiding in it — those are the worst of creatures",
+          "ur": "اہل کتاب اور مشرکین میں سے جنہوں نے کفر کیا وہ جہنم کی آگ میں ہوں گے، اس میں ہمیشہ رہنے والے — یہی بدترین مخلوق ہیں"
+        },
+        {
+          "en": "They were commanded only to worship Allah, sincere to Him in religion, upright, to establish prayer and give zakah — and that is the straight religion",
+          "ur": "انہیں حکم صرف یہی دیا گیا تھا کہ اللہ کی عبادت کریں، دین کو اسی کے لیے خالص کر کے، یکسو ہو کر، نماز قائم کریں اور زکوٰۃ دیں — اور یہی سیدھا دین ہے"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "98:8 gives the reward: gardens of Eden, and Allah's pleasure for whoever feared his Lord.",
+        "ur": "98:8 بدلہ بتاتی ہے: عدن کے باغ، اور اس کے لیے اللہ کی رضا جو اپنے رب سے ڈرا۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "No doubt at all",
+      "ar": "لَا رَيْبَ فِيهِ",
+      "ur": "بالکل کوئی شک نہیں"
+    },
+    "ayah": {
+      "surah": 2,
+      "ayah": 2,
+      "label": "Al-Baqarah 2:2",
+      "ar": "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ",
+      "en": "This is the Book about which there is no doubt, a guidance for those conscious of Allāh -",
+      "ur": "یہ کتاب (قرآن مجید) اس میں کچھ شک نہیں (کہ کلامِ خدا ہے۔ خدا سے) ڈرنے والوں کی رہنما ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002002.mp3"
+    },
+    "highlighted_word_indices": [
+      2,
+      3
+    ],
+    "highlighted_words": [
+      "لَا",
+      "رَيْبَ"
+    ],
+    "noor_explanation": {
+      "en": "لَا رَيْبَ فِيهِ — the shape of this chapter in four words: لَا and a noun with a fatḥa and no tanwīn.",
+      "ur": "لَا رَيْبَ فِيهِ — اس باب کی شکل چار الفاظ میں: لَا اور فتحہ والا اسم بغیر تنوین۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Pointing words, phrase against sentence, the shape لَا رَيْبَ, the jobs of لَا and a whole surah — Chapter 62 in one review.",
+      "ur": "اشارے کے الفاظ، مرکب اور جملہ، شکل لَا رَيْبَ، لَا کے کام اور ایک پوری سورت — باب 62 ایک جائزے میں۔"
+    }
+  }
+}

@@ -1,0 +1,511 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 64, Retrieval review (ch64-l05, rebuilt in place and moved to display order 10). Twelve tasks, in the proposal's allocation: classification (1), the three predicate kinds (3), the outer مبتدأ (1), the verbal-clause span (1), five reading decisions — Al-Balad I, Al-Balad II linked to the opening, Al-Ghashiyah I, Al-Ghashiyah II and Al-Ghashiyah III linked to the whole (5) — and the nominal-clause span (1). Added 2026-10-04 in the proposal harvest, batch 8 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-64-content-proposal.md and its review amendments.",
+    "title": "Chapter 64 Review — Predicates, Al-Balad and Al-Ghashiyah",
+    "titleAr": "مُرَاجَعَةُ الْبَابِ 64 — الْخَبَرُ وَالْبَلَدُ وَالْغَاشِيَةُ",
+    "titleUr": "باب 64 کا جائزہ — خبر، البلد اور الغاشیہ",
+    "chapter_order": 64,
+    "lesson_order": 10,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 88,
+      "ayah": 25,
+      "label": "Al-Ghashiyah 88:25",
+      "ar": "إِنَّ إِلَيْنَا إِيَابَهُمْ",
+      "en": "Indeed, to Us is their return.",
+      "ur": "بےشک ان کو ہمارے پاس لوٹ کر آنا ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/088025.mp3"
+    },
+    "noor_intro": {
+      "en": "Review Chapter 64: sentence kinds, the three predicates, the layers, and two surahs.",
+      "ur": "باب 64 کا جائزہ: جملے کی قسمیں، تین خبریں، تہیں، اور دو سورتیں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 64 summary",
+        "ar": "خُلَاصَةُ الْبَابِ",
+        "ur": "باب 64 کا خلاصہ"
+      },
+      "explanation": {
+        "en": "Two kinds of sentence (nominal and verbal), the three kinds of predicate (a single word, a sentence, a phrase), the outer مبتدأ against the doer inside the verb, the whole predicate clause, and the two surahs: Al-Balad in two parts and Al-Ghashiyah in three.",
+        "ur": "جملے کی دو قسمیں (اسمیہ اور فعلیہ)، خبر کی تین قسمیں (اکیلا لفظ، جملہ، مرکب)، باہر کا مبتدا بمقابلہ فعل کے اندر کرنے والا، پوری خبر کا جملہ، اور دو سورتیں: البلد دو حصوں میں اور الغاشیہ تین میں۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Twelve tasks",
+        "ur": "بارہ مشقیں"
+      },
+      "body": {
+        "en": "One on telling the sentence kinds apart, three on the three kinds of predicate, one on the outer subject, one on a verbal-clause predicate, one on a nominal-clause predicate and five from the five reading parts, ending with a link to the whole surah.",
+        "ur": "ایک جملے کی قسمیں الگ کرنے پر، تین خبر کی تین قسموں پر، ایک باہر کے مبتدا پر، ایک فعلیہ جملے والی خبر پر، ایک اسمیہ جملے والی خبر پر اور پانچ پڑھائی کے پانچ حصوں سے، جن کے آخر میں پوری سورت سے جوڑ ہے۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l05-ex01",
+      "prompt": {
+        "ar": "يَعْلَمُ اللَّهُ",
+        "ar_plain": "يعلم الله",
+        "translit": "yaʿlamu al-lahu",
+        "en": "(which sentence is verbal — and how can you tell?)",
+        "ur": "(کون سا جملہ فعلیہ ہے — اور آپ کیسے بتائیں گے؟)"
+      },
+      "options": [
+        {
+          "en": "اللَّهُ يَعْلَمُ — it starts with a verb",
+          "ur": "اللَّهُ يَعْلَمُ — یہ فعل سے شروع ہوتا ہے"
+        },
+        {
+          "en": "يَعْلَمُ اللَّهُ — it starts with a verb and الله is the doer",
+          "ur": "يَعْلَمُ اللَّهُ — یہ فعل سے شروع ہوتا ہے اور اللہ کرنے والا ہے"
+        },
+        {
+          "en": "الْكِتَابُ جَدِيدٌ — it starts with a verb",
+          "ur": "الْكِتَابُ جَدِيدٌ — یہ فعل سے شروع ہوتا ہے"
+        },
+        {
+          "en": "الْمَكْتَبَةُ أَمَامَ الْمَدْرَسَةِ — it starts with a verb",
+          "ur": "الْمَكْتَبَةُ أَمَامَ الْمَدْرَسَةِ — یہ فعل سے شروع ہوتا ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Only يَعْلَمُ اللَّهُ starts with a verb. اللَّهُ يَعْلَمُ starts with a noun, so it is nominal.",
+        "ur": "صرف يَعْلَمُ اللَّهُ فعل سے شروع ہوتا ہے۔ اللَّهُ يَعْلَمُ اسم سے شروع ہوتا ہے، اس لیے اسمیہ ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l05-ex02",
+      "prompt": {
+        "ar": "اللَّهُ حَكِيمٌ",
+        "ar_plain": "الله حكيم",
+        "translit": "al-lahu ḥakīmun",
+        "en": "(what kind of predicate is حَكِيمٌ?)",
+        "ur": "(حَكِيمٌ کس قسم کی خبر ہے؟)"
+      },
+      "options": [
+        {
+          "en": "A whole sentence",
+          "ur": "پورا جملہ"
+        },
+        {
+          "en": "A phrase of place",
+          "ur": "جگہ کا مرکب"
+        },
+        {
+          "en": "A single word",
+          "ur": "ایک اکیلا لفظ"
+        },
+        {
+          "en": "There is no predicate",
+          "ur": "کوئی خبر نہیں"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "حَكِيمٌ is one word and it is the predicate.",
+        "ur": "حَكِيمٌ ایک لفظ ہے اور یہی خبر ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l05-ex03",
+      "prompt": {
+        "ar": "الْكِتَابُ فِي الْبَيْتِ",
+        "ar_plain": "الكتاب في البيت",
+        "translit": "al-kitābu fī al-bayti",
+        "en": "(what kind of predicate is فِي الْبَيْتِ?)",
+        "ur": "(فِي الْبَيْتِ کس قسم کی خبر ہے؟)"
+      },
+      "options": [
+        {
+          "en": "A single word",
+          "ur": "ایک اکیلا لفظ"
+        },
+        {
+          "en": "A verbal sentence",
+          "ur": "فعلیہ جملہ"
+        },
+        {
+          "en": "The مبتدأ",
+          "ur": "مبتدا"
+        },
+        {
+          "en": "A phrase (preposition and its noun)",
+          "ur": "ایک مرکب (حرف جر اور اس کا اسم)"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "فِي الْبَيْتِ is a phrase of place, and it is the predicate.",
+        "ur": "فِي الْبَيْتِ جگہ کا مرکب ہے اور یہی خبر ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l05-ex04",
+      "prompt": {
+        "ar": "الطَّالِبُ يَكْتُبُ",
+        "ar_plain": "الطالب يكتب",
+        "translit": "aṭ-ṭālibu yaktubu",
+        "en": "(what kind of predicate is يَكْتُبُ?)",
+        "ur": "(يَكْتُبُ کس قسم کی خبر ہے؟)"
+      },
+      "options": [
+        {
+          "en": "A whole sentence (a verb with its hidden doer)",
+          "ur": "پورا جملہ (فعل اپنے چھپے کرنے والے کے ساتھ)"
+        },
+        {
+          "en": "A single word of description",
+          "ur": "وصف کا اکیلا لفظ"
+        },
+        {
+          "en": "A phrase of place",
+          "ur": "جگہ کا مرکب"
+        },
+        {
+          "en": "It is the مبتدأ",
+          "ur": "یہ مبتدا ہے"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يَكْتُبُ with its hidden 'he' is a whole sentence, and it is the predicate.",
+        "ur": "يَكْتُبُ اپنے چھپے 'وہ' کے ساتھ پورا جملہ ہے، اور یہی خبر ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l05-ex05",
+      "prompt": {
+        "ar": "الطَّالِبُ يَكْتُبُ",
+        "ar_plain": "الطالب يكتب",
+        "translit": "aṭ-ṭālibu yaktubu",
+        "en": "(which word is the outer مبتدأ?)",
+        "ur": "(باہر کا مبتدا کون سا لفظ ہے؟)"
+      },
+      "options": [
+        {
+          "en": "يَكْتُبُ",
+          "ur": "يَكْتُبُ"
+        },
+        {
+          "en": "الطَّالِبُ",
+          "ur": "الطَّالِبُ"
+        },
+        {
+          "en": "The hidden 'he'",
+          "ur": "چھپا 'وہ'"
+        },
+        {
+          "en": "There is none",
+          "ur": "کوئی نہیں"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The sentence starts with a noun: الطَّالِبُ is the outer مبتدأ.",
+        "ur": "جملہ اسم سے شروع ہوتا ہے: الطَّالِبُ باہر کا مبتدا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l05-ex06",
+      "prompt": {
+        "ar": "الْمُعَلِّمُ يَقْرَأُ الْكِتَابَ",
+        "ar_plain": "المعلم يقرا الكتاب",
+        "translit": "al-muʿallimu yaqraʾu al-kitāba",
+        "en": "(which words are the whole predicate?)",
+        "ur": "(پوری خبر کون سے الفاظ ہیں؟)"
+      },
+      "options": [
+        {
+          "en": "يَقْرَأُ",
+          "ur": "يَقْرَأُ"
+        },
+        {
+          "en": "الْكِتَابَ",
+          "ur": "الْكِتَابَ"
+        },
+        {
+          "en": "يَقْرَأُ الْكِتَابَ",
+          "ur": "يَقْرَأُ الْكِتَابَ"
+        },
+        {
+          "en": "الْمُعَلِّمُ يَقْرَأُ",
+          "ur": "الْمُعَلِّمُ يَقْرَأُ"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The verb and its object together are the predicate clause.",
+        "ur": "فعل اور اس کا مفعول مل کر خبر کا جملہ ہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l05-ex07",
+      "prompt": {
+        "ar": "لَقَدْ خَلَقْنَا الْإِنسَانَ فِي كَبَدٍ",
+        "ar_plain": "لقد خلقنا الانسان في كبد",
+        "translit": "laqad khalaqnā al-ʾinsāna fī kabadin",
+        "en": "(90:4)",
+        "ur": "(90:4)"
+      },
+      "options": [
+        {
+          "en": "and by a father and what he fathered",
+          "ur": "اور والد کی اور اس کی جو اس سے پیدا ہوا"
+        },
+        {
+          "en": "Does he think that no one will ever overpower him?",
+          "ur": "کیا وہ سمجھتا ہے کہ اس پر کوئی ہرگز قابو نہیں پا سکے گا؟"
+        },
+        {
+          "en": "and you are at liberty in this city",
+          "ur": "اور تم اس شہر میں آزادانہ رہ رہے ہو"
+        },
+        {
+          "en": "We created man in hardship",
+          "ur": "ہم نے انسان کو مشقت میں پیدا کیا"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "90:4 says man was created in hardship.",
+        "ur": "90:4 کہتی ہے کہ انسان مشقت میں پیدا کیا گیا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l05-ex08",
+      "prompt": {
+        "ar": "لَقَدْ خَلَقْنَا الْإِنسَانَ فِي كَبَدٍ … ثُمَّ كَانَ مِنَ الَّذِينَ آمَنُوا وَتَوَاصَوْا بِالصَّبْرِ وَتَوَاصَوْا بِالْمَرْحَمَةِ",
+        "ar_plain": "لقد خلقنا الانسان في كبد … ثم كان من الذين امنوا وتواصوا بالصبر وتواصوا بالمرحمة",
+        "translit": "laqad khalaqnā al-ʾinsāna fī kabadin … thumma kāna mina alladhīna ʾāmanū watawaāṣaw bi-ṣ-ṣabri watawaāṣaw bi-l-marḥamati",
+        "en": "(90:4 and 90:17: how does the second part answer the first?)",
+        "ur": "(90:4 اور 90:17: دوسرا حصہ پہلے کا جواب کیسے دیتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "Man lives in hardship, and the steep path of freeing, feeding, patience and mercy answers it",
+          "ur": "انسان مشقت میں رہتا ہے، اور آزاد کرنے، کھلانے، صبر اور رحم کی گھاٹی اس کا جواب ہے"
+        },
+        {
+          "en": "Both ayat swear by a city",
+          "ur": "دونوں آیات ایک شہر کی قسم کھاتی ہیں"
+        },
+        {
+          "en": "The second repeats the first word for word",
+          "ur": "دوسری پہلی کو لفظ بہ لفظ دہراتی ہے"
+        },
+        {
+          "en": "They are about two different surahs",
+          "ur": "یہ دو مختلف سورتوں کی بات ہیں"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The first part says what man is made in; the second names the path that answers it.",
+        "ur": "پہلا حصہ بتاتا ہے کہ انسان کس حال میں بنا؛ دوسرا اس کے جواب میں گھاٹی کا نام لیتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l05-ex09",
+      "prompt": {
+        "ar": "وُجُوهٌ يَوْمَئِذٍ خَاشِعَةٌ",
+        "ar_plain": "وجوه يومئذ خاشعة",
+        "translit": "wujūhun yawmaʾidhin khāshiʿatun",
+        "en": "(88:2)",
+        "ur": "(88:2)"
+      },
+      "options": [
+        {
+          "en": "Has the report of the Overwhelming Event reached you?",
+          "ur": "کیا تمہارے پاس چھا جانے والی کی خبر آئی؟"
+        },
+        {
+          "en": "Some faces on that Day will be humbled",
+          "ur": "اس دن کچھ چہرے جھکے ہوں گے"
+        },
+        {
+          "en": "working hard, worn out",
+          "ur": "محنت کرنے والے، تھکے ہوئے"
+        },
+        {
+          "en": "They will burn in a blazing Fire",
+          "ur": "وہ دہکتی آگ میں جلیں گے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "88:2 says some faces that Day will be humbled.",
+        "ur": "88:2 کہتی ہے کہ اس دن کچھ چہرے جھکے ہوں گے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l05-ex10",
+      "prompt": {
+        "ar": "فِي جَنَّةٍ عَالِيَةٍ",
+        "ar_plain": "في جنة عالية",
+        "translit": "fī jannatin ʿāliyatin",
+        "en": "(88:10)",
+        "ur": "(88:10)"
+      },
+      "options": [
+        {
+          "en": "pleased with their striving",
+          "ur": "اپنی کوشش سے راضی"
+        },
+        {
+          "en": "in it they will hear no idle talk",
+          "ur": "اس میں وہ کوئی بے ہودہ بات نہیں سنیں گے"
+        },
+        {
+          "en": "in a high garden",
+          "ur": "ایک بلند باغ میں"
+        },
+        {
+          "en": "Other faces on that Day will be joyful",
+          "ur": "اس دن کچھ چہرے ہشاش بشاش ہوں گے"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "88:10 puts the joyful faces in a high garden.",
+        "ur": "88:10 ہشاش بشاش چہروں کو بلند باغ میں رکھتی ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l05-ex11",
+      "prompt": {
+        "ar": "أَفَلَا يَنظُرُونَ إِلَى الْإِبِلِ كَيْفَ خُلِقَتْ … إِنَّ إِلَيْنَا إِيَابَهُمْ",
+        "ar_plain": "افلا ينظرون الى الابل كيف خلقت … ان الينا ايابهم",
+        "translit": "ʾafalā yanẓurūna ʾilā al-ʾibili kayfa khuliqat … ʾinna ʾilaynā ʾiyaābahum",
+        "en": "(88:17 and 88:25: how do they fit the whole surah?)",
+        "ur": "(88:17 اور 88:25: یہ پوری سورت میں کیسے بیٹھتی ہیں؟)"
+      },
+      "options": [
+        {
+          "en": "A story of one nation",
+          "ur": "ایک قوم کی کہانی"
+        },
+        {
+          "en": "A list of the days of the week",
+          "ur": "ہفتے کے دنوں کی فہرست"
+        },
+        {
+          "en": "A second oath",
+          "ur": "ایک دوسری قسم"
+        },
+        {
+          "en": "After the two sets of faces, a call to look at what was made, and then the return to Allah and His reckoning",
+          "ur": "چہروں کے دو گروہوں کے بعد جو بنایا گیا اسے دیکھنے کی دعوت، اور پھر اللہ کی طرف لوٹنا اور اس کا حساب"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The call to look comes after the faces, and the return and the reckoning close the surah.",
+        "ur": "دیکھنے کی دعوت چہروں کے بعد آتی ہے، اور لوٹنا اور حساب سورت کو ختم کرتے ہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch64-l05-ex12",
+      "prompt": {
+        "ar": "الْبَيْتُ بَابُهُ كَبِيرٌ",
+        "ar_plain": "البيت بابه كبير",
+        "translit": "al-baytu bābuhu kabīrun",
+        "en": "(which words are the whole predicate?)",
+        "ur": "(پوری خبر کون سے الفاظ ہیں؟)"
+      },
+      "options": [
+        {
+          "en": "بَابُهُ كَبِيرٌ",
+          "ur": "بَابُهُ كَبِيرٌ"
+        },
+        {
+          "en": "كَبِيرٌ",
+          "ur": "كَبِيرٌ"
+        },
+        {
+          "en": "الْبَيْتُ بَابُهُ",
+          "ur": "الْبَيْتُ بَابُهُ"
+        },
+        {
+          "en": "بَابُهُ",
+          "ur": "بَابُهُ"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The whole clause بَابُهُ كَبِيرٌ is the predicate of الْبَيْتُ; the ـهُ links it back.",
+        "ur": "پورا جملہ بَابُهُ كَبِيرٌ الْبَيْتُ کی خبر ہے؛ ـهُ اسے لوٹاتا ہے۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Predicate first",
+      "ar": "إِنَّ إِلَيْنَا إِيَابَهُمْ",
+      "ur": "خبر پہلے"
+    },
+    "ayah": {
+      "surah": 88,
+      "ayah": 25,
+      "label": "Al-Ghashiyah 88:25",
+      "ar": "إِنَّ إِلَيْنَا إِيَابَهُمْ",
+      "en": "Indeed, to Us is their return.",
+      "ur": "بےشک ان کو ہمارے پاس لوٹ کر آنا ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/088025.mp3"
+    },
+    "highlighted_word_indices": [
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "إِلَيْنَا",
+      "إِيَابَهُمْ"
+    ],
+    "noor_explanation": {
+      "en": "إِنَّ إِلَيْنَا إِيَابَهُمْ — the phrase إِلَيْنَا comes first and the noun follows: a phrase as the predicate, standing first.",
+      "ur": "إِنَّ إِلَيْنَا إِيَابَهُمْ — مرکب إِلَيْنَا پہلے آتا ہے اور اسم بعد میں: مرکب بطور خبر، پہلے آتا ہوا۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Sentence kinds, the three predicates, the layers inside a predicate and two surahs — Chapter 64 in one review.",
+      "ur": "جملے کی قسمیں، تین خبریں، خبر کے اندر کی تہیں اور دو سورتیں — باب 64 ایک جائزے میں۔"
+    }
+  }
+}

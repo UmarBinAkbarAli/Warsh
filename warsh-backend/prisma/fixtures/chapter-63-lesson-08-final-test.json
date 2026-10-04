@@ -1,0 +1,444 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 63, Final test (ch63-test, new). Twelve multiple-choice questions at 80 % (9/12 fails, 10/12 passes): the head's case and the meaning of a definite / indefinite second term (q01–02), the dual in the nominative and the oblique (q03–04), the sound masculine plural in the nominative and the oblique (q05–06), a chain of three and an adjective attached to the right noun (q07–08), why a ن goes missing for a noun and for a five verb with لَنْ (q09–10), and one decision from each part of Ash-Shams (q11–12). Correct options are placed 3 / 3 / 3 / 3. Added 2026-10-04 in the proposal harvest, batch 8 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-63-content-proposal.md and its review amendments.",
+    "title": "Chapter 63 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الثَّالِثِ وَالسِّتِّينَ",
+    "titleUr": "باب 63 کا آخری امتحان",
+    "chapter_order": 63,
+    "lesson_order": 8,
+    "estimated_minutes": 10,
+    "xp_reward": 25
+  },
+  "hook": {
+    "ayah": {
+      "surah": 91,
+      "ayah": 13,
+      "label": "Ash-Shams 91:13",
+      "ar": "فَقَالَ لَهُمْ رَسُولُ اللَّهِ نَاقَةَ اللَّهِ وَسُقْيَاهَا",
+      "en": "And the messenger of Allāh [i.e., Ṣāliḥ] said to them, \"[Do not harm] the she-camel of Allāh or [prevent her from] her drink.\"",
+      "ur": "تو خدا کے پیغمبر (صالح) نے ان سے کہا کہ خدا کی اونٹنی اور اس کے پانی پینے کی باری سے عذر کرو",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/091013.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 63.",
+      "ur": "باب 63 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 63,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch63-test-q01",
+        "topic": {
+          "en": "The head's case",
+          "ur": "مضاف کی حالت"
+        },
+        "prompt": {
+          "en": "Which form completes 'I heard the teacher's voice'?",
+          "ur": "کون سی صورت 'میں نے استاد کی آواز سنی' کو مکمل کرتی ہے؟"
+        },
+        "arabic": "سَمِعْتُ ___ الْمُعَلِّمِ",
+        "options": [
+          {
+            "en": "صَوْتُ",
+            "ur": "صَوْتُ"
+          },
+          {
+            "en": "صَوْتٌ",
+            "ur": "صَوْتٌ"
+          },
+          {
+            "en": "صَوْتَ",
+            "ur": "صَوْتَ"
+          },
+          {
+            "en": "صَوْتِ",
+            "ur": "صَوْتِ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch63-test-q02",
+        "topic": {
+          "en": "An indefinite second term",
+          "ur": "نکرہ دوسرا جزو"
+        },
+        "prompt": {
+          "en": "What does this sentence say?",
+          "ur": "یہ جملہ کیا کہتا ہے؟"
+        },
+        "arabic": "هَذَا بَيْتُ مُعَلِّمٍ",
+        "options": [
+          {
+            "en": "This is a teacher's house",
+            "ur": "یہ ایک استاد کا گھر ہے"
+          },
+          {
+            "en": "This is the teacher's house",
+            "ur": "یہ استاد کا گھر ہے"
+          },
+          {
+            "en": "This house is a teacher",
+            "ur": "یہ گھر ایک استاد ہے"
+          },
+          {
+            "en": "This is a house and a teacher",
+            "ur": "یہ ایک گھر اور ایک استاد ہے"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch63-test-q03",
+        "topic": {
+          "en": "A dual as first term",
+          "ur": "مثنیٰ بطور پہلا جزو"
+        },
+        "prompt": {
+          "en": "Which form completes 'The student's two sons came'?",
+          "ur": "کون سی صورت 'طالب علم کے دو بیٹے آئے' کو مکمل کرتی ہے؟"
+        },
+        "arabic": "جَاءَ ___ الطَّالِبِ",
+        "options": [
+          {
+            "en": "ابْنَانِ",
+            "ur": "ابْنَانِ"
+          },
+          {
+            "en": "ابْنَيْنِ",
+            "ur": "ابْنَيْنِ"
+          },
+          {
+            "en": "ابْنَيْ",
+            "ur": "ابْنَيْ"
+          },
+          {
+            "en": "ابْنَا",
+            "ur": "ابْنَا"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch63-test-q04",
+        "topic": {
+          "en": "A dual after 'I saw'",
+          "ur": "'میں نے دیکھا' کے بعد مثنیٰ"
+        },
+        "prompt": {
+          "en": "Which form completes 'I saw the student's two sons'?",
+          "ur": "کون سی صورت 'میں نے طالب علم کے دو بیٹے دیکھے' کو مکمل کرتی ہے؟"
+        },
+        "arabic": "رَأَيْتُ ___ الطَّالِبِ",
+        "options": [
+          {
+            "en": "ابْنَا",
+            "ur": "ابْنَا"
+          },
+          {
+            "en": "ابْنَيْ",
+            "ur": "ابْنَيْ"
+          },
+          {
+            "en": "ابْنَانِ",
+            "ur": "ابْنَانِ"
+          },
+          {
+            "en": "ابْنَيْنِ",
+            "ur": "ابْنَيْنِ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch63-test-q05",
+        "topic": {
+          "en": "A plural as first term",
+          "ur": "جمع بطور پہلا جزو"
+        },
+        "prompt": {
+          "en": "Which form completes 'The Muslims of the village came'?",
+          "ur": "کون سی صورت 'گاؤں کے مسلمان آئے' کو مکمل کرتی ہے؟"
+        },
+        "arabic": "جَاءَ ___ الْقَرْيَةِ",
+        "options": [
+          {
+            "en": "مُسْلِمُونَ",
+            "ur": "مُسْلِمُونَ"
+          },
+          {
+            "en": "مُسْلِمُو",
+            "ur": "مُسْلِمُو"
+          },
+          {
+            "en": "مُسْلِمِي",
+            "ur": "مُسْلِمِي"
+          },
+          {
+            "en": "مُسْلِمِينَ",
+            "ur": "مُسْلِمِينَ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch63-test-q06",
+        "topic": {
+          "en": "A plural in the oblique",
+          "ur": "مجرور حالت میں جمع"
+        },
+        "prompt": {
+          "en": "Which form completes 'I went to the village's Muslims'?",
+          "ur": "کون سی صورت 'میں گاؤں کے مسلمانوں کے پاس گیا' کو مکمل کرتی ہے؟"
+        },
+        "arabic": "ذَهَبْتُ إِلَى ___ الْقَرْيَةِ",
+        "options": [
+          {
+            "en": "مُسْلِمُو",
+            "ur": "مُسْلِمُو"
+          },
+          {
+            "en": "مُسْلِمُونَ",
+            "ur": "مُسْلِمُونَ"
+          },
+          {
+            "en": "مُسْلِمِينَ",
+            "ur": "مُسْلِمِينَ"
+          },
+          {
+            "en": "مُسْلِمِي",
+            "ur": "مُسْلِمِي"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch63-test-q07",
+        "topic": {
+          "en": "A chain of three",
+          "ur": "تین کی زنجیر"
+        },
+        "prompt": {
+          "en": "What does this phrase say?",
+          "ur": "یہ جملہ کیا کہتا ہے؟"
+        },
+        "arabic": "كِتَابُ مُعَلِّمِ الْمَدْرَسَةِ",
+        "options": [
+          {
+            "en": "The book of the school's teacher",
+            "ur": "مدرسے کے استاد کی کتاب"
+          },
+          {
+            "en": "The school's teachers",
+            "ur": "مدرسے کے اساتذہ"
+          },
+          {
+            "en": "The book is in the school",
+            "ur": "کتاب مدرسے میں ہے"
+          },
+          {
+            "en": "The teacher and the school",
+            "ur": "استاد اور مدرسہ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch63-test-q08",
+        "topic": {
+          "en": "An adjective with its own noun",
+          "ur": "اپنے اسم کے ساتھ صفت"
+        },
+        "prompt": {
+          "en": "Which word does الْجَدِيدَةُ describe?",
+          "ur": "الْجَدِيدَةُ کس لفظ کو بیان کرتا ہے؟"
+        },
+        "arabic": "سَيَّارَةُ الْمُعَلِّمِ الْجَدِيدَةُ",
+        "options": [
+          {
+            "en": "الْمُعَلِّمِ — the teacher, who is masculine",
+            "ur": "الْمُعَلِّمِ — استاد، جو مذکر ہے"
+          },
+          {
+            "en": "Both words",
+            "ur": "دونوں الفاظ"
+          },
+          {
+            "en": "سَيَّارَةُ — the car, which is feminine like the describer",
+            "ur": "سَيَّارَةُ — گاڑی، جو صفت کی طرح مؤنث ہے"
+          },
+          {
+            "en": "Neither word",
+            "ur": "کوئی لفظ نہیں"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch63-test-q09",
+        "topic": {
+          "en": "Why a ن goes missing: a noun",
+          "ur": "ن کیوں گرتا ہے: اسم"
+        },
+        "prompt": {
+          "en": "Why is the final ن missing here?",
+          "ur": "یہاں آخری ن کیوں غائب ہے؟"
+        },
+        "arabic": "مُعَلِّمُو الْمَدْرَسَةِ",
+        "options": [
+          {
+            "en": "Because لَنْ comes before it",
+            "ur": "کیونکہ اس سے پہلے لَنْ ہے"
+          },
+          {
+            "en": "Because it is a verb",
+            "ur": "کیونکہ یہ فعل ہے"
+          },
+          {
+            "en": "Because it is a name",
+            "ur": "کیونکہ یہ نام ہے"
+          },
+          {
+            "en": "Because it is the first term of an iḍāfa",
+            "ur": "کیونکہ یہ اضافت کا پہلا جزو ہے"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch63-test-q10",
+        "topic": {
+          "en": "Why a ن goes missing: a verb",
+          "ur": "ن کیوں گرتا ہے: فعل"
+        },
+        "prompt": {
+          "en": "Why is the final ن missing here?",
+          "ur": "یہاں آخری ن کیوں غائب ہے؟"
+        },
+        "arabic": "لَنْ يَكْتُبُوا",
+        "options": [
+          {
+            "en": "Because it is the first term of an iḍāfa",
+            "ur": "کیونکہ یہ اضافت کا پہلا جزو ہے"
+          },
+          {
+            "en": "Because لَنْ governs the verb",
+            "ur": "کیونکہ لَنْ فعل پر عمل کرتا ہے"
+          },
+          {
+            "en": "Because it is a dual",
+            "ur": "کیونکہ یہ مثنیٰ ہے"
+          },
+          {
+            "en": "Because it is a name",
+            "ur": "کیونکہ یہ نام ہے"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch63-test-q11",
+        "topic": {
+          "en": "Success in Ash-Shams",
+          "ur": "الشمس میں کامیابی"
+        },
+        "prompt": {
+          "en": "According to this ayah, who has succeeded?",
+          "ur": "اس آیت کے مطابق کون کامیاب ہوا؟"
+        },
+        "arabic": "قَدْ أَفْلَحَ مَن زَكَّاهَا",
+        "options": [
+          {
+            "en": "He who buries the soul",
+            "ur": "جس نے جان کو دبا دیا"
+          },
+          {
+            "en": "He who denied",
+            "ur": "جس نے جھٹلایا"
+          },
+          {
+            "en": "He who purifies the soul",
+            "ur": "جس نے جان کو پاک کیا"
+          },
+          {
+            "en": "He who hamstrung the she-camel",
+            "ur": "جس نے اونٹنی کی کونچیں کاٹیں"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch63-test-q12",
+        "topic": {
+          "en": "What came upon Thamud",
+          "ur": "ثمود پر کیا آیا"
+        },
+        "prompt": {
+          "en": "According to this ayah, what came upon Thamud?",
+          "ur": "اس آیت کے مطابق ثمود پر کیا آیا؟"
+        },
+        "arabic": "فَكَذَّبُوهُ فَعَقَرُوهَا فَدَمْدَمَ عَلَيْهِمْ رَبُّهُم بِذَنبِهِمْ فَسَوَّاهَا",
+        "options": [
+          {
+            "en": "Their Lord crushed them for their sin",
+            "ur": "ان کے رب نے ان کے گناہ کے سبب انہیں ہلاک کر دیا"
+          },
+          {
+            "en": "They were given a sealed drink",
+            "ur": "انہیں مہر لگا مشروب پلایا گیا"
+          },
+          {
+            "en": "They were raised to a high place",
+            "ur": "انہیں ایک بلند مقام پر اٹھایا گیا"
+          },
+          {
+            "en": "They were given a book",
+            "ur": "انہیں ایک کتاب دی گئی"
+          }
+        ],
+        "correct_index": 0
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 63 — iḍāfa in use",
+      "ar": "الْإِضَافَةُ فِي الِاسْتِعْمَالِ",
+      "ur": "باب 63 — اضافت کا استعمال"
+    },
+    "ayah": {
+      "surah": 91,
+      "ayah": 13,
+      "label": "Ash-Shams 91:13",
+      "ar": "فَقَالَ لَهُمْ رَسُولُ اللَّهِ نَاقَةَ اللَّهِ وَسُقْيَاهَا",
+      "en": "And the messenger of Allāh [i.e., Ṣāliḥ] said to them, \"[Do not harm] the she-camel of Allāh or [prevent her from] her drink.\"",
+      "ur": "تو خدا کے پیغمبر (صالح) نے ان سے کہا کہ خدا کی اونٹنی اور اس کے پانی پینے کی باری سے عذر کرو",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/091013.mp3"
+    },
+    "highlighted_word_indices": [
+      2,
+      3
+    ],
+    "highlighted_words": [
+      "رَسُولُ",
+      "اللَّهِ"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 63 able to build an iḍāfa in every case, drop the right ن, follow a chain and read Ash-Shams.",
+      "ur": "آپ باب 63 اس حال میں مکمل کرتے ہیں کہ ہر حالت میں اضافت بنا سکتے ہیں، صحیح ن گرا سکتے ہیں، زنجیر کو سمجھ سکتے ہیں اور الشمس پڑھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 63 complete. Chapter 64: nominal and verbal sentences, and two surahs.",
+      "ur": "باب 63 مکمل۔ باب 64: اسمیہ اور فعلیہ جملے، اور دو سورتیں۔"
+    }
+  }
+}

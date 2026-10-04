@@ -1,0 +1,444 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 64, Final test (ch64-test, new). Twelve multiple-choice questions at 80 % (9/12 fails, 10/12 passes) in the proposal's 2 + 3 + 2 + 2 + 3 allocation: a nominal core and a verb-first sentence (q01–02), the three predicate kinds (q03–05), the outer subject and an attached doer (q06–07), a verbal-clause span and a nominal-clause span (q08–09), and three reading questions — Al-Balad across both parts, Al-Ghashiyah's two sets of faces and Al-Ghashiyah's ending (q10–12). Correct options are placed 3 / 3 / 3 / 3 and every question supplies its own sentence or excerpt. Added 2026-10-04 in the proposal harvest, batch 8 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-64-content-proposal.md and its review amendments.",
+    "title": "Chapter 64 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الرَّابِعِ وَالسِّتِّينَ",
+    "titleUr": "باب 64 کا آخری امتحان",
+    "chapter_order": 64,
+    "lesson_order": 11,
+    "estimated_minutes": 10,
+    "xp_reward": 25
+  },
+  "hook": {
+    "ayah": {
+      "surah": 88,
+      "ayah": 25,
+      "label": "Al-Ghashiyah 88:25",
+      "ar": "إِنَّ إِلَيْنَا إِيَابَهُمْ",
+      "en": "Indeed, to Us is their return.",
+      "ur": "بےشک ان کو ہمارے پاس لوٹ کر آنا ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/088025.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 64.",
+      "ur": "باب 64 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 64,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch64-test-q01",
+        "topic": {
+          "en": "A nominal core",
+          "ur": "اسمیہ مرکز"
+        },
+        "prompt": {
+          "en": "In this sentence, which word is the predicate (خبر)?",
+          "ur": "اس جملے میں خبر (predicate) کون سا لفظ ہے؟"
+        },
+        "arabic": "إِنَّ اللَّهَ عَلِيمٌ",
+        "options": [
+          {
+            "en": "اللَّهَ",
+            "ur": "اللَّهَ"
+          },
+          {
+            "en": "عَلِيمٌ",
+            "ur": "عَلِيمٌ"
+          },
+          {
+            "en": "إِنَّ",
+            "ur": "إِنَّ"
+          },
+          {
+            "en": "اللَّهَ عَلِيمٌ",
+            "ur": "اللَّهَ عَلِيمٌ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch64-test-q02",
+        "topic": {
+          "en": "A verb-first sentence",
+          "ur": "فعل سے شروع ہونے والا جملہ"
+        },
+        "prompt": {
+          "en": "In this sentence, who is the doer?",
+          "ur": "اس جملے میں کرنے والا کون ہے؟"
+        },
+        "arabic": "يَقْرَأُ الطَّالِبُ الْكِتَابَ",
+        "options": [
+          {
+            "en": "الْكِتَابَ",
+            "ur": "الْكِتَابَ"
+          },
+          {
+            "en": "يَقْرَأُ",
+            "ur": "يَقْرَأُ"
+          },
+          {
+            "en": "There is no doer",
+            "ur": "کوئی کرنے والا نہیں"
+          },
+          {
+            "en": "الطَّالِبُ",
+            "ur": "الطَّالِبُ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch64-test-q03",
+        "topic": {
+          "en": "A single-word predicate",
+          "ur": "ایک لفظ کی خبر"
+        },
+        "prompt": {
+          "en": "What kind of predicate is حَكِيمٌ?",
+          "ur": "حَكِيمٌ کس قسم کی خبر ہے؟"
+        },
+        "arabic": "اللَّهُ حَكِيمٌ",
+        "options": [
+          {
+            "en": "A single word",
+            "ur": "ایک اکیلا لفظ"
+          },
+          {
+            "en": "A whole sentence",
+            "ur": "پورا جملہ"
+          },
+          {
+            "en": "A phrase of place",
+            "ur": "جگہ کا مرکب"
+          },
+          {
+            "en": "It is the مبتدأ",
+            "ur": "یہ مبتدا ہے"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch64-test-q04",
+        "topic": {
+          "en": "A sentence as predicate",
+          "ur": "جملہ بطور خبر"
+        },
+        "prompt": {
+          "en": "What kind of predicate is يَعْلَمُ?",
+          "ur": "يَعْلَمُ کس قسم کی خبر ہے؟"
+        },
+        "arabic": "اللَّهُ يَعْلَمُ",
+        "options": [
+          {
+            "en": "A single word",
+            "ur": "ایک اکیلا لفظ"
+          },
+          {
+            "en": "A phrase of place",
+            "ur": "جگہ کا مرکب"
+          },
+          {
+            "en": "A whole sentence (a verb with its hidden doer)",
+            "ur": "پورا جملہ (فعل اپنے چھپے کرنے والے کے ساتھ)"
+          },
+          {
+            "en": "It is the مبتدأ",
+            "ur": "یہ مبتدا ہے"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch64-test-q05",
+        "topic": {
+          "en": "A phrase as predicate",
+          "ur": "مرکب بطور خبر"
+        },
+        "prompt": {
+          "en": "What kind of predicate is أَمَامَ الْمَدْرَسَةِ?",
+          "ur": "أَمَامَ الْمَدْرَسَةِ کس قسم کی خبر ہے؟"
+        },
+        "arabic": "الْمَكْتَبَةُ أَمَامَ الْمَدْرَسَةِ",
+        "options": [
+          {
+            "en": "A single word",
+            "ur": "ایک اکیلا لفظ"
+          },
+          {
+            "en": "A verbal sentence",
+            "ur": "فعلیہ جملہ"
+          },
+          {
+            "en": "The مبتدأ",
+            "ur": "مبتدا"
+          },
+          {
+            "en": "A phrase that tells where the library is",
+            "ur": "ایک مرکب جو بتاتا ہے کہ لائبریری کہاں ہے"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch64-test-q06",
+        "topic": {
+          "en": "The outer subject",
+          "ur": "باہر کا مبتدا"
+        },
+        "prompt": {
+          "en": "Which word is the outer مبتدأ?",
+          "ur": "باہر کا مبتدا کون سا لفظ ہے؟"
+        },
+        "arabic": "الطَّالِبُ يَكْتُبُ",
+        "options": [
+          {
+            "en": "الطَّالِبُ",
+            "ur": "الطَّالِبُ"
+          },
+          {
+            "en": "يَكْتُبُ",
+            "ur": "يَكْتُبُ"
+          },
+          {
+            "en": "The hidden 'he'",
+            "ur": "چھپا 'وہ'"
+          },
+          {
+            "en": "There is none",
+            "ur": "کوئی نہیں"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch64-test-q07",
+        "topic": {
+          "en": "An attached doer",
+          "ur": "جڑا ہوا کرنے والا"
+        },
+        "prompt": {
+          "en": "Who does the writing in this verb?",
+          "ur": "اس فعل میں لکھنے والا کون ہے؟"
+        },
+        "arabic": "كَتَبُوا الدَّرْسَ",
+        "options": [
+          {
+            "en": "الدَّرْسَ",
+            "ur": "الدَّرْسَ"
+          },
+          {
+            "en": "The attached 'they' at the end of the verb",
+            "ur": "فعل کے آخر میں جڑا 'وہ سب'"
+          },
+          {
+            "en": "A hidden 'he'",
+            "ur": "چھپا 'وہ' (ایک)"
+          },
+          {
+            "en": "There is no doer",
+            "ur": "کوئی کرنے والا نہیں"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch64-test-q08",
+        "topic": {
+          "en": "A verbal clause as predicate",
+          "ur": "فعلیہ جملے والی خبر"
+        },
+        "prompt": {
+          "en": "Which words are the whole predicate?",
+          "ur": "پوری خبر کون سے الفاظ ہیں؟"
+        },
+        "arabic": "الْمُعَلِّمُ يَقْرَأُ الْكِتَابَ",
+        "options": [
+          {
+            "en": "يَقْرَأُ",
+            "ur": "يَقْرَأُ"
+          },
+          {
+            "en": "الْكِتَابَ",
+            "ur": "الْكِتَابَ"
+          },
+          {
+            "en": "يَقْرَأُ الْكِتَابَ",
+            "ur": "يَقْرَأُ الْكِتَابَ"
+          },
+          {
+            "en": "الْمُعَلِّمُ يَقْرَأُ",
+            "ur": "الْمُعَلِّمُ يَقْرَأُ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch64-test-q09",
+        "topic": {
+          "en": "A nominal clause as predicate",
+          "ur": "اسمیہ جملے والی خبر"
+        },
+        "prompt": {
+          "en": "Which words are the whole predicate?",
+          "ur": "پوری خبر کون سے الفاظ ہیں؟"
+        },
+        "arabic": "الْبَيْتُ بَابُهُ كَبِيرٌ",
+        "options": [
+          {
+            "en": "كَبِيرٌ",
+            "ur": "كَبِيرٌ"
+          },
+          {
+            "en": "الْبَيْتُ بَابُهُ",
+            "ur": "الْبَيْتُ بَابُهُ"
+          },
+          {
+            "en": "بَابُهُ",
+            "ur": "بَابُهُ"
+          },
+          {
+            "en": "بَابُهُ كَبِيرٌ",
+            "ur": "بَابُهُ كَبِيرٌ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch64-test-q10",
+        "topic": {
+          "en": "Al-Balad: what he has not done",
+          "ur": "البلد: جو اس نے نہیں کیا"
+        },
+        "prompt": {
+          "en": "According to this ayah, what has he not done?",
+          "ur": "اس آیت کے مطابق اس نے کیا نہیں کیا؟"
+        },
+        "arabic": "فَلَا اقْتَحَمَ الْعَقَبَةَ",
+        "options": [
+          {
+            "en": "He has not counted his wealth",
+            "ur": "اس نے اپنا مال نہیں گنا"
+          },
+          {
+            "en": "He has not attempted the steep pass",
+            "ur": "اس نے گھاٹی میں قدم نہیں رکھا"
+          },
+          {
+            "en": "He has not seen the city",
+            "ur": "اس نے شہر نہیں دیکھا"
+          },
+          {
+            "en": "He has not sworn an oath",
+            "ur": "اس نے قسم نہیں کھائی"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch64-test-q11",
+        "topic": {
+          "en": "Al-Ghashiyah: two sets of faces",
+          "ur": "الغاشیہ: چہروں کے دو گروہ"
+        },
+        "prompt": {
+          "en": "How do the two sets of faces differ?",
+          "ur": "چہروں کے دو گروہ کیسے مختلف ہیں؟"
+        },
+        "arabic": "وُجُوهٌ يَوْمَئِذٍ خَاشِعَةٌ … وُجُوهٌ يَوْمَئِذٍ نَّاعِمَةٌ",
+        "options": [
+          {
+            "en": "The first are joyful; the others are humbled",
+            "ur": "پہلے ہشاش بشاش ہیں؛ دوسرے جھکے ہوئے"
+          },
+          {
+            "en": "Both are humbled",
+            "ur": "دونوں جھکے ہوئے ہیں"
+          },
+          {
+            "en": "The first are humbled; the others are joyful",
+            "ur": "پہلے جھکے ہوئے ہیں؛ دوسرے ہشاش بشاش"
+          },
+          {
+            "en": "Both are joyful",
+            "ur": "دونوں ہشاش بشاش ہیں"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch64-test-q12",
+        "topic": {
+          "en": "Al-Ghashiyah: the ending",
+          "ur": "الغاشیہ: انجام"
+        },
+        "prompt": {
+          "en": "What do these two ayat say?",
+          "ur": "یہ دو آیات کیا کہتی ہیں؟"
+        },
+        "arabic": "إِنَّ إِلَيْنَا إِيَابَهُمْ ثُمَّ إِنَّ عَلَيْنَا حِسَابَهُم",
+        "options": [
+          {
+            "en": "Their return is to Allah, and their reckoning is His",
+            "ur": "ان کا لوٹنا اللہ کی طرف ہے، اور ان کا حساب اسی کے ذمے ہے"
+          },
+          {
+            "en": "They have no return and no reckoning",
+            "ur": "ان کا نہ لوٹنا ہے نہ حساب"
+          },
+          {
+            "en": "Their reckoning is first, then their return to a city",
+            "ur": "ان کا حساب پہلے، پھر ایک شہر کی طرف لوٹنا"
+          },
+          {
+            "en": "The Messenger is their controller",
+            "ur": "رسول ان کا داروغہ ہے"
+          }
+        ],
+        "correct_index": 0
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 64 — predicates and two surahs",
+      "ar": "الْخَبَرُ وَسُورَتَانِ",
+      "ur": "باب 64 — خبر اور دو سورتیں"
+    },
+    "ayah": {
+      "surah": 88,
+      "ayah": 25,
+      "label": "Al-Ghashiyah 88:25",
+      "ar": "إِنَّ إِلَيْنَا إِيَابَهُمْ",
+      "en": "Indeed, to Us is their return.",
+      "ur": "بےشک ان کو ہمارے پاس لوٹ کر آنا ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/088025.mp3"
+    },
+    "highlighted_word_indices": [
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "إِلَيْنَا",
+      "إِيَابَهُمْ"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 64 able to name the three kinds of predicate, take a whole clause as the predicate, and read Al-Balad and Al-Ghashiyah.",
+      "ur": "آپ باب 64 اس حال میں مکمل کرتے ہیں کہ خبر کی تین قسمیں بتا سکتے ہیں، پورے جملے کو خبر لے سکتے ہیں، اور البلد اور الغاشیہ پڑھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 64 complete. Chapter 65: كَانَ and its sisters, and the end of Book 7.",
+      "ur": "باب 64 مکمل۔ باب 65: كَانَ اور اس کی بہنیں، اور کتاب 7 کا اختتام۔"
+    }
+  }
+}

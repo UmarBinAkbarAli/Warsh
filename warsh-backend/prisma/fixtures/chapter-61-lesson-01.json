@@ -2,12 +2,12 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 61, Lesson 1 (ch61-l01, rebuilt in place). The old row taught an invented 'frequently sold' form and a wrong buyer word. This one gives a checked core: تِجَارَةٌ / تَاجِرٌ, بَاعَ / يَبِيعُ, اشْتَرَى / يَشْتَرِي with بَائِعٌ and مُشْتَرٍ, بِضَاعَةٌ, ثَمَنٌ, رِبْحٌ and خَسَارَةٌ, with 2:41 (ثَمَنًا قَلِيلًا). The verbs are whole-word pairs; no other forms of them are scored. Added 2026-10-04 in the proposal harvest, batch 8 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-61-content-proposal.md and its review amendments.",
+    "title": "Trade and Commerce",
+    "titleAr": "التِّجَارَةُ وَالْبَيْعُ",
+    "titleUr": "تجارت اور خرید و فروخت",
     "chapter_order": 61,
     "lesson_order": 1,
-    "chapter_title": "Trade, Weights, and Instrument Nouns (اسم الآلة)",
-    "title": "Trade and Commerce",
-    "titleAr": "التِّجَارَةُ وَالتِّبَادُلُ",
-    "source": "book7_ch61_trade_weights.md",
     "estimated_minutes": 8,
     "xp_reward": 10
   },
@@ -16,67 +16,70 @@
       "surah": 83,
       "ayah": 1,
       "label": "Al-Mutaffifin 83:1",
-      "ar": "وَيْلٌ لِلْمُطَفِّفِينَ",
-      "en": "Woe to those who give less than full.",
-      "ur": "تباہی ہے ان لوگوں کے لیے جو کمتر دیتے ہیں۔",
+      "ar": "وَيْلٌ لِّلْمُطَفِّفِينَ",
+      "en": "Woe to those who give less [than due],",
+      "ur": "ناپ اور تول میں کمی کرنے والوں کے لیے خرابی ہے",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/083001.mp3"
     },
     "noor_intro": {
-      "en": "The Quran strongly condemns cheating in trade — those who give less than full measure. Honest trade is a major theme in the Quran. Let us learn the Arabic of honest commerce.",
-      "ur": "قرآن تجارت میں دھوکے کو سخت مذمت کرتا ہے — جو کمتر دیتے ہیں۔ honest trade قرآن میں ایک بڑا موضوع ہے۔ آئیے honest تجارت کی عربی سیکھیں۔"
+      "en": "The Quran warns the cheat in trade: وَيْلٌ لِلْمُطَفِّفِينَ. Learn the words of an honest market first.",
+      "ur": "قرآن تجارت میں دھوکا دینے والے کو خبردار کرتا ہے: وَيْلٌ لِلْمُطَفِّفِينَ۔ پہلے ایمان دار بازار کے الفاظ سیکھیں۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The words of a deal",
+        "ar": "أَلْفَاظُ الصَّفْقَةِ",
+        "ur": "سودے کے الفاظ"
+      },
+      "explanation": {
+        "en": "Every market deal has a few parts: a seller (بَائِعٌ), a buyer (مُشْتَرٍ), goods (بِضَاعَةٌ) and a price (ثَمَنٌ). This lesson gives you those words, the two verbs of a sale — بَاعَ / يَبِيعُ and اشْتَرَى / يَشْتَرِي — and the words for profit and loss.",
+        "ur": "ہر بازاری سودے کے چند حصے ہوتے ہیں: بیچنے والا (بَائِعٌ)، خریدنے والا (مُشْتَرٍ)، سامان (بِضَاعَةٌ) اور قیمت (ثَمَنٌ)۔ یہ سبق آپ کو یہ الفاظ، فروخت کے دو فعل — بَاعَ / يَبِيعُ اور اشْتَرَى / يَشْتَرِي — اور نفع و نقصان کے الفاظ دیتا ہے۔"
+      }
+    },
     {
       "type": "WORD",
       "text": {
         "ar": "تِجَارَةٌ",
         "ar_plain": "تجارة",
-        "translit": "tijaaratun",
+        "translit": "tijāratun",
         "en": "trade; commerce",
-        "ur": "تجارت؛ کاروبار"
+        "ur": "تجارت"
       },
       "explanation": {
-        "en": "تِجَارَةٌ is a feminine noun meaning 'trade' or 'commerce.' تاجِرٌ means 'merchant/trader.' The verb is تاجَرَ (to trade). تِجَارَةُ الْحَرِيرِ = 'silk trade.'",
-        "ur": "تِجَارَةٌ مؤنث اسم ہے جس کا مطلب ہے 'تجارت' یا 'کاروبار'۔ تاجِرٌ کا مطلب 'تاجر' ہے۔ اس کا فعل تاجَرَ (تجارت کرنا) ہے۔ تِجَارَةُ الْحَرِيرِ = 'ریشم کی تجارت'۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "تجارة"
+        "en": "تِجَارَةٌ is the general word for trade. The person who trades is تَاجِرٌ, a merchant: تَاجِرٌ أَمِينٌ is 'an honest merchant'.",
+        "ur": "تِجَارَةٌ تجارت کا عام لفظ ہے۔ تجارت کرنے والا تَاجِرٌ ہے، یعنی سوداگر: تَاجِرٌ أَمِينٌ کا مطلب 'ایک دیانت دار سوداگر' ہے۔"
       }
     },
     {
       "type": "WORD",
       "text": {
-        "ar": "بَيْعٌ",
-        "ar_plain": "بيع",
-        "translit": "bay'un",
-        "en": "sale; selling",
-        "ur": "فروخت؛ بیچنا"
+        "ar": "بَاعَ",
+        "ar_plain": "باع",
+        "translit": "bāʿa",
+        "en": "he sold",
+        "ur": "اس نے بیچا"
       },
       "explanation": {
-        "en": "بَيْعٌ is a masculine noun meaning \"sale, selling\". بَاعَ means \"he sold\"; the seller is بَائِعٌ. بَيْعٌ وَشِرَاءٌ = \"buying and selling\".",
-        "ur": "بَيْعٌ مذکر اسم ہے: \"بیچنا، فروخت\"۔ بَاعَ = \"اس نے بیچا\"؛ بیچنے والا بَائِعٌ۔ بَيْعٌ وَشِرَاءٌ = \"خرید و فروخت\"۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "بيع"
+        "en": "بَاعَ is 'he sold' and يَبِيعُ is 'he sells'. They are given as a pair to learn whole. The seller is بَائِعٌ: بَاعَ التَّاجِرُ الْبِضَاعَةَ — 'the merchant sold the goods'.",
+        "ur": "بَاعَ کا مطلب 'اس نے بیچا' اور يَبِيعُ کا مطلب 'وہ بیچتا ہے' ہے۔ انہیں جوڑی کی صورت میں پورا یاد کریں۔ بیچنے والا بَائِعٌ ہے: بَاعَ التَّاجِرُ الْبِضَاعَةَ — 'سوداگر نے سامان بیچا'۔"
       }
     },
     {
       "type": "WORD",
       "text": {
-        "ar": "شِرَاءٌ",
-        "ar_plain": "شراء",
-        "translit": "shiraa'un",
-        "en": "buying; purchase",
-        "ur": "خرید؛ خریدنا"
+        "ar": "اشْتَرَى",
+        "ar_plain": "اشترى",
+        "translit": "ashtarā",
+        "en": "he bought",
+        "ur": "اس نے خریدا"
       },
       "explanation": {
-        "en": "شِرَاءٌ is a masculine noun meaning \"buying, purchase\". اشْتَرَى means \"to buy\"; the buyer is مُشْتَرٍ (الْمُشْتَرِي).",
-        "ur": "شِرَاءٌ مذکر اسم ہے: \"خریدنا، خریداری\"۔ اشْتَرَى = \"خریدنا\"؛ خریدار مُشْتَرٍ (الْمُشْتَرِي)۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "شراء"
+        "en": "اشْتَرَى is 'he bought' and يَشْتَرِي is 'he buys'. The one who buys is مُشْتَرٍ; with الْ it is الْمُشْتَرِي: اشْتَرَى الْمُشْتَرِي بِضَاعَةً — 'the buyer bought goods'.",
+        "ur": "اشْتَرَى کا مطلب 'اس نے خریدا' اور يَشْتَرِي کا مطلب 'وہ خریدتا ہے' ہے۔ خریدنے والا مُشْتَرٍ ہے؛ الْ کے ساتھ الْمُشْتَرِي: اشْتَرَى الْمُشْتَرِي بِضَاعَةً — 'خریدار نے سامان خریدا'۔"
       }
     },
     {
@@ -85,66 +88,65 @@
         "ar": "ثَمَنٌ",
         "ar_plain": "ثمن",
         "translit": "thamanun",
-        "en": "price; value",
+        "en": "price",
         "ur": "قیمت"
       },
       "explanation": {
-        "en": "ثَمَنٌ is a masculine noun meaning \"price\". ثَمَنٌ عَادِلٌ = \"a fair price\"; ثَمَنٌ غَالٍ = \"an expensive price\". In the Quran: وَلَا تَشْتَرُوا بِآيَاتِي ثَمَنًا قَلِيلًا (2:41).",
-        "ur": "ثَمَنٌ مذکر اسم ہے: \"قیمت\"۔ ثَمَنٌ عَادِلٌ = \"منصفانہ قیمت\"؛ ثَمَنٌ غَالٍ = \"مہنگی قیمت\"۔ قرآن میں: وَلَا تَشْتَرُوا بِآيَاتِي ثَمَنًا قَلِيلًا (2:41)۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "ثمن"
+        "en": "ثَمَنٌ is the price paid for something. Ask it with كَمْ: كَمْ ثَمَنُ هَذِهِ الْبِضَاعَةِ؟ — 'how much is the price of these goods?'. بِضَاعَةٌ is goods that are bought and sold.",
+        "ur": "ثَمَنٌ کسی چیز کے لیے دی جانے والی قیمت ہے۔ اسے كَمْ سے پوچھیں: كَمْ ثَمَنُ هَذِهِ الْبِضَاعَةِ؟ — 'اس سامان کی قیمت کتنی ہے؟'۔ بِضَاعَةٌ وہ سامان ہے جو خریدا اور بیچا جاتا ہے۔"
       }
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "رِبْحٌ",
-        "ar_plain": "ربح",
-        "translit": "ribhun",
-        "en": "profit; gain",
-        "ur": "منافع؛ کمائی"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Profit and loss",
+        "ar": "الرِّبْحُ وَالْخَسَارَةُ",
+        "ur": "نفع اور نقصان"
       },
+      "examples": [
+        {
+          "ar": "رِبْحٌ",
+          "ar_plain": "ربح",
+          "translit": "ribḥun",
+          "en": "profit; gain",
+          "ur": "نفع"
+        },
+        {
+          "ar": "خَسَارَةٌ",
+          "ar_plain": "خسارة",
+          "translit": "khasāratun",
+          "en": "loss",
+          "ur": "نقصان"
+        }
+      ],
       "explanation": {
-        "en": "رِبْحٌ is a masculine noun meaning 'profit' or 'gain.' رَبِحَ means 'to profit.' رَابِحٌ means 'profitable.' التِّجَارَةُ الرَّابِحَةُ = 'profitable trade.'",
-        "ur": "رِبْحٌ مذکر اسم ہے جس کا مطلب ہے 'منافع' یا 'کمائی'۔ رَبِحَ کا مطلب 'فائدہ ہونا' ہے۔ رَابِحٌ کا مطلب 'منافع بخش' ہے۔ التِّجَارَةُ الرَّابِحَةُ = 'منافع بخش تجارت'۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "ربح"
+        "en": "The two outcomes of trade. رِبْحٌ is what you gain; خَسَارَةٌ is what you lose. A trade can end in رِبْحٌ or in خَسَارَةٌ.",
+        "ur": "تجارت کے دو نتیجے۔ رِبْحٌ وہ ہے جو آپ کماتے ہیں؛ خَسَارَةٌ وہ ہے جو آپ کھوتے ہیں۔ تجارت رِبْحٌ پر بھی ختم ہو سکتی ہے اور خَسَارَةٌ پر بھی۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "خُسَارَةٌ",
-        "ar_plain": "خسارة",
-        "translit": "khasaaratun",
-        "en": "loss",
-        "ur": "نقصان؛ خسارہ"
+        "ar": "ۖ وَلَا تَشْتَرُوا بِآيَاتِي ثَمَنًا",
+        "ar_plain": " ولا تشتروا باياتي ثمنا",
+        "translit": "ۖ walā tashtarū biʾāyaātī thamanan",
+        "en": "And do not exchange My signs for a small price",
+        "ur": "اور میری آیتوں کے بدلے تھوڑی قیمت مت لو"
       },
       "explanation": {
-        "en": "خُسَارَةٌ is a feminine noun meaning 'loss.' خَسِرَ means 'to suffer a loss.' خَاسِرٌ means 'one who is at a loss.' خُسْرَانٌ is another form.",
-        "ur": "خُسَارَةٌ مؤنث اسم ہے جس کا مطلب ہے 'نقصان' یا 'خسارہ'۔ خَسِرَ کا مطلب 'نقصان ہونا' ہے۔ خَاسِرٌ کا مطلب 'نقصان میں ہے' ہے۔ خُسْرَانٌ ایک اور form ہے۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "خسارة"
+        "en": "ثَمَنًا is 'a price' after a verb of buying: تَشْتَرُوا is 'you buy / exchange'. The ayah forbids selling the signs of Allah for a small price. (Al-Baqarah 2:41)",
+        "ur": "ثَمَنًا بیع و شراء کے فعل کے بعد 'ایک قیمت' ہے: تَشْتَرُوا کا مطلب 'تم خریدتے / بدلتے ہو'۔ آیت اللہ کی آیتوں کو تھوڑی قیمت کے بدلے بیچنے سے روکتی ہے۔ (Al-Baqarah 2:41)"
       }
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "أَمِينٌ",
-        "ar_plain": "امين",
-        "translit": "ameenun",
-        "en": "trustworthy; honest",
-        "ur": "امن؛ honest"
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Two verbs, two directions",
+        "ur": "دو فعل، دو سمتیں"
       },
-      "explanation": {
-        "en": "أَمِينٌ is an adjective meaning 'trustworthy' or 'honest.' Used for a person who can be trusted with money and goods. الْمُسْلِمُ الْأَمِينُ = 'the honest Muslim.'",
-        "ur": "أَمِينٌ ایک صفت ہے جس کا مطلب ہے 'امن' یا 'honest'۔ پیسے اور مال کے ساتھ بھروسہ کیا جا سکتا ہے۔ الْمُسْلِمُ الْأَمِينُ = 'امن مسلمان'۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "امين"
+      "body": {
+        "en": "بَاعَ and اشْتَرَى look at the same deal from two sides: the seller sold, the buyer bought. Both are learned as whole words here; no other forms of them are asked in this lesson.",
+        "ur": "بَاعَ اور اشْتَرَى ایک ہی سودے کو دو طرف سے دیکھتے ہیں: بیچنے والے نے بیچا، خریدنے والے نے خریدا۔ دونوں یہاں پورے الفاظ کے طور پر سیکھے جاتے ہیں؛ اس سبق میں ان کی دوسری صورتیں نہیں پوچھی جاتیں۔"
       }
     }
   ],
@@ -153,123 +155,82 @@
       "type": "TAP_TRANSLATION",
       "id": "ch61-l01-ex01",
       "prompt": {
-        "ar": "تِجَارَةٌ رَابِحَةٌ",
-        "ar_plain": "تجارة رابحة",
-        "translit": "tijaaratun raabihatun",
-        "en": "profitable trade",
-        "ur": "منافع بخش تجارت"
+        "ar": "بَاعَ التَّاجِرُ الْبِضَاعَةَ",
+        "ar_plain": "باع التاجر البضاعة",
+        "translit": "bāʿa at-tājiru al-biḍāʿata",
+        "en": "(what did the merchant do?)",
+        "ur": "(سوداگر نے کیا کیا؟)"
       },
       "options": [
         {
-          "en": "profitable trade",
-          "ur": "منافع بخش تجارت"
+          "en": "The merchant sold the goods",
+          "ur": "سوداگر نے سامان بیچا"
         },
         {
-          "en": "loss in trade",
-          "ur": "تجارت میں نقصان"
+          "en": "The merchant bought the goods",
+          "ur": "سوداگر نے سامان خریدا"
         },
         {
-          "en": "selling goods",
-          "ur": "مال بیچنا"
+          "en": "The merchant lost the goods",
+          "ur": "سوداگر نے سامان کھو دیا"
         },
         {
-          "en": "buying prices",
-          "ur": "خرید کی قیمتیں"
+          "en": "The merchant carried the goods",
+          "ur": "سوداگر نے سامان اٹھایا"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "تِجَارَةٌ is 'trade' and رَابِحَةٌ means 'profitable/gaining.' Together: profitable trade. خُسَارَةٌ means 'loss.'",
-        "ur": "تِجَارَةٌ 'تجارت' ہے اور رَابِحَةٌ کا مطلب 'منافع بخش' ہے۔ مل کر: منافع بخش تجارت۔ خُسَارَةٌ 'نقصان' ہے۔"
+        "en": "بَاعَ means 'he sold'. اشْتَرَى is the verb for 'he bought'.",
+        "ur": "بَاعَ کا مطلب 'اس نے بیچا' ہے۔ 'اس نے خریدا' کے لیے اشْتَرَى ہے۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch61-l01-ex02",
-      "statement": {
-        "en": "رِبْحٌ means 'loss' in Arabic.",
-        "ur": "رِبْحٌ عربی میں 'نقصان' کا مطلب ہے۔"
-      },
-      "correct_answer": false,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "رِبْحٌ means 'profit' or 'gain.' خُسَارَةٌ means 'loss.'",
-        "ur": "رِبْحٌ کا مطلب 'منافع' یا 'کمائی' ہے۔ خُسَارَةٌ کا مطلب 'نقصان' ہے۔"
-      }
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch61-l01-ex03",
-      "mode": "TAP",
-      "sentence_ar": "بَاعَ التَّاجِرُ الْبِضَاعَةَ بِثَمَنٍ ___",
-      "hint": {
-        "en": "The merchant sold the goods at a fair price.",
-        "ur": "تاجر نے مال کو منصفانہ قیمت پر بیچا۔"
+      "prompt": {
+        "ar": "اشْتَرَى الْمُشْتَرِي بِضَاعَةً",
+        "ar_plain": "اشترى المشتري بضاعة",
+        "translit": "ashtarā al-mushtarī biḍāʿatan",
+        "en": "(what did the buyer do?)",
+        "ur": "(خریدار نے کیا کیا؟)"
       },
       "options": [
         {
-          "ar": "عَادِلٍ",
-          "ar_plain": "عادل",
-          "translit": "'aadilin",
-          "en": "fair",
-          "ur": "منصفانہ"
+          "en": "The buyer sold goods",
+          "ur": "خریدار نے سامان بیچا"
         },
         {
-          "ar": "غَالٍ",
-          "ar_plain": "غال",
-          "translit": "ghaalin",
-          "en": "expensive",
-          "ur": "مہنگا"
+          "en": "The buyer asked for a loss",
+          "ur": "خریدار نے نقصان مانگا"
         },
         {
-          "ar": "رَخِيصٍ",
-          "ar_plain": "رخيص",
-          "translit": "rakhiiSin",
-          "en": "cheap",
-          "ur": "سستا"
+          "en": "The buyer bought goods",
+          "ur": "خریدار نے سامان خریدا"
         },
         {
-          "ar": "مُرْتَفِعٍ",
-          "ar_plain": "مرتفع",
-          "translit": "murtafi'in",
-          "en": "high",
-          "ur": "زیادہ"
+          "en": "The buyer wrote the price",
+          "ur": "خریدار نے قیمت لکھی"
         }
       ],
-      "correct_answer": {
-        "ar": "عَادِلٍ",
-        "ar_plain": "عادل",
-        "translit": "'aadilin",
-        "en": "fair",
-        "ur": "منصفانہ"
-      },
-      "xp_value": 1
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "اشْتَرَى means 'he bought' and الْمُشْتَرِي is the buyer.",
+        "ur": "اشْتَرَى کا مطلب 'اس نے خریدا' اور الْمُشْتَرِي خریدار ہے۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch61-l01-ex04",
+      "id": "ch61-l01-ex03",
       "left_column": [
         {
-          "ar": "بَيْعٌ",
-          "ar_plain": "بيع",
-          "translit": "bay'un",
-          "en": "sale",
-          "ur": "فروخت"
-        },
-        {
-          "ar": "شِرَاءٌ",
-          "ar_plain": "شراء",
-          "translit": "shiraa'un",
-          "en": "purchase",
-          "ur": "خرید"
-        },
-        {
-          "ar": "رِبْحٌ",
-          "ar_plain": "ربح",
-          "translit": "ribhun",
-          "en": "profit",
-          "ur": "منافع"
+          "ar": "تِجَارَةٌ",
+          "ar_plain": "تجارة",
+          "translit": "tijāratun",
+          "en": "trade",
+          "ur": "تجارت"
         },
         {
           "ar": "ثَمَنٌ",
@@ -277,24 +238,38 @@
           "translit": "thamanun",
           "en": "price",
           "ur": "قیمت"
+        },
+        {
+          "ar": "رِبْحٌ",
+          "ar_plain": "ربح",
+          "translit": "ribḥun",
+          "en": "profit",
+          "ur": "نفع"
+        },
+        {
+          "ar": "خَسَارَةٌ",
+          "ar_plain": "خسارة",
+          "translit": "khasāratun",
+          "en": "loss",
+          "ur": "نقصان"
         }
       ],
       "right_column": [
         {
-          "en": "purchase",
-          "ur": "خرید"
+          "en": "profit",
+          "ur": "نفع"
         },
         {
-          "en": "sale",
-          "ur": "فروخت"
+          "en": "trade",
+          "ur": "تجارت"
+        },
+        {
+          "en": "loss",
+          "ur": "نقصان"
         },
         {
           "en": "price",
           "ur": "قیمت"
-        },
-        {
-          "en": "profit",
-          "ur": "منافع"
         }
       ],
       "correct_pairs": [
@@ -304,156 +279,250 @@
         ],
         [
           1,
-          0
+          3
         ],
         [
           2,
-          3
+          0
         ],
         [
           3,
           2
         ]
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Four words of trade: trade, price, profit and loss.",
+        "ur": "تجارت کے چار الفاظ: تجارت، قیمت، نفع اور نقصان۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch61-l01-ex04",
+      "mode": "TAP",
+      "sentence_ar": "الْبَائِعُ ___ الْبِضَاعَةَ",
+      "hint": {
+        "en": "The seller sells the goods.",
+        "ur": "بیچنے والا سامان بیچتا ہے۔"
+      },
+      "options": [
+        {
+          "ar": "يَشْتَرِي",
+          "ar_plain": "يشتري",
+          "translit": "yashtarī",
+          "en": "buys",
+          "ur": "خریدتا ہے"
+        },
+        {
+          "ar": "يَبِيعُ",
+          "ar_plain": "يبيع",
+          "translit": "yabīʿu",
+          "en": "sells",
+          "ur": "بیچتا ہے"
+        },
+        {
+          "ar": "خَسَارَةٌ",
+          "ar_plain": "خسارة",
+          "translit": "khasāratun",
+          "en": "loss",
+          "ur": "نقصان"
+        },
+        {
+          "ar": "ثَمَنٌ",
+          "ar_plain": "ثمن",
+          "translit": "thamanun",
+          "en": "price",
+          "ur": "قیمت"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يَبِيعُ",
+        "ar_plain": "يبيع",
+        "translit": "yabīʿu",
+        "en": "sells",
+        "ur": "بیچتا ہے"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The hint says the seller sells: يَبِيعُ is 'he sells'.",
+        "ur": "اشارہ بتاتا ہے کہ بیچنے والا بیچتا ہے: يَبِيعُ کا مطلب 'وہ بیچتا ہے' ہے۔"
+      }
     },
     {
       "type": "BUILD_SENTENCE",
       "id": "ch61-l01-ex05",
       "target_translation": {
-        "en": "The merchant is trustworthy in trade.",
-        "ur": "تاجر تجارت میں امین ہے۔"
+        "en": "The buyer buys the goods.",
+        "ur": "خریدار سامان خریدتا ہے۔"
       },
       "tiles": [
         {
-          "ar": "التَّاجِرُ",
-          "ar_plain": "التاجر",
-          "translit": "at-taajiru",
-          "en": "the merchant",
-          "ur": "تاجر"
+          "ar": "يَشْتَرِي",
+          "ar_plain": "يشتري",
+          "translit": "yashtarī",
+          "en": "buys",
+          "ur": "خریدتا ہے"
         },
         {
-          "ar": "أَمِينٌ",
-          "ar_plain": "امين",
-          "translit": "ameenun",
-          "en": "trustworthy",
-          "ur": "امن"
+          "ar": "الْبِضَاعَةَ",
+          "ar_plain": "البضاعة",
+          "translit": "al-biḍāʿata",
+          "en": "the goods",
+          "ur": "سامان"
         },
         {
-          "ar": "فِي",
-          "ar_plain": "في",
-          "translit": "fii",
-          "en": "in",
-          "ur": "میں"
-        },
-        {
-          "ar": "التِّجَارَةِ",
-          "ar_plain": "التجارة",
-          "translit": "at-tijaarati",
-          "en": "trade",
-          "ur": "تجارت"
+          "ar": "الْمُشْتَرِي",
+          "ar_plain": "المشتري",
+          "translit": "al-mushtarī",
+          "en": "the buyer",
+          "ur": "خریدار"
         }
       ],
       "correct_order": [
-        0,
-        1,
         2,
-        3
+        0,
+        1
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch61-l01-ex06",
-      "prompt": {
-        "ar": "خَسِرَ التَّاجِرُ",
-        "ar_plain": "خسر التاجر",
-        "translit": "khasira at-taajiru",
-        "en": "the merchant suffered a loss",
-        "ur": "تاجر کو نقصان ہوا"
-      },
-      "options": [
-        {
-          "en": "the merchant suffered a loss",
-          "ur": "تاجر کو نقصان ہوا"
-        },
-        {
-          "en": "the merchant made a profit",
-          "ur": "تاجر کو منافع ہوا"
-        },
-        {
-          "en": "the merchant is honest",
-          "ur": "تاجر امین ہے"
-        },
-        {
-          "en": "the merchant bought goods",
-          "ur": "تاجر نے مال خریدی"
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "خَسِرَ means 'to suffer a loss.' رَبِحَ means 'to profit.' خَاسِرٌ is the person at a loss.",
-        "ur": "خَسِرَ کا مطلب 'نقصان ہونا' ہے۔ رَبِحَ کا مطلب 'فائدہ ہونا' ہے۔ خَاسِرٌ نقصان میں ہے۔"
+        "en": "The buyer comes first, then the verb, then the goods.",
+        "ur": "پہلے خریدار، پھر فعل، پھر سامان۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch61-l01-ex07",
+      "id": "ch61-l01-ex06",
       "statement": {
-        "en": "أَمِينٌ describes a trustworthy, honest person in trade.",
-        "ur": "أَمِينٌ تجارت میں بھروسہ کے قابل، honest شخص کو بیان کرتا ہے۔"
+        "en": "خَسَارَةٌ means 'profit' in Arabic.",
+        "ur": "خَسَارَةٌ کا مطلب عربی میں 'نفع' ہے۔"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "خَسَارَةٌ is 'loss'. 'Profit' is رِبْحٌ.",
+        "ur": "خَسَارَةٌ کا مطلب 'نقصان' ہے۔ 'نفع' رِبْحٌ ہے۔"
+      }
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch61-l01-ex08",
-      "mode": "TYPE",
-      "sentence_ar": "اشْتَرَى الْمُشْتَرِي الْبِضَاعَةَ بِ___ غَالٍ",
+      "id": "ch61-l01-ex07",
+      "mode": "TAP",
+      "sentence_ar": "فِي التِّجَارَةِ رِبْحٌ وَ ___",
       "hint": {
-        "en": "The buyer purchased the goods at a high price.",
-        "ur": "خریدار نے مال کو اونچی قیمت پر خریدی۔"
+        "en": "In trade there is profit and loss.",
+        "ur": "تجارت میں نفع بھی ہے اور نقصان بھی۔"
       },
+      "options": [
+        {
+          "ar": "خَسَارَةٌ",
+          "ar_plain": "خسارة",
+          "translit": "khasāratun",
+          "en": "loss",
+          "ur": "نقصان"
+        },
+        {
+          "ar": "بَاعَ",
+          "ar_plain": "باع",
+          "translit": "bāʿa",
+          "en": "he sold",
+          "ur": "اس نے بیچا"
+        },
+        {
+          "ar": "بِضَاعَةٌ",
+          "ar_plain": "بضاعة",
+          "translit": "biḍāʿatun",
+          "en": "goods",
+          "ur": "سامان"
+        },
+        {
+          "ar": "اشْتَرَى",
+          "ar_plain": "اشترى",
+          "translit": "ashtarā",
+          "en": "he bought",
+          "ur": "اس نے خریدا"
+        }
+      ],
       "correct_answer": {
-        "ar": "ثَمَنٍ",
-        "ar_plain": "ثمن",
-        "translit": "thamanin",
-        "en": "price",
-        "ur": "قیمت"
+        "ar": "خَسَارَةٌ",
+        "ar_plain": "خسارة",
+        "translit": "khasāratun",
+        "en": "loss",
+        "ur": "نقصان"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The two outcomes of trade are profit and loss.",
+        "ur": "تجارت کے دو نتیجے نفع اور نقصان ہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch61-l01-ex08",
+      "prompt": {
+        "ar": "ۖ وَلَا تَشْتَرُوا بِآيَاتِي ثَمَنًا",
+        "ar_plain": " ولا تشتروا باياتي ثمنا",
+        "translit": "ۖ walā tashtarū biʾāyaātī thamanan",
+        "en": "(2:41: what does this phrase say?)",
+        "ur": "(2:41: یہ جملہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "do not sell your goods for profit",
+          "ur": "اپنا سامان نفع کے لیے مت بیچو"
+        },
+        {
+          "en": "do not exchange My signs for a small price",
+          "ur": "میری آیتوں کے بدلے تھوڑی قیمت مت لو"
+        },
+        {
+          "en": "do not lose a small price",
+          "ur": "تھوڑی قیمت مت کھو"
+        },
+        {
+          "en": "do not ask the merchant for a price",
+          "ur": "سوداگر سے قیمت مت پوچھو"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "تَشْتَرُوا is 'you exchange / buy' and ثَمَنًا قَلِيلًا is 'a small price'.",
+        "ur": "تَشْتَرُوا کا مطلب 'تم بدلتے / خریدتے ہو' اور ثَمَنًا قَلِيلًا کا مطلب 'تھوڑی قیمت' ہے۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Trade Vocabulary — honest commerce in the Quran",
-      "ar": "مُفْرَدَاتُ التِّجَارَةِ — التِّجَارَةُ الْعَادِلَةُ فِي الْقُرْآنِ",
-      "ur": "تجارت کے الفاظ — قرآن میں منصفانہ تجارت"
+      "en": "Price in the Quran",
+      "ar": "الثَّمَنُ فِي الْقُرْآنِ",
+      "ur": "قرآن میں قیمت"
     },
     "ayah": {
-      "surah": 83,
-      "ayah": 1,
-      "label": "Al-Mutaffifin 83:1",
-      "ar": "وَيْلٌ لِلْمُطَفِّفِينَ",
-      "en": "Woe to those who give less than full.",
-      "ur": "تباہی ہے ان لوگوں کے لیے جو کمتر دیتے ہیں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/083001.mp3"
+      "surah": 2,
+      "ayah": 41,
+      "label": "Al-Baqarah 2:41",
+      "ar": "وَآمِنُوا بِمَا أَنزَلْتُ مُصَدِّقًا لِّمَا مَعَكُمْ وَلَا تَكُونُوا أَوَّلَ كَافِرٍ بِهِ ۖ وَلَا تَشْتَرُوا بِآيَاتِي ثَمَنًا قَلِيلًا وَإِيَّايَ فَاتَّقُونِ",
+      "en": "And believe in what I have sent down confirming that which is [already] with you, and be not the first to disbelieve in it. And do not exchange My signs for a small price, and fear [only] Me.",
+      "ur": "اور جو کتاب میں نے (اپنے رسول محمدﷺ پر) نازل کی ہے جو تمہاری کتاب تورات کو سچا کہتی ہے، اس پر ایمان لاؤ اور اس سے منکرِ اول نہ بنو، اور میری آیتوں میں (تحریف کر کے) ان کے بدلے تھوڑی سی قیمت (یعنی دنیاوی منعفت) نہ حاصل کرو، اور مجھی سے خوف رکھو",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002041.mp3"
     },
     "highlighted_word_indices": [
-      0,
-      1
+      15,
+      16
+    ],
+    "highlighted_words": [
+      "ثَمَنًا",
+      "قَلِيلًا"
     ],
     "noor_explanation": {
-      "en": "وَيْلٌ is a strong warning word meaning 'woe.' الْمُطَفِّفِينَ comes from the root ط ف ف — those who cheat in measure. The opposite of مُطَفِّفٌ is the التَّاجِرُ الْأَمِينُ — the honest merchant.",
-      "ur": "وَيْلٌ ایک سخت تنبیہ کا لفظ ہے جس کا مطلب 'تباہی' ہے۔ الْمُطَفِّفِينَ مادہ ط-ف-ف سے ہے — وہ لوگ جو ناپ تول میں کمی کرتے ہیں۔ مُطَفِّفٌ کا الٹ التَّاجِرُ الْأَمِينُ ہے — امانت دار تاجر۔"
+      "en": "ثَمَنًا قَلِيلًا — 'a small price'. The word of the market, ثَمَنٌ, appears in the Quran when it warns about selling what is sacred cheaply.",
+      "ur": "ثَمَنًا قَلِيلًا — 'تھوڑی قیمت'۔ بازار کا لفظ ثَمَنٌ قرآن میں اس وقت آتا ہے جب وہ مقدس چیز کو سستا بیچنے سے خبردار کرتا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "The Quran warns sternly against cheating in trade — وَيْلٌ لِلْمُطَفِّفِينَ. تِجَارَةٌ, بَيْعٌ, رِبْحٌ, ثَمَنٌ are not just business words; honesty in them is part of faith.",
-      "ur": "قرآن تجارت میں دھوکے سے سختی سے خبردار کرتا ہے — وَيْلٌ لِلْمُطَفِّفِينَ۔ تِجَارَةٌ، بَيْعٌ، رِبْحٌ، ثَمَنٌ صرف کاروباری الفاظ نہیں؛ ان میں دیانت ایمان کا حصہ ہے۔"
+      "en": "You can now name the seller, the buyer, the goods, the price, the profit and the loss.",
+      "ur": "اب آپ بیچنے والے، خریدار، سامان، قیمت، نفع اور نقصان کے نام بتا سکتے ہیں۔"
     }
   }
 }

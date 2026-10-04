@@ -1,0 +1,577 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 63, Retrieval review (ch63-l05, rebuilt in place and moved to display order 7; the old row was a STANDARD 'chapter review'). Twelve tasks: head and meaning (2), the dual (2), the sound masculine plural (2), a chain and an adjective attachment (2), why a ن goes missing — iḍāfa against the five verbs with لَنْ (2), and one local decision from each part of Ash-Shams (2). All of it is retrieval of Chapters 3, 26, 47, 55, 56 and 57. Added 2026-10-04 in the proposal harvest, batch 8 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-63-content-proposal.md and its review amendments.",
+    "title": "Chapter 63 Review — Iḍāfa in Use and Ash-Shams",
+    "titleAr": "مُرَاجَعَةُ الْبَابِ 63 — الْإِضَافَةُ وَالشَّمْسِ",
+    "titleUr": "باب 63 کا جائزہ — اضافت کا استعمال اور الشمس",
+    "chapter_order": 63,
+    "lesson_order": 7,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 91,
+      "ayah": 13,
+      "label": "Ash-Shams 91:13",
+      "ar": "فَقَالَ لَهُمْ رَسُولُ اللَّهِ نَاقَةَ اللَّهِ وَسُقْيَاهَا",
+      "en": "And the messenger of Allāh [i.e., Ṣāliḥ] said to them, \"[Do not harm] the she-camel of Allāh or [prevent her from] her drink.\"",
+      "ur": "تو خدا کے پیغمبر (صالح) نے ان سے کہا کہ خدا کی اونٹنی اور اس کے پانی پینے کی باری سے عذر کرو",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/091013.mp3"
+    },
+    "noor_intro": {
+      "en": "Review Chapter 63: iḍāfa in every case, the dual, the plural, chains, and the surah.",
+      "ur": "باب 63 کا جائزہ: ہر حالت میں اضافت، مثنیٰ، جمع، زنجیریں، اور سورت۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 63 summary",
+        "ar": "خُلَاصَةُ الْبَابِ",
+        "ur": "باب 63 کا خلاصہ"
+      },
+      "explanation": {
+        "en": "Idafa, put to use: a head with its case and a genitive second term, definite and indefinite dependents, the dual and the sound masculine plural losing their final ن, a chain of three, an adjective that belongs to the right noun, the two reasons a ن can go missing, and the two parts of Ash-Shams.",
+        "ur": "اضافت، استعمال میں: ایک مضاف جس کی اپنی حالت ہے اور مجرور دوسرا جزو، معرفہ اور نکرہ مضاف الیہ، مثنیٰ اور جمع مذکر سالم جو اپنا آخری ن گراتے ہیں، تین کی زنجیر، صحیح اسم سے تعلق رکھنے والی صفت، ن گرنے کی دو وجوہات، اور سورۃ الشمس کے دو حصے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Twelve tasks",
+        "ur": "بارہ مشقیں"
+      },
+      "body": {
+        "en": "Two on the head and the meaning, two on the dual, two on the sound masculine plural, two on a chain and an adjective, two on why a ن goes missing, and one from each part of Ash-Shams. Nothing here is new teaching.",
+        "ur": "دو مضاف اور معنی پر، دو مثنیٰ پر، دو جمع مذکر سالم پر، دو زنجیر اور صفت پر، دو اس پر کہ ن کیوں گرتا ہے، اور سورۃ الشمس کے ہر حصے سے ایک۔ یہاں کچھ بھی نیا نہیں سکھایا گیا۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "FILL_BLANK",
+      "id": "ch63-l05-ex01",
+      "mode": "TAP",
+      "sentence_ar": "رَأَيْتُ ___ الطَّالِبِ",
+      "hint": {
+        "en": "I saw the student's book.",
+        "ur": "میں نے طالب علم کی کتاب دیکھی۔"
+      },
+      "options": [
+        {
+          "ar": "كِتَابَ",
+          "ar_plain": "كتاب",
+          "translit": "kitāba",
+          "en": "book (accusative head)",
+          "ur": "کتاب (منصوب مضاف)"
+        },
+        {
+          "ar": "كِتَابُ",
+          "ar_plain": "كتاب",
+          "translit": "kitābu",
+          "en": "book (nominative)",
+          "ur": "کتاب (مرفوع)"
+        },
+        {
+          "ar": "كِتَابٌ",
+          "ar_plain": "كتاب",
+          "translit": "kitābun",
+          "en": "a book (tanwīn)",
+          "ur": "ایک کتاب (تنوین)"
+        },
+        {
+          "ar": "كِتَابِ",
+          "ar_plain": "كتاب",
+          "translit": "kitābi",
+          "en": "book (genitive)",
+          "ur": "کتاب (مجرور)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "كِتَابَ",
+        "ar_plain": "كتاب",
+        "translit": "kitāba",
+        "en": "book (accusative head)",
+        "ur": "کتاب (منصوب مضاف)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After 'I saw' the head takes the accusative; the second term الطَّالِبِ stays genitive.",
+        "ur": "'میں نے دیکھا' کے بعد مضاف منصوب ہوتا ہے؛ دوسرا جزو الطَّالِبِ مجرور رہتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch63-l05-ex02",
+      "prompt": {
+        "ar": "كِتَابُ الْمُعَلِّمِ",
+        "ar_plain": "كتاب المعلم",
+        "translit": "kitābu al-muʿallimi",
+        "en": "(what does this say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "The new book",
+          "ur": "نئی کتاب"
+        },
+        {
+          "en": "The teacher's book",
+          "ur": "استاد کی کتاب"
+        },
+        {
+          "en": "The book is a teacher",
+          "ur": "کتاب ایک استاد ہے"
+        },
+        {
+          "en": "A book and a teacher",
+          "ur": "ایک کتاب اور ایک استاد"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Two nouns joined in iḍāfa: 'the book of the teacher'.",
+        "ur": "اضافت میں جڑے دو اسم: 'استاد کی کتاب'۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch63-l05-ex03",
+      "mode": "TAP",
+      "sentence_ar": "جَاءَ ___ الْمُعَلِّمِ",
+      "hint": {
+        "en": "The teacher's two sons came.",
+        "ur": "استاد کے دو بیٹے آئے۔"
+      },
+      "options": [
+        {
+          "ar": "ابْنَانِ",
+          "ar_plain": "ابنان",
+          "translit": "abnāni",
+          "en": "two sons (with ن)",
+          "ur": "دو بیٹے (ن کے ساتھ)"
+        },
+        {
+          "ar": "ابْنَيْنِ",
+          "ar_plain": "ابنين",
+          "translit": "abnayni",
+          "en": "two sons (oblique, with ن)",
+          "ur": "دو بیٹے (مجرور/منصوب، ن کے ساتھ)"
+        },
+        {
+          "ar": "ابْنَا",
+          "ar_plain": "ابنا",
+          "translit": "abnā",
+          "en": "two sons (nominative, no ن)",
+          "ur": "دو بیٹے (مرفوع، بغیر ن)"
+        },
+        {
+          "ar": "ابْنَيْ",
+          "ar_plain": "ابني",
+          "translit": "abnay",
+          "en": "two sons (oblique, no ن)",
+          "ur": "دو بیٹے (مجرور/منصوب، بغیر ن)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "ابْنَا",
+        "ar_plain": "ابنا",
+        "translit": "abnā",
+        "en": "two sons (nominative, no ن)",
+        "ur": "دو بیٹے (مرفوع، بغیر ن)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The nominative dual loses its ن as the first term of an iḍāfa: ابْنَا.",
+        "ur": "مرفوع مثنیٰ اضافت کا پہلا جزو ہو کر اپنا ن گراتا ہے: ابْنَا۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch63-l05-ex04",
+      "mode": "TAP",
+      "sentence_ar": "رَأَيْتُ ___ الْمُعَلِّمِ",
+      "hint": {
+        "en": "I saw the teacher's two sons.",
+        "ur": "میں نے استاد کے دو بیٹے دیکھے۔"
+      },
+      "options": [
+        {
+          "ar": "ابْنَا",
+          "ar_plain": "ابنا",
+          "translit": "abnā",
+          "en": "two sons (nominative, no ن)",
+          "ur": "دو بیٹے (مرفوع، بغیر ن)"
+        },
+        {
+          "ar": "ابْنَانِ",
+          "ar_plain": "ابنان",
+          "translit": "abnāni",
+          "en": "two sons (with ن)",
+          "ur": "دو بیٹے (ن کے ساتھ)"
+        },
+        {
+          "ar": "ابْنَيْنِ",
+          "ar_plain": "ابنين",
+          "translit": "abnayni",
+          "en": "two sons (oblique, with ن)",
+          "ur": "دو بیٹے (مجرور/منصوب، ن کے ساتھ)"
+        },
+        {
+          "ar": "ابْنَيْ",
+          "ar_plain": "ابني",
+          "translit": "abnay",
+          "en": "two sons (oblique, no ن)",
+          "ur": "دو بیٹے (مجرور/منصوب، بغیر ن)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "ابْنَيْ",
+        "ar_plain": "ابني",
+        "translit": "abnay",
+        "en": "two sons (oblique, no ن)",
+        "ur": "دو بیٹے (مجرور/منصوب، بغیر ن)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After 'I saw' the dual is oblique, and as a first term it loses its ن: ابْنَيْ.",
+        "ur": "'میں نے دیکھا' کے بعد مثنیٰ مجرور/منصوب ہوتا ہے، اور پہلا جزو ہو کر ن گراتا ہے: ابْنَيْ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch63-l05-ex05",
+      "mode": "TAP",
+      "sentence_ar": "جَاءَ ___ الْمَدْرَسَةِ",
+      "hint": {
+        "en": "The school's teachers came.",
+        "ur": "مدرسے کے اساتذہ آئے۔"
+      },
+      "options": [
+        {
+          "ar": "مُعَلِّمُو",
+          "ar_plain": "معلمو",
+          "translit": "muʿallimū",
+          "en": "teachers (nominative, no ن)",
+          "ur": "اساتذہ (مرفوع، بغیر ن)"
+        },
+        {
+          "ar": "مُعَلِّمُونَ",
+          "ar_plain": "معلمون",
+          "translit": "muʿallimūna",
+          "en": "teachers (nominative, with ن)",
+          "ur": "اساتذہ (مرفوع، ن کے ساتھ)"
+        },
+        {
+          "ar": "مُعَلِّمِي",
+          "ar_plain": "معلمي",
+          "translit": "muʿallimī",
+          "en": "teachers (oblique, no ن)",
+          "ur": "اساتذہ (مجرور/منصوب، بغیر ن)"
+        },
+        {
+          "ar": "مُعَلِّمِينَ",
+          "ar_plain": "معلمين",
+          "translit": "muʿallimīna",
+          "en": "teachers (oblique, with ن)",
+          "ur": "اساتذہ (مجرور/منصوب، ن کے ساتھ)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "مُعَلِّمُو",
+        "ar_plain": "معلمو",
+        "translit": "muʿallimū",
+        "en": "teachers (nominative, no ن)",
+        "ur": "اساتذہ (مرفوع، بغیر ن)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The nominative sound masculine plural drops its ن as a first term: مُعَلِّمُو.",
+        "ur": "مرفوع جمع مذکر سالم پہلا جزو ہو کر ن گراتی ہے: مُعَلِّمُو۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch63-l05-ex06",
+      "mode": "TAP",
+      "sentence_ar": "رَأَيْتُ ___ الْمَدْرَسَةِ",
+      "hint": {
+        "en": "I saw the school's teachers.",
+        "ur": "میں نے مدرسے کے اساتذہ دیکھے۔"
+      },
+      "options": [
+        {
+          "ar": "مُعَلِّمُو",
+          "ar_plain": "معلمو",
+          "translit": "muʿallimū",
+          "en": "teachers (nominative, no ن)",
+          "ur": "اساتذہ (مرفوع، بغیر ن)"
+        },
+        {
+          "ar": "مُعَلِّمِي",
+          "ar_plain": "معلمي",
+          "translit": "muʿallimī",
+          "en": "teachers (oblique, no ن)",
+          "ur": "اساتذہ (مجرور/منصوب، بغیر ن)"
+        },
+        {
+          "ar": "مُعَلِّمُونَ",
+          "ar_plain": "معلمون",
+          "translit": "muʿallimūna",
+          "en": "teachers (nominative, with ن)",
+          "ur": "اساتذہ (مرفوع، ن کے ساتھ)"
+        },
+        {
+          "ar": "مُعَلِّمِينَ",
+          "ar_plain": "معلمين",
+          "translit": "muʿallimīna",
+          "en": "teachers (oblique, with ن)",
+          "ur": "اساتذہ (مجرور/منصوب، ن کے ساتھ)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "مُعَلِّمِي",
+        "ar_plain": "معلمي",
+        "translit": "muʿallimī",
+        "en": "teachers (oblique, no ن)",
+        "ur": "اساتذہ (مجرور/منصوب، بغیر ن)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After 'I saw' the plural is oblique; as a first term it loses its ن: مُعَلِّمِي.",
+        "ur": "'میں نے دیکھا' کے بعد جمع مجرور/منصوب ہوتی ہے؛ پہلا جزو ہو کر ن گراتی ہے: مُعَلِّمِي۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch63-l05-ex07",
+      "prompt": {
+        "ar": "كِتَابُ أُسْتَاذِ الْمَدْرَسَةِ",
+        "ar_plain": "كتاب استاذ المدرسة",
+        "translit": "kitābu ʾustādhi al-madrasati",
+        "en": "(what does this say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "The school's teachers",
+          "ur": "مدرسے کے اساتذہ"
+        },
+        {
+          "en": "The book is in the school",
+          "ur": "کتاب مدرسے میں ہے"
+        },
+        {
+          "en": "The book of the school's teacher",
+          "ur": "مدرسے کے استاد کی کتاب"
+        },
+        {
+          "en": "The teacher and the school",
+          "ur": "استاد اور مدرسہ"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A chain of three: the book, of the teacher, of the school.",
+        "ur": "تین کی زنجیر: کتاب، استاد کی، مدرسے کے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch63-l05-ex08",
+      "prompt": {
+        "ar": "سَيَّارَةُ الْمُعَلِّمِ الْجَدِيدَةُ",
+        "ar_plain": "سيارة المعلم الجديدة",
+        "translit": "sayyaāratu al-muʿallimi al-jadīdatu",
+        "en": "(which word does الْجَدِيدَةُ describe?)",
+        "ur": "(الْجَدِيدَةُ کس لفظ کو بیان کرتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "الْمُعَلِّمِ — the teacher, who is masculine",
+          "ur": "الْمُعَلِّمِ — استاد، جو مذکر ہے"
+        },
+        {
+          "en": "Both words",
+          "ur": "دونوں الفاظ"
+        },
+        {
+          "en": "Neither word",
+          "ur": "کوئی لفظ نہیں"
+        },
+        {
+          "en": "سَيَّارَةُ — the car, which is feminine like the describer",
+          "ur": "سَيَّارَةُ — گاڑی، جو صفت کی طرح مؤنث ہے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْجَدِيدَةُ is feminine and nominative, so it describes the feminine head سَيَّارَةُ, not the masculine الْمُعَلِّمِ.",
+        "ur": "الْجَدِيدَةُ مؤنث اور مرفوع ہے، اس لیے یہ مؤنث مضاف سَيَّارَةُ کو بیان کرتا ہے، مذکر الْمُعَلِّمِ کو نہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch63-l05-ex09",
+      "prompt": {
+        "ar": "مُعَلِّمُو الْمَدْرَسَةِ",
+        "ar_plain": "معلمو المدرسة",
+        "translit": "muʿallimū al-madrasati",
+        "en": "(why is the final ن missing?)",
+        "ur": "(آخری ن کیوں غائب ہے؟)"
+      },
+      "options": [
+        {
+          "en": "Because it is the first term of an iḍāfa",
+          "ur": "کیونکہ یہ اضافت کا پہلا جزو ہے"
+        },
+        {
+          "en": "Because لَنْ comes before it",
+          "ur": "کیونکہ اس سے پہلے لَنْ ہے"
+        },
+        {
+          "en": "Because it is a verb",
+          "ur": "کیونکہ یہ فعل ہے"
+        },
+        {
+          "en": "Because it is a name",
+          "ur": "کیونکہ یہ نام ہے"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A noun loses its ن when a second term follows it in iḍāfa.",
+        "ur": "اسم کے بعد اضافت میں دوسرا جزو آئے تو اس کا ن گر جاتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch63-l05-ex10",
+      "prompt": {
+        "ar": "لَنْ يَكْتُبُوا",
+        "ar_plain": "لن يكتبوا",
+        "translit": "lan yaktubū",
+        "en": "(why is the final ن missing?)",
+        "ur": "(آخری ن کیوں غائب ہے؟)"
+      },
+      "options": [
+        {
+          "en": "Because it is the first term of an iḍāfa",
+          "ur": "کیونکہ یہ اضافت کا پہلا جزو ہے"
+        },
+        {
+          "en": "Because لَنْ governs the verb",
+          "ur": "کیونکہ لَنْ فعل پر عمل کرتا ہے"
+        },
+        {
+          "en": "Because it is a dual",
+          "ur": "کیونکہ یہ مثنیٰ ہے"
+        },
+        {
+          "en": "Because it is a name",
+          "ur": "کیونکہ یہ نام ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A five verb loses its ن when لَنْ or لَمْ governs it. That is a verb's reason, not iḍāfa.",
+        "ur": "پانچ افعال میں سے فعل کا ن لَنْ یا لَمْ کے عمل سے گرتا ہے۔ یہ فعل کی وجہ ہے، اضافت کی نہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch63-l05-ex11",
+      "prompt": {
+        "ar": "فَأَلْهَمَهَا فُجُورَهَا وَتَقْوَاهَا",
+        "ar_plain": "فالهمها فجورها وتقواها",
+        "translit": "faʾalhamahā fujūrahā wataqwaāhā",
+        "en": "(91:8)",
+        "ur": "(91:8)"
+      },
+      "options": [
+        {
+          "en": "and by a soul and the One who shaped it",
+          "ur": "اور جان کی قسم اور اس کی جس نے اسے سنوارا"
+        },
+        {
+          "en": "He who purifies it has succeeded",
+          "ur": "جس نے اسے پاک کیا وہ کامیاب ہوا"
+        },
+        {
+          "en": "and inspired it with its wrongdoing and its piety",
+          "ur": "پھر اسے اس کی بدکاری اور اس کی پرہیزگاری کا الہام کیا"
+        },
+        {
+          "en": "and by the earth and the One who spread it out",
+          "ur": "اور زمین کی قسم اور اس کی جس نے اسے بچھایا"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "91:8 says the soul was inspired with its wrongdoing and its piety.",
+        "ur": "91:8 کہتی ہے کہ جان کو اس کی بدکاری اور اس کی پرہیزگاری کا الہام کیا گیا۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch63-l05-ex12",
+      "statement": {
+        "en": "91:11–15 tell how Thamud denied and what came upon them for their sin, an example after the two ends of 91:9–10.",
+        "ur": "91:11–15 بتاتی ہیں کہ ثمود نے کیسے جھٹلایا اور ان کے گناہ پر ان پر کیا آیا، یعنی 91:9–10 کے دو انجاموں کے بعد ایک مثال۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes — Thamud is the example that follows.",
+        "ur": "جی ہاں — ثمود وہ مثال ہے جو اس کے بعد آتی ہے۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Two iḍāfa in one ayah",
+      "ar": "رَسُولُ اللَّهِ نَاقَةَ اللَّهِ",
+      "ur": "ایک آیت میں دو اضافتیں"
+    },
+    "ayah": {
+      "surah": 91,
+      "ayah": 13,
+      "label": "Ash-Shams 91:13",
+      "ar": "فَقَالَ لَهُمْ رَسُولُ اللَّهِ نَاقَةَ اللَّهِ وَسُقْيَاهَا",
+      "en": "And the messenger of Allāh [i.e., Ṣāliḥ] said to them, \"[Do not harm] the she-camel of Allāh or [prevent her from] her drink.\"",
+      "ur": "تو خدا کے پیغمبر (صالح) نے ان سے کہا کہ خدا کی اونٹنی اور اس کے پانی پینے کی باری سے عذر کرو",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/091013.mp3"
+    },
+    "highlighted_word_indices": [
+      2,
+      3,
+      4
+    ],
+    "highlighted_words": [
+      "رَسُولُ",
+      "اللَّهِ",
+      "نَاقَةَ"
+    ],
+    "noor_explanation": {
+      "en": "رَسُولُ اللَّهِ and نَاقَةَ اللَّهِ — iḍāfa with اللَّهِ as the second term, the shape this whole chapter has been using.",
+      "ur": "رَسُولُ اللَّهِ اور نَاقَةَ اللَّهِ — اللَّهِ کے ساتھ اضافت، وہی ساخت جو یہ پورا باب استعمال کرتا رہا ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Iḍāfa in every case, the dual, the plural, a chain, a missing ن and two parts of a surah — Chapter 63 in one review.",
+      "ur": "ہر حالت میں اضافت، مثنیٰ، جمع، زنجیر، ایک غائب ن اور ایک سورت کے دو حصے — باب 63 ایک جائزے میں۔"
+    }
+  }
+}
