@@ -947,6 +947,35 @@ Everything below this list is either done and verified, or one of these:
    later pass). Map entries for Ch 51–55 rewritten (S10). Not done: scholarly
    review, Android pass, Chapter 52's constructed dialogue lesson, and turning
    `ch55-l06` into the review.
+   **Proposal harvest, batch 9 (Chapters 66–70): live in production
+   2026-10-04.** Ch 66 had `ch66-l01`–`l05` rebuilt around the job of a ظرف (the
+   old rows said it is always accusative and taught ḥāl, Chapter 71's), and gained
+   all of Al-Infitar in two parts (`ch66-l08`, `l09`), a rebuilt review and
+   `ch66-test`. Ch 67 had `ch67-l01`–`l04` rebuilt (لَوْ as a pictured condition, its
+   condition and result, verb form and meaning, لَوْ لَمْ and لَوْلَا), and gained a
+   short exchange (`ch67-l06`), Al-Alaq in two parts (`ch67-l07`, `l08`), a rebuilt
+   review and `ch67-test`. Ch 68 had `ch68-l01`–`l05` rebuilt (the three jussive signs,
+   لَمْ / لَمَّا, prohibitive and negative لَا, command lām against the direct
+   command, and the two-verb condition of owner decision D6 in `ch68-l05`), and
+   gained Al-Layl in two parts (`ch68-l08`, `l09`), a rebuilt review and `ch68-test`.
+   Ch 69 had `ch69-l01`–`l04` rebuilt around the jussive response to a request, and
+   gained At-Tariq in two parts (`ch69-l07`, `l08`), Al-Inshiqaq in three
+   (`ch69-l09`–`l11`), a rebuilt review and `ch69-test`. Ch 70 had `ch70-l01`–`l05`
+   rebuilt as three exception patterns plus غَيْر and سِوَى (the old rows taught a
+   four-type grid), and gained Al-Buruj in two parts (`ch70-l08`, `l09`), a rebuilt
+   review and `ch70-test`; the old SP11 phrase row `ch70-l07` is unpublished (DRAFT,
+   progress kept). Published with `scripts/promote-chapters-66-70.cjs` after a
+   staging API walk (test locked until the lessons are done, key stripped, 9/12
+   fails, 10/12 passes, replay 0 XP, all five chapters); `content:check` 594/594
+   and `content:baseline` 594. **No TTS was generated:** the missing catalogue list
+   in `Docs/lesson-audio-needed.md` is now 1269 clips (335 new). 134 new scenes for
+   207 cards requested in `Docs/lesson-illustrations-needed.md` (every card of
+   these chapters is mapped). Map entries for Ch 66–70 rewritten (S10). Owner
+   decision D6 (`ch68-l05`) was built under the harvest instruction and can be
+   unpublished, though Chapter 69 then needs another prerequisite home. Learners who
+   finished `ch66-l01`–`l06`, `ch67-l01`–`l05`, `ch68-l01`–`l06`, `ch69-l01`–`l05` or
+   `ch70-l01`–`l06` see an "Updated" notice. Not done: scholarly review and the
+   Android pass.
    **Proposal harvest, batch 8 (Chapters 61–65): live in production
    2026-10-04.** Ch 61 was rebuilt in full: trade words (`ch61-l01`), weighing
    against measuring (`ch61-l02`), the **CL17 Conversation Lab "At the Market"**

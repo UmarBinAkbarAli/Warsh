@@ -2,14 +2,13 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 66, Lesson 1 — Introduction to ظرف (Zarf) — adverbial accusative of time and place.",
+    "_note": "Chapter 66, Lesson 1 (ch66-l01, rebuilt in place). Replaces the old 'a zarf is always accusative' lesson. A ظرف (مفعول فيه) is a noun of time or place that tells when or where the action happens and usually sits in the accusative; meaning alone never decides the role. Contrasts: a place ظرف against a real preposition (أَمَامَ / عَلَى), the same time word as ظرف and as subject (يَوْمَ الْجُمُعَةِ / يَوْمُ الْجُمُعَةِ), and مِنْ أَقْطَارِ (55:33) as a prepositional phrase. Chapter 55's 'later contrast' for فَوْقَ، تَحْتَ، أَمَامَ، خَلْفَ، بَيْنَ is taken up here. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-66-content-proposal.md and its review amendments.",
+    "title": "What Makes a Noun a ظَرْف?",
+    "titleAr": "مَا الظَّرْفُ؟",
+    "titleUr": "ظرف کسے کہتے ہیں؟",
     "chapter_order": 66,
     "lesson_order": 1,
-    "chapter_title": "ظرف الزمان والمكان",
-    "title": "Introduction to the Zarf (Adverbial Accusative)",
-    "titleAr": "الْمُقَدِّمَة: الظَّرْفُ (الْمَفْعُولُ فِيهِ)",
-    "source": "book_8_lesson_1_zarf_intro.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
@@ -17,96 +16,112 @@
       "surah": 33,
       "ayah": 42,
       "label": "Al-Ahzab 33:42",
-      "ar": "وَسَبِّحُوهُ بُكْرَةً وَأَصِيلًا",
+      "ar": "وَسَبِّحُوهُ بُكْرَةً وَأَصِيلًا",
       "en": "And exalt Him morning and afternoon.",
-      "ur": "اور صبح و شام اس کی تسبیح کرو",
+      "ur": "اور صبح و شام اس کی تسبیح کرو۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033042.mp3"
     },
     "noor_intro": {
-      "en": "بُكْرَةً وَأَصِيلًا — 'morning and afternoon'. Neither word has a preposition, yet both tell us WHEN to glorify Allah. That is a ظَرْف: a time or place word in the accusative that answers 'when?' or 'where?'.",
-      "ur": "بُكْرَةً وَأَصِيلًا — 'صبح اور سہ پہر'۔ دونوں لفظوں سے پہلے کوئی حرفِ جر نہیں، پھر بھی دونوں بتاتے ہیں کہ اللہ کی تسبیح کب کرنی ہے۔ یہی ظرف ہے: وقت یا جگہ کا لفظ جو منصوب ہو کر 'کب؟' یا 'کہاں؟' کا جواب دے۔"
+      "en": "You have used فَوْقَ, يَوْمَ and عِنْدَ since the early chapters. Now they get a grammatical job: a ظَرْف says when or where the action happens.",
+      "ur": "آپ شروع کے ابواب سے فَوْقَ، يَوْمَ اور عِنْدَ استعمال کرتے آئے ہیں۔ اب انہیں ایک نحوی کام ملتا ہے: ظَرْف بتاتا ہے کہ عمل کب یا کہاں ہوتا ہے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "The Zarf (ظرف) — Adverbial Accusative",
+        "en": "The ظرف: when or where",
         "ar": "الظَّرْفُ — الْمَفْعُولُ فِيهِ",
-        "ur": "ظرف — ظرف زمان یا مکان"
+        "ur": "ظرف: کب یا کہاں"
       },
       "explanation": {
-        "en": "A zarf tells us WHEN or WHERE an action takes place. It is always in the accusative (منصوب) because it is a مفعول فيه — 'that in which' the action happens.",
-        "ur": "ظرف بتاتا ہے کہ کب یا کہاں کوئی عمل ہوتا ہے۔ یہ ہمیشہ نصب میں ہوتا ہے کیونکہ یہ مفعول فیہ ہے — 'جس میں' عمل ہوتا ہے۔"
+        "en": "A ظرف is a noun of time or place that tells when or where the action happens, with no preposition in front of it. In that job it usually stands in the accusative. The job decides the ending, not the meaning: a word that means 'day' or 'place' can play another role, and then it takes another ending.",
+        "ur": "ظرف وقت یا جگہ کا اسم ہے جو بتاتا ہے کہ عمل کب یا کہاں ہوتا ہے، اور اس کے آگے کوئی حرفِ جر نہیں ہوتا۔ اس کام میں وہ عموماً منصوب ہوتا ہے۔ ختم کام سے طے ہوتا ہے، معنی سے نہیں: جس لفظ کا مطلب 'دن' یا 'جگہ' ہے وہ کوئی اور کام بھی کر سکتا ہے، تب اس کا ختم بھی اور ہوتا ہے۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "يَوْمَ",
-        "ar_plain": "يوم",
-        "translit": "yawma",
-        "en": "on the day (time zarf)",
-        "ur": "اس دن (وقت کا ظرف)"
+        "ar": "بُكْرَةً وَأَصِيلًا",
+        "ar_plain": "بكرة واصيلا",
+        "translit": "bukratan waʾaṣīlan",
+        "en": "morning and afternoon",
+        "ur": "صبح اور شام"
       },
       "explanation": {
-        "en": "يَوْمَ is the most common time zarf in the Quran. It answers 'when?' يَوْمَئِذٍ means 'on that day.'",
-        "ur": "يَوْمَ قرآن میں سب سے عام وقت کا ظرف ہے۔ یہ 'کب؟' کا جواب دیتا ہے۔ يَوْمَئِذٍ مطلب 'اسی دن'۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "عِنْدَ",
-        "ar_plain": "عند",
-        "translit": "inda",
-        "en": "at, near (place zarf)",
-        "ur": "پاس، نزدیک (مکان کا ظرف)"
-      },
-      "explanation": {
-        "en": "عِنْدَ means 'at', 'with' or 'near' — a place zarf. It is always followed by a مُضَاف إِلَيْه: عِنْدَ رَبِّي means 'with my Lord'.",
-        "ur": "عِنْدَ کا معنی 'پاس'، 'ہاں' یا 'نزدیک' ہے — ظرفِ مکان۔ اس کے بعد ہمیشہ مضاف الیہ آتا ہے: عِنْدَ رَبِّي یعنی 'میرے رب کے پاس'۔"
+        "en": "بُكْرَةً and أَصِيلًا answer 'when?' for the verb سَبِّحُوهُ: 'exalt Him in the morning and in the afternoon'. Neither has a preposition in front of it, and each ends in the accusative tanwīn. (Al-Ahzab 33:42) (Al-Ahzab 33:42)",
+        "ur": "بُكْرَةً اور أَصِيلًا فعل سَبِّحُوهُ کے لیے 'کب؟' کا جواب دیتے ہیں: 'صبح اور سہ پہر کو اس کی تسبیح کرو'۔ ان کے آگے کوئی حرفِ جر نہیں، اور دونوں منصوب تنوین پر ختم ہوتے ہیں۔ (الاحزاب 33:42) (Al-Ahzab 33:42)"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "يَوْمَ يَقُومُ الْحِسَابُ",
-        "ar_plain": "يوم يقوم الحساب",
-        "translit": "yawma yaqoomu al-hisaabu",
-        "en": "on the Day when the account is established",
-        "ur": "اس دن جب حساب قائم ہوگا"
+        "ar": "جَلَسَ الطَّالِبُ أَمَامَ الْمَكْتَبِ",
+        "ar_plain": "جلس الطالب امام المكتب",
+        "translit": "jalasa aṭ-ṭālibu ʾamāma al-maktabi",
+        "en": "The student sat in front of the desk",
+        "ur": "طالب علم میز کے سامنے بیٹھا"
       },
       "explanation": {
-        "en": "From Ibrahim 14:41. يَوْمَ is the time zarf (accusative) and يَقُومُ الْحِسَابُ is the clause it is added to: 'on the Day the reckoning is established'.",
-        "ur": "ابراہیم 14:41 سے۔ يَوْمَ ظرفِ زمان (منصوب) ہے اور يَقُومُ الْحِسَابُ وہ جملہ ہے جس کی طرف یہ مضاف ہے: 'جس دن حساب قائم ہو گا'۔"
+        "en": "أَمَامَ tells where he sat: it is the place ظرف, in the accusative. الْمَكْتَبِ comes after it as its dependent and is genitive.",
+        "ur": "أَمَامَ بتاتا ہے کہ وہ کہاں بیٹھا: یہ مکان کا ظرف ہے، منصوب۔ الْمَكْتَبِ اس کے بعد اس کا متعلق ہے اور مجرور ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "جَلَسْتُ أَمَامَ الْبَيْتِ",
-        "ar_plain": "جلست أمام البيت",
-        "translit": "jalastu amaama al-bayti",
-        "en": "I sat in front of the house",
-        "ur": "میں گھر کے سامنے بیٹھا"
+        "ar": "جَلَسَ الطَّالِبُ عَلَى الْمَكْتَبِ",
+        "ar_plain": "جلس الطالب على المكتب",
+        "translit": "jalasa aṭ-ṭālibu ʿalā al-maktabi",
+        "en": "The student sat on the desk",
+        "ur": "طالب علم میز پر بیٹھا"
       },
       "explanation": {
-        "en": "أَمَامَ is a place zarf — accusative, answering 'where?'. الْبَيْتِ after it is genitive as its مُضَاف إِلَيْه. Compare a preposition phrase: فِي الْبَيْتِ ('in the house') — after فِي or مِنْ the noun is genitive and is not a zarf. In 55:33, مِنْ أَقْطَارِ السَّمَاوَاتِ is such a phrase.",
-        "ur": "أَمَامَ ظرفِ مکان ہے — منصوب، 'کہاں؟' کا جواب۔ اس کے بعد الْبَيْتِ مضاف الیہ ہونے سے مجرور ہے۔ حرفِ جر والے حصے سے موازنہ کیجیے: فِي الْبَيْتِ ('گھر میں') — فِي یا مِنْ کے بعد اسم مجرور ہوتا ہے اور ظرف نہیں ہوتا۔ 55:33 میں مِنْ أَقْطَارِ السَّمَاوَاتِ ایسا ہی حصہ ہے۔"
+        "en": "Same question, 'where?', but عَلَى is a real preposition. The noun after a preposition is genitive, and this phrase is a prepositional phrase, not a ظرف.",
+        "ur": "سوال وہی ہے، 'کہاں؟'، مگر عَلَى حقیقی حرفِ جر ہے۔ حرفِ جر کے بعد اسم مجرور ہوتا ہے، اور یہ جار مجرور ہے، ظرف نہیں۔"
       }
     },
     {
-      "type": "CONCEPT",
+      "type": "CONTRAST",
       "concept": {
-        "en": "Zarf is always accusative (منصوب)",
-        "ar": "الظَّرْفُ مَنْصُوبٌ دَائِمًا",
-        "ur": "ظرف ہمیشہ نصب میں ہوتا ہے"
+        "en": "One word, two jobs",
+        "ar": "ایک لفظ، دو کام",
+        "ur": "ظَرْفٌ أَمْ لَا؟"
+      },
+      "examples": [
+        {
+          "ar": "سَافَرَ الطَّالِبُ يَوْمَ الْجُمُعَةِ",
+          "ar_plain": "سافر الطالب يوم الجمعة",
+          "translit": "sāfara aṭ-ṭālibu yawma al-jumuʿati",
+          "en": "The student travelled on Friday",
+          "ur": "طالب علم جمعہ کے دن سفر پر گیا"
+        },
+        {
+          "ar": "يَوْمُ الْجُمُعَةِ يَوْمٌ جَمِيلٌ",
+          "ar_plain": "يوم الجمعة يوم جميل",
+          "translit": "yawmu al-jumuʿati yawmun jamīlun",
+          "en": "Friday is a lovely day",
+          "ur": "جمعہ ایک خوبصورت دن ہے"
+        }
+      ],
+      "explanation": {
+        "en": "In the first sentence يَوْمَ tells when he travelled: a ظرف, accusative. In the second يَوْمُ is the subject of the sentence: nominative, and not a ظرف.",
+        "ur": "پہلے جملے میں يَوْمَ بتاتا ہے کہ وہ کب گیا: ظرف، منصوب۔ دوسرے میں يَوْمُ جملے کا مبتدا ہے: مرفوع، اور ظرف نہیں۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "مِنْ أَقْطَارِ السَّمَاوَاتِ وَالْأَرْضِ",
+        "ar_plain": "من اقطار السماوات والارض",
+        "translit": "min ʾaqṭāri as-samāwaāti wa-l-ʾarḍi",
+        "en": "from the regions of the heavens and the earth",
+        "ur": "آسمانوں اور زمین کے کناروں سے"
       },
       "explanation": {
-        "en": "Whether a zarf shows time or place, it takes the accusative case. This is called المفعول فيه — 'the object in which.'",
-        "ur": "چہ وقت کا ظرف ہو یا مکان کا، یہ نصب کی حالت میں ہوتا ہے۔ اسے المفعول فیہ کہتے ہیں — 'جس میں' عمل ہوتا ہے۔"
+        "en": "أَقْطَارِ means 'regions, edges'. It stands after the preposition مِنْ, so it is genitive: a prepositional phrase, not a ظرف, even though the meaning is about place. (Ar-Rahman 55:33) (Ar-Rahman 55:33)",
+        "ur": "أَقْطَارِ کا مطلب 'کنارے، اطراف' ہے۔ یہ حرفِ جر مِنْ کے بعد ہے، اس لیے مجرور ہے: جار مجرور، ظرف نہیں، اگرچہ معنی جگہ کا ہے۔ (الرحمن 55:33) (Ar-Rahman 55:33)"
       }
     }
   ],
@@ -115,107 +130,263 @@
       "type": "TAP_TRANSLATION",
       "id": "ch66-l01-ex01",
       "prompt": {
-        "ar": "يَوْمَ يَجْتَمِعُ النَّاسُ",
-        "ar_plain": "يوم يجتمع الناس",
-        "translit": "yawma yajtami'u an-naasu",
-        "en": "on the day when people gather",
-        "ur": "اس دن جب لوگ جمع ہوں گے"
+        "ar": "جَلَسَ الطَّالِبُ أَمَامَ الْمَكْتَبِ",
+        "ar_plain": "جلس الطالب امام المكتب",
+        "translit": "jalasa aṭ-ṭālibu ʾamāma al-maktabi",
+        "en": "(which word is the place ظرف?)",
+        "ur": "(کون سا لفظ مکان کا ظرف ہے؟)"
       },
       "options": [
         {
-          "en": "on the day when people gather",
-          "ur": "اس دن جب لوگ جمع ہوں گے"
+          "en": "أَمَامَ — in front of",
+          "ur": "أَمَامَ — کے سامنے"
         },
         {
-          "en": "on a day of gathering",
-          "ur": "جمع کے دن"
+          "en": "الْمَكْتَبِ — the desk",
+          "ur": "الْمَكْتَبِ — میز"
         },
         {
-          "en": "the people gather on that day",
-          "ur": "لوگ اس دن جمع ہوتے ہیں"
+          "en": "الطَّالِبُ — the student",
+          "ur": "الطَّالِبُ — طالب علم"
         },
         {
-          "en": "the people will gather today",
-          "ur": "لوگ آج جمع ہوں گے"
+          "en": "جَلَسَ — sat",
+          "ur": "جَلَسَ — بیٹھا"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "يَوْمَ is a time zarf (accusative) and يَجْتَمِعُ النَّاسُ is the clause it introduces: 'on the day when people gather'.",
-        "ur": "يَوْمَ ظرفِ زمان (منصوب) ہے اور يَجْتَمِعُ النَّاسُ وہ جملہ ہے جو اس کے بعد آتا ہے: 'جس دن لوگ جمع ہوں گے'۔"
+        "en": "أَمَامَ answers 'where?' with no preposition in front of it. الْمَكْتَبِ is its genitive dependent.",
+        "ur": "أَمَامَ بغیر حرفِ جر کے 'کہاں؟' کا جواب دیتا ہے۔ الْمَكْتَبِ اس کا مجرور متعلق ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch66-l01-ex02",
+      "prompt": {
+        "ar": "جَلَسَ الطَّالِبُ عَلَى الْمَكْتَبِ",
+        "ar_plain": "جلس الطالب على المكتب",
+        "translit": "jalasa aṭ-ṭālibu ʿalā al-maktabi",
+        "en": "(what is عَلَى here?)",
+        "ur": "(یہاں عَلَى کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "A place ظرف in the accusative",
+          "ur": "مکان کا ظرف، منصوب"
+        },
+        {
+          "en": "The subject of the sentence",
+          "ur": "جملے کا فاعل"
+        },
+        {
+          "en": "A preposition, so the phrase is a prepositional phrase, not a ظرف",
+          "ur": "حرفِ جر، اس لیے یہ جار مجرور ہے، ظرف نہیں"
+        },
+        {
+          "en": "A verb",
+          "ur": "فعل"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "عَلَى is a preposition and الْمَكْتَبِ is genitive after it. A ظرف has no preposition in front of it.",
+        "ur": "عَلَى حرفِ جر ہے اور الْمَكْتَبِ اس کے بعد مجرور ہے۔ ظرف کے آگے حرفِ جر نہیں ہوتا۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch66-l01-ex02",
+      "id": "ch66-l01-ex03",
       "statement": {
-        "en": "ظُرُوفُ الزَّمَانِ وَالْمَكَانِ are both مَنْصُوبٌ (in the accusative).",
-        "ur": "ظُرُوفُ الزَّمَانِ وَالْمَكَانِ دونوں مَنْصُوبٌ (نصب میں) ہیں۔",
-        "ar_example": {
-          "ar": "يَوْمَئِذٍ يَعْلَمُ الْمُجْرِمُونَ",
-          "ar_plain": "يومئذ يعلم المجرمون",
-          "translit": "yawma'idhin ya'lamu al-mujrimoona",
-          "en": "On that day, the criminals will know.",
-          "ur": "اس دن مجرمین جان لیں گے۔"
-        }
+        "en": "Any noun that means a time or a place is always a ظرف.",
+        "ur": "جو بھی اسم وقت یا جگہ کا مطلب رکھتا ہو وہ ہمیشہ ظرف ہوتا ہے۔"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. The job decides: in يَوْمُ الْجُمُعَةِ يَوْمٌ جَمِيلٌ the word يَوْمُ is the subject, nominative, and not a ظرف.",
+        "ur": "غلط۔ کام فیصلہ کرتا ہے: يَوْمُ الْجُمُعَةِ يَوْمٌ جَمِيلٌ میں لفظ يَوْمُ مبتدا ہے، مرفوع، اور ظرف نہیں۔"
+      }
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch66-l01-ex03",
+      "id": "ch66-l01-ex04",
       "mode": "TAP",
-      "sentence_ar": "___ يَقُومُ النَّاسُ لِرَبِّ الْعَالَمِينَ",
+      "sentence_ar": "سَافَرَ الطَّالِبُ ___ الْجُمُعَةِ",
       "hint": {
-        "en": "On the Day when people stand before the Lord of the worlds.",
-        "ur": "اس دن جب لوگ رب العالمین کے سامنے کھڑے ہوں گے۔"
+        "en": "The student travelled on Friday.",
+        "ur": "طالب علم جمعہ کے دن سفر پر گیا۔"
       },
       "options": [
+        {
+          "ar": "يَوْمُ",
+          "ar_plain": "يوم",
+          "translit": "yawmu",
+          "en": "day (nominative)",
+          "ur": "دن (مرفوع)"
+        },
+        {
+          "ar": "يَوْمٌ",
+          "ar_plain": "يوم",
+          "translit": "yawmun",
+          "en": "a day (nominative, tanwīn)",
+          "ur": "ایک دن (مرفوع، تنوین)"
+        },
+        {
+          "ar": "يَوْمِ",
+          "ar_plain": "يوم",
+          "translit": "yawmi",
+          "en": "day (genitive)",
+          "ur": "دن (مجرور)"
+        },
         {
           "ar": "يَوْمَ",
           "ar_plain": "يوم",
           "translit": "yawma",
-          "en": "on the day",
-          "ur": "اس دن"
-        },
-        {
-          "ar": "شَيْءٌ",
-          "ar_plain": "شيء",
-          "translit": "shay'un",
-          "en": "a thing",
-          "ur": "چیز"
-        },
-        {
-          "ar": "عِنْدَ",
-          "ar_plain": "عند",
-          "translit": "inda",
-          "en": "at",
-          "ur": "پاس"
-        },
-        {
-          "ar": "الْيَوْمَ",
-          "ar_plain": "اليوم",
-          "translit": "al-yawma",
-          "en": "today",
-          "ur": "آج"
+          "en": "on the day (ظرف, accusative)",
+          "ur": "دن کو (ظرف، منصوب)"
         }
       ],
       "correct_answer": {
         "ar": "يَوْمَ",
         "ar_plain": "يوم",
         "translit": "yawma",
-        "en": "on the day",
-        "ur": "اس دن"
+        "en": "on the day (ظرف, accusative)",
+        "ur": "دن کو (ظرف، منصوب)"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Here يَوْمَ tells when he travelled, so it is a ظرف and stays accusative; الْجُمُعَةِ after it is its genitive dependent.",
+        "ur": "یہاں يَوْمَ بتاتا ہے کہ وہ کب گیا، اس لیے یہ ظرف ہے اور منصوب رہتا ہے؛ اس کے بعد الْجُمُعَةِ اس کا مجرور متعلق ہے۔"
+      }
     },
     {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch66-l01-ex04",
-      "sentence_ar": "جَلَسَ الطَّالِبُ عِنْدَ الْمُعَلِّمِ",
-      "words": [
+      "type": "TAP_TRANSLATION",
+      "id": "ch66-l01-ex05",
+      "prompt": {
+        "ar": "يَوْمُ الْجُمُعَةِ يَوْمٌ جَمِيلٌ",
+        "ar_plain": "يوم الجمعة يوم جميل",
+        "translit": "yawmu al-jumuʿati yawmun jamīlun",
+        "en": "(what is the first word, يَوْمُ?)",
+        "ur": "(پہلا لفظ يَوْمُ کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "A time ظرف, so it must be accusative",
+          "ur": "وقت کا ظرف، اس لیے منصوب ہونا چاہیے"
+        },
+        {
+          "en": "The subject, nominative, so it is not a ظرف",
+          "ur": "مبتدا، مرفوع، اس لیے ظرف نہیں"
+        },
+        {
+          "en": "A place ظرف",
+          "ur": "مکان کا ظرف"
+        },
+        {
+          "en": "A preposition",
+          "ur": "حرفِ جر"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The sentence says 'Friday is a lovely day'. يَوْمُ is what the sentence is about, the subject, so it is nominative.",
+        "ur": "جملہ کہتا ہے 'جمعہ ایک خوبصورت دن ہے'۔ يَوْمُ وہ ہے جس کے بارے میں جملہ ہے، یعنی مبتدا، اس لیے مرفوع ہے۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch66-l01-ex06",
+      "left_column": [
+        {
+          "ar": "فَوْقَ الْبَيْتِ",
+          "ar_plain": "فوق البيت",
+          "translit": "fawqa al-bayti",
+          "en": "above the house",
+          "ur": "گھر کے اوپر"
+        },
+        {
+          "ar": "قَبْلَ الصَّلَاةِ",
+          "ar_plain": "قبل الصلاة",
+          "translit": "qabla aṣ-ṣalāti",
+          "en": "before the prayer",
+          "ur": "نماز سے پہلے"
+        },
+        {
+          "ar": "فِي الْبَيْتِ",
+          "ar_plain": "في البيت",
+          "translit": "fī al-bayti",
+          "en": "in the house",
+          "ur": "گھر میں"
+        },
+        {
+          "ar": "يَوْمُ الْجُمُعَةِ جَمِيلٌ",
+          "ar_plain": "يوم الجمعة جميل",
+          "translit": "yawmu al-jumuʿati jamīlun",
+          "en": "Friday is lovely",
+          "ur": "جمعہ خوبصورت ہے"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "a preposition with a genitive noun",
+          "ur": "حرفِ جر اور مجرور اسم"
+        },
+        {
+          "en": "a place ظرف with its dependent",
+          "ur": "مکان کا ظرف، اپنے متعلق کے ساتھ"
+        },
+        {
+          "en": "a time word used as the subject",
+          "ur": "وقت کا لفظ بطور مبتدا"
+        },
+        {
+          "en": "a time ظرف with its dependent",
+          "ur": "وقت کا ظرف، اپنے متعلق کے ساتھ"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The first two are ظرف + dependent; فِي is a real preposition; the last has a time word as the subject.",
+        "ur": "پہلے دو ظرف اور متعلق ہیں؛ فِي حقیقی حرفِ جر ہے؛ آخری میں وقت کا لفظ مبتدا ہے۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch66-l01-ex07",
+      "target_translation": {
+        "en": "The student sat in front of the desk.",
+        "ur": "طالب علم میز کے سامنے بیٹھا۔"
+      },
+      "tiles": [
+        {
+          "ar": "أَمَامَ",
+          "ar_plain": "امام",
+          "translit": "ʾamāma",
+          "en": "in front of",
+          "ur": "کے سامنے"
+        },
         {
           "ar": "جَلَسَ",
           "ar_plain": "جلس",
@@ -224,249 +395,79 @@
           "ur": "بیٹھا"
         },
         {
+          "ar": "الْمَكْتَبِ",
+          "ar_plain": "المكتب",
+          "translit": "al-maktabi",
+          "en": "the desk",
+          "ur": "میز"
+        },
+        {
           "ar": "الطَّالِبُ",
           "ar_plain": "الطالب",
-          "translit": "at-taalibu",
+          "translit": "aṭ-ṭālibu",
           "en": "the student",
           "ur": "طالب علم"
-        },
-        {
-          "ar": "عِنْدَ",
-          "ar_plain": "عند",
-          "translit": "'inda",
-          "en": "with / near",
-          "ur": "کے پاس"
-        },
-        {
-          "ar": "الْمُعَلِّمِ",
-          "ar_plain": "المعلم",
-          "translit": "al-mu'allimi",
-          "en": "the teacher",
-          "ur": "استاد"
-        }
-      ],
-      "available_roles": [
-        "VERB",
-        "SUBJECT",
-        "OBJECT",
-        "PREPOSITION",
-        "POSSESSIVE",
-        "TIME_ZARF",
-        "PLACE_ZARF"
-      ],
-      "correct_roles": [
-        "VERB",
-        "SUBJECT",
-        "PLACE_ZARF",
-        "POSSESSIVE"
-      ],
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "جَلَسَ is the verb and الطَّالِبُ its doer. عِنْدَ is a place zarf (accusative, fatḥa) answering 'where?'. A zarf like عِنْدَ is a مُضَاف, so الْمُعَلِّمِ after it is its مُضَاف إِلَيْه (genitive).",
-        "ur": "جَلَسَ فعل اور الطَّالِبُ اس کا فاعل ہے۔ عِنْدَ ظرفِ مکان ہے (منصوب، زبر) جو 'کہاں؟' کا جواب دیتا ہے۔ عِنْدَ جیسا ظرف مضاف ہوتا ہے، اس لیے اس کے بعد الْمُعَلِّمِ مضاف الیہ (مجرور) ہے۔"
-      }
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch66-l01-ex05",
-      "prompt": {
-        "ar": "مَشَيْتُ خَلْفَ الْإِمَامِ",
-        "ar_plain": "مشيت خلف الإمام",
-        "translit": "mashaytu khalfa al-imaami",
-        "en": "I walked behind the imam",
-        "ur": "میں امام کے پیچھے چلا"
-      },
-      "options": [
-        {
-          "en": "I walked behind the imam",
-          "ur": "میں امام کے پیچھے چلا"
-        },
-        {
-          "en": "I walked in front of the imam",
-          "ur": "میں امام کے آگے چلا"
-        },
-        {
-          "en": "The imam walked behind me",
-          "ur": "امام میرے پیچھے چلا"
-        },
-        {
-          "en": "I walked with the imam",
-          "ur": "میں امام کے ساتھ چلا"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "خَلْفَ is a place zarf meaning 'behind' (accusative). الْإِمَامِ is its مُضَاف إِلَيْه. 'In front of' would be أَمَامَ.",
-        "ur": "خَلْفَ ظرفِ مکان ہے جس کا معنی 'پیچھے' ہے (منصوب)۔ الْإِمَامِ اس کا مضاف الیہ ہے۔ 'آگے' کے لیے أَمَامَ ہوتا۔"
-      }
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch66-l01-ex06",
-      "left_column": [
-        {
-          "ar": "يَوْمَ يَقُومُ الْحِسَابُ",
-          "ar_plain": "يوم يقوم الحساب",
-          "translit": "yawma yaqoomu al-hisaabu",
-          "en": "on the Day of Judgment",
-          "ur": "حساب کے دن"
-        },
-        {
-          "ar": "عِنْدَ رَبِّهِ",
-          "ar_plain": "عند ربه",
-          "translit": "inda rabbihi",
-          "en": "near his Lord",
-          "ur": "اس کے رب کے پاس"
-        },
-        {
-          "ar": "فَوْقَهُمْ",
-          "ar_plain": "فوقهم",
-          "translit": "fawqahum",
-          "en": "above them",
-          "ur": "ان کے اوپر"
-        },
-        {
-          "ar": "لَيْلًا وَنَهَارًا",
-          "ar_plain": "ليلا ونهارا",
-          "translit": "laylan wa naharan",
-          "en": "night and day",
-          "ur": "رات اور دن"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "time zarf — يَوْمَ",
-          "ur": "ظرفِ زمان — يَوْمَ"
-        },
-        {
-          "en": "place zarf — عِنْدَ",
-          "ur": "ظرفِ مکان — عِنْدَ"
-        },
-        {
-          "en": "place zarf — فَوْقَ",
-          "ur": "ظرفِ مکان — فَوْقَ"
-        },
-        {
-          "en": "two time zarfs joined by وَ",
-          "ur": "وَ سے جڑے دو ظرفِ زمان"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch66-l01-ex07",
-      "target_translation": {
-        "en": "On that day, the believers will see their Lord.",
-        "ur": "اس دن مومنین اپنے رب کو دیکھیں گے۔"
-      },
-      "tiles": [
-        {
-          "ar": "يَوْمَئِذٍ",
-          "ar_plain": "يومئذ",
-          "translit": "yawma'idhin",
-          "en": "on that day",
-          "ur": "اس دن"
-        },
-        {
-          "ar": "يَرَوْنَ",
-          "ar_plain": "يرون",
-          "translit": "yarawna",
-          "en": "they see",
-          "ur": "دیکھتے ہیں"
-        },
-        {
-          "ar": "الْمُؤْمِنُونَ",
-          "ar_plain": "المؤمنون",
-          "translit": "al-mu'minoona",
-          "en": "the believers",
-          "ur": "مومنین"
-        },
-        {
-          "ar": "رَبَّهُمْ",
-          "ar_plain": "ربهم",
-          "translit": "rabbahum",
-          "en": "their Lord",
-          "ur": "ان کا رب"
         }
       ],
       "correct_order": [
-        0,
-        2,
         1,
-        3
+        3,
+        0,
+        2
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Verb, doer, then the place ظرف and its dependent.",
+        "ur": "فعل، فاعل، پھر مکان کا ظرف اور اس کا متعلق۔"
+      }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch66-l01-ex08",
       "statement": {
-        "en": "أَقْطَارِ in فِي أَقْطَارِ السَّمَاوَاتِ is a مفعول فيه (place zarf) and is therefore منصوب.",
-        "ur": "فِي أَقْطَارِ السَّمَاوَاتِ میں أَقْطَارِ ایک مفعول فیہ (مکان کا ظرف) ہے اسلئے مَنْصُوبٌ ہے۔",
-        "ar_example": {
-          "ar": "مِنْ أَقْطَارِ السَّمَاوَاتِ وَالْأَرْضِ",
-          "ar_plain": "من اقطار السماوات والارض",
-          "translit": "min aqtaari al-samawati wa al-ardi",
-          "en": "from the regions of the heavens and the earth",
-          "ur": "آسمانوں اور زمین کے کناروں سے"
-        }
+        "en": "In مِنْ أَقْطَارِ السَّمَاوَاتِ وَالْأَرْضِ (55:33) the word أَقْطَارِ is a place ظرف.",
+        "ur": "مِنْ أَقْطَارِ السَّمَاوَاتِ وَالْأَرْضِ (55:33) میں لفظ أَقْطَارِ مکان کا ظرف ہے۔"
       },
       "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "False. أَقْطَارِ comes after the preposition مِنْ, so it is genitive (kasra) — a preposition phrase, not a zarf. A zarf has no preposition before it and is accusative, like بُكْرَةً or أَمَامَ.",
-        "ur": "غلط۔ أَقْطَارِ حرفِ جر مِنْ کے بعد آیا ہے اس لیے مجرور ہے (زیر) — یہ جار مجرور ہے، ظرف نہیں۔ ظرف سے پہلے حرفِ جر نہیں ہوتا اور وہ منصوب ہوتا ہے، جیسے بُكْرَةً یا أَمَامَ۔"
+        "en": "False. أَقْطَارِ comes after the preposition مِنْ and is genitive: a prepositional phrase.",
+        "ur": "غلط۔ أَقْطَارِ حرفِ جر مِنْ کے بعد ہے اور مجرور ہے: جار مجرور۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Zarf — the adverbial accusative of time and place",
-      "ar": "الظَّرْفُ — الْمَفْعُولُ فِيهِ زَمَانًا أَوْ مَكَانًا",
-      "ur": "ظرف — وقت یا مکان کا ظرف"
+      "en": "A ظرف answers when or where",
+      "ar": "الظَّرْفُ يُجِيبُ مَتَى وَأَيْنَ",
+      "ur": "ظرف کب اور کہاں کا جواب دیتا ہے"
     },
     "ayah": {
       "surah": 33,
       "ayah": 42,
       "label": "Al-Ahzab 33:42",
-      "ar": "وَسَبِّحُوهُ بُكْرَةً وَأَصِيلًا",
+      "ar": "وَسَبِّحُوهُ بُكْرَةً وَأَصِيلًا",
       "en": "And exalt Him morning and afternoon.",
-      "ur": "اور صبح و شام اس کی تسبیح کرو",
+      "ur": "اور صبح و شام اس کی تسبیح کرو۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033042.mp3"
     },
     "highlighted_word_indices": [
       1,
       2
     ],
+    "highlighted_words": [
+      "بُكْرَةً",
+      "وَأَصِيلًا"
+    ],
     "noor_explanation": {
-      "en": "بُكْرَةً ('in the morning') and أَصِيلًا ('in the late afternoon') are time zarfs: each is accusative with tanwīn, and each answers 'when?' for the verb سَبِّحُوهُ. No preposition is needed — the accusative itself carries the meaning 'at that time'.",
-      "ur": "بُكْرَةً ('صبح کو') اور أَصِيلًا ('سہ پہر کو') ظرفِ زمان ہیں: دونوں تنوین کے ساتھ منصوب ہیں اور فعل سَبِّحُوهُ کے لیے 'کب؟' کا جواب دیتے ہیں۔ کسی حرفِ جر کی ضرورت نہیں — نصب خود 'اس وقت' کا معنی دیتا ہے۔"
+      "en": "بُكْرَةً وَأَصِيلًا — two time words with no preposition, each telling when. That is the ظرف job.",
+      "ur": "بُكْرَةً وَأَصِيلًا — دو وقت کے الفاظ بغیر حرفِ جر کے، ہر ایک بتاتا ہے کہ کب۔ یہی ظرف کا کام ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Zarf tells us when or where. يَوْمَ, عِنْدَ, أَمَامَ, خَلْفَ, فَوْقَ, تَحْتَ — these are your أدوات زمان ومكان. They are always منصوب.",
-      "ur": "ظرف بتاتا ہے کب یا کہاں۔ يَوْمَ، عِنْدَ، أَمَامَ، خَلْفَ، فَوْقَ، تَحْتَ — یہ تمہارے أدوات زمان ومکان ہیں۔ یہ ہمیشہ منصوب ہوتے ہیں۔"
+      "en": "A ظرف tells when or where, with no preposition. The job, not the meaning, decides the role.",
+      "ur": "ظرف بتاتا ہے کہ کب یا کہاں، بغیر حرفِ جر کے۔ کردار کام سے طے ہوتا ہے، معنی سے نہیں۔"
     }
   }
 }

@@ -2,177 +2,395 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 68, Lesson 4 — لَمْ and لَمَّا deep dive with Quranic examples.",
+    "_note": "Chapter 68, Lesson 4 (ch68-l02, rebuilt in place; STANDARD, not the VERB_PATTERN registration the seed once carried — no conjugation block). Teaches command lām: لِ + an imperfect in the jussive, 'let him …' (لِيَكْتُبْ), against the direct command of Chapter 51 (اُكْتُبْ, 'write!'), which is its own built form and is not an imperfect verb made jussive by an invisible lām — the old claim is gone — and against the purpose lām of Chapter 45 (لِيَكْتُبَ, 'so that he may write'). Exact: 65:7 (لِيُنفِقْ ذُو سَعَةٍ مِّن سَعَتِهِ, لِيُنفِقْ supplied as a Form IV verb meaning 'let him spend') and 18:19 (فَلْيَنظُرْ … فَلْيَأْتِكُم … وَلْيَتَلَطَّفْ; the lām takes sukūn after فَ and وَ). Production starts from the sound verb كَتَبَ. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-68-content-proposal.md and its review amendments.",
+    "title": "Command لِـ and the Direct Command",
+    "titleAr": "لَامُ الْأَمْرِ وَفِعْلُ الْأَمْرِ",
+    "titleUr": "امر کا لام اور براہِ راست حکم",
     "chapter_order": 68,
     "lesson_order": 4,
-    "chapter_title": "الجوازم",
-    "title": "Deep Dive: لَمْ and لَمَّا with Quranic Parsing",
-    "titleAr": "دَرْسٌ مُتَقَدِّمٌ: لَمْ وَلَمَّا مَعَ تَحْلِيلِ آيَاتٍ",
-    "source": "book_8_lesson_2_lam_lamma_quran.md",
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 49,
-      "ayah": 14,
-      "label": "Al-Hujurat 49:14",
-      "ar": "قَالَتِ الْأَعْرَابُ آمَنَّا ۖ قُل لَّمْ تُؤْمِنُوا وَلَٰكِن قُولُوا أَسْلَمْنَا وَلَمَّا يَدْخُلِ الْإِيمَانُ فِي قُلُوبِكُمْ",
-      "en": "The bedouins say, 'We have believed.' Say, 'You have not [yet] believed; but say [instead], \"We have submitted,\" for faith has not yet entered your hearts.'",
-      "ur": "دیہاتی کہتے ہیں کہ ہم ایمان لے آئے۔ کہہ دو: تم ایمان نہیں لائے، بلکہ یوں کہو کہ ہم نے اسلام قبول کیا، اور ایمان ابھی تک تمہارے دلوں میں داخل نہیں ہوا",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/049014.mp3"
+      "surah": 65,
+      "ayah": 7,
+      "label": "At-Talaq 65:7",
+      "ar": "لِيُنفِقْ ذُو سَعَةٍ مِّن سَعَتِهِ",
+      "en": "Let a man of wealth spend from his wealth",
+      "ur": "کشادگی والا اپنی کشادگی سے خرچ کرے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/065007.mp3"
     },
     "noor_intro": {
-      "en": "قُل لَّمْ تُؤْمِنُوا ... وَلَمَّا يَدْخُلِ الْإِيمَانُ فِي قُلُوبِكُمْ — 'you have not believed … faith has not yet entered your hearts'. لَمْ and لَمَّا side by side: both make the verb jussive, but لَمَّا adds 'not yet'.",
-      "ur": "قُل لَّمْ تُؤْمِنُوا ... وَلَمَّا يَدْخُلِ الْإِيمَانُ فِي قُلُوبِكُمْ — 'تم ایمان نہیں لائے … ایمان ابھی تک تمہارے دلوں میں داخل نہیں ہوا'۔ لَمْ اور لَمَّا ساتھ ساتھ: دونوں فعل کو مجزوم کرتے ہیں، مگر لَمَّا 'ابھی تک' کا اضافہ کرتا ہے۔"
+      "en": "Two ways to give a command: say 'write!' to someone in front of you, or say 'let him write' about someone else. The second uses a lām.",
+      "ur": "حکم دینے کے دو طریقے ہیں: سامنے والے سے 'لکھو!' کہنا، یا کسی اور کے بارے میں 'وہ لکھے' کہنا۔ دوسرے میں لام استعمال ہوتا ہے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "لَمْ vs لَمَّا — The Same Jussive, Different Nuance",
-        "ar": "لَمْ بِالْمُقَابِلِ لَمَّا — نَفْسُ الْجَزْمِ، فَرْقُ الْمَعْنَى",
-        "ur": "لَمْ بمقابلے لَمَّا — وہی مجزوم، مختلف nuance"
+        "en": "Two kinds of command",
+        "ar": "فِعْلُ الْأَمْرِ وَلَامُ الْأَمْرِ",
+        "ur": "حکم کی دو قسمیں"
       },
       "explanation": {
-        "en": "Both لَمْ and لَمَّا negate the past and make the verb jussive. لَمْ is a plain 'did not'. لَمَّا means 'has not yet' — the negation lasts up to now, and the thing may still happen.",
-        "ur": "لَمْ اور لَمَّا دونوں ماضی کی نفی کرتے ہیں اور فعل کو مجزوم کرتے ہیں۔ لَمْ سادہ 'نہیں کیا' ہے۔ لَمَّا کا معنی 'ابھی تک نہیں' ہے — نفی اب تک قائم ہے، اور بات ابھی ہو سکتی ہے۔"
+        "en": "The direct command (Chapter 51) is a built form addressed to the person in front of you: اُكْتُبْ, 'write!'. Command lām is a particle: لِ + an imperfect verb in the jussive, usually about a third person: لِيَكْتُبْ, 'let him write'. The direct command is not an imperfect verb with a hidden lām; it is its own form.",
+        "ur": "براہِ راست حکم (باب 51) ایک بنی بنائی صورت ہے جو سامنے والے سے کہی جاتی ہے: اُكْتُبْ، 'لکھو!'۔ امر کا لام ایک حرف ہے: لِ + مجزوم مضارع فعل، عموماً غائب کے بارے میں: لِيَكْتُبْ، 'وہ لکھے'۔ براہِ راست حکم کسی چھپے ہوئے لام والا مضارع نہیں؛ یہ اپنی الگ صورت ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
-        "ar_plain": "ولم يكن له كفوا أحد",
-        "translit": "wa-lam yakun lahu kufuwan ahadun",
-        "en": "And there is none comparable to Him.",
-        "ur": "اور کوئی اس کا ہمسر نہیں۔"
-      },
-      "explanation": {
-        "en": "From Al-Ikhlas 112:4. يَكُونُ becomes jussive يَكُنْ after لَمْ (the long و drops before the sukūn). أَحَدٌ is the اِسْم of كَانَ, and كُفُوًا its خَبَر, placed first. A plain past negation: there has never been anyone equal to Him.",
-        "ur": "الاخلاص 112:4 سے۔ لَمْ کے بعد يَكُونُ مجزوم ہو کر يَكُنْ بنا (سکون سے پہلے لمبی و گر گئی)۔ أَحَدٌ، كَانَ کا اسم ہے اور كُفُوًا اس کی خبر، جو پہلے آئی ہے۔ سادہ ماضی کی نفی: اس کا کوئی ہمسر کبھی نہیں ہوا۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "وَلَمَّا وَرَدَ مَاءَ مَدْيَنَ",
-        "ar_plain": "ولما ورد ماء مدين",
-        "translit": "wa-lammaa warada maa'a madyana",
-        "en": "And when he came to the water of Madyan",
-        "ur": "اور جب وہ مدین کے پانی پر پہنچے"
-      },
-      "explanation": {
-        "en": "From Al-Qasas 28:23. لَمَّا before a past verb means 'when' — it is not the jussive لَمَّا, and it makes nothing jussive.",
-        "ur": "القصص 28:23 سے۔ ماضی سے پہلے لَمَّا کا معنی 'جب' ہے — یہ جازمہ لَمَّا نہیں، اور کچھ مجزوم نہیں کرتا۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
+      "type": "CONTRAST",
       "concept": {
-        "en": "لَمَّا as a particle vs conjunction — two functions",
-        "ar": "لَمَّا الْجَازِمَةُ وَلَمَّا الْحِينِيَّةُ",
-        "ur": "لَمَّا particle بمقابلے conjunction — دو functions"
+        "en": "Direct command and command لِـ",
+        "ar": "براہِ راست حکم اور امر کا لام",
+        "ur": "فِعْلُ الْأَمْرِ وَلَامُ الْأَمْرِ"
       },
+      "examples": [
+        {
+          "ar": "اُكْتُبْ",
+          "ar_plain": "اكتب",
+          "translit": "uktub",
+          "en": "Write! (to you)",
+          "ur": "لکھو! (تم سے)"
+        },
+        {
+          "ar": "لِيَكْتُبْ",
+          "ar_plain": "ليكتب",
+          "translit": "liyaktub",
+          "en": "Let him write",
+          "ur": "وہ لکھے"
+        }
+      ],
       "explanation": {
-        "en": "لَمَّا has two jobs: (1) before a present verb — 'not yet', and the verb is jussive: لَمَّا يَدْخُلْ. (2) before a past verb — 'when': لَمَّا وَرَدَ. Look at the verb after it to know which.",
-        "ur": "لَمَّا کے دو کام ہیں: (1) مضارع سے پہلے — 'ابھی تک نہیں'، اور فعل مجزوم: لَمَّا يَدْخُلْ۔ (2) ماضی سے پہلے — 'جب': لَمَّا وَرَدَ۔ بعد والا فعل دیکھ کر پہچانیے۔"
+        "en": "The first is the built command form. The second is لِ plus يَكْتُبْ, an imperfect with a sukūn.",
+        "ur": "پہلی بنی ہوئی امر کی صورت ہے۔ دوسری لِ اور يَكْتُبْ ہے، سکون والا مضارع۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Command لِـ and purpose لِـ",
+        "ar": "امر کا لام اور غرض کا لام",
+        "ur": "لَامُ الْأَمْرِ وَلَامُ التَّعْلِيلِ"
+      },
+      "examples": [
+        {
+          "ar": "لِيَكْتُبْ",
+          "ar_plain": "ليكتب",
+          "translit": "liyaktub",
+          "en": "Let him write (sukūn)",
+          "ur": "وہ لکھے (سکون)"
+        },
+        {
+          "ar": "لِيَكْتُبَ",
+          "ar_plain": "ليكتب",
+          "translit": "liyaktuba",
+          "en": "so that he may write (fatḥa)",
+          "ur": "تاکہ وہ لکھے (فتحہ)"
+        }
+      ],
+      "explanation": {
+        "en": "The same letters. A sukūn gives a command; a fatḥa gives the purpose of Chapter 45. Neither is the noun pattern لِلطَّالِبِ ('for the student').",
+        "ur": "حروف وہی۔ سکون حکم دیتا ہے؛ فتحہ باب 45 کی غرض دیتا ہے۔ دونوں میں سے کوئی اسم والی ساخت لِلطَّالِبِ ('طالب علم کے لیے') نہیں۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "وَلَمَّا يَدْخُلِ الْإِيمَانُ فِي قُلُوبِكُمْ",
-        "ar_plain": "ولما يدخل الإيمان في قلوبكم",
-        "translit": "wa-lammaa yadkhuli al-iimaanu fii quluubikum",
-        "en": "and faith has not yet entered your hearts",
-        "ur": "اور ایمان ابھی تک تمہارے دلوں میں داخل نہیں ہوا"
+        "ar": "لِيُنفِقْ ذُو سَعَةٍ مِّن سَعَتِهِ",
+        "ar_plain": "لينفق ذو سعة من سعته",
+        "translit": "liyunfiq dhū saʿatin mmin saʿatihi",
+        "en": "Let a man of wealth spend from his wealth",
+        "ur": "کشادگی والا اپنی کشادگی سے خرچ کرے"
       },
       "explanation": {
-        "en": "From 49:14. لَمَّا here is the jussive 'not yet'. يَدْخُلْ is jussive; its sukūn turns to kasra only to join الْإِيمَانُ. 'Not yet' leaves the door open: faith may still enter.",
-        "ur": "49:14 سے۔ یہاں لَمَّا جازمہ 'ابھی تک نہیں' ہے۔ يَدْخُلْ مجزوم ہے؛ اس کا سکون صرف الْإِيمَانُ سے ملانے کے لیے زیر بنا۔ 'ابھی تک' دروازہ کھلا رکھتا ہے: ایمان اب بھی داخل ہو سکتا ہے۔"
+        "en": "لِيُنفِقْ ذُو سَعَةٍ مِّن سَعَتِهِ: لِ + لِيُنفِقْ, 'let him spend', with a sukūn. لِيُنفِقْ is a verb of another pattern, given with its meaning. (At-Talaq 65:7) (At-Talaq 65:7)",
+        "ur": "لِيُنفِقْ ذُو سَعَةٍ مِّن سَعَتِهِ: لِ + لِيُنفِقْ، 'وہ خرچ کرے'، سکون کے ساتھ۔ لِيُنفِقْ ایک اور وزن کا فعل ہے، جو اپنے معنی کے ساتھ دیا گیا ہے۔ (الطلاق 65:7) (At-Talaq 65:7)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "فَلْيَنظُرْ أَيُّهَا أَزْكَىٰ طَعَامًا فَلْيَأْتِكُم بِرِزْقٍ مِّنْهُ وَلْيَتَلَطَّفْ",
+        "ar_plain": "فلينظر ايها ازكى طعاما فلياتكم برزق منه وليتلطف",
+        "translit": "falyanẓur ʾayyuhā ʾazkā ṭaʿāman falyaʾtikum birizqin mminhu walyatalaṭṭaf",
+        "en": "let him look … and bring you provision … and let him be gentle",
+        "ur": "وہ دیکھے … اور تمہارے پاس رزق لائے … اور نرمی سے کام لے"
+      },
+      "explanation": {
+        "en": "فَلْيَنظُرْ … فَلْيَأْتِكُم … وَلْيَتَلَطَّفْ: three command lāms. After فَ and وَ the lām takes a sukūn instead of a kasra: فَلْـ, وَلْـ. The verbs are given with their meanings. (Al-Kahf 18:19) (Al-Kahf 18:19)",
+        "ur": "فَلْيَنظُرْ … فَلْيَأْتِكُم … وَلْيَتَلَطَّفْ: تین امر کے لام۔ فَ اور وَ کے بعد لام کسرہ کے بجائے سکون لیتا ہے: فَلْـ، وَلْـ۔ افعال اپنے معنی کے ساتھ دیے گئے ہیں۔ (الکہف 18:19) (Al-Kahf 18:19)"
       }
     }
   ],
   "exercises": [
     {
-      "type": "TRUE_FALSE",
-      "id": "ch68-l04-ex01",
-      "statement": {
-        "en": "لَمَّا meaning 'when' (before a past verb) does NOT make anything jussive.",
-        "ur": "'جب' کے معنی والا لَمَّا (ماضی سے پہلے) کچھ مجزوم نہیں کرتا۔",
-        "ar_example": {
-          "ar": "وَلَمَّا وَرَدَ مَاءَ مَدْيَنَ",
-          "ar_plain": "ولما ورد ماء مدين",
-          "translit": "wa-lammaa warada maa'a madyana",
-          "en": "And when he came to the water of Madyan",
-          "ur": "اور جب وہ مدین کے پانی پر پہنچے"
-        }
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l02-ex01",
+      "prompt": {
+        "ar": "اُكْتُبْ · لِيَكْتُبْ",
+        "ar_plain": "اكتب · ليكتب",
+        "translit": "uktub · liyaktub",
+        "en": "(what is the difference?)",
+        "ur": "(فرق کیا ہے؟)"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "options": [
+        {
+          "en": "Both are the same form",
+          "ur": "دونوں ایک ہی صورت ہیں"
+        },
+        {
+          "en": "اُكْتُبْ is a direct command to you: 'write!'; لِيَكْتُبْ is lām plus a jussive imperfect: 'let him write'",
+          "ur": "اُكْتُبْ تم سے براہِ راست حکم ہے: 'لکھو!'؛ لِيَكْتُبْ لام اور مجزوم مضارع ہے: 'وہ لکھے'"
+        },
+        {
+          "en": "اُكْتُبْ is the past and لِيَكْتُبْ the future",
+          "ur": "اُكْتُبْ ماضی ہے اور لِيَكْتُبْ مستقبل"
+        },
+        {
+          "en": "اُكْتُبْ is a noun",
+          "ur": "اُكْتُبْ اسم ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The direct command is its own built form; command lām is لِ plus an imperfect with a sukūn.",
+        "ur": "براہِ راست حکم اپنی بنی ہوئی صورت ہے؛ امر کا لام لِ اور سکون والا مضارع ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch68-l02-ex02",
+      "statement": {
+        "en": "اُكْتُبْ is an imperfect verb made jussive by an invisible lām.",
+        "ur": "اُكْتُبْ ایک مضارع فعل ہے جسے چھپا ہوا لام مجزوم کرتا ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. اُكْتُبْ is the direct command form (Chapter 51); there is no hidden lām.",
+        "ur": "غلط۔ اُكْتُبْ براہِ راست امر کی صورت ہے (باب 51)؛ کوئی چھپا ہوا لام نہیں۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch68-l02-ex03",
+      "mode": "TAP",
+      "sentence_ar": "___ خَالِدٌ الدَّرْسَ",
+      "hint": {
+        "en": "Let Khalid write the lesson.",
+        "ur": "خالد سبق لکھے۔"
+      },
+      "options": [
+        {
+          "ar": "لِيَكْتُبَ",
+          "ar_plain": "ليكتب",
+          "translit": "liyaktuba",
+          "en": "so that he may write (fatḥa)",
+          "ur": "تاکہ وہ لکھے (فتحہ)"
+        },
+        {
+          "ar": "اُكْتُبْ",
+          "ar_plain": "اكتب",
+          "translit": "uktub",
+          "en": "write! (to you)",
+          "ur": "لکھو! (تم سے)"
+        },
+        {
+          "ar": "لِيَكْتُبْ",
+          "ar_plain": "ليكتب",
+          "translit": "liyaktub",
+          "en": "let him write (command lām, sukūn)",
+          "ur": "وہ لکھے (امر کا لام، سکون)"
+        },
+        {
+          "ar": "يَكْتُبُ",
+          "ar_plain": "يكتب",
+          "translit": "yaktubu",
+          "en": "he writes (ḍamma)",
+          "ur": "وہ لکھتا ہے (ضمہ)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "لِيَكْتُبْ",
+        "ar_plain": "ليكتب",
+        "translit": "liyaktub",
+        "en": "let him write (command lām, sukūn)",
+        "ur": "وہ لکھے (امر کا لام، سکون)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "'Let Khalid write' needs command lām and a sukūn: لِيَكْتُبْ.",
+        "ur": "'خالد لکھے' کو امر کا لام اور سکون چاہیے: لِيَكْتُبْ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l02-ex04",
+      "prompt": {
+        "ar": "لِيَكْتُبَ",
+        "ar_plain": "ليكتب",
+        "translit": "liyaktuba",
+        "en": "(what does this mean?)",
+        "ur": "(اس کا کیا مطلب ہے؟)"
+      },
+      "options": [
+        {
+          "en": "'so that he may write': the purpose lām, with a fatḥa",
+          "ur": "'تاکہ وہ لکھے': غرض کا لام، فتحہ کے ساتھ"
+        },
+        {
+          "en": "'let him write': a command",
+          "ur": "'وہ لکھے': حکم"
+        },
+        {
+          "en": "'write!': a direct command",
+          "ur": "'لکھو!': براہِ راست حکم"
+        },
+        {
+          "en": "'for the writer': a noun",
+          "ur": "'لکھنے والے کے لیے': اسم"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A fatḥa after لِ makes it the purpose lām of Chapter 45.",
+        "ur": "لِ کے بعد فتحہ اسے باب 45 کا غرض کا لام بناتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l02-ex05",
+      "prompt": {
+        "ar": "لِيُنفِقْ ذُو سَعَةٍ مِّن سَعَتِهِ",
+        "ar_plain": "لينفق ذو سعة من سعته",
+        "translit": "liyunfiq dhū saʿatin mmin saʿatihi",
+        "en": "(65:7: what does it say?)",
+        "ur": "(65:7: یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "A man of wealth spent from his wealth",
+          "ur": "کشادگی والے نے اپنی کشادگی سے خرچ کیا"
+        },
+        {
+          "en": "A man of wealth does not spend",
+          "ur": "کشادگی والا خرچ نہیں کرتا"
+        },
+        {
+          "en": "So that a man of wealth may spend",
+          "ur": "تاکہ کشادگی والا خرچ کرے"
+        },
+        {
+          "en": "Let a man of wealth spend from his wealth",
+          "ur": "کشادگی والا اپنی کشادگی سے خرچ کرے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لِيُنفِقْ with a sukūn is command lām: 'let him spend'.",
+        "ur": "سکون والا لِيُنفِقْ امر کا لام ہے: 'وہ خرچ کرے'۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l02-ex06",
+      "prompt": {
+        "ar": "فَلْيَنظُرْ · وَلْيَتَلَطَّفْ",
+        "ar_plain": "فلينظر · وليتلطف",
+        "translit": "falyanẓur · walyatalaṭṭaf",
+        "en": "(18:19: what happens to the lām after فَ and وَ?)",
+        "ur": "(18:19: فَ اور وَ کے بعد لام کا کیا ہوتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "It takes a fatḥa: فَلَـ",
+          "ur": "یہ فتحہ لیتا ہے: فَلَـ"
+        },
+        {
+          "en": "It takes a sukūn: فَلْـ, وَلْـ",
+          "ur": "یہ سکون لیتا ہے: فَلْـ، وَلْـ"
+        },
+        {
+          "en": "It disappears completely",
+          "ur": "یہ پوری طرح غائب ہو جاتا ہے"
+        },
+        {
+          "en": "It turns into a noun",
+          "ur": "یہ اسم بن جاتا ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After فَ and وَ the command lām is read with a sukūn.",
+        "ur": "فَ اور وَ کے بعد امر کا لام سکون سے پڑھا جاتا ہے۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch68-l04-ex02",
+      "id": "ch68-l02-ex07",
       "left_column": [
         {
-          "ar": "لَمْ يَكُنْ",
-          "ar_plain": "لم يكن",
-          "translit": "lam yakun",
-          "en": "there was not",
-          "ur": "نہیں تھا"
+          "ar": "اُكْتُبْ",
+          "ar_plain": "اكتب",
+          "translit": "uktub",
+          "en": "write",
+          "ur": "لکھو"
         },
         {
-          "ar": "لَمَّا يَدْخُلِ",
-          "ar_plain": "لما يدخل",
-          "translit": "lammaa yadkhuli",
-          "en": "has not yet entered",
-          "ur": "ابھی تک داخل نہیں ہوا"
+          "ar": "لِيَكْتُبْ",
+          "ar_plain": "ليكتب",
+          "translit": "liyaktub",
+          "en": "write",
+          "ur": "لکھے"
         },
         {
-          "ar": "وَلَمَّا وَرَدَ",
-          "ar_plain": "ولما ورد",
-          "translit": "wa-lammaa warada",
-          "en": "and when he arrived",
-          "ur": "اور جب وہ پہنچے"
+          "ar": "لِيَكْتُبَ",
+          "ar_plain": "ليكتب",
+          "translit": "liyaktuba",
+          "en": "write",
+          "ur": "لکھے"
         },
         {
-          "ar": "لَا تَحْزَنْ",
-          "ar_plain": "لا تحزن",
-          "translit": "laa tahzan",
-          "en": "do not grieve",
-          "ur": "غم نہ کرو"
+          "ar": "فَلْيَكْتُبْ",
+          "ar_plain": "فليكتب",
+          "translit": "falyaktub",
+          "en": "write",
+          "ur": "لکھے"
         }
       ],
       "right_column": [
         {
-          "en": "لَمْ particle — simple past negation",
-          "ur": "لَمْ particle — سادہ ماضی انکار"
+          "en": "command lām after فَ: 'so let him write'",
+          "ur": "فَ کے بعد امر کا لام: 'تو وہ لکھے'"
         },
         {
-          "en": "لَمَّا particle — 'not yet' jussive",
-          "ur": "لَمَّا particle — 'ابھی تک نہیں' مجزوم"
+          "en": "a direct command: 'write!'",
+          "ur": "براہِ راست حکم: 'لکھو!'"
         },
         {
-          "en": "لَمَّا conjunction — 'when' (no jussive)",
-          "ur": "لَمَّا conjunction — 'جب' (کوئی مجزوم نہیں)"
+          "en": "purpose lām: 'so that he may write'",
+          "ur": "غرض کا لام: 'تاکہ وہ لکھے'"
         },
         {
-          "en": "لَا النَّاهِيَة — 'do not' + jussive",
-          "ur": "لَا نَاهِيَہ — 'نہ کرو' + مجزوم"
+          "en": "command lām: 'let him write'",
+          "ur": "امر کا لام: 'وہ لکھے'"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
+          1
         ],
         [
           1,
-          1
+          3
         ],
         [
           2,
@@ -180,302 +398,89 @@
         ],
         [
           3,
-          3
+          0
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch68-l04-ex03",
-      "prompt": {
-        "ar": "وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
-        "ar_plain": "ولم يكن له كفوا أحد",
-        "translit": "wa-lam yakun lahu kufuwan ahadun",
-        "en": "And there is none comparable to Him.",
-        "ur": "اور کوئی اس کا ہمسر نہیں۔"
-      },
-      "options": [
-        {
-          "en": "And there is none comparable to Him.",
-          "ur": "اور کوئی اس کا ہمسر نہیں۔"
-        },
-        {
-          "en": "And He is not comparable to anyone yet.",
-          "ur": "اور وہ ابھی کسی کا ہمسر نہیں۔"
-        },
-        {
-          "en": "And do not make anyone equal to Him.",
-          "ur": "اور کسی کو اس کا ہمسر نہ بناؤ۔"
-        },
-        {
-          "en": "And He has no son.",
-          "ur": "اور اس کا کوئی بیٹا نہیں۔"
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَمْ يَكُنْ is a plain past negation — 'there has not been'. يَكُنْ is jussive after لَمْ. There is no 'not yet' here, and it is a statement, not a prohibition.",
-        "ur": "لَمْ يَكُنْ سادہ ماضی کی نفی ہے — 'نہیں ہوا'۔ لَمْ کے بعد يَكُنْ مجزوم ہے۔ یہاں 'ابھی تک' کا مفہوم نہیں، اور یہ خبر ہے، نہی نہیں۔"
-      }
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch68-l04-ex04",
-      "mode": "TAP",
-      "sentence_ar": "وَلَمْ ___ لَهُ كُفُوًا أَحَدٌ",
-      "hint": {
-        "en": "112:4 — 'And there is none comparable to Him.'",
-        "ur": "112:4 — 'اور کوئی اس کا ہمسر نہیں۔'"
-      },
-      "options": [
-        {
-          "ar": "يَكُنْ",
-          "ar_plain": "يكن",
-          "translit": "yakun",
-          "en": "is (jussive after لَمْ)",
-          "ur": "ہے (لَمْ کے بعد مجزوم)"
-        },
-        {
-          "ar": "يَكُونُ",
-          "ar_plain": "يكون",
-          "translit": "yakuunu",
-          "en": "is (indicative)",
-          "ur": "ہے (مرفوع)"
-        },
-        {
-          "ar": "كَانَ",
-          "ar_plain": "كان",
-          "translit": "kaana",
-          "en": "was (past)",
-          "ur": "تھا (ماضی)"
-        },
-        {
-          "ar": "لَمَّا",
-          "ar_plain": "لما",
-          "translit": "lammaa",
-          "en": "when / not yet",
-          "ur": "جب / ابھی تک نہیں"
-        }
-      ],
-      "correct_answer": {
-        "ar": "يَكُنْ",
-        "ar_plain": "يكن",
-        "translit": "yakun",
-        "en": "is (jussive after لَمْ)",
-        "ur": "ہے (لَمْ کے بعد مجزوم)"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch68-l04-ex05",
-      "sentence_ar": "وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
-      "words": [
-        {
-          "ar": "وَلَمْ",
-          "ar_plain": "ولم",
-          "translit": "wa-lam",
-          "en": "and not",
-          "ur": "اور نہیں"
-        },
-        {
-          "ar": "يَكُنْ",
-          "ar_plain": "يكن",
-          "translit": "yakun",
-          "en": "is",
-          "ur": "ہے"
-        },
-        {
-          "ar": "لَهُ",
-          "ar_plain": "له",
-          "translit": "lahu",
-          "en": "to Him",
-          "ur": "اس کا"
-        },
-        {
-          "ar": "كُفُوًا",
-          "ar_plain": "كفوا",
-          "translit": "kufuwan",
-          "en": "equal",
-          "ur": "ہمسر"
-        },
-        {
-          "ar": "أَحَدٌ",
-          "ar_plain": "أحد",
-          "translit": "ahadun",
-          "en": "anyone",
-          "ur": "کوئی"
-        }
-      ],
-      "available_roles": [
-        "PARTICLE",
-        "VERB",
-        "SUBJECT",
-        "PREDICATE",
-        "OBJECT",
-        "PREPOSITION"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "VERB",
-        "PREPOSITION",
-        "PREDICATE",
-        "SUBJECT"
-      ],
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "وَلَمْ is وَ + the jussive particle لَمْ. يَكُنْ is كَانَ in the jussive. لَهُ is a preposition phrase. أَحَدٌ is the اِسْم of كَانَ (nominative), and كُفُوًا its خَبَر (accusative), placed before it.",
-        "ur": "وَلَمْ = وَ + جازم حرف لَمْ۔ يَكُنْ، كَانَ کا مجزوم ہے۔ لَهُ جار مجرور ہے۔ أَحَدٌ، كَانَ کا اسم (مرفوع) اور كُفُوًا اس کی خبر (منصوب) ہے، جو اس سے پہلے آئی۔"
+        "en": "Four forms of one verb: a direct command, command lām, purpose lām and command lām after فَ.",
+        "ur": "ایک فعل کی چار صورتیں: براہِ راست حکم، امر کا لام، غرض کا لام اور فَ کے بعد امر کا لام۔"
       }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch68-l04-ex06",
+      "id": "ch68-l02-ex08",
       "target_translation": {
-        "en": "He did not have any helper among the gods.",
-        "ur": "اس کے پاس معبودوں میں سے کوئی مددگار نہیں تھا۔"
+        "en": "Let Khalid write the lesson.",
+        "ur": "خالد سبق لکھے۔"
       },
       "tiles": [
         {
-          "ar": "لَمْ",
-          "ar_plain": "لم",
-          "translit": "lam",
-          "en": "did not",
-          "ur": "نہیں"
+          "ar": "الدَّرْسَ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsa",
+          "en": "the lesson",
+          "ur": "سبق"
         },
         {
-          "ar": "يَكُنْ",
-          "ar_plain": "يكن",
-          "translit": "yakun",
-          "en": "there is",
-          "ur": "ہے"
+          "ar": "لِيَكْتُبْ",
+          "ar_plain": "ليكتب",
+          "translit": "liyaktub",
+          "en": "let him write",
+          "ur": "وہ لکھے"
         },
         {
-          "ar": "لَهُ",
-          "ar_plain": "له",
-          "translit": "lahu",
-          "en": "for him",
-          "ur": "اس کے لیے"
-        },
-        {
-          "ar": "مِنَ",
-          "ar_plain": "من",
-          "translit": "mina",
-          "en": "from",
-          "ur": "میں سے"
-        },
-        {
-          "ar": "الْآلِهَةِ",
-          "ar_plain": "الآلهة",
-          "translit": "al-aalihati",
-          "en": "the gods",
-          "ur": "معبود"
-        },
-        {
-          "ar": "نَاصِرٌ",
-          "ar_plain": "ناصر",
-          "translit": "naasirun",
-          "en": "helper",
-          "ur": "مددگار"
+          "ar": "خَالِدٌ",
+          "ar_plain": "خالد",
+          "translit": "khālidun",
+          "en": "Khalid",
+          "ur": "خالد"
         }
       ],
       "correct_order": [
-        0,
         1,
         2,
-        3,
-        4,
-        5
+        0
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch68-l04-ex07",
-      "prompt": {
-        "ar": "وَلَمَّا يَدْخُلِ الْإِيمَانُ فِي قُلُوبِكُمْ",
-        "ar_plain": "ولما يدخل الإيمان في قلوبكم",
-        "translit": "wa-lammaa yadkhuli al-iimaanu fii quluubikum",
-        "en": "and faith has not yet entered your hearts",
-        "ur": "اور ایمان ابھی تک تمہارے دلوں میں داخل نہیں ہوا"
-      },
-      "options": [
-        {
-          "en": "and faith has not yet entered your hearts",
-          "ur": "اور ایمان ابھی تک تمہارے دلوں میں داخل نہیں ہوا"
-        },
-        {
-          "en": "and when faith entered your hearts",
-          "ur": "اور جب ایمان تمہارے دلوں میں داخل ہوا"
-        },
-        {
-          "en": "so let faith enter your hearts",
-          "ur": "تو ایمان کو اپنے دلوں میں داخل ہونے دو"
-        },
-        {
-          "en": "faith will never enter your hearts",
-          "ur": "ایمان تمہارے دلوں میں کبھی داخل نہیں ہو گا"
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَمَّا before a present verb is the jussive 'not yet' (49:14): يَدْخُلْ is jussive, and its sukūn becomes a kasra (يَدْخُلِ) only to join the next word. The nuance: it has not happened yet, but it may.",
-        "ur": "مضارع سے پہلے لَمَّا جازمہ 'ابھی تک نہیں' ہے (49:14): يَدْخُلْ مجزوم ہے، اور اس کا سکون صرف اگلے لفظ سے ملانے کے لیے زیر (يَدْخُلِ) بنا ہے۔ مفہوم: ابھی نہیں ہوا، مگر ہو سکتا ہے۔"
+        "en": "Command lām and its verb, then the doer, then the object.",
+        "ur": "امر کا لام اور اس کا فعل، پھر کرنے والا، پھر مفعول۔"
       }
-    },
-    {
-      "type": "IDENTIFY_ROOT",
-      "id": "ch68-l04-ex08",
-      "word": {
-        "ar": "يَدْخُلِ",
-        "ar_plain": "يدخل",
-        "translit": "yadkhuli",
-        "en": "enter",
-        "ur": "داخل ہو"
-      },
-      "options": [
-        "د خ ل",
-        "خ ل د",
-        "ع ب د",
-        "ك ف ر"
-      ],
-      "correct_index": 0,
-      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "لَمْ and لَمَّا — same jussive, different semantic weight",
-      "ar": "لَمْ وَلَمَّا — نَفْسُ الْجَزْمِ، وَزْنٌ سِيَاقِيٌّ مُخْتَلِفٌ",
-      "ur": "لَمْ اور لَمَّا — وہی مجزوم، مختلف semantic وزن"
+      "en": "Let him spend",
+      "ar": "لِيُنفِقْ",
+      "ur": "وہ خرچ کرے"
     },
     "ayah": {
-      "surah": 49,
-      "ayah": 14,
-      "label": "Al-Hujurat 49:14",
-      "ar": "قَالَتِ الْأَعْرَابُ آمَنَّا ۖ قُل لَّمْ تُؤْمِنُوا وَلَٰكِن قُولُوا أَسْلَمْنَا وَلَمَّا يَدْخُلِ الْإِيمَانُ فِي قُلُوبِكُمْ",
-      "en": "The bedouins say, 'We have believed.' Say, 'You have not [yet] believed; but say [instead], \"We have submitted,\" for faith has not yet entered your hearts.'",
-      "ur": "دیہاتی کہتے ہیں کہ ہم ایمان لے آئے۔ کہہ دو: تم ایمان نہیں لائے، بلکہ یوں کہو کہ ہم نے اسلام قبول کیا، اور ایمان ابھی تک تمہارے دلوں میں داخل نہیں ہوا",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/049014.mp3"
+      "surah": 65,
+      "ayah": 7,
+      "label": "At-Talaq 65:7",
+      "ar": "لِيُنفِقْ ذُو سَعَةٍ مِّن سَعَتِهِ",
+      "en": "Let a man of wealth spend from his wealth",
+      "ur": "کشادگی والا اپنی کشادگی سے خرچ کرے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/065007.mp3"
     },
     "highlighted_word_indices": [
-      5,
-      6,
-      10,
-      11
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "لِيُنفِقْ",
+      "ذُو"
     ],
     "noor_explanation": {
-      "en": "لَّمْ تُؤْمِنُوا — 'you have not believed': تُؤْمِنُونَ became jussive and lost its ن. وَلَمَّا يَدْخُلِ الْإِيمَانُ — 'faith has not yet entered': يَدْخُلْ is jussive, with kasra only to join the next word. لَمْ states the fact; لَمَّا adds 'yet' — the door to real faith is still open. Between them, قُولُوا is an imperative.",
-      "ur": "لَّمْ تُؤْمِنُوا — 'تم ایمان نہیں لائے': تُؤْمِنُونَ مجزوم ہو کر ن کھو بیٹھا۔ وَلَمَّا يَدْخُلِ الْإِيمَانُ — 'ایمان ابھی تک داخل نہیں ہوا': يَدْخُلْ مجزوم ہے، زیر صرف اگلے لفظ سے ملانے کے لیے۔ لَمْ حقیقت بتاتا ہے؛ لَمَّا 'ابھی تک' بڑھاتا ہے — سچے ایمان کا دروازہ اب بھی کھلا ہے۔ ان کے بیچ قُولُوا فعلِ امر ہے۔"
+      "en": "لِيُنفِقْ ذُو سَعَةٍ — command lām and a jussive verb: 'let a man of means spend'.",
+      "ur": "لِيُنفِقْ ذُو سَعَةٍ — امر کا لام اور مجزوم فعل: 'کشادگی والا خرچ کرے'۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "لَمْ and لَمَّا both trigger jussive, but لَمَّا carries the 'not yet' nuance — it implies an expectation that something would happen but it hasn't. When parsing, ask: is this simple past negation (لَمْ) or 'not yet' with expectation (لَمَّا)? Both make the verb مجزوم, but the meaning differs significantly.",
-      "ur": "لَمْ اور لَمَّا دونوں مجزوم trigger کرتے ہیں، مگر لَمَّا 'ابھی تک نہیں' کا nuance لیتا ہے — یہ imply کرتا ہے کہ کچھ ہونے والا تھا مگر نہیں ہوا۔ تجزیہ کرتے وقت پوچھو: کیا یہ سادہ ماضی انکار ہے (لَمْ) یا 'ابھی تک نہیں' expectation کے ساتھ (لَمَّا)؟ دونوں فعل کو مجزوم بناتے ہیں، مگر مطلب بہت مختلف ہے۔"
+      "en": "Command lām + a jussive says 'let him'; the direct command is its own form; and لِيَكْتُبَ with a fatḥa is the purpose.",
+      "ur": "امر کا لام + مجزوم 'وہ کرے' کہتا ہے؛ براہِ راست حکم اپنی الگ صورت ہے؛ اور فتحہ والا لِيَكْتُبَ غرض ہے۔"
     }
   }
 }

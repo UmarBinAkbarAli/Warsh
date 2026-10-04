@@ -1,0 +1,507 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 69, Retrieval review (ch69-l05, rebuilt in place and moved to display order 10; the old row mixed in الندبة and repeated 'always jussive'). Twelve tasks: request and consequence (2), a jussive response against a direct command (2), the response signs (2), the Quran: 33:71 and the 2:282 contrast (2), a command and a prohibition licensing a result (2), one from At-Tariq and one from Al-Inshiqaq (2). All of it is retrieval of Lessons 1-9. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-69-content-proposal.md and its review amendments.",
+    "title": "Chapter 69 Review — The Jussive Response and Two Surahs",
+    "titleAr": "مُرَاجَعَةُ الْبَابِ 69 — جَوَابُ الطَّلَبِ",
+    "titleUr": "باب 69 کا جائزہ — درخواست کا جواب اور دو سورتیں",
+    "chapter_order": 69,
+    "lesson_order": 10,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 33,
+      "ayah": 71,
+      "label": "Al-Ahzab 33:71",
+      "ar": "يُصْلِحْ لَكُمْ أَعْمَالَكُمْ وَيَغْفِرْ لَكُمْ ذُنُوبَكُمْ",
+      "en": "He will amend for you your deeds and forgive you your sins",
+      "ur": "وہ تمہارے اعمال سنوار دے گا اور تمہارے گناہ بخش دے گا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033071.mp3"
+    },
+    "noor_intro": {
+      "en": "Review Chapter 69: the request, its response, the signs and the two surahs.",
+      "ur": "باب 69 کا جائزہ: درخواست، اس کا جواب، علامتیں اور دو سورتیں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 69 summary",
+        "ar": "خُلَاصَةُ الْبَابِ",
+        "ur": "باب 69 کا خلاصہ"
+      },
+      "explanation": {
+        "en": "After a command (or a prohibition) a jussive imperfect verb can say what follows from doing what was asked: اُدْرُسْ تَنْجَحْ. The request is a direct command, its own form; only the response is a jussive imperfect, with the same three signs. A separate statement keeps the indicative, and the وَ of 2:282 joins a new statement. 33:70 asks and 33:71 answers. You also read At-Tariq and Al-Inshiqaq.",
+        "ur": "حکم (یا نہی) کے بعد مجزوم مضارع فعل بتا سکتا ہے کہ جو مانگا گیا اسے کرنے سے کیا ہوگا: اُدْرُسْ تَنْجَحْ۔ درخواست براہِ راست حکم ہے، اپنی صورت؛ صرف جواب مجزوم مضارع ہے، انہی تین علامتوں کے ساتھ۔ الگ بیان مرفوع رہتا ہے، اور 2:282 کا وَ نیا بیان جوڑتا ہے۔ 33:70 مانگتی ہے اور 33:71 جواب دیتی ہے۔ آپ نے الطارق اور الانشقاق بھی پڑھیں۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Twelve tasks",
+        "ur": "بارہ مشقیں"
+      },
+      "body": {
+        "en": "Two on a request and its consequence, two on a response against a direct command, two on the signs, two on the Quran, two on a command and a prohibition licensing a result, one from At-Tariq and one from Al-Inshiqaq. Nothing here is new teaching.",
+        "ur": "دو درخواست اور اس کے نتیجے پر، دو جواب بمقابلہ براہِ راست حکم پر، دو علامتوں پر، دو قرآن پر، دو حکم اور نہی کے نتیجے کی اجازت پر، ایک الطارق سے اور ایک الانشقاق سے۔ یہاں کچھ بھی نیا نہیں سکھایا گیا۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch69-l05-ex01",
+      "prompt": {
+        "ar": "اِقْرَأْ تَفْهَمْ",
+        "ar_plain": "اقرا تفهم",
+        "translit": "iqraʾ tafham",
+        "en": "(what does it say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "Read, you will understand (if you read, you will understand)",
+          "ur": "پڑھو، سمجھ جاؤ گے (اگر پڑھو تو سمجھ جاؤ گے)"
+        },
+        {
+          "en": "You read and understood",
+          "ur": "تم نے پڑھا اور سمجھ لیا"
+        },
+        {
+          "en": "Do not read, you will understand",
+          "ur": "مت پڑھو، سمجھ جاؤ گے"
+        },
+        {
+          "en": "You understand, and you read",
+          "ur": "تم سمجھتے ہو، اور پڑھتے ہو"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The command asks; the jussive verb says what follows.",
+        "ur": "حکم مانگتا ہے؛ مجزوم فعل بتاتا ہے کہ کیا ہوگا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch69-l05-ex02",
+      "prompt": {
+        "ar": "اِقْرَأْ تَفْهَمْ · اِقْرَأْ، يَفْهَمُ خَالِدٌ",
+        "ar_plain": "اقرا تفهم · اقرا، يفهم خالد",
+        "translit": "iqraʾ tafham · iqraʾ yafhamu khālidun",
+        "en": "(in which is the second part the response?)",
+        "ur": "(کس میں دوسرا حصہ جواب ہے؟)"
+      },
+      "options": [
+        {
+          "en": "In the second: Khalid's understanding follows from your reading",
+          "ur": "دوسرے میں: خالد کا سمجھنا آپ کے پڑھنے کا نتیجہ ہے"
+        },
+        {
+          "en": "In the first: understanding follows from reading, with a sukūn",
+          "ur": "پہلے میں: سمجھنا پڑھنے کا نتیجہ ہے، سکون کے ساتھ"
+        },
+        {
+          "en": "In both",
+          "ur": "دونوں میں"
+        },
+        {
+          "en": "In neither",
+          "ur": "کسی میں نہیں"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Only the first second-part is what follows from doing what was asked.",
+        "ur": "صرف پہلا دوسرا حصہ اس کا نتیجہ ہے جو مانگا گیا۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch69-l05-ex03",
+      "statement": {
+        "en": "اِقْرَأْ is an imperfect verb in the jussive.",
+        "ur": "اِقْرَأْ مجزوم مضارع فعل ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. اِقْرَأْ is the direct command form; only the response verb is a jussive imperfect.",
+        "ur": "غلط۔ اِقْرَأْ براہِ راست حکم کی صورت ہے؛ صرف جواب کا فعل مجزوم مضارع ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch69-l05-ex04",
+      "prompt": {
+        "ar": "اِقْرَأْ تَفْهَمْ",
+        "ar_plain": "اقرا تفهم",
+        "translit": "iqraʾ tafham",
+        "en": "(which word is the direct command and which the jussive response?)",
+        "ur": "(کون سا لفظ براہِ راست حکم ہے اور کون سا مجزوم جواب؟)"
+      },
+      "options": [
+        {
+          "en": "اِقْرَأْ is the jussive response; تَفْهَمْ is the command",
+          "ur": "اِقْرَأْ مجزوم جواب ہے؛ تَفْهَمْ حکم ہے"
+        },
+        {
+          "en": "Both are jussive responses",
+          "ur": "دونوں مجزوم جواب ہیں"
+        },
+        {
+          "en": "Both are direct commands",
+          "ur": "دونوں براہِ راست احکام ہیں"
+        },
+        {
+          "en": "اِقْرَأْ is the direct command; تَفْهَمْ is the jussive response",
+          "ur": "اِقْرَأْ براہِ راست حکم ہے؛ تَفْهَمْ مجزوم جواب ہے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The command asks first; the imperfect verb after it answers.",
+        "ur": "حکم پہلے مانگتا ہے؛ اس کے بعد مضارع فعل جواب دیتا ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch69-l05-ex05",
+      "mode": "TAP",
+      "sentence_ar": "اُكْتُبُوا ___",
+      "hint": {
+        "en": "Write (all of you), you will understand.",
+        "ur": "لکھو (تم سب)، سمجھ جاؤ گے۔"
+      },
+      "options": [
+        {
+          "ar": "تَفْهَمُوا",
+          "ar_plain": "تفهموا",
+          "translit": "tafhamū",
+          "en": "you all will understand (no ن)",
+          "ur": "تم سب سمجھ جاؤ گے (بغیر ن)"
+        },
+        {
+          "ar": "تَفْهَمُونَ",
+          "ar_plain": "تفهمون",
+          "translit": "tafhamūna",
+          "en": "you all understand (with ن)",
+          "ur": "تم سب سمجھتے ہو (ن کے ساتھ)"
+        },
+        {
+          "ar": "تَفْهَمْ",
+          "ar_plain": "تفهم",
+          "translit": "tafham",
+          "en": "you will understand (sukūn)",
+          "ur": "تم سمجھ جاؤ گے (سکون)"
+        },
+        {
+          "ar": "تَفْهَمَ",
+          "ar_plain": "تفهم",
+          "translit": "tafhama",
+          "en": "you understand (fatḥa)",
+          "ur": "تم سمجھو (فتحہ)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "تَفْهَمُوا",
+        "ar_plain": "تفهموا",
+        "translit": "tafhamū",
+        "en": "you all will understand (no ن)",
+        "ur": "تم سب سمجھ جاؤ گے (بغیر ن)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A five form loses its ن in the response.",
+        "ur": "پانچ صورتوں والا فعل جواب میں ن کھو دیتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch69-l05-ex06",
+      "prompt": {
+        "ar": "اُهْرُبْ تَنْجُ",
+        "ar_plain": "اهرب تنج",
+        "translit": "uhrub tanju",
+        "en": "(what is the sign on تَنْجُ?)",
+        "ur": "(تَنْجُ پر علامت کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "A sukūn on a sound letter",
+          "ur": "صحیح حرف پر سکون"
+        },
+        {
+          "en": "The weak final letter has dropped: تَنْجُو → تَنْجُ",
+          "ur": "کمزور آخری حرف گر گیا: تَنْجُو → تَنْجُ"
+        },
+        {
+          "en": "The final ن has dropped",
+          "ur": "آخری ن گر گیا"
+        },
+        {
+          "en": "A ḍamma on the last letter",
+          "ur": "آخری حرف پر ضمہ"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The weak final letter drops in the response.",
+        "ur": "کمزور آخری حرف جواب میں گر جاتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch69-l05-ex07",
+      "prompt": {
+        "ar": "يُصْلِحْ لَكُمْ أَعْمَالَكُمْ وَيَغْفِرْ لَكُمْ ذُنُوبَكُمْ",
+        "ar_plain": "يصلح لكم اعمالكم ويغفر لكم ذنوبكم",
+        "translit": "yuṣliḥ lakum ʾaʿmālakum wayaghfir lakum dhunūbakum",
+        "en": "(33:71: what are يُصْلِحْ and يَغْفِرْ?)",
+        "ur": "(33:71: يُصْلِحْ اور يَغْفِرْ کیا ہیں؟)"
+      },
+      "options": [
+        {
+          "en": "Direct commands",
+          "ur": "براہِ راست احکام"
+        },
+        {
+          "en": "Past verbs",
+          "ur": "ماضی کے افعال"
+        },
+        {
+          "en": "Jussive imperfect responses to the commands of 33:70",
+          "ur": "33:70 کے احکام کے مجزوم مضارع جواب"
+        },
+        {
+          "en": "Nouns",
+          "ur": "اسم"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "They carry a sukūn and say what follows.",
+        "ur": "ان پر سکون ہے اور یہ بتاتے ہیں کہ کیا ہوگا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch69-l05-ex08",
+      "prompt": {
+        "ar": "وَاتَّقُوا اللَّهَ وَيُعَلِّمُكُمُ اللَّهُ",
+        "ar_plain": "واتقوا الله ويعلمكم الله",
+        "translit": "waāttaqū al-laha wayuʿallimukumu al-lahu",
+        "en": "(2:282: what is the second part?)",
+        "ur": "(2:282: دوسرا حصہ کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "A new statement joined by وَ: not the jussive response pattern",
+          "ur": "وَ سے جڑا نیا بیان: مجزوم جواب والی ساخت نہیں"
+        },
+        {
+          "en": "A jussive response, like 33:71",
+          "ur": "مجزوم جواب، جیسے 33:71"
+        },
+        {
+          "en": "A prohibition",
+          "ur": "نہی"
+        },
+        {
+          "en": "A question",
+          "ur": "سوال"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The verb is not marked jussive; the وَ adds a new statement.",
+        "ur": "فعل مجزوم نشان زد نہیں؛ وَ نیا بیان جوڑتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch69-l05-ex09",
+      "prompt": {
+        "ar": "لَا تَنْسَ الدَّرْسَ تَنْجَحْ",
+        "ar_plain": "لا تنس الدرس تنجح",
+        "translit": "lā tansa ad-darsa tanjaḥ",
+        "en": "(what does it say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "You forgot the lesson, so you passed",
+          "ur": "تم سبق بھول گئے اس لیے کامیاب ہوئے"
+        },
+        {
+          "en": "Do not forget the lesson, you will pass",
+          "ur": "سبق مت بھولو، کامیاب ہو گے"
+        },
+        {
+          "en": "Forget the lesson, you will pass",
+          "ur": "سبق بھول جاؤ، کامیاب ہو گے"
+        },
+        {
+          "en": "You do not forget the lesson, and you pass",
+          "ur": "تم سبق نہیں بھولتے، اور کامیاب ہوتے ہو"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A prohibition, then the result of not doing what is forbidden.",
+        "ur": "ایک نہی، پھر ممنوع کام نہ کرنے کا نتیجہ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch69-l05-ex10",
+      "prompt": {
+        "ar": "لَا تَنْسَ الدَّرْسَ تَنْجَحْ · لَا تَنْسَ الدَّرْسَ، يَنْسَى خَالِدٌ",
+        "ar_plain": "لا تنس الدرس تنجح · لا تنس الدرس، ينسى خالد",
+        "translit": "lā tansa ad-darsa tanjaḥ · lā tansa ad-darsa yansā khālidun",
+        "en": "(in which does the prohibition license a result?)",
+        "ur": "(کس میں نہی نتیجے کی اجازت دیتی ہے؟)"
+      },
+      "options": [
+        {
+          "en": "In the first: passing follows from not forgetting",
+          "ur": "پہلے میں: کامیابی نہ بھولنے کا نتیجہ ہے"
+        },
+        {
+          "en": "In the second: Khalid's forgetting follows from your not forgetting",
+          "ur": "دوسرے میں: خالد کا بھولنا آپ کے نہ بھولنے کا نتیجہ ہے"
+        },
+        {
+          "en": "In both",
+          "ur": "دونوں میں"
+        },
+        {
+          "en": "In neither",
+          "ur": "کسی میں نہیں"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Only the first second-part is the consequence of doing what the prohibition asks.",
+        "ur": "صرف پہلا دوسرا حصہ اس کے کرنے کا نتیجہ ہے جو نہی مانگتی ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch69-l05-ex11",
+      "prompt": {
+        "ar": "فَمَهِّلِ الْكَافِرِينَ أَمْهِلْهُمْ رُوَيْدًا",
+        "ar_plain": "فمهل الكافرين امهلهم رويدا",
+        "translit": "famahhili al-kāfirīna ʾamhilhum ruwaydan",
+        "en": "(86:17: what are the two verbs?)",
+        "ur": "(86:17: دو فعل کیا ہیں؟)"
+      },
+      "options": [
+        {
+          "en": "Jussive responses to an earlier request",
+          "ur": "پہلی درخواست کے مجزوم جواب"
+        },
+        {
+          "en": "Past verbs",
+          "ur": "ماضی کے افعال"
+        },
+        {
+          "en": "Nouns",
+          "ur": "اسم"
+        },
+        {
+          "en": "Direct commands, not jussive responses",
+          "ur": "براہِ راست احکام، مجزوم جواب نہیں"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "They are requests, not the consequence of one.",
+        "ur": "یہ درخواستیں ہیں، کسی کا نتیجہ نہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch69-l05-ex12",
+      "prompt": {
+        "ar": "إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ لَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍ",
+        "ar_plain": "الا الذين امنوا وعملوا الصالحات لهم اجر غير ممنون",
+        "translit": "ʾillā alladhīna ʾāmanū waʿamilū aṣ-ṣāliḥāti lahum ʾajrun ghayru mamnūnin",
+        "en": "(84:25: what does it say?)",
+        "ur": "(84:25: یہ کیا کہتی ہے؟)"
+      },
+      "options": [
+        {
+          "en": "Except those who believe and do righteous deeds: for them is a reward that never ends",
+          "ur": "سوائے ان کے جو ایمان لائے اور نیک عمل کیے: ان کے لیے ایسا اجر ہے جو ختم نہیں ہوتا"
+        },
+        {
+          "en": "Give them news of a painful punishment",
+          "ur": "انہیں دردناک عذاب کی خبر دو"
+        },
+        {
+          "en": "They do not believe and do not prostrate",
+          "ur": "وہ ایمان نہیں لاتے اور سجدہ نہیں کرتے"
+        },
+        {
+          "en": "You will go from stage to stage",
+          "ur": "تم ایک حالت سے دوسری حالت کی طرف جاؤ گے"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "84:25 closes the surah with an exception and a reward.",
+        "ur": "84:25 سورت کو ایک استثنا اور ایک اجر پر ختم کرتی ہے۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "A response to a request",
+      "ar": "جَوَابُ الطَّلَبِ",
+      "ur": "درخواست کا جواب"
+    },
+    "ayah": {
+      "surah": 33,
+      "ayah": 71,
+      "label": "Al-Ahzab 33:71",
+      "ar": "يُصْلِحْ لَكُمْ أَعْمَالَكُمْ وَيَغْفِرْ لَكُمْ ذُنُوبَكُمْ",
+      "en": "He will amend for you your deeds and forgive you your sins",
+      "ur": "وہ تمہارے اعمال سنوار دے گا اور تمہارے گناہ بخش دے گا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033071.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      3
+    ],
+    "highlighted_words": [
+      "يُصْلِحْ",
+      "وَيَغْفِرْ"
+    ],
+    "noor_explanation": {
+      "en": "يُصْلِحْ … وَيَغْفِرْ — the jussive responses that this whole chapter has been about.",
+      "ur": "يُصْلِحْ … وَيَغْفِرْ — وہ مجزوم جواب جن کے بارے میں یہ پورا باب تھا۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "A request and its jussive response, the signs, a look-alike and two whole surahs — Chapter 69 in one review.",
+      "ur": "ایک درخواست اور اس کا مجزوم جواب، علامتیں، ایک ملتا جلتا جملہ اور دو پوری سورتیں — باب 69 ایک جائزے میں۔"
+    }
+  }
+}

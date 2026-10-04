@@ -1,0 +1,488 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 70, Retrieval review (ch70-l06, rebuilt in place and moved to display order 8; the old row was seeded STANDARD with a REVIEW body and taught the 'four types'). Twelve tasks: complete affirmative (2), complete negative: the replacement and the accusative analysis (2), restriction (2), telling stated group from no group and the always-accusative claim (2), غَيْر and سِوَى (2) and one decision from each part of Al-Buruj (2). All of it is retrieval of Lessons 1-7. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-70-content-proposal.md and its review amendments.",
+    "title": "Chapter 70 Review — Exception and Al-Buruj",
+    "titleAr": "مُرَاجَعَةُ الْبَابِ 70 — الِاسْتِثْنَاءُ وَالْبُرُوجُ",
+    "titleUr": "باب 70 کا جائزہ — استثنا اور البروج",
+    "chapter_order": 70,
+    "lesson_order": 8,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 2,
+      "ayah": 249,
+      "label": "Al-Baqarah 2:249",
+      "ar": "فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا مِّنْهُمْ",
+      "en": "but they drank from it, except a few of them",
+      "ur": "تو انہوں نے اس سے پیا سوائے ان میں سے تھوڑوں کے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002249.mp3"
+    },
+    "noor_intro": {
+      "en": "Review Chapter 70: the three patterns of exception, غَيْر and سِوَى, and the surah.",
+      "ur": "باب 70 کا جائزہ: استثنا کی تین ساختیں، غَيْر اور سِوَى، اور سورت۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 70 summary",
+        "ar": "خُلَاصَةُ الْبَابِ",
+        "ur": "باب 70 کا خلاصہ"
+      },
+      "explanation": {
+        "en": "Three patterns of exception with إِلَّا: complete affirmative (the group is stated and the excepted word is accusative), complete negative (the excepted word follows the group's case, or is accusative, and a task says which), and restriction with no stated group (the word after إِلَّا takes its own role's ending). غَيْر and سِوَى are nouns with a genitive dependent. You also read the two parts of Al-Buruj.",
+        "ur": "إِلَّا کے ساتھ استثنا کی تین ساختیں: تام مثبت (گروہ بیان اور نکالا ہوا لفظ منصوب)، تام منفی (نکالا ہوا لفظ گروہ کی حالت کی پیروی کرتا ہے، یا منصوب ہے، اور مشق بتاتی ہے کہ کون سی)، اور بغیر بیان کیے گروہ کے حصر (إِلَّا کے بعد کا لفظ اپنے کام کا ختم لیتا ہے)۔ غَيْر اور سِوَى مجرور متعلق والے اسم ہیں۔ آپ نے البروج کے دونوں حصے بھی پڑھے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Twelve tasks",
+        "ur": "بارہ مشقیں"
+      },
+      "body": {
+        "en": "Two on the complete affirmative, two on the complete negative, two on restriction, two on telling the patterns apart, two on غَيْر and سِوَى, and one from each part of Al-Buruj. Nothing here is new teaching.",
+        "ur": "دو تام مثبت پر، دو تام منفی پر، دو حصر پر، دو ساختوں میں فرق پر، دو غَيْر اور سِوَى پر، اور ایک البروج کے ہر حصے سے۔ یہاں کچھ بھی نیا نہیں سکھایا گیا۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "FILL_BLANK",
+      "id": "ch70-l06-ex01",
+      "mode": "TAP",
+      "sentence_ar": "ذَهَبَ الْأَوْلَادُ إِلَّا ___",
+      "hint": {
+        "en": "The boys went except one boy.",
+        "ur": "لڑکے گئے سوائے ایک لڑکے کے۔"
+      },
+      "options": [
+        {
+          "ar": "وَلَدٌ",
+          "ar_plain": "ولد",
+          "translit": "waladun",
+          "en": "a boy (nominative)",
+          "ur": "ایک لڑکا (مرفوع)"
+        },
+        {
+          "ar": "وَلَدًا",
+          "ar_plain": "ولدا",
+          "translit": "waladan",
+          "en": "a boy (accusative)",
+          "ur": "ایک لڑکا (منصوب)"
+        },
+        {
+          "ar": "وَلَدٍ",
+          "ar_plain": "ولد",
+          "translit": "waladin",
+          "en": "a boy (genitive)",
+          "ur": "ایک لڑکا (مجرور)"
+        },
+        {
+          "ar": "الْوَلَدُ",
+          "ar_plain": "الولد",
+          "translit": "al-waladu",
+          "en": "the boy (nominative)",
+          "ur": "لڑکا (مرفوع)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "وَلَدًا",
+        "ar_plain": "ولدا",
+        "translit": "waladan",
+        "en": "a boy (accusative)",
+        "ur": "ایک لڑکا (منصوب)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Group stated, sentence affirmative: the excepted word is accusative.",
+        "ur": "گروہ بیان، جملہ مثبت: نکالا ہوا لفظ منصوب ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l06-ex02",
+      "prompt": {
+        "ar": "فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا مِّنْهُمْ",
+        "ar_plain": "فشربوا منه الا قليلا منهم",
+        "translit": "fasharibū minhu ʾillā qalīlan mminhum",
+        "en": "(2:249: what is قَلِيلًا?)",
+        "ur": "(2:249: قَلِيلًا کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "The excepted word, accusative, after a stated group in an affirmative sentence",
+          "ur": "نکالا ہوا لفظ، منصوب، مثبت جملے میں بیان کیے ہوئے گروہ کے بعد"
+        },
+        {
+          "en": "The doer, nominative",
+          "ur": "فاعل، مرفوع"
+        },
+        {
+          "en": "A word after a preposition",
+          "ur": "حرفِ جر کے بعد کا لفظ"
+        },
+        {
+          "en": "The tool",
+          "ur": "آلہ"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Complete affirmative: the group is those who drank.",
+        "ur": "تام مثبت: گروہ پینے والے ہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l06-ex03",
+      "prompt": {
+        "ar": "مَا ذَهَبَ الْأَوْلَادُ إِلَّا وَلَدٌ",
+        "ar_plain": "ما ذهب الاولاد الا ولد",
+        "translit": "mā dhahaba al-ʾawlādu ʾillā waladun",
+        "en": "(what does the nominative وَلَدٌ show?)",
+        "ur": "(مرفوع وَلَدٌ کیا دکھاتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "It is the accusative excepted word",
+          "ur": "یہ منصوب نکالا ہوا لفظ ہے"
+        },
+        {
+          "en": "It is the verdict",
+          "ur": "یہ حکم ہے"
+        },
+        {
+          "en": "It follows the case of the stated group الْأَوْلَادُ: the replacement analysis",
+          "ur": "یہ بیان کیے ہوئے گروہ الْأَوْلَادُ کی حالت کی پیروی کرتا ہے: بدل والی صورت"
+        },
+        {
+          "en": "It is a mistake",
+          "ur": "یہ غلطی ہے"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A nominative word after a nominative group follows its case.",
+        "ur": "مرفوع گروہ کے بعد مرفوع لفظ اس کی حالت کی پیروی کرتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l06-ex04",
+      "prompt": {
+        "ar": "مَا ذَهَبَ الْأَوْلَادُ إِلَّا وَلَدًا",
+        "ar_plain": "ما ذهب الاولاد الا ولدا",
+        "translit": "mā dhahaba al-ʾawlādu ʾillā waladan",
+        "en": "(what does the accusative وَلَدًا show?)",
+        "ur": "(منصوب وَلَدًا کیا دکھاتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "It follows the nominative of الْأَوْلَادُ",
+          "ur": "یہ الْأَوْلَادُ کے مرفوع کی پیروی کرتا ہے"
+        },
+        {
+          "en": "The excepted word, accusative: the other analysis",
+          "ur": "نکالا ہوا لفظ، منصوب: دوسری صورت"
+        },
+        {
+          "en": "It follows a preposition",
+          "ur": "یہ حرفِ جر کے بعد ہے"
+        },
+        {
+          "en": "It is wrong",
+          "ur": "یہ غلط ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Both endings are right in a complete negative sentence; this one is the accusative excepted word.",
+        "ur": "تام منفی جملے میں دونوں ختم درست ہیں؛ یہ منصوب نکالا ہوا لفظ ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l06-ex05",
+      "prompt": {
+        "ar": "مَا رَأَيْتُ إِلَّا عَلِيًّا",
+        "ar_plain": "ما رايت الا عليا",
+        "translit": "mā raʾaytu ʾillā ʿaliyyan",
+        "en": "(why is عَلِيًّا accusative?)",
+        "ur": "(عَلِيًّا منصوب کیوں ہے؟)"
+      },
+      "options": [
+        {
+          "en": "It is the accusative excepted word of a stated group",
+          "ur": "یہ بیان کیے ہوئے گروہ کا منصوب نکالا ہوا لفظ ہے"
+        },
+        {
+          "en": "It is the doer",
+          "ur": "یہ فاعل ہے"
+        },
+        {
+          "en": "It is the object of رَأَيْتُ: its normal role, in a restriction",
+          "ur": "یہ رَأَيْتُ کا مفعول ہے: اس کا عام کردار، حصر میں"
+        },
+        {
+          "en": "Every word after إِلَّا is accusative",
+          "ur": "إِلَّا کے بعد ہر لفظ منصوب ہوتا ہے"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "There is no stated group: 'I saw only Ali', and Ali is the object.",
+        "ur": "کوئی بیان کیا گیا گروہ نہیں: 'میں نے صرف علی کو دیکھا'، اور علی مفعول ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l06-ex06",
+      "prompt": {
+        "ar": "وَمَا آمَنَ مَعَهُ إِلَّا قَلِيلٌ",
+        "ar_plain": "وما امن معه الا قليل",
+        "translit": "wamā ʾāmana maʿahu ʾillā qalīlun",
+        "en": "(11:40: what is قَلِيلٌ?)",
+        "ur": "(11:40: قَلِيلٌ کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "The excepted word, accusative",
+          "ur": "نکالا ہوا لفظ، منصوب"
+        },
+        {
+          "en": "The object",
+          "ur": "مفعول"
+        },
+        {
+          "en": "A word after a preposition",
+          "ur": "حرفِ جر کے بعد کا لفظ"
+        },
+        {
+          "en": "The doer of آمَنَ, nominative, in a restriction",
+          "ur": "آمَنَ کا فاعل، مرفوع، حصر میں"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "With no stated group the word after إِلَّا takes its own role: here the doer.",
+        "ur": "گروہ بیان نہ ہو تو إِلَّا کے بعد کا لفظ اپنا کردار لیتا ہے: یہاں فاعل۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l06-ex07",
+      "prompt": {
+        "ar": "جَاءَ الطُّلَّابُ إِلَّا خَالِدًا · مَا جَاءَ إِلَّا خَالِدٌ",
+        "ar_plain": "جاء الطلاب الا خالدا · ما جاء الا خالد",
+        "translit": "jāʾa aṭ-ṭullābu ʾillā khālidan · mā jāʾa ʾillā khālidun",
+        "en": "(in which is a group stated that the word is taken out of?)",
+        "ur": "(کس میں گروہ بیان ہے جس سے لفظ نکالا گیا؟)"
+      },
+      "options": [
+        {
+          "en": "In the first: الطُّلَّابُ is the stated group",
+          "ur": "پہلے میں: الطُّلَّابُ بیان کیا ہوا گروہ ہے"
+        },
+        {
+          "en": "In the second: no group is stated, it means 'only Khalid'",
+          "ur": "دوسرے میں: کوئی گروہ بیان نہیں، مطلب 'صرف خالد' ہے"
+        },
+        {
+          "en": "In both",
+          "ur": "دونوں میں"
+        },
+        {
+          "en": "In neither",
+          "ur": "کسی میں نہیں"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Only the first has a stated group.",
+        "ur": "صرف پہلے میں بیان کیا ہوا گروہ ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch70-l06-ex08",
+      "statement": {
+        "en": "The word after إِلَّا is always accusative.",
+        "ur": "إِلَّا کے بعد کا لفظ ہمیشہ منصوب ہوتا ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. It is accusative in a complete affirmative sentence, may follow the group or be accusative in a complete negative one, and takes its role's ending in a restriction.",
+        "ur": "غلط۔ تام مثبت جملے میں منصوب ہے، تام منفی میں گروہ کی پیروی کر سکتا ہے یا منصوب ہو سکتا ہے، اور حصر میں اپنے کردار کا ختم لیتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l06-ex09",
+      "prompt": {
+        "ar": "جَاءَ الطُّلَّابُ غَيْرَ خَالِدٍ",
+        "ar_plain": "جاء الطلاب غير خالد",
+        "translit": "jāʾa aṭ-ṭullābu ghayra khālidin",
+        "en": "(what is خَالِدٍ?)",
+        "ur": "(خَالِدٍ کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "The excepted word, accusative",
+          "ur": "نکالا ہوا لفظ، منصوب"
+        },
+        {
+          "en": "The genitive dependent of غَيْرَ",
+          "ur": "غَيْرَ کا مجرور متعلق"
+        },
+        {
+          "en": "The doer",
+          "ur": "فاعل"
+        },
+        {
+          "en": "A preposition",
+          "ur": "حرفِ جر"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "غَيْر is a noun and the first term of an iḍāfa.",
+        "ur": "غَيْر اسم ہے اور اضافت کا پہلا جزو۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch70-l06-ex10",
+      "statement": {
+        "en": "غَيْر and سِوَى are particles, like إِلَّا.",
+        "ur": "غَيْر اور سِوَى حروف ہیں، إِلَّا کی طرح۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. They are nouns followed by a genitive dependent.",
+        "ur": "غلط۔ یہ اسم ہیں جن کے بعد مجرور متعلق آتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l06-ex11",
+      "prompt": {
+        "ar": "وَمَا نَقَمُوا مِنْهُمْ إِلَّا أَن يُؤْمِنُوا بِاللَّهِ الْعَزِيزِ الْحَمِيدِ",
+        "ar_plain": "وما نقموا منهم الا ان يؤمنوا بالله العزيز الحميد",
+        "translit": "wamā naqamū minhum ʾillā ʾan yuʾminū bi-l-lahi al-ʿazīzi al-ḥamīdi",
+        "en": "(85:8)",
+        "ur": "(85:8)"
+      },
+      "options": [
+        {
+          "en": "and they were witnesses to what they were doing to the believers",
+          "ur": "اور وہ اس پر گواہ تھے جو وہ مومنوں کے ساتھ کر رہے تھے"
+        },
+        {
+          "en": "to whom belongs the dominion of the heavens and the earth, and Allah is Witness over all things",
+          "ur": "جس کی آسمانوں اور زمین کی بادشاہی ہے، اور اللہ ہر چیز پر گواہ ہے"
+        },
+        {
+          "en": "and they resented them only because they believed in Allah, the Almighty, the Praiseworthy",
+          "ur": "اور انہوں نے ان پر صرف اس لیے ناراضی کی کہ وہ اللہ، غالب، لائقِ حمد، پر ایمان لائے"
+        },
+        {
+          "en": "when they sat by it",
+          "ur": "جب وہ اس کے پاس بیٹھے تھے"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "85:8 says they resented them only because they believed in Allah, the Almighty, the Praiseworthy.",
+        "ur": "85:8 کہتی ہے کہ انہوں نے ان پر صرف اس لیے ناراضی کی کہ وہ اللہ، غالب، لائقِ حمد، پر ایمان لائے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l06-ex12",
+      "prompt": {
+        "ar": "وَاللَّهُ مِن وَرَائِهِم مُّحِيطٌ",
+        "ar_plain": "والله من ورائهم محيط",
+        "translit": "wa-l-lahu min warāʾihim mmuḥīṭun",
+        "en": "(85:20: what does it say?)",
+        "ur": "(85:20: یہ کیا کہتی ہے؟)"
+      },
+      "options": [
+        {
+          "en": "and Allah encompasses them from behind",
+          "ur": "اور اللہ ان کو پیچھے سے گھیرے ہوئے ہے"
+        },
+        {
+          "en": "and Allah is behind the deniers only",
+          "ur": "اور اللہ صرف جھٹلانے والوں کے پیچھے ہے"
+        },
+        {
+          "en": "and the deniers encompass Allah",
+          "ur": "اور جھٹلانے والوں نے اللہ کو گھیر رکھا ہے"
+        },
+        {
+          "en": "and they are behind Allah",
+          "ur": "اور وہ اللہ کے پیچھے ہیں"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Allah encompasses them from behind: the answer to the denial of 85:19.",
+        "ur": "اللہ انہیں پیچھے سے گھیرے ہوئے ہے: 85:19 کے جھٹلانے کا جواب۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "An exception in one ayah",
+      "ar": "إِلَّا فِي آيَةٍ",
+      "ur": "ایک آیت میں استثنا"
+    },
+    "ayah": {
+      "surah": 2,
+      "ayah": 249,
+      "label": "Al-Baqarah 2:249",
+      "ar": "فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا مِّنْهُمْ",
+      "en": "but they drank from it, except a few of them",
+      "ur": "تو انہوں نے اس سے پیا سوائے ان میں سے تھوڑوں کے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002249.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      2,
+      3
+    ],
+    "highlighted_words": [
+      "فَشَرِبُوا",
+      "إِلَّا",
+      "قَلِيلًا"
+    ],
+    "noor_explanation": {
+      "en": "فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا — a stated group, the tool, and the accusative excepted word: the first pattern of this chapter.",
+      "ur": "فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا — بیان کیا ہوا گروہ، آلہ، اور منصوب نکالا ہوا لفظ: اس باب کی پہلی ساخت۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Three patterns of exception, غَيْر and سِوَى, and a whole surah — Chapter 70 in one review.",
+      "ur": "استثنا کی تین ساختیں، غَيْر اور سِوَى، اور ایک پوری سورت — باب 70 ایک جائزے میں۔"
+    }
+  }
+}

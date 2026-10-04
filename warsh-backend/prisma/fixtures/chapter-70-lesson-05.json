@@ -2,79 +2,95 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 70, Lesson 5 — Connected and disconnected exception; exception with غَيْر and سِوَى.",
+    "_note": "Chapter 70, Lesson 5 (ch70-l05, rebuilt in place). غَيْر and سِوَى are NOUNS meaning 'other than', followed by a genitive dependent (iḍāfa, Chapters 55 and 63); in an affirmative sentence with a stated group غَيْرَ takes the accusative an excepted word would take (حَضَرَ الطُّلَّابُ غَيْرَ طَالِبٍ), while سِوَى's ending is not visible (Chapter 56). The old claims that they are particles, combine with other tools, or occur only in negative sentences are gone. The Shahada (47:19, لَا إِلَٰهَ إِلَّا اللَّهُ) is a recognition card only, with no parse tested. Disconnected exception is not taught. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-70-content-proposal.md and its review amendments.",
+    "title": "غَيْر and سِوَى",
+    "titleAr": "غَيْرُ وَسِوَى",
+    "titleUr": "غَيْر اور سِوَى",
     "chapter_order": 70,
     "lesson_order": 5,
-    "chapter_title": "الاستثناء",
-    "title": "Connected, Disconnected, غَيْر and سِوَى",
-    "titleAr": "الْمُتَّصِلُ وَالْمُنْقَطِعُ، وَالِاسْتِثْنَاءُ بِغَيْرٍ وَسِوًى",
-    "source": "arabai-backend/prisma/fixtures",
     "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 2,
-      "ayah": 34,
-      "label": "Al-Baqarah 2:34",
-      "ar": "وَإِذْ قُلْنَا لِلْمَلَائِكَةِ اسْجُدُوا لِآدَمَ فَسَجَدُوا إِلَّا إِبْلِيسَ أَبَىٰ وَاسْتَكْبَرَ وَكَانَ مِنَ الْكَافِرِينَ",
-      "en": "And [mention] when We said to the angels, 'Prostrate before Adam'; so they prostrated, except for Iblees. He refused and was arrogant and became of the disbelievers.",
-      "ur": "اور جب ہم نے فرشتوں سے کہا کہ آدم کو سجدہ کرو تو ابلیس کے سوا سب نے سجدہ کیا، اس نے انکار کیا اور تکبر کیا اور وہ کافروں میں سے ہو گیا",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002034.mp3"
+      "surah": 47,
+      "ayah": 19,
+      "label": "Muhammad 47:19",
+      "ar": "فَاعْلَمْ أَنَّهُ لَا إِلَٰهَ إِلَّا اللَّهُ",
+      "en": "So know that there is no deity except Allah",
+      "ur": "تو جان لو کہ اللہ کے سوا کوئی معبود نہیں",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/047019.mp3"
     },
     "noor_intro": {
-      "en": "فَسَجَدُوا إِلَّا إِبْلِيسَ — 'so they prostrated, except Iblis'. Was Iblis one of the angels? The Quran says he was of the jinn (18:50). That question — is the excepted one from the same kind as the group? — is today's first topic.",
-      "ur": "فَسَجَدُوا إِلَّا إِبْلِيسَ — 'تو ابلیس کے سوا سب نے سجدہ کیا'۔ کیا ابلیس فرشتوں میں سے تھا؟ قرآن کہتا ہے وہ جنوں میں سے تھا (18:50)۔ یہی سوال — کیا مستثنیٰ گروہ کی جنس سے ہے؟ — آج کا پہلا موضوع ہے۔"
+      "en": "Two nouns can do the job of إِلَّا: غَيْر and سِوَى, 'other than'. They are nouns, so they are followed by a genitive, as in any iḍāfa.",
+      "ur": "دو اسم إِلَّا کا کام کر سکتے ہیں: غَيْر اور سِوَى، 'کے سوا'۔ یہ اسم ہیں، اس لیے ان کے بعد مجرور آتا ہے، جیسے ہر اضافت میں۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Connected exception (مُتَّصِل)",
-        "ar": "الِاسْتِثْنَاءُ الْمُتَّصِلُ",
-        "ur": "متصل استثنا"
+        "en": "Nouns meaning 'other than'",
+        "ar": "غَيْرُ وَسِوَى اسْمَانِ",
+        "ur": "'کے سوا' کے معنی والے دو اسم"
       },
       "explanation": {
-        "en": "The excepted one belongs to the group: جَاءَ الطُّلَّابُ إِلَّا عَلِيًّا — Ali is one of the students. This is the normal case.",
-        "ur": "مستثنیٰ گروہ میں شامل ہوتا ہے: جَاءَ الطُّلَّابُ إِلَّا عَلِيًّا — علی طالب علموں میں سے ہے۔ عام صورت یہی ہے۔"
+        "en": "غَيْر and سِوَى are nouns, not particles like إِلَّا. They are the first term of an iḍāfa, so the word after them is genitive: حَضَرَ الطُّلَّابُ غَيْرَ طَالِبٍ, 'the students attended other than a student'. In this affirmative sentence غَيْرَ is accusative, like the excepted word after إِلَّا; طَالِبٍ is its genitive dependent.",
+        "ur": "غَيْر اور سِوَى اسم ہیں، إِلَّا جیسے حروف نہیں۔ یہ اضافت کا پہلا جزو ہیں، اس لیے ان کے بعد کا لفظ مجرور ہے: حَضَرَ الطُّلَّابُ غَيْرَ طَالِبٍ، 'طلبہ آئے ایک طالب علم کے سوا'۔ اس مثبت جملے میں غَيْرَ منصوب ہے، إِلَّا کے بعد نکالے ہوئے لفظ کی طرح؛ طَالِبٍ اس کا مجرور متعلق ہے۔"
       }
     },
     {
-      "type": "CONCEPT",
+      "type": "CONTRAST",
       "concept": {
-        "en": "Disconnected exception (مُنْقَطِع)",
-        "ar": "الِاسْتِثْنَاءُ الْمُنْقَطِعُ",
-        "ur": "منقطع استثنا"
+        "en": "إِلَّا, غَيْر and سِوَى",
+        "ar": "إِلَّا، غَيْر اور سِوَى",
+        "ur": "إِلَّا وَغَيْرُ وَسِوَى"
       },
+      "examples": [
+        {
+          "ar": "حَضَرَ الطُّلَّابُ إِلَّا طَالِبًا",
+          "ar_plain": "حضر الطلاب الا طالبا",
+          "translit": "ḥaḍara aṭ-ṭullābu ʾillā ṭāliban",
+          "en": "The students attended except a student",
+          "ur": "طلبہ آئے سوائے ایک طالب علم کے"
+        },
+        {
+          "ar": "حَضَرَ الطُّلَّابُ غَيْرَ طَالِبٍ · سِوَى طَالِبٍ",
+          "ar_plain": "حضر الطلاب غير طالب · سوى طالب",
+          "translit": "ḥaḍara aṭ-ṭullābu ghayra ṭālibin · siwaā ṭālibin",
+          "en": "The students attended other than a student",
+          "ur": "طلبہ آئے ایک طالب علم کے سوا"
+        }
+      ],
       "explanation": {
-        "en": "The excepted one is from a different kind, and إِلَّا means 'but rather': مَا لَهُمْ بِهِ مِنْ عِلْمٍ إِلَّا اتِّبَاعَ الظَّنِّ — 'they have no knowledge of it, only the following of assumption' (4:157). The مُسْتَثْنَى is accusative. Many scholars read فَسَجَدُوا إِلَّا إِبْلِيسَ this way, since Iblis was of the jinn.",
-        "ur": "مستثنیٰ دوسری جنس سے ہوتا ہے، اور إِلَّا کا معنی 'بلکہ' ہوتا ہے: مَا لَهُمْ بِهِ مِنْ عِلْمٍ إِلَّا اتِّبَاعَ الظَّنِّ — 'ان کو اس کا کوئی علم نہیں، بس گمان کی پیروی ہے' (4:157)۔ مستثنیٰ منصوب ہوتا ہے۔ بہت سے علما فَسَجَدُوا إِلَّا إِبْلِيسَ کو بھی اسی طرح پڑھتے ہیں، کیونکہ ابلیس جنوں میں سے تھا۔"
+        "en": "After إِلَّا the excepted word is accusative. After غَيْر the noun غَيْرَ is accusative and its dependent is genitive. سِوَى works the same way, but its own ending is not visible.",
+        "ur": "إِلَّا کے بعد نکالا ہوا لفظ منصوب ہے۔ غَيْر کے بعد اسم غَيْرَ منصوب ہے اور اس کا متعلق مجرور۔ سِوَى بھی اسی طرح ہے، مگر اس کا اپنا ختم نظر نہیں آتا۔"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Exception with غَيْر",
-        "ar": "الِاسْتِثْنَاءُ بِغَيْرٍ",
-        "ur": "غَيْر کے ساتھ استثنا"
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "No visible ending on سِوَى",
+        "ur": "سِوَى پر ختم نظر نہیں آتا"
       },
-      "explanation": {
-        "en": "غَيْر works like إِلَّا, but the excepted noun becomes its مُضَاف إِلَيْه (genitive), and غَيْر itself takes the case the excepted noun would have taken: جَاءَ الْقَوْمُ غَيْرَ زَيْدٍ (like إِلَّا زَيْدًا); مَا جَاءَ غَيْرُ زَيْدٍ (like إِلَّا زَيْدٌ).",
-        "ur": "غَيْر، إِلَّا کی طرح کام کرتا ہے، مگر مستثنیٰ اس کا مضاف الیہ (مجرور) بن جاتا ہے، اور خود غَيْر وہ اعراب لیتا ہے جو مستثنیٰ کو ملتا: جَاءَ الْقَوْمُ غَيْرَ زَيْدٍ (جیسے إِلَّا زَيْدًا)؛ مَا جَاءَ غَيْرُ زَيْدٍ (جیسے إِلَّا زَيْدٌ)۔"
+      "body": {
+        "en": "سِوَى ends in a long vowel, so its case is not shown on the word; you see only the genitive of its dependent, طَالِبٍ. You are not asked to produce an ending for سِوَى.",
+        "ur": "سِوَى لمبے حرف پر ختم ہوتا ہے، اس لیے اس کی حالت لفظ پر ظاہر نہیں ہوتی؛ آپ صرف اس کے متعلق طَالِبٍ کا مجرور ہونا دیکھتے ہیں۔ آپ سے سِوَى کا کوئی ختم بنانے کو نہیں کہا جاتا۔"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Exception with سِوَى",
-        "ar": "الِاسْتِثْنَاءُ بِسِوًى",
-        "ur": "سِوَى کے ساتھ استثنا"
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "فَاعْلَمْ أَنَّهُ لَا إِلَٰهَ إِلَّا اللَّهُ",
+        "ar_plain": "فاعلم انه لا اله الا الله",
+        "translit": "fāʿlam ʾannahu lā ʾilāha ʾillā al-lahu",
+        "en": "So know that there is no deity except Allah",
+        "ur": "تو جان لو کہ اللہ کے سوا کوئی معبود نہیں"
       },
       "explanation": {
-        "en": "سِوَى is like غَيْر: the noun after it is genitive. سِوَى ends in alif, so its own case never shows: مَا جَاءَ سِوَى زَيْدٍ; جَاءَ الْقَوْمُ سِوَى زَيْدٍ.",
-        "ur": "سِوَى، غَيْر جیسا ہے: اس کے بعد والا اسم مجرور ہوتا ہے۔ سِوَى کے آخر میں الف ہے، اس لیے اس کا اپنا اعراب کبھی ظاہر نہیں ہوتا: مَا جَاءَ سِوَى زَيْدٍ؛ جَاءَ الْقَوْمُ سِوَى زَيْدٍ۔"
+        "en": "لَا إِلَٰهَ إِلَّا اللَّهُ: 'there is no deity except Allah'. Recognise it as a negation with إِلَّا. It is a special construction with a categorical negation, and no parse of it is asked here. (Muhammad 47:19) (Muhammad 47:19)",
+        "ur": "لَا إِلَٰهَ إِلَّا اللَّهُ: 'اللہ کے سوا کوئی معبود نہیں'۔ اسے إِلَّا کے ساتھ نفی کے طور پر پہچانیں۔ یہ قطعی نفی کے ساتھ ایک خاص ساخت ہے، اور یہاں اس کا کوئی نحوی تجزیہ نہیں مانگا جاتا۔ (محمد 47:19) (Muhammad 47:19)"
       }
     }
   ],
@@ -83,321 +99,367 @@
       "type": "TAP_TRANSLATION",
       "id": "ch70-l05-ex01",
       "prompt": {
-        "ar": "فَسَجَدُوا إِلَّا إِبْلِيسَ",
-        "ar_plain": "فسجدوا إلا إبليس",
-        "translit": "fa-sajaduu illaa ibliisa",
-        "en": "So they prostrated, except Iblis.",
-        "ur": "تو ابلیس کے سوا سب نے سجدہ کیا۔"
+        "ar": "حَضَرَ الطُّلَّابُ غَيْرَ طَالِبٍ",
+        "ar_plain": "حضر الطلاب غير طالب",
+        "translit": "ḥaḍara aṭ-ṭullābu ghayra ṭālibin",
+        "en": "(what is طَالِبٍ?)",
+        "ur": "(طَالِبٍ کیا ہے؟)"
       },
       "options": [
         {
-          "en": "So they prostrated, except Iblis.",
-          "ur": "تو ابلیس کے سوا سب نے سجدہ کیا۔"
+          "en": "The excepted word, accusative",
+          "ur": "نکالا ہوا لفظ، منصوب"
         },
         {
-          "en": "Only Iblis prostrated.",
-          "ur": "صرف ابلیس نے سجدہ کیا۔"
+          "en": "The dependent of غَيْرَ, genitive",
+          "ur": "غَيْرَ کا متعلق، مجرور"
         },
         {
-          "en": "They did not prostrate to Iblis.",
-          "ur": "انہوں نے ابلیس کو سجدہ نہیں کیا۔"
+          "en": "The verdict",
+          "ur": "حکم"
         },
         {
-          "en": "Iblis made them prostrate.",
-          "ur": "ابلیس نے انہیں سجدہ کروایا۔"
+          "en": "A preposition",
+          "ur": "حرفِ جر"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "Affirmative sentence ('they prostrated') with the group named (the angels), so إِبْلِيسَ is accusative and is the one who did NOT prostrate (2:34).",
-        "ur": "مثبت جملہ ('انہوں نے سجدہ کیا') اور گروہ (فرشتے) مذکور، اس لیے إِبْلِيسَ منصوب ہے اور وہی ہے جس نے سجدہ نہیں کیا (2:34)۔"
+        "en": "غَيْر is a noun and the first term of an iḍāfa; طَالِبٍ is its genitive dependent.",
+        "ur": "غَيْر اسم ہے اور اضافت کا پہلا جزو؛ طَالِبٍ اس کا مجرور متعلق ہے۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch70-l05-ex02",
-      "statement": {
-        "en": "In مَا جَاءَنِي أَحَدٌ إِلَّا حِمَارًا ('no one came to me except a donkey'), the exception is مُتَّصِل (connected).",
-        "ur": "مَا جَاءَنِي أَحَدٌ إِلَّا حِمَارًا ('میرے پاس کوئی نہیں آیا سوائے ایک گدھے کے') میں استثنا متصل ہے۔"
+      "prompt": {
+        "ar": "حَضَرَ الطُّلَّابُ غَيْرَ طَالِبٍ",
+        "ar_plain": "حضر الطلاب غير طالب",
+        "translit": "ḥaḍara aṭ-ṭullābu ghayra ṭālibin",
+        "en": "(what is غَيْرَ, and why that ending?)",
+        "ur": "(غَيْرَ کیا ہے، اور یہ ختم کیوں؟)"
       },
-      "correct_answer": false,
+      "options": [
+        {
+          "en": "A particle, with no ending",
+          "ur": "حرف، بغیر ختم کے"
+        },
+        {
+          "en": "A verb",
+          "ur": "فعل"
+        },
+        {
+          "en": "A noun, accusative like an excepted word in an affirmative sentence with a stated group",
+          "ur": "اسم، مثبت جملے میں جس میں گروہ بیان ہو نکالے ہوئے لفظ کی طرح منصوب"
+        },
+        {
+          "en": "The stated group, nominative",
+          "ur": "بیان کیا ہوا گروہ، مرفوع"
+        }
+      ],
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "False. A donkey is not one of the people meant by أَحَدٌ, so the exception is مُنْقَطِع (disconnected): the excepted thing is from a different kind. The مُسْتَثْنَى is then accusative.",
-        "ur": "غلط۔ گدھا ان لوگوں میں سے نہیں جو أَحَدٌ سے مراد ہیں، اس لیے استثنا منقطع ہے: مستثنیٰ دوسری جنس سے ہے۔ ایسے میں مستثنیٰ منصوب ہوتا ہے۔"
+        "en": "غَيْرَ is a noun and takes the accusative that an excepted word would take here.",
+        "ur": "غَيْرَ اسم ہے اور وہ منصوب لیتا ہے جو یہاں نکالا ہوا لفظ لیتا۔"
       }
     },
     {
       "type": "FILL_BLANK",
       "id": "ch70-l05-ex03",
       "mode": "TAP",
-      "sentence_ar": "جَاءَ الْقَوْمُ غَيْرَ ___",
+      "sentence_ar": "حَضَرَ الطُّلَّابُ غَيْرَ ___",
       "hint": {
-        "en": "'The people came, other than Zayd.' The noun after غَيْر is its مُضَاف إِلَيْه.",
-        "ur": "'لوگ آئے، زید کے سوا۔' غَيْر کے بعد والا اسم اس کا مضاف الیہ ہے۔"
+        "en": "The students attended other than a student.",
+        "ur": "طلبہ آئے ایک طالب علم کے سوا۔"
       },
       "options": [
         {
-          "ar": "زَيْدٍ",
-          "ar_plain": "زيد",
-          "translit": "zaydin",
-          "en": "Zayd (genitive)",
-          "ur": "زید (مجرور)"
+          "ar": "طَالِبٍ",
+          "ar_plain": "طالب",
+          "translit": "ṭālibin",
+          "en": "a student (genitive dependent)",
+          "ur": "ایک طالب علم (مجرور متعلق)"
         },
         {
-          "ar": "زَيْدًا",
-          "ar_plain": "زيدا",
-          "translit": "zaydan",
-          "en": "Zayd (accusative)",
-          "ur": "زید (منصوب)"
+          "ar": "طَالِبًا",
+          "ar_plain": "طالبا",
+          "translit": "ṭāliban",
+          "en": "a student (accusative)",
+          "ur": "ایک طالب علم (منصوب)"
         },
         {
-          "ar": "زَيْدٌ",
-          "ar_plain": "زيد",
-          "translit": "zaydun",
-          "en": "Zayd (nominative)",
-          "ur": "زید (مرفوع)"
+          "ar": "طَالِبٌ",
+          "ar_plain": "طالب",
+          "translit": "ṭālibun",
+          "en": "a student (nominative)",
+          "ur": "ایک طالب علم (مرفوع)"
         },
         {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "not",
-          "ur": "نہیں"
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibu",
+          "en": "the student (nominative)",
+          "ur": "طالب علم (مرفوع)"
         }
       ],
       "correct_answer": {
-        "ar": "زَيْدٍ",
-        "ar_plain": "زيد",
-        "translit": "zaydin",
-        "en": "Zayd (genitive)",
-        "ur": "زید (مجرور)"
+        "ar": "طَالِبٍ",
+        "ar_plain": "طالب",
+        "translit": "ṭālibin",
+        "en": "a student (genitive dependent)",
+        "ur": "ایک طالب علم (مجرور متعلق)"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The word after غَيْر is its genitive dependent.",
+        "ur": "غَيْر کے بعد کا لفظ اس کا مجرور متعلق ہے۔"
+      }
     },
     {
-      "type": "FILL_BLANK",
+      "type": "TRUE_FALSE",
       "id": "ch70-l05-ex04",
-      "mode": "TAP",
-      "sentence_ar": "مَا جَاءَ ___ زَيْدٍ",
-      "hint": {
-        "en": "'No one came except Zayd' — a مُفَرَّغ sentence, so غَيْر itself is the doer of جَاءَ.",
-        "ur": "'زید کے سوا کوئی نہیں آیا' — مفرّغ جملہ، اس لیے خود غَيْر، جَاءَ کا فاعل ہے۔"
+      "statement": {
+        "en": "غَيْر and سِوَى are particles, like إِلَّا.",
+        "ur": "غَيْر اور سِوَى حروف ہیں، إِلَّا کی طرح۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. They are nouns, the first term of an iḍāfa, followed by a genitive.",
+        "ur": "غلط۔ یہ اسم ہیں، اضافت کا پہلا جزو، جن کے بعد مجرور آتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l05-ex05",
+      "prompt": {
+        "ar": "حَضَرَ الطُّلَّابُ سِوَى طَالِبٍ",
+        "ar_plain": "حضر الطلاب سوى طالب",
+        "translit": "ḥaḍara aṭ-ṭullābu siwaā ṭālibin",
+        "en": "(what can you see of سِوَى's case?)",
+        "ur": "(آپ سِوَى کی حالت کے بارے میں کیا دیکھ سکتے ہیں؟)"
       },
       "options": [
         {
-          "ar": "غَيْرُ",
-          "ar_plain": "غير",
-          "translit": "ghayru",
-          "en": "other than (nominative)",
-          "ur": "سوا (مرفوع)"
+          "en": "A fatḥa on سِوَى",
+          "ur": "سِوَى پر فتحہ"
         },
         {
-          "ar": "غَيْرَ",
-          "ar_plain": "غير",
-          "translit": "ghayra",
-          "en": "other than (accusative)",
-          "ur": "سوا (منصوب)"
+          "en": "A ḍamma on سِوَى",
+          "ur": "سِوَى پر ضمہ"
         },
         {
-          "ar": "غَيْرِ",
-          "ar_plain": "غير",
-          "translit": "ghayri",
-          "en": "other than (genitive)",
-          "ur": "سوا (مجرور)"
+          "en": "A kasra on سِوَى",
+          "ur": "سِوَى پر کسرہ"
         },
         {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "not",
-          "ur": "نہیں"
+          "en": "Nothing on سِوَى itself; you see only the genitive of طَالِبٍ",
+          "ur": "خود سِوَى پر کچھ نہیں؛ آپ صرف طَالِبٍ کا مجرور ہونا دیکھتے ہیں"
         }
       ],
-      "correct_answer": {
-        "ar": "غَيْرُ",
-        "ar_plain": "غير",
-        "translit": "ghayru",
-        "en": "other than (nominative)",
-        "ur": "سوا (مرفوع)"
-      },
-      "xp_value": 1
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "سِوَى ends in a long vowel, so its ending is not shown.",
+        "ur": "سِوَى لمبے حرف پر ختم ہوتا ہے، اس لیے اس کا ختم ظاہر نہیں ہوتا۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch70-l05-ex05",
+      "id": "ch70-l05-ex06",
       "left_column": [
         {
-          "ar": "جَاءَ الْقَوْمُ إِلَّا زَيْدًا",
-          "ar_plain": "جاء القوم إلا زيدا",
-          "translit": "jaa'a al-qawmu illaa zaydan",
-          "en": "the people came except Zayd",
-          "ur": "لوگ آئے سوائے زید کے"
+          "ar": "إِلَّا طَالِبًا",
+          "ar_plain": "الا طالبا",
+          "translit": "ʾillā ṭāliban",
+          "en": "except a student",
+          "ur": "سوائے ایک طالب علم کے"
         },
         {
-          "ar": "جَاءَ الْقَوْمُ غَيْرَ زَيْدٍ",
-          "ar_plain": "جاء القوم غير زيد",
-          "translit": "jaa'a al-qawmu ghayra zaydin",
-          "en": "the people came, other than Zayd",
-          "ur": "لوگ آئے، زید کے سوا"
+          "ar": "غَيْرَ طَالِبٍ",
+          "ar_plain": "غير طالب",
+          "translit": "ghayra ṭālibin",
+          "en": "other than a student",
+          "ur": "ایک طالب علم کے سوا"
         },
         {
-          "ar": "مَا جَاءَ سِوَى زَيْدٍ",
-          "ar_plain": "ما جاء سوى زيد",
-          "translit": "maa jaa'a siwaa zaydin",
-          "en": "none came but Zayd",
-          "ur": "زید کے سوا کوئی نہیں آیا"
+          "ar": "سِوَى طَالِبٍ",
+          "ar_plain": "سوى طالب",
+          "translit": "siwaā ṭālibin",
+          "en": "other than a student",
+          "ur": "ایک طالب علم کے سوا"
+        },
+        {
+          "ar": "لَا إِلَٰهَ إِلَّا اللَّهُ",
+          "ar_plain": "لا اله الا الله",
+          "translit": "lā ʾilāha ʾillā al-lahu",
+          "en": "no deity except Allah",
+          "ur": "اللہ کے سوا کوئی معبود نہیں"
         }
       ],
       "right_column": [
         {
-          "en": "إِلَّا — the excepted noun itself takes the case",
-          "ur": "إِلَّا — مستثنیٰ خود اعراب لیتا ہے"
+          "en": "recognised as a negation with إِلَّا; not parsed here",
+          "ur": "إِلَّا کے ساتھ نفی کے طور پر پہچانا گیا؛ یہاں تجزیہ نہیں"
         },
         {
-          "en": "غَيْر — غَيْر takes the case; the noun after it is genitive",
-          "ur": "غَيْر — اعراب غَيْر پر؛ بعد والا اسم مجرور"
+          "en": "a particle, then an accusative excepted word",
+          "ur": "حرف، پھر منصوب نکالا ہوا لفظ"
         },
         {
-          "en": "سِوَى — the noun after it is genitive; سِوَى shows no case",
-          "ur": "سِوَى — بعد والا اسم مجرور؛ سِوَى پر اعراب ظاہر نہیں"
+          "en": "a noun with no visible ending, then a genitive dependent",
+          "ur": "ایسا اسم جس کا ختم ظاہر نہیں، پھر مجرور متعلق"
+        },
+        {
+          "en": "a noun in the accusative, then a genitive dependent",
+          "ur": "منصوب اسم، پھر مجرور متعلق"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
+          1
         ],
         [
           1,
-          1
+          3
         ],
         [
           2,
           2
+        ],
+        [
+          3,
+          0
         ]
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The tool, two nouns and a phrase you recognise.",
+        "ur": "آلہ، دو اسم اور ایک فقرہ جسے آپ پہچانتے ہیں۔"
+      }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch70-l05-ex06",
+      "id": "ch70-l05-ex07",
       "target_translation": {
-        "en": "The angels prostrated, except Iblis.",
-        "ur": "ابلیس کے سوا فرشتوں نے سجدہ کیا۔"
+        "en": "The students attended other than a student.",
+        "ur": "طلبہ آئے ایک طالب علم کے سوا۔"
       },
       "tiles": [
         {
-          "ar": "سَجَدَ",
-          "ar_plain": "سجد",
-          "translit": "sajada",
-          "en": "prostrated",
-          "ur": "سجدہ کیا"
+          "ar": "غَيْرَ",
+          "ar_plain": "غير",
+          "translit": "ghayra",
+          "en": "other than",
+          "ur": "کے سوا"
         },
         {
-          "ar": "الْمَلَائِكَةُ",
-          "ar_plain": "الملائكة",
-          "translit": "al-malaa'ikatu",
-          "en": "the angels",
-          "ur": "فرشتے"
+          "ar": "حَضَرَ",
+          "ar_plain": "حضر",
+          "translit": "ḥaḍara",
+          "en": "attended",
+          "ur": "آیا"
         },
         {
-          "ar": "إِلَّا",
-          "ar_plain": "إلا",
-          "translit": "illaa",
-          "en": "except",
-          "ur": "سوائے"
+          "ar": "طَالِبٍ",
+          "ar_plain": "طالب",
+          "translit": "ṭālibin",
+          "en": "a student",
+          "ur": "ایک طالب علم"
         },
         {
-          "ar": "إِبْلِيسَ",
-          "ar_plain": "إبليس",
-          "translit": "ibliisa",
-          "en": "Iblis",
-          "ur": "ابلیس"
-        },
-        {
-          "ar": "إِبْلِيسُ",
-          "ar_plain": "إبليس",
-          "translit": "ibliisu",
-          "en": "Iblis (nominative)",
-          "ur": "ابلیس (مرفوع)"
+          "ar": "الطُّلَّابُ",
+          "ar_plain": "الطلاب",
+          "translit": "aṭ-ṭullābu",
+          "en": "the students",
+          "ur": "طلبہ"
         }
       ],
       "correct_order": [
-        0,
         1,
-        2,
-        3
+        3,
+        0,
+        2
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Verdict and group, then غَيْرَ and its dependent.",
+        "ur": "حکم اور گروہ، پھر غَيْرَ اور اس کا متعلق۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch70-l05-ex07",
+      "id": "ch70-l05-ex08",
       "prompt": {
-        "ar": "مَا لَهُمْ بِهِ مِنْ عِلْمٍ إِلَّا اتِّبَاعَ الظَّنِّ",
-        "ar_plain": "ما لهم به من علم إلا اتباع الظن",
-        "translit": "maa lahum bihi min 'ilmin illaa ittibaa'a az-zanni",
-        "en": "They have no knowledge of it except the following of assumption.",
-        "ur": "ان کو اس کا کچھ علم نہیں، سوائے گمان کی پیروی کے۔"
+        "ar": "فَاعْلَمْ أَنَّهُ لَا إِلَٰهَ إِلَّا اللَّهُ",
+        "ar_plain": "فاعلم انه لا اله الا الله",
+        "translit": "fāʿlam ʾannahu lā ʾilāha ʾillā al-lahu",
+        "en": "(47:19: what does it say?)",
+        "ur": "(47:19: یہ کیا کہتی ہے؟)"
       },
       "options": [
         {
-          "en": "They have no knowledge of it — only assumption.",
-          "ur": "ان کو اس کا کچھ علم نہیں — بس گمان ہے۔"
+          "en": "So know that there is no deity except Allah",
+          "ur": "تو جان لو کہ اللہ کے سوا کوئی معبود نہیں"
         },
         {
-          "en": "They know it, except for some assumptions.",
-          "ur": "وہ اسے جانتے ہیں، سوائے کچھ گمانوں کے۔"
+          "en": "So know that Allah is one of many",
+          "ur": "تو جان لو کہ اللہ بہت سوں میں سے ایک ہے"
         },
         {
-          "en": "Following assumption is a kind of knowledge.",
-          "ur": "گمان کی پیروی بھی ایک قسم کا علم ہے۔"
+          "en": "So do not know that there is a deity",
+          "ur": "تو مت جانو کہ کوئی معبود ہے"
         },
         {
-          "en": "They have knowledge and they follow it.",
-          "ur": "ان کے پاس علم ہے اور وہ اس پر چلتے ہیں۔"
+          "en": "So you will know that He is a deity",
+          "ur": "تو تم جان لو گے کہ وہ ایک معبود ہے"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "Following assumption is not a kind of knowledge, so this is a مُنْقَطِع exception: 'no knowledge — only assumption' (4:157). اتِّبَاعَ is accusative.",
-        "ur": "گمان کی پیروی علم کی قسم نہیں، اس لیے یہ منقطع استثنا ہے: 'کوئی علم نہیں — بس گمان' (4:157)۔ اتِّبَاعَ منصوب ہے۔"
+        "en": "A negation with إِلَّا: 'no deity except Allah'. Recognise it; no parse is asked.",
+        "ur": "إِلَّا کے ساتھ نفی: 'اللہ کے سوا کوئی معبود نہیں'۔ اسے پہچانیں؛ تجزیہ نہیں مانگا گیا۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Connected and disconnected; غَيْر and سِوَى",
-      "ar": "الْمُتَّصِلُ وَالْمُنْقَطِعُ وَغَيْرٌ وَسِوًى",
-      "ur": "متصل، منقطع، غَيْر اور سِوَى"
+      "en": "Nouns that mean 'other than'",
+      "ar": "غَيْرُ وَسِوَى",
+      "ur": "'کے سوا' کے معنی والے اسم"
     },
     "ayah": {
-      "surah": 4,
-      "ayah": 157,
-      "label": "An-Nisa 4:157",
-      "ar": "مَا لَهُم بِهِ مِنْ عِلْمٍ إِلَّا اتِّبَاعَ الظَّنِّ",
-      "en": "They have no knowledge of it except the following of assumption.",
-      "ur": "ان کو اس کا کچھ بھی علم نہیں، سوائے گمان کی پیروی کے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/004157.mp3"
+      "surah": 47,
+      "ayah": 19,
+      "label": "Muhammad 47:19",
+      "ar": "فَاعْلَمْ أَنَّهُ لَا إِلَٰهَ إِلَّا اللَّهُ",
+      "en": "So know that there is no deity except Allah",
+      "ur": "تو جان لو کہ اللہ کے سوا کوئی معبود نہیں",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/047019.mp3"
     },
     "highlighted_word_indices": [
+      2,
       4,
-      5,
-      6,
-      7
+      5
+    ],
+    "highlighted_words": [
+      "لَا",
+      "إِلَّا",
+      "اللَّهُ"
     ],
     "noor_explanation": {
-      "en": "مَا لَهُمْ بِهِ مِنْ عِلْمٍ إِلَّا اتِّبَاعَ الظَّنِّ — about the claim that 'Isa was killed: they had no knowledge, only assumption. Assumption is not a kind of knowledge, so the exception is مُنْقَطِع and اتِّبَاعَ is accusative. The grammar itself says their claim had no knowledge behind it.",
-      "ur": "مَا لَهُمْ بِهِ مِنْ عِلْمٍ إِلَّا اتِّبَاعَ الظَّنِّ — عیسیٰ علیہ السلام کے قتل کے دعوے کے بارے میں: ان کے پاس کوئی علم نہیں، بس گمان تھا۔ گمان علم کی قسم نہیں، اس لیے استثنا منقطع ہے اور اتِّبَاعَ منصوب۔ ترکیب خود بتاتی ہے کہ ان کے دعوے کے پیچھے کوئی علم نہیں تھا۔"
+      "en": "لَا إِلَٰهَ إِلَّا اللَّهُ — a negation with إِلَّا, recognised here and not parsed.",
+      "ur": "لَا إِلَٰهَ إِلَّا اللَّهُ — إِلَّا کے ساتھ نفی، یہاں پہچانی گئی اور اس کا تجزیہ نہیں کیا گیا۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Connected: the excepted one is from the group. Disconnected: it is from another kind, and إِلَّا means 'but rather'. With غَيْر and سِوَى the excepted noun is genitive; غَيْر carries the case instead. The review comes next.",
-      "ur": "متصل: مستثنیٰ گروہ میں سے ہے۔ منقطع: دوسری جنس سے، اور إِلَّا کا معنی 'بلکہ'۔ غَيْر اور سِوَى کے ساتھ مستثنیٰ مجرور ہوتا ہے؛ اعراب غَيْر پر آتا ہے۔ آگے جائزہ ہے۔"
+      "en": "غَيْر and سِوَى are nouns meaning 'other than', followed by a genitive dependent.",
+      "ur": "غَيْر اور سِوَى 'کے سوا' کے معنی والے اسم ہیں، جن کے بعد مجرور متعلق آتا ہے۔"
     }
   }
 }

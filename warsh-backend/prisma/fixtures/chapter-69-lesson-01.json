@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 69, Lesson 1 — Introduction to جواب الطلب: a command answered by a jussive present-tense verb, contrasted with a direct command.",
+    "_note": "Chapter 69, Lesson 1 (ch69-l01, rebuilt in place). The bounded جواب الطلب: after a command (and, in lesson 3, a prohibition) an imperfect verb in the jussive can state what follows from doing what was asked: اُدْرُسْ تَنْجَحْ, 'study, you will pass'. The request itself is a direct command (Chapter 51), which is its own form and is not made jussive; only the response verb is the jussive imperfect. 33:70 (the requests) and 33:71 (the responses يُصْلِحْ, يَغْفِرْ) are shown as two exact excerpts with their own references, never spliced into one string. The old claims (a 'conditional waw', زِدْنِي and ادْعُوا as responses, 'every answer is jussive', the invented فَاقْهَمْ lines and the الندبة detour) are gone. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-69-content-proposal.md and its review amendments.",
+    "title": "A Request and Its Consequence",
+    "titleAr": "الطَّلَبُ وَجَوَابُهُ",
+    "titleUr": "درخواست اور اس کا نتیجہ",
     "chapter_order": 69,
     "lesson_order": 1,
-    "chapter_title": "جواب الطلب",
-    "title": "Introduction to جواب الطلب — The Response to Command",
-    "titleAr": "الْمُقَدِّمَة: جَوَابُ الطَّلَبِ وَاسْتِجَابَتُهُ",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
@@ -16,82 +16,95 @@
       "surah": 33,
       "ayah": 71,
       "label": "Al-Ahzab 33:71",
-      "ar": "يُصْلِحْ لَكُمْ أَعْمَالَكُمْ وَيَغْفِرْ لَكُمْ ذُنُوبَكُمْ ۗ وَمَنْ يُطِعِ اللَّهَ وَرَسُولَهُ فَقَدْ فَازَ فَوْزًا عَظِيمًا",
-      "en": "He will set your deeds right for you and forgive you your sins. Whoever obeys Allah and His Messenger has achieved a great triumph.",
-      "ur": "وہ تمہارے اعمال درست کر دے گا اور تمہارے گناہ بخش دے گا۔ اور جو اللہ اور اس کے رسول کی اطاعت کرے اس نے بڑی کامیابی پائی۔",
+      "ar": "يُصْلِحْ لَكُمْ أَعْمَالَكُمْ وَيَغْفِرْ لَكُمْ ذُنُوبَكُمْ",
+      "en": "He will amend for you your deeds and forgive you your sins",
+      "ur": "وہ تمہارے اعمال سنوار دے گا اور تمہارے گناہ بخش دے گا",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033071.mp3"
     },
     "noor_intro": {
-      "en": "Verse 70 gives two commands: اتَّقُوا اللَّهَ and وَقُولُوا قَوْلًا سَدِيدًا. Verse 71 answers them: يُصْلِحْ — \"He will set right.\" That answer is a present-tense verb, and it is مَجْزُوم. This is جواب الطلب.",
-      "ur": "آیت 70 میں دو حکم ہیں: اتَّقُوا اللَّهَ اور وَقُولُوا قَوْلًا سَدِيدًا۔ آیت 71 ان کا جواب دیتی ہے: يُصْلِحْ — \"وہ درست کر دے گا\"۔ یہ جواب مضارع فعل ہے اور مَجْزُوم ہے۔ یہی جواب الطلب ہے۔"
+      "en": "'Fear Allah and speak straight words' is a request. The next ayah says what follows: 'He will amend for you your deeds'. The first verbs are commands; the verbs that follow are the result.",
+      "ur": "'اللہ سے ڈرو اور سیدھی بات کہو' ایک درخواست ہے۔ اگلی آیت بتاتی ہے کہ اس کے بعد کیا ہوگا: 'وہ تمہارے اعمال سنوار دے گا'۔ پہلے افعال احکام ہیں؛ بعد کے افعال نتیجہ ہیں۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "جواب الطلب — the answer to a command",
-        "ar": "جَوَابُ الطَّلَبِ",
-        "ur": "جواب الطلب — حکم کا جواب"
+        "en": "A request, then what follows",
+        "ar": "الطَّلَبُ ثُمَّ جَوَابُهُ",
+        "ur": "درخواست، پھر جو اس کے بعد آتا ہے"
       },
       "explanation": {
-        "en": "A command (طَلَب) can be followed by a present-tense verb that tells what will result. When there is no فَـ or وَ before it, that verb is مَجْزُوم. \"Do X; Y will happen\" means \"if you do X, Y will happen.\"",
-        "ur": "حکم (طَلَب) کے بعد ایسا مضارع فعل آ سکتا ہے جو بتائے کہ نتیجہ کیا ہو گا۔ جب اس سے پہلے فَـ یا وَ نہ ہو تو وہ فعل مَجْزُوم ہوتا ہے۔ \"X کرو؛ Y ہو گا\" کا مطلب ہے \"اگر X کرو گے تو Y ہو گا\"۔"
+        "en": "Take a command: اُدْرُسْ, 'study!'. Put an imperfect verb after it and the meaning is 'if you do it, this follows': اُدْرُسْ تَنْجَحْ, 'study, you will pass'. The command is the request; the imperfect verb is the response, and it takes the jussive: تَنْجَحْ, with a sukūn. This is a meaning aid, not a promise about the world.",
+        "ur": "ایک حکم لیں: اُدْرُسْ، 'پڑھو!'۔ اس کے بعد ایک مضارع فعل رکھ دیں تو معنی ہوتا ہے 'اگر تم یہ کرو تو یہ ہوگا': اُدْرُسْ تَنْجَحْ، 'پڑھو، کامیاب ہو گے'۔ حکم درخواست ہے؛ مضارع فعل جواب ہے، اور وہ مجزوم ہوتا ہے: تَنْجَحْ، سکون کے ساتھ۔ یہ معنی سمجھنے کی مدد ہے، دنیا کے بارے میں کوئی وعدہ نہیں۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "اِجْتَهِدْ تَنْجَحْ",
-        "ar_plain": "اجتهد تنجح",
-        "translit": "ijtahid tanjah",
-        "en": "Make an effort; you will succeed. (constructed)",
-        "ur": "محنت کرو، کامیاب ہو گے۔ (بنائی گئی مثال)"
-      },
-      "explanation": {
-        "en": "اِجْتَهِدْ is the command. تَنْجَحْ is the answer: present tense, مَجْزُوم — the final ح carries sukūn.",
-        "ur": "اِجْتَهِدْ حکم ہے۔ تَنْجَحْ جواب ہے: مضارع، مَجْزُوم — آخری ح پر سکون ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "اِجْلِسْ وَاكْتُبْ",
-        "ar_plain": "اجلس واكتب",
-        "translit": "ijlis waktub",
-        "en": "Sit and write. (constructed)",
-        "ur": "بیٹھو اور لکھو۔ (بنائی گئی مثال)"
-      },
-      "explanation": {
-        "en": "Two commands joined by وَ. اكْتُبْ is itself a command (فِعْلُ أَمْرٍ), not an answer — nothing here is جواب الطلب.",
-        "ur": "وَ سے جڑے دو حکم۔ اكْتُبْ خود حکم (فعل امر) ہے، جواب نہیں — یہاں کچھ بھی جواب الطلب نہیں۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
+      "type": "CONTRAST",
       "concept": {
-        "en": "How to see the jussive in the answer",
-        "ar": "عَلَامَةُ الْجَزْمِ فِي الْجَوَابِ",
-        "ur": "جواب میں جزم کیسے پہچانیں"
+        "en": "Request and response are different forms",
+        "ar": "درخواست اور جواب مختلف صورتیں ہیں",
+        "ur": "الطَّلَبُ وَالْجَوَابُ صِيغَتَانِ"
       },
+      "examples": [
+        {
+          "ar": "اُدْرُسْ",
+          "ar_plain": "ادرس",
+          "translit": "udrus",
+          "en": "Study! (the request)",
+          "ur": "پڑھو! (درخواست)"
+        },
+        {
+          "ar": "تَنْجَحْ",
+          "ar_plain": "تنجح",
+          "translit": "tanjaḥ",
+          "en": "you will pass (the response)",
+          "ur": "کامیاب ہو گے (جواب)"
+        }
+      ],
       "explanation": {
-        "en": "On a sound verb, the last letter takes sukūn: تَنْجَحُ → تَنْجَحْ. On the five verbs, the final نَ drops: تَنْجَحُونَ → تَنْجَحُوا.",
-        "ur": "صحیح فعل میں آخری حرف پر سکون آتا ہے: تَنْجَحُ → تَنْجَحْ۔ افعالِ خمسہ میں آخری نَ گر جاتا ہے: تَنْجَحُونَ → تَنْجَحُوا۔"
+        "en": "اُدْرُسْ is the direct command of Chapter 51, its own built form: it is not an imperfect verb made jussive. تَنْجَحْ is an imperfect verb in the jussive. Only the second is a jussive imperfect.",
+        "ur": "اُدْرُسْ باب 51 کا براہِ راست حکم ہے، اپنی بنی ہوئی صورت: یہ مضارع فعل نہیں جسے مجزوم کیا گیا ہو۔ تَنْجَحْ مجزوم مضارع فعل ہے۔ صرف دوسرا مجزوم مضارع ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "اتَّقُوا اللَّهَ وَقُولُوا قَوْلًا سَدِيدًا ۝ يُصْلِحْ لَكُمْ أَعْمَالَكُمْ",
-        "ar_plain": "اتقوا الله وقولوا قولا سديدا يصلح لكم اعمالكم",
-        "translit": "ittaqullaaha wa quuluu qawlan sadiidaa, yuslih lakum a'maalakum",
-        "en": "Be mindful of Allah and speak words of truth; He will set your deeds right for you. (Al-Ahzab 33:70–71)",
-        "ur": "اللہ سے ڈرو اور سیدھی بات کہو، وہ تمہارے اعمال درست کر دے گا۔ (الاحزاب 33:70–71)"
+        "ar": "اتَّقُوا اللَّهَ وَقُولُوا قَوْلًا سَدِيدًا",
+        "ar_plain": "اتقوا الله وقولوا قولا سديدا",
+        "translit": "attaqū al-laha waqūlū qawlan sadīdan",
+        "en": "fear Allah and speak words of appropriate justice",
+        "ur": "اللہ سے ڈرو اور سیدھی بات کہو"
       },
       "explanation": {
-        "en": "The two commands come first. يُصْلِحْ answers them — present tense, مَجْزُوم, sukūn on the ح. وَيَغْفِرْ that follows is joined to it and is also مَجْزُوم.",
-        "ur": "پہلے دو حکم ہیں۔ يُصْلِحْ ان کا جواب ہے — مضارع، مَجْزُوم، ح پر سکون۔ اس کے بعد وَيَغْفِرْ اسی سے جڑا ہے اور وہ بھی مَجْزُوم ہے۔"
+        "en": "Two requests, both direct commands in the plural: اتَّقُوا اللَّهَ, 'fear Allah', and وَقُولُوا قَوْلًا سَدِيدًا, 'and speak straight words'. (Al-Ahzab 33:70) (Al-Ahzab 33:70)",
+        "ur": "دو درخواستیں، دونوں جمع کے براہِ راست احکام: اتَّقُوا اللَّهَ، 'اللہ سے ڈرو'، اور وَقُولُوا قَوْلًا سَدِيدًا، 'اور سیدھی بات کہو'۔ (الاحزاب 33:70) (Al-Ahzab 33:70)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "يُصْلِحْ لَكُمْ أَعْمَالَكُمْ وَيَغْفِرْ لَكُمْ ذُنُوبَكُمْ",
+        "ar_plain": "يصلح لكم اعمالكم ويغفر لكم ذنوبكم",
+        "translit": "yuṣliḥ lakum ʾaʿmālakum wayaghfir lakum dhunūbakum",
+        "en": "He will amend for you your deeds and forgive you your sins",
+        "ur": "وہ تمہارے اعمال سنوار دے گا اور تمہارے گناہ بخش دے گا"
+      },
+      "explanation": {
+        "en": "Two responses in the next ayah: يُصْلِحْ لَكُمْ أَعْمَالَكُمْ, 'He will amend your deeds for you', and وَيَغْفِرْ لَكُمْ ذُنُوبَكُمْ, 'and forgive you your sins'. Both verbs are imperfect and carry a sukūn. (Al-Ahzab 33:71) (Al-Ahzab 33:71)",
+        "ur": "اگلی آیت میں دو جواب: يُصْلِحْ لَكُمْ أَعْمَالَكُمْ، 'وہ تمہارے اعمال سنوار دے گا'، اور وَيَغْفِرْ لَكُمْ ذُنُوبَكُمْ، 'اور تمہارے گناہ بخش دے گا'۔ دونوں فعل مضارع ہیں اور سکون والے ہیں۔ (الاحزاب 33:71) (Al-Ahzab 33:71)"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Read the two ayat side by side",
+        "ur": "دونوں آیات کو ساتھ ساتھ پڑھیں"
+      },
+      "body": {
+        "en": "33:70 and 33:71 are two ayat. You read the requests in the first and the responses in the second, each with its own reference; the meaning ties them together. The grammar tags are about the verbs, not about a joined string.",
+        "ur": "33:70 اور 33:71 دو آیات ہیں۔ آپ پہلی میں درخواستیں اور دوسری میں جواب پڑھتے ہیں، ہر ایک اپنے حوالے کے ساتھ؛ معنی انہیں جوڑتا ہے۔ نحوی نشانات افعال کے بارے میں ہیں، کسی جڑی ہوئی عبارت کے نہیں۔"
       }
     }
   ],
@@ -100,56 +113,70 @@
       "type": "TAP_TRANSLATION",
       "id": "ch69-l01-ex01",
       "prompt": {
-        "ar": "اِجْتَهِدْ تَنْجَحْ",
-        "ar_plain": "اجتهد تنجح",
-        "translit": "ijtahid tanjah",
-        "en": "Make an effort; you will succeed.",
-        "ur": "محنت کرو، کامیاب ہو گے۔"
+        "ar": "اُدْرُسْ تَنْجَحْ",
+        "ar_plain": "ادرس تنجح",
+        "translit": "udrus tanjaḥ",
+        "en": "(what does it say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
       },
       "options": [
         {
-          "en": "He made an effort and succeeded.",
-          "ur": "اس نے محنت کی اور کامیاب ہوا۔"
+          "en": "You studied, so you passed",
+          "ur": "تم نے پڑھا اس لیے کامیاب ہوئے"
         },
         {
-          "en": "Make an effort; you will succeed.",
-          "ur": "محنت کرو، کامیاب ہو گے۔"
+          "en": "Study, you will pass (if you study, you will pass)",
+          "ur": "پڑھو، کامیاب ہو گے (اگر تم پڑھو تو کامیاب ہو گے)"
         },
         {
-          "en": "Do not make an effort.",
-          "ur": "محنت مت کرو۔"
+          "en": "Do not study, you will pass",
+          "ur": "مت پڑھو، کامیاب ہو گے"
         },
         {
-          "en": "You succeed when he tries.",
-          "ur": "جب وہ کوشش کرتا ہے تم کامیاب ہوتے ہو۔"
+          "en": "You pass, and you study",
+          "ur": "تم کامیاب ہوتے ہو، اور پڑھتے ہو"
         }
       ],
       "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "اِجْتَهِدْ = \"make an effort\" (command); تَنْجَحْ = \"you will succeed\" (the answer, مَجْزُوم).",
-        "ur": "اِجْتَهِدْ = \"محنت کرو\" (حکم)؛ تَنْجَحْ = \"کامیاب ہو گے\" (جواب، مَجْزُوم)۔"
+        "en": "The command is the request; the jussive verb after it says what follows from doing it.",
+        "ur": "حکم درخواست ہے؛ اس کے بعد مجزوم فعل بتاتا ہے کہ اسے کرنے سے کیا ہوگا۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch69-l01-ex02",
-      "statement": {
-        "en": "In وَقُلْ رَبِّ زِدْنِي عِلْمًا, زِدْنِي is جواب الطلب.",
-        "ur": "وَقُلْ رَبِّ زِدْنِي عِلْمًا میں زِدْنِي جواب الطلب ہے۔",
-        "ar_example": {
-          "ar": "وَقُلْ رَبِّ زِدْنِي عِلْمًا",
-          "ar_plain": "وقل رب زدني علما",
-          "translit": "wa qul rabbi zidnii 'ilmaa",
-          "en": "And say, 'My Lord, increase me in knowledge.' (Ta-Ha 20:114)",
-          "ur": "اور کہو: 'اے میرے رب! میرے علم میں اضافہ فرما۔' (طٰہٰ 20:114)"
-        }
+      "prompt": {
+        "ar": "اُدْرُسْ تَنْجَحْ",
+        "ar_plain": "ادرس تنجح",
+        "translit": "udrus tanjaḥ",
+        "en": "(which word is the request, and which is the response?)",
+        "ur": "(کون سا لفظ درخواست ہے، اور کون سا جواب؟)"
       },
-      "correct_answer": false,
+      "options": [
+        {
+          "en": "تَنْجَحْ is the request; اُدْرُسْ is the response",
+          "ur": "تَنْجَحْ درخواست ہے؛ اُدْرُسْ جواب ہے"
+        },
+        {
+          "en": "Both are requests",
+          "ur": "دونوں درخواستیں ہیں"
+        },
+        {
+          "en": "اُدْرُسْ is the request; تَنْجَحْ is the response",
+          "ur": "اُدْرُسْ درخواست ہے؛ تَنْجَحْ جواب ہے"
+        },
+        {
+          "en": "Both are responses",
+          "ur": "دونوں جواب ہیں"
+        }
+      ],
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "False. زِدْنِي is itself a request in command form (a du‘ā’): \"increase me\". It is not a present-tense verb answering a command.",
-        "ur": "غلط۔ زِدْنِي خود امر کی صورت میں ایک درخواست (دعا) ہے: \"میرے علم میں اضافہ فرما\"۔ یہ کسی حکم کا جواب دینے والا مضارع فعل نہیں۔"
+        "en": "The command comes first and asks; the imperfect verb after it answers.",
+        "ur": "حکم پہلے آتا ہے اور مانگتا ہے؛ اس کے بعد مضارع فعل جواب دیتا ہے۔"
       }
     },
     {
@@ -158,107 +185,156 @@
       "mode": "TAP",
       "sentence_ar": "اُدْرُسْ ___",
       "hint": {
-        "en": "Study; you will understand. (constructed)",
-        "ur": "پڑھو، سمجھ جاؤ گے۔ (بنائی گئی مثال)"
+        "en": "Study, you will pass.",
+        "ur": "پڑھو، کامیاب ہو گے۔"
       },
       "options": [
         {
-          "ar": "تَفْهَمُ",
-          "ar_plain": "تفهم",
-          "translit": "tafhamu",
-          "en": "you understand (مَرْفُوع)",
-          "ur": "تم سمجھتے ہو (مَرْفُوع)"
+          "ar": "تَنْجَحْ",
+          "ar_plain": "تنجح",
+          "translit": "tanjaḥ",
+          "en": "you will pass (jussive, sukūn)",
+          "ur": "کامیاب ہو گے (مجزوم، سکون)"
         },
         {
-          "ar": "تَفْهَمْ",
-          "ar_plain": "تفهم",
-          "translit": "tafham",
-          "en": "you will understand (مَجْزُوم)",
-          "ur": "تم سمجھ جاؤ گے (مَجْزُوم)"
+          "ar": "تَنْجَحُ",
+          "ar_plain": "تنجح",
+          "translit": "tanjaḥu",
+          "en": "you pass (ḍamma)",
+          "ur": "تم کامیاب ہوتے ہو (ضمہ)"
         },
         {
-          "ar": "فَهِمْتَ",
-          "ar_plain": "فهمت",
-          "translit": "fahimta",
-          "en": "you understood (past)",
-          "ur": "تم سمجھ گئے (ماضی)"
+          "ar": "تَنْجَحَ",
+          "ar_plain": "تنجح",
+          "translit": "tanjaḥa",
+          "en": "you pass (fatḥa)",
+          "ur": "تم کامیاب ہو (فتحہ)"
         },
         {
-          "ar": "تَفْهَمَ",
-          "ar_plain": "تفهم",
-          "translit": "tafhama",
-          "en": "you understand (مَنْصُوب)",
-          "ur": "تم سمجھو (مَنْصُوب)"
+          "ar": "نَجَحْتَ",
+          "ar_plain": "نجحت",
+          "translit": "najaḥta",
+          "en": "you passed",
+          "ur": "تم کامیاب ہوئے"
         }
       ],
       "correct_answer": {
-        "ar": "تَفْهَمْ",
-        "ar_plain": "تفهم",
-        "translit": "tafham",
-        "en": "you will understand (مَجْزُوم)",
-        "ur": "تم سمجھ جاؤ گے (مَجْزُوم)"
+        "ar": "تَنْجَحْ",
+        "ar_plain": "تنجح",
+        "translit": "tanjaḥ",
+        "en": "you will pass (jussive, sukūn)",
+        "ur": "کامیاب ہو گے (مجزوم، سکون)"
       },
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "The answer to the command اُدْرُسْ is a jussive present-tense verb: تَفْهَمْ, with sukūn.",
-        "ur": "حکم اُدْرُسْ کا جواب مَجْزُوم مضارع ہے: سکون کے ساتھ تَفْهَمْ۔"
+        "en": "The response verb after a request is a jussive imperfect, with a sukūn.",
+        "ur": "درخواست کے بعد جواب کا فعل مجزوم مضارع ہوتا ہے، سکون کے ساتھ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch69-l01-ex04",
+      "statement": {
+        "en": "اُدْرُسْ is an imperfect verb that has been put in the jussive.",
+        "ur": "اُدْرُسْ ایک مضارع فعل ہے جسے مجزوم کر دیا گیا ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. اُدْرُسْ is the direct command form; only the response تَنْجَحْ is a jussive imperfect.",
+        "ur": "غلط۔ اُدْرُسْ براہِ راست حکم کی صورت ہے؛ صرف جواب تَنْجَحْ مجزوم مضارع ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch69-l01-ex05",
+      "prompt": {
+        "ar": "يُصْلِحْ لَكُمْ أَعْمَالَكُمْ وَيَغْفِرْ لَكُمْ ذُنُوبَكُمْ",
+        "ar_plain": "يصلح لكم اعمالكم ويغفر لكم ذنوبكم",
+        "translit": "yuṣliḥ lakum ʾaʿmālakum wayaghfir lakum dhunūbakum",
+        "en": "(33:71: what does it say?)",
+        "ur": "(33:71: یہ کیا کہتی ہے؟)"
+      },
+      "options": [
+        {
+          "en": "He amended your deeds yesterday",
+          "ur": "اس نے کل تمہارے اعمال سنوارے"
+        },
+        {
+          "en": "Amend your deeds and forgive your sins",
+          "ur": "اپنے اعمال سنوارو اور اپنے گناہ بخشو"
+        },
+        {
+          "en": "He did not amend your deeds",
+          "ur": "اس نے تمہارے اعمال نہیں سنوارے"
+        },
+        {
+          "en": "He will amend for you your deeds and forgive you your sins",
+          "ur": "وہ تمہارے اعمال سنوار دے گا اور تمہارے گناہ بخش دے گا"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يُصْلِحْ and يَغْفِرْ are the responses: 'He will amend … and forgive …'.",
+        "ur": "يُصْلِحْ اور يَغْفِرْ جواب ہیں: 'وہ سنوار دے گا … اور بخش دے گا …'۔"
       }
     },
     {
       "type": "MATCHING",
-      "id": "ch69-l01-ex04",
+      "id": "ch69-l01-ex06",
       "left_column": [
         {
-          "ar": "اتَّقُوا اللَّهَ",
-          "ar_plain": "اتقوا الله",
-          "translit": "ittaqullaah",
-          "en": "be mindful of Allah",
-          "ur": "اللہ سے ڈرو"
+          "ar": "اُدْرُسْ",
+          "ar_plain": "ادرس",
+          "translit": "udrus",
+          "en": "study",
+          "ur": "پڑھو"
         },
         {
-          "ar": "يُصْلِحْ لَكُمْ",
-          "ar_plain": "يصلح لكم",
-          "translit": "yuslih lakum",
-          "en": "He will set right for you",
-          "ur": "وہ تمہارے لیے درست کر دے گا"
+          "ar": "تَنْجَحْ",
+          "ar_plain": "تنجح",
+          "translit": "tanjaḥ",
+          "en": "you will pass",
+          "ur": "کامیاب ہو گے"
         },
         {
-          "ar": "اِجْلِسْ وَاكْتُبْ",
-          "ar_plain": "اجلس واكتب",
-          "translit": "ijlis waktub",
-          "en": "sit and write",
-          "ur": "بیٹھو اور لکھو"
+          "ar": "تَنْجَحُ",
+          "ar_plain": "تنجح",
+          "translit": "tanjaḥu",
+          "en": "you pass",
+          "ur": "تم کامیاب ہوتے ہو"
         },
         {
-          "ar": "رَبِّ زِدْنِي عِلْمًا",
-          "ar_plain": "رب زدني علما",
-          "translit": "rabbi zidnii 'ilmaa",
-          "en": "my Lord, increase me in knowledge",
-          "ur": "اے رب! میرے علم میں اضافہ فرما"
+          "ar": "لَنْ تَنْجَحَ",
+          "ar_plain": "لن تنجح",
+          "translit": "lan tanjaḥa",
+          "en": "you will not pass",
+          "ur": "تم کامیاب نہیں ہو گے"
         }
       ],
       "right_column": [
         {
-          "en": "two commands — no answer",
-          "ur": "دو حکم — کوئی جواب نہیں"
+          "en": "an ordinary statement: indicative",
+          "ur": "عام بیان: مرفوع"
         },
         {
-          "en": "a du‘ā’ in command form",
-          "ur": "امر کی صورت میں دعا"
+          "en": "a request: a direct command",
+          "ur": "درخواست: براہِ راست حکم"
         },
         {
-          "en": "the command",
-          "ur": "حکم"
+          "en": "a negated future: subjunctive",
+          "ur": "منفی مستقبل: منصوب"
         },
         {
-          "en": "the answer — مَجْزُوم",
-          "ur": "جواب — مَجْزُوم"
+          "en": "a response: an imperfect, jussive",
+          "ur": "جواب: مضارع، مجزوم"
         }
       ],
       "correct_pairs": [
         [
           0,
-          2
+          1
         ],
         [
           1,
@@ -270,129 +346,97 @@
         ],
         [
           3,
-          1
+          2
         ]
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The jussive response, the command that asks, and two verbs with other endings.",
+        "ur": "مجزوم جواب، مانگنے والا حکم، اور دو فعل جن کے ختم اور ہیں۔"
+      }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch69-l01-ex05",
+      "id": "ch69-l01-ex07",
       "target_translation": {
-        "en": "Seek knowledge; you (all) will succeed. (constructed)",
-        "ur": "علم حاصل کرو، کامیاب ہو گے۔ (بنائی گئی مثال)"
+        "en": "Read, you will understand.",
+        "ur": "پڑھو، سمجھ جاؤ گے۔"
       },
       "tiles": [
         {
-          "ar": "اُطْلُبُوا",
-          "ar_plain": "اطلبوا",
-          "translit": "utlubuu",
-          "en": "seek (pl.)",
-          "ur": "حاصل کرو"
+          "ar": "تَفْهَمْ",
+          "ar_plain": "تفهم",
+          "translit": "tafham",
+          "en": "you will understand",
+          "ur": "سمجھ جاؤ گے"
         },
         {
-          "ar": "الْعِلْمَ",
-          "ar_plain": "العلم",
-          "translit": "al-'ilma",
-          "en": "knowledge",
-          "ur": "علم"
-        },
-        {
-          "ar": "تَنْجَحُوا",
-          "ar_plain": "تنجحوا",
-          "translit": "tanjahuu",
-          "en": "you will succeed",
-          "ur": "کامیاب ہو گے"
+          "ar": "اِقْرَأْ",
+          "ar_plain": "اقرا",
+          "translit": "iqraʾ",
+          "en": "read!",
+          "ur": "پڑھو!"
         }
       ],
       "correct_order": [
-        0,
         1,
-        2
+        0
       ],
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "Command first, then the answer. تَنْجَحُوا is one of the five verbs: its jussive drops the final نَ (تَنْجَحُونَ → تَنْجَحُوا).",
-        "ur": "پہلے حکم، پھر جواب۔ تَنْجَحُوا افعالِ خمسہ میں سے ہے: جزم میں آخری نَ گر جاتا ہے (تَنْجَحُونَ → تَنْجَحُوا)۔"
+        "en": "The request first, then the response with its sukūn.",
+        "ur": "پہلے درخواست، پھر سکون والا جواب۔"
       }
     },
     {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch69-l01-ex06",
-      "sentence_ar": "اِقْرَأِ الْكِتَابَ تَتَعَلَّمْ",
-      "words": [
-        {
-          "ar": "اِقْرَأِ",
-          "ar_plain": "اقرا",
-          "translit": "iqra'i",
-          "en": "read",
-          "ur": "پڑھو"
-        },
-        {
-          "ar": "الْكِتَابَ",
-          "ar_plain": "الكتاب",
-          "translit": "al-kitaaba",
-          "en": "the book",
-          "ur": "کتاب"
-        },
-        {
-          "ar": "تَتَعَلَّمْ",
-          "ar_plain": "تتعلم",
-          "translit": "tata'allam",
-          "en": "you will learn",
-          "ur": "سیکھ جاؤ گے"
-        }
-      ],
-      "available_roles": [
-        "PARTICLE",
-        "VERB",
-        "SUBJECT",
-        "OBJECT"
-      ],
-      "correct_roles": [
-        "VERB",
-        "OBJECT",
-        "VERB"
-      ],
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "Constructed: \"Read the book; you will learn.\" اِقْرَأِ = verb (command); الْكِتَابَ = object; تَتَعَلَّمْ = verb, the jussive answer.",
-        "ur": "بنایا گیا جملہ: \"کتاب پڑھو، سیکھ جاؤ گے۔\" اِقْرَأِ = فعل (حکم)؛ الْكِتَابَ = مفعول؛ تَتَعَلَّمْ = فعل، مَجْزُوم جواب۔"
-      }
-    },
-    {
-      "type": "IDENTIFY_ROOT",
-      "id": "ch69-l01-ex07",
-      "word": {
-        "ar": "يُصْلِحْ",
-        "ar_plain": "يصلح",
-        "translit": "yuslih",
-        "en": "He will set right",
-        "ur": "وہ درست کر دے گا"
+      "type": "TAP_TRANSLATION",
+      "id": "ch69-l01-ex08",
+      "prompt": {
+        "ar": "اتَّقُوا اللَّهَ",
+        "ar_plain": "اتقوا الله",
+        "translit": "attaqū al-laha",
+        "en": "(33:70: what is اتَّقُوا?)",
+        "ur": "(33:70: اتَّقُوا کیا ہے؟)"
       },
       "options": [
-        "ص ل ح",
-        "ص ح ل",
-        "س ل ح",
-        "ص ل و"
+        {
+          "en": "A direct command in the plural: 'fear Allah'",
+          "ur": "جمع میں براہِ راست حکم: 'اللہ سے ڈرو'"
+        },
+        {
+          "en": "A jussive imperfect response",
+          "ur": "مجزوم مضارع جواب"
+        },
+        {
+          "en": "A noun",
+          "ur": "اسم"
+        },
+        {
+          "en": "A past verb: 'they feared'",
+          "ur": "ماضی کا فعل: 'انہوں نے ڈرا'"
+        }
       ],
       "correct_index": 0,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "اتَّقُوا is a command (a request), not a response.",
+        "ur": "اتَّقُوا حکم (درخواست) ہے، جواب نہیں۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "جواب الطلب — a command answered by a jussive present-tense verb",
-      "ar": "جَوَابُ الطَّلَبِ",
-      "ur": "جواب الطلب — حکم کا جواب مَجْزُوم مضارع سے"
+      "en": "A request, then its response",
+      "ar": "الطَّلَبُ وَجَوَابُهُ",
+      "ur": "درخواست، پھر اس کا جواب"
     },
     "ayah": {
       "surah": 33,
       "ayah": 71,
       "label": "Al-Ahzab 33:71",
-      "ar": "يُصْلِحْ لَكُمْ أَعْمَالَكُمْ وَيَغْفِرْ لَكُمْ ذُنُوبَكُمْ ۗ وَمَنْ يُطِعِ اللَّهَ وَرَسُولَهُ فَقَدْ فَازَ فَوْزًا عَظِيمًا",
-      "en": "He will set your deeds right for you and forgive you your sins. Whoever obeys Allah and His Messenger has achieved a great triumph.",
-      "ur": "وہ تمہارے اعمال درست کر دے گا اور تمہارے گناہ بخش دے گا۔ اور جو اللہ اور اس کے رسول کی اطاعت کرے اس نے بڑی کامیابی پائی۔",
+      "ar": "يُصْلِحْ لَكُمْ أَعْمَالَكُمْ وَيَغْفِرْ لَكُمْ ذُنُوبَكُمْ",
+      "en": "He will amend for you your deeds and forgive you your sins",
+      "ur": "وہ تمہارے اعمال سنوار دے گا اور تمہارے گناہ بخش دے گا",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033071.mp3"
     },
     "highlighted_word_indices": [
@@ -404,14 +448,14 @@
       "وَيَغْفِرْ"
     ],
     "noor_explanation": {
-      "en": "يُصْلِحْ and وَيَغْفِرْ answer the commands of verse 70. Both are present tense and مَجْزُوم — see the sukūn on ح and ر.",
-      "ur": "يُصْلِحْ اور وَيَغْفِرْ آیت 70 کے حکموں کا جواب ہیں۔ دونوں مضارع اور مَجْزُوم ہیں — ح اور ر پر سکون دیکھیں۔"
+      "en": "يُصْلِحْ … وَيَغْفِرْ — two jussive imperfect verbs, the responses to the commands of the ayah before.",
+      "ur": "يُصْلِحْ … وَيَغْفِرْ — دو مجزوم مضارع فعل، پچھلی آیت کے احکام کے جواب۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "A command, then a present-tense verb that tells the result, with no فَـ or وَ before it: that verb is جواب الطلب and it is مَجْزُوم. A command after a command — or a du‘ā’ like زِدْنِي — is not an answer.",
-      "ur": "حکم، پھر نتیجہ بتانے والا مضارع فعل، جس سے پہلے فَـ یا وَ نہ ہو: وہ فعل جواب الطلب ہے اور مَجْزُوم ہے۔ حکم کے بعد دوسرا حکم — یا زِدْنِي جیسی دعا — جواب نہیں۔"
+      "en": "A command asks; an imperfect verb in the jussive after it says what follows from doing it.",
+      "ur": "حکم مانگتا ہے؛ اس کے بعد مجزوم مضارع فعل بتاتا ہے کہ اسے کرنے سے کیا ہوگا۔"
     }
   }
 }

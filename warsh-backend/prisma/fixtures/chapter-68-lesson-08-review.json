@@ -1,0 +1,547 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 68, Retrieval review (ch68-l06, rebuilt in place and moved to display order 8; the old row claimed a 'capstone' and 'parse any jussive verb'). Twelve tasks: the three jussive signs (3), لَمَّا and لَا (2), command and purpose lām (2), the two-verb condition: إِنْ, مَنْ and the two-clause sign (3) and one local decision from each part of Al-Layl (2). All of it is retrieval of Lessons 1-7. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-68-content-proposal.md and its review amendments.",
+    "title": "Chapter 68 Review — Jussive Particles, Conditions and Al-Layl",
+    "titleAr": "مُرَاجَعَةُ الْبَابِ 68 — الْجَزْمُ وَاللَّيْلُ",
+    "titleUr": "باب 68 کا جائزہ — جزم، شرطیں اور اللیل",
+    "chapter_order": 68,
+    "lesson_order": 8,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 65,
+      "ayah": 2,
+      "label": "At-Talaq 65:2",
+      "ar": "وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا",
+      "en": "And whoever fears Allah — He will make for him a way out",
+      "ur": "اور جو اللہ سے ڈرے گا وہ اس کے لیے نکلنے کی راہ بنا دے گا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/065002.mp3"
+    },
+    "noor_intro": {
+      "en": "Review Chapter 68: the jussive signs, the particles, commands, conditions and the surah.",
+      "ur": "باب 68 کا جائزہ: جزم کی علامتیں، حروف، احکام، شرطیں اور سورت۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 68 summary",
+        "ar": "خُلَاصَةُ الْبَابِ",
+        "ur": "باب 68 کا خلاصہ"
+      },
+      "explanation": {
+        "en": "Three signs of the jussive (a sukūn, a dropped weak letter, a dropped ن); لَمْ 'did not', لَمَّا + a jussive 'not yet', لَمَّا + a past verb 'when'; prohibitive لَا + a jussive against negative لَا + an indicative; the direct command against command لِـ against purpose لِـ; and إِنْ or conditional مَنْ + two jussive verbs. You also read the two parts of Al-Layl.",
+        "ur": "جزم کی تین علامتیں (سکون، گرا ہوا کمزور حرف، گرا ہوا ن)؛ لَمْ 'نہیں'، لَمَّا + مجزوم 'ابھی نہیں'، لَمَّا + ماضی 'جب'؛ نہی والا لَا + مجزوم بمقابلہ نفی والا لَا + مرفوع؛ براہِ راست حکم بمقابلہ امر کا لِـ بمقابلہ غرض کا لِـ؛ اور إِنْ یا شرطیہ مَنْ + دو مجزوم افعال۔ آپ نے اللیل کے دو حصے بھی پڑھے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Twelve tasks",
+        "ur": "بارہ مشقیں"
+      },
+      "body": {
+        "en": "Three on the jussive signs, two on لَمَّا and لَا, two on commands, three on the two-verb condition, and two from Al-Layl. Nothing here is new teaching.",
+        "ur": "تین جزم کی علامتوں پر، دو لَمَّا اور لَا پر، دو احکام پر، تین دو فعل والی شرط پر، اور دو اللیل سے۔ یہاں کچھ بھی نیا نہیں سکھایا گیا۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "FILL_BLANK",
+      "id": "ch68-l06-ex01",
+      "mode": "TAP",
+      "sentence_ar": "لَمْ ___ الْوَلَدُ هُنَا",
+      "hint": {
+        "en": "The boy did not sit here.",
+        "ur": "لڑکا یہاں نہیں بیٹھا۔"
+      },
+      "options": [
+        {
+          "ar": "يَجْلِسُ",
+          "ar_plain": "يجلس",
+          "translit": "yajlisu",
+          "en": "sits (ḍamma)",
+          "ur": "بیٹھتا ہے (ضمہ)"
+        },
+        {
+          "ar": "يَجْلِسَ",
+          "ar_plain": "يجلس",
+          "translit": "yajlisa",
+          "en": "sits (fatḥa)",
+          "ur": "بیٹھے (فتحہ)"
+        },
+        {
+          "ar": "يَجْلِسْ",
+          "ar_plain": "يجلس",
+          "translit": "yajlis",
+          "en": "sits (jussive, sukūn)",
+          "ur": "بیٹھتا (مجزوم، سکون)"
+        },
+        {
+          "ar": "جَلَسَ",
+          "ar_plain": "جلس",
+          "translit": "jalasa",
+          "en": "sat",
+          "ur": "بیٹھا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يَجْلِسْ",
+        "ar_plain": "يجلس",
+        "translit": "yajlis",
+        "en": "sits (jussive, sukūn)",
+        "ur": "بیٹھتا (مجزوم، سکون)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After لَمْ the sound verb takes a sukūn.",
+        "ur": "لَمْ کے بعد صحیح فعل سکون لیتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l06-ex02",
+      "prompt": {
+        "ar": "لَمْ يَقُلْ",
+        "ar_plain": "لم يقل",
+        "translit": "lam yaqul",
+        "en": "(what is the sign here?)",
+        "ur": "(یہاں علامت کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "The weak middle letter dropped: يَقُولُ → يَقُلْ",
+          "ur": "کمزور درمیانی حرف گر گیا: يَقُولُ → يَقُلْ"
+        },
+        {
+          "en": "The final ن dropped",
+          "ur": "آخری ن گر گیا"
+        },
+        {
+          "en": "A fatḥa on the last letter",
+          "ur": "آخری حرف پر فتحہ"
+        },
+        {
+          "en": "Nothing changed",
+          "ur": "کچھ نہیں بدلا"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The jussive sign here is the dropped weak letter, as in Chapter 57.",
+        "ur": "یہاں مجزوم علامت گرا ہوا کمزور حرف ہے، جیسا کہ باب 57 میں۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch68-l06-ex03",
+      "mode": "TAP",
+      "sentence_ar": "هُمْ لَمْ ___",
+      "hint": {
+        "en": "They did not write.",
+        "ur": "انہوں نے نہیں لکھا۔"
+      },
+      "options": [
+        {
+          "ar": "يَكْتُبُونَ",
+          "ar_plain": "يكتبون",
+          "translit": "yaktubūna",
+          "en": "write (with ن)",
+          "ur": "لکھتے ہیں (ن کے ساتھ)"
+        },
+        {
+          "ar": "يَكْتُبُوا",
+          "ar_plain": "يكتبوا",
+          "translit": "yaktubū",
+          "en": "write (five form, no ن)",
+          "ur": "لکھتے (پانچ صورتیں، بغیر ن)"
+        },
+        {
+          "ar": "يَكْتُبْ",
+          "ar_plain": "يكتب",
+          "translit": "yaktub",
+          "en": "writes (sukūn)",
+          "ur": "لکھتا (سکون)"
+        },
+        {
+          "ar": "يَكْتُبُ",
+          "ar_plain": "يكتب",
+          "translit": "yaktubu",
+          "en": "writes (ḍamma)",
+          "ur": "لکھتا ہے (ضمہ)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يَكْتُبُوا",
+        "ar_plain": "يكتبوا",
+        "translit": "yaktubū",
+        "en": "write (five form, no ن)",
+        "ur": "لکھتے (پانچ صورتیں، بغیر ن)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A five form loses its ن after لَمْ.",
+        "ur": "پانچ صورتوں والا فعل لَمْ کے بعد ن کھو دیتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l06-ex04",
+      "prompt": {
+        "ar": "لَمَّا جَاءَ الْمُعَلِّمُ جَلَسَ الطُّلَّابُ",
+        "ar_plain": "لما جاء المعلم جلس الطلاب",
+        "translit": "lammā jāʾa al-muʿallimu jalasa aṭ-ṭullābu",
+        "en": "(what does لَمَّا mean here?)",
+        "ur": "(یہاں لَمَّا کا کیا مطلب ہے؟)"
+      },
+      "options": [
+        {
+          "en": "'Not yet': it is followed by a jussive",
+          "ur": "'ابھی نہیں': اس کے بعد مجزوم ہے"
+        },
+        {
+          "en": "'Do not'",
+          "ur": "'مت'"
+        },
+        {
+          "en": "'If'",
+          "ur": "'اگر'"
+        },
+        {
+          "en": "'When': a past verb follows it",
+          "ur": "'جب': اس کے بعد ماضی کا فعل ہے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A past verb (جَاءَ) follows, so لَمَّا means 'when'.",
+        "ur": "آگے ماضی کا فعل (جَاءَ) ہے، اس لیے لَمَّا کا مطلب 'جب' ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l06-ex05",
+      "prompt": {
+        "ar": "لَا تَقْرَأْ · لَا تَقْرَأُ",
+        "ar_plain": "لا تقرا · لا تقرا",
+        "translit": "lā taqraʾ · lā taqraʾu",
+        "en": "(which one forbids?)",
+        "ur": "(کون سا روکتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "لَا تَقْرَأُ, with the ḍamma",
+          "ur": "لَا تَقْرَأُ، ضمہ کے ساتھ"
+        },
+        {
+          "en": "لَا تَقْرَأْ, with the sukūn: 'do not read!'",
+          "ur": "لَا تَقْرَأْ، سکون کے ساتھ: 'مت پڑھو!'"
+        },
+        {
+          "en": "Both forbid",
+          "ur": "دونوں روکتے ہیں"
+        },
+        {
+          "en": "Neither forbids",
+          "ur": "کوئی نہیں روکتا"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The sukūn makes the prohibition; the ḍamma makes a statement.",
+        "ur": "سکون نہی بناتا ہے؛ ضمہ بیان بناتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l06-ex06",
+      "prompt": {
+        "ar": "اُقْرَأْ · لِيَقْرَأْ",
+        "ar_plain": "اقرا · ليقرا",
+        "translit": "uqraʾ · liyaqraʾ",
+        "en": "(what is the difference?)",
+        "ur": "(فرق کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "اُقْرَأْ is a direct command to you; لِيَقْرَأْ is command lām: 'let him read'",
+          "ur": "اُقْرَأْ تم سے براہِ راست حکم ہے؛ لِيَقْرَأْ امر کا لام ہے: 'وہ پڑھے'"
+        },
+        {
+          "en": "Both are direct commands to you",
+          "ur": "دونوں تم سے براہِ راست حکم ہیں"
+        },
+        {
+          "en": "اُقْرَأْ is a noun",
+          "ur": "اُقْرَأْ اسم ہے"
+        },
+        {
+          "en": "لِيَقْرَأْ is a question",
+          "ur": "لِيَقْرَأْ سوال ہے"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The direct command is its own form; command lām is لِ + a jussive imperfect.",
+        "ur": "براہِ راست حکم اپنی صورت ہے؛ امر کا لام لِ + مجزوم مضارع ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l06-ex07",
+      "prompt": {
+        "ar": "لِيَقْرَأَ",
+        "ar_plain": "ليقرا",
+        "translit": "liyaqraʾa",
+        "en": "(what does this mean?)",
+        "ur": "(اس کا کیا مطلب ہے؟)"
+      },
+      "options": [
+        {
+          "en": "'let him read': a command",
+          "ur": "'وہ پڑھے': حکم"
+        },
+        {
+          "en": "'read!': a direct command",
+          "ur": "'پڑھو!': براہِ راست حکم"
+        },
+        {
+          "en": "'so that he may read': purpose, with a fatḥa",
+          "ur": "'تاکہ وہ پڑھے': غرض، فتحہ کے ساتھ"
+        },
+        {
+          "en": "'for the reader': a noun",
+          "ur": "'پڑھنے والے کے لیے': اسم"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A fatḥa after لِ makes it the purpose lām.",
+        "ur": "لِ کے بعد فتحہ اسے غرض کا لام بناتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l06-ex08",
+      "prompt": {
+        "ar": "إِنْ تَقْرَأْ تَفْهَمْ",
+        "ar_plain": "ان تقرا تفهم",
+        "translit": "ʾin taqraʾ tafham",
+        "en": "(which are the two verbs, and what is their mood?)",
+        "ur": "(دو فعل کون سے ہیں، اور ان کی حالت کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "إِنْ and تَقْرَأْ: one jussive",
+          "ur": "إِنْ اور تَقْرَأْ: ایک مجزوم"
+        },
+        {
+          "en": "تَقْرَأْ and تَفْهَمْ: both jussive, after إِنْ",
+          "ur": "تَقْرَأْ اور تَفْهَمْ: دونوں مجزوم، إِنْ کے بعد"
+        },
+        {
+          "en": "تَفْهَمْ only: the answer",
+          "ur": "صرف تَفْهَمْ: جواب"
+        },
+        {
+          "en": "Neither is jussive",
+          "ur": "کوئی مجزوم نہیں"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Conditional إِنْ governs both verbs: the condition and the answer.",
+        "ur": "شرطیہ إِنْ دونوں افعال پر عمل کرتا ہے: شرط اور جواب۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l06-ex09",
+      "prompt": {
+        "ar": "مَنْ يَقْرَأْ يَفْهَمْ · مَنْ يَقْرَأُ؟",
+        "ar_plain": "من يقرا يفهم · من يقرا؟",
+        "translit": "man yaqraʾ yafham · man yaqraʾu",
+        "en": "(which مَنْ is conditional?)",
+        "ur": "(کون سا مَنْ شرطیہ ہے؟)"
+      },
+      "options": [
+        {
+          "en": "The first: both verbs are jussive",
+          "ur": "پہلا: دونوں افعال مجزوم ہیں"
+        },
+        {
+          "en": "The second: 'who reads?'",
+          "ur": "دوسرا: 'کون پڑھتا ہے؟'"
+        },
+        {
+          "en": "Both are conditional",
+          "ur": "دونوں شرطیہ ہیں"
+        },
+        {
+          "en": "Neither is conditional",
+          "ur": "کوئی شرطیہ نہیں"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The second is a question and keeps the indicative.",
+        "ur": "دوسرا سوال ہے اور مرفوع رہتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l06-ex10",
+      "prompt": {
+        "ar": "إِنْ تَكْتُبُوا تَفْهَمُوا",
+        "ar_plain": "ان تكتبوا تفهموا",
+        "translit": "ʾin taktubū tafhamū",
+        "en": "(what happened to the final ن of both verbs?)",
+        "ur": "(دونوں افعال کے آخری ن کا کیا ہوا؟)"
+      },
+      "options": [
+        {
+          "en": "It stayed in both",
+          "ur": "دونوں میں باقی رہا"
+        },
+        {
+          "en": "It dropped from the first only",
+          "ur": "صرف پہلے سے گرا"
+        },
+        {
+          "en": "It became a sukūn",
+          "ur": "سکون بن گیا"
+        },
+        {
+          "en": "It dropped from both: the five-form sign",
+          "ur": "دونوں سے گر گیا: پانچ صورتوں کی علامت"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Both five forms lose their ن after إِنْ.",
+        "ur": "إِنْ کے بعد دونوں پانچ صورتوں والے افعال ن کھو دیتے ہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l06-ex11",
+      "prompt": {
+        "ar": "فَسَنُيَسِّرُهُ لِلْعُسْرَىٰ",
+        "ar_plain": "فسنيسره للعسرى",
+        "translit": "fasanuyassiruhu lilʿusrā",
+        "en": "(92:10)",
+        "ur": "(92:10)"
+      },
+      "options": [
+        {
+          "en": "and denies the best reward",
+          "ur": "اور اچھے انجام کو جھٹلایا"
+        },
+        {
+          "en": "We will ease him toward hardship",
+          "ur": "ہم اسے سختی کی طرف لے جائیں گے"
+        },
+        {
+          "en": "and his wealth will not help him when he falls",
+          "ur": "اور جب وہ گرے گا تو اس کا مال اس کے کام نہ آئے گا"
+        },
+        {
+          "en": "But as for him who withholds and thinks himself free of need",
+          "ur": "اور رہا وہ جس نے بخل کیا اور خود کو بے نیاز سمجھا"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "92:10 says: We will ease him toward hardship.",
+        "ur": "92:10 کہتی ہے: ہم اسے سختی کی طرف لے جائیں گے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l06-ex12",
+      "prompt": {
+        "ar": "وَسَيُجَنَّبُهَا الْأَتْقَى الَّذِي يُؤْتِي مَالَهُ يَتَزَكَّىٰ",
+        "ar_plain": "وسيجنبها الاتقى الذي يؤتي ماله يتزكى",
+        "translit": "wasayujannabuhā al-ʾatqā alladhī yuʾtī mālahu yatazakkā",
+        "en": "(92:17–18: what does it say?)",
+        "ur": "(92:17–18: یہ کیا کہتی ہیں؟)"
+      },
+      "options": [
+        {
+          "en": "The most wretched will be kept away from it",
+          "ur": "سب سے بدبخت اس سے دور رکھا جائے گا"
+        },
+        {
+          "en": "He will not give his wealth",
+          "ur": "وہ اپنا مال نہیں دے گا"
+        },
+        {
+          "en": "The most mindful will be kept away from it: he who gives his wealth to purify himself",
+          "ur": "سب سے زیادہ پرہیزگار اس سے دور رکھا جائے گا: وہ جو پاک ہونے کے لیے اپنا مال دیتا ہے"
+        },
+        {
+          "en": "It is a warning about the night",
+          "ur": "یہ رات کے بارے میں تنبیہ ہے"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "92:17–18 describe the most mindful, who gives his wealth to purify himself.",
+        "ur": "92:17–18 سب سے زیادہ پرہیزگار کا بیان کرتی ہیں، جو پاک ہونے کے لیے اپنا مال دیتا ہے۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Conditional مَن",
+      "ar": "وَمَن يَتَّقِ",
+      "ur": "شرطیہ مَن"
+    },
+    "ayah": {
+      "surah": 65,
+      "ayah": 2,
+      "label": "At-Talaq 65:2",
+      "ar": "وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا",
+      "en": "And whoever fears Allah — He will make for him a way out",
+      "ur": "اور جو اللہ سے ڈرے گا وہ اس کے لیے نکلنے کی راہ بنا دے گا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/065002.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1,
+      3
+    ],
+    "highlighted_words": [
+      "وَمَن",
+      "يَتَّقِ",
+      "يَجْعَل"
+    ],
+    "noor_explanation": {
+      "en": "وَمَن يَتَّقِ … يَجْعَل — a conditional مَن and two jussive verbs, the peak of the chapter in one ayah.",
+      "ur": "وَمَن يَتَّقِ … يَجْعَل — شرطیہ مَن اور دو مجزوم افعال، باب کا نقطۂ عروج ایک آیت میں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Jussive signs, لَمْ, لَمَّا, لَا, command lām, a two-verb condition and a whole surah — Chapter 68 in one review.",
+      "ur": "جزم کی علامتیں، لَمْ، لَمَّا، لَا، امر کا لام، دو فعل والی شرط اور ایک پوری سورت — باب 68 ایک جائزے میں۔"
+    }
+  }
+}

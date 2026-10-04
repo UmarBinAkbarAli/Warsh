@@ -2,415 +2,443 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 70, Lesson 1 — Introduction to الاستثناء with إِلَّا: the three parts, and the accusative after an affirmative sentence.",
+    "_note": "Chapter 70, Lesson 1 (ch70-l01, rebuilt in place). Names the parts: the verdict, المستثنى منه (the stated group), أداة الاستثناء (إِلَّا) and المستثنى (the excepted word), with حَضَرَ الطُّلَّابُ إِلَّا طَالِبًا وَاحِدًا (authored) and 2:34 (فَسَجَدُوا إِلَّا إِبْلِيسَ). Previews that the stated group can be missing (مَا حَضَرَ إِلَّا خَالِدٌ): then not every word after إِلَّا is an accusative exception. The old 'four types' grid (complete/incomplete crossed with positive/negative) and the invented terms (الْمُفْتَرَقُ, القول بإلا) are gone: the chapter teaches three patterns, one per lesson. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-70-content-proposal.md and its review amendments.",
+    "title": "The Parts of an Exception Sentence",
+    "titleAr": "أَرْكَانُ جُمْلَةِ الِاسْتِثْنَاءِ",
+    "titleUr": "استثنا والے جملے کے اجزا",
     "chapter_order": 70,
     "lesson_order": 1,
-    "chapter_title": "الاستثناء",
-    "title": "Introduction to الاستثناء — Exception with إِلَّا",
-    "titleAr": "الْمُقَدِّمَةُ: الِاسْتِثْنَاءُ بِإِلَّا",
-    "source": "book_8_lesson_4_istithna_intro.md",
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 37,
-      "ayah": 35,
-      "label": "As-Saffat 37:35",
-      "ar": "إِنَّهُمْ كَانُوا إِذَا قِيلَ لَهُمْ لَا إِلَٰهَ إِلَّا اللَّهُ يَسْتَكْبِرُونَ",
-      "en": "Indeed they, when it was said to them, \"There is no deity but Allah,\" were arrogant.",
-      "ur": "ان کا حال یہ تھا کہ جب ان سے کہا جاتا تھا کہ اللہ کے سوا کوئی معبود نہیں تو وہ تکبر کرتے تھے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/037035.mp3"
+      "surah": 2,
+      "ayah": 34,
+      "label": "Al-Baqarah 2:34",
+      "ar": "فَسَجَدُوا إِلَّا إِبْلِيسَ",
+      "en": "so they prostrated, except Iblis",
+      "ur": "تو انہوں نے سجدہ کیا سوائے ابلیس کے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002034.mp3"
     },
     "noor_intro": {
-      "en": "لَا إِلَٰهَ إِلَّا اللَّهُ — 'there is no deity but Allah'. The words the ayah says they turned away from are built on إِلَّا, the particle of exception. This chapter is about how إِلَّا works.",
-      "ur": "لَا إِلَٰهَ إِلَّا اللَّهُ — 'اللہ کے سوا کوئی معبود نہیں'۔ جن الفاظ سے آیت کے مطابق وہ تکبر کرتے تھے وہ إِلَّا، یعنی حرفِ استثنا، پر قائم ہیں۔ یہ باب إِلَّا کے کام کے بارے میں ہے۔"
+      "en": "An exception takes one thing out of a statement: 'they all prostrated — except Iblis'. Today you name the parts of such a sentence.",
+      "ur": "استثنا ایک چیز کو بیان سے نکال لیتا ہے: 'سب نے سجدہ کیا — سوائے ابلیس کے'۔ آج آپ ایسے جملے کے اجزا کے نام سیکھتے ہیں۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "الاستثناء — taking something out",
-        "ar": "الِاسْتِثْنَاءُ",
-        "ur": "استثنا — کسی چیز کو الگ کرنا"
+        "en": "Four parts",
+        "ar": "الْأَرْكَانُ",
+        "ur": "چار اجزا"
       },
       "explanation": {
-        "en": "An exception sentence has three parts: the مُسْتَثْنَى مِنْهُ (the whole group), the tool إِلَّا, and the مُسْتَثْنَى (what is taken out of the group). جَاءَ الطُّلَّابُ إِلَّا عَلِيًّا — 'the students came, except Ali'.",
-        "ur": "استثنا والے جملے کے تین حصے ہیں: مستثنیٰ منہ (پورا گروہ)، آلہ إِلَّا، اور مستثنیٰ (جو گروہ سے نکالا گیا)۔ جَاءَ الطُّلَّابُ إِلَّا عَلِيًّا — 'طالب علم آئے، سوائے علی کے'۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "إِلَّا",
-        "ar_plain": "إلا",
-        "translit": "illaa",
-        "en": "except",
-        "ur": "سوائے، مگر"
-      },
-      "explanation": {
-        "en": "إِلَّا means 'except'. Whatever comes after it is outside the ruling of the sentence: everyone came — but not Ali.",
-        "ur": "إِلَّا کا معنی 'سوائے' ہے۔ اس کے بعد جو آئے وہ جملے کے حکم سے باہر ہوتا ہے: سب آئے — مگر علی نہیں۔"
+        "en": "An exception sentence can have four parts: the verdict (what is said of the group, such as 'attended'), المستثنى منه (the stated group: the students), أداة الاستثناء (the tool: إِلَّا) and المستثنى (the excepted word: a student). The excepted word is taken out of the verdict: all the students attended, except one.",
+        "ur": "استثنا والے جملے کے چار اجزا ہو سکتے ہیں: حکم (گروہ کے بارے میں جو کہا گیا، جیسے 'آئے'), المستثنى منه (بیان کیا ہوا گروہ: طلبہ)، أداة الاستثناء (آلہ: إِلَّا) اور المستثنى (نکالا ہوا لفظ: ایک طالب علم)۔ نکالا ہوا لفظ حکم سے باہر ہو جاتا ہے: سب طلبہ آئے، سوائے ایک کے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "جَاءَ الطُّلَّابُ إِلَّا عَلِيًّا",
-        "ar_plain": "جاء الطلاب إلا عليا",
-        "translit": "jaa'a at-tullaabu illaa 'aliyyan",
-        "en": "The students came, except Ali.",
-        "ur": "طالب علم آئے، سوائے علی کے۔"
+        "ar": "حَضَرَ الطُّلَّابُ إِلَّا طَالِبًا وَاحِدًا",
+        "ar_plain": "حضر الطلاب الا طالبا واحدا",
+        "translit": "ḥaḍara aṭ-ṭullābu ʾillā ṭāliban waāḥidan",
+        "en": "The students attended except one student",
+        "ur": "طلبہ آئے سوائے ایک طالب علم کے"
       },
       "explanation": {
-        "en": "The sentence is affirmative and the group (الطُّلَّابُ) is mentioned, so the مُسْتَثْنَى is accusative: عَلِيًّا.",
-        "ur": "جملہ مثبت ہے اور گروہ (الطُّلَّابُ) مذکور ہے، اس لیے مستثنیٰ منصوب ہے: عَلِيًّا۔"
+        "en": "حَضَرَ is the verdict; الطُّلَّابُ is the stated group; إِلَّا is the tool; طَالِبًا وَاحِدًا is the excepted word, with its adjective.",
+        "ur": "حَضَرَ حکم ہے؛ الطُّلَّابُ بیان کیا ہوا گروہ ہے؛ إِلَّا آلہ ہے؛ طَالِبًا وَاحِدًا نکالا ہوا لفظ ہے، اپنی صفت کے ساتھ۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "لَا إِلَٰهَ إِلَّا اللَّهُ",
-        "ar_plain": "لا إله إلا الله",
-        "translit": "laa ilaaha illaa allaahu",
-        "en": "There is no deity but Allah.",
-        "ur": "اللہ کے سوا کوئی معبود نہیں۔"
+        "ar": "فَسَجَدُوا إِلَّا إِبْلِيسَ",
+        "ar_plain": "فسجدوا الا ابليس",
+        "translit": "fasajadū ʾillā ʾiblīsa",
+        "en": "so they prostrated, except Iblis",
+        "ur": "تو انہوں نے سجدہ کیا سوائے ابلیس کے"
       },
       "explanation": {
-        "en": "لَا denies the whole category 'deity'; إِلَّا takes Allah out of the denial. Because the sentence is negative, اللَّهُ follows the position of the denied noun and is nominative. Next lesson explains why.",
-        "ur": "لَا 'معبود' کی پوری جنس کی نفی کرتا ہے؛ إِلَّا اللہ کو اس نفی سے نکالتا ہے۔ چونکہ جملہ منفی ہے، اس لیے اللَّهُ نفی والے اسم کے محل کے تابع ہو کر مرفوع ہے۔ وجہ اگلے سبق میں۔"
+        "en": "فَسَجَدُوا is the verdict, إِلَّا is the tool and إِبْلِيسَ is the excepted word. The stated group, the angels, comes earlier in the ayah. (Al-Baqarah 2:34) (Al-Baqarah 2:34)",
+        "ur": "فَسَجَدُوا حکم ہے، إِلَّا آلہ ہے اور إِبْلِيسَ نکالا ہوا لفظ ہے۔ بیان کیا ہوا گروہ، فرشتے، آیت میں پہلے آیا ہے۔ (البقرہ 2:34) (Al-Baqarah 2:34)"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "The group may be missing",
+        "ar": "گروہ غائب بھی ہو سکتا ہے",
+        "ur": "قَدْ يُحْذَفُ الْمُسْتَثْنَى مِنْهُ"
+      },
+      "examples": [
+        {
+          "ar": "حَضَرَ الطُّلَّابُ إِلَّا خَالِدًا",
+          "ar_plain": "حضر الطلاب الا خالدا",
+          "translit": "ḥaḍara aṭ-ṭullābu ʾillā khālidan",
+          "en": "The students attended except Khalid",
+          "ur": "طلبہ آئے سوائے خالد کے"
+        },
+        {
+          "ar": "مَا حَضَرَ إِلَّا خَالِدٌ",
+          "ar_plain": "ما حضر الا خالد",
+          "translit": "mā ḥaḍara ʾillā khālidun",
+          "en": "Only Khalid attended",
+          "ur": "صرف خالد آیا"
+        }
+      ],
+      "explanation": {
+        "en": "In the first the group is stated and Khalid is taken out of it. In the second no group is stated, and the sentence means only Khalid attended. So not every word after إِلَّا is an excepted word; Lessons 2 to 4 take the patterns one by one.",
+        "ur": "پہلے میں گروہ بیان کیا گیا ہے اور خالد اس سے نکالا گیا ہے۔ دوسرے میں کوئی گروہ بیان نہیں، اور جملے کا مطلب ہے صرف خالد آیا۔ پس إِلَّا کے بعد ہر لفظ نکالا ہوا لفظ نہیں؛ سبق 2 سے 4 ساخت ایک ایک کر کے لیتے ہیں۔"
       }
     },
     {
       "type": "GRAMMAR_NOTE",
       "title": {
-        "en": "First rule",
-        "ur": "پہلا قاعدہ"
+        "en": "Names to keep",
+        "ur": "یاد رکھنے والے نام"
       },
       "body": {
-        "en": "Affirmative sentence + the group is mentioned → the مُسْتَثْنَى after إِلَّا is accusative: نَجَحَ الطُّلَّابُ إِلَّا خَالِدًا.",
-        "ur": "مثبت جملہ + گروہ مذکور → إِلَّا کے بعد مستثنیٰ منصوب: نَجَحَ الطُّلَّابُ إِلَّا خَالِدًا۔"
+        "en": "المستثنى منه is the stated group; أداة الاستثناء is the tool; المستثنى is the excepted word. This chapter uses only these names.",
+        "ur": "المستثنى منه بیان کیا ہوا گروہ ہے؛ أداة الاستثناء آلہ ہے؛ المستثنى نکالا ہوا لفظ ہے۔ یہ باب صرف یہی نام استعمال کرتا ہے۔"
       }
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
-      "id": "ch70-l01-ex01",
-      "prompt": {
-        "ar": "لَا إِلَٰهَ إِلَّا اللَّهُ",
-        "ar_plain": "لا إله إلا الله",
-        "translit": "laa ilaaha illaa allaahu",
-        "en": "There is no deity but Allah.",
-        "ur": "اللہ کے سوا کوئی معبود نہیں۔"
-      },
-      "options": [
-        {
-          "en": "There is no deity but Allah.",
-          "ur": "اللہ کے سوا کوئی معبود نہیں۔"
-        },
-        {
-          "en": "There is a deity besides Allah.",
-          "ur": "اللہ کے علاوہ بھی ایک معبود ہے۔"
-        },
-        {
-          "en": "There is no deity and no Allah.",
-          "ur": "نہ کوئی معبود ہے نہ اللہ۔"
-        },
-        {
-          "en": "Allah is not a deity.",
-          "ur": "اللہ معبود نہیں۔"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "لَا negates every deity; إِلَّا then takes Allah out of that negation. The result is the strongest possible affirmation: Allah alone is God.",
-        "ur": "لَا ہر معبود کی نفی کرتا ہے؛ پھر إِلَّا اللہ کو اس نفی سے باہر نکالتا ہے۔ نتیجہ سب سے مضبوط اثبات ہے: صرف اللہ ہی معبود ہے۔"
-      }
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch70-l01-ex02",
-      "mode": "TAP",
-      "sentence_ar": "جَاءَ الطُّلَّابُ ___ عَلِيًّا",
-      "hint": {
-        "en": "'The students came, except Ali.'",
-        "ur": "'طالب علم آئے، سوائے علی کے۔'"
-      },
-      "options": [
-        {
-          "ar": "إِلَّا",
-          "ar_plain": "إلا",
-          "translit": "illaa",
-          "en": "except",
-          "ur": "سوائے"
-        },
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "not",
-          "ur": "نہیں"
-        },
-        {
-          "ar": "مَعَ",
-          "ar_plain": "مع",
-          "translit": "ma'a",
-          "en": "with",
-          "ur": "ساتھ"
-        },
-        {
-          "ar": "فِي",
-          "ar_plain": "في",
-          "translit": "fii",
-          "en": "in",
-          "ur": "میں"
-        }
-      ],
-      "correct_answer": {
-        "ar": "إِلَّا",
-        "ar_plain": "إلا",
-        "translit": "illaa",
-        "en": "except",
-        "ur": "سوائے"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch70-l01-ex03",
-      "statement": {
-        "en": "In جَاءَ الطُّلَّابُ إِلَّا عَلِيًّا, الطُّلَّابُ is the مُسْتَثْنَى مِنْهُ (the group something is taken out of) and عَلِيًّا is the مُسْتَثْنَى.",
-        "ur": "جَاءَ الطُّلَّابُ إِلَّا عَلِيًّا میں الطُّلَّابُ مستثنیٰ منہ (وہ گروہ جس سے نکالا گیا) اور عَلِيًّا مستثنیٰ ہے۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
       "type": "MATCHING",
-      "id": "ch70-l01-ex04",
+      "id": "ch70-l01-ex01",
       "left_column": [
         {
           "ar": "الطُّلَّابُ",
           "ar_plain": "الطلاب",
-          "translit": "at-tullaabu",
+          "translit": "aṭ-ṭullābu",
           "en": "the students",
-          "ur": "طالب علم"
+          "ur": "طلبہ"
         },
         {
           "ar": "إِلَّا",
-          "ar_plain": "إلا",
-          "translit": "illaa",
+          "ar_plain": "الا",
+          "translit": "ʾillā",
           "en": "except",
           "ur": "سوائے"
         },
         {
-          "ar": "عَلِيًّا",
-          "ar_plain": "عليا",
-          "translit": "'aliyyan",
-          "en": "Ali",
-          "ur": "علی"
+          "ar": "طَالِبًا",
+          "ar_plain": "طالبا",
+          "translit": "ṭāliban",
+          "en": "a student",
+          "ur": "ایک طالب علم"
+        },
+        {
+          "ar": "حَضَرَ",
+          "ar_plain": "حضر",
+          "translit": "ḥaḍara",
+          "en": "attended",
+          "ur": "آیا"
         }
       ],
       "right_column": [
         {
-          "en": "مُسْتَثْنَى مِنْهُ — the whole group",
-          "ur": "مستثنیٰ منہ — پورا گروہ"
+          "en": "المستثنى: the excepted word",
+          "ur": "المستثنى: نکالا ہوا لفظ"
         },
         {
-          "en": "أَدَاةُ الِاسْتِثْنَاءِ — the tool of exception",
-          "ur": "حرفِ استثنا"
+          "en": "المستثنى منه: the stated group",
+          "ur": "المستثنى منه: بیان کیا ہوا گروہ"
         },
         {
-          "en": "مُسْتَثْنَى — the one taken out",
-          "ur": "مستثنیٰ — جسے نکالا گیا"
+          "en": "the verdict",
+          "ur": "حکم"
+        },
+        {
+          "en": "أداة الاستثناء: the tool",
+          "ur": "أداة الاستثناء: آلہ"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
           1
         ],
         [
+          1,
+          3
+        ],
+        [
           2,
+          0
+        ],
+        [
+          3,
           2
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch70-l01-ex05",
-      "mode": "TAP",
-      "sentence_ar": "نَجَحَ الطُّلَّابُ إِلَّا ___",
-      "hint": {
-        "en": "'The students passed, except Khalid.' In an affirmative sentence the مُسْتَثْنَى is accusative.",
-        "ur": "'طالب علم کامیاب ہوئے سوائے خالد کے۔' مثبت جملے میں مستثنیٰ منصوب ہوتا ہے۔"
-      },
-      "options": [
-        {
-          "ar": "خَالِدًا",
-          "ar_plain": "خالدا",
-          "translit": "khaalidan",
-          "en": "Khalid (accusative)",
-          "ur": "خالد (منصوب)"
-        },
-        {
-          "ar": "خَالِدٌ",
-          "ar_plain": "خالد",
-          "translit": "khaalidun",
-          "en": "Khalid (nominative)",
-          "ur": "خالد (مرفوع)"
-        },
-        {
-          "ar": "خَالِدٍ",
-          "ar_plain": "خالد",
-          "translit": "khaalidin",
-          "en": "Khalid (genitive)",
-          "ur": "خالد (مجرور)"
-        },
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "not",
-          "ur": "نہیں"
-        }
-      ],
-      "correct_answer": {
-        "ar": "خَالِدًا",
-        "ar_plain": "خالدا",
-        "translit": "khaalidan",
-        "en": "Khalid (accusative)",
-        "ur": "خالد (منصوب)"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch70-l01-ex06",
-      "target_translation": {
-        "en": "The students attended, except Ali.",
-        "ur": "طالب علم حاضر ہوئے، سوائے علی کے۔"
-      },
-      "tiles": [
-        {
-          "ar": "حَضَرَ",
-          "ar_plain": "حضر",
-          "translit": "hadara",
-          "en": "attended",
-          "ur": "حاضر ہوئے"
-        },
-        {
-          "ar": "الطُّلَّابُ",
-          "ar_plain": "الطلاب",
-          "translit": "at-tullaabu",
-          "en": "the students",
-          "ur": "طالب علم"
-        },
-        {
-          "ar": "إِلَّا",
-          "ar_plain": "إلا",
-          "translit": "illaa",
-          "en": "except",
-          "ur": "سوائے"
-        },
-        {
-          "ar": "عَلِيًّا",
-          "ar_plain": "عليا",
-          "translit": "'aliyyan",
-          "en": "Ali",
-          "ur": "علی"
-        },
-        {
-          "ar": "عَلِيٌّ",
-          "ar_plain": "علي",
-          "translit": "'aliyyun",
-          "en": "Ali (nominative)",
-          "ur": "علی (مرفوع)"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Four parts of حَضَرَ الطُّلَّابُ إِلَّا طَالِبًا.",
+        "ur": "حَضَرَ الطُّلَّابُ إِلَّا طَالِبًا کے چار اجزا۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch70-l01-ex07",
+      "id": "ch70-l01-ex02",
       "prompt": {
-        "ar": "فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا مِنْهُمْ",
-        "ar_plain": "فشربوا منه إلا قليلا منهم",
-        "translit": "fa-sharibuu minhu illaa qaliilan minhum",
-        "en": "But they drank from it, except a few of them.",
-        "ur": "تو تھوڑے لوگوں کے سوا سب نے اس سے پی لیا۔"
+        "ar": "حَضَرَ الطُّلَّابُ إِلَّا طَالِبًا وَاحِدًا",
+        "ar_plain": "حضر الطلاب الا طالبا واحدا",
+        "translit": "ḥaḍara aṭ-ṭullābu ʾillā ṭāliban waāḥidan",
+        "en": "(what does it say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
       },
       "options": [
         {
-          "en": "But they drank from it, except a few of them.",
-          "ur": "تو تھوڑے لوگوں کے سوا سب نے اس سے پی لیا۔"
+          "en": "Only one student attended",
+          "ur": "صرف ایک طالب علم آیا"
         },
         {
-          "en": "Only a few of them drank from it.",
-          "ur": "ان میں سے صرف تھوڑوں نے اس سے پیا۔"
+          "en": "One student attended with the students",
+          "ur": "ایک طالب علم طلبہ کے ساتھ آیا"
         },
         {
-          "en": "They did not drink from it at all.",
-          "ur": "انہوں نے اس سے بالکل نہیں پیا۔"
+          "en": "The students attended except one student",
+          "ur": "طلبہ آئے سوائے ایک طالب علم کے"
         },
         {
-          "en": "A few of them drank, and the rest refused.",
-          "ur": "تھوڑوں نے پیا اور باقی نے انکار کیا۔"
+          "en": "The students did not attend",
+          "ur": "طلبہ نہیں آئے"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The excepted student is taken out of the verdict: all the others attended.",
+        "ur": "نکالا ہوا طالب علم حکم سے باہر ہے: باقی سب آئے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch70-l01-ex03",
+      "mode": "TAP",
+      "sentence_ar": "حَضَرَ الطُّلَّابُ ___ طَالِبًا",
+      "hint": {
+        "en": "The students attended except a student.",
+        "ur": "طلبہ آئے سوائے ایک طالب علم کے۔"
+      },
+      "options": [
+        {
+          "ar": "مَعَ",
+          "ar_plain": "مع",
+          "translit": "maʿa",
+          "en": "with",
+          "ur": "کے ساتھ"
+        },
+        {
+          "ar": "بَعْدَ",
+          "ar_plain": "بعد",
+          "translit": "baʿda",
+          "en": "after",
+          "ur": "کے بعد"
+        },
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "إِلَّا",
+          "ar_plain": "الا",
+          "translit": "ʾillā",
+          "en": "except",
+          "ur": "سوائے"
+        }
+      ],
+      "correct_answer": {
+        "ar": "إِلَّا",
+        "ar_plain": "الا",
+        "translit": "ʾillā",
+        "en": "except",
+        "ur": "سوائے"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The tool that takes a word out of the statement is إِلَّا.",
+        "ur": "جو آلہ کسی لفظ کو بیان سے نکالتا ہے وہ إِلَّا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l01-ex04",
+      "prompt": {
+        "ar": "فَسَجَدُوا إِلَّا إِبْلِيسَ",
+        "ar_plain": "فسجدوا الا ابليس",
+        "translit": "fasajadū ʾillā ʾiblīsa",
+        "en": "(2:34: which word is the excepted word?)",
+        "ur": "(2:34: نکالا ہوا لفظ کون سا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "إِبْلِيسَ",
+          "ur": "إِبْلِيسَ"
+        },
+        {
+          "en": "فَسَجَدُوا",
+          "ur": "فَسَجَدُوا"
+        },
+        {
+          "en": "إِلَّا",
+          "ur": "إِلَّا"
+        },
+        {
+          "en": "None: there is no excepted word",
+          "ur": "کوئی نہیں: کوئی نکالا ہوا لفظ نہیں"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "The sentence is affirmative — 'they drank' — and إِلَّا takes a few out of it. So most drank and only a few held back (2:249). قَلِيلًا is accusative.",
-        "ur": "جملہ مثبت ہے — 'انہوں نے پیا' — اور إِلَّا تھوڑوں کو اس سے نکالتا ہے۔ یعنی اکثر نے پیا اور صرف تھوڑے رکے رہے (2:249)۔ قَلِيلًا منصوب ہے۔"
+        "en": "إِبْلِيسَ is taken out of the verdict 'they prostrated'.",
+        "ur": "إِبْلِيسَ کو حکم 'انہوں نے سجدہ کیا' سے نکالا گیا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l01-ex05",
+      "prompt": {
+        "ar": "مَا حَضَرَ إِلَّا خَالِدٌ",
+        "ar_plain": "ما حضر الا خالد",
+        "translit": "mā ḥaḍara ʾillā khālidun",
+        "en": "(what does it say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "Everyone attended except Khalid",
+          "ur": "خالد کے سوا سب آئے"
+        },
+        {
+          "en": "Only Khalid attended: no group is stated",
+          "ur": "صرف خالد آیا: کوئی گروہ بیان نہیں"
+        },
+        {
+          "en": "Khalid did not attend",
+          "ur": "خالد نہیں آیا"
+        },
+        {
+          "en": "The students attended",
+          "ur": "طلبہ آئے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "With no stated group and a negative, إِلَّا means 'only'.",
+        "ur": "گروہ بیان نہ ہو اور نفی ہو تو إِلَّا کا مطلب 'صرف' ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch70-l01-ex06",
+      "statement": {
+        "en": "Every word that comes after إِلَّا is an excepted word taken out of a stated group.",
+        "ur": "إِلَّا کے بعد آنے والا ہر لفظ ایک نکالا ہوا لفظ ہے جو بیان کیے ہوئے گروہ سے نکالا گیا۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. In مَا حَضَرَ إِلَّا خَالِدٌ no group is stated, and the sentence means 'only Khalid'.",
+        "ur": "غلط۔ مَا حَضَرَ إِلَّا خَالِدٌ میں کوئی گروہ بیان نہیں، اور جملے کا مطلب 'صرف خالد' ہے۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch70-l01-ex07",
+      "target_translation": {
+        "en": "The students attended except one student.",
+        "ur": "طلبہ آئے سوائے ایک طالب علم کے۔"
+      },
+      "tiles": [
+        {
+          "ar": "إِلَّا",
+          "ar_plain": "الا",
+          "translit": "ʾillā",
+          "en": "except",
+          "ur": "سوائے"
+        },
+        {
+          "ar": "حَضَرَ",
+          "ar_plain": "حضر",
+          "translit": "ḥaḍara",
+          "en": "attended",
+          "ur": "آیا"
+        },
+        {
+          "ar": "طَالِبًا وَاحِدًا",
+          "ar_plain": "طالبا واحدا",
+          "translit": "ṭāliban waāḥidan",
+          "en": "one student",
+          "ur": "ایک طالب علم"
+        },
+        {
+          "ar": "الطُّلَّابُ",
+          "ar_plain": "الطلاب",
+          "translit": "aṭ-ṭullābu",
+          "en": "the students",
+          "ur": "طلبہ"
+        }
+      ],
+      "correct_order": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The verdict and the group, then the tool, then the excepted word.",
+        "ur": "حکم اور گروہ، پھر آلہ، پھر نکالا ہوا لفظ۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "الاستثناء with إِلَّا — the grammar of exception",
-      "ar": "الِاسْتِثْنَاءُ بِإِلَّا",
-      "ur": "إِلَّا کے ساتھ استثنا"
+      "en": "Taking one out of the verdict",
+      "ar": "إِلَّا تُخْرِجُ",
+      "ur": "حکم سے ایک کو نکالنا"
     },
     "ayah": {
-      "surah": 37,
-      "ayah": 35,
-      "label": "As-Saffat 37:35",
-      "ar": "إِنَّهُمْ كَانُوا إِذَا قِيلَ لَهُمْ لَا إِلَٰهَ إِلَّا اللَّهُ يَسْتَكْبِرُونَ",
-      "en": "Indeed they, when it was said to them, \"There is no deity but Allah,\" were arrogant.",
-      "ur": "ان کا حال یہ تھا کہ جب ان سے کہا جاتا تھا کہ اللہ کے سوا کوئی معبود نہیں تو وہ تکبر کرتے تھے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/037035.mp3"
+      "surah": 2,
+      "ayah": 34,
+      "label": "Al-Baqarah 2:34",
+      "ar": "فَسَجَدُوا إِلَّا إِبْلِيسَ",
+      "en": "so they prostrated, except Iblis",
+      "ur": "تو انہوں نے سجدہ کیا سوائے ابلیس کے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002034.mp3"
     },
     "highlighted_word_indices": [
-      5,
-      6,
-      7,
-      8
+      0,
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "فَسَجَدُوا",
+      "إِلَّا",
+      "إِبْلِيسَ"
     ],
     "noor_explanation": {
-      "en": "لَا إِلَٰهَ إِلَّا اللَّهُ: لَا denies the whole category, إِلَٰهَ is the denied noun, and إِلَّا اللَّهُ takes Allah out of that denial. Every exception has these parts — a group, the tool إِلَّا, and what is taken out.",
-      "ur": "لَا إِلَٰهَ إِلَّا اللَّهُ: لَا پوری جنس کی نفی کرتا ہے، إِلَٰهَ نفی کیا گیا اسم ہے، اور إِلَّا اللَّهُ اللہ کو اس نفی سے نکالتا ہے۔ ہر استثنا کے یہی حصے ہیں — گروہ، آلہ إِلَّا، اور نکالا گیا۔"
+      "en": "فَسَجَدُوا إِلَّا إِبْلِيسَ — the verdict, the tool and the excepted word in four words.",
+      "ur": "فَسَجَدُوا إِلَّا إِبْلِيسَ — حکم، آلہ اور نکالا ہوا لفظ چار الفاظ میں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "إِلَّا takes something out of a group. Ask three questions: what is the group (مُسْتَثْنَى مِنْهُ)? What is taken out (مُسْتَثْنَى)? Is the sentence affirmative? If so, the مُسْتَثْنَى is accusative.",
-      "ur": "إِلَّا کسی چیز کو گروہ سے نکالتا ہے۔ تین سوال پوچھیے: گروہ کیا ہے (مستثنیٰ منہ)؟ کیا نکالا گیا (مستثنیٰ)؟ کیا جملہ مثبت ہے؟ اگر ہاں تو مستثنیٰ منصوب ہے۔"
+      "en": "An exception sentence has a verdict, a stated group, the tool إِلَّا and an excepted word — and sometimes no stated group.",
+      "ur": "استثنا والے جملے میں حکم، بیان کیا ہوا گروہ، آلہ إِلَّا اور نکالا ہوا لفظ ہوتا ہے — اور کبھی گروہ بیان نہیں ہوتا۔"
     }
   }
 }

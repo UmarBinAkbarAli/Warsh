@@ -2,14 +2,13 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 67, Lesson 2 — لَوْ with different verb types and negation patterns.",
+    "_note": "Chapter 67, Lesson 2 (ch67-l02, rebuilt in place). Marks the two clauses of a لَوْ sentence with exact excerpts: 21:22 (the result with لَـ: لَفَسَدَتَا) and 8:63 (the result with a negative مَا: مَا أَلَّفْتَ; the مَا inside the condition, مَا فِي الْأَرْضِ, is a different word). The old claim that every answer begins with لَـ and the invented 8:63 wording (the extra words, the لَاسْتَغْرَبْتَ line) are gone: the exact contiguous excerpt is used. Authored practice: لَوْ ذَهَبْتَ مَعَنَا لَفَرِحْنَا. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-67-content-proposal.md and its review amendments.",
+    "title": "Find the Condition and Its Result",
+    "titleAr": "الشَّرْطُ وَجَوَابُهُ",
+    "titleUr": "شرط اور اس کا جواب تلاش کریں",
     "chapter_order": 67,
     "lesson_order": 2,
-    "chapter_title": "لو",
-    "title": "لو with Past and Present Verbs",
-    "titleAr": "لَوْ مَعَ الْأَفْعَالِ الْمَاضِيَةِ وَالْمُضَارِعَةِ",
-    "source": "book_8_lesson_1_lo_verb_types.md",
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
@@ -17,94 +16,81 @@
       "surah": 8,
       "ayah": 63,
       "label": "Al-Anfal 8:63",
-      "ar": "وَأَلَّفَ بَيْنَ قُلُوبِهِمْ ۚ لَوْ أَنفَقْتَ مَا فِي الْأَرْضِ جَمِيعًا مَّا أَلَّفْتَ بَيْنَ قُلُوبِهِمْ وَلَٰكِنَّ اللَّهَ أَلَّفَ بَيْنَهُمْ ۚ إِنَّهُ عَزِيزٌ حَكِيمٌ",
-      "en": "And brought together their hearts. If you had spent all that is in the earth, you could not have brought their hearts together; but Allah brought them together. Indeed, He is Exalted in Might and Wise.",
-      "ur": "اور ان کے دلوں میں الفت ڈال دی۔ اگر تم زمین کی ساری دولت خرچ کر دیتے تب بھی ان کے دلوں میں الفت نہ ڈال سکتے، مگر اللہ نے ان میں الفت ڈال دی، بے شک وہ غالب، حکمت والا ہے",
+      "ar": "لَوْ أَنفَقْتَ مَا فِي الْأَرْضِ جَمِيعًا مَّا أَلَّفْتَ بَيْنَ قُلُوبِهِمْ",
+      "en": "If you had spent all that is in the earth, you could not have brought their hearts together.",
+      "ur": "اگر تم زمین کی ساری چیزیں خرچ کر دیتے تو ان کے دلوں کو نہ ملا سکتے۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/008063.mp3"
     },
     "noor_intro": {
-      "en": "لَوْ أَنفَقْتَ مَا فِي الْأَرْضِ جَمِيعًا مَّا أَلَّفْتَ بَيْنَ قُلُوبِهِمْ — 'if you had spent all that is in the earth, you could not have united their hearts'. Here لَوْ comes with a past verb. Today: لَوْ with past and present verbs, and how it is negated.",
-      "ur": "لَوْ أَنفَقْتَ مَا فِي الْأَرْضِ جَمِيعًا مَّا أَلَّفْتَ بَيْنَ قُلُوبِهِمْ — 'اگر تم زمین کی ساری دولت خرچ کر دیتے تب بھی ان کے دل نہ جوڑ سکتے'۔ یہاں لَوْ ماضی فعل کے ساتھ ہے۔ آج: لَوْ ماضی اور مضارع کے ساتھ، اور اس کی نفی۔"
+      "en": "Two clauses: لَوْ + the condition, then the result. Sometimes the result starts with لَـ, and sometimes with the negative مَا.",
+      "ur": "دو جملے: لَوْ + شرط، پھر نتیجہ۔ کبھی نتیجہ لَـ سے شروع ہوتا ہے، اور کبھی منفی مَا سے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "لَوْ with past tense verbs (ماضی)",
-        "ar": "لَوْ مَعَ الْأَفْعَالِ الْمَاضِيَّةِ",
-        "ur": "لَوْ ماضی افعال کے ساتھ"
+        "en": "Condition, then result",
+        "ar": "الشَّرْطُ ثُمَّ الْجَوَابُ",
+        "ur": "شرط، پھر نتیجہ"
       },
       "explanation": {
-        "en": "When لَوْ is followed by a past tense verb, the entire condition is counterfactual — it did not happen. لَوْ + past = 'if only... had.'",
-        "ur": "جب لَوْ کے بعد ماضی فعل آتا ہے، پوری شرط counterfactual ہوتی ہے — یہ نہیں ہوا۔ لَوْ + ماضی = 'کاش... ہوتا'۔"
+        "en": "A لَوْ sentence has two parts. The condition comes right after لَوْ. The result follows it and says what would have followed. A positive result often begins with لَـ, as in لَفَسَدَتَا. A negative result begins with مَا and has no لَـ, as in مَا أَلَّفْتَ. So لَـ is common in a positive result, and it is not a rule for every result.",
+        "ur": "لَوْ والے جملے کے دو حصے ہیں۔ شرط لَوْ کے فوراً بعد آتی ہے۔ نتیجہ اس کے بعد آتا ہے اور بتاتا ہے کہ کیا ہوتا۔ مثبت نتیجہ اکثر لَـ سے شروع ہوتا ہے، جیسے لَفَسَدَتَا۔ منفی نتیجہ مَا سے شروع ہوتا ہے اور اس میں لَـ نہیں ہوتا، جیسے مَا أَلَّفْتَ۔ پس لَـ مثبت نتیجے میں عام ہے، اور ہر نتیجے کے لیے قاعدہ نہیں۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "لَوْ أَنْفَقْتَ مَا فِي الْأَرْضِ جَمِيعًا مَا أَلَّفْتَ بَيْنَ قُلُوبِهِمْ",
+        "ar": "لَوْ كَانَ فِيهِمَا آلِهَةٌ إِلَّا اللَّهُ لَفَسَدَتَا",
+        "ar_plain": "لو كان فيهما الهة الا الله لفسدتا",
+        "translit": "law kāna fīhimā ʾālihatun ʾillā al-lahu lafasadatā",
+        "en": "Had there been gods in them other than Allah, they would both have been ruined.",
+        "ur": "اگر ان دونوں میں اللہ کے سوا اور معبود ہوتے تو دونوں تباہ ہو جاتے۔"
+      },
+      "explanation": {
+        "en": "Condition: لَوْ كَانَ فِيهِمَا آلِهَةٌ إِلَّا اللَّهُ. Result: لَفَسَدَتَا — the لَـ with the verb, a positive result. (Al-Anbiya 21:22) (Al-Anbiya 21:22)",
+        "ur": "شرط: لَوْ كَانَ فِيهِمَا آلِهَةٌ إِلَّا اللَّهُ۔ نتیجہ: لَفَسَدَتَا — فعل کے ساتھ لَـ، مثبت نتیجہ۔ (الانبیاء 21:22) (Al-Anbiya 21:22)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "لَوْ أَنفَقْتَ مَا فِي الْأَرْضِ جَمِيعًا مَّا أَلَّفْتَ بَيْنَ قُلُوبِهِمْ",
         "ar_plain": "لو انفقت ما في الارض جميعا ما الفت بين قلوبهم",
-        "translit": "law anfiqta jaami'a maa fii al-ardi la'is'taghrabta qalbahu",
-        "en": "If you had spent all that is in the earth, you could not have brought their hearts together. (8:63)",
-        "ur": "اگر تم زمین کی ساری دولت خرچ کر دیتے تو بھی ان کے دلوں میں الفت نہ ڈال سکتے۔ (8:63)"
+        "translit": "law ʾanfaqta mā fī al-ʾarḍi jamīʿan mmā ʾallafta bayna qulūbihim",
+        "en": "If you had spent all that is in the earth, you could not have brought their hearts together.",
+        "ur": "اگر تم زمین کی ساری چیزیں خرچ کر دیتے تو ان کے دلوں کو نہ ملا سکتے۔"
       },
       "explanation": {
-        "en": "لَوْ أَنْفَقْتَ — \"if you had spent\". The spending did not happen. The result مَا أَلَّفْتَ (\"you could not have united\") is negative, so it does not take لَـ.",
-        "ur": "لَوْ أَنْفَقْتَ — \"اگر تم خرچ کر دیتے\"۔ خرچ نہیں ہوا۔ جواب مَا أَلَّفْتَ (\"تم الفت نہ ڈال سکتے\") منفی ہے، اس لیے اس پر لَـ نہیں آتا۔"
+        "en": "Condition: لَوْ أَنفَقْتَ مَا فِي الْأَرْضِ جَمِيعًا, 'had you spent all that is in the earth'. Result: مَا أَلَّفْتَ بَيْنَ قُلُوبِهِمْ, 'you could not have brought their hearts together' — negative, so it begins with مَا. (Al-Anfal 8:63) (Al-Anfal 8:63)",
+        "ur": "شرط: لَوْ أَنفَقْتَ مَا فِي الْأَرْضِ جَمِيعًا، 'اگر تم زمین کی ساری چیزیں خرچ کر دیتے'۔ نتیجہ: مَا أَلَّفْتَ بَيْنَ قُلُوبِهِمْ، 'تم ان کے دلوں کو نہ ملا سکتے' — منفی، اس لیے مَا سے شروع ہوتا ہے۔ (الانفال 8:63) (Al-Anfal 8:63)"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "لَوْ with المضارع (present tense)",
-        "ar": "لَوْ مَعَ الْمُضَارِعِ",
-        "ur": "لَوْ المضارع کے ساتھ"
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Two different مَا",
+        "ur": "دو مختلف مَا"
       },
-      "explanation": {
-        "en": "When لَوْ is followed by a present tense verb, it implies ongoing or habitual counterfactual action — 'if only... kept doing/were doing.' The present tense adds nuance to the unreal condition.",
-        "ur": "جب لَوْ کے بعد المضارع فعل آتا ہے، یہ ongoing یا فرضی عادت کا counterfactual عمل ظاہر کرتا ہے — 'کاش... کرتا/رہتا'۔ المضارع فرضی شرط کو nuance دیتا ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "لَوْ يَعْلَمُ الَّذِينَ يَشْرَبُونَ الْخَمْرَ مَا يَصِلُ إِلَيْهِمْ مِنْ أَذًى",
-        "ar_plain": "لو يعلم الذين يشربون الخمر ما يصل اليهم من اذى",
-        "translit": "law ya'lamu alladhiiina yashrabuuna al-khamra maa yasilu ilayhim min adhaa",
-        "en": "If those who drink alcohol knew what harm reaches them.",
-        "ur": "اگر وہ لوگ جو شراب پیتے ہیں جانتے کہ ان تک کیا تکلیف پہنچتی ہے۔"
-      },
-      "explanation": {
-        "en": "لَوْ يَعْلَمُ — 'if only they knew.' يَعْلَمُ is present tense, but لَوْ makes it counterfactual — they do NOT know. The present tense here implies ongoing ignorance.",
-        "ur": "لَوْ يَعْلَمُ — 'کاش وہ جانتے'۔ يَعْلَمُ حال ہے، مگر لَوْ اسے counterfactual بناتا ہے — وہ نہیں جانتے۔ یہاں المضارع ongoing جہالت ظاہر کرتا ہے۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "لَوْ negated — لَوْ لَمْ / لَوْ مَا",
-        "ar": "نَفْيُ شَرْطِ لَوْ — لَوْ لَمْ",
-        "ur": "لَوْ کا انکار — لَوْ لَمْ / لَوْ مَا"
-      },
-      "explanation": {
-        "en": "The condition after لَوْ is negated with لَمْ + a jussive verb: لَوْ لَمْ تَذْهَبْ — 'had you not gone'. A negative unreal condition means the thing actually DID happen: you did go.",
-        "ur": "لَوْ کے بعد شرط کی نفی لَمْ + مجزوم فعل سے ہوتی ہے: لَوْ لَمْ تَذْهَبْ — 'اگر تم نہ جاتے'۔ منفی غیر واقع شرط کا مطلب ہے کہ کام دراصل ہوا: تم گئے تھے۔"
+      "body": {
+        "en": "In 8:63 the first مَا (in مَا فِي الْأَرْضِ, 'what is in the earth') is part of the condition: it means 'what'. The second مَا (in مَا أَلَّفْتَ) starts the result and means 'not'. The same letters do two jobs; read the clause around each.",
+        "ur": "8:63 میں پہلا مَا (مَا فِي الْأَرْضِ میں، 'جو زمین میں ہے') شرط کا حصہ ہے: اس کا مطلب 'جو' ہے۔ دوسرا مَا (مَا أَلَّفْتَ میں) نتیجہ شروع کرتا ہے اور اس کا مطلب 'نہیں' ہے۔ ایک ہی حروف دو کام کرتے ہیں؛ ہر ایک کے ارد گرد کا جملہ پڑھیں۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "لَوْ لَمْ تَذْهَبْ لَنَدِمْتَ",
-        "ar_plain": "لو لم تذهب لندمت",
-        "translit": "law lam tadhhab la-indamta",
-        "en": "Had you not gone, you would have regretted it.",
-        "ur": "اگر تم نہ جاتے تو پچھتاتے۔"
+        "ar": "لَوْ ذَهَبْتَ مَعَنَا لَفَرِحْنَا",
+        "ar_plain": "لو ذهبت معنا لفرحنا",
+        "translit": "law dhahabta maʿanā lafariḥnā",
+        "en": "Had you gone with us, we would have been glad",
+        "ur": "اگر تم ہمارے ساتھ جاتے تو ہم خوش ہوتے"
       },
       "explanation": {
-        "en": "لَوْ لَمْ تَذْهَبْ — 'had you not gone'. You did go, so you did not regret it. لَنَدِمْتَ is the answer with لَـ: 'you would have regretted it'.",
-        "ur": "لَوْ لَمْ تَذْهَبْ — 'اگر تم نہ جاتے'۔ تم گئے، اس لیے پچھتائے نہیں۔ لَنَدِمْتَ لَـ کے ساتھ جواب ہے: 'تو تم پچھتاتے'۔"
+        "en": "Condition: ذَهَبْتَ مَعَنَا. Result: لَفَرِحْنَا, a positive result with لَـ. The verb فَرِحَ, 'to be glad', is given with its meaning.",
+        "ur": "شرط: ذَهَبْتَ مَعَنَا۔ نتیجہ: لَفَرِحْنَا، لَـ والا مثبت نتیجہ۔ فعل فَرِحَ، 'خوش ہونا'، اپنے معنی کے ساتھ دیا گیا ہے۔"
       }
     }
   ],
@@ -113,161 +99,180 @@
       "type": "TAP_TRANSLATION",
       "id": "ch67-l02-ex01",
       "prompt": {
-        "ar": "لَوْ أَنْفَقْتَ مَا فِي الْأَرْضِ جَمِيعًا",
-        "ar_plain": "لو انفقت جميع ما في الارض",
-        "translit": "law anfaqta maa fil-ardi jamee‘an",
-        "en": "if you had spent all that is in the earth",
-        "ur": "اگر تم زمین میں جو کچھ ہے سب خرچ کر دیتے"
+        "ar": "لَوْ كَانَ فِيهِمَا آلِهَةٌ إِلَّا اللَّهُ لَفَسَدَتَا",
+        "ar_plain": "لو كان فيهما الهة الا الله لفسدتا",
+        "translit": "law kāna fīhimā ʾālihatun ʾillā al-lahu lafasadatā",
+        "en": "(21:22: which word starts the result?)",
+        "ur": "(21:22: کون سا لفظ نتیجہ شروع کرتا ہے؟)"
       },
       "options": [
         {
-          "en": "if you had spent all that is in the earth",
-          "ur": "اگر تم زمین میں جو کچھ ہے سب خرچ کر دیتے"
+          "en": "كَانَ",
+          "ur": "كَانَ"
         },
         {
-          "en": "if you spend all that is in the earth",
-          "ur": "اگر تم زمین میں جو کچھ ہے سب خرچ کرو"
+          "en": "لَفَسَدَتَا",
+          "ur": "لَفَسَدَتَا"
         },
         {
-          "en": "if only you spend everything",
-          "ur": "کاش تم سب کچھ خرچ کرو"
+          "en": "آلِهَةٌ",
+          "ur": "آلِهَةٌ"
         },
         {
-          "en": "you spent all that is in the earth",
-          "ur": "تم نے زمین میں جو کچھ تھا سب خرچ کیا"
+          "en": "لَوْ",
+          "ur": "لَوْ"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "أَنْفَقْتَ is past tense. With لَوْ, this creates a counterfactual condition — 'if you had spent.' The person did not actually spend all that is in the earth.",
-        "ur": "أَنْفَقْتَ ماضی ہے۔ لَوْ کے ساتھ، یہ counterfactual شرط بناتا ہے — 'اگر تم خرچ کر دیتے'۔ شخص نے واقعتًا زمین میں جو کچھ تھا سب خرچ نہیں کیا۔"
+        "en": "The result is لَفَسَدَتَا: the verb with لَـ.",
+        "ur": "نتیجہ لَفَسَدَتَا ہے: لَـ والا فعل۔"
       }
     },
     {
-      "type": "FILL_BLANK",
+      "type": "TAP_TRANSLATION",
       "id": "ch67-l02-ex02",
-      "mode": "TAP",
-      "sentence_ar": "لَوْ ___ الَّذِينَ يَشْرَبُونَ الْخَمْرَ لَاتَّعَظُوا",
-      "hint": {
-        "en": "'If those who drink wine knew, they would take heed.' Use the present-tense verb; a verb before its plural subject stays singular.",
-        "ur": "'اگر شراب پینے والے جانتے تو نصیحت پکڑتے۔' مضارع فعل لگائیے؛ جمع فاعل سے پہلے فعل واحد رہتا ہے۔"
+      "prompt": {
+        "ar": "لَوْ أَنفَقْتَ مَا فِي الْأَرْضِ جَمِيعًا مَّا أَلَّفْتَ بَيْنَ قُلُوبِهِمْ",
+        "ar_plain": "لو انفقت ما في الارض جميعا ما الفت بين قلوبهم",
+        "translit": "law ʾanfaqta mā fī al-ʾarḍi jamīʿan mmā ʾallafta bayna qulūbihim",
+        "en": "(8:63: where does the result begin?)",
+        "ur": "(8:63: نتیجہ کہاں سے شروع ہوتا ہے؟)"
       },
       "options": [
         {
-          "ar": "يَعْلَمُ",
-          "ar_plain": "يعلم",
-          "translit": "ya'lamu",
-          "en": "knew (present, singular)",
-          "ur": "جانتے (مضارع، واحد)"
+          "en": "At لَوْ",
+          "ur": "لَوْ پر"
         },
         {
-          "ar": "يَعْلَمُونَ",
-          "ar_plain": "يعلمون",
-          "translit": "ya'lamuuna",
-          "en": "they know (plural)",
-          "ur": "وہ جانتے ہیں (جمع)"
+          "en": "At أَنفَقْتَ",
+          "ur": "أَنفَقْتَ پر"
         },
         {
-          "ar": "يَعْلَمْ",
-          "ar_plain": "يعلم",
-          "translit": "ya'lam",
-          "en": "know (jussive)",
-          "ur": "جانے (مجزوم)"
+          "en": "At مَا فِي الْأَرْضِ",
+          "ur": "مَا فِي الْأَرْضِ پر"
         },
         {
-          "ar": "عِلْمٌ",
-          "ar_plain": "علم",
-          "translit": "'ilmun",
-          "en": "knowledge (noun)",
-          "ur": "علم (اسم)"
+          "en": "At مَا أَلَّفْتَ, the negative مَا",
+          "ur": "مَا أَلَّفْتَ پر، منفی مَا"
         }
       ],
-      "correct_answer": {
-        "ar": "يَعْلَمُ",
-        "ar_plain": "يعلم",
-        "translit": "ya'lamu",
-        "en": "knew (present, singular)",
-        "ur": "جانتے (مضارع، واحد)"
-      },
-      "xp_value": 1
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The first مَا means 'what', inside the condition; the second مَا is the negative that starts the result.",
+        "ur": "پہلا مَا 'جو' ہے، شرط کے اندر؛ دوسرا مَا وہ منفی ہے جو نتیجہ شروع کرتا ہے۔"
+      }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch67-l02-ex03",
       "statement": {
-        "en": "لَوْ + present tense verb (المضارع) can be counterfactual, implying ongoing ignorance or habit.",
-        "ur": "لَوْ + المضارع (حال) counterfactual ہو سکتا ہے، ongoing جہالت یا عادت ظاہر کرتا ہے۔",
-        "ar_example": {
-          "ar": "لَوْ يَعْلَمُ الَّذِينَ يَشْرَبُونَ الْخَمْرَ",
-          "ar_plain": "لو يعلم الذين يشربون الخمر",
-          "translit": "law ya'lamu alladhiiina yashrabuuna al-khamra",
-          "en": "If only those who drink alcohol knew.",
-          "ur": "کاش وہ لوگ جو شراب پیتے ہیں جانتے۔"
-        }
+        "en": "The result of a لَوْ sentence always begins with لَـ.",
+        "ur": "لَوْ والے جملے کا نتیجہ ہمیشہ لَـ سے شروع ہوتا ہے۔"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. A positive result often has لَـ, but the negative result in 8:63 begins with مَا.",
+        "ur": "غلط۔ مثبت نتیجے میں اکثر لَـ ہوتا ہے، مگر 8:63 کا منفی نتیجہ مَا سے شروع ہوتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch67-l02-ex04",
+      "prompt": {
+        "ar": "لَوْ أَنفَقْتَ مَا فِي الْأَرْضِ جَمِيعًا مَّا أَلَّفْتَ بَيْنَ قُلُوبِهِمْ",
+        "ar_plain": "لو انفقت ما في الارض جميعا ما الفت بين قلوبهم",
+        "translit": "law ʾanfaqta mā fī al-ʾarḍi jamīʿan mmā ʾallafta bayna qulūbihim",
+        "en": "(8:63: what does it say?)",
+        "ur": "(8:63: یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "Had you spent all that is in the earth, you could not have brought their hearts together",
+          "ur": "اگر تم زمین کی ساری چیزیں خرچ کر دیتے تو ان کے دلوں کو نہ ملا سکتے"
+        },
+        {
+          "en": "You spent all that is in the earth, and their hearts came together",
+          "ur": "تم نے زمین کی ساری چیزیں خرچ کیں اور ان کے دل مل گئے"
+        },
+        {
+          "en": "If you spend everything, their hearts will come together",
+          "ur": "اگر تم سب کچھ خرچ کرو گے تو ان کے دل مل جائیں گے"
+        },
+        {
+          "en": "Do not spend all that is in the earth",
+          "ur": "زمین کی ساری چیزیں خرچ مت کرو"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The condition is 'had you spent …'; the result is 'you could not have united their hearts'.",
+        "ur": "شرط 'اگر تم خرچ کر دیتے …' ہے؛ نتیجہ 'تم ان کے دل نہ ملا سکتے' ہے۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch67-l02-ex04",
+      "id": "ch67-l02-ex05",
       "left_column": [
         {
-          "ar": "لَوْ أَنْفَقْتَ",
-          "ar_plain": "لو انفقت",
-          "translit": "law anfiqta",
-          "en": "if you had spent",
-          "ur": "اگر تم نے خرچ کیا ہوتا"
+          "ar": "لَوْ كَانَ فِيهِمَا آلِهَةٌ إِلَّا اللَّهُ",
+          "ar_plain": "لو كان فيهما الهة الا الله",
+          "translit": "law kāna fīhimā ʾālihatun ʾillā al-lahu",
+          "en": "gods other than Allah in them",
+          "ur": "ان میں اللہ کے سوا معبود"
         },
         {
-          "ar": "لَوْ يَعْلَمُ",
-          "ar_plain": "لو يعلم",
-          "translit": "law ya'lamu",
-          "en": "if only he knew",
-          "ur": "کاش وہ جانتا"
+          "ar": "لَفَسَدَتَا",
+          "ar_plain": "لفسدتا",
+          "translit": "lafasadatā",
+          "en": "they would both be ruined",
+          "ur": "دونوں تباہ ہوتے"
         },
         {
-          "ar": "لَوْ لَمْ تَذْهَبْ",
-          "ar_plain": "لو لم تذهب",
-          "translit": "law lam tadhhab",
-          "en": "if only you had not gone",
-          "ur": "کاش تم نہیں گئے"
+          "ar": "لَوْ أَنفَقْتَ مَا فِي الْأَرْضِ جَمِيعًا",
+          "ar_plain": "لو انفقت ما في الارض جميعا",
+          "translit": "law ʾanfaqta mā fī al-ʾarḍi jamīʿan",
+          "en": "you spent all that is in the earth",
+          "ur": "تم نے زمین کی ساری چیزیں خرچ کیں"
         },
         {
-          "ar": "لَوْ أَنَّهُمْ آمَنُوا",
-          "ar_plain": "لو أنهم آمنوا",
-          "translit": "law annahum aamanuu",
-          "en": "had they believed",
-          "ur": "اگر وہ ایمان لاتے"
+          "ar": "مَا أَلَّفْتَ بَيْنَ قُلُوبِهِمْ",
+          "ar_plain": "ما الفت بين قلوبهم",
+          "translit": "mā ʾallafta bayna qulūbihim",
+          "en": "you could not unite their hearts",
+          "ur": "تم ان کے دل نہ ملا سکتے"
         }
       ],
       "right_column": [
         {
-          "en": "لَوْ + past verb",
-          "ur": "لَوْ + ماضی"
+          "en": "the result of 8:63, negative, with مَا",
+          "ur": "8:63 کا نتیجہ، منفی، مَا کے ساتھ"
         },
         {
-          "en": "لَوْ + present verb",
-          "ur": "لَوْ + مضارع"
+          "en": "the condition of 21:22",
+          "ur": "21:22 کی شرط"
         },
         {
-          "en": "لَوْ + لَمْ: negated condition",
-          "ur": "لَوْ + لَمْ: منفی شرط"
+          "en": "the condition of 8:63",
+          "ur": "8:63 کی شرط"
         },
         {
-          "en": "لَوْ + أَنَّ + clause",
-          "ur": "لَوْ + أَنَّ + جملہ"
+          "en": "the result of 21:22, with لَـ",
+          "ur": "21:22 کا نتیجہ، لَـ کے ساتھ"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
+          1
         ],
         [
           1,
-          1
+          3
         ],
         [
           2,
@@ -275,197 +280,167 @@
         ],
         [
           3,
-          3
+          0
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch67-l02-ex05",
-      "target_translation": {
-        "en": "If only they had believed, they would have been guided.",
-        "ur": "اگر وہ ایمان لے آتے تو ہدایت یافتہ لوگوں میں سے ہوتے۔"
-      },
-      "tiles": [
-        {
-          "ar": "لَوْ",
-          "ar_plain": "لو",
-          "translit": "law",
-          "en": "if only",
-          "ur": "کاش"
-        },
-        {
-          "ar": "آمَنُوا",
-          "ar_plain": "آمنوا",
-          "translit": "aamanoo",
-          "en": "they believed",
-          "ur": "انہوں نے ایمان لیا"
-        },
-        {
-          "ar": "لَكَانُوا",
-          "ar_plain": "لكانوا",
-          "translit": "lakaanoo",
-          "en": "then they would have been",
-          "ur": "تو وہ ہوتے"
-        },
-        {
-          "ar": "مِنَ الْمُهْتَدِينَ",
-          "ar_plain": "من المهتدين",
-          "translit": "mina al-muhtadiina",
-          "en": "from the guided",
-          "ur": "ہدایت یافتگان میں سے"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch67-l02-ex06",
-      "sentence_ar": "لَوْ يَعْلَمُ الَّذِينَ يَشْرَبُونَ الْخَمْرَ",
-      "words": [
-        {
-          "ar": "لَوْ",
-          "ar_plain": "لو",
-          "translit": "law",
-          "en": "if only",
-          "ur": "کاش"
-        },
-        {
-          "ar": "يَعْلَمُ",
-          "ar_plain": "يعلم",
-          "translit": "ya'lamu",
-          "en": "knows",
-          "ur": "جانتا ہے"
-        },
-        {
-          "ar": "الَّذِينَ",
-          "ar_plain": "الذين",
-          "translit": "alladhiiina",
-          "en": "those who",
-          "ur": "وہ لوگ جو"
-        },
-        {
-          "ar": "يَشْرَبُونَ",
-          "ar_plain": "يشربون",
-          "translit": "yashrabuuna",
-          "en": "drink",
-          "ur": "پیتے ہیں"
-        },
-        {
-          "ar": "الْخَمْرَ",
-          "ar_plain": "الخمر",
-          "translit": "al-khamra",
-          "en": "the alcohol",
-          "ur": "شراب"
-        }
-      ],
-      "available_roles": [
-        "PARTICLE",
-        "VERB",
-        "SUBJECT",
-        "OBJECT",
-        "RELATIVE_PRONOUN",
-        "TIME_ZARF"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "VERB",
-        "RELATIVE_PRONOUN",
-        "VERB",
-        "OBJECT"
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch67-l02-ex07",
-      "prompt": {
-        "ar": "لَوْ لَمْ تَذْهَبْ لَنَدِمْتَ",
-        "ar_plain": "لو لم تذهب لندمت",
-        "translit": "law lam tadhhab la-nadimta",
-        "en": "had you not gone, you would have regretted it",
-        "ur": "اگر تم نہ جاتے تو پچھتاتے"
-      },
-      "options": [
-        {
-          "en": "had you not gone, you would have regretted it",
-          "ur": "اگر تم نہ جاتے تو پچھتاتے"
-        },
-        {
-          "en": "if you do not go, you will regret it",
-          "ur": "اگر تم نہیں جاؤ گے تو تم پچھتاو گے"
-        },
-        {
-          "en": "if only you did not go, you would regret it",
-          "ur": "کاش تم نہیں جاؤ تو تم پچھتاو گے"
-        },
-        {
-          "en": "you did not go and you regretted it",
-          "ur": "تم نہیں گئے اور تم پچھتاے"
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَوْ لَمْ is a negated unreal condition — you did go. تَذْهَبْ is jussive after لَمْ. لَنَدِمْتَ is the answer: 'you would have regretted it'.",
-        "ur": "لَوْ لَمْ منفی غیر واقع شرط ہے — تم گئے تھے۔ لَمْ کے بعد تَذْهَبْ مجزوم ہے۔ لَنَدِمْتَ جواب ہے: 'تو تم پچھتاتے'۔"
+        "en": "Two conditions and two results: one result with لَـ and one with the negative مَا.",
+        "ur": "دو شرطیں اور دو نتیجے: ایک نتیجہ لَـ کے ساتھ اور ایک منفی مَا کے ساتھ۔"
       }
     },
     {
-      "type": "IDENTIFY_ROOT",
-      "id": "ch67-l02-ex08",
-      "word": {
-        "ar": "يَعْلَمُ",
-        "ar_plain": "يعلم",
-        "translit": "ya'lamu",
-        "en": "knows",
-        "ur": "جانتا ہے"
+      "type": "TAP_TRANSLATION",
+      "id": "ch67-l02-ex06",
+      "prompt": {
+        "ar": "مَا فِي الْأَرْضِ … مَا أَلَّفْتَ",
+        "ar_plain": "ما في الارض … ما الفت",
+        "translit": "mā fī al-ʾarḍi … mā ʾallafta",
+        "en": "(8:63: which مَا is the negative one?)",
+        "ur": "(8:63: کون سا مَا منفی ہے؟)"
       },
       "options": [
-        "ع ل م",
-        "غ ل ب",
-        "ن ص ر",
-        "ح س د"
+        {
+          "en": "The first, in مَا فِي الْأَرْضِ",
+          "ur": "پہلا، مَا فِي الْأَرْضِ میں"
+        },
+        {
+          "en": "Both are negative",
+          "ur": "دونوں منفی ہیں"
+        },
+        {
+          "en": "The second, in مَا أَلَّفْتَ: it means 'not'",
+          "ur": "دوسرا، مَا أَلَّفْتَ میں: اس کا مطلب 'نہیں' ہے"
+        },
+        {
+          "en": "Neither is negative",
+          "ur": "کوئی منفی نہیں"
+        }
       ],
-      "correct_index": 0,
-      "xp_value": 1
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The first مَا means 'what' inside the condition; the second starts the negative result.",
+        "ur": "پہلا مَا شرط کے اندر 'جو' ہے؛ دوسرا منفی نتیجہ شروع کرتا ہے۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch67-l02-ex07",
+      "target_translation": {
+        "en": "Had you gone with us, we would have been glad.",
+        "ur": "اگر تم ہمارے ساتھ جاتے تو ہم خوش ہوتے۔"
+      },
+      "tiles": [
+        {
+          "ar": "مَعَنَا",
+          "ar_plain": "معنا",
+          "translit": "maʿanā",
+          "en": "with us",
+          "ur": "ہمارے ساتھ"
+        },
+        {
+          "ar": "لَوْ",
+          "ar_plain": "لو",
+          "translit": "law",
+          "en": "had",
+          "ur": "اگر"
+        },
+        {
+          "ar": "لَفَرِحْنَا",
+          "ar_plain": "لفرحنا",
+          "translit": "lafariḥnā",
+          "en": "we would have been glad",
+          "ur": "ہم خوش ہوتے"
+        },
+        {
+          "ar": "ذَهَبْتَ",
+          "ar_plain": "ذهبت",
+          "translit": "dhahabta",
+          "en": "you went",
+          "ur": "تم گئے"
+        }
+      ],
+      "correct_order": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The condition (the verb and مَعَنَا) comes first, then the result with لَـ.",
+        "ur": "پہلے شرط (فعل اور مَعَنَا)، پھر لَـ والا نتیجہ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch67-l02-ex08",
+      "prompt": {
+        "ar": "لَوْ ذَهَبْتَ مَعَنَا لَفَرِحْنَا",
+        "ar_plain": "لو ذهبت معنا لفرحنا",
+        "translit": "law dhahabta maʿanā lafariḥnā",
+        "en": "(which part is the condition?)",
+        "ur": "(کون سا حصہ شرط ہے؟)"
+      },
+      "options": [
+        {
+          "en": "لَفَرِحْنَا",
+          "ur": "لَفَرِحْنَا"
+        },
+        {
+          "en": "لَوْ ذَهَبْتَ مَعَنَا",
+          "ur": "لَوْ ذَهَبْتَ مَعَنَا"
+        },
+        {
+          "en": "Only لَوْ",
+          "ur": "صرف لَوْ"
+        },
+        {
+          "en": "The whole sentence is the condition",
+          "ur": "پورا جملہ شرط ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The condition is what comes right after لَوْ; the result is لَفَرِحْنَا.",
+        "ur": "شرط وہ ہے جو لَوْ کے فوراً بعد آئے؛ نتیجہ لَفَرِحْنَا ہے۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "لَوْ — past and present tense counterfactual patterns",
-      "ar": "لَوْ مَعَ الْمَاضِي وَالْمُضَارِعِ",
-      "ur": "لَوْ — ماضی اور حال counterfactual pattern"
+      "en": "Result with لَـ, result with مَا",
+      "ar": "لَـ وَمَا فِي الْجَوَابِ",
+      "ur": "لَـ والا نتیجہ، مَا والا نتیجہ"
     },
     "ayah": {
-      "surah": 2,
-      "ayah": 165,
-      "label": "Al-Baqarah 2:165",
-      "ar": "وَلَوْ يَرَى الَّذِينَ ظَلَمُوا إِذْ يَرَوْنَ الْعَذَابَ أَنَّ الْقُوَّةَ لِلَّهِ جَمِيعًا وَأَنَّ اللَّهَ شَدِيدُ الْعَذَابِ",
-      "en": "And if only they who have wronged would consider [that] when they see the punishment, [they will be certain] that all power belongs to Allah and that Allah is severe in punishment.",
-      "ur": "اور کاش ظالم لوگ (اسے) دیکھ لیں جب وہ عذاب دیکھیں گے کہ ساری قوت اللہ ہی کی ہے اور یہ کہ اللہ سخت عذاب دینے والا ہے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002165.mp3"
+      "surah": 8,
+      "ayah": 63,
+      "label": "Al-Anfal 8:63",
+      "ar": "لَوْ أَنفَقْتَ مَا فِي الْأَرْضِ جَمِيعًا مَّا أَلَّفْتَ بَيْنَ قُلُوبِهِمْ",
+      "en": "If you had spent all that is in the earth, you could not have brought their hearts together.",
+      "ur": "اگر تم زمین کی ساری چیزیں خرچ کر دیتے تو ان کے دلوں کو نہ ملا سکتے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/008063.mp3"
     },
     "highlighted_word_indices": [
       0,
-      1
+      2
+    ],
+    "highlighted_words": [
+      "لَوْ",
+      "مَا"
     ],
     "noor_explanation": {
-      "en": "وَلَوْ يَرَى الَّذِينَ ظَلَمُوا — لَوْ with a present-tense verb: 'if only those who did wrong could see'. They do not see it now; when they see the punishment, they will know that all power belongs to Allah. The answer of لَوْ is left unsaid, which makes the warning heavier.",
-      "ur": "وَلَوْ يَرَى الَّذِينَ ظَلَمُوا — لَوْ مضارع فعل کے ساتھ: 'کاش ظالم دیکھ لیں'۔ وہ ابھی نہیں دیکھتے؛ جب عذاب دیکھیں گے تو جان لیں گے کہ ساری قوت اللہ کی ہے۔ لَوْ کا جواب ذکر نہیں کیا گیا، جس سے تنبیہ اور سخت ہو جاتی ہے۔"
+      "en": "لَوْ opens the condition, and the negative مَا opens the result — لَـ is not the only way a result begins.",
+      "ur": "لَوْ شرط کھولتا ہے، اور منفی مَا نتیجہ کھولتا ہے — لَـ نتیجہ شروع کرنے کا واحد طریقہ نہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "لَوْ works with both past and present verbs. لَوْ + ماضي = 'if only... had.' لَوْ + المضارع = 'if only... did/were doing.' Negated: لَوْ لَمْ = 'if only... had not.' Each variant carries the same counterfactual emotional weight — regret for what did not happen.",
-      "ur": "لَوْ ماضی اور المضارع دونوں کے ساتھ کام کرتا ہے۔ لَوْ + ماضی = 'کاش... ہوتا'۔ لَوْ + المضارع = 'کاش... کرتا/ہوتا'۔ منفی: لَوْ لَمْ = 'کاش... نہ ہوتا'۔ ہر variant اسی counterfactual جذباتی وزن کو لیتا ہے — جو نہیں ہوا اس پر افسوس۔"
+      "en": "Find the condition after لَوْ, then the result: with لَـ if positive, often with مَا if negative.",
+      "ur": "لَوْ کے بعد شرط تلاش کریں، پھر نتیجہ: مثبت ہو تو لَـ کے ساتھ، منفی ہو تو اکثر مَا کے ساتھ۔"
     }
   }
 }

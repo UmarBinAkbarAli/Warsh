@@ -2,83 +2,123 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 70, Lesson 4 — إِلَّا in the Quran: the Shahadah, restriction (حصر) with مَا / إِنْ + إِلَّا.",
+    "_note": "Chapter 70, Lesson 4 (ch70-l04, rebuilt in place). Pattern three: after a negative, with no stated group, إِلَّا means 'only' (حصر / استثناء مفرّغ) and the word after it takes the role it would take in an ordinary sentence. Authored role pairs: مَا جَاءَ إِلَّا زَيْدٌ (doer), مَا رَأَيْتُ إِلَّا زَيْدًا (object), مَا مَرَرْتُ إِلَّا بِزَيْدٍ (after a preposition). Exact, all with a nominative word: 54:50 (وَمَا أَمْرُنَا إِلَّا وَاحِدَةٌ — a predicate), 11:40 (وَمَا آمَنَ مَعَهُ إِلَّا قَلِيلٌ — a doer) and 92:15 (لَا يَصْلَاهَا إِلَّا الْأَشْقَى — a doer). The altered 'وَمَا أَمْرُنَا إِلَّا قَوْلًا بَيِّنًا' and the invented implied-يكون rule are gone. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-70-content-proposal.md and its review amendments.",
+    "title": "Restriction: No Stated Group",
+    "titleAr": "الِاسْتِثْنَاءُ النَّاقِصُ وَالْحَصْرُ",
+    "titleUr": "حصر: گروہ بیان نہیں",
     "chapter_order": 70,
     "lesson_order": 4,
-    "chapter_title": "الاستثناء",
-    "title": "إِلَّا in the Quran — لَا إِلَٰهَ إِلَّا اللَّه",
-    "titleAr": "إِلَّا فِي الْقُرْآنِ — لَا إِلَٰهَ إِلَّا اللَّهُ",
-    "source": "arabai-backend/prisma/fixtures",
     "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 47,
-      "ayah": 19,
-      "label": "Muhammad 47:19",
-      "ar": "فَاعْلَمْ أَنَّهُ لَا إِلَٰهَ إِلَّا اللَّهُ وَاسْتَغْفِرْ لِذَنبِكَ",
-      "en": "So know that there is no deity except Allah and ask forgiveness for your sin.",
-      "ur": "پس جان لو کہ اللہ کے سوا کوئی معبود نہیں اور اپنے گناہ کی معافی مانگو",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/047019.mp3"
+      "surah": 54,
+      "ayah": 50,
+      "label": "Al-Qamar 54:50",
+      "ar": "وَمَا أَمْرُنَا إِلَّا وَاحِدَةٌ كَلَمْحٍ بِالْبَصَرِ",
+      "en": "And Our command is but one, like a glance of the eye.",
+      "ur": "اور ہمارا حکم تو آنکھ کے جھپکنے کی طرح ایک بات ہوتی ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/054050.mp3"
     },
     "noor_intro": {
-      "en": "فَاعْلَمْ أَنَّهُ لَا إِلَٰهَ إِلَّا اللَّهُ — 'so know that there is no deity except Allah'. The command is to know it, not just to say it. Today we read the grammar of the Shahadah and of 'only' sentences built with إِلَّا.",
-      "ur": "فَاعْلَمْ أَنَّهُ لَا إِلَٰهَ إِلَّا اللَّهُ — 'پس جان لو کہ اللہ کے سوا کوئی معبود نہیں'۔ حکم اسے جاننے کا ہے، صرف کہنے کا نہیں۔ آج ہم کلمۂ شہادت کی ترکیب اور إِلَّا سے بننے والے 'صرف' والے جملے پڑھیں گے۔"
+      "en": "With no stated group, إِلَّا means 'only', and the word after it simply plays its normal role: a doer is nominative, an object accusative, a word after a preposition genitive.",
+      "ur": "گروہ بیان نہ ہو تو إِلَّا کا مطلب 'صرف' ہے، اور اس کے بعد کا لفظ اپنا عام کردار ادا کرتا ہے: فاعل مرفوع، مفعول منصوب، حرفِ جر کے بعد مجرور۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "The grammar of the Shahadah",
-        "ar": "إِعْرَابُ لَا إِلَٰهَ إِلَّا اللَّهُ",
-        "ur": "کلمۂ شہادت کی ترکیب"
+        "en": "Restriction: read the role",
+        "ar": "الْحَصْرُ: اِقْرَأِ الْوَظِيفَةَ",
+        "ur": "حصر: کردار پڑھیں"
       },
       "explanation": {
-        "en": "لَا denies the whole category (لَا النَّافِيَةُ لِلْجِنْسِ); إِلَٰهَ is its noun, with fatḥa; its predicate is understood ('worthy of worship' / 'in truth'); إِلَّا is the exception; اللَّهُ is a بَدَل from the position of إِلَٰهَ, so it is nominative. Meaning: nothing is worthy of worship except Allah.",
-        "ur": "لَا پوری جنس کی نفی کرتا ہے (لائے نفیِ جنس)؛ إِلَٰهَ اس کا اسم ہے، زبر کے ساتھ؛ اس کی خبر محذوف ہے ('حق' / 'عبادت کے لائق')؛ إِلَّا استثنا ہے؛ اللَّهُ، إِلَٰهَ کے محل سے بدل ہے، اس لیے مرفوع۔ معنی: اللہ کے سوا کوئی عبادت کے لائق نہیں۔"
+        "en": "After a negative with no stated group, إِلَّا means 'only'. The word after it is not an excepted word; it takes the ending of its job in the sentence. مَا جَاءَ إِلَّا زَيْدٌ: زَيْدٌ is the doer, nominative. مَا رَأَيْتُ إِلَّا زَيْدًا: زَيْدًا is the object, accusative. مَا مَرَرْتُ إِلَّا بِزَيْدٍ: زَيْدٍ follows بِ, genitive.",
+        "ur": "منفی کے بعد جب گروہ بیان نہ ہو تو إِلَّا کا مطلب 'صرف' ہے۔ اس کے بعد کا لفظ نکالا ہوا لفظ نہیں؛ وہ جملے میں اپنے کام کا ختم لیتا ہے۔ مَا جَاءَ إِلَّا زَيْدٌ: زَيْدٌ فاعل ہے، مرفوع۔ مَا رَأَيْتُ إِلَّا زَيْدًا: زَيْدًا مفعول ہے، منصوب۔ مَا مَرَرْتُ إِلَّا بِزَيْدٍ: زَيْدٍ بِ کے بعد ہے، مجرور۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "لَا إِلَٰهَ إِلَّا هُوَ",
-        "ar_plain": "لا إله إلا هو",
-        "translit": "laa ilaaha illaa huwa",
-        "en": "There is no deity except Him.",
-        "ur": "اس کے سوا کوئی معبود نہیں۔"
-      },
-      "explanation": {
-        "en": "In Ayat al-Kursi (2:255) the exception is a pronoun: هُوَ, the nominative form, in the same position as اللَّهُ.",
-        "ur": "آیت الکرسی (2:255) میں مستثنیٰ ضمیر ہے: هُوَ، مرفوع شکل، اسی جگہ جہاں اللَّهُ آتا ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "لَا إِلَٰهَ إِلَّا أَنْتَ سُبْحَانَكَ",
-        "ar_plain": "لا إله إلا أنت سبحانك",
-        "translit": "laa ilaaha illaa anta subhaanaka",
-        "en": "There is no deity except You; exalted are You.",
-        "ur": "تیرے سوا کوئی معبود نہیں، تو پاک ہے۔"
-      },
-      "explanation": {
-        "en": "Yunus's du'a from inside the whale (21:87). Again the exception is a nominative pronoun: أَنْتَ.",
-        "ur": "مچھلی کے پیٹ میں یونس علیہ السلام کی دعا (21:87)۔ یہاں بھی مستثنیٰ مرفوع ضمیر ہے: أَنْتَ۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
+      "type": "CONTRAST",
       "concept": {
-        "en": "Restriction: مَا / إِنْ + إِلَّا = 'only'",
-        "ar": "الْحَصْرُ بِالنَّفْيِ وَإِلَّا",
-        "ur": "حصر: مَا / إِنْ + إِلَّا = صرف"
+        "en": "The same word, three roles",
+        "ar": "ایک ہی لفظ، تین کردار",
+        "ur": "اللَّفْظُ وَاحِدٌ وَالْوَظِيفَةُ مُخْتَلِفَةٌ"
+      },
+      "examples": [
+        {
+          "ar": "مَا جَاءَ إِلَّا زَيْدٌ · مَا رَأَيْتُ إِلَّا زَيْدًا",
+          "ar_plain": "ما جاء الا زيد · ما رايت الا زيدا",
+          "translit": "mā jāʾa ʾillā zaydun · mā raʾaytu ʾillā zaydan",
+          "en": "Only Zayd came · I saw only Zayd",
+          "ur": "صرف زید آیا · میں نے صرف زید کو دیکھا"
+        },
+        {
+          "ar": "مَا مَرَرْتُ إِلَّا بِزَيْدٍ",
+          "ar_plain": "ما مررت الا بزيد",
+          "translit": "mā marartu ʾillā bizaydin",
+          "en": "I passed by only Zayd",
+          "ur": "میں صرف زید کے پاس سے گزرا"
+        }
+      ],
+      "explanation": {
+        "en": "Nothing is taken out of a group. Each sentence says 'only Zayd', and Zayd's ending shows his job: doer, object, or after a preposition.",
+        "ur": "کسی گروہ سے کچھ نہیں نکالا گیا۔ ہر جملہ 'صرف زید' کہتا ہے، اور زید کا ختم اس کا کام دکھاتا ہے: فاعل، مفعول، یا حرفِ جر کے بعد۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "وَمَا أَمْرُنَا إِلَّا وَاحِدَةٌ كَلَمْحٍ بِالْبَصَرِ",
+        "ar_plain": "وما امرنا الا واحدة كلمح بالبصر",
+        "translit": "wamā ʾamrunā ʾillā waāḥidatun kalamḥin bi-l-baṣari",
+        "en": "And Our command is but one, like a glance of the eye.",
+        "ur": "اور ہمارا حکم تو آنکھ کے جھپکنے کی طرح ایک بات ہوتی ہے"
       },
       "explanation": {
-        "en": "A negative + إِلَّا with no group named limits the sentence to one thing: مَا عَلَى الرَّسُولِ إِلَّا الْبَلَاغُ — 'the Messenger's duty is only to convey' (5:99). إِنْ can do the work of مَا: إِنْ هُوَ إِلَّا وَحْيٌ يُوحَىٰ — 'it is only a revelation revealed' (53:4).",
-        "ur": "نفی + إِلَّا، جب گروہ مذکور نہ ہو، جملے کو ایک بات تک محدود کر دیتے ہیں: مَا عَلَى الرَّسُولِ إِلَّا الْبَلَاغُ — 'رسول کے ذمے صرف پہنچا دینا ہے' (5:99)۔ إِنْ بھی مَا کا کام کر سکتا ہے: إِنْ هُوَ إِلَّا وَحْيٌ يُوحَىٰ — 'یہ تو صرف وحی ہے جو اتاری جاتی ہے' (53:4)۔"
+        "en": "وَمَا أَمْرُنَا إِلَّا وَاحِدَةٌ: 'Our command is but one'. No group is stated, and وَاحِدَةٌ is the predicate of أَمْرُنَا, nominative. (Al-Qamar 54:50) (Al-Qamar 54:50)",
+        "ur": "وَمَا أَمْرُنَا إِلَّا وَاحِدَةٌ: 'ہمارا حکم بس ایک ہی ہے'۔ کوئی گروہ بیان نہیں، اور وَاحِدَةٌ أَمْرُنَا کی خبر ہے، مرفوع۔ (القمر 54:50) (Al-Qamar 54:50)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "وَمَا آمَنَ مَعَهُ إِلَّا قَلِيلٌ",
+        "ar_plain": "وما امن معه الا قليل",
+        "translit": "wamā ʾāmana maʿahu ʾillā qalīlun",
+        "en": "but none had believed with him, except a few",
+        "ur": "اور اس کے ساتھ ایمان نہیں لایا مگر تھوڑے"
+      },
+      "explanation": {
+        "en": "وَمَا آمَنَ مَعَهُ إِلَّا قَلِيلٌ: 'none believed with him but a few'. قَلِيلٌ is the doer of آمَنَ, nominative. (Hud 11:40) (Hud 11:40)",
+        "ur": "وَمَا آمَنَ مَعَهُ إِلَّا قَلِيلٌ: 'اس کے ساتھ ایمان نہیں لایا مگر تھوڑے'۔ قَلِيلٌ آمَنَ کا فاعل ہے، مرفوع۔ (ہود 11:40) (Hud 11:40)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "لَا يَصْلَاهَا إِلَّا الْأَشْقَى",
+        "ar_plain": "لا يصلاها الا الاشقى",
+        "translit": "lā yaṣlāhā ʾillā al-ʾashqā",
+        "en": "None will [enter to] burn therein except the most wretched one",
+        "ur": "اس میں وہی داخل ہو گا جو بڑا بدبخت ہے"
+      },
+      "explanation": {
+        "en": "لَا يَصْلَاهَا إِلَّا الْأَشْقَى: 'none will burn in it but the most wretched'. الْأَشْقَى is the doer of the verb, nominative. (Al-Layl 92:15) (Al-Layl 92:15)",
+        "ur": "لَا يَصْلَاهَا إِلَّا الْأَشْقَى: 'اس میں وہی جلے گا جو سب سے بدبخت ہے'۔ الْأَشْقَى فعل کا فاعل ہے، مرفوع۔ (اللیل 92:15) (Al-Layl 92:15)"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Not a rule to delete words",
+        "ur": "الفاظ ہٹانے کا قاعدہ نہیں"
+      },
+      "body": {
+        "en": "Do not turn this into 'cross out the negative and إِلَّا'. Read the sentence, find the job of the word after إِلَّا, and give it that job's ending.",
+        "ur": "اسے 'منفی اور إِلَّا کاٹ دو' نہ بنائیں۔ جملہ پڑھیں، إِلَّا کے بعد کے لفظ کا کام معلوم کریں، اور اسے اس کام کا ختم دیں۔"
       }
     }
   ],
@@ -87,330 +127,370 @@
       "type": "TAP_TRANSLATION",
       "id": "ch70-l04-ex01",
       "prompt": {
-        "ar": "مَا عَلَى الرَّسُولِ إِلَّا الْبَلَاغُ",
-        "ar_plain": "ما على الرسول إلا البلاغ",
-        "translit": "maa 'alaa ar-rasuuli illaa al-balaaghu",
-        "en": "Not upon the Messenger is [responsibility] except [for] notification.",
-        "ur": "رسول کے ذمے تو صرف پہنچا دینا ہے۔"
+        "ar": "وَمَا أَمْرُنَا إِلَّا وَاحِدَةٌ كَلَمْحٍ بِالْبَصَرِ",
+        "ar_plain": "وما امرنا الا واحدة كلمح بالبصر",
+        "translit": "wamā ʾamrunā ʾillā waāḥidatun kalamḥin bi-l-baṣari",
+        "en": "(54:50: what does it say?)",
+        "ur": "(54:50: یہ کیا کہتی ہے؟)"
       },
       "options": [
         {
-          "en": "The Messenger's duty is only to convey the message.",
-          "ur": "رسول کے ذمے تو صرف پیغام پہنچانا ہے۔"
+          "en": "Our command is but one, like a glance of the eye",
+          "ur": "ہمارا حکم بس ایک ہی ہے، آنکھ کے جھپکنے کی طرح"
         },
         {
-          "en": "The Messenger has no message.",
-          "ur": "رسول کے پاس کوئی پیغام نہیں۔"
+          "en": "Our command is one among many",
+          "ur": "ہمارا حکم بہت سوں میں سے ایک ہے"
         },
         {
-          "en": "The message is not upon the Messenger.",
-          "ur": "پیغام رسول پر نہیں۔"
+          "en": "Our command is not one",
+          "ur": "ہمارا حکم ایک نہیں"
         },
         {
-          "en": "Everything is upon the Messenger except the message.",
-          "ur": "پیغام کے سوا سب کچھ رسول کے ذمے ہے۔"
+          "en": "One command came and went",
+          "ur": "ایک حکم آیا اور چلا گیا"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "مَا + إِلَّا restricts: 'nothing is upon the Messenger except conveying' (5:99). No group is named, so الْبَلَاغُ keeps its own case — nominative, as the subject placed after its predicate.",
-        "ur": "مَا + إِلَّا حصر کرتے ہیں: 'رسول پر پہنچا دینے کے سوا کچھ نہیں' (5:99)۔ کوئی گروہ مذکور نہیں، اس لیے الْبَلَاغُ اپنا اعراب رکھتا ہے — مرفوع، مؤخر مبتدا۔"
+        "en": "إِلَّا means 'only' here: there is no group to take something out of.",
+        "ur": "یہاں إِلَّا کا مطلب 'صرف' ہے: کوئی گروہ نہیں جس سے کچھ نکالا جائے۔"
       }
     },
     {
-      "type": "GRAMMAR_PARSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch70-l04-ex02",
-      "sentence_ar": "إِنْ هُوَ إِلَّا وَحْيٌ يُوحَىٰ",
-      "words": [
+      "prompt": {
+        "ar": "وَمَا أَمْرُنَا إِلَّا وَاحِدَةٌ",
+        "ar_plain": "وما امرنا الا واحدة",
+        "translit": "wamā ʾamrunā ʾillā waāḥidatun",
+        "en": "(54:50: what is وَاحِدَةٌ?)",
+        "ur": "(54:50: وَاحِدَةٌ کیا ہے؟)"
+      },
+      "options": [
         {
-          "ar": "إِنْ",
-          "ar_plain": "إن",
-          "translit": "in",
-          "en": "not",
-          "ur": "نہیں"
+          "en": "The excepted word, accusative",
+          "ur": "نکالا ہوا لفظ، منصوب"
         },
         {
-          "ar": "هُوَ",
-          "ar_plain": "هو",
-          "translit": "huwa",
-          "en": "it",
-          "ur": "وہ"
+          "en": "The object of a verb",
+          "ur": "کسی فعل کا مفعول"
         },
         {
-          "ar": "إِلَّا",
-          "ar_plain": "إلا",
-          "translit": "illaa",
-          "en": "except / only",
-          "ur": "مگر"
+          "en": "A word after a preposition",
+          "ur": "حرفِ جر کے بعد کا لفظ"
         },
         {
-          "ar": "وَحْيٌ",
-          "ar_plain": "وحي",
-          "translit": "wahyun",
-          "en": "a revelation",
-          "ur": "وحی"
-        },
-        {
-          "ar": "يُوحَىٰ",
-          "ar_plain": "يوحى",
-          "translit": "yuuhaa",
-          "en": "revealed",
-          "ur": "جو اتاری جاتی ہے"
+          "en": "The predicate of أَمْرُنَا, nominative",
+          "ur": "أَمْرُنَا کی خبر، مرفوع"
         }
       ],
-      "available_roles": [
-        "PARTICLE",
-        "SUBJECT",
-        "PREDICATE",
-        "VERB",
-        "OBJECT"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "SUBJECT",
-        "PARTICLE",
-        "PREDICATE",
-        "VERB"
-      ],
+      "correct_index": 3,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "إِنْ here means 'not' (like مَا). هُوَ is the subject, إِلَّا restricts, وَحْيٌ is the predicate (nominative — مُفَرَّغ), and يُوحَىٰ is a verb describing it: 'it is only a revelation revealed' (53:4).",
-        "ur": "یہاں إِنْ کا معنی 'نہیں' ہے (مَا کی طرح)۔ هُوَ مبتدا، إِلَّا حصر، وَحْيٌ خبر (مرفوع — مفرّغ)، اور يُوحَىٰ فعل جو اس کی صفت ہے: 'یہ تو بس وحی ہے جو اتاری جاتی ہے' (53:4)۔"
+        "en": "The word after إِلَّا takes its normal role: here the predicate, nominative.",
+        "ur": "إِلَّا کے بعد کا لفظ اپنا عام کردار لیتا ہے: یہاں خبر، مرفوع۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l04-ex03",
+      "prompt": {
+        "ar": "مَا رَأَيْتُ إِلَّا زَيْدًا",
+        "ar_plain": "ما رايت الا زيدا",
+        "translit": "mā raʾaytu ʾillā zaydan",
+        "en": "(why is زَيْدًا accusative?)",
+        "ur": "(زَيْدًا منصوب کیوں ہے؟)"
+      },
+      "options": [
+        {
+          "en": "It is the doer: nominative",
+          "ur": "یہ فاعل ہے: مرفوع"
+        },
+        {
+          "en": "It is the object of رَأَيْتُ: its normal role",
+          "ur": "یہ رَأَيْتُ کا مفعول ہے: اس کا عام کردار"
+        },
+        {
+          "en": "It follows a preposition",
+          "ur": "یہ حرفِ جر کے بعد ہے"
+        },
+        {
+          "en": "Every word after إِلَّا is accusative",
+          "ur": "إِلَّا کے بعد ہر لفظ منصوب ہوتا ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The sentence says 'I saw only Zayd': Zayd is the object, so accusative.",
+        "ur": "جملہ کہتا ہے 'میں نے صرف زید کو دیکھا': زید مفعول ہے، اس لیے منصوب۔"
       }
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch70-l04-ex03",
+      "id": "ch70-l04-ex04",
       "mode": "TAP",
-      "sentence_ar": "لَا إِلَٰهَ إِلَّا ___ سُبْحَانَكَ",
+      "sentence_ar": "مَا جَاءَ إِلَّا ___",
       "hint": {
-        "en": "21:87 — Yunus's du'a: 'There is no deity except You; exalted are You.'",
-        "ur": "21:87 — یونس علیہ السلام کی دعا: 'تیرے سوا کوئی معبود نہیں، تو پاک ہے۔'"
+        "en": "Only Zayd came.",
+        "ur": "صرف زید آیا۔"
       },
       "options": [
         {
-          "ar": "أَنْتَ",
-          "ar_plain": "أنت",
-          "translit": "anta",
-          "en": "You",
-          "ur": "تو"
+          "ar": "زَيْدًا",
+          "ar_plain": "زيدا",
+          "translit": "zaydan",
+          "en": "Zayd (accusative)",
+          "ur": "زید (منصوب)"
         },
         {
-          "ar": "إِيَّاكَ",
-          "ar_plain": "إياك",
-          "translit": "iyyaaka",
-          "en": "You (object form)",
-          "ur": "تجھے"
+          "ar": "زَيْدٍ",
+          "ar_plain": "زيد",
+          "translit": "zaydin",
+          "en": "Zayd (genitive)",
+          "ur": "زید (مجرور)"
         },
         {
-          "ar": "أَنْتُمْ",
-          "ar_plain": "أنتم",
-          "translit": "antum",
-          "en": "you (plural)",
-          "ur": "تم سب"
+          "ar": "زَيْدٌ",
+          "ar_plain": "زيد",
+          "translit": "zaydun",
+          "en": "Zayd (doer, nominative)",
+          "ur": "زید (فاعل، مرفوع)"
         },
         {
-          "ar": "هُمْ",
-          "ar_plain": "هم",
-          "translit": "hum",
-          "en": "they",
-          "ur": "وہ"
+          "ar": "زَيْدَانِ",
+          "ar_plain": "زيدان",
+          "translit": "zaydāni",
+          "en": "two Zayds",
+          "ur": "دو زید"
         }
       ],
       "correct_answer": {
-        "ar": "أَنْتَ",
-        "ar_plain": "أنت",
-        "translit": "anta",
-        "en": "You",
-        "ur": "تو"
+        "ar": "زَيْدٌ",
+        "ar_plain": "زيد",
+        "translit": "zaydun",
+        "en": "Zayd (doer, nominative)",
+        "ur": "زید (فاعل، مرفوع)"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Zayd is the doer of جَاءَ, so nominative.",
+        "ur": "زید جَاءَ کا فاعل ہے، اس لیے مرفوع۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch70-l04-ex05",
+      "mode": "TAP",
+      "sentence_ar": "مَا مَرَرْتُ إِلَّا بِ___",
+      "hint": {
+        "en": "I passed by only Zayd.",
+        "ur": "میں صرف زید کے پاس سے گزرا۔"
+      },
+      "options": [
+        {
+          "ar": "زَيْدٍ",
+          "ar_plain": "زيد",
+          "translit": "zaydin",
+          "en": "Zayd (genitive, after بِ)",
+          "ur": "زید (مجرور، بِ کے بعد)"
+        },
+        {
+          "ar": "زَيْدٌ",
+          "ar_plain": "زيد",
+          "translit": "zaydun",
+          "en": "Zayd (nominative)",
+          "ur": "زید (مرفوع)"
+        },
+        {
+          "ar": "زَيْدًا",
+          "ar_plain": "زيدا",
+          "translit": "zaydan",
+          "en": "Zayd (accusative)",
+          "ur": "زید (منصوب)"
+        },
+        {
+          "ar": "زَيْدَانِ",
+          "ar_plain": "زيدان",
+          "translit": "zaydāni",
+          "en": "two Zayds",
+          "ur": "دو زید"
+        }
+      ],
+      "correct_answer": {
+        "ar": "زَيْدٍ",
+        "ar_plain": "زيد",
+        "translit": "zaydin",
+        "en": "Zayd (genitive, after بِ)",
+        "ur": "زید (مجرور، بِ کے بعد)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The word follows the preposition بِ, so it is genitive.",
+        "ur": "لفظ حرفِ جر بِ کے بعد ہے، اس لیے مجرور ہے۔"
+      }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch70-l04-ex04",
-      "statement": {
-        "en": "In لَا إِلَٰهَ إِلَّا اللَّهُ the name of Allah is nominative (اللَّهُ), because it follows the position of the denied noun as a بَدَل.",
-        "ur": "لَا إِلَٰهَ إِلَّا اللَّهُ میں اللہ کا نام مرفوع (اللَّهُ) ہے، کیونکہ یہ بدل بن کر نفی کیے گئے اسم کے محل کے تابع ہے۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch70-l04-ex05",
-      "left_column": [
-        {
-          "ar": "لَا إِلَٰهَ إِلَّا اللَّهُ",
-          "ar_plain": "لا إله إلا الله",
-          "translit": "laa ilaaha illaa allaahu",
-          "en": "no deity but Allah",
-          "ur": "اللہ کے سوا کوئی معبود نہیں"
-        },
-        {
-          "ar": "وَمَا مُحَمَّدٌ إِلَّا رَسُولٌ",
-          "ar_plain": "وما محمد إلا رسول",
-          "translit": "wa-maa muhammadun illaa rasuulun",
-          "en": "Muhammad is only a messenger",
-          "ur": "محمد بس ایک رسول ہیں"
-        },
-        {
-          "ar": "فَسَجَدُوا إِلَّا إِبْلِيسَ",
-          "ar_plain": "فسجدوا إلا إبليس",
-          "translit": "fa-sajaduu illaa ibliisa",
-          "en": "they prostrated, except Iblis",
-          "ur": "ابلیس کے سوا سب نے سجدہ کیا"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "negative, group named — Allah takes the group's case",
-          "ur": "منفی، گروہ مذکور — اللہ گروہ کا اعراب لیتا ہے"
-        },
-        {
-          "en": "negative, no group — مُفَرَّغ, means \"only\"",
-          "ur": "منفی، گروہ نہیں — مفرّغ، معنی \"صرف\""
-        },
-        {
-          "en": "affirmative, group named — accusative",
-          "ur": "مثبت، گروہ مذکور — منصوب"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
       "id": "ch70-l04-ex06",
-      "target_translation": {
-        "en": "There is no deity but Allah.",
-        "ur": "اللہ کے سوا کوئی معبود نہیں۔"
+      "statement": {
+        "en": "In a negative sentence with no stated group, the word after إِلَّا is always accusative.",
+        "ur": "منفی جملے میں جس میں گروہ بیان نہ ہو، إِلَّا کے بعد کا لفظ ہمیشہ منصوب ہوتا ہے۔"
       },
-      "tiles": [
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "no",
-          "ur": "نہیں"
-        },
-        {
-          "ar": "إِلَٰهَ",
-          "ar_plain": "إله",
-          "translit": "ilaaha",
-          "en": "deity",
-          "ur": "معبود"
-        },
-        {
-          "ar": "إِلَّا",
-          "ar_plain": "إلا",
-          "translit": "illaa",
-          "en": "except",
-          "ur": "سوائے"
-        },
-        {
-          "ar": "اللَّهُ",
-          "ar_plain": "الله",
-          "translit": "allaahu",
-          "en": "Allah",
-          "ur": "اللہ"
-        },
-        {
-          "ar": "اللَّهَ",
-          "ar_plain": "الله",
-          "translit": "allaaha",
-          "en": "Allah (accusative)",
-          "ur": "اللہ (منصوب)"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. It takes the ending of its job: nominative as a doer, accusative as an object, genitive after a preposition.",
+        "ur": "غلط۔ وہ اپنے کام کا ختم لیتا ہے: فاعل ہو تو مرفوع، مفعول ہو تو منصوب، حرفِ جر کے بعد ہو تو مجرور۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch70-l04-ex07",
       "prompt": {
-        "ar": "إِنْ هُوَ إِلَّا وَحْيٌ يُوحَىٰ",
-        "ar_plain": "إن هو إلا وحي يوحى",
-        "translit": "in huwa illaa wahyun yuuhaa",
-        "en": "It is not but a revelation revealed.",
-        "ur": "یہ تو صرف وحی ہے جو اتاری جاتی ہے۔"
+        "ar": "وَمَا آمَنَ مَعَهُ إِلَّا قَلِيلٌ",
+        "ar_plain": "وما امن معه الا قليل",
+        "translit": "wamā ʾāmana maʿahu ʾillā qalīlun",
+        "en": "(11:40: what does it say, and what is قَلِيلٌ?)",
+        "ur": "(11:40: یہ کیا کہتا ہے، اور قَلِيلٌ کیا ہے؟)"
       },
       "options": [
         {
-          "en": "It is only a revelation revealed.",
-          "ur": "یہ تو صرف وحی ہے جو اتاری جاتی ہے۔"
+          "en": "'None believed with him but a few': قَلِيلٌ is the doer of آمَنَ",
+          "ur": "'اس کے ساتھ ایمان نہیں لایا مگر تھوڑے': قَلِيلٌ آمَنَ کا فاعل ہے"
         },
         {
-          "en": "If he is revealed, it is a revelation.",
-          "ur": "اگر وہ اتارا جائے تو وحی ہے۔"
+          "en": "'A few believed and the rest did not': قَلِيلٌ is the object",
+          "ur": "'تھوڑے ایمان لائے اور باقی نہیں': قَلِيلٌ مفعول ہے"
         },
         {
-          "en": "It is not a revelation.",
-          "ur": "یہ وحی نہیں۔"
+          "en": "'Everyone believed': قَلِيلٌ is a verb",
+          "ur": "'سب ایمان لائے': قَلِيلٌ فعل ہے"
         },
         {
-          "en": "Everything except revelation is revealed.",
-          "ur": "وحی کے سوا سب کچھ اتارا جاتا ہے۔"
+          "en": "'He believed a few': قَلِيلٌ is the predicate",
+          "ur": "'اس نے تھوڑوں کو مانا': قَلِيلٌ خبر ہے"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "إِنْ is not 'if' here: with إِلَّا it means 'not … except' = 'only' (53:4).",
-        "ur": "یہاں إِنْ 'اگر' نہیں: إِلَّا کے ساتھ اس کا معنی 'نہیں … مگر' = 'صرف' ہے (53:4)۔"
+        "en": "Restriction with the doer after إِلَّا: nominative.",
+        "ur": "فاعل کے ساتھ حصر: إِلَّا کے بعد مرفوع۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch70-l04-ex08",
+      "left_column": [
+        {
+          "ar": "مَا جَاءَ إِلَّا زَيْدٌ",
+          "ar_plain": "ما جاء الا زيد",
+          "translit": "mā jāʾa ʾillā zaydun",
+          "en": "only Zayd came",
+          "ur": "صرف زید آیا"
+        },
+        {
+          "ar": "مَا رَأَيْتُ إِلَّا زَيْدًا",
+          "ar_plain": "ما رايت الا زيدا",
+          "translit": "mā raʾaytu ʾillā zaydan",
+          "en": "I saw only Zayd",
+          "ur": "میں نے صرف زید کو دیکھا"
+        },
+        {
+          "ar": "مَا مَرَرْتُ إِلَّا بِزَيْدٍ",
+          "ar_plain": "ما مررت الا بزيد",
+          "translit": "mā marartu ʾillā bizaydin",
+          "en": "I passed only Zayd",
+          "ur": "میں صرف زید کے پاس سے گزرا"
+        },
+        {
+          "ar": "وَمَا أَمْرُنَا إِلَّا وَاحِدَةٌ",
+          "ar_plain": "وما امرنا الا واحدة",
+          "translit": "wamā ʾamrunā ʾillā waāḥidatun",
+          "en": "our command is but one",
+          "ur": "ہمارا حکم بس ایک"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "the predicate: nominative",
+          "ur": "خبر: مرفوع"
+        },
+        {
+          "en": "the doer: nominative",
+          "ur": "فاعل: مرفوع"
+        },
+        {
+          "en": "after a preposition: genitive",
+          "ur": "حرفِ جر کے بعد: مجرور"
+        },
+        {
+          "en": "the object: accusative",
+          "ur": "مفعول: منصوب"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Four roles after إِلَّا in a restriction.",
+        "ur": "حصر میں إِلَّا کے بعد چار کردار۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "إِلَّا in the Quran — the Shahadah and restriction",
-      "ar": "إِلَّا فِي الْقُرْآنِ — التَّوْحِيدُ وَالْحَصْرُ",
-      "ur": "قرآن میں إِلَّا — توحید اور حصر"
+      "en": "Only: read the role",
+      "ar": "الْحَصْرُ",
+      "ur": "صرف: کردار پڑھیں"
     },
     "ayah": {
-      "surah": 2,
-      "ayah": 255,
-      "label": "Al-Baqarah 2:255",
-      "ar": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ",
-      "en": "Allah — there is no deity except Him, the Ever-Living, the Sustainer of [all] existence.",
-      "ur": "اللہ، اس کے سوا کوئی معبود نہیں، وہ ہمیشہ زندہ رہنے والا، سب کو قائم رکھنے والا ہے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002255.mp3"
+      "surah": 54,
+      "ayah": 50,
+      "label": "Al-Qamar 54:50",
+      "ar": "وَمَا أَمْرُنَا إِلَّا وَاحِدَةٌ كَلَمْحٍ بِالْبَصَرِ",
+      "en": "And Our command is but one, like a glance of the eye.",
+      "ur": "اور ہمارا حکم تو آنکھ کے جھپکنے کی طرح ایک بات ہوتی ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/054050.mp3"
     },
     "highlighted_word_indices": [
-      1,
+      0,
       2,
-      3,
-      4
+      3
+    ],
+    "highlighted_words": [
+      "وَمَا",
+      "إِلَّا",
+      "وَاحِدَةٌ"
     ],
     "noor_explanation": {
-      "en": "In Ayat al-Kursi: لَا إِلَٰهَ إِلَّا هُوَ — لَا denies the whole category, إِلَٰهَ is its noun, the predicate is understood, إِلَّا introduces the exception, and هُوَ stands in place of the denied noun. Meaning: there is no one worthy of worship except Allah.",
-      "ur": "آیت الکرسی میں: لَا إِلَٰهَ إِلَّا هُوَ — لَا پوری جنس کی نفی کرتا ہے، إِلَٰهَ اس کا اسم ہے، خبر محذوف ہے، إِلَّا استثنا لاتا ہے، اور هُوَ نفی کیے گئے اسم کی جگہ ہے۔ معنی: اللہ کے سوا کوئی عبادت کے لائق نہیں۔"
+      "en": "وَمَا أَمْرُنَا إِلَّا وَاحِدَةٌ — 'only': the word after إِلَّا is the predicate, nominative.",
+      "ur": "وَمَا أَمْرُنَا إِلَّا وَاحِدَةٌ — 'صرف': إِلَّا کے بعد کا لفظ خبر ہے، مرفوع۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Every time you say لَا إِلَٰهَ إِلَّا اللَّهُ you deny every false god and affirm Allah alone — in one sentence. With مَا or إِنْ, إِلَّا also builds 'only' sentences. Next: other words of exception, غَيْر and سِوَى.",
-      "ur": "جب بھی آپ لَا إِلَٰهَ إِلَّا اللَّهُ کہتے ہیں تو ایک ہی جملے میں ہر جھوٹے معبود کی نفی اور صرف اللہ کا اثبات کرتے ہیں۔ مَا یا إِنْ کے ساتھ إِلَّا 'صرف' والے جملے بھی بناتا ہے۔ آگے: استثنا کے دوسرے الفاظ، غَيْر اور سِوَى۔"
+      "en": "With no stated group, إِلَّا means 'only', and the word after it takes the ending of its own job.",
+      "ur": "گروہ بیان نہ ہو تو إِلَّا کا مطلب 'صرف' ہے، اور اس کے بعد کا لفظ اپنے کام کا ختم لیتا ہے۔"
     }
   }
 }

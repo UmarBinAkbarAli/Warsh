@@ -1,0 +1,445 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 70, Final test (ch70-test, new). Twelve multiple-choice questions at 80 % (9/12 fails, 10/12 passes): complete affirmative (q01–02), complete negative with each analysis named (q03–04), restriction (q05–06), telling a stated group from none (q07–08 — q07 reads a restriction, q08 picks the stated group), غَيْر and سِوَى (q09–10) and one decision from each part of Al-Buruj (q11–12). Correct options are placed 3 / 3 / 3 / 3. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-70-content-proposal.md and its review amendments.",
+    "title": "Chapter 70 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ السَّبْعِينَ",
+    "titleUr": "باب 70 کا آخری امتحان",
+    "chapter_order": 70,
+    "lesson_order": 9,
+    "estimated_minutes": 10,
+    "xp_reward": 25
+  },
+  "hook": {
+    "ayah": {
+      "surah": 2,
+      "ayah": 249,
+      "label": "Al-Baqarah 2:249",
+      "ar": "فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا مِّنْهُمْ",
+      "en": "but they drank from it, except a few of them",
+      "ur": "تو انہوں نے اس سے پیا سوائے ان میں سے تھوڑوں کے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002249.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 70.",
+      "ur": "باب 70 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 70,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch70-test-q01",
+        "topic": {
+          "en": "Complete affirmative",
+          "ur": "تام مثبت"
+        },
+        "prompt": {
+          "en": "Which form completes 'The boys read the book except one boy'?",
+          "ur": "کون سی صورت 'لڑکوں نے کتاب پڑھی سوائے ایک لڑکے کے' کو مکمل کرتی ہے؟"
+        },
+        "arabic": "قَرَأَ الْأَوْلَادُ الْكِتَابَ إِلَّا ___",
+        "options": [
+          {
+            "en": "وَلَدٌ",
+            "ur": "وَلَدٌ"
+          },
+          {
+            "en": "وَلَدًا",
+            "ur": "وَلَدًا"
+          },
+          {
+            "en": "وَلَدٍ",
+            "ur": "وَلَدٍ"
+          },
+          {
+            "en": "الْوَلَدُ",
+            "ur": "الْوَلَدُ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch70-test-q02",
+        "topic": {
+          "en": "A Quranic complete affirmative",
+          "ur": "قرآنی تام مثبت"
+        },
+        "prompt": {
+          "en": "In this phrase, what is قَلِيلًا?",
+          "ur": "اس فقرے میں قَلِيلًا کیا ہے؟"
+        },
+        "arabic": "فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا مِّنْهُمْ",
+        "options": [
+          {
+            "en": "The doer, nominative",
+            "ur": "فاعل، مرفوع"
+          },
+          {
+            "en": "A word after a preposition, genitive",
+            "ur": "حرفِ جر کے بعد کا لفظ، مجرور"
+          },
+          {
+            "en": "The tool of exception",
+            "ur": "استثنا کا آلہ"
+          },
+          {
+            "en": "The excepted word, accusative, after a stated group in an affirmative sentence",
+            "ur": "نکالا ہوا لفظ، منصوب، مثبت جملے میں بیان کیے ہوئے گروہ کے بعد"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch70-test-q03",
+        "topic": {
+          "en": "Complete negative: following the group",
+          "ur": "تام منفی: گروہ کی پیروی"
+        },
+        "prompt": {
+          "en": "Which ending follows the stated group's case (the replacement analysis)?",
+          "ur": "کون سا ختم بیان کیے ہوئے گروہ کی حالت کی پیروی کرتا ہے (بدل والی صورت)؟"
+        },
+        "arabic": "مَا قَرَأَ الْأَوْلَادُ الْكِتَابَ إِلَّا ___",
+        "options": [
+          {
+            "en": "وَلَدٌ",
+            "ur": "وَلَدٌ"
+          },
+          {
+            "en": "وَلَدًا",
+            "ur": "وَلَدًا"
+          },
+          {
+            "en": "وَلَدٍ",
+            "ur": "وَلَدٍ"
+          },
+          {
+            "en": "وَلَدَيْنِ",
+            "ur": "وَلَدَيْنِ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch70-test-q04",
+        "topic": {
+          "en": "Complete negative: the accusative analysis",
+          "ur": "تام منفی: منصوب والی صورت"
+        },
+        "prompt": {
+          "en": "Which ending shows the accusative excepted-word analysis?",
+          "ur": "کون سا ختم منصوب نکالے ہوئے لفظ والی صورت دکھاتا ہے؟"
+        },
+        "arabic": "مَا قَرَأَ الْأَوْلَادُ الْكِتَابَ إِلَّا ___",
+        "options": [
+          {
+            "en": "وَلَدٌ",
+            "ur": "وَلَدٌ"
+          },
+          {
+            "en": "وَلَدٍ",
+            "ur": "وَلَدٍ"
+          },
+          {
+            "en": "وَلَدًا",
+            "ur": "وَلَدًا"
+          },
+          {
+            "en": "الْوَلَدُ",
+            "ur": "الْوَلَدُ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch70-test-q05",
+        "topic": {
+          "en": "Restriction: an object",
+          "ur": "حصر: مفعول"
+        },
+        "prompt": {
+          "en": "Why is the word after إِلَّا accusative here?",
+          "ur": "یہاں إِلَّا کے بعد کا لفظ منصوب کیوں ہے؟"
+        },
+        "arabic": "مَا قَرَأْتُ إِلَّا كِتَابًا",
+        "options": [
+          {
+            "en": "It is the excepted word of a stated group",
+            "ur": "یہ بیان کیے ہوئے گروہ کا نکالا ہوا لفظ ہے"
+          },
+          {
+            "en": "It follows a preposition",
+            "ur": "یہ حرفِ جر کے بعد ہے"
+          },
+          {
+            "en": "It is the object of قَرَأْتُ: its normal role",
+            "ur": "یہ قَرَأْتُ کا مفعول ہے: اس کا عام کردار"
+          },
+          {
+            "en": "It is the doer",
+            "ur": "یہ فاعل ہے"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch70-test-q06",
+        "topic": {
+          "en": "Restriction: a doer",
+          "ur": "حصر: فاعل"
+        },
+        "prompt": {
+          "en": "What is خَالِدٌ here?",
+          "ur": "یہاں خَالِدٌ کیا ہے؟"
+        },
+        "arabic": "مَا نَجَحَ إِلَّا خَالِدٌ",
+        "options": [
+          {
+            "en": "The doer of نَجَحَ, nominative: 'only Khalid passed'",
+            "ur": "نَجَحَ کا فاعل، مرفوع: 'صرف خالد کامیاب ہوا'"
+          },
+          {
+            "en": "The accusative excepted word",
+            "ur": "منصوب نکالا ہوا لفظ"
+          },
+          {
+            "en": "The object",
+            "ur": "مفعول"
+          },
+          {
+            "en": "A word after a preposition",
+            "ur": "حرفِ جر کے بعد کا لفظ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch70-test-q07",
+        "topic": {
+          "en": "Reading a restriction",
+          "ur": "حصر پڑھنا"
+        },
+        "prompt": {
+          "en": "What does this sentence say?",
+          "ur": "یہ جملہ کیا کہتا ہے؟"
+        },
+        "arabic": "مَا جَاءَ إِلَّا الْمُعَلِّمُ",
+        "options": [
+          {
+            "en": "Everyone came except the teacher",
+            "ur": "استاد کے سوا سب آئے"
+          },
+          {
+            "en": "The teacher did not come",
+            "ur": "استاد نہیں آیا"
+          },
+          {
+            "en": "The teacher came with everyone",
+            "ur": "استاد سب کے ساتھ آیا"
+          },
+          {
+            "en": "Only the teacher came",
+            "ur": "صرف استاد آیا"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch70-test-q08",
+        "topic": {
+          "en": "A stated group",
+          "ur": "بیان کیا ہوا گروہ"
+        },
+        "prompt": {
+          "en": "In which sentence is the excepted word taken out of a stated group?",
+          "ur": "کس جملے میں نکالا ہوا لفظ بیان کیے ہوئے گروہ سے نکالا گیا ہے؟"
+        },
+        "options": [
+          {
+            "en": "مَا جَاءَ إِلَّا خَالِدٌ",
+            "ur": "مَا جَاءَ إِلَّا خَالِدٌ"
+          },
+          {
+            "en": "جَاءَ الطُّلَّابُ إِلَّا خَالِدًا",
+            "ur": "جَاءَ الطُّلَّابُ إِلَّا خَالِدًا"
+          },
+          {
+            "en": "مَا رَأَيْتُ إِلَّا خَالِدًا",
+            "ur": "مَا رَأَيْتُ إِلَّا خَالِدًا"
+          },
+          {
+            "en": "مَا مَرَرْتُ إِلَّا بِخَالِدٍ",
+            "ur": "مَا مَرَرْتُ إِلَّا بِخَالِدٍ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch70-test-q09",
+        "topic": {
+          "en": "غَيْر and its dependent",
+          "ur": "غَيْر اور اس کا متعلق"
+        },
+        "prompt": {
+          "en": "What is خَالِدٍ here?",
+          "ur": "یہاں خَالِدٍ کیا ہے؟"
+        },
+        "arabic": "جَاءَ الطُّلَّابُ غَيْرَ خَالِدٍ",
+        "options": [
+          {
+            "en": "The excepted word, accusative",
+            "ur": "نکالا ہوا لفظ، منصوب"
+          },
+          {
+            "en": "The doer",
+            "ur": "فاعل"
+          },
+          {
+            "en": "A preposition",
+            "ur": "حرفِ جر"
+          },
+          {
+            "en": "The genitive dependent of غَيْرَ",
+            "ur": "غَيْرَ کا مجرور متعلق"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch70-test-q10",
+        "topic": {
+          "en": "سِوَى",
+          "ur": "سِوَى"
+        },
+        "prompt": {
+          "en": "What can you see of سِوَى's case in this sentence?",
+          "ur": "اس جملے میں آپ سِوَى کی حالت کے بارے میں کیا دیکھ سکتے ہیں؟"
+        },
+        "arabic": "جَاءَ الطُّلَّابُ سِوَى خَالِدٍ",
+        "options": [
+          {
+            "en": "A fatḥa on سِوَى",
+            "ur": "سِوَى پر فتحہ"
+          },
+          {
+            "en": "Nothing on سِوَى itself; you see only the genitive of خَالِدٍ",
+            "ur": "خود سِوَى پر کچھ نہیں؛ آپ صرف خَالِدٍ کا مجرور ہونا دیکھتے ہیں"
+          },
+          {
+            "en": "A ḍamma on سِوَى",
+            "ur": "سِوَى پر ضمہ"
+          },
+          {
+            "en": "A kasra on سِوَى",
+            "ur": "سِوَى پر کسرہ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch70-test-q11",
+        "topic": {
+          "en": "Al-Buruj, first part",
+          "ur": "البروج، پہلا حصہ"
+        },
+        "prompt": {
+          "en": "According to this ayah, what is for those who believed and did righteous deeds?",
+          "ur": "اس آیت کے مطابق جو ایمان لائے اور نیک عمل کیے ان کے لیے کیا ہے؟"
+        },
+        "arabic": "إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ لَهُمْ جَنَّاتٌ تَجْرِي مِن تَحْتِهَا الْأَنْهَارُ ۚ ذَٰلِكَ الْفَوْزُ الْكَبِيرُ",
+        "options": [
+          {
+            "en": "The punishment of Hell",
+            "ur": "جہنم کا عذاب"
+          },
+          {
+            "en": "The fire full of fuel",
+            "ur": "ایندھن سے بھری آگ"
+          },
+          {
+            "en": "Gardens beneath which rivers flow: the great success",
+            "ur": "باغات جن کے نیچے نہریں بہتی ہیں: بڑی کامیابی"
+          },
+          {
+            "en": "A severe grip",
+            "ur": "سخت پکڑ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch70-test-q12",
+        "topic": {
+          "en": "Al-Buruj, the whole passage",
+          "ur": "البروج، پوری سورت"
+        },
+        "prompt": {
+          "en": "According to this ayah, what is said of the deniers?",
+          "ur": "اس آیت کے مطابق جھٹلانے والوں کے بارے میں کیا کہا گیا ہے؟"
+        },
+        "arabic": "وَاللَّهُ مِن وَرَائِهِم مُّحِيطٌ",
+        "options": [
+          {
+            "en": "Allah encompasses them from behind",
+            "ur": "اللہ انہیں پیچھے سے گھیرے ہوئے ہے"
+          },
+          {
+            "en": "They encompass Allah",
+            "ur": "وہ اللہ کو گھیرے ہوئے ہیں"
+          },
+          {
+            "en": "They are behind the believers",
+            "ur": "وہ مومنوں کے پیچھے ہیں"
+          },
+          {
+            "en": "They are in a preserved tablet",
+            "ur": "وہ محفوظ تختی میں ہیں"
+          }
+        ],
+        "correct_index": 0
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 70 — exception",
+      "ar": "الِاسْتِثْنَاءُ",
+      "ur": "باب 70 — استثنا"
+    },
+    "ayah": {
+      "surah": 2,
+      "ayah": 249,
+      "label": "Al-Baqarah 2:249",
+      "ar": "فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا مِّنْهُمْ",
+      "en": "but they drank from it, except a few of them",
+      "ur": "تو انہوں نے اس سے پیا سوائے ان میں سے تھوڑوں کے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002249.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      2,
+      3
+    ],
+    "highlighted_words": [
+      "فَشَرِبُوا",
+      "إِلَّا",
+      "قَلِيلًا"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 70 able to read the three patterns of exception, tell a stated group from none, use غَيْر and سِوَى, and follow Al-Buruj.",
+      "ur": "آپ باب 70 اس حال میں مکمل کرتے ہیں کہ استثنا کی تین ساختیں پڑھ سکتے ہیں، بیان کیے ہوئے گروہ اور غیر بیان شدہ میں فرق کر سکتے ہیں، غَيْر اور سِوَى استعمال کر سکتے ہیں، اور البروج سمجھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 70 complete. Chapter 71: the accusative of state and of specification, and a surah.",
+      "ur": "باب 70 مکمل۔ باب 71: حال اور تمییز کا منصوب، اور ایک سورت۔"
+    }
+  }
+}

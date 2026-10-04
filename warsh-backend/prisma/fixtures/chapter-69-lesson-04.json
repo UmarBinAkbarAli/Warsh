@@ -2,191 +2,343 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 69, Lesson 4 — the signs of jazm in the answer (sukūn, dropped نَ, dropped weak letter in 2:40), contrasted with 18:60 where لَا أَبْرَحُ is مَرْفُوع and أَبْلُغَ is مَنْصُوب.",
+    "_note": "Chapter 69, Lesson 4 (ch69-l02, rebuilt in place). Reads 33:70 and 33:71 as two exact ayat, each with its own reference: the commands اتَّقُوا اللَّهَ وَقُولُوا قَوْلًا سَدِيدًا (33:70) and the jussive responses يُصْلِحْ لَكُمْ أَعْمَالَكُمْ وَيَغْفِرْ لَكُمْ (33:71). Then one contrast: 2:282's وَاتَّقُوا اللَّهَ وَيُعَلِّمُكُمُ اللَّهُ is 'and fear Allah — and Allah teaches you', a new statement joined with وَ (the corpus does not mark the verb jussive), so it is not evidence for the response pattern. The old 'conditional waw' claim is removed. The exact 2:282 excerpt spans a waqf sign, which the Quran audit accepts. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-69-content-proposal.md and its review amendments.",
+    "title": "In the Quran: Requests, Results and a Contrast",
+    "titleAr": "فِي الْقُرْآنِ: الطَّلَبُ وَالنَّتِيجَةُ",
+    "titleUr": "قرآن میں: درخواستیں، نتیجے اور ایک فرق",
     "chapter_order": 69,
     "lesson_order": 4,
-    "chapter_title": "جواب الطلب",
-    "title": "Seeing the Jussive in the Answer",
-    "titleAr": "عَلَامَاتُ الْجَزْمِ فِي جَوَابِ الطَّلَبِ",
-    "estimated_minutes": 9,
-    "xp_reward": 10,
-    "titleUr": "جواب میں جزم کی پہچان"
+    "estimated_minutes": 10,
+    "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 2,
-      "ayah": 40,
-      "label": "Al-Baqarah 2:40",
-      "ar": "يَا بَنِي إِسْرَائِيلَ اذْكُرُوا نِعْمَتِيَ الَّتِي أَنْعَمْتُ عَلَيْكُمْ وَأَوْفُوا بِعَهْدِي أُوفِ بِعَهْدِكُمْ وَإِيَّايَ فَارْهَبُونِ",
-      "en": "O Children of Israel, remember My favour which I bestowed on you, and fulfil My covenant; I will fulfil your covenant. And Me alone you should fear.",
-      "ur": "اے بنی اسرائیل! میری وہ نعمت یاد کرو جو میں نے تم پر کی، اور میرا عہد پورا کرو، میں تمہارا عہد پورا کروں گا، اور صرف مجھ ہی سے ڈرو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002040.mp3"
+      "surah": 33,
+      "ayah": 70,
+      "label": "Al-Ahzab 33:70",
+      "ar": "اتَّقُوا اللَّهَ وَقُولُوا قَوْلًا سَدِيدًا",
+      "en": "fear Allah and speak words of appropriate justice",
+      "ur": "اللہ سے ڈرو اور سیدھی بات کہو",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033070.mp3"
     },
     "noor_intro": {
-      "en": "وَأَوْفُوا بِعَهْدِي أُوفِ بِعَهْدِكُمْ — \"fulfil My covenant; I will fulfil your covenant.\" أُوفِ answers the command. Its jussive sign is a missing letter: أُوفِي → أُوفِ.",
-      "ur": "وَأَوْفُوا بِعَهْدِي أُوفِ بِعَهْدِكُمْ — \"میرا عہد پورا کرو، میں تمہارا عہد پورا کروں گا\"۔ أُوفِ حکم کا جواب ہے۔ اس میں جزم کی علامت ایک گرا ہوا حرف ہے: أُوفِي → أُوفِ۔"
+      "en": "Two ayat, one idea: the commands of 33:70 and the results of 33:71. Then one look-alike that is not the same pattern.",
+      "ur": "دو آیات، ایک خیال: 33:70 کے احکام اور 33:71 کے نتیجے۔ پھر ایک ملتا جلتا جملہ جو یہی ساخت نہیں۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Three signs of the jussive answer",
-        "ar": "عَلَامَاتُ الْجَزْمِ",
-        "ur": "جزم کی تین علامتیں"
+        "en": "Commands, then their results",
+        "ar": "الْأَوَامِرُ ثُمَّ نَتَائِجُهَا",
+        "ur": "احکام، پھر ان کے نتیجے"
       },
       "explanation": {
-        "en": "1) Sukūn on a sound verb: أَسْتَجِيبُ → أَسْتَجِبْ. 2) The five verbs drop نَ: تَنْجَحُونَ → تَنْجَحُوا. 3) A verb ending in a long vowel drops it: أُوفِي → أُوفِ.",
-        "ur": "1) صحیح فعل پر سکون: أَسْتَجِيبُ → أَسْتَجِبْ۔ 2) افعالِ خمسہ میں نَ گر جاتا ہے: تَنْجَحُونَ → تَنْجَحُوا۔ 3) لمبی آواز پر ختم ہونے والا فعل اسے گرا دیتا ہے: أُوفِي → أُوفِ۔"
+        "en": "33:70 gives the commands: fear Allah and speak straight words. 33:71 gives what follows: He will amend for you your deeds and forgive you your sins. The commands are direct commands; the two responses are jussive imperfect verbs. You read them as two ayat, with the meaning joining them.",
+        "ur": "33:70 احکام دیتی ہے: اللہ سے ڈرو اور سیدھی بات کہو۔ 33:71 بتاتی ہے کہ اس کے بعد کیا ہے: وہ تمہارے اعمال سنوار دے گا اور تمہارے گناہ بخش دے گا۔ احکام براہِ راست حکم ہیں؛ دو جواب مجزوم مضارع فعل ہیں۔ آپ انہیں دو آیات کے طور پر پڑھتے ہیں، جنہیں معنی جوڑتا ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "وَأَوْفُوا بِعَهْدِي أُوفِ بِعَهْدِكُمْ",
-        "ar_plain": "واوفوا بعهدي اوف بعهدكم",
-        "translit": "wa awfuu bi'ahdii uufi bi'ahdikum",
-        "en": "Fulfil My covenant; I will fulfil your covenant. (Al-Baqarah 2:40)",
-        "ur": "میرا عہد پورا کرو، میں تمہارا عہد پورا کروں گا۔ (البقرہ 2:40)"
+        "ar": "اتَّقُوا اللَّهَ وَقُولُوا قَوْلًا سَدِيدًا",
+        "ar_plain": "اتقوا الله وقولوا قولا سديدا",
+        "translit": "attaqū al-laha waqūlū qawlan sadīdan",
+        "en": "fear Allah and speak words of appropriate justice",
+        "ur": "اللہ سے ڈرو اور سیدھی بات کہو"
       },
       "explanation": {
-        "en": "أَوْفُوا is the command. أُوفِ is the answer: the long ī of أُوفِي has dropped — that is its jazm.",
-        "ur": "أَوْفُوا حکم ہے۔ أُوفِ جواب ہے: أُوفِي کی لمبی ی گر گئی ہے — یہی اس کا جزم ہے۔"
+        "en": "اتَّقُوا اللَّهَ وَقُولُوا قَوْلًا سَدِيدًا: two direct commands in the plural. (Al-Ahzab 33:70) (Al-Ahzab 33:70)",
+        "ur": "اتَّقُوا اللَّهَ وَقُولُوا قَوْلًا سَدِيدًا: جمع میں دو براہِ راست احکام۔ (الاحزاب 33:70) (Al-Ahzab 33:70)"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "لَا أَبْرَحُ and أَبْلُغَ are not answers",
-        "ar": "لَا أَبْرَحُ … حَتَّىٰ أَبْلُغَ",
-        "ur": "لَا أَبْرَحُ اور أَبْلُغَ جواب نہیں"
-      },
-      "explanation": {
-        "en": "In Al-Kahf 18:60 Musa makes a statement, not a command. لَا أَبْرَحُ ends in ḍamma — negation, مَرْفُوع. أَبْلُغَ after حَتَّىٰ ends in fatḥa — مَنْصُوب.",
-        "ur": "الکہف 18:60 میں موسیٰ ایک بات کہتے ہیں، حکم نہیں دیتے۔ لَا أَبْرَحُ ضمہ پر ختم ہوتا ہے — نفی، مَرْفُوع۔ حَتَّىٰ کے بعد أَبْلُغَ فتحہ پر ختم ہوتا ہے — مَنْصُوب۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "لَا أَبْرَحُ حَتَّىٰ أَبْلُغَ مَجْمَعَ الْبَحْرَيْنِ",
-        "ar_plain": "لا ابرح حتى ابلغ مجمع البحرين",
-        "translit": "laa abrahu hattaa ablugha majma'al-bahrayn",
-        "en": "I will not stop until I reach the meeting of the two seas. (Al-Kahf 18:60)",
-        "ur": "میں نہیں رکوں گا یہاں تک کہ دو سمندروں کے ملنے کی جگہ پہنچ جاؤں۔ (الکہف 18:60)"
+        "ar": "يُصْلِحْ لَكُمْ أَعْمَالَكُمْ وَيَغْفِرْ لَكُمْ ذُنُوبَكُمْ",
+        "ar_plain": "يصلح لكم اعمالكم ويغفر لكم ذنوبكم",
+        "translit": "yuṣliḥ lakum ʾaʿmālakum wayaghfir lakum dhunūbakum",
+        "en": "He will amend for you your deeds and forgive you your sins",
+        "ur": "وہ تمہارے اعمال سنوار دے گا اور تمہارے گناہ بخش دے گا"
       },
       "explanation": {
-        "en": "أَبْرَحُ: ḍamma → مَرْفُوع. أَبْلُغَ: fatḥa → مَنْصُوب. No command, so no جواب الطلب.",
-        "ur": "أَبْرَحُ: ضمہ → مَرْفُوع۔ أَبْلُغَ: فتحہ → مَنْصُوب۔ کوئی حکم نہیں، اس لیے جواب الطلب نہیں۔"
+        "en": "يُصْلِحْ لَكُمْ أَعْمَالَكُمْ وَيَغْفِرْ لَكُمْ ذُنُوبَكُمْ: two jussive responses, each with a sukūn. (Al-Ahzab 33:71) (Al-Ahzab 33:71)",
+        "ur": "يُصْلِحْ لَكُمْ أَعْمَالَكُمْ وَيَغْفِرْ لَكُمْ ذُنُوبَكُمْ: دو مجزوم جواب، ہر ایک سکون کے ساتھ۔ (الاحزاب 33:71) (Al-Ahzab 33:71)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "وَاتَّقُوا اللَّهَ ۖ وَيُعَلِّمُكُمُ اللَّهُ",
+        "ar_plain": "واتقوا الله  ويعلمكم الله",
+        "translit": "waāttaqū al-laha ۖ wayuʿallimukumu al-lahu",
+        "en": "And fear Allah — and Allah teaches you",
+        "ur": "اور اللہ سے ڈرو — اور اللہ تمہیں سکھاتا ہے"
+      },
+      "explanation": {
+        "en": "وَاتَّقُوا اللَّهَ وَيُعَلِّمُكُمُ اللَّهُ: a command, then وَ and a new statement, 'and Allah teaches you'. The verb here is not marked as a jussive response; it is a separate statement joined by وَ. This is the look-alike, not the pattern. (Al-Baqarah 2:282) (Al-Baqarah 2:282)",
+        "ur": "وَاتَّقُوا اللَّهَ وَيُعَلِّمُكُمُ اللَّهُ: ایک حکم، پھر وَ اور ایک نیا بیان، 'اور اللہ تمہیں سکھاتا ہے'۔ یہاں فعل مجزوم جواب کے طور پر نشان زد نہیں؛ یہ وَ سے جڑا الگ بیان ہے۔ یہ ملتا جلتا جملہ ہے، یہ ساخت نہیں۔ (البقرہ 2:282) (Al-Baqarah 2:282)"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Why 2:282 is only a contrast",
+        "ur": "2:282 صرف موازنہ کیوں ہے"
+      },
+      "body": {
+        "en": "There is no 'conditional waw'. In 2:282 the وَ joins a new statement to a command, and its verb is not marked jussive. The response pattern needs the consequence of doing what was asked, with a jussive verb, as in 33:71.",
+        "ur": "کوئی 'شرطیہ واو' نہیں ہے۔ 2:282 میں وَ ایک نئے بیان کو حکم سے جوڑتا ہے، اور اس کا فعل مجزوم نشان زد نہیں۔ جواب والی ساخت میں جو مانگا گیا اس کے کرنے کا نتیجہ ہونا چاہیے، مجزوم فعل کے ساتھ، جیسے 33:71 میں۔"
       }
     }
   ],
   "exercises": [
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch69-l04-ex01",
+      "id": "ch69-l02-ex01",
       "prompt": {
-        "ar": "وَأَوْفُوا بِعَهْدِي أُوفِ بِعَهْدِكُمْ",
-        "ar_plain": "واوفوا بعهدي اوف بعهدكم",
-        "translit": "wa awfuu bi'ahdii uufi bi'ahdikum",
-        "en": "Fulfil My covenant; I will fulfil your covenant.",
-        "ur": "میرا عہد پورا کرو، میں تمہارا عہد پورا کروں گا۔"
+        "ar": "اتَّقُوا اللَّهَ وَقُولُوا قَوْلًا سَدِيدًا",
+        "ar_plain": "اتقوا الله وقولوا قولا سديدا",
+        "translit": "attaqū al-laha waqūlū qawlan sadīdan",
+        "en": "(33:70: what does it say?)",
+        "ur": "(33:70: یہ کیا کہتی ہے؟)"
       },
       "options": [
         {
-          "en": "They fulfilled My covenant and I fulfilled theirs.",
-          "ur": "انہوں نے میرا عہد پورا کیا اور میں نے ان کا۔"
+          "en": "fear Allah and speak straight words",
+          "ur": "اللہ سے ڈرو اور سیدھی بات کہو"
         },
         {
-          "en": "Do not break My covenant.",
-          "ur": "میرا عہد مت توڑو۔"
+          "en": "they feared Allah and spoke straight words",
+          "ur": "انہوں نے اللہ کا ڈر رکھا اور سیدھی بات کہی"
         },
         {
-          "en": "Fulfil My covenant; I will fulfil your covenant.",
-          "ur": "میرا عہد پورا کرو، میں تمہارا عہد پورا کروں گا۔"
+          "en": "do not fear Allah and do not speak",
+          "ur": "اللہ سے مت ڈرو اور بات مت کہو"
         },
         {
-          "en": "I fulfil My covenant with you.",
-          "ur": "میں تم سے اپنا عہد پورا کرتا ہوں۔"
+          "en": "He will amend your deeds",
+          "ur": "وہ تمہارے اعمال سنوار دے گا"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Two direct commands: 'fear Allah' and 'speak straight words'.",
+        "ur": "دو براہِ راست احکام: 'اللہ سے ڈرو' اور 'سیدھی بات کہو'۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch69-l02-ex02",
+      "prompt": {
+        "ar": "يُصْلِحْ · وَيَغْفِرْ",
+        "ar_plain": "يصلح · ويغفر",
+        "translit": "yuṣliḥ · wayaghfir",
+        "en": "(33:71: what are these two verbs?)",
+        "ur": "(33:71: یہ دو فعل کیا ہیں؟)"
+      },
+      "options": [
+        {
+          "en": "Direct commands to you",
+          "ur": "تم سے براہِ راست احکام"
+        },
+        {
+          "en": "Jussive imperfect verbs: the responses to the commands of 33:70",
+          "ur": "مجزوم مضارع فعل: 33:70 کے احکام کے جواب"
+        },
+        {
+          "en": "Past verbs",
+          "ur": "ماضی کے افعال"
+        },
+        {
+          "en": "Nouns",
+          "ur": "اسم"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "They are imperfect, with a sukūn, and they say what follows.",
+        "ur": "یہ مضارع ہیں، سکون کے ساتھ، اور بتاتے ہیں کہ کیا ہوگا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch69-l02-ex03",
+      "prompt": {
+        "ar": "اتَّقُوا · وَقُولُوا",
+        "ar_plain": "اتقوا · وقولوا",
+        "translit": "attaqū · waqūlū",
+        "en": "(33:70: what are these two verbs?)",
+        "ur": "(33:70: یہ دو فعل کیا ہیں؟)"
+      },
+      "options": [
+        {
+          "en": "Jussive imperfect responses",
+          "ur": "مجزوم مضارع جواب"
+        },
+        {
+          "en": "Past verbs",
+          "ur": "ماضی کے افعال"
+        },
+        {
+          "en": "Direct commands in the plural: they are the requests",
+          "ur": "جمع میں براہِ راست احکام: یہ درخواستیں ہیں"
+        },
+        {
+          "en": "Questions",
+          "ur": "سوال"
         }
       ],
       "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "أَوْفُوا = \"fulfil\" (command); أُوفِ = \"I will fulfil\" (the jussive answer).",
-        "ur": "أَوْفُوا = \"پورا کرو\" (حکم)؛ أُوفِ = \"میں پورا کروں گا\" (مَجْزُوم جواب)۔"
+        "en": "They ask; they are not made jussive.",
+        "ur": "یہ مانگتے ہیں؛ انہیں مجزوم نہیں کیا گیا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch69-l02-ex04",
+      "prompt": {
+        "ar": "يُصْلِحْ لَكُمْ أَعْمَالَكُمْ وَيَغْفِرْ لَكُمْ ذُنُوبَكُمْ",
+        "ar_plain": "يصلح لكم اعمالكم ويغفر لكم ذنوبكم",
+        "translit": "yuṣliḥ lakum ʾaʿmālakum wayaghfir lakum dhunūbakum",
+        "en": "(33:71: what does it say?)",
+        "ur": "(33:71: یہ کیا کہتی ہے؟)"
+      },
+      "options": [
+        {
+          "en": "Fear Allah and speak straight words",
+          "ur": "اللہ سے ڈرو اور سیدھی بات کہو"
+        },
+        {
+          "en": "He did not forgive your sins",
+          "ur": "اس نے تمہارے گناہ نہیں بخشے"
+        },
+        {
+          "en": "You amend your deeds",
+          "ur": "تم اپنے اعمال سنوارو"
+        },
+        {
+          "en": "He will amend for you your deeds and forgive you your sins",
+          "ur": "وہ تمہارے اعمال سنوار دے گا اور تمہارے گناہ بخش دے گا"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Two responses: He will amend, and He will forgive.",
+        "ur": "دو جواب: وہ سنوارے گا، اور وہ بخشے گا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch69-l02-ex05",
+      "prompt": {
+        "ar": "وَاتَّقُوا اللَّهَ وَيُعَلِّمُكُمُ اللَّهُ",
+        "ar_plain": "واتقوا الله ويعلمكم الله",
+        "translit": "waāttaqū al-laha wayuʿallimukumu al-lahu",
+        "en": "(2:282: what is the second part?)",
+        "ur": "(2:282: دوسرا حصہ کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "A new statement joined by وَ: 'and Allah teaches you'. It is not the jussive response pattern",
+          "ur": "وَ سے جڑا نیا بیان: 'اور اللہ تمہیں سکھاتا ہے'۔ یہ مجزوم جواب والی ساخت نہیں"
+        },
+        {
+          "en": "A jussive response, like 33:71",
+          "ur": "مجزوم جواب، جیسے 33:71"
+        },
+        {
+          "en": "A prohibition",
+          "ur": "نہی"
+        },
+        {
+          "en": "A question",
+          "ur": "سوال"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The verb is not marked jussive; the وَ simply adds a new statement.",
+        "ur": "فعل مجزوم نشان زد نہیں؛ وَ صرف ایک نیا بیان جوڑتا ہے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch69-l04-ex02",
+      "id": "ch69-l02-ex06",
       "statement": {
-        "en": "In لَا أَبْرَحُ, the verb أَبْرَحُ is مَجْزُوم.",
-        "ur": "لَا أَبْرَحُ میں فعل أَبْرَحُ مَجْزُوم ہے۔"
+        "en": "In 2:282 the وَ is a 'conditional waw' that makes يُعَلِّمُكُمُ a jussive response.",
+        "ur": "2:282 میں وَ 'شرطیہ واو' ہے جو يُعَلِّمُكُمُ کو مجزوم جواب بناتا ہے۔"
       },
       "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "False. لَا here negates a statement; أَبْرَحُ ends in ḍamma and is مَرْفُوع.",
-        "ur": "غلط۔ یہاں لَا ایک بات کی نفی کرتا ہے؛ أَبْرَحُ ضمہ پر ختم ہوتا ہے اور مَرْفُوع ہے۔"
+        "en": "False. The وَ joins a new statement; the verb is not marked jussive. Only 33:71 is the model here.",
+        "ur": "غلط۔ وَ ایک نیا بیان جوڑتا ہے؛ فعل مجزوم نشان زد نہیں۔ یہاں نمونہ صرف 33:71 ہے۔"
       }
     },
     {
       "type": "MATCHING",
-      "id": "ch69-l04-ex03",
+      "id": "ch69-l02-ex07",
       "left_column": [
         {
-          "ar": "أَسْتَجِبْ",
-          "ar_plain": "استجب",
-          "translit": "astajib",
-          "en": "I will answer",
-          "ur": "میں قبول کروں گا"
+          "ar": "اتَّقُوا",
+          "ar_plain": "اتقوا",
+          "translit": "attaqū",
+          "en": "fear",
+          "ur": "ڈرو"
         },
         {
-          "ar": "تَنْجَحُوا",
-          "ar_plain": "تنجحوا",
-          "translit": "tanjahuu",
-          "en": "you (pl.) will succeed",
-          "ur": "تم کامیاب ہو گے"
+          "ar": "يُصْلِحْ",
+          "ar_plain": "يصلح",
+          "translit": "yuṣliḥ",
+          "en": "He will amend",
+          "ur": "وہ سنوارے گا"
         },
         {
-          "ar": "أُوفِ",
-          "ar_plain": "اوف",
-          "translit": "uufi",
-          "en": "I will fulfil",
-          "ur": "میں پورا کروں گا"
+          "ar": "يَغْفِرْ",
+          "ar_plain": "يغفر",
+          "translit": "yaghfir",
+          "en": "He will forgive",
+          "ur": "وہ بخشے گا"
         },
         {
-          "ar": "أَبْلُغَ",
-          "ar_plain": "ابلغ",
-          "translit": "ablugha",
-          "en": "I reach",
-          "ur": "میں پہنچ جاؤں"
+          "ar": "يُعَلِّمُكُمُ",
+          "ar_plain": "يعلمكم",
+          "translit": "yuʿallimukumu",
+          "en": "teaches you",
+          "ur": "تمہیں سکھاتا ہے"
         }
       ],
       "right_column": [
         {
-          "en": "jazm: final long vowel dropped",
-          "ur": "جزم: آخری لمبی آواز گری"
+          "en": "a verb in a new statement (2:282): not the pattern",
+          "ur": "نئے بیان کا فعل (2:282): یہ ساخت نہیں"
         },
         {
-          "en": "not jazm: مَنْصُوب after حَتَّىٰ",
-          "ur": "جزم نہیں: حَتَّىٰ کے بعد مَنْصُوب"
+          "en": "a direct command in the plural (33:70)",
+          "ur": "جمع میں براہِ راست حکم (33:70)"
         },
         {
-          "en": "jazm: sukūn",
-          "ur": "جزم: سکون"
+          "en": "a second jussive response (33:71)",
+          "ur": "دوسرا مجزوم جواب (33:71)"
         },
         {
-          "en": "jazm: نَ dropped",
-          "ur": "جزم: نَ گرا"
+          "en": "a jussive response (33:71)",
+          "ur": "مجزوم جواب (33:71)"
         }
       ],
       "correct_pairs": [
         [
           0,
-          2
+          1
         ],
         [
           1,
@@ -194,164 +346,93 @@
         ],
         [
           2,
-          0
+          2
         ],
         [
           3,
-          1
+          0
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch69-l04-ex04",
-      "mode": "TAP",
-      "sentence_ar": "اُدْرُسُوا ___",
-      "hint": {
-        "en": "Study (pl.); you will succeed. (constructed)",
-        "ur": "پڑھو، کامیاب ہو گے۔ (بنائی گئی مثال)"
-      },
-      "options": [
-        {
-          "ar": "تَنْجَحُونَ",
-          "ar_plain": "تنجحون",
-          "translit": "tanjahuuna",
-          "en": "you succeed (مَرْفُوع)",
-          "ur": "تم کامیاب ہوتے ہو (مَرْفُوع)"
-        },
-        {
-          "ar": "نَجَحْتُمْ",
-          "ar_plain": "نجحتم",
-          "translit": "najahtum",
-          "en": "you succeeded (past)",
-          "ur": "تم کامیاب ہوئے (ماضی)"
-        },
-        {
-          "ar": "تَنْجَحُوا",
-          "ar_plain": "تنجحوا",
-          "translit": "tanjahuu",
-          "en": "you will succeed (مَجْزُوم)",
-          "ur": "تم کامیاب ہو گے (مَجْزُوم)"
-        },
-        {
-          "ar": "تَنْجَحُ",
-          "ar_plain": "تنجح",
-          "translit": "tanjahu",
-          "en": "you (sg.) succeed",
-          "ur": "تم (واحد) کامیاب ہوتے ہو"
-        }
-      ],
-      "correct_answer": {
-        "ar": "تَنْجَحُوا",
-        "ar_plain": "تنجحوا",
-        "translit": "tanjahuu",
-        "en": "you will succeed (مَجْزُوم)",
-        "ur": "تم کامیاب ہو گے (مَجْزُوم)"
-      },
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "The plural answer is one of the five verbs: its jussive drops نَ — تَنْجَحُوا.",
-        "ur": "جمع کا جواب افعالِ خمسہ میں سے ہے: جزم میں نَ گر جاتا ہے — تَنْجَحُوا۔"
+        "en": "One command, two jussive responses and one look-alike.",
+        "ur": "ایک حکم، دو مجزوم جواب اور ایک ملتا جلتا جملہ۔"
       }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch69-l04-ex05",
+      "id": "ch69-l02-ex08",
       "target_translation": {
-        "en": "Fulfil My covenant; I will fulfil your covenant. (Al-Baqarah 2:40)",
-        "ur": "میرا عہد پورا کرو، میں تمہارا عہد پورا کروں گا۔ (البقرہ 2:40)"
+        "en": "He will amend for you your deeds.",
+        "ur": "وہ تمہارے اعمال سنوار دے گا۔"
       },
       "tiles": [
         {
-          "ar": "وَأَوْفُوا",
-          "ar_plain": "واوفوا",
-          "translit": "wa awfuu",
-          "en": "and fulfil",
-          "ur": "اور پورا کرو"
+          "ar": "أَعْمَالَكُمْ",
+          "ar_plain": "اعمالكم",
+          "translit": "ʾaʿmālakum",
+          "en": "your deeds",
+          "ur": "تمہارے اعمال"
         },
         {
-          "ar": "بِعَهْدِي",
-          "ar_plain": "بعهدي",
-          "translit": "bi'ahdii",
-          "en": "My covenant",
-          "ur": "میرا عہد"
+          "ar": "يُصْلِحْ",
+          "ar_plain": "يصلح",
+          "translit": "yuṣliḥ",
+          "en": "He will amend",
+          "ur": "وہ سنوارے گا"
         },
         {
-          "ar": "أُوفِ",
-          "ar_plain": "اوف",
-          "translit": "uufi",
-          "en": "I will fulfil",
-          "ur": "میں پورا کروں گا"
-        },
-        {
-          "ar": "بِعَهْدِكُمْ",
-          "ar_plain": "بعهدكم",
-          "translit": "bi'ahdikum",
-          "en": "your covenant",
-          "ur": "تمہارا عہد"
+          "ar": "لَكُمْ",
+          "ar_plain": "لكم",
+          "translit": "lakum",
+          "en": "for you",
+          "ur": "تمہارے لیے"
         }
       ],
       "correct_order": [
-        0,
         1,
         2,
-        3
+        0
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "IDENTIFY_ROOT",
-      "id": "ch69-l04-ex06",
-      "word": {
-        "ar": "أُوفِ",
-        "ar_plain": "اوف",
-        "translit": "uufi",
-        "en": "I will fulfil",
-        "ur": "میں پورا کروں گا"
-      },
-      "options": [
-        "و ف ي",
-        "ا و ف",
-        "و ف ق",
-        "ف ي ء"
-      ],
-      "correct_index": 0,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The response verb, for you, then the object.",
+        "ur": "جواب کا فعل، تمہارے لیے، پھر مفعول۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Signs of jazm in the answer",
-      "ar": "عَلَامَاتُ الْجَزْمِ فِي الْجَوَابِ",
-      "ur": "جواب میں جزم کی علامتیں"
+      "en": "Two ayat, one idea",
+      "ar": "آيَتَانِ وَفِكْرَةٌ وَاحِدَةٌ",
+      "ur": "دو آیات، ایک خیال"
     },
     "ayah": {
-      "surah": 2,
-      "ayah": 40,
-      "label": "Al-Baqarah 2:40",
-      "ar": "يَا بَنِي إِسْرَائِيلَ اذْكُرُوا نِعْمَتِيَ الَّتِي أَنْعَمْتُ عَلَيْكُمْ وَأَوْفُوا بِعَهْدِي أُوفِ بِعَهْدِكُمْ وَإِيَّايَ فَارْهَبُونِ",
-      "en": "O Children of Israel, remember My favour which I bestowed on you, and fulfil My covenant; I will fulfil your covenant. And Me alone you should fear.",
-      "ur": "اے بنی اسرائیل! میری وہ نعمت یاد کرو جو میں نے تم پر کی، اور میرا عہد پورا کرو، میں تمہارا عہد پورا کروں گا، اور صرف مجھ ہی سے ڈرو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002040.mp3"
+      "surah": 33,
+      "ayah": 71,
+      "label": "Al-Ahzab 33:71",
+      "ar": "يُصْلِحْ لَكُمْ أَعْمَالَكُمْ وَيَغْفِرْ لَكُمْ ذُنُوبَكُمْ",
+      "en": "He will amend for you your deeds and forgive you your sins",
+      "ur": "وہ تمہارے اعمال سنوار دے گا اور تمہارے گناہ بخش دے گا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033071.mp3"
     },
     "highlighted_word_indices": [
-      8,
-      10
+      0,
+      3
     ],
     "highlighted_words": [
-      "وَأَوْفُوا",
-      "أُوفِ"
+      "يُصْلِحْ",
+      "وَيَغْفِرْ"
     ],
     "noor_explanation": {
-      "en": "وَأَوْفُوا is the command; أُوفِ answers it. Its jazm shows as a dropped letter, not a sukūn.",
-      "ur": "وَأَوْفُوا حکم ہے؛ أُوفِ اس کا جواب ہے۔ اس کا جزم سکون سے نہیں، گرے ہوئے حرف سے ظاہر ہوتا ہے۔"
+      "en": "يُصْلِحْ … وَيَغْفِرْ — the jussive responses to the commands of the ayah before.",
+      "ur": "يُصْلِحْ … وَيَغْفِرْ — پچھلی آیت کے احکام کے مجزوم جواب۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "The jussive answer shows in three ways: sukūn (أَسْتَجِبْ), a dropped نَ (تَنْجَحُوا), or a dropped long vowel (أُوفِ). And remember 18:60: لَا أَبْرَحُ is مَرْفُوع and أَبْلُغَ is مَنْصُوب — no command, no answer.",
-      "ur": "مَجْزُوم جواب تین طرح ظاہر ہوتا ہے: سکون (أَسْتَجِبْ)، گرا ہوا نَ (تَنْجَحُوا)، یا گری ہوئی لمبی آواز (أُوفِ)۔ اور 18:60 یاد رکھیں: لَا أَبْرَحُ مَرْفُوع ہے اور أَبْلُغَ مَنْصُوب — نہ حکم، نہ جواب۔"
+      "en": "33:70 asks and 33:71 answers with jussive verbs; the وَ of 2:282 only adds a new statement.",
+      "ur": "33:70 مانگتی ہے اور 33:71 مجزوم افعال سے جواب دیتی ہے؛ 2:282 کا وَ صرف نیا بیان جوڑتا ہے۔"
     }
   }
 }

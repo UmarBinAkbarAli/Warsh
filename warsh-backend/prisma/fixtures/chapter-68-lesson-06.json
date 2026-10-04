@@ -1,566 +1,488 @@
 {
   "schema_version": "1.0",
-  "template": "REVIEW",
+  "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 68, Lesson 6 — REVIEW lesson for الجوازم (Chapter 68).",
+    "_note": "Chapter 68, Lesson 6 (ch68-l08, new). Al-Layl 92:1–11 in three groups (1–4, 5–7, 8–11): one board of four (92:1–4), seven single ayat (92:5–11) and one fresh parallel-contrast decision (92:5–7 against 92:8–10). Each أَمَّا … section is kept with its outcome and read by meaning: أَمَّا مَنْ … فَسَنُيَسِّرُهُ is 'as for the one who … We will ease him', which is NOT the two-jussive-verb pattern of ch68-l05. يَغْشَى, تَجَلَّى, لَشَتَّى, أَعْطَى, اتَّقَى, بِالْحُسْنَى, فَسَنُيَسِّرُهُ, لِلْيُسْرَى, بَخِلَ, اسْتَغْنَى, لِلْعُسْرَى and تَرَدَّى are supplied whole with their meanings; none is derived or parsed. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-68-content-proposal.md and its review amendments.",
+    "title": "Al-Layl I — 92:1–11",
+    "titleAr": "اللَّيْلُ ١ — ١–١١",
+    "titleUr": "اللیل (1) — 92:1–11",
     "chapter_order": 68,
     "lesson_order": 6,
-    "chapter_title": "الجوازم",
-    "title": "Review: Jussive Particles and the المضارع Capstone",
-    "titleAr": "الْمُرَاجَعَةُ: الْجَوَازِمُ وَخِتَامُ الْمُضَارِعِ",
-    "source": "book_8_review_chapter68.md",
     "estimated_minutes": 10,
-    "xp_reward": 5
+    "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 2,
-      "ayah": 256,
-      "label": "Al-Baqarah 2:256",
-      "ar": "لَا إِكْرَاهَ فِي الدِّينِ ۖ قَد تَّبَيَّنَ الرُّشْدُ مِنَ الْغَيِّ ۚ فَمَن يَكْفُرْ بِالطَّاغُوتِ وَيُؤْمِن بِاللَّهِ فَقَدِ اسْتَمْسَكَ بِالْعُرْوَةِ الْوُثْقَىٰ لَا انفِصَامَ لَهَا ۗ وَاللَّهُ سَمِيعٌ عَلِيمٌ",
-      "en": "There shall be no compulsion in [acceptance of] the religion. The right course has become distinct from the wrong. So whoever disbelieves in ṭāghūt and believes in Allāh has grasped the most trustworthy handhold with no break in it. And Allāh is Hearing and Knowing.",
-      "ur": "دین (اسلام) میں زبردستی نہیں ہے ہدایت (صاف طور پر ظاہر اور) گمراہی سے الگ ہو چکی ہے تو جو شخص بتوں سے اعتقاد نہ رکھے اور خدا پر ایمان لائے اس نے ایسی مضبوط رسی ہاتھ میں پکڑ لی ہے جو کبھی ٹوٹنے والی نہیں اور خدا (سب کچھ) سنتا اور (سب کچھ) جانتا ہے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002256.mp3"
+      "surah": 92,
+      "ayah": 1,
+      "label": "Al-Layl 92:1",
+      "ar": "وَاللَّيْلِ إِذَا يَغْشَىٰ",
+      "en": "By the night when it covers",
+      "ur": "رات کی قسم جب (دن کو) چھپالے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/092001.mp3"
     },
     "noor_intro": {
-      "en": "فَمَن يَكْفُرْ بِالطَّاغُوتِ وَيُؤْمِن بِاللَّهِ — 'so whoever disbelieves in ṭāghūt and believes in Allah'. يَكْفُرْ and يُؤْمِنْ are jussive after the conditional مَنْ. Chapter 68 closes the present-tense journey: you now know every way a present verb becomes jussive.",
-      "ur": "فَمَن يَكْفُرْ بِالطَّاغُوتِ وَيُؤْمِن بِاللَّهِ — 'تو جو طاغوت کا انکار کرے اور اللہ پر ایمان لائے'۔ شرطیہ مَنْ کے بعد يَكْفُرْ اور يُؤْمِنْ مجزوم ہیں۔ باب 68 مضارع کا سفر مکمل کرتا ہے: اب آپ مضارع کے مجزوم ہونے کے سب طریقے جانتے ہیں۔"
+      "en": "Surat Al-Layl swears by night, day and the creation of male and female, then says one thing: your efforts are not the same. The rest follows two paths side by side.",
+      "ur": "سورۃ اللیل رات، دن اور نر و مادہ کی تخلیق کی قسم کھاتی ہے، پھر ایک بات کہتی ہے: تمہاری کوششیں ایک جیسی نہیں۔ باقی سورت دو راستوں کی ساتھ ساتھ پیروی کرتی ہے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Chapter 68 Summary: The Complete Jussive System",
-        "ar": "ملخص الباب ٦٨: نِظَامُ الْمَجْزُومِ الْكَامِلُ",
-        "ur": "باب 68 کا خلاصہ: مکمل مجزوم نظام"
+        "en": "Oaths, then two paths",
+        "ar": "الْقَسَمُ ثُمَّ طَرِيقَانِ",
+        "ur": "قسمیں، پھر دو راستے"
       },
       "explanation": {
-        "en": "Four particles make one present verb jussive: لَمْ ('did not'), لَمَّا ('not yet'), لَا النَّاهِيَة ('do not'), لَامُ الْأَمْرِ ('let him'). Conditional words like إِنْ and مَنْ make jussive both the condition and its answer.",
-        "ur": "چار حروف ایک مضارع کو مجزوم کرتے ہیں: لَمْ ('نہیں کیا')، لَمَّا ('ابھی تک نہیں')، لَا نَاهِيَہ ('نہ کرو')، لامِ امر ('وہ کرے')۔ إِنْ اور مَنْ جیسے شرطیہ کلمات شرط اور جواب دونوں کو مجزوم کرتے ہیں۔"
+        "en": "92:1–3 are oaths, 92:4 says your efforts differ, and 92:5–11 follow two kinds of person side by side. Each section opens with أَمَّا ('as for'): the one who gives, is mindful and believes (92:5–7) and the one who withholds, thinks himself free of need and denies (92:8–10), each with what follows. You read each section with its outcome.",
+        "ur": "92:1–3 قسمیں ہیں، 92:4 کہتی ہے کہ تمہاری کوششیں مختلف ہیں، اور 92:5–11 دو قسم کے انسان ساتھ ساتھ بیان کرتی ہیں۔ ہر حصہ أَمَّا ('رہا') سے کھلتا ہے: وہ جو دیتا ہے، پرہیز کرتا ہے اور سچ مانتا ہے (92:5–7) اور وہ جو بخل کرتا ہے، خود کو بے نیاز سمجھتا ہے اور جھٹلاتا ہے (92:8–10)، ہر ایک کے بعد کے انجام کے ساتھ۔ آپ ہر حصے کو اس کے انجام کے ساتھ پڑھتے ہیں۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "لَمْ",
-        "ar_plain": "لم",
-        "translit": "lam",
-        "en": "did not → jussive",
-        "ur": "نہیں → مجزوم"
+        "ar": "وَاللَّيْلِ إِذَا يَغْشَىٰ وَالنَّهَارِ إِذَا تَجَلَّىٰ وَمَا خَلَقَ الذَّكَرَ وَالْأُنثَىٰ إِنَّ سَعْيَكُمْ لَشَتَّىٰ",
+        "ar_plain": "والليل اذا يغشى والنهار اذا تجلى وما خلق الذكر والانثى ان سعيكم لشتى",
+        "translit": "wa-l-layli ʾidhā yaghshā wa-n-nahāri ʾidhā tajallā wamā khalaqa adh-dhakara wa-l-ʾunthā ʾinna saʿyakum lashattā",
+        "en": "By the night when it covers And [by] the day when it appears And [by] He who created the male and female, Indeed, your efforts are diverse.",
+        "ur": "رات کی قسم جب (دن کو) چھپالے اور دن کی قسم جب چمک اٹھے اور اس (ذات) کی قسم جس نے نر اور مادہ پیدا کیے کہ تم لوگوں کی کوششں طرح طرح کی ہے"
       },
       "explanation": {
-        "en": "لَمْ negates past and triggers jussive. لَمْ يَفْعَلْ = 'he did not do.' Simple past negation.",
-        "ur": "لَمْ ماضی کو منفی کرتا ہے اور مجزوم trigger کرتا ہے۔ لَمْ يَفْعَلْ = 'اس نے نہیں کیا'۔ سادہ ماضی انکار۔"
+        "en": "Three oaths: the night when it covers (يَغْشَىٰ), the day when it shines (تَجَلَّىٰ), and Him who created the male and the female. Then 92:4: إِنَّ سَعْيَكُمْ لَشَتَّىٰ, 'indeed, your efforts are different'. (Al-Layl 92:1–4) (Al-Layl 92:1–4)",
+        "ur": "تین قسمیں: رات جب وہ ڈھانپ لے (يَغْشَىٰ)، دن جب وہ روشن ہو (تَجَلَّىٰ)، اور وہ جس نے نر اور مادہ پیدا کیا۔ پھر 92:4: إِنَّ سَعْيَكُمْ لَشَتَّىٰ، 'بے شک تمہاری کوششیں مختلف ہیں'۔ (اللیل 92:1–4) (Al-Layl 92:1–4)"
       }
     },
     {
-      "type": "WORD",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "لَمَّا",
-        "ar_plain": "لما",
-        "translit": "lammaa",
-        "en": "not yet → jussive",
-        "ur": "ابھی تک نہیں → مجزوم"
+        "ar": "فَأَمَّا مَنْ أَعْطَىٰ وَاتَّقَىٰ وَصَدَّقَ بِالْحُسْنَىٰ فَسَنُيَسِّرُهُ لِلْيُسْرَىٰ",
+        "ar_plain": "فاما من اعطى واتقى وصدق بالحسنى فسنيسره لليسرى",
+        "translit": "faʾammā man ʾaʿṭā waāttaqā waṣaddaqa bi-l-ḥusnā fasanuyassiruhu lilyusrā",
+        "en": "As for he who gives and fears Allāh And believes in the best [reward], We will ease him toward ease.",
+        "ur": "تو جس نے (خدا کے رستے میں مال) دیا اور پرہیز گاری کی اور نیک بات کو سچ جانا اس کو ہم آسان طریقے کی توفیق دیں گے"
       },
       "explanation": {
-        "en": "لَمَّا is like لَمْ but carries 'not yet' nuance. لَمَّا يَفْعَلْ = 'he has not yet done.' Implies expectation.",
-        "ur": "لَمَّا لَمْ کی طرح ہے مگر 'ابھی تک نہیں' کا nuance لیتا ہے۔ لَمَّا يَفْعَلْ = 'اس نے ابھی تک نہیں کیا'۔ Expectation ظاہر کرتا ہے۔"
+        "en": "فَأَمَّا مَنْ أَعْطَىٰ وَاتَّقَىٰ: 'as for the one who gives and is mindful of Allah', وَصَدَّقَ بِالْحُسْنَىٰ, 'and believes in the best reward'. The outcome: فَسَنُيَسِّرُهُ لِلْيُسْرَىٰ, 'We will ease him toward ease'. (Al-Layl 92:5–7) (Al-Layl 92:5–7)",
+        "ur": "فَأَمَّا مَنْ أَعْطَىٰ وَاتَّقَىٰ: 'رہا وہ جس نے دیا اور اللہ سے ڈرا'، وَصَدَّقَ بِالْحُسْنَىٰ، 'اور اچھے انجام کو سچ مانا'۔ انجام: فَسَنُيَسِّرُهُ لِلْيُسْرَىٰ، 'ہم اسے آسانی کی طرف آسانی دیں گے'۔ (اللیل 92:5–7) (Al-Layl 92:5–7)"
       }
     },
     {
-      "type": "WORD",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "لَا الناهية",
-        "ar_plain": "لا الناهية",
-        "translit": "laa naahiya",
-        "en": "do not → jussive",
-        "ur": "مت → مجزوم"
+        "ar": "وَأَمَّا مَن بَخِلَ وَاسْتَغْنَىٰ وَكَذَّبَ بِالْحُسْنَىٰ فَسَنُيَسِّرُهُ لِلْعُسْرَىٰ وَمَا يُغْنِي عَنْهُ مَالُهُ إِذَا تَرَدَّىٰ",
+        "ar_plain": "واما من بخل واستغنى وكذب بالحسنى فسنيسره للعسرى وما يغني عنه ماله اذا تردى",
+        "translit": "waʾammā man bakhila waāstaghnā wakaddhaba bi-l-ḥusnā fasanuyassiruhu lilʿusrā wamā yughnī ʿanhu māluhu ʾidhā taraddā",
+        "en": "But as for he who withholds and considers himself free of need And denies the best [reward], We will ease him toward difficulty. And what will his wealth avail him when he falls?",
+        "ur": "اور جس نے بخل کیا اور بےپروا بنا رہا اور نیک بات کو جھوٹ سمجھا اسے سختی میں پہنچائیں گے اور جب وہ (دوزخ کے گڑھے میں) گرے گا تو اس کا مال اس کے کچھ کام نہ آئے گا"
       },
       "explanation": {
-        "en": "لَا الناهية commands 'do not.' لَا تَفْعَلْ = 'do not do.' Prohibitive particle.",
-        "ur": "لَا الناهية حکم دیتا ہے 'مت'۔ لَا تَفْعَلْ = 'مت کرو'۔ ممنوعہ particle۔"
+        "en": "وَأَمَّا مَن بَخِلَ وَاسْتَغْنَىٰ: 'but as for the one who withholds and thinks himself free of need', وَكَذَّبَ بِالْحُسْنَىٰ, 'and denies the best reward'. The outcome: فَسَنُيَسِّرُهُ لِلْعُسْرَىٰ, 'We will ease him toward hardship'. 92:11: his wealth will not help him when he falls. (Al-Layl 92:8–11) (Al-Layl 92:8–11)",
+        "ur": "وَأَمَّا مَن بَخِلَ وَاسْتَغْنَىٰ: 'اور رہا وہ جس نے بخل کیا اور خود کو بے نیاز سمجھا'، وَكَذَّبَ بِالْحُسْنَىٰ، 'اور اچھے انجام کو جھٹلایا'۔ انجام: فَسَنُيَسِّرُهُ لِلْعُسْرَىٰ، 'ہم اسے سختی کی طرف لے جائیں گے'۔ 92:11: جب وہ گرے گا تو اس کا مال اس کے کام نہ آئے گا۔ (اللیل 92:8–11) (Al-Layl 92:8–11)"
       }
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "لَامُ الْأَمْرِ",
-        "ar_plain": "لام امر",
-        "translit": "laamu al-amri",
-        "en": "let him … → jussive",
-        "ur": "وہ کرے … ← مجزوم"
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Read each section with its outcome",
+        "ur": "ہر حصے کو اس کے انجام کے ساتھ پڑھیں"
       },
-      "explanation": {
-        "en": "لَامُ الْأَمْرِ + jussive gives 'let him / let them': لِيُنْفِقْ، فَلْيَعْبُدُوا. The imperative for 'you' is a separate form built on the jussive: اكْتُبْ، اكْتُبِي، اكْتُبَا، اكْتُبُوا، اكْتُبْنَ.",
-        "ur": "لامِ امر + مجزوم 'وہ کرے' کا معنی دیتا ہے: لِيُنْفِقْ، فَلْيَعْبُدُوا۔ 'تم' کے لیے فعلِ امر الگ شکل ہے جو مجزوم پر مبنی ہے: اكْتُبْ، اكْتُبِي، اكْتُبَا، اكْتُبُوا، اكْتُبْنَ۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "The المضارع journey — complete",
-        "ar": "رِحْلَةُ الْمُضَارِعِ — مُكْتَمِلَةٌ",
-        "ur": "المضارع کا سفر — مکمل"
-      },
-      "explanation": {
-        "en": "You began the المضارع journey in Chapter 34 with indicative (مرفوع). You learned future (سَ), source nouns (مصدر), feminine forms, and the three states (مرفوع/منصوب/مجزوم). Now with the four جوازم, you have the complete picture of how المضارع behaves under different particles.",
-        "ur": "تم نے باب 34 میں المضارع کا سفر indicative (مرفوع) سے شروع کیا۔ تم نے مستقبل (سَ), مصادر, مؤنث forms, اور تین حالتیں (مرفوع/منصوب/مجزوم) سیکھیں۔ اب چار جوازم کے ساتھ، تمہارے پاس ہے کہ مختلف particles کے تحت المضارع کیسے behave کرتا ہے۔"
+      "body": {
+        "en": "أَمَّا مَنْ … فَسَنُيَسِّرُهُ is 'as for the one who …, We will ease him …'. It is read by meaning. It is not the إِنْ / مَنْ condition of Lesson 5, and you are not asked to classify its verbs.",
+        "ur": "أَمَّا مَنْ … فَسَنُيَسِّرُهُ کا مطلب 'رہا وہ جس نے …، ہم اسے آسانی دیں گے …' ہے۔ اسے معنی سے پڑھا جاتا ہے۔ یہ سبق 5 کی إِنْ / مَنْ والی شرط نہیں، اور آپ سے ان کے افعال کی درجہ بندی نہیں کہی جاتی۔"
       }
     }
   ],
   "exercises": [
     {
       "type": "MATCHING",
-      "id": "ch68-l06-ex01",
+      "id": "ch68-l08-ex01",
       "left_column": [
         {
-          "ar": "لَمْ يَغْفِرْ",
-          "ar_plain": "لم يغفر",
-          "translit": "lam yaghfir",
-          "en": "he did not forgive",
-          "ur": "اس نے بخشا نہیں"
+          "ar": "وَاللَّيْلِ إِذَا يَغْشَىٰ",
+          "ar_plain": "والليل اذا يغشى",
+          "translit": "wa-l-layli ʾidhā yaghshā",
+          "en": "(92:1)",
+          "ur": "(92:1)"
         },
         {
-          "ar": "لَمَّا يَأْتِ",
-          "ar_plain": "لما ياتي",
-          "translit": "lammaa ya'ti",
-          "en": "he has not yet come",
-          "ur": "اس نے ابھی تک نہیں آیا"
+          "ar": "وَالنَّهَارِ إِذَا تَجَلَّىٰ",
+          "ar_plain": "والنهار اذا تجلى",
+          "translit": "wa-n-nahāri ʾidhā tajallā",
+          "en": "(92:2)",
+          "ur": "(92:2)"
         },
         {
-          "ar": "لَا تَفْتَرُوا",
-          "ar_plain": "لا تفتروا",
-          "translit": "laa taftariu",
-          "en": "do not fabricate",
-          "ur": "مت گھڑو"
+          "ar": "وَمَا خَلَقَ الذَّكَرَ وَالْأُنثَىٰ",
+          "ar_plain": "وما خلق الذكر والانثى",
+          "translit": "wamā khalaqa adh-dhakara wa-l-ʾunthā",
+          "en": "(92:3)",
+          "ur": "(92:3)"
         },
         {
-          "ar": "لِيُنْفِقْ",
-          "ar_plain": "لينفق",
-          "translit": "li-yunfiq",
-          "en": "let him spend",
-          "ur": "وہ خرچ کرے"
+          "ar": "إِنَّ سَعْيَكُمْ لَشَتَّىٰ",
+          "ar_plain": "ان سعيكم لشتى",
+          "translit": "ʾinna saʿyakum lashattā",
+          "en": "(92:4)",
+          "ur": "(92:4)"
         }
       ],
       "right_column": [
         {
-          "en": "لَمْ — past negation → مجزوم",
-          "ur": "لَمْ — ماضی انکار → مجزوم"
+          "en": "and by Him who created the male and the female",
+          "ur": "اور اس کی قسم جس نے نر اور مادہ پیدا کیا"
         },
         {
-          "en": "لَمَّا — not yet → مجزوم",
-          "ur": "لَمَّا — ابھی تک نہیں → مجزوم"
+          "en": "By the night when it covers",
+          "ur": "رات کی قسم جب وہ ڈھانپ لے"
         },
         {
-          "en": "لَا الناهية — prohibition → مجزوم",
-          "ur": "لَا الناهية — ممنوعہ → مجزوم"
+          "en": "Indeed, your efforts are different",
+          "ur": "بے شک تمہاری کوششیں مختلف ہیں"
         },
         {
-          "en": "لام الأمر — command → مجزوم",
-          "ur": "لام الأمر — حکم → مجزوم"
+          "en": "and by the day when it shines",
+          "ur": "اور دن کی قسم جب وہ روشن ہو"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
           1
         ],
         [
+          1,
+          3
+        ],
+        [
           2,
-          2
+          0
         ],
         [
           3,
-          3
+          2
         ]
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Four statements: the night covers, the day shines, the creation of the male and the female, your efforts are different.",
+        "ur": "چار بیان: رات ڈھانپتی ہے، دن روشن ہوتا ہے، نر اور مادہ کی تخلیق، تمہاری کوششیں مختلف ہیں۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch68-l06-ex02",
+      "id": "ch68-l08-ex02",
       "prompt": {
-        "ar": "اتَّقِ اللَّهَ وَلَا تُطِعِ الْكَافِرِينَ",
-        "ar_plain": "اتق الله ولا تطع الكافرين",
-        "translit": "ittaqi Allaha wa laa tut'i al-kaafiriina",
-        "en": "Fear Allah and do not obey the disbelievers.",
-        "ur": "اللہ سے ڈرو اور کافروں کی بات نہ مانو۔"
+        "ar": "فَأَمَّا مَنْ أَعْطَىٰ وَاتَّقَىٰ",
+        "ar_plain": "فاما من اعطى واتقى",
+        "translit": "faʾammā man ʾaʿṭā waāttaqā",
+        "en": "(92:5)",
+        "ur": "(92:5)"
       },
       "options": [
         {
-          "en": "Fear Allah and do not obey the disbelievers.",
-          "ur": "اللہ سے ڈرو اور کافروں کی بات نہ مانو۔"
+          "en": "Indeed, your efforts are different",
+          "ur": "بے شک تمہاری کوششیں مختلف ہیں"
         },
         {
-          "en": "I fear Allah and they do not obey the disbelievers.",
-          "ur": "میں اللہ سے ڈرتا ہوں اور وہ کافروں کی بات نہیں مانتے۔"
+          "en": "As for him who gives and is mindful of Allah",
+          "ur": "رہا وہ جس نے دیا اور اللہ سے ڈرا"
         },
         {
-          "en": "They fear Allah and do not obey the disbelievers.",
-          "ur": "وہ اللہ سے ڈرتے ہیں اور کافروں کی بات نہیں مانتے۔"
+          "en": "and believes in the best reward",
+          "ur": "اور اچھے انجام کو سچ مانا"
         },
         {
-          "en": "Fear them and do not obey the disbelievers.",
-          "ur": "ان سے ڈرو اور کافروں کی بات نہ مانو۔"
+          "en": "and by Him who created the male and the female",
+          "ur": "اور اس کی قسم جس نے نر اور مادہ پیدا کیا"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "This ayah says: As for him who gives and is mindful of Allah.",
+        "ur": "یہ آیت کہتی ہے: رہا وہ جس نے دیا اور اللہ سے ڈرا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l08-ex03",
+      "prompt": {
+        "ar": "وَصَدَّقَ بِالْحُسْنَىٰ",
+        "ar_plain": "وصدق بالحسنى",
+        "translit": "waṣaddaqa bi-l-ḥusnā",
+        "en": "(92:6)",
+        "ur": "(92:6)"
+      },
+      "options": [
+        {
+          "en": "As for him who gives and is mindful of Allah",
+          "ur": "رہا وہ جس نے دیا اور اللہ سے ڈرا"
+        },
+        {
+          "en": "We will ease him toward ease",
+          "ur": "ہم اسے آسانی کی طرف آسانی دیں گے"
+        },
+        {
+          "en": "Indeed, your efforts are different",
+          "ur": "بے شک تمہاری کوششیں مختلف ہیں"
+        },
+        {
+          "en": "and believes in the best reward",
+          "ur": "اور اچھے انجام کو سچ مانا"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "This ayah says: and believes in the best reward.",
+        "ur": "یہ آیت کہتی ہے: اور اچھے انجام کو سچ مانا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l08-ex04",
+      "prompt": {
+        "ar": "فَسَنُيَسِّرُهُ لِلْيُسْرَىٰ",
+        "ar_plain": "فسنيسره لليسرى",
+        "translit": "fasanuyassiruhu lilyusrā",
+        "en": "(92:7)",
+        "ur": "(92:7)"
+      },
+      "options": [
+        {
+          "en": "We will ease him toward ease",
+          "ur": "ہم اسے آسانی کی طرف آسانی دیں گے"
+        },
+        {
+          "en": "and believes in the best reward",
+          "ur": "اور اچھے انجام کو سچ مانا"
+        },
+        {
+          "en": "But as for him who withholds and thinks himself free of need",
+          "ur": "اور رہا وہ جس نے بخل کیا اور خود کو بے نیاز سمجھا"
+        },
+        {
+          "en": "As for him who gives and is mindful of Allah",
+          "ur": "رہا وہ جس نے دیا اور اللہ سے ڈرا"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "اتَّقِ is an imperative — 'fear!'. تُطِعِ is jussive after لَا النَّاهِيَة — 'do not obey'. Both address the same person.",
-        "ur": "اتَّقِ فعلِ امر ہے — 'ڈرو!'۔ تُطِعِ لَا نَاهِيَہ کے بعد مجزوم ہے — 'کہنا نہ مانو'۔ دونوں ایک ہی شخص سے خطاب ہیں۔"
+        "en": "This ayah says: We will ease him toward ease.",
+        "ur": "یہ آیت کہتی ہے: ہم اسے آسانی کی طرف آسانی دیں گے۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch68-l06-ex03",
-      "statement": {
-        "en": "All four jussive particles (لَمْ, لَمَّا, لَا النَّاهِيَة, لَامُ الْأَمْرِ) make the present verb مجزوم.",
-        "ur": "چاروں جازم حروف (لَمْ، لَمَّا، لَا نَاهِيَہ، لامِ امر) مضارع کو مجزوم کرتے ہیں۔",
-        "ar_example": {
-          "ar": "لَمْ يَقُلْ — لَمَّا يَقُلْ — لَا يَقُلْ — لِيَقُلْ",
-          "ar_plain": "لم يقل — لما يقل — لا يقل — ليقل",
-          "translit": "lam yaqul — lammaa yaqul — laa yaqul — li-yaqul",
-          "en": "he did not say / he has not yet said / let him not say / let him say",
-          "ur": "اس نے نہیں کہا / ابھی تک نہیں کہا / وہ نہ کہے / وہ کہے"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch68-l06-ex04",
-      "target_translation": {
-        "en": "Do not be among the criminals!",
-        "ur": "مجرموں میں سے نہ ہو جاؤ!"
-      },
-      "tiles": [
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "do not",
-          "ur": "مت"
-        },
-        {
-          "ar": "تَكُونُوا",
-          "ar_plain": "تكونوا",
-          "translit": "takuunu",
-          "en": "you be",
-          "ur": "تم ہو"
-        },
-        {
-          "ar": "مِنَ",
-          "ar_plain": "من",
-          "translit": "mina",
-          "en": "from",
-          "ur": "میں سے"
-        },
-        {
-          "ar": "الْمُجْرِمِينَ",
-          "ar_plain": "المجرمين",
-          "translit": "al-mujrimiina",
-          "en": "the sinners",
-          "ur": "گنہگار"
-        },
-        {
-          "ar": "لَمْ",
-          "ar_plain": "لم",
-          "translit": "lam",
-          "en": "did not",
-          "ur": "نہیں"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch68-l06-ex05",
-      "mode": "TAP",
-      "sentence_ar": "وَلَمْ ___ لَهُ كُفُوًا أَحَدٌ",
-      "hint": {
-        "en": "112:4 — 'And there is none comparable to Him.'",
-        "ur": "112:4 — 'اور کوئی اس کا ہمسر نہیں۔'"
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l08-ex05",
+      "prompt": {
+        "ar": "وَأَمَّا مَن بَخِلَ وَاسْتَغْنَىٰ",
+        "ar_plain": "واما من بخل واستغنى",
+        "translit": "waʾammā man bakhila waāstaghnā",
+        "en": "(92:8)",
+        "ur": "(92:8)"
       },
       "options": [
         {
-          "ar": "يَكُنْ",
-          "ar_plain": "يكن",
-          "translit": "yakun",
-          "en": "is (jussive after لَمْ)",
-          "ur": "ہے (لَمْ کے بعد مجزوم)"
+          "en": "We will ease him toward ease",
+          "ur": "ہم اسے آسانی کی طرف آسانی دیں گے"
         },
         {
-          "ar": "يَكُونُ",
-          "ar_plain": "يكون",
-          "translit": "yakuunu",
-          "en": "is (indicative)",
-          "ur": "ہے (مرفوع)"
+          "en": "and denies the best reward",
+          "ur": "اور اچھے انجام کو جھٹلایا"
         },
         {
-          "ar": "يَكُنَّ",
-          "ar_plain": "يكن",
-          "translit": "yakunna",
-          "en": "there is (fem. jussive)",
-          "ur": "ہے (مؤنث مجزوم)"
+          "en": "But as for him who withholds and thinks himself free of need",
+          "ur": "اور رہا وہ جس نے بخل کیا اور خود کو بے نیاز سمجھا"
         },
         {
-          "ar": "كَانَ",
-          "ar_plain": "كان",
-          "translit": "kaana",
-          "en": "was (past)",
-          "ur": "تھا (ماضی)"
+          "en": "and believes in the best reward",
+          "ur": "اور اچھے انجام کو سچ مانا"
         }
       ],
-      "correct_answer": {
-        "ar": "يَكُنْ",
-        "ar_plain": "يكن",
-        "translit": "yakun",
-        "en": "is (jussive after لَمْ)",
-        "ur": "ہے (لَمْ کے بعد مجزوم)"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch68-l06-ex06",
-      "sentence_ar": "لَا تَفْتَرُوا عَلَى اللَّهِ الْكَذِبَ",
-      "words": [
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "do not",
-          "ur": "مت"
-        },
-        {
-          "ar": "تَفْتَرُوا",
-          "ar_plain": "تفتروا",
-          "translit": "taftariu",
-          "en": "you fabricate",
-          "ur": "تم گھڑو"
-        },
-        {
-          "ar": "عَلَى",
-          "ar_plain": "على",
-          "translit": "alaa",
-          "en": "against",
-          "ur": "پر"
-        },
-        {
-          "ar": "اللَّهِ",
-          "ar_plain": "الله",
-          "translit": "Allahi",
-          "en": "Allah",
-          "ur": "اللہ"
-        },
-        {
-          "ar": "الْكَذِبَ",
-          "ar_plain": "الكذب",
-          "translit": "al-kadhhiba",
-          "en": "falsehood",
-          "ur": "جھوٹ"
-        }
-      ],
-      "available_roles": [
-        "PARTICLE",
-        "VERB",
-        "OBJECT",
-        "PREPOSITION",
-        "POSSESSIVE"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "VERB",
-        "PREPOSITION",
-        "POSSESSIVE",
-        "OBJECT"
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch68-l06-ex07",
-      "left_column": [
-        {
-          "ar": "اكْتُبْ",
-          "ar_plain": "اكتب",
-          "translit": "uktub",
-          "en": "write! (masc. sing.)",
-          "ur": "لکھو! (مذکر واحد)"
-        },
-        {
-          "ar": "اكْتُبِي",
-          "ar_plain": "اكتبي",
-          "translit": "uktubii",
-          "en": "write! (fem. sing.)",
-          "ur": "لکھو! (مؤنث واحد)"
-        },
-        {
-          "ar": "اكْتُبَا",
-          "ar_plain": "اكتبا",
-          "translit": "uktubaa",
-          "en": "write! (dual)",
-          "ur": "لکھو! (تثنیہ)"
-        },
-        {
-          "ar": "اكْتُبُوا",
-          "ar_plain": "اكتبوا",
-          "translit": "uktubuu",
-          "en": "write! (masc. pl.)",
-          "ur": "لکھو! (مذکر جمع)"
-        },
-        {
-          "ar": "اكْتُبْنَ",
-          "ar_plain": "اكتبن",
-          "translit": "uktubna",
-          "en": "write! (fem. pl.)",
-          "ur": "لکھو! (مؤنث جمع)"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "أَنْتَ",
-          "ur": "أَنْتَ"
-        },
-        {
-          "en": "أَنْتِ",
-          "ur": "أَنْتِ"
-        },
-        {
-          "en": "أَنْتُمَا",
-          "ur": "أَنْتُمَا"
-        },
-        {
-          "en": "أَنْتُمْ",
-          "ur": "أَنْتُمْ"
-        },
-        {
-          "en": "أَنْتُنَّ",
-          "ur": "أَنْتُنَّ"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ],
-        [
-          4,
-          4
-        ]
-      ],
-      "xp_value": 1
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "This ayah says: But as for him who withholds and thinks himself free of need.",
+        "ur": "یہ آیت کہتی ہے: اور رہا وہ جس نے بخل کیا اور خود کو بے نیاز سمجھا۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch68-l06-ex08",
+      "id": "ch68-l08-ex06",
       "prompt": {
-        "ar": "وَلَمَّا يَدْخُلِ الْإِيمَانُ فِي قُلُوبِكُمْ",
-        "ar_plain": "ولما يدخل الإيمان في قلوبكم",
-        "translit": "wa-lammaa yadkhuli al-iimaanu fii quluubikum",
-        "en": "and faith has not yet entered your hearts",
-        "ur": "اور ایمان ابھی تک تمہارے دلوں میں داخل نہیں ہوا"
+        "ar": "وَكَذَّبَ بِالْحُسْنَىٰ",
+        "ar_plain": "وكذب بالحسنى",
+        "translit": "wakaddhaba bi-l-ḥusnā",
+        "en": "(92:9)",
+        "ur": "(92:9)"
       },
       "options": [
         {
-          "en": "and faith has not yet entered your hearts",
-          "ur": "اور ایمان ابھی تک تمہارے دلوں میں داخل نہیں ہوا"
+          "en": "But as for him who withholds and thinks himself free of need",
+          "ur": "اور رہا وہ جس نے بخل کیا اور خود کو بے نیاز سمجھا"
         },
         {
-          "en": "and when faith entered your hearts",
-          "ur": "اور جب ایمان تمہارے دلوں میں داخل ہوا"
+          "en": "and denies the best reward",
+          "ur": "اور اچھے انجام کو جھٹلایا"
         },
         {
-          "en": "so let faith enter your hearts",
-          "ur": "تو ایمان کو اپنے دلوں میں داخل ہونے دو"
+          "en": "We will ease him toward hardship",
+          "ur": "ہم اسے سختی کی طرف لے جائیں گے"
         },
         {
-          "en": "faith will never enter your hearts",
-          "ur": "ایمان تمہارے دلوں میں کبھی داخل نہیں ہو گا"
+          "en": "We will ease him toward ease",
+          "ur": "ہم اسے آسانی کی طرف آسانی دیں گے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "This ayah says: and denies the best reward.",
+        "ur": "یہ آیت کہتی ہے: اور اچھے انجام کو جھٹلایا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l08-ex07",
+      "prompt": {
+        "ar": "فَسَنُيَسِّرُهُ لِلْعُسْرَىٰ",
+        "ar_plain": "فسنيسره للعسرى",
+        "translit": "fasanuyassiruhu lilʿusrā",
+        "en": "(92:10)",
+        "ur": "(92:10)"
+      },
+      "options": [
+        {
+          "en": "and denies the best reward",
+          "ur": "اور اچھے انجام کو جھٹلایا"
+        },
+        {
+          "en": "and his wealth will not help him when he falls",
+          "ur": "اور جب وہ گرے گا تو اس کا مال اس کے کام نہ آئے گا"
+        },
+        {
+          "en": "But as for him who withholds and thinks himself free of need",
+          "ur": "اور رہا وہ جس نے بخل کیا اور خود کو بے نیاز سمجھا"
+        },
+        {
+          "en": "We will ease him toward hardship",
+          "ur": "ہم اسے سختی کی طرف لے جائیں گے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "This ayah says: We will ease him toward hardship.",
+        "ur": "یہ آیت کہتی ہے: ہم اسے سختی کی طرف لے جائیں گے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l08-ex08",
+      "prompt": {
+        "ar": "وَمَا يُغْنِي عَنْهُ مَالُهُ إِذَا تَرَدَّىٰ",
+        "ar_plain": "وما يغني عنه ماله اذا تردى",
+        "translit": "wamā yughnī ʿanhu māluhu ʾidhā taraddā",
+        "en": "(92:11)",
+        "ur": "(92:11)"
+      },
+      "options": [
+        {
+          "en": "and his wealth will not help him when he falls",
+          "ur": "اور جب وہ گرے گا تو اس کا مال اس کے کام نہ آئے گا"
+        },
+        {
+          "en": "We will ease him toward hardship",
+          "ur": "ہم اسے سختی کی طرف لے جائیں گے"
+        },
+        {
+          "en": "Indeed, guidance is upon Us",
+          "ur": "بے شک ہدایت دینا ہمارے ذمے ہے"
+        },
+        {
+          "en": "and denies the best reward",
+          "ur": "اور اچھے انجام کو جھٹلایا"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَمَّا before a present verb is the jussive 'not yet' (49:14): يَدْخُلْ is jussive, and its sukūn becomes a kasra (يَدْخُلِ) only to join the next word. The nuance: it has not happened yet, but it may.",
-        "ur": "مضارع سے پہلے لَمَّا جازمہ 'ابھی تک نہیں' ہے (49:14): يَدْخُلْ مجزوم ہے، اور اس کا سکون صرف اگلے لفظ سے ملانے کے لیے زیر (يَدْخُلِ) بنا ہے۔ مفہوم: ابھی نہیں ہوا، مگر ہو سکتا ہے۔"
+        "en": "This ayah says: and his wealth will not help him when he falls.",
+        "ur": "یہ آیت کہتی ہے: اور جب وہ گرے گا تو اس کا مال اس کے کام نہ آئے گا۔"
       }
     },
     {
-      "type": "IDENTIFY_ROOT",
-      "id": "ch68-l06-ex09",
-      "word": {
-        "ar": "يَدْخُلِ",
-        "ar_plain": "يدخل",
-        "translit": "yadkhuli",
-        "en": "enter",
-        "ur": "داخل ہو"
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l08-ex09",
+      "prompt": {
+        "ar": "فَأَمَّا مَنْ أَعْطَىٰ وَاتَّقَىٰ وَصَدَّقَ بِالْحُسْنَىٰ فَسَنُيَسِّرُهُ لِلْيُسْرَىٰ … وَأَمَّا مَن بَخِلَ وَاسْتَغْنَىٰ وَكَذَّبَ بِالْحُسْنَىٰ فَسَنُيَسِّرُهُ لِلْعُسْرَىٰ",
+        "ar_plain": "فاما من اعطى واتقى وصدق بالحسنى فسنيسره لليسرى … واما من بخل واستغنى وكذب بالحسنى فسنيسره للعسرى",
+        "translit": "faʾammā man ʾaʿṭā waāttaqā waṣaddaqa bi-l-ḥusnā fasanuyassiruhu lilyusrā … waʾammā man bakhila waāstaghnā wakaddhaba bi-l-ḥusnā fasanuyassiruhu lilʿusrā",
+        "en": "(92:5–7 and 92:8–10: how are they parallel?)",
+        "ur": "(92:5–7 اور 92:8–10: یہ کس طرح متوازی ہیں؟)"
       },
       "options": [
-        "د خ ل",
-        "خ ل د",
-        "ع ب د",
-        "ك ف ر"
+        {
+          "en": "Two paths: the giver is eased toward ease; the one who withholds is eased toward hardship",
+          "ur": "دو راستے: دینے والے کو آسانی کی طرف آسانی دی جائے گی؛ بخل کرنے والے کو سختی کی طرف لے جایا جائے گا"
+        },
+        {
+          "en": "Both are eased toward ease",
+          "ur": "دونوں کو آسانی کی طرف آسانی دی جائے گی"
+        },
+        {
+          "en": "Both describe the night and the day",
+          "ur": "دونوں رات اور دن کا بیان کرتی ہیں"
+        },
+        {
+          "en": "Both are about wealth that helps",
+          "ur": "دونوں اس مال کے بارے میں ہیں جو کام آتا ہے"
+        }
       ],
       "correct_index": 0,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The two sections mirror each other with opposite descriptions and opposite outcomes.",
+        "ur": "دونوں حصے ایک دوسرے کا عکس ہیں، الٹی صفات اور الٹے انجام کے ساتھ۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Chapter 68 Capstone: The Complete Jussive System",
-      "ar": "الْمُلَخَّصُ: نِظَامُ الْمَجْزُومِ الْكَامِلُ",
-      "ur": "باب 68 کا خلاصہ: مکمل مجزوم نظام"
+      "en": "Your efforts are different",
+      "ar": "إِنَّ سَعْيَكُمْ لَشَتَّىٰ",
+      "ur": "تمہاری کوششیں مختلف ہیں"
     },
     "ayah": {
-      "surah": 2,
-      "ayah": 256,
-      "label": "Al-Baqarah 2:256",
-      "ar": "لَا إِكْرَاهَ فِي الدِّينِ ۖ قَد تَّبَيَّنَ الرُّشْدُ مِنَ الْغَيِّ ۚ فَمَن يَكْفُرْ بِالطَّاغُوتِ وَيُؤْمِن بِاللَّهِ فَقَدِ اسْتَمْسَكَ بِالْعُرْوَةِ الْوُثْقَىٰ لَا انفِصَامَ لَهَا ۗ وَاللَّهُ سَمِيعٌ عَلِيمٌ",
-      "en": "There shall be no compulsion in [acceptance of] the religion. The right course has become distinct from the wrong. So whoever disbelieves in ṭāghūt and believes in Allāh has grasped the most trustworthy handhold with no break in it. And Allāh is Hearing and Knowing.",
-      "ur": "دین (اسلام) میں زبردستی نہیں ہے ہدایت (صاف طور پر ظاہر اور) گمراہی سے الگ ہو چکی ہے تو جو شخص بتوں سے اعتقاد نہ رکھے اور خدا پر ایمان لائے اس نے ایسی مضبوط رسی ہاتھ میں پکڑ لی ہے جو کبھی ٹوٹنے والی نہیں اور خدا (سب کچھ) سنتا اور (سب کچھ) جانتا ہے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002256.mp3"
+      "surah": 92,
+      "ayah": 4,
+      "label": "Al-Layl 92:4",
+      "ar": "إِنَّ سَعْيَكُمْ لَشَتَّىٰ",
+      "en": "Indeed, your efforts are diverse.",
+      "ur": "کہ تم لوگوں کی کوششں طرح طرح کی ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/092004.mp3"
     },
     "highlighted_word_indices": [
-      11,
-      12,
-      14
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "سَعْيَكُمْ",
+      "لَشَتَّىٰ"
     ],
     "noor_explanation": {
-      "en": "فَمَن يَكْفُرْ بِالطَّاغُوتِ وَيُؤْمِن بِاللَّهِ — مَنْ is a conditional word, and it makes the verb after it jussive: يَكْفُرُ → يَكْفُرْ, يُؤْمِنُ → يُؤْمِنْ. The ayah opens with لَا إِكْرَاهَ — a لَا that denies a whole category ('no compulsion at all') and has no verb. Every jussive in this chapter has a trigger you can point to.",
-      "ur": "فَمَن يَكْفُرْ بِالطَّاغُوتِ وَيُؤْمِن بِاللَّهِ — مَنْ شرطیہ کلمہ ہے اور اپنے بعد والے فعل کو مجزوم کرتا ہے: يَكْفُرُ → يَكْفُرْ، يُؤْمِنُ → يُؤْمِنْ۔ آیت لَا إِكْرَاهَ سے شروع ہوتی ہے — ایسا لَا جو پوری جنس کی نفی کرتا ہے ('کوئی زبردستی نہیں') اور جس کے ساتھ فعل نہیں۔ اس باب کے ہر مجزوم کا ایک سبب ہے جس کی طرف آپ اشارہ کر سکتے ہیں۔"
+      "en": "إِنَّ سَعْيَكُمْ لَشَتَّىٰ — one sentence, and the rest of the surah shows the two kinds of effort.",
+      "ur": "إِنَّ سَعْيَكُمْ لَشَتَّىٰ — ایک جملہ، اور باقی سورت دو قسم کی کوشش دکھاتی ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Chapter 68 done! The present-tense verb has three states: (1) indicative مَرْفُوع when nothing governs it; (2) منصوب after أَنْ, لَنْ, كَيْ; (3) مَجْزُوم after لَمْ, لَمَّا, لَا النَّاهِيَة, لَامُ الْأَمْرِ, and in conditions. The imperative is built on the jussive. You can now parse any present verb you meet in the Quran.",
-      "ur": "باب 68 مکمل! مضارع کی تین حالتیں ہیں: (1) مرفوع جب کوئی عامل نہ ہو؛ (2) منصوب أَنْ، لَنْ، كَيْ کے بعد؛ (3) مجزوم لَمْ، لَمَّا، لَا نَاهِيَہ، لامِ امر کے بعد، اور شرط میں۔ فعلِ امر مجزوم پر مبنی ہے۔ اب آپ قرآن کے ہر مضارع کی ترکیب کر سکتے ہیں۔"
+      "en": "You read 92:1–11: the oaths, the two paths and the outcome of each.",
+      "ur": "آپ نے 92:1–11 پڑھیں: قسمیں، دو راستے اور ہر ایک کا انجام۔"
     }
   }
 }

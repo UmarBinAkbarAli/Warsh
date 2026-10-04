@@ -1,0 +1,444 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 66, Final test (ch66-test, new). Twelve multiple-choice questions at 80 % (9/12 fails, 10/12 passes): ظرف against preposition and a time word in another job (q01–02), a point in time and a length of time (q03–04), a place word with an explicit and a pronoun dependent (q05–06), a changing ending and a fixed form (q07–08), a predicate phrase and a prepositional predicate (q09–10), and one decision from each part of Al-Infitar (q11–12). Correct options are placed 3 / 3 / 3 / 3. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-66-content-proposal.md and its review amendments.",
+    "title": "Chapter 66 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ السَّادِسِ وَالسِّتِّينَ",
+    "titleUr": "باب 66 کا آخری امتحان",
+    "chapter_order": 66,
+    "lesson_order": 9,
+    "estimated_minutes": 10,
+    "xp_reward": 25
+  },
+  "hook": {
+    "ayah": {
+      "surah": 82,
+      "ayah": 19,
+      "label": "Al-Infitar 82:19",
+      "ar": "يَوْمَ لَا تَمْلِكُ نَفْسٌ لِّنَفْسٍ شَيْئًا ۖ وَالْأَمْرُ يَوْمَئِذٍ لِّلَّهِ",
+      "en": "It is the Day when a soul will not possess for another soul [power to do] a thing; and the command, that Day, is [entirely] with Allāh.",
+      "ur": "جس روز کوئی کسی کا بھلا نہ کر سکے گا اور حکم اس روز خدا ہی کا ہو گا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/082019.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 66.",
+      "ur": "باب 66 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 66,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch66-test-q01",
+        "topic": {
+          "en": "A place ظرف",
+          "ur": "مکان کا ظرف"
+        },
+        "prompt": {
+          "en": "Which word is the place ظرف?",
+          "ur": "کون سا لفظ مکان کا ظرف ہے؟"
+        },
+        "arabic": "جَلَسَ الْوَلَدُ تَحْتَ الشَّجَرَةِ",
+        "options": [
+          {
+            "en": "الشَّجَرَةِ",
+            "ur": "الشَّجَرَةِ"
+          },
+          {
+            "en": "تَحْتَ",
+            "ur": "تَحْتَ"
+          },
+          {
+            "en": "الْوَلَدُ",
+            "ur": "الْوَلَدُ"
+          },
+          {
+            "en": "جَلَسَ",
+            "ur": "جَلَسَ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch66-test-q02",
+        "topic": {
+          "en": "A time word in another job",
+          "ur": "دوسرے کام میں وقت کا لفظ"
+        },
+        "prompt": {
+          "en": "What is يَوْمُ here?",
+          "ur": "یہاں يَوْمُ کیا ہے؟"
+        },
+        "arabic": "يَوْمُ الْأَحَدِ طَوِيلٌ",
+        "options": [
+          {
+            "en": "A time ظرف in the accusative",
+            "ur": "وقت کا ظرف، منصوب"
+          },
+          {
+            "en": "A preposition",
+            "ur": "حرفِ جر"
+          },
+          {
+            "en": "A place ظرف",
+            "ur": "مکان کا ظرف"
+          },
+          {
+            "en": "The subject, nominative: not a ظرف",
+            "ur": "مبتدا، مرفوع: ظرف نہیں"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch66-test-q03",
+        "topic": {
+          "en": "A point in time",
+          "ur": "وقت کا نقطہ"
+        },
+        "prompt": {
+          "en": "What does بَعْدَ tell here?",
+          "ur": "یہاں بَعْدَ کیا بتاتا ہے؟"
+        },
+        "arabic": "رَجَعْتُ بَعْدَ الدَّرْسِ",
+        "options": [
+          {
+            "en": "when I came back: after the lesson",
+            "ur": "میں کب لوٹا: سبق کے بعد"
+          },
+          {
+            "en": "where I came back",
+            "ur": "میں کہاں لوٹا"
+          },
+          {
+            "en": "who came back",
+            "ur": "کون لوٹا"
+          },
+          {
+            "en": "how long I stayed",
+            "ur": "میں کتنی دیر رہا"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch66-test-q04",
+        "topic": {
+          "en": "A length of time",
+          "ur": "وقت کی لمبائی"
+        },
+        "prompt": {
+          "en": "What does حُقُبًا tell?",
+          "ur": "حُقُبًا کیا بتاتا ہے؟"
+        },
+        "arabic": "أَوْ أَمْضِيَ حُقُبًا",
+        "options": [
+          {
+            "en": "the exact moment he left",
+            "ur": "وہ ٹھیک کس لمحے نکلا"
+          },
+          {
+            "en": "the place he went",
+            "ur": "وہ کس جگہ گیا"
+          },
+          {
+            "en": "how long: for ages",
+            "ur": "کتنی دیر: مدتوں"
+          },
+          {
+            "en": "who went with him",
+            "ur": "اس کے ساتھ کون گیا"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch66-test-q05",
+        "topic": {
+          "en": "The dependent of a place word",
+          "ur": "مکان کے لفظ کا متعلق"
+        },
+        "prompt": {
+          "en": "What is الْمُعَلِّمِ?",
+          "ur": "الْمُعَلِّمِ کیا ہے؟"
+        },
+        "arabic": "وَقَفَ الطُّلَّابُ خَلْفَ الْمُعَلِّمِ",
+        "options": [
+          {
+            "en": "The place ظرف",
+            "ur": "مکان کا ظرف"
+          },
+          {
+            "en": "The subject",
+            "ur": "مبتدا"
+          },
+          {
+            "en": "The genitive dependent of خَلْفَ",
+            "ur": "خَلْفَ کا مجرور متعلق"
+          },
+          {
+            "en": "A verb",
+            "ur": "فعل"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch66-test-q06",
+        "topic": {
+          "en": "A pronoun dependent",
+          "ur": "ضمیر متعلق"
+        },
+        "prompt": {
+          "en": "What is the pronoun هُ?",
+          "ur": "ضمیر هُ کیا ہے؟"
+        },
+        "arabic": "جَلَسْتُ عِنْدَهُ",
+        "options": [
+          {
+            "en": "The dependent of عِنْدَ, genitive in position",
+            "ur": "عِنْدَ کا متعلق، محل کے اعتبار سے مجرور"
+          },
+          {
+            "en": "The place ظرف",
+            "ur": "مکان کا ظرف"
+          },
+          {
+            "en": "The subject of جَلَسْتُ",
+            "ur": "جَلَسْتُ کا فاعل"
+          },
+          {
+            "en": "A preposition",
+            "ur": "حرفِ جر"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch66-test-q07",
+        "topic": {
+          "en": "A changing ending",
+          "ur": "بدلتا ہوا ختم"
+        },
+        "prompt": {
+          "en": "Why is the word يَوْمُ in 82:18 and not يَوْمَ?",
+          "ur": "82:18 میں لفظ يَوْمَ کے بجائے يَوْمُ کیوں ہے؟"
+        },
+        "arabic": "وَمَا أَدْرَاكَ مَا يَوْمُ الدِّينِ",
+        "options": [
+          {
+            "en": "Because it tells when something happens",
+            "ur": "کیونکہ یہ بتاتا ہے کہ کچھ کب ہوتا ہے"
+          },
+          {
+            "en": "Because it follows a preposition",
+            "ur": "کیونکہ یہ حرفِ جر کے بعد ہے"
+          },
+          {
+            "en": "Because the word is fixed",
+            "ur": "کیونکہ لفظ ثابت ہے"
+          },
+          {
+            "en": "Because the Day is what the question asks about, so it is nominative",
+            "ur": "کیونکہ دن وہ ہے جس کے بارے میں سوال ہے، اس لیے مرفوع ہے"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch66-test-q08",
+        "topic": {
+          "en": "A fixed form",
+          "ur": "ثابت صورت"
+        },
+        "prompt": {
+          "en": "What is special about حَيْثُ?",
+          "ur": "حَيْثُ میں خاص بات کیا ہے؟"
+        },
+        "arabic": "حَيْثُ شِئْتُمَا",
+        "options": [
+          {
+            "en": "It changes to genitive after every preposition",
+            "ur": "یہ ہر حرفِ جر کے بعد مجرور ہو جاتا ہے"
+          },
+          {
+            "en": "It keeps the same ḍamma ending wherever it stands",
+            "ur": "یہ جہاں بھی ہو ایک ہی ضمہ والا ختم رکھتا ہے"
+          },
+          {
+            "en": "It is always the subject of the sentence",
+            "ur": "یہ ہمیشہ جملے کا مبتدا ہوتا ہے"
+          },
+          {
+            "en": "It is a verb",
+            "ur": "یہ فعل ہے"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch66-test-q09",
+        "topic": {
+          "en": "An adverbial predicate",
+          "ur": "ظرف والی خبر"
+        },
+        "prompt": {
+          "en": "What is the predicate?",
+          "ur": "خبر کیا ہے؟"
+        },
+        "arabic": "الْقَلَمُ أَمَامَ الْكِتَابِ",
+        "options": [
+          {
+            "en": "الْقَلَمُ",
+            "ur": "الْقَلَمُ"
+          },
+          {
+            "en": "أَمَامَ alone",
+            "ur": "صرف أَمَامَ"
+          },
+          {
+            "en": "الْكِتَابِ alone",
+            "ur": "صرف الْكِتَابِ"
+          },
+          {
+            "en": "أَمَامَ الْكِتَابِ, the whole phrase",
+            "ur": "أَمَامَ الْكِتَابِ، پورا فقرہ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch66-test-q10",
+        "topic": {
+          "en": "A prepositional predicate",
+          "ur": "حرفِ جر والی خبر"
+        },
+        "prompt": {
+          "en": "What is بِحُسْبَانٍ?",
+          "ur": "بِحُسْبَانٍ کیا ہے؟"
+        },
+        "arabic": "الشَّمْسُ وَالْقَمَرُ بِحُسْبَانٍ",
+        "options": [
+          {
+            "en": "A time ظرف",
+            "ur": "وقت کا ظرف"
+          },
+          {
+            "en": "A preposition with a genitive noun, serving as the predicate: not a ظرف",
+            "ur": "حرفِ جر اور مجرور اسم جو خبر ہے: ظرف نہیں"
+          },
+          {
+            "en": "A place ظرف",
+            "ur": "مکان کا ظرف"
+          },
+          {
+            "en": "A verb",
+            "ur": "فعل"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch66-test-q11",
+        "topic": {
+          "en": "Al-Infitar, first part",
+          "ur": "الانفطار، پہلا حصہ"
+        },
+        "prompt": {
+          "en": "According to this ayah, what will a soul know?",
+          "ur": "اس آیت کے مطابق جان کیا جان لے گی؟"
+        },
+        "arabic": "عَلِمَتْ نَفْسٌ مَّا قَدَّمَتْ وَأَخَّرَتْ",
+        "options": [
+          {
+            "en": "What it sent ahead and what it left behind",
+            "ur": "جو اس نے آگے بھیجا اور جو پیچھے چھوڑا"
+          },
+          {
+            "en": "The names of the stars",
+            "ur": "تاروں کے نام"
+          },
+          {
+            "en": "The price of its goods",
+            "ur": "اپنے سامان کی قیمت"
+          },
+          {
+            "en": "The way to the sea",
+            "ur": "سمندر کا راستہ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch66-test-q12",
+        "topic": {
+          "en": "Al-Infitar, the whole passage",
+          "ur": "الانفطار، پوری سورت"
+        },
+        "prompt": {
+          "en": "According to this ayah, whose is the command on that Day?",
+          "ur": "اس آیت کے مطابق اس دن حکم کس کا ہے؟"
+        },
+        "arabic": "يَوْمَ لَا تَمْلِكُ نَفْسٌ لِّنَفْسٍ شَيْئًا ۖ وَالْأَمْرُ يَوْمَئِذٍ لِّلَّهِ",
+        "options": [
+          {
+            "en": "The keepers'",
+            "ur": "نگہبانوں کا"
+          },
+          {
+            "en": "Each soul's own",
+            "ur": "ہر جان کا اپنا"
+          },
+          {
+            "en": "Allah's",
+            "ur": "اللہ کا"
+          },
+          {
+            "en": "The righteous people's",
+            "ur": "نیک لوگوں کا"
+          }
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 66 — time and place words",
+      "ar": "الظُّرُوفُ",
+      "ur": "باب 66 — وقت اور مکان کے الفاظ"
+    },
+    "ayah": {
+      "surah": 82,
+      "ayah": 19,
+      "label": "Al-Infitar 82:19",
+      "ar": "يَوْمَ لَا تَمْلِكُ نَفْسٌ لِّنَفْسٍ شَيْئًا ۖ وَالْأَمْرُ يَوْمَئِذٍ لِّلَّهِ",
+      "en": "It is the Day when a soul will not possess for another soul [power to do] a thing; and the command, that Day, is [entirely] with Allāh.",
+      "ur": "جس روز کوئی کسی کا بھلا نہ کر سکے گا اور حکم اس روز خدا ہی کا ہو گا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/082019.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      8
+    ],
+    "highlighted_words": [
+      "يَوْمَ",
+      "يَوْمَئِذٍ"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 66 able to name a ظرف by its job, read its dependent, tell a changing ending from a fixed one and read Al-Infitar.",
+      "ur": "آپ باب 66 اس حال میں مکمل کرتے ہیں کہ ظرف کو اس کے کام سے پہچان سکتے ہیں، اس کا متعلق پڑھ سکتے ہیں، بدلتے اور ٹھہرے ہوئے ختم میں فرق کر سکتے ہیں اور الانفطار پڑھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 66 complete. Chapter 67: the particle لَوْ, and Surat Al-Alaq.",
+      "ur": "باب 66 مکمل۔ باب 67: حرف لَوْ، اور سورۃ العلق۔"
+    }
+  }
+}

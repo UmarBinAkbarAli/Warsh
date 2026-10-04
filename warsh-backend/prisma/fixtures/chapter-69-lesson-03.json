@@ -2,158 +2,374 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 69, Lesson 3 — not every present-tense verb near a command is جواب الطلب: negation (89:17), resumption with وَ (2:282), and أَنْ.",
+    "_note": "Chapter 69, Lesson 3 (ch69-l03, rebuilt in place; the old الندبة material is gone). A jussive response says what follows from doing what the request asks. A command (اُدْرُسْ تَنْجَحْ) and one prohibition (لَا تَنْسَ الدَّرْسَ تَنْجَحْ, 'do not forget the lesson, you will pass', نَسِيَ supplied with its meaning, تَنْسَ with its weak ى dropped) license a result; a separate statement after a request does not, and its verb keeps the indicative (اُدْرُسْ، يَنْجَحُ خَالِدٌ). A warning about breaking a prohibition is not this construction. Questions and wishes are not covered. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-69-content-proposal.md and its review amendments.",
+    "title": "When Does a Request License a Result?",
+    "titleAr": "مَتَى يَصِحُّ الْجَوَابُ؟",
+    "titleUr": "درخواست کب نتیجے کی اجازت دیتی ہے؟",
     "chapter_order": 69,
     "lesson_order": 3,
-    "chapter_title": "جواب الطلب",
-    "title": "When a Verb Is Not the Answer",
-    "titleAr": "مَتَى لَا يَكُونُ الْفِعْلُ جَوَابًا",
-    "estimated_minutes": 8,
-    "xp_reward": 10,
-    "titleUr": "جب فعل جواب نہ ہو"
+    "estimated_minutes": 10,
+    "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 89,
-      "ayah": 17,
-      "label": "Al-Fajr 89:17",
-      "ar": "كَلَّا ۖ بَلْ لَا تُكْرِمُونَ الْيَتِيمَ",
-      "en": "No! But you do not honour the orphan.",
-      "ur": "ہرگز نہیں! بلکہ تم یتیم کی عزت نہیں کرتے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/089017.mp3"
+      "surah": 33,
+      "ayah": 70,
+      "label": "Al-Ahzab 33:70",
+      "ar": "اتَّقُوا اللَّهَ وَقُولُوا قَوْلًا سَدِيدًا",
+      "en": "fear Allah and speak words of appropriate justice",
+      "ur": "اللہ سے ڈرو اور سیدھی بات کہو",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033070.mp3"
     },
     "noor_intro": {
-      "en": "لَا تُكْرِمُونَ — \"you do not honour.\" Here لَا only negates, and تُكْرِمُونَ keeps its نَ: it is مَرْفُوع, not an answer to any command. This lesson shows how to tell the difference.",
-      "ur": "لَا تُكْرِمُونَ — \"تم عزت نہیں کرتے\"۔ یہاں لَا صرف نفی کرتا ہے، اور تُكْرِمُونَ کا نَ باقی ہے: یہ مَرْفُوع ہے، کسی حکم کا جواب نہیں۔ اس سبق میں فرق پہچاننا سیکھیں گے۔"
+      "en": "Not every verb after a request is its response. The response says what follows from doing what you were asked. A separate statement just sits next to the request.",
+      "ur": "درخواست کے بعد آنے والا ہر فعل اس کا جواب نہیں ہوتا۔ جواب بتاتا ہے کہ جو کہا گیا اسے کرنے سے کیا ہوگا۔ الگ بیان صرف درخواست کے ساتھ رکھا ہوتا ہے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Three checks before you say \"answer\"",
-        "ar": "ثَلَاثَةُ أَسْئِلَةٍ",
-        "ur": "جواب کہنے سے پہلے تین سوال"
+        "en": "Does the second part follow from the first?",
+        "ar": "هَلِ الثَّانِي نَتِيجَةُ الْأَوَّلِ؟",
+        "ur": "کیا دوسرا حصہ پہلے کا نتیجہ ہے؟"
       },
       "explanation": {
-        "en": "Is there a command before it? Is the verb present tense with no فَـ or وَ before it? Does it tell the result of the command? Only then is it جواب الطلب and مَجْزُوم.",
-        "ur": "کیا اس سے پہلے حکم ہے؟ کیا فعل مضارع ہے اور اس سے پہلے فَـ یا وَ نہیں؟ کیا یہ حکم کا نتیجہ بتاتا ہے؟ تبھی یہ جواب الطلب اور مَجْزُوم ہے۔"
+        "en": "Ask one question: if you do what the request asks, does the second part follow from it? اُدْرُسْ تَنْجَحْ: yes, passing follows from studying, so the verb is a jussive response. اُدْرُسْ، يَنْجَحُ خَالِدٌ, 'study! Khalid is passing': no, it is a separate statement, and its verb keeps the indicative.",
+        "ur": "ایک سوال پوچھیں: اگر آپ وہ کریں جو درخواست مانگتی ہے تو کیا دوسرا حصہ اس کے نتیجے میں آتا ہے؟ اُدْرُسْ تَنْجَحْ: ہاں، کامیابی پڑھنے کا نتیجہ ہے، اس لیے فعل مجزوم جواب ہے۔ اُدْرُسْ، يَنْجَحُ خَالِدٌ، 'پڑھو! خالد کامیاب ہو رہا ہے': نہیں، یہ الگ بیان ہے، اور اس کا فعل مرفوع رہتا ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "بَلْ لَا تُكْرِمُونَ الْيَتِيمَ",
-        "ar_plain": "بل لا تكرمون اليتيم",
-        "translit": "bal laa tukrimuuna al-yatiim",
-        "en": "But you do not honour the orphan. (Al-Fajr 89:17)",
-        "ur": "بلکہ تم یتیم کی عزت نہیں کرتے۔ (الفجر 89:17)"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "A response and a separate statement",
+        "ar": "جواب اور الگ بیان",
+        "ur": "جَوَابٌ وَجُمْلَةٌ مُسْتَقِلَّةٌ"
       },
+      "examples": [
+        {
+          "ar": "اُدْرُسْ تَنْجَحْ",
+          "ar_plain": "ادرس تنجح",
+          "translit": "udrus tanjaḥ",
+          "en": "Study, you will pass",
+          "ur": "پڑھو، کامیاب ہو گے"
+        },
+        {
+          "ar": "اُدْرُسْ، يَنْجَحُ خَالِدٌ",
+          "ar_plain": "ادرس، ينجح خالد",
+          "translit": "udrus yanjaḥu khālidun",
+          "en": "Study! Khalid is passing",
+          "ur": "پڑھو! خالد کامیاب ہو رہا ہے"
+        }
+      ],
       "explanation": {
-        "en": "No command comes before it. لَا negates, and تُكْرِمُونَ keeps its final نَ — it is مَرْفُوع.",
-        "ur": "اس سے پہلے کوئی حکم نہیں۔ لَا نفی کرتا ہے، اور تُكْرِمُونَ کا آخری نَ باقی ہے — یہ مَرْفُوع ہے۔"
+        "en": "In the first, passing follows from studying and the verb has a sukūn. In the second, Khalid's passing has nothing to do with your studying, so the verb keeps its ḍamma.",
+        "ur": "پہلے میں کامیابی پڑھنے کا نتیجہ ہے اور فعل پر سکون ہے۔ دوسرے میں خالد کی کامیابی کا آپ کے پڑھنے سے کوئی تعلق نہیں، اس لیے فعل اپنا ضمہ رکھتا ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "وَاتَّقُوا اللَّهَ ۖ وَيُعَلِّمُكُمُ اللَّهُ",
-        "ar_plain": "واتقوا الله ويعلمكم الله",
-        "translit": "wattaqullaaha wa yu'allimukumullaah",
-        "en": "Be mindful of Allah, and Allah teaches you. (Al-Baqarah 2:282)",
-        "ur": "اور اللہ سے ڈرو، اور اللہ تمہیں سکھاتا ہے۔ (البقرہ 2:282)"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "A command and a prohibition",
+        "ar": "حکم اور نہی",
+        "ur": "الْأَمْرُ وَالنَّهْيُ"
       },
+      "examples": [
+        {
+          "ar": "اُدْرُسْ تَنْجَحْ",
+          "ar_plain": "ادرس تنجح",
+          "translit": "udrus tanjaḥ",
+          "en": "Study, you will pass",
+          "ur": "پڑھو، کامیاب ہو گے"
+        },
+        {
+          "ar": "لَا تَنْسَ الدَّرْسَ تَنْجَحْ",
+          "ar_plain": "لا تنس الدرس تنجح",
+          "translit": "lā tansa ad-darsa tanjaḥ",
+          "en": "Do not forget the lesson, you will pass",
+          "ur": "سبق مت بھولو، کامیاب ہو گے"
+        }
+      ],
       "explanation": {
-        "en": "A command comes first, but وَ begins a new statement: يُعَلِّمُكُمُ ends in ḍamma, so it is مَرْفُوع. Because of the وَ, it is not جواب الطلب.",
-        "ur": "پہلے حکم ہے، مگر وَ نئی بات شروع کرتا ہے: يُعَلِّمُكُمُ ضمہ پر ختم ہوتا ہے، اس لیے مَرْفُوع ہے۔ وَ کی وجہ سے یہ جواب الطلب نہیں۔"
+        "en": "A prohibition can license a result too: the result follows from not doing the forbidden thing. تَنْسَ is from نَسِيَ, 'to forget', given with its meaning; its weak final letter has dropped after the prohibitive لَا.",
+        "ur": "نہی بھی نتیجے کی اجازت دے سکتی ہے: نتیجہ ممنوع کام نہ کرنے سے آتا ہے۔ تَنْسَ نَسِيَ سے ہے، 'بھولنا'، جو اپنے معنی کے ساتھ دیا گیا ہے؛ نہی والے لَا کے بعد اس کا کمزور آخری حرف گر گیا ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "أُرِيدُ أَنْ تَنْجَحَ",
-        "ar_plain": "اريد ان تنجح",
-        "translit": "uriidu an tanjaha",
-        "en": "I want you to succeed. (constructed)",
-        "ur": "میں چاہتا ہوں کہ تم کامیاب ہو۔ (بنائی گئی مثال)"
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "What this lesson does not cover",
+        "ur": "یہ سبق کیا شامل نہیں کرتا"
       },
-      "explanation": {
-        "en": "After أَنْ the verb is مَنْصُوب — fatḥa: تَنْجَحَ. Compare the answer اِجْتَهِدْ تَنْجَحْ, with sukūn.",
-        "ur": "أَنْ کے بعد فعل مَنْصُوب ہوتا ہے — فتحہ: تَنْجَحَ۔ جواب اِجْتَهِدْ تَنْجَحْ سے موازنہ کریں، جس میں سکون ہے۔"
+      "body": {
+        "en": "A warning about breaking a prohibition is a different relationship and is not taught here. Questions and wishes are not covered either. The only tested pattern is a command or a prohibition, then the consequence of doing what it asks.",
+        "ur": "ممنوع کام کرنے پر تنبیہ ایک مختلف تعلق ہے اور یہاں نہیں سکھایا جاتا۔ سوال اور تمنا بھی شامل نہیں۔ جانچی جانے والی واحد ساخت یہ ہے: حکم یا نہی، پھر اس کے کرنے کا نتیجہ۔"
       }
     }
   ],
   "exercises": [
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch69-l03-ex01",
+      "prompt": {
+        "ar": "اُدْرُسْ تَنْجَحْ · اُدْرُسْ، يَنْجَحُ خَالِدٌ",
+        "ar_plain": "ادرس تنجح · ادرس، ينجح خالد",
+        "translit": "udrus tanjaḥ · udrus yanjaḥu khālidun",
+        "en": "(in which is the second part the response?)",
+        "ur": "(کس میں دوسرا حصہ جواب ہے؟)"
+      },
+      "options": [
+        {
+          "en": "In the first: passing follows from studying, and the verb has a sukūn",
+          "ur": "پہلے میں: کامیابی پڑھنے کا نتیجہ ہے اور فعل پر سکون ہے"
+        },
+        {
+          "en": "In the second: Khalid's passing follows from your studying",
+          "ur": "دوسرے میں: خالد کی کامیابی آپ کے پڑھنے کا نتیجہ ہے"
+        },
+        {
+          "en": "In both",
+          "ur": "دونوں میں"
+        },
+        {
+          "en": "In neither",
+          "ur": "کسی میں نہیں"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Only the first second-part is the consequence of doing what was asked.",
+        "ur": "صرف پہلا دوسرا حصہ اس کے کرنے کا نتیجہ ہے جو مانگا گیا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch69-l03-ex02",
+      "prompt": {
+        "ar": "اُدْرُسْ، يَنْجَحُ خَالِدٌ",
+        "ar_plain": "ادرس، ينجح خالد",
+        "translit": "udrus yanjaḥu khālidun",
+        "en": "(why does يَنْجَحُ keep its ḍamma?)",
+        "ur": "(يَنْجَحُ اپنا ضمہ کیوں رکھتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "Because the verb is a command",
+          "ur": "کیونکہ فعل حکم ہے"
+        },
+        {
+          "en": "Because Khalid is a name",
+          "ur": "کیونکہ خالد نام ہے"
+        },
+        {
+          "en": "Because it is a past verb",
+          "ur": "کیونکہ یہ ماضی کا فعل ہے"
+        },
+        {
+          "en": "It is a separate statement, not a consequence of the request, so there is no jussive",
+          "ur": "یہ الگ بیان ہے، درخواست کا نتیجہ نہیں، اس لیے جزم نہیں"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A statement beside a request is not its response; the verb stays indicative.",
+        "ur": "درخواست کے ساتھ رکھا بیان اس کا جواب نہیں؛ فعل مرفوع رہتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch69-l03-ex03",
+      "prompt": {
+        "ar": "لَا تَنْسَ الدَّرْسَ تَنْجَحْ",
+        "ar_plain": "لا تنس الدرس تنجح",
+        "translit": "lā tansa ad-darsa tanjaḥ",
+        "en": "(what does it say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "You forgot the lesson, so you passed",
+          "ur": "تم سبق بھول گئے اس لیے کامیاب ہوئے"
+        },
+        {
+          "en": "Do not forget the lesson, you will pass",
+          "ur": "سبق مت بھولو، کامیاب ہو گے"
+        },
+        {
+          "en": "Forget the lesson, you will pass",
+          "ur": "سبق بھول جاؤ، کامیاب ہو گے"
+        },
+        {
+          "en": "You do not forget the lesson, and you pass",
+          "ur": "تم سبق نہیں بھولتے، اور کامیاب ہوتے ہو"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A prohibition, then the result of not doing what is forbidden.",
+        "ur": "ایک نہی، پھر ممنوع کام نہ کرنے کا نتیجہ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch69-l03-ex04",
+      "mode": "TAP",
+      "sentence_ar": "لَا تَنْسَ الدَّرْسَ ___",
+      "hint": {
+        "en": "Do not forget the lesson, you will pass.",
+        "ur": "سبق مت بھولو، کامیاب ہو گے۔"
+      },
+      "options": [
+        {
+          "ar": "تَنْجَحْ",
+          "ar_plain": "تنجح",
+          "translit": "tanjaḥ",
+          "en": "you will pass (jussive)",
+          "ur": "کامیاب ہو گے (مجزوم)"
+        },
+        {
+          "ar": "تَنْجَحُ",
+          "ar_plain": "تنجح",
+          "translit": "tanjaḥu",
+          "en": "you pass (ḍamma)",
+          "ur": "تم کامیاب ہوتے ہو (ضمہ)"
+        },
+        {
+          "ar": "تَنْجَحَ",
+          "ar_plain": "تنجح",
+          "translit": "tanjaḥa",
+          "en": "you pass (fatḥa)",
+          "ur": "تم کامیاب ہو (فتحہ)"
+        },
+        {
+          "ar": "نَجَحْتَ",
+          "ar_plain": "نجحت",
+          "translit": "najaḥta",
+          "en": "you passed",
+          "ur": "تم کامیاب ہوئے"
+        }
+      ],
+      "correct_answer": {
+        "ar": "تَنْجَحْ",
+        "ar_plain": "تنجح",
+        "translit": "tanjaḥ",
+        "en": "you will pass (jussive)",
+        "ur": "کامیاب ہو گے (مجزوم)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The result of a prohibition is a jussive response too.",
+        "ur": "نہی کا نتیجہ بھی مجزوم جواب ہوتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch69-l03-ex05",
+      "prompt": {
+        "ar": "تَنْسَ",
+        "ar_plain": "تنس",
+        "translit": "tansa",
+        "en": "(in لَا تَنْسَ, what is the sign?)",
+        "ur": "(لَا تَنْسَ میں علامت کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "A sukūn on a sound letter",
+          "ur": "صحیح حرف پر سکون"
+        },
+        {
+          "en": "A dropped final ن",
+          "ur": "گرا ہوا آخری ن"
+        },
+        {
+          "en": "The weak final letter has dropped after the prohibitive لَا",
+          "ur": "نہی والے لَا کے بعد کمزور آخری حرف گر گیا ہے"
+        },
+        {
+          "en": "A fatḥa",
+          "ur": "فتحہ"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَا تَنْسَ is a prohibition with a weak-final verb: the final letter drops.",
+        "ur": "لَا تَنْسَ کمزور آخری حرف والے فعل کی نہی ہے: آخری حرف گر جاتا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch69-l03-ex06",
       "statement": {
-        "en": "In بَلْ لَا تُكْرِمُونَ الْيَتِيمَ, تُكْرِمُونَ is مَجْزُوم.",
-        "ur": "بَلْ لَا تُكْرِمُونَ الْيَتِيمَ میں تُكْرِمُونَ مَجْزُوم ہے۔"
+        "en": "Every imperfect verb that follows a request is its jussive response.",
+        "ur": "درخواست کے بعد آنے والا ہر مضارع فعل اس کا مجزوم جواب ہے۔"
       },
       "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "False. لَا only negates and the نَ stays: تُكْرِمُونَ is مَرْفُوع.",
-        "ur": "غلط۔ لَا صرف نفی کرتا ہے اور نَ باقی رہتا ہے: تُكْرِمُونَ مَرْفُوع ہے۔"
+        "en": "False. The second part must be what follows from doing what was asked. A separate statement keeps the indicative.",
+        "ur": "غلط۔ دوسرا حصہ اس کا نتیجہ ہونا چاہیے جو مانگا گیا۔ الگ بیان مرفوع رہتا ہے۔"
       }
     },
     {
       "type": "MATCHING",
-      "id": "ch69-l03-ex02",
+      "id": "ch69-l03-ex07",
       "left_column": [
         {
-          "ar": "لَا تُكْرِمُونَ",
-          "ar_plain": "لا تكرمون",
-          "translit": "laa tukrimuun",
-          "en": "you do not honour",
-          "ur": "تم عزت نہیں کرتے"
+          "ar": "اُدْرُسْ تَنْجَحْ",
+          "ar_plain": "ادرس تنجح",
+          "translit": "udrus tanjaḥ",
+          "en": "study, pass",
+          "ur": "پڑھو، کامیاب"
         },
         {
-          "ar": "وَيُعَلِّمُكُمُ اللَّهُ",
-          "ar_plain": "ويعلمكم الله",
-          "translit": "wa yu'allimukumullaah",
-          "en": "and Allah teaches you",
-          "ur": "اور اللہ تمہیں سکھاتا ہے"
+          "ar": "لَا تَنْسَ الدَّرْسَ تَنْجَحْ",
+          "ar_plain": "لا تنس الدرس تنجح",
+          "translit": "lā tansa ad-darsa tanjaḥ",
+          "en": "do not forget, pass",
+          "ur": "مت بھولو، کامیاب"
         },
         {
-          "ar": "أَنْ تَنْجَحَ",
-          "ar_plain": "ان تنجح",
-          "translit": "an tanjaha",
-          "en": "that you succeed",
-          "ur": "کہ تم کامیاب ہو"
+          "ar": "اُدْرُسْ، يَنْجَحُ خَالِدٌ",
+          "ar_plain": "ادرس، ينجح خالد",
+          "translit": "udrus yanjaḥu khālidun",
+          "en": "study, Khalid passes",
+          "ur": "پڑھو، خالد کامیاب"
         },
         {
-          "ar": "اِجْتَهِدْ تَنْجَحْ",
-          "ar_plain": "اجتهد تنجح",
-          "translit": "ijtahid tanjah",
-          "en": "make an effort; you will succeed",
-          "ur": "محنت کرو، کامیاب ہو گے"
+          "ar": "اُدْرُسْ تَنْجَحُ",
+          "ar_plain": "ادرس تنجح",
+          "translit": "udrus tanjaḥu",
+          "en": "study, you pass",
+          "ur": "پڑھو، تم کامیاب ہوتے ہو"
         }
       ],
       "right_column": [
         {
-          "en": "after أَنْ — مَنْصُوب",
-          "ur": "أَنْ کے بعد — مَنْصُوب"
+          "en": "a command + an indicative verb: not the response pattern",
+          "ur": "حکم + مرفوع فعل: جواب والی ساخت نہیں"
         },
         {
-          "en": "the answer — مَجْزُوم",
-          "ur": "جواب — مَجْزُوم"
+          "en": "a command + its jussive consequence",
+          "ur": "حکم + اس کا مجزوم نتیجہ"
         },
         {
-          "en": "negation — مَرْفُوع",
-          "ur": "نفی — مَرْفُوع"
+          "en": "a command + a separate indicative statement",
+          "ur": "حکم + الگ مرفوع بیان"
         },
         {
-          "en": "new statement after وَ — مَرْفُوع",
-          "ur": "وَ کے بعد نئی بات — مَرْفُوع"
+          "en": "a prohibition + its jussive consequence",
+          "ur": "نہی + اس کا مجزوم نتیجہ"
         }
       ],
       "correct_pairs": [
         [
           0,
-          2
+          1
         ],
         [
           1,
@@ -161,197 +377,101 @@
         ],
         [
           2,
-          0
+          2
         ],
         [
           3,
-          1
+          0
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch69-l03-ex03",
-      "prompt": {
-        "ar": "وَاتَّقُوا اللَّهَ ۖ وَيُعَلِّمُكُمُ اللَّهُ",
-        "ar_plain": "واتقوا الله ويعلمكم الله",
-        "translit": "wattaqullaaha wa yu'allimukumullaah",
-        "en": "Be mindful of Allah, and Allah teaches you.",
-        "ur": "اور اللہ سے ڈرو، اور اللہ تمہیں سکھاتا ہے۔"
-      },
-      "options": [
-        {
-          "en": "Be mindful of Allah, and Allah teaches you.",
-          "ur": "اور اللہ سے ڈرو، اور اللہ تمہیں سکھاتا ہے۔"
-        },
-        {
-          "en": "Teach about Allah and be mindful.",
-          "ur": "اللہ کے بارے میں سکھاؤ اور ڈرو۔"
-        },
-        {
-          "en": "Allah was mindful and taught you.",
-          "ur": "اللہ نے خیال رکھا اور تمہیں سکھایا۔"
-        },
-        {
-          "en": "Do not fear; Allah will not teach you.",
-          "ur": "مت ڈرو؛ اللہ تمہیں نہیں سکھائے گا۔"
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "اتَّقُوا اللَّهَ = \"be mindful of Allah\" (command). وَيُعَلِّمُكُمُ اللَّهُ = \"and Allah teaches you\" — a new statement, مَرْفُوع.",
-        "ur": "اتَّقُوا اللَّهَ = \"اللہ سے ڈرو\" (حکم)۔ وَيُعَلِّمُكُمُ اللَّهُ = \"اور اللہ تمہیں سکھاتا ہے\" — نئی بات، مَرْفُوع۔"
-      }
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch69-l03-ex04",
-      "mode": "TAP",
-      "sentence_ar": "أُرِيدُ أَنْ ___",
-      "hint": {
-        "en": "I want you to succeed. (constructed)",
-        "ur": "میں چاہتا ہوں کہ تم کامیاب ہو۔ (بنائی گئی مثال)"
-      },
-      "options": [
-        {
-          "ar": "تَنْجَحْ",
-          "ar_plain": "تنجح",
-          "translit": "tanjah",
-          "en": "you succeed (مَجْزُوم)",
-          "ur": "تم کامیاب ہو (مَجْزُوم)"
-        },
-        {
-          "ar": "تَنْجَحُ",
-          "ar_plain": "تنجح",
-          "translit": "tanjahu",
-          "en": "you succeed (مَرْفُوع)",
-          "ur": "تم کامیاب ہوتے ہو (مَرْفُوع)"
-        },
-        {
-          "ar": "نَجَحْتَ",
-          "ar_plain": "نجحت",
-          "translit": "najahta",
-          "en": "you succeeded (past)",
-          "ur": "تم کامیاب ہوئے (ماضی)"
-        },
-        {
-          "ar": "تَنْجَحَ",
-          "ar_plain": "تنجح",
-          "translit": "tanjaha",
-          "en": "you succeed (مَنْصُوب)",
-          "ur": "تم کامیاب ہو (مَنْصُوب)"
-        }
-      ],
-      "correct_answer": {
-        "ar": "تَنْجَحَ",
-        "ar_plain": "تنجح",
-        "translit": "tanjaha",
-        "en": "you succeed (مَنْصُوب)",
-        "ur": "تم کامیاب ہو (مَنْصُوب)"
-      },
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "After أَنْ the verb is مَنْصُوب: تَنْجَحَ, with fatḥa.",
-        "ur": "أَنْ کے بعد فعل مَنْصُوب ہوتا ہے: فتحہ کے ساتھ تَنْجَحَ۔"
+        "en": "Two licensed responses and two sentences that are not the pattern.",
+        "ur": "دو جائز جواب اور دو جملے جو اس ساخت کے نہیں۔"
       }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch69-l03-ex05",
+      "id": "ch69-l03-ex08",
       "target_translation": {
-        "en": "But you do not honour the orphan. (Al-Fajr 89:17)",
-        "ur": "بلکہ تم یتیم کی عزت نہیں کرتے۔ (الفجر 89:17)"
+        "en": "Do not forget the lesson, you will pass.",
+        "ur": "سبق مت بھولو، کامیاب ہو گے۔"
       },
       "tiles": [
         {
-          "ar": "بَلْ",
-          "ar_plain": "بل",
-          "translit": "bal",
-          "en": "but",
-          "ur": "بلکہ"
+          "ar": "تَنْجَحْ",
+          "ar_plain": "تنجح",
+          "translit": "tanjaḥ",
+          "en": "you will pass",
+          "ur": "کامیاب ہو گے"
         },
         {
           "ar": "لَا",
           "ar_plain": "لا",
-          "translit": "laa",
-          "en": "not",
-          "ur": "نہیں"
+          "translit": "lā",
+          "en": "do not",
+          "ur": "مت"
         },
         {
-          "ar": "تُكْرِمُونَ",
-          "ar_plain": "تكرمون",
-          "translit": "tukrimuuna",
-          "en": "you honour",
-          "ur": "تم عزت کرتے ہو"
+          "ar": "الدَّرْسَ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsa",
+          "en": "the lesson",
+          "ur": "سبق"
         },
         {
-          "ar": "الْيَتِيمَ",
-          "ar_plain": "اليتيم",
-          "translit": "al-yatiima",
-          "en": "the orphan",
-          "ur": "یتیم"
+          "ar": "تَنْسَ",
+          "ar_plain": "تنس",
+          "translit": "tansa",
+          "en": "forget",
+          "ur": "بھولو"
         }
       ],
       "correct_order": [
-        0,
         1,
+        3,
         2,
-        3
+        0
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "IDENTIFY_ROOT",
-      "id": "ch69-l03-ex06",
-      "word": {
-        "ar": "تُكْرِمُونَ",
-        "ar_plain": "تكرمون",
-        "translit": "tukrimuuna",
-        "en": "you honour",
-        "ur": "تم عزت کرتے ہو"
-      },
-      "options": [
-        "ر ك م",
-        "ك ر م",
-        "ك ر ن",
-        "ت ك ر"
-      ],
-      "correct_index": 1,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The prohibition, its object, then the response.",
+        "ur": "نہی، اس کا مفعول، پھر جواب۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Not every present-tense verb is an answer",
-      "ar": "لَيْسَ كُلُّ مُضَارِعٍ جَوَابًا",
-      "ur": "ہر مضارع فعل جواب نہیں"
+      "en": "Requests that license a result",
+      "ar": "الطَّلَبُ وَالنَّتِيجَةُ",
+      "ur": "درخواستیں جو نتیجے کی اجازت دیتی ہیں"
     },
     "ayah": {
-      "surah": 89,
-      "ayah": 17,
-      "label": "Al-Fajr 89:17",
-      "ar": "كَلَّا ۖ بَلْ لَا تُكْرِمُونَ الْيَتِيمَ",
-      "en": "No! But you do not honour the orphan.",
-      "ur": "ہرگز نہیں! بلکہ تم یتیم کی عزت نہیں کرتے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/089017.mp3"
+      "surah": 33,
+      "ayah": 70,
+      "label": "Al-Ahzab 33:70",
+      "ar": "اتَّقُوا اللَّهَ وَقُولُوا قَوْلًا سَدِيدًا",
+      "en": "fear Allah and speak words of appropriate justice",
+      "ur": "اللہ سے ڈرو اور سیدھی بات کہو",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033070.mp3"
     },
     "highlighted_word_indices": [
-      4
+      0,
+      2
     ],
     "highlighted_words": [
-      "تُكْرِمُونَ"
+      "اتَّقُوا",
+      "وَقُولُوا"
     ],
     "noor_explanation": {
-      "en": "تُكْرِمُونَ keeps its نَ: no command, no answer, so it stays مَرْفُوع after the negating لَا.",
-      "ur": "تُكْرِمُونَ کا نَ باقی ہے: نہ حکم، نہ جواب، اس لیے نفی والے لَا کے بعد یہ مَرْفُوع رہتا ہے۔"
+      "en": "اتَّقُوا اللَّهَ وَقُولُوا — two commands, and in the next ayah the consequence of doing them.",
+      "ur": "اتَّقُوا اللَّهَ وَقُولُوا — دو احکام، اور اگلی آیت میں ان کے کرنے کا نتیجہ۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Before calling a verb جواب الطلب, check for the command, the missing فَـ/وَ, and the result meaning. لَا تُكْرِمُونَ and وَيُعَلِّمُكُمُ are مَرْفُوع; أَنْ تَنْجَحَ is مَنْصُوب; only اِجْتَهِدْ تَنْجَحْ is the jussive answer.",
-      "ur": "کسی فعل کو جواب الطلب کہنے سے پہلے حکم، فَـ/وَ کا نہ ہونا، اور نتیجے کا معنی دیکھیں۔ لَا تُكْرِمُونَ اور وَيُعَلِّمُكُمُ مَرْفُوع ہیں؛ أَنْ تَنْجَحَ مَنْصُوب ہے؛ صرف اِجْتَهِدْ تَنْجَحْ مَجْزُوم جواب ہے۔"
+      "en": "A command or a prohibition, then a jussive verb for what follows from doing it; a separate statement keeps the indicative.",
+      "ur": "حکم یا نہی، پھر اس کے کرنے سے جو ہوگا اس کے لیے مجزوم فعل؛ الگ بیان مرفوع رہتا ہے۔"
     }
   }
 }

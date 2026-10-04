@@ -2,14 +2,13 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 70, Lesson 2 — The three sentence types for إِلَّا: تام موجب، تام منفي، مفرّغ.",
+    "_note": "Chapter 70, Lesson 2 (ch70-l02, rebuilt in place). Pattern one: the group is stated (complete) and the sentence is affirmative: the excepted word is accusative. Authored: حَضَرَ الطُّلَّابُ إِلَّا طَالِبًا, قَرَأَ الطُّلَّابُ الدَّرْسَ إِلَّا خَالِدًا; exact: 2:34 (إِلَّا إِبْلِيسَ) and 2:249 (فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا مِّنْهُمْ). The old second 'type' and the 'full negative exception' explanation are gone. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-70-content-proposal.md and its review amendments.",
+    "title": "Complete Affirmative Exception",
+    "titleAr": "الِاسْتِثْنَاءُ التَّامُّ الْمُثْبَتُ",
+    "titleUr": "تام مثبت استثنا",
     "chapter_order": 70,
     "lesson_order": 2,
-    "chapter_title": "الاستثناء",
-    "title": "Three Kinds of Exception Sentence",
-    "titleAr": "أَنْوَاعُ جُمْلَةِ الِاسْتِثْنَاءِ",
-    "source": "book_8_lesson_4_istithna_types.md",
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
@@ -17,425 +16,510 @@
       "surah": 2,
       "ayah": 249,
       "label": "Al-Baqarah 2:249",
-      "ar": "فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا مِّنْهُمْ",
-      "en": "But they drank from it, except a [very] few of them.",
-      "ur": "تو ان میں سے تھوڑے سے لوگوں کے سوا سب نے اس سے پی لیا",
+      "ar": "فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا مِّنْهُمْ",
+      "en": "but they drank from it, except a few of them",
+      "ur": "تو انہوں نے اس سے پیا سوائے ان میں سے تھوڑوں کے",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002249.mp3"
     },
     "noor_intro": {
-      "en": "فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا مِّنْهُمْ — 'they drank from it, except a few of them'. The sentence is affirmative and the group is there (the soldiers), so قَلِيلًا is accusative. Today: how the type of sentence decides the case after إِلَّا.",
-      "ur": "فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا مِّنْهُمْ — 'تو تھوڑوں کے سوا سب نے اس سے پی لیا'۔ جملہ مثبت ہے اور گروہ (لشکر) موجود ہے، اس لیے قَلِيلًا منصوب ہے۔ آج: جملے کی قسم إِلَّا کے بعد والے اعراب کو کیسے طے کرتی ہے۔"
+      "en": "When the group is stated and the sentence is a plain statement, the excepted word has one ending: the accusative.",
+      "ur": "جب گروہ بیان ہو اور جملہ سادہ بیان ہو تو نکالے ہوئے لفظ کا ایک ہی ختم ہوتا ہے: منصوب۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Affirmative, group mentioned (تَامٌّ مُوجَبٌ)",
-        "ar": "الِاسْتِثْنَاءُ التَّامُّ الْمُوجَبُ",
-        "ur": "تام موجب"
+        "en": "Complete affirmative: accusative",
+        "ar": "تَامٌّ مُثْبَتٌ: الْمُسْتَثْنَى مَنْصُوبٌ",
+        "ur": "تام مثبت: نکالا ہوا لفظ منصوب"
       },
       "explanation": {
-        "en": "The sentence is affirmative and the group is named. The مُسْتَثْنَى is always accusative: جَاءَ الْقَوْمُ إِلَّا زَيْدًا; فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا (2:249).",
-        "ur": "جملہ مثبت ہے اور گروہ مذکور۔ مستثنیٰ ہمیشہ منصوب ہوتا ہے: جَاءَ الْقَوْمُ إِلَّا زَيْدًا؛ فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا (2:249)۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Negative, group mentioned (تَامٌّ مَنْفِيٌّ)",
-        "ar": "الِاسْتِثْنَاءُ التَّامُّ الْمَنْفِيُّ",
-        "ur": "تام منفی"
-      },
-      "explanation": {
-        "en": "The sentence is negative and the group is named. The مُسْتَثْنَى may be accusative, or — more often — it copies the case of the group as a بَدَل: مَا جَاءَ أَحَدٌ إِلَّا زَيْدٌ. In the Quran: مَّا فَعَلُوهُ إِلَّا قَلِيلٌ مِّنْهُمْ (4:66) — قَلِيلٌ is nominative like the 'they' it is taken from.",
-        "ur": "جملہ منفی ہے اور گروہ مذکور۔ مستثنیٰ منصوب بھی ہو سکتا ہے، یا — زیادہ تر — بدل بن کر گروہ کا اعراب لیتا ہے: مَا جَاءَ أَحَدٌ إِلَّا زَيْدٌ۔ قرآن میں: مَّا فَعَلُوهُ إِلَّا قَلِيلٌ مِّنْهُمْ (4:66) — قَلِيلٌ اسی 'وہ' کی طرح مرفوع ہے جس سے نکالا گیا۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Negative, no group (مُفَرَّغٌ)",
-        "ar": "الِاسْتِثْنَاءُ الْمُفَرَّغُ",
-        "ur": "مفرّغ"
-      },
-      "explanation": {
-        "en": "The sentence is negative and the group is left out. Then إِلَّا has no grammatical effect; the word takes the case of its role, as if إِلَّا were absent: مَا جَاءَ إِلَّا زَيْدٌ (doer), مَا رَأَيْتُ إِلَّا زَيْدًا (object), مَا مَرَرْتُ إِلَّا بِزَيْدٍ (after بِ). The meaning is 'only'.",
-        "ur": "جملہ منفی ہے اور گروہ چھوڑ دیا گیا۔ تب إِلَّا کا کوئی نحوی اثر نہیں؛ لفظ اپنے کردار کا اعراب لیتا ہے جیسے إِلَّا ہو ہی نہیں: مَا جَاءَ إِلَّا زَيْدٌ (فاعل)، مَا رَأَيْتُ إِلَّا زَيْدًا (مفعول)، مَا مَرَرْتُ إِلَّا بِزَيْدٍ (بِ کے بعد)۔ معنی 'صرف' ہوتا ہے۔"
+        "en": "Complete means the stated group is there; affirmative means the sentence does not negate. In that pattern the excepted word is accusative: حَضَرَ الطُّلَّابُ إِلَّا طَالِبًا. The ending shows it with fatḥatān, or a fatḥa on a word like إِبْلِيسَ.",
+        "ur": "تام کا مطلب ہے کہ بیان کیا ہوا گروہ موجود ہے؛ مثبت کا مطلب ہے کہ جملہ نفی نہیں کرتا۔ اس ساخت میں نکالا ہوا لفظ منصوب ہوتا ہے: حَضَرَ الطُّلَّابُ إِلَّا طَالِبًا۔ ختم فتحتین سے ظاہر ہوتا ہے، یا إِبْلِيسَ جیسے لفظ پر فتحہ سے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "وَمَا مُحَمَّدٌ إِلَّا رَسُولٌ",
-        "ar_plain": "وما محمد إلا رسول",
-        "translit": "wa-maa muhammadun illaa rasuulun",
-        "en": "Muhammad is not but a messenger.",
-        "ur": "محمد تو بس ایک رسول ہیں۔"
+        "ar": "قَرَأَ الطُّلَّابُ الدَّرْسَ إِلَّا خَالِدًا",
+        "ar_plain": "قرا الطلاب الدرس الا خالدا",
+        "translit": "qaraʾa aṭ-ṭullābu ad-darsa ʾillā khālidan",
+        "en": "The students read the lesson except Khalid",
+        "ur": "طلبہ نے سبق پڑھا سوائے خالد کے"
       },
       "explanation": {
-        "en": "From 3:144 — a مُفَرَّغ sentence. Take إِلَّا away and you have مُحَمَّدٌ رَسُولٌ: رَسُولٌ is the nominative خَبَر. مَا + إِلَّا adds 'only'.",
-        "ur": "3:144 سے — مفرّغ جملہ۔ إِلَّا ہٹائیں تو مُحَمَّدٌ رَسُولٌ بچتا ہے: رَسُولٌ مرفوع خبر ہے۔ مَا + إِلَّا 'صرف' کا معنی بڑھاتے ہیں۔"
+        "en": "The group (الطُّلَّابُ) is stated and the sentence is affirmative, so خَالِدًا is accusative.",
+        "ur": "گروہ (الطُّلَّابُ) بیان کیا گیا ہے اور جملہ مثبت ہے، اس لیے خَالِدًا منصوب ہے۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "فَسَجَدُوا إِلَّا إِبْلِيسَ",
+        "ar_plain": "فسجدوا الا ابليس",
+        "translit": "fasajadū ʾillā ʾiblīsa",
+        "en": "so they prostrated, except Iblis",
+        "ur": "تو انہوں نے سجدہ کیا سوائے ابلیس کے"
+      },
+      "explanation": {
+        "en": "إِلَّا إِبْلِيسَ: the excepted word stands after إِلَّا with a fatḥa, the accusative. (Al-Baqarah 2:34) (Al-Baqarah 2:34)",
+        "ur": "إِلَّا إِبْلِيسَ: نکالا ہوا لفظ إِلَّا کے بعد فتحہ کے ساتھ ہے، منصوب۔ (البقرہ 2:34) (Al-Baqarah 2:34)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا مِّنْهُمْ",
+        "ar_plain": "فشربوا منه الا قليلا منهم",
+        "translit": "fasharibū minhu ʾillā qalīlan mminhum",
+        "en": "but they drank from it, except a few of them",
+        "ur": "تو انہوں نے اس سے پیا سوائے ان میں سے تھوڑوں کے"
+      },
+      "explanation": {
+        "en": "فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا مِّنْهُمْ: the group is those who drank, the sentence is affirmative, and قَلِيلًا has fatḥatān, the accusative. (Al-Baqarah 2:249) (Al-Baqarah 2:249)",
+        "ur": "فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا مِّنْهُمْ: گروہ پینے والے ہیں، جملہ مثبت ہے، اور قَلِيلًا پر فتحتین ہیں، منصوب۔ (البقرہ 2:249) (Al-Baqarah 2:249)"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Two things to check",
+        "ur": "دو باتیں دیکھنی ہیں"
+      },
+      "body": {
+        "en": "Before you choose the accusative, check two things: is the group stated, and is the sentence affirmative? If either answer changes, the pattern changes, and the next lessons take those cases.",
+        "ur": "منصوب چننے سے پہلے دو باتیں دیکھیں: کیا گروہ بیان ہے، اور کیا جملہ مثبت ہے؟ ان میں سے کوئی جواب بدل جائے تو ساخت بدل جاتی ہے، اور اگلے سبق وہ صورتیں لیتے ہیں۔"
       }
     }
   ],
   "exercises": [
     {
-      "type": "MATCHING",
+      "type": "FILL_BLANK",
       "id": "ch70-l02-ex01",
-      "left_column": [
-        {
-          "ar": "جَاءَ الْقَوْمُ إِلَّا زَيْدًا",
-          "ar_plain": "جاء القوم إلا زيدا",
-          "translit": "jaa'a al-qawmu illaa zaydan",
-          "en": "the people came, except Zayd",
-          "ur": "لوگ آئے، سوائے زید کے"
-        },
-        {
-          "ar": "مَا جَاءَ أَحَدٌ إِلَّا زَيْدٌ",
-          "ar_plain": "ما جاء أحد إلا زيد",
-          "translit": "maa jaa'a ahadun illaa zaydun",
-          "en": "no one came except Zayd",
-          "ur": "زید کے سوا کوئی نہیں آیا"
-        },
-        {
-          "ar": "مَا جَاءَ إِلَّا زَيْدٌ",
-          "ar_plain": "ما جاء إلا زيد",
-          "translit": "maa jaa'a illaa zaydun",
-          "en": "only Zayd came",
-          "ur": "صرف زید آیا"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "تَامٌّ مُوجَبٌ — affirmative, group mentioned",
-          "ur": "تام موجب — مثبت، گروہ مذکور"
-        },
-        {
-          "en": "تَامٌّ مَنْفِيٌّ — negative, group mentioned",
-          "ur": "تام منفی — منفی، گروہ مذکور"
-        },
-        {
-          "en": "مُفَرَّغٌ — negative, no group mentioned",
-          "ur": "مفرّغ — منفی، گروہ مذکور نہیں"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch70-l02-ex02",
-      "prompt": {
-        "ar": "وَمَا مُحَمَّدٌ إِلَّا رَسُولٌ",
-        "ar_plain": "وما محمد إلا رسول",
-        "translit": "wa-maa muhammadun illaa rasuulun",
-        "en": "Muhammad is not but a messenger.",
-        "ur": "محمد تو بس ایک رسول ہیں۔"
+      "mode": "TAP",
+      "sentence_ar": "حَضَرَ الطُّلَّابُ إِلَّا ___",
+      "hint": {
+        "en": "The students attended except a student.",
+        "ur": "طلبہ آئے سوائے ایک طالب علم کے۔"
       },
       "options": [
         {
-          "en": "Muhammad is not but a messenger.",
-          "ur": "محمد تو بس ایک رسول ہیں۔"
+          "ar": "طَالِبًا",
+          "ar_plain": "طالبا",
+          "translit": "ṭāliban",
+          "en": "a student (accusative)",
+          "ur": "ایک طالب علم (منصوب)"
         },
         {
-          "en": "Muhammad is not a messenger.",
-          "ur": "محمد رسول نہیں۔"
+          "ar": "طَالِبٌ",
+          "ar_plain": "طالب",
+          "translit": "ṭālibun",
+          "en": "a student (nominative)",
+          "ur": "ایک طالب علم (مرفوع)"
         },
         {
-          "en": "Every messenger is Muhammad.",
-          "ur": "ہر رسول محمد ہے۔"
+          "ar": "طَالِبٍ",
+          "ar_plain": "طالب",
+          "translit": "ṭālibin",
+          "en": "a student (genitive)",
+          "ur": "ایک طالب علم (مجرور)"
         },
         {
-          "en": "Muhammad sent a messenger.",
-          "ur": "محمد نے ایک رسول بھیجا۔"
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibu",
+          "en": "the student (nominative)",
+          "ur": "طالب علم (مرفوع)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "طَالِبًا",
+        "ar_plain": "طالبا",
+        "translit": "ṭāliban",
+        "en": "a student (accusative)",
+        "ur": "ایک طالب علم (منصوب)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Group stated, sentence affirmative: the excepted word is accusative.",
+        "ur": "گروہ بیان، جملہ مثبت: نکالا ہوا لفظ منصوب ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch70-l02-ex02",
+      "mode": "TAP",
+      "sentence_ar": "قَرَأَ الطُّلَّابُ الدَّرْسَ إِلَّا ___",
+      "hint": {
+        "en": "The students read the lesson except Khalid.",
+        "ur": "طلبہ نے سبق پڑھا سوائے خالد کے۔"
+      },
+      "options": [
+        {
+          "ar": "خَالِدٌ",
+          "ar_plain": "خالد",
+          "translit": "khālidun",
+          "en": "Khalid (nominative)",
+          "ur": "خالد (مرفوع)"
+        },
+        {
+          "ar": "خَالِدًا",
+          "ar_plain": "خالدا",
+          "translit": "khālidan",
+          "en": "Khalid (accusative)",
+          "ur": "خالد (منصوب)"
+        },
+        {
+          "ar": "خَالِدٍ",
+          "ar_plain": "خالد",
+          "translit": "khālidin",
+          "en": "Khalid (genitive)",
+          "ur": "خالد (مجرور)"
+        },
+        {
+          "ar": "خَالِدَانِ",
+          "ar_plain": "خالدان",
+          "translit": "khālidāni",
+          "en": "two Khalids",
+          "ur": "دو خالد"
+        }
+      ],
+      "correct_answer": {
+        "ar": "خَالِدًا",
+        "ar_plain": "خالدا",
+        "translit": "khālidan",
+        "en": "Khalid (accusative)",
+        "ur": "خالد (منصوب)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The pattern is the same: stated group, affirmative sentence, accusative.",
+        "ur": "ساخت وہی ہے: بیان کیا گیا گروہ، مثبت جملہ، منصوب۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l02-ex03",
+      "prompt": {
+        "ar": "فَسَجَدُوا إِلَّا إِبْلِيسَ",
+        "ar_plain": "فسجدوا الا ابليس",
+        "translit": "fasajadū ʾillā ʾiblīsa",
+        "en": "(2:34: what is إِبْلِيسَ, and why that ending?)",
+        "ur": "(2:34: إِبْلِيسَ کیا ہے، اور یہ ختم کیوں؟)"
+      },
+      "options": [
+        {
+          "en": "The verdict, in the nominative",
+          "ur": "حکم، مرفوع"
+        },
+        {
+          "en": "The excepted word, accusative: the group is stated and the sentence is affirmative",
+          "ur": "نکالا ہوا لفظ، منصوب: گروہ بیان ہے اور جملہ مثبت ہے"
+        },
+        {
+          "en": "The tool, in the accusative",
+          "ur": "آلہ، منصوب"
+        },
+        {
+          "en": "The stated group, in the genitive",
+          "ur": "بیان کیا ہوا گروہ، مجرور"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "إِبْلِيسَ is the excepted word after إِلَّا, with the accusative fatḥa.",
+        "ur": "إِبْلِيسَ إِلَّا کے بعد نکالا ہوا لفظ ہے، منصوب فتحہ کے ساتھ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l02-ex04",
+      "prompt": {
+        "ar": "فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا مِّنْهُمْ",
+        "ar_plain": "فشربوا منه الا قليلا منهم",
+        "translit": "fasharibū minhu ʾillā qalīlan mminhum",
+        "en": "(2:249: what does it say?)",
+        "ur": "(2:249: یہ کیا کہتی ہے؟)"
+      },
+      "options": [
+        {
+          "en": "but they drank from it, except a few of them",
+          "ur": "تو انہوں نے اس سے پیا سوائے ان میں سے تھوڑوں کے"
+        },
+        {
+          "en": "only a few of them drank from it",
+          "ur": "ان میں سے صرف تھوڑوں نے اس سے پیا"
+        },
+        {
+          "en": "none of them drank from it",
+          "ur": "ان میں سے کسی نے اس سے نہیں پیا"
+        },
+        {
+          "en": "a few of them drank, and the rest did not",
+          "ur": "تھوڑوں نے پیا، اور باقیوں نے نہیں"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "مَا + إِلَّا restricts: 'Muhammad is only a messenger' (3:144). No group is mentioned, so إِلَّا changes nothing: رَسُولٌ is nominative as the خَبَر.",
-        "ur": "مَا + إِلَّا حصر کرتے ہیں: 'محمد تو بس ایک رسول ہیں' (3:144)۔ کوئی گروہ مذکور نہیں، اس لیے إِلَّا کچھ نہیں بدلتا: رَسُولٌ خبر ہونے سے مرفوع ہے۔"
+        "en": "They drank, except a few: the few are taken out of the verdict.",
+        "ur": "انہوں نے پیا، سوائے تھوڑوں کے: تھوڑے حکم سے نکالے گئے ہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l02-ex05",
+      "prompt": {
+        "ar": "قَلِيلًا",
+        "ar_plain": "قليلا",
+        "translit": "qalīlan",
+        "en": "(2:249: why does قَلِيلًا end in fatḥatān?)",
+        "ur": "(2:249: قَلِيلًا فتحتین پر کیوں ختم ہوتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "It is the subject: nominative",
+          "ur": "یہ مبتدا ہے: مرفوع"
+        },
+        {
+          "en": "It follows a preposition: genitive",
+          "ur": "یہ حرفِ جر کے بعد ہے: مجرور"
+        },
+        {
+          "en": "It is a verb",
+          "ur": "یہ فعل ہے"
+        },
+        {
+          "en": "It is the excepted word in a complete affirmative sentence: accusative",
+          "ur": "یہ تام مثبت جملے میں نکالا ہوا لفظ ہے: منصوب"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The group (those who drank) is stated and the sentence is affirmative, so the excepted word is accusative.",
+        "ur": "گروہ (پینے والے) بیان ہے اور جملہ مثبت ہے، اس لیے نکالا ہوا لفظ منصوب ہے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch70-l02-ex03",
+      "id": "ch70-l02-ex06",
       "statement": {
-        "en": "In a مُفَرَّغ exception (no group mentioned), إِلَّا makes the next word accusative.",
-        "ur": "مفرّغ استثنا (جس میں گروہ مذکور نہ ہو) میں إِلَّا اگلے لفظ کو منصوب کرتا ہے۔"
+        "en": "In a complete affirmative exception the excepted word is accusative.",
+        "ur": "تام مثبت استثنا میں نکالا ہوا لفظ منصوب ہوتا ہے۔"
       },
-      "correct_answer": false,
+      "correct_answer": true,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "False. In a مُفَرَّغ sentence إِلَّا has no effect: read the sentence as if إِلَّا were not there. مَا جَاءَ إِلَّا زَيْدٌ — زَيْدٌ is the doer, nominative.",
-        "ur": "غلط۔ مفرّغ جملے میں إِلَّا کا کوئی اثر نہیں: جملے کو ایسے پڑھیے جیسے إِلَّا نہ ہو۔ مَا جَاءَ إِلَّا زَيْدٌ — زَيْدٌ فاعل ہے، مرفوع۔"
+        "en": "Yes: a stated group and an affirmative sentence give the accusative.",
+        "ur": "جی ہاں: بیان کیا گیا گروہ اور مثبت جملہ منصوب دیتے ہیں۔"
       }
     },
     {
-      "type": "FILL_BLANK",
-      "id": "ch70-l02-ex04",
-      "mode": "TAP",
-      "sentence_ar": "مَا رَأَيْتُ إِلَّا ___",
-      "hint": {
-        "en": "'I saw only Zayd.' No group is mentioned, so give the word the case of its role.",
-        "ur": "'میں نے صرف زید کو دیکھا۔' گروہ مذکور نہیں، اس لیے لفظ کو اس کے کردار کا اعراب دیجیے۔"
-      },
-      "options": [
+      "type": "MATCHING",
+      "id": "ch70-l02-ex07",
+      "left_column": [
         {
-          "ar": "زَيْدًا",
-          "ar_plain": "زيدا",
-          "translit": "zaydan",
-          "en": "Zayd (accusative — object)",
-          "ur": "زید (منصوب — مفعول)"
+          "ar": "حَضَرَ الطُّلَّابُ إِلَّا طَالِبًا",
+          "ar_plain": "حضر الطلاب الا طالبا",
+          "translit": "ḥaḍara aṭ-ṭullābu ʾillā ṭāliban",
+          "en": "attended except a student",
+          "ur": "آئے سوائے ایک کے"
         },
         {
-          "ar": "زَيْدٌ",
-          "ar_plain": "زيد",
-          "translit": "zaydun",
-          "en": "Zayd (nominative)",
-          "ur": "زید (مرفوع)"
+          "ar": "فَسَجَدُوا إِلَّا إِبْلِيسَ",
+          "ar_plain": "فسجدوا الا ابليس",
+          "translit": "fasajadū ʾillā ʾiblīsa",
+          "en": "prostrated except Iblis",
+          "ur": "سجدہ کیا سوائے ابلیس کے"
         },
         {
-          "ar": "زَيْدٍ",
-          "ar_plain": "زيد",
-          "translit": "zaydin",
-          "en": "Zayd (genitive)",
-          "ur": "زید (مجرور)"
+          "ar": "فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا",
+          "ar_plain": "فشربوا منه الا قليلا",
+          "translit": "fasharibū minhu ʾillā qalīlan",
+          "en": "drank except a few",
+          "ur": "پیا سوائے تھوڑوں کے"
         },
         {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "not",
-          "ur": "نہیں"
+          "ar": "مَا حَضَرَ إِلَّا خَالِدٌ",
+          "ar_plain": "ما حضر الا خالد",
+          "translit": "mā ḥaḍara ʾillā khālidun",
+          "en": "only Khalid attended",
+          "ur": "صرف خالد آیا"
         }
       ],
-      "correct_answer": {
-        "ar": "زَيْدًا",
-        "ar_plain": "زيدا",
-        "translit": "zaydan",
-        "en": "Zayd (accusative — object)",
-        "ur": "زید (منصوب — مفعول)"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch70-l02-ex05",
-      "mode": "TAP",
-      "sentence_ar": "مَا جَاءَ إِلَّا ___",
-      "hint": {
-        "en": "'Only Zayd came.' Here the word after إِلَّا is the doer of جَاءَ.",
-        "ur": "'صرف زید آیا۔' یہاں إِلَّا کے بعد والا لفظ جَاءَ کا فاعل ہے۔"
-      },
-      "options": [
+      "right_column": [
         {
-          "ar": "زَيْدٌ",
-          "ar_plain": "زيد",
-          "translit": "zaydun",
-          "en": "Zayd (nominative — doer)",
-          "ur": "زید (مرفوع — فاعل)"
+          "en": "no group stated: not this pattern",
+          "ur": "گروہ بیان نہیں: یہ ساخت نہیں"
         },
         {
-          "ar": "زَيْدًا",
-          "ar_plain": "زيدا",
-          "translit": "zaydan",
-          "en": "Zayd (accusative)",
-          "ur": "زید (منصوب)"
+          "en": "complete affirmative: the excepted word is accusative",
+          "ur": "تام مثبت: نکالا ہوا لفظ منصوب"
         },
         {
-          "ar": "زَيْدٍ",
-          "ar_plain": "زيد",
-          "translit": "zaydin",
-          "en": "Zayd (genitive)",
-          "ur": "زید (مجرور)"
+          "en": "complete affirmative: a name with a fatḥa",
+          "ur": "تام مثبت: فتحہ والا نام"
         },
         {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "not",
-          "ur": "نہیں"
+          "en": "complete affirmative: fatḥatān",
+          "ur": "تام مثبت: فتحتین"
         }
       ],
-      "correct_answer": {
-        "ar": "زَيْدٌ",
-        "ar_plain": "زيد",
-        "translit": "zaydun",
-        "en": "Zayd (nominative — doer)",
-        "ur": "زید (مرفوع — فاعل)"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch70-l02-ex06",
-      "sentence_ar": "وَمَا مُحَمَّدٌ إِلَّا رَسُولٌ",
-      "words": [
-        {
-          "ar": "وَ",
-          "ar_plain": "و",
-          "translit": "wa",
-          "en": "and",
-          "ur": "اور"
-        },
-        {
-          "ar": "مَا",
-          "ar_plain": "ما",
-          "translit": "maa",
-          "en": "not",
-          "ur": "نہیں"
-        },
-        {
-          "ar": "مُحَمَّدٌ",
-          "ar_plain": "محمد",
-          "translit": "muhammadun",
-          "en": "Muhammad",
-          "ur": "محمد"
-        },
-        {
-          "ar": "إِلَّا",
-          "ar_plain": "إلا",
-          "translit": "illaa",
-          "en": "except / only",
-          "ur": "مگر"
-        },
-        {
-          "ar": "رَسُولٌ",
-          "ar_plain": "رسول",
-          "translit": "rasuulun",
-          "en": "a messenger",
-          "ur": "رسول"
-        }
-      ],
-      "available_roles": [
-        "CONJUNCTION",
-        "PARTICLE",
-        "SUBJECT",
-        "PREDICATE",
-        "VERB",
-        "OBJECT"
-      ],
-      "correct_roles": [
-        "CONJUNCTION",
-        "PARTICLE",
-        "SUBJECT",
-        "PARTICLE",
-        "PREDICATE"
+      "correct_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ]
       ],
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "وَ joins; مَا negates; مُحَمَّدٌ is the subject; إِلَّا restricts; رَسُولٌ is the predicate, nominative, because in a مُفَرَّغ sentence إِلَّا changes nothing.",
-        "ur": "وَ جوڑتا ہے؛ مَا نفی کرتا ہے؛ مُحَمَّدٌ مبتدا ہے؛ إِلَّا حصر کرتا ہے؛ رَسُولٌ خبر ہے، مرفوع، کیونکہ مفرّغ جملے میں إِلَّا کچھ نہیں بدلتا۔"
+        "en": "Three complete affirmative sentences and one that is not this pattern.",
+        "ur": "تین تام مثبت جملے اور ایک جو اس ساخت کا نہیں۔"
       }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch70-l02-ex07",
+      "id": "ch70-l02-ex08",
       "target_translation": {
-        "en": "I saw no one in the mosque except the believers.",
-        "ur": "میں نے مسجد میں مومنوں کے سوا کسی کو نہیں دیکھا۔"
+        "en": "The students read the lesson except Khalid.",
+        "ur": "طلبہ نے سبق پڑھا سوائے خالد کے۔"
       },
       "tiles": [
         {
-          "ar": "مَا",
-          "ar_plain": "ما",
-          "translit": "maa",
-          "en": "not",
-          "ur": "نہیں"
-        },
-        {
-          "ar": "رَأَيْتُ",
-          "ar_plain": "رأيت",
-          "translit": "ra'aytu",
-          "en": "I saw",
-          "ur": "میں نے دیکھا"
-        },
-        {
-          "ar": "أَحَدًا",
-          "ar_plain": "أحدا",
-          "translit": "ahadan",
-          "en": "anyone",
-          "ur": "کسی کو"
-        },
-        {
-          "ar": "فِي الْمَسْجِدِ",
-          "ar_plain": "في المسجد",
-          "translit": "fii al-masjidi",
-          "en": "in the mosque",
-          "ur": "مسجد میں"
-        },
-        {
           "ar": "إِلَّا",
-          "ar_plain": "إلا",
-          "translit": "illaa",
+          "ar_plain": "الا",
+          "translit": "ʾillā",
           "en": "except",
           "ur": "سوائے"
         },
         {
-          "ar": "الْمُؤْمِنِينَ",
-          "ar_plain": "المؤمنين",
-          "translit": "al-mu'miniina",
-          "en": "the believers",
-          "ur": "مومن"
+          "ar": "قَرَأَ",
+          "ar_plain": "قرا",
+          "translit": "qaraʾa",
+          "en": "read",
+          "ur": "پڑھا"
+        },
+        {
+          "ar": "خَالِدًا",
+          "ar_plain": "خالدا",
+          "translit": "khālidan",
+          "en": "Khalid",
+          "ur": "خالد"
+        },
+        {
+          "ar": "الطُّلَّابُ",
+          "ar_plain": "الطلاب",
+          "translit": "aṭ-ṭullābu",
+          "en": "the students",
+          "ur": "طلبہ"
+        },
+        {
+          "ar": "الدَّرْسَ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsa",
+          "en": "the lesson",
+          "ur": "سبق"
         }
       ],
       "correct_order": [
-        0,
         1,
-        2,
         3,
         4,
-        5
+        0,
+        2
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Verdict, group and object, then the tool, then the excepted word.",
+        "ur": "حکم، گروہ اور مفعول، پھر آلہ، پھر نکالا ہوا لفظ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l02-ex09",
+      "prompt": {
+        "ar": "حَضَرَ الطُّلَّابُ إِلَّا طَالِبًا وَاحِدًا",
+        "ar_plain": "حضر الطلاب الا طالبا واحدا",
+        "translit": "ḥaḍara aṭ-ṭullābu ʾillā ṭāliban waāḥidan",
+        "en": "(what is وَاحِدًا?)",
+        "ur": "(وَاحِدًا کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "The verdict",
+          "ur": "حکم"
+        },
+        {
+          "en": "The tool",
+          "ur": "آلہ"
+        },
+        {
+          "en": "An adjective of the excepted word, in the same accusative",
+          "ur": "نکالے ہوئے لفظ کی صفت، اسی منصوب حالت میں"
+        },
+        {
+          "en": "The stated group",
+          "ur": "بیان کیا ہوا گروہ"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The adjective agrees with the excepted word: both are accusative.",
+        "ur": "صفت نکالے ہوئے لفظ کے مطابق ہے: دونوں منصوب ہیں۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Three kinds of exception sentence",
-      "ar": "التَّامُّ الْمُوجَبُ وَالتَّامُّ الْمَنْفِيُّ وَالْمُفَرَّغُ",
-      "ur": "استثنا کے جملوں کی تین قسمیں"
+      "en": "Except a few: accusative",
+      "ar": "إِلَّا قَلِيلًا",
+      "ur": "سوائے تھوڑوں کے: منصوب"
     },
     "ayah": {
-      "surah": 3,
-      "ayah": 144,
-      "label": "Aal Imran 3:144",
-      "ar": "وَمَا مُحَمَّدٌ إِلَّا رَسُولٌ قَدْ خَلَتْ مِن قَبْلِهِ الرُّسُلُ",
-      "en": "Muhammad is not but a messenger. [Other] messengers have passed on before him.",
-      "ur": "اور محمد تو بس ایک رسول ہیں، ان سے پہلے بھی بہت سے رسول گزر چکے ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003144.mp3"
+      "surah": 2,
+      "ayah": 249,
+      "label": "Al-Baqarah 2:249",
+      "ar": "فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا مِّنْهُمْ",
+      "en": "but they drank from it, except a few of them",
+      "ur": "تو انہوں نے اس سے پیا سوائے ان میں سے تھوڑوں کے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002249.mp3"
     },
     "highlighted_word_indices": [
       0,
-      1,
       2,
       3
     ],
+    "highlighted_words": [
+      "فَشَرِبُوا",
+      "إِلَّا",
+      "قَلِيلًا"
+    ],
     "noor_explanation": {
-      "en": "وَمَا مُحَمَّدٌ إِلَّا رَسُولٌ — the group is not mentioned, so this is مُفَرَّغ: إِلَّا only restricts the meaning, and رَسُولٌ keeps its nominative as the خَبَر. Said after Uhud: the Prophet ﷺ is a messenger like those before him, and the message does not end with him.",
-      "ur": "وَمَا مُحَمَّدٌ إِلَّا رَسُولٌ — گروہ مذکور نہیں، اس لیے یہ مفرّغ ہے: إِلَّا صرف معنی میں حصر کرتا ہے، اور رَسُولٌ خبر ہو کر مرفوع رہتا ہے۔ یہ اُحد کے بعد فرمایا گیا: نبی ﷺ اپنے سے پہلے رسولوں کی طرح ایک رسول ہیں، اور پیغام ان کے ساتھ ختم نہیں ہوتا۔"
+      "en": "إِلَّا قَلِيلًا — the excepted word with fatḥatān after a stated group and an affirmative verdict.",
+      "ur": "إِلَّا قَلِيلًا — بیان کیے گئے گروہ اور مثبت حکم کے بعد فتحتین والا نکالا ہوا لفظ۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Three kinds: affirmative with the group → accusative (إِلَّا زَيْدًا). Negative with the group → accusative or, more often, the group's case (إِلَّا زَيْدٌ). Negative without the group → the word's own role decides; إِلَّا just means 'only'.",
-      "ur": "تین قسمیں: مثبت، گروہ کے ساتھ → منصوب (إِلَّا زَيْدًا)۔ منفی، گروہ کے ساتھ → منصوب، یا زیادہ تر گروہ کا اعراب (إِلَّا زَيْدٌ)۔ منفی، گروہ کے بغیر → لفظ کا اپنا کردار طے کرتا ہے؛ إِلَّا کا معنی بس 'صرف'۔"
+      "en": "Complete affirmative: the group is stated, the sentence is affirmative, and the excepted word is accusative.",
+      "ur": "تام مثبت: گروہ بیان ہے، جملہ مثبت ہے، اور نکالا ہوا لفظ منصوب ہے۔"
     }
   }
 }

@@ -1,0 +1,446 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 68, Final test (ch68-test, new). Twelve multiple-choice questions at 80 % (9/12 fails, 10/12 passes): the three jussive signs — sound-final, weak-final and five form (q01–03), لَمَّا and prohibitive لَا (q04–05), command lām and purpose lām (q06–07), the two-verb condition: إِنْ, conditional مَنْ and a Quranic example (q08–10), and one decision from each part of Al-Layl (q11–12). Correct options are placed 3 / 3 / 3 / 3. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-68-content-proposal.md and its review amendments.",
+    "title": "Chapter 68 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الثَّامِنِ وَالسِّتِّينَ",
+    "titleUr": "باب 68 کا آخری امتحان",
+    "chapter_order": 68,
+    "lesson_order": 9,
+    "estimated_minutes": 10,
+    "xp_reward": 25
+  },
+  "hook": {
+    "ayah": {
+      "surah": 65,
+      "ayah": 2,
+      "label": "At-Talaq 65:2",
+      "ar": "وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا",
+      "en": "And whoever fears Allah — He will make for him a way out",
+      "ur": "اور جو اللہ سے ڈرے گا وہ اس کے لیے نکلنے کی راہ بنا دے گا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/065002.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 68.",
+      "ur": "باب 68 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 68,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch68-test-q01",
+        "topic": {
+          "en": "A sound-final verb after لَمْ",
+          "ur": "لَمْ کے بعد صحیح آخری حرف والا فعل"
+        },
+        "prompt": {
+          "en": "Which form completes 'The boy did not open the door'?",
+          "ur": "کون سی صورت 'لڑکے نے دروازہ نہیں کھولا' کو مکمل کرتی ہے؟"
+        },
+        "arabic": "لَمْ ___ الْوَلَدُ الْبَابَ",
+        "options": [
+          {
+            "en": "يَفْتَحْ",
+            "ur": "يَفْتَحْ"
+          },
+          {
+            "en": "يَفْتَحُ",
+            "ur": "يَفْتَحُ"
+          },
+          {
+            "en": "يَفْتَحَ",
+            "ur": "يَفْتَحَ"
+          },
+          {
+            "en": "فَتَحَ",
+            "ur": "فَتَحَ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch68-test-q02",
+        "topic": {
+          "en": "A weak letter after لَمْ",
+          "ur": "لَمْ کے بعد کمزور حرف"
+        },
+        "prompt": {
+          "en": "What is the jussive sign in this verb?",
+          "ur": "اس فعل میں مجزوم علامت کیا ہے؟"
+        },
+        "arabic": "لَمْ يَدْعُ",
+        "options": [
+          {
+            "en": "The final ن has dropped",
+            "ur": "آخری ن گر گیا"
+          },
+          {
+            "en": "A sukūn on a sound letter",
+            "ur": "صحیح حرف پر سکون"
+          },
+          {
+            "en": "The weak final letter ـو has dropped: يَدْعُو → يَدْعُ",
+            "ur": "کمزور آخری حرف ـو گر گیا: يَدْعُو → يَدْعُ"
+          },
+          {
+            "en": "A fatḥa on the last letter",
+            "ur": "آخری حرف پر فتحہ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch68-test-q03",
+        "topic": {
+          "en": "A five form after لَمْ",
+          "ur": "لَمْ کے بعد پانچ صورتوں والا فعل"
+        },
+        "prompt": {
+          "en": "Which form completes 'You all did not go'?",
+          "ur": "کون سی صورت 'تم سب نہیں گئے' کو مکمل کرتی ہے؟"
+        },
+        "arabic": "أَنْتُمْ لَمْ ___",
+        "options": [
+          {
+            "en": "تَذْهَبُونَ",
+            "ur": "تَذْهَبُونَ"
+          },
+          {
+            "en": "تَذْهَبُوا",
+            "ur": "تَذْهَبُوا"
+          },
+          {
+            "en": "تَذْهَبْ",
+            "ur": "تَذْهَبْ"
+          },
+          {
+            "en": "تَذْهَبُ",
+            "ur": "تَذْهَبُ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch68-test-q04",
+        "topic": {
+          "en": "لَمَّا and a jussive",
+          "ur": "لَمَّا اور مجزوم"
+        },
+        "prompt": {
+          "en": "What does this sentence say?",
+          "ur": "یہ جملہ کیا کہتا ہے؟"
+        },
+        "arabic": "لَمَّا يَنْجَحْ خَالِدٌ",
+        "options": [
+          {
+            "en": "When Khalid passed",
+            "ur": "جب خالد کامیاب ہوا"
+          },
+          {
+            "en": "Khalid did not pass",
+            "ur": "خالد کامیاب نہیں ہوا"
+          },
+          {
+            "en": "Khalid will not pass",
+            "ur": "خالد کامیاب نہیں ہوگا"
+          },
+          {
+            "en": "Khalid has not passed yet",
+            "ur": "خالد ابھی کامیاب نہیں ہوا"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch68-test-q05",
+        "topic": {
+          "en": "A prohibition",
+          "ur": "نہی"
+        },
+        "prompt": {
+          "en": "What does لَا do in this phrase?",
+          "ur": "اس فقرے میں لَا کیا کرتا ہے؟"
+        },
+        "arabic": "وَلَا تَيْأَسُوا مِن رَّوْحِ اللَّهِ",
+        "options": [
+          {
+            "en": "It says 'they do not despair'",
+            "ur": "یہ کہتا ہے 'وہ مایوس نہیں ہوتے'"
+          },
+          {
+            "en": "It forbids: 'do not despair', and the verb has dropped its ن",
+            "ur": "یہ روکتا ہے: 'مایوس نہ ہو'، اور فعل کا ن گر گیا"
+          },
+          {
+            "en": "It says 'you despaired'",
+            "ur": "یہ کہتا ہے 'تم مایوس ہوئے'"
+          },
+          {
+            "en": "It asks a question",
+            "ur": "یہ سوال کرتا ہے"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch68-test-q06",
+        "topic": {
+          "en": "Command lām",
+          "ur": "امر کا لام"
+        },
+        "prompt": {
+          "en": "What does this sentence say?",
+          "ur": "یہ جملہ کیا کہتا ہے؟"
+        },
+        "arabic": "لِيَكْتُبْ خَالِدٌ الدَّرْسَ",
+        "options": [
+          {
+            "en": "Khalid wrote the lesson",
+            "ur": "خالد نے سبق لکھا"
+          },
+          {
+            "en": "Write the lesson, Khalid",
+            "ur": "خالد، سبق لکھو"
+          },
+          {
+            "en": "So that Khalid may write the lesson",
+            "ur": "تاکہ خالد سبق لکھے"
+          },
+          {
+            "en": "Let Khalid write the lesson",
+            "ur": "خالد سبق لکھے"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch68-test-q07",
+        "topic": {
+          "en": "Purpose lām",
+          "ur": "غرض کا لام"
+        },
+        "prompt": {
+          "en": "What does this word mean?",
+          "ur": "اس لفظ کا کیا مطلب ہے؟"
+        },
+        "arabic": "لِيَقْرَأَ",
+        "options": [
+          {
+            "en": "so that he may read",
+            "ur": "تاکہ وہ پڑھے"
+          },
+          {
+            "en": "let him read",
+            "ur": "وہ پڑھے"
+          },
+          {
+            "en": "read!",
+            "ur": "پڑھو!"
+          },
+          {
+            "en": "he did not read",
+            "ur": "اس نے نہیں پڑھا"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch68-test-q08",
+        "topic": {
+          "en": "The condition verbs after إِنْ",
+          "ur": "إِنْ کے بعد کے افعال"
+        },
+        "prompt": {
+          "en": "Which are the two jussive verbs?",
+          "ur": "دو مجزوم افعال کون سے ہیں؟"
+        },
+        "arabic": "إِنْ تَكْتُبْ تَفْهَمْ",
+        "options": [
+          {
+            "en": "إِنْ and تَكْتُبْ",
+            "ur": "إِنْ and تَكْتُبْ"
+          },
+          {
+            "en": "إِنْ and تَفْهَمْ",
+            "ur": "إِنْ and تَفْهَمْ"
+          },
+          {
+            "en": "تَكْتُبْ and تَفْهَمْ",
+            "ur": "تَكْتُبْ and تَفْهَمْ"
+          },
+          {
+            "en": "Only تَكْتُبْ",
+            "ur": "Only تَكْتُبْ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch68-test-q09",
+        "topic": {
+          "en": "Conditional مَنْ",
+          "ur": "شرطیہ مَنْ"
+        },
+        "prompt": {
+          "en": "What is مَنْ here?",
+          "ur": "یہاں مَنْ کیا ہے؟"
+        },
+        "arabic": "مَنْ يَدْرُسْ يَنْجَحْ",
+        "options": [
+          {
+            "en": "A question: 'who?'",
+            "ur": "سوال: 'کون؟'"
+          },
+          {
+            "en": "Conditional: 'whoever', with two jussive verbs",
+            "ur": "شرطیہ: 'جو'، دو مجزوم افعال کے ساتھ"
+          },
+          {
+            "en": "A noun that is the subject only",
+            "ur": "صرف مبتدا اسم"
+          },
+          {
+            "en": "A verb",
+            "ur": "فعل"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch68-test-q10",
+        "topic": {
+          "en": "Two verbs in a Quranic condition",
+          "ur": "قرآنی شرط میں دو فعل"
+        },
+        "prompt": {
+          "en": "Which are the two verbs governed by مَن?",
+          "ur": "مَن جن دو افعال پر عمل کرتا ہے وہ کون سے ہیں؟"
+        },
+        "arabic": "وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا",
+        "options": [
+          {
+            "en": "اللَّهَ and مَخْرَجًا",
+            "ur": "اللَّهَ and مَخْرَجًا"
+          },
+          {
+            "en": "لَّهُ and مَخْرَجًا",
+            "ur": "لَّهُ and مَخْرَجًا"
+          },
+          {
+            "en": "مَن and اللَّهَ",
+            "ur": "مَن and اللَّهَ"
+          },
+          {
+            "en": "يَتَّقِ and يَجْعَل",
+            "ur": "يَتَّقِ and يَجْعَل"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch68-test-q11",
+        "topic": {
+          "en": "Al-Layl, first part",
+          "ur": "اللیل، پہلا حصہ"
+        },
+        "prompt": {
+          "en": "According to this ayah, whom does it describe?",
+          "ur": "اس آیت کے مطابق یہ کس کا بیان کرتی ہے؟"
+        },
+        "arabic": "وَأَمَّا مَن بَخِلَ وَاسْتَغْنَىٰ",
+        "options": [
+          {
+            "en": "The one who gives and is mindful of Allah",
+            "ur": "وہ جو دیتا ہے اور اللہ سے ڈرتا ہے"
+          },
+          {
+            "en": "The night when it covers",
+            "ur": "رات جب وہ ڈھانپ لے"
+          },
+          {
+            "en": "The one who withholds and thinks himself free of need",
+            "ur": "وہ جو بخل کرتا ہے اور خود کو بے نیاز سمجھتا ہے"
+          },
+          {
+            "en": "The day when it shines",
+            "ur": "دن جب وہ روشن ہو"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch68-test-q12",
+        "topic": {
+          "en": "Al-Layl, the whole passage",
+          "ur": "اللیل، پوری سورت"
+        },
+        "prompt": {
+          "en": "According to this ayah, what will happen to the one who gives seeking the face of his Lord?",
+          "ur": "اس آیت کے مطابق جو اپنے رب کی رضا چاہتے ہوئے دیتا ہے اس کے ساتھ کیا ہوگا؟"
+        },
+        "arabic": "وَلَسَوْفَ يَرْضَىٰ",
+        "options": [
+          {
+            "en": "He will surely be pleased",
+            "ur": "وہ ضرور خوش ہو جائے گا"
+          },
+          {
+            "en": "He will be eased toward hardship",
+            "ur": "اسے سختی کی طرف لے جایا جائے گا"
+          },
+          {
+            "en": "His wealth will not help him",
+            "ur": "اس کا مال اس کے کام نہ آئے گا"
+          },
+          {
+            "en": "He will burn in the Fire",
+            "ur": "وہ آگ میں جلے گا"
+          }
+        ],
+        "correct_index": 0
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 68 — the jussive and conditions",
+      "ar": "الْجَزْمُ وَالشَّرْطُ",
+      "ur": "باب 68 — جزم اور شرطیں"
+    },
+    "ayah": {
+      "surah": 65,
+      "ayah": 2,
+      "label": "At-Talaq 65:2",
+      "ar": "وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا",
+      "en": "And whoever fears Allah — He will make for him a way out",
+      "ur": "اور جو اللہ سے ڈرے گا وہ اس کے لیے نکلنے کی راہ بنا دے گا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/065002.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1,
+      3
+    ],
+    "highlighted_words": [
+      "وَمَن",
+      "يَتَّقِ",
+      "يَجْعَل"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 68 able to read the jussive signs, tell لَمْ, لَمَّا and لَا apart, give a command, read a two-verb condition and follow Al-Layl.",
+      "ur": "آپ باب 68 اس حال میں مکمل کرتے ہیں کہ جزم کی علامتیں پڑھ سکتے ہیں، لَمْ، لَمَّا اور لَا میں فرق کر سکتے ہیں، حکم دے سکتے ہیں، دو فعل والی شرط پڑھ سکتے ہیں اور اللیل سمجھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 68 complete. Chapter 69: the jussive answer to a request, and two surahs.",
+      "ur": "باب 68 مکمل۔ باب 69: درخواست کا مجزوم جواب، اور دو سورتیں۔"
+    }
+  }
+}

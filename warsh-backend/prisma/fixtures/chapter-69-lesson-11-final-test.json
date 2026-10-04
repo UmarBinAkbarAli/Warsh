@@ -1,0 +1,441 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 69, Final test (ch69-test, new). Twelve multiple-choice questions at 80 % (9/12 fails, 10/12 passes): a request and its consequence, and a response against a separate statement (q01–02), the direct command against the jussive response (q03–04), the response signs for a five form and a weak letter (q05–06), the Quran: 33:71 and the 2:282 look-alike (q07–08), a separate statement and a prohibition licensing a result (q09–10), and one decision from each surah (q11–12). Correct options are placed 3 / 3 / 3 / 3. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-69-content-proposal.md and its review amendments.",
+    "title": "Chapter 69 Final Test",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ التَّاسِعِ وَالسِّتِّينَ",
+    "titleUr": "باب 69 کا آخری امتحان",
+    "chapter_order": 69,
+    "lesson_order": 11,
+    "estimated_minutes": 10,
+    "xp_reward": 25
+  },
+  "hook": {
+    "ayah": {
+      "surah": 33,
+      "ayah": 71,
+      "label": "Al-Ahzab 33:71",
+      "ar": "يُصْلِحْ لَكُمْ أَعْمَالَكُمْ وَيَغْفِرْ لَكُمْ ذُنُوبَكُمْ",
+      "en": "He will amend for you your deeds and forgive you your sins",
+      "ur": "وہ تمہارے اعمال سنوار دے گا اور تمہارے گناہ بخش دے گا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033071.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 69.",
+      "ur": "باب 69 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 69,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch69-test-q01",
+        "topic": {
+          "en": "A request and its consequence",
+          "ur": "درخواست اور اس کا نتیجہ"
+        },
+        "prompt": {
+          "en": "What does this sentence say?",
+          "ur": "یہ جملہ کیا کہتا ہے؟"
+        },
+        "arabic": "اِسْمَعْ تَفْهَمْ",
+        "options": [
+          {
+            "en": "You listened and understood",
+            "ur": "تم نے سنا اور سمجھ لیا"
+          },
+          {
+            "en": "Do not listen, you will understand",
+            "ur": "مت سنو، سمجھ جاؤ گے"
+          },
+          {
+            "en": "You understand, and you listen",
+            "ur": "تم سمجھتے ہو، اور سنتے ہو"
+          },
+          {
+            "en": "Listen, you will understand (if you listen, you will understand)",
+            "ur": "سنو، سمجھ جاؤ گے (اگر سنو تو سمجھ جاؤ گے)"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch69-test-q02",
+        "topic": {
+          "en": "A response or a separate statement",
+          "ur": "جواب یا الگ بیان"
+        },
+        "prompt": {
+          "en": "In which sentence is the second part the response to the request?",
+          "ur": "کس جملے میں دوسرا حصہ درخواست کا جواب ہے؟"
+        },
+        "options": [
+          {
+            "en": "اِسْمَعْ تَفْهَمْ",
+            "ur": "اِسْمَعْ تَفْهَمْ"
+          },
+          {
+            "en": "اِسْمَعْ، يَسْمَعُ خَالِدٌ",
+            "ur": "اِسْمَعْ، يَسْمَعُ خَالِدٌ"
+          },
+          {
+            "en": "Both",
+            "ur": "دونوں"
+          },
+          {
+            "en": "Neither",
+            "ur": "کوئی نہیں"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch69-test-q03",
+        "topic": {
+          "en": "The direct command in a pair",
+          "ur": "جوڑے میں براہِ راست حکم"
+        },
+        "prompt": {
+          "en": "Which word is the direct command, and which is the jussive response?",
+          "ur": "کون سا لفظ براہِ راست حکم ہے اور کون سا مجزوم جواب؟"
+        },
+        "arabic": "اِسْمَعْ تَفْهَمْ",
+        "options": [
+          {
+            "en": "اِسْمَعْ is the jussive response; تَفْهَمْ is the command",
+            "ur": "اِسْمَعْ مجزوم جواب ہے؛ تَفْهَمْ حکم ہے"
+          },
+          {
+            "en": "Both are jussive responses",
+            "ur": "دونوں مجزوم جواب ہیں"
+          },
+          {
+            "en": "اِسْمَعْ is the direct command; تَفْهَمْ is the jussive response",
+            "ur": "اِسْمَعْ براہِ راست حکم ہے؛ تَفْهَمْ مجزوم جواب ہے"
+          },
+          {
+            "en": "Both are direct commands",
+            "ur": "دونوں براہِ راست احکام ہیں"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch69-test-q04",
+        "topic": {
+          "en": "What a direct command is",
+          "ur": "براہِ راست حکم کیا ہے"
+        },
+        "prompt": {
+          "en": "Which statement about اِسْمَعْ is right?",
+          "ur": "اِسْمَعْ کے بارے میں کون سا بیان درست ہے؟"
+        },
+        "options": [
+          {
+            "en": "It is an imperfect verb with a hidden lām",
+            "ur": "یہ چھپے ہوئے لام والا مضارع ہے"
+          },
+          {
+            "en": "It is the direct command form, not an imperfect verb made jussive",
+            "ur": "یہ براہِ راست حکم کی صورت ہے، مجزوم کیا ہوا مضارع نہیں"
+          },
+          {
+            "en": "It is a past verb",
+            "ur": "یہ ماضی کا فعل ہے"
+          },
+          {
+            "en": "It is a noun",
+            "ur": "یہ اسم ہے"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch69-test-q05",
+        "topic": {
+          "en": "A five form in the response",
+          "ur": "جواب میں پانچ صورتوں والا فعل"
+        },
+        "prompt": {
+          "en": "Which form completes 'Listen (all of you), you will understand'?",
+          "ur": "کون سی صورت 'سنو (تم سب)، سمجھ جاؤ گے' کو مکمل کرتی ہے؟"
+        },
+        "arabic": "اِسْمَعُوا ___",
+        "options": [
+          {
+            "en": "تَفْهَمُونَ",
+            "ur": "تَفْهَمُونَ"
+          },
+          {
+            "en": "تَفْهَمُوا",
+            "ur": "تَفْهَمُوا"
+          },
+          {
+            "en": "تَفْهَمْ",
+            "ur": "تَفْهَمْ"
+          },
+          {
+            "en": "تَفْهَمَ",
+            "ur": "تَفْهَمَ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch69-test-q06",
+        "topic": {
+          "en": "A weak letter in the response",
+          "ur": "جواب میں کمزور حرف"
+        },
+        "prompt": {
+          "en": "What is the sign on تَنْجُ?",
+          "ur": "تَنْجُ پر علامت کیا ہے؟"
+        },
+        "arabic": "اُهْرُبْ تَنْجُ",
+        "options": [
+          {
+            "en": "A sukūn on a sound final letter",
+            "ur": "صحیح آخری حرف پر سکون"
+          },
+          {
+            "en": "The final ن has dropped",
+            "ur": "آخری ن گر گیا"
+          },
+          {
+            "en": "A fatḥa on the last letter",
+            "ur": "آخری حرف پر فتحہ"
+          },
+          {
+            "en": "The weak final letter has dropped: تَنْجُو → تَنْجُ",
+            "ur": "کمزور آخری حرف گر گیا: تَنْجُو → تَنْجُ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch69-test-q07",
+        "topic": {
+          "en": "Responses in a Quranic ayah",
+          "ur": "قرآنی آیت میں جواب"
+        },
+        "prompt": {
+          "en": "What is يُصْلِحْ in this ayah?",
+          "ur": "اس آیت میں يُصْلِحْ کیا ہے؟"
+        },
+        "arabic": "يُصْلِحْ لَكُمْ أَعْمَالَكُمْ وَيَغْفِرْ لَكُمْ ذُنُوبَكُمْ",
+        "options": [
+          {
+            "en": "A jussive imperfect response to the commands of 33:70",
+            "ur": "33:70 کے احکام کا مجزوم مضارع جواب"
+          },
+          {
+            "en": "A direct command to you",
+            "ur": "تم سے براہِ راست حکم"
+          },
+          {
+            "en": "A past verb",
+            "ur": "ماضی کا فعل"
+          },
+          {
+            "en": "A noun",
+            "ur": "اسم"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch69-test-q08",
+        "topic": {
+          "en": "A look-alike that is not the pattern",
+          "ur": "ملتا جلتا جملہ جو یہ ساخت نہیں"
+        },
+        "prompt": {
+          "en": "Which phrase is a new statement joined by وَ, not a jussive response?",
+          "ur": "کون سا فقرہ وَ سے جڑا نیا بیان ہے، مجزوم جواب نہیں؟"
+        },
+        "options": [
+          {
+            "en": "يُصْلِحْ لَكُمْ (33:71)",
+            "ur": "يُصْلِحْ لَكُمْ (33:71)"
+          },
+          {
+            "en": "وَيَغْفِرْ لَكُمْ (33:71)",
+            "ur": "وَيَغْفِرْ لَكُمْ (33:71)"
+          },
+          {
+            "en": "وَيُعَلِّمُكُمُ اللَّهُ (2:282)",
+            "ur": "وَيُعَلِّمُكُمُ اللَّهُ (2:282)"
+          },
+          {
+            "en": "اتَّقُوا اللَّهَ (33:70)",
+            "ur": "اتَّقُوا اللَّهَ (33:70)"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch69-test-q09",
+        "topic": {
+          "en": "A separate statement after a request",
+          "ur": "درخواست کے بعد الگ بیان"
+        },
+        "prompt": {
+          "en": "Why does يَسْمَعُ keep its ḍamma here?",
+          "ur": "یہاں يَسْمَعُ اپنا ضمہ کیوں رکھتا ہے؟"
+        },
+        "arabic": "اِسْمَعْ، يَسْمَعُ خَالِدٌ",
+        "options": [
+          {
+            "en": "It is a command",
+            "ur": "یہ حکم ہے"
+          },
+          {
+            "en": "It is a past verb",
+            "ur": "یہ ماضی کا فعل ہے"
+          },
+          {
+            "en": "Khalid is a name",
+            "ur": "خالد نام ہے"
+          },
+          {
+            "en": "It is a separate statement, not a consequence of the request",
+            "ur": "یہ الگ بیان ہے، درخواست کا نتیجہ نہیں"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch69-test-q10",
+        "topic": {
+          "en": "A prohibition licensing a result",
+          "ur": "نتیجے کی اجازت دیتی نہی"
+        },
+        "prompt": {
+          "en": "What does this sentence say?",
+          "ur": "یہ جملہ کیا کہتا ہے؟"
+        },
+        "arabic": "لَا تَنْسَ الدَّرْسَ تَنْجَحْ",
+        "options": [
+          {
+            "en": "You forgot the lesson, so you passed",
+            "ur": "تم سبق بھول گئے اس لیے کامیاب ہوئے"
+          },
+          {
+            "en": "Do not forget the lesson, you will pass",
+            "ur": "سبق مت بھولو، کامیاب ہو گے"
+          },
+          {
+            "en": "Forget the lesson, you will pass",
+            "ur": "سبق بھول جاؤ، کامیاب ہو گے"
+          },
+          {
+            "en": "You do not forget the lesson, and you pass",
+            "ur": "تم سبق نہیں بھولتے، اور کامیاب ہوتے ہو"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch69-test-q11",
+        "topic": {
+          "en": "At-Tariq, the whole passage",
+          "ur": "الطارق، پوری سورت"
+        },
+        "prompt": {
+          "en": "According to this ayah, what are the two closing verbs of the surah?",
+          "ur": "اس آیت کے مطابق سورت کے آخری دو فعل کیا ہیں؟"
+        },
+        "arabic": "فَمَهِّلِ الْكَافِرِينَ أَمْهِلْهُمْ رُوَيْدًا",
+        "options": [
+          {
+            "en": "Jussive responses to an earlier request",
+            "ur": "پہلی درخواست کے مجزوم جواب"
+          },
+          {
+            "en": "Past verbs about the disbelievers",
+            "ur": "کافروں کے بارے میں ماضی کے افعال"
+          },
+          {
+            "en": "Direct commands: 'give the disbelievers time; give them a little time'",
+            "ur": "براہِ راست احکام: 'کافروں کو مہلت دو؛ انہیں تھوڑی سی مہلت دو'"
+          },
+          {
+            "en": "Questions about the Day",
+            "ur": "اس دن کے بارے میں سوال"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch69-test-q12",
+        "topic": {
+          "en": "Al-Inshiqaq, the whole passage",
+          "ur": "الانشقاق، پوری سورت"
+        },
+        "prompt": {
+          "en": "According to this ayah, what is said of those who believe and do righteous deeds?",
+          "ur": "اس آیت کے مطابق ان کے بارے میں کیا کہا گیا ہے جو ایمان لائے اور نیک عمل کیے؟"
+        },
+        "arabic": "إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ لَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍ",
+        "options": [
+          {
+            "en": "They are excepted from the punishment, and for them is a reward that never ends",
+            "ur": "وہ عذاب سے مستثنیٰ ہیں، اور ان کے لیے ایسا اجر ہے جو ختم نہیں ہوتا"
+          },
+          {
+            "en": "They will be given their record behind their backs",
+            "ur": "انہیں اعمال نامہ پیٹھ کے پیچھے دیا جائے گا"
+          },
+          {
+            "en": "They will not believe",
+            "ur": "وہ ایمان نہیں لائیں گے"
+          },
+          {
+            "en": "They will go from stage to stage only",
+            "ur": "وہ صرف ایک حالت سے دوسری حالت کی طرف جائیں گے"
+          }
+        ],
+        "correct_index": 0
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 69 — the jussive response",
+      "ar": "جَوَابُ الطَّلَبِ",
+      "ur": "باب 69 — مجزوم جواب"
+    },
+    "ayah": {
+      "surah": 33,
+      "ayah": 71,
+      "label": "Al-Ahzab 33:71",
+      "ar": "يُصْلِحْ لَكُمْ أَعْمَالَكُمْ وَيَغْفِرْ لَكُمْ ذُنُوبَكُمْ",
+      "en": "He will amend for you your deeds and forgive you your sins",
+      "ur": "وہ تمہارے اعمال سنوار دے گا اور تمہارے گناہ بخش دے گا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033071.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      3
+    ],
+    "highlighted_words": [
+      "يُصْلِحْ",
+      "وَيَغْفِرْ"
+    ],
+    "noor_explanation": {
+      "en": "You finish Chapter 69 able to find a request and its jussive response, tell a response from a direct command, and read At-Tariq and Al-Inshiqaq.",
+      "ur": "آپ باب 69 اس حال میں مکمل کرتے ہیں کہ درخواست اور اس کا مجزوم جواب تلاش کر سکتے ہیں، جواب اور براہِ راست حکم میں فرق کر سکتے ہیں، اور الطارق اور الانشقاق پڑھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 69 complete. Chapter 70: exception with إِلَّا, and Surat Al-Buruj.",
+      "ur": "باب 69 مکمل۔ باب 70: إِلَّا کے ساتھ استثنا، اور سورۃ البروج۔"
+    }
+  }
+}

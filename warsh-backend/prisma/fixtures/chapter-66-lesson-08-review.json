@@ -1,0 +1,507 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 66, Retrieval review (ch66-l06, rebuilt in place and moved to display order 8; the old row held a zarf summary with the always-accusative claim). Twelve tasks: ظرف against a preposition and a time word in another job (2), time point and length (2), a place word with an explicit and a pronoun dependent (2), changing and fixed endings (2), a predicate phrase and a preposition inside a predicate (2), and one task from each part of Al-Infitar (2). All of it is retrieval of Lessons 1-9. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-66-content-proposal.md and its review amendments.",
+    "title": "Chapter 66 Review — Adverbs of Time and Place",
+    "titleAr": "مُرَاجَعَةُ الْبَابِ 66 — الظُّرُوفُ",
+    "titleUr": "باب 66 کا جائزہ — وقت اور مکان کے ظروف",
+    "chapter_order": 66,
+    "lesson_order": 8,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 82,
+      "ayah": 19,
+      "label": "Al-Infitar 82:19",
+      "ar": "يَوْمَ لَا تَمْلِكُ نَفْسٌ لِّنَفْسٍ شَيْئًا ۖ وَالْأَمْرُ يَوْمَئِذٍ لِّلَّهِ",
+      "en": "It is the Day when a soul will not possess for another soul [power to do] a thing; and the command, that Day, is [entirely] with Allāh.",
+      "ur": "جس روز کوئی کسی کا بھلا نہ کر سکے گا اور حکم اس روز خدا ہی کا ہو گا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/082019.mp3"
+    },
+    "noor_intro": {
+      "en": "Review Chapter 66: time and place words, their dependents, their endings and the surah.",
+      "ur": "باب 66 کا جائزہ: وقت اور مکان کے الفاظ، ان کے متعلق، ان کے ختم اور سورت۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 66 summary",
+        "ar": "خُلَاصَةُ الْبَابِ",
+        "ur": "باب 66 کا خلاصہ"
+      },
+      "explanation": {
+        "en": "A ظرف is a noun of time or place that tells when or where, usually in the accusative; the job decides the ending. A time word may tell a point or a length; a place word is the head of a pair with a genitive dependent; one word changes with its job (يَوْمُ / يَوْمَ / يَوْمِ) and حَيْثُ never changes; a phrase can be the predicate, and inside it a ظرف differs from a preposition.",
+        "ur": "ظرف وقت یا جگہ کا اسم ہے جو بتاتا ہے کہ کب یا کہاں، عموماً منصوب؛ کام ختم طے کرتا ہے۔ وقت کا لفظ نقطہ یا مدت بتا سکتا ہے؛ مکان کا لفظ مجرور متعلق کے ساتھ جوڑے کا پہلا حصہ ہے؛ ایک لفظ اپنے کام کے ساتھ بدلتا ہے (يَوْمُ / يَوْمَ / يَوْمِ) اور حَيْثُ کبھی نہیں بدلتا؛ ایک فقرہ خبر ہو سکتا ہے، اور اس کے اندر ظرف حرفِ جر سے مختلف ہے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Twelve tasks",
+        "ur": "بارہ مشقیں"
+      },
+      "body": {
+        "en": "Two on ظرف against preposition and against a time word in another job, two on time words, two on place words and their dependents, two on changing and fixed endings, two on a predicate phrase and what is inside it, and two from Al-Infitar. Nothing here is new teaching.",
+        "ur": "دو ظرف بمقابلہ حرفِ جر اور دوسرے کام میں وقت کے لفظ پر، دو وقت کے الفاظ پر، دو مکان کے الفاظ اور ان کے متعلق پر، دو بدلتے اور ٹھہرے ہوئے ختم پر، دو خبر کے فقرے اور اس کے اندر پر، اور دو الانفطار سے۔ یہاں کچھ بھی نیا نہیں سکھایا گیا۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch66-l06-ex01",
+      "prompt": {
+        "ar": "وَقَفَ الْمُعَلِّمُ أَمَامَ الْبَابِ",
+        "ar_plain": "وقف المعلم امام الباب",
+        "translit": "waqafa al-muʿallimu ʾamāma al-bābi",
+        "en": "(which word is the place ظرف?)",
+        "ur": "(کون سا لفظ مکان کا ظرف ہے؟)"
+      },
+      "options": [
+        {
+          "en": "الْبَابِ",
+          "ur": "الْبَابِ"
+        },
+        {
+          "en": "الْمُعَلِّمُ",
+          "ur": "الْمُعَلِّمُ"
+        },
+        {
+          "en": "أَمَامَ",
+          "ur": "أَمَامَ"
+        },
+        {
+          "en": "وَقَفَ",
+          "ur": "وَقَفَ"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَمَامَ tells where he stood, with no preposition. الْبَابِ is its genitive dependent.",
+        "ur": "أَمَامَ بتاتا ہے کہ وہ کہاں کھڑا ہوا، بغیر حرفِ جر کے۔ الْبَابِ اس کا مجرور متعلق ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch66-l06-ex02",
+      "prompt": {
+        "ar": "يَوْمُ السَّبْتِ جَمِيلٌ",
+        "ar_plain": "يوم السبت جميل",
+        "translit": "yawmu as-sabti jamīlun",
+        "en": "(what is يَوْمُ here?)",
+        "ur": "(یہاں يَوْمُ کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "The subject, nominative: not a ظرف",
+          "ur": "مبتدا، مرفوع: ظرف نہیں"
+        },
+        {
+          "en": "A time ظرف in the accusative",
+          "ur": "وقت کا ظرف، منصوب"
+        },
+        {
+          "en": "A preposition",
+          "ur": "حرفِ جر"
+        },
+        {
+          "en": "A place ظرف",
+          "ur": "مکان کا ظرف"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The sentence says 'Saturday is lovely': the day is what it is about.",
+        "ur": "جملہ کہتا ہے 'ہفتہ خوبصورت ہے': دن وہ ہے جس کے بارے میں جملہ ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch66-l06-ex03",
+      "prompt": {
+        "ar": "ذَهَبْتُ يَوْمَ الْأَحَدِ",
+        "ar_plain": "ذهبت يوم الاحد",
+        "translit": "dhahabtu yawma al-ʾaḥadi",
+        "en": "(what does يَوْمَ tell?)",
+        "ur": "(يَوْمَ کیا بتاتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "where I went",
+          "ur": "میں کہاں گیا"
+        },
+        {
+          "en": "who went",
+          "ur": "کون گیا"
+        },
+        {
+          "en": "how long I stayed",
+          "ur": "میں کتنی دیر رہا"
+        },
+        {
+          "en": "when I went: a point in time",
+          "ur": "میں کب گیا: وقت کا ایک نقطہ"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يَوْمَ names the day of going: a point in time.",
+        "ur": "يَوْمَ جانے کا دن بتاتا ہے: وقت کا ایک نقطہ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch66-l06-ex04",
+      "prompt": {
+        "ar": "بَعْدَ الدَّرْسِ · قَبْلَ الصَّلَاةِ · يَوْمَ الْجُمُعَةِ · حُقُبًا",
+        "ar_plain": "بعد الدرس · قبل الصلاة · يوم الجمعة · حقبا",
+        "translit": "baʿda ad-darsi · qabla aṣ-ṣalāti · yawma al-jumuʿati · ḥuquban",
+        "en": "(which one tells how long, not a point in time?)",
+        "ur": "(کون سا بتاتا ہے کہ کتنی دیر، وقت کا نقطہ نہیں؟)"
+      },
+      "options": [
+        {
+          "en": "بَعْدَ الدَّرْسِ — after the lesson",
+          "ur": "بَعْدَ الدَّرْسِ — سبق کے بعد"
+        },
+        {
+          "en": "حُقُبًا — for ages",
+          "ur": "حُقُبًا — مدتوں"
+        },
+        {
+          "en": "قَبْلَ الصَّلَاةِ — before the prayer",
+          "ur": "قَبْلَ الصَّلَاةِ — نماز سے پہلے"
+        },
+        {
+          "en": "يَوْمَ الْجُمُعَةِ — on Friday",
+          "ur": "يَوْمَ الْجُمُعَةِ — جمعہ کے دن"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The other three name a moment; حُقُبًا is a length of time.",
+        "ur": "باقی تین ایک لمحہ بتاتے ہیں؛ حُقُبًا وقت کی لمبائی ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch66-l06-ex05",
+      "prompt": {
+        "ar": "جَلَسَ الْوَلَدُ تَحْتَ الشَّجَرَةِ",
+        "ar_plain": "جلس الولد تحت الشجرة",
+        "translit": "jalasa al-waladu taḥta ash-shajarati",
+        "en": "(what is الشَّجَرَةِ?)",
+        "ur": "(الشَّجَرَةِ کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "The place ظرف",
+          "ur": "مکان کا ظرف"
+        },
+        {
+          "en": "The subject",
+          "ur": "مبتدا"
+        },
+        {
+          "en": "The dependent of تَحْتَ, genitive",
+          "ur": "تَحْتَ کا متعلق، مجرور"
+        },
+        {
+          "en": "A verb",
+          "ur": "فعل"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "تَحْتَ is the head; the noun after it is its genitive dependent.",
+        "ur": "تَحْتَ پہلا حصہ ہے؛ اس کے بعد کا اسم اس کا مجرور متعلق ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch66-l06-ex06",
+      "prompt": {
+        "ar": "أَمَامَكَ",
+        "ar_plain": "امامك",
+        "translit": "ʾamāmaka",
+        "en": "(what is كَ here?)",
+        "ur": "(یہاں كَ کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "The dependent: 'you', a pronoun that is genitive in position",
+          "ur": "متعلق: 'تم'، ایک ضمیر جو محل کے اعتبار سے مجرور ہے"
+        },
+        {
+          "en": "The place ظرف",
+          "ur": "مکان کا ظرف"
+        },
+        {
+          "en": "A preposition",
+          "ur": "حرفِ جر"
+        },
+        {
+          "en": "The verb",
+          "ur": "فعل"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كَ completes أَمَامَ like a noun would, and it is genitive in position.",
+        "ur": "كَ اسم کی طرح أَمَامَ کو مکمل کرتا ہے، اور محل کے اعتبار سے مجرور ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch66-l06-ex07",
+      "mode": "TAP",
+      "sentence_ar": "ذَهَبْتُ فِي ___ الْجُمُعَةِ",
+      "hint": {
+        "en": "I went on the day of Friday.",
+        "ur": "میں جمعہ کے دن گیا۔"
+      },
+      "options": [
+        {
+          "ar": "يَوْمَ",
+          "ar_plain": "يوم",
+          "translit": "yawma",
+          "en": "day (accusative)",
+          "ur": "دن (منصوب)"
+        },
+        {
+          "ar": "يَوْمِ",
+          "ar_plain": "يوم",
+          "translit": "yawmi",
+          "en": "day (genitive, after فِي)",
+          "ur": "دن (مجرور، فِي کے بعد)"
+        },
+        {
+          "ar": "يَوْمُ",
+          "ar_plain": "يوم",
+          "translit": "yawmu",
+          "en": "day (nominative)",
+          "ur": "دن (مرفوع)"
+        },
+        {
+          "ar": "يَوْمٌ",
+          "ar_plain": "يوم",
+          "translit": "yawmun",
+          "en": "a day (nominative, tanwīn)",
+          "ur": "ایک دن (مرفوع، تنوین)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يَوْمِ",
+        "ar_plain": "يوم",
+        "translit": "yawmi",
+        "en": "day (genitive, after فِي)",
+        "ur": "دن (مجرور، فِي کے بعد)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After the preposition فِي the noun is genitive: فِي يَوْمِ الْجُمُعَةِ.",
+        "ur": "حرفِ جر فِي کے بعد اسم مجرور ہوتا ہے: فِي يَوْمِ الْجُمُعَةِ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch66-l06-ex08",
+      "statement": {
+        "en": "The ending of حَيْثُ does not change even after a preposition: مِنْ حَيْثُ.",
+        "ur": "حَيْثُ کا ختم حرفِ جر کے بعد بھی نہیں بدلتا: مِنْ حَيْثُ۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes. حَيْثُ keeps its fixed ḍamma wherever it stands.",
+        "ur": "جی ہاں۔ حَيْثُ اپنی جگہ جو بھی ہو اپنا ثابت ضمہ رکھتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch66-l06-ex09",
+      "prompt": {
+        "ar": "الْبَيْتُ أَمَامَ الْمَسْجِدِ",
+        "ar_plain": "البيت امام المسجد",
+        "translit": "al-baytu ʾamāma al-masjidi",
+        "en": "(what is the predicate?)",
+        "ur": "(خبر کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "الْبَيْتُ",
+          "ur": "الْبَيْتُ"
+        },
+        {
+          "en": "أَمَامَ alone",
+          "ur": "صرف أَمَامَ"
+        },
+        {
+          "en": "الْمَسْجِدِ alone",
+          "ur": "صرف الْمَسْجِدِ"
+        },
+        {
+          "en": "أَمَامَ الْمَسْجِدِ, the whole phrase",
+          "ur": "أَمَامَ الْمَسْجِدِ، پورا فقرہ"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The predicate is the whole phrase that says where the house is.",
+        "ur": "خبر پورا فقرہ ہے جو بتاتا ہے کہ گھر کہاں ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch66-l06-ex10",
+      "prompt": {
+        "ar": "الْبَيْتُ فِي الْقَرْيَةِ",
+        "ar_plain": "البيت في القرية",
+        "translit": "al-baytu fī al-qaryati",
+        "en": "(inside the predicate, which word is the real preposition?)",
+        "ur": "(خبر کے اندر کون سا لفظ حقیقی حرفِ جر ہے؟)"
+      },
+      "options": [
+        {
+          "en": "الْقَرْيَةِ",
+          "ur": "الْقَرْيَةِ"
+        },
+        {
+          "en": "فِي",
+          "ur": "فِي"
+        },
+        {
+          "en": "الْبَيْتُ",
+          "ur": "الْبَيْتُ"
+        },
+        {
+          "en": "None: it is a ظرف",
+          "ur": "کوئی نہیں: یہ ظرف ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "فِي is a real preposition and الْقَرْيَةِ is the genitive noun after it.",
+        "ur": "فِي حقیقی حرفِ جر ہے اور الْقَرْيَةِ اس کے بعد مجرور اسم ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch66-l06-ex11",
+      "prompt": {
+        "ar": "إِذَا السَّمَاءُ انفَطَرَتْ وَإِذَا الْكَوَاكِبُ انتَثَرَتْ وَإِذَا الْبِحَارُ فُجِّرَتْ وَإِذَا الْقُبُورُ بُعْثِرَتْ",
+        "ar_plain": "اذا السماء انفطرت واذا الكواكب انتثرت واذا البحار فجرت واذا القبور بعثرت",
+        "translit": "ʾidhā as-samāʾu anfaṭarat waʾidhā al-kawaākibu antatharat waʾidhā al-biḥāru fujjirat waʾidhā al-qubūru buʿthirat",
+        "en": "(what do 82:1–4 describe?)",
+        "ur": "(82:1–4 کیا بیان کرتی ہیں؟)"
+      },
+      "options": [
+        {
+          "en": "Four rules of trade",
+          "ur": "تجارت کے چار اصول"
+        },
+        {
+          "en": "Four names of a town",
+          "ur": "ایک بستی کے چار نام"
+        },
+        {
+          "en": "Four events: the sky splits, the stars scatter, the seas burst forth, the graves are turned over",
+          "ur": "چار واقعات: آسمان پھٹتا ہے، تارے بکھرتے ہیں، سمندر پھٹ بہتے ہیں، قبریں الٹ دی جاتی ہیں"
+        },
+        {
+          "en": "Four steps of a journey",
+          "ur": "ایک سفر کے چار مرحلے"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The four إِذَا clauses name four events; 82:5 gives what a soul then knows.",
+        "ur": "چاروں إِذَا والی شرطیں چار واقعات بتاتی ہیں؛ 82:5 بتاتی ہے کہ جان پھر کیا جان لے گی۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch66-l06-ex12",
+      "prompt": {
+        "ar": "وَمَا أَدْرَاكَ مَا يَوْمُ الدِّينِ ثُمَّ مَا أَدْرَاكَ مَا يَوْمُ الدِّينِ يَوْمَ لَا تَمْلِكُ نَفْسٌ لِّنَفْسٍ شَيْئًا ۖ وَالْأَمْرُ يَوْمَئِذٍ لِّلَّهِ",
+        "ar_plain": "وما ادراك ما يوم الدين ثم ما ادراك ما يوم الدين يوم لا تملك نفس لنفس شيئا  والامر يومئذ لله",
+        "translit": "wamā ʾadrāka mā yawmu ad-dīni thumma mā ʾadrāka mā yawmu ad-dīni yawma lā tamliku nafsun llinafsin shayʾan ۖ wa-l-ʾamru yawmaʾidhin llillahi",
+        "en": "(82:17–19: what do they do?)",
+        "ur": "(82:17–19: یہ کیا کرتی ہیں؟)"
+      },
+      "options": [
+        {
+          "en": "They ask what the Day of Judgment is, and answer: the Day when no soul has power for another, and the command is Allah's",
+          "ur": "یہ پوچھتی ہیں کہ جزا کا دن کیا ہے، اور جواب دیتی ہیں: وہ دن جب کوئی جان دوسری کے لیے اختیار نہ رکھے گی، اور حکم اللہ کا ہے"
+        },
+        {
+          "en": "They describe the keepers who write",
+          "ur": "یہ لکھنے والے نگہبانوں کا بیان کرتی ہیں"
+        },
+        {
+          "en": "They name the stars that scatter",
+          "ur": "یہ بکھرنے والے تاروں کا نام لیتی ہیں"
+        },
+        {
+          "en": "They list what a soul sent ahead",
+          "ur": "یہ فہرست دیتی ہیں کہ جان نے کیا آگے بھیجا"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "82:17–18 ask; 82:19 answers.",
+        "ur": "82:17–18 پوچھتی ہیں؛ 82:19 جواب دیتی ہے۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "The Day in Al-Infitar",
+      "ar": "يَوْمَ فِي الِانْفِطَارِ",
+      "ur": "الانفطار میں وہ دن"
+    },
+    "ayah": {
+      "surah": 82,
+      "ayah": 19,
+      "label": "Al-Infitar 82:19",
+      "ar": "يَوْمَ لَا تَمْلِكُ نَفْسٌ لِّنَفْسٍ شَيْئًا ۖ وَالْأَمْرُ يَوْمَئِذٍ لِّلَّهِ",
+      "en": "It is the Day when a soul will not possess for another soul [power to do] a thing; and the command, that Day, is [entirely] with Allāh.",
+      "ur": "جس روز کوئی کسی کا بھلا نہ کر سکے گا اور حکم اس روز خدا ہی کا ہو گا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/082019.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      8
+    ],
+    "highlighted_words": [
+      "يَوْمَ",
+      "يَوْمَئِذٍ"
+    ],
+    "noor_explanation": {
+      "en": "يَوْمَ opens the answer and يَوْمَئِذٍ closes it — the word of the whole chapter in one ayah.",
+      "ur": "يَوْمَ جواب کھولتا ہے اور يَوْمَئِذٍ اسے بند کرتا ہے — پورے باب کا لفظ ایک آیت میں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Time and place words, their dependents, one changing and one fixed ending, a predicate phrase and a whole surah — Chapter 66 in one review.",
+      "ur": "وقت اور مکان کے الفاظ، ان کے متعلق، ایک بدلتا اور ایک ٹھہرا ہوا ختم، خبر کا فقرہ اور پوری سورت — باب 66 ایک جائزے میں۔"
+    }
+  }
+}

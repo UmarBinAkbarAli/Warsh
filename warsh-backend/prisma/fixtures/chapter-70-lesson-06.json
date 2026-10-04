@@ -1,431 +1,504 @@
 {
   "schema_version": "1.0",
-  "template": "REVIEW",
+  "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 70, Lesson 6 — REVIEW lesson for الاستثناء.",
+    "_note": "Chapter 70, Lesson 6 (ch70-l08, new). Al-Buruj 85:1–11 in four groups (1–3, 4–7, 8–9, 10–11): one board of four (85:1–4), seven single ayat (85:5–11) and one fresh narrative-contrast decision (85:10 against 85:11). 85:8 (وَمَا نَقَمُوا مِنْهُمْ إِلَّا أَن يُؤْمِنُوا بِاللَّهِ …) is read by meaning as 'they resented them only because they believed in Allah': a restriction whose word after إِلَّا is a clause, so it is NOT a post-إِلَّا noun-case task and no ending is asked. الْبُرُوجِ, الْمَوْعُودِ, شَاهِدٍ, مَشْهُودٍ, الْأُخْدُودِ, الْوَقُودِ, نَقَمُوا, فَتَنُوا and الْحَرِيقِ are supplied whole with their meanings. No claim is made about who the people of the trench are beyond the text. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-70-content-proposal.md and its review amendments.",
+    "title": "Al-Buruj I — 85:1–11",
+    "titleAr": "الْبُرُوجُ ١ — ١–١١",
+    "titleUr": "البروج (1) — 85:1–11",
     "chapter_order": 70,
     "lesson_order": 6,
-    "chapter_title": "الاستثناء",
-    "title": "Review: Exception",
-    "titleAr": "مُرَاجَعَةٌ: الِاسْتِثْنَاءُ",
-    "source": "arabai-backend/prisma/fixtures",
     "estimated_minutes": 10,
-    "xp_reward": 5
+    "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 59,
-      "ayah": 22,
-      "label": "Al-Hashr 59:22",
-      "ar": "هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ ۖ عَالِمُ الْغَيْبِ وَالشَّهَادَةِ ۖ هُوَ الرَّحْمَٰنُ الرَّحِيمُ",
-      "en": "He is Allah, other than whom there is no deity, Knower of the unseen and the witnessed. He is the Entirely Merciful, the Especially Merciful.",
-      "ur": "وہی اللہ ہے جس کے سوا کوئی معبود نہیں، پوشیدہ اور ظاہر کا جاننے والا، وہ بڑا مہربان، نہایت رحم والا ہے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/059022.mp3"
+      "surah": 85,
+      "ayah": 1,
+      "label": "Al-Buruj 85:1",
+      "ar": "وَالسَّمَاءِ ذَاتِ الْبُرُوجِ",
+      "en": "By the sky containing great stars",
+      "ur": "آسمان کی قسم جس میں برج ہیں",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/085001.mp3"
     },
     "noor_intro": {
-      "en": "هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ — 'He is Allah, other than whom there is no deity'. Let's consolidate the chapter: the parts of an exception, the three sentence types, connected and disconnected, and غَيْر and سِوَى.",
-      "ur": "هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ — 'وہی اللہ ہے جس کے سوا کوئی معبود نہیں'۔ آئیے باب کو یکجا کریں: استثنا کے حصے، جملوں کی تین قسمیں، متصل اور منقطع، اور غَيْر اور سِوَى۔"
+      "en": "Surat Al-Buruj opens with oaths, then tells of the people of the trench, and ends this part with two outcomes. One ayah in it, 85:8, uses إِلَّا in a way you can now read: 'only because they believed'.",
+      "ur": "سورۃ البروج قسموں سے کھلتی ہے، پھر خندق والوں کا ذکر کرتی ہے، اور اس حصے کو دو انجاموں پر ختم کرتی ہے۔ اس میں ایک آیت، 85:8، إِلَّا اس طرح استعمال کرتی ہے جو آپ اب پڑھ سکتے ہیں: 'صرف اس لیے کہ وہ ایمان لائے'۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Review: the case after إِلَّا",
-        "ar": "مُرَاجَعَةٌ: إِعْرَابُ الْمُسْتَثْنَى بِإِلَّا",
-        "ur": "جائزہ: إِلَّا کے بعد اعراب"
+        "en": "Oaths, the people of the trench, two outcomes",
+        "ar": "قَسَمٌ وَأَصْحَابُ الْأُخْدُودِ وَمَصِيرَانِ",
+        "ur": "قسمیں، خندق والے، دو انجام"
       },
       "explanation": {
-        "en": "Affirmative, group named → accusative (إِلَّا زَيْدًا). Negative, group named → accusative or the group's case (إِلَّا زَيْدٌ). Negative, no group (مُفَرَّغ) → the word's own role decides, and the meaning is 'only'.",
-        "ur": "مثبت، گروہ مذکور → منصوب (إِلَّا زَيْدًا)۔ منفی، گروہ مذکور → منصوب یا گروہ کا اعراب (إِلَّا زَيْدٌ)۔ منفی، گروہ نہیں (مفرّغ) → لفظ کا اپنا کردار طے کرتا ہے، اور معنی 'صرف'۔"
+        "en": "85:1–3 swear by the sky with its great stars, the promised Day, and a witness and what is witnessed. 85:4–7 speak of the people of the trench, the fire full of fuel, and how they sat by it as witnesses to what they did to the believers. 85:8–9 say what they resented in them, and 85:10–11 give two outcomes: for those who persecuted the believers and did not repent, and for those who believed and did righteous deeds.",
+        "ur": "85:1–3 برجوں والے آسمان، وعدہ کیے ہوئے دن، اور گواہ اور جس کی گواہی دی جائے کی قسم کھاتی ہیں۔ 85:4–7 خندق والوں، ایندھن سے بھری آگ، اور اس کے پاس ان کے بیٹھنے کا ذکر کرتی ہیں کہ وہ مومنوں کے ساتھ جو کر رہے تھے اس پر گواہ تھے۔ 85:8–9 بتاتی ہیں کہ انہیں ان میں کیا ناگوار تھا، اور 85:10–11 دو انجام دیتی ہیں: ان کے لیے جنہوں نے مومنوں کو ستایا اور توبہ نہ کی، اور ان کے لیے جو ایمان لائے اور نیک عمل کیے۔"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Connected vs disconnected",
-        "ar": "الْمُتَّصِلُ وَالْمُنْقَطِعُ",
-        "ur": "متصل اور منقطع"
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "وَالسَّمَاءِ ذَاتِ الْبُرُوجِ وَالْيَوْمِ الْمَوْعُودِ وَشَاهِدٍ وَمَشْهُودٍ",
+        "ar_plain": "والسماء ذات البروج واليوم الموعود وشاهد ومشهود",
+        "translit": "wa-s-samāʾi dhāti al-burūji wa-l-yawmi al-mawʿūdi washāhidin wamashhūdin",
+        "en": "By the sky containing great stars And [by] the promised Day And [by] the witness and what is witnessed,",
+        "ur": "آسمان کی قسم جس میں برج ہیں اور اس دن کی جس کا وعدہ ہے اور حاضر ہونے والے کی اور جو اس کے پاس حاضر کیا جائے اسکی"
       },
       "explanation": {
-        "en": "Connected: the excepted one is part of the group (Ali among the students). Disconnected: it is of another kind, and إِلَّا means 'but rather' (no knowledge — only assumption, 4:157).",
-        "ur": "متصل: مستثنیٰ گروہ کا حصہ ہے (طالب علموں میں علی)۔ منقطع: دوسری جنس سے ہے، اور إِلَّا کا معنی 'بلکہ' (کوئی علم نہیں — بس گمان، 4:157)۔"
+        "en": "Three oaths: the sky with its great stars (الْبُرُوجِ), the promised Day (الْيَوْمِ الْمَوْعُودِ), and a witness and what is witnessed (شَاهِدٍ وَمَشْهُودٍ). Each description is given whole. (Al-Buruj 85:1–3) (Al-Buruj 85:1–3)",
+        "ur": "تین قسمیں: برجوں (الْبُرُوجِ) والا آسمان، وعدہ کیا ہوا دن (الْيَوْمِ الْمَوْعُودِ)، اور گواہ اور جس کی گواہی دی جائے (شَاهِدٍ وَمَشْهُودٍ)۔ ہر صفت پوری دی گئی ہے۔ (البروج 85:1–3) (Al-Buruj 85:1–3)"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "غَيْر and سِوَى",
-        "ar": "غَيْرٌ وَسِوًى",
-        "ur": "غَيْر اور سِوَى"
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "قُتِلَ أَصْحَابُ الْأُخْدُودِ النَّارِ ذَاتِ الْوَقُودِ إِذْ هُمْ عَلَيْهَا قُعُودٌ وَهُمْ عَلَىٰ مَا يَفْعَلُونَ بِالْمُؤْمِنِينَ شُهُودٌ",
+        "ar_plain": "قتل اصحاب الاخدود النار ذات الوقود اذ هم عليها قعود وهم على ما يفعلون بالمؤمنين شهود",
+        "translit": "qutila ʾaṣḥābu al-ʾukhdūdi an-nāri dhāti al-waqūdi ʾidh hum ʿalayhā quʿūdun wahum ʿalā mā yafʿalūna bi-l-muʾminīna shuhūdun",
+        "en": "Destroyed [i.e., cursed] were the companions of the trench [Containing] the fire full of fuel, When they were sitting near it. And they, to what they were doing against the believers, were witnesses.",
+        "ur": "کہ خندقوں (کے کھودنے) والے ہلاک کر دیئے گئے (یعنی) آگ (کی خندقیں) جس میں ایندھن (جھونک رکھا) تھا جب کہ وہ ان (کے کناروں) پر بیٹھے ہوئے تھے اور جو( سختیاں) اہل ایمان پر کر رہے تھے ان کو سامنے دیکھ رہے تھے"
       },
       "explanation": {
-        "en": "Both are followed by a genitive noun. غَيْر takes the case the excepted noun would have had (غَيْرَ / غَيْرُ); سِوَى never shows its case.",
-        "ur": "دونوں کے بعد مجرور اسم آتا ہے۔ غَيْر وہ اعراب لیتا ہے جو مستثنیٰ کو ملتا (غَيْرَ / غَيْرُ)؛ سِوَى کا اعراب کبھی ظاہر نہیں ہوتا۔"
+        "en": "قُتِلَ أَصْحَابُ الْأُخْدُودِ: 'destroyed were the people of the trench', النَّارِ ذَاتِ الْوَقُودِ, 'the fire full of fuel', إِذْ هُمْ عَلَيْهَا قُعُودٌ, 'when they sat by it', and they were witnesses to what they were doing to the believers. (Al-Buruj 85:4–7) (Al-Buruj 85:4–7)",
+        "ur": "قُتِلَ أَصْحَابُ الْأُخْدُودِ: 'خندق والے ہلاک کر دیے گئے'، النَّارِ ذَاتِ الْوَقُودِ، 'ایندھن سے بھری آگ'، إِذْ هُمْ عَلَيْهَا قُعُودٌ، 'جب وہ اس کے پاس بیٹھے تھے'، اور وہ اس پر گواہ تھے جو وہ مومنوں کے ساتھ کر رہے تھے۔ (البروج 85:4–7) (Al-Buruj 85:4–7)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "وَمَا نَقَمُوا مِنْهُمْ إِلَّا أَن يُؤْمِنُوا بِاللَّهِ الْعَزِيزِ الْحَمِيدِ الَّذِي لَهُ مُلْكُ السَّمَاوَاتِ وَالْأَرْضِ ۚ وَاللَّهُ عَلَىٰ كُلِّ شَيْءٍ شَهِيدٌ",
+        "ar_plain": "وما نقموا منهم الا ان يؤمنوا بالله العزيز الحميد الذي له ملك السماوات والارض  والله على كل شيء شهيد",
+        "translit": "wamā naqamū minhum ʾillā ʾan yuʾminū bi-l-lahi al-ʿazīzi al-ḥamīdi alladhī lahu mulku as-samāwaāti wa-l-ʾarḍi ۚ wa-l-lahu ʿalā kulli shayʾin shahīdun",
+        "en": "And they resented them not except because they believed in Allāh, the Exalted in Might, the Praiseworthy, To whom belongs the dominion of the heavens and the earth. And Allāh, over all things, is Witness.",
+        "ur": "ان کو مومنوں کی یہی بات بری لگتی تھی کہ وہ خدا پر ایمان لائے ہوئے تھے جو غالب (اور) قابل ستائش ہے وہی جس کی آسمانوں اور زمین میں بادشاہت ہے۔ اور خدا ہر چیز سے واقف ہے"
+      },
+      "explanation": {
+        "en": "وَمَا نَقَمُوا مِنْهُمْ إِلَّا أَن يُؤْمِنُوا بِاللَّهِ الْعَزِيزِ الْحَمِيدِ: 'and they resented them only because they believed in Allah, the Almighty, the Praiseworthy'. This is a restriction: 'nothing … except that they believed'. What follows إِلَّا is a whole clause, and you read it by meaning. 85:9 adds that to Him belongs the dominion and He is Witness over all things. (Al-Buruj 85:8–9) (Al-Buruj 85:8–9)",
+        "ur": "وَمَا نَقَمُوا مِنْهُمْ إِلَّا أَن يُؤْمِنُوا بِاللَّهِ الْعَزِيزِ الْحَمِيدِ: 'اور انہوں نے ان پر صرف اس لیے ناراضی کی کہ وہ اللہ، غالب، لائقِ حمد، پر ایمان لائے'۔ یہ حصر ہے: 'کچھ نہیں … سوائے اس کے کہ وہ ایمان لائے'۔ إِلَّا کے بعد پورا جملہ ہے، اور آپ اسے معنی سے پڑھتے ہیں۔ 85:9 بتاتی ہے کہ اسی کی بادشاہی ہے اور وہ ہر چیز پر گواہ ہے۔ (البروج 85:8–9) (Al-Buruj 85:8–9)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "إِنَّ الَّذِينَ فَتَنُوا الْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ ثُمَّ لَمْ يَتُوبُوا فَلَهُمْ عَذَابُ جَهَنَّمَ وَلَهُمْ عَذَابُ الْحَرِيقِ إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ لَهُمْ جَنَّاتٌ تَجْرِي مِن تَحْتِهَا الْأَنْهَارُ ۚ ذَٰلِكَ الْفَوْزُ الْكَبِيرُ",
+        "ar_plain": "ان الذين فتنوا المؤمنين والمؤمنات ثم لم يتوبوا فلهم عذاب جهنم ولهم عذاب الحريق ان الذين امنوا وعملوا الصالحات لهم جنات تجري من تحتها الانهار  ذلك الفوز الكبير",
+        "translit": "ʾinna alladhīna fatanū al-muʾminīna wa-l-muʾmināti thumma lam yatūbū falahum ʿadhābu jahannama walahum ʿadhābu al-ḥarīqi ʾinna alladhīna ʾāmanū waʿamilū aṣ-ṣāliḥāti lahum jannātun tajrī min taḥtihā al-ʾanhāru ۚ dhālika al-fawzu al-kabīru",
+        "en": "Indeed, those who have tortured the believing men and believing women and then have not repented will have the punishment of Hell, and they will have the punishment of the Burning Fire. Indeed, those who have believed and done righteous deeds will have gardens beneath which rivers flow. That is the great attainment.",
+        "ur": "جن لوگوں نے مومن مردوں اور مومن عورتوں کو تکلیفیں دیں اور توبہ نہ کی ان کو دوزخ کا (اور) عذاب بھی ہوگا اور جلنے کا عذاب بھی ہوگا (اور) جو لوگ ایمان لائے اور نیک کام کرتے رہے ان کے لیے باغات ہیں جن کے نیچے نہریں بہہ رہی ہیں۔ یہ ہی بڑی کامیابی ہے"
+      },
+      "explanation": {
+        "en": "Two outcomes: those who persecuted the believing men and women and then did not repent will have the punishment of Hell and the punishment of the Burning (85:10); those who believed and did righteous deeds will have gardens beneath which rivers flow, the great success (85:11). (Al-Buruj 85:10–11) (Al-Buruj 85:10–11)",
+        "ur": "دو انجام: جنہوں نے مومن مردوں اور عورتوں کو ستایا اور پھر توبہ نہ کی ان کے لیے جہنم کا عذاب ہے اور جلنے کا عذاب ہے (85:10)؛ جو ایمان لائے اور نیک عمل کیے ان کے لیے باغات ہیں جن کے نیچے نہریں بہتی ہیں، بڑی کامیابی (85:11)۔ (البروج 85:10–11) (Al-Buruj 85:10–11)"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "A restriction with a clause",
+        "ur": "جملے کے ساتھ حصر"
+      },
+      "body": {
+        "en": "In 85:8 the thing after إِلَّا is the clause أَن يُؤْمِنُوا, 'that they believe'. You read it as 'only because they believed'; you are not asked to give it an ending. The other words in this part are given whole with their meanings.",
+        "ur": "85:8 میں إِلَّا کے بعد جملہ أَن يُؤْمِنُوا ہے، 'کہ وہ ایمان لائے'۔ آپ اسے 'صرف اس لیے کہ وہ ایمان لائے' پڑھتے ہیں؛ آپ سے اسے کوئی ختم دینے کو نہیں کہا جاتا۔ اس حصے کے باقی الفاظ اپنے معنی کے ساتھ پورے دیے گئے ہیں۔"
       }
     }
   ],
   "exercises": [
     {
       "type": "MATCHING",
-      "id": "ch70-l06-ex01",
+      "id": "ch70-l08-ex01",
       "left_column": [
         {
-          "ar": "جَاءَ الْقَوْمُ إِلَّا زَيْدًا",
-          "ar_plain": "جاء القوم إلا زيدا",
-          "translit": "jaa'a al-qawmu illaa zaydan",
-          "en": "the people came except Zayd",
-          "ur": "لوگ آئے سوائے زید کے"
+          "ar": "وَالسَّمَاءِ ذَاتِ الْبُرُوجِ",
+          "ar_plain": "والسماء ذات البروج",
+          "translit": "wa-s-samāʾi dhāti al-burūji",
+          "en": "(85:1)",
+          "ur": "(85:1)"
         },
         {
-          "ar": "مَا جَاءَ أَحَدٌ إِلَّا زَيْدٌ",
-          "ar_plain": "ما جاء أحد إلا زيد",
-          "translit": "maa jaa'a ahadun illaa zaydun",
-          "en": "no one came except Zayd",
-          "ur": "زید کے سوا کوئی نہیں آیا"
+          "ar": "وَالْيَوْمِ الْمَوْعُودِ",
+          "ar_plain": "واليوم الموعود",
+          "translit": "wa-l-yawmi al-mawʿūdi",
+          "en": "(85:2)",
+          "ur": "(85:2)"
         },
         {
-          "ar": "مَا أَكَلْتُ إِلَّا تُفَّاحَةً",
-          "ar_plain": "ما أكلت إلا تفاحة",
-          "translit": "maa akaltu illaa tuffaahatan",
-          "en": "I ate only an apple",
-          "ur": "میں نے صرف ایک سیب کھایا"
+          "ar": "وَشَاهِدٍ وَمَشْهُودٍ",
+          "ar_plain": "وشاهد ومشهود",
+          "translit": "washāhidin wamashhūdin",
+          "en": "(85:3)",
+          "ur": "(85:3)"
         },
         {
-          "ar": "مَا لَهُمْ بِهِ مِنْ عِلْمٍ إِلَّا اتِّبَاعَ الظَّنِّ",
-          "ar_plain": "ما لهم به من علم إلا اتباع الظن",
-          "translit": "maa lahum bihi min 'ilmin illaa ittibaa'a az-zanni",
-          "en": "no knowledge — only assumption",
-          "ur": "کوئی علم نہیں — بس گمان"
+          "ar": "قُتِلَ أَصْحَابُ الْأُخْدُودِ",
+          "ar_plain": "قتل اصحاب الاخدود",
+          "translit": "qutila ʾaṣḥābu al-ʾukhdūdi",
+          "en": "(85:4)",
+          "ur": "(85:4)"
         }
       ],
       "right_column": [
         {
-          "en": "affirmative, group named",
-          "ur": "مثبت، گروہ مذکور"
+          "en": "and by a witness and what is witnessed",
+          "ur": "اور گواہ اور جس کی گواہی دی جائے اس کی قسم"
         },
         {
-          "en": "negative, group named",
-          "ur": "منفی، گروہ مذکور"
+          "en": "By the sky with its great stars",
+          "ur": "برجوں والے آسمان کی قسم"
         },
         {
-          "en": "مُفَرَّغ — no group",
-          "ur": "مفرّغ — گروہ نہیں"
+          "en": "Destroyed were the people of the trench",
+          "ur": "خندق والے ہلاک کر دیے گئے"
         },
         {
-          "en": "مُنْقَطِع — a different kind",
-          "ur": "منقطع — دوسری جنس"
+          "en": "and by the promised Day",
+          "ur": "اور وعدہ کیے ہوئے دن کی قسم"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
           1
         ],
         [
+          1,
+          3
+        ],
+        [
           2,
-          2
+          0
         ],
         [
           3,
-          3
+          2
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch70-l06-ex02",
-      "statement": {
-        "en": "In مَا جَاءَنِي أَحَدٌ إِلَّا زَيْدٌ, زَيْدٌ is the مُسْتَثْنَى مِنْهُ.",
-        "ur": "مَا جَاءَنِي أَحَدٌ إِلَّا زَيْدٌ میں زَيْدٌ مستثنیٰ منہ ہے۔",
-        "ar_example": {
-          "ar": "مَا جَاءَنِي أَحَدٌ إِلَّا زَيْدٌ",
-          "ar_plain": "ما جاءني أحد إلا زيد",
-          "translit": "maa jaa'anii ahadun illaa zaydun",
-          "en": "No one came to me except Zayd.",
-          "ur": "زید کے سوا میرے پاس کوئی نہیں آیا۔"
-        }
-      },
-      "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "False. زَيْدٌ is the مُسْتَثْنَى (the one taken out). أَحَدٌ is the مُسْتَثْنَى مِنْهُ — the group the negation covers.",
-        "ur": "غلط۔ زَيْدٌ مستثنیٰ ہے (جسے نکالا گیا)۔ أَحَدٌ مستثنیٰ منہ ہے — وہ گروہ جس پر نفی ہے۔"
+        "en": "Four statements: the sky with great stars; the promised Day; a witness and what is witnessed; destroyed were the people of the trench.",
+        "ur": "چار بیان: برجوں والا آسمان؛ وعدہ کیا ہوا دن؛ گواہ اور جس کی گواہی دی جائے؛ خندق والے ہلاک کر دیے گئے۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch70-l06-ex03",
-      "statement": {
-        "en": "After غَيْر and سِوَى the excepted noun is genitive.",
-        "ur": "غَيْر اور سِوَى کے بعد مستثنیٰ مجرور ہوتا ہے۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch70-l06-ex04",
-      "mode": "TAP",
-      "sentence_ar": "مَا أَعْرِفُ أَحَدًا ___ زَيْدٍ",
-      "hint": {
-        "en": "'I know no one except Zayd.' Zayd is genitive, so choose a word that takes a genitive after it — in the right case.",
-        "ur": "'میں زید کے سوا کسی کو نہیں جانتا۔' زید مجرور ہے، اس لیے ایسا لفظ چنیے جس کے بعد مجرور آتا ہو — درست اعراب میں۔"
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l08-ex02",
+      "prompt": {
+        "ar": "النَّارِ ذَاتِ الْوَقُودِ",
+        "ar_plain": "النار ذات الوقود",
+        "translit": "an-nāri dhāti al-waqūdi",
+        "en": "(85:5)",
+        "ur": "(85:5)"
       },
       "options": [
         {
-          "ar": "سِوَى",
-          "ar_plain": "سوى",
-          "translit": "siwaa",
-          "en": "except",
-          "ur": "سوا"
+          "en": "Destroyed were the people of the trench",
+          "ur": "خندق والے ہلاک کر دیے گئے"
         },
         {
-          "ar": "إِلَّا",
-          "ar_plain": "إلا",
-          "translit": "illaa",
-          "en": "except (needs زَيْدًا)",
-          "ur": "سوائے (زَيْدًا چاہیے)"
+          "en": "the fire full of fuel",
+          "ur": "ایندھن سے بھری آگ"
         },
         {
-          "ar": "غَيْرُ",
-          "ar_plain": "غير",
-          "translit": "ghayru",
-          "en": "other than (nominative)",
-          "ur": "سوا (مرفوع)"
+          "en": "when they sat by it",
+          "ur": "جب وہ اس کے پاس بیٹھے تھے"
         },
         {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "not",
-          "ur": "نہیں"
+          "en": "and by a witness and what is witnessed",
+          "ur": "اور گواہ اور جس کی گواہی دی جائے اس کی قسم"
         }
       ],
-      "correct_answer": {
-        "ar": "سِوَى",
-        "ar_plain": "سوى",
-        "translit": "siwaa",
-        "en": "except",
-        "ur": "سوا"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch70-l06-ex05",
-      "mode": "TAP",
-      "sentence_ar": "نَجَحَ الطُّلَّابُ ___ خَالِدٍ",
-      "hint": {
-        "en": "'The students passed, other than Khalid.' Affirmative with the group named: غَيْر takes the accusative.",
-        "ur": "'طالب علم کامیاب ہوئے، خالد کے سوا۔' مثبت جملہ اور گروہ مذکور: غَيْر منصوب ہوگا۔"
-      },
-      "options": [
-        {
-          "ar": "غَيْرَ",
-          "ar_plain": "غير",
-          "translit": "ghayra",
-          "en": "other than (accusative)",
-          "ur": "سوا (منصوب)"
-        },
-        {
-          "ar": "غَيْرُ",
-          "ar_plain": "غير",
-          "translit": "ghayru",
-          "en": "other than (nominative)",
-          "ur": "سوا (مرفوع)"
-        },
-        {
-          "ar": "إِلَّا",
-          "ar_plain": "إلا",
-          "translit": "illaa",
-          "en": "except (needs خَالِدًا)",
-          "ur": "سوائے (خَالِدًا چاہیے)"
-        },
-        {
-          "ar": "مَعَ",
-          "ar_plain": "مع",
-          "translit": "ma'a",
-          "en": "with",
-          "ur": "ساتھ"
-        }
-      ],
-      "correct_answer": {
-        "ar": "غَيْرَ",
-        "ar_plain": "غير",
-        "translit": "ghayra",
-        "en": "other than (accusative)",
-        "ur": "سوا (منصوب)"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch70-l06-ex06",
-      "target_translation": {
-        "en": "No one succeeded except Umar.",
-        "ur": "عمر کے سوا کوئی کامیاب نہیں ہوا۔"
-      },
-      "tiles": [
-        {
-          "ar": "مَا",
-          "ar_plain": "ما",
-          "translit": "maa",
-          "en": "not",
-          "ur": "نہیں"
-        },
-        {
-          "ar": "نَجَحَ",
-          "ar_plain": "نجح",
-          "translit": "najaha",
-          "en": "succeeded",
-          "ur": "کامیاب ہوا"
-        },
-        {
-          "ar": "أَحَدٌ",
-          "ar_plain": "أحد",
-          "translit": "ahadun",
-          "en": "anyone",
-          "ur": "کوئی"
-        },
-        {
-          "ar": "إِلَّا",
-          "ar_plain": "إلا",
-          "translit": "illaa",
-          "en": "except",
-          "ur": "سوائے"
-        },
-        {
-          "ar": "عُمَرُ",
-          "ar_plain": "عمر",
-          "translit": "'umaru",
-          "en": "Umar",
-          "ur": "عمر"
-        },
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "no",
-          "ur": "نہیں"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3,
-        4
-      ],
-      "xp_value": 1
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "This ayah says: the fire full of fuel.",
+        "ur": "یہ آیت کہتی ہے: ایندھن سے بھری آگ۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch70-l06-ex07",
+      "id": "ch70-l08-ex03",
       "prompt": {
-        "ar": "مَا أَكَلْتُ إِلَّا تُفَّاحَةً",
-        "ar_plain": "ما أكلت إلا تفاحة",
-        "translit": "maa akaltu illaa tuffaahatan",
-        "en": "I ate nothing but an apple.",
-        "ur": "میں نے ایک سیب کے سوا کچھ نہیں کھایا۔"
+        "ar": "إِذْ هُمْ عَلَيْهَا قُعُودٌ",
+        "ar_plain": "اذ هم عليها قعود",
+        "translit": "ʾidh hum ʿalayhā quʿūdun",
+        "en": "(85:6)",
+        "ur": "(85:6)"
       },
       "options": [
         {
-          "en": "I ate nothing but an apple.",
-          "ur": "میں نے ایک سیب کے سوا کچھ نہیں کھایا۔"
+          "en": "the fire full of fuel",
+          "ur": "ایندھن سے بھری آگ"
         },
         {
-          "en": "I did not eat the apple.",
-          "ur": "میں نے سیب نہیں کھایا۔"
+          "en": "and they were witnesses to what they were doing to the believers",
+          "ur": "اور وہ اس پر گواہ تھے جو وہ مومنوں کے ساتھ کر رہے تھے"
         },
         {
-          "en": "I ate everything except an apple.",
-          "ur": "میں نے سیب کے سوا سب کچھ کھایا۔"
+          "en": "Destroyed were the people of the trench",
+          "ur": "خندق والے ہلاک کر دیے گئے"
         },
         {
-          "en": "An apple did not eat me.",
-          "ur": "سیب نے مجھے نہیں کھایا۔"
+          "en": "when they sat by it",
+          "ur": "جب وہ اس کے پاس بیٹھے تھے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "This ayah says: when they sat by it.",
+        "ur": "یہ آیت کہتی ہے: جب وہ اس کے پاس بیٹھے تھے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l08-ex04",
+      "prompt": {
+        "ar": "وَهُمْ عَلَىٰ مَا يَفْعَلُونَ بِالْمُؤْمِنِينَ شُهُودٌ",
+        "ar_plain": "وهم على ما يفعلون بالمؤمنين شهود",
+        "translit": "wahum ʿalā mā yafʿalūna bi-l-muʾminīna shuhūdun",
+        "en": "(85:7)",
+        "ur": "(85:7)"
+      },
+      "options": [
+        {
+          "en": "and they were witnesses to what they were doing to the believers",
+          "ur": "اور وہ اس پر گواہ تھے جو وہ مومنوں کے ساتھ کر رہے تھے"
+        },
+        {
+          "en": "when they sat by it",
+          "ur": "جب وہ اس کے پاس بیٹھے تھے"
+        },
+        {
+          "en": "and they resented them only because they believed in Allah, the Almighty, the Praiseworthy",
+          "ur": "اور انہوں نے ان پر صرف اس لیے ناراضی کی کہ وہ اللہ، غالب، لائقِ حمد، پر ایمان لائے"
+        },
+        {
+          "en": "the fire full of fuel",
+          "ur": "ایندھن سے بھری آگ"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "مَا + إِلَّا with no group named is مُفَرَّغ: 'I ate only an apple'. تُفَّاحَةً is accusative because it is the object of أَكَلْتُ.",
-        "ur": "مَا + إِلَّا، گروہ مذکور نہیں، مفرّغ ہے: 'میں نے صرف ایک سیب کھایا'۔ تُفَّاحَةً اس لیے منصوب ہے کہ وہ أَكَلْتُ کا مفعول ہے۔"
+        "en": "This ayah says: and they were witnesses to what they were doing to the believers.",
+        "ur": "یہ آیت کہتی ہے: اور وہ اس پر گواہ تھے جو وہ مومنوں کے ساتھ کر رہے تھے۔"
       }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch70-l06-ex08",
+      "id": "ch70-l08-ex05",
       "prompt": {
-        "ar": "إِنْ هُوَ إِلَّا ذِكْرٌ لِلْعَالَمِينَ",
-        "ar_plain": "إن هو إلا ذكر للعالمين",
-        "translit": "in huwa illaa dhikrun lil-'aalamiina",
-        "en": "It is not except a reminder to the worlds.",
-        "ur": "یہ تو تمام جہانوں کے لیے بس ایک نصیحت ہے۔"
+        "ar": "وَمَا نَقَمُوا مِنْهُمْ إِلَّا أَن يُؤْمِنُوا بِاللَّهِ الْعَزِيزِ الْحَمِيدِ",
+        "ar_plain": "وما نقموا منهم الا ان يؤمنوا بالله العزيز الحميد",
+        "translit": "wamā naqamū minhum ʾillā ʾan yuʾminū bi-l-lahi al-ʿazīzi al-ḥamīdi",
+        "en": "(85:8)",
+        "ur": "(85:8)"
       },
       "options": [
         {
-          "en": "It is only a reminder to the worlds.",
-          "ur": "یہ تو تمام جہانوں کے لیے بس ایک نصیحت ہے۔"
+          "en": "and they were witnesses to what they were doing to the believers",
+          "ur": "اور وہ اس پر گواہ تھے جو وہ مومنوں کے ساتھ کر رہے تھے"
         },
         {
-          "en": "If it is a reminder, it is for the worlds.",
-          "ur": "اگر یہ نصیحت ہے تو جہانوں کے لیے ہے۔"
+          "en": "to whom belongs the dominion of the heavens and the earth, and Allah is Witness over all things",
+          "ur": "جس کی آسمانوں اور زمین کی بادشاہی ہے، اور اللہ ہر چیز پر گواہ ہے"
         },
         {
-          "en": "It is not a reminder to the worlds.",
-          "ur": "یہ جہانوں کے لیے نصیحت نہیں۔"
+          "en": "and they resented them only because they believed in Allah, the Almighty, the Praiseworthy",
+          "ur": "اور انہوں نے ان پر صرف اس لیے ناراضی کی کہ وہ اللہ، غالب، لائقِ حمد، پر ایمان لائے"
         },
         {
-          "en": "Everything except the reminder is for the worlds.",
-          "ur": "نصیحت کے سوا سب جہانوں کے لیے ہے۔"
+          "en": "when they sat by it",
+          "ur": "جب وہ اس کے پاس بیٹھے تھے"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "This ayah says: and they resented them only because they believed in Allah, the Almighty, the Praiseworthy.",
+        "ur": "یہ آیت کہتی ہے: اور انہوں نے ان پر صرف اس لیے ناراضی کی کہ وہ اللہ، غالب، لائقِ حمد، پر ایمان لائے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l08-ex06",
+      "prompt": {
+        "ar": "الَّذِي لَهُ مُلْكُ السَّمَاوَاتِ وَالْأَرْضِ ۚ وَاللَّهُ عَلَىٰ كُلِّ شَيْءٍ شَهِيدٌ",
+        "ar_plain": "الذي له ملك السماوات والارض  والله على كل شيء شهيد",
+        "translit": "alladhī lahu mulku as-samāwaāti wa-l-ʾarḍi ۚ wa-l-lahu ʿalā kulli shayʾin shahīdun",
+        "en": "(85:9)",
+        "ur": "(85:9)"
+      },
+      "options": [
+        {
+          "en": "and they resented them only because they believed in Allah, the Almighty, the Praiseworthy",
+          "ur": "اور انہوں نے ان پر صرف اس لیے ناراضی کی کہ وہ اللہ، غالب، لائقِ حمد، پر ایمان لائے"
+        },
+        {
+          "en": "to whom belongs the dominion of the heavens and the earth, and Allah is Witness over all things",
+          "ur": "جس کی آسمانوں اور زمین کی بادشاہی ہے، اور اللہ ہر چیز پر گواہ ہے"
+        },
+        {
+          "en": "Those who persecuted the believing men and women and then did not repent will have the punishment of Hell and the punishment of the Burning",
+          "ur": "جنہوں نے مومن مردوں اور عورتوں کو ستایا اور پھر توبہ نہ کی ان کے لیے جہنم کا عذاب ہے اور جلنے کا عذاب ہے"
+        },
+        {
+          "en": "and they were witnesses to what they were doing to the believers",
+          "ur": "اور وہ اس پر گواہ تھے جو وہ مومنوں کے ساتھ کر رہے تھے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "This ayah says: to whom belongs the dominion of the heavens and the earth, and Allah is Witness over all things.",
+        "ur": "یہ آیت کہتی ہے: جس کی آسمانوں اور زمین کی بادشاہی ہے، اور اللہ ہر چیز پر گواہ ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l08-ex07",
+      "prompt": {
+        "ar": "إِنَّ الَّذِينَ فَتَنُوا الْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ ثُمَّ لَمْ يَتُوبُوا فَلَهُمْ عَذَابُ جَهَنَّمَ وَلَهُمْ عَذَابُ الْحَرِيقِ",
+        "ar_plain": "ان الذين فتنوا المؤمنين والمؤمنات ثم لم يتوبوا فلهم عذاب جهنم ولهم عذاب الحريق",
+        "translit": "ʾinna alladhīna fatanū al-muʾminīna wa-l-muʾmināti thumma lam yatūbū falahum ʿadhābu jahannama walahum ʿadhābu al-ḥarīqi",
+        "en": "(85:10)",
+        "ur": "(85:10)"
+      },
+      "options": [
+        {
+          "en": "to whom belongs the dominion of the heavens and the earth, and Allah is Witness over all things",
+          "ur": "جس کی آسمانوں اور زمین کی بادشاہی ہے، اور اللہ ہر چیز پر گواہ ہے"
+        },
+        {
+          "en": "Those who believed and did righteous deeds will have gardens beneath which rivers flow; that is the great success",
+          "ur": "جو ایمان لائے اور نیک عمل کیے ان کے لیے باغات ہیں جن کے نیچے نہریں بہتی ہیں؛ یہی بڑی کامیابی ہے"
+        },
+        {
+          "en": "and they resented them only because they believed in Allah, the Almighty, the Praiseworthy",
+          "ur": "اور انہوں نے ان پر صرف اس لیے ناراضی کی کہ وہ اللہ، غالب، لائقِ حمد، پر ایمان لائے"
+        },
+        {
+          "en": "Those who persecuted the believing men and women and then did not repent will have the punishment of Hell and the punishment of the Burning",
+          "ur": "جنہوں نے مومن مردوں اور عورتوں کو ستایا اور پھر توبہ نہ کی ان کے لیے جہنم کا عذاب ہے اور جلنے کا عذاب ہے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "This ayah says: Those who persecuted the believing men and women and then did not repent will have the punishment of Hell and the punishment of the Burning.",
+        "ur": "یہ آیت کہتی ہے: جنہوں نے مومن مردوں اور عورتوں کو ستایا اور پھر توبہ نہ کی ان کے لیے جہنم کا عذاب ہے اور جلنے کا عذاب ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l08-ex08",
+      "prompt": {
+        "ar": "إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ لَهُمْ جَنَّاتٌ تَجْرِي مِن تَحْتِهَا الْأَنْهَارُ ۚ ذَٰلِكَ الْفَوْزُ الْكَبِيرُ",
+        "ar_plain": "ان الذين امنوا وعملوا الصالحات لهم جنات تجري من تحتها الانهار  ذلك الفوز الكبير",
+        "translit": "ʾinna alladhīna ʾāmanū waʿamilū aṣ-ṣāliḥāti lahum jannātun tajrī min taḥtihā al-ʾanhāru ۚ dhālika al-fawzu al-kabīru",
+        "en": "(85:11)",
+        "ur": "(85:11)"
+      },
+      "options": [
+        {
+          "en": "Those who believed and did righteous deeds will have gardens beneath which rivers flow; that is the great success",
+          "ur": "جو ایمان لائے اور نیک عمل کیے ان کے لیے باغات ہیں جن کے نیچے نہریں بہتی ہیں؛ یہی بڑی کامیابی ہے"
+        },
+        {
+          "en": "Those who persecuted the believing men and women and then did not repent will have the punishment of Hell and the punishment of the Burning",
+          "ur": "جنہوں نے مومن مردوں اور عورتوں کو ستایا اور پھر توبہ نہ کی ان کے لیے جہنم کا عذاب ہے اور جلنے کا عذاب ہے"
+        },
+        {
+          "en": "Indeed, the grip of your Lord is severe",
+          "ur": "بے شک تمہارے رب کی پکڑ سخت ہے"
+        },
+        {
+          "en": "to whom belongs the dominion of the heavens and the earth, and Allah is Witness over all things",
+          "ur": "جس کی آسمانوں اور زمین کی بادشاہی ہے، اور اللہ ہر چیز پر گواہ ہے"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "إِنْ … إِلَّا = 'only' (81:27). ذِكْرٌ is the nominative predicate — a مُفَرَّغ sentence.",
-        "ur": "إِنْ … إِلَّا = 'صرف' (81:27)۔ ذِكْرٌ مرفوع خبر ہے — مفرّغ جملہ۔"
+        "en": "This ayah says: Those who believed and did righteous deeds will have gardens beneath which rivers flow; that is the great success.",
+        "ur": "یہ آیت کہتی ہے: جو ایمان لائے اور نیک عمل کیے ان کے لیے باغات ہیں جن کے نیچے نہریں بہتی ہیں؛ یہی بڑی کامیابی ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l08-ex09",
+      "prompt": {
+        "ar": "إِنَّ الَّذِينَ فَتَنُوا الْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ ثُمَّ لَمْ يَتُوبُوا فَلَهُمْ عَذَابُ جَهَنَّمَ وَلَهُمْ عَذَابُ الْحَرِيقِ … إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ لَهُمْ جَنَّاتٌ تَجْرِي مِن تَحْتِهَا الْأَنْهَارُ ۚ ذَٰلِكَ الْفَوْزُ الْكَبِيرُ",
+        "ar_plain": "ان الذين فتنوا المؤمنين والمؤمنات ثم لم يتوبوا فلهم عذاب جهنم ولهم عذاب الحريق … ان الذين امنوا وعملوا الصالحات لهم جنات تجري من تحتها الانهار  ذلك الفوز الكبير",
+        "translit": "ʾinna alladhīna fatanū al-muʾminīna wa-l-muʾmināti thumma lam yatūbū falahum ʿadhābu jahannama walahum ʿadhābu al-ḥarīqi … ʾinna alladhīna ʾāmanū waʿamilū aṣ-ṣāliḥāti lahum jannātun tajrī min taḥtihā al-ʾanhāru ۚ dhālika al-fawzu al-kabīru",
+        "en": "(85:10 and 85:11: how do they contrast?)",
+        "ur": "(85:10 اور 85:11: ان میں کیا فرق ہے؟)"
+      },
+      "options": [
+        {
+          "en": "Those who persecuted the believers and did not repent face Hell; those who believed and did righteous deeds have gardens",
+          "ur": "جنہوں نے مومنوں کو ستایا اور توبہ نہ کی ان کے لیے جہنم ہے؛ جو ایمان لائے اور نیک عمل کیے ان کے لیے باغات ہیں"
+        },
+        {
+          "en": "Both groups have gardens",
+          "ur": "دونوں گروہوں کے لیے باغات ہیں"
+        },
+        {
+          "en": "Both groups face Hell",
+          "ur": "دونوں گروہوں کے لیے جہنم ہے"
+        },
+        {
+          "en": "Neither is mentioned",
+          "ur": "کسی کا ذکر نہیں"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Two opposite outcomes for two opposite groups.",
+        "ur": "دو الٹے گروہوں کے لیے دو الٹے انجام۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Exception — from rules to understanding",
-      "ar": "الِاسْتِثْنَاءُ — مِنَ الْقَاعِدَةِ إِلَى الْفَهْمِ",
-      "ur": "استثنا — قاعدے سے فہم تک"
+      "en": "Only because they believed",
+      "ar": "إِلَّا أَن يُؤْمِنُوا",
+      "ur": "صرف اس لیے کہ وہ ایمان لائے"
     },
     "ayah": {
-      "surah": 59,
-      "ayah": 22,
-      "label": "Al-Hashr 59:22",
-      "ar": "هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ ۖ عَالِمُ الْغَيْبِ وَالشَّهَادَةِ ۖ هُوَ الرَّحْمَٰنُ الرَّحِيمُ",
-      "en": "He is Allah, other than whom there is no deity, Knower of the unseen and the witnessed. He is the Entirely Merciful, the Especially Merciful.",
-      "ur": "وہی اللہ ہے جس کے سوا کوئی معبود نہیں، پوشیدہ اور ظاہر کا جاننے والا، وہ بڑا مہربان، نہایت رحم والا ہے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/059022.mp3"
+      "surah": 85,
+      "ayah": 8,
+      "label": "Al-Buruj 85:8",
+      "ar": "وَمَا نَقَمُوا مِنْهُمْ إِلَّا أَن يُؤْمِنُوا بِاللَّهِ الْعَزِيزِ الْحَمِيدِ",
+      "en": "And they resented them not except because they believed in Allāh, the Exalted in Might, the Praiseworthy,",
+      "ur": "ان کو مومنوں کی یہی بات بری لگتی تھی کہ وہ خدا پر ایمان لائے ہوئے تھے جو غالب (اور) قابل ستائش ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/085008.mp3"
     },
     "highlighted_word_indices": [
+      1,
       3,
-      4,
-      5,
-      0
+      5
+    ],
+    "highlighted_words": [
+      "نَقَمُوا",
+      "إِلَّا",
+      "يُؤْمِنُوا"
     ],
     "noor_explanation": {
-      "en": "لَا إِلَٰهَ إِلَّا هُوَ — the group (every deity) is named and the sentence is negative, so the exception copies the group's position: هُوَ, nominative. Everything this chapter taught meets in this phrase: a group, إِلَّا, and the One taken out of it.",
-      "ur": "لَا إِلَٰهَ إِلَّا هُوَ — گروہ (ہر معبود) مذکور ہے اور جملہ منفی، اس لیے مستثنیٰ گروہ کے محل کا اعراب لیتا ہے: هُوَ، مرفوع۔ اس باب کی ہر بات اس ایک جملے میں جمع ہے: گروہ، إِلَّا، اور وہ ایک جسے اس سے الگ کیا گیا۔"
+      "en": "وَمَا نَقَمُوا مِنْهُمْ إِلَّا أَن يُؤْمِنُوا — a restriction whose word after إِلَّا is a clause: 'only because they believed'.",
+      "ur": "وَمَا نَقَمُوا مِنْهُمْ إِلَّا أَن يُؤْمِنُوا — ایسا حصر جس میں إِلَّا کے بعد جملہ ہے: 'صرف اس لیے کہ وہ ایمان لائے'۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Chapter 70 is complete. You can now find the group and the excepted word, decide the case after إِلَّا, tell connected from disconnected, and read غَيْر and سِوَى — and you know the grammar of لَا إِلَٰهَ إِلَّا اللَّهُ.",
-      "ur": "باب 70 مکمل۔ اب آپ گروہ اور مستثنیٰ پہچان سکتے ہیں، إِلَّا کے بعد کا اعراب طے کر سکتے ہیں، متصل اور منقطع میں فرق کر سکتے ہیں، غَيْر اور سِوَى پڑھ سکتے ہیں — اور لَا إِلَٰهَ إِلَّا اللَّهُ کی ترکیب جانتے ہیں۔"
+      "en": "You read 85:1–11: the oaths, the people of the trench, what was resented, and the two outcomes.",
+      "ur": "آپ نے 85:1–11 پڑھیں: قسمیں، خندق والے، جو ناگوار تھا، اور دو انجام۔"
     }
   }
 }

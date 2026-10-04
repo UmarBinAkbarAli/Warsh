@@ -2,14 +2,13 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 67, Lesson 1 — Introduction to لَوْ (the counterfactual particle / 'what if').",
+    "_note": "Chapter 67, Lesson 1 (ch67-l01, rebuilt in place). لَوْ introduces a condition that the speaker pictures, most often something contrary to what is the case (21:22), against Chapter 32's إِذَا clause (99:1) for something expected. The old 'always unreal / the opposite of إِذَا' rule and the امتناع label are gone: the common reading is stated, and it is said to depend on the sentence. لَوْ is not one of the particles that put a verb in the jussive; Chapter 68 teaches those. Authored contrast: إِذَا دَرَسْتَ نَجَحْتَ / لَوْ دَرَسْتَ لَنَجَحْتَ. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-67-content-proposal.md and its review amendments.",
+    "title": "Meet لَوْ: A Condition Pictured",
+    "titleAr": "لَوْ: الشَّرْطُ الْمُتَخَيَّلُ",
+    "titleUr": "لَوْ: ایک فرضی شرط",
     "chapter_order": 67,
     "lesson_order": 1,
-    "chapter_title": "لو",
-    "title": "The Counterfactual Particle لَوْ",
-    "titleAr": "حَرْفُ لَوْ وَاسْتِحْسَانُهَا",
-    "source": "book_8_lesson_1_lo_intro.md",
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
@@ -17,80 +16,95 @@
       "surah": 21,
       "ayah": 22,
       "label": "Al-Anbiya 21:22",
-      "ar": "لَوْ كَانَ فِيهِمَا آلِهَةٌ إِلَّا اللَّهُ لَفَسَدَتَا ۚ فَسُبْحَانَ اللَّهِ رَبِّ الْعَرْشِ عَمَّا يَصِفُونَ",
-      "en": "Had there been within the heavens and earth gods besides Allah, they both would have been ruined. So exalted is Allah, Lord of the Throne, above what they describe.",
-      "ur": "اگر آسمان اور زمین میں اللہ کے سوا اور معبود ہوتے تو دونوں درہم برہم ہو جاتے، سو اللہ جو عرش کا رب ہے ان باتوں سے پاک ہے جو یہ بیان کرتے ہیں",
+      "ar": "لَوْ كَانَ فِيهِمَا آلِهَةٌ إِلَّا اللَّهُ لَفَسَدَتَا",
+      "en": "Had there been gods in them other than Allah, they would both have been ruined.",
+      "ur": "اگر ان دونوں میں اللہ کے سوا اور معبود ہوتے تو دونوں تباہ ہو جاتے۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/021022.mp3"
     },
     "noor_intro": {
-      "en": "لَوْ كَانَ فِيهِمَا آلِهَةٌ إِلَّا اللَّهُ لَفَسَدَتَا — 'had there been gods in them besides Allah, they would both have been ruined'. لَوْ talks about something that did NOT happen: there are no other gods, so the ruin did not happen. English 'if' does not tell you this; لَوْ does.",
-      "ur": "لَوْ كَانَ فِيهِمَا آلِهَةٌ إِلَّا اللَّهُ لَفَسَدَتَا — 'اگر ان میں اللہ کے سوا اور معبود ہوتے تو دونوں برباد ہو جاتے'۔ لَوْ اس بات کا ذکر کرتا ہے جو نہیں ہوئی: اور کوئی معبود نہیں، اس لیے بربادی بھی نہیں ہوئی۔ انگریزی کا 'if' یہ نہیں بتاتا؛ لَوْ بتاتا ہے۔"
+      "en": "لَوْ opens a condition that you picture: 'had there been …'. Then comes what would have followed. You know إِذَا from Chapter 32; لَوْ does a different job.",
+      "ur": "لَوْ ایک ایسی شرط کھولتا ہے جسے آپ تصور کرتے ہیں: 'اگر ہوتے …'۔ پھر وہ آتا ہے جو اس کے بعد ہوتا۔ إِذَا آپ باب 32 سے جانتے ہیں؛ لَوْ کا کام مختلف ہے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "The counterfactual particle لَوْ",
-        "ar": "لَوْ — حَرْفُ امْتِنَاعٍ لِامْتِنَاعٍ",
-        "ur": "ماضی کے لیے counterfactual particle"
+        "en": "لَوْ pictures a condition",
+        "ar": "لَوْ — شَرْطٌ يُتَخَيَّلُ",
+        "ur": "لَوْ ایک شرط کا تصور کراتا ہے"
       },
       "explanation": {
-        "en": "لَوْ usually introduces a condition that was not fulfilled. The grammarians call it حَرْفُ امْتِنَاعٍ لِامْتِنَاعٍ — 'the particle of one thing not happening because another did not'. لَوْ + past verb = 'if … had …, then … would have …'.",
-        "ur": "لَوْ عموماً ایسی شرط لاتا ہے جو پوری نہیں ہوئی۔ نحوی اسے حَرْفُ امْتِنَاعٍ لِامْتِنَاعٍ کہتے ہیں — 'ایک بات کے نہ ہونے کی وجہ سے دوسری کا نہ ہونا'۔ لَوْ + ماضی = 'اگر … ہوتا تو … ہو جاتا'۔"
+        "en": "لَوْ introduces a condition that the speaker pictures, and what would follow from it. Its most common reading is a condition contrary to what is the case: 'had you studied, you would have passed' says that you did not study. How a لَوْ sentence is read still depends on the sentence and the situation, so you read the whole sentence.",
+        "ur": "لَوْ ایک ایسی شرط کھولتا ہے جسے بولنے والا تصور کرتا ہے، اور وہ جو اس سے نتیجتاً ہوتا۔ اس کی سب سے عام صورت حقیقت کے خلاف شرط ہے: 'اگر تم پڑھتے تو کامیاب ہوتے' بتاتا ہے کہ تم نے پڑھا نہیں۔ لَوْ والا جملہ کس طرح پڑھا جائے، یہ پھر بھی جملے اور موقع پر منحصر ہے، اس لیے آپ پورا جملہ پڑھتے ہیں۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "لَوْ كَانَ فِيهِمَا آلِهَةٌ إِلَّا اللَّهُ لَفَسَدَتَا",
+        "ar": "لَوْ كَانَ فِيهِمَا آلِهَةٌ إِلَّا اللَّهُ لَفَسَدَتَا",
         "ar_plain": "لو كان فيهما الهة الا الله لفسدتا",
-        "translit": "law kana fiihimaa aalihatun illaa Allahu lafasadataa",
-        "en": "If there were in them [the heavens and earth] gods besides Allah, they would both be ruined.",
-        "ur": "اگر آسمانوں اور زمین میں اللہ کے سوا کوئی معبود ہوتا تو دونوں خراب ہو جاتے۔"
+        "translit": "law kāna fīhimā ʾālihatun ʾillā al-lahu lafasadatā",
+        "en": "Had there been gods in them other than Allah, they would both have been ruined.",
+        "ur": "اگر ان دونوں میں اللہ کے سوا اور معبود ہوتے تو دونوں تباہ ہو جاتے۔"
       },
       "explanation": {
-        "en": "لَوْ كَانَ — 'if there were.' كَانَ is in the past tense but لَوْ tells us this is NOT real — there ARE no other gods. This is the counterfactual meaning of لَوْ.",
-        "ur": "لَوْ كَانَ — 'اگر ہوتا'۔ كَانَ ماضی میں ہے مگر لَوْ بتاتا ہے کہ یہ اصل نہیں ہے — کوئی اور معبود نہیں ہے۔ یہ لَوْ کا counterfactual مطلب ہے۔"
+        "en": "لَوْ كَانَ فِيهِمَا آلِهَةٌ إِلَّا اللَّهُ is the condition: 'had there been gods in them other than Allah'. لَفَسَدَتَا is what would have followed: 'they would both have been ruined'. (Al-Anbiya 21:22) (Al-Anbiya 21:22)",
+        "ur": "لَوْ كَانَ فِيهِمَا آلِهَةٌ إِلَّا اللَّهُ شرط ہے: 'اگر ان دونوں میں اللہ کے سوا معبود ہوتے'۔ لَفَسَدَتَا وہ ہے جو اس کے بعد ہوتا: 'تو دونوں تباہ ہو جاتے'۔ (الانبیاء 21:22) (Al-Anbiya 21:22)"
       }
     },
     {
-      "type": "CONCEPT",
+      "type": "CONTRAST",
       "concept": {
-        "en": "لَوْ vs إِذَا — counterfactual vs real",
-        "ar": "لَوْ وَإِذَا — الْمُمْتَنِعُ وَالْوَاقِعُ",
-        "ur": "لَوْ بمقابلے إِذَا — counterfactual بمقابلے حقیقی"
+        "en": "لَوْ and إِذَا",
+        "ar": "لَوْ اور إِذَا",
+        "ur": "لَوْ وَإِذَا"
       },
+      "examples": [
+        {
+          "ar": "إِذَا دَرَسْتَ نَجَحْتَ",
+          "ar_plain": "اذا درست نجحت",
+          "translit": "ʾidhā darasta najaḥta",
+          "en": "When you study, you pass",
+          "ur": "جب تم پڑھتے ہو تو کامیاب ہوتے ہو"
+        },
+        {
+          "ar": "لَوْ دَرَسْتَ لَنَجَحْتَ",
+          "ar_plain": "لو درست لنجحت",
+          "translit": "law darasta lanajaḥta",
+          "en": "Had you studied, you would have passed",
+          "ur": "اگر تم پڑھتے تو کامیاب ہوتے"
+        }
+      ],
       "explanation": {
-        "en": "إِذَا introduces a REAL or possible condition ('when/if'). لَوْ introduces an UNREAL or counterfactual condition ('if only/would have'). The difference matters enormously for meaning.",
-        "ur": "إِذَا ایک حقیقی یا ممکن شرط متعارف کراتا ہے ('جب/اگر')۔ لَوْ ایک غیر حقیقی یا counterfactual شرط متعارف کراتا ہے ('کاش/ہوتا')۔ اس فرق کا مطلب کے لیے بہت اہم ہے۔"
+        "en": "Chapter 32's إِذَا clause speaks of what happens when its condition is met. لَوْ pictures a condition and what would have followed; here it says you did not study.",
+        "ur": "باب 32 کی إِذَا والی شرط اس کی بات کرتی ہے جو شرط پوری ہونے پر ہوتا ہے۔ لَوْ ایک شرط اور اس کے نتیجے کی تصویر بناتا ہے؛ یہاں یہ بتاتا ہے کہ تم نے پڑھا نہیں۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "AYAH_PREVIEW",
       "text": {
         "ar": "إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا",
-        "ar_plain": "اذا زلزلت الارض زلالها",
-        "translit": "i-dhaa zulzilat al-ardu zilzaalahaa",
-        "en": "When the earth is shaken with its earthquake.",
-        "ur": "جب زمین اس کے زلزلے سے ہل جائے۔"
+        "ar_plain": "اذا زلزلت الارض زلزالها",
+        "translit": "ʾidhā zulzilati al-ʾarḍu zilzālahā",
+        "en": "When the earth is shaken with its [final] earthquake",
+        "ur": "جب زمین بھونچال سے ہلا دی جائے گی"
       },
       "explanation": {
-        "en": "إِذَا is the real conditional 'when.' This earthquake WILL happen — it is not counterfactual. Compare with لَوْ which implies the condition did not/will not occur.",
-        "ur": "إِذَا حقیقی شرطی 'جب' ہے۔ یہ زلزلہ ہوگا — یہ counterfactual نہیں ہے۔ لَوْ سے موازنہ کریں جو بتاتا ہے کہ شرط نہیں ہوئی/نہیں ہوگی۔"
+        "en": "An إِذَا clause, for comparison: 'when the earth is shaken with its quake'. It speaks of something expected, and it is not a لَوْ clause. (Az-Zalzalah 99:1) (Az-Zalzalah 99:1)",
+        "ur": "موازنے کے لیے ایک إِذَا والا جملہ: 'جب زمین اپنے زلزلے سے ہلا دی جائے گی'۔ یہ کسی متوقع بات کی بات کرتا ہے، اور لَوْ والا جملہ نہیں۔ (الزلزال 99:1) (Az-Zalzalah 99:1)"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "The structure of لَوْ: لَوْ + verb + لَـ + result",
-        "ar": "بِنَاءُ لَوْ: لَوْ + فعل + لَـ + جَوَابٌ",
-        "ur": "لَوْ کی ساخت: لَوْ + فعل + لَـ + جواب"
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "لَوْ does not change the verb's ending",
+        "ur": "لَوْ فعل کا ختم نہیں بدلتا"
       },
-      "explanation": {
-        "en": "A لَوْ sentence has two parts: the condition (after لَوْ) and the result (after لَـ). لَوْ كَانَ... لَـ for 'if only... had... then.'",
-        "ur": "لَوْ جملے کے دو حصے ہیں: شرط (لَوْ کے بعد) اور جواب (لَـ کے بعد)۔ لَوْ كَانَ... لَـ اس کے لیے 'کاش... ہوتا... تو'۔"
+      "body": {
+        "en": "لَوْ is not one of the particles that put the next verb in the jussive. In لَوْ دَرَسْتَ and لَوْ كَانَ the verbs keep the form they have. Chapter 68 gives the particles that do change a verb.",
+        "ur": "لَوْ ان حروف میں سے نہیں جو اگلے فعل کو مجزوم کرتے ہیں۔ لَوْ دَرَسْتَ اور لَوْ كَانَ میں افعال اپنی صورت پر رہتے ہیں۔ باب 68 وہ حروف دے گا جو فعل بدلتے ہیں۔"
       }
     }
   ],
@@ -99,381 +113,336 @@
       "type": "TAP_TRANSLATION",
       "id": "ch67-l01-ex01",
       "prompt": {
-        "ar": "لَوْ أَنَّهُ آمَنَ بِرَبِّهِ",
-        "ar_plain": "لو انه آمن بربه",
-        "translit": "law annahu aamana bi-rabbihi",
-        "en": "if only he had believed in his Lord",
-        "ur": "کاش اس نے اپنے رب پر ایمان لے آتا"
+        "ar": "لَوْ دَرَسْتَ لَنَجَحْتَ",
+        "ar_plain": "لو درست لنجحت",
+        "translit": "law darasta lanajaḥta",
+        "en": "(what does it say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
       },
       "options": [
         {
-          "en": "if only he had believed in his Lord",
-          "ur": "کاش اس نے اپنے رب پر ایمان لے آتا"
+          "en": "When you study, you pass",
+          "ur": "جب تم پڑھتے ہو تو کامیاب ہوتے ہو"
         },
         {
-          "en": "if he believes in his Lord",
-          "ur": "اگر وہ اپنے رب پر ایمان لے"
+          "en": "You studied and you passed",
+          "ur": "تم نے پڑھا اور کامیاب ہوئے"
         },
         {
-          "en": "when he believes in his Lord",
-          "ur": "جب وہ اپنے رب پر ایمان لے"
+          "en": "Had you studied, you would have passed",
+          "ur": "اگر تم پڑھتے تو کامیاب ہوتے"
         },
         {
-          "en": "he believed in his Lord",
-          "ur": "اس نے اپنے رب پر ایمان لیا"
+          "en": "Do not study, so you pass",
+          "ur": "مت پڑھو، تاکہ کامیاب ہو"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَوْ pictures a condition: 'had you studied', and then what would have followed.",
+        "ur": "لَوْ ایک شرط کا تصور کراتا ہے: 'اگر تم پڑھتے'، اور پھر وہ جو اس کے بعد ہوتا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch67-l01-ex02",
+      "prompt": {
+        "ar": "لَوْ كَانَ فِيهِمَا آلِهَةٌ إِلَّا اللَّهُ لَفَسَدَتَا",
+        "ar_plain": "لو كان فيهما الهة الا الله لفسدتا",
+        "translit": "law kāna fīhimā ʾālihatun ʾillā al-lahu lafasadatā",
+        "en": "(21:22: what does it say?)",
+        "ur": "(21:22: یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "Had there been gods in them other than Allah, they would both have been ruined",
+          "ur": "اگر ان دونوں میں اللہ کے سوا معبود ہوتے تو دونوں تباہ ہو جاتے"
+        },
+        {
+          "en": "There are gods in them, and they are ruined",
+          "ur": "ان میں معبود ہیں، اور وہ تباہ ہیں"
+        },
+        {
+          "en": "When the gods come, they will be ruined",
+          "ur": "جب معبود آئیں گے تو وہ تباہ ہوں گے"
+        },
+        {
+          "en": "Allah ruined the two of them",
+          "ur": "اللہ نے ان دونوں کو تباہ کیا"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَوْ is the counterfactual particle — it talks about something that did NOT happen. أَنَّهُ آمَنَ is the unreal condition, so English 'if only … had' fits.",
-        "ur": "لَوْ اس بات کا ذکر کرتا ہے جو نہیں ہوئی۔ أَنَّهُ آمَنَ غیر واقع شرط ہے، اس لیے 'کاش وہ ایمان لے آتا' درست ترجمہ ہے۔"
+        "en": "لَوْ كَانَ … is the condition and لَفَسَدَتَا is what would have followed.",
+        "ur": "لَوْ كَانَ … شرط ہے اور لَفَسَدَتَا وہ ہے جو اس کے بعد ہوتا۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch67-l01-ex02",
+      "id": "ch67-l01-ex03",
       "statement": {
-        "en": "لَوْ introduces a condition that DID happen — it is a real conditional like إِذَا.",
-        "ur": "لَوْ ایسی شرط متعارف کراتا ہے جو ہوئی — یہ إِذَا کی طرح حقیقی شرط ہے۔",
-        "ar_example": {
-          "ar": "لَوْ كَانَ فِيهِمَا آلِهَةٌ إِلَّا اللَّهُ لَفَسَدَتَا",
-          "ar_plain": "لو كان فيهما الهة الا الله لفسدتا",
-          "translit": "law kana fiihimaa aalihatun illaa Allahu lafasadataa",
-          "en": "If there were gods besides Allah, they would both be ruined.",
-          "ur": "اگر اللہ کے سوا معبود ہوتے تو دونوں خراب ہو جاتے۔"
-        }
+        "en": "لَوْ is one of the particles that put the next verb in the jussive.",
+        "ur": "لَوْ ان حروف میں سے ہے جو اگلے فعل کو مجزوم کرتے ہیں۔"
       },
       "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَوْ is the opposite of إِذَا — it introduces an UNREAL or counterfactual condition. There are no gods besides Allah, so the condition لَوْ كَانَ is impossible/hypothetical.",
-        "ur": "لَوْ إِذَا کے برعکس ہے — یہ ایک غیر حقیقی یا counterfactual شرط متعارف کراتا ہے۔ اللہ کے سوا کوئی معبود نہیں، تو شرط لَوْ كَانَ ناممکن/فرضی ہے۔"
+        "en": "False. لَوْ does not change the verb's ending; Chapter 68 teaches the particles that do.",
+        "ur": "غلط۔ لَوْ فعل کا ختم نہیں بدلتا؛ باب 68 وہ حروف سکھاتا ہے جو بدلتے ہیں۔"
       }
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch67-l01-ex03",
+      "id": "ch67-l01-ex04",
       "mode": "TAP",
-      "sentence_ar": "___ كَانَ فِيهِمَا آلِهَةٌ إِلَّا اللَّهُ لَفَسَدَتَا",
+      "sentence_ar": "___ دَرَسْتَ لَنَجَحْتَ",
       "hint": {
-        "en": "If there were in them gods besides Allah, they would both be ruined.",
-        "ur": "اگر ان میں اللہ کے سوا کوئی معبود ہوتا تو دونوں خراب ہو جاتے۔"
+        "en": "Had you studied, you would have passed.",
+        "ur": "اگر تم پڑھتے تو کامیاب ہوتے۔"
       },
       "options": [
+        {
+          "ar": "إِذَا",
+          "ar_plain": "اذا",
+          "translit": "ʾidhā",
+          "en": "when",
+          "ur": "جب"
+        },
         {
           "ar": "لَوْ",
           "ar_plain": "لو",
           "translit": "law",
-          "en": "if only (counterfactual)",
-          "ur": "کاش (counterfactual)"
+          "en": "had (a pictured condition)",
+          "ur": "اگر (فرضی شرط)"
         },
         {
-          "ar": "إِذَا",
-          "ar_plain": "اذا",
-          "translit": "i-dhaa",
-          "en": "when (real)",
-          "ur": "جب (حقیقی)"
+          "ar": "حَتَّى",
+          "ar_plain": "حتى",
+          "translit": "ḥattā",
+          "en": "until",
+          "ur": "یہاں تک کہ"
         },
         {
-          "ar": "إِنْ",
-          "ar_plain": "ان",
-          "translit": "in",
-          "en": "if (general)",
-          "ur": "اگر (عمومی)"
-        },
-        {
-          "ar": "لَمَّا",
-          "ar_plain": "لما",
-          "translit": "lammaa",
-          "en": "not yet",
-          "ur": "ابھی تک نہیں"
+          "ar": "لَمْ",
+          "ar_plain": "لم",
+          "translit": "lam",
+          "en": "did not",
+          "ur": "نہیں"
         }
       ],
       "correct_answer": {
         "ar": "لَوْ",
         "ar_plain": "لو",
         "translit": "law",
-        "en": "if only (counterfactual)",
-        "ur": "کاش (counterfactual)"
+        "en": "had (a pictured condition)",
+        "ur": "اگر (فرضی شرط)"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَوْ opens the pictured condition, and the result begins with لَـ: لَنَجَحْتَ.",
+        "ur": "لَوْ فرضی شرط کھولتا ہے، اور نتیجہ لَـ سے شروع ہوتا ہے: لَنَجَحْتَ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch67-l01-ex05",
+      "prompt": {
+        "ar": "إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا",
+        "ar_plain": "اذا زلزلت الارض زلزالها",
+        "translit": "ʾidhā zulzilati al-ʾarḍu zilzālahā",
+        "en": "(99:1: what kind of clause is this?)",
+        "ur": "(99:1: یہ کس قسم کا جملہ ہے؟)"
+      },
+      "options": [
+        {
+          "en": "A لَوْ clause: a condition that is pictured",
+          "ur": "لَوْ والا جملہ: ایک فرضی شرط"
+        },
+        {
+          "en": "A command",
+          "ur": "حکم"
+        },
+        {
+          "en": "A question",
+          "ur": "سوال"
+        },
+        {
+          "en": "An إِذَا clause: 'when' something expected happens",
+          "ur": "إِذَا والا جملہ: 'جب' کوئی متوقع بات ہو"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "This is an إِذَا clause from Chapter 32: it says 'when', not 'had'.",
+        "ur": "یہ باب 32 کا إِذَا والا جملہ ہے: یہ 'جب' کہتا ہے، 'اگر ہوتا' نہیں۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch67-l01-ex04",
+      "id": "ch67-l01-ex06",
       "left_column": [
         {
           "ar": "لَوْ كَانَ فِيهِمَا آلِهَةٌ",
           "ar_plain": "لو كان فيهما الهة",
-          "translit": "law kana fiihimaa aalihatun",
-          "en": "if there were gods in them",
-          "ur": "اگر ان میں معبود ہوتے"
+          "translit": "law kāna fīhimā ʾālihatun",
+          "en": "gods in them",
+          "ur": "ان میں معبود"
         },
         {
           "ar": "إِذَا زُلْزِلَتِ الْأَرْضُ",
           "ar_plain": "اذا زلزلت الارض",
-          "translit": "i-dhaa zulzilat al-ardu",
-          "en": "when the earth is shaken",
-          "ur": "جب زمین ہل جائے"
+          "translit": "ʾidhā zulzilati al-ʾarḍu",
+          "en": "the earth is shaken",
+          "ur": "زمین ہلائی جائے"
         },
         {
-          "ar": "لَوْ أَنَّهُ آمَنَ بِرَبِّهِ",
-          "ar_plain": "لو انه آمن بربه",
-          "translit": "law annahu aamana bi-rabbihi",
-          "en": "if only he had believed in his Lord",
-          "ur": "کاش اس نے اپنے رب پر ایمان لے آتا"
+          "ar": "لَوْ دَرَسْتَ",
+          "ar_plain": "لو درست",
+          "translit": "law darasta",
+          "en": "you studied",
+          "ur": "تم نے پڑھا"
         },
         {
-          "ar": "إِذَا جَاءَ نَصْرُ اللَّهِ",
-          "ar_plain": "اذا جاء نصر الله",
-          "translit": "i-dhaa jaa'a nasru Allahi",
-          "en": "when the victory of Allah comes",
-          "ur": "جب اللہ کی فتح آئے"
+          "ar": "إِذَا دَرَسْتَ",
+          "ar_plain": "اذا درست",
+          "translit": "ʾidhā darasta",
+          "en": "you study",
+          "ur": "تم پڑھو"
         }
       ],
       "right_column": [
         {
-          "en": "لَوْ — counterfactual (unreal)",
-          "ur": "لَوْ — counterfactual (غیر حقیقی)"
+          "en": "if you had studied",
+          "ur": "اگر تم پڑھتے"
         },
         {
-          "en": "إِذَا — real (will happen)",
-          "ur": "إِذَا — حقیقی (ہوگا)"
+          "en": "if there had been gods in them",
+          "ur": "اگر ان میں معبود ہوتے"
         },
         {
-          "en": "لَوْ — counterfactual (unreal)",
-          "ur": "لَوْ — counterfactual (غیر حقیقی)"
+          "en": "when you study",
+          "ur": "جب تم پڑھو"
         },
         {
-          "en": "إِذَا — real (will happen)",
-          "ur": "إِذَا — حقیقی (ہوگا)"
+          "en": "when the earth is shaken",
+          "ur": "جب زمین ہلائی جائے"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
           1
         ],
         [
+          1,
+          3
+        ],
+        [
           2,
-          2
+          0
         ],
         [
           3,
-          3
+          2
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch67-l01-ex05",
-      "target_translation": {
-        "en": "If only the disbelievers had believed, they would have been upon guidance.",
-        "ur": "کاش کافر ایمان لے آتے تو وہ ہدایت پر ہوتے۔"
-      },
-      "tiles": [
-        {
-          "ar": "لَوْ",
-          "ar_plain": "لو",
-          "translit": "law",
-          "en": "if only",
-          "ur": "کاش"
-        },
-        {
-          "ar": "آمَنَ",
-          "ar_plain": "آمن",
-          "translit": "aamana",
-          "en": "believed",
-          "ur": "ایمان لیا"
-        },
-        {
-          "ar": "الْكَافِرُونَ",
-          "ar_plain": "الكافرون",
-          "translit": "al-kaafiroona",
-          "en": "the disbelievers",
-          "ur": "کافر"
-        },
-        {
-          "ar": "لَكَانُوا",
-          "ar_plain": "لكانوا",
-          "translit": "lakaanoo",
-          "en": "then they would have been",
-          "ur": "تو وہ ہوتے"
-        },
-        {
-          "ar": "عَلَى هُدًى",
-          "ar_plain": "على هد",
-          "translit": "alaa hudan",
-          "en": "upon guidance",
-          "ur": "ہدایت پر"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3,
-        4
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch67-l01-ex06",
-      "statement": {
-        "en": "In a لَوْ sentence, an affirmative past-tense answer usually begins with لَـ.",
-        "ur": "لَوْ والے جملے میں مثبت ماضی جواب عموماً لَـ سے شروع ہوتا ہے۔",
-        "ar_example": {
-          "ar": "لَوْ آمَنَ لَكَانَ مِنَ الْمُحْسِنِينَ",
-          "ar_plain": "لو آمن لكان من المحسنين",
-          "translit": "law aamana la-kaana mina al-muhsiniina",
-          "en": "Had he believed, he would have been among the doers of good.",
-          "ur": "اگر وہ ایمان لاتا تو نیکوکاروں میں سے ہوتا۔"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch67-l01-ex07",
-      "prompt": {
-        "ar": "لَوْ شَاءَ رَبُّكَ لَآمَنَ مَنْ فِي الْأَرْضِ كُلُّهُمْ",
-        "ar_plain": "لو شاء ربك لآمن من في الارض كلهم",
-        "translit": "law shaa'a rabbuka laa'mana man fii al-ardi kulluhum",
-        "en": "If your Lord had wished, all who are on the earth would have believed.",
-        "ur": "اگر تمہارا رب چاہتا تو زمین میں سب ایمان لے آتے۔"
-      },
-      "options": [
-        {
-          "en": "If your Lord had wished, all who are on the earth would have believed.",
-          "ur": "اگر تمہارا رب چاہتا تو زمین میں سب ایمان لے آتے۔"
-        },
-        {
-          "en": "If your Lord wills, whoever is on the earth will believe.",
-          "ur": "اگر تمہارا رب چاہے تو جو زمین پر ہے وہ ایمان لے گا۔"
-        },
-        {
-          "en": "Your Lord wished, and all the people on the earth believed.",
-          "ur": "تمہارے رب نے چاہا اور زمین کے سب لوگوں نے ایمان لیا۔"
-        },
-        {
-          "en": "If your Lord had not wished, no one on earth would have believed.",
-          "ur": "اگر تمہارا رب نہ چاہتا تو زمین پر کوئی ایمان نہ لیتا۔"
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَوْ شَاءَ is counterfactual past — 'if (your Lord) had wished.' لَآمَنَ is the result — 'they would have believed.' لَـ marks the result clause. This is the hypothetical past structure of لَوْ.",
-        "ur": "لَوْ شَاءَ counterfactual ماضی ہے — 'اگر (تمہارا رب) چاہتا'۔ لَآمَنَ جواب ہے — 'وہ ایمان لے آتے'۔ لَـ جواب کے حصے کو نشان دیتا ہے۔ یہ لَوْ کی فرضی ماضی ساخت ہے۔"
+        "en": "Two are لَوْ clauses, which picture a condition; two are إِذَا clauses, which say 'when'.",
+        "ur": "دو لَوْ والے جملے ہیں، جو شرط کا تصور کراتے ہیں؛ دو إِذَا والے ہیں، جو 'جب' کہتے ہیں۔"
       }
     },
     {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch67-l01-ex08",
-      "sentence_ar": "لَوْ أَنَّهُ آمَنَ بِرَبِّهِ وَكَانَ مِنَ الْمُحْسِنِينَ",
-      "words": [
+      "type": "BUILD_SENTENCE",
+      "id": "ch67-l01-ex07",
+      "target_translation": {
+        "en": "Had you studied, you would have passed.",
+        "ur": "اگر تم پڑھتے تو کامیاب ہوتے۔"
+      },
+      "tiles": [
+        {
+          "ar": "لَنَجَحْتَ",
+          "ar_plain": "لنجحت",
+          "translit": "lanajaḥta",
+          "en": "you would have passed",
+          "ur": "تم کامیاب ہوتے"
+        },
         {
           "ar": "لَوْ",
           "ar_plain": "لو",
           "translit": "law",
-          "en": "if only (counterfactual)",
-          "ur": "کاش"
+          "en": "had",
+          "ur": "اگر"
         },
         {
-          "ar": "أَنَّهُ",
-          "ar_plain": "انه",
-          "translit": "annahu",
-          "en": "that he",
-          "ur": "کہ اس نے"
-        },
-        {
-          "ar": "آمَنَ",
-          "ar_plain": "آمن",
-          "translit": "aamana",
-          "en": "believed",
-          "ur": "ایمان لیا"
-        },
-        {
-          "ar": "بِرَبِّهِ",
-          "ar_plain": "بربه",
-          "translit": "bi-rabbihi",
-          "en": "in his Lord",
-          "ur": "اپنے رب میں"
-        },
-        {
-          "ar": "وَكَانَ",
-          "ar_plain": "وكان",
-          "translit": "wa kana",
-          "en": "and he was",
-          "ur": "اور وہ تھا"
-        },
-        {
-          "ar": "مِنَ الْمُحْسِنِينَ",
-          "ar_plain": "من المحسنين",
-          "translit": "mina al-muhsiniina",
-          "en": "from the doers of good",
-          "ur": "نیکوکاروں میں سے"
+          "ar": "دَرَسْتَ",
+          "ar_plain": "درست",
+          "translit": "darasta",
+          "en": "you studied",
+          "ur": "تم نے پڑھا"
         }
       ],
-      "available_roles": [
-        "PARTICLE",
-        "VERB",
-        "SUBJECT",
-        "OBJECT",
-        "PREPOSITION",
-        "PREDICATE"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "PARTICLE",
-        "VERB",
-        "PREPOSITION",
-        "VERB",
-        "PREDICATE"
+      "correct_order": [
+        1,
+        2,
+        0
       ],
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَوْ is the counterfactual particle; أَنَّهُ is أَنَّ + 'he'. آمَنَ is the verb and بِرَبِّهِ a preposition phrase. وَكَانَ is وَ + the verb كَانَ, and مِنَ الْمُحْسِنِينَ is its خَبَر.",
-        "ur": "لَوْ امتناع کا حرف ہے؛ أَنَّهُ = أَنَّ + 'وہ'۔ آمَنَ فعل اور بِرَبِّهِ جار مجرور ہے۔ وَكَانَ = وَ + فعل كَانَ، اور مِنَ الْمُحْسِنِينَ اس کی خبر ہے۔"
+        "en": "The particle, the condition, then the result with لَـ.",
+        "ur": "حرف، شرط، پھر لَـ والا نتیجہ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch67-l01-ex08",
+      "statement": {
+        "en": "A لَوْ clause usually pictures something that is not the case, and you read the whole sentence to see how it is meant.",
+        "ur": "لَوْ والا جملہ عموماً کسی ایسی بات کا تصور کراتا ہے جو واقع نہیں، اور اسے کس طرح مراد لیا گیا ہے یہ آپ پورا جملہ پڑھ کر دیکھتے ہیں۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes: the common reading, with the sentence and the situation deciding.",
+        "ur": "جی ہاں: عام صورت، جس میں جملہ اور موقع فیصلہ کرتے ہیں۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "لَوْ — the counterfactual particle ('if only / would have')",
-      "ar": "لَوْ — حَرْفُ امْتِنَاعٍ لِامْتِنَاعٍ",
-      "ur": "لَوْ — counterfactual particle ('کاش / ہوتا اگر')"
+      "en": "A condition pictured, and what follows",
+      "ar": "لَوْ وَجَوَابُهَا",
+      "ur": "ایک فرضی شرط اور جو اس کے بعد آتا ہے"
     },
     "ayah": {
       "surah": 21,
       "ayah": 22,
       "label": "Al-Anbiya 21:22",
-      "ar": "لَوْ كَانَ فِيهِمَا آلِهَةٌ إِلَّا اللَّهُ لَفَسَدَتَا ۚ فَسُبْحَانَ اللَّهِ رَبِّ الْعَرْشِ عَمَّا يَصِفُونَ",
-      "en": "Had there been within the heavens and earth gods besides Allah, they both would have been ruined. So exalted is Allah, Lord of the Throne, above what they describe.",
-      "ur": "اگر آسمان اور زمین میں اللہ کے سوا اور معبود ہوتے تو دونوں درہم برہم ہو جاتے، سو اللہ جو عرش کا رب ہے ان باتوں سے پاک ہے جو یہ بیان کرتے ہیں",
+      "ar": "لَوْ كَانَ فِيهِمَا آلِهَةٌ إِلَّا اللَّهُ لَفَسَدَتَا",
+      "en": "Had there been gods in them other than Allah, they would both have been ruined.",
+      "ur": "اگر ان دونوں میں اللہ کے سوا اور معبود ہوتے تو دونوں تباہ ہو جاتے۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/021022.mp3"
     },
     "highlighted_word_indices": [
       0,
       6
     ],
+    "highlighted_words": [
+      "لَوْ",
+      "لَفَسَدَتَا"
+    ],
     "noor_explanation": {
-      "en": "لَوْ كَانَ فِيهِمَا آلِهَةٌ ... لَفَسَدَتَا — the condition (other gods) is impossible, so the result (ruin) never happened. The answer لَفَسَدَتَا opens with لَـ, as an affirmative past answer of لَوْ usually does. The heavens and earth standing in order is itself the proof of Tawheed.",
-      "ur": "لَوْ كَانَ فِيهِمَا آلِهَةٌ ... لَفَسَدَتَا — شرط (دوسرے معبود) ناممکن ہے، اس لیے نتیجہ (بربادی) کبھی نہیں ہوا۔ جواب لَفَسَدَتَا لَـ سے شروع ہوتا ہے، جیسا کہ لَوْ کا مثبت ماضی جواب عموماً ہوتا ہے۔ آسمان و زمین کا نظام میں قائم رہنا خود توحید کی دلیل ہے۔"
+      "en": "لَوْ opens the condition and لَفَسَدَتَا gives what would have followed: two clauses, one idea.",
+      "ur": "لَوْ شرط کھولتا ہے اور لَفَسَدَتَا وہ دیتا ہے جو اس کے بعد ہوتا: دو جملے، ایک خیال۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "لَوْ is a conditional particle in Arabic. It usually describes something that did not happen — 'if this had been so, then …'. Its answer often begins with لَـ, but not always.",
-      "ur": "لَوْ عربی میں ایک شرطی حرف ہے۔ عام طور پر یہ ایسی بات کے لیے آتا ہے جو ہوئی نہیں — 'اگر ایسا ہوتا تو...'۔ اکثر اس کے جواب پر لَـ آتا ہے، لیکن ہمیشہ نہیں۔"
+      "en": "لَوْ pictures a condition and what would follow; it does not change the verb's ending.",
+      "ur": "لَوْ ایک شرط اور اس کے نتیجے کا تصور کراتا ہے؛ یہ فعل کا ختم نہیں بدلتا۔"
     }
   }
 }

@@ -2,209 +2,364 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 68, Lesson 2 — Commands: لام الأمر + jussive, and the imperative (فعل الأمر).",
+    "_note": "Chapter 68, Lesson 2 (ch68-l04, rebuilt in place). Retrieval of Chapter 44: لَمْ + jussive 'did not'; لَمَّا + jussive 'not yet' (2:214 وَلَمَّا يَأْتِكُم, 49:14 وَلَمَّا يَدْخُلِ); and a different use, لَمَّا + a past verb 'when' (28:23 وَلَمَّا وَرَدَ), which is not jussive. The old invented 'لَمَّا جَاءَ = has not yet come', the corrupted 28:23 and the made-up لَمَّا يَتَمَطَّوْا are gone. Authored pair: لَمْ يَنْجَحْ خَالِدٌ / لَمَّا يَنْجَحْ خَالِدٌ. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-68-content-proposal.md and its review amendments.",
+    "title": "لَمْ, لَمَّا — 'Did Not' and 'Not Yet'",
+    "titleAr": "لَمْ وَلَمَّا",
+    "titleUr": "لَمْ اور لَمَّا — 'نہیں' اور 'ابھی نہیں'",
     "chapter_order": 68,
     "lesson_order": 2,
-    "chapter_title": "الجوازم",
-    "title": "Commands: لام الأمر and the Imperative",
-    "titleAr": "الْأَمْرُ: لَامُ الْأَمْرِ وَفِعْلُ الْأَمْرِ",
-    "source": "book_8_lesson_2_verb_pattern_lam_amr.md",
     "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 33,
-      "ayah": 1,
-      "label": "Al-Ahzab 33:1",
-      "ar": "يَا أَيُّهَا النَّبِيُّ اتَّقِ اللَّهَ وَلَا تُطِعِ الْكَافِرِينَ وَالْمُنَافِقِينَ إِنَّ اللَّهَ كَانَ عَلِيمًا حَكِيمًا",
-      "en": "O Prophet, fear Allah and do not obey the disbelievers and hypocrites. Indeed, Allah is ever knowing and wise.",
-      "ur": "اے نبی! اللہ سے ڈرتے رہو اور کافروں اور منافقوں کی بات نہ مانو۔ بیشک اللہ جاننے والا، حکمت والا ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033001.mp3"
+      "surah": 2,
+      "ayah": 214,
+      "label": "Al-Baqarah 2:214",
+      "ar": "وَلَمَّا يَأْتِكُم مَّثَلُ الَّذِينَ خَلَوْا",
+      "en": "while the like of those who passed on before you has not yet come to you",
+      "ur": "حالانکہ تم پر ابھی ان لوگوں کی مثل نہیں آئی جو تم سے پہلے گزر گئے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002214.mp3"
     },
     "noor_intro": {
-      "en": "اتَّقِ اللَّهَ وَلَا تُطِعِ — 'fear Allah and do not obey'. اتَّقِ is an imperative (فِعْلُ الْأَمْرِ); لَا تُطِعْ is a prohibition with a jussive verb. Today: the two ways Arabic gives a command — the imperative, and لَامُ الْأَمْرِ with a jussive.",
-      "ur": "اتَّقِ اللَّهَ وَلَا تُطِعِ — 'اللہ سے ڈرو اور (کافروں کا) کہنا نہ مانو'۔ اتَّقِ فعلِ امر ہے؛ لَا تُطِعْ مجزوم فعل کے ساتھ نہی ہے۔ آج: عربی میں حکم دینے کے دو طریقے — فعلِ امر، اور لامِ امر مجزوم فعل کے ساتھ۔"
+      "en": "You met لَمْ and لَمَّا in Chapter 44. Both put the next verb in the jussive; they differ in meaning. A third use of لَمَّا has no jussive at all.",
+      "ur": "آپ لَمْ اور لَمَّا سے باب 44 میں ملے۔ دونوں اگلے فعل کو مجزوم کرتے ہیں؛ معنی میں فرق ہے۔ لَمَّا کے تیسرے استعمال میں جزم بالکل نہیں۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "لام الأمر — The Command Particle",
-        "ar": "لَامُ الْأَمْرِ",
-        "ur": "حکم کا ذرہ"
+        "en": "'Did not' and 'not yet'",
+        "ar": "لَمْ لِنَفْيِ الْمَاضِي وَلَمَّا لِنَفْيٍ مُتَوَقَّعٍ",
+        "ur": "'نہیں' اور 'ابھی نہیں'"
       },
       "explanation": {
-        "en": "لَامُ الْأَمْرِ is a لِـ placed before a present-tense verb to say 'let him / let them …'; the verb becomes jussive. لِيُنْفِقْ ذُو سَعَةٍ مِنْ سَعَتِهِ — 'let the man of wealth spend from his wealth' (65:7). After وَ or فَ the lām takes sukūn: فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ — 'so let them worship the Lord of this House' (106:3).",
-        "ur": "لامِ امر وہ لِـ ہے جو مضارع سے پہلے آ کر 'چاہیے کہ وہ …' کا معنی دیتا ہے؛ فعل مجزوم ہو جاتا ہے۔ لِيُنْفِقْ ذُو سَعَةٍ مِنْ سَعَتِهِ — 'وسعت والا اپنی وسعت سے خرچ کرے' (65:7)۔ وَ یا فَ کے بعد لام ساکن ہو جاتا ہے: فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ — 'تو انہیں چاہیے کہ اس گھر کے رب کی عبادت کریں' (106:3)۔"
+        "en": "لَمْ + the jussive says something did not happen: لَمْ يَنْجَحْ خَالِدٌ, 'Khalid did not pass'. لَمَّا + the jussive says it has not happened yet, and it may still: لَمَّا يَنْجَحْ خَالِدٌ, 'Khalid has not passed yet'.",
+        "ur": "لَمْ + مجزوم بتاتا ہے کہ کچھ نہیں ہوا: لَمْ يَنْجَحْ خَالِدٌ، 'خالد کامیاب نہیں ہوا'۔ لَمَّا + مجزوم بتاتا ہے کہ ابھی نہیں ہوا، اور ہو سکتا ہے: لَمَّا يَنْجَحْ خَالِدٌ، 'خالد ابھی کامیاب نہیں ہوا'۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "اتَّقِ",
-        "ar_plain": "اتق",
-        "translit": "ittaqi",
-        "en": "fear (command)",
-        "ur": "ڈرو (حکم)"
+        "ar": "وَلَمَّا يَأْتِكُم مَّثَلُ الَّذِينَ خَلَوْا",
+        "ar_plain": "ولما ياتكم مثل الذين خلوا",
+        "translit": "walammā yaʾtikum mmathalu alladhīna khalaw",
+        "en": "while the like of those who passed on before you has not yet come to you",
+        "ur": "حالانکہ تم پر ابھی ان لوگوں کی مثل نہیں آئی جو تم سے پہلے گزر گئے"
       },
       "explanation": {
-        "en": "اتَّقِ is the imperative ('fear!', 'be mindful of!') of اتَّقَى / يَتَّقِي, root و-ق-ي. It is made from the jussive: تَتَّقِي → jussive تَتَّقِ (the final ي drops) → drop the تَ → اتَّقِ. No لام is involved.",
-        "ur": "اتَّقِ، اتَّقَى / يَتَّقِي (مادہ و-ق-ي) کا امر ہے: 'ڈرو!'۔ یہ مجزوم سے بنتا ہے: تَتَّقِي → مجزوم تَتَّقِ (آخری ي گر گئی) → تَ ہٹا دیں → اتَّقِ۔ اس میں کوئی لام نہیں۔"
+        "en": "وَلَمَّا يَأْتِكُم مَّثَلُ الَّذِينَ خَلَوْا: لَمَّا + يَأْتِكُم (jussive), 'has not yet come to you'. It speaks of something that still may come. (Al-Baqarah 2:214) (Al-Baqarah 2:214)",
+        "ur": "وَلَمَّا يَأْتِكُم مَّثَلُ الَّذِينَ خَلَوْا: لَمَّا + يَأْتِكُم (مجزوم)، 'ابھی تم تک نہیں آئی'۔ یہ ایسی بات کی بات ہے جو ابھی آ سکتی ہے۔ (البقرہ 2:214) (Al-Baqarah 2:214)"
       }
     },
     {
-      "type": "WORD",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "صِلْ",
-        "ar_plain": "صل",
-        "translit": "sil",
-        "en": "connect (command)",
-        "ur": "ملو (حکم)"
+        "ar": "وَلَمَّا يَدْخُلِ الْإِيمَانُ فِي قُلُوبِكُمْ",
+        "ar_plain": "ولما يدخل الايمان في قلوبكم",
+        "translit": "walammā yadkhuli al-ʾīmānu fī qulūbikum",
+        "en": "for faith has not yet entered your hearts",
+        "ur": "کیونکہ ایمان ابھی تمہارے دلوں میں داخل نہیں ہوا"
       },
       "explanation": {
-        "en": "صِلْ is the imperative of وَصَلَ / يَصِلُ ('to connect', 'to keep ties'). From the jussive تَصِلْ, drop the تَ: صِلْ — 'connect!'. Because the first letter after تَ already has a vowel, no extra alif is needed.",
-        "ur": "صِلْ، وَصَلَ / يَصِلُ ('جوڑنا'، 'رشتہ نبھانا') کا امر ہے۔ مجزوم تَصِلْ سے تَ ہٹا دیں: صِلْ — 'جوڑو!'۔ چونکہ تَ کے بعد والا حرف متحرک ہے، اس لیے الف بڑھانے کی ضرورت نہیں۔"
+        "en": "وَلَمَّا يَدْخُلِ الْإِيمَانُ فِي قُلُوبِكُمْ: لَمَّا + يَدْخُلِ (jussive), 'has not yet entered'. (Al-Hujurat 49:14) (Al-Hujurat 49:14)",
+        "ur": "وَلَمَّا يَدْخُلِ الْإِيمَانُ فِي قُلُوبِكُمْ: لَمَّا + يَدْخُلِ (مجزوم)، 'ابھی داخل نہیں ہوا'۔ (الحجرات 49:14) (Al-Hujurat 49:14)"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "The imperative is built on its jussive",
-        "ar": "فِعْلُ الْأَمْرِ مَبْنِيٌّ عَلَى مَا يُجْزَمُ بِهِ مُضَارِعُهُ",
-        "ur": "فعلِ امر اپنے مجزوم مضارع کی طرح مبنی ہے"
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "وَلَمَّا وَرَدَ مَاءَ مَدْيَنَ",
+        "ar_plain": "ولما ورد ماء مدين",
+        "translit": "walammā warada māʾa madyana",
+        "en": "And when he came to the water of Madyan",
+        "ur": "اور جب وہ مدین کے پانی پر پہنچا"
       },
       "explanation": {
-        "en": "The imperative (افْعَلْ) is its own verb form, not a jussive governed by a hidden لام. It is مَبْنِيّ, and it ends exactly as its jussive does: تَكْتُبْ → اكْتُبْ (sukūn); تَكْتُبُوا → اكْتُبُوا (ن dropped); تَتَّقِ → اتَّقِ (vowel letter dropped). لَامُ الْأَمْرِ is used for 'let him / let them'.",
-        "ur": "فعلِ امر (افْعَلْ) اپنی الگ شکل ہے، کسی پوشیدہ لام کا مجزوم نہیں۔ یہ مبنی ہے، اور اس کا آخر بالکل اپنے مجزوم جیسا ہوتا ہے: تَكْتُبْ → اكْتُبْ (سکون)؛ تَكْتُبُوا → اكْتُبُوا (ن گرا)؛ تَتَّقِ → اتَّقِ (حرفِ علت گرا)۔ 'چاہیے کہ وہ …' کے لیے لامِ امر آتا ہے۔"
+        "en": "وَلَمَّا وَرَدَ مَاءَ مَدْيَنَ: here لَمَّا is followed by a past verb (وَرَدَ) and means 'when'. There is no jussive and no 'not yet'. (Al-Qasas 28:23) (Al-Qasas 28:23)",
+        "ur": "وَلَمَّا وَرَدَ مَاءَ مَدْيَنَ: یہاں لَمَّا کے بعد ماضی کا فعل (وَرَدَ) ہے اور مطلب 'جب' ہے۔ نہ مجزوم ہے نہ 'ابھی نہیں'۔ (القصص 28:23) (Al-Qasas 28:23)"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Ask what follows لَمَّا",
+        "ur": "پوچھیں کہ لَمَّا کے بعد کیا ہے"
+      },
+      "body": {
+        "en": "If a jussive verb follows لَمَّا, the meaning is 'not yet'. If a past verb follows it, لَمَّا means 'when'. The same letters, two meanings; the verb after it decides.",
+        "ur": "لَمَّا کے بعد مجزوم فعل ہو تو معنی 'ابھی نہیں' ہے۔ اس کے بعد ماضی کا فعل ہو تو لَمَّا کا مطلب 'جب' ہے۔ حروف وہی، معنی دو؛ اس کے بعد کا فعل فیصلہ کرتا ہے۔"
       }
     }
   ],
   "exercises": [
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch68-l02-ex01",
+      "id": "ch68-l04-ex01",
       "prompt": {
-        "ar": "اتَّقِ اللَّهَ",
-        "ar_plain": "اتق الله",
-        "translit": "ittaqi Allaha",
-        "en": "Fear Allah.",
-        "ur": "اللہ سے ڈرو۔"
+        "ar": "وَلَمَّا يَأْتِكُم مَّثَلُ الَّذِينَ خَلَوْا",
+        "ar_plain": "ولما ياتكم مثل الذين خلوا",
+        "translit": "walammā yaʾtikum mmathalu alladhīna khalaw",
+        "en": "(2:214: what does it say?)",
+        "ur": "(2:214: یہ کیا کہتا ہے؟)"
       },
       "options": [
         {
-          "en": "Fear Allah.",
-          "ur": "اللہ سے ڈرو۔"
+          "en": "while the like of those who passed on has not yet come to you",
+          "ur": "حالانکہ ابھی تم تک ان لوگوں کی مثل نہیں آئی جو گزر گئے"
         },
         {
-          "en": "I fear Allah.",
-          "ur": "میں اللہ سے ڈرتا ہوں۔"
+          "en": "when the like of those who passed on came",
+          "ur": "جب ان لوگوں کی مثل آئی جو گزر گئے"
         },
         {
-          "en": "They fear Allah.",
-          "ur": "وہ اللہ سے ڈرتے ہیں۔"
+          "en": "the like of them did not come",
+          "ur": "ان کی مثل نہیں آئی"
         },
         {
-          "en": "Fear them.",
-          "ur": "ان سے ڈرو۔"
+          "en": "the like of them will not come",
+          "ur": "ان کی مثل نہیں آئے گی"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "اتَّقِ is the imperative of يَتَّقِي: 'fear (Allah)!'. It is a command to one person, not a statement.",
-        "ur": "اتَّقِ، يَتَّقِي کا امر ہے: '(اللہ سے) ڈرو!'۔ یہ ایک شخص کو حکم ہے، خبر نہیں۔"
+        "en": "لَمَّا + a jussive verb says 'not yet'.",
+        "ur": "لَمَّا + مجزوم فعل 'ابھی نہیں' کہتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l04-ex02",
+      "prompt": {
+        "ar": "لَمْ يَنْجَحْ خَالِدٌ · لَمَّا يَنْجَحْ خَالِدٌ",
+        "ar_plain": "لم ينجح خالد · لما ينجح خالد",
+        "translit": "lam yanjaḥ khālidun · lammā yanjaḥ khālidun",
+        "en": "(what is the difference?)",
+        "ur": "(فرق کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "The first: not yet. The second: did not",
+          "ur": "پہلا: ابھی نہیں۔ دوسرا: نہیں"
+        },
+        {
+          "en": "The first: Khalid did not pass. The second: Khalid has not passed yet",
+          "ur": "پہلا: خالد کامیاب نہیں ہوا۔ دوسرا: خالد ابھی کامیاب نہیں ہوا"
+        },
+        {
+          "en": "The first is a question and the second a command",
+          "ur": "پہلا سوال اور دوسرا حکم"
+        },
+        {
+          "en": "There is no difference",
+          "ur": "کوئی فرق نہیں"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَمْ says 'did not'; لَمَّا says 'not yet'.",
+        "ur": "لَمْ 'نہیں' کہتا ہے؛ لَمَّا 'ابھی نہیں' کہتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l04-ex03",
+      "prompt": {
+        "ar": "وَلَمَّا وَرَدَ مَاءَ مَدْيَنَ",
+        "ar_plain": "ولما ورد ماء مدين",
+        "translit": "walammā warada māʾa madyana",
+        "en": "(28:23: what does وَلَمَّا mean here?)",
+        "ur": "(28:23: یہاں وَلَمَّا کا کیا مطلب ہے؟)"
+      },
+      "options": [
+        {
+          "en": "'And not yet'",
+          "ur": "'اور ابھی نہیں'"
+        },
+        {
+          "en": "'And do not'",
+          "ur": "'اور مت'"
+        },
+        {
+          "en": "'And will not'",
+          "ur": "'اور نہیں ہوگا'"
+        },
+        {
+          "en": "'And when': a past verb follows, so there is no jussive",
+          "ur": "'اور جب': آگے ماضی کا فعل ہے، اس لیے جزم نہیں"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A past verb (وَرَدَ) follows, so لَمَّا means 'when'.",
+        "ur": "آگے ماضی کا فعل (وَرَدَ) ہے، اس لیے لَمَّا کا مطلب 'جب' ہے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch68-l02-ex02",
+      "id": "ch68-l04-ex04",
       "statement": {
-        "en": "The imperative ends the way its jussive does: اكْتُبْ like تَكْتُبْ, and اكْتُبُوا like تَكْتُبُوا (ن dropped).",
-        "ur": "فعلِ امر کا آخر اس کے مجزوم جیسا ہوتا ہے: اكْتُبْ جیسے تَكْتُبْ، اور اكْتُبُوا جیسے تَكْتُبُوا (ن گرا)۔",
-        "ar_example": {
-          "ar": "اتَّقِ اللَّهَ — اصْبِرُوا",
-          "ar_plain": "اتق الله — اصبروا",
-          "translit": "ittaqi allaaha — isbiruu",
-          "en": "Fear Allah — be patient (pl.)",
-          "ur": "اللہ سے ڈرو — صبر کرو"
-        }
+        "en": "لَمَّا always means 'not yet'.",
+        "ur": "لَمَّا ہمیشہ 'ابھی نہیں' کے معنی دیتا ہے۔"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. With a past verb, لَمَّا means 'when' (28:23).",
+        "ur": "غلط۔ ماضی کے فعل کے ساتھ لَمَّا کا مطلب 'جب' ہے (28:23)۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch68-l04-ex05",
+      "mode": "TAP",
+      "sentence_ar": "___ يَنْجَحْ خَالِدٌ",
+      "hint": {
+        "en": "Khalid has not passed yet.",
+        "ur": "خالد ابھی کامیاب نہیں ہوا۔"
+      },
+      "options": [
+        {
+          "ar": "لَمَّا",
+          "ar_plain": "لما",
+          "translit": "lammā",
+          "en": "not yet",
+          "ur": "ابھی نہیں"
+        },
+        {
+          "ar": "لَمْ",
+          "ar_plain": "لم",
+          "translit": "lam",
+          "en": "did not",
+          "ur": "نہیں"
+        },
+        {
+          "ar": "لَنْ",
+          "ar_plain": "لن",
+          "translit": "lan",
+          "en": "will not",
+          "ur": "نہیں ہوگا"
+        },
+        {
+          "ar": "إِنْ",
+          "ar_plain": "ان",
+          "translit": "ʾin",
+          "en": "if",
+          "ur": "اگر"
+        }
+      ],
+      "correct_answer": {
+        "ar": "لَمَّا",
+        "ar_plain": "لما",
+        "translit": "lammā",
+        "en": "not yet",
+        "ur": "ابھی نہیں"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The hint says 'not yet', so the particle is لَمَّا; لَمْ would say 'did not'.",
+        "ur": "اشارہ 'ابھی نہیں' کہتا ہے، اس لیے حرف لَمَّا ہے؛ لَمْ 'نہیں' کہتا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l04-ex06",
+      "prompt": {
+        "ar": "وَلَمَّا يَدْخُلِ الْإِيمَانُ فِي قُلُوبِكُمْ",
+        "ar_plain": "ولما يدخل الايمان في قلوبكم",
+        "translit": "walammā yadkhuli al-ʾīmānu fī qulūbikum",
+        "en": "(49:14: what follows لَمَّا, and so what does it mean?)",
+        "ur": "(49:14: لَمَّا کے بعد کیا ہے، اور اس لیے اس کا مطلب کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "A past verb: 'when'",
+          "ur": "ماضی کا فعل: 'جب'"
+        },
+        {
+          "en": "A jussive verb, يَدْخُلِ: 'not yet'",
+          "ur": "مجزوم فعل، يَدْخُلِ: 'ابھی نہیں'"
+        },
+        {
+          "en": "A noun: 'because'",
+          "ur": "اسم: 'کیونکہ'"
+        },
+        {
+          "en": "A command: 'let'",
+          "ur": "حکم: 'چاہیے'"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يَدْخُلِ is jussive, so لَمَّا means 'not yet': faith has not yet entered.",
+        "ur": "يَدْخُلِ مجزوم ہے، اس لیے لَمَّا کا مطلب 'ابھی نہیں' ہے: ایمان ابھی داخل نہیں ہوا۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch68-l02-ex03",
+      "id": "ch68-l04-ex07",
       "left_column": [
         {
-          "ar": "اكْتُبْ",
-          "ar_plain": "اكتب",
-          "translit": "uktub",
-          "en": "write! (masc. sing.)",
-          "ur": "لکھو! (مذکر واحد)"
+          "ar": "لَمْ يَنْجَحْ خَالِدٌ",
+          "ar_plain": "لم ينجح خالد",
+          "translit": "lam yanjaḥ khālidun",
+          "en": "Khalid pass",
+          "ur": "خالد کامیاب"
         },
         {
-          "ar": "اكْتُبِي",
-          "ar_plain": "اكتبي",
-          "translit": "uktubii",
-          "en": "write! (fem. sing.)",
-          "ur": "لکھو! (مؤنث واحد)"
+          "ar": "لَمَّا يَنْجَحْ خَالِدٌ",
+          "ar_plain": "لما ينجح خالد",
+          "translit": "lammā yanjaḥ khālidun",
+          "en": "Khalid pass",
+          "ur": "خالد کامیاب"
         },
         {
-          "ar": "اكْتُبَا",
-          "ar_plain": "اكتبا",
-          "translit": "uktubaa",
-          "en": "write! (dual)",
-          "ur": "لکھو! (تثنیہ)"
+          "ar": "لَنْ يَنْجَحَ خَالِدٌ",
+          "ar_plain": "لن ينجح خالد",
+          "translit": "lan yanjaḥa khālidun",
+          "en": "Khalid pass",
+          "ur": "خالد کامیاب"
         },
         {
-          "ar": "اكْتُبُوا",
-          "ar_plain": "اكتبوا",
-          "translit": "uktubuu",
-          "en": "write! (masc. pl.)",
-          "ur": "لکھو! (مذکر جمع)"
-        },
-        {
-          "ar": "اكْتُبْنَ",
-          "ar_plain": "اكتبن",
-          "translit": "uktubna",
-          "en": "write! (fem. pl.)",
-          "ur": "لکھو! (مؤنث جمع)"
+          "ar": "وَلَمَّا وَرَدَ مَاءَ مَدْيَنَ",
+          "ar_plain": "ولما ورد ماء مدين",
+          "translit": "walammā warada māʾa madyana",
+          "en": "the water of Madyan",
+          "ur": "مدین کا پانی"
         }
       ],
       "right_column": [
         {
-          "en": "أَنْتَ (masc. sing.)",
-          "ur": "أَنْتَ (مذکر واحد)"
+          "en": "and when he came to the water of Madyan",
+          "ur": "اور جب وہ مدین کے پانی پر پہنچا"
         },
         {
-          "en": "أَنْتِ (fem. sing.)",
-          "ur": "أَنْتِ (مؤنث واحد)"
+          "en": "Khalid did not pass",
+          "ur": "خالد کامیاب نہیں ہوا"
         },
         {
-          "en": "أَنْتُمَا (dual)",
-          "ur": "أَنْتُمَا (جفت)"
+          "en": "Khalid will not pass",
+          "ur": "خالد کامیاب نہیں ہوگا"
         },
         {
-          "en": "أَنْتُمْ (masc. pl.)",
-          "ur": "أَنْتُمْ (مذکر جمع)"
-        },
-        {
-          "en": "أَنْتُنَّ (fem. pl.)",
-          "ur": "أَنْتُنَّ (مؤنث جمع)"
+          "en": "Khalid has not passed yet",
+          "ur": "خالد ابھی کامیاب نہیں ہوا"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
+          1
         ],
         [
           1,
-          1
+          3
         ],
         [
           2,
@@ -212,230 +367,89 @@
         ],
         [
           3,
-          3
-        ],
-        [
-          4,
-          4
+          0
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch68-l02-ex04",
-      "mode": "TAP",
-      "sentence_ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا ___ وَصَابِرُوا وَرَابِطُوا",
-      "hint": {
-        "en": "3:200 — 'O you who have believed, be patient and endure and remain stationed.'",
-        "ur": "3:200 — 'اے ایمان والو! صبر کرو، ثابت قدم رہو اور جمے رہو۔'"
-      },
-      "options": [
-        {
-          "ar": "اصْبِرُوا",
-          "ar_plain": "اصبروا",
-          "translit": "isbiruu",
-          "en": "be patient (command)",
-          "ur": "صبر کرو (امر)"
-        },
-        {
-          "ar": "يَصْبِرُونَ",
-          "ar_plain": "يصبرون",
-          "translit": "yasbiruuna",
-          "en": "they are patient",
-          "ur": "وہ صبر کرتے ہیں"
-        },
-        {
-          "ar": "لَا تَصْبِرُوا",
-          "ar_plain": "لا تصبروا",
-          "translit": "laa tasbiruu",
-          "en": "do not be patient",
-          "ur": "صبر نہ کرو"
-        },
-        {
-          "ar": "صَبَرُوا",
-          "ar_plain": "صبروا",
-          "translit": "sabaruu",
-          "en": "they were patient",
-          "ur": "انہوں نے صبر کیا"
-        }
-      ],
-      "correct_answer": {
-        "ar": "اصْبِرُوا",
-        "ar_plain": "اصبروا",
-        "translit": "isbiruu",
-        "en": "be patient (command)",
-        "ur": "صبر کرو (امر)"
-      },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Three negations that mean different things, and a لَمَّا that means 'when'.",
+        "ur": "تین نفیاں جن کے معنی مختلف ہیں، اور ایک لَمَّا جس کا مطلب 'جب' ہے۔"
+      }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch68-l02-ex05",
+      "id": "ch68-l04-ex08",
       "target_translation": {
-        "en": "O believers, do not follow the disbelievers!",
-        "ur": "اے مومنین! کافروں کی پیروی مت کرو!"
+        "en": "Khalid did not pass.",
+        "ur": "خالد کامیاب نہیں ہوا۔"
       },
       "tiles": [
         {
-          "ar": "يَا",
-          "ar_plain": "يا",
-          "translit": "yaa",
-          "en": "O",
-          "ur": "اے"
+          "ar": "خَالِدٌ",
+          "ar_plain": "خالد",
+          "translit": "khālidun",
+          "en": "Khalid",
+          "ur": "خالد"
         },
         {
-          "ar": "أَيُّهَا",
-          "ar_plain": "ايها",
-          "translit": "ayyuhaa",
-          "en": "O (vocative)",
-          "ur": "اے (ندا)"
+          "ar": "لَمْ",
+          "ar_plain": "لم",
+          "translit": "lam",
+          "en": "did not",
+          "ur": "نہیں"
         },
         {
-          "ar": "الْمُؤْمِنُونَ",
-          "ar_plain": "المؤمنون",
-          "translit": "al-mu'minuuna",
-          "en": "the believers",
-          "ur": "مومنین"
-        },
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "do not",
-          "ur": "مت"
-        },
-        {
-          "ar": "تَتَّبِعُوا",
-          "ar_plain": "تتبعوا",
-          "translit": "tattabi'u",
-          "en": "you follow",
-          "ur": "تم پیروی کرتے ہو"
-        },
-        {
-          "ar": "الْكَافِرِينَ",
-          "ar_plain": "الكافرين",
-          "translit": "al-kaafiriina",
-          "en": "the disbelievers",
-          "ur": "کافر"
+          "ar": "يَنْجَحْ",
+          "ar_plain": "ينجح",
+          "translit": "yanjaḥ",
+          "en": "pass",
+          "ur": "کامیاب ہوا"
         }
       ],
       "correct_order": [
-        0,
         1,
         2,
-        3,
-        4,
-        5
+        0
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch68-l02-ex06",
-      "sentence_ar": "اتَّقِ اللَّهَ وَلَا تُطِعِ الْكَافِرِينَ",
-      "words": [
-        {
-          "ar": "اتَّقِ",
-          "ar_plain": "اتق",
-          "translit": "ittaqi",
-          "en": "fear (command)",
-          "ur": "ڈرو (حکم)"
-        },
-        {
-          "ar": "اللَّهَ",
-          "ar_plain": "الله",
-          "translit": "Allaha",
-          "en": "Allah",
-          "ur": "اللہ"
-        },
-        {
-          "ar": "وَلَا",
-          "ar_plain": "ولا",
-          "translit": "wa laa",
-          "en": "and do not",
-          "ur": "اور مت"
-        },
-        {
-          "ar": "تُطِعِ",
-          "ar_plain": "تطع",
-          "translit": "tut'i",
-          "en": "you obey",
-          "ur": "تم بات مانو"
-        },
-        {
-          "ar": "الْكَافِرِينَ",
-          "ar_plain": "الكافرين",
-          "translit": "al-kaafiriina",
-          "en": "the disbelievers",
-          "ur": "کافر"
-        }
-      ],
-      "available_roles": [
-        "VERB",
-        "SUBJECT",
-        "OBJECT",
-        "PARTICLE",
-        "PREPOSITION"
-      ],
-      "correct_roles": [
-        "VERB",
-        "OBJECT",
-        "PARTICLE",
-        "VERB",
-        "OBJECT"
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "IDENTIFY_ROOT",
-      "id": "ch68-l02-ex07",
-      "word": {
-        "ar": "اتَّقِ",
-        "ar_plain": "اتق",
-        "translit": "ittaqi",
-        "en": "fear (command)",
-        "ur": "ڈرو (حکم)"
-      },
-      "options": [
-        "و ق ي",
-        "ع ب د",
-        "ش ك ر",
-        "ن ص ر"
-      ],
-      "correct_index": 0,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The particle, the jussive verb, then the doer.",
+        "ur": "حرف، مجزوم فعل، پھر کرنے والا۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Commands: the imperative and لَامُ الْأَمْرِ",
-      "ar": "فِعْلُ الْأَمْرِ وَلَامُ الْأَمْرِ",
-      "ur": "حکم: فعلِ امر اور لامِ امر"
+      "en": "Not yet, and when",
+      "ar": "لَمَّا",
+      "ur": "ابھی نہیں، اور جب"
     },
     "ayah": {
-      "surah": 33,
-      "ayah": 1,
-      "label": "Al-Ahzab 33:1",
-      "ar": "يَا أَيُّهَا النَّبِيُّ اتَّقِ اللَّهَ وَلَا تُطِعِ الْكَافِرِينَ وَالْمُنَافِقِينَ",
-      "en": "O Prophet, fear Allah and do not obey the disbelievers and hypocrites.",
-      "ur": "اے نبی! اللہ سے ڈرتے رہو اور کافروں اور منافقوں کی بات نہ مانو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033001.mp3"
+      "surah": 2,
+      "ayah": 214,
+      "label": "Al-Baqarah 2:214",
+      "ar": "وَلَمَّا يَأْتِكُم مَّثَلُ الَّذِينَ خَلَوْا",
+      "en": "while the like of those who passed on before you has not yet come to you",
+      "ur": "حالانکہ تم پر ابھی ان لوگوں کی مثل نہیں آئی جو تم سے پہلے گزر گئے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002214.mp3"
     },
     "highlighted_word_indices": [
-      3,
-      5,
-      6
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "وَلَمَّا",
+      "يَأْتِكُم"
     ],
     "noor_explanation": {
-      "en": "اتَّقِ is an imperative — built on its jussive تَتَّقِ, so the final ي is gone. وَلَا تُطِعِ is a prohibition: تُطِيعُ became jussive تُطِعْ after لَا النَّاهِيَة (the long ي dropped), and the sukūn turned to kasra only to join الْكَافِرِينَ. A command and a prohibition side by side.",
-      "ur": "اتَّقِ فعلِ امر ہے — اپنے مجزوم تَتَّقِ پر مبنی، اس لیے آخری ي نہیں۔ وَلَا تُطِعِ نہی ہے: لَا نَاهِيَہ کے بعد تُطِيعُ مجزوم ہو کر تُطِعْ بنا (لمبی ي گر گئی)، اور سکون صرف الْكَافِرِينَ سے ملانے کے لیے زیر بنا۔ حکم اور نہی ساتھ ساتھ۔"
+      "en": "وَلَمَّا يَأْتِكُم — a jussive verb after لَمَّا: 'not yet'.",
+      "ur": "وَلَمَّا يَأْتِكُم — لَمَّا کے بعد مجزوم فعل: 'ابھی نہیں'۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Two ways to command: the imperative for 'you' (اكْتُبْ، اتَّقِ، اصْبِرُوا), built on the jussive; and لَامُ الْأَمْرِ + jussive for 'let him / let them' (لِيُنْفِقْ، فَلْيَعْبُدُوا). And لَا + jussive forbids: لَا تُطِعْ.",
-      "ur": "حکم کے دو طریقے: 'تم' کے لیے فعلِ امر (اكْتُبْ، اتَّقِ، اصْبِرُوا)، جو مجزوم پر مبنی ہے؛ اور 'وہ' کے لیے لامِ امر + مجزوم (لِيُنْفِقْ، فَلْيَعْبُدُوا)۔ اور لَا + مجزوم منع کرتا ہے: لَا تُطِعْ۔"
+      "en": "لَمْ says 'did not'; لَمَّا + a jussive says 'not yet'; لَمَّا + a past verb says 'when'.",
+      "ur": "لَمْ 'نہیں' کہتا ہے؛ لَمَّا + مجزوم 'ابھی نہیں' کہتا ہے؛ لَمَّا + ماضی 'جب' کہتا ہے۔"
     }
   }
 }

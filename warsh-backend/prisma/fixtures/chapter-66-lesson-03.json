@@ -2,14 +2,13 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 66, Lesson 3 — Place Zarf (ظرف المكان) — where something happens.",
+    "_note": "Chapter 66, Lesson 3 (ch66-l03, rebuilt in place). Place ظرف as the head of a pair and its genitive dependent: فَوْقَ، تَحْتَ، أَمَامَ، خَلْفَ، عِنْدَ، بَيْنَ. Retrieves عِنْدَ with attached pronouns (Chapter 7) and بَيْنَ … وَ … (Chapter 21); a pronoun dependent is genitive in position, not necessarily in a visible kasra; a real preposition (فِي) is contrasted. Old inventions (the Throne over water, angels guarding) are gone; every phrase is complete. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-66-content-proposal.md and its review amendments.",
+    "title": "Place Words and Their Dependents",
+    "titleAr": "ظُرُوفُ الْمَكَانِ وَالْمُضَافُ إِلَيْهِ",
+    "titleUr": "مکان کے الفاظ اور ان کے متعلق",
     "chapter_order": 66,
     "lesson_order": 3,
-    "chapter_title": "ظرف الزمان والمكان",
-    "title": "Zarf of Place (ظرف المكان)",
-    "titleAr": "ظَرْفُ الْمَكَانِ",
-    "source": "book_8_lesson_1_zarf_place.md",
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
@@ -17,110 +16,112 @@
       "surah": 2,
       "ayah": 255,
       "label": "Al-Baqarah 2:255",
-      "ar": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ",
-      "en": "Allah — there is no deity except Him, the Ever-Living, the Sustainer of existence. Neither slumber nor sleep overtakes Him. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that will intercede with Him except by His permission?",
-      "ur": "اللہ — اس کے سوا کوئی معبود نہیں، وہ زندہ ہے، برقرار رکھنے والا ہے۔ نہ تھکاوٹ اسے پکڑتی ہے نہ نیند۔ آسمانوں اور زمین میں جو ہے سب اسی کا ہے۔ کون ہے جو اس کے پاس شفاعت کرے مگر اس کی اجازت سے؟",
+      "ar": "يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ",
+      "en": "He knows what is before them and what is behind them.",
+      "ur": "وہ جانتا ہے جو ان کے آگے ہے اور جو ان کے پیچھے ہے۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002255.mp3"
     },
     "noor_intro": {
-      "en": "عِنْدَهُ — 'with Him' or 'near Him.' عِنْدَ is a place zarf telling us WHERE. In Arabic, WHERE is also expressed in the accusative.",
-      "ur": "عِنْدَهُ — 'اس کے پاس' یا 'اس کے ساتھ'۔ عِنْدَ مکان کا ظرف ہے جو بتاتا ہے کہ کہاں۔ عربی میں 'کہاں' بھی نصب میں ظاہر ہوتا ہے۔"
+      "en": "بَيْنَ أَيْدِيهِمْ and خَلْفَهُمْ: two place words, each with something after it. Today you read the pair: the ظرف and its dependent.",
+      "ur": "بَيْنَ أَيْدِيهِمْ اور خَلْفَهُمْ: مکان کے دو الفاظ، ہر ایک کے بعد کچھ ہے۔ آج آپ جوڑا پڑھیں گے: ظرف اور اس کا متعلق۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Zarf of Place (ظرف المكان)",
-        "ar": "ظَرْفُ الْمَكَانِ",
-        "ur": "مکان کا ظرف"
+        "en": "The head and its dependent",
+        "ar": "الظَّرْفُ وَالْمُضَافُ إِلَيْهِ",
+        "ur": "ظرف اور اس کا متعلق"
       },
       "explanation": {
-        "en": "A place zarf answers 'where?' It tells us the location where an action occurs. Common place zarfs: أَمَامَ, خَلْفَ, فَوْقَ, تَحْتَ, عِنْدَ, بَيْنَ, حَيْثُ.",
-        "ur": "مکان کا ظرف 'کہاں؟' کا جواب دیتا ہے۔ یہ بتاتا ہے کہ کس جگہ کوئی عمل ہوتا ہے۔ عام مکان ظروف: أَمَامَ, خَلْفَ, فَوْقَ, تَحْتَ, عِنْدَ, بَيْنَ, حَيْثُ۔"
+        "en": "A place ظرف is the head of a small pair, and it always needs a dependent after it: فَوْقَ الْبَيْتِ, خَلْفَ الْمَسْجِدِ. The head is the ظرف, in the accusative; the dependent is the noun that completes it, in the genitive. A phrase like عِنْدَ on its own is incomplete — عِنْدَ الْمُعَلِّمِ is complete.",
+        "ur": "مکان کا ظرف ایک چھوٹے جوڑے کا پہلا حصہ ہے، اور اس کے بعد متعلق ضروری ہے: فَوْقَ الْبَيْتِ، خَلْفَ الْمَسْجِدِ۔ پہلا حصہ ظرف ہے، منصوب؛ متعلق وہ اسم ہے جو اسے مکمل کرتا ہے، مجرور۔ عِنْدَ اکیلا نامکمل ہے — عِنْدَ الْمُعَلِّمِ مکمل ہے۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ",
+        "ar_plain": "يعلم ما بين ايديهم وما خلفهم",
+        "translit": "yaʿlamu mā bayna ʾaydīhim wamā khalfahum",
+        "en": "He knows what is before them and what is behind them.",
+        "ur": "وہ جانتا ہے جو ان کے آگے ہے اور جو ان کے پیچھے ہے۔"
+      },
+      "explanation": {
+        "en": "بَيْنَ أَيْدِيهِمْ is 'before them' (literally 'between their hands'): the ظرف بَيْنَ and its dependent أَيْدِيهِمْ. خَلْفَهُمْ is 'behind them': the ظرف خَلْفَ with the pronoun هُمْ as its dependent. (Al-Baqarah 2:255) (Al-Baqarah 2:255)",
+        "ur": "بَيْنَ أَيْدِيهِمْ کا مطلب 'ان کے آگے' ہے (لفظی طور پر 'ان کے ہاتھوں کے درمیان'): ظرف بَيْنَ اور اس کا متعلق أَيْدِيهِمْ۔ خَلْفَهُمْ کا مطلب 'ان کے پیچھے' ہے: ظرف خَلْفَ اور ضمیر هُمْ اس کا متعلق۔ (البقرہ 2:255) (Al-Baqarah 2:255)"
       }
     },
     {
       "type": "WORD",
       "text": {
-        "ar": "أَمَامَ",
-        "ar_plain": "امام",
-        "translit": "amaama",
-        "en": "in front of, before (place zarf)",
-        "ur": "ساتھ، پہلے (مکان کا ظرف)"
+        "ar": "فَوْقَ · تَحْتَ · أَمَامَ · خَلْفَ",
+        "ar_plain": "فوق · تحت · امام · خلف",
+        "translit": "fawqa · taḥta · ʾamāma · khalfa",
+        "en": "above · under · in front of · behind",
+        "ur": "اوپر · نیچے · سامنے · پیچھے"
       },
       "explanation": {
-        "en": "أَمَامَ is a place zarf meaning 'in front of' or 'before.' أَمَامَكَ means 'in front of you.' It is always منصوب.",
-        "ur": "أَمَامَ مکان کا ظرف ہے جس کا مطلب 'آگے' یا 'پہلے'۔ أَمَامَكَ مطلب 'تمہارے آگے'۔ یہ ہمیشہ منصوب ہوتا ہے۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "خَلْفَ",
-        "ar_plain": "خلف",
-        "translit": "khalf",
-        "en": "behind, after (place zarf)",
-        "ur": "پیچھے، بعد میں (مکان کا ظرف)"
-      },
-      "explanation": {
-        "en": "خَلْفَ is a place zarf meaning 'behind' or 'after.' خَلْفَهُ means 'behind him.' It is منصوب.",
-        "ur": "خَلْفَ مکان کا ظرف ہے جس کا مطلب 'پیچھے' یا 'بعد میں'۔ خَلْفَهُ مطلب 'اس کے پیچھے'۔ یہ منصوب ہوتا ہے۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "فَوْقَ",
-        "ar_plain": "فوق",
-        "translit": "fawqa",
-        "en": "above, over (place zarf)",
-        "ur": "اوپر، اوپر (مکان کا ظرف)"
-      },
-      "explanation": {
-        "en": "فَوْقَ is a place zarf meaning 'above' or 'over.' فَوْقَهُمْ means 'above them.' It is منصوب.",
-        "ur": "فَوْقَ مکان کا ظرف ہے جس کا مطلب 'اوپر' یا 'بلند'۔ فَوْقَهُمْ مطلب 'ان کے اوپر'۔ یہ منصوب ہوتا ہے۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "تَحْتَ",
-        "ar_plain": "تحت",
-        "translit": "tahta",
-        "en": "below, under (place zarf)",
-        "ur": "نیچے، نیچے (مکان کا ظرف)"
-      },
-      "explanation": {
-        "en": "تَحْتَ is a place zarf meaning 'below' or 'under.' تَحْتَ الْأَرْضِ means 'below the earth.' It is منصوب.",
-        "ur": "تَحْتَ مکان کا ظرف ہے جس کا مطلب 'نیچے' یا 'زیر'۔ تَحْتَ الْأَرْضِ مطلب 'زمین کے نیچے'۔ یہ منصوب ہوتا ہے۔"
+        "en": "Four place words you know. Each is the head of its pair: فَوْقَ الْمَكْتَبِ, تَحْتَ الشَّجَرَةِ, أَمَامَ الْبَابِ, خَلْفَ الْمَسْجِدِ.",
+        "ur": "مکان کے چار الفاظ جو آپ جانتے ہیں۔ ہر ایک اپنے جوڑے کا پہلا حصہ ہے: فَوْقَ الْمَكْتَبِ، تَحْتَ الشَّجَرَةِ، أَمَامَ الْبَابِ، خَلْفَ الْمَسْجِدِ۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "وَلِلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ",
-        "ar_plain": "ولله ما في السماوات وما في الارض",
-        "translit": "wa lillaahi maa fii al-samawaati wa maa fii al-ardi",
-        "en": "And to Allah belongs what is in the heavens and what is on the earth.",
-        "ur": "اور اللہ کے پاس ہے جو آسمانوں میں ہے اور جو زمین میں ہے۔"
+        "ar": "بَيْنَ الْبَيْتِ وَالْمَسْجِدِ",
+        "ar_plain": "بين البيت والمسجد",
+        "translit": "bayna al-bayti wa-l-masjidi",
+        "en": "between the house and the mosque",
+        "ur": "گھر اور مسجد کے درمیان"
       },
       "explanation": {
-        "en": "فِي السَّمَاوَاتِ — 'in the heavens' — فِي indicates place but is a preposition, not a zarf. A zarf like أَمَامَ or عِنْدَ stands alone without فِي.",
-        "ur": "فِي السَّمَاوَاتِ — 'آسمانوں میں' — فِي جگہ دکھاتا ہے مگر یہ حرف ہے، ظرف نہیں۔ ظرف جیسے أَمَامَ یا عِنْدَ تنہا آتا ہے۔"
+        "en": "بَيْنَ needs two things joined by وَ, as in Chapter 21. Both stand in the genitive after it: it is the head, and the two nouns are its dependents.",
+        "ur": "بَيْنَ کو دو چیزیں چاہییں جو وَ سے جڑی ہوں، جیسا کہ باب 21 میں۔ دونوں اس کے بعد مجرور ہیں: یہ پہلا حصہ ہے، اور دونوں اسم اس کے متعلق۔"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Place zarfs answer: أين؟ (Where?)",
-        "ar": "ظُرُوفُ الْمَكَانِ تُجِيبُ عَنْ: أَيْنَ؟",
-        "ur": "مکان ظروف 'کہاں؟' کا جواب دیتے ہیں۔"
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "عِنْدِي كِتَابٌ · عِنْدَهُ قَلَمٌ",
+        "ar_plain": "عندي كتاب · عنده قلم",
+        "translit": "ʿindī kitābun · ʿindahu qalamun",
+        "en": "I have a book · he has a pen",
+        "ur": "میرے پاس کتاب ہے · اس کے پاس قلم ہے"
       },
       "explanation": {
-        "en": "To identify a place zarf, ask أين occurred? If the answer is a location word, it is a place zarf. Unlike فِي, a zarf does not need a preposition.",
-        "ur": "مکان کا ظرف پہچاننے کے لیے پوچھیں: کہاں ہوا؟ اگر جواب جگہ کا لفظ ہے، تو یہ مکان کا ظرف ہے۔ فِي کے برعکس، ظرف کو حرف کی ضرورت نہیں۔"
+        "en": "You used عِنْدَ with a pronoun in Chapter 7. The pronoun (ـي, ـهُ) is the dependent: it is genitive in position, even though you do not see a kasra on it. The ending of the head can change too: عِنْدِي.",
+        "ur": "آپ نے باب 7 میں عِنْدَ کو ضمیر کے ساتھ استعمال کیا تھا۔ ضمیر (ـي، ـهُ) متعلق ہے: یہ محل کے اعتبار سے مجرور ہے، چاہے اس پر کسرہ نظر نہ آئے۔ پہلے حصے کا ختم بھی بدل سکتا ہے: عِنْدِي۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "ظرف against a real preposition",
+        "ar": "ظرف اور حقیقی حرفِ جر",
+        "ur": "ظَرْفٌ أَمْ حَرْفُ جَرٍّ؟"
+      },
+      "examples": [
+        {
+          "ar": "جَلَسْتُ عِنْدَ الْمُعَلِّمِ",
+          "ar_plain": "جلست عند المعلم",
+          "translit": "jalastu ʿinda al-muʿallimi",
+          "en": "I sat with the teacher",
+          "ur": "میں استاد کے پاس بیٹھا"
+        },
+        {
+          "ar": "جَلَسْتُ فِي الْمَدْرَسَةِ",
+          "ar_plain": "جلست في المدرسة",
+          "translit": "jalastu fī al-madrasati",
+          "en": "I sat in the school",
+          "ur": "میں مدرسے میں بیٹھا"
+        }
+      ],
+      "explanation": {
+        "en": "عِنْدَ is a noun, the head of a pair, in the accusative as a ظرف. فِي is a real preposition: it takes a genitive noun and builds a prepositional phrase.",
+        "ur": "عِنْدَ اسم ہے، جوڑے کا پہلا حصہ، ظرف کے طور پر منصوب۔ فِي حقیقی حرفِ جر ہے: یہ مجرور اسم لیتا ہے اور جار مجرور بناتا ہے۔"
       }
     }
   ],
@@ -129,204 +130,218 @@
       "type": "TAP_TRANSLATION",
       "id": "ch66-l03-ex01",
       "prompt": {
-        "ar": "جَلَسَ الْوَلَدُ تَحْتَ الشَّجَرَةِ",
-        "ar_plain": "جلس الولد تحت الشجرة",
-        "translit": "jalasa al-waladu tahta ash-shajarati",
-        "en": "The boy sat under the tree",
-        "ur": "لڑکا درخت کے نیچے بیٹھا"
+        "ar": "خَلْفَ الْبَيْتِ",
+        "ar_plain": "خلف البيت",
+        "translit": "khalfa al-bayti",
+        "en": "(which is the ظرف, which is its dependent?)",
+        "ur": "(ظرف کون سا ہے، اس کا متعلق کون سا؟)"
       },
       "options": [
         {
-          "en": "The boy sat under the tree",
-          "ur": "لڑکا درخت کے نیچے بیٹھا"
+          "en": "خَلْفَ is the ظرف; الْبَيْتِ is its genitive dependent",
+          "ur": "خَلْفَ ظرف ہے؛ الْبَيْتِ اس کا مجرور متعلق ہے"
         },
         {
-          "en": "The boy sat above the tree",
-          "ur": "لڑکا درخت کے اوپر بیٹھا"
+          "en": "الْبَيْتِ is the ظرف; خَلْفَ is its dependent",
+          "ur": "الْبَيْتِ ظرف ہے؛ خَلْفَ اس کا متعلق ہے"
         },
         {
-          "en": "The tree was under the boy",
-          "ur": "درخت لڑکے کے نیچے تھا"
+          "en": "Both words are ظرف",
+          "ur": "دونوں الفاظ ظرف ہیں"
         },
         {
-          "en": "The boy sat behind the tree",
-          "ur": "لڑکا درخت کے پیچھے بیٹھا"
+          "en": "Both words are prepositions",
+          "ur": "دونوں الفاظ حروفِ جر ہیں"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "تَحْتَ is a place zarf meaning 'under' (accusative); الشَّجَرَةِ is its مُضَاف إِلَيْه. 'Above' would be فَوْقَ and 'behind' خَلْفَ.",
-        "ur": "تَحْتَ ظرفِ مکان ہے جس کا معنی 'نیچے' ہے (منصوب)؛ الشَّجَرَةِ اس کا مضاف الیہ ہے۔ 'اوپر' کے لیے فَوْقَ اور 'پیچھے' کے لیے خَلْفَ۔"
+        "en": "The place word is the head and takes the accusative; the noun after it is the genitive dependent.",
+        "ur": "مکان کا لفظ پہلا حصہ ہے اور منصوب ہوتا ہے؛ اس کے بعد کا اسم مجرور متعلق ہے۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch66-l03-ex02",
-      "statement": {
-        "en": "أَمَامَ, خَلْفَ, فَوْقَ, تَحْتَ are all place zarfs and are منصوب.",
-        "ur": "أَمَامَ، خَلْفَ، فَوْقَ، تَحْتَ سب ظروفِ مکان ہیں اور منصوب ہیں۔",
-        "ar_example": {
-          "ar": "يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ",
-          "ar_plain": "يعلم ما بين أيديهم وما خلفهم",
-          "translit": "ya'lamu maa bayna aydiihim wa-maa khalfahum",
-          "en": "He knows what is before them and what is behind them.",
-          "ur": "وہ جانتا ہے جو ان کے آگے ہے اور جو ان کے پیچھے ہے۔"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
       "type": "FILL_BLANK",
-      "id": "ch66-l03-ex03",
+      "id": "ch66-l03-ex02",
       "mode": "TAP",
-      "sentence_ar": "صَلَّيْتُ ___ الْإِمَامِ",
+      "sentence_ar": "جَلَسْتُ ___ الْمُعَلِّمِ",
       "hint": {
-        "en": "'I prayed behind the imam.'",
-        "ur": "'میں نے امام کے پیچھے نماز پڑھی۔'"
+        "en": "I sat with the teacher.",
+        "ur": "میں استاد کے پاس بیٹھا۔"
       },
       "options": [
-        {
-          "ar": "خَلْفَ",
-          "ar_plain": "خلف",
-          "translit": "khalfa",
-          "en": "behind",
-          "ur": "پیچھے"
-        },
-        {
-          "ar": "فَوْقَ",
-          "ar_plain": "فوق",
-          "translit": "fawqa",
-          "en": "above",
-          "ur": "اوپر"
-        },
-        {
-          "ar": "تَحْتَ",
-          "ar_plain": "تحت",
-          "translit": "tahta",
-          "en": "under",
-          "ur": "نیچے"
-        },
         {
           "ar": "يَوْمَ",
           "ar_plain": "يوم",
           "translit": "yawma",
-          "en": "on the day",
-          "ur": "جس دن"
+          "en": "on the day (time)",
+          "ur": "دن کو (وقت)"
+        },
+        {
+          "ar": "حِينَ",
+          "ar_plain": "حين",
+          "translit": "ḥīna",
+          "en": "when (time)",
+          "ur": "جب (وقت)"
+        },
+        {
+          "ar": "عِنْدَ",
+          "ar_plain": "عند",
+          "translit": "ʿinda",
+          "en": "at, with",
+          "ur": "کے پاس"
+        },
+        {
+          "ar": "لَيْلًا",
+          "ar_plain": "ليلا",
+          "translit": "laylan",
+          "en": "by night (time)",
+          "ur": "رات کو (وقت)"
         }
       ],
       "correct_answer": {
-        "ar": "خَلْفَ",
-        "ar_plain": "خلف",
-        "translit": "khalfa",
-        "en": "behind",
-        "ur": "پیچھے"
+        "ar": "عِنْدَ",
+        "ar_plain": "عند",
+        "translit": "ʿinda",
+        "en": "at, with",
+        "ur": "کے پاس"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The phrase needs a place word with its dependent: عِنْدَ الْمُعَلِّمِ. The others are time words.",
+        "ur": "جملے کو مکان کا لفظ اپنے متعلق کے ساتھ چاہیے: عِنْدَ الْمُعَلِّمِ۔ باقی وقت کے الفاظ ہیں۔"
+      }
     },
     {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch66-l03-ex04",
-      "sentence_ar": "خَلْفَهُمْ مَلَائِكَةٌ يَحْرُسُونَهُمْ",
-      "words": [
+      "type": "TAP_TRANSLATION",
+      "id": "ch66-l03-ex03",
+      "prompt": {
+        "ar": "خَلْفَهُمْ",
+        "ar_plain": "خلفهم",
+        "translit": "khalfahum",
+        "en": "(2:255: what is هُمْ here?)",
+        "ur": "(2:255: یہاں هُمْ کیا ہے؟)"
+      },
+      "options": [
         {
-          "ar": "خَلْفَهُمْ",
-          "ar_plain": "خلفهم",
-          "translit": "khalfahum",
-          "en": "behind them",
-          "ur": "ان کے پیچھے"
+          "en": "The place ظرف",
+          "ur": "مکان کا ظرف"
         },
         {
-          "ar": "مَلَائِكَةٌ",
-          "ar_plain": "ملائكة",
-          "translit": "malaa'ikatu",
-          "en": "angels",
-          "ur": "فرشتے"
+          "en": "The dependent: 'them', a pronoun that is genitive in position",
+          "ur": "متعلق: 'ان'، ایک ضمیر جو محل کے اعتبار سے مجرور ہے"
         },
         {
-          "ar": "يَحْرُسُونَهُمْ",
-          "ar_plain": "يحفظونهم",
-          "translit": "yahfazuunahum",
-          "en": "they guard them",
-          "ur": "وہ انہیں حفاظت کرتے ہیں"
+          "en": "The subject of a verb",
+          "ur": "کسی فعل کا فاعل"
+        },
+        {
+          "en": "A preposition",
+          "ur": "حرفِ جر"
         }
       ],
-      "available_roles": [
-        "SUBJECT",
-        "VERB",
-        "PARTICLE",
-        "PREPOSITION",
-        "ADJECTIVE",
-        "TIME_ZARF",
-        "PLACE_ZARF"
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هُمْ completes خَلْفَ like a noun would: it is the dependent, genitive in position even though no kasra shows.",
+        "ur": "هُمْ اسم کی طرح خَلْفَ کو مکمل کرتا ہے: یہ متعلق ہے، محل کے اعتبار سے مجرور اگرچہ کسرہ نظر نہیں آتا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch66-l03-ex04",
+      "prompt": {
+        "ar": "يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ",
+        "ar_plain": "يعلم ما بين ايديهم وما خلفهم",
+        "translit": "yaʿlamu mā bayna ʾaydīhim wamā khalfahum",
+        "en": "(2:255: what does it say?)",
+        "ur": "(2:255: یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "He knows what is above them and what is under them",
+          "ur": "وہ جانتا ہے جو ان کے اوپر ہے اور جو ان کے نیچے ہے"
+        },
+        {
+          "en": "They know what is in front of Him",
+          "ur": "وہ جانتے ہیں جو اس کے سامنے ہے"
+        },
+        {
+          "en": "He knows them before and after the day",
+          "ur": "وہ انہیں دن سے پہلے اور بعد جانتا ہے"
+        },
+        {
+          "en": "He knows what is before them and what is behind them",
+          "ur": "وہ جانتا ہے جو ان کے آگے ہے اور جو ان کے پیچھے ہے"
+        }
       ],
-      "correct_roles": [
-        "PLACE_ZARF",
-        "SUBJECT",
-        "VERB"
-      ],
-      "xp_value": 1
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "بَيْنَ أَيْدِيهِمْ is 'before them' and خَلْفَهُمْ is 'behind them'; 'above' would be فَوْقَ.",
+        "ur": "بَيْنَ أَيْدِيهِمْ کا مطلب 'ان کے آگے' اور خَلْفَهُمْ کا مطلب 'ان کے پیچھے' ہے؛ 'اوپر' فَوْقَ ہوتا۔"
+      }
     },
     {
       "type": "MATCHING",
       "id": "ch66-l03-ex05",
       "left_column": [
         {
-          "ar": "عِنْدَ اللَّهِ",
-          "ar_plain": "عند الله",
-          "translit": "inda Allahi",
-          "en": "near Allah",
-          "ur": "اللہ کے پاس"
+          "ar": "فَوْقَ الْمَكْتَبِ",
+          "ar_plain": "فوق المكتب",
+          "translit": "fawqa al-maktabi",
+          "en": "(dependent: the desk)",
+          "ur": "(متعلق: میز)"
         },
         {
-          "ar": "فَوْقَهُمُ الْعَرْشُ",
-          "ar_plain": "فوقهم العرش",
-          "translit": "fawqahumu al-'arshu",
-          "en": "above them is the Throne",
-          "ur": "ان کے اوپر عرش ہے"
+          "ar": "تَحْتَ الشَّجَرَةِ",
+          "ar_plain": "تحت الشجرة",
+          "translit": "taḥta ash-shajarati",
+          "en": "(dependent: the tree)",
+          "ur": "(متعلق: درخت)"
         },
         {
-          "ar": "تَحْتَهُ الْأَرْضُ",
-          "ar_plain": "تحته الارض",
-          "translit": "tahtahu al-ardu",
-          "en": "below it is the earth",
-          "ur": "اس کے نیچے زمین ہے"
+          "ar": "أَمَامَ الْبَابِ",
+          "ar_plain": "امام الباب",
+          "translit": "ʾamāma al-bābi",
+          "en": "(dependent: the door)",
+          "ur": "(متعلق: دروازہ)"
         },
         {
-          "ar": "أَمَامَهُمْ جَهَنَّمُ",
-          "ar_plain": "امامهم جهنم",
-          "translit": "amaamuhum jahannamu",
-          "en": "before them is Hell",
-          "ur": "ان کے سامنے جہنم ہے"
+          "ar": "خَلْفَ الْمَسْجِدِ",
+          "ar_plain": "خلف المسجد",
+          "translit": "khalfa al-masjidi",
+          "en": "(dependent: the mosque)",
+          "ur": "(متعلق: مسجد)"
         }
       ],
       "right_column": [
         {
-          "en": "عِنْدَ — place zarf",
-          "ur": "عِنْدَ — مکان کا ظرف"
+          "en": "head: behind",
+          "ur": "پہلا حصہ: پیچھے"
         },
         {
-          "en": "فَوْقَ — place zarf",
-          "ur": "فَوْقَ — مکان کا ظرف"
+          "en": "head: above",
+          "ur": "پہلا حصہ: اوپر"
         },
         {
-          "en": "تَحْتَ — place zarf",
-          "ur": "تَحْتَ — مکان کا ظرف"
+          "en": "head: in front of",
+          "ur": "پہلا حصہ: سامنے"
         },
         {
-          "en": "أَمَامَ — place zarf",
-          "ur": "أَمَامَ — مکان کا ظرف"
+          "en": "head: under",
+          "ur": "پہلا حصہ: نیچے"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
+          1
         ],
         [
           1,
-          1
+          3
         ],
         [
           2,
@@ -334,138 +349,148 @@
         ],
         [
           3,
-          3
+          0
         ]
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Each pair is a place ظرف followed by its genitive dependent; the right column names the head.",
+        "ur": "ہر جوڑا مکان کا ظرف ہے جس کے بعد اس کا مجرور متعلق ہے؛ دائیں کالم میں پہلا حصہ بتایا گیا ہے۔"
+      }
     },
     {
       "type": "BUILD_SENTENCE",
       "id": "ch66-l03-ex06",
       "target_translation": {
-        "en": "The angels are above them, serving their Lord.",
-        "ur": "فرشتے ان کے اوپر ہیں، اپنے رب کی عبادت کر رہے ہیں۔"
+        "en": "The boy stood in front of the school.",
+        "ur": "لڑکا مدرسے کے سامنے کھڑا ہوا۔"
       },
       "tiles": [
         {
-          "ar": "مَلَائِكَةٌ",
-          "ar_plain": "ملائكة",
-          "translit": "malaa'ikatu",
-          "en": "angels",
-          "ur": "فرشتے"
+          "ar": "الْمَدْرَسَةِ",
+          "ar_plain": "المدرسة",
+          "translit": "al-madrasati",
+          "en": "the school",
+          "ur": "مدرسہ"
         },
         {
-          "ar": "فَوْقَهُمْ",
-          "ar_plain": "فوقهم",
-          "translit": "fawqahum",
-          "en": "above them",
-          "ur": "ان کے اوپر"
+          "ar": "الْوَلَدُ",
+          "ar_plain": "الولد",
+          "translit": "al-waladu",
+          "en": "the boy",
+          "ur": "لڑکا"
         },
         {
-          "ar": "يَعْبُدُونَ",
-          "ar_plain": "يعبدون",
-          "translit": "ya'budoona",
-          "en": "they worship",
-          "ur": "وہ عبادت کرتے ہیں"
+          "ar": "وَقَفَ",
+          "ar_plain": "وقف",
+          "translit": "waqafa",
+          "en": "stood",
+          "ur": "کھڑا ہوا"
         },
         {
-          "ar": "رَبَّهُمْ",
-          "ar_plain": "ربهم",
-          "translit": "rabbahum",
-          "en": "their Lord",
-          "ur": "ان کا رب"
+          "ar": "أَمَامَ",
+          "ar_plain": "امام",
+          "translit": "ʾamāma",
+          "en": "in front of",
+          "ur": "کے سامنے"
         }
       ],
       "correct_order": [
-        0,
-        1,
         2,
-        3
+        1,
+        3,
+        0
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Verb, doer, then the place ظرف and its dependent.",
+        "ur": "فعل، فاعل، پھر مکان کا ظرف اور اس کا متعلق۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch66-l03-ex07",
       "prompt": {
-        "ar": "تَحْتَ الْعَرْشِ الْمَاءُ",
-        "ar_plain": "تحت العرش الماء",
-        "translit": "tahta al-'arshi al-maa'u",
-        "en": "Below the Throne is water.",
-        "ur": "عرش کے نیچے پانی ہے۔"
+        "ar": "بَيْنَ الْبَيْتِ وَالْمَسْجِدِ",
+        "ar_plain": "بين البيت والمسجد",
+        "translit": "bayna al-bayti wa-l-masjidi",
+        "en": "(what does بَيْنَ need?)",
+        "ur": "(بَيْنَ کو کیا چاہیے؟)"
       },
       "options": [
         {
-          "en": "Below the Throne is water.",
-          "ur": "عرش کے نیچے پانی ہے۔"
+          "en": "Two things joined by وَ: between the house and the mosque",
+          "ur": "وَ سے جڑی دو چیزیں: گھر اور مسجد کے درمیان"
         },
         {
-          "en": "The Throne is below the water.",
-          "ur": "عرش پانی کے نیچے ہے۔"
+          "en": "Only one noun",
+          "ur": "صرف ایک اسم"
         },
         {
-          "en": "Above the Throne is water.",
-          "ur": "عرش کے اوپر پانی ہے۔"
+          "en": "A verb after it",
+          "ur": "اس کے بعد فعل"
         },
         {
-          "en": "Behind the Throne is water.",
-          "ur": "عرش کے پیچھے پانی ہے۔"
+          "en": "A time word",
+          "ur": "وقت کا لفظ"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "تَحْتَ is a place zarf (accusative): تَحْتَ الْعَرْشِ 'below the Throne'. It comes first here as the خَبَر, and الْمَاءُ is the delayed مُبْتَدَأ.",
-        "ur": "تَحْتَ ظرفِ مکان (منصوب) ہے: تَحْتَ الْعَرْشِ 'عرش کے نیچے'۔ یہاں یہ خبر کے طور پر پہلے آیا ہے اور الْمَاءُ مؤخر مبتدا ہے۔"
+        "en": "بَيْنَ needs two landmarks, both genitive, as in Chapter 21.",
+        "ur": "بَيْنَ کو دو نشانیاں چاہییں، دونوں مجرور، جیسا کہ باب 21 میں۔"
       }
     },
     {
-      "type": "IDENTIFY_ROOT",
+      "type": "TRUE_FALSE",
       "id": "ch66-l03-ex08",
-      "word": {
-        "ar": "أَمَامَ",
-        "ar_plain": "امام",
-        "translit": "amaama",
-        "en": "in front of",
-        "ur": "ساتھ"
+      "statement": {
+        "en": "In فَوْقَ الْمَكْتَبِ the noun الْمَكْتَبِ is accusative because it follows a ظرف.",
+        "ur": "فَوْقَ الْمَكْتَبِ میں اسم الْمَكْتَبِ منصوب ہے کیونکہ یہ ظرف کے بعد ہے۔"
       },
-      "options": [
-        "أ م م",
-        "و ق ف",
-        "خ ل ف",
-        "ع ن د"
-      ],
-      "correct_index": 0,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. The ظرف itself is accusative; its dependent is genitive.",
+        "ur": "غلط۔ ظرف خود منصوب ہے؛ اس کا متعلق مجرور ہے۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Place zarfs — أَمَامَ, خَلْفَ, فَوْقَ, تَحْتَ, عِنْدَ",
-      "ar": "ظُرُوفُ الْمَكَانِ: أَمَامَ، خَلْفَ، فَوْقَ، تَحْتَ، عِنْدَ",
-      "ur": "مکان ظروف: أَمَامَ، خَلْفَ، فَوْقَ، تَحْتَ، عِنْدَ"
+      "en": "A pair: ظرف and dependent",
+      "ar": "الظَّرْفُ وَمُضَافُهُ",
+      "ur": "جوڑا: ظرف اور متعلق"
     },
     "ayah": {
       "surah": 2,
       "ayah": 255,
       "label": "Al-Baqarah 2:255",
-      "ar": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ",
-      "en": "To Him belongs whatever is in the heavens and whatever is on the earth. Who intercedes with Him except by His permission?",
-      "ur": "آسمانوں اور زمین میں جو ہے سب اسی کا ہے۔ کون اس کے پاس شفاعت کرے مگر اس کی اجازت سے؟",
+      "ar": "يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ",
+      "en": "He knows what is before them and what is behind them.",
+      "ur": "وہ جانتا ہے جو ان کے آگے ہے اور جو ان کے پیچھے ہے۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002255.mp3"
     },
     "highlighted_word_indices": [
-      23
+      2,
+      3,
+      5
+    ],
+    "highlighted_words": [
+      "بَيْنَ",
+      "أَيْدِيهِمْ",
+      "خَلْفَهُمْ"
     ],
     "noor_explanation": {
-      "en": "عِنْدَهُ — 'with Him' or 'near Him.' عِنْدَ is a place zarf telling us WHERE. It is منصوب as مفعول فيه. Whether time or place, the zarf is always in the accusative.",
-      "ur": "عِنْدَهُ — 'اس کے پاس'۔ عِنْدَ مکان کا ظرف ہے جو بتاتا ہے کہ کہاں۔ یہ مفعول فیہ کے طور پر منصوب ہے۔ چہ وقت کا ظرف ہو یا مکان کا، ظرف ہمیشہ نصب میں ہوتا ہے۔"
+      "en": "بَيْنَ أَيْدِيهِمْ and خَلْفَهُمْ — each a place word with its dependent, one a noun and one a pronoun.",
+      "ur": "بَيْنَ أَيْدِيهِمْ اور خَلْفَهُمْ — ہر ایک مکان کا لفظ اپنے متعلق کے ساتھ، ایک اسم اور ایک ضمیر۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Place zarfs answer أين؟ — where. عِنْدَ, أَمَامَ, خَلْفَ, فَوْقَ, تَحْتَ, بَيْنَ — all are منصوب. They tell you WHERE in the ayah.",
-      "ur": "مکان ظروف 'کہاں؟' کا جواب دیتے ہیں۔ عِنْدَ, أَمَامَ, خَلْفَ, فَوْقَ, تَحْتَ, بَيْنَ — سب منصوب ہیں۔ یہ بتاتے ہیں کہ آیت میں کہاں۔"
+      "en": "A place ظرف is the head of a pair; its dependent is genitive — a noun or a pronoun.",
+      "ur": "مکان کا ظرف جوڑے کا پہلا حصہ ہے؛ اس کا متعلق مجرور ہے — اسم یا ضمیر۔"
     }
   }
 }

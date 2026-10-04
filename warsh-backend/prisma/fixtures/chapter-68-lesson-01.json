@@ -2,109 +2,140 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 68, Lesson 1 — Introduction to Jussive particles: لَا الناهية (لا command/prohibition).",
+    "_note": "Chapter 68, Lesson 1 (ch68-l01, rebuilt in place). Retrieval and coordination, no new paradigm: the jussive state of the imperfect has three signs, each already met — a sukūn on a sound final letter (يَكْتُبُ → لَمْ يَكْتُبْ, Chapter 45), a weak final letter that drops (يَرْمِي → لَمْ يَرْمِ, يَدْعُو → لَمْ يَدْعُ, Chapter 57) and the final ن of the five forms that drops (يَذْهَبُونَ → لَمْ يَذْهَبُوا). Verb states are not noun cases; نصب (لَنْ يَذْهَبَ) is a different state. 12:87 (وَلَا تَيْأَسُوا) is exact. The old 'fatḥa turns to kasra' rule, 'naṣr' and 'the system is yours' lines are gone. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-68-content-proposal.md and its review amendments.",
+    "title": "Three Signs of the Jussive",
+    "titleAr": "عَلَامَاتُ الْجَزْمِ",
+    "titleUr": "جزم کی تین علامتیں",
     "chapter_order": 68,
     "lesson_order": 1,
-    "chapter_title": "الجوازم",
-    "title": "Introduction to Jussive Particles",
-    "titleAr": "الْمُقَدِّمَة: الْجَوَازِمُ وَمَا يَجْزِمُ",
-    "source": "book_8_lesson_2_jussive_intro.md",
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 16,
-      "ayah": 116,
-      "label": "An-Nahl 16:116",
-      "ar": "وَلَا تَقُولُوا لِمَا تَصِفُ أَلْسِنَتُكُمُ الْكَذِبَ هَٰذَا حَلَالٌ وَهَٰذَا حَرَامٌ لِّتَفْتَرُوا عَلَى اللَّهِ الْكَذِبَ ۚ إِنَّ الَّذِينَ يَفْتَرُونَ عَلَى اللَّهِ الْكَذِبَ لَا يُفْلِحُونَ",
-      "en": "And do not say about what your tongues assert of untruth, 'This is lawful and this is unlawful,' to invent falsehood about Allah. Indeed, those who invent falsehood about Allah will not succeed.",
-      "ur": "اور اپنی زبانوں سے گھڑے ہوئے جھوٹ کی بنا پر یہ نہ کہو کہ یہ حلال ہے اور یہ حرام، کہ اللہ پر جھوٹ باندھو۔ بے شک جو لوگ اللہ پر جھوٹ باندھتے ہیں وہ کامیاب نہیں ہوں گے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/016116.mp3"
+      "surah": 12,
+      "ayah": 87,
+      "label": "Yusuf 12:87",
+      "ar": "وَلَا تَيْأَسُوا مِن رَّوْحِ اللَّهِ",
+      "en": "and do not despair of the relief of Allah",
+      "ur": "اور اللہ کی رحمت سے مایوس نہ ہو",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012087.mp3"
     },
     "noor_intro": {
-      "en": "وَلَا تَقُولُوا — 'and do not say'. تَقُولُوا is a present-tense verb made jussive by لَا النَّاهِيَة: the ن of تَقُولُونَ drops. At the end of the same ayah, لَا يُفْلِحُونَ — 'they will not succeed' — keeps its ن, because that لَا only negates.",
-      "ur": "وَلَا تَقُولُوا — 'اور نہ کہو'۔ تَقُولُوا مضارع ہے جسے لَا نَاهِيَہ نے مجزوم کیا: تَقُولُونَ کا ن گر گیا۔ اسی آیت کے آخر میں لَا يُفْلِحُونَ — 'وہ کامیاب نہیں ہوں گے' — اپنا ن رکھتا ہے، کیونکہ وہ لَا صرف نفی کا ہے۔"
+      "en": "You have seen a verb change its ending after a particle: لَمْ, لَا, لَنْ. Today you put the three jussive signs side by side.",
+      "ur": "آپ نے حرف کے بعد فعل کے ختم کو بدلتے دیکھا ہے: لَمْ، لَا، لَنْ۔ آج آپ جزم کی تین علامتیں ساتھ ساتھ رکھتے ہیں۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Jussive Particles (الْجَوَازِم)",
-        "ar": "الْجَوَازِمُ",
-        "ur": "jussive particles"
+        "en": "The jussive state of a verb",
+        "ar": "الْمُضَارِعُ الْمَجْزُومُ",
+        "ur": "فعل کی مجزوم حالت"
       },
       "explanation": {
-        "en": "Four particles make a single present-tense verb jussive (مَجْزُوم): لَمْ, لَمَّا, لَا النَّاهِيَة and لَامُ الْأَمْرِ. (Conditional words like إِنْ and مَنْ make two verbs jussive — that comes elsewhere.)",
-        "ur": "چار حروف ایک مضارع فعل کو مجزوم کرتے ہیں: لَمْ، لَمَّا، لَا نَاهِيَہ اور لامِ امر۔ (إِنْ اور مَنْ جیسے شرطیہ کلمات دو فعلوں کو مجزوم کرتے ہیں — وہ الگ موضوع ہے۔)"
+        "en": "A particle such as لَمْ or the prohibitive لَا puts the imperfect verb after it in the jussive. This is a state of the verb, not a noun case. Compare the three states of يَذْهَبُ: يَذْهَبُ (ḍamma), لَنْ يَذْهَبَ (fatḥa, the subjunctive of Chapter 45) and لَمْ يَذْهَبْ (sukūn, the jussive).",
+        "ur": "لَمْ یا نہی والا لَا اپنے بعد کے مضارع فعل کو مجزوم کر دیتا ہے۔ یہ فعل کی حالت ہے، اسم کا اعراب نہیں۔ يَذْهَبُ کی تین حالتیں دیکھیں: يَذْهَبُ (ضمہ)، لَنْ يَذْهَبَ (فتحہ، باب 45 کا منصوب) اور لَمْ يَذْهَبْ (سکون، مجزوم)۔"
       }
     },
     {
-      "type": "CONCEPT",
+      "type": "CONTRAST",
       "concept": {
-        "en": "لَا الناهية (The Prohibitive No)",
-        "ar": "لَا النَّاهِيَة",
-        "ur": "لَا الناهیہ (ممنوعہ)"
+        "en": "A sound final letter takes a sukūn",
+        "ar": "صحیح آخری حرف پر سکون",
+        "ur": "الْحَرْفُ الصَّحِيحُ يُسَكَّنُ"
       },
+      "examples": [
+        {
+          "ar": "يَكْتُبُ",
+          "ar_plain": "يكتب",
+          "translit": "yaktubu",
+          "en": "he writes",
+          "ur": "وہ لکھتا ہے"
+        },
+        {
+          "ar": "لَمْ يَكْتُبْ",
+          "ar_plain": "لم يكتب",
+          "translit": "lam yaktub",
+          "en": "he did not write",
+          "ur": "اس نے نہیں لکھا"
+        }
+      ],
       "explanation": {
-        "en": "لَا الناهية commands the listener NOT to do something. It is used for prohibition, not general negation. لَا + المضارع مجزوم = 'do not [verb].'",
-        "ur": "لَا الناهية سننے والے کو حکم دیتا ہے کہ کچھ مت کرو۔ یہ ممنوعہ کے لیے ہے، عمومی انکار کے لیے نہیں۔ لَا + المضارع مجزوم = 'مت [فعل]'۔"
+        "en": "Sign one: the ḍamma on the last letter becomes a sukūn after لَمْ.",
+        "ur": "پہلی علامت: لَمْ کے بعد آخری حرف کا ضمہ سکون بن جاتا ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "لَا تَقُولُوا",
-        "ar_plain": "لا تقولوا",
-        "translit": "laa taquuluu",
-        "en": "do not say (pl.)",
-        "ur": "مت کہو (جمع)"
-      },
-      "explanation": {
-        "en": "لَا تَقُولُوا — 'do not say.' تَقُولُوا is مجزوم because لَا الناهية precedes it. The final واو indicates plural 'you all.'",
-        "ur": "لَا تَقُولُوا — 'مت کہو'۔ تَقُولُوا مجزوم ہے کیونکہ لَا الناهية اس کے پہلے ہے۔ آخری واو جمع 'تم سب' کو دکھاتا ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "لَا تَفْتَرُوا عَلَى اللَّهِ الْكَذِبَ",
-        "ar_plain": "لا تفتروا على الله الكذب",
-        "translit": "laa taftariu 'alaa Allahi al-kadhhiba",
-        "en": "Do not fabricate falsehood against Allah.",
-        "ur": "اللہ پر جھوٹ مت گھڑو۔"
-      },
-      "explanation": {
-        "en": "لَا تَفْتَرُوا — 'do not fabricate.' تَفْتَرُوا is مجزوم after لَا الناهية. The واو is the plural marker for 'you all.' This is a command to a group — 'all of you, do not do this.'",
-        "ur": "لَا تَفْتَرُوا — 'مت گھڑو'۔ تَفْتَرُوا لَا الناهية کے بعد مجزوم ہے۔ واو جمع کا نشان ہے 'تم سب' کے لیے۔ یہ ایک جماعت کو حکم ہے — 'تم سب، یہ مت کرو'۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
+      "type": "CONTRAST",
       "concept": {
-        "en": "لَا النَّاهِيَة vs لَا النَّافِيَة",
-        "ar": "لَا النَّاهِيَةُ وَلَا النَّافِيَةُ",
-        "ur": "لَا نَاهِيَہ اور لَا نَافِيَہ"
+        "en": "A weak final letter drops",
+        "ar": "کمزور آخری حرف گر جاتا ہے",
+        "ur": "حَرْفُ الْعِلَّةِ يُحْذَفُ"
       },
+      "examples": [
+        {
+          "ar": "يَرْمِي · يَدْعُو",
+          "ar_plain": "يرمي · يدعو",
+          "translit": "yarmī · yadʿū",
+          "en": "he throws · he calls",
+          "ur": "وہ پھینکتا ہے · وہ بلاتا ہے"
+        },
+        {
+          "ar": "لَمْ يَرْمِ · لَمْ يَدْعُ",
+          "ar_plain": "لم يرم · لم يدع",
+          "translit": "lam yarmi · lam yadʿu",
+          "en": "he did not throw · he did not call",
+          "ur": "اس نے نہیں پھینکا · اس نے نہیں بلایا"
+        }
+      ],
       "explanation": {
-        "en": "The same لَا does two jobs. لَا النَّاهِيَة forbids and makes the verb jussive: لَا تَعْبُدُوا — 'do not worship' (ن dropped). لَا النَّافِيَة only negates and changes nothing: لَا أَعْبُدُ مَا تَعْبُدُونَ — 'I do not worship what you worship' (109:2). Ask: is it a command not to, or a statement?",
-        "ur": "ایک ہی لَا دو کام کرتا ہے۔ لَا نَاهِيَہ منع کرتا ہے اور فعل کو مجزوم کرتا ہے: لَا تَعْبُدُوا — 'عبادت نہ کرو' (ن گر گیا)۔ لَا نَافِيَہ صرف نفی کرتا ہے اور کچھ نہیں بدلتا: لَا أَعْبُدُ مَا تَعْبُدُونَ — 'میں اس کی عبادت نہیں کرتا جس کی تم کرتے ہو' (109:2)۔ پوچھیے: یہ منع کرنا ہے یا خبر دینا؟"
+        "en": "Sign two: the weak final letter (ـي, ـو) is gone after لَمْ, as in Chapter 57. Only the verbs you have met are used; no new weak verb is generated here.",
+        "ur": "دوسری علامت: لَمْ کے بعد کمزور آخری حرف (ـي، ـو) غائب ہو جاتا ہے، جیسا کہ باب 57 میں۔ یہاں صرف وہی افعال استعمال ہوتے ہیں جو آپ دیکھ چکے ہیں؛ کوئی نیا کمزور فعل نہیں بنایا جاتا۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "CONTRAST",
+      "concept": {
+        "en": "The five forms drop their final ن",
+        "ar": "پانچ صورتیں آخری ن گرا دیتی ہیں",
+        "ur": "الْأَفْعَالُ الْخَمْسَةُ تَحْذِفُ النُّونَ"
+      },
+      "examples": [
+        {
+          "ar": "يَذْهَبُونَ",
+          "ar_plain": "يذهبون",
+          "translit": "yadhhabūna",
+          "en": "they go",
+          "ur": "وہ جاتے ہیں"
+        },
+        {
+          "ar": "لَمْ يَذْهَبُوا",
+          "ar_plain": "لم يذهبوا",
+          "translit": "lam yadhhabū",
+          "en": "they did not go",
+          "ur": "وہ نہیں گئے"
+        }
+      ],
+      "explanation": {
+        "en": "Sign three: the five forms (the ones that end in ـونَ, ـانِ, ـينَ) lose the final ن after لَمْ. The sukūn sign is not used for them.",
+        "ur": "تیسری علامت: پانچ صورتیں (جو ـونَ، ـانِ، ـينَ پر ختم ہوتی ہیں) لَمْ کے بعد آخری ن کھو دیتی ہیں۔ ان کے لیے سکون کی علامت استعمال نہیں ہوتی۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "لَا تَمْنَعُوا الْخَيْرَ",
-        "ar_plain": "لا تمنعوا الخير",
-        "translit": "laa tamna'uu al-khayra",
-        "en": "Do not withhold good.",
-        "ur": "بھلائی مت روکو۔"
+        "ar": "وَلَا تَيْأَسُوا مِن رَّوْحِ اللَّهِ",
+        "ar_plain": "ولا تياسوا من روح الله",
+        "translit": "walā tayʾasū min rrawḥi al-lahi",
+        "en": "and do not despair of the relief of Allah",
+        "ur": "اور اللہ کی رحمت سے مایوس نہ ہو"
       },
       "explanation": {
-        "en": "لَا تَمْنَعُوا — 'do not withhold.' تَمْنَعُوا is مجزوم after لَا الناهية. This is a command to plural 'you all' — 'do not withhold good from those who deserve it.'",
-        "ur": "لَا تَمْنَعُوا — 'مت روکو'۔ تَمْنَعُوا لَا الناهية کے بعد مجزوم ہے۔ یہ جمع 'تم سب' کو حکم ہے — 'جو مستحق ہیں ان سے بھلائی مت روکو'۔"
+        "en": "وَلَا تَيْأَسُوا: the verb is a five form, and the ن of تَيْأَسُونَ has dropped after the prohibitive لَا. The ayah is exact; the verb is given with its meaning, 'despair'. (Yusuf 12:87) (Yusuf 12:87)",
+        "ur": "وَلَا تَيْأَسُوا: فعل پانچ صورتوں میں سے ہے، اور نہی والے لَا کے بعد تَيْأَسُونَ کا ن گر گیا ہے۔ آیت بالکل وہی ہے؛ فعل اپنے معنی 'مایوس ہونا' کے ساتھ دیا گیا ہے۔ (یوسف 12:87) (Yusuf 12:87)"
       }
     }
   ],
@@ -113,161 +144,270 @@
       "type": "TAP_TRANSLATION",
       "id": "ch68-l01-ex01",
       "prompt": {
-        "ar": "لَا تَقُولُوا لِمَا تَصِفُ أَلْسِنَتُكُمُ الْكَذِبَ",
-        "ar_plain": "لا تقولوا لما تصف السنتكم الكذب",
-        "translit": "laa taquuluu limaa tasifu al-sinatukumu al-kadhhiba",
-        "en": "Do not say what your tongues describe as false.",
-        "ur": "جسے تمہاری زبانیں جھوٹ بتاتی ہیں وہ مت کہو۔"
+        "ar": "لَمْ ___",
+        "ar_plain": "لم ___",
+        "translit": "lam ___",
+        "en": "(which form follows لَمْ for يَكْتُبُ?)",
+        "ur": "(يَكْتُبُ کے لیے لَمْ کے بعد کون سی صورت آتی ہے؟)"
       },
       "options": [
         {
-          "en": "Do not say what your tongues describe as false.",
-          "ur": "جسے تمہاری زبانیں جھوٹ بتاتی ہیں وہ مت کہو۔"
+          "en": "يَكْتُبُ",
+          "ur": "يَكْتُبُ"
         },
         {
-          "en": "You do not say what your tongues describe as false.",
-          "ur": "تم نہیں کہتے جو تمہاری زبانیں جھوٹ بتاتی ہیں۔"
+          "en": "يَكْتُبْ",
+          "ur": "يَكْتُبْ"
         },
         {
-          "en": "They do not say what their tongues describe as false.",
-          "ur": "وہ نہیں کہتے جو ان کی زبانیں جھوٹ بتاتی ہیں۔"
+          "en": "يَكْتُبَ",
+          "ur": "يَكْتُبَ"
         },
         {
-          "en": "Do not describe your tongues as false.",
-          "ur": "اپنی زبانوں کو جھوٹ مت بتاؤ۔"
+          "en": "كَتَبَ",
+          "ur": "كَتَبَ"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَا تَقُولُوا is the prohibitive — 'do not say.' تَقُولُوا is مجزوم because لَا الناهية precedes it. This is a command, not a statement of fact.",
-        "ur": "لَا تَقُولُوا ممنوعہ ہے — 'مت کہو'۔ تَقُولُوا لَا الناهية کے پہلے ہونے کی وجہ سے مجزوم ہے۔ یہ حکم ہے، حقیقت کا بیان نہیں۔"
+        "en": "After لَمْ the sound-final verb takes a sukūn: لَمْ يَكْتُبْ.",
+        "ur": "لَمْ کے بعد صحیح آخری حرف والا فعل سکون لیتا ہے: لَمْ يَكْتُبْ۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch68-l01-ex02",
-      "statement": {
-        "en": "لَا الناهية causes the المضارع to be مجزوم (jussive) — this is the same effect as لَمْ.",
-        "ur": "لَا الناهية کی وجہ سے المضارع مجزوم (jussive) ہوتا ہے — یہ لَمْ کے اثر سے ایسا ہی ہے۔",
-        "ar_example": {
-          "ar": "لَا تَفْتَرُوا عَلَى اللَّهِ الْكَذِبَ",
-          "ar_plain": "لا تفتروا على الله الكذب",
-          "translit": "laa taftariu 'alaa Allahi al-kadhhiba",
-          "en": "Do not fabricate falsehood against Allah.",
-          "ur": "اللہ پر جھوٹ مت گھڑو۔"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
       "type": "FILL_BLANK",
-      "id": "ch68-l01-ex03",
+      "id": "ch68-l01-ex02",
       "mode": "TAP",
-      "sentence_ar": "___ تَمْنَعُوا الْخَيْرَ عَنِ الْمَسَاكِينِ",
+      "sentence_ar": "لَمْ ___ الطَّالِبُ الدَّرْسَ",
       "hint": {
-        "en": "Do not withhold good from the poor.",
-        "ur": "مساکین سے بھلائی مت روکو۔"
+        "en": "The student did not write the lesson.",
+        "ur": "طالب علم نے سبق نہیں لکھا۔"
       },
       "options": [
         {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "do not (prohibitive)",
-          "ur": "مت (ممنوعہ)"
+          "ar": "يَكْتُبُ",
+          "ar_plain": "يكتب",
+          "translit": "yaktubu",
+          "en": "writes (ḍamma)",
+          "ur": "لکھتا ہے (ضمہ)"
         },
         {
-          "ar": "لَمْ",
-          "ar_plain": "لم",
-          "translit": "lam",
-          "en": "did not (past negation)",
-          "ur": "نہیں (ماضی انکار)"
+          "ar": "يَكْتُبَ",
+          "ar_plain": "يكتب",
+          "translit": "yaktuba",
+          "en": "writes (fatḥa)",
+          "ur": "لکھے (فتحہ)"
         },
         {
-          "ar": "لَيْسَ",
-          "ar_plain": "ليس",
-          "translit": "laysa",
-          "en": "is not",
-          "ur": "نہیں ہے"
+          "ar": "يَكْتُبْ",
+          "ar_plain": "يكتب",
+          "translit": "yaktub",
+          "en": "writes (jussive, sukūn)",
+          "ur": "لکھتا (مجزوم، سکون)"
         },
         {
-          "ar": "إِنْ",
-          "ar_plain": "ان",
-          "translit": "in",
-          "en": "if",
-          "ur": "اگر"
+          "ar": "كَتَبَ",
+          "ar_plain": "كتب",
+          "translit": "kataba",
+          "en": "wrote",
+          "ur": "لکھا"
         }
       ],
       "correct_answer": {
-        "ar": "لَا",
-        "ar_plain": "لا",
-        "translit": "laa",
-        "en": "do not (prohibitive)",
-        "ur": "مت (ممنوعہ)"
+        "ar": "يَكْتُبْ",
+        "ar_plain": "يكتب",
+        "translit": "yaktub",
+        "en": "writes (jussive, sukūn)",
+        "ur": "لکھتا (مجزوم، سکون)"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After لَمْ the verb takes the sukūn.",
+        "ur": "لَمْ کے بعد فعل سکون لیتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l01-ex03",
+      "prompt": {
+        "ar": "لَمْ يَرْمِ",
+        "ar_plain": "لم يرم",
+        "translit": "lam yarmi",
+        "en": "(what is the sign here?)",
+        "ur": "(یہاں علامت کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "A sukūn on the last letter",
+          "ur": "آخری حرف پر سکون"
+        },
+        {
+          "en": "The final ن has dropped",
+          "ur": "آخری ن گر گیا ہے"
+        },
+        {
+          "en": "A fatḥa on the last letter",
+          "ur": "آخری حرف پر فتحہ"
+        },
+        {
+          "en": "The weak final letter ـي has dropped: يَرْمِي → يَرْمِ",
+          "ur": "کمزور آخری حرف ـي گر گیا ہے: يَرْمِي → يَرْمِ"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A weak final letter is the thing that drops, as in Chapter 57.",
+        "ur": "کمزور آخری حرف گرتا ہے، جیسا کہ باب 57 میں۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch68-l01-ex04",
+      "mode": "TAP",
+      "sentence_ar": "هُمْ لَمْ ___",
+      "hint": {
+        "en": "They did not go.",
+        "ur": "وہ نہیں گئے۔"
+      },
+      "options": [
+        {
+          "ar": "يَذْهَبُوا",
+          "ar_plain": "يذهبوا",
+          "translit": "yadhhabū",
+          "en": "go (five form, no final ن)",
+          "ur": "جاتے (پانچ صورتیں، بغیر ن)"
+        },
+        {
+          "ar": "يَذْهَبُونَ",
+          "ar_plain": "يذهبون",
+          "translit": "yadhhabūna",
+          "en": "go (with ن)",
+          "ur": "جاتے ہیں (ن کے ساتھ)"
+        },
+        {
+          "ar": "يَذْهَبْ",
+          "ar_plain": "يذهب",
+          "translit": "yadhhab",
+          "en": "goes (sukūn)",
+          "ur": "جاتا (سکون)"
+        },
+        {
+          "ar": "يَذْهَبُ",
+          "ar_plain": "يذهب",
+          "translit": "yadhhabu",
+          "en": "goes (ḍamma)",
+          "ur": "جاتا ہے (ضمہ)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يَذْهَبُوا",
+        "ar_plain": "يذهبوا",
+        "translit": "yadhhabū",
+        "en": "go (five form, no final ن)",
+        "ur": "جاتے (پانچ صورتیں، بغیر ن)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A five form loses its final ن after لَمْ: لَمْ يَذْهَبُوا.",
+        "ur": "پانچ صورتوں والا فعل لَمْ کے بعد آخری ن کھو دیتا ہے: لَمْ يَذْهَبُوا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l01-ex05",
+      "prompt": {
+        "ar": "وَلَا تَيْأَسُوا",
+        "ar_plain": "ولا تياسوا",
+        "translit": "walā tayʾasū",
+        "en": "(12:87: why has the ن of تَيْأَسُونَ dropped?)",
+        "ur": "(12:87: تَيْأَسُونَ کا ن کیوں گر گیا؟)"
+      },
+      "options": [
+        {
+          "en": "Because the word is a noun",
+          "ur": "کیونکہ لفظ اسم ہے"
+        },
+        {
+          "en": "The prohibitive لَا governs a five form, and a five form drops its ن",
+          "ur": "نہی والا لَا پانچ صورتوں والے فعل پر عمل کرتا ہے، اور پانچ صورتیں ن گرا دیتی ہیں"
+        },
+        {
+          "en": "Because the verb is in the past",
+          "ur": "کیونکہ فعل ماضی میں ہے"
+        },
+        {
+          "en": "Because of a mistake in the text",
+          "ur": "کیونکہ متن میں غلطی ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After the prohibitive لَا the five form is jussive, and its sign is the missing ن.",
+        "ur": "نہی والے لَا کے بعد پانچ صورتیں مجزوم ہوتی ہیں، اور ان کی علامت ن کا گرنا ہے۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch68-l01-ex04",
+      "id": "ch68-l01-ex06",
       "left_column": [
         {
-          "ar": "لَا تَقُولُوا",
-          "ar_plain": "لا تقولوا",
-          "translit": "laa taquuluu",
-          "en": "do not say",
-          "ur": "نہ کہو"
+          "ar": "لَمْ يَذْهَبْ",
+          "ar_plain": "لم يذهب",
+          "translit": "lam yadhhab",
+          "en": "he did not go",
+          "ur": "وہ نہیں گیا"
         },
         {
-          "ar": "لَا يُفْلِحُونَ",
-          "ar_plain": "لا يفلحون",
-          "translit": "laa yuflihuuna",
-          "en": "they will not succeed",
-          "ur": "وہ کامیاب نہیں ہوں گے"
+          "ar": "لَمْ يَرْمِ",
+          "ar_plain": "لم يرم",
+          "translit": "lam yarmi",
+          "en": "he did not throw",
+          "ur": "اس نے نہیں پھینکا"
         },
         {
-          "ar": "لَا تَأْكُلُوا",
-          "ar_plain": "لا تأكلوا",
-          "translit": "laa ta'kuluu",
-          "en": "do not eat",
-          "ur": "نہ کھاؤ"
+          "ar": "لَمْ يَذْهَبُوا",
+          "ar_plain": "لم يذهبوا",
+          "translit": "lam yadhhabū",
+          "en": "they did not go",
+          "ur": "وہ نہیں گئے"
         },
         {
-          "ar": "لَا أَعْبُدُ",
-          "ar_plain": "لا أعبد",
-          "translit": "laa a'budu",
-          "en": "I do not worship",
-          "ur": "میں عبادت نہیں کرتا"
+          "ar": "لَنْ يَذْهَبَ",
+          "ar_plain": "لن يذهب",
+          "translit": "lan yadhhaba",
+          "en": "he will not go",
+          "ur": "وہ نہیں جائے گا"
         }
       ],
       "right_column": [
         {
-          "en": "لَا النَّاهِيَة — 'do not say' (ن dropped)",
-          "ur": "لَا نَاهِيَہ — 'نہ کہو' (ن گرا)"
+          "en": "a fatḥa: the subjunctive, not the jussive",
+          "ur": "فتحہ: منصوب، مجزوم نہیں"
         },
         {
-          "en": "لَا النَّافِيَة — 'will not succeed' (ن kept)",
-          "ur": "لَا نَافِيَہ — 'کامیاب نہیں' (ن باقی)"
+          "en": "a sukūn on a sound final letter",
+          "ur": "صحیح آخری حرف پر سکون"
         },
         {
-          "en": "لَا النَّاهِيَة — 'do not eat' (ن dropped)",
-          "ur": "لَا نَاهِيَہ — 'نہ کھاؤ' (ن گرا)"
+          "en": "a final ن that drops",
+          "ur": "آخری ن کا گرنا"
         },
         {
-          "en": "لَا النَّافِيَة — 'I do not worship' (ḍamma kept)",
-          "ur": "لَا نَافِيَہ — 'عبادت نہیں کرتا' (ضمہ باقی)"
+          "en": "a weak final letter that drops",
+          "ur": "کمزور آخری حرف کا گرنا"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
+          1
         ],
         [
           1,
-          1
+          3
         ],
         [
           2,
@@ -275,217 +415,76 @@
         ],
         [
           3,
-          3
+          0
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch68-l01-ex05",
-      "target_translation": {
-        "en": "Do not eat from haram, do not drink alcohol.",
-        "ur": "حرام مت کھاؤ، شراب مت پیو۔"
-      },
-      "tiles": [
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "do not",
-          "ur": "مت"
-        },
-        {
-          "ar": "تَأْكُلُوا",
-          "ar_plain": "تأكلوا",
-          "translit": "ta'kuluu",
-          "en": "you eat",
-          "ur": "تم کھاتے ہو"
-        },
-        {
-          "ar": "الْحَرَامَ",
-          "ar_plain": "الحرام",
-          "translit": "al-haraamu",
-          "en": "the haram",
-          "ur": "حرام"
-        },
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "do not",
-          "ur": "مت"
-        },
-        {
-          "ar": "تَشْرَبُوا",
-          "ar_plain": "تشربوا",
-          "translit": "tashrabu",
-          "en": "you drink",
-          "ur": "تم پیتے ہو"
-        },
-        {
-          "ar": "الْخَمْرَ",
-          "ar_plain": "الخمر",
-          "translit": "al-khamra",
-          "en": "the alcohol",
-          "ur": "شراب"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch68-l01-ex06",
-      "sentence_ar": "لَا تَفْتَرُوا عَلَى اللَّهِ الْكَذِبَ",
-      "words": [
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "do not",
-          "ur": "مت"
-        },
-        {
-          "ar": "تَفْتَرُوا",
-          "ar_plain": "تفتروا",
-          "translit": "taftariu",
-          "en": "you fabricate",
-          "ur": "تم گھڑو"
-        },
-        {
-          "ar": "عَلَى",
-          "ar_plain": "على",
-          "translit": "alaa",
-          "en": "against",
-          "ur": "پر"
-        },
-        {
-          "ar": "اللَّهِ",
-          "ar_plain": "الله",
-          "translit": "Allahi",
-          "en": "Allah",
-          "ur": "اللہ"
-        },
-        {
-          "ar": "الْكَذِبَ",
-          "ar_plain": "الكذب",
-          "translit": "al-kadhhiba",
-          "en": "falsehood",
-          "ur": "جھوٹ"
-        }
-      ],
-      "available_roles": [
-        "PARTICLE",
-        "VERB",
-        "SUBJECT",
-        "OBJECT",
-        "PREPOSITION",
-        "TIME_ZARF",
-        "PLACE_ZARF",
-        "CONJUNCTION",
-        "POSSESSIVE"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "VERB",
-        "PREPOSITION",
-        "POSSESSIVE",
-        "OBJECT"
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch68-l01-ex07",
-      "prompt": {
-        "ar": "لَا تَكُونُوا مِنَ الْمُشْرِكِينَ",
-        "ar_plain": "لا تكونوا من المشركين",
-        "translit": "laa takuunuuna mina al-mushrikiina",
-        "en": "Do not be from the polytheists.",
-        "ur": "مشرکین میں سے مت ہو۔"
-      },
-      "options": [
-        {
-          "en": "Do not be from the polytheists.",
-          "ur": "مشرکین میں سے مت ہو۔"
-        },
-        {
-          "en": "You are not from the polytheists.",
-          "ur": "تم مشرکین میں سے نہیں ہو۔"
-        },
-        {
-          "en": "You were not among the polytheists.",
-          "ur": "تم مشرکوں میں سے نہیں تھے۔"
-        },
-        {
-          "en": "You will not be from the polytheists.",
-          "ur": "تم مشرکین میں سے نہیں ہو گے۔"
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَا تَكُونُوا is the prohibitive — 'do not be.' تَكُونُوا is مجزوم after لَا الناهية. This is a command not to belong to the polytheists — not a statement of fact.",
-        "ur": "لَا تَكُونُوا ممنوعہ ہے — 'مت ہو'۔ تَكُونُوا لَا الناهية کے بعد مجزوم ہے۔ یہ مشرکین میں شامل نہ ہونے کا حکم ہے — حقیقت کا بیان نہیں۔"
+        "en": "Three jussive signs, and a fatḥa that belongs to a different state.",
+        "ur": "جزم کی تین علامتیں، اور ایک فتحہ جو ایک مختلف حالت کی ہے۔"
       }
     },
     {
-      "type": "IDENTIFY_ROOT",
-      "id": "ch68-l01-ex08",
-      "word": {
-        "ar": "تَفْتَرُوا",
-        "ar_plain": "تفتروا",
-        "translit": "taftariu",
-        "en": "you fabricate",
-        "ur": "تم گھڑو"
+      "type": "TRUE_FALSE",
+      "id": "ch68-l01-ex07",
+      "statement": {
+        "en": "The jussive signs are noun cases, like the cases of a noun.",
+        "ur": "جزم کی علامتیں اسم کے اعراب کی طرح اسم کی حالتیں ہیں۔"
       },
-      "options": [
-        "ف ر ي",
-        "ف ت ر",
-        "ع م ل",
-        "ن ص ر"
-      ],
-      "correct_index": 0,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. They are states of the verb. A noun takes a case; an imperfect verb takes a state: ḍamma, fatḥa or the jussive signs.",
+        "ur": "غلط۔ یہ فعل کی حالتیں ہیں۔ اسم اعراب لیتا ہے؛ مضارع فعل ایک حالت لیتا ہے: ضمہ، فتحہ یا جزم کی علامتیں۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch68-l01-ex08",
+      "statement": {
+        "en": "After لَمْ, the verb يَذْهَبُونَ stays exactly as it is.",
+        "ur": "لَمْ کے بعد فعل يَذْهَبُونَ بالکل ویسا ہی رہتا ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. It becomes لَمْ يَذْهَبُوا: the final ن drops.",
+        "ur": "غلط۔ یہ لَمْ يَذْهَبُوا بن جاتا ہے: آخری ن گر جاتا ہے۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "لَا الناهية — the prohibitive particle (causes jussive)",
-      "ar": "لَا النَّاهِيَة — حَرْفُ النَّهْيِ (يُجْزِمُ الْمُضَارِعَ)",
-      "ur": "لَا الناهیہ — ممنوعہ کا ذرہ (مجزوم بناتا ہے)"
+      "en": "A sign on the verb",
+      "ar": "عَلَامَةُ الْجَزْمِ",
+      "ur": "فعل پر علامت"
     },
     "ayah": {
-      "surah": 16,
-      "ayah": 116,
-      "label": "An-Nahl 16:116",
-      "ar": "وَلَا تَقُولُوا لِمَا تَصِفُ أَلْسِنَتُكُمُ الْكَذِبَ هَٰذَا حَلَالٌ وَهَٰذَا حَرَامٌ لِّتَفْتَرُوا عَلَى اللَّهِ الْكَذِبَ ۚ إِنَّ الَّذِينَ يَفْتَرُونَ عَلَى اللَّهِ الْكَذِبَ لَا يُفْلِحُونَ",
-      "en": "And do not say about what your tongues assert of untruth, 'This is lawful and this is unlawful,' to invent falsehood about Allah. Indeed, those who invent falsehood about Allah will not succeed.",
-      "ur": "اور اپنی زبانوں سے گھڑے ہوئے جھوٹ کی بنا پر یہ نہ کہو کہ یہ حلال ہے اور یہ حرام، کہ اللہ پر جھوٹ باندھو۔ بے شک جو لوگ اللہ پر جھوٹ باندھتے ہیں وہ کامیاب نہیں ہوں گے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/016116.mp3"
+      "surah": 12,
+      "ayah": 87,
+      "label": "Yusuf 12:87",
+      "ar": "وَلَا تَيْأَسُوا مِن رَّوْحِ اللَّهِ",
+      "en": "and do not despair of the relief of Allah",
+      "ur": "اور اللہ کی رحمت سے مایوس نہ ہو",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012087.mp3"
     },
     "highlighted_word_indices": [
       0,
-      1,
-      22
+      1
+    ],
+    "highlighted_words": [
+      "وَلَا",
+      "تَيْأَسُوا"
     ],
     "noor_explanation": {
-      "en": "وَلَا تَقُولُوا — لَا النَّاهِيَة makes تَقُولُونَ jussive, so its ن drops: تَقُولُوا, 'do not say'. The ayah ends لَا يُفْلِحُونَ — here لَا only negates, so the ن stays: 'they will not succeed'. Same word لَا, two different jobs, and the ن tells you which.",
-      "ur": "وَلَا تَقُولُوا — لَا نَاهِيَہ تَقُولُونَ کو مجزوم کرتا ہے، اس لیے ن گر جاتا ہے: تَقُولُوا، 'نہ کہو'۔ آیت لَا يُفْلِحُونَ پر ختم ہوتی ہے — یہاں لَا صرف نفی کرتا ہے، اس لیے ن باقی رہتا ہے: 'کامیاب نہیں ہوں گے'۔ ایک ہی لَا، دو مختلف کام، اور ن بتاتا ہے کون سا۔"
+      "en": "وَلَا تَيْأَسُوا — the prohibitive لَا and a five form without its ن: one of the three signs in one ayah.",
+      "ur": "وَلَا تَيْأَسُوا — نہی والا لَا اور بغیر ن کے پانچ صورتوں والا فعل: ایک آیت میں تین میں سے ایک علامت۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "لَا الناهية makes the present-tense verb jussive. It forbids: 'do not'. لَا + jussive present = prohibition. تَقُولُوا, تَفْتَرُوا — both are jussive after لَا.",
-      "ur": "لَا الناهية مضارع کو جزم دیتا ہے۔ یہ منع کرتا ہے: 'مت کرو'۔ لَا + مضارع مجزوم = نہی۔ تَقُولُوا, تَفْتَرُوا — لَا کے بعد مجزوم ہیں۔"
+      "en": "Three signs of the jussive: a sukūn, a dropped weak letter, a dropped ن — and they belong to the verb.",
+      "ur": "جزم کی تین علامتیں: سکون، گرا ہوا کمزور حرف، گرا ہوا ن — اور وہ فعل کی ہیں۔"
     }
   }
 }

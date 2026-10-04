@@ -2,296 +2,413 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 68, Lesson 5 — Sentence transformation and parsing with jussive particles.",
+    "_note": "Chapter 68, Lesson 5 (ch68-l05, rebuilt in place; owner decision D6). Teaches the bounded two-verb condition: conditional إِنْ / مَنْ puts both the condition verb and the answer verb in the jussive. Initial models are authored and unambiguous (إِنْ تَدْرُسْ تَنْجَحْ, مَنْ يَدْرُسْ يَنْجَحْ, إِنْ تَدْرُسُوا تَنْجَحُوا); مَنْ as a question (مَنْ يَكْتُبُ؟) keeps the indicative. Exact: 49:14 (وَإِن تُطِيعُوا اللَّهَ وَرَسُولَهُ لَا يَلِتْكُم — a five-form condition; the answer is introduced by an ordinary negative لَا and يَلِتْكُم is supplied with its meaning, not a weak-final example) and 65:2 (وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا — يَتَّقِ is supplied as a derived verb whose final ي has dropped, يَجْعَل a sound-final jussive). No claim is made that every conditional answer looks like this. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-68-content-proposal.md and its review amendments.",
+    "title": "Two Verbs, One Condition: إِنْ and مَنْ",
+    "titleAr": "فِعْلَانِ وَشَرْطٌ وَاحِدٌ: إِنْ وَمَنْ",
+    "titleUr": "دو فعل، ایک شرط: إِنْ اور مَنْ",
     "chapter_order": 68,
     "lesson_order": 5,
-    "chapter_title": "الجوازم",
-    "title": "Jussive Parsing Practice — From indicative to jussive",
-    "titleAr": "تَدْرِيبٌ عَلَى الْإِعْرَابِ — مِنَ الْمَرْفُوعِ إِلَى الْمَجْزُومِ",
-    "source": "book_8_lesson_2_jussive_parsing_practice.md",
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 7,
-      "ayah": 180,
-      "label": "Al-A'raf 7:180",
-      "ar": "وَلِلَّهِ الْأَسْمَاءُ الْحُسْنَىٰ فَادْعُوهُ بِهَا ۖ وَذَرُوا الَّذِينَ يُلْحِدُونَ فِي أَسْمَائِهِ ۚ سَيُجْزَوْنَ مَا كَانُوا يَعْمَلُونَ",
-      "en": "And to Allah belong the best names, so invoke Him by them. And leave [the company of] those who practice deviation concerning His names. They will be recompensed for what they have been doing.",
-      "ur": "اور اللہ کے سب نام اچھے ہیں، تو اسے انہی ناموں سے پکارو، اور جو لوگ اس کے ناموں میں کج روی اختیار کرتے ہیں انہیں چھوڑ دو، جو کچھ وہ کرتے رہے ہیں اس کا بدلہ پائیں گے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/007180.mp3"
+      "surah": 65,
+      "ayah": 2,
+      "label": "At-Talaq 65:2",
+      "ar": "وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا",
+      "en": "And whoever fears Allah — He will make for him a way out",
+      "ur": "اور جو اللہ سے ڈرے گا وہ اس کے لیے نکلنے کی راہ بنا دے گا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/065002.mp3"
     },
     "noor_intro": {
-      "en": "فَادْعُوهُ بِهَا وَذَرُوا الَّذِينَ يُلْحِدُونَ — 'so invoke Him by them, and leave those who deviate'. ادْعُوا and ذَرُوا are imperatives (ن dropped, like their jussives). يُلْحِدُونَ keeps its ن: no jussive particle comes before it. Today we practise telling the states apart.",
-      "ur": "فَادْعُوهُ بِهَا وَذَرُوا الَّذِينَ يُلْحِدُونَ — 'تو اسے انہی ناموں سے پکارو، اور کج روی کرنے والوں کو چھوڑ دو'۔ ادْعُوا اور ذَرُوا فعلِ امر ہیں (ن گرا، اپنے مجزوم کی طرح)۔ يُلْحِدُونَ کا ن باقی ہے: اس سے پہلے کوئی جازم حرف نہیں۔ آج ہم ان حالتوں کو الگ پہچاننے کی مشق کریں گے۔"
+      "en": "مَنْ here is not a question. 'Whoever fears Allah' is a condition, and the answer is another verb: both verbs wear the jussive.",
+      "ur": "یہاں مَنْ سوال نہیں۔ 'جو اللہ سے ڈرے' ایک شرط ہے، اور جواب ایک اور فعل ہے: دونوں افعال مجزوم ہیں۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Indicative vs Jussive — The Same Verb, Different States",
-        "ar": "الْمَرْفُوعُ بِالْمُقَابِلِ الْمَجْزُومُ — نَفْسُ الْفِعْلِ، حَالٌ مُخْتَلِفٌ",
-        "ur": "مرفوع بمقابلے مجزوم — وہی فعل، مختلف حالت"
+        "en": "One particle, two jussive verbs",
+        "ar": "أَدَاةُ شَرْطٍ وَفِعْلَانِ مَجْزُومَانِ",
+        "ur": "ایک حرف، دو مجزوم فعل"
       },
       "explanation": {
-        "en": "The same verb can be مرفوع (indicative) or مجزوم (jussive) depending on what precedes it. يَفْعَلُ (indicative) vs لَا يَفْعَلْ (jussive after لَا الناهية). يَفْعَلُ (indicative) vs لَمْ يَفْعَلْ (jussive after لَمْ).",
-        "ur": "وہی فعل مرفوع (indicative) یا مجزوم (jussive) ہو سکتا ہے اس پر منحصر ہے کہ اس سے پہلے کیا ہے۔ يَفْعَلُ (indicative) vs لَا يَفْعَلْ (لَا الناهية کے بعد مجزوم)۔ يَفْعَلُ (indicative) vs لَمْ يَفْعَلْ (لَمْ کے بعد مجزوم)۔"
+        "en": "Conditional إِنْ ('if') and conditional مَنْ ('whoever') govern two verbs: the condition and the answer. Both are jussive. إِنْ تَدْرُسْ تَنْجَحْ, 'if you study, you will pass': both verbs take a sukūn. إِنْ تَدْرُسُوا تَنْجَحُوا, 'if you all study, you will pass': both five forms lose their ن.",
+        "ur": "شرطیہ إِنْ ('اگر') اور شرطیہ مَنْ ('جو') دو افعال پر عمل کرتے ہیں: شرط اور جواب۔ دونوں مجزوم ہیں۔ إِنْ تَدْرُسْ تَنْجَحْ، 'اگر تم پڑھو تو کامیاب ہو گے': دونوں افعال سکون لیتے ہیں۔ إِنْ تَدْرُسُوا تَنْجَحُوا، 'اگر تم سب پڑھو تو کامیاب ہو گے': دونوں پانچ صورتوں والے افعال اپنا ن کھو دیتے ہیں۔"
       }
     },
     {
-      "type": "CONCEPT",
+      "type": "CONTRAST",
       "concept": {
-        "en": "Transforming from indicative to jussive",
-        "ar": "التَّحْوِيلُ مِنَ الْمَرْفُوعِ إِلَى الْمَجْزُومِ",
-        "ur": "مرفوع سے مجزوم میں تبدیلی"
+        "en": "Conditional مَنْ and question مَنْ",
+        "ar": "شرطیہ مَنْ اور استفہامیہ مَنْ",
+        "ur": "مَنْ الشَّرْطِيَّةُ وَمَنِ الِاسْتِفْهَامِيَّةُ"
       },
+      "examples": [
+        {
+          "ar": "مَنْ يَدْرُسْ يَنْجَحْ",
+          "ar_plain": "من يدرس ينجح",
+          "translit": "man yadrus yanjaḥ",
+          "en": "Whoever studies, passes",
+          "ur": "جو پڑھے گا کامیاب ہوگا"
+        },
+        {
+          "ar": "مَنْ يَكْتُبُ؟",
+          "ar_plain": "من يكتب؟",
+          "translit": "man yaktubu",
+          "en": "Who writes?",
+          "ur": "کون لکھتا ہے؟"
+        }
+      ],
       "explanation": {
-        "en": "When a jussive particle is added before a verb, the verb changes from مرفوع to مجزوم. The voweling changes (يَفْعَلُ → يَفْعَلْ, تَفْعَلُ → تَفْعَلْ). This is how Arabic shows that a verb is governed by a jussive particle.",
-        "ur": "جب jussive particle فعل سے پہلے آتی ہے، فعل مرفوع سے مجزوم میں بدل جاتا ہے۔ voweling بدل جاتی ہے (يَفْعَلُ → يَفْعَلْ, تَفْعَلُ → تَفْعَلْ)۔ یہ عربی کا طریقہ ہے دکھانے کا کہ فعل jussive particle کے تحت ہے۔"
+        "en": "In the first, مَنْ is conditional and both verbs are jussive. In the second, مَنْ asks a question and the verb stays indicative. Do not treat every مَنْ before a verb as conditional.",
+        "ur": "پہلے میں مَنْ شرطیہ ہے اور دونوں افعال مجزوم ہیں۔ دوسرے میں مَنْ سوال کرتا ہے اور فعل مرفوع رہتا ہے۔ فعل سے پہلے آنے والے ہر مَنْ کو شرطیہ نہ سمجھیں۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "يَذْهَبُ ← لَمْ يَذْهَبْ",
-        "ar_plain": "يذهب ← لم يذهب",
-        "translit": "yadhhabu — lam yadhhab",
-        "en": "he goes → he did not go",
-        "ur": "وہ جاتا ہے ← وہ نہیں گیا"
+        "ar": "وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا",
+        "ar_plain": "ومن يتق الله يجعل له مخرجا",
+        "translit": "waman yattaqi al-laha yajʿal llahu makhrajan",
+        "en": "And whoever fears Allah — He will make for him a way out",
+        "ur": "اور جو اللہ سے ڈرے گا وہ اس کے لیے نکلنے کی راہ بنا دے گا"
       },
       "explanation": {
-        "en": "يَذْهَبُ is indicative (مَرْفُوع), ending in ḍamma. After لَمْ it becomes jussive: the ḍamma becomes a sukūn — يَذْهَبْ.",
-        "ur": "يَذْهَبُ مرفوع ہے، آخر میں ضمہ۔ لَمْ کے بعد مجزوم ہو جاتا ہے: ضمہ سکون بن جاتا ہے — يَذْهَبْ۔"
+        "en": "وَمَن يَتَّقِ اللَّهَ is the condition and يَجْعَل لَّهُ مَخْرَجًا the answer. يَتَّقِ is a verb of another pattern, given with its meaning, 'fears'; its final ي has dropped, the sign you know. يَجْعَل has a sukūn. (At-Talaq 65:2) (At-Talaq 65:2)",
+        "ur": "وَمَن يَتَّقِ اللَّهَ شرط ہے اور يَجْعَل لَّهُ مَخْرَجًا جواب۔ يَتَّقِ ایک اور وزن کا فعل ہے، جو اپنے معنی 'ڈرتا ہے' کے ساتھ دیا گیا ہے؛ اس کا آخری ي گر چکا ہے، وہ علامت جو آپ جانتے ہیں۔ يَجْعَل سکون والا ہے۔ (الطلاق 65:2) (At-Talaq 65:2)"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "نَسْتَعِينُ ← لَنْ نَسْتَعِينَ",
-        "ar_plain": "نستعين ← لن نستعين",
-        "translit": "nasta'iinu — lan nasta'iina",
-        "en": "we seek help → we will never seek help (naṣb, not jazm)",
-        "ur": "ہم مدد مانگتے ہیں ← ہم ہرگز مدد نہیں مانگیں گے (نصب، جزم نہیں)"
+        "ar": "وَإِن تُطِيعُوا اللَّهَ وَرَسُولَهُ لَا يَلِتْكُم مِّنْ أَعْمَالِكُمْ شَيْئًا",
+        "ar_plain": "وان تطيعوا الله ورسوله لا يلتكم من اعمالكم شيئا",
+        "translit": "waʾin tuṭīʿū al-laha warasūlahu lā yalitkum mmin ʾaʿmālikum shayʾan",
+        "en": "And if you obey Allah and His Messenger, He will not diminish for you anything from your deeds",
+        "ur": "اور اگر تم اللہ اور اس کے رسول کی اطاعت کرو تو وہ تمہارے اعمال میں سے کچھ کم نہیں کرے گا"
       },
       "explanation": {
-        "en": "لَنْ makes the verb منصوب, not مجزوم: لَنْ نَسْتَعِينَ ends in fatḥa. The jussive would end in sukūn, and in this hollow verb the long ي would drop: لَمْ نَسْتَعِنْ. Fatḥa = naṣb; sukūn = jazm.",
-        "ur": "لَنْ فعل کو منصوب کرتا ہے، مجزوم نہیں: لَنْ نَسْتَعِينَ کا آخر زبر ہے۔ مجزوم کا آخر سکون ہوتا، اور اس اجوف فعل میں لمبی ي گر جاتی: لَمْ نَسْتَعِنْ۔ زبر = نصب؛ سکون = جزم۔"
+        "en": "وَإِن تُطِيعُوا اللَّهَ وَرَسُولَهُ is the condition: a five form without its ن. The answer begins with an ordinary negative لَا, and يَلِتْكُم is given whole with its meaning, 'He will diminish for you'. You read the pair by meaning. (Al-Hujurat 49:14) (Al-Hujurat 49:14)",
+        "ur": "وَإِن تُطِيعُوا اللَّهَ وَرَسُولَهُ شرط ہے: بغیر ن کے پانچ صورتوں والا فعل۔ جواب عام نفی والے لَا سے شروع ہوتا ہے، اور يَلِتْكُم اپنے معنی 'وہ تمہارے لیے کم کرے گا' کے ساتھ پورا دیا گیا ہے۔ آپ جوڑے کو معنی سے پڑھتے ہیں۔ (الحجرات 49:14) (Al-Hujurat 49:14)"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Where the lesson stops",
+        "ur": "سبق کہاں رکتا ہے"
+      },
+      "body": {
+        "en": "This lesson teaches one pattern: إِنْ or conditional مَنْ + a jussive condition + a jussive answer. It does not claim that every conditional answer has this shape, and it does not teach other conditional particles. The next chapter looks at a different jussive answer.",
+        "ur": "یہ سبق ایک ساخت سکھاتا ہے: إِنْ یا شرطیہ مَنْ + مجزوم شرط + مجزوم جواب۔ یہ دعویٰ نہیں کرتا کہ ہر شرطیہ جواب ایسا ہوتا ہے، اور دوسرے شرطیہ حروف نہیں سکھاتا۔ اگلا باب ایک مختلف مجزوم جواب دیکھتا ہے۔"
       }
     }
   ],
   "exercises": [
     {
-      "type": "GRAMMAR_PARSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch68-l05-ex01",
-      "sentence_ar": "لَا تَقُولُوا لِمَا تَصِفُ أَلْسِنَتُكُمُ الْكَذِبَ",
-      "words": [
+      "prompt": {
+        "ar": "إِنْ تَدْرُسْ تَنْجَحْ · إِنْ تَدْرُسُ تَنْجَحُ · لَنْ تَدْرُسَ تَنْجَحَ",
+        "ar_plain": "ان تدرس تنجح · ان تدرس تنجح · لن تدرس تنجح",
+        "translit": "ʾin tadrus tanjaḥ · ʾin tadrusu tanjaḥu · lan tadrusa tanjaḥa",
+        "en": "(which sentence has a jussive condition and a jussive answer?)",
+        "ur": "(کس جملے میں شرط اور جواب دونوں مجزوم ہیں؟)"
+      },
+      "options": [
         {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "do not",
-          "ur": "مت"
+          "en": "إِنْ تَدْرُسُ تَنْجَحُ",
+          "ur": "إِنْ تَدْرُسُ تَنْجَحُ"
         },
         {
-          "ar": "تَقُولُوا",
-          "ar_plain": "تقولوا",
-          "translit": "taquulu",
-          "en": "you say",
-          "ur": "تم کہتے ہو"
+          "en": "لَنْ تَدْرُسَ تَنْجَحَ",
+          "ur": "لَنْ تَدْرُسَ تَنْجَحَ"
         },
         {
-          "ar": "لِمَا",
-          "ar_plain": "لما",
-          "translit": "limaa",
-          "en": "what",
-          "ur": "جسے"
+          "en": "إِنْ تَدْرُسْ تَنْجَحْ",
+          "ur": "إِنْ تَدْرُسْ تَنْجَحْ"
         },
         {
-          "ar": "تَصِفُ",
-          "ar_plain": "تصف",
-          "translit": "tasif",
-          "en": "describe",
-          "ur": "بیان کرتی ہیں"
-        },
-        {
-          "ar": "أَلْسِنَتُكُمُ",
-          "ar_plain": "السنتكم",
-          "translit": "alsinatukum",
-          "en": "your tongues",
-          "ur": "تمہاری زبانیں"
-        },
-        {
-          "ar": "الْكَذِبَ",
-          "ar_plain": "الكذب",
-          "translit": "al-kadhhiba",
-          "en": "falsehood",
-          "ur": "جھوٹ"
+          "en": "None of them",
+          "ur": "ان میں سے کوئی نہیں"
         }
       ],
-      "available_roles": [
-        "PARTICLE",
-        "VERB",
-        "SUBJECT",
-        "OBJECT",
-        "TIME_ZARF",
-        "PLACE_ZARF"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "VERB",
-        "PARTICLE",
-        "VERB",
-        "SUBJECT",
-        "OBJECT"
-      ],
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَا is the prohibitive particle and تَقُولُوا its jussive verb. لِمَا is لِ + مَا. تَصِفُ is the verb 'describes', and أَلْسِنَتُكُمُ ('your tongues') is its subject. الْكَذِبَ is the object.",
-        "ur": "لَا نہی کا حرف اور تَقُولُوا اس کا مجزوم فعل ہے۔ لِمَا = لِ + مَا۔ تَصِفُ فعل 'بیان کرتی ہیں' ہے، اور أَلْسِنَتُكُمُ ('تمہاری زبانیں') اس کا فاعل۔ الْكَذِبَ مفعول ہے۔"
+        "en": "Both verbs take a sukūn after إِنْ: تَدْرُسْ and تَنْجَحْ.",
+        "ur": "إِنْ کے بعد دونوں افعال سکون لیتے ہیں: تَدْرُسْ اور تَنْجَحْ۔"
       }
     },
     {
-      "type": "BUILD_SENTENCE",
+      "type": "FILL_BLANK",
       "id": "ch68-l05-ex02",
-      "target_translation": {
-        "en": "He did not believe, so he did not succeed.",
-        "ur": "اس نے ایمان نہیں لیا تو اس نے کامیابی حاصل نہیں کی۔"
+      "mode": "TAP",
+      "sentence_ar": "إِنْ ___ تَنْجَحْ",
+      "hint": {
+        "en": "If you study, you will pass.",
+        "ur": "اگر تم پڑھو تو کامیاب ہو گے۔"
       },
-      "tiles": [
+      "options": [
         {
-          "ar": "لَمْ",
-          "ar_plain": "لم",
-          "translit": "lam",
-          "en": "did not",
-          "ur": "نہیں"
+          "ar": "تَدْرُسُ",
+          "ar_plain": "تدرس",
+          "translit": "tadrusu",
+          "en": "study (ḍamma)",
+          "ur": "پڑھتے ہو (ضمہ)"
         },
         {
-          "ar": "يُؤْمِنْ",
-          "ar_plain": "يؤمن",
-          "translit": "yu'min",
-          "en": "he believes",
-          "ur": "وہ ایمان لاتا ہے"
+          "ar": "تَدْرُسَ",
+          "ar_plain": "تدرس",
+          "translit": "tadrusa",
+          "en": "study (fatḥa)",
+          "ur": "پڑھو (فتحہ)"
         },
         {
-          "ar": "فَلَمْ",
-          "ar_plain": "فلم",
-          "translit": "falam",
-          "en": "so did not",
-          "ur": "تو نہیں"
+          "ar": "تَدْرُسُونَ",
+          "ar_plain": "تدرسون",
+          "translit": "tadrusūna",
+          "en": "you all study (with ن)",
+          "ur": "تم سب پڑھتے ہو (ن کے ساتھ)"
         },
         {
-          "ar": "يُفْلِحْ",
-          "ar_plain": "يفلح",
-          "translit": "yuflah",
-          "en": "he succeeds",
-          "ur": "وہ کامیاب ہوتا ہے"
+          "ar": "تَدْرُسْ",
+          "ar_plain": "تدرس",
+          "translit": "tadrus",
+          "en": "study (jussive, sukūn)",
+          "ur": "پڑھو (مجزوم، سکون)"
         }
       ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "xp_value": 1
+      "correct_answer": {
+        "ar": "تَدْرُسْ",
+        "ar_plain": "تدرس",
+        "translit": "tadrus",
+        "en": "study (jussive, sukūn)",
+        "ur": "پڑھو (مجزوم، سکون)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After إِنْ the condition verb is jussive, like the answer: تَدْرُسْ.",
+        "ur": "إِنْ کے بعد شرط کا فعل جواب کی طرح مجزوم ہوتا ہے: تَدْرُسْ۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch68-l05-ex03",
       "prompt": {
-        "ar": "وَذَرُوا الَّذِينَ يُلْحِدُونَ فِي أَسْمَائِهِ",
-        "ar_plain": "وذروا الذين يلحدون في اسمائه",
-        "translit": "wa dharuu alladhiiina yulhidoona fiii asmaaihi",
-        "en": "And leave those who take deviation in His names.",
-        "ur": "اور جن لوگوں اس کے ناموں میں کجی کرتے ہیں انہیں چھوڑ دو۔"
+        "ar": "إِنْ تَدْرُسُوا تَنْجَحُوا",
+        "ar_plain": "ان تدرسوا تنجحوا",
+        "translit": "ʾin tadrusū tanjaḥū",
+        "en": "(what has happened to the final ن of both verbs?)",
+        "ur": "(دونوں افعال کے آخری ن کا کیا ہوا؟)"
       },
       "options": [
         {
-          "en": "And leave those who take deviation in His names.",
-          "ur": "اور جن لوگوں اس کے ناموں میں کجی کرتے ہیں انہیں چھوڑ دو۔"
+          "en": "It dropped from both: the jussive sign of a five form",
+          "ur": "دونوں سے گر گیا: پانچ صورتوں والے فعل کی مجزوم علامت"
         },
         {
-          "en": "And they left those who take deviation in His names.",
-          "ur": "اور انہوں نے جن لوگوں اس کے ناموں میں کجی کی انہیں چھوڑ دیا۔"
+          "en": "It stayed in both",
+          "ur": "دونوں میں باقی رہا"
         },
         {
-          "en": "And do not leave those who take deviation in His names.",
-          "ur": "اور جن لوگوں اس کے ناموں میں کجی کرتے ہیں انہیں مت چھوڑو۔"
+          "en": "It dropped from the first only",
+          "ur": "صرف پہلے سے گرا"
         },
         {
-          "en": "And those who take deviation left His names.",
-          "ur": "اور جن لوگوں نے کجی کی اس کے ناموں میں سے وہ چھوڑ گئے۔"
+          "en": "It turned into a sukūn",
+          "ur": "سکون میں بدل گیا"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "ذَرُوا is an imperative ('leave!'): like its jussive تَذَرُوا, it has lost the ن. يُلْحِدُونَ inside the relative clause is indicative — no jussive particle comes before it.",
-        "ur": "ذَرُوا فعلِ امر ہے ('چھوڑ دو!'): اپنے مجزوم تَذَرُوا کی طرح اس کا ن گر گیا۔ صلہ کے اندر يُلْحِدُونَ مرفوع ہے — اس سے پہلے کوئی جازم حرف نہیں۔"
+        "en": "Both five forms lose their ن after إِنْ.",
+        "ur": "إِنْ کے بعد دونوں پانچ صورتوں والے افعال اپنا ن کھو دیتے ہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l05-ex04",
+      "prompt": {
+        "ar": "وَإِن تُطِيعُوا اللَّهَ وَرَسُولَهُ لَا يَلِتْكُم",
+        "ar_plain": "وان تطيعوا الله ورسوله لا يلتكم",
+        "translit": "waʾin tuṭīʿū al-laha warasūlahu lā yalitkum",
+        "en": "(49:14: which part is the condition?)",
+        "ur": "(49:14: کون سا حصہ شرط ہے؟)"
+      },
+      "options": [
+        {
+          "en": "لَا يَلِتْكُم",
+          "ur": "لَا يَلِتْكُم"
+        },
+        {
+          "en": "وَإِن تُطِيعُوا اللَّهَ وَرَسُولَهُ",
+          "ur": "وَإِن تُطِيعُوا اللَّهَ وَرَسُولَهُ"
+        },
+        {
+          "en": "Only وَإِن",
+          "ur": "صرف وَإِن"
+        },
+        {
+          "en": "The whole ayah is the condition",
+          "ur": "پوری آیت شرط ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The condition is what follows إِن; the answer begins with لَا.",
+        "ur": "شرط وہ ہے جو إِن کے بعد آتی ہے؛ جواب لَا سے شروع ہوتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l05-ex05",
+      "prompt": {
+        "ar": "وَإِن تُطِيعُوا اللَّهَ وَرَسُولَهُ لَا يَلِتْكُم",
+        "ar_plain": "وان تطيعوا الله ورسوله لا يلتكم",
+        "translit": "waʾin tuṭīʿū al-laha warasūlahu lā yalitkum",
+        "en": "(49:14: what is the لَا in the answer?)",
+        "ur": "(49:14: جواب میں لَا کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "The prohibitive لَا that governs the jussive",
+          "ur": "نہی والا لَا جو جزم دیتا ہے"
+        },
+        {
+          "en": "The conditional particle",
+          "ur": "شرطیہ حرف"
+        },
+        {
+          "en": "A noun",
+          "ur": "اسم"
+        },
+        {
+          "en": "An ordinary negative inside the answer; the conditional إِنْ governs the verbs",
+          "ur": "جواب کے اندر عام نفی؛ شرطیہ إِنْ افعال پر عمل کرتا ہے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The لَا here only negates the answer: 'He will not diminish'. The jussive comes from the condition.",
+        "ur": "یہاں لَا صرف جواب کی نفی کرتا ہے: 'وہ کم نہیں کرے گا'۔ جزم شرط سے آتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch68-l05-ex06",
+      "prompt": {
+        "ar": "وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا",
+        "ar_plain": "ومن يتق الله يجعل له مخرجا",
+        "translit": "waman yattaqi al-laha yajʿal llahu makhrajan",
+        "en": "(65:2: which are the two verbs, and what is مَن?)",
+        "ur": "(65:2: دو افعال کون سے ہیں، اور مَن کیا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "اللَّهَ and مَخْرَجًا; مَن is a question",
+          "ur": "اللَّهَ اور مَخْرَجًا؛ مَن سوال ہے"
+        },
+        {
+          "en": "يَتَّقِ only; مَن is a noun",
+          "ur": "صرف يَتَّقِ؛ مَن اسم ہے"
+        },
+        {
+          "en": "يَتَّقِ and يَجْعَل; مَن is conditional: 'whoever'",
+          "ur": "يَتَّقِ اور يَجْعَل؛ مَن شرطیہ ہے: 'جو'"
+        },
+        {
+          "en": "لَّهُ and مَخْرَجًا; مَن is a verb",
+          "ur": "لَّهُ اور مَخْرَجًا؛ مَن فعل ہے"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The condition verb is يَتَّقِ and the answer verb is يَجْعَل; مَن here means 'whoever'.",
+        "ur": "شرط کا فعل يَتَّقِ ہے اور جواب کا فعل يَجْعَل؛ یہاں مَن کا مطلب 'جو' ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch68-l05-ex07",
+      "statement": {
+        "en": "Every مَنْ before a verb is conditional and puts two verbs in the jussive.",
+        "ur": "فعل سے پہلے آنے والا ہر مَنْ شرطیہ ہے اور دو افعال کو مجزوم کرتا ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. In مَنْ يَكْتُبُ؟ ('who writes?') مَنْ asks a question and the verb stays indicative.",
+        "ur": "غلط۔ مَنْ يَكْتُبُ؟ ('کون لکھتا ہے؟') میں مَنْ سوال کرتا ہے اور فعل مرفوع رہتا ہے۔"
       }
     },
     {
       "type": "MATCHING",
-      "id": "ch68-l05-ex04",
+      "id": "ch68-l05-ex08",
       "left_column": [
         {
-          "ar": "لَمْ يَذْهَبْ",
-          "ar_plain": "لم يذهب",
-          "translit": "lam yadhhab",
-          "en": "he did not go",
-          "ur": "اس نے نہیں گیا"
+          "ar": "إِنْ تَدْرُسْ تَنْجَحْ",
+          "ar_plain": "ان تدرس تنجح",
+          "translit": "ʾin tadrus tanjaḥ",
+          "en": "study, pass",
+          "ur": "پڑھو، کامیاب"
         },
         {
-          "ar": "لَا تَأْكُلْ",
-          "ar_plain": "لا تأكل",
-          "translit": "laa ta'kul",
-          "en": "do not eat",
-          "ur": "مت کھا"
+          "ar": "مَنْ يَدْرُسْ يَنْجَحْ",
+          "ar_plain": "من يدرس ينجح",
+          "translit": "man yadrus yanjaḥ",
+          "en": "studies, passes",
+          "ur": "پڑھے، کامیاب"
         },
         {
-          "ar": "لَمَّا يَأْتِ",
-          "ar_plain": "لما ياتي",
-          "translit": "lammaa ya'ti",
-          "en": "he has not yet come",
-          "ur": "اس نے ابھی تک نہیں آیا"
+          "ar": "مَنْ يَكْتُبُ؟",
+          "ar_plain": "من يكتب؟",
+          "translit": "man yaktubu",
+          "en": "writes",
+          "ur": "لکھتا"
         },
         {
-          "ar": "اكْتُبْ",
-          "ar_plain": "اكتب",
-          "translit": "uktub",
-          "en": "write! (masc. sing.)",
-          "ur": "لکھو! (مذکر واحد)"
+          "ar": "إِنْ تَدْرُسُوا تَنْجَحُوا",
+          "ar_plain": "ان تدرسوا تنجحوا",
+          "translit": "ʾin tadrusū tanjaḥū",
+          "en": "study, pass",
+          "ur": "پڑھو، کامیاب"
         }
       ],
       "right_column": [
         {
-          "en": "لَمْ — past negation → jussive",
-          "ur": "لَمْ — ماضی انکار → مجزوم"
+          "en": "if you all study, you will pass",
+          "ur": "اگر تم سب پڑھو تو کامیاب ہو گے"
         },
         {
-          "en": "لَا الناهية — prohibition → jussive",
-          "ur": "لَا الناهية — ممنوعہ → مجزوم"
+          "en": "if you study, you will pass",
+          "ur": "اگر تم پڑھو تو کامیاب ہو گے"
         },
         {
-          "en": "لَمَّا — not yet → jussive",
-          "ur": "لَمَّا — ابھی تک نہیں → مجزوم"
+          "en": "who writes? (a question, no jazm)",
+          "ur": "کون لکھتا ہے؟ (سوال، جزم نہیں)"
         },
         {
-          "en": "imperative — built like the jussive",
-          "ur": "فعلِ امر — مجزوم کی طرح مبنی"
+          "en": "whoever studies will pass",
+          "ur": "جو پڑھے گا کامیاب ہوگا"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
+          1
         ],
         [
           1,
-          1
+          3
         ],
         [
           2,
@@ -299,129 +416,91 @@
         ],
         [
           3,
-          3
+          0
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch68-l05-ex05",
-      "statement": {
-        "en": "يُلْحِدُونَ in وَذَرُوا الَّذِينَ يُلْحِدُونَ فِي أَسْمَائِهِ is مجزوم because it comes after the command ذَرُوا.",
-        "ur": "وَذَرُوا الَّذِينَ يُلْحِدُونَ فِي أَسْمَائِهِ میں يُلْحِدُونَ مجزوم ہے کیونکہ یہ حکم ذَرُوا کے بعد آیا ہے۔",
-        "ar_example": {
-          "ar": "يُلْحِدُونَ",
-          "ar_plain": "يلحدون",
-          "translit": "yulhidoona",
-          "en": "they take deviation",
-          "ur": "وہ کجی کرتے ہیں"
-        }
-      },
-      "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "يُلْحِدُونَ is مرفوع (indicative) — it is not after any jussive particle. The relative clause الَّذِينَ يُلْحِدُونَ contains an indicative verb. Only the jussive particles (لَمْ, لَمَّا, لَا الناهية, لام الأمر) trigger مجزوم.",
-        "ur": "يُلْحِدُونَ مرفوع (indicative) ہے — یہ کسی jussive particle کے بعد نہیں ہے۔ Relative clause الَّذِينَ يُلْحِدُونَ میں indicative verb ہے۔ صرف jussive particles (لَمْ, لَمَّا, لَا الناهية, لام الأمر) مجزوم trigger کرتے ہیں۔"
+        "en": "Two conditions, one five-form condition and one question.",
+        "ur": "دو شرطیں، ایک پانچ صورتوں والی شرط اور ایک سوال۔"
       }
     },
     {
-      "type": "FILL_BLANK",
-      "id": "ch68-l05-ex06",
-      "mode": "TAP",
-      "sentence_ar": "الْمُؤْمِنُونَ لَمْ ___ الْكَافِرِينَ أَوْلِيَاءَ",
-      "hint": {
-        "en": "'The believers did not take the disbelievers as allies.'",
-        "ur": "'مومنوں نے کافروں کو دوست نہیں بنایا۔'"
+      "type": "BUILD_SENTENCE",
+      "id": "ch68-l05-ex09",
+      "target_translation": {
+        "en": "Whoever studies will pass.",
+        "ur": "جو پڑھے گا کامیاب ہوگا۔"
       },
-      "options": [
+      "tiles": [
         {
-          "ar": "يَتَّخِذُوا",
-          "ar_plain": "يتخذوا",
-          "translit": "yattakhidhu",
-          "en": "they take (jussive after لَمْ)",
-          "ur": "وہ بناتے ہیں (لَمْ کے بعد مجزوم)"
+          "ar": "يَنْجَحْ",
+          "ar_plain": "ينجح",
+          "translit": "yanjaḥ",
+          "en": "will pass",
+          "ur": "کامیاب ہوگا"
         },
         {
-          "ar": "يَتَّخِذُونَ",
-          "ar_plain": "يتخذون",
-          "translit": "yattakhidhuuna",
-          "en": "they take (indicative)",
-          "ur": "وہ بناتے ہیں (مرفوع)"
+          "ar": "مَنْ",
+          "ar_plain": "من",
+          "translit": "man",
+          "en": "whoever",
+          "ur": "جو"
         },
         {
-          "ar": "لَا يَتَّخِذُوا",
-          "ar_plain": "لا يتخذوا",
-          "translit": "laa yattakhidhu",
-          "en": "do not take (prohibition)",
-          "ur": "نہ بنائیں (نہی)"
-        },
-        {
-          "ar": "اتَّخَذُوا",
-          "ar_plain": "اتخذوا",
-          "translit": "ittakhadhuu",
-          "en": "they took (past)",
-          "ur": "انہوں نے بنایا (ماضی)"
+          "ar": "يَدْرُسْ",
+          "ar_plain": "يدرس",
+          "translit": "yadrus",
+          "en": "studies",
+          "ur": "پڑھے"
         }
       ],
-      "correct_answer": {
-        "ar": "يَتَّخِذُوا",
-        "ar_plain": "يتخذوا",
-        "translit": "yattakhidhu",
-        "en": "they take (jussive after لَمْ)",
-        "ur": "وہ بناتے ہیں (لَمْ کے بعد مجزوم)"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "IDENTIFY_ROOT",
-      "id": "ch68-l05-ex07",
-      "word": {
-        "ar": "يُلْحِدُونَ",
-        "ar_plain": "يلحدون",
-        "translit": "yulhidoona",
-        "en": "they take deviation",
-        "ur": "وہ کجی کرتے ہیں"
-      },
-      "options": [
-        "ل ح د",
-        "ع ب د",
-        "ن ص ر",
-        "ج ن ب"
+      "correct_order": [
+        1,
+        2,
+        0
       ],
-      "correct_index": 0,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The particle, the condition verb, then the answer verb.",
+        "ur": "حرف، شرط کا فعل، پھر جواب کا فعل۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Jussive transformation — the same verb in different states",
-      "ar": "الْمَرْفُوعُ وَالْمَجْزُومُ — فِعْلٌ وَاحِدٌ فِي حَالَتَيْنِ",
-      "ur": "مجزوم تبدیلی — وہی فعل مختلف حالتوں میں"
+      "en": "Whoever fears Allah",
+      "ar": "وَمَن يَتَّقِ",
+      "ur": "جو اللہ سے ڈرے"
     },
     "ayah": {
-      "surah": 7,
-      "ayah": 180,
-      "label": "Al-A'raf 7:180",
-      "ar": "وَلِلَّهِ الْأَسْمَاءُ الْحُسْنَىٰ فَادْعُوهُ بِهَا ۖ وَذَرُوا الَّذِينَ يُلْحِدُونَ فِي أَسْمَائِهِ ۚ سَيُجْزَوْنَ مَا كَانُوا يَعْمَلُونَ",
-      "en": "And to Allah belong the best names, so invoke Him by them. And leave [the company of] those who practice deviation concerning His names. They will be recompensed for what they have been doing.",
-      "ur": "اور اللہ کے سب نام اچھے ہیں، تو اسے انہی ناموں سے پکارو، اور جو لوگ اس کے ناموں میں کج روی اختیار کرتے ہیں انہیں چھوڑ دو، جو کچھ وہ کرتے رہے ہیں اس کا بدلہ پائیں گے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/007180.mp3"
+      "surah": 65,
+      "ayah": 2,
+      "label": "At-Talaq 65:2",
+      "ar": "وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا",
+      "en": "And whoever fears Allah — He will make for him a way out",
+      "ur": "اور جو اللہ سے ڈرے گا وہ اس کے لیے نکلنے کی راہ بنا دے گا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/065002.mp3"
     },
     "highlighted_word_indices": [
-      3,
-      6,
-      8
+      0,
+      1,
+      3
+    ],
+    "highlighted_words": [
+      "وَمَن",
+      "يَتَّقِ",
+      "يَجْعَل"
     ],
     "noor_explanation": {
-      "en": "فَادْعُوهُ and وَذَرُوا are imperatives: each ends like its jussive, with the ن dropped (تَدْعُونَ → ادْعُوا, تَذَرُونَ → ذَرُوا). يُلْحِدُونَ in the relative clause keeps its ن — nothing before it makes it jussive. A command at the start of a sentence does not reach the verbs inside a later clause.",
-      "ur": "فَادْعُوهُ اور وَذَرُوا فعلِ امر ہیں: ہر ایک کا آخر اپنے مجزوم جیسا ہے، ن گرا ہوا (تَدْعُونَ → ادْعُوا، تَذَرُونَ → ذَرُوا)۔ صلہ میں يُلْحِدُونَ کا ن باقی ہے — اس سے پہلے کوئی چیز اسے مجزوم نہیں کرتی۔ جملے کے شروع کا حکم بعد والے جملے کے افعال تک نہیں پہنچتا۔"
+      "en": "وَمَن يَتَّقِ … يَجْعَل — one conditional مَن governs both verbs: the condition and the answer.",
+      "ur": "وَمَن يَتَّقِ … يَجْعَل — ایک شرطیہ مَن دونوں افعال پر عمل کرتا ہے: شرط اور جواب۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "To parse a present verb, find what comes right before it. لَمْ, لَمَّا, لَا النَّاهِيَة or لَامُ الْأَمْرِ → jussive. أَنْ, لَنْ, كَيْ → naṣb. Nothing → indicative. And an imperative like ذَرُوا is its own form; it does not make the verbs after it jussive.",
-      "ur": "مضارع کی ترکیب کے لیے دیکھیے کہ اس سے فوراً پہلے کیا ہے۔ لَمْ، لَمَّا، لَا نَاهِيَہ یا لامِ امر → مجزوم۔ أَنْ، لَنْ، كَيْ → منصوب۔ کچھ نہیں → مرفوع۔ اور ذَرُوا جیسا فعلِ امر الگ شکل ہے؛ یہ بعد والے افعال کو مجزوم نہیں کرتا۔"
+      "en": "Conditional إِنْ and مَنْ put the condition and the answer in the jussive; a question مَنْ does not.",
+      "ur": "شرطیہ إِنْ اور مَنْ شرط اور جواب کو مجزوم کرتے ہیں؛ سوال والا مَنْ نہیں کرتا۔"
     }
   }
 }

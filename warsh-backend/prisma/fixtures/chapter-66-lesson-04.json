@@ -2,485 +2,456 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 66, Lesson 4 — Declinable (مُعْرَب) and fixed (مَبْنِيّ) ظروف.",
+    "_note": "Chapter 66, Lesson 4 (ch66-l04, rebuilt in place). One word, three endings: يَوْمُ (subject), يَوْمَ (ظرف), يَوْمِ (after a preposition) — the exact contrast of 82:18 / 82:19 and 62:9; and عِنْدَ → مِنْ عِنْدِ (3:78). Then the one fixed example: حَيْثُ keeps its ḍamma in حَيْثُ شِئْتُمَا (2:35). The old rule that 'zarf is always accusative / إِذَا is future / most are fixed' is gone. In 82:19 the governing verb is left out and its meaning is supplied; learners are not asked to rebuild it. No full-verse parse of 2:35 and no rule for clauses after حَيْثُ. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-66-content-proposal.md and its review amendments.",
+    "title": "A Changing Ending and a Fixed One",
+    "titleAr": "الْمُعْرَبُ وَالْمَبْنِيُّ مِنَ الظُّرُوفِ",
+    "titleUr": "بدلتا ہوا ختم اور ٹھہرا ہوا ختم",
     "chapter_order": 66,
     "lesson_order": 4,
-    "chapter_title": "ظرف الزمان والمكان",
-    "title": "Zarf: Declinable and Fixed",
-    "titleAr": "الظَّرْفُ: الْمُعْرَبُ وَالْمَبْنِيُّ",
-    "source": "book_8_lesson_1_zarf_dual_meaning.md",
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 18,
-      "ayah": 60,
-      "label": "Al-Kahf 18:60",
-      "ar": "وَإِذْ قَالَ مُوسَى لِفَتَاهُ لَا أَبْرَحُ حَتَّىٰ أَبْلُغَ مَجْمَعَ الْبَحْرَيْنِ أَوْ أَمْضِيَ حُقُبًا",
-      "en": "And when Moses said to his servant, 'I will not cease until I reach the meeting of the two seas or I will go on for ages.'",
-      "ur": "اور جب موسیٰ نے اپنے نوجوان سے کہا کہ میں نہیں رکوں گا یہاں تک کہ دو دریاؤں کے ملنے کی جگہ تک پہنچ جاؤں یا بہت سال گزر جائیں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/018060.mp3"
+      "surah": 82,
+      "ayah": 19,
+      "label": "Al-Infitar 82:19",
+      "ar": "يَوْمَ لَا تَمْلِكُ نَفْسٌ لِّنَفْسٍ شَيْئًا",
+      "en": "On the Day when no soul has power to do anything for another",
+      "ur": "جس دن کوئی جان کسی دوسری جان کے لیے کچھ نہ کر سکے گی",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/082019.mp3"
     },
     "noor_intro": {
-      "en": "This ayah opens with وَإِذْ — 'and when' — and ends with حُقُبًا — 'for ages'. Both are time zarfs, but they behave differently: حُقُبًا shows its accusative ending, while إِذْ never changes. Today: which zarfs decline and which are fixed.",
-      "ur": "یہ آیت وَإِذْ ('اور جب') سے شروع ہو کر حُقُبًا ('مدتوں') پر ختم ہوتی ہے۔ دونوں ظرفِ زمان ہیں مگر ان کا رویہ مختلف ہے: حُقُبًا اپنا نصب ظاہر کرتا ہے، جبکہ إِذْ کبھی نہیں بدلتا۔ آج: کون سے ظروف معرب ہیں اور کون سے مبنی۔"
+      "en": "In 82:18 the word is يَوْمُ; in 82:19 it is يَوْمَ. Same word, different ending — because the job is different.",
+      "ur": "82:18 میں لفظ يَوْمُ ہے؛ 82:19 میں يَوْمَ ہے۔ لفظ وہی، ختم مختلف — کیونکہ کام مختلف ہے۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Most zarfs are declinable (مُعْرَب)",
-        "ar": "أَكْثَرُ الظُّرُوفِ مُعْرَبَةٌ",
-        "ur": "اکثر ظروف معرب ہیں"
+        "en": "The ending follows the job",
+        "ar": "الْإِعْرَابُ يَتْبَعُ الْوَظِيفَةَ",
+        "ur": "ختم کام کے پیچھے چلتا ہے"
       },
       "explanation": {
-        "en": "Most zarfs are ordinary nouns that change their ending. Used as a zarf they are accusative: يَوْمَ، عِنْدَ، أَمَامَ، لَيْلًا. After a preposition they become genitive: مِنْ عِنْدِ اللَّهِ ('from Allah'). Used as a subject they are nominative: يَوْمُ الدِّينِ ('the Day of Judgement').",
-        "ur": "اکثر ظروف عام اسم ہیں جن کا آخر بدلتا ہے۔ ظرف کے طور پر منصوب ہوتے ہیں: يَوْمَ، عِنْدَ، أَمَامَ، لَيْلًا۔ حرفِ جر کے بعد مجرور ہو جاتے ہیں: مِنْ عِنْدِ اللَّهِ ('اللہ کی طرف سے')۔ اور مبتدا یا فاعل ہوں تو مرفوع: يَوْمُ الدِّينِ ('جزا کا دن')۔"
+        "en": "Most of these words are ordinary nouns, and an ordinary noun takes the ending its job asks for. يَوْمُ is nominative as a subject, يَوْمَ is accusative as a time ظرف, and يَوْمِ is genitive after a preposition. A ظرف is therefore accusative in its ظرف job only: it is not a word that always looks the same.",
+        "ur": "ان میں سے زیادہ تر الفاظ عام اسم ہیں، اور عام اسم وہ ختم لیتا ہے جو اس کا کام مانگتا ہے۔ يَوْمُ بطور مبتدا مرفوع ہے، يَوْمَ وقت کے ظرف کے طور پر منصوب ہے، اور يَوْمِ حرفِ جر کے بعد مجرور ہے۔ اس لیے ظرف صرف اپنے ظرف والے کام میں منصوب ہے: یہ ایسا لفظ نہیں جو ہمیشہ ایک جیسا نظر آئے۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "حَيْثُ",
-        "ar_plain": "حيث",
-        "translit": "haythu",
-        "en": "where (a fixed place zarf)",
-        "ur": "جہاں (مبنی ظرفِ مکان)"
+        "ar": "مَا يَوْمُ الدِّينِ",
+        "ar_plain": "ما يوم الدين",
+        "translit": "mā yawmu ad-dīni",
+        "en": "what the Day of Judgment is",
+        "ur": "جزا کا دن کیا ہے"
       },
       "explanation": {
-        "en": "حَيْثُ ('where') is مَبْنِيّ: it always ends in ḍamma, whatever its position. فَكُلَا مِنْ حَيْثُ شِئْتُمَا — 'so eat from wherever you will' (7:19): even after مِنْ it stays حَيْثُ.",
-        "ur": "حَيْثُ ('جہاں') مبنی ہے: اس کا آخر ہمیشہ ضمہ ہوتا ہے، جملے میں جو بھی جگہ ہو۔ فَكُلَا مِنْ حَيْثُ شِئْتُمَا — 'تو جہاں سے چاہو کھاؤ' (7:19): مِنْ کے بعد بھی یہ حَيْثُ ہی رہتا ہے۔"
+        "en": "In مَا يَوْمُ الدِّينِ the Day itself is what the question asks about: يَوْمُ is nominative. (Al-Infitar 82:18) (Al-Infitar 82:18)",
+        "ur": "مَا يَوْمُ الدِّينِ میں دن خود وہ ہے جس کے بارے میں سوال ہے: يَوْمُ مرفوع ہے۔ (الانفطار 82:18) (Al-Infitar 82:18)"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "مِنْ عِنْدِ اللَّهِ",
+        "ar": "يَوْمَ لَا تَمْلِكُ نَفْسٌ لِّنَفْسٍ شَيْئًا",
+        "ar_plain": "يوم لا تملك نفس لنفس شيئا",
+        "translit": "yawma lā tamliku nafsun llinafsin shayʾan",
+        "en": "The Day when no soul has power to do anything for another",
+        "ur": "جس دن کوئی جان کسی دوسری جان کے لیے کچھ نہ کر سکے گی"
+      },
+      "explanation": {
+        "en": "Here يَوْمَ is accusative and means 'on the Day when …': it opens a new statement about the Day, and the ayah leaves out the verb that governs it. You are given that meaning; you do not rebuild the verb. (Al-Infitar 82:19) (Al-Infitar 82:19)",
+        "ur": "یہاں يَوْمَ منصوب ہے اور اس کا مطلب 'اس دن جب …' ہے: یہ دن کے بارے میں ایک نیا بیان کھولتا ہے، اور آیت وہ فعل چھوڑ دیتی ہے جو اس پر عمل کرتا ہے۔ آپ کو یہ معنی دیا جاتا ہے؛ آپ فعل خود نہیں بناتے۔ (الانفطار 82:19) (Al-Infitar 82:19)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "مِنْ عِندِ اللَّهِ",
         "ar_plain": "من عند الله",
-        "translit": "min 'indi allaahi",
+        "translit": "min ʿindi al-lahi",
         "en": "from Allah",
         "ur": "اللہ کی طرف سے"
       },
       "explanation": {
-        "en": "وَمَا هُوَ مِنْ عِنْدِ اللَّهِ — 'and it is not from Allah' (3:78). Here عِنْدَ follows the preposition مِنْ, so it turns genitive: عِنْدِ. That change shows عِنْدَ is مُعْرَب, not fixed.",
-        "ur": "وَمَا هُوَ مِنْ عِنْدِ اللَّهِ — 'اور وہ اللہ کی طرف سے نہیں' (3:78)۔ یہاں عِنْدَ حرفِ جر مِنْ کے بعد ہے اس لیے مجرور ہو گیا: عِنْدِ۔ یہی تبدیلی بتاتی ہے کہ عِنْدَ معرب ہے، مبنی نہیں۔"
+        "en": "عِنْدَ changes too: after the preposition مِنْ it becomes عِندِ, genitive. The same word that was accusative in جَلَسْتُ عِنْدَ الْمُعَلِّمِ takes the ending its new job asks for. (Al Imran 3:78) (Al Imran 3:78)",
+        "ur": "عِنْدَ بھی بدلتا ہے: حرفِ جر مِنْ کے بعد یہ عِندِ ہو جاتا ہے، مجرور۔ وہی لفظ جو جَلَسْتُ عِنْدَ الْمُعَلِّمِ میں منصوب تھا اپنے نئے کام کے مطابق ختم لیتا ہے۔ (آل عمران 3:78) (Al Imran 3:78)"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "A few zarfs are fixed (مَبْنِيّ)",
-        "ar": "بَعْضُ الظُّرُوفِ مَبْنِيٌّ",
-        "ur": "چند ظروف مبنی ہیں"
-      },
-      "explanation": {
-        "en": "A small group never changes its ending: إِذْ ('when', past), إِذَا ('when', future), حَيْثُ ('where'), الْآنَ ('now'). They sit in the place of an accusative, but you will not see a case vowel change on them.",
-        "ur": "ایک چھوٹا گروہ اپنا آخر کبھی نہیں بدلتا: إِذْ ('جب'، ماضی)، إِذَا ('جب'، مستقبل)، حَيْثُ ('جہاں')، الْآنَ ('اب')۔ یہ محلاً منصوب ہوتے ہیں، مگر ان پر اعراب کی تبدیلی نظر نہیں آتی۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "لِلَّهِ الْأَمْرُ مِن قَبْلُ وَمِن بَعْدُ",
-        "ar_plain": "لله الأمر من قبل ومن بعد",
-        "translit": "lillaahi al-amru min qablu wa-min ba'du",
-        "en": "To Allah belongs the command before and after",
-        "ur": "اللہ ہی کا حکم ہے پہلے بھی اور بعد میں بھی"
+        "ar": "حَيْثُ شِئْتُمَا",
+        "ar_plain": "حيث شئتما",
+        "translit": "ḥaythu shiʾtumā",
+        "en": "wherever you two wish",
+        "ur": "جہاں سے تم دونوں چاہو"
       },
       "explanation": {
-        "en": "From Ar-Rum 30:4. قَبْلُ and بَعْدُ normally decline: مِنْ قَبْلِ ذَٰلِكَ ('before that') is genitive. When the word they are added to is left out, they become fixed on ḍamma — مِن قَبْلُ وَمِن بَعْدُ — even after مِنْ.",
-        "ur": "الروم 30:4 سے۔ قَبْلَ اور بَعْدَ عام طور پر معرب ہیں: مِنْ قَبْلِ ذَٰلِكَ ('اس سے پہلے') مجرور ہے۔ جب ان کا مضاف الیہ حذف ہو جائے تو یہ ضمہ پر مبنی ہو جاتے ہیں — مِن قَبْلُ وَمِن بَعْدُ — مِنْ کے بعد بھی۔"
+        "en": "حَيْثُ is different: it is a place word that is built on a fixed ḍamma, and it keeps that ending whatever its position. Here it opens the clause شِئْتُمَا, 'you two wished'; you read the whole phrase as 'wherever you two wish'. (Al-Baqarah 2:35) (Al-Baqarah 2:35)",
+        "ur": "حَيْثُ مختلف ہے: یہ مکان کا لفظ ہے جو ایک ثابت ضمہ پر مبنی ہے، اور اپنی جگہ جو بھی ہو یہی ختم رکھتا ہے۔ یہاں یہ جملہ شِئْتُمَا، 'تم دونوں نے چاہا'، کھولتا ہے؛ آپ پورا فقرہ 'جہاں سے تم دونوں چاہو' پڑھتے ہیں۔ (البقرہ 2:35) (Al-Baqarah 2:35)"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "يَوْمَئِذٍ — a zarf that still declines",
-        "ar": "يَوْمَئِذٍ — ظَرْفٌ مُعْرَبٌ",
-        "ur": "يَوْمَئِذٍ — معرب ظرف"
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Form and position are two things",
+        "ur": "صورت اور محل دو چیزیں ہیں"
       },
-      "explanation": {
-        "en": "يَوْمَئِذٍ = يَوْمَ + إِذٍ. إِذْ is fixed, but يَوْمَ still declines: as a zarf it is يَوْمَئِذٍ, and after a preposition it becomes يَوْمِئِذٍ — مِنْ عَذَابِ يَوْمِئِذٍ ('from the punishment of that Day', 70:11).",
-        "ur": "يَوْمَئِذٍ = يَوْمَ + إِذٍ۔ إِذْ مبنی ہے مگر يَوْمَ معرب ہی رہتا ہے: ظرف ہو تو يَوْمَئِذٍ، اور جر کی جگہ ہو تو يَوْمِئِذٍ — مِنْ عَذَابِ يَوْمِئِذٍ ('اس دن کے عذاب سے'، 70:11)۔"
+      "body": {
+        "en": "What you see on the word and the job it does are two things. حَيْثُ always looks the same, yet it still tells where. A pronoun dependent is also genitive in its position, even though no kasra shows (خَلْفَهُمْ). Keep asking: what is the job here?",
+        "ur": "لفظ پر جو نظر آتا ہے اور اس کا کام دو چیزیں ہیں۔ حَيْثُ ہمیشہ ایک جیسا نظر آتا ہے، پھر بھی بتاتا ہے کہ کہاں۔ ضمیر متعلق بھی اپنے محل میں مجرور ہے، چاہے کسرہ نظر نہ آئے (خَلْفَهُمْ)۔ پوچھتے رہیں: یہاں کام کیا ہے؟"
       }
     }
   ],
   "exercises": [
     {
-      "type": "TRUE_FALSE",
-      "id": "ch66-l04-ex01",
-      "statement": {
-        "en": "يَوْمَ and عِنْدَ are مُعْرَب: after a preposition they become genitive, as in مِنْ عِنْدِ اللَّهِ.",
-        "ur": "يَوْمَ اور عِنْدَ معرب ہیں: حرفِ جر کے بعد مجرور ہو جاتے ہیں، جیسے مِنْ عِنْدِ اللَّهِ۔",
-        "ar_example": {
-          "ar": "مِنْ عِنْدِ اللَّهِ",
-          "ar_plain": "من عند الله",
-          "translit": "min 'indi allaahi",
-          "en": "from Allah",
-          "ur": "اللہ کی طرف سے"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
       "type": "TAP_TRANSLATION",
-      "id": "ch66-l04-ex02",
+      "id": "ch66-l04-ex01",
       "prompt": {
-        "ar": "حِينَ تَزْرَعُونَ",
-        "ar_plain": "حين تزروعون",
-        "translit": "hiina tazra'uuna",
-        "en": "when you sow",
-        "ur": "جب تم کاشت کرتے ہو"
+        "ar": "وَمَا أَدْرَاكَ مَا يَوْمُ الدِّينِ ← يَوْمَ لَا تَمْلِكُ نَفْسٌ",
+        "ar_plain": "وما ادراك ما يوم الدين ← يوم لا تملك نفس",
+        "translit": "wamā ʾadrāka mā yawmu ad-dīni ← yawma lā tamliku nafsun",
+        "en": "(82:18 and 82:19: why does the word change?)",
+        "ur": "(82:18 اور 82:19: لفظ کیوں بدلتا ہے؟)"
       },
       "options": [
         {
-          "en": "when you sow",
-          "ur": "جب تم کاشت کرتے ہو"
+          "en": "Because the second ayah is longer",
+          "ur": "کیونکہ دوسری آیت لمبی ہے"
         },
         {
-          "en": "you sowed a field",
-          "ur": "تم نے کھیت بویا"
+          "en": "In 82:18 the Day is what is asked about (nominative); in 82:19 يَوْمَ means 'on the Day when' (accusative)",
+          "ur": "82:18 میں دن وہ ہے جس کے بارے میں سوال ہے (مرفوع)؛ 82:19 میں يَوْمَ کا مطلب 'اس دن جب' ہے (منصوب)"
         },
         {
-          "en": "you are planting now",
-          "ur": "تم اب کاشت کر رہے ہو"
+          "en": "Because the reader may choose any ending",
+          "ur": "کیونکہ پڑھنے والا کوئی بھی ختم چن سکتا ہے"
         },
         {
-          "en": "the time for sowing",
-          "ur": "بوائی کا وقت"
+          "en": "Because one is a verb and one is a noun",
+          "ur": "کیونکہ ایک فعل ہے اور ایک اسم"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "حِينَ is a time zarf followed by the present-tense verb تَزْرَعُونَ: 'when you sow'. حِينَ + a verb fixes the moment of the action.",
-        "ur": "حِينَ ظرفِ زمان ہے جس کے بعد مضارع فعل تَزْرَعُونَ ہے: 'جب تم بوتے ہو'۔ حِينَ + فعل کام کا وقت متعین کرتا ہے۔"
+        "en": "The job changes the ending: nominative for the thing asked about, accusative for 'on the Day when'.",
+        "ur": "کام ختم بدل دیتا ہے: جس کے بارے میں سوال ہو اس کے لیے مرفوع، 'اس دن جب' کے لیے منصوب۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch66-l04-ex02",
+      "left_column": [
+        {
+          "ar": "يَوْمُ السَّبْتِ جَمِيلٌ",
+          "ar_plain": "يوم السبت جميل",
+          "translit": "yawmu as-sabti jamīlun",
+          "en": "Saturday is lovely",
+          "ur": "ہفتہ خوبصورت ہے"
+        },
+        {
+          "ar": "ذَهَبْتُ يَوْمَ السَّبْتِ",
+          "ar_plain": "ذهبت يوم السبت",
+          "translit": "dhahabtu yawma as-sabti",
+          "en": "I went on Saturday",
+          "ur": "میں ہفتے کے دن گیا"
+        },
+        {
+          "ar": "مِنْ يَوْمِ السَّبْتِ",
+          "ar_plain": "من يوم السبت",
+          "translit": "min yawmi as-sabti",
+          "en": "from Saturday",
+          "ur": "ہفتے کے دن سے"
+        },
+        {
+          "ar": "حَيْثُ شِئْتُمَا",
+          "ar_plain": "حيث شئتما",
+          "translit": "ḥaythu shiʾtumā",
+          "en": "wherever you two wish",
+          "ur": "جہاں سے تم دونوں چاہو"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "the word is a time ظرف: accusative",
+          "ur": "لفظ وقت کا ظرف ہے: منصوب"
+        },
+        {
+          "en": "a word that keeps its fixed ḍamma",
+          "ur": "ایسا لفظ جو اپنا ثابت ضمہ رکھتا ہے"
+        },
+        {
+          "en": "the word is the subject: nominative",
+          "ur": "لفظ مبتدا ہے: مرفوع"
+        },
+        {
+          "en": "the word follows a preposition: genitive",
+          "ur": "لفظ حرفِ جر کے بعد ہے: مجرور"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Three endings of one word, and one word that never changes.",
+        "ur": "ایک لفظ کے تین ختم، اور ایک لفظ جو کبھی نہیں بدلتا۔"
       }
     },
     {
       "type": "FILL_BLANK",
       "id": "ch66-l04-ex03",
       "mode": "TAP",
-      "sentence_ar": "وَإِنْ مِنْ شَيْءٍ إِلَّا ___ خَزَائِنُهُ",
+      "sentence_ar": "ذَهَبْتُ ___ السَّبْتِ",
       "hint": {
-        "en": "15:21 — 'And there is not a thing but that with Us are its depositories.'",
-        "ur": "15:21 — 'اور کوئی چیز ایسی نہیں جس کے خزانے ہمارے پاس نہ ہوں۔'"
+        "en": "I went on Saturday.",
+        "ur": "میں ہفتے کے دن گیا۔"
       },
       "options": [
         {
-          "ar": "عِنْدَنَا",
-          "ar_plain": "عندنا",
-          "translit": "'indanaa",
-          "en": "with Us",
-          "ur": "ہمارے پاس"
+          "ar": "يَوْمُ",
+          "ar_plain": "يوم",
+          "translit": "yawmu",
+          "en": "day (nominative)",
+          "ur": "دن (مرفوع)"
         },
         {
-          "ar": "يَوْمَئِذٍ",
-          "ar_plain": "يومئذ",
-          "translit": "yawma'idhin",
-          "en": "on that day",
-          "ur": "اس دن"
+          "ar": "يَوْمِ",
+          "ar_plain": "يوم",
+          "translit": "yawmi",
+          "en": "day (genitive)",
+          "ur": "دن (مجرور)"
         },
         {
-          "ar": "حَيْثُ",
-          "ar_plain": "حيث",
-          "translit": "haythu",
-          "en": "where",
-          "ur": "جہاں"
+          "ar": "يَوْمَ",
+          "ar_plain": "يوم",
+          "translit": "yawma",
+          "en": "on the day (ظرف, accusative)",
+          "ur": "دن کو (ظرف، منصوب)"
         },
         {
-          "ar": "بِقَدَرٍ",
-          "ar_plain": "بقدر",
-          "translit": "bi-qadarin",
-          "en": "in measure",
-          "ur": "اندازے سے"
+          "ar": "يَوْمٌ",
+          "ar_plain": "يوم",
+          "translit": "yawmun",
+          "en": "a day (nominative, tanwīn)",
+          "ur": "ایک دن (مرفوع، تنوین)"
         }
       ],
       "correct_answer": {
-        "ar": "عِنْدَنَا",
-        "ar_plain": "عندنا",
-        "translit": "'indanaa",
-        "en": "with Us",
-        "ur": "ہمارے پاس"
+        "ar": "يَوْمَ",
+        "ar_plain": "يوم",
+        "translit": "yawma",
+        "en": "on the day (ظرف, accusative)",
+        "ur": "دن کو (ظرف، منصوب)"
       },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch66-l04-ex04",
-      "left_column": [
-        {
-          "ar": "يَوْمَ يَرَى الْكَافِرُونَ النَّارَ",
-          "ar_plain": "يوم يرى الكافرون النار",
-          "translit": "yawma yaraa al-kaafiroona an-nuura",
-          "en": "on the day the disbelievers see the Fire",
-          "ur": "اس دن کافر آگ دیکھیں گے"
-        },
-        {
-          "ar": "عِنْدَ رَبِّهِمْ",
-          "ar_plain": "عند ربهم",
-          "translit": "'inda rabbihim",
-          "en": "with their Lord",
-          "ur": "اپنے رب کے پاس"
-        },
-        {
-          "ar": "حِينَ يَحْكُمُ اللَّهُ",
-          "ar_plain": "حين يحكم الله",
-          "translit": "hiina yahkumu Allahu",
-          "en": "when Allah judges",
-          "ur": "جب اللہ فیصلہ کرتا ہے"
-        },
-        {
-          "ar": "إِذْ قَالَ مُوسَىٰ",
-          "ar_plain": "إذ قال موسى",
-          "translit": "idh qaala muusaa",
-          "en": "when Moses said",
-          "ur": "جب موسیٰ نے کہا"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "يَوْمَ — time zarf, declinable",
-          "ur": "يَوْمَ — ظرفِ زمان، معرب"
-        },
-        {
-          "en": "عِنْدَ — place zarf, declinable",
-          "ur": "عِنْدَ — ظرفِ مکان، معرب"
-        },
-        {
-          "en": "حِينَ — time zarf before a verb",
-          "ur": "حِينَ — فعل سے پہلے ظرفِ زمان"
-        },
-        {
-          "en": "إِذْ — time zarf, fixed (مَبْنِيّ)",
-          "ur": "إِذْ — ظرفِ زمان، مبنی"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch66-l04-ex05",
-      "sentence_ar": "جَاءَ الضَّيْفُ يَوْمَ الْجُمُعَةِ",
-      "words": [
-        {
-          "ar": "جَاءَ",
-          "ar_plain": "جاء",
-          "translit": "jaa'a",
-          "en": "came",
-          "ur": "آیا"
-        },
-        {
-          "ar": "الضَّيْفُ",
-          "ar_plain": "الضيف",
-          "translit": "ad-dayfu",
-          "en": "the guest",
-          "ur": "مہمان"
-        },
-        {
-          "ar": "يَوْمَ",
-          "ar_plain": "يوم",
-          "translit": "yawma",
-          "en": "on the day",
-          "ur": "دن"
-        },
-        {
-          "ar": "الْجُمُعَةِ",
-          "ar_plain": "الجمعة",
-          "translit": "al-jumu'ati",
-          "en": "of Friday",
-          "ur": "جمعہ کے"
-        }
-      ],
-      "available_roles": [
-        "SUBJECT",
-        "VERB",
-        "OBJECT",
-        "PREPOSITION",
-        "POSSESSIVE",
-        "TIME_ZARF",
-        "PLACE_ZARF"
-      ],
-      "correct_roles": [
-        "VERB",
-        "SUBJECT",
-        "TIME_ZARF",
-        "POSSESSIVE"
-      ],
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "جَاءَ is the verb and الضَّيْفُ its doer. يَوْمَ is a time zarf (accusative) and الْجُمُعَةِ is its مُضَاف إِلَيْه (genitive): 'the guest came on Friday'.",
-        "ur": "جَاءَ فعل اور الضَّيْفُ فاعل ہے۔ يَوْمَ ظرفِ زمان (منصوب) اور الْجُمُعَةِ اس کا مضاف الیہ (مجرور) ہے: 'مہمان جمعہ کے دن آیا'۔"
+        "en": "The word tells when I went, so it is a time ظرف and takes the accusative.",
+        "ur": "لفظ بتاتا ہے کہ میں کب گیا، اس لیے یہ وقت کا ظرف ہے اور منصوب ہوتا ہے۔"
       }
     },
     {
-      "type": "BUILD_SENTENCE",
-      "id": "ch66-l04-ex06",
-      "target_translation": {
-        "en": "On the day when the truth is established, no one will be wronged.",
-        "ur": "اس دن جب حق قائم ہوگا، کسی پر ظلم نہیں ہوگا۔"
+      "type": "FILL_BLANK",
+      "id": "ch66-l04-ex04",
+      "mode": "TAP",
+      "sentence_ar": "وَمَا هُوَ مِنْ ___ اللَّهِ",
+      "hint": {
+        "en": "And it is not from Allah. (3:78)",
+        "ur": "اور وہ اللہ کی طرف سے نہیں ہے۔ (3:78)"
       },
-      "tiles": [
+      "options": [
         {
-          "ar": "يَوْمَ",
-          "ar_plain": "يوم",
-          "translit": "yawma",
-          "en": "on the day",
-          "ur": "اس دن"
+          "ar": "عِنْدَ",
+          "ar_plain": "عند",
+          "translit": "ʿinda",
+          "en": "(accusative)",
+          "ur": "(منصوب)"
         },
         {
-          "ar": "يَقُومُ",
-          "ar_plain": "يقوم",
-          "translit": "yaqoomu",
-          "en": "is established",
-          "ur": "قائم ہوتا ہے"
+          "ar": "عِنْدُ",
+          "ar_plain": "عند",
+          "translit": "ʿindu",
+          "en": "(nominative)",
+          "ur": "(مرفوع)"
         },
         {
-          "ar": "الْحَقُّ",
-          "ar_plain": "الحق",
-          "translit": "al-haqqu",
-          "en": "the truth",
-          "ur": "حق"
+          "ar": "عِنْدٌ",
+          "ar_plain": "عند",
+          "translit": "ʿindun",
+          "en": "(nominative, tanwīn)",
+          "ur": "(مرفوع، تنوین)"
         },
         {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "not",
-          "ur": "نہیں"
-        },
-        {
-          "ar": "يُظْلَمُ",
-          "ar_plain": "يظلم",
-          "translit": "yuzlamu",
-          "en": "is wronged",
-          "ur": "ظلم ہوتا ہے"
-        },
-        {
-          "ar": "أَحَدٌ",
-          "ar_plain": "احد",
-          "translit": "ahadun",
-          "en": "anyone",
-          "ur": "کوئی"
+          "ar": "عِندِ",
+          "ar_plain": "عند",
+          "translit": "ʿindi",
+          "en": "(genitive, after مِنْ)",
+          "ur": "(مجرور، مِنْ کے بعد)"
         }
       ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "xp_value": 1
+      "correct_answer": {
+        "ar": "عِندِ",
+        "ar_plain": "عند",
+        "translit": "ʿindi",
+        "en": "(genitive, after مِنْ)",
+        "ur": "(مجرور، مِنْ کے بعد)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After the preposition مِنْ the word is genitive: مِنْ عِندِ اللَّهِ.",
+        "ur": "حرفِ جر مِنْ کے بعد لفظ مجرور ہوتا ہے: مِنْ عِندِ اللَّهِ۔"
+      }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch66-l04-ex07",
+      "id": "ch66-l04-ex05",
       "statement": {
-        "en": "All ظروف are مَبْنِيّ (indeclinable). They never change case.",
-        "ur": "تمام ظروف مبنی ہیں۔ ان کا اعراب کبھی نہیں بدلتا۔",
-        "ar_example": {
-          "ar": "مِنْ عِنْدِ اللَّهِ",
-          "ar_plain": "من عند الله",
-          "translit": "min 'indi allaahi",
-          "en": "from Allah",
-          "ur": "اللہ کی طرف سے"
-        }
+        "en": "حَيْثُ keeps the same ending, a ḍamma, wherever it stands in the sentence.",
+        "ur": "حَيْثُ جملے میں جہاں بھی ہو اس کا ختم ایک ہی رہتا ہے، ضمہ۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes. حَيْثُ is a place word with a fixed ending, unlike يَوْمُ / يَوْمَ / يَوْمِ.",
+        "ur": "جی ہاں۔ حَيْثُ ثابت ختم والا مکان کا لفظ ہے، يَوْمُ / يَوْمَ / يَوْمِ کے برعکس۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch66-l04-ex06",
+      "statement": {
+        "en": "Because حَيْثُ never changes, every time or place word is a fixed form.",
+        "ur": "چونکہ حَيْثُ کبھی نہیں بدلتا، اس لیے وقت اور مکان کا ہر لفظ ثابت صورت ہے۔"
       },
       "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "False. Most zarfs are مُعْرَب: عِنْدَ becomes عِنْدِ after مِنْ, and يَوْمَ becomes يَوْمُ as a subject. Only a few, like إِذْ، إِذَا، حَيْثُ، الْآنَ, are fixed.",
-        "ur": "غلط۔ اکثر ظروف معرب ہیں: مِنْ کے بعد عِنْدَ بدل کر عِنْدِ ہو جاتا ہے، اور مبتدا ہو تو يَوْمَ بدل کر يَوْمُ۔ صرف چند، جیسے إِذْ، إِذَا، حَيْثُ، الْآنَ، مبنی ہیں۔"
+        "en": "False. Most of these words are ordinary nouns and change with their job: يَوْمُ / يَوْمَ / يَوْمِ and عِنْدَ / عِندِ.",
+        "ur": "غلط۔ ان میں سے زیادہ تر عام اسم ہیں اور اپنے کام کے ساتھ بدلتے ہیں: يَوْمُ / يَوْمَ / يَوْمِ اور عِنْدَ / عِندِ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch66-l04-ex07",
+      "prompt": {
+        "ar": "حَيْثُ شِئْتُمَا",
+        "ar_plain": "حيث شئتما",
+        "translit": "ḥaythu shiʾtumā",
+        "en": "(2:35: what does it say?)",
+        "ur": "(2:35: یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "wherever you two wish",
+          "ur": "جہاں سے تم دونوں چاہو"
+        },
+        {
+          "en": "whenever you two came",
+          "ur": "جب بھی تم دونوں آئے"
+        },
+        {
+          "en": "where they wished",
+          "ur": "جہاں انہوں نے چاہا"
+        },
+        {
+          "en": "under whatever you wish",
+          "ur": "جو تم چاہو اس کے نیچے"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "حَيْثُ is 'where' and شِئْتُمَا is 'you two wished': 'wherever you two wish'.",
+        "ur": "حَيْثُ کا مطلب 'جہاں' ہے اور شِئْتُمَا کا مطلب 'تم دونوں نے چاہا': 'جہاں سے تم دونوں چاہو'۔"
       }
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch66-l04-ex08",
       "prompt": {
-        "ar": "حُقُبًا",
-        "ar_plain": "حقبا",
-        "translit": "huquban",
-        "en": "for ages / a long time",
-        "ur": "بہت سال / طویل وقت تک"
+        "ar": "يَوْمَ لَا تَمْلِكُ نَفْسٌ لِّنَفْسٍ شَيْئًا",
+        "ar_plain": "يوم لا تملك نفس لنفس شيئا",
+        "translit": "yawma lā tamliku nafsun llinafsin shayʾan",
+        "en": "(82:19: what does يَوْمَ tell?)",
+        "ur": "(82:19: يَوْمَ کیا بتاتا ہے؟)"
       },
       "options": [
         {
-          "en": "for ages / a long time",
-          "ur": "بہت سال / طویل وقت تک"
+          "en": "where: 'in the place where …'",
+          "ur": "کہاں: 'اس جگہ جہاں …'"
         },
         {
-          "en": "a valley",
-          "ur": "ایک وادی"
+          "en": "who: 'the one who has power'",
+          "ur": "کون: 'وہ جو اختیار رکھتا ہے'"
         },
         {
-          "en": "a promise",
-          "ur": "ایک وعدہ"
+          "en": "when: 'on the Day when no soul has power …'",
+          "ur": "کب: 'اس دن جب کوئی جان اختیار نہ رکھے گی …'"
         },
         {
-          "en": "a matter",
-          "ur": "ایک معاملہ"
+          "en": "how many: 'a number of souls'",
+          "ur": "کتنے: 'جانوں کی ایک تعداد'"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "حُقُبًا in Al-Kahf 18:60 is a time zarf meaning 'for ages'. Its fatḥatān shows the accusative — a declinable zarf.",
-        "ur": "الکہف 18:60 میں حُقُبًا ظرفِ زمان ہے جس کا معنی 'مدتوں' ہے۔ اس کے دو زبر نصب ظاہر کرتے ہیں — یہ معرب ظرف ہے۔"
+        "en": "يَوْمَ names the time of the statement: 'on the Day when …'.",
+        "ur": "يَوْمَ بیان کا وقت بتاتا ہے: 'اس دن جب …'۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Zarfs: most decline, a few are fixed",
-      "ar": "الظُّرُوفُ: أَكْثَرُهَا مُعْرَبٌ وَقَلِيلٌ مِنْهَا مَبْنِيٌّ",
-      "ur": "ظروف: اکثر معرب، چند مبنی"
+      "en": "Three endings, one fixed word",
+      "ar": "ثَلَاثُ حَالَاتٍ وَلَفْظٌ مَبْنِيٌّ",
+      "ur": "تین ختم اور ایک ثابت لفظ"
     },
     "ayah": {
-      "surah": 18,
-      "ayah": 60,
-      "label": "Al-Kahf 18:60",
-      "ar": "وَإِذْ قَالَ مُوسَى لِفَتَاهُ لَا أَبْرَحُ حَتَّىٰ أَبْلُغَ مَجْمَعَ الْبَحْرَيْنِ أَوْ أَمْضِيَ حُقُبًا",
-      "en": "Moses said to his servant, 'I will not cease until I reach the meeting of the two seas or I will go on for ages.'",
-      "ur": "موسیٰ نے اپنے نوجوان سے کہا کہ میں نہیں رکوں گا یہاں تک کہ دو دریاؤں کے ملنے کی جگہ تک پہنچ جاؤں یا بہت سال گزر جائیں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/018060.mp3"
+      "surah": 82,
+      "ayah": 19,
+      "label": "Al-Infitar 82:19",
+      "ar": "يَوْمَ لَا تَمْلِكُ نَفْسٌ لِّنَفْسٍ شَيْئًا",
+      "en": "On the Day when no soul has power to do anything for another",
+      "ur": "جس دن کوئی جان کسی دوسری جان کے لیے کچھ نہ کر سکے گی",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/082019.mp3"
     },
     "highlighted_word_indices": [
-      0,
-      12
+      0
+    ],
+    "highlighted_words": [
+      "يَوْمَ"
     ],
     "noor_explanation": {
-      "en": "Two time zarfs frame this ayah. إِذْ ('when') is مَبْنِيّ — it is always إِذْ. حُقُبًا ('for ages') is مُعْرَب — its fatḥatān mark the accusative of a zarf. Most zarfs are like حُقُبًا; only a handful are like إِذْ.",
-      "ur": "اس آیت کے دونوں سروں پر ظرفِ زمان ہیں۔ إِذْ ('جب') مبنی ہے — ہمیشہ إِذْ ہی رہتا ہے۔ حُقُبًا ('مدتوں') معرب ہے — اس کے دو زبر ظرف کا نصب ہیں۔ اکثر ظروف حُقُبًا جیسے ہیں؛ صرف چند إِذْ جیسے۔"
+      "en": "يَوْمَ here is accusative. In 82:18 the same word was يَوْمُ — the job, not the word, picks the ending.",
+      "ur": "يَوْمَ یہاں منصوب ہے۔ 82:18 میں یہی لفظ يَوْمُ تھا — ختم لفظ نہیں، کام چنتا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Most zarfs are مُعْرَب: accusative as a zarf (عِنْدَ), genitive after a preposition (مِنْ عِنْدِ), nominative as a subject (يَوْمُ الدِّينِ). A few — إِذْ، إِذَا، حَيْثُ، الْآنَ — are fixed and never change.",
-      "ur": "اکثر ظروف معرب ہیں: ظرف ہوں تو منصوب (عِنْدَ)، حرفِ جر کے بعد مجرور (مِنْ عِنْدِ)، مبتدا ہوں تو مرفوع (يَوْمُ الدِّينِ)۔ چند — إِذْ، إِذَا، حَيْثُ، الْآنَ — مبنی ہیں اور کبھی نہیں بدلتے۔"
+      "en": "Most of these words change with their job; حَيْثُ is the one you met that never changes.",
+      "ur": "ان میں سے زیادہ تر الفاظ اپنے کام کے ساتھ بدلتے ہیں؛ حَيْثُ وہ لفظ ہے جو آپ نے دیکھا جو کبھی نہیں بدلتا۔"
     }
   }
 }

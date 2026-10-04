@@ -2,81 +2,93 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 67, Lesson 4 — The three kinds of لَوْ: conditional, wishing, and مصدرية.",
+    "_note": "Chapter 67, Lesson 4 (ch67-l04, rebuilt in place). لَوْ لَمْ: لَمْ (Chapter 44), not لَوْ, governs the jussive; exact 24:35 (وَلَوْ لَمْ تَمْسَسْهُ نَارٌ) with its meaning supplied and no claim about the verb's root. Then one bounded construction, لَوْلَا + a noun, 'if it were not for' (authored: لَوْلَا الْمَاءُ لَهَلَكَ النَّاسُ). The old 'three kinds of لَوْ' (wishing, 'masdar', after يَوَدُّ), the wrong 13:31 wording and the 'always unreal' rule are gone; the exhortative لَوْلَا ('why not'), لَوْ مَا and the specialist labels are not taught. Added 2026-10-04 in the proposal harvest, batch 9 (Docs/proposals/proposal-harvest-tracker.md), from Docs/proposals/chapter-67-content-proposal.md and its review amendments.",
+    "title": "Saying 'Not' After لَوْ, and لَوْلَا",
+    "titleAr": "لَوْ لَمْ وَلَوْلَا",
+    "titleUr": "لَوْ کے بعد 'نہیں'، اور لَوْلَا",
     "chapter_order": 67,
     "lesson_order": 4,
-    "chapter_title": "لو",
-    "title": "Three Kinds of لو",
-    "titleAr": "أَنْوَاعُ لَوْ",
-    "source": "book_8_lesson_1_lo_advanced.md",
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 6,
-      "ayah": 40,
-      "label": "Al-An'am 6:40",
-      "ar": "قُلْ أَرَأَيْتَكُمْ إِنْ أَتَاكُمْ عَذَابُ اللَّهِ أَوْ أَتَتْكُمُ السَّاعَةُ أَغَيْرَ اللَّهِ تَدْعُونَ إِن كُنتُمْ صَادِقِينَ",
-      "en": "Say, \"Have you considered: if there came to you the punishment of Allāh or there came to you the Hour - is it other than Allāh you would invoke, if you should be truthful?\"",
-      "ur": "کہو (کافرو) بھلا دیکھو تو اگر تم پر خدا کا عذاب آجائےیا قیامت آموجود ہو تو کیا تم (ایسی حالت میں) خدا کے سوا کسی اور کو پکارو گے؟ اگر سچے ہو (تو بتاؤ)",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/006040.mp3"
+      "surah": 24,
+      "ayah": 35,
+      "label": "An-Nur 24:35",
+      "ar": "وَلَوْ لَمْ تَمْسَسْهُ نَارٌ",
+      "en": "even if no fire had touched it",
+      "ur": "چاہے اسے کوئی آگ نہ چھوئے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/024035.mp3"
     },
     "noor_intro": {
-      "en": "قُلْ أَرَأَيْتَكُمْ إِنْ أَتَاكُمْ عَذَابُ اللَّهِ — 'have you considered: if the punishment of Allah came to you…'. إِنْ here is a real condition — it could happen. Today we contrast it with the three kinds of لَوْ.",
-      "ur": "قُلْ أَرَأَيْتَكُمْ إِنْ أَتَاكُمْ عَذَابُ اللَّهِ — 'بتاؤ، اگر تم پر اللہ کا عذاب آ جائے…'۔ یہاں إِنْ حقیقی شرط ہے — ایسا ہو سکتا ہے۔ آج ہم اس کا موازنہ لَوْ کی تین قسموں سے کریں گے۔"
+      "en": "You know لَمْ from Chapter 44. After لَوْ it still does its own job. And لَوْلَا is a different word with a different meaning: 'if it were not for'.",
+      "ur": "لَمْ آپ باب 44 سے جانتے ہیں۔ لَوْ کے بعد بھی وہ اپنا کام کرتا ہے۔ اور لَوْلَا ایک مختلف لفظ ہے جس کا مطلب مختلف ہے: 'اگر … نہ ہوتا'۔"
     },
-    "autoplay": true
+    "autoplay": false
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "The conditional لَوْ (لَوْ الشَّرْطِيَّة)",
-        "ar": "لَوْ الشَّرْطِيَّةُ — حَرْفُ امْتِنَاعٍ لِامْتِنَاعٍ",
-        "ur": "شرطیہ لَوْ"
+        "en": "لَوْ لَمْ: لَمْ does its own job",
+        "ar": "لَوْ لَمْ",
+        "ur": "لَوْ لَمْ: لَمْ اپنا کام کرتا ہے"
       },
       "explanation": {
-        "en": "The most common kind: a condition that did not happen, and a result that therefore did not happen either. لَوْ شَاءَ رَبُّكَ لَآمَنَ مَنْ فِي الْأَرْضِ كُلُّهُمْ — 'had your Lord willed, everyone on earth would have believed' (10:99).",
-        "ur": "سب سے عام قسم: ایسی شرط جو نہیں ہوئی، اور اس لیے نتیجہ بھی نہیں ہوا۔ لَوْ شَاءَ رَبُّكَ لَآمَنَ مَنْ فِي الْأَرْضِ كُلُّهُمْ — 'اگر تیرا رب چاہتا تو زمین کے سب لوگ ایمان لے آتے' (10:99)۔"
+        "en": "لَوْ لَمْ means 'even if … had not …'. The negation is لَمْ, and it is لَمْ, not لَوْ, that puts the verb after it in the jussive (Chapter 44). لَوْ itself changes nothing.",
+        "ur": "لَوْ لَمْ کا مطلب 'چاہے … نہ ہوتا' ہے۔ نفی لَمْ ہے، اور بعد والے فعل کو مجزوم لَمْ کرتا ہے، لَوْ نہیں (باب 44)۔ لَوْ خود کچھ نہیں بدلتا۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "وَلَوْ لَمْ تَمْسَسْهُ نَارٌ",
+        "ar_plain": "ولو لم تمسسه نار",
+        "translit": "walaw lam tamsashu nārun",
+        "en": "even if no fire had touched it",
+        "ur": "چاہے اسے کوئی آگ نہ چھوئے"
+      },
+      "explanation": {
+        "en": "وَلَوْ لَمْ تَمْسَسْهُ نَارٌ: 'even if no fire had touched it'. لَمْ governs تَمْسَسْهُ, which means 'touches it'; the meaning is given and you do not derive the verb. (An-Nur 24:35) (An-Nur 24:35)",
+        "ur": "وَلَوْ لَمْ تَمْسَسْهُ نَارٌ: 'چاہے اسے کوئی آگ نہ چھوئے'۔ لَمْ تَمْسَسْهُ پر عمل کرتا ہے، جس کا مطلب 'اسے چھوتی ہے' ہے؛ معنی دیا گیا ہے اور آپ فعل کو خود نہیں بناتے۔ (النور 24:35) (An-Nur 24:35)"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "The wishing لَوْ (لَوْ لِلتَّمَنِّي)",
-        "ar": "لَوْ لِلتَّمَنِّي",
-        "ur": "تمنا والا لَوْ"
+        "en": "لَوْلَا: 'if it were not for'",
+        "ar": "لَوْلَا",
+        "ur": "لَوْلَا: 'اگر … نہ ہوتا'"
       },
       "explanation": {
-        "en": "لَوْ can mean 'if only' — a wish with no 'then' clause. Its hoped-for result comes with فَـ and a subjunctive verb: فَلَوْ أَنَّ لَنَا كَرَّةً فَنَكُونَ مِنَ الْمُؤْمِنِينَ — 'if only we had a return, so we could be among the believers' (26:102).",
-        "ur": "لَوْ 'کاش' کے معنی میں بھی آتا ہے — ایسی تمنا جس کا 'تو' والا جواب نہیں۔ اس کا مطلوبہ نتیجہ فَـ اور منصوب فعل سے آتا ہے: فَلَوْ أَنَّ لَنَا كَرَّةً فَنَكُونَ مِنَ الْمُؤْمِنِينَ — 'کاش ہمیں لوٹنا ملے تو ہم مومنوں میں ہو جائیں' (26:102)۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "لَوْ after verbs of wishing (لَوْ الْمَصْدَرِيَّة)",
-        "ar": "لَوْ الْمَصْدَرِيَّةُ بَعْدَ وَدَّ وَيَوَدُّ",
-        "ur": "وَدَّ اور يَوَدُّ کے بعد مصدریہ لَوْ"
-      },
-      "explanation": {
-        "en": "After وَدَّ / يَوَدُّ ('to wish'), لَوْ works like أَنْ ('that'): it joins the next verb into a clause that acts like a verbal noun, and it has no answer. يَوَدُّ أَحَدُهُمْ لَوْ يُعَمَّرُ أَلْفَ سَنَةٍ — 'each of them wishes that he could live a thousand years' (2:96).",
-        "ur": "وَدَّ / يَوَدُّ ('چاہنا') کے بعد لَوْ، أَنْ ('کہ') کی طرح کام کرتا ہے: یہ اگلے فعل کو مصدر کے معنی والا جملہ بنا دیتا ہے، اور اس کا کوئی جواب نہیں ہوتا۔ يَوَدُّ أَحَدُهُمْ لَوْ يُعَمَّرُ أَلْفَ سَنَةٍ — 'ان میں سے ہر ایک چاہتا ہے کہ ہزار برس جیے' (2:96)۔"
+        "en": "لَوْلَا followed by a noun means 'if it were not for …'. The noun after it is nominative, and the result says what would have followed. It is a different word from لَوْ لَمْ, and it is written as one word.",
+        "ur": "لَوْلَا کے بعد اسم آئے تو مطلب 'اگر … نہ ہوتا' ہے۔ اس کے بعد کا اسم مرفوع ہوتا ہے، اور نتیجہ بتاتا ہے کہ کیا ہوتا۔ یہ لَوْ لَمْ سے مختلف لفظ ہے، اور ایک لفظ لکھا جاتا ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "وَلَوْ أَنَّ قُرْآنًا سُيِّرَتْ بِهِ الْجِبَالُ أَوْ قُطِّعَتْ بِهِ الْأَرْضُ أَوْ كُلِّمَ بِهِ الْمَوْتَىٰ",
-        "ar_plain": "ولو ان قرآنا سيرت به الجبال او قطعت به الارض او كلم به الموتي",
-        "translit": "wa law anna qur'aanan suyyirat bihil-jibaalu aw qutti'at bihil-ardu aw kullima bihil-mawtaa",
-        "en": "And if there were a Quran by which the mountains were moved, or the earth were split, or the dead were made to speak … (13:31)",
-        "ur": "اور اگر کوئی قرآن ایسا ہوتا جس سے پہاڑ چلا دیے جاتے، یا زمین پھاڑ دی جاتی، یا مردوں سے بات کرا دی جاتی … (13:31)"
+        "ar": "لَوْلَا الْمَاءُ لَهَلَكَ النَّاسُ",
+        "ar_plain": "لولا الماء لهلك الناس",
+        "translit": "lawlā al-māʾu lahalaka an-nāsu",
+        "en": "Were it not for water, people would perish",
+        "ur": "اگر پانی نہ ہوتا تو لوگ ہلاک ہو جاتے"
       },
       "explanation": {
-        "en": "وَلَوْ أَنَّ begins a condition about something that did not happen: a Quran by which mountains were moved, the earth split, or the dead made to speak. The answer of لَوْ is not stated in the ayah.",
-        "ur": "وَلَوْ أَنَّ ایک ایسی شرط شروع کرتا ہے جو واقع نہیں ہوئی: ایسا قرآن جس سے پہاڑ چلائے جاتے، زمین پھاڑ دی جاتی یا مردوں سے بات کرائی جاتی۔ اس آیت میں لَوْ کا جواب مذکور نہیں۔"
+        "en": "لَوْلَا الْمَاءُ is 'if it were not for water' (a noun, nominative), and لَهَلَكَ النَّاسُ is the result with لَـ. The verb هَلَكَ, 'perished', is given with its meaning.",
+        "ur": "لَوْلَا الْمَاءُ 'اگر پانی نہ ہوتا' ہے (اسم، مرفوع)، اور لَهَلَكَ النَّاسُ لَـ والا نتیجہ ہے۔ فعل هَلَكَ، 'ہلاک ہوا'، اپنے معنی کے ساتھ دیا گیا ہے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "One meaning of لَوْلَا for now",
+        "ur": "ابھی لَوْلَا کا ایک ہی معنی"
+      },
+      "body": {
+        "en": "لَوْلَا appears in the Quran with other meanings as well, such as 'why not …'. This lesson teaches only 'if it were not for' + a noun, with a result. The other uses are not part of this lesson.",
+        "ur": "لَوْلَا قرآن میں دوسرے معنی کے ساتھ بھی آتا ہے، جیسے 'کیوں نہیں …'۔ یہ سبق صرف 'اگر … نہ ہوتا' + اسم، نتیجے کے ساتھ، سکھاتا ہے۔ دوسرے استعمال اس سبق میں شامل نہیں۔"
       }
     }
   ],
@@ -85,113 +97,246 @@
       "type": "TAP_TRANSLATION",
       "id": "ch67-l04-ex01",
       "prompt": {
-        "ar": "وَلَوْ أَنَّ قُرْآنًا سُيِّرَتْ بِهِ الْجِبَالُ",
-        "ar_plain": "ولو ان قرآنا سيرت به الجبال",
-        "translit": "wa law anna qur'aanan suyyirat bihil-jibaalu",
-        "en": "And if there were a Quran by which the mountains were moved …",
-        "ur": "اور اگر کوئی قرآن ایسا ہوتا جس سے پہاڑ چلا دیے جاتے …"
+        "ar": "وَلَوْ لَمْ تَمْسَسْهُ نَارٌ",
+        "ar_plain": "ولو لم تمسسه نار",
+        "translit": "walaw lam tamsashu nārun",
+        "en": "(24:35: what does it say?)",
+        "ur": "(24:35: یہ کیا کہتا ہے؟)"
       },
       "options": [
         {
-          "en": "And if there were a Quran by which the mountains were moved …",
-          "ur": "اور اگر کوئی قرآن ایسا ہوتا جس سے پہاڑ چلا دیے جاتے …"
+          "en": "when fire touches it",
+          "ur": "جب آگ اسے چھوتی ہے"
         },
         {
-          "en": "And if a Quran were sent, the mountains would be moved.",
-          "ur": "اور اگر قرآن بھیجا جاتا تو پہاڑ ہل جاتے۔"
+          "en": "even if no fire had touched it",
+          "ur": "چاہے اسے کوئی آگ نہ چھوئے"
         },
         {
-          "en": "A Quran was sent and mountains were moved.",
-          "ur": "قرآن بھیجا گیا اور پہاڑ ہل گئے۔"
+          "en": "fire touched it, so it lit",
+          "ur": "آگ نے اسے چھوا تو وہ جل اٹھا"
         },
         {
-          "en": "If a Quran moves mountains, it is this one.",
-          "ur": "اگر قرآن پہاڑ ہلاتا ہے تو یہی ہے۔"
+          "en": "do not let fire touch it",
+          "ur": "آگ کو اسے مت چھونے دو"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَوْ أَنَّ introduces a condition that did not happen. سُيِّرَتْ is a past passive verb — \"were moved\". The mountains were not moved; this is a hypothetical.",
-        "ur": "لَوْ أَنَّ ایک ایسی شرط شروع کرتا ہے جو واقع نہیں ہوئی۔ سُيِّرَتْ ماضی مجہول ہے — \"چلا دیے جاتے\"۔ پہاڑ چلائے نہیں گئے؛ یہ فرضی بات ہے۔"
+        "en": "لَوْ لَمْ means 'even if … had not …': the fire did not touch it.",
+        "ur": "لَوْ لَمْ کا مطلب 'چاہے … نہ ہوتا' ہے: آگ نے اسے نہیں چھوا۔"
       }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch67-l04-ex02",
       "statement": {
-        "en": "After verbs of wishing like يَوَدُّ, لَوْ works like أَنْ ('that') and has no answer clause.",
-        "ur": "يَوَدُّ جیسے تمنا کے افعال کے بعد لَوْ، أَنْ ('کہ') کی طرح کام کرتا ہے اور اس کا کوئی جواب نہیں ہوتا۔",
-        "ar_example": {
-          "ar": "يَوَدُّ أَحَدُهُمْ لَوْ يُعَمَّرُ أَلْفَ سَنَةٍ",
-          "ar_plain": "يود أحدهم لو يعمر ألف سنة",
-          "translit": "yawaddu ahaduhum law yu'ammaru alfa sanatin",
-          "en": "Each of them wishes that he could live a thousand years.",
-          "ur": "ان میں سے ہر ایک چاہتا ہے کہ ہزار برس جیے۔"
+        "en": "In لَوْ لَمْ تَمْسَسْهُ the particle لَوْ puts the verb in the jussive.",
+        "ur": "لَوْ لَمْ تَمْسَسْهُ میں حرف لَوْ فعل کو مجزوم کرتا ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. It is لَمْ that governs the verb; لَوْ changes nothing.",
+        "ur": "غلط۔ فعل پر عمل لَمْ کرتا ہے؛ لَوْ کچھ نہیں بدلتا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch67-l04-ex03",
+      "prompt": {
+        "ar": "لَوْ لَمْ تَمْسَسْهُ",
+        "ar_plain": "لو لم تمسسه",
+        "translit": "law lam tamsashu",
+        "en": "(which word governs the jussive?)",
+        "ur": "(مجزوم کون سا لفظ کرتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "لَوْ",
+          "ur": "لَوْ"
+        },
+        {
+          "en": "نَارٌ",
+          "ur": "نَارٌ"
+        },
+        {
+          "en": "لَمْ",
+          "ur": "لَمْ"
+        },
+        {
+          "en": "هُ",
+          "ur": "هُ"
         }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَمْ is the particle of Chapter 44 that governs the next verb.",
+        "ur": "لَمْ باب 44 کا وہ حرف ہے جو اگلے فعل پر عمل کرتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch67-l04-ex04",
+      "prompt": {
+        "ar": "لَوْلَا الْمَاءُ لَهَلَكَ النَّاسُ",
+        "ar_plain": "لولا الماء لهلك الناس",
+        "translit": "lawlā al-māʾu lahalaka an-nāsu",
+        "en": "(what does it say?)",
+        "ur": "(یہ کیا کہتا ہے؟)"
+      },
+      "options": [
+        {
+          "en": "Were it not for water, people would perish",
+          "ur": "اگر پانی نہ ہوتا تو لوگ ہلاک ہو جاتے"
+        },
+        {
+          "en": "Water is not for people",
+          "ur": "پانی لوگوں کے لیے نہیں ہے"
+        },
+        {
+          "en": "People drink water, so they live",
+          "ur": "لوگ پانی پیتے ہیں اس لیے زندہ ہیں"
+        },
+        {
+          "en": "Why do people not drink water?",
+          "ur": "لوگ پانی کیوں نہیں پیتے؟"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَوْلَا + a noun is 'if it were not for …', and the result says what would have followed.",
+        "ur": "لَوْلَا + اسم 'اگر … نہ ہوتا' ہے، اور نتیجہ بتاتا ہے کہ کیا ہوتا۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch67-l04-ex05",
+      "mode": "TAP",
+      "sentence_ar": "لَوْلَا ___ لَهَلَكَ النَّاسُ",
+      "hint": {
+        "en": "Were it not for water, people would perish.",
+        "ur": "اگر پانی نہ ہوتا تو لوگ ہلاک ہو جاتے۔"
+      },
+      "options": [
+        {
+          "ar": "الْمَاءَ",
+          "ar_plain": "الماء",
+          "translit": "al-māʾa",
+          "en": "the water (accusative)",
+          "ur": "پانی (منصوب)"
+        },
+        {
+          "ar": "الْمَاءِ",
+          "ar_plain": "الماء",
+          "translit": "al-māʾi",
+          "en": "the water (genitive)",
+          "ur": "پانی (مجرور)"
+        },
+        {
+          "ar": "مَاءً",
+          "ar_plain": "ماء",
+          "translit": "māʾan",
+          "en": "water (accusative, tanwīn)",
+          "ur": "پانی (منصوب، تنوین)"
+        },
+        {
+          "ar": "الْمَاءُ",
+          "ar_plain": "الماء",
+          "translit": "al-māʾu",
+          "en": "the water (nominative)",
+          "ur": "پانی (مرفوع)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الْمَاءُ",
+        "ar_plain": "الماء",
+        "translit": "al-māʾu",
+        "en": "the water (nominative)",
+        "ur": "پانی (مرفوع)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The noun after لَوْلَا is nominative: لَوْلَا الْمَاءُ.",
+        "ur": "لَوْلَا کے بعد اسم مرفوع ہوتا ہے: لَوْلَا الْمَاءُ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch67-l04-ex06",
+      "statement": {
+        "en": "لَوْلَا followed by a noun means 'if it were not for …'.",
+        "ur": "لَوْلَا کے بعد اسم ہو تو مطلب 'اگر … نہ ہوتا' ہے۔"
       },
       "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes. That is the one meaning this lesson teaches.",
+        "ur": "جی ہاں۔ یہی وہ ایک معنی ہے جو یہ سبق سکھاتا ہے۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch67-l04-ex03",
+      "id": "ch67-l04-ex07",
       "left_column": [
         {
-          "ar": "لَوْ شَاءَ اللَّهُ",
-          "ar_plain": "لو شاء الله",
-          "translit": "law shaa'a allaahu",
-          "en": "had Allah willed",
-          "ur": "اگر اللہ چاہتا"
+          "ar": "وَلَوْ لَمْ تَمْسَسْهُ نَارٌ",
+          "ar_plain": "ولو لم تمسسه نار",
+          "translit": "walaw lam tamsashu nārun",
+          "en": "fire did not touch it",
+          "ur": "آگ نے اسے نہیں چھوا"
         },
         {
-          "ar": "وَلَوْ أَنَّ قُرْآنًا",
-          "ar_plain": "ولو أن قرآنا",
-          "translit": "wa-law anna qur'aanan",
-          "en": "and if there were a Quran",
-          "ur": "اور اگر کوئی ایسا قرآن ہوتا"
+          "ar": "لَوْلَا الْمَاءُ لَهَلَكَ النَّاسُ",
+          "ar_plain": "لولا الماء لهلك الناس",
+          "translit": "lawlā al-māʾu lahalaka an-nāsu",
+          "en": "water, people perish",
+          "ur": "پانی، لوگ ہلاک"
         },
         {
-          "ar": "يَوَدُّ أَحَدُهُمْ لَوْ يُعَمَّرُ",
-          "ar_plain": "يود أحدهم لو يعمر",
-          "translit": "yawaddu ahaduhum law yu'ammaru",
-          "en": "each wishes that he could live long",
-          "ur": "ہر ایک چاہتا ہے کہ لمبی عمر پائے"
+          "ar": "لَوْ ذَهَبْتَ مَعَنَا",
+          "ar_plain": "لو ذهبت معنا",
+          "translit": "law dhahabta maʿanā",
+          "en": "you went with us",
+          "ur": "تم ہمارے ساتھ گئے"
         },
         {
-          "ar": "فَلَوْ أَنَّ لَنَا كَرَّةً",
-          "ar_plain": "فلو أن لنا كرة",
-          "translit": "fa-law anna lanaa karratan",
-          "en": "if only we had a return",
-          "ur": "کاش ہمیں لوٹنا ملے"
+          "ar": "لَوْ كَانَ فِيهِمَا آلِهَةٌ",
+          "ar_plain": "لو كان فيهما الهة",
+          "translit": "law kāna fīhimā ʾālihatun",
+          "en": "gods in them",
+          "ur": "ان میں معبود"
         }
       ],
       "right_column": [
         {
-          "en": "conditional, with an answer",
-          "ur": "شرطیہ، جواب کے ساتھ"
+          "en": "if there had been gods in them",
+          "ur": "اگر ان میں معبود ہوتے"
         },
         {
-          "en": "conditional, answer left unsaid",
-          "ur": "شرطیہ، جواب محذوف"
+          "en": "even if no fire had touched it (24:35)",
+          "ur": "چاہے اسے کوئی آگ نہ چھوئے (24:35)"
         },
         {
-          "en": "after يَوَدُّ: لَوْ = أَنْ",
-          "ur": "يَوَدُّ کے بعد: لَوْ = أَنْ"
+          "en": "if you had gone with us",
+          "ur": "اگر تم ہمارے ساتھ جاتے"
         },
         {
-          "en": "wishing: 'if only'",
-          "ur": "تمنا: 'کاش'"
+          "en": "if it were not for water, people would perish",
+          "ur": "اگر پانی نہ ہوتا تو لوگ ہلاک ہو جاتے"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
+          1
         ],
         [
           1,
-          1
+          3
         ],
         [
           2,
@@ -199,265 +344,97 @@
         ],
         [
           3,
-          3
+          0
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch67-l04-ex04",
-      "mode": "TAP",
-      "sentence_ar": "قُلْ أَرَأَيْتَكُمْ إِنْ ___ عَذَابُ اللَّهِ أَوْ أَتَتْكُمُ السَّاعَةُ",
-      "hint": {
-        "en": "Say, have you considered: if the punishment of Allah should come to you.",
-        "ur": "کہہ دیجیے کہ تم نے بتایا: اگر اللہ کا عذاب تم پر آ جائے۔"
-      },
-      "options": [
-        {
-          "ar": "أَتَاكُمْ",
-          "ar_plain": "اتاكم",
-          "translit": "ataakum",
-          "en": "came to you (real conditional)",
-          "ur": "تم پر آیا (حقیقی شرط)"
-        },
-        {
-          "ar": "لَوْ أَتَى",
-          "ar_plain": "لو اتى",
-          "translit": "law ata",
-          "en": "if only it came (counterfactual)",
-          "ur": "کاش وہ آتا (counterfactual)"
-        },
-        {
-          "ar": "يَأْتِيكُمْ",
-          "ar_plain": "يأتيكم",
-          "translit": "ya'tiikum",
-          "en": "would come to you",
-          "ur": "تم پر آئے گا"
-        },
-        {
-          "ar": "لَوْ يَأْتِ",
-          "ar_plain": "لو ياتي",
-          "translit": "law ya'ti",
-          "en": "if only it would come",
-          "ur": "کاش وہ آئے"
-        }
-      ],
-      "correct_answer": {
-        "ar": "أَتَاكُمْ",
-        "ar_plain": "اتاكم",
-        "translit": "ataakum",
-        "en": "came to you (real conditional)",
-        "ur": "تم پر آیا (حقیقی شرط)"
-      },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A negated condition, an 'if it were not for' sentence and two plain conditions.",
+        "ur": "ایک منفی شرط، 'اگر … نہ ہوتا' والا جملہ اور دو سادہ شرطیں۔"
+      }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch67-l04-ex05",
+      "id": "ch67-l04-ex08",
       "target_translation": {
-        "en": "If the student had understood the lesson, he would have succeeded.",
-        "ur": "اگر طالب علم سبق سمجھتا تو کامیاب ہو جاتا۔"
+        "en": "Were it not for water, people would perish.",
+        "ur": "اگر پانی نہ ہوتا تو لوگ ہلاک ہو جاتے۔"
       },
       "tiles": [
         {
-          "ar": "لَوْ",
-          "ar_plain": "لو",
-          "translit": "law",
-          "en": "if",
-          "ur": "اگر"
+          "ar": "الْمَاءُ",
+          "ar_plain": "الماء",
+          "translit": "al-māʾu",
+          "en": "the water",
+          "ur": "پانی"
         },
         {
-          "ar": "فَهِمَ",
-          "ar_plain": "فهم",
-          "translit": "fahima",
-          "en": "understood",
-          "ur": "سمجھتا"
+          "ar": "النَّاسُ",
+          "ar_plain": "الناس",
+          "translit": "an-nāsu",
+          "en": "the people",
+          "ur": "لوگ"
         },
         {
-          "ar": "الطَّالِبُ",
-          "ar_plain": "الطالب",
-          "translit": "at-taalibu",
-          "en": "the student",
-          "ur": "طالب علم"
+          "ar": "لَوْلَا",
+          "ar_plain": "لولا",
+          "translit": "lawlā",
+          "en": "were it not for",
+          "ur": "اگر … نہ ہوتا"
         },
         {
-          "ar": "الدَّرْسَ",
-          "ar_plain": "الدرس",
-          "translit": "ad-darsa",
-          "en": "the lesson",
-          "ur": "سبق"
-        },
-        {
-          "ar": "لَنَجَحَ",
-          "ar_plain": "لنجح",
-          "translit": "lanajaha",
-          "en": "he would have succeeded",
-          "ur": "تو کامیاب ہو جاتا"
+          "ar": "لَهَلَكَ",
+          "ar_plain": "لهلك",
+          "translit": "lahalaka",
+          "en": "would perish",
+          "ur": "ہلاک ہو جاتے"
         }
       ],
       "correct_order": [
-        0,
-        1,
         2,
+        0,
         3,
-        4
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch67-l04-ex06",
-      "sentence_ar": "وَلَوْ أَنَّ قُرْآنًا سُيِّرَتْ بِهِ الْجِبَالُ",
-      "words": [
-        {
-          "ar": "وَ",
-          "ar_plain": "و",
-          "translit": "wa",
-          "en": "and",
-          "ur": "اور"
-        },
-        {
-          "ar": "لَوْ",
-          "ar_plain": "لو",
-          "translit": "law",
-          "en": "if only",
-          "ur": "کاش"
-        },
-        {
-          "ar": "أَنَّ",
-          "ar_plain": "ان",
-          "translit": "anna",
-          "en": "that",
-          "ur": "کہ"
-        },
-        {
-          "ar": "قُرْآنًا",
-          "ar_plain": "قرآنا",
-          "translit": "qur'aanan",
-          "en": "a Quran",
-          "ur": "ایک قرآن"
-        },
-        {
-          "ar": "سُيِّرَتْ",
-          "ar_plain": "سيرت",
-          "translit": "suyyirat",
-          "en": "were moved",
-          "ur": "چلا دیے جاتے"
-        },
-        {
-          "ar": "الْجِبَالُ",
-          "ar_plain": "الجبال",
-          "translit": "al-jibaalu",
-          "en": "the mountains",
-          "ur": "پہاڑ"
-        }
-      ],
-      "available_roles": [
-        "PARTICLE",
-        "VERB",
-        "SUBJECT",
-        "OBJECT",
-        "PREPOSITION"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "PARTICLE",
-        "PARTICLE",
-        "SUBJECT",
-        "VERB",
-        "SUBJECT"
+        1
       ],
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "وَ and لَوْ are particles, and so is أَنَّ. قُرْآنًا is the اِسْم of أَنَّ (accusative). سُيِّرَتْ is a passive verb ('were moved') and الْجِبَالُ is what was moved — its subject.",
-        "ur": "وَ اور لَوْ حروف ہیں، اور أَنَّ بھی۔ قُرْآنًا أَنَّ کا اسم (منصوب) ہے۔ سُيِّرَتْ فعل مجہول ('چلائے جاتے') ہے اور الْجِبَالُ وہ ہیں جنہیں چلایا جاتا — اس کا نائب فاعل۔"
+        "en": "لَوْلَا and its noun first, then the result with لَـ.",
+        "ur": "پہلے لَوْلَا اور اس کا اسم، پھر لَـ والا نتیجہ۔"
       }
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch67-l04-ex07",
-      "prompt": {
-        "ar": "لَوْ شَاءَ رَبُّكَ لَآمَنَ مَنْ فِي الْأَرْضِ كُلُّهُمْ",
-        "ar_plain": "لو شاء ربك لآمن من في الارض كلهم",
-        "translit": "law shaa'a rabbuka laa'mana man fii al-ardi kulluhum",
-        "en": "If your Lord had willed, all who are on the earth would have believed.",
-        "ur": "اگر تمہارا رب چاہتا تو زمین میں سب ایمان لے آتے۔"
-      },
-      "options": [
-        {
-          "en": "If your Lord had willed, all who are on the earth would have believed.",
-          "ur": "اگر تمہارا رب چاہتا تو زمین میں سب ایمان لے آتے۔"
-        },
-        {
-          "en": "If your Lord wills, everyone on earth will believe.",
-          "ur": "اگر تمہارا رب چاہے تو زمین پر سب ایمان لیں گے۔"
-        },
-        {
-          "en": "Your Lord wished, and all the people on earth believed.",
-          "ur": "تمہارے رب نے چاہا اور زمین کے سب لوگوں نے ایمان لیا۔"
-        },
-        {
-          "en": "If only your Lord had not willed, no one on earth would believe.",
-          "ur": "کاش تمہارے رب نے نہ چاہا تو زمین پر کوئی ایمان نہ لیتا۔"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "لَوْ شَاءَ — 'had (your Lord) willed'. Allah did not will to force belief on everyone, so not everyone believed; the ayah goes on: 'would you then compel the people?' (10:99). لَآمَنَ is the answer with لَـ.",
-        "ur": "لَوْ شَاءَ — 'اگر (تیرا رب) چاہتا'۔ اللہ نے سب کو زبردستی مومن بنانا نہیں چاہا، اس لیے سب ایمان نہیں لائے؛ آیت آگے کہتی ہے: 'تو کیا تم لوگوں کو مجبور کرو گے؟' (10:99)۔ لَآمَنَ لَـ کے ساتھ جواب ہے۔"
-      }
-    },
-    {
-      "type": "IDENTIFY_ROOT",
-      "id": "ch67-l04-ex08",
-      "word": {
-        "ar": "سُيِّرَتْ",
-        "ar_plain": "سيرت",
-        "translit": "suyyirat",
-        "en": "were moved",
-        "ur": "چلا دیے جاتے"
-      },
-      "options": [
-        "س ي ر",
-        "س و ي",
-        "ع م ل",
-        "ج ب ل"
-      ],
-      "correct_index": 0,
-      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Three kinds of لَوْ: conditional, wishing, and after يَوَدُّ",
-      "ar": "لَوْ: الشَّرْطِيَّةُ وَالتَّمَنِّي وَالْمَصْدَرِيَّةُ",
-      "ur": "لَوْ کی تین قسمیں: شرطیہ، تمنا اور مصدریہ"
+      "en": "لَوْ لَمْ and لَوْلَا",
+      "ar": "لَوْ لَمْ وَلَوْلَا",
+      "ur": "لَوْ لَمْ اور لَوْلَا"
     },
     "ayah": {
-      "surah": 2,
-      "ayah": 96,
-      "label": "Al-Baqarah 2:96",
-      "ar": "يَوَدُّ أَحَدُهُمْ لَوْ يُعَمَّرُ أَلْفَ سَنَةٍ",
-      "en": "Each one of them wishes he could be granted life a thousand years.",
-      "ur": "ان میں سے ہر ایک چاہتا ہے کہ کاش اسے ہزار برس کی عمر ملے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002096.mp3"
+      "surah": 24,
+      "ayah": 35,
+      "label": "An-Nur 24:35",
+      "ar": "وَلَوْ لَمْ تَمْسَسْهُ نَارٌ",
+      "en": "even if no fire had touched it",
+      "ur": "چاہے اسے کوئی آگ نہ چھوئے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/024035.mp3"
     },
     "highlighted_word_indices": [
       0,
-      2,
-      3
+      1
+    ],
+    "highlighted_words": [
+      "وَلَوْ",
+      "لَمْ"
     ],
     "noor_explanation": {
-      "en": "يَوَدُّ أَحَدُهُمْ لَوْ يُعَمَّرُ أَلْفَ سَنَةٍ — after يَوَدُّ ('wishes'), لَوْ means 'that': 'each of them wishes that he could live a thousand years'. There is no 'then' clause, because this لَوْ is not a condition. The ayah continues: a long life would not move him away from the punishment.",
-      "ur": "يَوَدُّ أَحَدُهُمْ لَوْ يُعَمَّرُ أَلْفَ سَنَةٍ — يَوَدُّ ('چاہتا ہے') کے بعد لَوْ کا معنی 'کہ' ہے: 'ان میں سے ہر ایک چاہتا ہے کہ ہزار برس جیے'۔ یہاں 'تو' والا جواب نہیں، کیونکہ یہ لَوْ شرط نہیں۔ آیت آگے کہتی ہے: لمبی عمر اسے عذاب سے دور نہیں کر سکتی۔"
+      "en": "وَلَوْ لَمْ تَمْسَسْهُ — لَوْ opens the condition and لَمْ negates the verb: two particles, two jobs.",
+      "ur": "وَلَوْ لَمْ تَمْسَسْهُ — لَوْ شرط کھولتا ہے اور لَمْ فعل کی نفی کرتا ہے: دو حروف، دو کام۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Three kinds of لَوْ: (1) conditional — 'had …, … would have' (لَوْ شَاءَ … لَآمَنَ); (2) wishing — 'if only', with فَـ + subjunctive (فَنَكُونَ); (3) after يَوَدُّ / وَدَّ — 'that', with no answer (يَوَدُّ … لَوْ يُعَمَّرُ). And remember إِنْ for a condition that could really happen.",
-      "ur": "لَوْ کی تین قسمیں: (1) شرطیہ — 'اگر … ہوتا تو … ہو جاتا' (لَوْ شَاءَ … لَآمَنَ)؛ (2) تمنا — 'کاش'، فَـ + منصوب فعل کے ساتھ (فَنَكُونَ)؛ (3) يَوَدُّ / وَدَّ کے بعد — 'کہ'، بغیر جواب کے (يَوَدُّ … لَوْ يُعَمَّرُ)۔ اور جو شرط واقعی ہو سکتی ہو اس کے لیے إِنْ یاد رکھیے۔"
+      "en": "After لَوْ, لَمْ still governs; and لَوْلَا + a noun means 'if it were not for'.",
+      "ur": "لَوْ کے بعد لَمْ پھر بھی عمل کرتا ہے؛ اور لَوْلَا + اسم کا مطلب 'اگر … نہ ہوتا' ہے۔"
     }
   }
 }
