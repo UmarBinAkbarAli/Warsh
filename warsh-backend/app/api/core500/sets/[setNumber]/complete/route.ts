@@ -3,6 +3,7 @@ import { z } from "zod";
 import { prisma } from "../../../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../../../lib/auth";
 import { applyStreakForActivity } from "../../../../../../lib/streak";
+import { lockCoreUser } from "../../../../../../lib/core500Session";
 import {
   CORE_KNOWN_MIN_REPETITIONS,
   CORE_SET_COUNT,
@@ -34,8 +35,8 @@ export async function POST(request: Request, { params }: Props) {
     return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
   }
 
-  const setNumber = Number.parseInt(params.setNumber, 10);
-  if (!Number.isInteger(setNumber) || setNumber < 1 || setNumber > CORE_SET_COUNT) {
+  const setNumber = Number(params.setNumber);
+  if (!/^\d+$/.test(params.setNumber) || !Number.isInteger(setNumber) || setNumber < 1 || setNumber > CORE_SET_COUNT) {
     return NextResponse.json(
       { error: "That set does not exist.", code: "set_not_found" },
       { status: 404 },
@@ -79,11 +80,12 @@ export async function POST(request: Request, { params }: Props) {
   // Only ids that actually belong to this set count, so a modified client
   // cannot mark arbitrary words known.
   const setWordIds = new Set(setWords.map((w) => w.id));
-  const claimed = parsed.data.knownWordIds.filter((id) => setWordIds.has(id));
+  const claimed = [...new Set(parsed.data.knownWordIds.filter((id) => setWordIds.has(id)))];
   const now = new Date();
-  const alreadyComplete = completedSets.has(setNumber);
+  let newlyCompleted = false;
 
   await prisma.$transaction(async (tx) => {
+    await lockCoreUser(tx, userId);
     for (const wordId of claimed) {
       // First pass through a word seeds its SRS row; later passes leave the
       // schedule alone, since grading happens in the SRS review route.
@@ -94,17 +96,21 @@ export async function POST(request: Request, { params }: Props) {
       });
     }
 
-    const setComplete = claimed.length === setWords.length;
+    const setComplete = setWords.length === 5 && claimed.length === setWords.length;
 
     await tx.userCoreSetProgress.upsert({
       where: { userId_setNumber: { userId, setNumber } },
-      create: { userId, setNumber, completedAt: setComplete ? now : null },
+      create: { userId, setNumber },
       // Never un-complete a set the learner already finished.
-      update: setComplete ? { completedAt: now } : {},
+      update: {},
     });
 
-    if (setComplete && !alreadyComplete) {
-      await applyStreakForActivity(tx, userId, now);
+    if (setComplete) {
+      const changed = await tx.userCoreSetProgress.updateMany({
+        where: { userId, setNumber, completedAt: null }, data: { completedAt: now },
+      });
+      newlyCompleted = changed.count > 0;
+      if (newlyCompleted) await applyStreakForActivity(tx, userId, now);
     }
   });
 
@@ -130,11 +136,11 @@ export async function POST(request: Request, { params }: Props) {
   return NextResponse.json({
     data: {
       setNumber,
-      completed: claimed.length === setWords.length,
+      completed: completedSets.has(setNumber) || (setWords.length === 5 && claimed.length === setWords.length),
       knownCount: allCore.filter((w) => knownIds.has(w.id)).length,
       coveragePercent: coveragePercent(knownFrequencySum),
       currentStreak: streak?.currentStreak ?? 0,
-      streakAdvanced: claimed.length === setWords.length && !alreadyComplete,
+      streakAdvanced: newlyCompleted,
     },
   });
 }

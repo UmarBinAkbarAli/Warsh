@@ -52,6 +52,7 @@ model User {
     promoRedemptions   PromoRedemption[]
     storePurchases     StorePurchase[]
     coreSetProgress    UserCoreSetProgress[]
+    coreAssessments    Core500Assessment[]
     restoreCredentials RestoreCredential[]
 }
 
@@ -359,6 +360,7 @@ model VocabularyWord {
     publishedAt      DateTime?
     createdAt        DateTime @default(now())
     userWords        UserVocabularyWord[]
+    coreAyahExamples Core500AyahExample[]
 
     @@index([coreSetNumber])
 }
@@ -377,6 +379,50 @@ model UserCoreSetProgress {
 
     @@unique([userId, setNumber])
     @@index([userId])
+}
+
+// Feature-owned enrichment; the shared quranicExample object remains unchanged.
+model Core500AyahExample {
+    id            String @id @default(cuid())
+    wordId        String
+    word          VocabularyWord @relation(fields: [wordId], references: [id], onDelete: Cascade)
+    position      Int
+    surahNumber   Int
+    ayahNumber    Int
+    surahName     String
+    arabic        String
+    translationEn String
+    translationUr String
+    // One-based word position in the canonical ayah, and its exact surface.
+    wordPosition  Int
+    corpusPosition Int
+    surface       String
+    matchKind     String
+    source        String
+    status        ContentStatus @default(DRAFT)
+    updatedAt     DateTime @updatedAt
+
+    @@unique([wordId, position])
+    @@unique([wordId, surahNumber, ayahNumber])
+}
+
+// One resumable assessment per set. The answer key never leaves the server.
+model Core500Assessment {
+    id         String @id @default(cuid())
+    userId     String
+    user       User @relation(fields: [userId], references: [id], onDelete: Cascade)
+    setNumber  Int
+    language   String
+    phase      String @default("INTRO")
+    questions  Json
+    activeIds  String[]
+    passedIds  String[] @default([])
+    answers    Json @default("{}")
+    round      Int @default(1)
+    createdAt  DateTime @default(now())
+    updatedAt  DateTime @updatedAt
+
+    @@unique([userId, setNumber])
 }
 
 model TadabburSurah {

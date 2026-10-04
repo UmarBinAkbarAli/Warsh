@@ -1,7 +1,7 @@
 # Warsh Current Status
 
 **Status:** Active current-state source of truth
-**Last verified:** 2026-09-23
+**Last verified:** 2026-10-04 for Core 500 and the web loading logo; other entries retain their dated verification
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Post-launch hardening
 
@@ -296,7 +296,9 @@ files remain release evidence.
 - Subscription/paywall, purchase verification, restore flow, and the Google RTDN
   webhook, which has been reached by live notifications since 2026-08-29
 - Quranic Core 500 — shipped 2026-09-07, published live 2026-09-10 (all 500 words
-  `PUBLISHED`, each with generated audio in R2)
+  `PUBLISHED`, each with generated audio in R2). Three ayah examples per word
+  and resumable five-word set tests are deployed to the production API and web
+  app as of 2026-10-04; details and remaining verification below.
 - Vocabulary in production is 920 published words: the Core 500 plus 420 curriculum
   words restored on 2026-09-10. Every one carries generated audio. The curriculum set
   had been absent — `prisma/seed.cjs` calls `vocabularyWord.deleteMany()` before
@@ -317,6 +319,70 @@ files remain release evidence.
 - Notifications, Mixpanel analytics, and Sentry integrations
 - English and Urdu UI modes with Arabic content retained in Arabic script
 - Responsive Expo web shell and production web deployment workflow
+
+### Core 500 ayah examples and set tests — 2026-10-04
+
+**Implemented and deployed:** `bf80623` is pushed to `origin/main`; the feature
+is live on `api.warsh.app` and `app.warsh.app`. The rollout used a clean checkout
+based on the previous production commit, excluding the shared checkout's five
+unpublished curriculum commits and unrelated working-tree edits.
+
+- **Word cards:** all 500 existing words have three distinct published ayah
+  references (1,500 links across 1,183 ayahs). Expandable examples show canonical
+  Arabic with the occurrence highlighted, English/Urdu translation, Surah/ayah
+  reference, human recitation and source attribution. Corpus lemma/prefix matching
+  distinguishes inflected forms and attached prefixes; ayahs have no transliteration.
+- **Five-word test:** after studying the cards, learners answer five shuffled
+  multiple-choice meaning questions. The server grades option IDs and keeps the
+  answer keys private. All five words must be correct to complete the set;
+  missed words enter review and are the only words tested in the retry round.
+  Saved language, questions, answers and round survive closing/reopening.
+- **Progress safety:** server authentication and set locks apply to every test
+  action. Completion/streak credit is transactional and safe under duplicate or
+  concurrent requests. Practice preserves prior completion timestamps and existing
+  SRS schedules, repetitions, favourites and hidden state. The compatible legacy
+  completion endpoint remains available for installed clients and now deduplicates
+  submitted word IDs.
+- **Implementation:** additive `Core500AyahExample` and `Core500Assessment`
+  models, migration `20261004120000_core500_examples_assessments`, enhanced set
+  GET responses, and GET/POST `/api/core500/sets/[setNumber]/assessment` for
+  start/resume/answer/retry. Learner UI stays in the Core 500 route/component/service
+  files, with matching English/Urdu keys. Studio review is at `/dashboard/core500`;
+  scoped preparation, validation, export and import scripts preserve existing word
+  IDs and refuse conflicting Studio edits. The new client requires assessment
+  support and three published examples for every word before enabling a test.
+- **Production data:** only the Core 500 migration and scoped example import
+  were applied. Before/after fingerprints match exactly for 920 vocabulary words,
+  72 chapters, 607 lessons and 11 Tadabbur Surahs. No curriculum seed, lesson sync,
+  shared staging migration or media-key replacement occurred.
+- **Verification:** 23 scoped domain/HTTP/streak tests, all 1,500 reference
+  validations, backend build, app TypeScript/lint and production Urdu audit passed.
+  Isolated Android/web previews verified cards, wrong answers, review/retry,
+  force-stop resume, completion and unlocking in English/Urdu. Live API checks
+  verified those server behaviours, duplicate answers and unchanged practice
+  credit/SRS; the temporary live account and its dependent records were removed.
+- **Remaining:** production browser cards rendered, but starting a test returned
+  a Vercel HTML Security Checkpoint 403 on both attempts, before the feature API;
+  production browser test completion remains unverified. Existing unrelated
+  fixture metadata errors in chapter-51-lesson-09 and chapter-52-lesson-06, plus
+  99 database-ahead and 93 missing lesson mirrors, were left untouched. Installed
+  Android clients need a separate Google Play release for the new screens; no
+  new Play submission or release APK was made for this rollout.
+
+The approved design, detailed implementation boundaries, content sources and
+maintenance commands are recorded in
+[Core 500 implementation record](proposals/core-500-ayah-examples-and-tests.md).
+
+### Web loading logo — 2026-10-04
+
+**Implemented, committed and live:** `0d4c7e7` replaces the temporary Arabic text
+in `warsh-app/public/index.html` with the existing official transparent logo,
+copied unchanged to `public/warsh-logo.png` and preloaded. The cream background,
+loading-bar animation and application startup behaviour are unchanged. The owner
+explicitly bypassed Pen review for this asset replacement only. Desktop/mobile
+rendering, the production HTML/image response and exact image hash were verified;
+the app proceeds normally to the authentication screen. Deployed through the
+maintained `npm run deploy:web` script; no Android, backend or feature code changed.
 
 ### Curriculum and content
 
