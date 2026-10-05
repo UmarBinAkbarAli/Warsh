@@ -430,6 +430,18 @@ maintained `npm run deploy:web` script; no Android, backend or feature code chan
 
 ### UX evaluation follow-up (2026-09-25)
 
+### Release 1.0.15 (39) — submitted 2026-10-05
+
+Android **1.0.15 (39)** submitted to Production (100 % roll-out) after the full
+release gate (fixtures, Urdu audit, backend build, app lint + tsc,
+`verify:release-api-url` incl. R8 mapping + Sentry UUID, `verify:play-signing`) and
+an emulator smoke test of the matching APK (launches, production content loads, the
+"New and updated lessons" notice shows). It carries Core 500 ayah examples and set
+tests, the Ch 26–72 curriculum harvest, and the refreshed QUL Indo-Pak 15-line pages
+(page 472 ayah marker; page 1 centred; page 443 was already correct in our build).
+Web shipped with the push of `f7c787b` (warsh-web and warsh-site Production
+deployments). Play review pending.
+
 Implemented from the 2026-09-24 UX evaluation (owner asked to implement
 directly; Pen section 31 holds the proposals). Web ships with the push;
 Android ships in **1.0.14 (38), submitted to Production 2026-09-25**: release
