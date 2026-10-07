@@ -3,6 +3,8 @@
 import { useState, useCallback, useMemo, useEffect } from "react";
 import styles from "./dashboard.module.css";
 import ImageField from "./ImageField";
+import CurriculumOverview from "./CurriculumOverview";
+import DashboardNav from "./DashboardNav";
 import type {
   LessonContent,
   DiscoverCard,
@@ -35,6 +37,9 @@ export type DashboardLesson = {
   xpReward: number;
   status: ContentStatus;
   updatedAt?: string;
+  cardCount?: number;
+  exerciseCount?: number;
+  openIssues?: number;
   // Loaded lazily via GET /api/admin/lessons/[id]; `undefined` = not yet fetched.
   content?: JsonValue;
 };
@@ -1257,11 +1262,11 @@ export default function DashboardClient({
   promoCodes?: PromoCodeStat[];
 }) {
   const [chapters, setChapters] = useState(initialChapters);
-  const [query, setQuery] = useState("");
   const [selectedChapterId, setSelectedChapterId] = useState(initialChapters[0]?.id ?? "");
   const [selectedLessonId, setSelectedLessonId] = useState(
     initialChapters[0]?.lessons[0]?.id ?? ""
   );
+  const [view, setView] = useState<"overview" | "chapter" | "editor">("overview");
   const [adminToken, setAdminToken] = useState("");
   const [status, setStatus] = useState("Ready");
 
@@ -1389,41 +1394,30 @@ export default function DashboardClient({
     [applyLessonToDraft, fetchLessonContent]
   );
 
-  // On mount, load the initially selected lesson (honoring ?chapter=&lesson=).
+  // On mount, open the editor only when the URL names a lesson; otherwise the
+  // curriculum overview is shown and lessons load when opened.
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const chId = params.get("chapter");
     const lsId = params.get("lesson");
+    const chId = params.get("chapter");
     const targetChapter =
-      chapters.find((c) => c.id === chId) ??
       (lsId ? chapters.find((c) => c.lessons.some((l) => l.id === lsId)) : undefined) ??
-      chapters[0];
+      chapters.find((c) => c.id === chId);
     if (!targetChapter) {
       setContentLoading(false);
       return;
     }
     const targetLesson = (lsId ? targetChapter.lessons.find((l) => l.id === lsId) : undefined) ?? targetChapter.lessons[0];
-    if (targetChapter.id !== selectedChapterId) setSelectedChapterId(targetChapter.id);
-    if (targetLesson && targetLesson.id !== selectedLessonId) setSelectedLessonId(targetLesson.id);
-    if (targetLesson) resetDraftFromParsed(targetLesson);
-    else setContentLoading(false);
+    setSelectedChapterId(targetChapter.id);
+    if (targetLesson) {
+      setSelectedLessonId(targetLesson.id);
+      setView("editor");
+      resetDraftFromParsed(targetLesson);
+    } else {
+      setContentLoading(false);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  // Filter chapters/lessons
-  const filteredChapters = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    if (!q) return chapters;
-    return chapters.filter(
-      (c) =>
-        c.title.toLowerCase().includes(q) ||
-        c.titleAr.includes(query.trim()) ||
-        c.lessons.some(
-          (l) =>
-            l.title.toLowerCase().includes(q) || l.titleAr.includes(query.trim())
-        )
-    );
-  }, [chapters, query]);
 
   function doSwitchLesson(newLessonId: string) {
     const targetLesson =
@@ -1432,6 +1426,25 @@ export default function DashboardClient({
     if (!targetLesson) return;
     setSelectedLessonId(newLessonId);
     resetDraftFromParsed(targetLesson);
+  }
+
+  function openLessonFromOverview(chapterId: string, lessonId: string) {
+    const chapter = chapters.find((c) => c.id === chapterId);
+    const lesson = chapter?.lessons.find((l) => l.id === lessonId);
+    if (!chapter || !lesson) return;
+    setSelectedChapterId(chapterId);
+    setSelectedLessonId(lessonId);
+    setLessonDraft(null);
+    setView("editor");
+    resetDraftFromParsed(lesson);
+  }
+
+  function backToOverview() {
+    if (editorState.dirty && !window.confirm("Discard unsaved changes and return to the curriculum?")) return;
+    setEditorState({ mode: "view", editingIndex: null, dirty: false });
+    setShowJsonView(false);
+    setShowPreview(false);
+    setView("overview");
   }
 
   function selectLesson(lesson: DashboardLesson) {
@@ -1569,6 +1582,8 @@ export default function DashboardClient({
         )
       );
       setSelectedLessonId(newLesson.id);
+      setLessonDraft(null);
+      setView("editor");
       resetDraftFromParsed({ ...newLesson, updatedAt: newLesson.updatedAt.toISOString() });
       setShowAddLesson(false);
       setAddLessonTitle("");
@@ -1992,7 +2007,7 @@ export default function DashboardClient({
     );
   }
 
-  if (!lessonDraft) {
+  if (view === "editor" && !lessonDraft) {
     return (
       <main className={styles.empty}>
         {contentLoading ? "Loading lesson…" : "This chapter has no lessons yet."}
@@ -2000,7 +2015,6 @@ export default function DashboardClient({
     );
   }
 
-  const totalLessons = chapters.reduce((s, c) => s + c.lessons.length, 0);
   const currentLessonPosition = selectedChapter.lessons.findIndex((lesson) => lesson.id === selectedLessonId) + 1;
   const activeMode = showJsonView ? "json" : showPreview ? "preview" : "builder";
 
@@ -2016,107 +2030,22 @@ export default function DashboardClient({
   };
 
   return (
-    <main className={styles.shell}>
-      {/* ---- SIDEBAR ---- */}
-      <aside className={styles.sidebar}>
-        <div className={styles.brand}>
-          <div>
-            <span className={styles.brandMark}>Warsh</span>
-            <span className={styles.brandSubline}>Curriculum Studio</span>
-          </div>
-          <span className={styles.brandArabic}>وَرْش</span>
-        </div>
-        <div className={styles.sidebarStats}>
-          <span>{chapters.length} chapters</span>
-          <span>{totalLessons} lessons</span>
-        </div>
-        <input
-          className={styles.search}
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search chapters or lessons"
-        />
-        <div className={styles.rail}>
-          {filteredChapters.map((chapter) => (
-            <button
-              className={`${styles.chapterButton} ${
-                chapter.id === selectedChapter?.id ? styles.active : ""
-              }`}
-              key={chapter.id}
-              onClick={() => {
-                setSelectedChapterId(chapter.id);
-                setSelectedLessonId(chapter.lessons[0]?.id ?? "");
-                resetDraftFromParsed(chapter.lessons[0]);
-              }}
-              type="button"
-            >
-              <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
-                Chapter {chapter.order}
-                {chapter.status !== "PUBLISHED" && <StatusPill status={chapter.status} small />}
-              </span>
-              <strong>{chapter.title}</strong>
-              <small>
-                {chapter.lessons.length} lessons
-                {chapter.id === selectedChapter.id ? " - selected" : ""}
-              </small>
-            </button>
-          ))}
-        </div>
-        <button
-          type="button"
-          onClick={openCreateChapter}
-          style={{
-            margin: "10px 0 4px",
-            padding: "10px 12px",
-            borderRadius: 8,
-            border: "1px dashed #b7ac8f",
-            background: "#f3efe2",
-            color: "#5f5844",
-            fontWeight: 600,
-            cursor: "pointer",
-          }}
-        >
-          + New chapter
-        </button>
-        <div style={{ marginTop: 8, paddingTop: 8, borderTop: "1px solid #e2d9c4", display: "grid", gap: 4 }}>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-            {[
-              { href: "/dashboard", label: "Overview" },
-              { href: "/dashboard/vocabulary", label: "Vocabulary" },
-              { href: "/dashboard/tadabbur", label: "Tadabbur" },
-              { href: "/dashboard/achievements", label: "Achievements" },
-              { href: "/dashboard/promo", label: "Promo" },
-              { href: "/dashboard/users", label: "Users" },
-              { href: "/dashboard/health", label: "Health" },
-            ].map((l) => (
-              <a key={l.href} href={l.href} style={{ fontSize: 12.5, color: "#0f766e", fontWeight: 600, textDecoration: "none" }}>
-                {l.label}
-              </a>
-            ))}
-          </div>
-          <button
-            type="button"
-            onClick={handleSignOut}
-            style={{ marginTop: 2, fontSize: 12.5, color: "#8a7f63", background: "none", border: "none", cursor: "pointer", textAlign: "left", padding: 0 }}
-          >
-            Sign out
-          </button>
-        </div>
-      </aside>
-
+    <main className={styles.shell} style={{ gridTemplateColumns: "minmax(0, 1fr)", gridTemplateRows: "auto 1fr", alignContent: "start" }}>
+      <DashboardNav active="/dashboard/curriculum" />
       {/* ---- MAIN WORKSPACE ---- */}
       <section className={styles.workspace}>
+        {view === "chapter" && (
         <header className={styles.header}>
           <div>
-            <p className={styles.kicker}>Content Dashboard</p>
+            <button type="button" onClick={backToOverview} style={{ ...chapterBtnStyle, marginBottom: 8 }}>
+              ← Curriculum
+            </button>
+            <p className={styles.kicker}>Chapter {selectedChapter.order}</p>
             <h1>{selectedChapter.title}</h1>
             <p className={styles.headerSubtitle}>{selectedChapter.titleAr}</p>
           </div>
           <div className={styles.statusGroup}>
-            <span>Chapter {selectedChapter.order}</span>
             <span>{selectedChapter.lessons.length} lessons</span>
-            <span>{draftDiscoverCards.length} cards</span>
-            <span>{draftExercises.length} exercises</span>
             <StatusPill status={selectedChapter.status} />
             <button
               type="button"
@@ -2147,204 +2076,125 @@ export default function DashboardClient({
             </button>
           </div>
         </header>
-
-        {promoCodes.length > 0 && (
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: 12,
-              padding: "12px 16px",
-              margin: "0 0 12px",
-              border: "1px solid #e2ddd0",
-              borderRadius: 10,
-              background: "#faf8f3",
-            }}
-          >
-            <strong style={{ fontSize: 13, color: "#6b6252", alignSelf: "center", marginRight: 4 }}>
-              Promo codes
-            </strong>
-            {promoCodes.map((p) => {
-              const cap = p.maxRedemptions;
-              const remaining = cap == null ? null : Math.max(0, cap - p.redemptionCount);
-              const pct = cap && cap > 0 ? Math.min(100, Math.round((p.redemptionCount / cap) * 100)) : 0;
-              const full = cap != null && p.redemptionCount >= cap;
-              return (
-                <div
-                  key={p.code}
-                  style={{
-                    minWidth: 200,
-                    padding: "8px 12px",
-                    border: "1px solid #e2ddd0",
-                    borderRadius: 8,
-                    background: "#fff",
-                  }}
-                >
-                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
-                    <code style={{ fontSize: 13, fontWeight: 700 }}>{p.code}</code>
-                    <span style={{ fontSize: 11, color: "#8a7f6a" }}>{p.freeDays}d free</span>
-                    <span
-                      style={{
-                        fontSize: 10,
-                        padding: "1px 6px",
-                        borderRadius: 999,
-                        color: p.active ? "#2f6f4f" : "#9a4040",
-                        background: p.active ? "#e6f2ea" : "#f6e6e6",
-                      }}
-                    >
-                      {p.active ? "active" : "off"}
-                    </span>
-                  </div>
-                  <div style={{ fontSize: 15, fontWeight: 700, color: full ? "#9a4040" : "#2f2a20" }}>
-                    {p.redemptionCount}
-                    {cap != null ? ` / ${cap}` : ""} redeemed
-                    {remaining != null && (
-                      <span style={{ fontSize: 11, fontWeight: 400, color: "#8a7f6a" }}>
-                        {" "}· {remaining} left
-                      </span>
-                    )}
-                  </div>
-                  {cap != null && (
-                    <div style={{ marginTop: 6, height: 6, borderRadius: 999, background: "#eee7d8" }}>
-                      <div
-                        style={{
-                          height: "100%",
-                          width: `${pct}%`,
-                          borderRadius: 999,
-                          background: full ? "#c06b6b" : "#7fae8f",
-                        }}
-                      />
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
         )}
 
-        <div className={styles.topbar}>
-          <label>
-            Admin token
-            <input
-              value={adminToken}
-              onChange={(e) => setAdminToken(e.target.value)}
-              placeholder="Required only if configured"
-              type="password"
-            />
-          </label>
-          <div className={styles.modeTabs} aria-label="Dashboard view mode">
-            <button
-              className={activeMode === "builder" ? styles.activeModeTab : ""}
-              onClick={() => {
-                setShowJsonView(false);
-                setShowPreview(false);
-              }}
-              type="button"
-            >
-              Builder
-            </button>
-            <button
-              className={activeMode === "preview" ? styles.activeModeTab : ""}
-              onClick={() => {
-                setShowJsonView(false);
-                setShowPreview(true);
-              }}
-              type="button"
-            >
-              Preview
-            </button>
-            <button
-              className={activeMode === "json" ? styles.activeModeTab : ""}
-              onClick={showJsonView ? () => setShowJsonView(false) : openJsonView}
-              type="button"
-            >
-              JSON
-            </button>
-          </div>
-        </div>
+        {view === "overview" && (
+          <CurriculumOverview
+            chapters={chapters}
+            promoCodes={promoCodes}
+            adminToken={adminToken}
+            onAdminTokenChange={setAdminToken}
+            onOpenLesson={openLessonFromOverview}
+            onAddLesson={(chapterId) => {
+              if (chapterId) setSelectedChapterId(chapterId);
+              setShowAddLesson(true);
+            }}
+            onNewChapter={openCreateChapter}
+            onOpenChapter={(chapterId) => {
+              setSelectedChapterId(chapterId);
+              setView("chapter");
+            }}
+          />
+        )}
 
-        {/* ---- LESSON STEPPER ---- */}
-        <div className={styles.curriculumHeader}>
-          <div>
-            <p className={styles.kicker}>Selected lesson</p>
-            <h2>
-              Lesson {selectedLesson?.order}: {lessonDraft.title}
-            </h2>
-          </div>
-          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            {selectedLesson && <StatusPill status={selectedLesson.status} />}
-            {selectedLesson && (
-              <button
-                type="button"
-                onClick={handlePublishLesson}
-                disabled={publishBusy}
-                style={{
-                  ...chapterBtnStyle,
-                  color: selectedLesson.status === "PUBLISHED" ? "#9a7b2e" : "#2f6f3a",
-                  borderColor: selectedLesson.status === "PUBLISHED" ? "#e3d3a6" : "#bcdcbd",
-                }}
-              >
-                {selectedLesson.status === "PUBLISHED" ? "Unpublish lesson" : "Publish lesson"}
-              </button>
-            )}
-            <span className={styles.lessonCountPill}>
-              {currentLessonPosition || selectedLesson?.order} of {selectedChapter.lessons.length}
-            </span>
-          </div>
-        </div>
-        <div className={styles.lessonStepper}>
-          {(selectedChapter?.lessons ?? []).map((lesson) => (
-            <button
-              key={lesson.id}
-              className={`${styles.lessonTab}${lesson.id === selectedLessonId ? " " + styles.activeTab : ""}`}
-              onClick={() => {
-                if (lesson.id === selectedLessonId) return;
-                if (editorState.dirty) {
-                  setPendingLessonSwitch({
-                    lessonId: lesson.id,
-                    resolve: (saved) => {
-                      if (saved) saveLesson().then(() => doSwitchLesson(lesson.id));
-                      else doSwitchLesson(lesson.id);
-                    },
-                  });
-                } else {
-                  doSwitchLesson(lesson.id);
-                }
-              }}
-              type="button"
-            >
-              <span className={styles.lessonTabNum}>L{lesson.order}</span>
-              <span className={styles.lessonTabTitle} title={lesson.title}>
-                {lesson.title}
-              </span>
-              <span className={styles.lessonTabMeta}>
-                {lesson.template} - {lesson.xpReward} XP
-                {lesson.status !== "PUBLISHED" && (
-                  <span style={{ marginLeft: 6 }}><StatusPill status={lesson.status} small /></span>
+
+        {view === "editor" && lessonDraft && (
+          <>
+            <div className={styles.curriculumHeader}>
+              <div>
+                <button type="button" onClick={backToOverview} style={{ ...chapterBtnStyle, marginBottom: 8 }}>
+                  ← Curriculum
+                </button>
+                <p className={styles.kicker}>
+                  {selectedChapter.order} · {selectedChapter.title} · Lesson {currentLessonPosition} of {selectedChapter.lessons.length}
+                </p>
+                <h2>
+                  Lesson {selectedLesson?.order}: {lessonDraft.title}
+                </h2>
+              </div>
+              <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+                {selectedLesson && <StatusPill status={selectedLesson.status} />}
+                {(selectedLesson?.openIssues ?? 0) > 0 && (
+                  <span style={{ fontSize: 12, fontWeight: 600, color: "#9a4040", background: "#f6e6e6", padding: "2px 8px", borderRadius: 999 }}>
+                    {selectedLesson?.openIssues} review issue{selectedLesson?.openIssues === 1 ? "" : "s"}
+                  </span>
                 )}
-              </span>
-              {selectedChapter.lessons.length > 1 && (
-                <span
-                  className={styles.lessonTabDelete}
-                  title="Delete lesson"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setDeleteTarget({ lessonId: lesson.id, title: lesson.title, order: lesson.order });
-                  }}
+                {selectedLesson && (
+                  <button
+                    type="button"
+                    onClick={handlePublishLesson}
+                    disabled={publishBusy}
+                    style={{
+                      ...chapterBtnStyle,
+                      color: selectedLesson.status === "PUBLISHED" ? "#9a7b2e" : "#2f6f3a",
+                      borderColor: selectedLesson.status === "PUBLISHED" ? "#e3d3a6" : "#bcdcbd",
+                    }}
+                  >
+                    {selectedLesson.status === "PUBLISHED" ? "Unpublish lesson" : "Publish lesson"}
+                  </button>
+                )}
+                <button
+                  type="button"
+                  style={chapterBtnStyle}
+                  disabled={currentLessonPosition <= 1}
+                  onClick={() => selectLesson(selectedChapter.lessons[currentLessonPosition - 2])}
                 >
-                  ×
-                </span>
-              )}
-            </button>
-          ))}
-          <button
-            className={styles.addLessonBtn}
-            onClick={() => setShowAddLesson(true)}
-            type="button"
-          >
-            + Lesson
-          </button>
-        </div>
+                  ← Previous
+                </button>
+                <button
+                  type="button"
+                  style={chapterBtnStyle}
+                  disabled={currentLessonPosition >= selectedChapter.lessons.length}
+                  onClick={() => selectLesson(selectedChapter.lessons[currentLessonPosition])}
+                >
+                  Next →
+                </button>
+                <button
+                  type="button"
+                  style={{ ...chapterBtnStyle, color: "#b04040", borderColor: "#e0b8b8" }}
+                  disabled={selectedChapter.lessons.length <= 1}
+                  onClick={() =>
+                    selectedLesson &&
+                    setDeleteTarget({ lessonId: selectedLesson.id, title: selectedLesson.title, order: selectedLesson.order })
+                  }
+                >
+                  Delete lesson
+                </button>
+              </div>
+            </div>
+            <div className={styles.topbar}>
+              <div className={styles.modeTabs} aria-label="Dashboard view mode">
+                <button
+                  className={activeMode === "builder" ? styles.activeModeTab : ""}
+                  onClick={() => {
+                    setShowJsonView(false);
+                    setShowPreview(false);
+                  }}
+                  type="button"
+                >
+                  Builder
+                </button>
+                <button
+                  className={activeMode === "preview" ? styles.activeModeTab : ""}
+                  onClick={() => {
+                    setShowJsonView(false);
+                    setShowPreview(true);
+                  }}
+                  type="button"
+                >
+                  Preview
+                </button>
+                <button
+                  className={activeMode === "json" ? styles.activeModeTab : ""}
+                  onClick={showJsonView ? () => setShowJsonView(false) : openJsonView}
+                  type="button"
+                >
+                  JSON
+                </button>
+              </div>
+            </div>
+          </>
+        )}
 
         {/* ---- DIRTY-SWITCH GUARD ---- */}
         {pendingLessonSwitch && (
@@ -2385,6 +2235,16 @@ export default function DashboardClient({
             <div className={styles.addLessonDialog}>
               <h3>Add new lesson</h3>
               <div className={styles.addLessonFields}>
+                <label>
+                  Chapter
+                  <select value={selectedChapterId} onChange={(e) => setSelectedChapterId(e.target.value)}>
+                    {chapters.map((c) => (
+                      <option key={c.id} value={c.id}>
+                        {c.order} · {c.title}
+                      </option>
+                    ))}
+                  </select>
+                </label>
                 <label>
                   English title
                   <input
@@ -2632,6 +2492,7 @@ export default function DashboardClient({
         )}
 
         {/* ---- LESSON BUILDER ---- */}
+        {view === "editor" && lessonDraft && (
         <section className={styles.panel}>
           <div className={styles.panelHeader}>
             <div>
@@ -2956,7 +2817,7 @@ export default function DashboardClient({
                   card={card}
                   index={i}
                   onEdit={() => {
-                    setEditorState({ mode: "edit-card", editingIndex: i, dirty: true });
+                    setEditorState((s) => ({ mode: "edit-card", editingIndex: i, dirty: s.dirty }));
                   }}
                   onDelete={() => handleDeleteCard(i)}
                   onDuplicate={() => handleDuplicateCard(i)}
@@ -3020,7 +2881,7 @@ export default function DashboardClient({
                   exercise={ex}
                   index={i}
                   onEdit={() => {
-                    setEditorState({ mode: "edit-exercise", editingIndex: i, dirty: true });
+                    setEditorState((s) => ({ mode: "edit-exercise", editingIndex: i, dirty: s.dirty }));
                   }}
                   onDelete={() => handleDeleteExercise(i)}
                   onDuplicate={() => handleDuplicateExercise(i)}
@@ -3066,7 +2927,7 @@ export default function DashboardClient({
                 setEditorState({ mode: "view", editingIndex: null, dirty: true });
               }}
               onCancel={() =>
-                setEditorState({ mode: "view", editingIndex: null, dirty: true })
+                setEditorState((s) => ({ mode: "view", editingIndex: null, dirty: s.dirty }))
               }
               adminToken={adminToken}
               onStatus={setStatus}
@@ -3087,7 +2948,7 @@ export default function DashboardClient({
                 setEditorState({ mode: "view", editingIndex: null, dirty: true });
               }}
               onCancel={() =>
-                setEditorState({ mode: "view", editingIndex: null, dirty: true })
+                setEditorState((s) => ({ mode: "view", editingIndex: null, dirty: s.dirty }))
               }
             />
           )}
@@ -3123,6 +2984,7 @@ export default function DashboardClient({
             </div>
           )}
         </section>
+        )}
       </section>
     </main>
   );
