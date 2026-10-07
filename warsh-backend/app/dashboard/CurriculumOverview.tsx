@@ -43,7 +43,7 @@ function LessonStatus({ lesson }: { lesson: DashboardLesson }) {
   );
 }
 
-const COLS = "minmax(0, 1fr) 120px 70px 90px 80px";
+const COLS = "minmax(0, 1fr) 120px 70px 90px 130px";
 
 export default function CurriculumOverview({
   chapters,
@@ -361,6 +361,7 @@ const primaryBtn: React.CSSProperties = {
 };
 
 const linkBtn: React.CSSProperties = {
+  whiteSpace: "nowrap",
   background: "none",
   border: "none",
   padding: 0,

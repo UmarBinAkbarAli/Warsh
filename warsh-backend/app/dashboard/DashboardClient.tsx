@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useMemo, useEffect } from "react";
+import { useState, useCallback, useMemo, useEffect, useRef } from "react";
 import styles from "./dashboard.module.css";
 import ImageField from "./ImageField";
 import CurriculumOverview from "./CurriculumOverview";
@@ -131,6 +131,142 @@ function getDiscoverCardTitle(card: DiscoverCard): string {
   );
 }
 
+// Counts `{ en: "...", ur: "" | missing }` pairs anywhere in a content value, so
+// the Studio can flag text that Urdu-mode learners will see in English instead.
+function missingUrduCount(value: unknown): number {
+  if (Array.isArray(value)) return value.reduce((n: number, v) => n + missingUrduCount(v), 0);
+  if (!value || typeof value !== "object") return 0;
+  const rec = value as Record<string, unknown>;
+  let n = 0;
+  if (typeof rec.en === "string" && rec.en.trim() && !(typeof rec.ur === "string" && rec.ur.trim())) n += 1;
+  for (const [k, v] of Object.entries(rec)) {
+    if (k === "en" || k === "ur") continue;
+    n += missingUrduCount(v);
+  }
+  return n;
+}
+
+function UrduMissingBadge({ count }: { count: number }) {
+  if (count <= 0) return null;
+  return (
+    <span
+      title={`${count} Urdu field${count === 1 ? "" : "s"} missing`}
+      style={{ fontSize: 10, fontWeight: 700, color: "#8a6a1c", background: "#f6edd2", border: "1px solid #e3d3a6", borderRadius: 999, padding: "2px 6px", whiteSpace: "nowrap" }}
+    >
+      Urdu · {count}
+    </span>
+  );
+}
+
+function UrduMissingNote({ count }: { count: number }) {
+  if (count <= 0) return null;
+  return (
+    <div style={{ gridColumn: "1 / -1", fontSize: 13, color: "#8a6a1c", background: "#fbf3da", border: "1px solid #e3d3a6", borderRadius: 8, padding: "8px 12px" }}>
+      {count} Urdu field{count === 1 ? " is" : "s are"} missing. Learners with Urdu meanings selected will see English instead.
+    </div>
+  );
+}
+
+// Fallback renderer for any card/exercise type without a bespoke form: it draws
+// the fields declared in the shared form config so no type is ever uneditable.
+function ConfigFields({
+  config,
+  record,
+  updateField,
+}: {
+  config?: { fields: Record<string, { label: { en: string }; inputKind: string; rtl?: boolean; required?: boolean }> };
+  record: Record<string, unknown>;
+  updateField: (path: string, value: unknown) => void;
+}) {
+  if (!config) return <p style={{ gridColumn: "1 / -1" }}>No editable fields for this type. Use the JSON tab.</p>;
+  const read = (path: string): unknown =>
+    path.split(".").reduce<unknown>((o, k) => (o && typeof o === "object" ? (o as Record<string, unknown>)[k] : undefined), record);
+  return (
+    <>
+      {Object.entries(config.fields).map(([path, f]) => {
+        const v = read(path);
+        const label = `${f.label.en}${f.required ? " *" : ""}`;
+        if (f.inputKind === "boolean") {
+          return (
+            <label key={path} style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <input type="checkbox" checked={Boolean(v)} onChange={(e) => updateField(path, e.target.checked)} />
+              <span>{label}</span>
+            </label>
+          );
+        }
+        if (f.inputKind === "number") {
+          return (
+            <label key={path}>
+              <span>{label}</span>
+              <input
+                type="number"
+                value={typeof v === "number" ? v : ""}
+                onChange={(e) => updateField(path, e.target.value === "" ? undefined : Number(e.target.value))}
+              />
+            </label>
+          );
+        }
+        if (f.inputKind === "text" || f.inputKind === "arabic") {
+          const long = path.startsWith("explanation");
+          return (
+            <label key={path} className={long ? styles.fullWidth : undefined}>
+              <span>{label}</span>
+              {long ? (
+                <textarea rows={2} value={typeof v === "string" ? v : ""} onChange={(e) => updateField(path, e.target.value)} />
+              ) : (
+                <input dir={f.rtl ? "rtl" : undefined} value={typeof v === "string" ? v : ""} onChange={(e) => updateField(path, e.target.value)} />
+              )}
+            </label>
+          );
+        }
+        return <JsonFieldEditor key={path} label={label} value={v} onChange={(next) => updateField(path, next)} />;
+      })}
+    </>
+  );
+}
+
+// Structured values (tiles, options, pairs) are edited as JSON and applied only when it parses.
+function JsonFieldEditor({ label, value, onChange }: { label: string; value: unknown; onChange: (v: unknown) => void }) {
+  const [text, setText] = useState(() => JSON.stringify(value ?? null, null, 2));
+  const [bad, setBad] = useState(false);
+  return (
+    <label className={styles.fullWidth}>
+      <span>
+        {label} (JSON){bad ? " — not valid yet, not applied" : ""}
+      </span>
+      <textarea
+        rows={5}
+        value={text}
+        style={{ fontFamily: "monospace", borderColor: bad ? "#b04040" : undefined }}
+        onChange={(e) => {
+          setText(e.target.value);
+          try {
+            onChange(JSON.parse(e.target.value));
+            setBad(false);
+          } catch {
+            setBad(true);
+          }
+        }}
+      />
+    </label>
+  );
+}
+
+// Calls `onChange` with each edited draft (never on the first render), so edits
+// land in the lesson draft immediately instead of waiting for a Save click.
+function useEmitDraft<T>(draft: T, onChange: (next: T) => void) {
+  const first = useRef(true);
+  const latest = useRef(onChange);
+  latest.current = onChange;
+  useEffect(() => {
+    if (first.current) {
+      first.current = false;
+      return;
+    }
+    latest.current(draft);
+  }, [draft]);
+}
+
 // ============================================================================
 // ARABIC TEXT EDITOR
 // ============================================================================
@@ -164,15 +300,15 @@ function ArabicTextEditor({
 function CardEditForm({
   card,
   index,
-  onSave,
-  onCancel,
+  onChange,
+  onClose,
   adminToken = "",
   onStatus,
 }: {
   card: DiscoverCard;
   index: number;
-  onSave: (updated: DiscoverCard) => void;
-  onCancel: () => void;
+  onChange: (updated: DiscoverCard) => void;
+  onClose: () => void;
   adminToken?: string;
   onStatus?: (msg: string) => void;
 }) {
@@ -197,24 +333,24 @@ function CardEditForm({
     });
   }
 
-  function save() {
-    onSave(draft);
-  }
+  useEmitDraft(draft, onChange);
 
   // We access via `card` prop (typed precisely) rather than `draft` for reads
-  const c = card as unknown as Record<string, unknown>;
+  const c = draft as unknown as Record<string, unknown>;
+  const bespoke = card.type === "WORD" || card.type === "CONCEPT" || card.type === "CONTRAST" || card.type === "AYAH_PREVIEW";
 
   return (
     <div className={styles.editPanel}>
       <div className={styles.editPanelHeader}>
-        <h4>Edit {config?.label?.en ?? card.type} — card {index + 1}</h4>
+        <h4>{config?.label?.en ?? card.type} — card {index + 1}</h4>
         <div className={styles.editPanelActions}>
-          <button className={styles.cancelBtn} onClick={onCancel} type="button">Cancel</button>
-          <button className={styles.saveBtn} onClick={save} type="button">Save card</button>
+          <button className={styles.cancelBtn} onClick={onClose} type="button">Done</button>
         </div>
       </div>
 
       <div className={styles.fieldGrid}>
+        <UrduMissingNote count={missingUrduCount(draft)} />
+        {!bespoke && <ConfigFields config={config} record={draftRecord} updateField={updateField} />}
         {card.type === "WORD" && (
           <>
             <label>
@@ -298,13 +434,13 @@ function CardEditForm({
 function ExerciseEditForm({
   exercise,
   index,
-  onSave,
-  onCancel,
+  onChange,
+  onClose,
 }: {
   exercise: Exercise;
   index: number;
-  onSave: (updated: Exercise) => void;
-  onCancel: () => void;
+  onChange: (updated: Exercise) => void;
+  onClose: () => void;
 }) {
   const [draft, setDraft] = useState<Exercise>(exercise as unknown as Exercise);
 
@@ -323,24 +459,30 @@ function ExerciseEditForm({
     });
   }
 
-  function save() {
-    onSave(draft);
-  }
+  useEmitDraft(draft, onChange);
 
   // Access via exercise prop for reads to avoid union narrowing issues
   const ex = exercise as unknown as Record<string, unknown>;
+  const BESPOKE_EXERCISES = [
+    "TRUE_FALSE", "TAP_TRANSLATION", "FILL_BLANK", "MATCHING", "GRAMMAR_PARSE", "CONVERSATION_BUILDER",
+    "SHADOW_REPEAT", "AUDIO_RECOGNITION", "WRITE_ARABIC", "HARAKAH_PLACEMENT", "WORD_ORDER",
+    "TRANSLATE_TO_ARABIC", "IDENTIFY_ROOT", "MATCH_AYAH",
+  ];
 
   return (
     <div className={styles.editPanel}>
       <div className={styles.editPanelHeader}>
-        <h4>Edit {exercise.type} — exercise {index + 1}</h4>
+        <h4>{exerciseFormConfig[exercise.type]?.label?.en ?? exercise.type} — exercise {index + 1}</h4>
         <div className={styles.editPanelActions}>
-          <button className={styles.cancelBtn} onClick={onCancel} type="button">Cancel</button>
-          <button className={styles.saveBtn} onClick={save} type="button">Save exercise</button>
+          <button className={styles.cancelBtn} onClick={onClose} type="button">Done</button>
         </div>
       </div>
 
       <div className={styles.fieldGrid}>
+        <UrduMissingNote count={missingUrduCount(draft)} />
+        {!BESPOKE_EXERCISES.includes(exercise.type) && (
+          <ConfigFields config={exerciseFormConfig[exercise.type]} record={draft as unknown as Record<string, unknown>} updateField={updateField} />
+        )}
         <label className={styles.fullWidth}>
           <span>Exercise ID</span>
           <code style={{ fontSize: 12 }}>{exercise.id}</code>
@@ -937,9 +1079,12 @@ function ExerciseEditForm({
 interface HookRevealCloseEditorProps {
   parsedContent: LessonContent;
   onUpdate: (updated: LessonContent) => void;
+  section?: "hook" | "reveal" | "close";
 }
 
-function HookRevealCloseEditor({ parsedContent, onUpdate }: HookRevealCloseEditorProps) {
+function HookRevealCloseEditor({ parsedContent, onUpdate, section }: HookRevealCloseEditorProps) {
+  const hide = (k: "hook" | "reveal" | "close"): React.CSSProperties | undefined =>
+    section && section !== k ? { display: "none" } : undefined;
   function updateHookField(path: string, value: unknown) {
     const hook = parsedContent.hook ?? {
       ayah: { surah: 1, ayah: 1, label: "", ar: "", en: "", ur: "", audio_url: "" },
@@ -996,13 +1141,15 @@ function HookRevealCloseEditor({ parsedContent, onUpdate }: HookRevealCloseEdito
   const close = parsedContent.close;
 
   return (
-    <div className={styles.builderSection}>
-      <div className={styles.sectionHeader}>
-        <h3>Hook / Reveal / Close</h3>
-      </div>
+    <div className={section ? undefined : styles.builderSection}>
+      {!section && (
+        <div className={styles.sectionHeader}>
+          <h3>Hook / Reveal / Close</h3>
+        </div>
+      )}
 
       {/* ---- HOOK ---- */}
-      <div className={styles.fieldSection}>
+      <div className={styles.fieldSection} style={hide("hook")}>
         <h5>Hook</h5>
         <div className={styles.fieldGrid}>
           <label>
@@ -1050,7 +1197,7 @@ function HookRevealCloseEditor({ parsedContent, onUpdate }: HookRevealCloseEdito
 
       {/* ---- REVEAL ---- */}
       {reveal && (
-        <div className={styles.fieldSection}>
+        <div className={styles.fieldSection} style={hide("reveal")}>
           <h5>Reveal</h5>
           <div className={styles.fieldGrid}>
             <label>
@@ -1084,7 +1231,7 @@ function HookRevealCloseEditor({ parsedContent, onUpdate }: HookRevealCloseEdito
       )}
 
       {/* ---- CLOSE ---- */}
-      <div className={styles.fieldSection}>
+      <div className={styles.fieldSection} style={hide("close")}>
         <h5>Close</h5>
         <div className={styles.fieldGrid}>
           <label className={styles.fullWidth}>
@@ -1105,23 +1252,24 @@ function HookRevealCloseEditor({ parsedContent, onUpdate }: HookRevealCloseEdito
 // DISCOVER CARD LIST ITEM
 // ============================================================================
 
-function DiscoverCardItem({
-  card,
-  index,
-  onEdit,
-  onDelete,
-  onDuplicate,
-  onMoveUp,
-  onMoveDown,
-  canMoveUp,
-  canMoveDown,
-  onDragStart,
-  onDragOver,
-  onDrop,
-  isDragOver,
-}: {
-  card: DiscoverCard;
+function exerciseSummary(ex: Exercise): string {
+  const rec = ex as unknown as Record<string, unknown>;
+  const read = (path: string): unknown =>
+    path.split(".").reduce<unknown>((o, k) => (o && typeof o === "object" ? (o as Record<string, unknown>)[k] : undefined), rec);
+  for (const path of [
+    "prompt.ar", "prompt.en", "statement.en", "sentence_ar", "target_translation.en", "phrase.ar",
+    "prompt_line.en", "word_unvowelled", "context.en", "source.en", "word.ar", "ayah_fragment.ar",
+  ]) {
+    const v = read(path);
+    if (typeof v === "string" && v.trim()) return v;
+  }
+  return "";
+}
+
+type OutlineItemProps = {
   index: number;
+  selected: boolean;
+  urduCount: number;
   onEdit: () => void;
   onDelete: () => void;
   onDuplicate: () => void;
@@ -1133,107 +1281,63 @@ function DiscoverCardItem({
   onDragOver: (index: number) => void;
   onDrop: (targetIndex: number) => void;
   isDragOver: boolean;
-}) {
-  const config = discoverCardFormConfig[card.type];
-  const title = getDiscoverCardTitle(card);
+};
 
+function OutlineActions(p: OutlineItemProps) {
   return (
-    <div
-      className={`${styles.cardItem}${isDragOver ? " " + styles.dragOver : ""}`}
-      draggable
-      onDragStart={(e) => { e.dataTransfer.effectAllowed = "move"; onDragStart(index); }}
-      onDragOver={(e) => { e.preventDefault(); e.dataTransfer.dropEffect = "move"; onDragOver(index); }}
-      onDrop={(e) => { e.preventDefault(); onDrop(index); }}
-    >
-      <div className={styles.cardSummary}>
-        <span className={styles.dragHandle} title="Drag to reorder">⋮⋮</span>
-        <span className={styles.cardIndex}>{index + 1}</span>
-        <span className={styles.cardType}>{card.type}</span>
-        <strong className={styles.cardTitle} dir="rtl">
-          {title}
-        </strong>
-      </div>
-      <div className={styles.cardActions}>
-        <button onClick={onEdit} type="button">Edit</button>
-        <button onClick={onDuplicate} type="button">Dup</button>
-        <button onClick={onMoveUp} disabled={!canMoveUp} type="button">↑</button>
-        <button onClick={onMoveDown} disabled={!canMoveDown} type="button">↓</button>
-        <button onClick={onDelete} type="button" style={{ color: "#b04040" }}>Del</button>
-      </div>
+    <div className={styles.cardActions} style={{ flexWrap: "wrap" }}>
+      <button onClick={p.onDuplicate} type="button">Duplicate</button>
+      <button onClick={p.onMoveUp} disabled={!p.canMoveUp} type="button">↑</button>
+      <button onClick={p.onMoveDown} disabled={!p.canMoveDown} type="button">↓</button>
+      <button onClick={p.onDelete} type="button" style={{ color: "#b04040" }}>Delete</button>
     </div>
   );
 }
 
-// ============================================================================
-// EXERCISE LIST ITEM
-// ============================================================================
-
-function ExerciseItem({
-  exercise,
-  index,
-  onEdit,
-  onDelete,
-  onDuplicate,
-  onMoveUp,
-  onMoveDown,
-  canMoveUp,
-  canMoveDown,
-  onDragStart,
-  onDragOver,
-  onDrop,
-  isDragOver,
-}: {
-  exercise: Exercise;
-  index: number;
-  onEdit: () => void;
-  onDelete: () => void;
-  onDuplicate: () => void;
-  onMoveUp: () => void;
-  onMoveDown: () => void;
-  canMoveUp: boolean;
-  canMoveDown: boolean;
-  onDragStart: (index: number) => void;
-  onDragOver: (index: number) => void;
-  onDrop: (targetIndex: number) => void;
-  isDragOver: boolean;
-}) {
-  const config = exerciseFormConfig[exercise.type];
-  const prompt =
-    exercise.type === "TAP_TRANSLATION"
-      ? exercise.prompt?.ar
-      : exercise.type === "FILL_BLANK"
-      ? exercise.sentence_ar
-      : exercise.type === "TRUE_FALSE"
-      ? exercise.statement?.en
-      : exercise.type === "BUILD_SENTENCE"
-      ? exercise.target_translation?.en
-      : null;
-
+function DiscoverCardItem(p: OutlineItemProps & { card: DiscoverCard }) {
+  const title = getDiscoverCardTitle(p.card);
   return (
     <div
-      className={`${styles.cardExerciseItem}${isDragOver ? " " + styles.dragOver : ""}`}
+      className={`${styles.cardItem} ${styles.outlineItem}${p.selected ? " " + styles.outlineSelected : ""}${p.isDragOver ? " " + styles.dragOver : ""}`}
       draggable
-      onDragStart={(e) => { e.dataTransfer.effectAllowed = "move"; onDragStart(index); }}
-      onDragOver={(e) => { e.preventDefault(); e.dataTransfer.dropEffect = "move"; onDragOver(index); }}
-      onDrop={(e) => { e.preventDefault(); onDrop(index); }}
+      onDragStart={(e) => { e.dataTransfer.effectAllowed = "move"; p.onDragStart(p.index); }}
+      onDragOver={(e) => { e.preventDefault(); e.dataTransfer.dropEffect = "move"; p.onDragOver(p.index); }}
+      onDrop={(e) => { e.preventDefault(); p.onDrop(p.index); }}
     >
-      <div className={styles.cardSummary}>
+      <button type="button" className={styles.outlineHead} onClick={p.onEdit} aria-pressed={p.selected}>
         <span className={styles.dragHandle} title="Drag to reorder">⋮⋮</span>
-        <span className={styles.cardIndex}>{index + 1}</span>
-        <code className={styles.exerciseId}>{exercise.id}</code>
-        <span className={styles.cardType}>{exercise.type}</span>
-        <span className={styles.cardPrompt}>{prompt ?? ""}</span>
-        {exercise.xp_value != null && (
-          <span className={styles.xpChip}>{exercise.xp_value}XP</span>
-        )}
-      </div>
-      <div className={styles.cardActions}>
-        <button onClick={onEdit} type="button">Edit</button>
-        <button onClick={onDuplicate} type="button">Dup</button>
-        <button onClick={onMoveUp} disabled={!canMoveUp} type="button">↑</button>
-        <button onClick={onMoveDown} disabled={!canMoveDown} type="button">↓</button>
-        <button onClick={onDelete} type="button" style={{ color: "#b04040" }}>Del</button>
-      </div>
+        <span className={styles.cardIndex}>{p.index + 1}</span>
+        <strong className={styles.cardTitle} dir="auto" style={{ flex: 1, textAlign: "left", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+          {title}
+        </strong>
+        <UrduMissingBadge count={p.urduCount} />
+        <span className={styles.cardType}>{p.card.type}</span>
+      </button>
+      {p.selected && <OutlineActions {...p} />}
+    </div>
+  );
+}
+
+function ExerciseItem(p: OutlineItemProps & { exercise: Exercise }) {
+  const prompt = exerciseSummary(p.exercise);
+  return (
+    <div
+      className={`${styles.cardExerciseItem} ${styles.outlineItem}${p.selected ? " " + styles.outlineSelected : ""}${p.isDragOver ? " " + styles.dragOver : ""}`}
+      draggable
+      onDragStart={(e) => { e.dataTransfer.effectAllowed = "move"; p.onDragStart(p.index); }}
+      onDragOver={(e) => { e.preventDefault(); e.dataTransfer.dropEffect = "move"; p.onDragOver(p.index); }}
+      onDrop={(e) => { e.preventDefault(); p.onDrop(p.index); }}
+    >
+      <button type="button" className={styles.outlineHead} onClick={p.onEdit} aria-pressed={p.selected}>
+        <span className={styles.dragHandle} title="Drag to reorder">⋮⋮</span>
+        <span className={styles.cardIndex}>{p.index + 1}</span>
+        <span className={styles.cardPrompt} dir="auto" style={{ flex: 1, textAlign: "left", color: "var(--ink)" }}>
+          {prompt || p.exercise.id}
+        </span>
+        <UrduMissingBadge count={p.urduCount} />
+        <span className={styles.cardType}>{p.exercise.type}</span>
+      </button>
+      {p.selected && <OutlineActions {...p} />}
     </div>
   );
 }
@@ -1242,7 +1346,7 @@ function ExerciseItem({
 // EDITOR STATE
 // ============================================================================
 
-type EditorMode = "view" | "edit-card" | "edit-exercise" | "add-card" | "add-exercise" | "json";
+type EditorMode = "view" | "edit-card" | "edit-exercise" | "edit-hrc" | "add-card" | "add-exercise" | "json";
 
 interface EditorState {
   mode: EditorMode;
@@ -1331,6 +1435,10 @@ export default function DashboardClient({
   }>({});
 
   // ---- Drag-and-drop state ----
+  const [hrcSection, setHrcSection] = useState<"hook" | "reveal" | "close">("hook");
+  // Bumped on structural edits (move, duplicate) so an open form remounts on fresh content.
+  const [paneNonce, setPaneNonce] = useState(0);
+  const [showDetails, setShowDetails] = useState(false);
   const [dragCardIndex, setDragCardIndex] = useState<number | null>(null);
   const [dragOverCardIndex, setDragOverCardIndex] = useState<number | null>(null);
   const [dragExerciseIndex, setDragExerciseIndex] = useState<number | null>(null);
@@ -1937,8 +2045,9 @@ export default function DashboardClient({
 
   function handleAddCard(type: DiscoverCardType) {
     const starter = createStarterCard(type);
+    setPaneNonce((n) => n + 1);
+    setEditorState({ mode: "edit-card", editingIndex: draftDiscoverCards.length, dirty: true });
     setDraftDiscoverCards((prev) => [...prev, starter]);
-    setEditorState({ mode: "view", editingIndex: null, dirty: true });
   }
 
   function handleDeleteCard(index: number) {
@@ -1949,13 +2058,14 @@ export default function DashboardClient({
   function handleDuplicateCard(index: number) {
     const card = draftDiscoverCards[index];
     if (!card) return;
-    const dup = { ...card };
+    const dup = JSON.parse(JSON.stringify(card)) as DiscoverCard;
     setDraftDiscoverCards((prev) => [
       ...prev.slice(0, index + 1),
       dup,
       ...prev.slice(index + 1),
     ]);
-    setEditorState({ mode: "view", editingIndex: null, dirty: true });
+    setPaneNonce((n) => n + 1);
+    setEditorState({ mode: "edit-card", editingIndex: index + 1, dirty: true });
   }
 
   function handleMoveCard(index: number, direction: -1 | 1) {
@@ -1964,13 +2074,15 @@ export default function DashboardClient({
     const cards = [...draftDiscoverCards];
     [cards[index], cards[newIndex]] = [cards[newIndex], cards[index]];
     setDraftDiscoverCards(cards);
-    setEditorState({ mode: "view", editingIndex: null, dirty: true });
+    setPaneNonce((n) => n + 1);
+    setEditorState({ mode: "edit-card", editingIndex: newIndex, dirty: true });
   }
 
   function handleAddExercise(type: ExerciseType) {
     const starter = createStarterExercise(type);
+    setPaneNonce((n) => n + 1);
+    setEditorState({ mode: "edit-exercise", editingIndex: draftExercises.length, dirty: true });
     setDraftExercises((prev) => [...prev, starter]);
-    setEditorState({ mode: "view", editingIndex: null, dirty: true });
   }
 
   function handleDeleteExercise(index: number) {
@@ -1981,13 +2093,14 @@ export default function DashboardClient({
   function handleDuplicateExercise(index: number) {
     const ex = draftExercises[index];
     if (!ex) return;
-    const dup = createStarterExercise(ex.type);
+    const dup = { ...JSON.parse(JSON.stringify(ex)), id: createStarterExercise(ex.type).id } as Exercise;
     setDraftExercises((prev) => [
       ...prev.slice(0, index + 1),
       dup,
       ...prev.slice(index + 1),
     ]);
-    setEditorState({ mode: "view", editingIndex: null, dirty: true });
+    setPaneNonce((n) => n + 1);
+    setEditorState({ mode: "edit-exercise", editingIndex: index + 1, dirty: true });
   }
 
   function handleMoveExercise(index: number, direction: -1 | 1) {
@@ -1996,7 +2109,8 @@ export default function DashboardClient({
     const exs = [...draftExercises];
     [exs[index], exs[newIndex]] = [exs[newIndex], exs[index]];
     setDraftExercises(exs);
-    setEditorState({ mode: "view", editingIndex: null, dirty: true });
+    setPaneNonce((n) => n + 1);
+    setEditorState({ mode: "edit-exercise", editingIndex: newIndex, dirty: true });
   }
 
   if (!selectedChapter) {
@@ -2494,54 +2608,46 @@ export default function DashboardClient({
         {/* ---- LESSON BUILDER ---- */}
         {view === "editor" && lessonDraft && (
         <section className={styles.panel}>
-          <div className={styles.panelHeader}>
-            <div>
-              <p className={styles.kicker}>
-                Lesson {selectedLesson?.order} — {lessonDraft.title}
-              </p>
-              <h2>Lesson Builder</h2>
+          <div className={styles.studioBar}>
+            <div className={styles.studioBarInfo}>
+              {editorState.dirty ? (
+                <span className={styles.dirtyPill}>Unsaved changes</span>
+              ) : (
+                <span style={{ color: "var(--muted)", fontSize: 13 }}>All changes saved</span>
+              )}
+              <span className={styles.saveStatus}>{status}</span>
+              <UrduMissingBadge count={missingUrduCount({ cards: draftDiscoverCards, ex: draftExercises, hrc: draftHRC })} />
             </div>
             <div className={styles.panelActions}>
-              {editorState.dirty && (
-                <span className={styles.dirtyPill}>
-                  Unsaved changes
-                </span>
-              )}
+              <button className={styles.cancelBtn} onClick={() => setShowDetails((v) => !v)} type="button">
+                {showDetails ? "Hide lesson details" : "Lesson details"}
+              </button>
               <button
-                className={styles.validateBtn}
-                onClick={handleValidate}
+                className={styles.cancelBtn}
+                disabled={!editorState.dirty}
+                onClick={() => {
+                  if (selectedLesson && window.confirm("Discard all unsaved changes to this lesson?")) {
+                    resetDraftFromParsed(selectedLesson);
+                  }
+                }}
                 type="button"
               >
+                Revert
+              </button>
+              <button className={styles.validateBtn} onClick={handleValidate} type="button">
                 Validate
               </button>
-              <button
-                className={styles.cancelBtn}
-                onClick={showJsonView ? () => setShowJsonView(false) : openJsonView}
-                type="button"
-              >
-                {showJsonView ? "Structured view" : "JSON view"}
-              </button>
-              <button
-                className={styles.cancelBtn}
-                onClick={() => setShowPreview((v) => !v)}
-                type="button"
-              >
-                {showPreview ? "Hide preview" : "Preview"}
-              </button>
-              <button
-                className={styles.primaryButton}
-                onClick={saveLesson}
-                type="button"
-              >
+              <button className={styles.primaryButton} onClick={saveLesson} type="button">
                 Save lesson
               </button>
             </div>
           </div>
-          <div className={styles.saveBar}>
-            <span className={styles.saveStatus}>{status}</span>
-            <span>{editorState.dirty ? "Draft has local edits" : "No unsaved edits"}</span>
-            <span>{lessonDraft.template}</span>
-          </div>
+
+          {selectedLesson?.status === "PUBLISHED" && (
+            <div className={styles.jsonWarning}>
+              This lesson is live. Saving updates it for learners now; those who already completed it will see an Updated notice.
+            </div>
+          )}
 
           {/* ---- ADVANCED JSON VIEW ---- */}
           {showJsonView && (
@@ -2742,235 +2848,257 @@ export default function DashboardClient({
             </div>
           )}
 
-          {/* Lesson metadata */}
-          <div className={styles.grid}>
-            <label>
-              English title
-              <input
-                value={lessonDraft.title}
-                onChange={(e) =>
-                  setLessonDraft((d) => d && { ...d, title: e.target.value })
-                }
-              />
-            </label>
-            <label>
-              Arabic title
-              <input
-                dir="rtl"
-                value={lessonDraft.titleAr}
-                onChange={(e) =>
-                  setLessonDraft((d) => d && { ...d, titleAr: e.target.value })
-                }
-              />
-            </label>
-            <label>
-              Template
-              <select
-                value={lessonDraft.template}
-                onChange={(e) =>
-                  setLessonDraft((d) => d && { ...d, template: e.target.value })
-                }
-              >
-                {LESSON_TEMPLATES.map((t) => (
-                  <option key={t} value={t}>{t}</option>
-                ))}
-              </select>
-            </label>
-            <label>
-              XP reward
-              <input
-                type="number"
-                min={0}
-                value={lessonDraft.xpReward}
-                onChange={(e) =>
-                  setLessonDraft((d) =>
-                    d && { ...d, xpReward: Number(e.target.value) }
-                  )
-                }
-              />
-            </label>
-          </div>
 
-          {/* ---- DISCOVER CARDS ---- */}
-          <div className={styles.builderSection}>
-            <div className={styles.sectionHeader}>
-              <h3>Discover Cards ({draftDiscoverCards.length})</h3>
-              <div className={styles.addButtons}>
-                {(["WORD", "CONCEPT", "EXAMPLE", "CONTRAST", "AYAH_PREVIEW"] as DiscoverCardType[])
-                  .filter((t) => discoverCardFormConfig[t]?.authoringScope)
-                  .map((t) => (
-                    <button
-                      key={t}
-                      onClick={() => handleAddCard(t)}
-                      type="button"
-                      className={styles.addBtn}
-                    >
-                      + {discoverCardFormConfig[t]?.label?.en ?? t}
-                    </button>
+          {showDetails && (
+            <div className={styles.grid}>
+              <label>
+                English title
+                <input
+                  value={lessonDraft.title}
+                  onChange={(e) =>
+                    setLessonDraft((d) => d && { ...d, title: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Arabic title
+                <input
+                  dir="rtl"
+                  value={lessonDraft.titleAr}
+                  onChange={(e) =>
+                    setLessonDraft((d) => d && { ...d, titleAr: e.target.value })
+                  }
+                />
+              </label>
+              <label>
+                Template
+                <select
+                  value={lessonDraft.template}
+                  onChange={(e) =>
+                    setLessonDraft((d) => d && { ...d, template: e.target.value })
+                  }
+                >
+                  {LESSON_TEMPLATES.map((t) => (
+                    <option key={t} value={t}>{t}</option>
                   ))}
+                </select>
+              </label>
+              <label>
+                XP reward
+                <input
+                  type="number"
+                  min={0}
+                  value={lessonDraft.xpReward}
+                  onChange={(e) =>
+                    setLessonDraft((d) =>
+                      d && { ...d, xpReward: Number(e.target.value) }
+                    )
+                  }
+                />
+              </label>
+            </div>
+          )}
+
+          {!showJsonView && (
+          <div className={styles.studioGrid}>
+            <div className={styles.studioOutline}>
+              {/* ---- OPENING / WRAP-UP ---- */}
+              <div className={styles.builderSection}>
+                <div className={styles.sectionHeader}>
+                  <h3>Opening &amp; wrap-up</h3>
+                </div>
+                <div className={styles.cardList}>
+                  {([
+                    ["hook", "Opening ayah", Boolean(draftHRC.hook ?? parsedContent?.hook)],
+                    ["reveal", "Reveal", Boolean(draftHRC.reveal ?? parsedContent?.reveal)],
+                    ["close", "Wrap-up (Noor message)", true],
+                  ] as const)
+                    .filter(([, , present]) => present)
+                    .map(([key, label]) => {
+                      const selected = editorState.mode === "edit-hrc" && hrcSection === key;
+                      const part = (draftHRC as Record<string, unknown>)[key] ?? (parsedContent as unknown as Record<string, unknown> | null)?.[key];
+                      return (
+                        <div key={key} className={`${styles.cardItem} ${styles.outlineItem}${selected ? " " + styles.outlineSelected : ""}`}>
+                          <button
+                            type="button"
+                            className={styles.outlineHead}
+                            aria-pressed={selected}
+                            onClick={() => {
+                              setHrcSection(key);
+                              setEditorState((st) => ({ mode: "edit-hrc", editingIndex: null, dirty: st.dirty }));
+                            }}
+                          >
+                            <strong className={styles.cardTitle} style={{ flex: 1, textAlign: "left" }}>{label}</strong>
+                            <UrduMissingBadge count={missingUrduCount(part)} />
+                          </button>
+                        </div>
+                      );
+                    })}
+                </div>
+              </div>
+
+              {/* ---- DISCOVER CARDS ---- */}
+              <div className={styles.builderSection}>
+                <div className={styles.sectionHeader}>
+                  <h3>Discover ({draftDiscoverCards.length})</h3>
+                  <div className={styles.addButtons}>
+                    {(["WORD", "CONCEPT", "EXAMPLE", "CONTRAST", "AYAH_PREVIEW"] as DiscoverCardType[])
+                      .filter((t) => discoverCardFormConfig[t]?.authoringScope)
+                      .map((t) => (
+                        <button key={t} onClick={() => handleAddCard(t)} type="button" className={styles.addBtn}>
+                          + {discoverCardFormConfig[t]?.label?.en?.replace(" Card", "") ?? t}
+                        </button>
+                      ))}
+                  </div>
+                </div>
+                <div className={styles.cardList}>
+                  {draftDiscoverCards.map((card, i) => (
+                    <DiscoverCardItem
+                      key={i}
+                      card={card}
+                      index={i}
+                      selected={editorState.mode === "edit-card" && editorState.editingIndex === i}
+                      urduCount={missingUrduCount(card)}
+                      onEdit={() => setEditorState((st) => ({ mode: "edit-card", editingIndex: i, dirty: st.dirty }))}
+                      onDelete={() => handleDeleteCard(i)}
+                      onDuplicate={() => handleDuplicateCard(i)}
+                      onMoveUp={() => handleMoveCard(i, -1)}
+                      onMoveDown={() => handleMoveCard(i, 1)}
+                      canMoveUp={i > 0}
+                      canMoveDown={i < draftDiscoverCards.length - 1}
+                      onDragStart={(idx) => setDragCardIndex(idx)}
+                      onDragOver={(idx) => setDragOverCardIndex(idx)}
+                      onDrop={(targetIdx) => {
+                        if (dragCardIndex !== null && dragCardIndex !== targetIdx) {
+                          const cards = [...draftDiscoverCards];
+                          const [moved] = cards.splice(dragCardIndex, 1);
+                          cards.splice(targetIdx, 0, moved);
+                          setDraftDiscoverCards(cards);
+                          setEditorState({ mode: "view", editingIndex: null, dirty: true });
+                        }
+                        setDragCardIndex(null);
+                        setDragOverCardIndex(null);
+                      }}
+                      isDragOver={dragOverCardIndex === i}
+                    />
+                  ))}
+                  {draftDiscoverCards.length === 0 && (
+                    <p style={{ color: "#8a651f", fontSize: 13, padding: "8px 0" }}>No discover cards yet. Use the + buttons above.</p>
+                  )}
+                </div>
+              </div>
+
+              {/* ---- PRACTICE EXERCISES ---- */}
+              <div className={styles.builderSection}>
+                <div className={styles.sectionHeader}>
+                  <h3>Practice ({draftExercises.length})</h3>
+                  <div className={styles.addButtons}>
+                    {(["TRUE_FALSE", "TAP_TRANSLATION", "FILL_BLANK", "BUILD_SENTENCE", "MATCHING"] as ExerciseType[]).map((t) => (
+                      <button key={t} onClick={() => handleAddExercise(t)} type="button" className={styles.addBtn}>
+                        + {exerciseFormConfig[t]?.label?.en ?? t}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                <div className={styles.cardList}>
+                  {draftExercises.map((ex, i) => (
+                    <ExerciseItem
+                      key={ex.id}
+                      exercise={ex}
+                      index={i}
+                      selected={editorState.mode === "edit-exercise" && editorState.editingIndex === i}
+                      urduCount={missingUrduCount(ex)}
+                      onEdit={() => setEditorState((st) => ({ mode: "edit-exercise", editingIndex: i, dirty: st.dirty }))}
+                      onDelete={() => handleDeleteExercise(i)}
+                      onDuplicate={() => handleDuplicateExercise(i)}
+                      onMoveUp={() => handleMoveExercise(i, -1)}
+                      onMoveDown={() => handleMoveExercise(i, 1)}
+                      canMoveUp={i > 0}
+                      canMoveDown={i < draftExercises.length - 1}
+                      onDragStart={(idx) => setDragExerciseIndex(idx)}
+                      onDragOver={(idx) => setDragOverExerciseIndex(idx)}
+                      onDrop={(targetIdx) => {
+                        if (dragExerciseIndex !== null && dragExerciseIndex !== targetIdx) {
+                          const exs = [...draftExercises];
+                          const [moved] = exs.splice(dragExerciseIndex, 1);
+                          exs.splice(targetIdx, 0, moved);
+                          setDraftExercises(exs);
+                          setEditorState({ mode: "view", editingIndex: null, dirty: true });
+                        }
+                        setDragExerciseIndex(null);
+                        setDragOverExerciseIndex(null);
+                      }}
+                      isDragOver={dragOverExerciseIndex === i}
+                    />
+                  ))}
+                  {draftExercises.length === 0 && (
+                    <p style={{ color: "#8a651f", fontSize: 13, padding: "8px 0" }}>No exercises yet. Use the + buttons above.</p>
+                  )}
+                </div>
               </div>
             </div>
-            <div className={styles.cardList}>
-              {draftDiscoverCards.map((card, i) => (
-                <DiscoverCardItem
-                  key={i}
-                  card={card}
-                  index={i}
-                  onEdit={() => {
-                    setEditorState((s) => ({ mode: "edit-card", editingIndex: i, dirty: s.dirty }));
+
+            {/* ---- EDITING PANE (sits beside the outline, never below it) ---- */}
+            <div className={styles.studioPane}>
+              {editorState.mode === "edit-card" && editorState.editingIndex !== null && draftDiscoverCards[editorState.editingIndex] && (
+                <CardEditForm
+                  key={`card-${editorState.editingIndex}-${paneNonce}`}
+                  card={draftDiscoverCards[editorState.editingIndex]}
+                  index={editorState.editingIndex}
+                  onChange={(updated) => {
+                    const at = editorState.editingIndex!;
+                    setDraftDiscoverCards((prev) => prev.map((c, i) => (i === at ? updated : c)));
+                    setEditorState((st) => ({ ...st, dirty: true }));
                   }}
-                  onDelete={() => handleDeleteCard(i)}
-                  onDuplicate={() => handleDuplicateCard(i)}
-                  onMoveUp={() => handleMoveCard(i, -1)}
-                  onMoveDown={() => handleMoveCard(i, 1)}
-                  canMoveUp={i > 0}
-                  canMoveDown={i < draftDiscoverCards.length - 1}
-                  onDragStart={(idx) => setDragCardIndex(idx)}
-                  onDragOver={(idx) => setDragOverCardIndex(idx)}
-                  onDrop={(targetIdx) => {
-                    if (dragCardIndex !== null && dragCardIndex !== targetIdx) {
-                      const cards = [...draftDiscoverCards];
-                      const [moved] = cards.splice(dragCardIndex, 1);
-                      cards.splice(targetIdx, 0, moved);
-                      setDraftDiscoverCards(cards);
-                      setEditorState({ mode: "view", editingIndex: null, dirty: true });
-                    }
-                    setDragCardIndex(null);
-                    setDragOverCardIndex(null);
-                  }}
-                  isDragOver={dragOverCardIndex === i}
+                  onClose={() => setEditorState((st) => ({ mode: "view", editingIndex: null, dirty: st.dirty }))}
+                  adminToken={adminToken}
+                  onStatus={setStatus}
                 />
-              ))}
-              {draftDiscoverCards.length === 0 && (
-                <p style={{ color: "#8a651f", fontSize: 13, padding: "8px 0" }}>
-                  No discover cards yet. Click "+ Word" or other types above to add.
-                </p>
+              )}
+              {editorState.mode === "edit-exercise" && editorState.editingIndex !== null && draftExercises[editorState.editingIndex] && (
+                <ExerciseEditForm
+                  key={`ex-${editorState.editingIndex}-${paneNonce}`}
+                  exercise={draftExercises[editorState.editingIndex]}
+                  index={editorState.editingIndex}
+                  onChange={(updated) => {
+                    const at = editorState.editingIndex!;
+                    setDraftExercises((prev) => prev.map((x, i) => (i === at ? updated : x)));
+                    setEditorState((st) => ({ ...st, dirty: true }));
+                  }}
+                  onClose={() => setEditorState((st) => ({ mode: "view", editingIndex: null, dirty: st.dirty }))}
+                />
+              )}
+              {editorState.mode === "edit-hrc" && parsedContent && (
+                <div className={styles.editPanel}>
+                  <div className={styles.editPanelHeader}>
+                    <h4>{hrcSection === "hook" ? "Opening ayah" : hrcSection === "reveal" ? "Reveal" : "Wrap-up"}</h4>
+                    <div className={styles.editPanelActions}>
+                      <button className={styles.cancelBtn} onClick={() => setEditorState((st) => ({ mode: "view", editingIndex: null, dirty: st.dirty }))} type="button">Done</button>
+                    </div>
+                  </div>
+                  <HookRevealCloseEditor
+                    section={hrcSection}
+                    parsedContent={{
+                      ...parsedContent,
+                      hook: draftHRC.hook ?? parsedContent.hook,
+                      reveal: draftHRC.reveal ?? parsedContent.reveal,
+                      close: draftHRC.close ?? parsedContent.close,
+                    }}
+                    onUpdate={(updated) => {
+                      setDraftHRC({ hook: updated.hook, reveal: updated.reveal, close: updated.close });
+                      setEditorState((st) => ({ ...st, dirty: true }));
+                    }}
+                  />
+                </div>
+              )}
+              {(editorState.mode === "view" || editorState.editingIndex === null && editorState.mode !== "edit-hrc") && (
+                <div className={styles.studioEmpty}>
+                  <strong>Select an item to edit it here</strong>
+                  <span>Pick the opening ayah, a Discover card or a Practice exercise on the left. Edits apply to the lesson as you type; press Save lesson to publish them.</span>
+                </div>
               )}
             </div>
           </div>
-
-          {/* ---- PRACTICE EXERCISES ---- */}
-          <div className={styles.builderSection}>
-            <div className={styles.sectionHeader}>
-              <h3>Practice Exercises ({draftExercises.length})</h3>
-              <div className={styles.addButtons}>
-                {(
-                  [
-                    "TRUE_FALSE",
-                    "TAP_TRANSLATION",
-                    "FILL_BLANK",
-                    "BUILD_SENTENCE",
-                    "MATCHING",
-                  ] as ExerciseType[]
-                ).map((t) => (
-                  <button
-                    key={t}
-                    onClick={() => handleAddExercise(t)}
-                    type="button"
-                    className={styles.addBtn}
-                  >
-                    + {exerciseFormConfig[t]?.label?.en ?? t}
-                  </button>
-                ))}
-              </div>
-            </div>
-            <div className={styles.cardList}>
-              {draftExercises.map((ex, i) => (
-                <ExerciseItem
-                  key={ex.id}
-                  exercise={ex}
-                  index={i}
-                  onEdit={() => {
-                    setEditorState((s) => ({ mode: "edit-exercise", editingIndex: i, dirty: s.dirty }));
-                  }}
-                  onDelete={() => handleDeleteExercise(i)}
-                  onDuplicate={() => handleDuplicateExercise(i)}
-                  onMoveUp={() => handleMoveExercise(i, -1)}
-                  onMoveDown={() => handleMoveExercise(i, 1)}
-                  canMoveUp={i > 0}
-                  canMoveDown={i < draftExercises.length - 1}
-                  onDragStart={(idx) => setDragExerciseIndex(idx)}
-                  onDragOver={(idx) => setDragOverExerciseIndex(idx)}
-                  onDrop={(targetIdx) => {
-                    if (dragExerciseIndex !== null && dragExerciseIndex !== targetIdx) {
-                      const exs = [...draftExercises];
-                      const [moved] = exs.splice(dragExerciseIndex, 1);
-                      exs.splice(targetIdx, 0, moved);
-                      setDraftExercises(exs);
-                      setEditorState({ mode: "view", editingIndex: null, dirty: true });
-                    }
-                    setDragExerciseIndex(null);
-                    setDragOverExerciseIndex(null);
-                  }}
-                  isDragOver={dragOverExerciseIndex === i}
-                />
-              ))}
-              {draftExercises.length === 0 && (
-                <p style={{ color: "#8a651f", fontSize: 13, padding: "8px 0" }}>
-                  No exercises yet. Click "+ True/False" or other types above to add.
-                </p>
-              )}
-            </div>
-          </div>
-
-          {/* ---- CARD EDIT FORM ---- */}
-          {editorState.mode === "edit-card" && editorState.editingIndex !== null && (
-            <CardEditForm
-              card={draftDiscoverCards[editorState.editingIndex]}
-              index={editorState.editingIndex}
-              onSave={(updated) => {
-                setDraftDiscoverCards((prev) => {
-                  const next = [...prev];
-                  next[editorState.editingIndex!] = updated;
-                  return next;
-                });
-                setEditorState({ mode: "view", editingIndex: null, dirty: true });
-              }}
-              onCancel={() =>
-                setEditorState((s) => ({ mode: "view", editingIndex: null, dirty: s.dirty }))
-              }
-              adminToken={adminToken}
-              onStatus={setStatus}
-            />
-          )}
-
-          {/* ---- EXERCISE EDIT FORM ---- */}
-          {editorState.mode === "edit-exercise" && editorState.editingIndex !== null && (
-            <ExerciseEditForm
-              exercise={draftExercises[editorState.editingIndex]}
-              index={editorState.editingIndex}
-              onSave={(updated) => {
-                setDraftExercises((prev) => {
-                  const next = [...prev];
-                  next[editorState.editingIndex!] = updated;
-                  return next;
-                });
-                setEditorState({ mode: "view", editingIndex: null, dirty: true });
-              }}
-              onCancel={() =>
-                setEditorState((s) => ({ mode: "view", editingIndex: null, dirty: s.dirty }))
-              }
-            />
-          )}
-
-          {/* ---- HOOK / REVEAL / CLOSE EDITOR ---- */}
-          {parsedContent && (
-            <HookRevealCloseEditor
-              parsedContent={{
-                ...parsedContent,
-                hook: draftHRC.hook ?? parsedContent.hook,
-                reveal: draftHRC.reveal ?? parsedContent.reveal,
-                close: draftHRC.close ?? parsedContent.close,
-              }}
-              onUpdate={(updated) => {
-                setDraftHRC({
-                  hook: updated.hook,
-                  reveal: updated.reveal,
-                  close: updated.close,
-                });
-                setEditorState((s) => ({ ...s, dirty: true }));
-              }}
-            />
           )}
 
           {/* ---- RAW JSON FALLBACK ---- */}
