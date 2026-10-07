@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useMemo, useEffect, useRef } from "react";
+import { useState, useCallback, useMemo, useEffect, useLayoutEffect, useRef } from "react";
 import styles from "./dashboard.module.css";
 import ImageField from "./ImageField";
 import CurriculumOverview from "./CurriculumOverview";
@@ -267,6 +267,107 @@ function useEmitDraft<T>(draft: T, onChange: (next: T) => void) {
   }, [draft]);
 }
 
+// Splits an edit form's fields into Content / English / Urdu / Media tabs. Fields are
+// classified from their labels and placeholders, so every form (bespoke or generated
+// from the shared config) gets the tabs without tagging each input by hand. A row that
+// holds both an English and an Urdu input shows under both tabs.
+type FieldTab = "content" | "en" | "ur" | "media";
+const FIELD_TABS: { id: FieldTab; label: string }[] = [
+  { id: "content", label: "Content" },
+  { id: "en", label: "English" },
+  { id: "ur", label: "Urdu" },
+  { id: "media", label: "Media" },
+];
+
+function fieldTabsOf(el: Element): Set<FieldTab> {
+  const parts = Array.from(el.querySelectorAll("span, legend, h5, strong")).map((n) => n.textContent ?? "");
+  parts.push(...Array.from(el.querySelectorAll("[placeholder]")).map((n) => n.getAttribute("placeholder") ?? ""));
+  if (!el.querySelector("input, textarea, select, button")) parts.push(el.textContent ?? "");
+  const text = parts.join(" | ").toLowerCase();
+  const tabs = new Set<FieldTab>();
+  if (/\(ur\)|urdu/.test(text)) tabs.add("ur");
+  if (/\(en\)|english/.test(text)) tabs.add("en");
+  if (tabs.size === 0) tabs.add(/audio|image|media|photo/.test(text) ? "media" : "content");
+  return tabs;
+}
+
+function TabbedFieldGrid({ urduCount, children }: { urduCount: number; children: React.ReactNode }) {
+  const [tab, setTab] = useState<FieldTab>("content");
+  const gridRef = useRef<HTMLDivElement>(null);
+  useLayoutEffect(() => {
+    const grid = gridRef.current;
+    if (!grid) return;
+    for (const child of Array.from(grid.children) as HTMLElement[]) {
+      child.style.display = fieldTabsOf(child).has(tab) ? "" : "none";
+    }
+  });
+  return (
+    <>
+      <div className={styles.fieldTabs} role="tablist">
+        {FIELD_TABS.map((t) => (
+          <button
+            key={t.id}
+            type="button"
+            role="tab"
+            aria-selected={tab === t.id}
+            className={`${styles.fieldTab}${tab === t.id ? " " + styles.fieldTabActive : ""}`}
+            onClick={() => setTab(t.id)}
+          >
+            {t.label}
+            {t.id === "ur" && <UrduMissingBadge count={urduCount} />}
+          </button>
+        ))}
+      </div>
+      <div className={styles.fieldGrid} ref={gridRef}>
+        {children}
+      </div>
+    </>
+  );
+}
+
+// One line under a card/exercise heading saying whether its Arabic has a clip.
+// Audio is keyed by a hash of the text, so this re-checks as the text changes.
+function AudioStatusLine({ kind, record, adminToken }: { kind: "card" | "exercise"; record: unknown; adminToken: string }) {
+  const [status, setStatus] = useState<"checking" | "custom" | "ready" | "missing" | "none" | "error">("checking");
+  const snapshot = JSON.stringify(record);
+  useEffect(() => {
+    let live = true;
+    setStatus("checking");
+    const timer = setTimeout(async () => {
+      try {
+        const res = await fetch("/api/admin/audio-status", {
+          method: "POST",
+          credentials: "include",
+          headers: { "Content-Type": "application/json", ...(adminToken ? { "x-admin-token": adminToken } : {}) },
+          body: JSON.stringify({ kind, record: JSON.parse(snapshot) }),
+        });
+        const json = await res.json();
+        if (live) setStatus(res.ok ? json.data.status : "error");
+      } catch {
+        if (live) setStatus("error");
+      }
+    }, 500);
+    return () => {
+      live = false;
+      clearTimeout(timer);
+    };
+  }, [snapshot, kind, adminToken]);
+  const view = {
+    checking: { text: "Checking audio…", color: "#6f725f" },
+    custom: { text: "Audio: custom recording linked", color: "#2f6f3a" },
+    ready: { text: "Audio: clip ready", color: "#2f6f3a" },
+    missing: { text: "Audio: no clip yet — run npm run audio:prebuild-catalog -- --from-db", color: "#9a4040" },
+    none: { text: "Audio: this item plays no clip", color: "#6f725f" },
+    error: { text: "Audio status unavailable", color: "#6f725f" },
+  }[status];
+  return (
+    <div className={styles.audioStatus} style={{ color: view.color }}>
+      <span aria-hidden>●</span>
+      {view.text}
+    </div>
+  );
+}
+
 // ============================================================================
 // ARABIC TEXT EDITOR
 // ============================================================================
@@ -348,7 +449,8 @@ function CardEditForm({
         </div>
       </div>
 
-      <div className={styles.fieldGrid}>
+      <AudioStatusLine kind="card" record={draft} adminToken={adminToken} />
+      <TabbedFieldGrid urduCount={missingUrduCount(draft)}>
         <UrduMissingNote count={missingUrduCount(draft)} />
         {!bespoke && <ConfigFields config={config} record={draftRecord} updateField={updateField} />}
         {card.type === "WORD" && (
@@ -422,7 +524,7 @@ function CardEditForm({
             </label>
           </>
         )}
-      </div>
+      </TabbedFieldGrid>
     </div>
   );
 }
@@ -436,11 +538,13 @@ function ExerciseEditForm({
   index,
   onChange,
   onClose,
+  adminToken = "",
 }: {
   exercise: Exercise;
   index: number;
   onChange: (updated: Exercise) => void;
   onClose: () => void;
+  adminToken?: string;
 }) {
   const [draft, setDraft] = useState<Exercise>(exercise as unknown as Exercise);
 
@@ -478,7 +582,8 @@ function ExerciseEditForm({
         </div>
       </div>
 
-      <div className={styles.fieldGrid}>
+      <AudioStatusLine kind="exercise" record={draft} adminToken={adminToken} />
+      <TabbedFieldGrid urduCount={missingUrduCount(draft)}>
         <UrduMissingNote count={missingUrduCount(draft)} />
         {!BESPOKE_EXERCISES.includes(exercise.type) && (
           <ConfigFields config={exerciseFormConfig[exercise.type]} record={draft as unknown as Record<string, unknown>} updateField={updateField} />
@@ -1067,7 +1172,7 @@ function ExerciseEditForm({
             </label>
           </>
         )}
-      </div>
+      </TabbedFieldGrid>
     </div>
   );
 }
@@ -2130,7 +2235,10 @@ export default function DashboardClient({
   }
 
   const currentLessonPosition = selectedChapter.lessons.findIndex((lesson) => lesson.id === selectedLessonId) + 1;
-  const activeMode = showJsonView ? "json" : showPreview ? "preview" : "builder";
+  const pvHook = draftHRC.hook ?? parsedContent?.hook;
+  const pvReveal = draftHRC.reveal ?? parsedContent?.reveal;
+  const pvClose = draftHRC.close ?? parsedContent?.close;
+  const activeMode = showJsonView ? "json" : "builder";
 
   const chapterBtnStyle: React.CSSProperties = {
     padding: "4px 10px",
@@ -2289,14 +2397,15 @@ export default function DashboardClient({
                   Builder
                 </button>
                 <button
-                  className={activeMode === "preview" ? styles.activeModeTab : ""}
+                  className={showPreview && !showJsonView ? styles.activeModeTab : ""}
+                  aria-pressed={showPreview}
                   onClick={() => {
                     setShowJsonView(false);
-                    setShowPreview(true);
+                    setShowPreview((v) => !v);
                   }}
                   type="button"
                 >
-                  Preview
+                  {showPreview ? "Hide preview" : "Show preview"}
                 </button>
                 <button
                   className={activeMode === "json" ? styles.activeModeTab : ""}
@@ -2712,143 +2821,6 @@ export default function DashboardClient({
             </div>
           )}
 
-          {/* Lesson metadata */}
-          {showPreview && (
-            <div className={styles.previewPanel}>
-              <div className={styles.previewHeader}>
-                <h3>Lesson Preview — {lessonDraft.title}</h3>
-                <button className={styles.cancelBtn} onClick={() => setShowPreview(false)} type="button">Close</button>
-              </div>
-              <div className={styles.previewBody}>
-                {/* Hook */}
-                {parsedContent?.hook?.ayah?.ar && (
-                  <div className={styles.previewSection}>
-                    <div className={styles.previewSectionTitle}>Hook</div>
-                    <div style={{ direction: "rtl", fontSize: 20, fontFamily: "Amiri, serif", color: "#1e211b" }}>
-                      {parsedContent.hook.ayah.ar}
-                    </div>
-                    {parsedContent.hook.ayah.en && (
-                      <div style={{ fontSize: 13, color: "#6f725f" }}>{parsedContent.hook.ayah.en}</div>
-                    )}
-                    {parsedContent.hook.noor_intro?.en && (
-                      <div style={{ fontSize: 12, color: "#8a651f", marginTop: 4 }}>Noor: {parsedContent.hook.noor_intro.en}</div>
-                    )}
-                  </div>
-                )}
-
-                {/* Discover Cards */}
-                {draftDiscoverCards.length > 0 && (
-                  <div className={styles.previewSection}>
-                    <div className={styles.previewSectionTitle}>Discover Cards ({draftDiscoverCards.length})</div>
-                    {draftDiscoverCards.map((card, i) => {
-                      const title = getDiscoverCardTitle(card);
-                      return (
-                        <div key={i} className={styles.previewCard}>
-                          <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-                            <span className={styles.previewCardType}>{card.type}</span>
-                            <span style={{ fontSize: 11, color: "#8a651f" }}>#{i + 1}</span>
-                          </div>
-                          {title && <div className={styles.previewCardTitle}>{title}</div>}
-                          {card.type === "WORD" && card.text?.en && (
-                            <div className={styles.previewCardSubtitle}>{card.text.en}</div>
-                          )}
-                          {(card.type === "CONCEPT" || card.type === "CONTRAST" || card.type === "AYAH_PREVIEW") && (
-                            <div className={styles.previewCardSubtitle}>{card.concept?.ar}</div>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
-                )}
-
-                {/* Exercises */}
-                {draftExercises.length > 0 && (
-                  <div className={styles.previewSection}>
-                    <div className={styles.previewSectionTitle}>Practice Exercises ({draftExercises.length})</div>
-                    {draftExercises.map((ex, i) => {
-                      const prompt = ex.type === "TAP_TRANSLATION" ? ex.prompt?.ar
-                        : ex.type === "FILL_BLANK" ? ex.sentence_ar
-                        : ex.type === "TRUE_FALSE" ? ex.statement?.en
-                        : ex.type === "BUILD_SENTENCE" ? ex.target_translation?.en
-                        : ex.type === "GRAMMAR_PARSE" ? ex.sentence_ar
-                        : ex.type === "MATCHING" ? `${ex.left_column?.length ?? 0} pairs`
-                        : ex.type === "SHADOW_REPEAT" ? ex.phrase?.ar
-                        : ex.type === "CONVERSATION_BUILDER" ? ex.prompt_line?.en
-                        : ex.type === "AUDIO_RECOGNITION" ? `[Audio ${ex.audio_url ? "URL set" : "no URL"}]`
-                        : ex.type === "WRITE_ARABIC" ? ex.prompt?.en
-                        : ex.type === "HARAKAH_PLACEMENT" ? ex.word_unvowelled
-                        : ex.type === "WORD_ORDER" ? ex.context?.en
-                        : ex.type === "TRANSLATE_TO_ARABIC" ? ex.source?.en
-                        : ex.type === "IDENTIFY_ROOT" ? ex.word?.ar
-                        : ex.type === "MATCH_AYAH" ? ex.ayah_fragment?.ar
-                        : null;
-                      return (
-                        <div key={ex.id} className={styles.previewExercise}>
-                          <div className={styles.previewExerciseMeta}>
-                            <span className={styles.previewExerciseType}>{ex.type}</span>
-                            <span className={styles.previewExerciseId}>{ex.id}</span>
-                            {ex.xp_value != null && (
-                              <span className={styles.xpChip}>{ex.xp_value}XP</span>
-                            )}
-                          </div>
-                          {prompt && (
-                            <div className={styles.previewExercisePrompt} dir="rtl">{prompt}</div>
-                          )}
-                          {/* TAP_TRANSLATION options preview */}
-                          {ex.type === "TAP_TRANSLATION" && ex.options && (
-                            <div className={styles.previewExerciseOptions}>
-                              {ex.options.map((opt, oi) => (
-                                <div key={oi} className={styles.previewOptionItem}>
-                                  {oi}: {opt.en}
-                                </div>
-                              ))}
-                            </div>
-                          )}
-                          {/* MATCHING pairs preview */}
-                          {ex.type === "MATCHING" && ex.left_column && (
-                            <div style={{ fontSize: 11, color: "#6f725f" }}>
-                              {ex.left_column.length} left · {ex.right_column?.length ?? 0} right · {ex.correct_pairs?.length ?? 0} pairs
-                            </div>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
-                )}
-
-                {/* Reveal */}
-                {parsedContent?.reveal && (
-                  <div className={styles.previewSection}>
-                    <div className={styles.previewSectionTitle}>Reveal</div>
-                    <div style={{ fontSize: 13, color: "#5c4a1e" }}>
-                      {parsedContent.reveal.concept_name?.en}
-                    </div>
-                    {parsedContent.reveal.noor_explanation?.en && (
-                      <div style={{ fontSize: 12, color: "#6f725f" }}>{parsedContent.reveal.noor_explanation.en}</div>
-                    )}
-                  </div>
-                )}
-
-                {/* Close */}
-                {parsedContent?.close?.noor_message?.en && (
-                  <div className={styles.previewSection}>
-                    <div className={styles.previewSectionTitle}>Close</div>
-                    <div style={{ fontSize: 13, color: "#5c4a1e", fontStyle: "italic" }}>
-                      {parsedContent.close.noor_message.en}
-                    </div>
-                  </div>
-                )}
-
-                {draftDiscoverCards.length === 0 && draftExercises.length === 0 && (
-                  <div className={styles.noPreviewContent}>
-                    No discover cards or exercises yet.
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
-
-
           {showDetails && (
             <div className={styles.grid}>
               <label>
@@ -2900,7 +2872,7 @@ export default function DashboardClient({
           )}
 
           {!showJsonView && (
-          <div className={styles.studioGrid}>
+          <div className={`${styles.studioGrid}${showPreview ? " " + styles.studioGridPreview : ""}`}>
             <div className={styles.studioOutline}>
               {/* ---- OPENING / WRAP-UP ---- */}
               <div className={styles.builderSection}>
@@ -3066,6 +3038,7 @@ export default function DashboardClient({
                     setEditorState((st) => ({ ...st, dirty: true }));
                   }}
                   onClose={() => setEditorState((st) => ({ mode: "view", editingIndex: null, dirty: st.dirty }))}
+                  adminToken={adminToken}
                 />
               )}
               {editorState.mode === "edit-hrc" && parsedContent && (
@@ -3098,6 +3071,135 @@ export default function DashboardClient({
                 </div>
               )}
             </div>
+          {showPreview && (
+            <div className={`${styles.previewPanel} ${styles.studioPreview}`}>
+              <div className={styles.previewHeader}>
+                <h3>Learner preview</h3>
+                <button className={styles.cancelBtn} onClick={() => setShowPreview(false)} type="button">Hide</button>
+              </div>
+              <div className={styles.previewBody}>
+                {/* Hook */}
+                {pvHook?.ayah?.ar && (
+                  <div className={styles.previewSection}>
+                    <div className={styles.previewSectionTitle}>Hook</div>
+                    <div style={{ direction: "rtl", fontSize: 20, fontFamily: "Amiri, serif", color: "#1e211b" }}>
+                      {pvHook.ayah.ar}
+                    </div>
+                    {pvHook.ayah.en && (
+                      <div style={{ fontSize: 13, color: "#6f725f" }}>{pvHook.ayah.en}</div>
+                    )}
+                    {pvHook.noor_intro?.en && (
+                      <div style={{ fontSize: 12, color: "#8a651f", marginTop: 4 }}>Noor: {pvHook.noor_intro.en}</div>
+                    )}
+                  </div>
+                )}
+                {/* Discover Cards */}
+                {draftDiscoverCards.length > 0 && (
+                  <div className={styles.previewSection}>
+                    <div className={styles.previewSectionTitle}>Discover Cards ({draftDiscoverCards.length})</div>
+                    {draftDiscoverCards.map((card, i) => {
+                      const title = getDiscoverCardTitle(card);
+                      return (
+                        <div key={i} className={styles.previewCard}>
+                          <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+                            <span className={styles.previewCardType}>{card.type}</span>
+                            <span style={{ fontSize: 11, color: "#8a651f" }}>#{i + 1}</span>
+                          </div>
+                          {title && <div className={styles.previewCardTitle}>{title}</div>}
+                          {card.type === "WORD" && card.text?.en && (
+                            <div className={styles.previewCardSubtitle}>{card.text.en}</div>
+                          )}
+                          {(card.type === "CONCEPT" || card.type === "CONTRAST" || card.type === "AYAH_PREVIEW") && (
+                            <div className={styles.previewCardSubtitle}>{card.concept?.ar}</div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+                {/* Exercises */}
+                {draftExercises.length > 0 && (
+                  <div className={styles.previewSection}>
+                    <div className={styles.previewSectionTitle}>Practice Exercises ({draftExercises.length})</div>
+                    {draftExercises.map((ex, i) => {
+                      const prompt = ex.type === "TAP_TRANSLATION" ? ex.prompt?.ar
+                        : ex.type === "FILL_BLANK" ? ex.sentence_ar
+                        : ex.type === "TRUE_FALSE" ? ex.statement?.en
+                        : ex.type === "BUILD_SENTENCE" ? ex.target_translation?.en
+                        : ex.type === "GRAMMAR_PARSE" ? ex.sentence_ar
+                        : ex.type === "MATCHING" ? `${ex.left_column?.length ?? 0} pairs`
+                        : ex.type === "SHADOW_REPEAT" ? ex.phrase?.ar
+                        : ex.type === "CONVERSATION_BUILDER" ? ex.prompt_line?.en
+                        : ex.type === "AUDIO_RECOGNITION" ? `[Audio ${ex.audio_url ? "URL set" : "no URL"}]`
+                        : ex.type === "WRITE_ARABIC" ? ex.prompt?.en
+                        : ex.type === "HARAKAH_PLACEMENT" ? ex.word_unvowelled
+                        : ex.type === "WORD_ORDER" ? ex.context?.en
+                        : ex.type === "TRANSLATE_TO_ARABIC" ? ex.source?.en
+                        : ex.type === "IDENTIFY_ROOT" ? ex.word?.ar
+                        : ex.type === "MATCH_AYAH" ? ex.ayah_fragment?.ar
+                        : null;
+                      return (
+                        <div key={ex.id} className={styles.previewExercise}>
+                          <div className={styles.previewExerciseMeta}>
+                            <span className={styles.previewExerciseType}>{ex.type}</span>
+                            <span className={styles.previewExerciseId}>{ex.id}</span>
+                            {ex.xp_value != null && (
+                              <span className={styles.xpChip}>{ex.xp_value}XP</span>
+                            )}
+                          </div>
+                          {prompt && (
+                            <div className={styles.previewExercisePrompt} dir="rtl">{prompt}</div>
+                          )}
+                          {/* TAP_TRANSLATION options preview */}
+                          {ex.type === "TAP_TRANSLATION" && ex.options && (
+                            <div className={styles.previewExerciseOptions}>
+                              {ex.options.map((opt, oi) => (
+                                <div key={oi} className={styles.previewOptionItem}>
+                                  {oi}: {opt.en}
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                          {/* MATCHING pairs preview */}
+                          {ex.type === "MATCHING" && ex.left_column && (
+                            <div style={{ fontSize: 11, color: "#6f725f" }}>
+                              {ex.left_column.length} left · {ex.right_column?.length ?? 0} right · {ex.correct_pairs?.length ?? 0} pairs
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+                {/* Reveal */}
+                {pvReveal && (
+                  <div className={styles.previewSection}>
+                    <div className={styles.previewSectionTitle}>Reveal</div>
+                    <div style={{ fontSize: 13, color: "#5c4a1e" }}>
+                      {pvReveal.concept_name?.en}
+                    </div>
+                    {pvReveal.noor_explanation?.en && (
+                      <div style={{ fontSize: 12, color: "#6f725f" }}>{pvReveal.noor_explanation.en}</div>
+                    )}
+                  </div>
+                )}
+                {/* Close */}
+                {pvClose?.noor_message?.en && (
+                  <div className={styles.previewSection}>
+                    <div className={styles.previewSectionTitle}>Close</div>
+                    <div style={{ fontSize: 13, color: "#5c4a1e", fontStyle: "italic" }}>
+                      {pvClose.noor_message.en}
+                    </div>
+                  </div>
+                )}
+                {draftDiscoverCards.length === 0 && draftExercises.length === 0 && (
+                  <div className={styles.noPreviewContent}>
+                    No discover cards or exercises yet.
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
           </div>
           )}
 
