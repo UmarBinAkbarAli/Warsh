@@ -1829,9 +1829,11 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    2.5–3 min (the exercise-ID check loaded every lesson's content; now an indexed
    SQL lookup, ~2 s), the JSON view ignored unsaved Builder edits, and Matching
    left-column Urdu and the True/False example sentence had no form fields.
-   Other exercise types may still lack fields; add them as found. The `next dev`
-   server shows "Unsaved changes" on merely opening a card (StrictMode double
-   effect, dev only; not checked in a production build).
+      Other exercise types may still lack fields; add them as found. **Verified on
+   production (2026-10-08, `api.warsh.app`):** the fixes are live, a lesson save now
+   takes ~1 s, the JSON view reflects unsaved edits, and opening a card no longer
+   shows "Unsaved changes" (that was a `next dev` StrictMode quirk only). The Studio
+   curriculum editor is done and ready for content editing.
 3. **Token reconciliation done (2026-09-12).** Every colour literal outside
    `constants/theme.ts` is gone: 30 `rgba()`/hex values across 20 files now route
    through a new role-named `WarshAlpha` set (scrims, gold washes, on-navy tints,
