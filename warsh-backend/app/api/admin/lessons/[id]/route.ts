@@ -122,21 +122,17 @@ export async function PATCH(request: Request, { params }: Props) {
     }
 
     // Build global ID set from all OTHER lessons (skip self)
-    const otherLessons = await prisma.lesson.findMany({
-      where: { id: { not: params.id } },
-      select: { id: true, content: true },
-    });
-
-    const globalIds = new Set<string>();
-    for (const lesson of otherLessons) {
-      const c = lesson.content as Record<string, unknown>;
-      const exArr = c?.exercises as Array<{ id?: string }> | undefined;
-      if (Array.isArray(exArr)) {
-        for (const ex of exArr) {
-          if (ex.id) globalIds.add(ex.id);
-        }
-      }
-    }
+    // Only the exercise ids are pulled, and only for the ids in this payload — loading
+    // every lesson's full content here made each save take minutes on Neon.
+    const clashing = await prisma.$queryRaw<Array<{ id: string }>>`
+      SELECT DISTINCT e.value->>'id' AS id
+      FROM "Lesson" l,
+           jsonb_array_elements(
+             CASE WHEN jsonb_typeof(l.content->'exercises') = 'array' THEN l.content->'exercises' ELSE '[]'::jsonb END
+           ) AS e(value)
+      WHERE l."id" <> ${params.id}
+        AND e.value->>'id' = ANY(${payloadIds}::text[])`;
+    const globalIds = new Set<string>(clashing.map((row) => row.id));
 
     // Block only if ID exists in another lesson (truly new to this curriculum position)
     for (const id of payloadIds) {

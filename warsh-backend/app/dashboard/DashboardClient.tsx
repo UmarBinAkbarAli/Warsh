@@ -604,6 +604,22 @@ function ExerciseEditForm({
               <span>Statement (UR)</span>
               <textarea rows={2} value={exercise.statement?.ur ?? ""} onChange={(e) => updateField("statement.ur", e.target.value)} />
             </label>
+            {exercise.statement?.ar_example && (
+              <>
+                <label>
+                  <span>Example sentence (AR)</span>
+                  <input dir="rtl" value={exercise.statement.ar_example.ar ?? ""} onChange={(e) => updateField("statement.ar_example.ar", e.target.value)} />
+                </label>
+                <label>
+                  <span>Example meaning (EN)</span>
+                  <input value={exercise.statement.ar_example.en ?? ""} onChange={(e) => updateField("statement.ar_example.en", e.target.value)} />
+                </label>
+                <label>
+                  <span>Example meaning (UR)</span>
+                  <input value={exercise.statement.ar_example.ur ?? ""} onChange={(e) => updateField("statement.ar_example.ur", e.target.value)} />
+                </label>
+              </>
+            )}
             <label>
               <span>Correct answer</span>
               <select
@@ -736,27 +752,33 @@ function ExerciseEditForm({
         {exercise.type === "MATCHING" && (
           <>
             <label className={styles.fullWidth}>
-              <span>Left column — Arabic/English pairs</span>
+              <span>Left column — Arabic/English/Urdu pairs</span>
               <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-                {((exercise as unknown as {left_column: Array<{ar: string, ar_plain?: string, translit?: string, en: string}>}).left_column ?? []).map((item, i) => (
-                  <div key={i} style={{ display: "grid", gridTemplateColumns: "24px 1fr 1fr 1fr", gap: 6, alignItems: "center" }}>
+                {((exercise as unknown as {left_column: Array<{ar: string, ar_plain?: string, translit?: string, en: string, ur?: string}>}).left_column ?? []).map((item, i) => (
+                  <div key={i} style={{ display: "grid", gridTemplateColumns: "24px 1fr 1fr 1fr 1fr", gap: 6, alignItems: "center" }}>
                     <span className={styles.optionIndex}>{i}</span>
                     <input dir="rtl" placeholder="Arabic" value={item.ar} onChange={(e) => {
-                      const ex = exercise as unknown as {left_column: Array<{ar: string, ar_plain?: string, translit?: string, en: string}>};
+                      const ex = exercise as unknown as {left_column: Array<{ar: string, ar_plain?: string, translit?: string, en: string, ur?: string}>};
                       const col = [...ex.left_column];
                       col[i] = { ...col[i], ar: e.target.value };
                       updateField("left_column", col);
                     }} />
                     <input placeholder="Translit" value={item.translit ?? ""} onChange={(e) => {
-                      const ex = exercise as unknown as {left_column: Array<{ar: string, ar_plain?: string, translit?: string, en: string}>};
+                      const ex = exercise as unknown as {left_column: Array<{ar: string, ar_plain?: string, translit?: string, en: string, ur?: string}>};
                       const col = [...ex.left_column];
                       col[i] = { ...col[i], translit: e.target.value };
                       updateField("left_column", col);
                     }} />
                     <input placeholder="English" value={item.en} onChange={(e) => {
-                      const ex = exercise as unknown as {left_column: Array<{ar: string, ar_plain?: string, translit?: string, en: string}>};
+                      const ex = exercise as unknown as {left_column: Array<{ar: string, ar_plain?: string, translit?: string, en: string, ur?: string}>};
                       const col = [...ex.left_column];
                       col[i] = { ...col[i], en: e.target.value };
+                      updateField("left_column", col);
+                    }} />
+                    <input dir="rtl" placeholder="Urdu" value={item.ur ?? ""} onChange={(e) => {
+                      const ex = exercise as unknown as {left_column: Array<{ar: string, ar_plain?: string, translit?: string, en: string, ur?: string}>};
+                      const col = [...ex.left_column];
+                      col[i] = { ...col[i], ur: e.target.value };
                       updateField("left_column", col);
                     }} />
                   </div>
@@ -1683,14 +1705,7 @@ export default function DashboardClient({
     // Round-trip preservation: merge draft arrays into the original content object
     // Per PRD Section 8.2 Decision 3 — originalContent is the immutable reference;
     // only discover_cards and exercises are swapped in; hook/reveal/close are also merged.
-    const savedContent = {
-      ...(lessonDraft.originalContent as Record<string, unknown>),
-      discover_cards: draftDiscoverCards,
-      exercises: draftExercises,
-      ...(draftHRC.hook !== undefined ? { hook: draftHRC.hook } : {}),
-      ...(draftHRC.reveal !== undefined ? { reveal: draftHRC.reveal } : {}),
-      ...(draftHRC.close !== undefined ? { close: draftHRC.close } : {}),
-    };
+    const savedContent = buildCurrentContent();
 
     const body = {
       title: lessonDraft.title,
@@ -2076,18 +2091,22 @@ export default function DashboardClient({
   // Initialize jsonBuffer when switching to JSON view
   function openJsonView() {
     if (!lessonDraft) return;
-    setJsonBuffer(JSON.stringify(lessonDraft.originalContent, null, 2));
+    setJsonBuffer(JSON.stringify(buildCurrentContent(), null, 2));
     setValidationResult(null);
     setShowJsonView(true);
   }
 
-  // Build the current content for validation / apply
-  function buildCurrentContent(): unknown {
+  // The lesson as it stands now: the saved content with the Builder's drafts merged in.
+  // Shared by the JSON view, Validate and Save so they can never disagree.
+  function buildCurrentContent(): Record<string, unknown> | null {
     if (!lessonDraft) return null;
     return {
       ...(lessonDraft.originalContent as Record<string, unknown>),
       discover_cards: draftDiscoverCards,
       exercises: draftExercises,
+      ...(draftHRC.hook !== undefined ? { hook: draftHRC.hook } : {}),
+      ...(draftHRC.reveal !== undefined ? { reveal: draftHRC.reveal } : {}),
+      ...(draftHRC.close !== undefined ? { close: draftHRC.close } : {}),
     };
   }
 
