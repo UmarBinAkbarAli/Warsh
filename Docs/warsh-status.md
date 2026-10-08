@@ -1,7 +1,7 @@
 # Warsh Current Status
 
 **Status:** Active current-state source of truth
-**Last verified:** 2026-10-04 for Core 500 and the web loading logo; other entries retain their dated verification
+**Last verified:** 2026-10-08 for the Warsh Studio curriculum editor; 2026-10-04 for Core 500 and the web loading logo; other entries retain their dated verification
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Post-launch hardening
 
@@ -1819,6 +1819,19 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    and the QA content observations above are absorbed into this pass. After each
    Studio session: `content:check` → `content:export` → commit, and regenerate
    audio for any edited Arabic (`audio:prebuild-catalog -- --from-db`).
+   **Studio editor redesign smoke-tested (2026-10-08).** The Curriculum tab is now an
+   overview table (all chapters, status, card/exercise counts) that opens a focused
+   lesson editor: outline plus editing pane side by side, live learner preview,
+   Content/English/Urdu/Media field tabs, audio status line, sticky save bar. Smoke
+   test on Ch 1 L2–L3: open, edit, preview, validate, save and export all work, and
+   Ch 1 L3 exercises 6–8 were corrected through it (matching pairs, Urdu
+   consistency, answer-leaking gloss). Three defects found and fixed: save took
+   2.5–3 min (the exercise-ID check loaded every lesson's content; now an indexed
+   SQL lookup, ~2 s), the JSON view ignored unsaved Builder edits, and Matching
+   left-column Urdu and the True/False example sentence had no form fields.
+   Other exercise types may still lack fields; add them as found. The `next dev`
+   server shows "Unsaved changes" on merely opening a card (StrictMode double
+   effect, dev only; not checked in a production build).
 3. **Token reconciliation done (2026-09-12).** Every colour literal outside
    `constants/theme.ts` is gone: 30 `rgba()`/hex values across 20 files now route
    through a new role-named `WarshAlpha` set (scrims, gold washes, on-navy tints,
