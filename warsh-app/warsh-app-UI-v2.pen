@@ -199438,7 +199438,7 @@
       "x": -1238,
       "y": 17662,
       "name": "Studio Curriculum Redesign · Proposal",
-      "width": 3100,
+      "width": 4158,
       "fill": "$parchment-deep",
       "layout": "vertical",
       "gap": 32,
@@ -203357,65 +203357,457 @@
                   ]
                 }
               ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "CD9wM",
+      "x": 1898,
+      "y": 17833,
+      "name": "C · Narrow panel (893) · editor under selected item",
+      "clip": true,
+      "width": 893,
+      "fill": "$parchment",
+      "cornerRadius": 12,
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "nDVcw",
+          "name": "Studio Top Bar",
+          "width": "fill_container",
+          "height": 56,
+          "fill": "$warsh-navy",
+          "padding": [
+            0,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "G3xdu",
+              "fill": "$parchment",
+              "content": "Warsh Studio",
+              "fontFamily": "$font-display",
+              "fontSize": 22,
+              "fontWeight": "700"
             },
             {
               "type": "frame",
-              "id": "CD9wM",
-              "name": "C · Narrow panel (893) · editor under selected item",
-              "clip": true,
-              "width": 893,
-              "fill": "$parchment",
-              "cornerRadius": 12,
-              "layout": "vertical",
+              "id": "pB9XU",
+              "name": "Menu",
+              "gap": 8,
+              "alignItems": "center",
               "children": [
                 {
-                  "type": "frame",
-                  "id": "nDVcw",
-                  "name": "Studio Top Bar",
-                  "width": "fill_container",
-                  "height": 56,
+                  "type": "text",
+                  "id": "Y7wWam",
+                  "fill": "$parchment",
+                  "content": "Curriculum",
+                  "fontFamily": "$font-text",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "icon",
+                  "id": "nQuvy",
+                  "name": "menu",
+                  "width": 20,
+                  "height": 20,
+                  "icon": "menu",
+                  "library": "lucide",
+                  "fill": "$parchment"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "U6bkET",
+          "name": "Body",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 14,
+          "padding": 20,
+          "children": [
+            {
+              "type": "frame",
+              "id": "XDUQX",
+              "name": "Chapter Selector",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "$pure-white",
+              "cornerRadius": 10,
+              "stroke": "$warsh-line",
+              "strokeWidth": 1,
+              "padding": [
+                0,
+                14
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "P8Fi0T",
                   "fill": "$warsh-navy",
+                  "content": "1 · Opening the Quran  ·  Lesson 3 of 8",
+                  "fontFamily": "$font-text",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "icon",
+                  "id": "QItn1",
+                  "name": "chevrons-up-down",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "chevrons-up-down",
+                  "library": "lucide",
+                  "fill": "$warsh-navy"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "LQb3F",
+              "fill": "$warsh-navy",
+              "content": "Lesson 3 · Names for the Book",
+              "fontFamily": "$font-display",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "XAtHH",
+              "name": "Action Row",
+              "width": "fill_container",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "H3zhD",
+                  "fill": "$gold-text",
+                  "content": "● Unsaved changes",
+                  "fontFamily": "$font-text",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "CumIZ",
+                  "name": "Spacer",
+                  "width": "fill_container",
+                  "height": 1
+                },
+                {
+                  "type": "frame",
+                  "id": "Fp6oE",
+                  "name": "Preview",
+                  "cornerRadius": 10,
+                  "stroke": "$warsh-navy",
+                  "strokeWidth": 1,
                   "padding": [
-                    0,
-                    20
+                    9,
+                    14
                   ],
-                  "justifyContent": "space_between",
-                  "alignItems": "center",
                   "children": [
                     {
                       "type": "text",
-                      "id": "G3xdu",
+                      "id": "V5rUX",
+                      "fill": "$warsh-navy",
+                      "content": "Preview",
+                      "fontFamily": "$font-text",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nGKe6",
+                  "name": "Save",
+                  "fill": "$warsh-navy",
+                  "cornerRadius": 10,
+                  "padding": [
+                    9,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "v0SYT",
                       "fill": "$parchment",
-                      "content": "Warsh Studio",
-                      "fontFamily": "$font-display",
-                      "fontSize": 22,
+                      "content": "Save lesson",
+                      "fontFamily": "$font-text",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "biXMY",
+              "name": "Outline",
+              "width": "fill_container",
+              "fill": "$pure-white",
+              "cornerRadius": 12,
+              "stroke": "$warsh-line",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 2,
+              "padding": 10,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "G1V1hq",
+                  "fill": "$ink-muted",
+                  "content": "DISCOVER · 5 CARDS",
+                  "fontFamily": "$font-text",
+                  "fontSize": 11,
+                  "fontWeight": "700",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "frame",
+                  "id": "EEhVX",
+                  "name": "Item الكتاب · the Book",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$parchment-soft",
+                  "cornerRadius": 8,
+                  "gap": 10,
+                  "padding": [
+                    0,
+                    10
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "tjKuF",
+                      "name": "grip-vertical",
+                      "width": 16,
+                      "height": 16,
+                      "icon": "grip-vertical",
+                      "library": "lucide",
+                      "fill": "$ink-muted"
+                    },
+                    {
+                      "type": "text",
+                      "id": "i1sOy",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "الكتاب · the Book",
+                      "fontFamily": "$font-text",
+                      "fontSize": 14,
                       "fontWeight": "700"
                     },
                     {
+                      "type": "icon",
+                      "id": "W7Stj",
+                      "name": "chevron-down",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "chevron-down",
+                      "library": "lucide",
+                      "fill": "$warsh-navy"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "w8aOkP",
+                  "name": "Inline Editor",
+                  "width": "fill_container",
+                  "fill": "$parchment-soft",
+                  "cornerRadius": 10,
+                  "stroke": "$gold",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 16,
+                  "children": [
+                    {
                       "type": "frame",
-                      "id": "pB9XU",
-                      "name": "Menu",
+                      "id": "N4wcN",
+                      "name": "Field Arabic word",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "x17qO",
+                          "fill": "$ink-secondary",
+                          "content": "Arabic word",
+                          "fontFamily": "$font-text",
+                          "fontSize": 12,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "WoZzA",
+                          "name": "Input",
+                          "width": "fill_container",
+                          "height": 52,
+                          "fill": "$pure-white",
+                          "cornerRadius": 8,
+                          "stroke": "$warsh-line",
+                          "strokeWidth": 1,
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "abWLb",
+                              "fill": "$ink",
+                              "content": "الْكِتَابُ",
+                              "fontFamily": "$font-arabic",
+                              "fontSize": 22,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "m6z1nv",
+                      "name": "Field English meaning",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "kz2yL",
+                          "fill": "$ink-secondary",
+                          "content": "English meaning",
+                          "fontFamily": "$font-text",
+                          "fontSize": 12,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Wa0Ea",
+                          "name": "Input",
+                          "width": "fill_container",
+                          "height": 42,
+                          "fill": "$pure-white",
+                          "cornerRadius": 8,
+                          "stroke": "$warsh-line",
+                          "strokeWidth": 1,
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "rrrhf",
+                              "fill": "$ink",
+                              "content": "the Book",
+                              "fontFamily": "$font-text",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "HiMid",
+                      "name": "Urdu Missing",
                       "gap": 8,
                       "alignItems": "center",
                       "children": [
                         {
-                          "type": "text",
-                          "id": "Y7wWam",
-                          "fill": "$parchment",
-                          "content": "Curriculum",
-                          "fontFamily": "$font-text",
-                          "fontSize": 14,
-                          "fontWeight": "600"
+                          "type": "icon",
+                          "id": "TglJZ",
+                          "name": "circle-alert",
+                          "width": 16,
+                          "height": 16,
+                          "icon": "circle-alert",
+                          "library": "lucide",
+                          "fill": "$terracotta-text"
                         },
                         {
-                          "type": "icon",
-                          "id": "nQuvy",
-                          "name": "menu",
-                          "width": 20,
-                          "height": 20,
-                          "icon": "menu",
-                          "library": "lucide",
-                          "fill": "$parchment"
+                          "type": "text",
+                          "id": "ysi5o",
+                          "fill": "$terracotta-text",
+                          "content": "Urdu meaning missing",
+                          "fontFamily": "$font-text",
+                          "fontSize": 12,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "hVBuW",
+                      "name": "Buttons",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "q1lRaB",
+                          "name": "Cancel",
+                          "cornerRadius": 8,
+                          "stroke": "$warsh-line",
+                          "strokeWidth": 1,
+                          "padding": [
+                            8,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "S47L3j",
+                              "fill": "$ink-secondary",
+                              "content": "Cancel",
+                              "fontFamily": "$font-text",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "KLeZD",
+                          "name": "Apply",
+                          "fill": "$gold-text",
+                          "cornerRadius": 8,
+                          "padding": [
+                            8,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "BrK32",
+                              "fill": "$pure-white",
+                              "content": "Apply to lesson",
+                              "fontFamily": "$font-text",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -203423,535 +203815,145 @@
                 },
                 {
                   "type": "frame",
-                  "id": "U6bkET",
-                  "name": "Body",
+                  "id": "PBeh6",
+                  "name": "Item القرآن · the Recitation",
                   "width": "fill_container",
-                  "layout": "vertical",
-                  "gap": 14,
-                  "padding": 20,
+                  "height": 44,
+                  "fill": "#00000000",
+                  "cornerRadius": 8,
+                  "gap": 10,
+                  "padding": [
+                    0,
+                    10
+                  ],
+                  "alignItems": "center",
                   "children": [
                     {
-                      "type": "frame",
-                      "id": "XDUQX",
-                      "name": "Chapter Selector",
-                      "width": "fill_container",
-                      "height": 44,
-                      "fill": "$pure-white",
-                      "cornerRadius": 10,
-                      "stroke": "$warsh-line",
-                      "strokeWidth": 1,
-                      "padding": [
-                        0,
-                        14
-                      ],
-                      "justifyContent": "space_between",
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "P8Fi0T",
-                          "fill": "$warsh-navy",
-                          "content": "1 · Opening the Quran  ·  Lesson 3 of 8",
-                          "fontFamily": "$font-text",
-                          "fontSize": 14,
-                          "fontWeight": "600"
-                        },
-                        {
-                          "type": "icon",
-                          "id": "QItn1",
-                          "name": "chevrons-up-down",
-                          "width": 18,
-                          "height": 18,
-                          "icon": "chevrons-up-down",
-                          "library": "lucide",
-                          "fill": "$warsh-navy"
-                        }
-                      ]
+                      "type": "icon",
+                      "id": "sFCZM",
+                      "name": "grip-vertical",
+                      "width": 16,
+                      "height": 16,
+                      "icon": "grip-vertical",
+                      "library": "lucide",
+                      "fill": "$ink-muted"
                     },
                     {
                       "type": "text",
-                      "id": "LQb3F",
-                      "fill": "$warsh-navy",
-                      "content": "Lesson 3 · Names for the Book",
-                      "fontFamily": "$font-display",
-                      "fontSize": 26,
-                      "fontWeight": "700"
+                      "id": "ejspR",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "القرآن · the Recitation",
+                      "fontFamily": "$font-text",
+                      "fontSize": 14,
+                      "fontWeight": "500"
                     },
                     {
-                      "type": "frame",
-                      "id": "XAtHH",
-                      "name": "Action Row",
-                      "width": "fill_container",
-                      "gap": 10,
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "H3zhD",
-                          "fill": "$gold-text",
-                          "content": "● Unsaved changes",
-                          "fontFamily": "$font-text",
-                          "fontSize": 12,
-                          "fontWeight": "600"
-                        },
-                        {
-                          "type": "frame",
-                          "id": "CumIZ",
-                          "name": "Spacer",
-                          "width": "fill_container",
-                          "height": 1
-                        },
-                        {
-                          "type": "frame",
-                          "id": "Fp6oE",
-                          "name": "Preview",
-                          "cornerRadius": 10,
-                          "stroke": "$warsh-navy",
-                          "strokeWidth": 1,
-                          "padding": [
-                            9,
-                            14
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "V5rUX",
-                              "fill": "$warsh-navy",
-                              "content": "Preview",
-                              "fontFamily": "$font-text",
-                              "fontSize": 13,
-                              "fontWeight": "600"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "frame",
-                          "id": "nGKe6",
-                          "name": "Save",
-                          "fill": "$warsh-navy",
-                          "cornerRadius": 10,
-                          "padding": [
-                            9,
-                            16
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "v0SYT",
-                              "fill": "$parchment",
-                              "content": "Save lesson",
-                              "fontFamily": "$font-text",
-                              "fontSize": 13,
-                              "fontWeight": "600"
-                            }
-                          ]
-                        }
-                      ]
+                      "type": "icon",
+                      "id": "YCbw8",
+                      "name": "Item Menu",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "ellipsis",
+                      "library": "lucide",
+                      "fill": "$ink-muted"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MqmAt",
+                  "name": "Item الذكر · the Reminder",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#00000000",
+                  "cornerRadius": 8,
+                  "gap": 10,
+                  "padding": [
+                    0,
+                    10
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "c7HfG",
+                      "name": "grip-vertical",
+                      "width": 16,
+                      "height": 16,
+                      "icon": "grip-vertical",
+                      "library": "lucide",
+                      "fill": "$ink-muted"
                     },
                     {
-                      "type": "frame",
-                      "id": "biXMY",
-                      "name": "Outline",
+                      "type": "text",
+                      "id": "wDav7",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
                       "width": "fill_container",
-                      "fill": "$pure-white",
-                      "cornerRadius": 12,
-                      "stroke": "$warsh-line",
-                      "strokeWidth": 1,
-                      "layout": "vertical",
-                      "gap": 2,
-                      "padding": 10,
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "G1V1hq",
-                          "fill": "$ink-muted",
-                          "content": "DISCOVER · 5 CARDS",
-                          "fontFamily": "$font-text",
-                          "fontSize": 11,
-                          "fontWeight": "700",
-                          "letterSpacing": 1
-                        },
-                        {
-                          "type": "frame",
-                          "id": "EEhVX",
-                          "name": "Item الكتاب · the Book",
-                          "width": "fill_container",
-                          "height": 44,
-                          "fill": "$parchment-soft",
-                          "cornerRadius": 8,
-                          "gap": 10,
-                          "padding": [
-                            0,
-                            10
-                          ],
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "icon",
-                              "id": "tjKuF",
-                              "name": "grip-vertical",
-                              "width": 16,
-                              "height": 16,
-                              "icon": "grip-vertical",
-                              "library": "lucide",
-                              "fill": "$ink-muted"
-                            },
-                            {
-                              "type": "text",
-                              "id": "i1sOy",
-                              "fill": "$ink",
-                              "textGrowth": "fixed-width",
-                              "width": "fill_container",
-                              "content": "الكتاب · the Book",
-                              "fontFamily": "$font-text",
-                              "fontSize": 14,
-                              "fontWeight": "700"
-                            },
-                            {
-                              "type": "icon",
-                              "id": "W7Stj",
-                              "name": "chevron-down",
-                              "width": 18,
-                              "height": 18,
-                              "icon": "chevron-down",
-                              "library": "lucide",
-                              "fill": "$warsh-navy"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "frame",
-                          "id": "w8aOkP",
-                          "name": "Inline Editor",
-                          "width": "fill_container",
-                          "fill": "$parchment-soft",
-                          "cornerRadius": 10,
-                          "stroke": "$gold",
-                          "strokeWidth": 1,
-                          "layout": "vertical",
-                          "gap": 12,
-                          "padding": 16,
-                          "children": [
-                            {
-                              "type": "frame",
-                              "id": "N4wcN",
-                              "name": "Field Arabic word",
-                              "width": "fill_container",
-                              "layout": "vertical",
-                              "gap": 4,
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "id": "x17qO",
-                                  "fill": "$ink-secondary",
-                                  "content": "Arabic word",
-                                  "fontFamily": "$font-text",
-                                  "fontSize": 12,
-                                  "fontWeight": "600"
-                                },
-                                {
-                                  "type": "frame",
-                                  "id": "WoZzA",
-                                  "name": "Input",
-                                  "width": "fill_container",
-                                  "height": 52,
-                                  "fill": "$pure-white",
-                                  "cornerRadius": 8,
-                                  "stroke": "$warsh-line",
-                                  "strokeWidth": 1,
-                                  "padding": [
-                                    0,
-                                    12
-                                  ],
-                                  "alignItems": "center",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "id": "abWLb",
-                                      "fill": "$ink",
-                                      "content": "الْكِتَابُ",
-                                      "fontFamily": "$font-arabic",
-                                      "fontSize": 22,
-                                      "fontWeight": "normal"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "frame",
-                              "id": "m6z1nv",
-                              "name": "Field English meaning",
-                              "width": "fill_container",
-                              "layout": "vertical",
-                              "gap": 4,
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "id": "kz2yL",
-                                  "fill": "$ink-secondary",
-                                  "content": "English meaning",
-                                  "fontFamily": "$font-text",
-                                  "fontSize": 12,
-                                  "fontWeight": "600"
-                                },
-                                {
-                                  "type": "frame",
-                                  "id": "Wa0Ea",
-                                  "name": "Input",
-                                  "width": "fill_container",
-                                  "height": 42,
-                                  "fill": "$pure-white",
-                                  "cornerRadius": 8,
-                                  "stroke": "$warsh-line",
-                                  "strokeWidth": 1,
-                                  "padding": [
-                                    0,
-                                    12
-                                  ],
-                                  "alignItems": "center",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "id": "rrrhf",
-                                      "fill": "$ink",
-                                      "content": "the Book",
-                                      "fontFamily": "$font-text",
-                                      "fontSize": 14,
-                                      "fontWeight": "normal"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "frame",
-                              "id": "HiMid",
-                              "name": "Urdu Missing",
-                              "gap": 8,
-                              "alignItems": "center",
-                              "children": [
-                                {
-                                  "type": "icon",
-                                  "id": "TglJZ",
-                                  "name": "circle-alert",
-                                  "width": 16,
-                                  "height": 16,
-                                  "icon": "circle-alert",
-                                  "library": "lucide",
-                                  "fill": "$terracotta-text"
-                                },
-                                {
-                                  "type": "text",
-                                  "id": "ysi5o",
-                                  "fill": "$terracotta-text",
-                                  "content": "Urdu meaning missing",
-                                  "fontFamily": "$font-text",
-                                  "fontSize": 12,
-                                  "fontWeight": "600"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "frame",
-                              "id": "hVBuW",
-                              "name": "Buttons",
-                              "gap": 10,
-                              "children": [
-                                {
-                                  "type": "frame",
-                                  "id": "q1lRaB",
-                                  "name": "Cancel",
-                                  "cornerRadius": 8,
-                                  "stroke": "$warsh-line",
-                                  "strokeWidth": 1,
-                                  "padding": [
-                                    8,
-                                    14
-                                  ],
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "id": "S47L3j",
-                                      "fill": "$ink-secondary",
-                                      "content": "Cancel",
-                                      "fontFamily": "$font-text",
-                                      "fontSize": 13,
-                                      "fontWeight": "600"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "frame",
-                                  "id": "KLeZD",
-                                  "name": "Apply",
-                                  "fill": "$gold-text",
-                                  "cornerRadius": 8,
-                                  "padding": [
-                                    8,
-                                    14
-                                  ],
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "id": "BrK32",
-                                      "fill": "$pure-white",
-                                      "content": "Apply to lesson",
-                                      "fontFamily": "$font-text",
-                                      "fontSize": 13,
-                                      "fontWeight": "600"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "frame",
-                          "id": "PBeh6",
-                          "name": "Item القرآن · the Recitation",
-                          "width": "fill_container",
-                          "height": 44,
-                          "fill": "#00000000",
-                          "cornerRadius": 8,
-                          "gap": 10,
-                          "padding": [
-                            0,
-                            10
-                          ],
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "icon",
-                              "id": "sFCZM",
-                              "name": "grip-vertical",
-                              "width": 16,
-                              "height": 16,
-                              "icon": "grip-vertical",
-                              "library": "lucide",
-                              "fill": "$ink-muted"
-                            },
-                            {
-                              "type": "text",
-                              "id": "ejspR",
-                              "fill": "$ink",
-                              "textGrowth": "fixed-width",
-                              "width": "fill_container",
-                              "content": "القرآن · the Recitation",
-                              "fontFamily": "$font-text",
-                              "fontSize": 14,
-                              "fontWeight": "500"
-                            },
-                            {
-                              "type": "icon",
-                              "id": "YCbw8",
-                              "name": "Item Menu",
-                              "width": 18,
-                              "height": 18,
-                              "icon": "ellipsis",
-                              "library": "lucide",
-                              "fill": "$ink-muted"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "frame",
-                          "id": "MqmAt",
-                          "name": "Item الذكر · the Reminder",
-                          "width": "fill_container",
-                          "height": 44,
-                          "fill": "#00000000",
-                          "cornerRadius": 8,
-                          "gap": 10,
-                          "padding": [
-                            0,
-                            10
-                          ],
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "icon",
-                              "id": "c7HfG",
-                              "name": "grip-vertical",
-                              "width": 16,
-                              "height": 16,
-                              "icon": "grip-vertical",
-                              "library": "lucide",
-                              "fill": "$ink-muted"
-                            },
-                            {
-                              "type": "text",
-                              "id": "wDav7",
-                              "fill": "$ink",
-                              "textGrowth": "fixed-width",
-                              "width": "fill_container",
-                              "content": "الذكر · the Reminder",
-                              "fontFamily": "$font-text",
-                              "fontSize": 14,
-                              "fontWeight": "500"
-                            },
-                            {
-                              "type": "icon",
-                              "id": "Jx4nX",
-                              "name": "Item Menu",
-                              "width": 18,
-                              "height": 18,
-                              "icon": "ellipsis",
-                              "library": "lucide",
-                              "fill": "$ink-muted"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "frame",
-                          "id": "zXv0S",
-                          "name": "Item الفرقان · the Criterion",
-                          "width": "fill_container",
-                          "height": 44,
-                          "fill": "#00000000",
-                          "cornerRadius": 8,
-                          "gap": 10,
-                          "padding": [
-                            0,
-                            10
-                          ],
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "icon",
-                              "id": "MJVcr",
-                              "name": "grip-vertical",
-                              "width": 16,
-                              "height": 16,
-                              "icon": "grip-vertical",
-                              "library": "lucide",
-                              "fill": "$ink-muted"
-                            },
-                            {
-                              "type": "text",
-                              "id": "lkA92",
-                              "fill": "$ink",
-                              "textGrowth": "fixed-width",
-                              "width": "fill_container",
-                              "content": "الفرقان · the Criterion",
-                              "fontFamily": "$font-text",
-                              "fontSize": 14,
-                              "fontWeight": "500"
-                            },
-                            {
-                              "type": "icon",
-                              "id": "E2q4x",
-                              "name": "Item Menu",
-                              "width": 18,
-                              "height": 18,
-                              "icon": "ellipsis",
-                              "library": "lucide",
-                              "fill": "$ink-muted"
-                            }
-                          ]
-                        }
-                      ]
+                      "content": "الذكر · the Reminder",
+                      "fontFamily": "$font-text",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "Jx4nX",
+                      "name": "Item Menu",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "ellipsis",
+                      "library": "lucide",
+                      "fill": "$ink-muted"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "zXv0S",
+                  "name": "Item الفرقان · the Criterion",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#00000000",
+                  "cornerRadius": 8,
+                  "gap": 10,
+                  "padding": [
+                    0,
+                    10
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "MJVcr",
+                      "name": "grip-vertical",
+                      "width": 16,
+                      "height": 16,
+                      "icon": "grip-vertical",
+                      "library": "lucide",
+                      "fill": "$ink-muted"
+                    },
+                    {
+                      "type": "text",
+                      "id": "lkA92",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "الفرقان · the Criterion",
+                      "fontFamily": "$font-text",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "E2q4x",
+                      "name": "Item Menu",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "ellipsis",
+                      "library": "lucide",
+                      "fill": "$ink-muted"
                     }
                   ]
                 }
