@@ -506,9 +506,11 @@ Still open from the evaluation:
   "no example" is stored as JSON null). Verified on the emulator against
   production (9 words). Open: 90 roots matched loosely and are marked `check`
   for owner review; the verse for جَمْع (100:5) has a fragment translation.
-- **Tadabbur Urdu (owner).** No Urdu translation in the data. The Mushaf
-  reader already ships Junagarhi (Urdu) and Pickthall (English), both public
-  domain, if the owner wants the same one.
+- **Tadabbur Urdu — done in production 2026-10-09.** All 55 ayat of the 11 Tadabbur
+  Surahs now carry the Junagarhi Urdu translation (the one the Mushaf reader
+  ships), written by `npm run content:add-tadabbur-urdu -- --apply`. It fills
+  only empty `translationUr` fields. A seed or `content:restore-tadabbur`
+  recreates rows without Urdu, so re-run it afterwards.
 - **Test with learners first:** full Urdu RTL (H10); hiding the SRS picture
   (M3).
 
