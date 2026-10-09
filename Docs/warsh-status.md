@@ -490,9 +490,15 @@ rollout, no errors or warnings on the release page; in review.
 
 Still open from the evaluation:
 
-- **Laptop web type (M18).** A global CSS `zoom` was tried on app.warsh.app
-  at 1440px and broke the layout (sidebar overlap, 47 elements past the
-  viewport), so it needs per-screen desktop type work.
+- **Laptop web type (M18) — Pen design proposed 2026-10-09, awaiting owner approval.**
+  Pen section "32 — Laptop Type · Proposed" (`warsh-app-UI-v2.pen`): a desktop
+  type scale for viewports ≥ 1024px (phone and tablet unchanged, no global zoom),
+  Home (P01) and Word detail (P05) re-typed as before/after, a new desktop Quran
+  reader (P07: page column capped at 760, larger Arabic, five-item sidebar), and
+  an implementation contract. Cause: the approved desktop screens P01–P06 reuse
+  phone-size type (Inter 11–14.5, Cormorant 18–30). A global CSS `zoom` was tried
+  earlier and broke the layout (sidebar overlap, 47 elements past the viewport).
+  No code is written until the owner approves the design.
 - **Word detail data (M12) — done in production 2026-10-09.** Roots 444 → 820,
   words with related words 179 → 481, words with a Quran example 55 → 642.
   Roots come from the Quranic Arabic Corpus (v0.4, GPL, not committed) for words

@@ -203962,6 +203962,2327 @@
           ]
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "H8yUA",
+      "x": -1238,
+      "y": 19008,
+      "name": "32 — Laptop Type · Proposed",
+      "fill": "$parchment",
+      "layout": "vertical",
+      "gap": 40,
+      "padding": 64,
+      "children": [
+        {
+          "type": "frame",
+          "id": "C45EZe",
+          "name": "Proposal Header",
+          "width": 2900,
+          "layout": "vertical",
+          "gap": 10,
+          "children": [
+            {
+              "type": "text",
+              "id": "A8ETK",
+              "name": "Title",
+              "fill": "$ink",
+              "content": "32 — Laptop type (M18) · Proposed",
+              "fontFamily": "Cormorant Garamond",
+              "fontSize": 40,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "p5SjJ",
+              "name": "Why",
+              "fill": "$ink-secondary",
+              "textGrowth": "fixed-width",
+              "width": 2000,
+              "content": "Why: the approved desktop screens (P01–P06) reuse phone-size type — Inter 11–14.5, Cormorant 18–30 — so at 1440px text reads small. A global CSS zoom broke the layout (sidebar overlap, 47 elements past the viewport), so the fix is a per-screen desktop type scale applied only at laptop width. Layout, colours and structure stay exactly as approved.",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "YdaN5",
+              "name": "Rule",
+              "fill": "$ink-secondary",
+              "textGrowth": "fixed-width",
+              "width": 2000,
+              "content": "Scale (desktop ≥ 1024px only; phone and tablet unchanged): Inter 11–12.5 → 13–14, 13–13.5 → 15, 14–15 → 16–17, 16+ → +2. Cormorant and Scheherazade ×1.15. Minimum UI text 13. Quran reader: page column capped at 720 and centred, Arabic lines larger.",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "dEn90",
+          "name": "Screens Row",
+          "gap": 48,
+          "children": [
+            {
+              "type": "frame",
+              "id": "TSB4C",
+              "name": "P01 · Home Dashboard · Desktop · Proposed type",
+              "clip": true,
+              "width": 1440,
+              "height": 960,
+              "fill": "$parchment",
+              "children": [
+                {
+                  "id": "PaxBH",
+                  "type": "ref",
+                  "ref": "ADeV3",
+                  "name": "Sidebar",
+                  "height": "fill_container",
+                  "descendants": {
+                    "epmd4": {
+                      "fontSize": 25
+                    },
+                    "FaGhP": {
+                      "fontSize": 17
+                    },
+                    "YxZ1x": {
+                      "fontSize": 17
+                    },
+                    "j816z": {
+                      "fontSize": 17
+                    },
+                    "CSK5A": {
+                      "fontSize": 17
+                    },
+                    "oM4vv": {
+                      "fontSize": 17
+                    },
+                    "lH980": {
+                      "fontSize": 18
+                    },
+                    "ZTy9s": {
+                      "fontSize": 15
+                    },
+                    "Npbbu": {
+                      "fontSize": 14
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "Mf2CJ",
+                  "name": "Main",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "gap": 40,
+                  "padding": [
+                    48,
+                    56
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "FByfM",
+                      "name": "Content Column",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 32,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "yfEbr",
+                          "name": "Header",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "v33UWF",
+                              "name": "Text",
+                              "layout": "vertical",
+                              "gap": 6,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "H0bhk8",
+                                  "name": "Greeting",
+                                  "fill": "$navy-deep",
+                                  "content": "Assalamu alaikum, Yusuf",
+                                  "fontFamily": "$font-display",
+                                  "fontSize": 35,
+                                  "fontWeight": "600"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "a3g93t",
+                                  "name": "Sub",
+                                  "fill": "$ink-secondary",
+                                  "content": "A small, steady reading for today.",
+                                  "fontFamily": "$font-body",
+                                  "fontSize": 17,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "g9WYz",
+                              "name": "Streak Chip",
+                              "fill": "$pure-white",
+                              "cornerRadius": "$radius-md",
+                              "stroke": "$warsh-line",
+                              "strokeWidth": 1.5,
+                              "gap": 8,
+                              "padding": [
+                                10,
+                                16
+                              ],
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "vcSrn",
+                                  "name": "Icon",
+                                  "width": 16,
+                                  "height": 16,
+                                  "icon": "flame",
+                                  "library": "lucide",
+                                  "fill": "$gold-deep"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "UuzAx",
+                                  "name": "Label",
+                                  "fill": "$ink",
+                                  "content": "3 days",
+                                  "fontFamily": "$font-body",
+                                  "fontSize": 16,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "XGkmu",
+                          "name": "Hero Card",
+                          "width": "fill_container",
+                          "fill": "$navy-deep",
+                          "cornerRadius": "$radius-xl",
+                          "gap": 40,
+                          "padding": 36,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "pUMOm",
+                              "name": "Left",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 14,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "EQTJA",
+                                  "name": "Chapter Badge",
+                                  "fill": "#FFFFFF14",
+                                  "cornerRadius": "$radius-sm",
+                                  "gap": 8,
+                                  "padding": [
+                                    8,
+                                    14
+                                  ],
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "icon",
+                                      "id": "Yuzl4",
+                                      "name": "Icon",
+                                      "width": 14,
+                                      "height": 14,
+                                      "icon": "book",
+                                      "library": "lucide",
+                                      "fill": "$gold-muted"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "gtMaJ",
+                                      "name": "Label",
+                                      "fill": "$cream",
+                                      "content": "Chapter 2 · Lesson 3",
+                                      "fontFamily": "$font-body",
+                                      "fontSize": 14,
+                                      "fontWeight": "600"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "smYr5",
+                                  "name": "Arabic",
+                                  "fill": "$gold",
+                                  "content": "اَلْجُمْلَةُ الْفِعْلِيَّة",
+                                  "fontFamily": "$font-arabic",
+                                  "fontSize": 41,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "xaHdI",
+                                  "name": "English",
+                                  "fill": "$pure-white",
+                                  "content": "The verbal sentence",
+                                  "fontFamily": "$font-display",
+                                  "fontSize": 25,
+                                  "fontWeight": "600"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "SAkeN",
+                                  "name": "Hint",
+                                  "fill": "$cream",
+                                  "content": "Listen, understand, then practise.",
+                                  "fontFamily": "$font-body",
+                                  "fontSize": 16,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "id": "FOA5i",
+                                  "type": "ref",
+                                  "ref": "YDvzE",
+                                  "name": "Continue Button",
+                                  "descendants": {
+                                    "qJtgl": {
+                                      "content": "Continue lesson",
+                                      "fontSize": 18
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "ZUcL7",
+                              "name": "Right",
+                              "width": 220,
+                              "layout": "vertical",
+                              "gap": 10,
+                              "alignItems": "end",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "X6TLeG",
+                                  "name": "Progress Label",
+                                  "fill": "$gold-muted",
+                                  "content": "Current lesson",
+                                  "fontFamily": "$font-body",
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "U85fO",
+                                  "name": "Progress Value",
+                                  "fill": "$pure-white",
+                                  "content": "3 of 6",
+                                  "fontFamily": "$font-display",
+                                  "fontSize": 30,
+                                  "fontWeight": "600"
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "IrD4z",
+                                  "name": "Track",
+                                  "width": "fill_container",
+                                  "height": 8,
+                                  "fill": "#FFFFFF1F",
+                                  "cornerRadius": 4,
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "Za9x4",
+                                      "name": "Fill",
+                                      "width": 110,
+                                      "height": "fill_container",
+                                      "fill": "$gold",
+                                      "cornerRadius": 4
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "VaLgV",
+                          "name": "Today Grid",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 16,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "h7Vom",
+                              "name": "Section Label",
+                              "fill": "$navy-deep",
+                              "content": "Today",
+                              "fontFamily": "$font-display",
+                              "fontSize": 23,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "tSkdV",
+                              "name": "Cards",
+                              "width": "fill_container",
+                              "gap": 16,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "g1dQDL",
+                                  "name": "Today's Goal",
+                                  "width": "fill_container",
+                                  "fill": "$pure-white",
+                                  "cornerRadius": "$radius-lg",
+                                  "stroke": "$warsh-line",
+                                  "strokeWidth": 1.5,
+                                  "layout": "vertical",
+                                  "gap": 12,
+                                  "padding": 22,
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "Gbwv1",
+                                      "name": "Top",
+                                      "width": "fill_container",
+                                      "justifyContent": "space_between",
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "cr0we",
+                                          "name": "Label",
+                                          "fill": "$ink-muted",
+                                          "content": "TODAY'S GOAL",
+                                          "fontFamily": "$font-body",
+                                          "fontSize": 13,
+                                          "fontWeight": "700",
+                                          "letterSpacing": 1.2
+                                        },
+                                        {
+                                          "type": "icon",
+                                          "id": "xrFe8",
+                                          "name": "Icon",
+                                          "width": 16,
+                                          "height": 16,
+                                          "icon": "flag",
+                                          "library": "lucide",
+                                          "fill": "$sage-deep"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "ZBjO7",
+                                      "name": "Value",
+                                      "fill": "$navy-deep",
+                                      "content": "1 lesson",
+                                      "fontFamily": "$font-display",
+                                      "fontSize": 25,
+                                      "fontWeight": "600"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "A5eJQF",
+                                      "name": "Caption",
+                                      "fill": "$ink-muted",
+                                      "content": "10 min · 0% complete",
+                                      "fontFamily": "$font-body",
+                                      "fontSize": 14,
+                                      "fontWeight": "normal"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "cygxQ",
+                                  "name": "Word of the Day",
+                                  "width": "fill_container",
+                                  "fill": "$parchment-soft",
+                                  "cornerRadius": "$radius-lg",
+                                  "stroke": "#E4D6AE",
+                                  "strokeWidth": 1.5,
+                                  "layout": "vertical",
+                                  "gap": 12,
+                                  "padding": 22,
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "CUhyH",
+                                      "name": "Top",
+                                      "width": "fill_container",
+                                      "justifyContent": "space_between",
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "j5ZQD",
+                                          "name": "Label",
+                                          "fill": "$gold-deep",
+                                          "content": "WORD OF THE DAY",
+                                          "fontFamily": "$font-body",
+                                          "fontSize": 13,
+                                          "fontWeight": "700",
+                                          "letterSpacing": 1.2
+                                        },
+                                        {
+                                          "type": "icon",
+                                          "id": "F0p3T4",
+                                          "name": "Icon",
+                                          "width": 16,
+                                          "height": 16,
+                                          "icon": "sparkles",
+                                          "library": "lucide",
+                                          "fill": "$gold-deep"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "JXWYd",
+                                      "name": "Arabic",
+                                      "fill": "$navy-deep",
+                                      "content": "نُور",
+                                      "fontFamily": "$font-arabic",
+                                      "fontSize": 35,
+                                      "fontWeight": "normal"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "QoTVE",
+                                      "name": "Meaning",
+                                      "fill": "$ink-secondary",
+                                      "content": "Light",
+                                      "fontFamily": "$font-body",
+                                      "fontSize": 15,
+                                      "fontWeight": "normal"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "s1qCG",
+                      "name": "Rail",
+                      "width": 280,
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "id": "hh2tb",
+                          "type": "ref",
+                          "ref": "mYBEu",
+                          "name": "Points",
+                          "width": "fill_container",
+                          "descendants": {
+                            "Kg72G": {
+                              "content": "POINTS",
+                              "fontSize": 13
+                            },
+                            "S4xST": {
+                              "icon": "sparkles"
+                            },
+                            "b9uXs2": {
+                              "content": "240",
+                              "fontSize": 39
+                            },
+                            "a2S2i": {
+                              "content": "points earned",
+                              "fontSize": 14
+                            }
+                          }
+                        },
+                        {
+                          "id": "t3nwD",
+                          "type": "ref",
+                          "ref": "mYBEu",
+                          "name": "Lessons",
+                          "width": "fill_container",
+                          "descendants": {
+                            "Kg72G": {
+                              "content": "LESSONS",
+                              "fontSize": 13
+                            },
+                            "S4xST": {
+                              "icon": "book-open"
+                            },
+                            "b9uXs2": {
+                              "content": "18",
+                              "fontSize": 39
+                            },
+                            "a2S2i": {
+                              "content": "lessons completed",
+                              "fontSize": 14
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "C41uE7",
+              "name": "P05 · Word Detail · Desktop · Proposed type",
+              "clip": true,
+              "width": 1440,
+              "height": 960,
+              "fill": "$parchment",
+              "children": [
+                {
+                  "id": "KbLTT",
+                  "type": "ref",
+                  "ref": "ADeV3",
+                  "name": "Sidebar",
+                  "height": "fill_container",
+                  "descendants": {
+                    "epmd4": {
+                      "fontSize": 25
+                    },
+                    "FaGhP": {
+                      "fontSize": 17
+                    },
+                    "A0NVg": {
+                      "fill": "transparent"
+                    },
+                    "eGIeC": {
+                      "fill": "$ink-muted"
+                    },
+                    "YxZ1x": {
+                      "fill": "$ink-secondary",
+                      "fontSize": 17
+                    },
+                    "LHiI6": {
+                      "fill": "$navy-deep"
+                    },
+                    "vSKj8": {
+                      "fill": "$pure-white"
+                    },
+                    "j816z": {
+                      "fill": "$pure-white",
+                      "fontSize": 17
+                    },
+                    "CSK5A": {
+                      "fontSize": 17
+                    },
+                    "oM4vv": {
+                      "fontSize": 17
+                    },
+                    "lH980": {
+                      "fontSize": 18
+                    },
+                    "ZTy9s": {
+                      "fontSize": 15
+                    },
+                    "Npbbu": {
+                      "fontSize": 14
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "n4c2NL",
+                  "name": "Main",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "gap": 48,
+                  "padding": [
+                    48,
+                    56
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "W1NdF",
+                      "name": "Content Column",
+                      "width": 680,
+                      "layout": "vertical",
+                      "gap": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "JC1xn",
+                          "name": "Back Row",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "veIWV",
+                              "name": "Icon",
+                              "width": 15,
+                              "height": 15,
+                              "icon": "arrow-left",
+                              "library": "lucide",
+                              "fill": "$ink-muted"
+                            },
+                            {
+                              "type": "text",
+                              "id": "lPj3P",
+                              "name": "Label",
+                              "fill": "$ink-muted",
+                              "content": "Back",
+                              "fontFamily": "$font-body",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "sxOE5",
+                          "name": "Word Hero",
+                          "width": "fill_container",
+                          "fill": "$navy-deep",
+                          "cornerRadius": "$radius-xl",
+                          "layout": "vertical",
+                          "gap": 14,
+                          "padding": 32,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "wOsQT",
+                              "name": "Top",
+                              "width": "fill_container",
+                              "justifyContent": "space_between",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "DKJd1",
+                                  "name": "Volume",
+                                  "width": 20,
+                                  "height": 20,
+                                  "icon": "volume-2",
+                                  "library": "lucide",
+                                  "fill": "$gold-muted"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "gcx5v",
+                                  "name": "Bookmark",
+                                  "width": 19,
+                                  "height": 19,
+                                  "icon": "heart",
+                                  "library": "lucide",
+                                  "fill": "$gold"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "qrZ4m",
+                              "name": "Arabic",
+                              "fill": "$gold",
+                              "content": "رَحْمَة",
+                              "fontFamily": "$font-arabic",
+                              "fontSize": 64,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "X1EJwo",
+                              "name": "Transliteration",
+                              "fill": "$gold-muted",
+                              "content": "raḥmah",
+                              "fontFamily": "$font-body",
+                              "fontSize": 17,
+                              "fontWeight": "normal",
+                              "fontStyle": "italic"
+                            },
+                            {
+                              "type": "text",
+                              "id": "RzAKC",
+                              "name": "Meaning",
+                              "fill": "$pure-white",
+                              "content": "Mercy",
+                              "fontFamily": "$font-display",
+                              "fontSize": 28,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "KjunV",
+                              "name": "Tabs",
+                              "gap": 8,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "D3tjLT",
+                                  "name": "Noun Tab",
+                                  "fill": "$gold",
+                                  "cornerRadius": 20,
+                                  "padding": [
+                                    8,
+                                    16
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "cCbhj",
+                                      "name": "Label",
+                                      "fill": "$navy-deep",
+                                      "content": "Noun · Feminine",
+                                      "fontFamily": "$font-body",
+                                      "fontSize": 14,
+                                      "fontWeight": "700"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "E7gN4",
+                          "name": "Usage Section",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 14,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "pl4Uq",
+                              "name": "Section Label",
+                              "fill": "$ink-muted",
+                              "content": "HOW IT'S USED",
+                              "fontFamily": "$font-body",
+                              "fontSize": 14,
+                              "fontWeight": "700",
+                              "letterSpacing": 1.4
+                            },
+                            {
+                              "type": "frame",
+                              "id": "A77jhG",
+                              "name": "Example",
+                              "width": "fill_container",
+                              "fill": "$pure-white",
+                              "cornerRadius": "$radius-lg",
+                              "stroke": "$warsh-line",
+                              "strokeWidth": 1.5,
+                              "layout": "vertical",
+                              "gap": 10,
+                              "padding": 22,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "eKGSy",
+                                  "name": "Arabic",
+                                  "fill": "$navy-deep",
+                                  "content": "الرَّحْمَٰنِ الرَّحِيمِ",
+                                  "fontFamily": "$font-arabic",
+                                  "fontSize": 28,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "dIsVX",
+                                  "name": "English",
+                                  "fill": "$ink-secondary",
+                                  "content": "The Most Merciful, the Especially Merciful.",
+                                  "fontFamily": "$font-body",
+                                  "fontSize": 16,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "RKcn8",
+                                  "name": "Source",
+                                  "fill": "$gold-deep",
+                                  "content": "Al-Fatihah · 1:3",
+                                  "fontFamily": "$font-body",
+                                  "fontSize": 14,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "T7lPZ",
+                          "name": "Actions",
+                          "width": "fill_container",
+                          "gap": 14,
+                          "children": [
+                            {
+                              "id": "J4Z3YS",
+                              "type": "ref",
+                              "ref": "YDvzE",
+                              "name": "Mark Reviewed",
+                              "descendants": {
+                                "qJtgl": {
+                                  "content": "Mark for review",
+                                  "fontSize": 18
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "h1hfjx",
+                      "name": "Rail",
+                      "width": 300,
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "QkQVJ",
+                          "name": "Rail Label",
+                          "fill": "$ink-muted",
+                          "content": "RELATED WORDS",
+                          "fontFamily": "$font-body",
+                          "fontSize": 13,
+                          "fontWeight": "700",
+                          "letterSpacing": 1.4
+                        },
+                        {
+                          "type": "frame",
+                          "id": "c7uMo",
+                          "name": "Related Box",
+                          "width": "fill_container",
+                          "fill": "$pure-white",
+                          "cornerRadius": "$radius-lg",
+                          "stroke": "$warsh-line",
+                          "strokeWidth": 1.5,
+                          "layout": "vertical",
+                          "gap": 12,
+                          "padding": 20,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "o2j9b",
+                              "name": "Merciful",
+                              "width": "fill_container",
+                              "justifyContent": "space_between",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "DdOXm",
+                                  "name": "Arabic",
+                                  "fill": "$navy-deep",
+                                  "content": "رَحِيم",
+                                  "fontFamily": "$font-arabic",
+                                  "fontSize": 20,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "bZmAK",
+                                  "name": "English",
+                                  "fill": "$ink-muted",
+                                  "content": "Merciful",
+                                  "fontFamily": "$font-body",
+                                  "fontSize": 15,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "GHoHG",
+                              "name": "Most Merciful",
+                              "width": "fill_container",
+                              "justifyContent": "space_between",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "PuwhX",
+                                  "name": "Arabic",
+                                  "fill": "$navy-deep",
+                                  "content": "رَحْمَٰن",
+                                  "fontFamily": "$font-arabic",
+                                  "fontSize": 20,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "bLkz3",
+                                  "name": "English",
+                                  "fill": "$ink-muted",
+                                  "content": "Most Merciful",
+                                  "fontFamily": "$font-body",
+                                  "fontSize": 15,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "HjO3p",
+                              "name": "Womb, kinship",
+                              "width": "fill_container",
+                              "justifyContent": "space_between",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "SzJcK",
+                                  "name": "Arabic",
+                                  "fill": "$navy-deep",
+                                  "content": "رَحِم",
+                                  "fontFamily": "$font-arabic",
+                                  "fontSize": 20,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "N9s9RV",
+                                  "name": "English",
+                                  "fill": "$ink-muted",
+                                  "content": "Womb, kinship",
+                                  "fontFamily": "$font-body",
+                                  "fontSize": 15,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "b6Dv0Q",
+              "name": "P07 · Quran Reader · Desktop · Proposed",
+              "clip": true,
+              "width": 1440,
+              "height": 960,
+              "fill": "$parchment",
+              "children": [
+                {
+                  "id": "rWT9X",
+                  "type": "ref",
+                  "ref": "ADeV3",
+                  "name": "Sidebar",
+                  "height": 960,
+                  "descendants": {
+                    "Za9ti": {
+                      "type": "frame",
+                      "id": "ImKVD",
+                      "name": "Nav List",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "qIAhH",
+                          "name": "Nav Learn",
+                          "width": "fill_container",
+                          "fill": "#00000000",
+                          "cornerRadius": "$radius-md",
+                          "gap": 12,
+                          "padding": [
+                            12,
+                            16
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "TrLMh",
+                              "name": "Icon",
+                              "width": 20,
+                              "height": 20,
+                              "icon": "book-open",
+                              "library": "lucide",
+                              "fill": "$ink-muted"
+                            },
+                            {
+                              "type": "text",
+                              "id": "q19urY",
+                              "name": "Label",
+                              "fill": "$ink-secondary",
+                              "content": "Learn",
+                              "fontFamily": "$font-body",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "iKI8A",
+                          "name": "Nav Vocabulary",
+                          "width": "fill_container",
+                          "fill": "#00000000",
+                          "cornerRadius": "$radius-md",
+                          "gap": 12,
+                          "padding": [
+                            12,
+                            16
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "sRwmZ",
+                              "name": "Icon",
+                              "width": 20,
+                              "height": 20,
+                              "icon": "layers",
+                              "library": "lucide",
+                              "fill": "$ink-muted"
+                            },
+                            {
+                              "type": "text",
+                              "id": "r1bQGl",
+                              "name": "Label",
+                              "fill": "$ink-secondary",
+                              "content": "Vocabulary",
+                              "fontFamily": "$font-body",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "x5tfv",
+                          "name": "Nav Quran",
+                          "width": "fill_container",
+                          "fill": "$navy-deep",
+                          "cornerRadius": "$radius-md",
+                          "gap": 12,
+                          "padding": [
+                            12,
+                            16
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "QwdCh",
+                              "name": "Icon",
+                              "width": 20,
+                              "height": 20,
+                              "icon": "book",
+                              "library": "lucide",
+                              "fill": "$pure-white"
+                            },
+                            {
+                              "type": "text",
+                              "id": "W7Oz58",
+                              "name": "Label",
+                              "fill": "$pure-white",
+                              "content": "Quran",
+                              "fontFamily": "$font-body",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "gP0Tk",
+                          "name": "Nav Noor",
+                          "width": "fill_container",
+                          "fill": "#00000000",
+                          "cornerRadius": "$radius-md",
+                          "gap": 12,
+                          "padding": [
+                            12,
+                            16
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "HNojQ",
+                              "name": "Icon",
+                              "width": 20,
+                              "height": 20,
+                              "icon": "message-circle",
+                              "library": "lucide",
+                              "fill": "$ink-muted"
+                            },
+                            {
+                              "type": "text",
+                              "id": "RHvlR",
+                              "name": "Label",
+                              "fill": "$ink-secondary",
+                              "content": "Noor",
+                              "fontFamily": "$font-body",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "MydCU",
+                          "name": "Nav You",
+                          "width": "fill_container",
+                          "fill": "#00000000",
+                          "cornerRadius": "$radius-md",
+                          "gap": 12,
+                          "padding": [
+                            12,
+                            16
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "T8klsU",
+                              "name": "Icon",
+                              "width": 20,
+                              "height": 20,
+                              "icon": "user",
+                              "library": "lucide",
+                              "fill": "$ink-muted"
+                            },
+                            {
+                              "type": "text",
+                              "id": "KARWc",
+                              "name": "Label",
+                              "fill": "$ink-secondary",
+                              "content": "You",
+                              "fontFamily": "$font-body",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "T4WgY",
+                  "name": "Main",
+                  "width": "fill_container",
+                  "height": 960,
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": [
+                    32,
+                    56
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "OeQYy",
+                      "name": "Top Bar",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "k2miFr",
+                          "name": "Back",
+                          "gap": 10,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "a9W8r",
+                              "name": "Back Icon",
+                              "width": 24,
+                              "height": 24,
+                              "icon": "chevron-left",
+                              "library": "lucide",
+                              "fill": "$navy-deep"
+                            },
+                            {
+                              "type": "text",
+                              "id": "d2tlsq",
+                              "name": "Surah",
+                              "fill": "$navy-deep",
+                              "content": "Al-Baqarah",
+                              "fontFamily": "Cormorant Garamond",
+                              "fontSize": 34,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "U8gaY",
+                          "name": "Actions",
+                          "gap": 14,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "aWrk2",
+                              "name": "Index Pill",
+                              "fill": "$gold-muted",
+                              "cornerRadius": 20,
+                              "gap": 8,
+                              "padding": [
+                                8,
+                                16
+                              ],
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "DRAWQ",
+                                  "name": "List",
+                                  "width": 18,
+                                  "height": 18,
+                                  "icon": "list",
+                                  "library": "lucide",
+                                  "fill": "$navy-deep"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "V1cqb",
+                                  "name": "Label",
+                                  "fill": "$navy-deep",
+                                  "content": "Surah · Parah",
+                                  "fontFamily": "$font-body",
+                                  "fontSize": 15,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "icon",
+                              "id": "i6PRdq",
+                              "name": "bookmark",
+                              "width": 24,
+                              "height": 24,
+                              "icon": "bookmark",
+                              "library": "lucide",
+                              "fill": "$navy-deep"
+                            },
+                            {
+                              "type": "icon",
+                              "id": "AXwSy",
+                              "name": "sliders-horizontal",
+                              "width": 24,
+                              "height": 24,
+                              "icon": "sliders-horizontal",
+                              "library": "lucide",
+                              "fill": "$navy-deep"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "gQtFi",
+                      "name": "Tajweed Legend",
+                      "width": 760,
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "xSMJg",
+                          "name": "Ghunnah · Ikhfa",
+                          "fill": "$pure-white",
+                          "cornerRadius": 16,
+                          "stroke": "$cream",
+                          "strokeWidth": 1,
+                          "gap": 8,
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "B5qpf",
+                              "name": "Dot",
+                              "fill": "#2E9E5B",
+                              "width": 10,
+                              "height": 10
+                            },
+                            {
+                              "type": "text",
+                              "id": "ON53y",
+                              "name": "Label",
+                              "fill": "$ink-secondary",
+                              "content": "Ghunnah · Ikhfa",
+                              "fontFamily": "$font-body",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "BK2L8",
+                          "name": "Qalqalah",
+                          "fill": "$pure-white",
+                          "cornerRadius": 16,
+                          "stroke": "$cream",
+                          "strokeWidth": 1,
+                          "gap": 8,
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "aeUS5",
+                              "name": "Dot",
+                              "fill": "#2F6FD1",
+                              "width": 10,
+                              "height": 10
+                            },
+                            {
+                              "type": "text",
+                              "id": "p2FJq",
+                              "name": "Label",
+                              "fill": "$ink-secondary",
+                              "content": "Qalqalah",
+                              "fontFamily": "$font-body",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "V0NJ1Y",
+                          "name": "Madd",
+                          "fill": "$pure-white",
+                          "cornerRadius": 16,
+                          "stroke": "$cream",
+                          "strokeWidth": 1,
+                          "gap": 8,
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "qTz6N",
+                              "name": "Dot",
+                              "fill": "#E0701F",
+                              "width": 10,
+                              "height": 10
+                            },
+                            {
+                              "type": "text",
+                              "id": "DYIuh",
+                              "name": "Label",
+                              "fill": "$ink-secondary",
+                              "content": "Madd",
+                              "fontFamily": "$font-body",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "q3WmTV",
+                          "name": "Silent",
+                          "fill": "$pure-white",
+                          "cornerRadius": 16,
+                          "stroke": "$cream",
+                          "strokeWidth": 1,
+                          "gap": 8,
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "RjAPV",
+                              "name": "Dot",
+                              "fill": "#8A8A8A",
+                              "width": 10,
+                              "height": 10
+                            },
+                            {
+                              "type": "text",
+                              "id": "RO9sk",
+                              "name": "Label",
+                              "fill": "$ink-secondary",
+                              "content": "Silent",
+                              "fontFamily": "$font-body",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Bgxmx",
+                      "name": "Mushaf Page",
+                      "width": 760,
+                      "height": "fill_container",
+                      "fill": "$surface-card",
+                      "cornerRadius": "$radius-lg",
+                      "stroke": "$gold-muted",
+                      "strokeWidth": 1.5,
+                      "layout": "vertical",
+                      "padding": [
+                        20,
+                        40
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "V9Ui5m",
+                          "name": "Page Header",
+                          "width": "fill_container",
+                          "padding": [
+                            0,
+                            0,
+                            12,
+                            0
+                          ],
+                          "justifyContent": "space_between",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "X6Pq1",
+                              "name": "Parah",
+                              "fill": "$gold-text",
+                              "content": "پارہ ۱",
+                              "fontFamily": "$font-arabic",
+                              "fontSize": 18,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "GZVnv",
+                              "name": "Surah Name",
+                              "fill": "$gold-text",
+                              "content": "سورۃ البقرة",
+                              "fontFamily": "$font-arabic",
+                              "fontSize": 18,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "tyiLZ",
+                          "name": "Surah Banner",
+                          "width": "fill_container",
+                          "fill": "$parchment-soft",
+                          "cornerRadius": 10,
+                          "padding": [
+                            8,
+                            0
+                          ],
+                          "justifyContent": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "MXjkg",
+                              "name": "Banner Name",
+                              "fill": "$navy-deep",
+                              "content": "سُورَةُ البقرة",
+                              "fontFamily": "$font-arabic",
+                              "fontSize": 26,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "dPA9i",
+                          "name": "Lines",
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "layout": "vertical",
+                          "padding": [
+                            10,
+                            0
+                          ],
+                          "justifyContent": "space_around",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "DdDvL",
+                              "name": "Line",
+                              "fill": "$ink",
+                              "content": "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِیْمِ",
+                              "textAlign": "center",
+                              "fontFamily": "$font-arabic",
+                              "fontSize": 38,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "pnkkf",
+                              "name": "Line",
+                              "fill": "$ink",
+                              "content": "الٓمّٓ ۟ۚ ذٰلِكَ الْكِتٰبُ لَا رَیْبَ ۛۖۚ فِیْهِ ۛۚ",
+                              "textAlign": "center",
+                              "fontFamily": "$font-arabic",
+                              "fontSize": 38,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "yfEBY",
+                              "name": "Line",
+                              "fill": "$ink",
+                              "content": "هُدًی لِّلْمُتَّقِیْنَ ۟ۙ الَّذِیْنَ یُؤْمِنُوْنَ",
+                              "textAlign": "center",
+                              "fontFamily": "$font-arabic",
+                              "fontSize": 38,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "VwMSn",
+                              "name": "Line",
+                              "fill": "$ink",
+                              "content": "بِالْغَیْبِ وَیُقِیْمُوْنَ الصَّلٰوةَ وَمِمَّا",
+                              "textAlign": "center",
+                              "fontFamily": "$font-arabic",
+                              "fontSize": 38,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "E81vR9",
+                              "name": "Line",
+                              "fill": "$ink",
+                              "content": "رَزَقْنٰهُمْ یُنْفِقُوْنَ ۟ۙ وَالَّذِیْنَ یُؤْمِنُوْنَ",
+                              "textAlign": "center",
+                              "fontFamily": "$font-arabic",
+                              "fontSize": 38,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "KhvRh",
+                              "name": "Line",
+                              "fill": "$ink",
+                              "content": "بِمَاۤ اُنْزِلَ اِلَیْكَ وَمَاۤ اُنْزِلَ مِنْ",
+                              "textAlign": "center",
+                              "fontFamily": "$font-arabic",
+                              "fontSize": 38,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Eh7bX",
+                              "name": "Line",
+                              "fill": "$ink",
+                              "content": "قَبْلِكَ ۚ وَبِالْاٰخِرَةِ هُمْ یُوْقِنُوْنَ ۟ؕ",
+                              "textAlign": "center",
+                              "fontFamily": "$font-arabic",
+                              "fontSize": 38,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "VsKf0",
+                          "name": "Page Number",
+                          "fill": "$gold-text",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "٢",
+                          "textAlign": "center",
+                          "fontFamily": "$font-arabic",
+                          "fontSize": 18,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xLIV4",
+                      "name": "Pager",
+                      "width": 760,
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Z8PhRE",
+                          "name": "Next",
+                          "fill": "$ink-secondary",
+                          "content": "‹ Page 3",
+                          "fontFamily": "$font-body",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Uw2lV",
+                          "name": "Juz",
+                          "fill": "$navy-deep",
+                          "content": "Juz (Parah) 1",
+                          "fontFamily": "$font-body",
+                          "fontSize": 15,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "beb9W",
+                          "name": "Prev",
+                          "fill": "$ink-secondary",
+                          "content": "Page 1 ›",
+                          "fontFamily": "$font-body",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "dyoYQ",
+          "name": "Type Scale Table",
+          "width": 2900,
+          "fill": "$pure-white",
+          "cornerRadius": "$radius-lg",
+          "stroke": "$cream",
+          "strokeWidth": 1.5,
+          "layout": "vertical",
+          "gap": 14,
+          "padding": 28,
+          "children": [
+            {
+              "type": "text",
+              "id": "tDfVi",
+              "name": "Table Title",
+              "fill": "$navy-deep",
+              "content": "Desktop type scale (laptop ≥ 1024px) — phone and tablet keep today's sizes",
+              "fontFamily": "Cormorant Garamond",
+              "fontSize": 26,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "nATXC",
+              "name": "Row 0",
+              "width": "fill_container",
+              "stroke": "$cream",
+              "strokeWidth": {
+                "bottom": 1.5
+              },
+              "gap": 24,
+              "padding": [
+                8,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "CjlrK",
+                  "name": "Cell",
+                  "fill": "$ink-muted",
+                  "textGrowth": "fixed-width",
+                  "width": 900,
+                  "content": "Role",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "jTUAm",
+                  "name": "Cell",
+                  "fill": "$ink-muted",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "Phone / today on desktop",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "uE6Y0",
+                  "name": "Cell",
+                  "fill": "$ink-muted",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "Proposed laptop",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "oYQWR",
+              "name": "Row 1",
+              "width": "fill_container",
+              "stroke": "$cream",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 24,
+              "padding": [
+                8,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "TaHgP",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 900,
+                  "content": "Page title (Cormorant)",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "SIlNF",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "30",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "u40nX",
+                  "name": "Cell",
+                  "fill": "$navy-deep",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "34",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "kDCns",
+              "name": "Row 2",
+              "width": "fill_container",
+              "stroke": "$cream",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 24,
+              "padding": [
+                8,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "qWyJB",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 900,
+                  "content": "Section title (Cormorant)",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "bT8t6",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "22 / 20 / 18",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "CMQ4N",
+                  "name": "Cell",
+                  "fill": "$navy-deep",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "26 / 23 / 21",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "HUNG5",
+              "name": "Row 3",
+              "width": "fill_container",
+              "stroke": "$cream",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 24,
+              "padding": [
+                8,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "P0NYHu",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 900,
+                  "content": "Body and row text (Inter)",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "sDh2I",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "13.5 – 14.5",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Ulrey",
+                  "name": "Cell",
+                  "fill": "$navy-deep",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "15 – 16",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "CeqUL",
+              "name": "Row 4",
+              "width": "fill_container",
+              "stroke": "$cream",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 24,
+              "padding": [
+                8,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "bvsaX",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 900,
+                  "content": "Secondary and meta text (Inter)",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "zSKyk",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "11.5 – 12.5",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "L85b2",
+                  "name": "Cell",
+                  "fill": "$navy-deep",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "14",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "EiBgi",
+              "name": "Row 5",
+              "width": "fill_container",
+              "stroke": "$cream",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 24,
+              "padding": [
+                8,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "A7MTea",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 900,
+                  "content": "Smallest label (Inter)",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "vP7o8",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "10.5 – 11",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "FHdDC",
+                  "name": "Cell",
+                  "fill": "$navy-deep",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "13 (minimum)",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "rGp6D",
+              "name": "Row 6",
+              "width": "fill_container",
+              "stroke": "$cream",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 24,
+              "padding": [
+                8,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "wEVyp",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 900,
+                  "content": "Arabic word and example (Scheherazade)",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Z1lVZ",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "17 – 36",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "flsYi",
+                  "name": "Cell",
+                  "fill": "$navy-deep",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "20 – 41",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "dZMrB",
+              "name": "Row 7",
+              "width": "fill_container",
+              "stroke": "$cream",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 24,
+              "padding": [
+                8,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "zDM9d",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 900,
+                  "content": "Word-detail headword (Scheherazade)",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "pyTQt",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "56",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "luZ1K",
+                  "name": "Cell",
+                  "fill": "$navy-deep",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "64",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fmhx7",
+              "name": "Row 8",
+              "width": "fill_container",
+              "stroke": "$cream",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 24,
+              "padding": [
+                8,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "isT2X",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 900,
+                  "content": "Quran page line (Scheherazade)",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "GEybI",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "phone page width",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "rTD9A",
+                  "name": "Cell",
+                  "fill": "$navy-deep",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "38 in a 760-wide page column",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "jUP7j",
+          "name": "Implementation Contract",
+          "width": 2900,
+          "fill": "$parchment-soft",
+          "cornerRadius": "$radius-lg",
+          "layout": "vertical",
+          "gap": 10,
+          "padding": 28,
+          "children": [
+            {
+              "type": "text",
+              "id": "rkCbr",
+              "name": "Contract Title",
+              "fill": "$navy-deep",
+              "content": "Implementation contract (after approval)",
+              "fontFamily": "Cormorant Garamond",
+              "fontSize": 26,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "p4sxC",
+              "name": "Contract Line",
+              "fill": "$ink",
+              "textGrowth": "fixed-width",
+              "width": 2840,
+              "content": "• Applies only when the web viewport is 1024px or wider; native Android and mobile web are untouched. No global zoom.",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "OYhHd",
+              "name": "Contract Line",
+              "fill": "$ink",
+              "textGrowth": "fixed-width",
+              "width": 2840,
+              "content": "• One shared desktop type scale in constants/theme.ts, applied screen by screen: Learn, Chapters, Chapter detail, Vocabulary, Word detail, You, Quran reader — then the lesson player and Noor in a later pass.",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "QgkZR",
+              "name": "Contract Line",
+              "fill": "$ink",
+              "textGrowth": "fixed-width",
+              "width": 2840,
+              "content": "• Quran reader on desktop: page column capped at 760 and centred, Arabic line size raised, empty gap above the surah header removed; the 15-line page stays 15 lines.",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "Z2zERv",
+              "name": "Contract Line",
+              "fill": "$ink",
+              "textGrowth": "fixed-width",
+              "width": 2840,
+              "content": "• Layout, colours, structure and copy do not change. Check each screen at 1280, 1440 and 1920 before shipping; deploy web only.",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "JsCwc",
+              "name": "Contract Line",
+              "fill": "$ink",
+              "textGrowth": "fixed-width",
+              "width": 2840,
+              "content": "• Shared C/Sidebar Nav has four items; the real app has five (Learn, Vocabulary, Quran, Noor, You). P07 shows the five-item sidebar; update the component when this is built.",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "JsWaT",
+              "name": "Contract Line",
+              "fill": "$ink",
+              "textGrowth": "fixed-width",
+              "width": 2840,
+              "content": "• Not in this proposal: Quran translation (switched off, Coming soon) and the 13-line layout (Later).",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
     }
   ],
   "variables": {
