@@ -364,13 +364,15 @@ unpublished curriculum commits and unrelated working-tree edits.
   force-stop resume, completion and unlocking in English/Urdu. Live API checks
   verified those server behaviours, duplicate answers and unchanged practice
   credit/SRS; the temporary live account and its dependent records were removed.
-- **Remaining:** production browser cards rendered, but starting a test returned
-  a Vercel HTML Security Checkpoint 403 on both attempts, before the feature API;
-  production browser test completion remains unverified. Existing unrelated
-  fixture metadata errors in chapter-51-lesson-09 and chapter-52-lesson-06, plus
-  99 database-ahead and 93 missing lesson mirrors, were left untouched. Installed
-  Android clients need a separate Google Play release for the new screens; no
-  new Play submission or release APK was made for this rollout.
+- **Production verification (2026-10-09):** through `app.warsh.app` (the browser origin) the
+  assessment GET, start, answer, retry and complete calls all return 200 with no
+  Security Checkpoint; a full run on set 1 (wrong answers, review, retry rounds,
+  correct finish) completed the set with streak and coverage credit. The earlier 403
+  was Vercel's transient IP-level checkpoint. The fixture mirror is current
+  (`content:check`: 607 in sync, 0 missing, 0 conflicts) and `db:validate-fixtures`
+  passes for all 607 lessons, so the earlier fixture-metadata and mirror gaps are
+  closed. Installed Android clients need a separate Google Play release for the new
+  screens (1.0.15 carries them).
 
 The approved design, detailed implementation boundaries, content sources and
 maintenance commands are recorded in
@@ -440,7 +442,7 @@ an emulator smoke test of the matching APK (launches, production content loads, 
 tests, the Ch 26–72 curriculum harvest, and the refreshed QUL Indo-Pak 15-line pages
 (page 472 ayah marker; page 1 centred; page 443 was already correct in our build).
 Web shipped with the push of `f7c787b` (warsh-web and warsh-site Production
-deployments). Play review pending.
+deployments). Approved and live on Google Play.
 
 Implemented from the 2026-09-24 UX evaluation (owner asked to implement
 directly; Pen section 31 holds the proposals). Web ships with the push;
@@ -526,21 +528,10 @@ Still open from the evaluation:
   are standard except عَصا and عاد, whose roots were cleared (they show none;
   `scripts/clear-doubtful-roots.ts`). The جَمْع example was a sentence fragment and
   was replaced by 54:45 (`scripts/fix-jam-example.ts`). Nothing open here.
-- **Quran translation under the page — switched off 2026-10-09 (owner decision).**
-  The Urdu and English options in Reading settings now show "Coming soon" and
-  cannot be selected; a translation a learner saved earlier is ignored. One
-  flag, `QURAN_TRANSLATION_ENABLED` in `services/quran/translations.ts`, brings
-  it back. Web is live after `deploy:web`; Android gets it with the next release
-  build. Reason: the web problem below.
-- **Quran reader on web — checked 2026-10-09 (app.warsh.app, 1528px Chrome).** Works:
-  surah list, Al-Fatihah and Al-Baqarah p. 2 render with tajweed colours and the
-  legend, page turning, reading settings, Urdu translation text (right-to-left,
-  numbered, credited). Found: (1) with a translation on, the strip under the
-  page could not be opened with the mouse wheel, a click or the chevron — only
-  the Space key scrolled to the translation (`quran/[page].tsx` nests a vertical
-  ScrollView in the horizontal page FlatList; confirm with a real mouse and fix);
-  (2) on a wide window the 15-line page is small with a large empty gap above the
-  surah header and, on page 2, words spread very wide — fixed by M18 (760px centred column).
+- **Quran translation under the page** is switched off ("Coming soon"; flag
+  `QURAN_TRANSLATION_ENABLED` in `services/quran/translations.ts`). The web reader
+  scroll problem with a translation on (nested ScrollView in `quran/[page].tsx`)
+  is to be handled when translation is re-enabled.
 - **Tadabbur Urdu — done in production 2026-10-09.** All 55 ayat of the 11 Tadabbur
   Surahs now carry the Junagarhi Urdu translation (the one the Mushaf reader
   ships), written by `npm run content:add-tadabbur-urdu -- --apply`. It fills
