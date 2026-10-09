@@ -522,9 +522,10 @@ Still open from the evaluation:
   (rebuild with `scripts/prepare-word-detail.ts`); written by
   `scripts/apply-word-detail.ts` (dry run by default, fills empty fields only,
   "no example" is stored as JSON null). Verified on the emulator against
-  production (9 words). Open: 90 roots matched loosely and are marked `check`
-  for owner review; the جَمْع example was a sentence fragment and was replaced by 54:45 on 2026-10-09
-  (`scripts/fix-jam-example.ts`).
+  production (9 words). Reviewed 2026-10-09: the 90 loosely matched roots
+  are standard except عَصا and عاد, whose roots were cleared (they show none;
+  `scripts/clear-doubtful-roots.ts`). The جَمْع example was a sentence fragment and
+  was replaced by 54:45 (`scripts/fix-jam-example.ts`). Nothing open here.
 - **Quran translation under the page — switched off 2026-10-09 (owner decision).**
   The Urdu and English options in Reading settings now show "Coming soon" and
   cannot be selected; a translation a learner saved earlier is ignored. One
