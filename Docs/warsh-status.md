@@ -254,7 +254,9 @@ files remain release evidence.
   meanings.
   Verified 2026-09-23 on a release APK on the `Warsh_API_34` emulator (list,
   page 2, the widest page 591, page 300, tajweed on/off, rule sheet, settings,
-  bookmark, swipe direction, Learn card resume). Not yet checked on web.
+  bookmark, swipe direction, Learn card resume). Checked on web 2026-10-09 against
+  staging at 1552px: surah list, resume card, Indo-Pak 15-line page with tajweed,
+  page turn, settings sheet, parah label.
 - Indo-Pak 15-line Mushaf (Pen section 28), the reader's default since
   2026-09-23; Madani stays selectable in Reading settings. 610 pages from the
   Qudratullah (Lahore) 15-line layout, which the owner confirmed matches the Taj
@@ -510,9 +512,14 @@ Still open from the evaluation:
   colours and copy are unchanged. Checked by the owner on local web (lesson
   ch72-l16: exercise, ayah and word beats readable, nothing clipped); the Haiku
   tester could not finish because the Chrome extension disconnected, so the other
-  exercise types (write/harakah, dialogue, parse, shadow-repeat, verb pattern,
-  conversation, answer-it) and the 900px window were not re-measured — look at
-  them next time the web app is open. Android is unaffected.
+  exercise types and the 900px window were re-checked on local web against staging
+  (2026-10-09): verb-pattern table (smallest text 14px), tap-translation (15px), the
+  spoken-phrase lab's listen and phrase steps and the lesson cards all scale at
+  ≥ 1024px with nothing clipped; at 900px (an iframe, because the Chrome tool cannot
+  hold a narrow viewport) the phone scale applies unchanged. Every style in the lab,
+  shadow-repeat, answer-it and player files goes through `desktopFontSize`. Not
+  exercised on screen: write/harakah (no published lesson uses them), grammar parse,
+  conversation builder and the answer-it chat. Android is unaffected.
 - **Word detail data (M12) — done in production 2026-10-09.** Roots 444 → 820,
   words with related words 179 → 481, words with a Quran example 55 → 642.
   Roots come from the Quranic Arabic Corpus (v0.4, GPL, not committed) for words
@@ -529,9 +536,11 @@ Still open from the evaluation:
   `scripts/clear-doubtful-roots.ts`). The جَمْع example was a sentence fragment and
   was replaced by 54:45 (`scripts/fix-jam-example.ts`). Nothing open here.
 - **Quran translation under the page** is switched off ("Coming soon"; flag
-  `QURAN_TRANSLATION_ENABLED` in `services/quran/translations.ts`). The web reader
-  scroll problem with a translation on (nested ScrollView in `quran/[page].tsx`)
-  is to be handled when translation is re-enabled.
+  `QURAN_TRANSLATION_ENABLED` in `services/quran/translations.ts`) by owner decision.
+  The web problem is fixed and verified with the flag on (2026-10-09): the peek strip
+  is now a button that scrolls to the translation, and the page's scroller handles the
+  mouse wheel itself (the inverted horizontal pager swallowed it). Turning it back on
+  is the one-line flag change; Android has not been re-tested with the new strip button.
 - **Tadabbur Urdu — done in production 2026-10-09.** All 55 ayat of the 11 Tadabbur
   Surahs now carry the Junagarhi Urdu translation (the one the Mushaf reader
   ships), written by `npm run content:add-tadabbur-urdu -- --apply`. It fills

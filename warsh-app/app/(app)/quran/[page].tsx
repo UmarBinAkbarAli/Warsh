@@ -1,9 +1,10 @@
 import { Ionicons } from "@expo/vector-icons";
 import { activateKeepAwakeAsync, deactivateKeepAwake } from "expo-keep-awake";
 import { useLocalSearchParams, useRouter } from "expo-router";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import {
   FlatList,
+  Platform,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -19,7 +20,7 @@ import { PageTranslation, TRANSLATION_PEEK_HEIGHT, TranslationPeek } from "@comp
 import { QuranSettingsSheet, TajweedLegend, TajweedRuleSheet } from "@components/quran/QuranSheets";
 import { useT } from "@i18n/index";
 import { useQuranStore } from "@stores/quranStore";
-import { QURAN_TRANSLATION_ENABLED } from "../../../services/quran/translations";
+import { QURAN_TRANSLATION_ENABLED, type QuranTranslation } from "../../../services/quran/translations";
 import { Colors, Fonts, FontSizes, IS_DESKTOP_WEB, LineHeights, Radii, Spacing, TajweedPalette, WarshPalette } from "../../../constants/theme";
 import {
   ayahForPage,
@@ -31,14 +32,71 @@ import {
   pageCount,
   pageForAyah,
   surahForPage,
+  type MushafLayout,
   type QuranWord,
 } from "../../../services/quran/data";
 
+const IS_WEB = Platform.OS === "web";
 const KEEP_AWAKE_TAG = "quran-reader";
 const PAGE_GUTTER = Spacing.md;
 // Laptop width (Pen section 32): the Mushaf page keeps a readable column instead
 // of stretching, which spread the words of each justified line far apart.
 const DESKTOP_PAGE_MAX_WIDTH = 760;
+
+/**
+ * A page with its translation below. The peek strip is also a button, so a
+ * mouse user on web (no flick gesture) can open the translation with a click.
+ */
+function TranslatedPage({
+  width,
+  height,
+  translation,
+  layout,
+  pageNumber,
+  children,
+}: {
+  width: number;
+  height: number;
+  translation: QuranTranslation;
+  layout: MushafLayout;
+  pageNumber: number;
+  children: ReactNode;
+}) {
+  const scrollRef = useRef<ScrollView | null>(null);
+  // On web the mouse wheel never reached this scroller (the page sits inside a
+  // horizontal, inverted pager), so the translation could only be reached with
+  // the scrollbar. Scroll it directly from the wheel.
+  const wheelCleanup = useRef<(() => void) | null>(null);
+  const attachRef = useCallback((instance: ScrollView | null) => {
+    scrollRef.current = instance;
+    wheelCleanup.current?.();
+    wheelCleanup.current = null;
+    const node = IS_WEB ? (instance?.getScrollableNode() as unknown as HTMLElement | undefined) : undefined;
+    if (!node?.addEventListener) return;
+    const onWheel = (event: WheelEvent) => {
+      if (event.ctrlKey || Math.abs(event.deltaY) < Math.abs(event.deltaX)) return;
+      const max = node.scrollHeight - node.clientHeight;
+      if ((event.deltaY < 0 && node.scrollTop <= 0) || (event.deltaY > 0 && node.scrollTop >= max)) return;
+      node.scrollTop += event.deltaY;
+      event.preventDefault();
+    };
+    node.addEventListener("wheel", onWheel, { passive: false });
+    wheelCleanup.current = () => node.removeEventListener("wheel", onWheel);
+  }, []);
+  return (
+    <ScrollView
+      ref={attachRef}
+      style={{ width, height }}
+      contentContainerStyle={{ paddingHorizontal: PAGE_GUTTER, alignItems: "center" }}
+      showsVerticalScrollIndicator={IS_WEB}
+      nestedScrollEnabled
+    >
+      {children}
+      <TranslationPeek translation={translation} onPress={() => scrollRef.current?.scrollTo({ y: height, animated: true })} />
+      <PageTranslation layout={layout} pageNumber={pageNumber} translation={translation} />
+    </ScrollView>
+  );
+}
 
 /**
  * The Mushaf reader (Pen sections 27 and 28). Pages run right to left like a
@@ -148,16 +206,9 @@ export default function QuranReaderScreen() {
       // printed lines, a strip peeks below it, and the page scrolls down to
       // the translation of its ayahs.
       return (
-        <ScrollView
-          style={{ width: size.width, height: size.height }}
-          contentContainerStyle={{ paddingHorizontal: PAGE_GUTTER, alignItems: "center" }}
-          showsVerticalScrollIndicator={false}
-          nestedScrollEnabled
-        >
+        <TranslatedPage width={size.width} height={size.height} translation={translation} layout={layout} pageNumber={item}>
           {mushafPage}
-          <TranslationPeek translation={translation} />
-          <PageTranslation layout={layout} pageNumber={item} translation={translation} />
-        </ScrollView>
+        </TranslatedPage>
       );
     },
     [size, layout, tajweed, tapped, translation],

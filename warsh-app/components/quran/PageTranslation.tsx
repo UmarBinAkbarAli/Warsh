@@ -1,5 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";
-import { StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 import { useT } from "@i18n/index";
 import { useLanguage } from "@services/language";
@@ -24,12 +24,17 @@ const CREDIT_KEY: Record<QuranTranslation, string> = {
 };
 
 /** The strip that peeks under the Mushaf page: scroll down to read on. */
-export function TranslationPeek({ translation }: { translation: QuranTranslation }) {
+export function TranslationPeek({ translation, onPress }: { translation: QuranTranslation; onPress?: () => void }) {
   const t = useT();
   // Labels follow the app language; only the ayah text follows the translation.
   const rtl = useLanguage() === "ur";
   return (
-    <View style={[styles.peek, rtl && styles.rowRtl]}>
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityLabel={t("quran.translation.peekTitle", { name: t(NAME_KEY[translation]) })}
+      style={[styles.peek, rtl && styles.rowRtl]}
+    >
       <Ionicons name="language-outline" size={18} color={WarshPalette.sageDeep} />
       <View style={styles.peekCopy}>
         <Text style={[styles.peekTitle, rtl && styles.textRtl]} numberOfLines={1}>
@@ -40,7 +45,7 @@ export function TranslationPeek({ translation }: { translation: QuranTranslation
         </Text>
       </View>
       <Ionicons name="chevron-down" size={18} color={Colors.text.muted} />
-    </View>
+    </Pressable>
   );
 }
 
