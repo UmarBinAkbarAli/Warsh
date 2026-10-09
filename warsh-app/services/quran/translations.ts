@@ -6,6 +6,12 @@ import { chapters, clampPage, type MushafLayout, pageCount, pageStart } from "./
 
 export type QuranTranslation = "ur-junagarhi" | "en-pickthall";
 
+// Owner decision 2026-10-09: the translation under the page is listed as
+// "coming soon" and switched off. The strip under the Mushaf page could not be
+// opened with a mouse on web. Set this to true to bring the feature back; a
+// translation a learner saved earlier is ignored while it is false.
+export const QURAN_TRANSLATION_ENABLED = false;
+
 export const TRANSLATIONS: {
   key: QuranTranslation;
   titleKey: string;

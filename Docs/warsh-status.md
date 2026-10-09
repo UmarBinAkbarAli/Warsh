@@ -506,6 +506,12 @@ Still open from the evaluation:
   "no example" is stored as JSON null). Verified on the emulator against
   production (9 words). Open: 90 roots matched loosely and are marked `check`
   for owner review; the verse for جَمْع (100:5) has a fragment translation.
+- **Quran translation under the page — switched off 2026-10-09 (owner decision).**
+  The Urdu and English options in Reading settings now show "Coming soon" and
+  cannot be selected; a translation a learner saved earlier is ignored. One
+  flag, `QURAN_TRANSLATION_ENABLED` in `services/quran/translations.ts`, brings
+  it back. Web is live after `deploy:web`; Android gets it with the next release
+  build. Reason: the web problem below.
 - **Quran reader on web — checked 2026-10-09 (app.warsh.app, 1528px Chrome).** Works:
   surah list, Al-Fatihah and Al-Baqarah p. 2 render with tajweed colours and the
   legend, page turning, reading settings, Urdu translation text (right-to-left,

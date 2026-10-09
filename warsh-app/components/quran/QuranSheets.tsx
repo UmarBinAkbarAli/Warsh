@@ -8,7 +8,7 @@ import { useQuranStore } from "@stores/quranStore";
 import { Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
 import { hasTajweed, isIndoPak, segmentsOf, wordText, type MushafLayout, type QuranWord } from "../../services/quran/data";
 import { TAJWEED_LEGEND, TAJWEED_RULES, rulesInWord } from "../../services/quran/tajweed";
-import { TRANSLATIONS, type QuranTranslation } from "../../services/quran/translations";
+import { QURAN_TRANSLATION_ENABLED, TRANSLATIONS, type QuranTranslation } from "../../services/quran/translations";
 import { INDOPAK_FONT, QURAN_FONT } from "./MushafPage";
 
 function BottomSheet({ visible, onClose, children }: { visible: boolean; onClose: () => void; children: ReactNode }) {
@@ -96,20 +96,27 @@ export function QuranSettingsSheet({ visible, onClose }: { visible: boolean; onC
 
         <Text style={[styles.label, styles.labelSpaced]}>{t("quran.settings.translation")}</Text>
         {translationOptions.map(({ key, titleKey, subKey }) => {
-          const selected = key === translation;
+          const soon = !QURAN_TRANSLATION_ENABLED && key !== null;
+          const selected = QURAN_TRANSLATION_ENABLED ? key === translation : key === null;
           return (
             <Pressable
               key={key ?? "off"}
-              onPress={() => setTranslation(key)}
-              style={[styles.option, selected && styles.optionSelected]}
+              onPress={soon ? undefined : () => setTranslation(key)}
+              disabled={soon}
+              style={[styles.option, selected && styles.optionSelected, soon && styles.optionDisabled]}
               accessibilityRole="radio"
-              accessibilityState={{ selected }}
+              accessibilityState={{ selected, disabled: soon }}
             >
               <View style={[styles.radio, selected && styles.radioOn]} />
               <View style={styles.optionCopy}>
                 <Text style={styles.optionTitle}>{t(titleKey)}</Text>
                 <Text style={styles.optionSub}>{t(subKey)}</Text>
               </View>
+              {soon ? (
+                <View style={styles.soonPill}>
+                  <Text style={styles.soonText}>{t("quran.settings.comingSoon")}</Text>
+                </View>
+              ) : null}
             </Pressable>
           );
         })}

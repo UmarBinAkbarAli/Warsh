@@ -19,6 +19,7 @@ import { PageTranslation, TRANSLATION_PEEK_HEIGHT, TranslationPeek } from "@comp
 import { QuranSettingsSheet, TajweedLegend, TajweedRuleSheet } from "@components/quran/QuranSheets";
 import { useT } from "@i18n/index";
 import { useQuranStore } from "@stores/quranStore";
+import { QURAN_TRANSLATION_ENABLED } from "../../../services/quran/translations";
 import { Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, TajweedPalette, WarshPalette } from "../../../constants/theme";
 import {
   ayahForPage,
@@ -52,7 +53,8 @@ export default function QuranReaderScreen() {
   const tajweed = tajweedOn && hasTajweed(layout);
   const setTajweed = useQuranStore((s) => s.setTajweed);
   const keepAwake = useQuranStore((s) => s.keepAwake);
-  const translation = useQuranStore((s) => s.translation);
+  const savedTranslation = useQuranStore((s) => s.translation);
+  const translation = QURAN_TRANSLATION_ENABLED ? savedTranslation : null;
   const bookmarks = useQuranStore((s) => s.bookmarks);
   const toggleBookmark = useQuranStore((s) => s.toggleBookmark);
   const setLastAyah = useQuranStore((s) => s.setLastAyah);
