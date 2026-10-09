@@ -475,8 +475,8 @@ const styles = StyleSheet.create({
   streakNumber: {
     color: Theme.WarshPalette.sage,
     fontFamily: Theme.Fonts.bold,
-    fontSize: 40,
-    lineHeight: 48,
+    fontSize: Theme.desktopFontSize(40),
+    lineHeight: Theme.desktopLineHeight(48, 40),
     fontVariant: ["lining-nums", "tabular-nums"],
   },
   streakLabel: {
@@ -549,8 +549,8 @@ const styles = StyleSheet.create({
     marginTop: Theme.Spacing.xs,
     color: Theme.WarshPalette.sage,
     fontFamily: Theme.Fonts.bold,
-    fontSize: 24,
-    lineHeight: 34,
+    fontSize: Theme.desktopFontSize(24),
+    lineHeight: Theme.desktopLineHeight(34, 24),
     textAlign: "center",
     fontVariant: ["lining-nums", "tabular-nums"],
   },
@@ -646,8 +646,8 @@ const styles = StyleSheet.create({
   achievementTitle: {
     marginTop: 4,
     color: Theme.WarshPalette.subtleBrown,
-    fontSize: 12,
-    lineHeight: 16,
+    fontSize: Theme.desktopFontSize(12),
+    lineHeight: Theme.desktopLineHeight(16, 12),
     textAlign: "center",
   },
   achievementMore: {
@@ -684,8 +684,8 @@ const styles = StyleSheet.create({
   speakingCount: {
     color: Theme.WarshPalette.ink,
     fontFamily: Theme.Fonts.bold,
-    fontSize: 30,
-    lineHeight: 38,
+    fontSize: Theme.desktopFontSize(30),
+    lineHeight: Theme.desktopLineHeight(38, 30),
     fontVariant: ["lining-nums", "tabular-nums"],
   },
   speakingSub: {

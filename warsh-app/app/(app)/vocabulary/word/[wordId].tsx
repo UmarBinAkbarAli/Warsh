@@ -17,7 +17,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { ArabicText } from "@components/ArabicText";
 import { PlayButton } from "@components/PlayButton";
 import { ScreenHeader } from "@components/ScreenHeader";
-import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../../../constants/theme";
+import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette, desktopFontSize, desktopLineHeight } from "../../../../constants/theme";
 import { getVocabularyWordDetail, updateUserVocabularyWord } from "@services/api";
 import { useTranslationLanguage, pickTranslation, pickLocalized } from "@services/language";
 import { useT } from "@i18n/index";
@@ -474,12 +474,12 @@ const styles = StyleSheet.create({
   ayahContainer: { marginBottom: Spacing.sm },
   ayahText: { textAlign: "right" },
   ayahWordDefault: {
-    fontFamily: Fonts.arabic, fontSize: 20,
-    color: WarshPalette.ink, lineHeight: 34,
+    fontFamily: Fonts.arabic, fontSize: desktopFontSize(20, "display"),
+    color: WarshPalette.ink, lineHeight: desktopLineHeight(34, 20, "display"),
   },
   ayahWordGold: {
-    fontFamily: Fonts.arabic, fontSize: 20,
-    color: WarshPalette.goldText, lineHeight: 34,
+    fontFamily: Fonts.arabic, fontSize: desktopFontSize(20, "display"),
+    color: WarshPalette.goldText, lineHeight: desktopLineHeight(34, 20, "display"),
   },
   ayahMeta: {
     flexDirection: "row", alignItems: "center",

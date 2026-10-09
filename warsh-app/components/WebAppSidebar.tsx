@@ -3,7 +3,7 @@ import { usePathname, useRouter } from "expo-router";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
 import { useAuthStore } from "../stores/authStore";
-import { Fonts, Radii, Spacing, WarshPalette } from "../constants/theme";
+import { Fonts, Radii, Spacing, WarshPalette, desktopFontSize } from "../constants/theme";
 
 type NavItem = {
   label: string;
@@ -148,12 +148,12 @@ const styles = StyleSheet.create({
   markGlyph: {
     color: WarshPalette.gold,
     fontFamily: Fonts.arabic,
-    fontSize: 22,
+    fontSize: desktopFontSize(22, "display"),
   },
   wordmark: {
     color: WarshPalette.navy,
     fontFamily: Fonts.bold,
-    fontSize: 15,
+    fontSize: desktopFontSize(15),
     letterSpacing: 3,
   },
   nav: {
@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
   navLabel: {
     color: WarshPalette.bodyBrown,
     fontFamily: Fonts.semiBold,
-    fontSize: 14,
+    fontSize: desktopFontSize(14),
   },
   navLabelSelected: {
     color: WarshPalette.white,
@@ -205,7 +205,7 @@ const styles = StyleSheet.create({
   avatarText: {
     color: WarshPalette.navy,
     fontFamily: Fonts.semiBold,
-    fontSize: 14,
+    fontSize: desktopFontSize(14),
   },
   footerCopy: {
     flex: 1,
@@ -215,11 +215,11 @@ const styles = StyleSheet.create({
   footerName: {
     color: WarshPalette.ink,
     fontFamily: Fonts.semiBold,
-    fontSize: 13,
+    fontSize: desktopFontSize(13),
   },
   footerMeta: {
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.regular,
-    fontSize: 12,
+    fontSize: desktopFontSize(12),
   },
 });

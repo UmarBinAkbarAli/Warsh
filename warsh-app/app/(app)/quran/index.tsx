@@ -8,7 +8,7 @@ import { INDOPAK_FONT, QURAN_FONT } from "@components/quran/MushafPage";
 import { QuranSettingsSheet } from "@components/quran/QuranSheets";
 import { useT } from "@i18n/index";
 import { useQuranStore } from "@stores/quranStore";
-import { Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette } from "../../../constants/theme";
+import { Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette, desktopFontSize, desktopLineHeight } from "../../../constants/theme";
 import {
   chapters,
   getChapter,
@@ -427,13 +427,13 @@ const styles = StyleSheet.create({
   },
   rowArabic: {
     fontFamily: QURAN_FONT,
-    fontSize: 20,
-    lineHeight: 34,
+    fontSize: desktopFontSize(20, "display"),
+    lineHeight: desktopLineHeight(34, 20, "display"),
     color: WarshPalette.navy,
   },
   rowArabicIndoPak: {
     fontFamily: INDOPAK_FONT,
-    fontSize: 18,
+    fontSize: desktopFontSize(18, "display"),
   },
   rowPage: {
     fontFamily: Fonts.regular,

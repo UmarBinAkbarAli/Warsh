@@ -30,6 +30,8 @@ import {
   Spacing,
   WarshAlpha,
   WarshPalette,
+  desktopFontSize,
+  desktopLineHeight,
 } from "../../../constants/theme";
 
 // ─── helpers ──────────────────────────────────────────────────────────────────
@@ -577,13 +579,13 @@ const styles = StyleSheet.create({
   androidContent: { paddingHorizontal: Spacing.gutter, paddingTop: Spacing.sm, paddingBottom: Spacing.xl * 3 },
   androidMain: { width: "100%" },
   androidChapterTitle: {
-    fontSize: 26,
-    lineHeight: 30,
+    fontSize: desktopFontSize(26),
+    lineHeight: desktopLineHeight(30, 26),
     fontFamily: Fonts.semiBold,
     letterSpacing: -0.2,
     marginBottom: Spacing.xs,
   },
-  androidChapterTitleAr: { fontSize: 22, lineHeight: 30, textAlign: "right", marginBottom: Spacing.xs },
+  androidChapterTitleAr: { fontSize: desktopFontSize(22), lineHeight: desktopLineHeight(30, 22), textAlign: "right", marginBottom: Spacing.xs },
   androidChapterDesc: {
     color: WarshPalette.subtleBrown,
     fontSize: FontSizes.bodyM,
@@ -595,7 +597,7 @@ const styles = StyleSheet.create({
   androidProgress: { marginTop: Spacing.lg, gap: Spacing.sm },
   androidProgressSummary: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
   androidProgressSummaryRtl: { flexDirection: "row-reverse" },
-  androidProgressLabel: { color: WarshPalette.bodyBrown, fontFamily: Fonts.semiBold, fontSize: 13, lineHeight: 16 },
+  androidProgressLabel: { color: WarshPalette.bodyBrown, fontFamily: Fonts.semiBold, fontSize: desktopFontSize(13), lineHeight: desktopLineHeight(16, 13) },
   androidProgressPercent: { color: WarshPalette.goldText, fontFamily: Fonts.semiBold, fontSize: FontSizes.caption, lineHeight: 16 },
   androidProgressTrack: { height: 4, borderRadius: 2, overflow: "hidden", backgroundColor: WarshPalette.progressTrack },
   androidProgressFill: { height: 4, borderRadius: 2, backgroundColor: WarshPalette.gold },
@@ -623,8 +625,8 @@ const styles = StyleSheet.create({
   androidStatusBadgeText: {
     color: WarshPalette.goldText,
     fontFamily: Fonts.bold,
-    fontSize: 10,
-    lineHeight: 13,
+    fontSize: desktopFontSize(10),
+    lineHeight: desktopLineHeight(13, 10),
     textTransform: "uppercase",
   },
 

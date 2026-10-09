@@ -20,7 +20,7 @@ import { QuranSettingsSheet, TajweedLegend, TajweedRuleSheet } from "@components
 import { useT } from "@i18n/index";
 import { useQuranStore } from "@stores/quranStore";
 import { QURAN_TRANSLATION_ENABLED } from "../../../services/quran/translations";
-import { Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, TajweedPalette, WarshPalette } from "../../../constants/theme";
+import { Colors, Fonts, FontSizes, IS_DESKTOP_WEB, LineHeights, Radii, Spacing, TajweedPalette, WarshPalette } from "../../../constants/theme";
 import {
   ayahForPage,
   clampPage,
@@ -36,6 +36,9 @@ import {
 
 const KEEP_AWAKE_TAG = "quran-reader";
 const PAGE_GUTTER = Spacing.md;
+// Laptop width (Pen section 32): the Mushaf page keeps a readable column instead
+// of stretching, which spread the words of each justified line far apart.
+const DESKTOP_PAGE_MAX_WIDTH = 760;
 
 /**
  * The Mushaf reader (Pen sections 27 and 28). Pages run right to left like a
@@ -131,7 +134,7 @@ export default function QuranReaderScreen() {
         <MushafPage
           layout={layout}
           pageNumber={item}
-          width={size.width - PAGE_GUTTER * 2}
+          width={IS_DESKTOP_WEB ? Math.min(size.width - PAGE_GUTTER * 2, DESKTOP_PAGE_MAX_WIDTH) : size.width - PAGE_GUTTER * 2}
           height={translation ? size.height - TRANSLATION_PEEK_HEIGHT : size.height}
           tajweed={tajweed}
           selectedWord={tapped && tapped.page === item ? tapped.key : null}
@@ -139,7 +142,7 @@ export default function QuranReaderScreen() {
         />
       );
       if (!translation) {
-        return <View style={{ width: size.width, height: size.height, paddingHorizontal: PAGE_GUTTER }}>{mushafPage}</View>;
+        return <View style={{ width: size.width, height: size.height, paddingHorizontal: PAGE_GUTTER, alignItems: "center" }}>{mushafPage}</View>;
       }
       // Translation under the page (Pen section 30): the page keeps its
       // printed lines, a strip peeks below it, and the page scrolls down to
@@ -147,7 +150,7 @@ export default function QuranReaderScreen() {
       return (
         <ScrollView
           style={{ width: size.width, height: size.height }}
-          contentContainerStyle={{ paddingHorizontal: PAGE_GUTTER }}
+          contentContainerStyle={{ paddingHorizontal: PAGE_GUTTER, alignItems: "center" }}
           showsVerticalScrollIndicator={false}
           nestedScrollEnabled
         >

@@ -13,6 +13,8 @@ import {
   Spacing,
   WarshAlpha,
   WarshPalette,
+  desktopFontSize,
+  desktopLineHeight,
 } from "../../constants/theme";
 
 export type PathLesson = {
@@ -645,8 +647,8 @@ const styles = StyleSheet.create({
   letterText: {
     color: WarshPalette.parchment,
     opacity: 0.7,
-    fontSize: 18,
-    lineHeight: 28,
+    fontSize: desktopFontSize(18),
+    lineHeight: desktopLineHeight(28, 18),
   },
   bandEyebrow: {
     color: WarshPalette.parchment,
@@ -658,8 +660,8 @@ const styles = StyleSheet.create({
   bandTitle: {
     color: WarshPalette.white,
     fontFamily: Fonts.semiBold,
-    fontSize: 20,
-    lineHeight: 25,
+    fontSize: desktopFontSize(20),
+    lineHeight: desktopLineHeight(25, 20),
   },
   bandEyebrowAndroid: {
     color: WarshPalette.heroEyebrow,
@@ -671,15 +673,15 @@ const styles = StyleSheet.create({
   },
   bandTitleAndroid: {
     fontFamily: Fonts.bold,
-    fontSize: 24,
-    lineHeight: 29,
+    fontSize: desktopFontSize(24),
+    lineHeight: desktopLineHeight(29, 24),
   },
   bandTitleAndroidRtl: { textAlign: "right" },
   bandArabic: {
     color: WarshPalette.parchment,
     fontFamily: Fonts.arabic,
-    fontSize: 20,
-    lineHeight: 26,
+    fontSize: desktopFontSize(20, "display"),
+    lineHeight: desktopLineHeight(26, 20, "display"),
   },
   bandTrack: {
     height: 6,
@@ -840,8 +842,8 @@ const styles = StyleSheet.create({
     width: "100%",
     color: WarshPalette.bodyBrown,
     textAlign: "right",
-    fontSize: 18,
-    lineHeight: 28,
+    fontSize: desktopFontSize(18),
+    lineHeight: desktopLineHeight(28, 18),
   },
   rowArabicAndroid: { fontSize: FontSizes.bodyM, lineHeight: 16 },
   progressRow: {

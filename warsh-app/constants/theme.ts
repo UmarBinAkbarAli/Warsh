@@ -1,3 +1,5 @@
+import { Platform } from "react-native";
+
 // Spec-11 §2 locked brand palette. Key names kept from the legacy theme
 // (renaming 300+ call sites isn't worth it) but every VALUE now maps to a
 // spec token by role — the spec name is noted on each line.
@@ -163,7 +165,7 @@ export const Fonts: Record<string, string | undefined> = {
 };
 
 // Spec-11 §3.3 type scale: base body 16/24, screen titles 28/38.
-export const FontSizes = {
+const BaseFontSizes = {
   // Cormorant Garamond display title, 30/36 (2026-08 auth redesign)
   display: 30,
   displayXL: 28,
@@ -185,7 +187,57 @@ export const FontSizes = {
   arabicS: 18,
 } as const;
 
-export const LineHeights = {
+// Laptop type scale (Pen section 32, owner-approved 2026-10-09; M18). Applies
+// only to web at 1024px or wider, read once when the app loads — phones, tablets
+// and narrow web windows keep the sizes above. Phone-size type read small on a
+// laptop; a global CSS zoom was tried and broke the layout, so the scale is
+// applied to the type tokens instead. Resize the window and reload to switch.
+export const DESKTOP_MIN_WIDTH = 1024;
+export const IS_DESKTOP_WEB =
+  Platform.OS === "web" && typeof window !== "undefined" && window.innerWidth >= DESKTOP_MIN_WIDTH;
+
+const DesktopFontSizes: Record<keyof typeof BaseFontSizes, number> = {
+  display: 34,
+  displayXL: 32,
+  displayL: 26,
+  h1: 26,
+  h2: 21,
+  h3: 17,
+  bodyL: 17,
+  bodyM: 16,
+  caption: 14,
+  label: 13,
+  transliteration: 16,
+  arabicXL: 60,
+  arabicDiscover: 50,
+  arabicL: 32,
+  arabicM: 23,
+  arabicS: 21,
+};
+
+export const FontSizes: typeof BaseFontSizes = IS_DESKTOP_WEB
+  ? (DesktopFontSizes as unknown as typeof BaseFontSizes)
+  : BaseFontSizes;
+
+/** A literal font size at laptop width: Inter-style text by the Pen table, display and Arabic ×1.15. */
+export function desktopFontSize(size: number, kind: "text" | "display" = "text"): number {
+  if (!IS_DESKTOP_WEB) return size;
+  if (kind === "display") return Math.round(size * 1.15);
+  if (size <= 11) return 13;
+  if (size <= 12.5) return 14;
+  if (size <= 13.5) return 15;
+  if (size <= 14.5) return 16;
+  if (size <= 15.5) return 17;
+  return size + 2;
+}
+
+/** The line height that goes with a scaled literal font size, so larger text is not clipped. */
+export function desktopLineHeight(lineHeight: number, size: number, kind: "text" | "display" = "text"): number {
+  if (!IS_DESKTOP_WEB) return lineHeight;
+  return Math.round((lineHeight * desktopFontSize(size, kind)) / size);
+}
+
+const BaseLineHeights = {
   display: 36,
   displayXL: 38,
   displayL: 32,
@@ -203,6 +255,16 @@ export const LineHeights = {
   arabicM: 32,
   arabicS: 30,
 } as const;
+
+// Line heights follow their type token so a scaled size keeps its leading.
+export const LineHeights: typeof BaseLineHeights = IS_DESKTOP_WEB
+  ? (Object.fromEntries(
+      Object.entries(BaseLineHeights).map(([key, value]) => [
+        key,
+        Math.round((value * DesktopFontSizes[key as keyof typeof DesktopFontSizes]) / BaseFontSizes[key as keyof typeof BaseFontSizes]),
+      ]),
+    ) as unknown as typeof BaseLineHeights)
+  : BaseLineHeights;
 
 // Four corner roles (UX evaluation 2026-09-24). Use a literal radius only for
 // a circle (width == height == 2r) or a hairline progress bar.

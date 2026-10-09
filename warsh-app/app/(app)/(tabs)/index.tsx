@@ -61,6 +61,8 @@ import {
   Shadows,
   Spacing,
   WarshPalette,
+  desktopFontSize,
+  desktopLineHeight,
 } from "../../../constants/theme";
 import {
   isPremiumSuspended,
@@ -1060,21 +1062,21 @@ const styles = StyleSheet.create({
   greeting: {
     color: WarshPalette.ink,
     fontFamily: Fonts.bold,
-    fontSize: 26,
-    lineHeight: 33,
+    fontSize: desktopFontSize(26),
+    lineHeight: desktopLineHeight(33, 26),
     letterSpacing: -0.35,
   },
   greetingAndroid: {
     fontFamily: Fonts.medium,
-    fontSize: 20,
-    lineHeight: 24,
+    fontSize: desktopFontSize(20),
+    lineHeight: desktopLineHeight(24, 20),
     letterSpacing: 0,
   },
   greetingDesktop: {
     color: WarshPalette.navy,
     fontFamily: Fonts.displaySemiBold,
-    fontSize: 30,
-    lineHeight: 38,
+    fontSize: desktopFontSize(30, "display"),
+    lineHeight: desktopLineHeight(38, 30, "display"),
   },
   greetingSubtitle: {
     marginTop: 3,
@@ -1128,7 +1130,7 @@ const styles = StyleSheet.create({
   avatarTextAndroid: {
     color: WarshPalette.white,
     fontFamily: Fonts.medium,
-    fontSize: 15,
+    fontSize: desktopFontSize(15),
   },
   avatarText: {
     color: WarshPalette.parchment,
@@ -1181,19 +1183,19 @@ const styles = StyleSheet.create({
   statLabel: {
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.bold,
-    fontSize: 12,
+    fontSize: desktopFontSize(12),
     letterSpacing: 1.4,
   },
   statValue: {
     color: WarshPalette.navy,
     fontFamily: Fonts.displaySemiBold,
-    fontSize: 34,
-    lineHeight: 40,
+    fontSize: desktopFontSize(34, "display"),
+    lineHeight: desktopLineHeight(40, 34, "display"),
   },
   statCaption: {
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.regular,
-    fontSize: 12,
+    fontSize: desktopFontSize(12),
   },
   coachMarkBubble: {
     flexDirection: "row",
@@ -1227,12 +1229,12 @@ const styles = StyleSheet.create({
     marginBottom: Spacing.xs,
   },
   sectionTitleAndroidRtl: { textAlign: "right" },
-  wordArabicAndroid: { fontSize: 18, lineHeight: 28 },
+  wordArabicAndroid: { fontSize: desktopFontSize(18), lineHeight: desktopLineHeight(28, 18) },
   wordArabic: {
     maxWidth: 120,
     color: WarshPalette.navy,
-    fontSize: 24,
-    lineHeight: 36,
+    fontSize: desktopFontSize(24),
+    lineHeight: desktopLineHeight(36, 24),
   },
   sectionHeadingRow: {
     flexDirection: "row",
