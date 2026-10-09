@@ -10,7 +10,7 @@ import { biasingStrings, checkAlternatives, type AnswerCheck, type AnswerSlot } 
 import { ArabicText } from "./ArabicText";
 import { BrandButton } from "./BrandButton";
 import { PlayButton } from "./PlayButton";
-import { Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette } from "../constants/theme";
+import { Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette, desktopFontSize, desktopLineHeight } from "../constants/theme";
 
 /**
  * "Answer it" — the spoken conversation in a Conversation Lab
@@ -545,10 +545,10 @@ const styles = StyleSheet.create({
   pillRow: { flexDirection: "row", alignItems: "center", gap: Spacing.sm },
   pill: { paddingHorizontal: 11, paddingVertical: 6, borderRadius: Radii.md, backgroundColor: WarshPalette.parchmentBg },
   pillDone: { backgroundColor: WarshPalette.correctBg },
-  pillText: { fontFamily: Fonts.bold, fontSize: 12, letterSpacing: 0.4, color: WarshPalette.goldText },
+  pillText: { fontFamily: Fonts.bold, fontSize: desktopFontSize(12), letterSpacing: 0.4, color: WarshPalette.goldText },
   pillTextDone: { color: WarshPalette.sageDeep },
-  turnCount: { fontFamily: Fonts.bold, fontSize: 12, color: WarshPalette.subtleBrown },
-  mission: { fontFamily: Fonts.bold, fontSize: 15, lineHeight: 21, color: WarshPalette.navy },
+  turnCount: { fontFamily: Fonts.bold, fontSize: desktopFontSize(12), color: WarshPalette.subtleBrown },
+  mission: { fontFamily: Fonts.bold, fontSize: desktopFontSize(15), lineHeight: desktopLineHeight(21, 15), color: WarshPalette.navy },
   chat: { flex: 1 },
   chatBody: { gap: 10, paddingVertical: Spacing.md },
   exchange: { gap: 10 },
@@ -557,22 +557,22 @@ const styles = StyleSheet.create({
   // Mirrored for Urdu: in row-reverse, flex-end is the left edge.
   turnYouRtl: { flexDirection: "row-reverse", justifyContent: "flex-end" },
   avatar: { width: 30, height: 30, borderRadius: 15, alignItems: "center", justifyContent: "center", backgroundColor: WarshPalette.sageSoft },
-  avatarText: { fontFamily: Fonts.bold, fontSize: 12, color: WarshPalette.sageDeep },
+  avatarText: { fontFamily: Fonts.bold, fontSize: desktopFontSize(12), color: WarshPalette.sageDeep },
   bubble: { maxWidth: "78%", paddingHorizontal: 14, paddingVertical: 10, borderRadius: Radii.md, borderWidth: 1, gap: 4 },
   cornerLtr: { borderTopRightRadius: 4 },
   cornerRtl: { borderTopLeftRadius: 4 },
   friendBubble: { backgroundColor: WarshPalette.white, borderColor: WarshPalette.sageSoft, alignItems: "flex-end" },
   friendLine: { flexDirection: "row", alignItems: "center", gap: 10 },
   friendArabic: { color: WarshPalette.navy },
-  meaning: { fontFamily: Fonts.regular, fontSize: 12, color: WarshPalette.subtleBrown },
+  meaning: { fontFamily: Fonts.regular, fontSize: desktopFontSize(12), color: WarshPalette.subtleBrown },
   cue: { flexDirection: "row", alignItems: "center", gap: 6, paddingHorizontal: 10, paddingVertical: 6, borderRadius: Radii.sm, backgroundColor: WarshPalette.parchmentBg, alignSelf: "stretch" },
-  cueText: { flex: 1, fontFamily: Fonts.regular, fontSize: 12, color: WarshPalette.bodyBrown },
+  cueText: { flex: 1, fontFamily: Fonts.regular, fontSize: desktopFontSize(12), color: WarshPalette.bodyBrown },
   slot: { flexDirection: "row", alignItems: "center", gap: 8, paddingHorizontal: 16, paddingVertical: 11, borderWidth: 1.5, borderColor: WarshPalette.gold, backgroundColor: WarshPalette.parchmentBg },
-  slotText: { fontFamily: Fonts.bold, fontSize: 14, color: WarshPalette.goldText },
+  slotText: { fontFamily: Fonts.bold, fontSize: desktopFontSize(14), color: WarshPalette.goldText },
   liveBubble: { flexDirection: "row", alignItems: "center", gap: 8, borderWidth: 1.5, borderColor: WarshPalette.recordingDot, backgroundColor: WarshPalette.white },
   liveText: { color: WarshPalette.subtleBrown },
   recordingBubble: { flexDirection: "row", alignItems: "center", gap: 10, backgroundColor: WarshPalette.navy, borderColor: WarshPalette.navy },
-  recordingText: { fontFamily: Fonts.bold, fontSize: 12, color: WarshPalette.white },
+  recordingText: { fontFamily: Fonts.bold, fontSize: desktopFontSize(12), color: WarshPalette.white },
   answerGood: { backgroundColor: WarshPalette.correctBg, borderColor: WarshPalette.correctBorder, alignItems: "flex-end" },
   answerBad: { backgroundColor: WarshPalette.wrongBg, borderColor: WarshPalette.wrongBorder, alignItems: "flex-end" },
   badge: { width: 22, height: 22, borderRadius: 11, alignItems: "center", justifyContent: "center" },
@@ -585,18 +585,18 @@ const styles = StyleSheet.create({
   wordExtra: { color: WarshPalette.subtleBrown },
   missingChip: { flexDirection: "row", alignItems: "center", gap: 3, paddingHorizontal: 8, borderRadius: Radii.sm, borderWidth: 1.5, borderColor: WarshPalette.wrongText, borderStyle: "dashed" },
   missingText: { color: WarshPalette.wrongText },
-  verdict: { fontFamily: Fonts.bold, fontSize: 12 },
+  verdict: { fontFamily: Fonts.bold, fontSize: desktopFontSize(12) },
   verdictGood: { color: WarshPalette.sageDeep },
   verdictBad: { color: WarshPalette.wrongText },
-  tip: { fontFamily: Fonts.regular, fontSize: 12, lineHeight: 16, color: WarshPalette.bodyBrown },
+  tip: { fontFamily: Fonts.regular, fontSize: desktopFontSize(12), lineHeight: desktopLineHeight(16, 12), color: WarshPalette.bodyBrown },
   modelBubble: { backgroundColor: WarshPalette.white, borderColor: WarshPalette.gold, alignItems: "flex-end" },
-  modelLabel: { fontFamily: Fonts.bold, fontSize: 12, letterSpacing: 0.4, color: WarshPalette.goldText },
+  modelLabel: { fontFamily: Fonts.bold, fontSize: desktopFontSize(12), letterSpacing: 0.4, color: WarshPalette.goldText },
   actions: { flexDirection: "row", justifyContent: "flex-end", gap: Spacing.lg, paddingRight: 30 },
   actionsRtl: { flexDirection: "row-reverse", justifyContent: "flex-end", paddingRight: 0, paddingLeft: 30 },
-  actionText: { fontFamily: Fonts.bold, fontSize: 12, color: WarshPalette.goldText },
+  actionText: { fontFamily: Fonts.bold, fontSize: desktopFontSize(12), color: WarshPalette.goldText },
   note: { flexDirection: "row", alignItems: "center", alignSelf: "center", gap: 6, maxWidth: "92%", paddingHorizontal: 12, paddingVertical: 8, borderRadius: Radii.md, backgroundColor: WarshPalette.parchmentBg },
   noteGood: { backgroundColor: WarshPalette.correctBg },
-  noteText: { flexShrink: 1, fontFamily: Fonts.regular, fontSize: 12, lineHeight: 16, color: WarshPalette.ink },
+  noteText: { flexShrink: 1, fontFamily: Fonts.regular, fontSize: desktopFontSize(12), lineHeight: desktopLineHeight(16, 12), color: WarshPalette.ink },
   noteTextGood: { fontFamily: Fonts.bold, color: WarshPalette.sageDeep },
   dock: {
     alignItems: "center",
@@ -616,5 +616,5 @@ const styles = StyleSheet.create({
   micLabel: { fontFamily: Fonts.bold, fontSize: FontSizes.caption, lineHeight: LineHeights.caption, color: WarshPalette.subtleBrown, textAlign: "center" },
   micLabelLive: { color: WarshPalette.recordingDot },
   fullWidth: { alignSelf: "stretch" },
-  skipText: { fontFamily: Fonts.bold, fontSize: 13, color: WarshPalette.goldText },
+  skipText: { fontFamily: Fonts.bold, fontSize: desktopFontSize(13), color: WarshPalette.goldText },
 });

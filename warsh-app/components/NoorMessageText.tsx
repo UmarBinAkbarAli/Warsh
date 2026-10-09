@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { StyleSheet, Text, type TextStyle } from "react-native";
 
-import { Fonts, WarshPalette } from "../constants/theme";
+import { Fonts, WarshPalette, desktopFontSize, desktopLineHeight } from "../constants/theme";
 
 // Noor replies arrive as light markdown. Printing it raw showed **asterisks**,
 // and Arabic examples inside English replies were body-size Latin text
@@ -69,5 +69,5 @@ export function NoorMessageText({ content, language, style, directionMark }: Pro
 
 const styles = StyleSheet.create({
   bold: { fontFamily: Fonts.bold },
-  arabic: { fontFamily: Fonts.arabic, fontSize: 20, color: WarshPalette.ink },
+  arabic: { fontFamily: Fonts.arabic, fontSize: desktopFontSize(20, "display"), color: WarshPalette.ink },
 });

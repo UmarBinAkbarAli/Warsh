@@ -8,7 +8,7 @@ import * as Crypto from "expo-crypto";
 import api, { isSubscriptionRequiredError, subscriptionRequiredRoute, purchaseNoorPack } from "@services/api";
 import { BrandButton } from "@components/BrandButton";
 import { useAuthStore } from "@stores/authStore";
-import { Colors, Fonts, FontSizes, LineHeights, Radii, Shadows, Spacing, WarshPalette, WarshAlpha } from "../../../constants/theme";
+import { Colors, Fonts, FontSizes, LineHeights, Radii, Shadows, Spacing, WarshPalette, WarshAlpha, desktopFontSize, desktopLineHeight } from "../../../constants/theme";
 import { trackNoorMessageSent } from "@services/analytics";
 import { useTranslationLanguage } from "@services/language";
 import {
@@ -318,7 +318,7 @@ export default function ChatScreen() {
               marginRight: Spacing.md,
             }}
           >
-            <Text style={{ color: Colors.text.gold, fontSize: 18, fontFamily: Fonts.arabicBold }}>ن</Text>
+            <Text style={{ color: Colors.text.gold, fontSize: desktopFontSize(18, "display"), fontFamily: Fonts.arabicBold }}>ن</Text>
           </View>
           <View style={{ flex: 1 }}>
             <Text style={{ fontSize: FontSizes.h2, lineHeight: LineHeights.h2, color: Colors.text.primary, fontFamily: Fonts.bold }}>
@@ -510,7 +510,7 @@ const styles = StyleSheet.create({
     marginBottom: Spacing.xl,
   },
   modalEmoji: {
-    fontSize: 40,
+    fontSize: desktopFontSize(40),
     textAlign: "center",
     marginBottom: Spacing.md,
   },
@@ -536,9 +536,9 @@ const styles = StyleSheet.create({
   },
   priceAmount: {
     color: WarshPalette.ink,
-    fontSize: 24,
+    fontSize: desktopFontSize(24),
     fontFamily: Fonts.bold,
-    lineHeight: 30,
+    lineHeight: desktopLineHeight(30, 24),
   },
   priceLabel: {
     color: WarshPalette.subtleBrown,

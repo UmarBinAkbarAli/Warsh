@@ -7,7 +7,7 @@ import { ArabicText } from "./ArabicText";
 import { WaveformBars } from "./WaveformBars";
 import { BrandButton } from "./BrandButton";
 import { recheckMicPermission, requestMicPermission } from "@services/micPermission";
-import { WarshPalette, Fonts, WarshAlpha, Radii } from "../constants/theme";
+import { WarshPalette, Fonts, WarshAlpha, Radii, desktopFontSize, desktopLineHeight } from "../constants/theme";
 import { useT } from "@i18n/index";
 
 type Props = {
@@ -472,15 +472,15 @@ const styles = StyleSheet.create({
   },
   arabic: {
     color: WarshPalette.ink,
-    fontSize: 32,
-    lineHeight: 46,
+    fontSize: desktopFontSize(32, "display"),
+    lineHeight: desktopLineHeight(46, 32, "display"),
     textAlign: "center",
   },
   transliteration: {
     marginTop: 6,
     color: WarshPalette.goldText,
     fontFamily: Fonts.italic,
-    fontSize: 12,
+    fontSize: desktopFontSize(12),
     fontStyle: "italic",
     textAlign: "center",
   },
@@ -488,8 +488,8 @@ const styles = StyleSheet.create({
     marginTop: 4,
     color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
-    fontSize: 13,
-    lineHeight: 20,
+    fontSize: desktopFontSize(13),
+    lineHeight: desktopLineHeight(20, 13),
     textAlign: "center",
   },
   waveformRow: {
@@ -515,7 +515,7 @@ const styles = StyleSheet.create({
   playBtnLabel: {
     color: WarshPalette.creamBg,
     fontFamily: Fonts.semiBold,
-    fontSize: 14,
+    fontSize: desktopFontSize(14),
   },
   speakBtn: {
     flexDirection: "row",
@@ -534,7 +534,7 @@ const styles = StyleSheet.create({
   speakBtnLabel: {
     color: WarshPalette.creamBg,
     fontFamily: Fonts.semiBold,
-    fontSize: 14,
+    fontSize: desktopFontSize(14),
   },
   speakBtnLabelDisabled: {
     color: WarshPalette.disabledText,
@@ -552,8 +552,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: WarshPalette.goldText,
     fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 16,
+    fontSize: desktopFontSize(12),
+    lineHeight: desktopLineHeight(16, 12),
   },
   comparisonPanel: {
     gap: 8,
@@ -577,8 +577,8 @@ const styles = StyleSheet.create({
     width: 52,
     color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 16,
+    fontSize: desktopFontSize(12),
+    lineHeight: desktopLineHeight(16, 12),
   },
   compareBtn: {
     alignItems: "center",
@@ -591,8 +591,8 @@ const styles = StyleSheet.create({
   compareBtnText: {
     color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
-    fontSize: 13,
-    lineHeight: 20,
+    fontSize: desktopFontSize(13),
+    lineHeight: desktopLineHeight(20, 13),
   },
   comparisonActions: {
     flexDirection: "row",
@@ -611,8 +611,8 @@ const styles = StyleSheet.create({
   reRecordText: {
     color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
-    fontSize: 13,
-    lineHeight: 20,
+    fontSize: desktopFontSize(13),
+    lineHeight: desktopLineHeight(20, 13),
   },
   doneBtn: {
     flex: 1,
@@ -624,7 +624,7 @@ const styles = StyleSheet.create({
   noorMessage: {
     color: WarshPalette.goldText,
     fontFamily: Fonts.italic,
-    fontSize: 18,
+    fontSize: desktopFontSize(18),
     fontStyle: "italic",
     textAlign: "center",
   },
@@ -649,33 +649,33 @@ const styles = StyleSheet.create({
   modalTitle: {
     color: WarshPalette.ink,
     fontFamily: Fonts.semiBold,
-    fontSize: 18,
-    lineHeight: 26,
+    fontSize: desktopFontSize(18),
+    lineHeight: desktopLineHeight(26, 18),
     textAlign: "center",
     marginBottom: 8,
   },
   modalBody: {
     color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
-    fontSize: 13,
-    lineHeight: 20,
+    fontSize: desktopFontSize(13),
+    lineHeight: desktopLineHeight(20, 13),
     textAlign: "center",
     marginBottom: 8,
   },
   modalPrivacy: {
     color: WarshPalette.goldText,
     fontFamily: Fonts.italic,
-    fontSize: 12,
+    fontSize: desktopFontSize(12),
     fontStyle: "italic",
-    lineHeight: 16,
+    lineHeight: desktopLineHeight(16, 12),
     textAlign: "center",
     marginBottom: 16,
   },
   modalDenied: {
     color: WarshPalette.deniedText,
     fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 18,
+    fontSize: desktopFontSize(12),
+    lineHeight: desktopLineHeight(18, 12),
     textAlign: "center",
     marginBottom: 12,
   },
@@ -693,7 +693,7 @@ const styles = StyleSheet.create({
   modalSkipText: {
     color: WarshPalette.goldText,
     fontFamily: Fonts.regular,
-    fontSize: 13,
-    lineHeight: 20,
+    fontSize: desktopFontSize(13),
+    lineHeight: desktopLineHeight(20, 13),
   },
 });

@@ -17,7 +17,7 @@ import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
 import { useTranslationLanguage } from "@services/language";
 import { useT } from "@i18n/index";
-import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../../constants/theme";
+import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette, desktopFontSize, desktopLineHeight } from "../../../constants/theme";
 import { ScreenHeader } from "@components/ScreenHeader";
 
 type LocalizedText = { en: string; ur: string };
@@ -322,12 +322,12 @@ const styles = StyleSheet.create({
   header: { flexDirection: "row", alignItems: "flex-start", paddingHorizontal: Spacing.gutter, paddingVertical: Spacing.md, gap: Spacing.md },
   headerBack: { paddingTop: 5 },
   headerText: { flex: 1 },
-  headerTitle: { color: WarshPalette.navy, fontFamily: Fonts.display, fontSize: 26, lineHeight: 32 },
+  headerTitle: { color: WarshPalette.navy, fontFamily: Fonts.display, fontSize: desktopFontSize(26, "display"), lineHeight: desktopLineHeight(32, 26, "display") },
   headerSubtitle: { color: WarshPalette.subtleBrown, fontFamily: Fonts.regular, fontSize: FontSizes.caption, marginTop: 2 },
   introContent: { padding: Spacing.gutter, gap: Spacing.lg, paddingBottom: 110 },
   hero: { height: 190, borderRadius: Radii.xl, backgroundColor: WarshPalette.navy, alignItems: "center", justifyContent: "center", gap: Spacing.md, padding: Spacing.lg },
   heroIcon: { width: 58, height: 58, borderRadius: 29, backgroundColor: WarshPalette.gold, alignItems: "center", justifyContent: "center" },
-  heroTitle: { color: WarshPalette.white, fontFamily: Fonts.display, fontSize: 26 },
+  heroTitle: { color: WarshPalette.white, fontFamily: Fonts.display, fontSize: desktopFontSize(26, "display") },
   heroArabic: { color: WarshPalette.parchment, textAlign: "center" },
   metricsCard: { flexDirection: "row", backgroundColor: WarshPalette.white, borderRadius: Radii.md, borderWidth: 1, borderColor: WarshPalette.defaultCardBorder, paddingVertical: Spacing.lg },
   metric: { flex: 1, alignItems: "center", gap: 3 },
@@ -343,7 +343,7 @@ const styles = StyleSheet.create({
   progressFill: { height: 6, borderRadius: 3, backgroundColor: WarshPalette.gold },
   questionCount: { color: WarshPalette.subtleBrown, fontFamily: Fonts.bold, fontSize: FontSizes.caption },
   questionContent: { paddingHorizontal: Spacing.gutter, paddingBottom: 110 },
-  prompt: { color: WarshPalette.navy, fontFamily: Fonts.display, fontSize: 23, lineHeight: 29, marginBottom: Spacing.md },
+  prompt: { color: WarshPalette.navy, fontFamily: Fonts.display, fontSize: desktopFontSize(23, "display"), lineHeight: desktopLineHeight(29, 23, "display"), marginBottom: Spacing.md },
   questionArabic: { color: WarshPalette.ink, textAlign: "center", marginBottom: Spacing.lg },
   optionList: { gap: Spacing.sm },
   option: { minHeight: 66, flexDirection: "row", alignItems: "center", gap: Spacing.md, padding: Spacing.md, borderRadius: Radii.md, borderWidth: 1, borderColor: WarshPalette.sageSoft, backgroundColor: WarshPalette.white },
@@ -361,9 +361,9 @@ const styles = StyleSheet.create({
   resultHeroRetry: { backgroundColor: WarshPalette.white, borderColor: WarshPalette.wrongBorder },
   resultIcon: { width: 62, height: 62, borderRadius: 31, backgroundColor: WarshPalette.gold, alignItems: "center", justifyContent: "center" },
   resultIconRetry: { backgroundColor: WarshPalette.wrongBg },
-  resultTitle: { color: WarshPalette.navy, fontFamily: Fonts.display, fontSize: 25, textAlign: "center" },
+  resultTitle: { color: WarshPalette.navy, fontFamily: Fonts.display, fontSize: desktopFontSize(25, "display"), textAlign: "center" },
   resultTitlePassed: { color: WarshPalette.white },
-  resultScore: { color: WarshPalette.wrongText, fontFamily: Fonts.bold, fontSize: 38 },
+  resultScore: { color: WarshPalette.wrongText, fontFamily: Fonts.bold, fontSize: desktopFontSize(38) },
   resultScorePassed: { color: WarshPalette.parchment },
   resultNote: { color: WarshPalette.subtleBrown, fontFamily: Fonts.regular, fontSize: FontSizes.caption },
   resultNotePassed: { color: WarshPalette.white },

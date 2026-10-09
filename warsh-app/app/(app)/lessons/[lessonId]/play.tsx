@@ -11,7 +11,7 @@ import { PlayButton } from "@components/PlayButton";
 import { ShadowRepeatExercise } from "@components/ShadowRepeatExercise";
 import { StreakWeekRow } from "@components/StreakWeekRow";
 import { getConversationLab, LabCanDoCard, LabIntroScreen, LabListenAndPhrases, LabSpeakAndMission } from "@components/ConversationLab";
-import { Animation, Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette } from "../../../../constants/theme";
+import { Animation, Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette, desktopFontSize, desktopLineHeight } from "../../../../constants/theme";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { cancelTodayReminders, fireMilestoneNotification } from "@services/notifications";
 import { trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from "@services/analytics";
@@ -2226,15 +2226,15 @@ const styles = StyleSheet.create({
   },
   hookAyah: {
     color: WarshPalette.ink,
-    fontSize: 28,
-    lineHeight: 40,
+    fontSize: desktopFontSize(28, "display"),
+    lineHeight: desktopLineHeight(40, 28, "display"),
     textAlign: "center",
   },
   ayahRef: {
     marginTop: 8,
     color: WarshPalette.goldText,
     fontFamily: Fonts.italic,
-    fontSize: 12,
+    fontSize: desktopFontSize(12),
     fontStyle: "italic",
     textAlign: "center",
   },
@@ -2264,8 +2264,8 @@ const styles = StyleSheet.create({
   hookBodyUrdu: {
     alignSelf: "stretch",
     fontFamily: Fonts.urduFallback,
-    fontSize: 18,
-    lineHeight: 34,
+    fontSize: desktopFontSize(18),
+    lineHeight: desktopLineHeight(34, 18),
     textAlign: "right",
   },
   bottomButton: {
@@ -2326,8 +2326,8 @@ const styles = StyleSheet.create({
     marginTop: 8,
     color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 18,
+    fontSize: desktopFontSize(12),
+    lineHeight: desktopLineHeight(18, 12),
     textAlign: "center",
   },
   // Spec-11 §2.4: helper text is muted ink, never gold. This was gold on
@@ -2442,8 +2442,8 @@ const styles = StyleSheet.create({
     marginTop: 32,
     color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
-    fontSize: 13,
-    lineHeight: 20,
+    fontSize: desktopFontSize(13),
+    lineHeight: desktopLineHeight(20, 13),
   },
   exerciseArabicCard: {
     marginTop: 24,
@@ -2455,8 +2455,8 @@ const styles = StyleSheet.create({
   },
   exerciseArabic: {
     color: WarshPalette.ink,
-    fontSize: 28,
-    lineHeight: 40,
+    fontSize: desktopFontSize(28, "display"),
+    lineHeight: desktopLineHeight(40, 28, "display"),
     textAlign: "center",
   },
   // WRITE_ARABIC / HARAKAH_PLACEMENT
@@ -2471,18 +2471,18 @@ const styles = StyleSheet.create({
     borderColor: WarshPalette.defaultCardBorder,
     borderRadius: Radii.md,
     padding: 16,
-    fontSize: 24,
+    fontSize: desktopFontSize(24, "display"),
     fontFamily: Fonts.arabic,
     color: WarshPalette.ink,
     backgroundColor: WarshPalette.white,
     minHeight: 64,
   },
   harakahInput: {
-    fontSize: 28,
+    fontSize: desktopFontSize(28, "display"),
   },
   harakahHintText: {
     fontFamily: Fonts.regular,
-    fontSize: 14,
+    fontSize: desktopFontSize(14),
     color: WarshPalette.bodyBrown,
     textAlign: "center",
   },
@@ -2496,18 +2496,18 @@ const styles = StyleSheet.create({
   },
   hintButtonText: {
     fontFamily: Fonts.regular,
-    fontSize: 13,
+    fontSize: desktopFontSize(13),
     color: WarshPalette.goldText,
   },
   hintRevealText: {
     fontFamily: Fonts.regular,
-    fontSize: 14,
+    fontSize: desktopFontSize(14),
     color: WarshPalette.bodyBrown,
     textAlign: "center",
   },
   hintRevealLetter: {
     fontFamily: Fonts.arabic,
-    fontSize: 20,
+    fontSize: desktopFontSize(20, "display"),
     color: WarshPalette.goldText,
   },
 
@@ -2531,7 +2531,7 @@ const styles = StyleSheet.create({
   },
   audioRecognitionHint: {
     marginTop: 8,
-    fontSize: 12,
+    fontSize: desktopFontSize(12),
     color: WarshPalette.ink,
     opacity: 0.5,
     fontFamily: Fonts.regular,
@@ -2672,14 +2672,14 @@ const styles = StyleSheet.create({
   tileText: {
     color: WarshPalette.ink,
     fontFamily: Fonts.regular,
-    fontSize: 15,
-    lineHeight: 21,
+    fontSize: desktopFontSize(15),
+    lineHeight: desktopLineHeight(21, 15),
     textAlign: "center",
   },
   tileArabicText: {
     color: WarshPalette.ink,
-    fontSize: 26,
-    lineHeight: 38,
+    fontSize: desktopFontSize(26, "display"),
+    lineHeight: desktopLineHeight(38, 26, "display"),
     textAlign: "center",
   },
   exerciseScroller: {
@@ -2739,8 +2739,8 @@ const styles = StyleSheet.create({
   matchBadgeText: {
     color: WarshPalette.parchment,
     fontFamily: Fonts.semiBold,
-    fontSize: 12,
-    lineHeight: 16,
+    fontSize: desktopFontSize(12),
+    lineHeight: desktopLineHeight(16, 12),
   },
   labelChipSelected: {
     borderColor: WarshPalette.gold,
@@ -2748,15 +2748,15 @@ const styles = StyleSheet.create({
   },
   matchingArabic: {
     color: WarshPalette.ink,
-    fontSize: 22,
-    lineHeight: 32,
+    fontSize: desktopFontSize(22, "display"),
+    lineHeight: desktopLineHeight(32, 22, "display"),
     textAlign: "center",
   },
   matchingText: {
     color: WarshPalette.ink,
     fontFamily: Fonts.regular,
-    fontSize: 15,
-    lineHeight: 21,
+    fontSize: desktopFontSize(15),
+    lineHeight: desktopLineHeight(21, 15),
     textAlign: "center",
   },
   parseSentence: {
@@ -2776,16 +2776,16 @@ const styles = StyleSheet.create({
   },
   parseWord: {
     color: WarshPalette.ink,
-    fontSize: 24,
-    lineHeight: 34,
+    fontSize: desktopFontSize(24, "display"),
+    lineHeight: desktopLineHeight(34, 24, "display"),
     textAlign: "center",
   },
   parseGloss: {
     marginTop: 2,
     color: WarshPalette.goldText,
     fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 16,
+    fontSize: desktopFontSize(12),
+    lineHeight: desktopLineHeight(16, 12),
     textAlign: "center",
   },
   parseRow: {
@@ -2832,20 +2832,20 @@ const styles = StyleSheet.create({
   dialogueSpeaker: {
     color: WarshPalette.goldText,
     fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 16,
+    fontSize: desktopFontSize(12),
+    lineHeight: desktopLineHeight(16, 12),
   },
   dialogueArabic: {
     color: WarshPalette.ink,
-    fontSize: 22,
-    lineHeight: 32,
+    fontSize: desktopFontSize(22, "display"),
+    lineHeight: desktopLineHeight(32, 22, "display"),
     textAlign: "left",
   },
   dialogueText: {
     color: WarshPalette.ink,
     fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 18,
+    fontSize: desktopFontSize(12),
+    lineHeight: desktopLineHeight(18, 12),
   },
   feedbackBar: {
     position: "absolute",
@@ -2866,8 +2866,8 @@ const styles = StyleSheet.create({
   },
   feedbackArabic: {
     color: WarshPalette.sageDeep,
-    fontSize: 16,
-    lineHeight: 26,
+    fontSize: desktopFontSize(16, "display"),
+    lineHeight: desktopLineHeight(26, 16, "display"),
     textAlign: "left",
   },
   feedbackExplanation: {
@@ -2879,8 +2879,8 @@ const styles = StyleSheet.create({
   // Urdu reads 2–3pt smaller than Latin at the same size (finding H4).
   feedbackExplanationUrdu: {
     fontFamily: Fonts.urduFallback,
-    fontSize: 18,
-    lineHeight: 34,
+    fontSize: desktopFontSize(18),
+    lineHeight: desktopLineHeight(34, 18),
   },
   feedbackWrongTitle: {
     color: WarshPalette.wrongText,
@@ -2895,8 +2895,8 @@ const styles = StyleSheet.create({
   feedbackCorrectAnswerArabic: {
     marginTop: 4,
     color: WarshPalette.sageDeep,
-    fontSize: 20,
-    lineHeight: 30,
+    fontSize: desktopFontSize(20, "display"),
+    lineHeight: desktopLineHeight(30, 20, "display"),
     textAlign: "left",
   },
   feedbackCorrectAnswerText: {
@@ -2921,8 +2921,8 @@ const styles = StyleSheet.create({
   revealEyebrow: {
     color: WarshPalette.goldText,
     fontFamily: Fonts.semiBold,
-    fontSize: 12,
-    lineHeight: 16,
+    fontSize: desktopFontSize(12),
+    lineHeight: desktopLineHeight(16, 12),
     letterSpacing: 1.4,
     textAlign: "center",
   },
@@ -2933,8 +2933,8 @@ const styles = StyleSheet.create({
     marginBottom: 28,
     color: WarshPalette.ink,
     fontFamily: Fonts.bold,
-    fontSize: 26,
-    lineHeight: 37,
+    fontSize: desktopFontSize(26),
+    lineHeight: desktopLineHeight(37, 26),
     textAlign: "center",
   },
   revealAyahCard: {
@@ -2952,8 +2952,8 @@ const styles = StyleSheet.create({
   },
   revealAyah: {
     color: WarshPalette.ink,
-    fontSize: 29,
-    lineHeight: 46,
+    fontSize: desktopFontSize(29, "display"),
+    lineHeight: desktopLineHeight(46, 29, "display"),
     textAlign: "center",
   },
   revealAyahWord: {
@@ -2972,8 +2972,8 @@ const styles = StyleSheet.create({
   revealListenLabel: {
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.regular,
-    fontSize: 13,
-    lineHeight: 18,
+    fontSize: desktopFontSize(13),
+    lineHeight: desktopLineHeight(18, 13),
   },
   revealLearnedSection: {
     marginTop: 22,
@@ -2984,8 +2984,8 @@ const styles = StyleSheet.create({
   revealLearnedLabel: {
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.semiBold,
-    fontSize: 12,
-    lineHeight: 16,
+    fontSize: desktopFontSize(12),
+    lineHeight: desktopLineHeight(16, 12),
     textAlign: "center",
   },
   revealWordChips: {
@@ -3006,8 +3006,8 @@ const styles = StyleSheet.create({
   },
   revealWordChipText: {
     color: WarshPalette.goldText,
-    fontSize: 20,
-    lineHeight: 28,
+    fontSize: desktopFontSize(20, "display"),
+    lineHeight: desktopLineHeight(28, 20, "display"),
   },
   revealHighlightNote: {
     alignSelf: "center",
@@ -3015,8 +3015,8 @@ const styles = StyleSheet.create({
     marginTop: 12,
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.regular,
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: desktopFontSize(13),
+    lineHeight: desktopLineHeight(19, 13),
     textAlign: "center",
   },
   closeSection: {
@@ -3026,8 +3026,8 @@ const styles = StyleSheet.create({
   closeSectionEyebrow: {
     color: WarshPalette.goldText,
     fontFamily: Fonts.semiBold,
-    fontSize: 12,
-    lineHeight: 16,
+    fontSize: desktopFontSize(12),
+    lineHeight: desktopLineHeight(16, 12),
     letterSpacing: 1.2,
   },
   closeSectionTitle: {
@@ -3035,8 +3035,8 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     color: WarshPalette.ink,
     fontFamily: Fonts.semiBold,
-    fontSize: 17,
-    lineHeight: 24,
+    fontSize: desktopFontSize(17),
+    lineHeight: desktopLineHeight(24, 17),
   },
   closeWeekHeader: {
     flexDirection: "row",
@@ -3047,8 +3047,8 @@ const styles = StyleSheet.create({
   closeWeekStatus: {
     color: WarshPalette.sageDeep,
     fontFamily: Fonts.regular,
-    fontSize: 13,
-    lineHeight: 18,
+    fontSize: desktopFontSize(13),
+    lineHeight: desktopLineHeight(18, 13),
   },
   closeWeekCard: {
     borderWidth: StyleSheet.hairlineWidth,
@@ -3131,8 +3131,8 @@ const styles = StyleSheet.create({
   completionKicker: {
     color: WarshPalette.parchment,
     fontFamily: Fonts.semiBold,
-    fontSize: 12,
-    lineHeight: 16,
+    fontSize: desktopFontSize(12),
+    lineHeight: desktopLineHeight(16, 12),
     letterSpacing: 1.6,
   },
   noorMonogram: {
@@ -3149,15 +3149,15 @@ const styles = StyleSheet.create({
   completeCardTitle: {
     marginTop: 12,
     fontFamily: Fonts.bold,
-    fontSize: 25,
+    fontSize: desktopFontSize(25),
     color: WarshPalette.white,
     textAlign: "center",
   },
   closeArabic: {
     marginTop: 6,
     color: WarshPalette.parchment,
-    fontSize: 21,
-    lineHeight: 32,
+    fontSize: desktopFontSize(21, "display"),
+    lineHeight: desktopLineHeight(32, 21, "display"),
     textAlign: "center",
   },
   completionResultsCard: {
@@ -3178,15 +3178,15 @@ const styles = StyleSheet.create({
   completionMetricValue: {
     color: WarshPalette.ink,
     fontFamily: Fonts.bold,
-    fontSize: 19,
-    lineHeight: 25,
+    fontSize: desktopFontSize(19),
+    lineHeight: desktopLineHeight(25, 19),
   },
   completionMetricLabel: {
     marginTop: 2,
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 16,
+    fontSize: desktopFontSize(12),
+    lineHeight: desktopLineHeight(16, 12),
     textAlign: "center",
   },
   completionMetricDivider: {
@@ -3197,8 +3197,8 @@ const styles = StyleSheet.create({
   xpText: {
     color: WarshPalette.sage,
     fontFamily: Fonts.semiBold,
-    fontSize: 24,
-    lineHeight: 32,
+    fontSize: desktopFontSize(24),
+    lineHeight: desktopLineHeight(32, 24),
     textAlign: "center",
   },
   noorRecapCard: {
@@ -3221,8 +3221,8 @@ const styles = StyleSheet.create({
     flex: 1,
     color: WarshPalette.sageDeep,
     fontFamily: Fonts.semiBold,
-    fontSize: 13,
-    lineHeight: 18,
+    fontSize: desktopFontSize(13),
+    lineHeight: desktopLineHeight(18, 13),
   },
   meaningLanguageBadge: {
     borderRadius: Radii.full,
@@ -3232,37 +3232,37 @@ const styles = StyleSheet.create({
     color: WarshPalette.sageDeep,
     backgroundColor: WarshPalette.white,
     fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 16,
+    fontSize: desktopFontSize(12),
+    lineHeight: desktopLineHeight(16, 12),
   },
   noorTip: {
     marginTop: 8,
     color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
-    fontSize: 14,
-    lineHeight: 21,
+    fontSize: desktopFontSize(14),
+    lineHeight: desktopLineHeight(21, 14),
   },
   nextLessonReady: {
     marginTop: 15,
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.italic,
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: desktopFontSize(13),
+    lineHeight: desktopLineHeight(19, 13),
     textAlign: "center",
   },
   errorText: {
     color: WarshPalette.wrongText,
     fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 18,
+    fontSize: desktopFontSize(12),
+    lineHeight: desktopLineHeight(18, 12),
     textAlign: "center",
   },
   spContextTitleEn: {
     marginTop: 8,
     color: WarshPalette.goldText,
     fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 18,
+    fontSize: desktopFontSize(12),
+    lineHeight: desktopLineHeight(18, 12),
     textAlign: "center",
     letterSpacing: 0.5,
   },
@@ -3270,7 +3270,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.regular,
-    fontSize: 12,
+    fontSize: desktopFontSize(12),
     textAlign: "center",
   },
   spPhraseCard: {
@@ -3286,15 +3286,15 @@ const styles = StyleSheet.create({
   },
   spPhraseArabic: {
     color: WarshPalette.ink,
-    fontSize: 32,
-    lineHeight: 46,
+    fontSize: desktopFontSize(32, "display"),
+    lineHeight: desktopLineHeight(46, 32, "display"),
     textAlign: "center",
   },
   spPhraseCompleteCount: {
     color: WarshPalette.sage,
     fontFamily: Fonts.semiBold,
-    fontSize: 18,
-    lineHeight: 26,
+    fontSize: desktopFontSize(18),
+    lineHeight: desktopLineHeight(26, 18),
     textAlign: "center",
     marginBottom: 8,
   },
@@ -3302,8 +3302,8 @@ const styles = StyleSheet.create({
     marginTop: 8,
     color: WarshPalette.sage,
     fontFamily: Fonts.regular,
-    fontSize: 13,
-    lineHeight: 20,
+    fontSize: desktopFontSize(13),
+    lineHeight: desktopLineHeight(20, 13),
     textAlign: "center",
   },
   verbPatternScreen: {
@@ -3327,14 +3327,14 @@ const styles = StyleSheet.create({
   verbRootPillText: {
     color: WarshPalette.white,
     fontFamily: Fonts.arabic,
-    fontSize: 18,
-    lineHeight: 26,
+    fontSize: desktopFontSize(18, "display"),
+    lineHeight: desktopLineHeight(26, 18, "display"),
     letterSpacing: 0.5,
   },
   verbBaseForm: {
     fontFamily: Fonts.arabic,
-    fontSize: 36,
-    lineHeight: 52,
+    fontSize: desktopFontSize(36, "display"),
+    lineHeight: desktopLineHeight(52, 36, "display"),
     color: WarshPalette.goldText,
     textAlign: "center",
     writingDirection: "rtl",
@@ -3344,8 +3344,8 @@ const styles = StyleSheet.create({
     marginBottom: 8,
     fontFamily: Fonts.italic,
     fontStyle: "italic",
-    fontSize: 13,
-    lineHeight: 20,
+    fontSize: desktopFontSize(13),
+    lineHeight: desktopLineHeight(20, 13),
     color: WarshPalette.bodyBrown,
     textAlign: "center",
   },
@@ -3375,20 +3375,20 @@ const styles = StyleSheet.create({
   },
   verbPronounAr: {
     fontFamily: Fonts.arabic,
-    fontSize: 18,
-    lineHeight: 28,
+    fontSize: desktopFontSize(18, "display"),
+    lineHeight: desktopLineHeight(28, 18, "display"),
     color: WarshPalette.ink,
   },
   verbPronounEn: {
     fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 16,
+    fontSize: desktopFontSize(12),
+    lineHeight: desktopLineHeight(16, 12),
     color: WarshPalette.goldText,
   },
   verbConjugatedForm: {
     fontFamily: Fonts.arabic,
-    fontSize: 20,
-    lineHeight: 30,
+    fontSize: desktopFontSize(20, "display"),
+    lineHeight: desktopLineHeight(30, 20, "display"),
     color: WarshPalette.goldText,
     textAlign: "right",
     writingDirection: "rtl",
@@ -3412,8 +3412,8 @@ const styles = StyleSheet.create({
   verbBaseMeaningSep: {
     fontFamily: Fonts.italic,
     fontStyle: "italic",
-    fontSize: 13,
-    lineHeight: 20,
+    fontSize: desktopFontSize(13),
+    lineHeight: desktopLineHeight(20, 13),
     color: WarshPalette.bodyBrown,
   },
   verbPatternNameAr: {
@@ -3427,7 +3427,7 @@ const styles = StyleSheet.create({
     backgroundColor: WarshPalette.sage,
     color: WarshPalette.creamBg,
     fontFamily: Fonts.bold,
-    fontSize: 12,
+    fontSize: desktopFontSize(12),
     overflow: "hidden",
   },
   verbPatternContinueButton: {

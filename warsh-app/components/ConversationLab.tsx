@@ -10,7 +10,7 @@ import { BrandButton } from "./BrandButton";
 import { PlayButton } from "./PlayButton";
 import { ShadowRepeatExercise } from "./ShadowRepeatExercise";
 import { AnswerItConversation, hasAnswerIt } from "./AnswerItConversation";
-import { Fonts, FontSizes, LineHeights, Radii, Spacing, WarshAlpha, WarshPalette } from "../constants/theme";
+import { Fonts, FontSizes, LineHeights, Radii, Spacing, WarshAlpha, WarshPalette, desktopFontSize, desktopLineHeight } from "../constants/theme";
 
 /**
  * Conversation Lab screens — the `spoken_phrases.lab` block of a SPOKEN_PHRASES
@@ -740,11 +740,11 @@ const styles = StyleSheet.create({
     borderRadius: Radii.md,
     backgroundColor: WarshPalette.parchmentBg,
   },
-  pillText: { fontFamily: Fonts.bold, fontSize: 12, color: WarshPalette.goldText, letterSpacing: 0.4 },
+  pillText: { fontFamily: Fonts.bold, fontSize: desktopFontSize(12), color: WarshPalette.goldText, letterSpacing: 0.4 },
   pillRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
   pager: { fontFamily: Fonts.bold, fontSize: FontSizes.caption, color: WarshPalette.subtleBrown },
   title: { fontFamily: Fonts.display, fontSize: FontSizes.displayXL, lineHeight: LineHeights.displayXL, color: WarshPalette.navy },
-  prompt: { fontFamily: Fonts.bold, fontSize: 20, lineHeight: 27, color: WarshPalette.navy },
+  prompt: { fontFamily: Fonts.bold, fontSize: desktopFontSize(20), lineHeight: desktopLineHeight(27, 20), color: WarshPalette.navy },
   body: { fontFamily: Fonts.regular, fontSize: FontSizes.bodyM, lineHeight: LineHeights.bodyM, color: WarshPalette.bodyBrown },
   sectionLabel: { fontFamily: Fonts.bold, fontSize: FontSizes.label, letterSpacing: 0.6, color: WarshPalette.goldText },
   missionCard: { flexDirection: "row", gap: Spacing.md, padding: 14, borderRadius: Radii.md, backgroundColor: WarshPalette.navy },
@@ -756,7 +756,7 @@ const styles = StyleSheet.create({
   chipText: { color: WarshPalette.navy },
   metaRow: { flexDirection: "row", flexWrap: "wrap", gap: 14 },
   metaItem: { flexDirection: "row", alignItems: "center", gap: 5 },
-  metaText: { fontFamily: Fonts.regular, fontSize: 12, color: WarshPalette.subtleBrown },
+  metaText: { fontFamily: Fonts.regular, fontSize: desktopFontSize(12), color: WarshPalette.subtleBrown },
   dialogue: { gap: 10 },
   turn: { flexDirection: "row", alignItems: "flex-end", gap: 8, marginBottom: 4 },
   turnFriend: { justifyContent: "flex-start" },
@@ -764,8 +764,8 @@ const styles = StyleSheet.create({
   avatar: { width: 26, height: 26, borderRadius: 13, alignItems: "center", justifyContent: "center" },
   avatarFriend: { backgroundColor: WarshPalette.sageSoft },
   avatarYou: { backgroundColor: WarshPalette.navy },
-  avatarText: { fontFamily: Fonts.bold, fontSize: 12 },
-  avatarTextFriend: { color: WarshPalette.sageDeep, fontSize: 12 },
+  avatarText: { fontFamily: Fonts.bold, fontSize: desktopFontSize(12) },
+  avatarTextFriend: { color: WarshPalette.sageDeep, fontSize: desktopFontSize(12) },
   avatarTextYou: { color: WarshPalette.gold },
   bubble: { maxWidth: "76%", paddingHorizontal: 12, paddingVertical: 8, borderRadius: Radii.md, borderWidth: 1, gap: 2 },
   bubbleFriend: { backgroundColor: WarshPalette.white, borderColor: WarshPalette.sageSoft },
@@ -774,7 +774,7 @@ const styles = StyleSheet.create({
   bubbleUpcoming: { opacity: 0.45 },
   bubbleArabic: { color: WarshPalette.navy, textAlign: "right" },
   bubbleArabicYou: { color: WarshPalette.white },
-  bubbleTranslation: { fontFamily: Fonts.regular, fontSize: 12, color: WarshPalette.subtleBrown },
+  bubbleTranslation: { fontFamily: Fonts.regular, fontSize: desktopFontSize(12), color: WarshPalette.subtleBrown },
   bubbleTranslationYou: { color: WarshAlpha.onNavyMuted },
   playback: {
     flexDirection: "row",
@@ -788,8 +788,8 @@ const styles = StyleSheet.create({
   playbackButton: { width: 36, height: 36, borderRadius: 18, alignItems: "center", justifyContent: "center", backgroundColor: WarshPalette.gold },
   track: { height: 5, borderRadius: 3, backgroundColor: WarshPalette.sageSoft, overflow: "hidden" },
   trackFill: { height: 5, borderRadius: 3, backgroundColor: WarshPalette.gold },
-  trackLabel: { marginTop: 5, fontFamily: Fonts.regular, fontSize: 12, color: WarshPalette.subtleBrown },
-  gateNote: { fontFamily: Fonts.regular, fontSize: 12, color: WarshPalette.subtleBrown, textAlign: "center" },
+  trackLabel: { marginTop: 5, fontFamily: Fonts.regular, fontSize: desktopFontSize(12), color: WarshPalette.subtleBrown },
+  gateNote: { fontFamily: Fonts.regular, fontSize: desktopFontSize(12), color: WarshPalette.subtleBrown, textAlign: "center" },
   phraseCard: {
     alignItems: "center",
     gap: Spacing.sm,
@@ -800,10 +800,10 @@ const styles = StyleSheet.create({
     backgroundColor: WarshPalette.white,
   },
   heardTag: { flexDirection: "row", alignItems: "center", gap: 5, paddingHorizontal: 9, paddingVertical: 4, borderRadius: Radii.md, backgroundColor: WarshPalette.parchmentDeep },
-  heardTagText: { fontFamily: Fonts.bold, fontSize: 12, color: WarshPalette.sageDeep, letterSpacing: 0.3 },
+  heardTagText: { fontFamily: Fonts.bold, fontSize: desktopFontSize(12), color: WarshPalette.sageDeep, letterSpacing: 0.3 },
   phraseArabic: { color: WarshPalette.navy, textAlign: "center" },
-  translit: { fontFamily: Fonts.italic, fontSize: 13, color: WarshPalette.subtleBrown },
-  meaning: { fontFamily: Fonts.bold, fontSize: 17, color: WarshPalette.ink, textAlign: "center" },
+  translit: { fontFamily: Fonts.italic, fontSize: desktopFontSize(13), color: WarshPalette.subtleBrown },
+  meaning: { fontFamily: Fonts.bold, fontSize: desktopFontSize(17), color: WarshPalette.ink, textAlign: "center" },
   context: { fontFamily: Fonts.regular, fontSize: FontSizes.caption, lineHeight: LineHeights.caption, color: WarshPalette.subtleBrown, textAlign: "center" },
   phrasePlay: { marginTop: Spacing.xs },
   patternCard: { gap: 10, padding: 14, borderRadius: Radii.md, backgroundColor: WarshPalette.parchmentBg },
@@ -811,7 +811,7 @@ const styles = StyleSheet.create({
   patternItem: { flex: 1, alignItems: "center", gap: 2, paddingVertical: 10, paddingHorizontal: 8, borderRadius: Radii.md, backgroundColor: WarshPalette.white },
   patternArabic: { color: WarshPalette.navy },
   patternMeaning: { fontFamily: Fonts.bold, fontSize: FontSizes.caption, color: WarshPalette.ink },
-  patternSource: { fontFamily: Fonts.regular, fontSize: 12, color: WarshPalette.subtleBrown },
+  patternSource: { fontFamily: Fonts.regular, fontSize: desktopFontSize(12), color: WarshPalette.subtleBrown },
   goalCard: { gap: 7, paddingHorizontal: 14, paddingVertical: 12, borderRadius: Radii.md, backgroundColor: WarshPalette.navy },
   goalRow: { flexDirection: "row", alignItems: "center", gap: 8 },
   goalText: { fontFamily: Fonts.bold, fontSize: FontSizes.caption, color: WarshPalette.white },
@@ -851,6 +851,6 @@ const styles = StyleSheet.create({
   feedbackTextWrong: { color: WarshPalette.wrongText },
   canDoCard: { gap: 10, padding: 14, borderRadius: Radii.md, backgroundColor: WarshPalette.parchmentBg, alignSelf: "stretch" },
   canDoRow: { flexDirection: "row", alignItems: "center", gap: 8 },
-  canDoLabel: { flex: 1, fontFamily: Fonts.bold, fontSize: 13, color: WarshPalette.ink },
+  canDoLabel: { flex: 1, fontFamily: Fonts.bold, fontSize: desktopFontSize(13), color: WarshPalette.ink },
   canDoArabic: { color: WarshPalette.navy },
 });

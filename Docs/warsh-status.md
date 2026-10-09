@@ -499,12 +499,18 @@ Still open from the evaluation:
   and the sidebar; the Quran reader page is a centred column capped at 760px.
   Tested on local web against staging with a Haiku 5.5 agent at 1440 and 900px.
   Android is unaffected.
-- **Lesson player and Noor laptop type (M18 second pass) — Pen design proposed
-  2026-10-09, awaiting owner approval.** Pen section "33 — Lesson Player & Noor ·
-  Laptop Type · Proposed": three laptop screens (lesson beat, exercise, Noor chat),
-  a type table and an implementation contract. Cause: `play.tsx` has about 60 fixed
-  font sizes, many at 12-13, so lessons read small at 1440px. Same ≥ 1024px switch
-  and helpers as M18; the 720 reading column stays. No code until approved.
+- **Lesson player and Noor laptop type (M18 second pass) — done 2026-10-09 (web only).**
+  Pen section 33 approved by the owner. Same ≥ 1024px switch and helpers as M18
+  (`desktopFontSize` / `desktopLineHeight`); the fixed sizes in
+  `lessons/[lessonId]/play.tsx`, `ShadowRepeatExercise`, `AnswerItConversation`,
+  `ConversationLab`, Noor (`chat.tsx`, `NoorMessageText`) and the chapter test now
+  scale (small text 12 → 14, 13 → 15, 14 → 16; Arabic and headings ×1.15). Layout,
+  colours and copy are unchanged. Checked by the owner on local web (lesson
+  ch72-l16: exercise, ayah and word beats readable, nothing clipped); the Haiku
+  tester could not finish because the Chrome extension disconnected, so the other
+  exercise types (write/harakah, dialogue, parse, shadow-repeat, verb pattern,
+  conversation, answer-it) and the 900px window were not re-measured — look at
+  them next time the web app is open. Android is unaffected.
 - **Word detail data (M12) — done in production 2026-10-09.** Roots 444 → 820,
   words with related words 179 → 481, words with a Quran example 55 → 642.
   Roots come from the Quranic Arabic Corpus (v0.4, GPL, not committed) for words
@@ -517,7 +523,8 @@ Still open from the evaluation:
   `scripts/apply-word-detail.ts` (dry run by default, fills empty fields only,
   "no example" is stored as JSON null). Verified on the emulator against
   production (9 words). Open: 90 roots matched loosely and are marked `check`
-  for owner review; the verse for جَمْع (100:5) has a fragment translation.
+  for owner review; the جَمْع example was a sentence fragment and was replaced by 54:45 on 2026-10-09
+  (`scripts/fix-jam-example.ts`).
 - **Quran translation under the page — switched off 2026-10-09 (owner decision).**
   The Urdu and English options in Reading settings now show "Coming soon" and
   cannot be selected; a translation a learner saved earlier is ignored. One
