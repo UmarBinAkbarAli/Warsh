@@ -500,8 +500,6 @@ Still open from the evaluation:
   domain, if the owner wants the same one.
 - **Test with learners first:** full Urdu RTL (H10); hiding the SRS picture
   (M3).
-- Chapter 72 review (R15) content: its word-order prompt prints the Arabic
-  answer, and its conversation options do not answer the question.
 
 
 ### Open items (2026-09-18)
