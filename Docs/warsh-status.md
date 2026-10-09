@@ -270,8 +270,8 @@ files remain release evidence.
   switching layout reopens at the same ayah. The owner holds no separate licence
   for the QUL layout or the Indo-Pak font (2026-09-23); both are the free QUL
   downloads and ship as they are.
-- Indo-Pak 16-line Mushaf, selectable in Reading settings since 2026-09-23 (not
-  yet device-tested by the owner): 548 pages from the QUL Taj Company 16-line
+- Indo-Pak 16-line Mushaf, selectable in Reading settings since 2026-09-23
+  (device-tested by the owner 2026-10-09: correct): 548 pages from the QUL Taj Company 16-line
   layout (`taj-indopak-16-lines.db` in `.quran-cache/qul/`), built by the same
   script into `data/quran/indopak16/`, same text, font and parah checks. The
   print sets the basmala inside the surah header band, so those headers draw
@@ -1910,6 +1910,8 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
 
 ### Later
 
+- 13-line Indo-Pak Mushaf layout (owner decision 2026-10-09: other priorities first;
+  it stays listed as "Coming soon" in Reading settings)
 - iOS/App Store release
 - Automatic pronunciation scoring
 - Persistent Noor memory
