@@ -206283,6 +206283,1038 @@
           ]
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "QOAxW",
+      "x": -1238,
+      "y": 21286,
+      "name": "33 — Lesson Player & Noor · Laptop Type · Proposed",
+      "width": 4544,
+      "fill": "$parchment",
+      "layout": "vertical",
+      "gap": 40,
+      "padding": 64,
+      "children": [
+        {
+          "type": "frame",
+          "id": "mpGtH",
+          "name": "Proposal Header",
+          "width": 2900,
+          "layout": "vertical",
+          "gap": 12,
+          "children": [
+            {
+              "type": "text",
+              "id": "va2xo",
+              "name": "Title",
+              "fill": "$ink",
+              "content": "33 — Lesson player and Noor · laptop type (M18 second pass) · Proposed",
+              "fontFamily": "Cormorant Garamond",
+              "fontSize": 40,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "hX84h",
+              "name": "Why",
+              "fill": "$ink-secondary",
+              "textGrowth": "fixed-width",
+              "width": 2900,
+              "content": "Why: M18 enlarged Learn, Vocabulary, You and the Quran on laptops, but the lesson player and Noor keep phone sizes — about 60 fixed sizes in the player, many at 12–13, so the screen where learners spend most time reads small at 1440px. Layout, colours and copy do not change.",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "s5MvD",
+              "name": "Scale",
+              "fill": "$ink-secondary",
+              "textGrowth": "fixed-width",
+              "width": 2900,
+              "content": "Same rule as section 32 (laptop ≥ 1024px only): Inter 12 → 14, 13 → 15, 14 → 16, 15 → 17, 16–18 → +2; Cormorant and Scheherazade ×1.15. Reading column stays 720 (Noor 760). Phone, tablet and windows under 1024px are unchanged.",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "zHb0f",
+          "name": "Screens Row",
+          "width": 4416,
+          "gap": 64,
+          "children": [
+            {
+              "type": "frame",
+              "id": "T2ox1",
+              "name": "L01 · Lesson · Discover beat · Desktop · Proposed type",
+              "clip": true,
+              "width": 1440,
+              "height": 900,
+              "fill": "$screen-bg",
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "y8nEz",
+                  "name": "Column",
+                  "width": 720,
+                  "layout": "vertical",
+                  "gap": 22,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "wCeh1",
+                      "name": "Ayah",
+                      "fill": "$navy-deep",
+                      "content": "وَأَنِ ٱعْبُدُونِى ۚ هَٰذَا صِرَٰطٌ مُّسْتَقِيمٌ",
+                      "fontFamily": "Scheherazade New",
+                      "fontSize": 32,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "pTC7k",
+                      "name": "Ref",
+                      "fill": "$gold-text",
+                      "content": "Ya-Sin 36:61",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "IyPAM",
+                      "name": "Listen",
+                      "fill": "$ink-secondary",
+                      "content": "Listen to the ayah",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "SgcHX",
+                      "name": "Divider",
+                      "fill": "$parchment-deep",
+                      "width": "fill_container",
+                      "height": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "i54xk6",
+                      "name": "Body",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 620,
+                      "content": "Listen to this short Quranic phrase. Today you will learn هَٰذَا — 'this' — and six masculine nouns. By the end, you will recognise 'هَٰذَا صِرَٰطٌ': 'This is a path.'",
+                      "lineHeight": 1.5,
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Y2EWrF",
+                      "name": "Primary Button",
+                      "width": "fill_container",
+                      "height": 56,
+                      "fill": "$navy-deep",
+                      "cornerRadius": 12,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ITe4p",
+                          "name": "Label",
+                          "fill": "$gold",
+                          "content": "I want to understand this",
+                          "fontFamily": "Inter",
+                          "fontSize": 17,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "S5G2rb",
+              "name": "L02 · Lesson · Exercise · Desktop · Proposed type",
+              "clip": true,
+              "width": 1440,
+              "height": 900,
+              "fill": "$screen-bg",
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "xVvFp",
+                  "name": "Column",
+                  "width": 720,
+                  "layout": "vertical",
+                  "gap": 22,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zPFNZ",
+                      "name": "Progress",
+                      "fill": "$ink-secondary",
+                      "content": "Question 3 of 8",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "QbgTv",
+                      "name": "Prompt",
+                      "fill": "$navy-deep",
+                      "content": "What does this word mean?",
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 26,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "IbxnP",
+                      "name": "Word",
+                      "fill": "$navy-deep",
+                      "content": "صِرَٰطٌ",
+                      "fontFamily": "Scheherazade New",
+                      "fontSize": 58,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "k49SR",
+                      "name": "Option 1",
+                      "width": "fill_container",
+                      "height": 60,
+                      "fill": "$sage-soft",
+                      "cornerRadius": 12,
+                      "stroke": "$sage-deep",
+                      "strokeWidth": 1,
+                      "padding": [
+                        0,
+                        20
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "T8cVr",
+                          "name": "Text",
+                          "fill": "$ink",
+                          "content": "a path",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "qIfuh",
+                      "name": "Option 2",
+                      "width": "fill_container",
+                      "height": 60,
+                      "fill": "$pure-white",
+                      "cornerRadius": 12,
+                      "stroke": "$parchment-deep",
+                      "strokeWidth": 1,
+                      "padding": [
+                        0,
+                        20
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "i4r1iJ",
+                          "name": "Text",
+                          "fill": "$ink",
+                          "content": "a book",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "e0jWQ",
+                      "name": "Option 3",
+                      "width": "fill_container",
+                      "height": 60,
+                      "fill": "$pure-white",
+                      "cornerRadius": 12,
+                      "stroke": "$parchment-deep",
+                      "strokeWidth": 1,
+                      "padding": [
+                        0,
+                        20
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "bHFgM",
+                          "name": "Text",
+                          "fill": "$ink",
+                          "content": "a door",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "V22il",
+                      "name": "Feedback",
+                      "fill": "$sage-deep",
+                      "textGrowth": "fixed-width",
+                      "width": 660,
+                      "content": "Correct — صِرَٰطٌ is the path in the ayah you just heard.",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "yyLlZ",
+                      "name": "Primary Button",
+                      "width": "fill_container",
+                      "height": 56,
+                      "fill": "$navy-deep",
+                      "cornerRadius": 12,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "z2oNJ",
+                          "name": "Label",
+                          "fill": "$gold",
+                          "content": "Continue",
+                          "fontFamily": "Inter",
+                          "fontSize": 17,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "cKFV6",
+              "name": "N01 · Noor chat · Desktop · Proposed type",
+              "clip": true,
+              "width": 1440,
+              "height": 900,
+              "fill": "$screen-bg",
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "nsTDz",
+                  "name": "Column",
+                  "width": 760,
+                  "layout": "vertical",
+                  "gap": 22,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zgHcL",
+                      "name": "Header",
+                      "fill": "$navy-deep",
+                      "content": "Noor",
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 26,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "EuSBX",
+                      "name": "Sub",
+                      "fill": "$ink-secondary",
+                      "content": "Ask about a word, an ayah or a rule",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "rDrfQ",
+                      "name": "User Row",
+                      "width": "fill_container",
+                      "justifyContent": "end",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "RT0oQ",
+                          "name": "User Bubble",
+                          "width": 560,
+                          "fill": "$navy-deep",
+                          "cornerRadius": 16,
+                          "padding": 16,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "RvxLS",
+                              "name": "Text",
+                              "fill": "$pure-white",
+                              "textGrowth": "fixed-width",
+                              "width": 528,
+                              "content": "Why is it هَٰذَا and not هَٰذِهِ here?",
+                              "fontFamily": "Inter",
+                              "fontSize": 17,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "H0EbqR",
+                      "name": "Noor Row",
+                      "width": "fill_container",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "CQ4zC",
+                          "name": "Noor Bubble",
+                          "width": 640,
+                          "fill": "$pure-white",
+                          "cornerRadius": 16,
+                          "layout": "vertical",
+                          "gap": 6,
+                          "padding": 18,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "p3tcL",
+                              "name": "Text",
+                              "fill": "$ink",
+                              "textGrowth": "fixed-width",
+                              "width": 600,
+                              "content": "هَٰذَا is used for a masculine noun. صِرَٰطٌ is masculine, so it takes هَٰذَا. هَٰذِهِ is for feminine nouns.",
+                              "lineHeight": 1.5,
+                              "fontFamily": "Inter",
+                              "fontSize": 17,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "k3oiga",
+                              "name": "Time",
+                              "fill": "$ink-muted",
+                              "content": "Just now",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "jmrC3",
+                      "name": "Input Row",
+                      "width": "fill_container",
+                      "height": 56,
+                      "fill": "$pure-white",
+                      "cornerRadius": 12,
+                      "stroke": "$parchment-deep",
+                      "strokeWidth": 1,
+                      "padding": [
+                        0,
+                        18
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "u5RVc",
+                          "name": "Placeholder",
+                          "fill": "$ink-muted",
+                          "content": "Message Noor…",
+                          "fontFamily": "Inter",
+                          "fontSize": 17,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "KthAe",
+          "name": "Type Scale Table",
+          "width": 2900,
+          "fill": "$pure-white",
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "padding": 28,
+          "children": [
+            {
+              "type": "text",
+              "id": "EkIP3",
+              "name": "Table Title",
+              "fill": "$navy-deep",
+              "content": "Lesson player and Noor on laptop (≥ 1024px) — phone, tablet and narrow windows keep today's sizes",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "z1Rcb",
+              "name": "Row 0",
+              "width": "fill_container",
+              "gap": 24,
+              "padding": [
+                10,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "OWc8f",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 1100,
+                  "content": "Role",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "xLNZo",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "Today on laptop",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "gQj1c",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "Proposed laptop",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "UzOwP",
+              "name": "Row 1",
+              "width": "fill_container",
+              "gap": 24,
+              "padding": [
+                10,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "xBVBG",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 1100,
+                  "content": "Ayah / hero Arabic (Scheherazade)",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "b6ZyS",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "28",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "RrnPI",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "32",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "z2BTQj",
+              "name": "Row 2",
+              "width": "fill_container",
+              "gap": 24,
+              "padding": [
+                10,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "jUyg5",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 1100,
+                  "content": "Word on exercise card (Scheherazade)",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "veddU",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "50",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "gZWrK",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "58",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "zuBse",
+              "name": "Row 3",
+              "width": "fill_container",
+              "gap": 24,
+              "padding": [
+                10,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "v9jbvF",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 1100,
+                  "content": "Exercise prompt, card title (Cormorant)",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "EXQTS",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "22 – 26",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "aapjV",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "26 – 30",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Hsi8L",
+              "name": "Row 4",
+              "width": "fill_container",
+              "gap": 24,
+              "padding": [
+                10,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Z6C8di",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 1100,
+                  "content": "Option and answer text (Inter)",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "il9gV",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "16 – 17",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "OZQhX",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "18",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "TTKKx",
+              "name": "Row 5",
+              "width": "fill_container",
+              "gap": 24,
+              "padding": [
+                10,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "cwYW2",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 1100,
+                  "content": "Body, explanation, chat bubbles (Inter)",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "g26rA",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "15 – 17",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "r5d1T1",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "17",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "F0bpM",
+              "name": "Row 6",
+              "width": "fill_container",
+              "gap": 24,
+              "padding": [
+                10,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "WxCkH",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 1100,
+                  "content": "Hints, feedback, input (Inter)",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "MT2xa",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "14 – 15",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "EyhtN",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "16 – 17",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "gti5j",
+              "name": "Row 7",
+              "width": "fill_container",
+              "gap": 24,
+              "padding": [
+                10,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "N5ELw",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 1100,
+                  "content": "Meta: reference, progress, time (Inter)",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "XGU87",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "12 – 13",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "hpP4I",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "14 – 15 (minimum 14 here)",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "unrgJ",
+              "name": "Row 8",
+              "width": "fill_container",
+              "gap": 24,
+              "padding": [
+                10,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "P4Dgv",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 1100,
+                  "content": "Reading column",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "EHljg",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "720 (Noor 760)",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "m5VU3",
+                  "name": "Cell",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "unchanged",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "h3uXI",
+          "name": "Implementation Contract",
+          "width": 2900,
+          "fill": "$parchment-soft",
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "gap": 10,
+          "padding": 28,
+          "children": [
+            {
+              "type": "text",
+              "id": "KsBsX",
+              "name": "Contract Title",
+              "fill": "$navy-deep",
+              "content": "Implementation contract (after approval)",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "uOBuZ",
+              "name": "Contract Line",
+              "fill": "$ink",
+              "content": "• Same switch as M18: only when the web viewport is 1024px or wider (IS_DESKTOP_WEB in constants/theme.ts); read once at load.",
+              "lineHeight": 1.45,
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "aRuL9",
+              "name": "Contract Line",
+              "fill": "$ink",
+              "content": "• Replace the fixed fontSize / lineHeight literals in lessons/[lessonId]/play.tsx, ShadowRepeatExercise, AnswerItConversation, ConversationLab, chat.tsx, NoorMessageText and chapter-test with desktopFontSize() / desktopLineHeight() — the helpers from M18.",
+              "lineHeight": 1.45,
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "kn83m",
+              "name": "Contract Line",
+              "fill": "$ink",
+              "content": "• Layout, colours, copy and exercise logic do not change; the 720 reading column stays. Check each exercise type still fits at 1440 and at 1024.",
+              "lineHeight": 1.45,
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "HY0uW",
+              "name": "Contract Line",
+              "fill": "$ink",
+              "content": "• Test with the Haiku tester on local web against staging: lesson beats, one of each exercise type, Noor, and a 900px window for no change.",
+              "lineHeight": 1.45,
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "YOQhZ",
+              "name": "Contract Line",
+              "fill": "$ink",
+              "content": "• Not in this proposal: Android (this is web only), the Quran translation (switched off) and Urdu right-to-left.",
+              "lineHeight": 1.45,
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
     }
   ],
   "variables": {

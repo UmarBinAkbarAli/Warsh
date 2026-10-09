@@ -498,8 +498,13 @@ Still open from the evaluation:
   Applied to Learn, chapter lesson list, Vocabulary word detail, You, Quran list
   and the sidebar; the Quran reader page is a centred column capped at 760px.
   Tested on local web against staging with a Haiku 5.5 agent at 1440 and 900px.
-  Open: lesson player and Noor still use mobile sizes (second pass, only checked
-  for breakage). Android is unaffected.
+  Android is unaffected.
+- **Lesson player and Noor laptop type (M18 second pass) — Pen design proposed
+  2026-10-09, awaiting owner approval.** Pen section "33 — Lesson Player & Noor ·
+  Laptop Type · Proposed": three laptop screens (lesson beat, exercise, Noor chat),
+  a type table and an implementation contract. Cause: `play.tsx` has about 60 fixed
+  font sizes, many at 12-13, so lessons read small at 1440px. Same ≥ 1024px switch
+  and helpers as M18; the 720 reading column stays. No code until approved.
 - **Word detail data (M12) — done in production 2026-10-09.** Roots 444 → 820,
   words with related words 179 → 481, words with a Quran example 55 → 642.
   Roots come from the Quranic Arabic Corpus (v0.4, GPL, not committed) for words
