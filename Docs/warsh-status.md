@@ -493,8 +493,19 @@ Still open from the evaluation:
 - **Laptop web type (M18).** A global CSS `zoom` was tried on app.warsh.app
   at 1440px and broke the layout (sidebar overlap, 47 elements past the
   viewport), so it needs per-screen desktop type work.
-- **Word detail data (M12).** Only 55 of 920 words carry a Quran example,
-  444 a root, 179 related words; filling them is a content job.
+- **Word detail data (M12) — done in production 2026-10-09.** Roots 444 → 820,
+  words with related words 179 → 481, words with a Quran example 55 → 642.
+  Roots come from the Quranic Arabic Corpus (v0.4, GPL, not committed) for words
+  that had none; an existing root is never overridden. The 500 Core words reuse
+  their owner-approved first example; 87 other words appear 3+ times with an
+  exact vowelled match and a verse of 12 words or fewer. Words with no root
+  (particles, names) stay without one; about 40 words with only long verses
+  have no example. Candidates: `warsh-backend/content/word-detail-candidates.json`
+  (rebuild with `scripts/prepare-word-detail.ts`); written by
+  `scripts/apply-word-detail.ts` (dry run by default, fills empty fields only,
+  "no example" is stored as JSON null). Verified on the emulator against
+  production (9 words). Open: 90 roots matched loosely and are marked `check`
+  for owner review; the verse for جَمْع (100:5) has a fragment translation.
 - **Tadabbur Urdu (owner).** No Urdu translation in the data. The Mushaf
   reader already ships Junagarhi (Urdu) and Pickthall (English), both public
   domain, if the owner wants the same one.
