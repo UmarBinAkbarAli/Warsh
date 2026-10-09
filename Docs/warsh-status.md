@@ -506,6 +506,15 @@ Still open from the evaluation:
   "no example" is stored as JSON null). Verified on the emulator against
   production (9 words). Open: 90 roots matched loosely and are marked `check`
   for owner review; the verse for جَمْع (100:5) has a fragment translation.
+- **Quran reader on web — checked 2026-10-09 (app.warsh.app, 1528px Chrome).** Works:
+  surah list, Al-Fatihah and Al-Baqarah p. 2 render with tajweed colours and the
+  legend, page turning, reading settings, Urdu translation text (right-to-left,
+  numbered, credited). Found: (1) with a translation on, the strip under the
+  page could not be opened with the mouse wheel, a click or the chevron — only
+  the Space key scrolled to the translation (`quran/[page].tsx` nests a vertical
+  ScrollView in the horizontal page FlatList; confirm with a real mouse and fix);
+  (2) on a wide window the 15-line page is small with a large empty gap above the
+  surah header and, on page 2, words spread very wide — part of M18.
 - **Tadabbur Urdu — done in production 2026-10-09.** All 55 ayat of the 11 Tadabbur
   Surahs now carry the Junagarhi Urdu translation (the one the Mushaf reader
   ships), written by `npm run content:add-tadabbur-urdu -- --apply`. It fills
