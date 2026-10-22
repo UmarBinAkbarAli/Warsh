@@ -543,6 +543,16 @@ Still open from the evaluation:
   ScrollView in the horizontal page FlatList; confirm with a real mouse and fix);
   (2) on a wide window the 15-line page is small with a large empty gap above the
   surah header and, on page 2, words spread very wide — fixed by M18 (760px centred column).
+- **Reading settings sheet blank on Android — fix in code 2026-10-22, needs the next
+  Android build.** On 1.0.15 the settings icon on the Quran tab dimmed the screen
+  and showed no sheet (owner, on the Play build). `BottomSheet` in
+  `components/quran/QuranSheets.tsx` now holds the sheet at the bottom of a
+  backdrop with a pixel `maxHeight` (85 % of the window) instead of a
+  `flex: 1` scrim above a percentage `maxHeight` — the layout the lesson sheet
+  already uses on Android. Not reproduced here (no emulator in the cloud
+  session; web never showed it); web is unchanged. Confirm on the APK that the
+  sheet opens from the Quran tab and the reader, then check the translation
+  options read "Coming soon".
 - **Tadabbur Urdu — done in production 2026-10-09.** All 55 ayat of the 11 Tadabbur
   Surahs now carry the Junagarhi Urdu translation (the one the Mushaf reader
   ships), written by `npm run content:add-tadabbur-urdu -- --apply`. It fills
