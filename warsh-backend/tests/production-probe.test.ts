@@ -1,6 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { PROBE_THRESHOLDS, runProductionProbe, type ProbeDeps } from "../lib/productionProbe";
+import { PROBE_THRESHOLDS, catalogAudioSample, runProductionProbe, type ProbeDeps } from "../lib/productionProbe";
+import { lessonAudioTargets } from "../lib/audioTargets";
 
 /**
  * The probe exists because an empty Vocabulary tab, a missing Tadabbur card and
@@ -120,4 +121,24 @@ test("a catalogue clip missing from the redirect host fails the probe", async ()
   );
   assert.equal(report.ok, false);
   assert.deepEqual(report.checks.filter((c) => !c.ok).map((c) => c.name), ["catalog_audio"]);
+});
+
+test("a final test edited last does not read as missing catalogue audio", () => {
+  // Chapter final tests and Quran-only lessons need no catalogue clips. When one
+  // was the newest edit the probe reported "no lesson carries catalogue audio".
+  const finalTest = { template: "REVIEW", discover_cards: [], exercises: [] };
+  const ayahOnly = {
+    discover_cards: [{ type: "AYAH_PREVIEW", audio_url: "https://assets.warsh.app/quran/1.mp3", text: { ar: "بِسْمِ" } }],
+    exercises: [{ type: "MATCH_AYAH" }],
+  };
+  const standard = {
+    discover_cards: [{ type: "CONCEPT", concept: { ar: "كِتَابٌ" } }],
+    exercises: [{ type: "FILL_BLANK", sentence_ar: "هٰذَا كِتَابٌ" }],
+  };
+
+  assert.deepEqual(catalogAudioSample([finalTest, ayahOnly, standard], lessonAudioTargets), [
+    "كِتَابٌ",
+    "هٰذَا كِتَابٌ",
+  ]);
+  assert.deepEqual(catalogAudioSample([finalTest, ayahOnly], lessonAudioTargets), []);
 });

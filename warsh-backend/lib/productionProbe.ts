@@ -38,7 +38,7 @@ export type ProbeDeps = {
   /** One media URL a learner would actually load, or null when none exists. */
   sampleMediaUrl: () => Promise<string | null>;
   /**
-   * Catalogue clips the most recently edited lesson depends on, as the public
+   * Catalogue clips of the most recently edited lesson that uses any, as the public
    * URLs /api/audio/catalog redirects to. Word media above is stored in the
    * database, so it cannot notice R2_PUBLIC_URL pointing at a bucket the
    * generator never uploaded to; these URLs are built from that variable.
@@ -124,6 +124,27 @@ export async function runProductionProbe(deps: ProbeDeps): Promise<ProbeReport> 
 
   const failures = checks.filter((c) => !c.ok).map((c) => `${c.name}: ${c.detail}`);
   return { ok: failures.length === 0, checks, failures };
+}
+
+/**
+ * The catalogue texts to probe from lessons ordered newest edit first: those of
+ * the first lesson that depends on catalogue audio at all.
+ *
+ * About one lesson in eight legitimately has none — every chapter final test,
+ * and Quran-only lessons whose cards carry human recitation — so sampling only
+ * the single newest edit reported "no lesson carries catalogue audio" whenever
+ * one of those happened to be edited last.
+ */
+export function catalogAudioSample(
+  contentsNewestFirst: unknown[],
+  targetsOf: (content: unknown) => { text: string }[],
+  limit = 5,
+): string[] {
+  for (const content of contentsNewestFirst) {
+    const targets = targetsOf(content);
+    if (targets.length > 0) return targets.slice(0, limit).map((target) => target.text);
+  }
+  return [];
 }
 
 function describeError(error: unknown): string {

@@ -418,7 +418,9 @@ maintained `npm run deploy:web` script; no Android, backend or feature code chan
   `applyVoidedPurchase` in case the RTDN void was dropped.
 - Daily production probe (`/api/cron/production-probe`, 03:00 UTC, 2026-09-11):
   asserts published-word, Core 500, Tadabbur and lesson counts stay above floors,
-  HEADs one real R2 media URL, and round-trips a prompt through the real Noor path.
+  HEADs one real R2 media URL plus the catalogue clips of the newest-edited lesson
+  that has any (final tests and Quran-only lessons have none and are skipped), and
+  round-trips a prompt through the real Noor path.
   Any failure emits a Sentry error event tagged `subsystem: probe` and answers 500,
   so Vercel's cron log records a failed run too. Logic lives in
   `lib/productionProbe.ts` and is covered by `tests/production-probe.test.ts`.
@@ -2016,7 +2018,12 @@ with `Retry-After: 10`. `tests/noor-burst-limit.test.ts` covers both keys.
   2026-08-29 with the `lib/openai.ts` fix.
 - **Cron reliability risk:** Neon suspends its compute overnight, so the 04:00/05:00
   PKT crons can hit a sleeping database and die with `P1000`. Half of August's
-  streak resets never ran.
+  streak resets never ran. Since 2026-10-22 a missed night no longer skews
+  streaks: `resolveMissedStreakDays` (`lib/streak.ts`) counts every missed day,
+  spending one freeze per day or resetting, so the next run lands where nightly
+  runs would have; the lesson path does the same. Each cron write is matched on
+  the row it read, so a lesson finished between 04:00 PKT and the run is no
+  longer overwritten (`skipped` in the response).
 - **Asset risk (closed 2026-09-16):** illustration coverage is 920 of 920
   published words. The owner drew the remaining 335 (16 curriculum + 319 Core
   500) across 2026-09-15/16; each batch was compressed and uploaded keyed by
