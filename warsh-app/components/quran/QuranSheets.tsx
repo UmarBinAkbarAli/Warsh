@@ -1,6 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
 import type { ReactNode } from "react";
-import { Modal, Pressable, ScrollView, StyleSheet, Switch, Text, View } from "react-native";
+import { Modal, Pressable, ScrollView, StyleSheet, Switch, Text, useWindowDimensions, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { useT } from "@i18n/index";
@@ -13,6 +13,7 @@ import { INDOPAK_FONT, QURAN_FONT } from "./MushafPage";
 
 function BottomSheet({ visible, onClose, children }: { visible: boolean; onClose: () => void; children: ReactNode }) {
   const insets = useSafeAreaInsets();
+  const { height } = useWindowDimensions();
   return (
     <Modal
       visible={visible}
@@ -22,13 +23,23 @@ function BottomSheet({ visible, onClose, children }: { visible: boolean; onClose
       animationType="slide"
       onRequestClose={onClose}
     >
-      <Pressable style={styles.scrim} onPress={onClose} accessibilityRole="button" />
-      {/* Gesture-nav insets can read 0 inside a translucent modal on some
-          Android builds, which left the last option under the home indicator
-          (finding M14); keep at least a gesture bar's worth of room. */}
-      <View style={[styles.sheet, { paddingBottom: Math.max(insets.bottom, 24) + Spacing.xl }]}>
-        <View style={styles.handle} />
-        {children}
+      {/* The backdrop holds the sheet at the bottom and the cap is in pixels:
+          with a flex: 1 scrim above a percentage maxHeight, the Android Quran
+          tab dimmed the screen and showed no sheet. */}
+      <View style={styles.backdrop}>
+        <Pressable style={styles.scrim} onPress={onClose} accessibilityRole="button" />
+        {/* Gesture-nav insets can read 0 inside a translucent modal on some
+            Android builds, which left the last option under the home indicator
+            (finding M14); keep at least a gesture bar's worth of room. */}
+        <View
+          style={[
+            styles.sheet,
+            { maxHeight: Math.round(height * 0.85), paddingBottom: Math.max(insets.bottom, 24) + Spacing.xl },
+          ]}
+        >
+          <View style={styles.handle} />
+          {children}
+        </View>
       </View>
     </Modal>
   );
@@ -67,7 +78,7 @@ export function QuranSettingsSheet({ visible, onClose }: { visible: boolean; onC
         </Pressable>
       </View>
 
-      <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.sheetBody}>
+      <ScrollView style={styles.sheetScroll} showsVerticalScrollIndicator={false} contentContainerStyle={styles.sheetBody}>
         <Text style={styles.label}>{t("quran.settings.layout")}</Text>
         {LAYOUTS.map(({ key, titleKey, subKey, layout }) => {
           const selected = layout === current;
@@ -194,7 +205,7 @@ export function TajweedRuleSheet({
   return (
     <BottomSheet visible={word !== null} onClose={onClose}>
       {word ? (
-        <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.sheetBody}>
+        <ScrollView style={styles.sheetScroll} showsVerticalScrollIndicator={false} contentContainerStyle={styles.sheetBody}>
           <View style={styles.wordRow}>
             <Text style={[styles.wordArabic, isIndoPak(layout) && styles.wordIndoPak]}>
               {segments
@@ -242,12 +253,15 @@ export function TajweedLegend() {
 }
 
 const styles = StyleSheet.create({
-  scrim: {
+  backdrop: {
     flex: 1,
+    justifyContent: "flex-end",
+  },
+  scrim: {
+    ...StyleSheet.absoluteFillObject,
     backgroundColor: Colors.overlay,
   },
   sheet: {
-    maxHeight: "85%",
     backgroundColor: Colors.bg.primary,
     borderTopLeftRadius: Radii.xl,
     borderTopRightRadius: Radii.xl,
@@ -261,6 +275,10 @@ const styles = StyleSheet.create({
     borderRadius: Radii.full,
     backgroundColor: WarshPalette.cream,
     marginBottom: Spacing.lg,
+  },
+  sheetScroll: {
+    flexGrow: 0,
+    flexShrink: 1,
   },
   sheetBody: {
     gap: Spacing.sm,

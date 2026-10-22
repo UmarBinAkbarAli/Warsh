@@ -4,7 +4,7 @@ import { prisma } from "../../../../lib/prisma";
 import { timingSafeStringEqual } from "../../../../lib/auth";
 import { withDbRetry } from "../../../../lib/dbRetry";
 import { getAssistantReply } from "../../../../lib/openai";
-import { runProductionProbe } from "../../../../lib/productionProbe";
+import { catalogAudioSample, runProductionProbe } from "../../../../lib/productionProbe";
 import { catalogAudioUrl } from "../../../../lib/audioCatalog";
 import { lessonAudioTargets } from "../../../../lib/audioTargets";
 
@@ -49,16 +49,23 @@ export async function GET(request: Request) {
     },
     sampleCatalogAudioUrls: async () => {
       // The newest edit is the clip most likely to be missing from the bucket.
-      const lesson = await withDbRetry("probe/catalog", () =>
-        prisma.lesson.findFirst({
-          where: { status: "PUBLISHED" },
-          orderBy: { updatedAt: "desc" },
-          select: { content: true },
-        }),
-      );
-      return lessonAudioTargets(lesson?.content)
-        .slice(0, 5)
-        .map((target) => catalogAudioUrl(target.text));
+      // Page past lessons with no catalogue audio (final tests, Quran-only
+      // lessons) instead of failing on them; an empty result then means no
+      // published lesson needs catalogue audio at all, which is a real fault.
+      const PAGE = 50;
+      for (let skip = 0; ; skip += PAGE) {
+        const lessons = await withDbRetry("probe/catalog", () =>
+          prisma.lesson.findMany({
+            where: { status: "PUBLISHED" },
+            orderBy: [{ updatedAt: "desc" }, { id: "asc" }],
+            select: { content: true },
+            skip,
+            take: PAGE,
+          }),
+        );
+        const texts = catalogAudioSample(lessons.map((l) => l.content), lessonAudioTargets);
+        if (texts.length > 0 || lessons.length < PAGE) return texts.map(catalogAudioUrl);
+      }
     },
     headMedia: async (url) => {
       const response = await fetch(url, { method: "HEAD", cache: "no-store" });

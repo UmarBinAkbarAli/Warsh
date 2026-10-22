@@ -1,4 +1,4 @@
-import { getPKTStreakDayIndex } from "./date";
+import { get4amPKTBoundary, getPKTStreakDayIndex, getPrevious4amPKTBoundary } from "./date";
 
 export interface StreakSnapshot {
   currentStreak: number;
@@ -60,11 +60,13 @@ export function calculateLessonStreakUpdate(
     };
   }
 
-  // If the cron was delayed, bridge exactly one missed streak day with one
-  // freeze before applying today's completion.
-  if (dayGap === 2 && streak.streakFreezes > 0) {
+  // The reset cron has not run since the learner's last active day (a delayed
+  // or failed night). Spend one freeze per missed day — what the nightly runs
+  // would have done — before applying today's completion.
+  const missedDays = dayGap - 1;
+  if (streak.streakFreezes >= missedDays) {
     const nextStreak = streak.currentStreak + 1;
-    const remainingFreezes = streak.streakFreezes - 1;
+    const remainingFreezes = streak.streakFreezes - missedDays;
     const freezeAward = shouldAwardStreakFreeze(
       nextStreak,
       remainingFreezes,
@@ -86,6 +88,45 @@ export function calculateLessonStreakUpdate(
     longestStreak: Math.max(streak.longestStreak, 1),
     lastActiveDate: now,
   };
+}
+
+export type MissedDayResolution =
+  | { action: "freeze"; missedDays: number; streakFreezes: number; lastActiveDate: Date; lastFreezeUsedAt: Date }
+  | { action: "reset"; missedDays: number };
+
+/**
+ * What the 04:00 PKT reset cron does to a streak whose owner did nothing in at
+ * least one whole streak day before `now`'s.
+ *
+ * One freeze covers one missed day. Normally the cron runs every night and sees
+ * exactly one missed day, but a night it fails (a cold Neon compute outlasting
+ * the retry budget) leaves two or more for the next run. Those are counted, so a
+ * single freeze no longer silently covers a two-day gap, and the outcome is the
+ * same as if every night had run. A reset leaves the freezes in place.
+ */
+export function resolveMissedStreakDays(
+  streak: Pick<StreakSnapshot, "lastActiveDate" | "streakFreezes">,
+  now: Date,
+): MissedDayResolution | null {
+  if (!streak.lastActiveDate) return { action: "reset", missedDays: 0 };
+
+  const today = getPKTStreakDayIndex(now);
+  const missedDays = today - 1 - getPKTStreakDayIndex(streak.lastActiveDate);
+  if (missedDays <= 0) return null;
+
+  if (streak.streakFreezes >= missedDays) {
+    // The virtual activity belongs to the day that just ended, so a lesson in
+    // the newly opened day increments normally without granting another free day.
+    return {
+      action: "freeze",
+      missedDays,
+      streakFreezes: streak.streakFreezes - missedDays,
+      lastActiveDate: getPrevious4amPKTBoundary(now),
+      lastFreezeUsedAt: get4amPKTBoundary(now),
+    };
+  }
+
+  return { action: "reset", missedDays };
 }
 
 // Minimal shape of the transactional client the streak write needs. Keeping it

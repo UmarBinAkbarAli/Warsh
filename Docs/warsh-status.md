@@ -1,7 +1,7 @@
 # Warsh Current Status
 
 **Status:** Active current-state source of truth
-**Last verified:** 2026-10-08 for the Warsh Studio curriculum editor; 2026-10-04 for Core 500 and the web loading logo; other entries retain their dated verification
+**Last verified:** 2026-10-22 for the 1.0.15 Play review and the Android reading-settings sheet fix (code only, Android unconfirmed); 2026-10-08 for the Warsh Studio curriculum editor; 2026-10-04 for Core 500 and the web loading logo; other entries retain their dated verification
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Post-launch hardening
 
@@ -422,7 +422,9 @@ maintained `npm run deploy:web` script; no Android, backend or feature code chan
   `applyVoidedPurchase` in case the RTDN void was dropped.
 - Daily production probe (`/api/cron/production-probe`, 03:00 UTC, 2026-09-11):
   asserts published-word, Core 500, Tadabbur and lesson counts stay above floors,
-  HEADs one real R2 media URL, and round-trips a prompt through the real Noor path.
+  HEADs one real R2 media URL plus the catalogue clips of the newest-edited lesson
+  that has any (final tests and Quran-only lessons have none and are skipped), and
+  round-trips a prompt through the real Noor path.
   Any failure emits a Sentry error event tagged `subsystem: probe` and answers 500,
   so Vercel's cron log records a failed run too. Logic lives in
   `lib/productionProbe.ts` and is covered by `tests/production-probe.test.ts`.
@@ -434,7 +436,7 @@ maintained `npm run deploy:web` script; no Android, backend or feature code chan
 
 ### UX evaluation follow-up (2026-09-25)
 
-### Release 1.0.15 (39) — submitted 2026-10-05
+### Release 1.0.15 (39) — live on Play (submitted 2026-10-05)
 
 Android **1.0.15 (39)** submitted to Production (100 % roll-out) after the full
 release gate (fixtures, Urdu audit, backend build, app lint + tsc,
@@ -541,6 +543,16 @@ Still open from the evaluation:
   is now a button that scrolls to the translation, and the page's scroller handles the
   mouse wheel itself (the inverted horizontal pager swallowed it). Turning it back on
   is the one-line flag change; Android has not been re-tested with the new strip button.
+- **Reading settings sheet blank on Android — fix in code 2026-10-22, needs the next
+  Android build.** On 1.0.15 the settings icon on the Quran tab dimmed the screen
+  and showed no sheet (owner, on the Play build). `BottomSheet` in
+  `components/quran/QuranSheets.tsx` now holds the sheet at the bottom of a
+  backdrop with a pixel `maxHeight` (85 % of the window) instead of a
+  `flex: 1` scrim above a percentage `maxHeight` — the layout the lesson sheet
+  already uses on Android. Not reproduced here (no emulator in the cloud
+  session; web never showed it); web is unchanged. Confirm on the APK that the
+  sheet opens from the Quran tab and the reader, then check the translation
+  options read "Coming soon".
 - **Tadabbur Urdu — done in production 2026-10-09.** All 55 ayat of the 11 Tadabbur
   Surahs now carry the Junagarhi Urdu translation (the one the Mushaf reader
   ships), written by `npm run content:add-tadabbur-urdu -- --apply`. It fills
@@ -2016,7 +2028,12 @@ with `Retry-After: 10`. `tests/noor-burst-limit.test.ts` covers both keys.
   2026-08-29 with the `lib/openai.ts` fix.
 - **Cron reliability risk:** Neon suspends its compute overnight, so the 04:00/05:00
   PKT crons can hit a sleeping database and die with `P1000`. Half of August's
-  streak resets never ran.
+  streak resets never ran. Since 2026-10-22 a missed night no longer skews
+  streaks: `resolveMissedStreakDays` (`lib/streak.ts`) counts every missed day,
+  spending one freeze per day or resetting, so the next run lands where nightly
+  runs would have; the lesson path does the same. Each cron write is matched on
+  the row it read, so a lesson finished between 04:00 PKT and the run is no
+  longer overwritten (`skipped` in the response).
 - **Asset risk (closed 2026-09-16):** illustration coverage is 920 of 920
   published words. The owner drew the remaining 335 (16 curriculum + 319 Core
   500) across 2026-09-15/16; each batch was compressed and uploaded keyed by
