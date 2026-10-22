@@ -1,7 +1,7 @@
 # Warsh Current Status
 
 **Status:** Active current-state source of truth
-**Last verified:** 2026-10-08 for the Warsh Studio curriculum editor; 2026-10-04 for Core 500 and the web loading logo; other entries retain their dated verification
+**Last verified:** 2026-10-22 for the 1.0.15 Play review and the Android reading-settings sheet fix (code only, Android unconfirmed); 2026-10-08 for the Warsh Studio curriculum editor; 2026-10-04 for Core 500 and the web loading logo; other entries retain their dated verification
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Post-launch hardening
 
