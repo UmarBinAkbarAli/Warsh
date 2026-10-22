@@ -18,12 +18,15 @@ type PlayButtonProps = {
   // where the audio control has to carry its own weight (Discover cards),
   // rather than sitting as a hint beside text.
   label?: string;
+  // "link" draws the labelled control as a bare icon + text action instead of
+  // the navy pill, for rows of quiet actions (the Noor reply card).
+  labelStyle?: "pill" | "link";
   autoPlay?: boolean;
 };
 
 type PlayState = "idle" | "loading" | "playing" | "error";
 
-export function PlayButton({ text, cacheKey, category = "words", wordId, audioUrl, size = 20, color = WarshPalette.gold, label, autoPlay = false }: PlayButtonProps) {
+export function PlayButton({ text, cacheKey, category = "words", wordId, audioUrl, size = 20, color = WarshPalette.gold, label, labelStyle = "pill", autoPlay = false }: PlayButtonProps) {
   const [playState, setPlayState] = useState<PlayState>("idle");
   const soundRef = useRef<Audio.Sound | null>(null);
   const mountedRef = useRef(true);
@@ -134,10 +137,14 @@ export function PlayButton({ text, cacheKey, category = "words", wordId, audioUr
         accessibilityLabel={label}
         onPress={handlePress}
         disabled={playState === "loading"}
-        style={({ pressed }) => [styles.pill, pressed ? styles.pillPressed : null]}
+        style={({ pressed }) =>
+          labelStyle === "link"
+            ? [styles.link, pressed ? styles.linkPressed : null]
+            : [styles.pill, pressed ? styles.pillPressed : null]
+        }
       >
         {playState === "loading" ? <ActivityIndicator size="small" color={color} /> : icon}
-        <Text style={[styles.pillLabel, { color: iconColor }]}>{label}</Text>
+        <Text style={[labelStyle === "link" ? styles.linkLabel : styles.pillLabel, { color: iconColor }]}>{label}</Text>
       </Pressable>
     );
   }
@@ -182,5 +189,18 @@ const styles = StyleSheet.create({
   pillLabel: {
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.bodyM,
+  },
+  link: {
+    minHeight: 32,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+  },
+  linkPressed: {
+    opacity: 0.7,
+  },
+  linkLabel: {
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.label,
   },
 });

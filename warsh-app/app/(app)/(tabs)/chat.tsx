@@ -1,14 +1,17 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { View, Text, ScrollView, Pressable, ActivityIndicator, Modal, Platform, TouchableOpacity, Alert, StyleSheet, useWindowDimensions } from "react-native";
-import { TextInput } from "react-native-paper";
+import { View, Text, ScrollView, Pressable, ActivityIndicator, Modal, Platform, TouchableOpacity, Alert, StyleSheet, TextInput, useWindowDimensions } from "react-native";
 import { useFocusEffect, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import * as Crypto from "expo-crypto";
-import api, { isSubscriptionRequiredError, subscriptionRequiredRoute, purchaseNoorPack } from "@services/api";
+import api, { isSubscriptionRequiredError, subscriptionRequiredRoute, purchaseNoorPack, updateUserVocabularyWord } from "@services/api";
 import { BrandButton } from "@components/BrandButton";
+import { ArabicText } from "@components/ArabicText";
+import { PlayButton } from "@components/PlayButton";
+import { StatusBarBacking } from "@components/StatusBarBacking";
+import { useT } from "@i18n/index";
 import { useAuthStore } from "@stores/authStore";
-import { Colors, Fonts, FontSizes, LineHeights, Radii, Shadows, Spacing, WarshPalette, WarshAlpha, desktopFontSize, desktopLineHeight } from "../../../constants/theme";
+import { Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette, WarshAlpha, desktopFontSize, desktopLineHeight } from "../../../constants/theme";
 import { trackNoorMessageSent } from "@services/analytics";
 import { useTranslationLanguage } from "@services/language";
 import {
@@ -36,6 +39,15 @@ function withDirectionMark(text: string, language: "en" | "ur"): string {
   return mark + text.replace(/\n/g, `\n${mark}`);
 }
 
+type Headword = {
+  arabic: string;
+  wordId: string | null;
+  transliteration: string | null;
+  meaning: string | null;
+  audioUrl: string | null;
+};
+type ChatMessage = { role: "USER" | "ASSISTANT"; content: string; headword?: Headword | null };
+
 export default function ChatScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
@@ -43,7 +55,10 @@ export default function ChatScreen() {
   const desktopWeb = Platform.OS === "web" && width >= 960;
   const user = useAuthStore((state) => state.user);
   const language = useTranslationLanguage();
-  const [messages, setMessages] = useState<any[]>([]);
+  const t = useT();
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [savedWords, setSavedWords] = useState<Set<string>>(new Set());
+  const scrollRef = useRef<ScrollView>(null);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(true);
   const [sending, setSending] = useState(false);
@@ -128,11 +143,11 @@ export default function ChatScreen() {
         router.replace(await subscriptionRequiredRoute());
         return;
       }
-      setError("Unable to load chat history.");
+      setError(t("chat.loadError"));
     } finally {
       setLoading(false);
     }
-  }, [router]);
+  }, [router, t]);
 
   useFocusEffect(
     useCallback(() => {
@@ -146,15 +161,15 @@ export default function ChatScreen() {
   // the purchase token isn't available until the user finishes paying.
   async function handleBuyNoorPack() {
     if (!isBillingSupportedEnvironment()) {
-      Alert.alert("Purchases unavailable", "In-app purchases are only available in a Play Store build, not Expo Go.");
+      Alert.alert(t("chat.iapUnavailableTitle"), t("chat.iapUnavailableExpoGo"));
       return;
     }
     if (!user?.id) {
-      Alert.alert("Sign in required", "Please sign in again before making a purchase.");
+      Alert.alert(t("chat.signInRequiredTitle"), t("chat.signInRequiredBody"));
       return;
     }
     if (!packDisplayPrice) {
-      Alert.alert("Purchase unavailable", "Google Play has not returned a price for this product. Please try again later.");
+      Alert.alert(t("chat.noPriceTitle"), t("chat.noPriceBody"));
       return;
     }
     setShowOverageModal(false);
@@ -196,19 +211,15 @@ export default function ChatScreen() {
 
       setUsage((prev) => ({ ...prev, packBalance: newBalance }));
       setPurchasingPack(false);
-      Alert.alert(
-        "20 messages added!",
-        "JazakAllah khair. Noor is ready to help whenever you need.",
-        [{ text: "Continue" }]
-      );
+      Alert.alert(t("chat.packAddedTitle"), t("chat.packAddedBody"), [{ text: t("common.continue") }]);
     } catch (err: any) {
       setPurchasingPack(false);
       const code = err?.response?.data?.code ?? err?.code ?? "unknown";
       console.error("[IAP] Noor pack verify failed:", code, err?.message);
       if (code === "purchase_pending") {
-        Alert.alert("Purchase pending", "Google Play is still processing this purchase. Messages will be added after payment completes.");
+        Alert.alert(t("chat.pendingTitle"), t("chat.pendingBody"));
       } else {
-        Alert.alert("Purchase failed", `We couldn't add the pack (${code}). If you were charged, contact support.`);
+        Alert.alert(t("chat.failedTitle"), t("chat.failedVerifyBody", { code }));
       }
     } finally {
       processingPurchaseTokensRef.current.delete(token);
@@ -224,40 +235,39 @@ export default function ChatScreen() {
       return; // User cancelled — no alert needed
     }
     if (isBillingDeclinedError(err)) {
-      Alert.alert(
-        "Payment didn't go through",
-        "Google Play couldn't take the payment. Check your payment method in the Play Store and try again — you haven't been charged.",
-      );
+      Alert.alert(t("chat.declinedTitle"), t("chat.declinedBody"));
       return;
     }
     if (isIapUnavailableError(err)) {
-      Alert.alert("Purchases unavailable", "In-app purchases are not available on this build.");
+      Alert.alert(t("chat.iapUnavailableTitle"), t("chat.iapUnavailableBuild"));
       return;
     }
     console.error("[IAP] Noor pack failed:", code, err?.message);
-    Alert.alert("Purchase failed", "Something went wrong. Please try again or contact support.");
+    Alert.alert(t("chat.failedTitle"), t("chat.failedBody"));
   }
 
-  async function sendMessage() {
-    if (!input.trim()) return;
+  async function sendMessage(text = input) {
+    const message = text.trim();
+    if (!message || sending) return;
     setSending(true);
     setError(null);
     try {
-      const response = await api.post("/api/chat", { message: input.trim() });
+      const response = await api.post("/api/chat", { message });
+      const data = response.data.data;
       setMessages((prev) => [
         ...prev,
-        { role: "USER", content: input.trim() },
-        { role: "ASSISTANT", content: response.data.data.reply },
+        { role: "USER", content: message },
+        { role: "ASSISTANT", content: data.reply, headword: data.headword ?? null },
       ]);
-      const usedToday = response.data.data.messagesUsedToday;
+      const usedToday = data.messagesUsedToday;
       setUsage({
         used: usedToday,
-        limit: response.data.data.messagesLimit,
-        packBalance: response.data.data.noorOverageBalance ?? 0,
+        limit: data.messagesLimit,
+        packBalance: data.noorOverageBalance ?? 0,
       });
       trackNoorMessageSent(usedToday);
-      setInput("");
-      const newAchievement = response.data.data.newAchievement;
+      if (text === input) setInput("");
+      const newAchievement = data.newAchievement;
       if (newAchievement) {
         router.push({
           pathname: "/(app)/milestone-celebration",
@@ -275,14 +285,30 @@ export default function ChatScreen() {
         router.replace(await subscriptionRequiredRoute());
       } else if (err.response?.status === 429 && err.response?.data?.code === "rate_limited") {
         // Burst limit, not the daily quota — don't offer to sell credits.
-        setError("You're sending messages too quickly. Wait a moment and try again.");
+        setError(t("chat.tooFast"));
       } else if (err.response?.status === 429) {
         setShowOverageModal(true);
+      } else if (err.response?.data?.code === "assistant_unavailable") {
+        setError(t("chat.unavailable"));
       } else {
-        setError("Unable to send message. Try again.");
+        setError(t("chat.sendError"));
       }
     } finally {
       setSending(false);
+    }
+  }
+
+  async function saveWord(wordId: string) {
+    setSavedWords((prev) => new Set(prev).add(wordId));
+    try {
+      await updateUserVocabularyWord(wordId, { isFavorite: true });
+    } catch {
+      setSavedWords((prev) => {
+        const next = new Set(prev);
+        next.delete(wordId);
+        return next;
+      });
+      setError(t("chat.saveWordError"));
     }
   }
 
@@ -294,117 +320,251 @@ export default function ChatScreen() {
     );
   }
 
+  const replyLanguage = language === "ur" ? t("language.urdu") : t("language.english");
+  const freeLeft = Math.max(0, usage.limit - usage.used);
+  const onPack = freeLeft === 0 && usage.packBalance > 0;
+  const meterLabel = onPack
+    ? t("chat.packLeft", { count: usage.packBalance, suffix: usage.packBalance === 1 ? "" : "s" })
+    : t("chat.leftToday", { count: freeLeft });
+  const meterA11y = onPack
+    ? t("chat.packLeftA11y", { count: usage.packBalance, suffix: usage.packBalance === 1 ? "" : "s" })
+    : t("chat.leftTodayA11y", { count: freeLeft, limit: usage.limit });
+
+  // Follow-ups track the latest reply: word-specific when it was about one
+  // word, general otherwise. Each tap sends a message and counts like one.
+  const lastReply = [...messages].reverse().find((m) => m.role === "ASSISTANT") ?? null;
+  const followUps = lastReply
+    ? lastReply.headword
+      ? [
+          { label: t("chat.followSentence"), message: t("chat.followSentenceMsg", { word: lastReply.headword.arabic }) },
+          { label: t("chat.followQuiz"), message: t("chat.followQuizMsg", { word: lastReply.headword.arabic }) },
+          { label: t("chat.followSimpler"), message: t("chat.followSimplerMsg") },
+        ]
+      : [
+          { label: t("chat.followSimpler"), message: t("chat.followSimplerMsg") },
+          { label: t("chat.followExample"), message: t("chat.followExampleMsg") },
+        ]
+    : [];
+
+  const starters = [
+    { icon: "chatbubble-outline", text: t("chat.starterBismillah"), meta: t("chat.starterBismillahMeta") },
+    { icon: "help-circle-outline", text: t("chat.starterQuiz"), meta: t("chat.starterQuizMeta") },
+    { icon: "book-outline", text: t("chat.starterHarakat"), meta: t("chat.starterHarakatMeta") },
+    { icon: "moon-outline", text: t("chat.starterFatiha"), meta: t("chat.starterFatihaMeta") },
+  ] as const;
+
+  const firstName = (user?.name ?? "").trim().split(/\s+/)[0] ?? "";
+
+  const noorMark = (size: "sm" | "md" | "lg") => (
+    <View
+      style={[styles.noorMark, size === "sm" ? styles.noorMarkSm : size === "lg" ? styles.noorMarkLg : null]}
+      accessibilityElementsHidden
+      importantForAccessibility="no"
+    >
+      <Text style={[styles.noorMarkText, size === "sm" ? styles.noorMarkTextSm : size === "lg" ? styles.noorMarkTextLg : null]}>ن</Text>
+    </View>
+  );
+
+  const renderAssistant = (message: ChatMessage, key: string) => {
+    const headword = message.headword ?? null;
+    const saved = headword?.wordId ? savedWords.has(headword.wordId) : false;
+    return (
+      <View key={key} style={[styles.assistantRow, desktopWeb && styles.assistantRowWeb]}>
+        {noorMark("sm")}
+        <View style={styles.assistantCard}>
+          {headword ? (
+            <View style={styles.headword}>
+              <ArabicText size="lg" style={styles.headwordArabic}>{headword.arabic}</ArabicText>
+              {headword.transliteration || headword.meaning ? (
+                <Text style={styles.headwordMeta}>
+                  {[headword.transliteration, headword.meaning].filter(Boolean).join(" · ")}
+                </Text>
+              ) : null}
+            </View>
+          ) : null}
+          {/* Noor often opens an English reply with an Arabic greeting
+              ("السلام عليكم. How can I help…"); Android's first-strong rule
+              then lays the whole bubble out right-to-left and strands the
+              question mark on the left. Same fix as discover prose: a
+              direction mark for the reply language (`writingDirection` is
+              iOS-only). */}
+          <Text style={[styles.assistantText, language === "ur" ? styles.proseRtl : styles.proseLtr]}>
+            {withDirectionMark(message.content, language)}
+          </Text>
+          {headword?.wordId ? (
+            <View style={styles.wordActions}>
+              <PlayButton
+                text={headword.arabic}
+                wordId={headword.wordId}
+                audioUrl={headword.audioUrl ?? undefined}
+                size={16}
+                color={WarshPalette.goldText}
+                label={t("chat.listen")}
+                labelStyle="link"
+              />
+              <Pressable
+                accessibilityRole="button"
+                accessibilityState={{ disabled: saved }}
+                disabled={saved}
+                onPress={() => void saveWord(headword.wordId as string)}
+                style={styles.wordAction}
+                hitSlop={6}
+              >
+                <Ionicons name={saved ? "bookmark" : "bookmark-outline"} size={16} color={WarshPalette.goldText} />
+                <Text style={styles.wordActionText}>{saved ? t("chat.savedWord") : t("chat.saveWord")}</Text>
+              </Pressable>
+            </View>
+          ) : null}
+        </View>
+      </View>
+    );
+  };
+
+  const welcome = (
+    <View style={styles.welcome}>
+      <View style={styles.welcomeHero}>
+        {noorMark("lg")}
+        <Text style={styles.welcomeTitle}>{t("chat.welcomeTitle", { name: firstName || t("chat.tutorName") })}</Text>
+        <Text style={styles.welcomeBody}>{t("chat.welcomeBody", { language: replyLanguage })}</Text>
+      </View>
+      <Text style={styles.tryAsking}>{t("chat.tryAsking")}</Text>
+      <View style={styles.starterList}>
+        {starters.map((starter) => (
+          <Pressable
+            key={starter.text}
+            accessibilityRole="button"
+            disabled={sending}
+            onPress={() => void sendMessage(starter.text)}
+            style={({ pressed }) => [styles.starter, pressed && styles.starterPressed]}
+          >
+            <View style={styles.starterIcon}>
+              <Ionicons name={starter.icon} size={20} color={WarshPalette.goldText} />
+            </View>
+            <View style={styles.starterCopy}>
+              <Text style={styles.starterText}>{starter.text}</Text>
+              <Text style={styles.starterMeta}>{starter.meta}</Text>
+            </View>
+            <Ionicons name="chevron-forward" size={16} color={WarshPalette.metaGrey} />
+          </Pressable>
+        ))}
+      </View>
+    </View>
+  );
+
   return (
-    <View style={{ flex: 1, backgroundColor: Colors.bg.primary }}>
+    <View style={styles.screen}>
       <View
         style={
           desktopWeb
             ? styles.webColumn
-            : { flex: 1, padding: Spacing.lg, paddingBottom: insets.bottom + 80 }
+            : [styles.column, { paddingTop: insets.top + Spacing.md, paddingBottom: insets.bottom + 80 }]
         }
       >
-        {/* Header */}
-        <View style={{ flexDirection: "row", alignItems: "center", marginBottom: Spacing.sm, paddingTop: desktopWeb ? 0 : insets.top }}>
-          <View
-            style={{
-              width: 48,
-              height: 48,
-              borderRadius: 24,
-              backgroundColor: Colors.bg.card,
-              borderWidth: 1,
-              borderColor: Colors.accent.gold,
-              alignItems: "center",
-              justifyContent: "center",
-              marginRight: Spacing.md,
-            }}
-          >
-            <Text style={{ color: Colors.text.gold, fontSize: desktopFontSize(18, "display"), fontFamily: Fonts.arabicBold }}>ن</Text>
+        {/* Header: title row (as Quran and You), then the tutor */}
+        <View style={styles.header}>
+          <View style={styles.titleRow}>
+            <Text style={styles.title}>{t("tabs.noor")}</Text>
+            <View style={styles.meter} accessible accessibilityLabel={meterA11y}>
+              <Ionicons name="chatbubble-outline" size={16} color={WarshPalette.goldText} />
+              <Text style={styles.meterText}>{meterLabel}</Text>
+            </View>
           </View>
-          <View style={{ flex: 1 }}>
-            <Text style={{ fontSize: FontSizes.h2, lineHeight: LineHeights.h2, color: Colors.text.primary, fontFamily: Fonts.bold }}>
-              Ustaad Noor
-            </Text>
-            <Text style={{ color: Colors.text.secondary }} numberOfLines={1}>
-              Warm, patient, and always ready to help.
-            </Text>
-          </View>
+          {messages.length > 0 ? (
+            <View style={styles.tutorRow}>
+              {noorMark("md")}
+              <View style={styles.tutorCopy}>
+                <Text style={styles.tutorName}>{t("chat.tutorName")}</Text>
+                <Text style={styles.tutorLine} numberOfLines={1}>{t("chat.tutorLine", { language: replyLanguage })}</Text>
+              </View>
+            </View>
+          ) : null}
         </View>
 
-        {/* Usage indicator */}
-        <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.md }}>
-          Chat with your Arabic tutor.{" "}
-          {usage.used >= usage.limit && usage.packBalance > 0
-            ? `${usage.packBalance} pack message${usage.packBalance !== 1 ? "s" : ""} remaining.`
-            : `${usage.used} of ${usage.limit} messages used today.`}
-        </Text>
+        {error ? <Text style={styles.errorText}>{error}</Text> : null}
 
-        {/* Non-429 errors */}
-        {error ? <Text style={{ color: Colors.text.danger, marginBottom: Spacing.md }}>{error}</Text> : null}
-
-        {/* Message list */}
-        <ScrollView style={{ flex: 1, marginBottom: Spacing.md }} contentContainerStyle={{ paddingBottom: Spacing.sm }}>
-          {messages.map((message, index) => (
-            <View
-              key={`${message.role}-${index}`}
-              style={{
-                backgroundColor: message.role === "USER" ? WarshAlpha.goldTintSoft : Colors.bg.card,
-                padding: Spacing.md,
-                borderRadius: Radii.md,
-                marginBottom: Spacing.sm,
-                alignSelf: message.role === "USER" ? "flex-end" : "flex-start",
-                maxWidth: desktopWeb ? "72%" : "88%",
-                borderLeftWidth: message.role === "ASSISTANT" ? 2 : 0,
-                borderLeftColor: Colors.accent.gold,
-                borderWidth: message.role === "USER" ? 0 : 1,
-                borderColor: message.role === "USER" ? "transparent" : Colors.border.subtle,
-                ...Shadows.card,
-              }}
-            >
-              {/* Noor often opens an English reply with an Arabic greeting
-                  ("السلام عليكم. How can I help…"); Android's first-strong rule
-                  then lays the whole bubble out right-to-left and strands the
-                  question mark on the left. Same fix as discover prose: a
-                  direction mark for the reply language (`writingDirection` is
-                  iOS-only). The learner's own bubble is left alone. */}
-              <Text
-                style={[
-                  { color: Colors.text.primary, lineHeight: LineHeights.bodyL },
-                  message.role === "ASSISTANT" ? (language === "ur" ? styles.proseRtl : styles.proseLtr) : null,
-                ]}
-              >
-                {message.role === "ASSISTANT" ? withDirectionMark(message.content, language) : message.content}
-              </Text>
+        <ScrollView
+          ref={scrollRef}
+          style={styles.messages}
+          contentContainerStyle={styles.messagesContent}
+          onContentSizeChange={() => scrollRef.current?.scrollToEnd({ animated: true })}
+          keyboardShouldPersistTaps="handled"
+        >
+          {messages.length === 0
+            ? welcome
+            : messages.map((message, index) =>
+                message.role === "USER" ? (
+                  <View key={`USER-${index}`} style={[styles.userBubble, desktopWeb && styles.userBubbleWeb]}>
+                    <Text style={styles.userText}>{message.content}</Text>
+                  </View>
+                ) : (
+                  renderAssistant(message, `ASSISTANT-${index}`)
+                ),
+              )}
+          {sending ? (
+            <View style={styles.assistantRow}>
+              {noorMark("sm")}
+              <View style={[styles.assistantCard, styles.typingCard]}>
+                <ActivityIndicator size="small" color={WarshPalette.goldText} />
+              </View>
             </View>
-          ))}
+          ) : null}
         </ScrollView>
 
-        {/* Input row */}
-        <View style={{ flexDirection: "row", gap: Spacing.sm }}>
+        {/* Composer */}
+        {followUps.length > 0 ? (
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            style={styles.followUps}
+            contentContainerStyle={styles.followUpsContent}
+            keyboardShouldPersistTaps="handled"
+          >
+            {followUps.map((followUp) => (
+              <Pressable
+                key={followUp.label}
+                accessibilityRole="button"
+                disabled={sending}
+                onPress={() => void sendMessage(followUp.message)}
+                style={({ pressed }) => [styles.chip, pressed && styles.chipPressed]}
+              >
+                <Text style={styles.chipText}>{followUp.label}</Text>
+              </Pressable>
+            ))}
+          </ScrollView>
+        ) : null}
+        <View style={styles.composer}>
           <TextInput
             value={input}
             onChangeText={setInput}
-            placeholder="Ask Ustaad Noor"
-            mode="outlined"
-            dense
-            style={{ flex: 1, backgroundColor: Colors.bg.surface }}
+            placeholder={t("chat.placeholder")}
+            placeholderTextColor={WarshPalette.subtleBrown}
+            accessibilityLabel={t("chat.placeholder")}
+            onSubmitEditing={() => void sendMessage()}
+            returnKeyType="send"
+            maxLength={2000}
+            style={styles.input}
           />
           <Pressable
-            onPress={sendMessage}
-            disabled={sending}
-            style={({ pressed }) => ({
-              backgroundColor: pressed && !sending ? WarshPalette.navyDeep : WarshPalette.navy,
-              borderRadius: Radii.md + 2,
-              paddingHorizontal: Spacing.lg,
-              paddingVertical: Spacing.md,
-              justifyContent: "center",
-              transform: [{ scale: pressed && !sending ? 0.97 : 1 }],
-              opacity: sending ? 0.7 : 1,
-            })}
+            accessibilityRole="button"
+            accessibilityLabel={t("chat.send")}
+            accessibilityState={{ disabled: sending || !input.trim() }}
+            onPress={() => void sendMessage()}
+            disabled={sending || !input.trim()}
+            style={({ pressed }) => [
+              styles.sendButton,
+              (sending || !input.trim()) && styles.sendButtonIdle,
+              pressed && styles.sendButtonPressed,
+            ]}
           >
-            <Text style={{ color: WarshPalette.parchment, fontFamily: Fonts.bold }}>{sending ? "Sending" : "Send"}</Text>
+            {sending ? (
+              <ActivityIndicator size="small" color={WarshPalette.gold} />
+            ) : (
+              <Ionicons name="arrow-up" size={20} color={WarshPalette.gold} />
+            )}
           </Pressable>
         </View>
       </View>
+      {desktopWeb ? null : <StatusBarBacking />}
 
       {/* N2 — Overage Modal */}
       <Modal
@@ -427,41 +587,32 @@ export default function ChatScreen() {
             style={[styles.modalCard, { paddingBottom: Spacing.xxl + insets.bottom }]}
             onPress={() => {}}
           >
-            {/* Handle bar */}
             <View style={styles.handleBar} />
-
-            {/* Plant emoji */}
-            <Text style={styles.modalEmoji}>🌿</Text>
-
-            {/* Title */}
-            <Text style={styles.modalTitle}>Continue learning with Noor</Text>
-
-            {/* Body */}
-            <Text style={styles.modalBody}>
-              You've used today's 5 messages with Ustaad Noor. Get 20 additional messages for {packDisplayPrice ?? "the price shown by Google Play"} — they don't expire.
-            </Text>
-
-            {/* Price display */}
-            <View style={styles.priceRow}>
-              <Text style={styles.priceAmount}>{packPriceLoading ? "Loading price..." : packDisplayPrice ?? "Unavailable"}</Text>
-              <Text style={styles.priceLabel}>for 20 messages</Text>
+            <View style={styles.modalIcon}>
+              <Ionicons name="chatbubbles-outline" size={28} color={WarshPalette.goldText} />
             </View>
-
-            {/* Purchase CTA */}
+            <Text style={styles.modalTitle}>{t("chat.packTitle")}</Text>
+            <Text style={styles.modalBody}>
+              {t("chat.packBody", { limit: usage.limit, price: packDisplayPrice ?? t("chat.packPriceFallback") })}
+            </Text>
+            <View style={styles.priceRow}>
+              <Text style={styles.priceAmount}>
+                {packPriceLoading ? t("chat.packLoadingPrice") : packDisplayPrice ?? t("chat.packPriceUnavailable")}
+              </Text>
+              <Text style={styles.priceLabel}>{t("chat.packFor20")}</Text>
+            </View>
             <BrandButton
-              title={purchasingPack ? "Processing..." : packDisplayPrice ? "Get more messages" : "Purchase unavailable"}
+              title={purchasingPack ? t("chat.packProcessing") : packDisplayPrice ? t("chat.packBuy") : t("chat.packBuyUnavailable")}
               onPress={handleBuyNoorPack}
               loading={purchasingPack}
               disabled={purchasingPack || !packDisplayPrice}
             />
-
-            {/* Dismiss link */}
             <TouchableOpacity
               onPress={() => setShowOverageModal(false)}
               style={styles.dismissButton}
               hitSlop={8}
             >
-              <Text style={styles.dismissText}>Maybe tomorrow</Text>
+              <Text style={styles.dismissText}>{t("chat.packLater")}</Text>
             </TouchableOpacity>
           </TouchableOpacity>
         </TouchableOpacity>
@@ -471,6 +622,148 @@ export default function ChatScreen() {
 }
 
 const styles = StyleSheet.create({
+  screen: { flex: 1, backgroundColor: Colors.bg.primary },
+  column: { flex: 1 },
+  webColumn: {
+    flex: 1,
+    width: "100%",
+    maxWidth: 900,
+    alignSelf: "center",
+    paddingTop: 36,
+    paddingBottom: 28,
+  },
+  header: { paddingHorizontal: Spacing.xl },
+  titleRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  title: {
+    color: WarshPalette.navy,
+    fontFamily: Fonts.display,
+    fontSize: FontSizes.display,
+    lineHeight: desktopLineHeight(36, 30),
+  },
+  meter: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+    height: 32,
+    paddingHorizontal: Spacing.md,
+    borderRadius: Radii.full,
+    borderWidth: 0.5,
+    borderColor: WarshPalette.parchmentCardBorder,
+    backgroundColor: WarshPalette.white,
+  },
+  meterText: {
+    color: WarshPalette.goldText,
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.label,
+  },
+  tutorRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.md,
+    marginTop: Spacing.md,
+  },
+  tutorCopy: { flex: 1, minWidth: 0 },
+  tutorName: {
+    color: WarshPalette.ink,
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyL,
+    lineHeight: desktopLineHeight(20, 16),
+  },
+  tutorLine: {
+    color: WarshPalette.subtleBrown,
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.caption,
+    lineHeight: LineHeights.caption,
+  },
+  noorMark: {
+    width: 40,
+    height: 40,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: Radii.full,
+    borderWidth: 1,
+    borderColor: WarshPalette.gold,
+    backgroundColor: WarshPalette.parchmentBg,
+  },
+  noorMarkSm: { width: 28, height: 28, marginTop: 2 },
+  noorMarkLg: { width: 72, height: 72 },
+  noorMarkText: {
+    color: WarshPalette.goldText,
+    fontFamily: Fonts.arabicBold,
+    fontSize: desktopFontSize(20),
+    lineHeight: desktopLineHeight(28, 20),
+  },
+  noorMarkTextSm: { fontSize: desktopFontSize(14), lineHeight: desktopLineHeight(20, 14) },
+  noorMarkTextLg: { fontSize: desktopFontSize(36), lineHeight: desktopLineHeight(48, 36) },
+  errorText: {
+    marginHorizontal: Spacing.xl,
+    marginTop: Spacing.sm,
+    color: Colors.text.danger,
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyM,
+  },
+  messages: { flex: 1 },
+  messagesContent: {
+    paddingHorizontal: Spacing.lg,
+    paddingTop: Spacing.lg,
+    paddingBottom: Spacing.md,
+    gap: Spacing.md,
+  },
+  userBubble: {
+    alignSelf: "flex-end",
+    maxWidth: "80%",
+    paddingVertical: 10,
+    paddingHorizontal: 14,
+    borderRadius: 16,
+    borderBottomRightRadius: 4,
+    backgroundColor: WarshPalette.navy,
+  },
+  userBubbleWeb: { maxWidth: "64%" },
+  userText: {
+    color: WarshPalette.creamBg,
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyL,
+    lineHeight: desktopLineHeight(22, 15),
+  },
+  assistantRow: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    gap: Spacing.sm,
+    alignSelf: "flex-start",
+    maxWidth: "92%",
+  },
+  assistantRowWeb: { maxWidth: "76%" },
+  assistantCard: {
+    flexShrink: 1,
+    paddingVertical: Spacing.md,
+    paddingHorizontal: 14,
+    borderRadius: 16,
+    borderTopLeftRadius: 4,
+    borderWidth: 0.5,
+    borderColor: WarshPalette.parchmentCardBorder,
+    backgroundColor: WarshPalette.white,
+  },
+  typingCard: { paddingVertical: Spacing.sm },
+  headword: { alignItems: "center", marginBottom: Spacing.sm },
+  headwordArabic: { color: WarshPalette.navy, textAlign: "center" },
+  headwordMeta: {
+    marginTop: 2,
+    color: WarshPalette.goldText,
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.caption,
+    lineHeight: LineHeights.caption,
+    textAlign: "center",
+  },
+  assistantText: {
+    color: WarshPalette.ink,
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyL,
+    lineHeight: LineHeights.bodyL,
+  },
   proseLtr: {
     textAlign: "left",
     writingDirection: "ltr",
@@ -479,15 +772,143 @@ const styles = StyleSheet.create({
     textAlign: "right",
     writingDirection: "rtl",
   },
-  webColumn: {
-    flex: 1,
-    width: "100%",
-    maxWidth: 900,
-    alignSelf: "center",
-    paddingHorizontal: 32,
-    paddingTop: 36,
-    paddingBottom: 28,
+  wordActions: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.lg,
+    marginTop: Spacing.md,
+    paddingTop: Spacing.sm,
+    borderTopWidth: 0.5,
+    borderTopColor: WarshPalette.cream,
   },
+  wordAction: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+    minHeight: 32,
+  },
+  wordActionText: {
+    color: WarshPalette.goldText,
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.label,
+  },
+  welcome: { paddingBottom: Spacing.md },
+  welcomeHero: {
+    alignItems: "center",
+    paddingHorizontal: Spacing.md,
+    paddingTop: Spacing.lg,
+  },
+  welcomeTitle: {
+    marginTop: Spacing.lg,
+    color: WarshPalette.navy,
+    fontFamily: Fonts.display,
+    fontSize: FontSizes.h1,
+    lineHeight: desktopLineHeight(30, 24),
+    textAlign: "center",
+  },
+  welcomeBody: {
+    marginTop: Spacing.sm,
+    maxWidth: 320,
+    color: WarshPalette.bodyBrown,
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyM,
+    lineHeight: desktopLineHeight(21, 14),
+    textAlign: "center",
+  },
+  tryAsking: {
+    marginTop: Spacing.xl,
+    marginBottom: Spacing.sm,
+    paddingHorizontal: Spacing.sm,
+    color: WarshPalette.goldText,
+    fontFamily: Fonts.bold,
+    fontSize: FontSizes.label,
+    textTransform: "uppercase",
+  },
+  starterList: { gap: Spacing.sm },
+  starter: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.md,
+    minHeight: 56,
+    paddingVertical: Spacing.sm,
+    paddingHorizontal: Spacing.md,
+    borderRadius: Radii.md,
+    borderWidth: 0.5,
+    borderColor: WarshPalette.cream,
+    backgroundColor: WarshPalette.white,
+  },
+  starterPressed: { backgroundColor: WarshPalette.parchmentBg },
+  starterIcon: {
+    width: 36,
+    height: 36,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 10,
+    backgroundColor: WarshPalette.parchmentDeep,
+  },
+  starterCopy: { flex: 1, minWidth: 0 },
+  starterText: {
+    color: WarshPalette.ink,
+    fontFamily: Fonts.medium,
+    fontSize: FontSizes.bodyM,
+    lineHeight: desktopLineHeight(18, 14),
+  },
+  starterMeta: {
+    marginTop: 2,
+    color: WarshPalette.subtleBrown,
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.caption,
+    lineHeight: LineHeights.caption,
+  },
+  followUps: { flexGrow: 0, marginBottom: 10 },
+  followUpsContent: { gap: Spacing.sm, paddingHorizontal: Spacing.lg },
+  chip: {
+    height: 32,
+    justifyContent: "center",
+    paddingHorizontal: Spacing.md,
+    borderRadius: Radii.full,
+    borderWidth: 0.5,
+    borderColor: WarshPalette.parchmentCardBorder,
+    backgroundColor: WarshPalette.parchmentBg,
+  },
+  chipPressed: { backgroundColor: WarshPalette.parchmentDeep },
+  chipText: {
+    color: WarshPalette.bodyBrown,
+    fontFamily: Fonts.regular,
+    fontSize: desktopFontSize(13),
+  },
+  composer: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.sm,
+    marginHorizontal: Spacing.lg,
+    paddingVertical: 4,
+    paddingLeft: Spacing.lg,
+    paddingRight: 4,
+    borderRadius: Radii.full,
+    borderWidth: 1,
+    borderColor: WarshPalette.parchmentCardBorder,
+    backgroundColor: WarshPalette.white,
+  },
+  input: {
+    flex: 1,
+    minWidth: 0,
+    minHeight: 40,
+    color: WarshPalette.ink,
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyL,
+    paddingVertical: 0,
+  },
+  sendButton: {
+    width: 40,
+    height: 40,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: Radii.full,
+    backgroundColor: WarshPalette.navy,
+  },
+  sendButtonIdle: { opacity: 0.55 },
+  sendButtonPressed: { backgroundColor: WarshPalette.navyDeep },
   modalBackdrop: {
     flex: 1,
     backgroundColor: WarshAlpha.scrim,
@@ -509,16 +930,20 @@ const styles = StyleSheet.create({
     backgroundColor: WarshPalette.defaultCardBorder,
     marginBottom: Spacing.xl,
   },
-  modalEmoji: {
-    fontSize: desktopFontSize(40),
-    textAlign: "center",
+  modalIcon: {
+    width: 56,
+    height: 56,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: Radii.full,
+    backgroundColor: WarshPalette.parchmentDeep,
     marginBottom: Spacing.md,
   },
   modalTitle: {
     color: WarshPalette.ink,
     fontSize: FontSizes.h1,
     lineHeight: LineHeights.h1,
-    fontFamily: Fonts.bold,
+    fontFamily: Fonts.display,
     textAlign: "center",
     marginBottom: Spacing.md,
   },

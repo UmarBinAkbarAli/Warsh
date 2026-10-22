@@ -391,6 +391,30 @@ rendering, the production HTML/image response and exact image hash were verified
 the app proceeds normally to the authentication screen. Deployed through the
 maintained `npm run deploy:web` script; no Android, backend or feature code changed.
 
+### You tab and Noor redesign — 2026-10-22
+
+**Implemented and committed; web verified, Android unverified.** Designed on the
+Claude Design canvas (`https://claude.ai/artifact/5WWFV6ghnCynmqxiXB2wK1`) — the
+owner skipped the Pen-first gate for these two screens as a trial of a Claude
+Design-first workflow.
+
+- **You tab** (`profile.tsx`): compact cream header (title row, initial, name,
+  member since, trial/Premium pill), Monday–Sunday streak strip, one progress card
+  (real level thresholds, six stats, "+N this week"), milestones with the next one
+  in progress, and a Noor nudge drawn from the learner's numbers. Log out moved to
+  Settings › Account. `GET /api/progress` adds `week`, `thisWeek`,
+  `levelProgress`, `nextMilestone` (`lib/profileStats.ts`).
+- **Noor** (`chat.tsx`): title row with a message meter, navy learner bubbles,
+  white reply cards, a word card (large Arabic, transliteration and meaning,
+  Listen, Save word) when a reply is about one vocabulary word, follow-up chips, a
+  first-visit screen with starter questions, and every string in `en`/`ur`. The
+  word comes from a `⟦word: …⟧` tag Noor is asked to append (stored, stripped for
+  the app) or, failing that, the single Arabic word in the learner's question —
+  `lib/noorHeadword.ts`.
+- Not yet checked: Android rendering of both screens, the Noor first-visit state.
+  Seen while testing (not caused by this change): Noor quoted a non-existent ayah,
+  and replied in Urdu to an English-setting account with an Urdu history.
+
 ### Curriculum and content
 
 - 72 curriculum chapters are represented in the authored fixture set.

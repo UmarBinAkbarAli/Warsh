@@ -5,6 +5,7 @@ import { PROGRESS_STATUS } from "../../../lib/course";
 import { get4amPKTBoundary, isYesterdayPKT } from "../../../lib/date";
 import { getSubscriptionState } from "../../../lib/subscription";
 import { refreshLapsedStoreSubscription } from "../../../lib/subscriptionRefresh";
+import { getLevelProgress, getNextMilestone, getStreakWeekStart, getWeekStrip } from "../../../lib/profileStats";
 
 function getLevel(xp: number) {
   if (xp >= 2001) return "INTERMEDIATE";
@@ -19,8 +20,9 @@ export async function GET(request: Request) {
   }
 
   const todayStart = get4amPKTBoundary();
+  const weekStart = getStreakWeekStart();
 
-  const [user, progress, streak, earnedAchievements, todayProgress, vocabTotal, vocabMastered, surahsCompleted] = await Promise.all([
+  const [user, progress, streak, earnedAchievements, todayProgress, vocabTotal, vocabMastered, surahsCompleted, lessonsThisWeek, wordsThisWeek] = await Promise.all([
     prisma.user.findUnique({ where: { id: userId }, select: { id: true, xp: true, level: true, dailyGoalMinutes: true, streakGoalDays: true, name: true, createdAt: true, trialStartAt: true, trialExpiresAt: true, subscriptionStatus: true, subscriptionActiveUntil: true, subscriptionProductId: true, noorOverageBalance: true, lastPurchaseToken: true, phrasesSpoken: true } }),
     prisma.progress.findMany({ where: { userId, status: PROGRESS_STATUS.COMPLETED }, select: { lessonId: true } }),
     prisma.streak.findUnique({ where: { userId }, select: { currentStreak: true, longestStreak: true, lastActiveDate: true, streakFreezes: true, lastFreezeUsedAt: true } }),
@@ -33,7 +35,10 @@ export async function GET(request: Request) {
     prisma.userVocabularyWord.count({ where: { userId } }),
     prisma.userVocabularyWord.count({ where: { userId, repetitions: { gte: 3 } } }),
     prisma.userSurahProgress.count({ where: { userId, completedAt: { not: null } } }),
+    prisma.progress.count({ where: { userId, status: PROGRESS_STATUS.COMPLETED, completedAt: { gte: weekStart } } }),
+    prisma.userVocabularyWord.count({ where: { userId, createdAt: { gte: weekStart } } }),
   ]);
+  const currentStreak = streak ? streak.currentStreak : 0;
 
   const fatihaPercent = 0; // Tadabbur progress now tracked via UserSurahProgress, not lesson delta
 
@@ -68,6 +73,14 @@ export async function GET(request: Request) {
       vocabMastered,
       surahsCompleted,
       subscription: subState,
+      // You tab: Monday–Sunday strip, this week's gains, level bar, next milestone.
+      week: getWeekStrip(currentStreak, streak?.lastActiveDate ?? null),
+      thisWeek: { lessons: lessonsThisWeek, words: wordsThisWeek },
+      levelProgress: getLevelProgress(user?.xp ?? 0),
+      nextMilestone: getNextMilestone(
+        new Set(earnedAchievements.map((ua: any) => ua.achievement.key)),
+        { streak: currentStreak, xp: user?.xp ?? 0, lessons: progress.length, phrases: user?.phrasesSpoken ?? 0 },
+      ),
       achievements: earnedAchievements.map((ua: any) => ({
         key: ua.achievement.key,
         title: ua.achievement.title,

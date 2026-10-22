@@ -22,6 +22,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette, WarshAlpha } from "../../constants/theme";
 import api, { WEB_BASE_URL, updateUserProfile, deleteAccount } from "@services/api";
 import { useAuthStore } from "@stores/authStore";
+import { useAuth } from "@hooks/useAuth";
 import {
   requestNotificationPermission,
   setupNotificationSchedules,
@@ -172,6 +173,9 @@ function OptionPicker({
 export default function SettingsScreen() {
   const [confirmDelete, setConfirmDelete] = useState(false);
   const [deleting, setDeleting] = useState(false);
+  // Log out moved here from the You tab (You redesign, 2026-10-22).
+  const [confirmLogout, setConfirmLogout] = useState(false);
+  const { logout } = useAuth();
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
   const desktopWeb = Platform.OS === "web" && width >= 960;
@@ -574,6 +578,13 @@ export default function SettingsScreen() {
             </>
           ) : null}
           <SettingRow
+            icon="log-out-outline"
+            label={t("profile.logOut")}
+            onPress={() => setConfirmLogout(true)}
+            showChevron
+          />
+          <View style={styles.divider} />
+          <SettingRow
             icon="trash-outline"
             label={t("settings.deleteAccount")}
             sublabel={t("settings.deleteAccountSub")}
@@ -634,6 +645,18 @@ export default function SettingsScreen() {
           </View>
         </View>
       </Modal>
+      <ConfirmDialog
+        visible={confirmLogout}
+        title={t("profile.logOutConfirmTitle")}
+        body={t("profile.logOutConfirmBody")}
+        confirmLabel={t("profile.logOut")}
+        cancelLabel={t("profile.logOutStay")}
+        onCancel={() => setConfirmLogout(false)}
+        onConfirm={() => {
+          setConfirmLogout(false);
+          void logout();
+        }}
+      />
       <ConfirmDialog
         visible={confirmDelete}
         title={t("settings.deleteAccountTitle")}

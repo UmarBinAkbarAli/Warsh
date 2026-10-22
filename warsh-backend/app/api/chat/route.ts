@@ -12,6 +12,7 @@ import { resolveContentLanguage } from "../../../lib/language";
 import { resolveDailyMessageLimit } from "../../../lib/noorLimit";
 import { claimNoorPackCredit, refundNoorPackCredit } from "../../../lib/noorCredits";
 import { hit, clientKey } from "../../../lib/rateLimit";
+import { presentNoorMessages } from "../../../lib/noorHeadword";
 
 const DAILY_MESSAGE_LIMIT = resolveDailyMessageLimit();
 
@@ -179,9 +180,18 @@ export async function POST(request: Request) {
       )?.noorOverageBalance ?? 0
     : (userRecord?.noorOverageBalance ?? 0);
 
+  // The stored reply keeps its headword tag (history rebuilds the card from it);
+  // the app only ever sees the stripped text plus the resolved word.
+  const [presented] = await presentNoorMessages(
+    [{ role: "ASSISTANT", content: reply }],
+    resolveContentLanguage(refreshed),
+    message,
+  );
+
   return NextResponse.json({
     data: {
-      reply,
+      reply: presented.content,
+      headword: presented.headword,
       messagesUsedToday: messagesUsedToday + 1,
       messagesLimit: DAILY_MESSAGE_LIMIT,
       noorOverageBalance: remainingPackBalance,

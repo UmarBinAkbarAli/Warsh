@@ -4,6 +4,8 @@ import { getUserIdFromRequest } from "../../../../lib/auth";
 import { getUserSubscriptionState, requiresSubscription } from "../../../../lib/subscription";
 import { getPKTStartOfDay } from "../../../../lib/date";
 import { resolveDailyMessageLimit } from "../../../../lib/noorLimit";
+import { resolveContentLanguage } from "../../../../lib/language";
+import { presentNoorMessages } from "../../../../lib/noorHeadword";
 
 const DAILY_MESSAGE_LIMIT = resolveDailyMessageLimit();
 
@@ -31,12 +33,20 @@ export async function GET(request: Request) {
     prisma.chatMessage.count({
       where: { userId, role: "USER", createdAt: { gte: today } },
     }),
-    prisma.user.findUnique({ where: { id: userId }, select: { noorOverageBalance: true } }),
+    prisma.user.findUnique({
+      where: { id: userId },
+      select: { noorOverageBalance: true, translationLanguage: true, nativeLanguage: true },
+    }),
   ]);
+
+  const messages = await presentNoorMessages(
+    newestMessages.reverse(),
+    userRecord ? resolveContentLanguage(userRecord) : undefined,
+  );
 
   return NextResponse.json({
     data: {
-      messages: newestMessages.reverse(),
+      messages,
       // Usage mirrors POST /api/chat so the counter is correct on every open,
       // not just after sending a message in the current session.
       messagesUsedToday,

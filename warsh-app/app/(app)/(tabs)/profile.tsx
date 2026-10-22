@@ -2,26 +2,29 @@ import { useCallback, useState } from "react";
 import { ActivityIndicator, Platform, Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import type { DimensionValue } from "react-native";
 import { useFocusEffect, useRouter } from "expo-router";
-import { setStatusBarStyle } from "expo-status-bar";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import api from "@services/api";
 import { useAuth } from "@hooks/useAuth";
 import { useLanguage } from "@services/language";
 import * as Theme from "../../../constants/theme";
-import { ConfirmDialog } from "@components/ConfirmDialog";
-import { BrandButton } from "@components/BrandButton";
 import { ArabicText } from "@components/ArabicText";
 import { StatusBarBacking } from "@components/StatusBarBacking";
 import { useT } from "@i18n/index";
+
+// You tab, redesigned on the Claude Design canvas (owner-approved 2026-10-22).
+// Icon rules for this screen: Ionicons outline only, 16 inline / 20 in cards /
+// 22 for header actions; gold-text on light surfaces, sage-deep only for "done",
+// subtle brown for meta. Log out lives in Settings.
+
+type WeekDay = { weekday: number; done: boolean; today: boolean };
 
 export default function ProfileScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
   const { width } = useWindowDimensions();
   const desktopWeb = Platform.OS === "web" && width >= 960;
-  const { user, logout } = useAuth();
-  const [confirmLogout, setConfirmLogout] = useState(false);
+  const { user } = useAuth();
   const language = useLanguage();
   const t = useT();
   const [data, setData] = useState<any>(null);
@@ -48,15 +51,6 @@ export default function ProfileScreen() {
     }, [loadProgress])
   );
 
-  // The ink header card sits under the status bar, so this tab needs light icons
-  // while every other screen (root layout default) needs dark ones.
-  useFocusEffect(
-    useCallback(() => {
-      setStatusBarStyle("light");
-      return () => setStatusBarStyle("dark");
-    }, [])
-  );
-
   if (loading) {
     return (
       <View style={styles.loadingScreen}>
@@ -65,240 +59,278 @@ export default function ProfileScreen() {
     );
   }
 
-  const displayName = data?.user?.name ?? user?.name ?? t("profile.student");
-  const streak = Math.max(0, Math.min(Number(data?.streak ?? 0), 7));
-  const xp = Number(data?.xp ?? 0);
-  const completedLessons = data?.completedLessons?.length ?? 0;
-  const level = data?.level ?? Math.floor(xp / 100) + 1;
-  const progressPercent = `${xp % 100}%` as DimensionValue;
-  const headerCardStyle = [styles.headerCard, { paddingTop: insets.top + Theme.Spacing.xl }];
+  const displayName = data?.userName ?? user?.name ?? t("profile.student");
+  const initial = String(displayName).trim().charAt(0).toUpperCase();
   const memberSince = data?.memberSince
     ? new Date(data.memberSince).toLocaleDateString(language === "ur" ? "ur-PK" : "en-GB", {
-        day: "numeric",
-        month: "long",
+        month: "short",
         year: "numeric",
       })
     : null;
 
   const sub = data?.subscription ?? null;
-  const planKey: string | null = sub?.subscriptionProductId ?? null;
-  const planName =
-    planKey === "yearly" ? t("manageSub.planYearly")
-    : planKey === "monthly" ? t("manageSub.planMonthly")
-    : t("manageSub.planPremium");
-  const subBadge = sub?.subscriptionActive
-    ? { label: planName, tone: Theme.WarshPalette.sage }
+  const trialDays = Number(sub?.trialDaysRemaining ?? 0);
+  const subPill = sub?.subscriptionActive
+    ? t("profile.premium")
     : sub?.trialActive
-      ? { label: t("manageSub.statusTrial"), tone: Theme.WarshPalette.gold }
+      ? t("profile.trialDaysLeft", { count: trialDays, suffix: trialDays === 1 ? "" : "s" })
       : null;
 
-  const profileHeader = (
-    <View style={[headerCardStyle, desktopWeb && styles.webHeaderCard]}>
-      <View style={styles.headerTopRow}>
-        <View style={styles.brandLine}>
-          <Text style={styles.brandEnglish}>Warsh</Text>
-          <Text style={styles.brandSeparator}> · </Text>
-          <ArabicText size="sm" style={styles.brandArabic}>
-            وَرْش
-          </ArabicText>
+  const header = (
+    <View style={[styles.header, { paddingTop: desktopWeb ? 0 : insets.top + Theme.Spacing.md }]}>
+      <View style={styles.titleRow}>
+        <Text style={styles.title}>{t("tabs.profile")}</Text>
+        <View style={styles.headerActions}>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={t("profile.shareProgress")}
+            onPress={() => router.push("/(app)/share-stats")}
+            style={styles.iconButton}
+          >
+            <Ionicons name="share-social-outline" size={22} color={Theme.WarshPalette.navy} />
+          </Pressable>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={t("a11y.settings")}
+            onPress={() => router.push("/(app)/settings")}
+            style={styles.iconButton}
+          >
+            <Ionicons name="settings-outline" size={22} color={Theme.WarshPalette.navy} />
+          </Pressable>
         </View>
-        <Pressable accessibilityRole="button" accessibilityLabel={t("a11y.settings")} onPress={() => router.push("/(app)/settings")} hitSlop={8}>
-          <Ionicons name="settings-outline" size={22} color={Theme.WarshPalette.gold} />
-        </Pressable>
       </View>
-      <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
-        <Text style={styles.userName}>{displayName}</Text>
-        <Pressable accessibilityRole="button" accessibilityLabel={t("a11y.editProfile")} onPress={() => router.push("/(app)/edit-profile")} hitSlop={8}>
-          <Ionicons name="create-outline" size={16} color={Theme.WarshPalette.gold} />
-        </Pressable>
+      <View style={styles.profileRow}>
+        <View style={styles.avatar} accessibilityElementsHidden importantForAccessibility="no">
+          <Text style={styles.avatarText}>{initial}</Text>
+        </View>
+        <View style={styles.profileText}>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={t("a11y.editProfile")}
+            onPress={() => router.push("/(app)/edit-profile")}
+            style={styles.nameButton}
+            hitSlop={6}
+          >
+            <Text style={styles.userName} numberOfLines={1}>{displayName}</Text>
+            <Ionicons name="create-outline" size={16} color={Theme.WarshPalette.goldText} />
+          </Pressable>
+          {memberSince ? (
+            <Text style={styles.memberSince}>{t("profile.memberSince", { date: memberSince })}</Text>
+          ) : null}
+          {subPill ? (
+          <Pressable
+            accessibilityRole="button"
+            onPress={() => router.push("/(app)/manage-subscription")}
+            style={styles.subPill}
+            hitSlop={6}
+          >
+            <Text style={styles.subPillText} numberOfLines={1}>{subPill}</Text>
+            <Ionicons name="chevron-forward" size={16} color={Theme.WarshPalette.goldText} />
+          </Pressable>
+          ) : null}
+        </View>
       </View>
-      <Text style={styles.greeting}>{t("profile.greeting")}</Text>
-      {subBadge ? (
-        <Pressable
-          style={[styles.subBadge, { borderColor: subBadge.tone }]}
-          onPress={() => router.push("/(app)/manage-subscription")}
-          hitSlop={6}
-        >
-          <Ionicons name="ribbon-outline" size={13} color={subBadge.tone} />
-          <Text style={[styles.subBadgeText, { color: subBadge.tone }]} numberOfLines={1}>
-            {subBadge.label}
-          </Text>
-          <Ionicons name="chevron-forward" size={12} color={subBadge.tone} />
-        </Pressable>
-      ) : null}
     </View>
   );
 
+  const weekLetters = t("profile.weekdays").split(",");
+  const weekNames = t("profile.weekdayNames").split(",");
+  const freezes = Number(data?.streakFreezes ?? 0);
+
   const streakCard = data ? (
-    <Pressable style={[styles.streakCard, desktopWeb && styles.webStreakCard]} onPress={() => router.push("/(app)/streak-detail")}>
-      <View style={styles.streakValueRow}>
-        <Text style={styles.streakNumber}>{data.streak}</Text>
-        <Text style={styles.streakLabel}>{t("profile.dayStreak")}</Text>
-        {(data.streakFreezes ?? 0) > 0 ? (
+    <Pressable style={styles.streakCard} onPress={() => router.push("/(app)/streak-detail")}>
+      <View style={styles.streakTopRow}>
+        <View style={styles.streakValueRow}>
+          <Text style={styles.streakNumber}>{data.streak ?? 0}</Text>
+          <Text style={styles.streakLabel}>{t("profile.dayStreak")}</Text>
+        </View>
+        {freezes > 0 ? (
           <View style={styles.freezeRow}>
-            {Array.from({ length: data.streakFreezes as number }).map((_: unknown, i: number) => (
-              <Ionicons key={i} name="shield-checkmark" size={16} color={Theme.WarshPalette.sage} />
-            ))}
+            <Ionicons name="shield-checkmark-outline" size={16} color={Theme.WarshPalette.sageDeep} />
+            <Text style={styles.freezeText}>
+              {t("profile.freezeCount", { count: freezes, suffix: freezes === 1 ? "" : "s" })}
+            </Text>
           </View>
         ) : null}
       </View>
-      <View style={styles.streakDots}>
-        {Array.from({ length: 7 }).map((_, index) => {
-          const completed = index >= 7 - streak;
-          return <View key={index} style={[styles.streakDot, completed ? styles.streakDotFilled : styles.streakDotEmpty]} />;
+      <View style={styles.weekRow}>
+        {((data.week ?? []) as WeekDay[]).map((day) => {
+          const name = weekNames[day.weekday] ?? "";
+          const label = day.done
+            ? t("profile.dayDone", { day: name })
+            : day.today
+              ? t("profile.dayToday", { day: name })
+              : name;
+          return (
+            <View key={day.weekday} style={styles.weekDay} accessible accessibilityLabel={label}>
+              <Text style={[styles.weekLetter, day.today && styles.weekLetterToday]}>{weekLetters[day.weekday]}</Text>
+              <View
+                style={[
+                  styles.weekDot,
+                  day.done ? styles.weekDotDone : day.today ? styles.weekDotToday : styles.weekDotFuture,
+                ]}
+              >
+                {day.done ? <Ionicons name="checkmark" size={16} color={Theme.WarshPalette.white} /> : null}
+              </View>
+            </View>
+          );
         })}
       </View>
-      {(data.streakFreezes ?? 0) > 0 ? (
-        <Text style={styles.freezeNote}>
-          {t("profile.freezeNote", { count: data.streakFreezes, suffix: data.streakFreezes !== 1 ? "s" : "" })}
-        </Text>
-      ) : null}
       <Text style={styles.streakQuote}>{t("profile.streakQuote")}</Text>
     </Pressable>
   ) : null;
 
-  const restContent = data ? (
-    <>
-      <View style={[styles.statsRow, desktopWeb && styles.webRow]}>
-        <View style={styles.statCard}>
-          <ArabicText size="sm" style={styles.statArabicLabel}>
-            نقاط
-          </ArabicText>
-          <Text style={styles.statValue}>{data.xp}</Text>
-          <Text style={styles.statSub}>{t("profile.pointsEarned")}</Text>
-        </View>
+  const levelProgress = data?.levelProgress ?? null;
+  const thisWeek = data?.thisWeek ?? {};
+  const stats: { ar: string; label: string; value: number; week?: number }[] = data
+    ? [
+        { ar: "نِقَاط", label: t("profile.statPoints"), value: Number(data.xp ?? 0) },
+        { ar: "دُرُوس", label: t("profile.statLessons"), value: data.completedLessons?.length ?? 0, week: thisWeek.lessons },
+        { ar: "كَلِمَات", label: t("profile.statWords"), value: Number(data.vocabTotal ?? 0), week: thisWeek.words },
+        { ar: "إِتْقَان", label: t("profile.statMastered"), value: Number(data.vocabMastered ?? 0) },
+        { ar: "عِبَارَات", label: t("profile.statPhrases"), value: Number(data.phrasesSpoken ?? 0) },
+        { ar: "سُوَر", label: t("profile.statSurahs"), value: Number(data.surahsCompleted ?? 0) },
+      ]
+    : [];
+  // The "+N this week" line only earns its height when some stat moved.
+  const anyWeekGain = stats.some((stat) => (stat.week ?? 0) > 0);
 
-        <View style={styles.statCard}>
-          <ArabicText size="sm" style={styles.statArabicLabel}>
-            دروس
-          </ArabicText>
-          <Text style={styles.statValue}>{completedLessons}</Text>
-          <Text style={styles.statSub}>{t("profile.lessonsDone")}</Text>
-        </View>
-      </View>
-
-      <View style={[styles.levelCard, desktopWeb && styles.webRow]}>
-        <View style={styles.levelRow}>
-          <Text style={styles.levelLabel}>{t("profile.level")}</Text>
-          <Text style={styles.levelValue}>{level}</Text>
-        </View>
-        <View style={styles.progressTrack}>
-          <View style={[styles.progressFill, { width: progressPercent }]} />
-        </View>
-      </View>
-
-      {(data.achievements?.length ?? 0) > 0 ? (
-        <Pressable style={[styles.achievementsCard, desktopWeb && styles.webRow]} onPress={() => router.push("/milestones" as any)}>
-          <View style={styles.achievementsHeader}>
-            <Text style={styles.achievementsTitle}>{t("profile.milestones")}</Text>
-            <Text style={styles.achievementsCount}>{t("profile.earnedCount", { count: data.achievements.length })}</Text>
+  const progressCard = data ? (
+    <View style={styles.progressCard}>
+      {levelProgress ? (
+        <>
+          <View style={styles.levelRow}>
+            <Text style={styles.cardTitle}>{t(`profile.level${levelProgress.level}`)}</Text>
+            <Text style={styles.levelMeta}>
+              {levelProgress.nextLevel
+                ? t("profile.pointsToLevel", {
+                    points: levelProgress.pointsToNext,
+                    level: t(`profile.level${levelProgress.nextLevel}`),
+                  })
+                : t("profile.topLevel")}
+            </Text>
           </View>
-          <View style={styles.achievementsRow}>
-            {(data.achievements as any[]).slice(0, 5).map((a: any) => (
-              <View key={a.key} style={styles.achievementBadge}>
-                <Ionicons name={a.icon as any} size={22} color={Theme.WarshPalette.gold} />
-                <ArabicText size="sm" style={styles.achievementTitle}>{a.title}</ArabicText>
-              </View>
-            ))}
-            {data.achievements.length > 5 ? (
-              <View style={[styles.achievementBadge, styles.achievementMore]}>
-                <Text style={styles.achievementMoreText}>+{data.achievements.length - 5}</Text>
-              </View>
+          <View
+            style={styles.progressTrack}
+            accessibilityRole="progressbar"
+            accessibilityValue={{ min: 0, max: 100, now: levelProgress.percent }}
+          >
+            <View style={[styles.progressFill, { width: `${levelProgress.percent}%` as DimensionValue }]} />
+          </View>
+        </>
+      ) : null}
+      <View style={styles.statGrid}>
+        {stats.map((stat) => (
+          <View key={stat.ar} style={styles.statCell}>
+            <ArabicText size="sm" style={styles.statArabic}>{stat.ar}</ArabicText>
+            <Text style={styles.statValue}>{stat.value}</Text>
+            <Text style={styles.statLabel}>{stat.label}</Text>
+            {anyWeekGain ? (
+              <Text style={styles.statDelta}>
+                {stat.week && stat.week > 0 ? t("profile.thisWeek", { count: stat.week }) : " "}
+              </Text>
             ) : null}
           </View>
-        </Pressable>
-      ) : null}
+        ))}
+      </View>
+    </View>
+  ) : null;
 
-      {(data.vocabTotal ?? 0) > 0 ? (
-        <View style={[styles.statsRow, desktopWeb && styles.webRow]}>
-          <View style={styles.statCard}>
-            <Ionicons name="book-outline" size={20} color={Theme.WarshPalette.gold} />
-            <Text style={styles.statValue}>{data.vocabTotal}</Text>
-            <Text style={styles.statSub}>{t("profile.wordsInBank")}</Text>
+  const earned = (data?.achievements ?? []) as any[];
+  const next = data?.nextMilestone ?? null;
+  const milestonesCard = data && (earned.length > 0 || next) ? (
+    <View style={styles.milestonesCard}>
+      <View style={styles.milestonesHeader}>
+        <Text style={styles.cardTitle}>{t("profile.milestones")}</Text>
+        {earned.length > 0 ? (
+          <Pressable
+            accessibilityRole="link"
+            onPress={() => router.push("/milestones" as any)}
+            style={styles.seeAll}
+            hitSlop={6}
+          >
+            <Text style={styles.seeAllText}>{t("profile.seeAllMilestones", { count: earned.length })}</Text>
+            <Ionicons name="chevron-forward" size={16} color={Theme.WarshPalette.goldText} />
+          </Pressable>
+        ) : null}
+      </View>
+      <View style={styles.badgeRow}>
+        {earned.slice(-(next ? 4 : 5)).map((a) => (
+          <View key={a.key} style={styles.badge}>
+            <Ionicons name={a.icon as any} size={20} color={Theme.WarshPalette.goldText} />
+            <ArabicText size="sm" style={styles.badgeTitle}>{a.title}</ArabicText>
           </View>
-          <View style={styles.statCard}>
-            <Ionicons name="star-outline" size={20} color={Theme.WarshPalette.sage} />
-            <Text style={styles.statValue}>{data.vocabMastered ?? 0}</Text>
-            <Text style={styles.statSub}>{t("profile.wordsMastered")}</Text>
+        ))}
+        {next ? (
+          <View style={[styles.badge, styles.badgeNext]}>
+            <Ionicons name={next.icon as any} size={20} color={Theme.WarshPalette.subtleBrown} />
+            <ArabicText size="sm" style={styles.badgeTitle}>{next.title}</ArabicText>
           </View>
-          {(data.surahsCompleted ?? 0) > 0 ? (
-            <View style={styles.statCard}>
-              <Ionicons name="moon-outline" size={20} color={Theme.WarshPalette.gold} />
-              <Text style={styles.statValue}>{data.surahsCompleted}</Text>
-              <Text style={styles.statSub}>{t("profile.surahsUnderstood")}</Text>
-            </View>
-          ) : null}
-        </View>
-      ) : null}
-
-      {data.memberSince ? (
-        <View style={[styles.memberSinceRow, desktopWeb && styles.webRow]}>
-          <Ionicons name="calendar-outline" size={14} color={Theme.WarshPalette.subtleBrown} />
-          <Text style={styles.memberSinceText}>
-            {t("profile.memberSince", { date: memberSince ?? "" })}
+        ) : null}
+      </View>
+      {next ? (
+        <View style={styles.nextRow}>
+          <Text style={styles.nextLabel}>{t("profile.nextMilestone")}</Text>
+          <View style={styles.nextTrack}>
+            <View
+              style={[
+                styles.nextFill,
+                { width: `${Math.round((next.current / next.target) * 100)}%` as DimensionValue },
+              ]}
+            />
+          </View>
+          <Text style={styles.nextCount}>
+            {t("profile.milestoneProgress", {
+              current: next.current,
+              target: next.target,
+              unit: t(`profile.unit_${next.unit}`),
+            })}
           </Text>
         </View>
       ) : null}
-
-      {(data.phrasesSpoken ?? 0) > 0 ? (
-        <View style={[styles.speakingCard, desktopWeb && styles.webRow]}>
-          <View style={styles.speakingIconRow}>
-            <Ionicons name="mic-outline" size={20} color={Theme.WarshPalette.sage} />
-            <Text style={styles.speakingTitle}>{t("profile.speaking")}</Text>
-          </View>
-          <Text style={styles.speakingCount}>{data.phrasesSpoken}</Text>
-          <Text style={styles.speakingSub}>{t("profile.phrasesYouCanSay")}</Text>
-        </View>
-      ) : null}
-
-      <View style={[styles.tipCard, desktopWeb && styles.webRow]}>
-        <Text style={styles.tipLabel}>{t("profile.noor")}</Text>
-        <Text style={styles.tipText}>{t("profile.noorTip")}</Text>
-      </View>
-    </>
+    </View>
   ) : null;
 
-  const actionButtons = (
-    <>
-      <BrandButton
-        title={t("profile.shareProgress")}
-        onPress={() => router.push("/(app)/share-stats")}
-        variant="secondary"
-        style={StyleSheet.flatten([styles.shareButton, desktopWeb && styles.webRow])}
-      />
-      <BrandButton
-        title={t("profile.logOut")}
-        onPress={() => setConfirmLogout(true)}
-        variant="danger"
-        style={StyleSheet.flatten([styles.logoutButton, desktopWeb && styles.webRow])}
-      />
-      <ConfirmDialog
-        visible={confirmLogout}
-        title={t("profile.logOutConfirmTitle")}
-        body={t("profile.logOutConfirmBody")}
-        confirmLabel={t("profile.logOut")}
-        cancelLabel={t("profile.logOutStay")}
-        onCancel={() => setConfirmLogout(false)}
-        onConfirm={() => {
-          setConfirmLogout(false);
-          void logout();
-        }}
-      />
-    </>
-  );
+  // Noor's note is drawn from the learner's own numbers: unmastered words point
+  // to review; otherwise it invites a question.
+  const vocabTotal = Number(data?.vocabTotal ?? 0);
+  const vocabMastered = Number(data?.vocabMastered ?? 0);
+  const reviewNudge = vocabTotal > 0 && vocabMastered < vocabTotal;
+  const noorCard = data ? (
+    <View style={styles.noorCard}>
+      <Text style={styles.noorLabel}>{t("profile.noor")}</Text>
+      <Text style={styles.noorText}>
+        {reviewNudge
+          ? t("profile.noorReviewTip", { total: vocabTotal, mastered: vocabMastered })
+          : t("profile.noorAskTip")}
+      </Text>
+      <Pressable
+        accessibilityRole="link"
+        onPress={() => router.push(reviewNudge ? "/(app)/(tabs)/vocabulary" : "/(app)/(tabs)/chat")}
+        style={styles.noorLink}
+        hitSlop={6}
+      >
+        <Text style={styles.noorLinkText}>{reviewNudge ? t("profile.noorReviewCta") : t("profile.noorAskCta")}</Text>
+        <Ionicons name="chevron-forward" size={16} color={Theme.WarshPalette.gold} />
+      </Pressable>
+    </View>
+  ) : null;
+
+  const errorText = error ? <Text style={styles.errorText}>{error}</Text> : null;
 
   if (desktopWeb) {
     return (
       <ScrollView style={styles.screen} contentContainerStyle={styles.webContent}>
         <View style={styles.webLayout}>
           <View style={styles.webLeftColumn}>
-            {profileHeader}
+            {header}
             {streakCard}
           </View>
           <View style={styles.webRightColumn}>
-            {error ? <Text style={styles.errorText}>{error}</Text> : null}
-            {restContent}
-            {actionButtons}
+            {errorText}
+            {progressCard}
+            {milestonesCard}
+            {noorCard}
           </View>
         </View>
       </ScrollView>
@@ -311,34 +343,23 @@ export default function ProfileScreen() {
         style={styles.screen}
         contentContainerStyle={[styles.content, { paddingBottom: insets.bottom + 90 }]}
       >
-        {profileHeader}
-        {error ? <Text style={styles.errorText}>{error}</Text> : null}
+        {header}
+        {errorText}
         {streakCard}
-        {restContent}
-        <BrandButton
-          title={t("profile.shareProgress")}
-          onPress={() => router.push("/(app)/share-stats")}
-          variant="secondary"
-          style={styles.shareButton}
-        />
-        <BrandButton title={t("profile.logOut")} onPress={() => setConfirmLogout(true)} variant="danger" style={styles.logoutButton} />
-        <ConfirmDialog
-          visible={confirmLogout}
-          title={t("profile.logOutConfirmTitle")}
-          body={t("profile.logOutConfirmBody")}
-          confirmLabel={t("profile.logOut")}
-          cancelLabel={t("profile.logOutStay")}
-          onCancel={() => setConfirmLogout(false)}
-          onConfirm={() => {
-            setConfirmLogout(false);
-            void logout();
-          }}
-        />
+        {progressCard}
+        {milestonesCard}
+        {noorCard}
       </ScrollView>
-      <StatusBarBacking color={Theme.WarshPalette.navy} />
+      <StatusBarBacking />
     </View>
   );
 }
+
+const cardBase = {
+  padding: Theme.Spacing.lg,
+  borderRadius: Theme.Radii.md,
+  borderWidth: 0.5,
+} as const;
 
 const styles = StyleSheet.create({
   loadingScreen: {
@@ -352,7 +373,8 @@ const styles = StyleSheet.create({
     backgroundColor: Theme.Colors.bg.primary,
   },
   content: {
-    paddingBottom: Theme.Spacing.xl,
+    paddingHorizontal: Theme.Spacing.xl,
+    gap: Theme.Spacing.md,
   },
   webContent: {
     paddingBottom: 48,
@@ -377,103 +399,114 @@ const styles = StyleSheet.create({
     minWidth: 0,
     gap: Theme.Spacing.md,
   },
-  webHeaderCard: {
-    borderRadius: Theme.Radii.md,
-    paddingTop: Theme.Spacing.xl,
+  header: {
+    paddingBottom: Theme.Spacing.xs,
   },
-  webStreakCard: {
-    margin: 0,
+  titleRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
-  webRow: {
-    marginHorizontal: 0,
-    marginTop: 0,
+  title: {
+    color: Theme.WarshPalette.navy,
+    fontFamily: Theme.Fonts.display,
+    fontSize: Theme.FontSizes.display,
+    lineHeight: Theme.desktopLineHeight(36, 30),
   },
-  headerCard: {
-    width: "100%",
-    paddingHorizontal: Theme.Spacing.xl,
-    paddingBottom: 40,
+  headerActions: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginRight: -11,
+  },
+  iconButton: {
+    width: 44,
+    height: 44,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  profileRow: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    gap: Theme.Spacing.md,
+    marginTop: Theme.Spacing.md,
+  },
+  avatar: {
+    width: 48,
+    height: 48,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: Theme.Radii.full,
     backgroundColor: Theme.WarshPalette.navy,
   },
-  headerTopRow: {
+  avatarText: {
+    color: Theme.WarshPalette.white,
+    fontFamily: Theme.Fonts.semiBold,
+    fontSize: Theme.desktopFontSize(18),
+  },
+  profileText: {
+    flex: 1,
+    minWidth: 0,
+  },
+  nameButton: {
     flexDirection: "row",
-    justifyContent: "space-between",
     alignItems: "center",
-  },
-  brandLine: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  brandEnglish: {
-    color: Theme.WarshPalette.gold,
-    fontFamily: Theme.Fonts.display,
-    fontSize: Theme.FontSizes.displayXL,
-    lineHeight: Theme.LineHeights.displayXL,
-  },
-  brandSeparator: {
-    color: Theme.WarshPalette.gold,
-    fontFamily: Theme.Fonts.display,
-    fontSize: Theme.FontSizes.displayXL,
-    lineHeight: Theme.LineHeights.displayXL,
-  },
-  brandArabic: {
-    color: Theme.WarshPalette.gold,
-    fontSize: Theme.FontSizes.displayL,
-    lineHeight: Theme.LineHeights.displayL,
-    textAlign: "left",
+    alignSelf: "flex-start",
+    gap: 6,
+    maxWidth: "100%",
+    minHeight: 28,
   },
   userName: {
-    marginTop: Theme.Spacing.sm,
-    color: Theme.WarshPalette.parchment,
-    fontFamily: Theme.Fonts.display,
-    fontSize: Theme.FontSizes.h3,
-    lineHeight: Theme.LineHeights.h3,
+    flexShrink: 1,
+    color: Theme.WarshPalette.ink,
+    fontFamily: Theme.Fonts.semiBold,
+    fontSize: Theme.FontSizes.h2,
+    lineHeight: Theme.desktopLineHeight(24, 18),
   },
-  greeting: {
-    marginTop: Theme.Spacing.xs,
-    color: Theme.WarshPalette.gold,
-    fontFamily: Theme.Fonts.italic,
+  memberSince: {
+    color: Theme.WarshPalette.subtleBrown,
+    fontFamily: Theme.Fonts.regular,
     fontSize: Theme.FontSizes.caption,
-    fontStyle: "italic",
     lineHeight: Theme.LineHeights.caption,
   },
-  subBadge: {
+  subPill: {
     flexDirection: "row",
     alignItems: "center",
     alignSelf: "flex-start",
     gap: 4,
     marginTop: Theme.Spacing.sm,
-    paddingVertical: 4,
-    paddingHorizontal: Theme.Spacing.sm,
+    height: 32,
+    paddingHorizontal: 10,
     borderRadius: Theme.Radii.full,
     borderWidth: 1,
+    borderColor: Theme.WarshPalette.goldText,
   },
-  subBadgeText: {
+  subPillText: {
+    color: Theme.WarshPalette.goldText,
     fontFamily: Theme.Fonts.semiBold,
     fontSize: Theme.FontSizes.label,
   },
   errorText: {
-    marginHorizontal: Theme.Spacing.xl,
-    marginTop: Theme.Spacing.md,
     color: Theme.WarshPalette.wrongText,
     fontFamily: Theme.Fonts.regular,
     fontSize: Theme.FontSizes.bodyM,
     lineHeight: Theme.LineHeights.bodyM,
   },
   streakCard: {
-    marginHorizontal: Theme.Spacing.xl,
-    marginTop: Theme.Spacing.lg,
-    padding: Theme.Spacing.lg,
-    borderRadius: Theme.Radii.md,
-    borderWidth: 0.5,
+    ...cardBase,
     borderColor: Theme.WarshPalette.parchmentCardBorder,
     backgroundColor: Theme.WarshPalette.parchmentBg,
+  },
+  streakTopRow: {
+    flexDirection: "row",
+    alignItems: "flex-end",
+    justifyContent: "space-between",
   },
   streakValueRow: {
     flexDirection: "row",
     alignItems: "flex-end",
   },
   streakNumber: {
-    color: Theme.WarshPalette.sage,
+    color: Theme.WarshPalette.sageDeep,
     fontFamily: Theme.Fonts.bold,
     fontSize: Theme.desktopFontSize(40),
     lineHeight: Theme.desktopLineHeight(48, 40),
@@ -487,252 +520,248 @@ const styles = StyleSheet.create({
     fontSize: Theme.FontSizes.bodyM,
     lineHeight: Theme.LineHeights.bodyM,
   },
-  streakDots: {
-    flexDirection: "row",
-    gap: Theme.Spacing.sm,
-    marginTop: Theme.Spacing.sm,
-  },
-  streakDot: {
-    width: Theme.Spacing.sm,
-    height: Theme.Spacing.sm,
-    borderRadius: Theme.Radii.full,
-  },
-  streakDotFilled: {
-    backgroundColor: Theme.WarshPalette.sage,
-  },
-  streakDotEmpty: {
-    borderWidth: 1,
-    borderColor: Theme.WarshPalette.parchmentCardBorder,
-  },
   freezeRow: {
     flexDirection: "row",
-    gap: 4,
-    marginLeft: Theme.Spacing.sm,
     alignItems: "center",
+    gap: 4,
+    marginBottom: Theme.Spacing.sm,
   },
-  freezeNote: {
-    marginTop: Theme.Spacing.xs,
-    color: Theme.WarshPalette.sage,
+  freezeText: {
+    color: Theme.WarshPalette.sageDeep,
     fontFamily: Theme.Fonts.regular,
-    fontSize: Theme.FontSizes.caption,
+    fontSize: Theme.FontSizes.label,
+  },
+  weekRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: Theme.Spacing.md,
+  },
+  weekDay: {
+    alignItems: "center",
+    gap: 6,
+  },
+  weekLetter: {
+    color: Theme.WarshPalette.subtleBrown,
+    fontFamily: Theme.Fonts.regular,
+    fontSize: Theme.FontSizes.label,
+    lineHeight: Theme.LineHeights.label,
+  },
+  weekLetterToday: {
+    color: Theme.WarshPalette.goldText,
+    fontFamily: Theme.Fonts.bold,
+  },
+  weekDot: {
+    width: 32,
+    height: 32,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: Theme.Radii.full,
+  },
+  weekDotDone: {
+    backgroundColor: Theme.WarshPalette.sageDeep,
+  },
+  weekDotToday: {
+    borderWidth: 2,
+    borderColor: Theme.WarshPalette.goldText,
+  },
+  weekDotFuture: {
+    borderWidth: 1,
+    borderColor: Theme.WarshPalette.cream,
   },
   streakQuote: {
-    marginTop: Theme.Spacing.lg,
+    marginTop: Theme.Spacing.md,
     color: Theme.WarshPalette.goldText,
     fontFamily: Theme.Fonts.italic,
     fontSize: Theme.FontSizes.caption,
     fontStyle: "italic",
     lineHeight: Theme.LineHeights.caption,
   },
-  statsRow: {
-    flexDirection: "row",
-    gap: Theme.Spacing.md,
-    marginHorizontal: Theme.Spacing.xl,
-    marginTop: Theme.Spacing.md,
-  },
-  statCard: {
-    flex: 1,
-    alignItems: "center",
-    padding: Theme.Spacing.lg,
-    borderRadius: Theme.Radii.md,
-    borderWidth: 0.5,
+  progressCard: {
+    ...cardBase,
     borderColor: Theme.WarshPalette.defaultCardBorder,
     backgroundColor: Theme.WarshPalette.white,
   },
-  statArabicLabel: {
+  cardTitle: {
+    color: Theme.WarshPalette.ink,
+    fontFamily: Theme.Fonts.display,
+    fontSize: Theme.FontSizes.h2,
+    lineHeight: Theme.desktopLineHeight(24, 18),
+  },
+  levelRow: {
+    flexDirection: "row",
+    alignItems: "baseline",
+    justifyContent: "space-between",
+    gap: Theme.Spacing.sm,
+  },
+  levelMeta: {
+    flexShrink: 1,
+    color: Theme.WarshPalette.subtleBrown,
+    fontFamily: Theme.Fonts.regular,
+    fontSize: Theme.FontSizes.caption,
+    lineHeight: Theme.LineHeights.caption,
+    textAlign: "right",
+  },
+  progressTrack: {
+    height: 6,
+    marginTop: 10,
+    overflow: "hidden",
+    borderRadius: 3,
+    backgroundColor: Theme.WarshPalette.sageTintBg,
+  },
+  progressFill: {
+    height: "100%",
+    borderRadius: 3,
+    backgroundColor: Theme.WarshPalette.sageDeep,
+  },
+  statGrid: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+    rowGap: Theme.Spacing.sm,
+    marginTop: Theme.Spacing.lg,
+  },
+  statCell: {
+    width: "31.5%",
+    alignItems: "center",
+    paddingVertical: 10,
+    paddingHorizontal: 6,
+    borderRadius: Theme.Radii.sm,
+    backgroundColor: Theme.WarshPalette.parchmentBg,
+  },
+  statArabic: {
     color: Theme.WarshPalette.goldText,
     fontSize: Theme.FontSizes.h3,
-    lineHeight: Theme.LineHeights.h3,
+    lineHeight: Theme.desktopLineHeight(24, 16),
     textAlign: "center",
   },
   statValue: {
-    marginTop: Theme.Spacing.xs,
-    color: Theme.WarshPalette.sage,
+    color: Theme.WarshPalette.sageDeep,
     fontFamily: Theme.Fonts.bold,
-    fontSize: Theme.desktopFontSize(24),
-    lineHeight: Theme.desktopLineHeight(34, 24),
-    textAlign: "center",
+    fontSize: Theme.desktopFontSize(22),
+    lineHeight: Theme.desktopLineHeight(28, 22),
     fontVariant: ["lining-nums", "tabular-nums"],
   },
-  statSub: {
-    marginTop: Theme.Spacing.xs,
+  statLabel: {
     color: Theme.WarshPalette.subtleBrown,
     fontFamily: Theme.Fonts.regular,
     fontSize: Theme.FontSizes.label,
     lineHeight: Theme.LineHeights.label,
     textAlign: "center",
   },
-  levelCard: {
-    marginHorizontal: Theme.Spacing.xl,
-    marginTop: Theme.Spacing.md,
-    padding: Theme.Spacing.lg,
-    borderRadius: Theme.Radii.md,
-    borderWidth: 0.5,
-    borderColor: Theme.WarshPalette.defaultCardBorder,
-    backgroundColor: Theme.WarshPalette.white,
+  statDelta: {
+    marginTop: 4,
+    color: Theme.WarshPalette.sageDeep,
+    fontFamily: Theme.Fonts.semiBold,
+    fontSize: Theme.FontSizes.label,
+    lineHeight: Theme.LineHeights.label,
+    textAlign: "center",
   },
-  levelRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    marginBottom: Theme.Spacing.md,
-  },
-  levelLabel: {
-    color: Theme.WarshPalette.subtleBrown,
-    fontFamily: Theme.Fonts.regular,
-    fontSize: Theme.FontSizes.bodyM,
-    lineHeight: Theme.LineHeights.bodyM,
-  },
-  levelValue: {
-    color: Theme.WarshPalette.ink,
-    fontFamily: Theme.Fonts.bold,
-    fontSize: Theme.FontSizes.arabicM,
-    lineHeight: Theme.LineHeights.arabicM,
-    fontVariant: ["lining-nums", "tabular-nums"],
-  },
-  progressTrack: {
-    width: "100%",
-    height: Theme.Spacing.xs,
-    overflow: "hidden",
-    borderRadius: 2,
-    backgroundColor: Theme.WarshPalette.defaultCardBorder,
-  },
-  progressFill: {
-    height: "100%",
-    borderRadius: 2,
-    backgroundColor: Theme.WarshPalette.sage,
-  },
-  achievementsCard: {
-    marginHorizontal: Theme.Spacing.xl,
-    marginTop: Theme.Spacing.md,
-    padding: Theme.Spacing.lg,
-    borderRadius: Theme.Radii.md,
-    borderWidth: 0.5,
+  milestonesCard: {
+    ...cardBase,
     borderColor: Theme.WarshPalette.parchmentCardBorder,
     backgroundColor: Theme.WarshPalette.parchmentBg,
   },
-  achievementsHeader: {
+  milestonesHeader: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    marginBottom: Theme.Spacing.md,
   },
-  achievementsTitle: {
-    color: Theme.WarshPalette.ink,
-    fontFamily: Theme.Fonts.display,
-    fontSize: Theme.FontSizes.bodyL,
-    lineHeight: Theme.LineHeights.bodyL,
+  seeAll: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 2,
+    minHeight: 32,
   },
-  achievementsCount: {
+  seeAllText: {
     color: Theme.WarshPalette.goldText,
     fontFamily: Theme.Fonts.regular,
     fontSize: Theme.FontSizes.caption,
-    lineHeight: Theme.LineHeights.caption,
   },
-  achievementsRow: {
+  badgeRow: {
     flexDirection: "row",
-    flexWrap: "wrap",
     gap: Theme.Spacing.sm,
+    marginTop: Theme.Spacing.sm,
   },
-  achievementBadge: {
+  badge: {
+    flex: 1,
     alignItems: "center",
-    width: 56,
-    padding: Theme.Spacing.sm,
+    paddingVertical: Theme.Spacing.sm,
+    paddingHorizontal: 2,
     borderRadius: Theme.Radii.sm,
     borderWidth: 0.5,
     borderColor: Theme.WarshPalette.defaultCardBorder,
     backgroundColor: Theme.WarshPalette.white,
   },
-  achievementTitle: {
+  badgeNext: {
+    borderWidth: 1,
+    borderStyle: "dashed",
+    borderColor: Theme.WarshPalette.goldDeep,
+    backgroundColor: "transparent",
+  },
+  badgeTitle: {
     marginTop: 4,
     color: Theme.WarshPalette.subtleBrown,
     fontSize: Theme.desktopFontSize(12),
     lineHeight: Theme.desktopLineHeight(16, 12),
     textAlign: "center",
   },
-  achievementMore: {
-    justifyContent: "center",
-    backgroundColor: Theme.WarshPalette.parchmentBg,
-  },
-  achievementMoreText: {
-    color: Theme.WarshPalette.subtleBrown,
-    fontFamily: Theme.Fonts.semiBold,
-    fontSize: Theme.FontSizes.bodyM,
-    lineHeight: Theme.LineHeights.bodyM,
-  },
-  speakingCard: {
-    marginHorizontal: Theme.Spacing.xl,
-    marginTop: Theme.Spacing.md,
-    padding: Theme.Spacing.lg,
-    borderRadius: Theme.Radii.md,
-    borderWidth: 0.5,
-    borderColor: Theme.WarshPalette.parchmentCardBorder,
-    backgroundColor: Theme.WarshPalette.parchmentBg,
-  },
-  speakingIconRow: {
+  nextRow: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 6,
-    marginBottom: Theme.Spacing.sm,
+    gap: 10,
+    marginTop: Theme.Spacing.md,
   },
-  speakingTitle: {
+  nextLabel: {
+    color: Theme.WarshPalette.bodyBrown,
+    fontFamily: Theme.Fonts.semiBold,
+    fontSize: Theme.FontSizes.label,
+  },
+  nextTrack: {
+    flex: 1,
+    height: 6,
+    overflow: "hidden",
+    borderRadius: 3,
+    backgroundColor: Theme.WarshPalette.parchmentDeep,
+  },
+  nextFill: {
+    height: "100%",
+    borderRadius: 3,
+    backgroundColor: Theme.WarshPalette.goldText,
+  },
+  nextCount: {
     color: Theme.WarshPalette.subtleBrown,
     fontFamily: Theme.Fonts.regular,
     fontSize: Theme.FontSizes.label,
-    lineHeight: Theme.LineHeights.label,
   },
-  speakingCount: {
-    color: Theme.WarshPalette.ink,
-    fontFamily: Theme.Fonts.bold,
-    fontSize: Theme.desktopFontSize(30),
-    lineHeight: Theme.desktopLineHeight(38, 30),
-    fontVariant: ["lining-nums", "tabular-nums"],
-  },
-  speakingSub: {
-    color: Theme.WarshPalette.subtleBrown,
-    fontFamily: Theme.Fonts.regular,
-    fontSize: Theme.FontSizes.bodyM,
-    lineHeight: Theme.LineHeights.bodyM,
-  },
-  tipCard: {
-    marginHorizontal: Theme.Spacing.xl,
-    marginTop: Theme.Spacing.md,
+  noorCard: {
     padding: Theme.Spacing.lg,
     borderRadius: Theme.Radii.md,
     backgroundColor: Theme.WarshPalette.navy,
   },
-  tipLabel: {
+  noorLabel: {
     color: Theme.WarshPalette.gold,
     fontFamily: Theme.Fonts.semiBold,
     fontSize: Theme.FontSizes.label,
     lineHeight: Theme.LineHeights.label,
   },
-  tipText: {
+  noorText: {
     marginTop: Theme.Spacing.sm,
-    color: Theme.WarshPalette.parchment,
+    color: Theme.WarshPalette.creamBg,
     fontFamily: Theme.Fonts.regular,
-    fontSize: Theme.FontSizes.bodyL,
-    lineHeight: Math.round(Theme.FontSizes.bodyL * 1.6),
+    fontSize: Theme.FontSizes.bodyM,
+    lineHeight: Math.round(Theme.FontSizes.bodyM * 1.6),
   },
-  logoutButton: {
-    marginHorizontal: Theme.Spacing.xl,
-    marginTop: Theme.Spacing.xl,
-  },
-  shareButton: {
-    marginHorizontal: Theme.Spacing.xl,
-    marginTop: Theme.Spacing.xl,
-  },
-  memberSinceRow: {
+  noorLink: {
     flexDirection: "row",
     alignItems: "center",
-    gap: Theme.Spacing.xs,
-    marginHorizontal: Theme.Spacing.xl,
-    marginTop: Theme.Spacing.sm,
+    alignSelf: "flex-start",
+    gap: 4,
+    minHeight: 36,
+    marginTop: Theme.Spacing.xs,
   },
-  memberSinceText: {
-    color: Theme.WarshPalette.subtleBrown,
-    fontFamily: Theme.Fonts.regular,
-    fontSize: Theme.FontSizes.caption,
-    lineHeight: Theme.LineHeights.caption,
+  noorLinkText: {
+    color: Theme.WarshPalette.gold,
+    fontFamily: Theme.Fonts.semiBold,
+    fontSize: Theme.FontSizes.bodyM,
   },
 });

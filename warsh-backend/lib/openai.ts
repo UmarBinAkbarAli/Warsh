@@ -1,5 +1,6 @@
 import OpenAI from "openai";
 import * as Sentry from "@sentry/nextjs";
+import { HEADWORD_INSTRUCTION } from "./noorHeadwordTag";
 
 const SYSTEM_PROMPT = `You are Ustaad Noor — the AI tutor inside Warsh, 
 an Arabic learning app for Muslims who want to understand the Quran 
@@ -198,7 +199,7 @@ async function getOpenAIReply(
   const messages: OpenAI.Chat.ChatCompletionMessageParam[] = [
     {
       role: "system",
-      content: SYSTEM_PROMPT + langInstruction + (options.minor ? MINOR_SAFETY_INSTRUCTION : ""),
+      content: SYSTEM_PROMPT + langInstruction + HEADWORD_INSTRUCTION + (options.minor ? MINOR_SAFETY_INSTRUCTION : ""),
     },
     ...history.map((m) => ({
       role: (m.role === "USER" ? "user" : "assistant") as "user" | "assistant",
