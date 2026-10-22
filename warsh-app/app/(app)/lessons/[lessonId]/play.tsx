@@ -462,6 +462,13 @@ function normalizeArabicAnswer(value?: string | null) {
   return normalizeAnswer(value).replace(/[أإآٱ]/g, "ا");
 }
 
+// HARAKAH_PLACEMENT grades the vowel marks themselves, so they must survive.
+// NFC puts stacked marks (shadda + fatha) in one canonical order however they
+// were typed; tatweel is dropped because it carries no meaning.
+function normalizeVowelledAnswer(value?: string | null) {
+  return value?.normalize("NFC").replace(/ـ/g, "").replace(/\s+/g, " ").trim() ?? "";
+}
+
 function getSelectedText(selectedAnswer: SelectedAnswer) {
   if (selectedAnswer && !Array.isArray(selectedAnswer) && typeof selectedAnswer === "object") {
     return Object.values(selectedAnswer).join(" ");
@@ -482,7 +489,12 @@ function isAnswerCorrect(ex: RawEx | undefined, selectedAnswer: SelectedAnswer, 
     return exParseTokens(ex, language, t).every((token) => normalizeAnswer(selectedAnswer[token.word]) === normalizeAnswer(token.label));
   }
 
-  if (exType(ex) === "WRITE_ARABIC" || exType(ex) === "HARAKAH_PLACEMENT" || isTypedFillBlank(ex)) {
+  if (exType(ex) === "HARAKAH_PLACEMENT") {
+    const selText = getSelectedText(selectedAnswer) ?? "";
+    return normalizeVowelledAnswer(selText) === normalizeVowelledAnswer(exCorrectAnswer(ex, language, t));
+  }
+
+  if (exType(ex) === "WRITE_ARABIC" || isTypedFillBlank(ex)) {
     const selText = getSelectedText(selectedAnswer) ?? "";
     const correct = exCorrectAnswer(ex, language, t);
     return normalizeArabicAnswer(selText) === normalizeArabicAnswer(correct);
