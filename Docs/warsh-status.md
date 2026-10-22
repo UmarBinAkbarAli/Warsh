@@ -432,7 +432,7 @@ maintained `npm run deploy:web` script; no Android, backend or feature code chan
 
 ### UX evaluation follow-up (2026-09-25)
 
-### Release 1.0.15 (39) — submitted 2026-10-05
+### Release 1.0.15 (39) — live on Play (submitted 2026-10-05)
 
 Android **1.0.15 (39)** submitted to Production (100 % roll-out) after the full
 release gate (fixtures, Urdu audit, backend build, app lint + tsc,
@@ -442,7 +442,7 @@ an emulator smoke test of the matching APK (launches, production content loads, 
 tests, the Ch 26–72 curriculum harvest, and the refreshed QUL Indo-Pak 15-line pages
 (page 472 ayah marker; page 1 centred; page 443 was already correct in our build).
 Web shipped with the push of `f7c787b` (warsh-web and warsh-site Production
-deployments). Play review pending.
+deployments). Play review passed — the owner confirmed 1.0.15 installed from Play (2026-10-22).
 
 Implemented from the 2026-09-24 UX evaluation (owner asked to implement
 directly; Pen section 31 holds the proposals). Web ships with the push;
