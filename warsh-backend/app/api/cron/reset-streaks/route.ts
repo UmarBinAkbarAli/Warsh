@@ -1,10 +1,8 @@
 import { NextResponse } from "next/server";
 import * as Sentry from "@sentry/nextjs";
 import { prisma } from "../../../../lib/prisma";
-import {
-  get4amPKTBoundary,
-  getPrevious4amPKTBoundary,
-} from "../../../../lib/date";
+import { getPrevious4amPKTBoundary } from "../../../../lib/date";
+import { resolveMissedStreakDays } from "../../../../lib/streak";
 import { timingSafeStringEqual } from "../../../../lib/auth";
 import { withDbRetry } from "../../../../lib/dbRetry";
 
@@ -28,7 +26,7 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
   }
 
-  // Of the two crons this is the one that touches every learner every day, so
+  // Of the daily crons this is the one that touches every learner every day, so
   // it gets the organisation's single monitor seat. A 55-minute margin because
   // the platform treats a daily schedule as "some time inside that hour" —
   // observed check-ins have landed anywhere from :02 to :50 — and a one-minute
@@ -43,17 +41,17 @@ export async function GET(request: Request) {
 
 async function runResetStreaks() {
   const now = new Date();
-  const currentBoundary = get4amPKTBoundary(now);
   const previousBoundary = getPrevious4amPKTBoundary(now);
 
-  // At the start of a new streak day, reset only users who missed the entire
-  // 04:00-to-04:00 day that just ended.
+  // At the start of a new streak day, act only on users who missed at least
+  // one entire 04:00-to-04:00 day.
   //
   // Every database call here is wrapped: this job runs at 04:00 PKT, when no
   // traffic has kept Neon's compute awake, and the connection error that comes
   // back from a suspended endpoint used to kill the run outright. Both writes
   // below move the row out of this selection, so a retry — or tomorrow's run
-  // after a hard failure — picks up only what is genuinely left.
+  // after a hard failure — picks up only what is genuinely left, and
+  // resolveMissedStreakDays counts every day a failed night left behind.
   const staleStreaks = await withDbRetry("cron/reset-streaks:select", () =>
     prisma.streak.findMany({
       where: {
@@ -63,41 +61,47 @@ async function runResetStreaks() {
           { lastActiveDate: { lt: previousBoundary } },
         ],
       },
-      select: { id: true, userId: true, currentStreak: true, streakFreezes: true, lastActiveDate: true },
+      select: { id: true, streakFreezes: true, lastActiveDate: true },
     }),
   );
 
   let reset = 0;
   let frozen = 0;
+  let skipped = 0;
 
   for (const streak of staleStreaks) {
-    if (streak.streakFreezes > 0) {
-      // Consume a freeze — streak survives
-      await withDbRetry("cron/reset-streaks:freeze", () =>
-        prisma.streak.update({
-          where: { id: streak.id },
-          data: {
-            streakFreezes: streak.streakFreezes - 1,
-            lastFreezeUsedAt: currentBoundary,
-            // The virtual activity belongs to the missed day, so a lesson in
-            // the newly opened day increments normally without granting an
-            // additional free day.
-            lastActiveDate: previousBoundary,
-          },
-        }),
-      );
-      frozen++;
-    } else {
-      // No freeze — reset streak
-      await withDbRetry("cron/reset-streaks:reset", () =>
-        prisma.streak.update({
-          where: { id: streak.id },
-          data: { currentStreak: 0 },
-        }),
-      );
-      reset++;
-    }
+    const resolution = resolveMissedStreakDays(streak, now);
+    if (!resolution) continue;
+
+    // The run lands anywhere in 04:00–04:59 PKT, so a learner can finish a
+    // lesson between the read above and this write. Matching the row on the
+    // snapshot makes the write a no-op once it has moved: the lesson already
+    // settled the gap, and an unconditional update would erase today's
+    // activity (or zero the streak it just restarted).
+    const snapshot = {
+      id: streak.id,
+      currentStreak: { gt: 0 },
+      streakFreezes: streak.streakFreezes,
+      lastActiveDate: streak.lastActiveDate,
+    };
+    const { count } = await withDbRetry(`cron/reset-streaks:${resolution.action}`, () =>
+      prisma.streak.updateMany({
+        where: snapshot,
+        data:
+          resolution.action === "freeze"
+            ? {
+                streakFreezes: resolution.streakFreezes,
+                lastFreezeUsedAt: resolution.lastFreezeUsedAt,
+                lastActiveDate: resolution.lastActiveDate,
+              }
+            : { currentStreak: 0 },
+      }),
+    );
+
+    if (count === 0) skipped++;
+    else if (resolution.action === "freeze") frozen++;
+    else reset++;
   }
 
-  return NextResponse.json({ data: { processed: staleStreaks.length, reset, frozen } });
+  return NextResponse.json({ data: { processed: staleStreaks.length, reset, frozen, skipped } });
 }
