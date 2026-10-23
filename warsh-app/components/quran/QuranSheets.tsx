@@ -1,5 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";
-import type { ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { Modal, Pressable, ScrollView, StyleSheet, Switch, Text, useWindowDimensions, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
@@ -62,6 +62,7 @@ export function QuranSettingsSheet({ visible, onClose }: { visible: boolean; onC
   const tajweedAvailable = hasTajweed(current);
   const setTajweed = useQuranStore((s) => s.setTajweed);
   const setKeepAwake = useQuranStore((s) => s.setKeepAwake);
+  const [aboutOpen, setAboutOpen] = useState(false);
   const translation = useQuranStore((s) => s.translation);
   const setTranslation = useQuranStore((s) => s.setTranslation);
   const translationOptions: { key: QuranTranslation | null; titleKey: string; subKey: string }[] = [
@@ -105,8 +106,12 @@ export function QuranSettingsSheet({ visible, onClose }: { visible: boolean; onC
           );
         })}
 
-        <Text style={[styles.label, styles.labelSpaced]}>{t("quran.settings.translation")}</Text>
-        {translationOptions.map(({ key, titleKey, subKey }) => {
+        {/* The translation picker returns once translations ship; until then
+            the sheet does not list options nobody can choose. */}
+        {QURAN_TRANSLATION_ENABLED ? (
+          <Text style={[styles.label, styles.labelSpaced]}>{t("quran.settings.translation")}</Text>
+        ) : null}
+        {QURAN_TRANSLATION_ENABLED && translationOptions.map(({ key, titleKey, subKey }) => {
           const soon = !QURAN_TRANSLATION_ENABLED && key !== null;
           const selected = QURAN_TRANSLATION_ENABLED ? key === translation : key === null;
           return (
@@ -141,6 +146,11 @@ export function QuranSettingsSheet({ visible, onClose }: { visible: boolean; onC
             onChange={setTajweed}
             disabled={!tajweedAvailable}
           />
+          {tajweed && tajweedAvailable ? (
+            <View style={styles.inlineLegend} accessibilityLabel={t("quran.settings.legendLabel")}>
+              <TajweedLegend inline />
+            </View>
+          ) : null}
           <View style={styles.divider} />
           <ToggleRow
             title={t("quran.settings.keepAwake")}
@@ -151,7 +161,16 @@ export function QuranSettingsSheet({ visible, onClose }: { visible: boolean; onC
         </View>
 
         <Text style={styles.footnote}>{t("quran.settings.footnote")}</Text>
-        <Text style={styles.footnote}>{t("quran.settings.sources")}</Text>
+        <Pressable
+          onPress={() => setAboutOpen((open) => !open)}
+          style={styles.aboutRow}
+          accessibilityRole="button"
+          accessibilityState={{ expanded: aboutOpen }}
+        >
+          <Text style={styles.aboutText}>{t("quran.settings.about")}</Text>
+          <Ionicons name={aboutOpen ? "chevron-down" : "chevron-forward"} size={18} color={WarshPalette.navy} />
+        </Pressable>
+        {aboutOpen ? <Text style={styles.sources}>{t("quran.settings.sources")}</Text> : null}
       </ScrollView>
     </BottomSheet>
   );
@@ -232,19 +251,23 @@ export function TajweedRuleSheet({
               </View>
             );
           })}
+          <Text style={styles.footnote}>{t("quran.tajweedHint")}</Text>
+          <Pressable onPress={onClose} style={styles.closeButton} accessibilityRole="button">
+            <Text style={styles.aboutText}>{t("common.close")}</Text>
+          </Pressable>
         </ScrollView>
       ) : null}
     </BottomSheet>
   );
 }
 
-export function TajweedLegend() {
+export function TajweedLegend({ inline = false }: { inline?: boolean } = {}) {
   const t = useT();
   return (
     <View style={styles.legend}>
       {TAJWEED_LEGEND.map((item) => (
-        <View key={item.group} style={styles.legendChip}>
-          <View style={[styles.legendDot, { backgroundColor: item.color }]} />
+        <View key={item.group} style={[styles.legendChip, inline && styles.legendChipInline]}>
+          <View style={[styles.legendDot, inline && styles.legendDotInline, { backgroundColor: item.color }]} />
           <Text style={styles.legendText}>{t(item.labelKey)}</Text>
         </View>
       ))}
@@ -273,8 +296,8 @@ const styles = StyleSheet.create({
     width: 36,
     height: 4,
     borderRadius: Radii.full,
-    backgroundColor: WarshPalette.cream,
-    marginBottom: Spacing.lg,
+    backgroundColor: WarshPalette.parchment,
+    marginBottom: Spacing.md,
   },
   sheetScroll: {
     flexGrow: 0,
@@ -292,10 +315,10 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: Fonts.display,
-    fontSize: FontSizes.displayL,
-    lineHeight: LineHeights.displayL,
+    fontSize: FontSizes.displayXL,
+    lineHeight: LineHeights.displayXL,
     color: WarshPalette.navy,
-    marginBottom: Spacing.md,
+    marginBottom: Spacing.sm,
   },
   label: {
     fontFamily: Fonts.bold,
@@ -384,31 +407,59 @@ const styles = StyleSheet.create({
   },
   footnote: {
     fontFamily: Fonts.regular,
+    fontSize: 13,
+    lineHeight: 18,
+    color: WarshPalette.subtleBrown,
+    marginTop: Spacing.xs,
+  },
+  aboutRow: {
+    minHeight: 48,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginTop: Spacing.sm,
+  },
+  aboutText: {
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyM,
+    color: WarshPalette.navy,
+  },
+  sources: {
+    fontFamily: Fonts.regular,
     fontSize: FontSizes.caption,
     lineHeight: LineHeights.caption,
     color: WarshPalette.subtleBrown,
-    marginTop: Spacing.sm,
+  },
+  inlineLegend: {
+    paddingHorizontal: Spacing.lg,
+    paddingBottom: 14,
   },
   wordRow: {
     alignItems: "center",
-    paddingVertical: Spacing.sm,
-    borderRadius: Radii.md,
-    backgroundColor: WarshPalette.white,
-    borderWidth: 1,
-    borderColor: WarshPalette.cream,
+    paddingTop: Spacing.sm,
+    paddingBottom: Spacing.lg,
   },
   wordIndoPak: {
     fontFamily: INDOPAK_FONT,
   },
   wordArabic: {
     fontFamily: QURAN_FONT,
-    fontSize: 34,
-    lineHeight: 64,
+    fontSize: 48,
+    lineHeight: 84,
     color: WarshPalette.ink,
   },
   ruleBlock: {
     gap: Spacing.xs,
-    paddingTop: Spacing.md,
+    padding: Spacing.lg,
+    borderRadius: Radii.md,
+    borderWidth: 1,
+    borderColor: WarshPalette.cream,
+    backgroundColor: WarshPalette.white,
+  },
+  closeButton: {
+    minHeight: 48,
+    alignItems: "center",
+    justifyContent: "center",
   },
   ruleNameRow: {
     flexDirection: "row",
@@ -422,10 +473,10 @@ const styles = StyleSheet.create({
     borderRadius: 6,
   },
   ruleName: {
-    fontFamily: Fonts.display,
-    fontSize: FontSizes.displayL,
-    lineHeight: LineHeights.displayL,
-    color: WarshPalette.navy,
+    fontFamily: Fonts.bold,
+    fontSize: 17,
+    lineHeight: 22,
+    color: WarshPalette.ink,
     flexShrink: 1,
   },
   ruleArabic: {
@@ -455,10 +506,20 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: WarshPalette.cream,
   },
+  legendChipInline: {
+    paddingHorizontal: 10,
+    borderWidth: 0,
+    backgroundColor: WarshPalette.highlightBgSoft,
+  },
   legendDot: {
     width: 8,
     height: 8,
     borderRadius: 4,
+  },
+  legendDotInline: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
   },
   legendText: {
     fontFamily: Fonts.bold,

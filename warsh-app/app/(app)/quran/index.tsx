@@ -32,6 +32,7 @@ type Row = {
   /** The Arabic is Indo-Pak text (a parah name), drawn in its own font. */
   indoPak?: boolean;
   page: number;
+  bookmarkAyah?: number;
 };
 
 /** Surah, juz (parah) and bookmark lists for the Quran reader (Pen sections 27 and 28). */
@@ -42,6 +43,7 @@ export default function QuranIndexScreen({ isTab = false }: { isTab?: boolean })
   const layout = useQuranStore((s) => s.layout);
   const lastAyah = useQuranStore((s) => s.lastAyah);
   const bookmarks = useQuranStore((s) => s.bookmarks);
+  const removeBookmark = useQuranStore((s) => s.removeBookmark);
   const lastPage = lastAyah ? pageForAyah(layout, lastAyah) : null;
   const [tab, setTab] = useState<Tab>("surah");
   const [searching, setSearching] = useState(false);
@@ -78,6 +80,7 @@ export default function QuranIndexScreen({ isTab = false }: { isTab?: boolean })
         const chapter = surahForPage(layout, page);
         return {
           key: `bookmark-${ayah}`,
+          bookmarkAyah: ayah,
           badge: String(page),
           title: chapter.en,
           subtitle: t("quran.pageJuz", { page, juz: juzForPage(layout, page) }),
@@ -90,15 +93,23 @@ export default function QuranIndexScreen({ isTab = false }: { isTab?: boolean })
       key: `surah-${chapter.n}`,
       badge: String(chapter.n),
       title: chapter.en,
-      subtitle: t("quran.surahMeta", {
-        meaning: chapter.meaning,
-        place: t(chapter.place === "meccan" ? "quran.meccan" : "quran.medinan"),
-        ayat: chapter.ayat,
-      }),
+      // While searching, the row says where the surah is rather than what it means.
+      subtitle: searching
+        ? t("quran.searchMeta", { ayat: chapter.ayat, page: surahPage(layout, chapter.n) })
+        : t("quran.surahMeta", {
+            meaning: chapter.meaning,
+            place: t(chapter.place === "meccan" ? "quran.meccan" : "quran.medinan"),
+            ayat: chapter.ayat,
+          }),
       arabic: chapter.ar,
       page: surahPage(layout, chapter.n),
     }));
-  }, [tab, query, bookmarks, layout, t]);
+  }, [tab, query, bookmarks, layout, searching, t]);
+
+  function closeSearch() {
+    setSearching(false);
+    setQuery("");
+  }
 
   const lastChapter = lastPage ? surahForPage(layout, lastPage) : null;
 
@@ -156,15 +167,26 @@ export default function QuranIndexScreen({ isTab = false }: { isTab?: boolean })
         ListHeaderComponent={
           <View style={styles.header}>
             {searching ? (
-              <TextInput
-                value={query}
-                onChangeText={setQuery}
-                autoFocus
-                placeholder={t("quran.searchPlaceholder")}
-                placeholderTextColor={WarshPalette.disabledText}
-                style={styles.search}
-                accessibilityLabel={t("common.search")}
-              />
+              <View style={styles.searchRow}>
+                <View style={styles.searchField}>
+                  <Ionicons name="search" size={18} color={WarshPalette.subtleBrown} />
+                  <TextInput
+                    value={query}
+                    onChangeText={setQuery}
+                    autoFocus
+                    placeholder={t("quran.searchPlaceholder")}
+                    placeholderTextColor={WarshPalette.disabledText}
+                    style={styles.search}
+                    accessibilityLabel={t("quran.searchSurahs")}
+                  />
+                </View>
+                <Pressable onPress={closeSearch} style={styles.searchCancel} accessibilityRole="button">
+                  <Text style={styles.searchCancelText}>{t("common.cancel")}</Text>
+                </Pressable>
+              </View>
+            ) : null}
+            {searching && query.trim() && rows.length > 0 ? (
+              <Text style={styles.resultCount}>{t("quran.searchCount", { count: rows.length })}</Text>
             ) : null}
 
             {lastPage && lastChapter && !searching ? (
@@ -207,19 +229,39 @@ export default function QuranIndexScreen({ isTab = false }: { isTab?: boolean })
           </View>
         }
         ListEmptyComponent={
-          <Text style={styles.empty}>
-            {tab === "bookmarks" ? t("quran.noBookmarks") : t("quran.noResults")}
-          </Text>
+          tab === "bookmarks" && !searching ? (
+            <View style={styles.emptyState}>
+              <View style={styles.emptyIcon}>
+                <Ionicons name="bookmark-outline" size={28} color={WarshPalette.goldText} />
+              </View>
+              <Text style={styles.emptyTitle}>{t("quran.noBookmarksTitle")}</Text>
+              <Text style={styles.emptyBody}>{t("quran.noBookmarks")}</Text>
+              <Pressable
+                onPress={() => openPage(lastPage ?? 1)}
+                style={({ pressed }) => [styles.emptyAction, pressed && styles.pressed]}
+                accessibilityRole="button"
+              >
+                <Text style={styles.emptyActionText}>{t("quran.startReading")}</Text>
+              </Pressable>
+            </View>
+          ) : (
+            <Text style={styles.empty}>{t("quran.noResults")}</Text>
+          )
         }
         ItemSeparatorComponent={() => <View style={styles.separator} />}
         renderItem={({ item }) => (
+          <View style={styles.rowWrap}>
           <Pressable
             onPress={() => openPage(item.page)}
-            style={({ pressed }) => [styles.row, pressed && styles.pressed]}
+            style={({ pressed }) => [styles.row, styles.rowMain, pressed && styles.pressed]}
             accessibilityRole="button"
           >
             <View style={styles.badge}>
-              <Text style={styles.badgeText}>{item.badge}</Text>
+              {item.bookmarkAyah ? (
+                <Ionicons name="bookmark" size={16} color={WarshPalette.goldText} />
+              ) : (
+                <Text style={styles.badgeText}>{item.badge}</Text>
+              )}
             </View>
             <View style={styles.rowCopy}>
               <Text style={styles.rowTitle} numberOfLines={1}>
@@ -233,9 +275,22 @@ export default function QuranIndexScreen({ isTab = false }: { isTab?: boolean })
               {item.arabic ? (
                 <Text style={[styles.rowArabic, item.indoPak && styles.rowArabicIndoPak]}>{item.arabic}</Text>
               ) : null}
-              <Text style={styles.rowPage}>{t("quran.pageShort", { page: item.page })}</Text>
+              {item.bookmarkAyah || searching ? null : (
+                <Text style={styles.rowPage}>{t("quran.pageShort", { page: item.page })}</Text>
+              )}
             </View>
           </Pressable>
+          {item.bookmarkAyah ? (
+            <Pressable
+              onPress={() => removeBookmark(item.bookmarkAyah!)}
+              style={({ pressed }) => [styles.removeButton, pressed && styles.pressed]}
+              accessibilityRole="button"
+              accessibilityLabel={t("quran.removeBookmark", { surah: item.title, page: item.page })}
+            >
+              <Ionicons name="trash-outline" size={20} color={WarshPalette.subtleBrown} />
+            </Pressable>
+          ) : null}
+          </View>
         )}
       />
 
@@ -316,16 +371,107 @@ const styles = StyleSheet.create({
     gap: Spacing.lg,
     paddingBottom: Spacing.sm,
   },
-  search: {
-    height: 44,
-    paddingHorizontal: Spacing.lg,
+  searchRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.sm,
+  },
+  searchField: {
+    flex: 1,
+    minHeight: 48,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+    paddingHorizontal: 14,
     borderRadius: Radii.md,
-    borderWidth: 1,
+    borderWidth: 1.5,
     borderColor: WarshPalette.gold,
     backgroundColor: WarshPalette.white,
+  },
+  search: {
+    flex: 1,
+    minHeight: 46,
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyL,
+    color: WarshPalette.ink,
+  },
+  searchCancel: {
+    minHeight: 48,
+    paddingHorizontal: 6,
+    justifyContent: "center",
+  },
+  searchCancelText: {
+    fontFamily: Fonts.semiBold,
+    fontSize: 15,
+    color: WarshPalette.navy,
+  },
+  resultCount: {
+    marginTop: -Spacing.xs,
+    fontFamily: Fonts.bold,
+    fontSize: FontSizes.label,
+    lineHeight: LineHeights.label,
+    letterSpacing: 1,
+    color: WarshPalette.goldText,
+    textTransform: "uppercase",
+  },
+  rowWrap: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.xs,
+  },
+  rowMain: { flex: 1, minWidth: 0 },
+  removeButton: {
+    width: 44,
+    height: 44,
+    marginRight: -10,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  emptyState: {
+    marginTop: 56,
+    alignItems: "center",
+  },
+  emptyIcon: {
+    width: 64,
+    height: 64,
+    borderRadius: 32,
+    borderWidth: 1,
+    borderColor: WarshPalette.parchment,
+    backgroundColor: WarshPalette.parchmentBg,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  emptyTitle: {
+    marginTop: Spacing.lg,
+    fontFamily: Fonts.display,
+    fontSize: 24,
+    lineHeight: 30,
+    color: WarshPalette.navy,
+    textAlign: "center",
+  },
+  emptyBody: {
+    marginTop: Spacing.sm,
+    maxWidth: 280,
     fontFamily: Fonts.regular,
     fontSize: FontSizes.bodyM,
-    color: WarshPalette.ink,
+    lineHeight: 21,
+    color: WarshPalette.bodyBrown,
+    textAlign: "center",
+  },
+  emptyAction: {
+    marginTop: Spacing.gutter,
+    minHeight: 48,
+    paddingHorizontal: Spacing.xl,
+    borderRadius: Radii.sm,
+    borderWidth: 1,
+    borderColor: WarshPalette.navy,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  emptyActionText: {
+    fontFamily: Fonts.semiBold,
+    fontSize: 15,
+    color: WarshPalette.navy,
   },
   continueStrip: {
     flexDirection: "row",

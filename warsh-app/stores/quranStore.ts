@@ -22,6 +22,7 @@ interface QuranState {
   setLastAyah: (ayah: number) => void;
   /** Bookmarks the page's opening ayah, or clears every bookmark on the page. */
   toggleBookmark: (pageAyahs: { first: number; next: number | null }) => void;
+  removeBookmark: (ayah: number) => void;
   setTajweed: (on: boolean) => void;
   setKeepAwake: (on: boolean) => void;
   setTranslation: (translation: QuranTranslation | null) => void;
@@ -48,6 +49,7 @@ export const useQuranStore = create<QuranState>()(
               : [...state.bookmarks, first].sort((a, b) => a - b),
           };
         }),
+      removeBookmark: (ayah) => set((state) => ({ bookmarks: state.bookmarks.filter((value) => value !== ayah) })),
       setTajweed: (tajweed) => set({ tajweed }),
       setKeepAwake: (keepAwake) => set({ keepAwake }),
       setTranslation: (translation) => set({ translation }),
