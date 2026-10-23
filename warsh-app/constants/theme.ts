@@ -61,6 +61,17 @@ export const WarshPalette = {
   // 2026-08 auth redesign
   neutralChip: "#F2F2F2", // language pill fill on the onboarding top bar
   googleRed: "#EA4335", // Google brand mark — brand-locked, never re-tint
+  // 2026-10 Claude Design canvas (All chapters and sheets)
+  ringTrack: "#DDD6C5", // empty progress ring / thin progress track
+  lockedSurface: "#F1ECE0", // locked chapter row
+  lockedRing: "#CFC8B6", // ring around a locked chapter's padlock
+  lockedChip: "#EAE5DA", // padlock disc and locked number tile
+  lockedText: "#4A4A4A", // titles and icons on locked rows (7.6:1 on lockedSurface)
+  sheetHandle: "#C9C2B0", // drag handle on cream bottom sheets
+  goldTextDeep: "#7A5E25", // percent label and New badge text
+  goldInk: "#5C4818", // lesson count on a cream row
+  updatedBg: "#E3ECF7", // "Updated" badge fill
+  updatedText: "#1F3F66", // "Updated" badge text
 } as const;
 
 // Quran reader (Pen section 27). Tajweed colours follow the printed Madani

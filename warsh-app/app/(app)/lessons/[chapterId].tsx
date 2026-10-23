@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   ActivityIndicator,
   Modal,
@@ -20,6 +20,8 @@ import { ScreenHeader } from "@components/ScreenHeader";
 import { StatusBarBacking } from "@components/StatusBarBacking";
 import { BrandButton } from "@components/BrandButton";
 import { useLanguage, useTranslationLanguage, pickLocalized } from "@services/language";
+import { lessonsWithCheckpoint } from "@services/lessonCheckpoint";
+import { useAuthStore } from "@stores/authStore";
 import { useT } from "@i18n/index";
 import {
   Colors,
@@ -197,7 +199,8 @@ export default function ChapterScreen() {
   const { width } = useWindowDimensions();
   const desktopWeb = Platform.OS === "web" && width >= 960;
   const androidMinimal = Platform.OS === "android";
-  const { chapterId } = useLocalSearchParams<{ chapterId: string }>();
+  const { chapterId, savedLesson } = useLocalSearchParams<{ chapterId: string; savedLesson?: string }>();
+  const userId = useAuthStore((s) => s.user?.id);
   const language = useTranslationLanguage();
   const uiLanguage = useLanguage();
   const isUrduUi = uiLanguage === "ur";
@@ -207,6 +210,19 @@ export default function ChapterScreen() {
   const [error, setError] = useState<string | null>(null);
   const [previewLesson, setPreviewLesson] = useState<any>(null);
   const [sheetVisible, setSheetVisible] = useState(false);
+  // Lessons whose learning cards are done: reopening them starts at practice.
+  const [practiceNext, setPracticeNext] = useState<Set<string>>(new Set());
+  const [savedNoteLesson, setSavedNoteLesson] = useState<string | null>(savedLesson ?? null);
+
+  useEffect(() => {
+    if (savedLesson) setSavedNoteLesson(savedLesson);
+  }, [savedLesson]);
+
+  useEffect(() => {
+    if (!savedNoteLesson) return undefined;
+    const timer = setTimeout(() => setSavedNoteLesson(null), 8000);
+    return () => clearTimeout(timer);
+  }, [savedNoteLesson]);
 
   const loadChapter = useCallback(async () => {
     if (!chapterId) {
@@ -218,7 +234,12 @@ export default function ChapterScreen() {
     setError(null);
     try {
       const response = await api.get(`/api/chapters/${chapterId}/lessons`);
-      setChapter(response.data.data.chapter);
+      const loaded = response.data.data.chapter;
+      setChapter(loaded);
+      if (userId && loaded?.lessons) {
+        const open = loaded.lessons.filter((lesson: any) => !lesson.isCompleted && !lesson.isChapterTest);
+        setPracticeNext(await lessonsWithCheckpoint(userId, open.map((lesson: any) => lesson.id)));
+      }
     } catch (err: any) {
       if (err.response?.status === 403) {
         setError(t("chapter.lockedError"));
@@ -229,7 +250,7 @@ export default function ChapterScreen() {
     } finally {
       setLoading(false);
     }
-  }, [chapterId, t]);
+  }, [chapterId, t, userId]);
 
   useFocusEffect(
     useCallback(() => {
@@ -338,6 +359,7 @@ export default function ChapterScreen() {
         const isNewLab = (lesson.isConversationLab || lesson.isNew) && !done;
         const skipped = lesson.isSkippedByPlacement && !isNewLab;
         const updated = lesson.isUpdated && done;
+        const resumesAtPractice = !done && practiceNext.has(lesson.id);
         return (
           <View key={lesson.id}>
             <TouchableOpacity
@@ -350,6 +372,7 @@ export default function ChapterScreen() {
                 !androidMinimal && upNext && styles.lessonCardUpNext,
                 androidMinimal && styles.androidLessonRow,
                 androidMinimal && upNext && styles.androidLessonRowUpNext,
+                androidMinimal && resumesAtPractice && styles.androidLessonRowResume,
 
               ]}
               onPress={() => handleLessonTap(lesson)}
@@ -376,9 +399,9 @@ export default function ChapterScreen() {
                       {isNewLab ? <StatusBadge compact label={t("lab.newBadge")} /> : null}
                       {updated ? <StatusBadge compact label={t("lessonNotice.badgeUpdated")} /> : null}
                     </View>
-                    <Text style={[styles.androidLessonMeta, isUrduUi && styles.androidRtlText]} numberOfLines={1}>
+                    <Text style={[styles.androidLessonMeta, resumesAtPractice && styles.androidLessonMetaResume, isUrduUi && styles.androidRtlText]} numberOfLines={1}>
                       {withDirectionMark(
-                        `${lessonKindLabel(lesson, t)} · ${
+                        resumesAtPractice ? t("player.practiceNext") : `${lessonKindLabel(lesson, t)} · ${
                           done
                             ? "100%"
                             : skipped
@@ -540,6 +563,27 @@ export default function ChapterScreen() {
         {desktopWeb ? <View style={styles.webRail}>{progressCard}</View> : null}
       </ScrollView>
       <StatusBarBacking />
+
+      {savedNoteLesson ? (
+        <View
+          accessibilityRole="alert"
+          style={[styles.savedNote, desktopWeb && styles.savedNoteWeb, { bottom: insets.bottom + Spacing.xl }]}
+        >
+          <Ionicons name="checkmark" size={20} color={WarshPalette.parchment} />
+          <Text style={styles.savedNoteText}>{t("player.leaveSavedNote")}</Text>
+          <Pressable
+            accessibilityRole="button"
+            onPress={() => {
+              const id = savedNoteLesson;
+              setSavedNoteLesson(null);
+              router.push(`/lessons/${id}/play`);
+            }}
+            style={styles.savedNoteAction}
+          >
+            <Text style={styles.savedNoteActionText}>{t("player.resume")}</Text>
+          </Pressable>
+        </View>
+      ) : null}
 
       <LessonPreviewSheet
         lesson={previewLesson}
@@ -732,6 +776,35 @@ const styles = StyleSheet.create({
     backgroundColor: WarshPalette.white,
   },
   androidLessonRowUpNext: { backgroundColor: WarshPalette.highlightBg },
+  androidLessonRowResume: { backgroundColor: WarshPalette.highlightBgSoft },
+  androidLessonMetaResume: { color: WarshPalette.goldText, fontFamily: Fonts.bold },
+  savedNote: {
+    position: "absolute",
+    left: Spacing.gutter,
+    right: Spacing.gutter,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.md,
+    paddingVertical: 14,
+    paddingHorizontal: Spacing.lg,
+    borderRadius: Radii.md,
+    backgroundColor: WarshPalette.navy,
+    shadowColor: WarshPalette.navy,
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.28,
+    shadowRadius: 18,
+    elevation: 6,
+  },
+  savedNoteWeb: { maxWidth: 560, alignSelf: "center" },
+  savedNoteText: {
+    flex: 1,
+    color: WarshPalette.white,
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyM,
+    lineHeight: LineHeights.bodyM,
+  },
+  savedNoteAction: { minHeight: 44, paddingHorizontal: Spacing.xs, justifyContent: "center" },
+  savedNoteActionText: { color: WarshPalette.parchment, fontFamily: Fonts.bold, fontSize: FontSizes.bodyM },
   androidLessonCardTop: { flexDirection: "row", alignItems: "center", gap: Spacing.md },
   androidLessonCardTopRtl: { flexDirection: "row-reverse" },
   androidLessonIndex: {

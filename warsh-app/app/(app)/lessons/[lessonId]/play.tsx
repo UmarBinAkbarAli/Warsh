@@ -13,6 +13,7 @@ import { StreakWeekRow } from "@components/StreakWeekRow";
 import { getConversationLab, LabCanDoCard, LabIntroScreen, LabListenAndPhrases, LabSpeakAndMission } from "@components/ConversationLab";
 import { Animation, Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette, desktopFontSize, desktopLineHeight } from "../../../../constants/theme";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { CHECKPOINT_MAX_BEAT, CHECKPOINT_MIN_BEAT, lessonCheckpointKey } from "@services/lessonCheckpoint";
 import { cancelTodayReminders, fireMilestoneNotification } from "@services/notifications";
 import { trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from "@services/analytics";
 import { pickLocalized, useLanguage, useTranslationLanguage } from "@services/language";
@@ -32,6 +33,7 @@ type RawLesson = {
   titleAr?: string;
   xpReward: number;
   template: string;
+  chapterId?: string;
   content: Record<string, unknown> | null;
   isCompleted?: boolean;
   isChapterTest?: boolean;
@@ -201,6 +203,48 @@ function exPrompt(ex: RawEx, language: LessonLanguage, uiLanguage: LessonLanguag
   if (type === "IDENTIFY_ROOT") return ui(t("player.prompt.identifyRoot"));
   if (type === "CONVERSATION_BUILDER") return ui(t("player.prompt.conversationReply"));
   return authored(undefined);
+}
+
+type ExInstruction = {
+  heading?: string;
+  headingLanguage: LessonLanguage;
+  /** Authored line under the heading: a quoted sentence or a plain context line. */
+  detail?: string;
+  detailLanguage: LessonLanguage;
+  detailStyle: "quote" | "plain";
+  /** Authored text shown inside the Arabic card instead of above it. */
+  cardText?: string;
+  cardItalic?: boolean;
+};
+
+// The heading tells the learner what to do; authored prose moves under it or
+// into the Arabic card. TAP_TRANSLATION keeps its single quiet prompt line.
+function exInstruction(ex: RawEx, language: LessonLanguage, uiLanguage: LessonLanguage, t: TranslateFn): ExInstruction {
+  const type = exType(ex);
+  const base = { headingLanguage: uiLanguage, detailLanguage: language, detailStyle: "plain" as const };
+  if (type === "TRUE_FALSE") {
+    return { ...base, heading: t("player.prompt.trueFalse"), cardText: localizedText(ex.statement, language) };
+  }
+  if (type === "FILL_BLANK") {
+    return { ...base, heading: t("player.prompt.fillBlank"), cardText: localizedText(ex.hint, language), cardItalic: true };
+  }
+  if (type === "BUILD_SENTENCE") {
+    const target = localizedText(ex.target_translation, language);
+    return { ...base, heading: t("player.prompt.buildSentence"), detail: target, detailStyle: "quote" };
+  }
+  if (type === "WORD_ORDER") {
+    return { ...base, heading: t("player.prompt.wordOrder"), detail: localizedText(ex.context, language) };
+  }
+  if (type === "TRANSLATE_TO_ARABIC") {
+    return { ...base, heading: t("player.prompt.translate"), detail: localizedText(ex.source, language), detailStyle: "quote" };
+  }
+  if (type === "MATCHING") {
+    const prompt = exPrompt(ex, language, uiLanguage, t).text;
+    const pairsOnly = prompt === t("player.prompt.matchPairs");
+    return { ...base, heading: prompt, detail: pairsOnly ? undefined : t("player.prompt.matchPairs"), detailLanguage: uiLanguage };
+  }
+  const prompt = exPrompt(ex, language, uiLanguage, t);
+  return { ...base, heading: prompt.text, headingLanguage: prompt.language };
 }
 
 function exArabicText(ex: RawEx): string | undefined {
@@ -395,18 +439,8 @@ function exLabels(ex: RawEx, t: TranslateFn): string[] {
 // ---------------------------------------------------------------------------
 const ANSWER_DELAY_MS = 1800;
 
-// Checkpoint resume: once a learner finishes Discover and reaches Practice
-// (or later), leaving and reopening the lesson resumes there instead of
-// replaying the Discover cards. Discover itself is never checkpointed —
-// exiting mid-Discover always restarts from card 1.
-const CHECKPOINT_MIN_BEAT = 3;
-const CHECKPOINT_MAX_BEAT = 4;
 function resolveDiscoverImage(url?: string) {
   return url?.startsWith("/") ? `${API_BASE_URL}${url}` : url;
-}
-
-function lessonCheckpointKey(userId: string, id: string) {
-  return `warsh_lesson_checkpoint_v2_${userId}_${id}`;
 }
 
 function splitWords(value?: string) {
@@ -564,6 +598,8 @@ export default function LessonPlayScreen() {
   // One boolean per answered scored exercise (SHADOW_REPEAT excluded — it has
   // no right/wrong answer). Sent to /complete so the server computes pass/fail.
   const exerciseResultsRef = useRef<boolean[]>([]);
+  // The exercises answered wrongly in this attempt, listed on the retry screen.
+  const missedExercisesRef = useRef<RawEx[]>([]);
   const [spPhraseIdx, setSpPhraseIdx] = useState(0);
   const [spPhraseStep, setSpPhraseStep] = useState<"intro" | "shadow" | "recognition" | "phraseComplete">("intro");
   const [spRecognitionAnswer, setSpRecognitionAnswer] = useState<string | null>(null);
@@ -800,11 +836,34 @@ export default function LessonPlayScreen() {
     const guarded = currentBeat === 2 || currentBeat === 3 || (Boolean(lab) && currentBeat === 4);
     if (Platform.OS !== "android" || !guarded) return;
     const sub = BackHandler.addEventListener("hardwareBackPress", () => {
-      setShowExitConfirm(true);
+      requestExit();
       return true;
     });
     return () => sub.remove();
-  }, [currentBeat, lab]);
+  }, [currentBeat, lab, lesson]);
+
+  // Past the learning cards the place is already saved, so X leaves at once and
+  // the chapter page says so; before that the learner is warned first.
+  function requestExit() {
+    if (currentBeat >= CHECKPOINT_MIN_BEAT && currentBeat <= CHECKPOINT_MAX_BEAT) {
+      leaveLesson(true);
+      return;
+    }
+    setShowExitConfirm(true);
+  }
+
+  function leaveLesson(saved: boolean) {
+    setShowExitConfirm(false);
+    const chapterId = lesson?.chapterId;
+    if (!chapterId) {
+      router.replace("/(app)/(tabs)");
+      return;
+    }
+    router.dismissTo({
+      pathname: "/lessons/[chapterId]",
+      params: saved ? { chapterId, savedLesson: lessonId } : { chapterId },
+    });
+  }
 
   function goToBeat(beat: number) {
     setCurrentBeat(beat);
@@ -834,7 +893,9 @@ export default function LessonPlayScreen() {
     if (isAnswered) return;
     setSelectedAnswer(answer);
     setIsAnswered(true);
-    exerciseResultsRef.current.push(isAnswerCorrect(currentExercise, answer, language, t));
+    const correct = isAnswerCorrect(currentExercise, answer, language, t);
+    exerciseResultsRef.current.push(correct);
+    if (!correct && currentExercise) missedExercisesRef.current.push(currentExercise);
   }
 
   function checkBuildSentence() {
@@ -1094,6 +1155,16 @@ export default function LessonPlayScreen() {
             );
           })}
         </View>
+        {!isAnswered && (exType(currentExercise ?? {}) === "BUILD_SENTENCE" || exType(currentExercise ?? {}) === "WORD_ORDER") ? (
+          <View style={styles.tileNote}>
+            {exType(currentExercise ?? {}) === "WORD_ORDER" ? (
+              <Ionicons name="arrow-back" size={14} color={WarshPalette.subtleBrown} />
+            ) : null}
+            <Text style={styles.tileNoteText}>
+              {exType(currentExercise ?? {}) === "WORD_ORDER" ? t("player.wordOrderNote") : t("player.buildSentenceNote")}
+            </Text>
+          </View>
+        ) : null}
         <View style={styles.tileWrap}>
           {options.map((option, index) => {
             // A placed tile leaves a dashed gap of the same size in the bank, so
@@ -1414,7 +1485,7 @@ export default function LessonPlayScreen() {
           <Pressable
             accessibilityRole="button"
             accessibilityLabel={t("player.leaveLesson")}
-            onPress={() => setShowExitConfirm(true)}
+            onPress={requestExit}
             style={styles.backButton}
           >
             <Ionicons name="close" size={24} color={WarshPalette.ink} />
@@ -1522,10 +1593,7 @@ export default function LessonPlayScreen() {
   }
 
   function renderExitConfirm() {
-    // Beat 2 (Discover) is never checkpointed, so leaving mid-Discover still
-    // costs progress — the copy below warns about that. Beat 3+ has already
-    // been saved by goToBeat, so the copy reassures instead of warning.
-    const progressSaved = currentBeat >= CHECKPOINT_MIN_BEAT;
+    // Only reached before the practice checkpoint: leaving costs the cards.
     return (
       <Modal
         visible={showExitConfirm}
@@ -1537,29 +1605,26 @@ export default function LessonPlayScreen() {
       >
         <View style={styles.exitOverlay}>
           <Pressable style={StyleSheet.absoluteFill} onPress={() => setShowExitConfirm(false)} />
-          <View style={styles.exitDialog}>
-            <Text style={styles.exitTitle}>
-              {progressSaved ? t("player.leaveLessonSavedTitle") : t("player.leaveLessonTitle")}
-            </Text>
+          <View style={styles.exitDialog} accessibilityRole="alert">
+            <View style={styles.exitIcon}>
+              <Ionicons name="log-out-outline" size={26} color={WarshPalette.parchment} />
+            </View>
+            <Text style={styles.exitTitle}>{lab ? t("lab.leaveTitle") : t("player.leaveLessonTitle")}</Text>
             <Text style={styles.exitBody}>
-              {progressSaved
-                ? t("player.leaveLessonSavedBody")
-                : lab
-                  ? t("lab.leaveBody")
-                  : t("player.leaveLessonBody", { current: currentCardIndex + 1, total: discoverCards.length })}
+              {lab
+                ? t("lab.leaveBody")
+                : t("player.leaveLessonBody", { current: currentCardIndex + 1, total: discoverCards.length })}
             </Text>
             <BrandButton
-              title={t("player.keepLearning")}
+              title={lab ? t("lab.keepGoing") : t("player.keepLearning")}
               onPress={() => setShowExitConfirm(false)}
               style={styles.exitPrimary}
             />
             <BrandButton
-              title={t("player.leaveLesson")}
-              variant={progressSaved ? "secondary" : "danger"}
-              onPress={() => {
-                setShowExitConfirm(false);
-                router.replace("/(app)/(tabs)");
-              }}
+              title={lab ? t("lab.leave") : t("player.leaveLesson")}
+              variant="danger"
+              onPress={() => leaveLesson(false)}
+              style={styles.exitSecondary}
             />
           </View>
         </View>
@@ -1603,7 +1668,8 @@ export default function LessonPlayScreen() {
   }
 
   function renderPractice() {
-    const { text: prompt, language: promptLanguage } = exPrompt(currentExercise ?? {}, language, uiLanguage, t);
+    const instruction = exInstruction(currentExercise ?? {}, language, uiLanguage, t);
+    const quietPrompt = exType(currentExercise ?? {}) === "TAP_TRANSLATION";
     const arabicTxt = exArabicText(currentExercise ?? {});
     const arabicAudioTxt = exAudioText(currentExercise ?? {});
 
@@ -1613,7 +1679,7 @@ export default function LessonPlayScreen() {
           <Pressable
             accessibilityRole="button"
             accessibilityLabel={t("player.leaveLesson")}
-            onPress={() => setShowExitConfirm(true)}
+            onPress={requestExit}
             style={styles.backButton}
           >
             <Ionicons name="close" size={24} color={WarshPalette.ink} />
@@ -1621,10 +1687,27 @@ export default function LessonPlayScreen() {
           <View style={styles.practiceProgressWrap}>{renderProgressBar()}</View>
           <View style={styles.backButtonSpacer} />
         </View>
-        <Text style={styles.exercisePrompt}>{prompt ? withDirectionMark(prompt, promptLanguage) : prompt}</Text>
-        {arabicTxt ? (
+        {instruction.heading ? (
+          <Text style={quietPrompt ? styles.exercisePrompt : styles.exerciseHeading} accessibilityRole="header">
+            {withDirectionMark(instruction.heading, instruction.headingLanguage)}
+          </Text>
+        ) : null}
+        {instruction.detail ? (
+          <Text style={instruction.detailStyle === "quote" ? styles.exerciseQuote : styles.exerciseDetail}>
+            {withDirectionMark(
+              instruction.detailStyle === "quote" ? `“${instruction.detail}”` : instruction.detail,
+              instruction.detailLanguage,
+            )}
+          </Text>
+        ) : null}
+        {arabicTxt || instruction.cardText ? (
           <View style={styles.exerciseArabicCard}>
-            <ArabicText size="lg" style={styles.exerciseArabic}>{arabicTxt}</ArabicText>
+            {arabicTxt ? <ArabicText size="lg" style={styles.exerciseArabic}>{arabicTxt}</ArabicText> : null}
+            {instruction.cardText ? (
+              <Text style={[styles.exerciseCardText, instruction.cardItalic && styles.exerciseCardTextItalic]}>
+                {withDirectionMark(instruction.cardText, language)}
+              </Text>
+            ) : null}
             {arabicAudioTxt ? (
               <View style={styles.exercisePlayRow}>
                 <PlayButton key={currentExerciseIndex} text={arabicAudioTxt} cacheKey={`${lessonId}-ex${currentExerciseIndex}`} category="lessons" audioUrl={currentExercise?.audio_url as string | undefined} size={20} autoPlay={true} />
@@ -1728,6 +1811,7 @@ export default function LessonPlayScreen() {
 
   function handleRetry() {
     exerciseResultsRef.current = [];
+    missedExercisesRef.current = [];
     phrasesCompletedRef.current = 0;
     completionFiredRef.current = false;
     setFailResult(null);
@@ -1735,47 +1819,126 @@ export default function LessonPlayScreen() {
     goToBeat(3);
   }
 
+  function missedKindLabel(ex: RawEx): string {
+    switch (exType(ex)) {
+      case "TAP_TRANSLATION":
+      case "MATCH_AYAH":
+      case "TRUE_FALSE":
+        return t("player.missedMeaning");
+      case "BUILD_SENTENCE":
+      case "WORD_ORDER":
+      case "CONVERSATION_BUILDER":
+        return t("player.missedBuild");
+      case "FILL_BLANK":
+        return t("chapter.typeFillBlank");
+      case "AUDIO_RECOGNITION":
+        return t("player.missedListen");
+      case "WRITE_ARABIC":
+      case "TRANSLATE_TO_ARABIC":
+        return t("player.missedWrite");
+      case "HARAKAH_PLACEMENT":
+        return t("player.missedHarakat");
+      case "IDENTIFY_ROOT":
+        return t("player.missedRoot");
+      case "MATCHING":
+        return t("chapter.typeMatching");
+      case "GRAMMAR_PARSE":
+        return t("player.missedGrammar");
+      default:
+        return "";
+    }
+  }
+
+  // One row per missed exercise: its meaning, the kind of question, and the
+  // Arabic it was about.
+  function missedRow(ex: RawEx) {
+    const answer = exCorrectAnswer(ex, language, t);
+    const arabic = exArabicText(ex) ?? (containsArabic(answer) ? answer : undefined);
+    let meaning: string | undefined;
+    if (exType(ex) === "TAP_TRANSLATION") {
+      meaning = (ex.direction as string | undefined) === "en_to_ar" ? localizedText(ex.prompt, language) : answer;
+    } else if (exType(ex) === "BUILD_SENTENCE") {
+      meaning = localizedText(ex.target_translation, language);
+    } else if (exType(ex) === "TRANSLATE_TO_ARABIC") {
+      meaning = localizedText(ex.source, language);
+    } else if (exType(ex) === "WORD_ORDER") {
+      meaning = localizedText(ex.context, language);
+    } else if (exType(ex) === "FILL_BLANK") {
+      meaning = localizedText(ex.hint, language);
+    } else if (!containsArabic(answer) && answer) {
+      meaning = answer;
+    } else {
+      meaning = exPrompt(ex, language, uiLanguage, t).text;
+    }
+    return { meaning: meaning ?? "", kind: missedKindLabel(ex), arabic: arabic ?? (containsArabic(answer) ? answer : undefined) };
+  }
+
   function renderRetry() {
     const correctCount = failResult?.correctCount ?? 0;
     const totalScored = failResult?.totalScored ?? exercises.length;
     // Server-computed pass mark (70% of scored exercises, rounded up).
     const neededToPass = failResult?.requiredCorrect ?? Math.ceil(totalScored * 0.7);
+    const missed = missedExercisesRef.current.map(missedRow);
 
     return (
       <View style={[styles.fullScreen, screenPadding, styles.closeScreen]}>
+        <View style={styles.topRow}>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={t("player.backToChapter")}
+            onPress={() => leaveLesson(false)}
+            style={styles.backButton}
+          >
+            <Ionicons name="close" size={24} color={WarshPalette.ink} />
+          </Pressable>
+        </View>
         <ScrollView
           style={styles.closeScroll}
-          contentContainerStyle={styles.closeScrollContent}
+          contentContainerStyle={styles.retryScrollContent}
           showsVerticalScrollIndicator={false}
         >
-          <View style={[styles.completionHero, styles.retryHero]}>
-            <Text style={[styles.completionKicker, styles.retryKicker]}>{t("player.retryKicker")}</Text>
-            <View style={[styles.noorMonogram, styles.retryMonogram]}>
-              <Ionicons name="refresh" size={26} color={WarshPalette.wrongBorder} />
+          <View style={styles.retryCard}>
+            <View style={styles.retryIcon}>
+              <Ionicons name="refresh" size={24} color={WarshPalette.wrongBorder} />
             </View>
-            <Text style={[styles.completeCardTitle, styles.retryTitleText]}>{t("player.retryTitle")}</Text>
-            <ArabicText size="md" style={StyleSheet.flatten([styles.closeArabic, styles.retryArabicText])}>حاول مرة أخرى</ArabicText>
-          </View>
-
-          <View style={[styles.completionResultsCard, styles.retryResultsCard]}>
-            <View style={styles.completionMetric}>
-              <Text style={styles.completionMetricValue}>{correctCount}</Text>
-              <Text style={styles.completionMetricLabel}>{t("player.retryCorrect")}</Text>
-            </View>
-            <View style={styles.completionMetricDivider} />
-            <View style={styles.completionMetric}>
-              <Text style={styles.completionMetricValue}>{neededToPass}</Text>
-              <Text style={styles.completionMetricLabel}>{t("player.retryNeeded")}</Text>
+            <View style={styles.retryCardText}>
+              <Text style={styles.retryHeading} accessibilityRole="header">{t("player.retryTitle")}</Text>
+              <Text style={styles.retryScore}>
+                <Text style={styles.retryScoreStrong}>
+                  {t("player.retryScore", { correct: correctCount, total: totalScored })}
+                </Text>
+                {` ${t("player.retryNeededCount", { count: neededToPass })}`}
+              </Text>
             </View>
           </View>
 
-          <View style={[styles.noorRecapCard, styles.retryRecapCard]}>
-            <Text style={styles.noorLabel}>{t("profile.noor")}</Text>
-            <Text style={styles.noorTip}>{t("player.retryTip")}</Text>
-          </View>
+          {missed.length > 0 ? (
+            <View style={styles.missedSection}>
+              <Text style={styles.missedKicker}>{t("player.missedKicker", { count: missed.length })}</Text>
+              <Text style={styles.missedBody}>{t("player.missedBody")}</Text>
+              <View style={styles.missedList}>
+                {missed.map((row, index) => (
+                  <View key={index} style={[styles.missedRow, index > 0 && styles.missedRowRule]}>
+                    <View style={styles.missedRowText}>
+                      {row.meaning ? (
+                        <Text style={styles.missedMeaning}>{withDirectionMark(row.meaning, language)}</Text>
+                      ) : null}
+                      {row.kind ? <Text style={styles.missedKind}>{row.kind}</Text> : null}
+                    </View>
+                    {row.arabic ? <ArabicText size="sm" style={styles.missedArabic}>{row.arabic}</ArabicText> : null}
+                  </View>
+                ))}
+              </View>
+            </View>
+          ) : (
+            <Text style={styles.missedBody}>{t("player.missedBody")}</Text>
+          )}
         </ScrollView>
 
         <BrandButton title={t("player.tryAgain")} onPress={handleRetry} style={styles.bottomButton} />
+        <Pressable accessibilityRole="button" onPress={() => leaveLesson(false)} style={styles.retryBack}>
+          <Text style={styles.retryBackText}>{t("player.backToChapter")}</Text>
+        </Pressable>
       </View>
     );
   }
@@ -2169,7 +2332,7 @@ export default function LessonPlayScreen() {
   }
 
   if (lab) {
-    const closeLesson = () => setShowExitConfirm(true);
+    const closeLesson = requestExit;
     const labPadding = screenPadding;
     if (currentBeat === 5) return failResult ? renderRetry() : renderClose();
     if (currentBeat === 3) return renderPractice();
@@ -2400,30 +2563,45 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.overlay,
   },
   exitDialog: {
-    padding: Spacing.xl,
-    borderRadius: Radii.md,
-    borderWidth: 1,
-    borderColor: WarshPalette.cream,
+    alignItems: "center",
+    paddingTop: 28,
+    paddingHorizontal: Spacing.gutter,
+    paddingBottom: Spacing.lg,
+    borderRadius: Radii.xl,
     backgroundColor: WarshPalette.parchmentBg,
+  },
+  exitIcon: {
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: WarshPalette.navy,
+    marginBottom: Spacing.lg,
   },
   exitTitle: {
     color: WarshPalette.ink,
-    fontFamily: Fonts.display,
-    fontSize: FontSizes.displayL,
-    lineHeight: LineHeights.displayL,
+    fontFamily: Fonts.bold,
+    fontSize: desktopFontSize(20),
+    lineHeight: desktopLineHeight(26, 20),
     textAlign: "center",
   },
   exitBody: {
     marginTop: Spacing.sm,
     color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
-    fontSize: FontSizes.bodyM,
-    lineHeight: LineHeights.bodyM,
+    fontSize: desktopFontSize(15),
+    lineHeight: desktopLineHeight(22, 15),
     textAlign: "center",
   },
   exitPrimary: {
-    marginTop: Spacing.xl,
-    marginBottom: Spacing.sm,
+    alignSelf: "stretch",
+    marginTop: Spacing.gutter,
+  },
+  exitSecondary: {
+    alignSelf: "stretch",
+    marginTop: 6,
+    minHeight: 48,
   },
   exercisePlayRow: {
     alignItems: "center",
@@ -2449,6 +2627,155 @@ const styles = StyleSheet.create({
   },
   progressSegmentEmpty: {
     backgroundColor: WarshPalette.defaultCardBorder,
+  },
+  exerciseHeading: {
+    marginTop: 32,
+    color: WarshPalette.ink,
+    fontFamily: Fonts.bold,
+    fontSize: desktopFontSize(18),
+    lineHeight: desktopLineHeight(26, 18),
+  },
+  exerciseDetail: {
+    marginTop: 6,
+    color: WarshPalette.bodyBrown,
+    fontFamily: Fonts.regular,
+    fontSize: desktopFontSize(15),
+    lineHeight: desktopLineHeight(22, 15),
+  },
+  exerciseQuote: {
+    marginTop: 6,
+    color: WarshPalette.navy,
+    fontFamily: Fonts.italic,
+    fontSize: desktopFontSize(20),
+    lineHeight: desktopLineHeight(28, 20),
+  },
+  exerciseCardText: {
+    marginTop: Spacing.sm,
+    color: WarshPalette.ink,
+    fontFamily: Fonts.semiBold,
+    fontSize: desktopFontSize(18),
+    lineHeight: desktopLineHeight(26, 18),
+    textAlign: "center",
+  },
+  exerciseCardTextItalic: {
+    fontFamily: Fonts.italic,
+    fontSize: desktopFontSize(14),
+    lineHeight: desktopLineHeight(20, 14),
+    color: WarshPalette.bodyBrown,
+  },
+  tileNote: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+    marginTop: Spacing.sm,
+  },
+  tileNoteText: {
+    color: WarshPalette.subtleBrown,
+    fontFamily: Fonts.regular,
+    fontSize: desktopFontSize(12),
+    lineHeight: desktopLineHeight(16, 12),
+  },
+  retryScrollContent: {
+    paddingTop: Spacing.xs,
+    paddingBottom: Spacing.xl,
+  },
+  retryCard: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.lg,
+    paddingVertical: Spacing.gutter,
+    paddingHorizontal: Spacing.xl,
+    borderRadius: Radii.xl,
+    borderWidth: 1,
+    borderColor: WarshPalette.wrongBorderSoft,
+    backgroundColor: WarshPalette.wrongBg,
+  },
+  retryIcon: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    borderWidth: 1,
+    borderColor: WarshPalette.wrongBorder,
+    backgroundColor: WarshPalette.white,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  retryCardText: { flex: 1, gap: 2 },
+  retryHeading: {
+    color: WarshPalette.ink,
+    fontFamily: Fonts.bold,
+    fontSize: desktopFontSize(22),
+    lineHeight: desktopLineHeight(28, 22),
+  },
+  retryScore: {
+    color: WarshPalette.bodyBrown,
+    fontFamily: Fonts.regular,
+    fontSize: desktopFontSize(15),
+    lineHeight: desktopLineHeight(22, 15),
+  },
+  retryScoreStrong: {
+    color: WarshPalette.wrongText,
+    fontFamily: Fonts.bold,
+  },
+  missedSection: { marginTop: Spacing.gutter },
+  missedKicker: {
+    color: WarshPalette.goldText,
+    fontFamily: Fonts.bold,
+    fontSize: desktopFontSize(12),
+    lineHeight: desktopLineHeight(16, 12),
+    letterSpacing: 1.2,
+    textTransform: "uppercase",
+  },
+  missedBody: {
+    marginTop: 6,
+    color: WarshPalette.bodyBrown,
+    fontFamily: Fonts.regular,
+    fontSize: desktopFontSize(14),
+    lineHeight: desktopLineHeight(20, 14),
+  },
+  missedList: {
+    marginTop: Spacing.md,
+    borderRadius: Radii.md,
+    borderWidth: 0.5,
+    borderColor: WarshPalette.parchmentCardBorder,
+    backgroundColor: WarshPalette.white,
+    overflow: "hidden",
+  },
+  missedRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.md,
+    paddingVertical: 10,
+    paddingHorizontal: Spacing.lg,
+  },
+  missedRowRule: {
+    borderTopWidth: 1,
+    borderTopColor: WarshPalette.cream,
+  },
+  missedRowText: { flex: 1, gap: 2 },
+  missedMeaning: {
+    color: WarshPalette.ink,
+    fontFamily: Fonts.semiBold,
+    fontSize: desktopFontSize(15),
+    lineHeight: desktopLineHeight(20, 15),
+  },
+  missedKind: {
+    color: WarshPalette.subtleBrown,
+    fontFamily: Fonts.regular,
+    fontSize: desktopFontSize(12),
+    lineHeight: desktopLineHeight(16, 12),
+  },
+  missedArabic: { color: WarshPalette.ink },
+  retryBack: {
+    minHeight: 48,
+    marginTop: 6,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  retryBackText: {
+    color: WarshPalette.navy,
+    fontFamily: Fonts.semiBold,
+    fontSize: desktopFontSize(16),
   },
   exercisePrompt: {
     marginTop: 32,
