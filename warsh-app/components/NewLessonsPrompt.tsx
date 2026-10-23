@@ -88,59 +88,45 @@ export function NewLessonsPrompt({ visible, notices, onOpen, onDismiss }: NewLes
             <View style={styles.handle} />
           </View>
 
-          <View style={[styles.header, rtlRow]}>
-            <View style={styles.badge}>
-              <Ionicons name="sparkles" size={20} color={WarshPalette.gold} />
-            </View>
-            <View style={styles.headerText}>
-              <Text style={[styles.eyebrow, rtlText]} numberOfLines={1}>
-                {t("lessonNotice.eyebrow")}
-              </Text>
-              <Text style={[styles.title, rtlText]}>{t(titleKey, { count })}</Text>
-            </View>
+          <View style={styles.headerText}>
+            <Text style={[styles.eyebrow, rtlText]} numberOfLines={1}>
+              {t("lessonNotice.eyebrow")}
+            </Text>
+            <Text style={[styles.title, rtlText]} accessibilityRole="header">{t(titleKey, { count })}</Text>
           </View>
 
           <Text style={[styles.body, rtlText]}>{t("lessonNotice.body")}</Text>
 
           <View style={styles.list}>
-            {rows.map((notice) => {
+            {rows.map((notice, index) => {
               const isNew = notice.kind === "new";
               return (
                 <Pressable
                   key={`${notice.kind}-${notice.lessonId}`}
                   onPress={() => onOpen(notice)}
                   accessibilityRole="button"
-                  style={({ pressed }) => [styles.row, rtlRow, pressed && styles.rowPressed]}
+                  style={({ pressed }) => [styles.row, index > 0 && styles.rowRule, rtlRow, pressed && styles.rowPressed]}
                 >
+                  <View style={styles.rowText}>
+                    <Text style={[styles.rowMeta, rtlText]} numberOfLines={1}>
+                      {t("lessonNotice.chapterLabel", { order: notice.chapterOrder })}
+                    </Text>
+                    <Text style={[styles.rowTitle, rtlText]} numberOfLines={1}>
+                      {pickLocalized(notice.lessonTitle, notice.lessonTitleUr, translationLanguage)}
+                    </Text>
+                  </View>
                   <View style={[styles.pill, isNew ? styles.pillNew : styles.pillUpdated]}>
                     <Text style={[styles.pillText, isNew ? styles.pillTextNew : styles.pillTextUpdated]}>
                       {t(isNew ? "lessonNotice.badgeNew" : "lessonNotice.badgeUpdated")}
                     </Text>
                   </View>
-                  <View style={styles.rowText}>
-                    <Text style={[styles.rowTitle, rtlText]} numberOfLines={1}>
-                      {pickLocalized(notice.lessonTitle, notice.lessonTitleUr, translationLanguage)}
-                    </Text>
-                    <Text style={[styles.rowMeta, rtlText]} numberOfLines={1}>
-                      {`${t("lessonNotice.chapterLabel", { order: notice.chapterOrder })} · ${pickLocalized(
-                        notice.chapterTitle,
-                        notice.chapterTitleUr,
-                        translationLanguage,
-                      )}`}
-                    </Text>
-                  </View>
-                  <Ionicons
-                    name={isUrdu ? "chevron-back" : "chevron-forward"}
-                    size={18}
-                    color={Colors.text.muted}
-                  />
                 </Pressable>
               );
             })}
-            {hiddenCount > 0 ? (
-              <Text style={[styles.more, rtlText]}>{t("lessonNotice.more", { count: hiddenCount })}</Text>
-            ) : null}
           </View>
+          {hiddenCount > 0 ? (
+            <Text style={[styles.more, rtlText]}>{t("lessonNotice.more", { count: hiddenCount })}</Text>
+          ) : null}
 
           <View style={[styles.reassurance, rtlRow]}>
             <Ionicons name="lock-open-outline" size={19} color={WarshPalette.sageDeep} />
@@ -171,22 +157,21 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.overlay,
   },
   sheet: {
-    gap: Spacing.md,
     paddingHorizontal: Spacing.gutter,
-    paddingTop: Spacing.sm,
+    paddingTop: Spacing.md,
     borderTopLeftRadius: Radii.xl,
     borderTopRightRadius: Radii.xl,
-    backgroundColor: WarshPalette.white,
+    backgroundColor: WarshPalette.creamBg,
   },
   handleArea: {
     alignItems: "center",
-    paddingBottom: Spacing.xs,
+    paddingBottom: Spacing.lg,
   },
   handle: {
-    width: 44,
+    width: 36,
     height: 4,
     borderRadius: Radii.full,
-    backgroundColor: WarshPalette.cream,
+    backgroundColor: WarshPalette.parchment,
   },
   rtlRow: {
     flexDirection: "row-reverse",
@@ -195,81 +180,74 @@ const styles = StyleSheet.create({
     textAlign: "right",
     writingDirection: "rtl",
   },
-  header: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: Spacing.md,
-  },
-  badge: {
-    width: 44,
-    height: 44,
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: Radii.full,
-    backgroundColor: WarshPalette.navy,
-  },
   headerText: {
-    flex: 1,
-    gap: 4,
+    gap: 6,
   },
   eyebrow: {
     color: WarshPalette.goldText,
-    fontFamily: Fonts.semiBold,
+    fontFamily: Fonts.bold,
     fontSize: FontSizes.label,
-    letterSpacing: 0.6,
+    lineHeight: 16,
+    letterSpacing: 1.2,
     textTransform: "uppercase",
   },
   title: {
-    color: WarshPalette.ink,
+    color: WarshPalette.navy,
     fontFamily: Fonts.display,
-    fontSize: FontSizes.displayL,
-    lineHeight: LineHeights.displayL,
+    fontSize: 26,
+    lineHeight: 32,
   },
   body: {
-    color: Colors.text.secondary,
+    marginTop: Spacing.sm,
+    color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
-    fontSize: FontSizes.bodyM,
-    lineHeight: LineHeights.bodyM,
+    fontSize: 15,
+    lineHeight: 22,
   },
   list: {
-    gap: Spacing.xs,
-  },
-  row: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: Spacing.sm,
-    paddingVertical: Spacing.sm,
-    paddingHorizontal: Spacing.md,
+    marginTop: Spacing.lg,
     borderRadius: Radii.md,
     borderWidth: 1,
     borderColor: WarshPalette.cream,
     backgroundColor: WarshPalette.white,
+    overflow: "hidden",
+  },
+  row: {
+    minHeight: 60,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.md,
+    paddingVertical: 10,
+    paddingHorizontal: 14,
+  },
+  rowRule: {
+    borderTopWidth: 1,
+    borderTopColor: WarshPalette.cream,
   },
   rowPressed: {
     backgroundColor: WarshPalette.highlightBg,
   },
   pill: {
-    paddingHorizontal: Spacing.sm,
-    paddingVertical: 3,
+    paddingHorizontal: 10,
+    paddingVertical: Spacing.xs,
     borderRadius: Radii.full,
   },
   pillNew: {
-    backgroundColor: WarshPalette.highlightBg,
-    borderWidth: 1,
-    borderColor: WarshPalette.gold,
+    backgroundColor: WarshPalette.correctBg,
   },
   pillUpdated: {
-    backgroundColor: WarshPalette.sageTintBg,
+    backgroundColor: WarshPalette.parchmentDeep,
   },
   pillText: {
-    fontFamily: Fonts.semiBold,
+    fontFamily: Fonts.bold,
     fontSize: FontSizes.label,
+    lineHeight: 16,
   },
   pillTextNew: {
-    color: WarshPalette.ink,
+    color: WarshPalette.sageDeep,
   },
   pillTextUpdated: {
-    color: WarshPalette.sageDeep,
+    color: WarshPalette.goldText,
   },
   rowText: {
     flex: 1,
@@ -278,24 +256,30 @@ const styles = StyleSheet.create({
   rowTitle: {
     color: WarshPalette.ink,
     fontFamily: Fonts.semiBold,
-    fontSize: FontSizes.bodyM,
+    fontSize: 15,
+    lineHeight: 20,
   },
   rowMeta: {
-    color: Colors.text.muted,
+    color: WarshPalette.subtleBrown,
     fontFamily: Fonts.regular,
     fontSize: FontSizes.label,
+    lineHeight: 16,
   },
   more: {
-    color: Colors.text.muted,
+    marginTop: Spacing.sm,
+    color: WarshPalette.subtleBrown,
     fontFamily: Fonts.regular,
-    fontSize: FontSizes.caption,
-    paddingHorizontal: Spacing.xs,
+    fontSize: 13,
+    lineHeight: 20,
   },
   reassurance: {
     flexDirection: "row",
     alignItems: "flex-start",
-    gap: Spacing.sm,
-    padding: Spacing.md,
+    gap: 10,
+    marginTop: 14,
+    marginBottom: Spacing.gutter,
+    paddingVertical: Spacing.md,
+    paddingHorizontal: 14,
     borderRadius: Radii.md,
     backgroundColor: WarshPalette.sageTintBg,
   },
@@ -303,16 +287,18 @@ const styles = StyleSheet.create({
     flex: 1,
     color: WarshPalette.sageDeep,
     fontFamily: Fonts.regular,
-    fontSize: FontSizes.caption,
-    lineHeight: LineHeights.caption,
+    fontSize: FontSizes.bodyM,
+    lineHeight: 20,
   },
   laterButton: {
-    alignSelf: "center",
-    paddingVertical: Spacing.xs,
+    minHeight: 48,
+    marginTop: 6,
+    alignItems: "center",
+    justifyContent: "center",
   },
   laterText: {
-    color: Colors.text.muted,
+    color: WarshPalette.navy,
     fontFamily: Fonts.semiBold,
-    fontSize: FontSizes.caption,
+    fontSize: FontSizes.bodyL,
   },
 });

@@ -596,16 +596,20 @@ export default function ChatScreen() {
               {t("chat.packBody", { limit: usage.limit, price: packDisplayPrice ?? t("chat.packPriceFallback") })}
             </Text>
             <View style={styles.priceRow}>
+              <View style={styles.priceCopy}>
+                <Text style={styles.priceTitle}>{t("chat.packOptionTitle")}</Text>
+                <Text style={styles.priceLabel}>{t("chat.packOptionSub")}</Text>
+              </View>
               <Text style={styles.priceAmount}>
                 {packPriceLoading ? t("chat.packLoadingPrice") : packDisplayPrice ?? t("chat.packPriceUnavailable")}
               </Text>
-              <Text style={styles.priceLabel}>{t("chat.packFor20")}</Text>
             </View>
             <BrandButton
               title={purchasingPack ? t("chat.packProcessing") : packDisplayPrice ? t("chat.packBuy") : t("chat.packBuyUnavailable")}
               onPress={handleBuyNoorPack}
               loading={purchasingPack}
               disabled={purchasingPack || !packDisplayPrice}
+              style={styles.packCta}
             />
             <TouchableOpacity
               onPress={() => setShowOverageModal(false)}
@@ -940,46 +944,64 @@ const styles = StyleSheet.create({
     marginBottom: Spacing.md,
   },
   modalTitle: {
-    color: WarshPalette.ink,
-    fontSize: FontSizes.h1,
-    lineHeight: LineHeights.h1,
+    color: WarshPalette.navy,
+    fontSize: desktopFontSize(26, "display"),
+    lineHeight: desktopLineHeight(32, 26, "display"),
     fontFamily: Fonts.display,
     textAlign: "center",
-    marginBottom: Spacing.md,
+    marginBottom: Spacing.sm,
   },
   modalBody: {
     color: WarshPalette.bodyBrown,
-    fontSize: FontSizes.bodyM,
-    lineHeight: LineHeights.bodyM * 1.5,
+    fontSize: desktopFontSize(15),
+    lineHeight: desktopLineHeight(22, 15),
     fontFamily: Fonts.regular,
     textAlign: "center",
-    marginBottom: Spacing.xl,
   },
   priceRow: {
+    alignSelf: "stretch",
+    flexDirection: "row",
     alignItems: "center",
-    marginBottom: Spacing.xl,
+    justifyContent: "space-between",
+    gap: Spacing.md,
+    marginTop: 18,
+    padding: Spacing.lg,
+    borderRadius: Radii.md,
+    borderWidth: 1.5,
+    borderColor: WarshPalette.gold,
+    backgroundColor: WarshPalette.white,
+  },
+  priceCopy: { flex: 1, gap: 2 },
+  priceTitle: {
+    color: WarshPalette.ink,
+    fontSize: FontSizes.bodyL,
+    fontFamily: Fonts.bold,
+    lineHeight: 22,
   },
   priceAmount: {
-    color: WarshPalette.ink,
-    fontSize: desktopFontSize(24),
+    color: WarshPalette.navy,
+    fontSize: desktopFontSize(20),
     fontFamily: Fonts.bold,
-    lineHeight: desktopLineHeight(30, 24),
+    lineHeight: desktopLineHeight(26, 20),
   },
   priceLabel: {
     color: WarshPalette.subtleBrown,
-    fontSize: FontSizes.bodyM,
+    fontSize: desktopFontSize(13),
     fontFamily: Fonts.regular,
-    lineHeight: LineHeights.bodyM,
-    marginTop: Spacing.xs,
+    lineHeight: desktopLineHeight(18, 13),
   },
+  packCta: { alignSelf: "stretch", marginTop: Spacing.gutter },
   dismissButton: {
-    paddingVertical: Spacing.md,
-    marginTop: Spacing.sm,
+    alignSelf: "stretch",
+    minHeight: 48,
+    marginTop: 6,
+    alignItems: "center",
+    justifyContent: "center",
   },
   dismissText: {
-    color: WarshPalette.subtleBrown,
-    fontSize: FontSizes.bodyM,
-    fontFamily: Fonts.regular,
+    color: WarshPalette.navy,
+    fontSize: FontSizes.bodyL,
+    fontFamily: Fonts.semiBold,
     textAlign: "center",
   },
 });

@@ -1,71 +1,56 @@
 import { View, Text, StyleSheet, Platform, useWindowDimensions } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { Ionicons } from "@expo/vector-icons";
 import { BrandButton } from "@components/BrandButton";
-import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
+import { useLanguage } from "@services/language";
+import { useT } from "@i18n/index";
+import { Colors, Fonts, Radii, Spacing, WarshPalette } from "../../constants/theme";
 import { ArabicText } from "@components/ArabicText";
 
 export default function TrialReminderScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
+  const t = useT();
+  const language = useLanguage();
   const desktopWeb = Platform.OS === "web" && width >= 960;
   const { days } = useLocalSearchParams<{ days: string }>();
   const trialDays = parseInt(days ?? "7", 10) || 7;
 
-  // Compute the reminder date (trial end - 2 days for buffer)
-  const reminderDate = new Date();
-  reminderDate.setDate(reminderDate.getDate() + trialDays - 2);
-  const dateStr = reminderDate.toLocaleDateString("en-US", { month: "short", day: "numeric" });
-
   // Subscription end date
   const endDate = new Date();
   endDate.setDate(endDate.getDate() + trialDays);
-  const endDateStr = endDate.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+  const endDateStr = endDate.toLocaleDateString(language === "ur" ? "ur-PK" : "en-US", { month: "short", day: "numeric" });
 
   return (
-    <View style={[styles.screen, { paddingTop: insets.top, paddingBottom: insets.bottom + Spacing.lg }]}>
+    <View style={[styles.screen, { paddingTop: insets.top, paddingBottom: insets.bottom + Spacing.xl }]}>
       <View style={[styles.body, desktopWeb && styles.webNarrow]}>
-        {/* Title */}
-        <View style={styles.header}>
-          <ArabicText size="sm" style={styles.bismillah}>
-            بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
-          </ArabicText>
-          <Text style={styles.title}>
-            Try the very best of Warsh.{"\n"}First {trialDays} days on us.
-          </Text>
-        </View>
+        <ArabicText size="sm" style={styles.bismillah}>
+          بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+        </ArabicText>
+        <Text style={styles.title} accessibilityRole="header">
+          {t("trialReminder.title", { days: trialDays })}
+        </Text>
 
-        {/* Noor mascot */}
-        <View style={styles.mascotArea}>
-          <View style={styles.mascotOuter}>
-            <View style={styles.mascotInner}>
-              <View style={styles.eyes}>
-                <View style={styles.eye} />
-                <View style={styles.eye} />
-              </View>
-              <View style={styles.dot} />
-            </View>
+        {/* An hourglass, not a face: no Warsh image shows facial features. */}
+        <View style={styles.emblemOuter} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
+          <View style={styles.emblemInner}>
+            <Ionicons name="hourglass-outline" size={52} color={WarshPalette.parchment} />
           </View>
         </View>
 
-        {/* Reminder message */}
         <View style={styles.messageCard}>
-          <Text style={styles.messageText}>
-            In {trialDays - 2} days, we'll remind you by email{"\n"}that your trial is about to end
-          </Text>
+          <View style={styles.messageIcon}>
+            <Ionicons name="mail-outline" size={20} color={WarshPalette.parchment} />
+          </View>
+          <Text style={styles.messageText}>{t("trialReminder.reminder", { days: Math.max(1, trialDays - 2) })}</Text>
         </View>
 
-        {/* Fine print */}
-        <Text style={styles.finePrint}>
-          Your subscription starts {endDateStr}. Cancel 24 hours{"\n"}before in Google Play settings.
-        </Text>
+        <Text style={styles.finePrint}>{t("trialReminder.finePrint", { date: endDateStr })}</Text>
 
-        <BrandButton
-          title="Continue"
-          onPress={() => router.replace("/(app)/(tabs)")}
-          style={styles.cta}
-        />
+        <View style={styles.spacer} />
+        <BrandButton title={t("common.continue")} onPress={() => router.replace("/(app)/(tabs)")} style={styles.cta} />
       </View>
     </View>
   );
@@ -78,93 +63,79 @@ const styles = StyleSheet.create({
   },
   body: {
     flex: 1,
-    paddingHorizontal: Spacing.xl,
-    justifyContent: "space-between",
+    alignItems: "center",
+    paddingHorizontal: 28,
+    paddingTop: Spacing.xxxl,
   },
   webNarrow: {
     width: "100%",
     maxWidth: 440,
     alignSelf: "center",
   },
-  header: {
-    alignItems: "center",
-    paddingTop: Spacing.lg,
-  },
   bismillah: {
     color: WarshPalette.goldText,
-    marginBottom: Spacing.md,
   },
   title: {
-    fontFamily: Fonts.bold,
-    fontSize: FontSizes.h1,
+    marginTop: Spacing.lg,
+    fontFamily: Fonts.display,
+    fontSize: 30,
+    lineHeight: 36,
     color: WarshPalette.ink,
     textAlign: "center",
-    lineHeight: LineHeights.h1 * 1.4,
   },
-
-  // Noor mascot (text-based, no image required)
-  mascotArea: {
-    alignItems: "center",
-    justifyContent: "center",
-    flex: 1,
-  },
-  mascotOuter: {
-    width: 140,
-    height: 140,
-    borderRadius: 70,
-    backgroundColor: WarshPalette.parchment,
-    borderWidth: 3,
-    borderColor: WarshPalette.gold,
+  emblemOuter: {
+    marginTop: 44,
+    width: 168,
+    height: 168,
+    borderRadius: 84,
+    backgroundColor: WarshPalette.parchmentSoft,
     alignItems: "center",
     justifyContent: "center",
   },
-  mascotInner: {
+  emblemInner: {
+    width: 112,
+    height: 112,
+    borderRadius: 56,
+    backgroundColor: WarshPalette.navy,
     alignItems: "center",
     justifyContent: "center",
-    gap: 8,
   },
-  eyes: {
-    flexDirection: "row",
-    gap: 16,
-  },
-  eye: {
-    width: 14,
-    height: 14,
-    borderRadius: 7,
-    backgroundColor: WarshPalette.ink,
-  },
-  dot: {
-    width: 6,
-    height: 6,
-    borderRadius: 3,
-    backgroundColor: WarshPalette.gold,
-  },
-
   messageCard: {
-    backgroundColor: WarshPalette.parchmentBg,
-    borderWidth: 1,
-    borderColor: WarshPalette.parchmentCardBorder,
-    borderRadius: Radii.md,
-    padding: Spacing.xl,
+    marginTop: 44,
+    alignSelf: "stretch",
+    flexDirection: "row",
     alignItems: "center",
-    marginBottom: Spacing.md,
+    gap: 14,
+    paddingVertical: 18,
+    paddingHorizontal: Spacing.gutter,
+    borderRadius: Radii.xl,
+    borderWidth: 0.5,
+    borderColor: WarshPalette.parchment,
+    backgroundColor: WarshPalette.parchmentBg,
+  },
+  messageIcon: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: WarshPalette.navy,
+    alignItems: "center",
+    justifyContent: "center",
   },
   messageText: {
-    fontFamily: Fonts.regular,
-    fontSize: FontSizes.bodyL,
+    flex: 1,
+    fontFamily: Fonts.semiBold,
+    fontSize: 15,
+    lineHeight: 22,
     color: WarshPalette.ink,
-    textAlign: "center",
-    lineHeight: LineHeights.bodyL,
   },
   finePrint: {
+    marginTop: Spacing.lg,
     fontFamily: Fonts.regular,
-    fontSize: FontSizes.caption,
-    color: WarshPalette.subtleBrown,
+    fontSize: 13,
+    lineHeight: 19,
+    color: WarshPalette.bodyBrown,
     textAlign: "center",
-    lineHeight: 16,
-    marginBottom: Spacing.md,
   },
-  cta: {
-    marginTop: Spacing.sm,
-  },
+  spacer: { flex: 1, minHeight: Spacing.xl },
+  cta: { alignSelf: "stretch" },
 });

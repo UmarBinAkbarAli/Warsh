@@ -89,9 +89,9 @@ export function AppUpdateBanner() {
       <View style={styles.headingRow}>
         <View style={styles.icon}>
           <Ionicons
-            name="cloud-download-outline"
-            size={24}
-            color={WarshPalette.navy}
+            name="download-outline"
+            size={22}
+            color={WarshPalette.parchment}
           />
         </View>
         <View style={styles.copy}>
@@ -108,12 +108,21 @@ export function AppUpdateBanner() {
           <Ionicons name="close" size={22} color={WarshPalette.subtleBrown} />
         </Pressable>
       </View>
-      <BrandButton
-        title={t("updates.action")}
-        loading={openingStore}
-        onPress={() => void openUpdate()}
-        style={styles.updateButton}
-      />
+      <View style={styles.actions}>
+        <Pressable
+          accessibilityRole="button"
+          onPress={dismiss}
+          style={({ pressed }) => [styles.laterButton, pressed && styles.laterPressed]}
+        >
+          <Text style={styles.laterText}>{t("updates.laterShort")}</Text>
+        </Pressable>
+        <BrandButton
+          title={t("updates.action")}
+          loading={openingStore}
+          onPress={() => void openUpdate()}
+          style={styles.updateButton}
+        />
+      </View>
     </View>
   );
 }
@@ -124,12 +133,12 @@ const styles = StyleSheet.create({
     left: Spacing.md,
     right: Spacing.md,
     zIndex: 1000,
-    gap: Spacing.md,
-    padding: Spacing.md,
+    gap: 14,
+    padding: Spacing.lg,
     borderWidth: 1,
-    borderColor: WarshPalette.gold,
-    borderRadius: Radii.md,
-    backgroundColor: WarshPalette.parchmentBg,
+    borderColor: WarshPalette.parchment,
+    borderRadius: Radii.xl,
+    backgroundColor: WarshPalette.white,
     ...Shadows.goldGlow,
   },
   headingRow: {
@@ -138,12 +147,12 @@ const styles = StyleSheet.create({
     gap: Spacing.sm,
   },
   icon: {
-    width: 42,
-    height: 42,
+    width: 40,
+    height: 40,
     alignItems: "center",
     justifyContent: "center",
     borderRadius: Radii.full,
-    backgroundColor: WarshPalette.highlightBg,
+    backgroundColor: WarshPalette.navy,
   },
   copy: {
     flex: 1,
@@ -151,13 +160,13 @@ const styles = StyleSheet.create({
   },
   title: {
     color: WarshPalette.ink,
-    fontFamily: Fonts.semiBold,
+    fontFamily: Fonts.bold,
     fontSize: FontSizes.bodyL,
-    lineHeight: LineHeights.bodyL,
+    lineHeight: 22,
   },
   body: {
-    marginTop: 2,
-    color: WarshPalette.subtleBrown,
+    marginTop: Spacing.xs,
+    color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
     fontSize: FontSizes.bodyM,
     lineHeight: LineHeights.bodyM,
@@ -170,7 +179,25 @@ const styles = StyleSheet.create({
     marginTop: -4,
     marginRight: -4,
   },
+  actions: {
+    flexDirection: "row",
+    gap: 10,
+  },
+  laterButton: {
+    flex: 1,
+    minHeight: 48,
+    borderRadius: Radii.sm,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  laterPressed: { backgroundColor: WarshPalette.parchmentBg },
+  laterText: {
+    color: WarshPalette.navy,
+    fontFamily: Fonts.semiBold,
+    fontSize: 15,
+  },
   updateButton: {
-    minHeight: 52,
+    flex: 1,
+    minHeight: 48,
   },
 });
