@@ -415,6 +415,39 @@ Design-first workflow.
   Seen while testing (not caused by this change): Noor quoted a non-existent ayah,
   and replied in Urdu to an English-setting account with an Urdu history.
 
+### Claude Design canvas, whole app — 2026-10-23
+
+**Implemented and committed; not yet released.** The owner redesigned the whole
+app on the same canvas (124 Android screens). Most boards reproduce today's app;
+the screens whose design differs were implemented:
+
+- **All chapters**: chapters grouped in tens (collapsible), a progress ring per
+  row (adds `react-native-svg`), New / Updated badges from the lesson flags on
+  `GET /api/chapters`, a sheet explaining a locked chapter, and a jump-to-chapter
+  sheet.
+- **Lesson player**: an instruction heading on every exercise ("True or false?",
+  "Build this sentence in Arabic.", …); new leave popup; past the learning cards
+  X leaves at once and the chapter page shows "Learning cards done … Resume" with
+  that lesson marked "Practice next"; the retry screen lists the answers missed;
+  pairs-matched counter; mini-dialogue and spoken-phrase intro restyled.
+- **Quran**: reading settings (plainer layout descriptions, colour key under the
+  tajweed switch, sources behind "About these Mushaf pages", translation list
+  hidden until translations ship); bookmarks empty state and per-row remove;
+  search with Cancel, result count, "N verses · page N"; tajweed rule sheet.
+- **Core 500 set**: word card, progress dots, answers marked in place, review
+  cards with the ayah, set-complete hero.
+- **Sheets and dialogs**: log out / delete account (Play billing note), app and
+  meaning language sheets (radio + confirm), Noor message pack, new-and-updated
+  lessons, streak ended (hadith with source), update banner, trial reminder (the
+  drawn face is replaced by an hourglass), Tadabbur word sheet, Milestones.
+
+Deliberately not done, pending the owner: the canvas's new exercise *interactions*
+(tap-a-letter harakat placement, free-typed Translate into Arabic, numbered
+word-order slots) change difficulty and grading, so they stay as they are. The
+canvas says Noor messages return "at 4 am"; the quota actually resets at PKT
+midnight, so the copy says "tomorrow". The update banner stays at the top of the
+screen rather than above the tab bar, where it would cover lesson buttons.
+
 ### Curriculum and content
 
 - 72 curriculum chapters are represented in the authored fixture set.
