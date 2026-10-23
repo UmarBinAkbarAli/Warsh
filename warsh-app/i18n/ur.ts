@@ -766,6 +766,7 @@ export const ur = {
   "player.prompt.translate": "عربی میں ترجمہ کریں۔",
   "player.buildSentenceNote": "عربی دائیں سے بائیں پڑھی جاتی ہے۔ ہٹانے کے لیے ٹائل پر ٹیپ کریں۔",
   "player.wordOrderNote": "پہلا لفظ دائیں طرف آتا ہے۔",
+  "player.pairsMatched": "{{total}} میں سے {{count}} جوڑے ملائے",
   "player.leaveSavedNote": "سیکھنے والے کارڈ مکمل۔ اگلی بار آپ سیدھے مشق پر جائیں گے۔",
   "player.resume": "جاری رکھیں",
   "player.practiceNext": "اگلا: مشق · سیکھنے والے کارڈ مکمل",

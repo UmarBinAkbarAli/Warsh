@@ -769,6 +769,7 @@ export const en = {
   "player.prompt.translate": "Translate into Arabic.",
   "player.buildSentenceNote": "Arabic reads right to left. Tap a tile to remove it.",
   "player.wordOrderNote": "The first word goes on the right.",
+  "player.pairsMatched": "{{count}} of {{total}} pairs matched",
   "player.leaveSavedNote": "Learning cards done. Next time you'll go straight to practice.",
   "player.resume": "Resume",
   "player.practiceNext": "Practice next · learning cards done",

@@ -1310,6 +1310,14 @@ export default function LessonPlayScreen() {
             </View>
           </View>
         </ScrollView>
+        {!isAnswered && pairs.length > 0 ? (
+          <View style={styles.matchCount}>
+            <Ionicons name="checkmark" size={16} color={WarshPalette.sageDeep} />
+            <Text style={styles.matchCountText}>
+              {t("player.pairsMatched", { count: Object.keys(selectedMap).length, total: pairs.length })}
+            </Text>
+          </View>
+        ) : null}
         {canCheck ? <BrandButton title={t("common.check")} onPress={() => answerExercise(selectedMap)} style={styles.bottomButton} /> : null}
       </>
     );
@@ -2860,6 +2868,17 @@ const styles = StyleSheet.create({
     fontSize: desktopFontSize(14),
     lineHeight: desktopLineHeight(20, 14),
     color: WarshPalette.bodyBrown,
+  },
+  matchCount: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.sm,
+    marginTop: Spacing.md,
+  },
+  matchCountText: {
+    color: WarshPalette.sageDeep,
+    fontFamily: Fonts.regular,
+    fontSize: desktopFontSize(13),
   },
   tileNote: {
     flexDirection: "row",
