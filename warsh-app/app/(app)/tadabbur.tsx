@@ -22,6 +22,8 @@ import { getTadabbur, getTadabburSurah, isSubscriptionRequiredError, subscriptio
 import { pickLocalized, useTranslationLanguage } from "@services/language";
 import { getEveryAyahAudioUrl } from "@services/quranAudio";
 import { ScreenHeader } from "@components/ScreenHeader";
+import { BrandButton } from "@components/BrandButton";
+import { useT } from "@i18n/index";
 
 // ─── types ────────────────────────────────────────────────────────────────────
 
@@ -124,6 +126,8 @@ function WordSheet({
 }) {
   const insets = useSafeAreaInsets();
   const translationLanguage = useTranslationLanguage();
+  const t = useT();
+  const known = word?.state === "gold" || word?.state === "ink";
   return (
     <Modal statusBarTranslucent navigationBarTranslucent visible={visible} transparent animationType="slide" onRequestClose={onDismiss}>
       <Pressable style={styles.sheetOverlay} onPress={onDismiss}>
@@ -142,19 +146,24 @@ function WordSheet({
                   {pickLocalized(word.meaningEn, word.meaningUr, translationLanguage)}
                 </Text>
               ) : null}
-              {word.root ? <ArabicText size="sm" style={styles.sheetRoot}>{word.root}</ArabicText> : null}
-              <View style={styles.sheetStateBadge}>
-                <Text style={styles.sheetStateBadgeText}>
-                  {word.state === "gold" ? "Mastered" : word.state === "ink" ? "In vocabulary" : "Not yet learned"}
-                </Text>
+              <View style={styles.sheetChips}>
+                {word.root ? (
+                  <View style={styles.sheetRootChip}>
+                    <Text style={styles.sheetRootLabel}>{t("tadabbur.root")} </Text>
+                    <ArabicText size="sm" style={styles.sheetRoot}>{word.root}</ArabicText>
+                  </View>
+                ) : null}
+                <View style={[styles.sheetStateBadge, known && styles.sheetStateBadgeKnown]}>
+                  <Text style={[styles.sheetStateBadgeText, known && styles.sheetStateBadgeTextKnown]}>
+                    {word.state === "gold" ? t("tadabbur.mastered") : word.state === "ink" ? t("tadabbur.inVocabulary") : t("tadabbur.notLearned")}
+                  </Text>
+                </View>
               </View>
               {word.vocabId ? (
-                <TouchableOpacity style={styles.sheetDetailBtn} onPress={onViewDetail}>
-                  <Text style={styles.sheetDetailBtnText}>View full details ›</Text>
-                </TouchableOpacity>
+                <BrandButton title={t("tadabbur.viewDetails")} onPress={onViewDetail} style={styles.sheetDetailBtn} />
               ) : null}
-              <TouchableOpacity style={styles.sheetDismissBtn} onPress={onDismiss}>
-                <Text style={styles.sheetDismissBtnText}>Close</Text>
+              <TouchableOpacity style={styles.sheetDismissBtn} onPress={onDismiss} accessibilityRole="button">
+                <Text style={styles.sheetDismissBtnText}>{t("common.close")}</Text>
               </TouchableOpacity>
             </>
           ) : null}
@@ -436,9 +445,9 @@ const styles = StyleSheet.create({
   wordMark: { height: 3, borderRadius: 2, marginTop: -2, backgroundColor: "transparent" },
   wordMarkMastered: { backgroundColor: WarshPalette.gold },
   wordMarkLearning: { backgroundColor: WarshPalette.sageSoft },
-  sheetMeaning: { color: WarshPalette.ink, fontFamily: Fonts.semiBold, fontSize: FontSizes.bodyL, lineHeight: LineHeights.bodyL, textAlign: "center", marginTop: Spacing.sm },
+  sheetMeaning: { color: WarshPalette.ink, fontFamily: Fonts.semiBold, fontSize: 20, lineHeight: 28, textAlign: "center", marginTop: Spacing.xs },
   sheetMeaningUrdu: { fontFamily: Fonts.urduFallback, fontSize: 20, lineHeight: 36 },
-  sheetRoot: { color: WarshPalette.subtleBrown, textAlign: "center", marginTop: Spacing.xs },
+  sheetRoot: { color: WarshPalette.goldText },
   ayahMeta: { flexDirection: "row", alignItems: "center", gap: Spacing.sm, marginTop: 4 },
   ayahRef: { color: WarshPalette.goldText, fontFamily: Fonts.regular, fontSize: FontSizes.caption },
   ayahTranslation: { color: WarshPalette.bodyBrown, fontFamily: Fonts.regular, fontSize: FontSizes.bodyM, fontStyle: "italic", marginTop: 2, lineHeight: LineHeights.bodyM },
@@ -466,23 +475,27 @@ const styles = StyleSheet.create({
   // Word sheet
   sheetOverlay: { flex: 1, justifyContent: "flex-end", backgroundColor: WarshAlpha.sheetScrim },
   sheetContainer: {
-    backgroundColor: WarshPalette.white, borderTopLeftRadius: 24, borderTopRightRadius: 24,
-    padding: Spacing.xl, paddingBottom: Spacing.xl * 2,
+    backgroundColor: WarshPalette.creamBg, borderTopLeftRadius: Radii.xl, borderTopRightRadius: Radii.xl,
+    paddingHorizontal: Spacing.gutter, paddingTop: Spacing.md, paddingBottom: Spacing.xl * 2,
   },
-  sheetHandle: { width: 40, height: 4, backgroundColor: WarshPalette.cream, borderRadius: 2, alignSelf: "center", marginBottom: Spacing.lg },
+  sheetHandle: { width: 36, height: 4, backgroundColor: WarshPalette.parchment, borderRadius: 2, alignSelf: "center", marginBottom: Spacing.lg },
+  sheetChips: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: Spacing.sm, marginTop: Spacing.lg },
+  sheetRootChip: {
+    flexDirection: "row", alignItems: "center", paddingHorizontal: Spacing.md, paddingVertical: 2,
+    borderRadius: Radii.full, borderWidth: 1, borderColor: WarshPalette.cream, backgroundColor: WarshPalette.highlightBgSoft,
+  },
+  sheetRootLabel: { color: WarshPalette.bodyBrown, fontFamily: Fonts.regular, fontSize: 13 },
   sheetArabicRow: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: Spacing.md, marginBottom: Spacing.sm },
   sheetArabic: { textAlign: "center" },
   sheetStateBadge: {
-    alignSelf: "center", paddingHorizontal: Spacing.md, paddingVertical: 4,
-    borderRadius: Radii.full ?? 999, backgroundColor: WarshPalette.parchmentBg,
-    borderWidth: 1, borderColor: WarshPalette.parchmentCardBorder, marginBottom: Spacing.lg,
+    justifyContent: "center", paddingHorizontal: Spacing.md, paddingVertical: 6,
+    borderRadius: Radii.full, backgroundColor: WarshPalette.parchmentBg,
+    borderWidth: 1, borderColor: WarshPalette.cream,
   },
-  sheetStateBadgeText: { color: WarshPalette.bodyBrown, fontFamily: Fonts.regular, fontSize: FontSizes.caption },
-  sheetDetailBtn: {
-    borderRadius: Radii.md, borderWidth: 1, borderColor: WarshPalette.gold,
-    padding: Spacing.md, alignItems: "center", marginBottom: Spacing.sm,
-  },
-  sheetDetailBtnText: { color: WarshPalette.goldText, fontFamily: Fonts.semiBold, fontSize: FontSizes.bodyL },
-  sheetDismissBtn: { padding: Spacing.md, alignItems: "center" },
-  sheetDismissBtnText: { color: WarshPalette.bodyBrown, fontFamily: Fonts.regular, fontSize: FontSizes.bodyM },
+  sheetStateBadgeKnown: { backgroundColor: WarshPalette.correctBg, borderColor: WarshPalette.correctBg },
+  sheetStateBadgeText: { color: WarshPalette.bodyBrown, fontFamily: Fonts.regular, fontSize: 13, lineHeight: 18 },
+  sheetStateBadgeTextKnown: { color: WarshPalette.sageDeep, fontFamily: Fonts.bold },
+  sheetDetailBtn: { marginTop: Spacing.xl },
+  sheetDismissBtn: { minHeight: 48, marginTop: 6, alignItems: "center", justifyContent: "center" },
+  sheetDismissBtnText: { color: WarshPalette.navy, fontFamily: Fonts.semiBold, fontSize: FontSizes.bodyL },
 });

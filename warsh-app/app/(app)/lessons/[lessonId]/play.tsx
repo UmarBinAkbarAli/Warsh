@@ -2224,25 +2224,62 @@ export default function LessonPlayScreen() {
     const dialogue = (sp?.dialogue as Array<Record<string, any>> | undefined) ?? [];
     const lines = dialogue.map((line) => {
       const phrase = phraseMap.get(line.phrase_id as string);
-      return { speaker: line.speaker as string ?? "", ar: phrase?.ar as string ?? "", en: localizedText(phrase, language) };
+      return {
+        speaker: line.speaker as string ?? "",
+        ar: phrase?.ar as string ?? "",
+        en: localizedText(phrase, language),
+        audioUrl: phrase?.audio_url as string | undefined,
+      };
     });
+    // The first speaker's lines are gold, the other's sage, so the turns read apart.
+    const firstSpeaker = lines[0]?.speaker;
 
     return (
       <View style={[styles.fullScreen, screenPadding]}>
-        <Text style={styles.spContextTitleEn}>{t("player.miniDialogue")}</Text>
+        <View style={styles.topRow}>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={t("player.leaveLesson")}
+            onPress={requestExit}
+            style={styles.backButton}
+          >
+            <Ionicons name="close" size={24} color={WarshPalette.ink} />
+          </Pressable>
+        </View>
+        <View style={styles.dialogueHeader}>
+          <View style={styles.dialogueHeaderIcon}>
+            <Ionicons name="chatbubble-outline" size={16} color={WarshPalette.sageDeep} />
+          </View>
+          <Text style={styles.dialogueTitle} accessibilityRole="header">{t("player.miniDialogue")}</Text>
+        </View>
+        <Text style={styles.dialogueIntro}>{t("player.dialogueIntro")}</Text>
         <ScrollView style={styles.exerciseScroller} contentContainerStyle={styles.exerciseScrollerContent}>
           <View style={styles.dialogueCard}>
             {lines.map((line, i) => (
-              <View key={i} style={styles.dialogueLine}>
-                <Text style={styles.dialogueSpeaker}>{line.speaker}</Text>
-                <ArabicText size="sm" style={styles.dialogueArabic}>{line.ar}</ArabicText>
-                {line.en ? <Text style={styles.discoverTranslation}>{line.en}</Text> : null}
+              <View key={i} style={[styles.dialogueRow, i > 0 && styles.dialogueLineRule]}>
+                {line.ar ? (
+                  <PlayButton
+                    text={line.ar}
+                    cacheKey={`${lessonId}-dialogue-${i}`}
+                    category="lessons"
+                    audioUrl={line.audioUrl}
+                    size={18}
+                  />
+                ) : null}
+                <View style={styles.dialogueLineText}>
+                  <Text style={[styles.dialogueSpeaker, line.speaker !== firstSpeaker && styles.dialogueSpeakerOther]}>
+                    {line.speaker}
+                  </Text>
+                  <ArabicText size="md" style={styles.dialogueArabic}>{line.ar}</ArabicText>
+                  {line.en ? <Text style={styles.dialogueTranslation}>{withDirectionMark(line.en, language)}</Text> : null}
+                </View>
               </View>
             ))}
             {lines.length === 0 ? <Text style={styles.hookQuestion}>{t("player.dialogueSoon")}</Text> : null}
           </View>
         </ScrollView>
         <BrandButton title={t("common.continue")} onPress={() => goToBeat(5)} style={styles.bottomButton} />
+        {renderExitConfirm()}
       </View>
     );
   }
@@ -2627,6 +2664,54 @@ const styles = StyleSheet.create({
   },
   progressSegmentEmpty: {
     backgroundColor: WarshPalette.defaultCardBorder,
+  },
+  dialogueHeader: {
+    marginTop: 40,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+  },
+  dialogueHeaderIcon: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: WarshPalette.correctBg,
+  },
+  dialogueTitle: {
+    flex: 1,
+    color: WarshPalette.ink,
+    fontFamily: Fonts.bold,
+    fontSize: desktopFontSize(20),
+    lineHeight: desktopLineHeight(26, 20),
+  },
+  dialogueIntro: {
+    marginTop: Spacing.sm,
+    marginBottom: Spacing.lg,
+    color: WarshPalette.bodyBrown,
+    fontFamily: Fonts.regular,
+    fontSize: desktopFontSize(14),
+    lineHeight: desktopLineHeight(20, 14),
+  },
+  dialogueRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+    paddingVertical: Spacing.md,
+  },
+  dialogueLineRule: {
+    borderTopWidth: 0.5,
+    borderTopColor: WarshPalette.waveformGoldIdle,
+  },
+  dialogueLineText: { flex: 1, minWidth: 0 },
+  dialogueSpeakerOther: { color: WarshPalette.sageDeep },
+  dialogueTranslation: {
+    marginTop: 2,
+    color: WarshPalette.bodyBrown,
+    fontFamily: Fonts.regular,
+    fontSize: desktopFontSize(14),
+    lineHeight: desktopLineHeight(20, 14),
   },
   exerciseHeading: {
     marginTop: 32,
@@ -3159,18 +3244,22 @@ const styles = StyleSheet.create({
   },
   dialogueCard: {
     marginTop: 20,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: WarshPalette.parchmentCardBorder,
-    borderRadius: Radii.md,
-    padding: 12,
-    backgroundColor: WarshPalette.white,
+    borderWidth: 1,
+    borderColor: WarshPalette.cream,
+    borderRadius: Radii.xl,
+    paddingVertical: 6,
+    paddingLeft: 18,
+    paddingRight: 12,
+    backgroundColor: WarshPalette.highlightBgSoft,
   },
   dialogueLine: {
     marginBottom: 10,
   },
   dialogueSpeaker: {
     color: WarshPalette.goldText,
-    fontFamily: Fonts.regular,
+    fontFamily: Fonts.bold,
+    letterSpacing: 1.2,
+    textTransform: "uppercase",
     fontSize: desktopFontSize(12),
     lineHeight: desktopLineHeight(16, 12),
   },
