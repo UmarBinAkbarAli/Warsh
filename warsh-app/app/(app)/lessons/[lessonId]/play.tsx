@@ -1613,7 +1613,9 @@ export default function LessonPlayScreen() {
             <Text style={styles.exitBody}>
               {lab
                 ? t("lab.leaveBody")
-                : t("player.leaveLessonBody", { current: currentCardIndex + 1, total: discoverCards.length })}
+                : lesson?.template === "SPOKEN_PHRASES"
+                  ? t("player.leavePhraseBody", { current: spPhraseIdx + 1, total: getSpPhrases().length })
+                  : t("player.leaveLessonBody", { current: currentCardIndex + 1, total: discoverCards.length })}
             </Text>
             <BrandButton
               title={lab ? t("lab.keepGoing") : t("player.keepLearning")}
@@ -2131,18 +2133,55 @@ export default function LessonPlayScreen() {
     }
 
     if (spPhraseStep === "intro") {
+      const steps = [t("player.shadowStepListen"), t("player.shadowStepSay"), t("player.shadowStepMoveOn")];
       return (
         <View style={[styles.fullScreen, screenPadding]}>
-          <Text style={styles.spPhraseCounter}>{t("player.discoverOf", { current: spPhraseIdx + 1, total })}</Text>
-          <View style={styles.spPhraseCard}>
+          <View style={styles.topRow}>
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel={t("player.leaveLesson")}
+              onPress={requestExit}
+              style={styles.backButton}
+            >
+              <Ionicons name="close" size={24} color={WarshPalette.ink} />
+            </Pressable>
+            <View
+              style={styles.spProgressTrack}
+              accessibilityRole="progressbar"
+              accessibilityLabel={t("player.discoverOf", { current: spPhraseIdx + 1, total })}
+            >
+              <View style={[styles.spProgressFill, { width: `${(spPhraseIdx / Math.max(1, total)) * 100}%` as any }]} />
+            </View>
+            <View style={styles.backButtonSpacer} />
+          </View>
+          <View style={styles.spMetaRow}>
+            <View style={styles.spChip}>
+              <Ionicons name="mic-outline" size={13} color={WarshPalette.sageDeep} />
+              <Text style={styles.spChipText}>{t("player.speaking")}</Text>
+            </View>
+            <Text style={styles.spMetaText}>{t("player.phrasesLearnedCount", { current: spPhraseIdx, total })}</Text>
+          </View>
+          <View style={styles.spPhraseCardLarge}>
             <ArabicText size="xl" style={styles.spPhraseArabic}>{arabicPhrase}</ArabicText>
             {translit ? <Text style={styles.discoverTransliteration}>{translit}</Text> : null}
-            <Text style={styles.discoverTranslation}>{translation}</Text>
+            <Text style={styles.spPhraseMeaning}>{translation}</Text>
             <View style={styles.discoverPlayRow}>
               <PlayButton text={arabicPhrase} cacheKey={`sp-${spPhraseIdx}`} category="phrases" audioUrl={phraseRow?.audio_url as string | undefined} size={22} />
             </View>
           </View>
+          <View style={styles.spSteps}>
+            {steps.map((step, index) => (
+              <View key={step} style={styles.spStep}>
+                <View style={[styles.spStepNumber, index === 0 && styles.spStepNumberDone]}>
+                  <Text style={[styles.spStepNumberText, index === 0 && styles.spStepNumberTextDone]}>{index + 1}</Text>
+                </View>
+                <Text style={[styles.spStepText, index === 0 && styles.spStepTextDone]}>{step}</Text>
+              </View>
+            ))}
+          </View>
+          <View style={styles.spacerFlex} />
           <BrandButton title={t("player.nowIllTry")} onPress={() => setSpPhraseStep("shadow")} style={styles.bottomButton} />
+          {renderExitConfirm()}
         </View>
       );
     }
@@ -2665,6 +2704,80 @@ const styles = StyleSheet.create({
   progressSegmentEmpty: {
     backgroundColor: WarshPalette.defaultCardBorder,
   },
+  spProgressTrack: {
+    flex: 1,
+    height: 3,
+    borderRadius: 2,
+    backgroundColor: WarshPalette.sageSoft,
+    overflow: "hidden",
+  },
+  spProgressFill: { height: "100%", backgroundColor: WarshPalette.sageDeep },
+  spMetaRow: {
+    marginTop: 44,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  spChip: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+    paddingHorizontal: Spacing.md,
+    paddingVertical: Spacing.xs,
+    borderRadius: Radii.full,
+    backgroundColor: WarshPalette.correctBg,
+  },
+  spChipText: {
+    color: WarshPalette.sageDeep,
+    fontFamily: Fonts.bold,
+    fontSize: desktopFontSize(12),
+  },
+  spMetaText: {
+    color: WarshPalette.bodyBrown,
+    fontFamily: Fonts.regular,
+    fontSize: desktopFontSize(13),
+  },
+  spPhraseCardLarge: {
+    marginTop: Spacing.gutter,
+    alignItems: "center",
+    paddingTop: 32,
+    paddingHorizontal: Spacing.gutter,
+    paddingBottom: 28,
+    borderRadius: Radii.xl,
+    borderWidth: 1,
+    borderColor: WarshPalette.cream,
+    backgroundColor: WarshPalette.highlightBgSoft,
+  },
+  spPhraseMeaning: {
+    marginTop: 10,
+    color: WarshPalette.ink,
+    fontFamily: Fonts.semiBold,
+    fontSize: desktopFontSize(17),
+    lineHeight: desktopLineHeight(24, 17),
+    textAlign: "center",
+  },
+  spSteps: { marginTop: Spacing.xl, gap: Spacing.md },
+  spStep: { flexDirection: "row", alignItems: "center", gap: Spacing.md },
+  spStepNumber: {
+    width: 26,
+    height: 26,
+    borderRadius: 13,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: WarshPalette.waveformGoldIdle,
+  },
+  spStepNumberDone: { backgroundColor: WarshPalette.sageDeep },
+  spStepNumberText: { color: WarshPalette.bodyBrown, fontFamily: Fonts.bold, fontSize: desktopFontSize(12) },
+  spStepNumberTextDone: { color: WarshPalette.white },
+  spStepText: {
+    flex: 1,
+    color: WarshPalette.bodyBrown,
+    fontFamily: Fonts.regular,
+    fontSize: desktopFontSize(15),
+    lineHeight: desktopLineHeight(22, 15),
+  },
+  spStepTextDone: { color: WarshPalette.ink },
+  spacerFlex: { flex: 1 },
   dialogueHeader: {
     marginTop: 40,
     flexDirection: "row",

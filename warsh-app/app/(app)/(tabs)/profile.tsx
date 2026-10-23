@@ -301,7 +301,7 @@ export default function ProfileScreen() {
       <Text style={styles.noorLabel}>{t("profile.noor")}</Text>
       <Text style={styles.noorText}>
         {reviewNudge
-          ? t("profile.noorReviewTip", { total: vocabTotal, mastered: vocabMastered })
+          ? t(vocabMastered === 0 ? "profile.noorReviewTipNone" : "profile.noorReviewTip", { total: vocabTotal, mastered: vocabMastered })
           : t("profile.noorAskTip")}
       </Text>
       <Pressable
