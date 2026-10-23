@@ -1,27 +1,10 @@
-import { Ionicons } from "@expo/vector-icons";
+import { StyleSheet, Text, View } from "react-native";
+
 import { useT } from "@i18n/index";
 import type { AppLanguage } from "@services/language";
-import {
-  ActivityIndicator,
-  Modal,
-  Pressable,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-
-import {
-  Colors,
-  FontSizes,
-  Fonts,
-  LineHeights,
-  Radii,
-  Spacing,
-  WarshAlpha,
-  WarshPalette,
-} from "../constants/theme";
+import { ArabicText } from "./ArabicText";
+import { LanguageChoiceSheet } from "./LanguageChoiceSheet";
+import { Fonts, Radii, Spacing, WarshPalette } from "../constants/theme";
 
 type TranslationLanguagePromptProps = {
   visible: boolean;
@@ -44,183 +27,64 @@ export function TranslationLanguagePrompt({
   onSelect,
   onDismiss,
 }: TranslationLanguagePromptProps) {
-  const insets = useSafeAreaInsets();
   const t = useT();
 
   return (
-    <Modal
+    <LanguageChoiceSheet
       visible={visible}
-      transparent
-      statusBarTranslucent
-      navigationBarTranslucent
-      animationType="fade"
-      onRequestClose={onDismiss}
-    >
-      <View style={styles.overlay}>
-        <Pressable
-          style={StyleSheet.absoluteFill}
-          onPress={() => !saving && onDismiss()}
-        />
-        <View
-          style={[styles.sheet, { paddingBottom: insets.bottom + Spacing.lg }]}
-        >
-          <View style={styles.handle} />
-          <View style={styles.header}>
-            <View style={{ flex: 1 }}>
-              <Text style={styles.title}>{t("language.chooseMeaning")}</Text>
-              <Text style={styles.body}>
-                {t("language.meaningDescription")}
-              </Text>
-            </View>
-            <TouchableOpacity
-              onPress={onDismiss}
-              disabled={saving}
-              hitSlop={8}
-              accessibilityLabel={t("common.close")}
-            >
-              <Ionicons
-                name="close"
-                size={20}
-                color={WarshPalette.subtleBrown}
-              />
-            </TouchableOpacity>
+      title={t("language.chooseMeaning")}
+      body={t("language.meaningDescription")}
+      current={current}
+      saving={saving}
+      options={[
+        { value: "ur", title: t("language.urdu"), subtitle: t("language.meaningsUrdu") },
+        { value: "en", title: t("language.english"), subtitle: t("language.meaningsEnglish") },
+      ]}
+      ctaLabel={(value) => t(value === "ur" ? "language.useUrduMeanings" : "language.useEnglishMeanings")}
+      onConfirm={onSelect}
+      onClose={onDismiss}
+      footnote={t("language.changeInSettings")}
+      preview={(value) => (
+        <View style={styles.preview}>
+          <Text style={styles.previewLabel}>{t("language.previewLabel")}</Text>
+          <View style={styles.previewRow}>
+            {value === "ur" ? (
+              <Text style={styles.previewUrdu}>اللہ کا گھر</Text>
+            ) : (
+              <Text style={styles.previewEnglish}>the House of Allah</Text>
+            )}
+            <ArabicText size="md">بَيْتُ اللَّهِ</ArabicText>
           </View>
-
-          {(["ur", "en"] as AppLanguage[]).map((value) => {
-            const selected = current === value;
-            return (
-              <TouchableOpacity
-                key={value}
-                accessibilityRole="radio"
-                accessibilityState={{ selected, disabled: saving }}
-                disabled={saving}
-                activeOpacity={0.8}
-                onPress={() => onSelect(value)}
-                style={[styles.choice, selected ? styles.choiceSelected : null]}
-              >
-                <View
-                  style={[
-                    styles.choiceIcon,
-                    selected ? styles.choiceIconSelected : null,
-                  ]}
-                >
-                  <Ionicons
-                    name={selected ? "checkmark" : "book-outline"}
-                    size={21}
-                    color={
-                      selected ? WarshPalette.white : WarshPalette.subtleBrown
-                    }
-                  />
-                </View>
-                <View style={styles.choiceCopy}>
-                  <Text
-                    style={[
-                      styles.choiceTitle,
-                      selected ? styles.choiceTitleSelected : null,
-                    ]}
-                  >
-                    {value === "ur"
-                      ? t("language.urdu")
-                      : t("language.english")}
-                  </Text>
-                  <Text
-                    style={[
-                      styles.choiceBody,
-                      selected ? styles.choiceBodySelected : null,
-                    ]}
-                  >
-                    {value === "ur"
-                      ? t("language.meaningsUrdu")
-                      : t("language.meaningsEnglish")}
-                  </Text>
-                </View>
-                {selected && saving ? (
-                  <ActivityIndicator color={WarshPalette.white} />
-                ) : null}
-              </TouchableOpacity>
-            );
-          })}
         </View>
-      </View>
-    </Modal>
+      )}
+    />
   );
 }
 
 const styles = StyleSheet.create({
-  overlay: {
-    flex: 1,
-    justifyContent: "flex-end",
-    backgroundColor: Colors.overlay,
-  },
-  sheet: {
-    gap: Spacing.md,
-    paddingHorizontal: Spacing.gutter,
-    paddingTop: Spacing.md,
-    borderTopLeftRadius: Radii.xl,
-    borderTopRightRadius: Radii.xl,
-    backgroundColor: WarshPalette.parchmentBg,
-  },
-  handle: {
-    alignSelf: "center",
-    width: 42,
-    height: 4,
-    borderRadius: Radii.full,
-    backgroundColor: WarshPalette.cream,
-  },
-  header: {
-    flexDirection: "row",
-    alignItems: "flex-start",
-    gap: Spacing.sm,
-  },
-  title: {
-    color: WarshPalette.navy,
-    fontFamily: Fonts.bold,
-    fontSize: FontSizes.h1,
-    lineHeight: LineHeights.h1,
-  },
-  body: {
-    marginTop: Spacing.xs,
-    color: WarshPalette.subtleBrown,
-    fontFamily: Fonts.regular,
-    fontSize: FontSizes.bodyM,
-    lineHeight: LineHeights.bodyM,
-  },
-  choice: {
-    minHeight: 74,
-    flexDirection: "row",
-    alignItems: "center",
-    gap: Spacing.md,
-    padding: Spacing.md,
+  preview: {
+    marginTop: Spacing.lg,
+    paddingVertical: 14,
+    paddingHorizontal: Spacing.lg,
     borderRadius: Radii.md,
     borderWidth: 1,
     borderColor: WarshPalette.cream,
-    backgroundColor: WarshPalette.white,
+    backgroundColor: WarshPalette.highlightBgSoft,
   },
-  choiceSelected: {
-    borderColor: WarshPalette.navy,
-    backgroundColor: WarshPalette.navy,
+  previewLabel: {
+    color: WarshPalette.goldText,
+    fontFamily: Fonts.bold,
+    fontSize: 12,
+    lineHeight: 16,
+    letterSpacing: 1,
   },
-  choiceIcon: {
-    width: 42,
-    height: 42,
+  previewRow: {
+    marginTop: Spacing.sm,
+    flexDirection: "row",
     alignItems: "center",
-    justifyContent: "center",
-    borderRadius: Radii.full,
-    backgroundColor: WarshPalette.sageTintBg,
+    justifyContent: "space-between",
+    gap: Spacing.md,
   },
-  choiceIconSelected: { backgroundColor: WarshPalette.gold },
-  choiceCopy: { flex: 1 },
-  choiceTitle: {
-    color: WarshPalette.ink,
-    fontFamily: Fonts.semiBold,
-    fontSize: FontSizes.bodyL,
-  },
-  choiceTitleSelected: { color: WarshPalette.white },
-  choiceBody: {
-    color: WarshPalette.subtleBrown,
-    fontFamily: Fonts.regular,
-    fontSize: FontSizes.caption,
-    marginTop: 2,
-  },
-  choiceBodySelected: { color: WarshAlpha.onNavyMuted },
+  previewUrdu: { color: WarshPalette.ink, fontFamily: Fonts.arabic, fontSize: 22, lineHeight: 34 },
+  previewEnglish: { color: WarshPalette.ink, fontFamily: Fonts.semiBold, fontSize: 16 },
 });

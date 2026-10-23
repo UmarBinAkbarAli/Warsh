@@ -651,6 +651,7 @@ export default function SettingsScreen() {
         body={t("profile.logOutConfirmBody")}
         confirmLabel={t("profile.logOut")}
         cancelLabel={t("profile.logOutStay")}
+        icon="log-out-outline"
         onCancel={() => setConfirmLogout(false)}
         onConfirm={() => {
           setConfirmLogout(false);
@@ -662,17 +663,54 @@ export default function SettingsScreen() {
         title={t("settings.deleteAccountTitle")}
         body={t("settings.deleteAccountBody")}
         confirmLabel={t("settings.deleteAccountConfirm")}
-        cancelLabel={t("common.cancel")}
+        cancelLabel={t("settings.keepAccount")}
         destructive
+        icon="trash-outline"
         loading={deleting}
         onCancel={() => setConfirmDelete(false)}
         onConfirm={() => void confirmDeleteAccount()}
-      />
+      >
+        {Platform.OS === "android" ? (
+          <View style={styles.deleteNote}>
+            <Ionicons name="information-circle-outline" size={20} color={WarshPalette.goldText} />
+            <Text style={styles.deleteNoteText}>
+              {t("settings.deletePlayNote")}{" "}
+              <Text
+                accessibilityRole="link"
+                style={styles.deleteNoteLink}
+                onPress={() => void Linking.openURL("https://play.google.com/store/account/subscriptions").catch(() => {})}
+              >
+                {t("settings.deletePlayLink")}
+              </Text>
+            </Text>
+          </View>
+        ) : null}
+      </ConfirmDialog>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  deleteNote: {
+    alignSelf: "stretch",
+    flexDirection: "row",
+    gap: 10,
+    marginTop: 14,
+    paddingVertical: Spacing.md,
+    paddingHorizontal: 14,
+    borderRadius: Radii.md,
+    borderWidth: 1,
+    borderColor: WarshPalette.cream,
+    backgroundColor: WarshPalette.highlightBgSoft,
+  },
+  deleteNoteText: {
+    flex: 1,
+    color: WarshPalette.bodyBrown,
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyM,
+    lineHeight: 20,
+  },
+  deleteNoteLink: { color: WarshPalette.goldText, fontFamily: Fonts.semiBold },
   screen: { flex: 1, backgroundColor: Colors.bg.primary },
 
   header: {
