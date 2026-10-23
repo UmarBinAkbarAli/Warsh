@@ -592,6 +592,10 @@ export default function HomeScreen() {
             </View>
             <Text style={styles.modalTitle}>{t("learn.streakEndedTitle")}</Text>
             <Text style={styles.modalBody}>{t("learn.streakEndedBody")}</Text>
+            <View style={styles.modalQuote}>
+              <Text style={styles.modalQuoteText}>{t("learn.streakEndedHadith")}</Text>
+              <Text style={styles.modalQuoteSource}>{t("learn.streakEndedHadithSource")}</Text>
+            </View>
             <Text style={styles.modalHadith}>
               {t("learn.streakEndedFooter")}
             </Text>
@@ -1347,15 +1351,15 @@ const styles = StyleSheet.create({
     width: "100%",
     maxWidth: 420,
     alignItems: "center",
-    padding: Spacing.xxl,
+    paddingTop: 28,
+    paddingHorizontal: Spacing.gutter,
+    paddingBottom: Spacing.lg,
     borderRadius: Radii.xl,
-    borderWidth: 1,
-    borderColor: WarshPalette.defaultCardBorder,
-    backgroundColor: Colors.bg.primary,
+    backgroundColor: WarshPalette.parchmentBg,
   },
   modalIcon: {
-    width: 58,
-    height: 58,
+    width: 56,
+    height: 56,
     alignItems: "center",
     justifyContent: "center",
     borderRadius: Radii.full,
@@ -1365,26 +1369,50 @@ const styles = StyleSheet.create({
   modalTitle: {
     color: WarshPalette.ink,
     fontFamily: Fonts.bold,
-    fontSize: FontSizes.h1,
-    lineHeight: LineHeights.h1,
+    fontSize: 20,
+    lineHeight: 26,
     textAlign: "center",
-    marginBottom: Spacing.md,
+    marginBottom: Spacing.sm,
   },
   modalBody: {
     color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
-    fontSize: FontSizes.bodyM,
-    lineHeight: 24,
+    fontSize: 15,
+    lineHeight: 22,
     textAlign: "center",
-    marginBottom: Spacing.md,
   },
-  modalHadith: {
-    color: WarshPalette.subtleBrown,
+  modalQuote: {
+    alignSelf: "stretch",
+    marginTop: Spacing.lg,
+    paddingVertical: 14,
+    paddingHorizontal: Spacing.lg,
+    borderRadius: Radii.md,
+    borderWidth: 1,
+    borderColor: WarshPalette.cream,
+    backgroundColor: WarshPalette.highlightBgSoft,
+  },
+  modalQuoteText: {
+    color: WarshPalette.bodyBrown,
     fontFamily: Fonts.italic,
     fontSize: FontSizes.bodyM,
-    lineHeight: LineHeights.bodyM,
+    lineHeight: 21,
     textAlign: "center",
-    marginBottom: Spacing.xl,
+  },
+  modalQuoteSource: {
+    marginTop: 6,
+    color: WarshPalette.goldText,
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.caption,
+    textAlign: "center",
+  },
+  modalHadith: {
+    marginTop: 14,
+    color: WarshPalette.sageDeep,
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyM,
+    lineHeight: 21,
+    textAlign: "center",
+    marginBottom: 18,
   },
   modalCta: { width: "100%" },
 });

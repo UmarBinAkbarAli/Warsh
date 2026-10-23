@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import { ActivityIndicator, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, useWindowDimensions, View } from "react-native";
-import { useRouter } from "expo-router";
+import { ActivityIndicator, Platform, ScrollView, StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import api from "@services/api";
 import { ArabicText } from "@components/ArabicText";
-import { BrandButton } from "@components/BrandButton";
+import { ScreenHeader } from "@components/ScreenHeader";
 import { StatusBarBacking } from "@components/StatusBarBacking";
+import { useLanguage } from "@services/language";
+import { useT } from "@i18n/index";
 import { FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
 
 type Achievement = {
@@ -19,14 +20,15 @@ type Achievement = {
   unlockedAt: string | null;
 };
 
-function formatDate(iso: string | null) {
+function formatDate(iso: string | null, language: string) {
   if (!iso) return null;
-  return new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+  return new Date(iso).toLocaleDateString(language === "ur" ? "ur-PK" : "en-GB", { day: "numeric", month: "short", year: "numeric" });
 }
 
 export default function MilestonesScreen() {
-  const router = useRouter();
   const insets = useSafeAreaInsets();
+  const t = useT();
+  const language = useLanguage();
   const { width } = useWindowDimensions();
   const desktopWeb = Platform.OS === "web" && width >= 960;
   const [achievements, setAchievements] = useState<Achievement[]>([]);
@@ -39,13 +41,13 @@ export default function MilestonesScreen() {
         const response = await api.get("/api/achievements");
         setAchievements(response.data.data.achievements);
       } catch {
-        setError("Unable to load milestones.");
+        setError(t("milestones.loadError"));
       } finally {
         setLoading(false);
       }
     }
     void load();
-  }, []);
+  }, [t]);
 
   const earned = achievements.filter((a) => a.earned);
   const remaining = achievements.filter((a) => !a.earned);
@@ -59,36 +61,21 @@ export default function MilestonesScreen() {
   }
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={[styles.screen, { paddingTop: desktopWeb ? 0 : insets.top }]}>
+      <ScreenHeader title={t("milestones.title")} showBack={!desktopWeb} style={desktopWeb ? styles.webHeader : null} />
       <ScrollView
         style={styles.screen}
-        contentContainerStyle={[
-          styles.content,
-          desktopWeb ? styles.webRow : { paddingTop: insets.top + Spacing.xl },
-        ]}
+        contentContainerStyle={[styles.content, desktopWeb && styles.webRow]}
       >
-        {!desktopWeb ? (
-          <TouchableOpacity
-            accessibilityRole="button"
-            accessibilityLabel="Back"
-            onPress={() => router.back()}
-            hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
-            style={styles.topBack}
-          >
-            <Ionicons name="arrow-back" size={22} color={WarshPalette.ink} />
-          </TouchableOpacity>
-        ) : null}
-        <View style={styles.header}>
-          <Text style={styles.eyebrow}>Your journey</Text>
-          <Text style={styles.title}>Milestones</Text>
-          <Text style={styles.subtitle}>{earned.length} earned · {remaining.length} remaining</Text>
-        </View>
+        <Text style={styles.subtitle}>
+          {t("milestones.summary", { earned: earned.length, remaining: remaining.length })}
+        </Text>
 
         {error ? <Text style={styles.errorText}>{error}</Text> : null}
 
         {earned.length > 0 ? (
           <>
-            <Text style={styles.sectionLabel}>Earned</Text>
+            <Text style={styles.sectionLabel}>{t("milestones.earned")}</Text>
             {earned.map((a) => (
               <View key={a.key} style={[styles.card, styles.cardEarned]}>
                 <View style={styles.iconWrap}>
@@ -98,10 +85,10 @@ export default function MilestonesScreen() {
                   <ArabicText size="sm" style={styles.cardTitle}>{a.title}</ArabicText>
                   <Text style={styles.cardDesc}>{a.description}</Text>
                   {a.unlockedAt ? (
-                    <Text style={styles.cardDate}>{formatDate(a.unlockedAt)}</Text>
+                    <Text style={styles.cardDate}>{formatDate(a.unlockedAt, language)}</Text>
                   ) : null}
                 </View>
-                <Text style={styles.cardXp}>+{a.xpReward} points</Text>
+                <Text style={styles.cardXp}>{t("milestones.points", { count: a.xpReward })}</Text>
               </View>
             ))}
           </>
@@ -109,7 +96,7 @@ export default function MilestonesScreen() {
 
         {remaining.length > 0 ? (
           <>
-            <Text style={styles.sectionLabel}>Not yet earned</Text>
+            <Text style={[styles.sectionLabel, styles.sectionLabelSpaced]}>{t("milestones.notYet")}</Text>
             {remaining.map((a) => (
               <View key={a.key} style={[styles.card, styles.cardLocked]}>
                 <View style={[styles.iconWrap, styles.iconWrapLocked]}>
@@ -119,13 +106,12 @@ export default function MilestonesScreen() {
                   <ArabicText size="sm" style={styles.cardTitleLocked}>{a.title}</ArabicText>
                   <Text style={styles.cardDesc}>{a.description}</Text>
                 </View>
-                <Text style={styles.cardXpLocked}>+{a.xpReward} points</Text>
+                <Text style={styles.cardXpLocked}>{t("milestones.points", { count: a.xpReward })}</Text>
               </View>
             ))}
           </>
         ) : null}
 
-        <BrandButton title="Back" onPress={() => router.back()} style={styles.backButton} />
       </ScrollView>
       <StatusBarBacking />
     </View>
@@ -139,41 +125,27 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: WarshPalette.creamBg,
   },
-  topBack: { alignSelf: "flex-start", minWidth: 48, minHeight: 48, justifyContent: "center", marginBottom: Spacing.sm },
   screen: {
     flex: 1,
     backgroundColor: WarshPalette.creamBg,
   },
   content: {
     paddingHorizontal: Spacing.xl,
+    paddingTop: Spacing.md,
     paddingBottom: Spacing.xl,
   },
-  webRow: {
+  webHeader: {
     width: "100%",
     maxWidth: 640,
     alignSelf: "center",
     paddingTop: 36,
   },
-  header: {
-    marginBottom: Spacing.lg,
-  },
-  eyebrow: {
-    color: WarshPalette.goldText,
-    fontFamily: Fonts.bold,
-    fontSize: FontSizes.label,
-    letterSpacing: 0,
-    lineHeight: LineHeights.label,
-    textTransform: "uppercase",
-  },
-  title: {
-    marginTop: Spacing.xs,
-    color: WarshPalette.ink,
-    fontFamily: Fonts.display,
-    fontSize: FontSizes.h1,
-    lineHeight: LineHeights.h1,
+  webRow: {
+    width: "100%",
+    maxWidth: 640,
+    alignSelf: "center",
   },
   subtitle: {
-    marginTop: Spacing.xs,
     color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
     fontSize: FontSizes.bodyM,
@@ -191,11 +163,12 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.bold,
     fontSize: FontSizes.caption,
     lineHeight: LineHeights.caption,
-    letterSpacing: 0.5,
+    letterSpacing: 0.6,
     textTransform: "uppercase",
-    marginBottom: Spacing.sm,
-    marginTop: Spacing.sm,
+    marginBottom: 10,
+    marginTop: 28,
   },
+  sectionLabelSpaced: { marginTop: Spacing.xl },
   card: {
     flexDirection: "row",
     alignItems: "center",
@@ -210,23 +183,22 @@ const styles = StyleSheet.create({
     backgroundColor: WarshPalette.white,
   },
   cardLocked: {
-    borderColor: WarshPalette.defaultCardBorder,
-    backgroundColor: WarshPalette.parchmentBg,
-    opacity: 0.65,
+    borderColor: WarshPalette.lockedRing,
+    backgroundColor: WarshPalette.lockedSurface,
   },
   iconWrap: {
     width: 48,
     height: 48,
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: Radii.sm,
-    backgroundColor: WarshPalette.highlightBg,
+    borderRadius: 6,
+    backgroundColor: WarshPalette.parchmentSoft,
     borderWidth: 0.5,
     borderColor: WarshPalette.highlightBorder,
   },
   iconWrapLocked: {
-    backgroundColor: WarshPalette.parchmentBg,
-    borderColor: WarshPalette.defaultCardBorder,
+    backgroundColor: WarshPalette.creamBg,
+    borderColor: WarshPalette.lockedRing,
   },
   cardBody: {
     flex: 1,
@@ -238,7 +210,7 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   cardTitleLocked: {
-    color: WarshPalette.subtleBrown,
+    color: WarshPalette.metaGrey,
     fontSize: FontSizes.arabicM,
     lineHeight: LineHeights.arabicM,
     textAlign: "left",
@@ -269,8 +241,5 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.regular,
     fontSize: FontSizes.caption,
     lineHeight: LineHeights.caption,
-  },
-  backButton: {
-    marginTop: Spacing.lg,
   },
 });
