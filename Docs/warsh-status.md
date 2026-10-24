@@ -418,7 +418,9 @@ Design-first workflow.
 
 ### Claude Design canvas, whole app — 2026-10-23
 
-**Implemented and committed; not yet released.** The owner redesigned the whole
+**Implemented and committed; 1.0.18 (42) submitted to Play 2026-10-24 (100 % rollout,
+queued behind Play's quick checks; gate and APK smoke test passed, 1.0.17 (41) was
+already live without it).** The owner redesigned the whole
 app on the same canvas (124 Android screens). Most boards reproduce today's app;
 the screens whose design differs were implemented:
 
