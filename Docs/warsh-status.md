@@ -418,7 +418,12 @@ Design-first workflow.
 
 ### Play Store listing refresh — 2026-10-24
 
-**Sent to Google for review 2026-10-24.** Designed on the Claude Design canvas
+**Live on Google Play 2026-10-24** (new name and short description verified on
+the public store page). Promo video added the same day: 33 s motion-graphics
+promo (HyperFrames + GSAP + Three.js + Lottie, captions and SFX, no voice), unlisted
+on the Warsh YouTube channel at https://youtu.be/ucZaAbG9TXs and linked as the
+listing video (that one change sent for review). Source lives outside the repo in
+the owner's marketing folder. Designed on the Claude Design canvas
 "Warsh Play Store" (https://claude.ai/artifact/Rj1pTJBGzJV1kvPPM4J23W) and
 approved by the owner. Seven listing changes: app name "Warsh: Learn Quranic
 Arabic", new short and full description (Quran-understanding positioning, 7-day
@@ -427,8 +432,7 @@ screenshots (1440×2560, the same set in the 7-inch and 10-inch slots, drawn at
 7-inch tablet width because the app is portrait-only with no tablet layout). AI
 asset declaration: "Don't label assets" (owner's answer). No Chromebook or XR
 assets. Exports and a backup of the previous listing text live in the
-gitignored `output/playstore/`. The 30-second promo video is storyboarded on the
-canvas but not produced.
+gitignored `output/playstore/`.
 
 ### Claude Design canvas, whole app — 2026-10-23
 
