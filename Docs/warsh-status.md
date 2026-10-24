@@ -611,14 +611,16 @@ Still open from the evaluation:
   are standard except عَصا and عاد, whose roots were cleared (they show none;
   `scripts/clear-doubtful-roots.ts`). The جَمْع example was a sentence fragment and
   was replaced by 54:45 (`scripts/fix-jam-example.ts`). Nothing open here.
-- **Quran translation under the page** is switched off ("Coming soon"; flag
+- **Quran translation under the page** is switched off by owner decision and stays
+  that way (settled 2026-10-24; do not raise it again). It shows "Coming soon"; flag
   `QURAN_TRANSLATION_ENABLED` in `services/quran/translations.ts`) by owner decision.
   The web problem is fixed and verified with the flag on (2026-10-09): the peek strip
   is now a button that scrolls to the translation, and the page's scroller handles the
   mouse wheel itself (the inverted horizontal pager swallowed it). Turning it back on
   is the one-line flag change; Android has not been re-tested with the new strip button.
-- **Reading settings sheet blank on Android — fix in code 2026-10-22, needs the next
-  Android build.** On 1.0.15 the settings icon on the Quran tab dimmed the screen
+- **Reading settings sheet blank on Android — DONE 2026-10-24.** Fixed in code
+  2026-10-22; the owner tested it on their phone with 1.0.18 (42), which is installed
+  and working. Nothing open. Original report: on 1.0.15 the settings icon on the Quran tab dimmed the screen
   and showed no sheet (owner, on the Play build). `BottomSheet` in
   `components/quran/QuranSheets.tsx` now holds the sheet at the bottom of a
   backdrop with a pixel `maxHeight` (85 % of the window) instead of a
@@ -632,8 +634,10 @@ Still open from the evaluation:
   ships), written by `npm run content:add-tadabbur-urdu -- --apply`. It fills
   only empty `translationUr` fields. A seed or `content:restore-tadabbur`
   recreates rows without Urdu, so re-run it afterwards.
-- **Test with learners first:** full Urdu RTL (H10); hiding the SRS picture
-  (M3).
+- **Urdu RTL (H10) — done 2026-10-24.** The owner uses RTL mode daily and it reads
+  fine; reopen only if they report an issue. Release 1.0.18 (42) is installed on the
+  owner's Android phone and working.
+- **Test with learners first:** hiding the SRS picture (M3).
 
 
 ### Open items (2026-09-18)
