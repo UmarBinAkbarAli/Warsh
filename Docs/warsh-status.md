@@ -416,6 +416,20 @@ Design-first workflow.
   Seen while testing (not caused by this change): Noor quoted a non-existent ayah,
   and replied in Urdu to an English-setting account with an Urdu history.
 
+### Play Store listing refresh — 2026-10-24
+
+**Sent to Google for review 2026-10-24.** Designed on the Claude Design canvas
+"Warsh Play Store" (https://claude.ai/artifact/Rj1pTJBGzJV1kvPPM4J23W) and
+approved by the owner. Seven listing changes: app name "Warsh: Learn Quranic
+Arabic", new short and full description (Quran-understanding positioning, 7-day
+trial), new feature graphic, 8 phone screenshots (1080×1920) and 8 portrait tablet
+screenshots (1440×2560, the same set in the 7-inch and 10-inch slots, drawn at
+7-inch tablet width because the app is portrait-only with no tablet layout). AI
+asset declaration: "Don't label assets" (owner's answer). No Chromebook or XR
+assets. Exports and a backup of the previous listing text live in the
+gitignored `output/playstore/`. The 30-second promo video is storyboarded on the
+canvas but not produced.
+
 ### Claude Design canvas, whole app — 2026-10-23
 
 **Implemented and committed; 1.0.18 (42) submitted to Play 2026-10-24 (100 % rollout,
