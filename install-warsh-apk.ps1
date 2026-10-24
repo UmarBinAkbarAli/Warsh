@@ -85,7 +85,7 @@ if (-not (Test-Path -LiteralPath $emulator)) {
     throw "Android Emulator not found at $emulator"
 }
 
-& $adb start-server | Out-Null
+$null = cmd /c "`"$adb`" start-server 2>nul"
 $serial = Get-OnlineEmulatorSerial -AdbPath $adb
 
 if (-not $serial) {
@@ -133,7 +133,7 @@ if ($ResetAppData) {
 }
 
 Write-Host "Launching $PackageName..."
-& $adb -s $serial shell monkey -p $PackageName -c android.intent.category.LAUNCHER 1 | Out-Null
+$null = cmd /c "`"$adb`" -s $serial shell monkey -p $PackageName -c android.intent.category.LAUNCHER 1 2>nul"
 if ($LASTEXITCODE -ne 0) {
     throw "APK installed, but $PackageName could not be launched."
 }

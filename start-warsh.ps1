@@ -140,7 +140,12 @@ if (-not $dev -and -not $prod) {
                     Remove-Item -LiteralPath $bundleOutput -Recurse -Force
                 }
             }
+            # Gradle writes warnings to stderr; under 'Stop' PS 5.1 turns those into
+            # terminating errors, so rely on the exit code instead.
+            $previousErrorAction = $ErrorActionPreference
+            $ErrorActionPreference = 'Continue'
             & .\gradlew.bat assembleRelease
+            $ErrorActionPreference = $previousErrorAction
             if ($LASTEXITCODE -ne 0) {
                 throw "Release APK build failed with exit code $LASTEXITCODE."
             }

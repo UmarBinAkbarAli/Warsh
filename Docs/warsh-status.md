@@ -144,9 +144,10 @@ files remain release evidence.
   publish, bill, access production data, or recover access.
 - Personal accounts must not remain the sole owner or sole recovery path. They may
   remain named collaborators only where required and approved.
-- Transfer completion is not claimed here until each service's owner/admin,
+- **Transfer complete (owner confirmed 2026-10-24).** Each service's owner/admin,
   billing, deployment, OAuth/Play signing, domain/DNS, webhook, environment, and
-  recovery access has been independently verified. Never put passwords, tokens, or
+  recovery access was verified; the only personal-account holdouts are the two
+  deliberate exceptions below (OpenAI, Namecheap). Never put passwords, tokens, or
   private keys in repository documentation.
 - **OpenAI is a deliberate exception (2026-09-10).** There is only one OpenAI
   account for Warsh and the owner confirmed it is the account to use, including in
