@@ -1504,15 +1504,18 @@ Seventeen vocabulary pictures are only the Arabic word printed on a tile (نَب
 
 | Filename | Cards | Arabic on the card | Scene |
 |---|---|---|---|
-| ✅ `ch01-near-book-far-mosque.png` | `ch01-l02` card 2 | هَذَا وَذَٰلِكَ | Two panels from the learner's viewpoint: left, a book on the desk right in front of the viewer; right, a mosque small in the distance across open ground |
-| ✅ `ch01-far-pen-far-path.png` | `ch01-l02` card 4 | ذَٰلِكَ قَبْلَ الِاسْم | Seen from a doorway: a pen lying on a table at the far end of a long room, and through the far window a path winding away into the distance |
-| ✅ `ch01-muslim-prayer.png` | `ch01-l02` card 7 | مُسْلِم | A man in modest dress standing on a prayer mat, hands raised to begin the prayer, seen from behind |
-| `ch01-message-lamp-scroll.png` | `ch01-l02` cards 8, 11 · `ch04-l01` card 9 · `ch04-l06` card 6 | نَبِيّ · رَسُول · نَبِيٌّ عَظِيمٌ | A sealed scroll resting beside a lit oil lamp in a quiet room: a message brought from afar. No figures |
-| `ch01-gender-book-tree.png` | `ch01-l03` card 1 | التَّذْكِير وَالتَّأْنِيث | Two panels: a book with a small navy tag hanging from it; a tree with a small gold tag hanging from it. Two kinds of noun, marked only by the tag colour |
-| `ch01-hadhihi-point-near-tree.png` | `ch01-l03` cards 2, 3 | هَذِهِ · هَذِهِ | A hand pointing at a tree standing close in front of the viewer, a feminine thing right here; foreground large, background soft. No lettering. Replaces the generic `ch05-near-feminine-scene` on these two cards (publish with `--replace`) |
-| `ch01-tilka-point-far-school.png` | `ch01-l04` card 2 | تِلْكَ مَدْرَسَةٌ | A hand pointing out across open ground at a school building small and far away on the horizon; the distance is obvious. No lettering. Replaces the reused `madrasa` picture on this card (publish with `--replace`) |
-| `ch01-surah-heading.png` | `ch01-l03` card 7 · `ch04-l03` card 10 | سُورَة · سُورَةٌ كَرِيمَةٌ | An open Mushaf on a wooden stand, a decorated surah heading band across the top of the page (ornament only, nothing readable) |
-| `ch01-tree-near-far.png` | `ch01-l04` card 1 · `ch05-l02` card 1 | تِلْكَ | Two panels of one landscape, one pointing hand in each: left, a hand pointing at a tree close to the viewer; right, the same hand pointing out across open ground at the same kind of tree small and far away on a hill. Pointing is the point of the picture; no lettering |
+| ✅ `ch01-near-far-two-hands.png` | `ch01-l02` card 2 | هَذَا وَذَٰلِكَ | Two hands from the learner's viewpoint: a large near hand pointing at a book on the desk, a small far hand pointing at a mosque across open sand. No faces |
+| ✅ `ch01-muslim-prayer.png` | `ch01-l02` card 6 | مُسْلِم | A man in modest dress standing on a prayer mat, hands raised to begin the prayer, seen from behind |
+| ✅ `ch01-nabiyy-calligraphy.png` | `ch01-l02` card 7 | نَبِيّ | The word نَبِيّ in thuluth calligraphy, navy on parchment with a gold border (owner exception to the no-lettering rule, 2026-10-24) |
+| ✅ `ch01-rasul-calligraphy.png` | `ch01-l02` card 10 | رَسُول | The word رَسُول in thuluth calligraphy, navy on parchment with a gold border (owner exception to the no-lettering rule, 2026-10-24) |
+| `ch01-message-lamp-scroll.png` | `ch04-l01` card 9 · `ch04-l06` card 6 | نَبِيٌّ عَظِيمٌ | A sealed scroll resting beside a lit oil lamp in a quiet room: a message brought from afar. No figures |
+| ✅ `ch01-gender-book-tree.png` | `ch01-l03` card 1 | التَّذْكِير وَالتَّأْنِيث | Two panels: a book with a small navy tag hanging from it; a tree with a small gold tag hanging from it. Two kinds of noun, marked only by the tag colour |
+| ✅ `ch01-hadhihi-hand-tree.png` | `ch01-l03` cards 2, 3 | هَذِهِ · هَذِهِ | A hand pointing at a tree standing close in front of the viewer, a feminine thing right here. No lettering |
+| ✅ `ch01-tilka-far-hand-school.png` | `ch01-l04` card 2 | تِلْكَ مَدْرَسَةٌ | A hand pointing out across open ground at a school building small and far away on the horizon. No lettering |
+| ✅ `ch01-surah-pills.png` | `ch01-l03` card 7 | سُورَة | An open Mushaf on a wooden stand, a decorated surah heading band across the top of the page |
+| `ch01-surah-heading.png` | `ch04-l03` card 10 | سُورَةٌ كَرِيمَةٌ | An open Mushaf on a wooden stand, a decorated surah heading band across the top of the page (ornament only, nothing readable) |
+| ✅ `ch01-tilka-far-hand-tree.png` | `ch01-l04` card 1 | تِلْكَ | Two panels of one landscape, one pointing hand in each: a tree close to the viewer, and the same kind of tree small and far away on a hill. No lettering |
+| `ch01-tree-near-far.png` | `ch05-l02` card 1 | تِلْكَ | Two panels of one landscape, one pointing hand in each: left, a hand pointing at a tree close to the viewer; right, the same hand pointing out across open ground at the same kind of tree small and far away on a hill. No lettering |
 | `ch01-three-feminine-nouns.png` | `ch01-l04` card 3 · `ch05-l01` card 3 | التَّاء الْمَرْبُوطَة | Three things in a row, a tree, a walled garden and a school building, each with a large gold ة (tā marbūṭa) sign glowing at the end of its tag, and a soft highlight ring round the sign on each. **Owner exception to the no-lettering rule:** the ة glyph is the only lettering allowed in this picture, drawn large and clean |
 
 ### Chapter 2
