@@ -12,7 +12,7 @@ import {
   View,
 } from "react-native";
 import { useFocusEffect, useLocalSearchParams, useRouter } from "expo-router";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { SafeAreaProvider, useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import api from "@services/api";
 import { ArabicText } from "@components/ArabicText";
@@ -121,6 +121,15 @@ function StatusBadge({ label, compact = false }: { label: string; compact?: bool
 
 // ─── lesson preview sheet ─────────────────────────────────────────────────────
 
+// A Modal is its own Android window, so the app's root SafeAreaProvider reports
+// a zero bottom inset inside it and a translucent three-button navigation bar
+// covers the Cancel row. The sheet gets its own provider and reads the inset
+// beneath it.
+function SheetSurface({ children }: { children: React.ReactNode }) {
+  const insets = useSafeAreaInsets();
+  return <View style={[styles.sheetContainer, { paddingBottom: insets.bottom + Spacing.xl }]}>{children}</View>;
+}
+
 function LessonPreviewSheet({
   lesson,
   visible,
@@ -132,7 +141,6 @@ function LessonPreviewSheet({
   onDismiss: () => void;
   onStart: () => void;
 }) {
-  const insets = useSafeAreaInsets();
   const language = useTranslationLanguage();
   const t = useT();
   if (!lesson) return null;
@@ -146,8 +154,9 @@ function LessonPreviewSheet({
 
   return (
     <Modal statusBarTranslucent navigationBarTranslucent visible={visible} transparent animationType="slide" onRequestClose={onDismiss}>
+      <SafeAreaProvider style={styles.sheetProvider}>
       <Pressable style={styles.sheetOverlay} onPress={onDismiss}>
-        <View style={[styles.sheetContainer, { paddingBottom: insets.bottom + Spacing.xl }]}>
+        <SheetSurface>
           <View style={styles.sheetHandle} />
 
           {/* Lesson type pill */}
@@ -185,8 +194,9 @@ function LessonPreviewSheet({
           <TouchableOpacity style={styles.sheetCancelBtn} onPress={onDismiss}>
             <Text style={styles.sheetCancelText}>{t("chapter.cancel")}</Text>
           </TouchableOpacity>
-        </View>
+        </SheetSurface>
       </Pressable>
+      </SafeAreaProvider>
     </Modal>
   );
 }
@@ -868,6 +878,7 @@ const styles = StyleSheet.create({
   chapterTestTextLocked: { color: WarshPalette.disabledText },
 
   // Bottom sheet
+  sheetProvider: { flex: 1 },
   sheetOverlay: { flex: 1, justifyContent: "flex-end", backgroundColor: WarshAlpha.sheetScrim },
   sheetContainer: {
     backgroundColor: WarshPalette.white,
