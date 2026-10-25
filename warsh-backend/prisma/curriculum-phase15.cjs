@@ -138,7 +138,7 @@ const specs = [
   {
     order: 1,
     sourceFile: "reader_lecture_01_haza_zalika.md",
-    title: "This, That, What, Who",
+    title: "This and That",
     titleAr: "هٰذَا، ذٰلِكَ، مَا، مَنْ",
     description: "Pointing words and first questions from the Medina Reader.",
     hook: { ayahAr: "ذٰلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ", ayahRef: "Al-Baqarah 2:2", highlightedWord: "ذٰلِكَ" },

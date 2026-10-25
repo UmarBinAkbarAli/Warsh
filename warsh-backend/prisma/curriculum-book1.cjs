@@ -148,9 +148,9 @@ const specs = [
   {
     order: 1,
     sourceFile: "reader_lecture_01_haza_zalika.md",
-    title: "This, That, What, Who",
-    titleAr: "هٰذَا وَذٰلِكَ وَمَا وَمَنْ",
-    description: "Your first Arabic words — pointing to things near and far, and asking what and who.",
+    title: "This and That",
+    titleAr: "هٰذَا وَذٰلِكَ وَهٰذِهِ وَتِلْكَ",
+    description: "Your first Arabic words — pointing to things near and far, masculine and feminine.",
     hook: { ayahAr: "ذٰلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ", ayahRef: "Al-Baqarah 2:2", highlightedWord: "ذٰلِكَ" },
     examples: [
       card("هٰذَا بَيْتٌ", "This is a house", "haadha baytun"),
