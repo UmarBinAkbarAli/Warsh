@@ -1,7 +1,6 @@
 import { useCallback, useMemo, useState } from "react";
 import {
   ActivityIndicator,
-  Modal,
   Platform,
   Pressable,
   ScrollView,
@@ -16,6 +15,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import Svg, { Circle } from "react-native-svg";
 import api from "@services/api";
+import { BottomSheetModal, SheetScrollView } from "@components/BottomSheetModal";
 import { ScreenHeader } from "@components/ScreenHeader";
 import { useTranslationLanguage, pickLocalized } from "@services/language";
 import { useT } from "@i18n/index";
@@ -308,16 +308,14 @@ export default function ChaptersScreen() {
         </ScrollView>
       )}
 
-      <Modal
+      <BottomSheetModal
         visible={lockedChapter !== null}
-        transparent
-        statusBarTranslucent
-        navigationBarTranslucent
-        animationType="slide"
-        onRequestClose={() => setLockedChapter(null)}
+        onClose={() => setLockedChapter(null)}
+        closeLabel={t("common.close")}
+        scrimStyle={styles.scrim}
+        sheetStyle={[styles.sheet, { paddingBottom: insets.bottom + Spacing.xxl }]}
       >
-        <Pressable style={styles.scrim} onPress={() => setLockedChapter(null)} accessibilityRole="button" accessibilityLabel={t("common.close")} />
-        <View style={[styles.sheet, { paddingBottom: insets.bottom + Spacing.xxl }]}>
+        <View>
           <View style={styles.handle} />
           <View style={styles.lockDisc}>
             <Ionicons name="lock-closed-outline" size={26} color={WarshPalette.lockedText} />
@@ -344,18 +342,16 @@ export default function ChaptersScreen() {
             <Text style={styles.sheetSecondaryText}>{t("chapters.notNow")}</Text>
           </Pressable>
         </View>
-      </Modal>
+      </BottomSheetModal>
 
-      <Modal
+      <BottomSheetModal
         visible={jumpOpen}
-        transparent
-        statusBarTranslucent
-        navigationBarTranslucent
-        animationType="slide"
-        onRequestClose={() => setJumpOpen(false)}
+        onClose={() => setJumpOpen(false)}
+        closeLabel={t("common.close")}
+        scrimStyle={styles.scrim}
+        sheetStyle={[styles.sheet, styles.jumpSheet, { paddingBottom: insets.bottom + Spacing.xxl }]}
       >
-        <Pressable style={styles.scrim} onPress={() => setJumpOpen(false)} accessibilityRole="button" accessibilityLabel={t("common.close")} />
-        <View style={[styles.sheet, styles.jumpSheet, { paddingBottom: insets.bottom + Spacing.xxl }]}>
+        <View style={styles.jumpBody}>
           <View style={styles.handle} />
           <View style={styles.jumpHeader}>
             <Text style={styles.jumpTitle}>{t("chapters.jump")}</Text>
@@ -380,7 +376,7 @@ export default function ChaptersScreen() {
               style={styles.jumpField}
             />
           </View>
-          <ScrollView contentContainerStyle={styles.jumpGrid} keyboardShouldPersistTaps="handled">
+          <SheetScrollView contentContainerStyle={styles.jumpGrid} keyboardShouldPersistTaps="handled">
             {jumpList.map((chapter) => {
               const current = chapter.id === focusChapter?.id;
               return (
@@ -401,10 +397,10 @@ export default function ChaptersScreen() {
                 </Pressable>
               );
             })}
-          </ScrollView>
+          </SheetScrollView>
           <Text style={styles.jumpHint}>{t("chapters.jumpLockedHint")}</Text>
         </View>
-      </Modal>
+      </BottomSheetModal>
     </View>
   );
 }
@@ -566,7 +562,7 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.caption,
     color: WarshPalette.goldInk,
   },
-  scrim: { flex: 1, backgroundColor: WarshAlpha.sheetScrim },
+  scrim: { backgroundColor: WarshAlpha.sheetScrim },
   sheet: {
     backgroundColor: WarshPalette.creamBg,
     borderTopLeftRadius: Radii.xl,
@@ -633,6 +629,7 @@ const styles = StyleSheet.create({
     color: WarshPalette.bodyBrown,
   },
   jumpSheet: { maxHeight: "80%" },
+  jumpBody: { flexShrink: 1 },
   jumpHeader: {
     flexDirection: "row",
     alignItems: "center",

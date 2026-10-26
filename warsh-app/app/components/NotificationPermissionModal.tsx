@@ -1,6 +1,7 @@
-import { Modal, View, Text, StyleSheet, Pressable } from "react-native";
+import { View, Text, StyleSheet, Pressable } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
+import { BottomSheetModal } from "@components/BottomSheetModal";
 import { BrandButton } from "@components/BrandButton";
 import { requestNotificationPermission } from "@services/notifications";
 import {
@@ -9,7 +10,6 @@ import {
   LineHeights,
   Radii,
   Spacing,
-  WarshAlpha,
   WarshPalette,
 } from "../../constants/theme";
 
@@ -27,16 +27,12 @@ export function NotificationPermissionModal({ visible, onGranted, onDismiss }: P
   }
 
   return (
-    <Modal
+    <BottomSheetModal
       visible={visible}
-      transparent
-      statusBarTranslucent
-      navigationBarTranslucent
-      animationType="slide"
-      onRequestClose={onDismiss}
+      onClose={onDismiss}
+      sheetStyle={[styles.sheet, { paddingBottom: Spacing.xxl + insets.bottom }]}
     >
-      <View style={styles.overlay}>
-        <View style={[styles.sheet, { paddingBottom: Spacing.xxl + insets.bottom }]}>
+      <View style={styles.content}>
           {/* Handle bar */}
           <View style={styles.handle} />
 
@@ -65,18 +61,12 @@ export function NotificationPermissionModal({ visible, onGranted, onDismiss }: P
           <Pressable onPress={onDismiss} style={styles.laterPressable}>
             <Text style={styles.laterText}>Maybe later</Text>
           </Pressable>
-        </View>
       </View>
-    </Modal>
+    </BottomSheetModal>
   );
 }
 
 const styles = StyleSheet.create({
-  overlay: {
-    flex: 1,
-    backgroundColor: WarshAlpha.scrim,
-    justifyContent: "flex-end",
-  },
   sheet: {
     backgroundColor: WarshPalette.parchmentBg,
     borderTopLeftRadius: Radii.xl,
@@ -84,6 +74,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.xl,
     paddingTop: Spacing.md,
     paddingBottom: Spacing.xxl,
+  },
+  content: {
     alignItems: "center",
     gap: Spacing.md,
   },

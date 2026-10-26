@@ -1,7 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 import { useT } from "@i18n/index";
 import { pickLocalized, useLanguage, useTranslationLanguage } from "@services/language";
-import { Modal, Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import {
@@ -13,6 +13,7 @@ import {
   Spacing,
   WarshPalette,
 } from "../constants/theme";
+import { BottomSheetModal } from "./BottomSheetModal";
 import { BrandButton } from "./BrandButton";
 
 /** One entry of `lessonNotices` from GET /api/chapters. */
@@ -73,17 +74,13 @@ export function NewLessonsPrompt({ visible, notices, onOpen, onDismiss }: NewLes
   if (notices.length === 0) return null;
 
   return (
-    <Modal
+    <BottomSheetModal
       visible={visible}
-      transparent
-      statusBarTranslucent
-      navigationBarTranslucent
-      animationType="fade"
-      onRequestClose={onDismiss}
+      onClose={onDismiss}
+      scrimStyle={styles.scrim}
+      sheetStyle={[styles.sheet, { paddingBottom: insets.bottom + Spacing.lg }]}
     >
-      <View style={styles.overlay}>
-        <Pressable style={StyleSheet.absoluteFill} onPress={onDismiss} />
-        <View style={[styles.sheet, { paddingBottom: insets.bottom + Spacing.lg }]}>
+      <View>
           <View style={styles.handleArea}>
             <View style={styles.handle} />
           </View>
@@ -144,16 +141,13 @@ export function NewLessonsPrompt({ visible, notices, onOpen, onDismiss }: NewLes
           >
             <Text style={styles.laterText}>{t("lessonNotice.later")}</Text>
           </Pressable>
-        </View>
       </View>
-    </Modal>
+    </BottomSheetModal>
   );
 }
 
 const styles = StyleSheet.create({
-  overlay: {
-    flex: 1,
-    justifyContent: "flex-end",
+  scrim: {
     backgroundColor: Colors.overlay,
   },
   sheet: {

@@ -1,8 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import {
-  FlatList,
   Image,
-  Modal,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -17,6 +15,7 @@ import { useAuth } from "@hooks/useAuth";
 import { useAuthStore } from "@stores/authStore";
 import { useOnboardingStore } from "@stores/onboardingStore";
 import { ArabicText } from "@components/ArabicText";
+import { BottomSheetModal, SheetFlatList } from "@components/BottomSheetModal";
 import { BrandButton } from "@components/BrandButton";
 import { WebAuthLayout } from "@components/WebAuthLayout";
 import api, { deleteAccount, getApiErrorCode, getApiErrorMessage, updateUserProfile } from "@services/api";
@@ -390,21 +389,18 @@ export default function AgeCheckScreen() {
         </Pressable>
       </ScrollView>
 
-      <Modal
+      <BottomSheetModal
         visible={open !== null}
-        transparent
-        statusBarTranslucent
-        navigationBarTranslucent
-        animationType="slide"
-        onRequestClose={() => setOpen(null)}
+        onClose={() => setOpen(null)}
+        scrimStyle={styles.scrim}
+        sheetStyle={[styles.sheet, { paddingBottom: insets.bottom + Spacing.lg }]}
       >
-        <Pressable style={styles.scrim} onPress={() => setOpen(null)} accessibilityRole="button" />
-        <View style={[styles.sheet, { paddingBottom: insets.bottom + Spacing.lg }]}>
+        <View style={styles.sheetInner}>
           <View style={styles.handle} />
           <Text style={[styles.sheetTitle, isUrdu ? styles.rtlText : null]}>
             {open === "day" ? t("ageCheck.pickDay") : open === "month" ? t("ageCheck.pickMonth") : t("ageCheck.pickYear")}
           </Text>
-          <FlatList
+          <SheetFlatList
             data={sheetItems}
             keyExtractor={(item) => String(item)}
             style={styles.sheetList}
@@ -430,24 +426,21 @@ export default function AgeCheckScreen() {
             }}
           />
         </View>
-      </Modal>
+      </BottomSheetModal>
 
-      <Modal
+      <BottomSheetModal
         visible={whyOpen}
-        transparent
-        statusBarTranslucent
-        navigationBarTranslucent
-        animationType="fade"
-        onRequestClose={() => setWhyOpen(false)}
+        onClose={() => setWhyOpen(false)}
+        scrimStyle={styles.scrim}
+        sheetStyle={[styles.sheet, { paddingBottom: insets.bottom + Spacing.xl }]}
       >
-        <Pressable style={styles.scrim} onPress={() => setWhyOpen(false)} accessibilityRole="button" />
-        <View style={[styles.sheet, { paddingBottom: insets.bottom + Spacing.xl }]}>
+        <View>
           <View style={styles.handle} />
           <Text style={[styles.sheetTitle, isUrdu ? styles.rtlText : null]}>{t("ageCheck.whyTitle")}</Text>
           <Text style={[styles.subtitle, isUrdu ? styles.rtlText : null]}>{t("ageCheck.whyBody")}</Text>
           <BrandButton title={t("common.continue")} onPress={() => setWhyOpen(false)} variant="secondary" />
         </View>
-      </Modal>
+      </BottomSheetModal>
     </WebAuthLayout>
   );
 }
@@ -611,9 +604,9 @@ const styles = StyleSheet.create({
     gap: Spacing.md,
   },
   scrim: {
-    flex: 1,
     backgroundColor: Colors.overlay,
   },
+  sheetInner: { flexShrink: 1 },
   sheet: {
     backgroundColor: WarshPalette.white,
     borderTopLeftRadius: Radii.md,

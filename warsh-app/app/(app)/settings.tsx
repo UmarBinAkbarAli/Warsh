@@ -3,7 +3,6 @@ import {
   ActivityIndicator,
   Alert,
   Linking,
-  Modal,
   Platform,
   ScrollView,
   StyleSheet,
@@ -32,6 +31,7 @@ import { isSentrySmokeTestEnabled, sendSentrySmokeTest } from "@services/sentry"
 import { trackCommitmentSet } from "@services/analytics";
 import { DAILY_UNIT_MINUTES, STREAK_GOAL_OPTIONS } from "../../constants/commitment";
 import { useT } from "@i18n/index";
+import { BottomSheetModal } from "@components/BottomSheetModal";
 import { ConfirmDialog } from "@components/ConfirmDialog";
 import { type AppLanguage } from "@services/language";
 import { ScreenHeader } from "@components/ScreenHeader";
@@ -597,10 +597,14 @@ export default function SettingsScreen() {
         <View style={{ height: Spacing.xl * 2 }} />
       </ScrollView>
 
-      <Modal statusBarTranslucent navigationBarTranslucent transparent visible={languageSheet !== null} animationType="fade" onRequestClose={() => setLanguageSheet(null)}>
-        <View style={styles.sheetOverlay}>
-          <TouchableOpacity style={StyleSheet.absoluteFill} activeOpacity={1} onPress={() => !languageSaving && setLanguageSheet(null)} />
-          <View style={[styles.languageSheet, { paddingBottom: insets.bottom + Spacing.lg }]}>
+      <BottomSheetModal
+        visible={languageSheet !== null}
+        onClose={() => setLanguageSheet(null)}
+        dismissible={!languageSaving}
+        scrimStyle={styles.sheetScrim}
+        sheetStyle={[styles.languageSheet, { paddingBottom: insets.bottom + Spacing.lg }]}
+      >
+          <View style={styles.languageSheetBody}>
             <View style={styles.sheetHandle} />
             <View style={styles.sheetHeader}>
               <View>
@@ -643,8 +647,7 @@ export default function SettingsScreen() {
               );
             })}
           </View>
-        </View>
-      </Modal>
+      </BottomSheetModal>
       <ConfirmDialog
         visible={confirmLogout}
         title={t("profile.logOutConfirmTitle")}
@@ -828,11 +831,10 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.caption,
   },
   pillTextSelected: { color: WarshPalette.white },
-  sheetOverlay: {
-    flex: 1, justifyContent: "flex-end", backgroundColor: WarshAlpha.sheetScrim,
-  },
+  sheetScrim: { backgroundColor: WarshAlpha.sheetScrim },
+  languageSheetBody: { gap: Spacing.md },
   languageSheet: {
-    gap: Spacing.md, paddingHorizontal: Spacing.gutter, paddingTop: Spacing.sm,
+    paddingHorizontal: Spacing.gutter, paddingTop: Spacing.sm,
     borderTopLeftRadius: Radii.xl, borderTopRightRadius: Radii.xl,
     backgroundColor: WarshPalette.parchmentBg,
   },

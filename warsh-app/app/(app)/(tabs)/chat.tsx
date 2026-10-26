@@ -1,17 +1,18 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { View, Text, ScrollView, Pressable, ActivityIndicator, Modal, Platform, TouchableOpacity, Alert, StyleSheet, TextInput, useWindowDimensions } from "react-native";
+import { View, Text, ScrollView, Pressable, ActivityIndicator, Platform, TouchableOpacity, Alert, StyleSheet, TextInput, useWindowDimensions } from "react-native";
 import { useFocusEffect, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import * as Crypto from "expo-crypto";
 import api, { isSubscriptionRequiredError, subscriptionRequiredRoute, purchaseNoorPack, updateUserVocabularyWord } from "@services/api";
+import { BottomSheetModal } from "@components/BottomSheetModal";
 import { BrandButton } from "@components/BrandButton";
 import { ArabicText } from "@components/ArabicText";
 import { PlayButton } from "@components/PlayButton";
 import { StatusBarBacking } from "@components/StatusBarBacking";
 import { useT } from "@i18n/index";
 import { useAuthStore } from "@stores/authStore";
-import { Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette, WarshAlpha, desktopFontSize, desktopLineHeight } from "../../../constants/theme";
+import { Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette, desktopFontSize, desktopLineHeight } from "../../../constants/theme";
 import { trackNoorMessageSent } from "@services/analytics";
 import { useTranslationLanguage } from "@services/language";
 import {
@@ -567,26 +568,12 @@ export default function ChatScreen() {
       {desktopWeb ? null : <StatusBarBacking />}
 
       {/* N2 — Overage Modal */}
-      <Modal
+      <BottomSheetModal
         visible={showOverageModal}
-        transparent
-        statusBarTranslucent
-        navigationBarTranslucent
-        animationType="slide"
-        onRequestClose={() => setShowOverageModal(false)}
+        onClose={() => setShowOverageModal(false)}
+        sheetStyle={[styles.modalCard, { paddingBottom: Spacing.xxl + insets.bottom }]}
       >
-        {/* Backdrop — tap to dismiss */}
-        <TouchableOpacity
-          style={styles.modalBackdrop}
-          activeOpacity={1}
-          onPress={() => setShowOverageModal(false)}
-        >
-          {/* Bottom-anchored card — block tap propagation so the card itself doesn't dismiss */}
-          <TouchableOpacity
-            activeOpacity={1}
-            style={[styles.modalCard, { paddingBottom: Spacing.xxl + insets.bottom }]}
-            onPress={() => {}}
-          >
+        <View style={styles.modalContent}>
             <View style={styles.handleBar} />
             <View style={styles.modalIcon}>
               <Ionicons name="chatbubbles-outline" size={28} color={WarshPalette.goldText} />
@@ -618,9 +605,8 @@ export default function ChatScreen() {
             >
               <Text style={styles.dismissText}>{t("chat.packLater")}</Text>
             </TouchableOpacity>
-          </TouchableOpacity>
-        </TouchableOpacity>
-      </Modal>
+        </View>
+      </BottomSheetModal>
     </View>
   );
 }
@@ -913,11 +899,6 @@ const styles = StyleSheet.create({
   },
   sendButtonIdle: { opacity: 0.55 },
   sendButtonPressed: { backgroundColor: WarshPalette.navyDeep },
-  modalBackdrop: {
-    flex: 1,
-    backgroundColor: WarshAlpha.scrim,
-    justifyContent: "flex-end",
-  },
   modalCard: {
     backgroundColor: WarshPalette.parchmentBg,
     borderTopLeftRadius: Radii.xl,
@@ -925,6 +906,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.xl,
     paddingTop: Spacing.md,
     paddingBottom: Spacing.xxl,
+  },
+  modalContent: {
     alignItems: "center",
   },
   handleBar: {

@@ -1,9 +1,7 @@
 import { useCallback, useRef, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
-  Modal,
   Platform,
-  Pressable,
   ScrollView,
   StyleSheet,
   Text,
@@ -22,6 +20,7 @@ import { getTadabbur, getTadabburSurah, isSubscriptionRequiredError, subscriptio
 import { pickLocalized, useTranslationLanguage } from "@services/language";
 import { getEveryAyahAudioUrl } from "@services/quranAudio";
 import { ScreenHeader } from "@components/ScreenHeader";
+import { BottomSheetModal } from "@components/BottomSheetModal";
 import { BrandButton } from "@components/BrandButton";
 import { useT } from "@i18n/index";
 
@@ -129,9 +128,13 @@ function WordSheet({
   const t = useT();
   const known = word?.state === "gold" || word?.state === "ink";
   return (
-    <Modal statusBarTranslucent navigationBarTranslucent visible={visible} transparent animationType="slide" onRequestClose={onDismiss}>
-      <Pressable style={styles.sheetOverlay} onPress={onDismiss}>
-        <View style={[styles.sheetContainer, { paddingBottom: Spacing.xl * 2 + insets.bottom }]}>
+    <BottomSheetModal
+      visible={visible}
+      onClose={onDismiss}
+      scrimStyle={styles.sheetScrim}
+      sheetStyle={[styles.sheetContainer, { paddingBottom: Spacing.xl * 2 + insets.bottom }]}
+    >
+      <View>
           <View style={styles.sheetHandle} />
           {word ? (
             <>
@@ -167,9 +170,8 @@ function WordSheet({
               </TouchableOpacity>
             </>
           ) : null}
-        </View>
-      </Pressable>
-    </Modal>
+      </View>
+    </BottomSheetModal>
   );
 }
 
@@ -473,7 +475,7 @@ const styles = StyleSheet.create({
   footer: { textAlign: "center", color: WarshPalette.subtleBrown, fontFamily: Fonts.regular, fontSize: FontSizes.caption, fontStyle: "italic", marginTop: Spacing.lg },
 
   // Word sheet
-  sheetOverlay: { flex: 1, justifyContent: "flex-end", backgroundColor: WarshAlpha.sheetScrim },
+  sheetScrim: { backgroundColor: WarshAlpha.sheetScrim },
   sheetContainer: {
     backgroundColor: WarshPalette.creamBg, borderTopLeftRadius: Radii.xl, borderTopRightRadius: Radii.xl,
     paddingHorizontal: Spacing.gutter, paddingTop: Spacing.md, paddingBottom: Spacing.xl * 2,

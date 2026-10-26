@@ -1,12 +1,13 @@
 import { Ionicons } from "@expo/vector-icons";
 import { useEffect, useState, type ReactNode } from "react";
-import { Modal, Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { useT } from "@i18n/index";
 import type { AppLanguage } from "@services/language";
+import { BottomSheetModal } from "./BottomSheetModal";
 import { BrandButton } from "./BrandButton";
-import { Fonts, FontSizes, Radii, Spacing, WarshAlpha, WarshPalette } from "../constants/theme";
+import { Fonts, FontSizes, Radii, Spacing, WarshPalette } from "../constants/theme";
 
 export type LanguageChoice = { value: AppLanguage; title: string; subtitle: string };
 
@@ -53,22 +54,14 @@ export function LanguageChoiceSheet({
   }, [visible, current]);
 
   return (
-    <Modal
+    <BottomSheetModal
       visible={visible}
-      transparent
-      statusBarTranslucent
-      navigationBarTranslucent
-      animationType="slide"
-      onRequestClose={onClose}
+      onClose={() => !saving && onClose()}
+      dismissible={!saving}
+      closeLabel={t("common.close")}
+      sheetStyle={[styles.sheet, { paddingBottom: Math.max(insets.bottom, 16) + Spacing.xl }]}
     >
-      <View style={styles.backdrop}>
-        <Pressable
-          style={styles.scrim}
-          onPress={() => !saving && onClose()}
-          accessibilityRole="button"
-          accessibilityLabel={t("common.close")}
-        />
-        <View style={[styles.sheet, { paddingBottom: Math.max(insets.bottom, 16) + Spacing.xl }]}>
+      <View>
           <View style={styles.handle} />
           <View style={styles.header}>
             <Text style={styles.title} accessibilityRole="header">{title}</Text>
@@ -120,15 +113,12 @@ export function LanguageChoiceSheet({
             loading={saving}
             style={styles.cta}
           />
-        </View>
       </View>
-    </Modal>
+    </BottomSheetModal>
   );
 }
 
 const styles = StyleSheet.create({
-  backdrop: { flex: 1, justifyContent: "flex-end" },
-  scrim: { ...StyleSheet.absoluteFillObject, backgroundColor: WarshAlpha.scrim },
   sheet: {
     paddingHorizontal: Spacing.gutter,
     paddingTop: Spacing.md,

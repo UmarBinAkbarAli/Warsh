@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import {
   ActivityIndicator,
-  Modal,
   Platform,
   Pressable,
   ScrollView,
@@ -12,12 +11,13 @@ import {
   View,
 } from "react-native";
 import { useFocusEffect, useLocalSearchParams, useRouter } from "expo-router";
-import { SafeAreaProvider, useSafeAreaInsets } from "react-native-safe-area-context";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import api from "@services/api";
 import { ArabicText } from "@components/ArabicText";
 import { ScreenHeader } from "@components/ScreenHeader";
 import { StatusBarBacking } from "@components/StatusBarBacking";
+import { BottomSheetModal } from "@components/BottomSheetModal";
 import { BrandButton } from "@components/BrandButton";
 import { useLanguage, useTranslationLanguage, pickLocalized } from "@services/language";
 import { lessonsWithCheckpoint } from "@services/lessonCheckpoint";
@@ -127,7 +127,7 @@ function StatusBadge({ label, compact = false }: { label: string; compact?: bool
 // beneath it.
 function SheetSurface({ children }: { children: React.ReactNode }) {
   const insets = useSafeAreaInsets();
-  return <View style={[styles.sheetContainer, { paddingBottom: insets.bottom + Spacing.xl }]}>{children}</View>;
+  return <View style={{ paddingBottom: insets.bottom + Spacing.xl }}>{children}</View>;
 }
 
 function LessonPreviewSheet({
@@ -153,9 +153,13 @@ function LessonPreviewSheet({
     lesson.isCompleted || skipped ? t("chapter.reviewLesson") : t("chapter.startLesson");
 
   return (
-    <Modal statusBarTranslucent navigationBarTranslucent visible={visible} transparent animationType="slide" onRequestClose={onDismiss}>
-      <SafeAreaProvider style={styles.sheetProvider}>
-      <Pressable style={styles.sheetOverlay} onPress={onDismiss}>
+    <BottomSheetModal
+      visible={visible}
+      onClose={onDismiss}
+      ownSafeArea
+      scrimStyle={styles.sheetScrim}
+      sheetStyle={styles.sheetContainer}
+    >
         <SheetSurface>
           <View style={styles.sheetHandle} />
 
@@ -195,9 +199,7 @@ function LessonPreviewSheet({
             <Text style={styles.sheetCancelText}>{t("chapter.cancel")}</Text>
           </TouchableOpacity>
         </SheetSurface>
-      </Pressable>
-      </SafeAreaProvider>
-    </Modal>
+    </BottomSheetModal>
   );
 }
 
@@ -878,8 +880,7 @@ const styles = StyleSheet.create({
   chapterTestTextLocked: { color: WarshPalette.disabledText },
 
   // Bottom sheet
-  sheetProvider: { flex: 1 },
-  sheetOverlay: { flex: 1, justifyContent: "flex-end", backgroundColor: WarshAlpha.sheetScrim },
+  sheetScrim: { backgroundColor: WarshAlpha.sheetScrim },
   sheetContainer: {
     backgroundColor: WarshPalette.white,
     borderTopLeftRadius: 24,

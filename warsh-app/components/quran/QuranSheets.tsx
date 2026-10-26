@@ -1,10 +1,11 @@
 import { Ionicons } from "@expo/vector-icons";
 import { useState, type ReactNode } from "react";
-import { Modal, Pressable, ScrollView, StyleSheet, Switch, Text, useWindowDimensions, View } from "react-native";
+import { Pressable, StyleSheet, Switch, Text, useWindowDimensions, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { useT } from "@i18n/index";
 import { useQuranStore } from "@stores/quranStore";
+import { BottomSheetModal, SheetScrollView } from "../BottomSheetModal";
 import { Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
 import { hasTajweed, isIndoPak, segmentsOf, wordText, type MushafLayout, type QuranWord } from "../../services/quran/data";
 import { TAJWEED_LEGEND, TAJWEED_RULES, rulesInWord } from "../../services/quran/tajweed";
@@ -15,33 +16,23 @@ function BottomSheet({ visible, onClose, children }: { visible: boolean; onClose
   const insets = useSafeAreaInsets();
   const { height } = useWindowDimensions();
   return (
-    <Modal
+    // The cap is in pixels: with a flex: 1 scrim above a percentage maxHeight,
+    // the Android Quran tab dimmed the screen and showed no sheet. Gesture-nav
+    // insets can read 0 inside a translucent modal on some Android builds,
+    // which left the last option under the home indicator (finding M14); keep
+    // at least a gesture bar's worth of room.
+    <BottomSheetModal
       visible={visible}
-      transparent
-      statusBarTranslucent
-      navigationBarTranslucent
-      animationType="slide"
-      onRequestClose={onClose}
+      onClose={onClose}
+      scrimStyle={styles.scrim}
+      sheetStyle={[
+        styles.sheet,
+        { maxHeight: Math.round(height * 0.85), paddingBottom: Math.max(insets.bottom, 24) + Spacing.xl },
+      ]}
     >
-      {/* The backdrop holds the sheet at the bottom and the cap is in pixels:
-          with a flex: 1 scrim above a percentage maxHeight, the Android Quran
-          tab dimmed the screen and showed no sheet. */}
-      <View style={styles.backdrop}>
-        <Pressable style={styles.scrim} onPress={onClose} accessibilityRole="button" />
-        {/* Gesture-nav insets can read 0 inside a translucent modal on some
-            Android builds, which left the last option under the home indicator
-            (finding M14); keep at least a gesture bar's worth of room. */}
-        <View
-          style={[
-            styles.sheet,
-            { maxHeight: Math.round(height * 0.85), paddingBottom: Math.max(insets.bottom, 24) + Spacing.xl },
-          ]}
-        >
-          <View style={styles.handle} />
-          {children}
-        </View>
-      </View>
-    </Modal>
+      <View style={styles.handle} />
+      {children}
+    </BottomSheetModal>
   );
 }
 
@@ -79,7 +70,7 @@ export function QuranSettingsSheet({ visible, onClose }: { visible: boolean; onC
         </Pressable>
       </View>
 
-      <ScrollView style={styles.sheetScroll} showsVerticalScrollIndicator={false} contentContainerStyle={styles.sheetBody}>
+      <SheetScrollView style={styles.sheetScroll} showsVerticalScrollIndicator={false} contentContainerStyle={styles.sheetBody}>
         <Text style={styles.label}>{t("quran.settings.layout")}</Text>
         {LAYOUTS.map(({ key, titleKey, subKey, layout }) => {
           const selected = layout === current;
@@ -171,7 +162,7 @@ export function QuranSettingsSheet({ visible, onClose }: { visible: boolean; onC
           <Ionicons name={aboutOpen ? "chevron-down" : "chevron-forward"} size={18} color={WarshPalette.navy} />
         </Pressable>
         {aboutOpen ? <Text style={styles.sources}>{t("quran.settings.sources")}</Text> : null}
-      </ScrollView>
+      </SheetScrollView>
     </BottomSheet>
   );
 }
@@ -224,7 +215,7 @@ export function TajweedRuleSheet({
   return (
     <BottomSheet visible={word !== null} onClose={onClose}>
       {word ? (
-        <ScrollView style={styles.sheetScroll} showsVerticalScrollIndicator={false} contentContainerStyle={styles.sheetBody}>
+        <SheetScrollView style={styles.sheetScroll} showsVerticalScrollIndicator={false} contentContainerStyle={styles.sheetBody}>
           <View style={styles.wordRow}>
             <Text style={[styles.wordArabic, isIndoPak(layout) && styles.wordIndoPak]}>
               {segments
@@ -255,7 +246,7 @@ export function TajweedRuleSheet({
           <Pressable onPress={onClose} style={styles.closeButton} accessibilityRole="button">
             <Text style={styles.aboutText}>{t("common.close")}</Text>
           </Pressable>
-        </ScrollView>
+        </SheetScrollView>
       ) : null}
     </BottomSheet>
   );
@@ -276,12 +267,7 @@ export function TajweedLegend({ inline = false }: { inline?: boolean } = {}) {
 }
 
 const styles = StyleSheet.create({
-  backdrop: {
-    flex: 1,
-    justifyContent: "flex-end",
-  },
   scrim: {
-    ...StyleSheet.absoluteFillObject,
     backgroundColor: Colors.overlay,
   },
   sheet: {
