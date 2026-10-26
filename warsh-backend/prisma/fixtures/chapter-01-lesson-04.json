@@ -62,33 +62,32 @@
       "id": "ch01-l04-ex01",
       "type": "TAP_TRANSLATION",
       "prompt": {
-        "ar": "هَذِهِ",
-        "en": "this (f, near)",
-        "ur": "یہ (f، قریب)",
-        "ar_plain": "هذه",
-        "translit": "hādhihi"
+        "ar": "مَدْرَسَة",
+        "en": "school",
+        "ur": "مدرسہ",
+        "ar_plain": "مدرسة",
+        "translit": "madrasa"
       },
       "options": [
         {
-          "en": "that (f)",
-          "ur": "وہ (مؤنث)"
+          "en": "school",
+          "ur": "مدرسہ"
         },
         {
-          "en": "that (m)",
-          "ur": "وہ (مذکر)"
+          "en": "garden",
+          "ur": "باغ"
         },
         {
-          "en": "this (m)",
-          "ur": "یہ (مذکر)"
+          "en": "tree",
+          "ur": "درخت"
         },
         {
-          "en": "this (f)",
-          "ur": "یہ (مؤنث)"
+          "en": "direction of prayer",
+          "ur": "قبلہ"
         }
       ],
       "xp_value": 5,
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/hadhihi.mp3",
-      "correct_index": 3
+      "correct_index": 0
     },
     {
       "id": "ch01-l04-ex02",
@@ -125,8 +124,8 @@
     {
       "id": "ch01-l04-ex03",
       "hint": {
-        "en": "This is a house. (بَيْت is masculine — near you)",
-        "ur": "یہ ایک گھر ہے۔ (بَيْت مذکر ہے — قریب)"
+        "en": "That is the direction of prayer. (قِبْلَة ends in ة and is far.)",
+        "ur": "وہ قبلہ ہے۔ (قِبْلَة ة پر ختم ہے اور دور ہے۔)"
       },
       "mode": "TAP",
       "type": "FILL_BLANK",
@@ -161,17 +160,17 @@
         }
       ],
       "xp_value": 5,
-      "sentence_ar": "___ بَيْتٌ",
+      "sentence_ar": "___ قِبْلَةٌ",
       "correct_answer": {
-        "ar": "هَذَا",
-        "en": "this (m)",
-        "ur": "یہ (م)",
-        "ar_plain": "هذا",
-        "translit": "hādhā"
+        "ar": "تِلْكَ",
+        "en": "that (f)",
+        "ur": "وہ (f)",
+        "ar_plain": "تلك",
+        "translit": "tilka"
       },
       "explanation_on_wrong": {
-        "en": "بَيْتٌ (house) is masculine — it does not end in ة. Masculine near → هَذَا.",
-        "ur": "بَيْتٌ مذکر ہے — ة پر ختم نہیں ہوتا۔ قریب مذکر → هَذا۔"
+        "en": "قِبْلَة ends in ة → feminine. Far → تِلْكَ.",
+        "ur": "قِبْلَة ة پر ختم ہوتا ہے → مؤنث۔ دور → تِلْكَ۔"
       }
     },
     {
@@ -347,82 +346,71 @@
       "xp_value": 5,
       "left_column": [
         {
-          "ar": "هَذَا",
-          "en": "this (m)",
-          "ur": "یہ (م)",
-          "ar_plain": "هذا",
-          "translit": "hādhā"
+          "ar": "تِلْكَ مَدْرَسَةٌ",
+          "en": "that is a school",
+          "ur": "وہ مدرسہ ہے",
+          "ar_plain": "تلك مدرسة",
+          "translit": "tilka madrasatun"
         },
         {
-          "ar": "هَذِهِ",
-          "en": "this (f)",
-          "ur": "یہ (f)",
-          "ar_plain": "هذه",
-          "translit": "hādhihi"
+          "ar": "تِلْكَ شَجَرَةٌ",
+          "en": "that is a tree",
+          "ur": "وہ درخت ہے",
+          "ar_plain": "تلك شجرة",
+          "translit": "tilka shajaratun"
         },
         {
-          "ar": "ذٰلِكَ",
-          "en": "that (m)",
-          "ur": "وہ (م)",
-          "ar_plain": "ذلك",
-          "translit": "dhālika"
+          "ar": "تِلْكَ جَنَّةٌ",
+          "en": "that is a garden",
+          "ur": "وہ باغ ہے",
+          "ar_plain": "تلك جنة",
+          "translit": "tilka jannatun"
         },
         {
-          "ar": "تِلْكَ",
-          "en": "that (f)",
-          "ur": "وہ (f)",
-          "ar_plain": "تلك",
-          "translit": "tilka"
+          "ar": "تِلْكَ قِبْلَةٌ",
+          "en": "that is the qibla",
+          "ur": "وہ قبلہ ہے",
+          "ar_plain": "تلك قبلة",
+          "translit": "tilka qiblatun"
         },
         {
-          "ar": "جَنَّة",
-          "en": "garden; Paradise",
-          "ur": "باغ؛ جنت",
-          "ar_plain": "جنة",
-          "translit": "janna"
-        },
-        {
-          "ar": "قِبْلَة",
-          "en": "direction of prayer",
-          "ur": "قبلہ",
-          "ar_plain": "قبلة",
-          "translit": "qibla"
+          "ar": "تِلْكَ الدَّارُ",
+          "en": "that home",
+          "ur": "وہ گھر",
+          "ar_plain": "تلك الدار",
+          "translit": "tilka d-dāru"
         }
       ],
       "right_column": [
         {
-          "en": "that (m)",
-          "ur": "وہ (مذکر)"
+          "en": "that is a garden",
+          "ur": "وہ باغ ہے"
         },
         {
-          "en": "direction of prayer",
-          "ur": "قبلہ"
+          "en": "that home",
+          "ur": "وہ گھر"
         },
         {
-          "en": "this (f)",
-          "ur": "یہ (مؤنث)"
+          "en": "that is a school",
+          "ur": "وہ مدرسہ ہے"
         },
         {
-          "en": "that (f)",
-          "ur": "وہ (مؤنث)"
+          "en": "that is the qibla",
+          "ur": "وہ قبلہ ہے"
         },
         {
-          "en": "garden; Paradise",
-          "ur": "باغ؛ جنت"
-        },
-        {
-          "en": "this (m)",
-          "ur": "یہ (مذکر)"
+          "en": "that is a tree",
+          "ur": "وہ درخت ہے"
         }
       ],
       "correct_pairs": [
         [
           0,
-          5
+          2
         ],
         [
           1,
-          2
+          4
         ],
         [
           2,
@@ -434,10 +422,6 @@
         ],
         [
           4,
-          4
-        ],
-        [
-          5,
           1
         ]
       ]
