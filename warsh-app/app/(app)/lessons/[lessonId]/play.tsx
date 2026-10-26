@@ -11,7 +11,7 @@ import { PlayButton } from "@components/PlayButton";
 import { ShadowRepeatExercise } from "@components/ShadowRepeatExercise";
 import { StreakWeekRow } from "@components/StreakWeekRow";
 import { getConversationLab, LabCanDoCard, LabIntroScreen, LabListenAndPhrases, LabSpeakAndMission } from "@components/ConversationLab";
-import { Animation, Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette, desktopFontSize, desktopLineHeight } from "../../../../constants/theme";
+import { Animation, Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshAlpha, WarshPalette, desktopFontSize, desktopLineHeight } from "../../../../constants/theme";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { CHECKPOINT_MAX_BEAT, CHECKPOINT_MIN_BEAT, lessonCheckpointKey } from "@services/lessonCheckpoint";
 import { cancelTodayReminders, fireMilestoneNotification } from "@services/notifications";
@@ -48,6 +48,7 @@ type CompletionResult = {
   totalXp: number;
   currentStreak: number;
   streakCelebration: boolean;
+  lessonsCompletedToday?: number;
   newAchievements: { key: string; title: string; titleAr?: string; xpReward: number }[];
   dailyGoalMet: boolean;
 };
@@ -583,6 +584,7 @@ export default function LessonPlayScreen() {
   const [submitting, setSubmitting] = useState(false);
   const [completionResult, setCompletionResult] = useState<CompletionResult | null>(null);
   const [failResult, setFailResult] = useState<FailResult | null>(null);
+  const [closeStep, setCloseStep] = useState(0);
   const [showExitConfirm, setShowExitConfirm] = useState(false);
   const [matchActive, setMatchActive] = useState<{ side: "left" | "right"; value: string } | null>(null);
   // The feedback panel floats over the bottom of the exercise; scrolling
@@ -742,6 +744,7 @@ export default function LessonPlayScreen() {
           totalXp: data.totalXp,
           currentStreak: data.currentStreak,
           streakCelebration: Boolean(data.streakCelebration),
+          lessonsCompletedToday: typeof data.lessonsCompletedToday === "number" ? data.lessonsCompletedToday : undefined,
           newAchievements: achievements,
           dailyGoalMet,
         });
@@ -829,6 +832,16 @@ export default function LessonPlayScreen() {
       }),
     [swipeX, windowWidth],
   );
+
+  // Hardware back inside the lesson-complete steps returns to the previous step.
+  useEffect(() => {
+    if (Platform.OS !== "android" || currentBeat !== 5 || closeStep === 0) return;
+    const sub = BackHandler.addEventListener("hardwareBackPress", () => {
+      setCloseStep((step) => Math.max(0, step - 1));
+      return true;
+    });
+    return () => sub.remove();
+  }, [currentBeat, closeStep]);
 
   // Hardware back on Discover and Practice must agree with the close button —
   // otherwise one exits silently and the other asks.
@@ -1953,118 +1966,261 @@ export default function LessonPlayScreen() {
     );
   }
 
-  function renderClose() {
-    const chapterBonus = completionResult?.chapterBonusXp ?? 0;
-    // ?? not ||: a server-reported 0 (replay, or a lesson skipped by placement)
-    // must not fall through to the lesson's nominal reward and show "+10".
-    const earnedPoints = (completionResult?.xpEarned ?? lesson?.xpReward ?? 10) + chapterBonus;
-    const streak = completionResult?.currentStreak ?? 1;
+  // The finished lesson is told in short steps: celebrate, then the ayah the
+  // learner can now read, then the streak — but only for the first lesson of
+  // the streak day (`streakCelebration`). Later lessons that day skip the
+  // streak step; the celebrate step shows "N lessons today" instead.
+  function closeSteps(): Array<"celebrate" | "quran" | "streak"> {
+    const reveal = c.reveal as Record<string, any> | undefined;
+    const hasAyah = Boolean((reveal?.ayah as Record<string, any> | undefined)?.ar);
+    const steps: Array<"celebrate" | "quran" | "streak"> = ["celebrate"];
+    if (!lab && hasAyah) steps.push("quran");
+    if (completionResult?.streakCelebration) steps.push("streak");
+    return steps;
+  }
+
+  async function finishClose() {
     const shouldShowStreakCelebration = Boolean(completionResult?.streakCelebration);
+    const achievements = completionResult?.newAchievements ?? [];
+    if (achievements.length > 0) {
+      const nextRoute = shouldShowStreakCelebration ? "commitment" : "tabs";
+      router.push({ pathname: "/(app)/milestone-celebration", params: { achievements: JSON.stringify(achievements), nextRoute } });
+    } else if (shouldShowStreakCelebration && await shouldOfferCommitmentPrompt(userId)) {
+      router.push({ pathname: "/(app)/streak-commitment", params: { source: "celebration" } });
+    } else {
+      router.replace("/(app)/(tabs)");
+    }
+  }
+
+  function renderStepDots(index: number, total: number) {
+    if (total < 2) return null;
+    return (
+      <View style={styles.stepDots} accessible accessibilityLabel={t("player.stepOf", { step: index + 1, total })}>
+        {Array.from({ length: total }, (_, i) => (
+          <View
+            key={i}
+            style={[styles.stepDot, i < index ? styles.stepDotDone : null, i === index ? styles.stepDotCurrent : null]}
+          />
+        ))}
+      </View>
+    );
+  }
+
+  function noorMessage(): string {
     const isSpoken = lesson?.template === "SPOKEN_PHRASES";
     const phrasesLearned = phrasesCompletedRef.current;
     const spokenPhraseCount = phrasesLearned > 0 ? phrasesLearned : 1;
-    const wordsLearned = discoverCards.filter((card) => card.type === "WORD").length;
-    const practiceCount = isSpoken ? spokenPhraseCount : exercises.length;
-
     const closeBlock = c.close as Record<string, any> | undefined;
-    const noorTip = isSpoken && !lab
+    return isSpoken && !lab
       ? t("player.closeSpokenTip", {
           count: spokenPhraseCount,
           suffix: spokenPhraseCount !== 1 ? "s" : "",
         })
       : localizedText(closeBlock?.noor_message, language) ?? t("player.closeDefaultTip");
+  }
+
+  function renderNoorBubble() {
+    return (
+      <View style={styles.noorBubbleRow}>
+        <View style={styles.noorAvatar}>
+          <ArabicText size="sm" style={styles.noorAvatarText}>ن</ArabicText>
+        </View>
+        <View style={styles.noorBubble}>
+          <Text style={styles.noorLabel}>{t("profile.noor")}</Text>
+          <Text style={styles.noorTip}>{withDirectionMark(noorMessage(), language)}</Text>
+        </View>
+      </View>
+    );
+  }
+
+  function renderCloseCelebrate(index: number, total: number) {
+    const chapterBonus = completionResult?.chapterBonusXp ?? 0;
+    // ?? not ||: a server-reported 0 (replay, or a lesson skipped by placement)
+    // must not fall through to the lesson's nominal reward and show "+10".
+    const earnedPoints = (completionResult?.xpEarned ?? lesson?.xpReward ?? 10) + chapterBonus;
+    const streak = completionResult?.currentStreak ?? 1;
+    const isSpoken = lesson?.template === "SPOKEN_PHRASES";
+    const phrasesLearned = phrasesCompletedRef.current;
+    const spokenPhraseCount = phrasesLearned > 0 ? phrasesLearned : 1;
+    const wordsLearned = discoverCards.filter((card) => card.type === "WORD").length;
+    const practiceCount = isSpoken ? spokenPhraseCount : exercises.length;
+    const lessonsToday = completionResult?.lessonsCompletedToday ?? 0;
+    // The streak was already celebrated on today's first lesson, so a later
+    // lesson shows how many lessons today instead.
+    const showLessonsToday = Boolean(completionResult) && !completionResult?.streakCelebration && lessonsToday >= 2;
+    const hasQuranStep = closeSteps().includes("quran");
+
+    return (
+      <ScrollView
+        style={styles.closeScroll}
+        contentContainerStyle={styles.stepScrollContent}
+        showsVerticalScrollIndicator={false}
+      >
+        {renderStepDots(index, total)}
+        {error ? <Text style={styles.errorText}>{error}</Text> : null}
+
+        <View style={styles.celebrateCard}>
+          <View style={styles.completionCornerTop} />
+          <View style={styles.completionCornerBottom} />
+          <View style={styles.celebrateRingOuter}>
+            <View style={styles.celebrateRingInner}>
+              <Ionicons name="checkmark" size={44} color={WarshPalette.parchment} />
+            </View>
+          </View>
+          <Text style={styles.celebrateTitle} accessibilityRole="header">
+            {lab ? t("lab.completeTitle") : t("player.lessonComplete")}
+          </Text>
+          <ArabicText size="md" style={styles.celebrateArabic}>بَارَكَ اللَّهُ فِيكَ</ArabicText>
+          <Text style={styles.celebrateArabicMeaning}>{t("player.blessingMeaning")}</Text>
+
+          {/* Without a server result these would be guesses (+10, 1 day). */}
+          {!error && completionResult ? (
+            <View style={styles.celebrateMetrics}>
+              <View style={styles.celebrateMetric}>
+                <Text style={styles.celebrateMetricValue}>+{earnedPoints}</Text>
+                <Text style={styles.celebrateMetricLabel}>{t("player.completionPoints")}</Text>
+              </View>
+              <View style={styles.celebrateMetric}>
+                <Text style={styles.celebrateMetricValue}>{wordsLearned > 0 ? wordsLearned : practiceCount}</Text>
+                <Text style={styles.celebrateMetricLabel}>
+                  {wordsLearned > 0 ? t("player.completionWords") : t("player.completionPractice")}
+                </Text>
+              </View>
+              <View style={styles.celebrateMetric}>
+                <Text style={styles.celebrateMetricValue}>{showLessonsToday ? lessonsToday : streak}</Text>
+                <Text style={styles.celebrateMetricLabel}>
+                  {showLessonsToday ? t("player.completionLessonsToday") : t("player.completionStreak")}
+                </Text>
+              </View>
+            </View>
+          ) : null}
+
+          {completionResult?.chapterJustCompleted ? (
+            <Text style={styles.chapterUnlockedBadge}>{t("player.nextChapterUnlocked")}</Text>
+          ) : null}
+          {completionResult && !completionResult.streakCelebration ? (
+            <View style={styles.streakSafeRow}>
+              <Ionicons name="flame-outline" size={14} color={WarshPalette.gold} />
+              <Text style={styles.streakSafeText}>{t("player.streakAlreadySafe")}</Text>
+            </View>
+          ) : null}
+        </View>
+
+        {lab ? <LabCanDoCard content={c} language={language} /> : null}
+        {isSpoken && !lab && phrasesLearned > 0 ? (
+          <Text style={styles.spPhrasesEarned}>
+            {t("player.phrasesToSay", { count: phrasesLearned, suffix: phrasesLearned !== 1 ? "s" : "" })}
+          </Text>
+        ) : null}
+        {/* Noor's recap lives on the Quran step when there is one. */}
+        {!hasQuranStep ? renderNoorBubble() : null}
+      </ScrollView>
+    );
+  }
+
+  function renderCloseQuran(index: number, total: number) {
+    const reveal = c.reveal as Record<string, any> | undefined;
+    const ayah = reveal?.ayah as Record<string, any> | undefined;
+    const hook = c.hook as Record<string, any> | undefined;
+    const hookAyah = hook?.ayah as Record<string, any> | undefined;
+    const ayahAr = (ayah?.ar as string | undefined) ?? "";
+    const indices = (reveal?.highlighted_word_indices as number[] | undefined) ?? [];
+    const ayahAudioUrl = (ayah?.audio_url ?? hookAyah?.audio_url) as string | undefined;
+    const ayahMeaning = localizedText(ayah, language);
+
+    return (
+      <ScrollView
+        style={styles.closeScroll}
+        contentContainerStyle={styles.stepScrollContent}
+        showsVerticalScrollIndicator={false}
+      >
+        {renderStepDots(index, total)}
+        <Text style={styles.stepTitle} accessibilityRole="header">{t("player.readThisNow")}</Text>
+        {indices.length > 0 ? <Text style={styles.stepSubtitle}>{t("player.goldWordsNote")}</Text> : null}
+
+        <View style={styles.stepAyahCard}>
+          {renderRevealAyah()}
+          {ayahMeaning ? (
+            <Text style={[styles.stepAyahMeaning, language === "ur" ? styles.stepAyahMeaningUrdu : null]}>
+              {withDirectionMark(ayahMeaning, language)}
+            </Text>
+          ) : null}
+          {ayah?.label ? <Text style={styles.ayahRef}>{ayah.label as string}</Text> : null}
+          {ayahAudioUrl ? (
+            <View style={styles.revealPlayRow}>
+              <PlayButton
+                text={ayahAr}
+                cacheKey={`reveal-${ayah?.label ?? lessonId}`}
+                category="lessons"
+                audioUrl={ayahAudioUrl}
+                size={22}
+              />
+              <Text style={styles.revealListenLabel}>{t("player.listenToAyah")}</Text>
+            </View>
+          ) : null}
+        </View>
+
+        {renderNoorBubble()}
+      </ScrollView>
+    );
+  }
+
+  function renderCloseStreak(index: number, total: number) {
+    const streak = completionResult?.currentStreak ?? 1;
+    return (
+      <ScrollView
+        style={styles.closeScroll}
+        contentContainerStyle={styles.stepScrollContent}
+        showsVerticalScrollIndicator={false}
+      >
+        {renderStepDots(index, total)}
+        <View style={styles.streakStepBody}>
+          <View style={styles.streakFlameCircle}>
+            <Ionicons name="flame-outline" size={56} color={WarshPalette.gold} />
+          </View>
+          <Text style={styles.streakStepNumber}>{streak}</Text>
+          <Text style={styles.streakStepLabel} accessibilityRole="header">{t("player.completionStreak")}</Text>
+          <Text style={styles.streakStepText}>{t("player.streakStepBody", { next: streak + 1 })}</Text>
+
+          <View style={styles.streakStepWeek}>
+            <StreakWeekRow streak={streak} lastActiveDate={new Date()} showUpcoming />
+          </View>
+          <View style={styles.streakLegend}>
+            <View style={styles.streakLegendItem}>
+              <View style={styles.streakLegendDone} />
+              <Text style={styles.streakLegendText}>{t("player.streakLegendDone")}</Text>
+            </View>
+            <View style={styles.streakLegendItem}>
+              <View style={styles.streakLegendUpcoming} />
+              <Text style={styles.streakLegendText}>{t("player.streakLegendUpcoming")}</Text>
+            </View>
+          </View>
+          {streak < 7 ? <Text style={styles.streakFreezeHint}>{t("player.streakFreezeHint")}</Text> : null}
+        </View>
+      </ScrollView>
+    );
+  }
+
+  function renderClose() {
+    const steps = closeSteps();
+    const index = Math.min(closeStep, steps.length - 1);
+    const step = steps[index];
+    const isLast = index === steps.length - 1;
+    const hasFollowUp = (completionResult?.newAchievements?.length ?? 0) > 0 || Boolean(completionResult?.streakCelebration);
+    const title = !isLast
+      ? (step === "celebrate" && steps[index + 1] === "quran" ? t("player.seeItInQuran") : t("common.continue"))
+      : (hasFollowUp || error ? t("common.continue") : t("player.backToLearn"));
 
     return (
       <View style={[styles.fullScreen, screenPadding, styles.closeScreen]}>
-        <ScrollView
-          style={styles.closeScroll}
-          contentContainerStyle={styles.closeScrollContent}
-          showsVerticalScrollIndicator={false}
-        >
-          {error ? <Text style={styles.errorText}>{error}</Text> : null}
-
-          <View style={styles.completionHero}>
-            <View style={styles.completionCornerTop} />
-            <View style={styles.completionCornerBottom} />
-            <Text style={styles.completionKicker}>{t("player.lessonCompleteKicker")}</Text>
-            <View style={styles.noorMonogram}>
-              <Ionicons name="checkmark" size={28} color={WarshPalette.parchment} />
-            </View>
-            <Text style={styles.completeCardTitle}>{lab ? t("lab.completeTitle") : t("player.lessonComplete")}</Text>
-            <ArabicText size="md" style={styles.closeArabic}>بَارَكَ اللَّهُ فِيكَ</ArabicText>
-          </View>
-
-          {/* Without a server result these would be guesses (+10, 1 day). */}
-          {!error ? <View style={styles.completionResultsCard}>
-            <View style={styles.completionMetric}>
-              <Text style={styles.completionMetricValue}>+{earnedPoints}</Text>
-              <Text style={styles.completionMetricLabel}>{t("player.completionPoints")}</Text>
-            </View>
-            <View style={styles.completionMetricDivider} />
-            <View style={styles.completionMetric}>
-              <Text style={styles.completionMetricValue}>{wordsLearned > 0 ? wordsLearned : practiceCount}</Text>
-              <Text style={styles.completionMetricLabel}>
-                {wordsLearned > 0 ? t("player.completionWords") : t("player.completionPractice")}
-              </Text>
-            </View>
-            <View style={styles.completionMetricDivider} />
-            <View style={styles.completionMetric}>
-              <Text style={styles.completionMetricValue}>{streak}</Text>
-              <Text style={styles.completionMetricLabel}>{t("player.completionStreak")}</Text>
-            </View>
-          </View> : null}
-
-          {completionResult?.chapterJustCompleted ? (
-            <Text style={styles.chapterUnlockedBadge}>
-              {t("player.nextChapterUnlocked")}
-            </Text>
-          ) : null}
-          {lab ? <LabCanDoCard content={c} language={language} /> : null}
-          {isSpoken && !lab && phrasesLearned > 0 ? (
-            <Text style={styles.spPhrasesEarned}>
-              {t("player.phrasesToSay", { count: phrasesLearned, suffix: phrasesLearned !== 1 ? "s" : "" })}
-            </Text>
-          ) : null}
-
-          {!lab ? renderQuranConnection() : null}
-
-          {completionResult ? (
-            <View style={styles.closeSection}>
-              <View style={styles.closeWeekHeader}>
-                <Text style={styles.closeSectionEyebrow}>{t("player.thisWeek")}</Text>
-                {completionResult.dailyGoalMet ? <Text style={styles.closeWeekStatus}>{t("player.todayGoalComplete")}</Text> : null}
-              </View>
-              <View style={styles.closeWeekCard}>
-                <StreakWeekRow streak={streak} lastActiveDate={new Date()} />
-              </View>
-            </View>
-          ) : null}
-
-          <View style={styles.noorRecapCard}>
-            <View style={styles.noorRecapHeader}>
-              <Text style={styles.noorLabel}>{t("profile.noor")}</Text>
-              <Text style={styles.meaningLanguageBadge}>
-                {language === "ur" ? t("player.urduMeanings") : t("player.englishMeanings")}
-              </Text>
-            </View>
-            <Text style={styles.noorTip} numberOfLines={3}>{withDirectionMark(noorTip, language)}</Text>
-          </View>
-
-          <Text style={styles.nextLessonReady}>{t("player.nextLessonReady")}</Text>
-        </ScrollView>
-
+        {step === "celebrate" ? renderCloseCelebrate(index, steps.length) : null}
+        {step === "quran" ? renderCloseQuran(index, steps.length) : null}
+        {step === "streak" ? renderCloseStreak(index, steps.length) : null}
         <BrandButton
-          title={t("common.continue")}
-          onPress={async () => {
-            const achievements = completionResult?.newAchievements ?? [];
-            if (achievements.length > 0) {
-              const nextRoute = shouldShowStreakCelebration ? "commitment" : "tabs";
-              router.push({ pathname: "/(app)/milestone-celebration", params: { achievements: JSON.stringify(achievements), nextRoute } });
-            } else if (shouldShowStreakCelebration && await shouldOfferCommitmentPrompt(userId)) {
-              router.push({ pathname: "/(app)/streak-commitment", params: { source: "celebration" } });
-            } else {
-              router.replace("/(app)/(tabs)");
-            }
+          title={title}
+          onPress={() => {
+            if (isLast) void finishClose();
+            else setCloseStep(index + 1);
           }}
           loading={submitting}
           style={styles.bottomButton}
@@ -3617,6 +3773,279 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 14,
     backgroundColor: WarshPalette.parchmentBg,
+  },
+  // Lesson-complete steps (celebrate → Quran → streak).
+  stepScrollContent: {
+    flexGrow: 1,
+    paddingTop: 8,
+    paddingBottom: 24,
+  },
+  stepDots: {
+    flexDirection: "row",
+    justifyContent: "center",
+    gap: 6,
+    marginBottom: 20,
+  },
+  stepDot: {
+    width: 6,
+    height: 6,
+    borderRadius: 3,
+    backgroundColor: WarshPalette.ringTrack,
+  },
+  stepDotDone: {
+    backgroundColor: WarshPalette.parchment,
+  },
+  stepDotCurrent: {
+    width: 22,
+    backgroundColor: WarshPalette.navy,
+  },
+  celebrateCard: {
+    flexGrow: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    overflow: "hidden",
+    borderRadius: Radii.xl,
+    paddingHorizontal: 20,
+    paddingVertical: 36,
+    backgroundColor: WarshPalette.navy,
+  },
+  celebrateRingOuter: {
+    width: 132,
+    height: 132,
+    borderRadius: 66,
+    borderWidth: 1,
+    borderColor: WarshAlpha.goldBorder,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  celebrateRingInner: {
+    width: 96,
+    height: 96,
+    borderRadius: 48,
+    borderWidth: 1.5,
+    borderColor: WarshPalette.gold,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: WarshPalette.navyDeep,
+  },
+  celebrateTitle: {
+    marginTop: 24,
+    color: WarshPalette.white,
+    fontFamily: Fonts.bold,
+    fontSize: desktopFontSize(28),
+    lineHeight: desktopLineHeight(34, 28),
+    textAlign: "center",
+  },
+  celebrateArabic: {
+    marginTop: 8,
+    color: WarshPalette.parchment,
+    fontSize: desktopFontSize(26, "display"),
+    lineHeight: desktopLineHeight(40, 26, "display"),
+    textAlign: "center",
+  },
+  celebrateArabicMeaning: {
+    color: WarshAlpha.onNavyMuted,
+    fontFamily: Fonts.regular,
+    fontSize: desktopFontSize(14),
+    lineHeight: desktopLineHeight(20, 14),
+    textAlign: "center",
+  },
+  celebrateMetrics: {
+    alignSelf: "stretch",
+    flexDirection: "row",
+    gap: 8,
+    marginTop: 32,
+  },
+  celebrateMetric: {
+    flex: 1,
+    alignItems: "center",
+    borderRadius: 14,
+    paddingHorizontal: 6,
+    paddingVertical: 14,
+    backgroundColor: WarshAlpha.onNavySurfaceFaint,
+  },
+  celebrateMetricValue: {
+    color: WarshPalette.parchment,
+    fontFamily: Fonts.bold,
+    fontSize: desktopFontSize(24),
+    lineHeight: desktopLineHeight(30, 24),
+  },
+  celebrateMetricLabel: {
+    color: WarshAlpha.onNavyMuted,
+    fontFamily: Fonts.regular,
+    fontSize: desktopFontSize(12),
+    lineHeight: desktopLineHeight(16, 12),
+    textAlign: "center",
+  },
+  streakSafeRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+    marginTop: 18,
+  },
+  streakSafeText: {
+    color: WarshAlpha.onNavyMuted,
+    fontFamily: Fonts.regular,
+    fontSize: desktopFontSize(13),
+    lineHeight: desktopLineHeight(18, 13),
+  },
+  stepTitle: {
+    color: WarshPalette.ink,
+    fontFamily: Fonts.bold,
+    fontSize: desktopFontSize(24),
+    lineHeight: desktopLineHeight(30, 24),
+    textAlign: "center",
+  },
+  stepSubtitle: {
+    marginTop: 6,
+    color: WarshPalette.subtleBrown,
+    fontFamily: Fonts.regular,
+    fontSize: desktopFontSize(14),
+    lineHeight: desktopLineHeight(20, 14),
+    textAlign: "center",
+  },
+  stepAyahCard: {
+    marginTop: 22,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: WarshPalette.parchmentCardBorder,
+    borderRadius: Radii.xl,
+    paddingHorizontal: 20,
+    paddingTop: 24,
+    paddingBottom: 18,
+    backgroundColor: WarshPalette.parchmentBg,
+    shadowColor: WarshPalette.ink,
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.06,
+    shadowRadius: 18,
+    elevation: 2,
+  },
+  stepAyahMeaning: {
+    marginTop: 10,
+    color: WarshPalette.bodyBrown,
+    fontFamily: Fonts.regular,
+    fontSize: desktopFontSize(15),
+    lineHeight: desktopLineHeight(22, 15),
+    textAlign: "center",
+  },
+  stepAyahMeaningUrdu: {
+    fontFamily: Fonts.urduFallback,
+    fontSize: desktopFontSize(18),
+    lineHeight: desktopLineHeight(32, 18),
+  },
+  noorBubbleRow: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    gap: 10,
+    marginTop: 18,
+  },
+  noorAvatar: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: WarshPalette.sageSoft,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: WarshPalette.correctBg,
+  },
+  noorAvatarText: {
+    color: WarshPalette.sageDeep,
+    textAlign: "center",
+  },
+  noorBubble: {
+    flex: 1,
+    borderRadius: 16,
+    borderTopLeftRadius: 4,
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+    backgroundColor: WarshPalette.correctBg,
+  },
+  streakStepBody: {
+    flexGrow: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  streakFlameCircle: {
+    width: 112,
+    height: 112,
+    borderRadius: 56,
+    borderWidth: 1,
+    borderColor: WarshPalette.cream,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: WarshPalette.parchmentSoft,
+  },
+  streakStepNumber: {
+    marginTop: 16,
+    color: WarshPalette.ink,
+    fontFamily: Fonts.bold,
+    fontSize: desktopFontSize(64),
+    lineHeight: desktopLineHeight(72, 64),
+    fontVariant: ["tabular-nums"],
+  },
+  streakStepLabel: {
+    color: WarshPalette.ink,
+    fontFamily: Fonts.semiBold,
+    fontSize: desktopFontSize(20),
+    lineHeight: desktopLineHeight(26, 20),
+  },
+  streakStepText: {
+    maxWidth: 300,
+    marginTop: 8,
+    color: WarshPalette.bodyBrown,
+    fontFamily: Fonts.regular,
+    fontSize: desktopFontSize(15),
+    lineHeight: desktopLineHeight(22, 15),
+    textAlign: "center",
+  },
+  streakStepWeek: {
+    alignSelf: "stretch",
+    marginTop: 28,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: WarshPalette.parchmentCardBorder,
+    borderRadius: 16,
+    paddingHorizontal: 10,
+    paddingVertical: 14,
+    backgroundColor: WarshPalette.white,
+  },
+  streakLegend: {
+    flexDirection: "row",
+    justifyContent: "center",
+    gap: 16,
+    marginTop: 10,
+  },
+  streakLegendItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+  },
+  streakLegendDone: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    backgroundColor: WarshPalette.navy,
+  },
+  streakLegendUpcoming: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    borderWidth: 1.5,
+    borderStyle: "dashed",
+    borderColor: WarshPalette.goldDeep,
+  },
+  streakLegendText: {
+    color: WarshPalette.subtleBrown,
+    fontFamily: Fonts.regular,
+    fontSize: desktopFontSize(12),
+    lineHeight: desktopLineHeight(16, 12),
+  },
+  streakFreezeHint: {
+    marginTop: 18,
+    color: WarshPalette.sageDeep,
+    fontFamily: Fonts.regular,
+    fontSize: desktopFontSize(13),
+    lineHeight: desktopLineHeight(18, 13),
+    textAlign: "center",
   },
   closeScreen: {
     backgroundColor: WarshPalette.creamBg,

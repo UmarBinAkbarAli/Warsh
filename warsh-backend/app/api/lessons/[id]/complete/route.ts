@@ -292,6 +292,9 @@ export async function POST(request: Request, { params }: Props) {
       chapterJustCompleted,
       dailyGoalXp,
       streakCelebration: firstCompletion && lessonsCompletedTodayBefore === 0,
+      // Lets the completion screen show "3 lessons today" instead of a streak
+      // it has already celebrated once this streak day.
+      lessonsCompletedToday: lessonsCompletedTodayBefore + (firstCompletion ? 1 : 0),
       totalXp: finalXp,
       newAchievements,
       streakUpdated: true,

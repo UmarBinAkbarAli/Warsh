@@ -8,11 +8,13 @@ import { FontSizes, Fonts, Spacing, WarshPalette } from "../constants/theme";
 interface Props {
   streak: number;
   lastActiveDate: Date | string | null;
+  /** Draw the days still to come as dashed rings, so they can't be read as missed days. */
+  showUpcoming?: boolean;
 }
 
 /** Monday–Sunday row of the current streak. Shared by the lesson completion
  *  screen and Streak detail so both always show the same days. */
-export function StreakWeekRow({ streak, lastActiveDate }: Props) {
+export function StreakWeekRow({ streak, lastActiveDate, showUpcoming = false }: Props) {
   const t = useT();
   const { done, todayIndex } = getStreakWeek(streak, lastActiveDate);
 
@@ -20,6 +22,7 @@ export function StreakWeekRow({ streak, lastActiveDate }: Props) {
     <View style={styles.row}>
       {done.map((isDone, index) => {
         const isToday = index === todayIndex;
+        const isUpcoming = showUpcoming && index > todayIndex;
         const label = t(`streak.weekday.${index}`);
         return (
           <View
@@ -28,8 +31,8 @@ export function StreakWeekRow({ streak, lastActiveDate }: Props) {
             accessible
             accessibilityLabel={`${label}${isDone ? `, ${t("streak.dayDone")}` : ""}`}
           >
-            <View style={[styles.circle, isDone ? styles.circleDone : null, isToday && !isDone ? styles.circleToday : null]}>
-              {isDone ? <Ionicons name="checkmark" size={16} color={WarshPalette.parchment} /> : <View style={styles.dot} />}
+            <View style={[styles.circle, isDone ? styles.circleDone : null, isToday && !isDone ? styles.circleToday : null, isUpcoming ? styles.circleUpcoming : null]}>
+              {isDone ? <Ionicons name="checkmark" size={16} color={WarshPalette.parchment} /> : isUpcoming ? null : <View style={styles.dot} />}
             </View>
             <Text style={[styles.label, isToday ? styles.labelToday : null]}>{label}</Text>
           </View>
@@ -63,6 +66,12 @@ const styles = StyleSheet.create({
   circleToday: {
     borderWidth: 2,
     borderColor: WarshPalette.gold,
+  },
+  circleUpcoming: {
+    borderWidth: 1.5,
+    borderStyle: "dashed",
+    borderColor: WarshPalette.goldDeep,
+    backgroundColor: "transparent",
   },
   dot: {
     width: 4,
