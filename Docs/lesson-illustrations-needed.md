@@ -1515,9 +1515,9 @@ Seventeen vocabulary pictures are only the Arabic word printed on a tile (نَب
 | ✅ `ch01-surah-pills.png` | `ch01-l03` card 7 | سُورَة | An open Mushaf on a wooden stand, a decorated surah heading band across the top of the page |
 | `ch01-surah-heading.png` | `ch04-l03` card 10 | سُورَةٌ كَرِيمَةٌ | An open Mushaf on a wooden stand, a decorated surah heading band across the top of the page (ornament only, nothing readable) |
 | ✅ `ch01-tilka-far-hand-tree.png` | `ch01-l04` card 1 | تِلْكَ | Two panels of one landscape, one pointing hand in each: a tree close to the viewer, and the same kind of tree small and far away on a hill. No lettering |
-| `ch01-dar-home.png` | `ch01-l04` card 5 | دَار | A family home seen from the front: a warm, welcoming house with an open door and a small courtyard, a place you return to. Faces blank, no lettering. Card uses `bayt.webp` until this exists (publish with `--replace`) |
+| ✅ `ch01-dar-home.png` | `ch01-l04` card 5 | دَار | A family home seen from the front: a warm, welcoming house with an open door and a small courtyard, a place you return to. Faces blank, no lettering. |
 | `ch01-tree-near-far.png` | `ch05-l02` card 1 | تِلْكَ | Two panels of one landscape, one pointing hand in each: left, a hand pointing at a tree close to the viewer; right, the same hand pointing out across open ground at the same kind of tree small and far away on a hill. No lettering |
-| `ch01-three-feminine-nouns.png` | `ch01-l04` card 3 · `ch05-l01` card 3 | التَّاء الْمَرْبُوطَة | Three things in a row, a tree, a walled garden and a school building, each with a large gold ة (tā marbūṭa) sign glowing at the end of its tag, and a soft highlight ring round the sign on each. **Owner exception to the no-lettering rule:** the ة glyph is the only lettering allowed in this picture, drawn large and clean |
+| ✅ `ch01-three-feminine-nouns.png` | `ch01-l04` card 3 · `ch05-l01` card 3 | التَّاء الْمَرْبُوطَة | Three things in a row, a tree, a walled garden and a school building, each with a large gold ة (tā marbūṭa) sign glowing at the end of its tag, and a soft highlight ring round the sign on each. **Owner exception to the no-lettering rule:** the ة glyph is the only lettering allowed in this picture, drawn large and clean |
 
 ### Chapter 2
 
