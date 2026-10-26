@@ -283,7 +283,7 @@ export default function ChapterTestScreen() {
                 </View>
                 <View style={styles.optionTextWrap}>
                   {option.arabic ? <ArabicText size="md" style={styles.optionArabic}>{option.arabic}</ArabicText> : null}
-                  <Text style={styles.optionText}>{localized(option)}</Text>
+                  {option.arabic && localized(option) === option.arabic ? null : <Text style={styles.optionText}>{localized(option)}</Text>}
                 </View>
               </TouchableOpacity>
             );
