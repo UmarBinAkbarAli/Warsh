@@ -434,6 +434,25 @@ asset declaration: "Don't label assets" (owner's answer). No Chromebook or XR
 assets. Exports and a backup of the previous listing text live in the
 gitignored `output/playstore/`.
 
+### Shared bottom sheet — 2026-10-26
+
+**Implemented, committed (`a78bc96`) and submitted to Play as 1.0.19 (43), 100 %
+rollout, in review.** Every bottom card now uses `components/BottomSheetModal.tsx`:
+the dimmed backdrop fades in place (it used to slide up with the card), tapping it
+or dragging the card down closes it, and the card tracks the finger. Gate passed
+(R8 mapping, API URL, Play signing) and the matching release APK was smoke-tested
+on the emulator.
+
+- RN's `Modal` wraps its content in a view that claims every touch at the start,
+  and a responder above a view is never asked about moves, so the sheet must claim
+  the touch itself (`onStartShouldSetPanResponder`). A move-only (capture) handler
+  never ran on Android. Drag thresholds are in dp, not pixels.
+- A drag that starts inside a scrolling list scrolls the list (native scroll view
+  intercepts); closing by drag works from the handle, header and any non-list area.
+- No real blur: it needs `expo-blur`, a native module, so the backdrop is dimmed only.
+- Animations use the JS driver on purpose; the native driver was not verified for
+  `setValue` during a drag.
+
 ### Claude Design canvas, whole app — 2026-10-23
 
 **Implemented and committed; 1.0.18 (42) submitted to Play 2026-10-24 (100 % rollout,
