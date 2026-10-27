@@ -123,6 +123,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    other: {
+      'p:domain_verify': 'c055ae2fa239ae649573be08614cfbad',
+    },
+  },
 };
 
 /**
