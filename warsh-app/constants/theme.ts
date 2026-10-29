@@ -1,161 +1,45 @@
 import { Platform } from "react-native";
 
+// Values below come from the Warsh design system via constants/tokens.generated.ts.
+// Change them in the design system, then run `npm run design-sync` (see scripts/design-sync.mjs).
+import {
+  AlphaTokens,
+  ColorRoleTokens,
+  DesktopFontSizeTokens,
+  DesktopLineHeightTokens,
+  FontSizeTokens,
+  LineHeightTokens,
+  MushafTokens,
+  PaletteTokens,
+  RadiusTokens,
+  ShadowTokens,
+  SpacingTokens,
+  TajweedTokens,
+  WebLayoutTokens,
+} from "./tokens.generated";
+
 // Spec-11 §2 locked brand palette. Key names kept from the legacy theme
 // (renaming 300+ call sites isn't worth it) but every VALUE now maps to a
 // spec token by role — the spec name is noted on each line.
 // Gold family + navy come from the A1 preview screen's palette (user decision
 // 2026-07-08), superseding spec-11 §2's gold values — richer gilt, and a deep
 // navy for high-emphasis CTA surfaces.
-export const WarshPalette = {
-  ink: "#1A1A1A", // --ink
-  deep: "#3D3D3D", // --ink-soft (secondary text)
-  navy: "#071B44", // brand navy (A1 CTA surface)
-  navyDeep: "#04122E", // navy pressed state
-  navyMuted: "#D5DAE5", // secondary progress text on navy (Learn hero)
-  heroEyebrow: "#F3EAD6", // chapter · lesson eyebrow on the navy Learn hero
-  metaGrey: "#6F7169", // Learn row eyebrows, meta and inactive states
-  progressTrack: "#E7E1D3", // neutral progress track (chapter detail)
-  listDivider: "#E8E3D9", // hairline between rows of one grouped list
-  gold: "#C49B4D", // --gold (A1 gold)
-  goldDeep: "#A88648", // --gold-deep (pressed states and borders; too light for text)
-  // Any gold-coloured TEXT on a light surface: 4.8:1 on creamBg, 4.9:1 on
-  // parchmentBg. gold and goldDeep stay for fills, icons, rings and progress,
-  // and for text on navy (UX evaluation 2026-09-24, finding H2).
-  goldText: "#85672C",
-  parchment: "#D4B06A", // --gold-soft / A1 gold-light (muted-gold accent, text on navy)
-  cream: "#EDDFAF", // --parchment-deep (borders, grouping surfaces)
-  creamBg: "#F8F4ED", // --screen-bg (primary screen background; 2026-08 redesign)
-  parchmentDeep: "#F4EBD0", // --parchment-deep (selected/grouped emphasis)
-  parchmentBg: "#FAF6E9", // --surface-card (card background)
-  parchmentSoft: "#FAF2DD", // --parchment-soft (emphasis cards)
-  white: "#FFFFFF", // --white-pure
-  defaultCardBorder: "#9DAB94", // --sage-soft (dividers/borders per §2.4)
-  parchmentCardBorder: "#D4B06A", // gold-light (emphasis card border per §5.2)
-  bodyBrown: "#3D3D3D", // --ink-soft (body text)
-  subtleBrown: "#5F5F5F", // --ink-muted (captions, helper text)
-  sage: "#7A8B70", // --sage
-  sageSoft: "#9DAB94", // --sage-soft
-  sageDeep: "#5A6953", // --sage-deep (confirmation states)
-  mint: "#9DAB94", // legacy key → --sage-soft
-  wrongBg: "#F7E9E0", // tint of --warning-soft
-  wrongBorder: "#C8744A", // --warning-soft (warm terracotta, never harsh red)
-  wrongBorderSoft: "#D99A78", // lighter --warning-soft
-  wrongText: "#9C5432", // darker --warning-soft for text contrast
-  correctBg: "#EDF1E4", // tint of --success-soft
-  correctBorder: "#A8BC8F", // light --success-soft
-  sageTintBg: "#EDF1E4", // tint of --success-soft
-  sageTintBorder: "#7B9461", // --success-soft
-  sageTintBorderStrong: "#5A6953", // --sage-deep
-  disabledIcon: "#9DAB94", // --sage-soft
-  disabledText: "#9B9283", // warm grey, between ink-muted and sage-soft
-  disabledFill: "#EDE6D6", // disabled primary button (label: subtleBrown, 5.1:1)
-  waveformGoldIdle: "#DCC98F", // desaturated --gold-soft
-  waveformSageIdle: "#9DAB94", // --sage-soft
-  recordingBg: "#944232", // deep terracotta (live-recording state)
-  recordingDot: "#D9634A", // vivid --warning-soft (no panic red per §2.3)
-  deniedText: "#9C5432", // darker --warning-soft
-  highlightBg: "#FBF3DC", // gold-tinted parchment (selection highlight)
-  highlightBorder: "#D4B06A", // gold-light
-  highlightBgSoft: "#FDF8EA", // lighter gold-tinted parchment
-  closeBg: "#FAF2DD", // --parchment-soft
-  // 2026-08 auth redesign
-  neutralChip: "#F2F2F2", // language pill fill on the onboarding top bar
-  googleRed: "#EA4335", // Google brand mark — brand-locked, never re-tint
-  // 2026-10 Claude Design canvas (All chapters and sheets)
-  ringTrack: "#DDD6C5", // empty progress ring / thin progress track
-  lockedSurface: "#F1ECE0", // locked chapter row
-  lockedRing: "#CFC8B6", // ring around a locked chapter's padlock
-  lockedChip: "#EAE5DA", // padlock disc and locked number tile
-  lockedText: "#4A4A4A", // titles and icons on locked rows (7.6:1 on lockedSurface)
-  sheetHandle: "#C9C2B0", // drag handle on cream bottom sheets
-  goldTextDeep: "#7A5E25", // percent label and New badge text
-  goldInk: "#5C4818", // lesson count on a cream row
-  updatedBg: "#E3ECF7", // "Updated" badge fill
-  updatedText: "#1F3F66", // "Updated" badge text
-} as const;
+export const WarshPalette = PaletteTokens;
 
 // Quran reader (Pen section 27). Tajweed colours follow the printed Madani
 // tajweed mushaf convention hafiz students already know: green for nasal
 // rules, blue for qalqalah, reds and oranges for madd by length, grey for
 // letters that are written but not pronounced.
-export const TajweedPalette = {
-  nasal: "#1E9A4B", // ghunnah, ikhfa, iqlab, idgham with ghunnah
-  qalqalah: "#1D6FD1",
-  maddNecessary: "#8E1B1B", // 6 counts
-  maddObligatory: "#D32F2F", // 4–5 counts, same word
-  maddSeparated: "#E8590C", // 4–5 counts, across words
-  maddPermissible: "#E89A00", // 2, 4 or 6 counts when stopping
-  silent: "#9A9A9A",
-  nasalTint: "rgba(30, 154, 75, 0.14)", // nasal @ 14% — tapped word highlight
-} as const;
+export const TajweedPalette = TajweedTokens;
 
-export const MushafPalette = {
-  page: "#FFFDF6", // page paper, a shade warmer than cards
-  frame: WarshPalette.gold,
-  hairline: "#E6DFC8",
-  ayahMarker: WarshPalette.goldDeep,
-} as const;
+export const MushafPalette = MushafTokens;
 
 // Translucent tints derived from the palette above. Every rgba() in the app
 // comes from here so the alpha steps stay consistent; the base colour is the
 // palette token named in the comment.
-export const WarshAlpha = {
-  // Scrims
-  scrim: "rgba(26, 26, 26, 0.6)", // ink @ 60% — confirmation/permission modals (spec-11 §5.6)
-  sheetScrim: "rgba(26, 26, 26, 0.45)", // ink @ 45% — bottom sheets and pickers
-  // Gold washes on light surfaces
-  goldWash: "rgba(196, 155, 77, 0.08)", // gold @ 8% — quiet emphasis background
-  goldTintSoft: "rgba(196, 155, 77, 0.13)", // gold @ 13% — chips, user bubbles
-  goldTint: "rgba(196, 155, 77, 0.27)", // gold @ 27% — decorative bands
-  goldBorder: "rgba(196, 155, 77, 0.45)", // gold @ 45% — hairline on navy
-  goldTextBorder: "rgba(133, 103, 44, 0.2)", // goldText @ 20% — chapter test card outline
-  goldLightBorder: "rgba(212, 176, 106, 0.45)", // parchment @ 45% — hairline on navy
-  // On navy surfaces
-  onNavyMuted: "rgba(255, 255, 255, 0.7)", // secondary text on navy
-  onNavySurface: "rgba(255, 255, 255, 0.16)", // pill/icon backing on navy
-  onNavySurfaceFaint: "rgba(255, 255, 255, 0.06)", // stat boxes on navy
-  // Sage / warning tints
-  sageTint: "rgba(122, 139, 112, 0.12)", // sage @ 12%
-  sageSoftTint: "rgba(157, 171, 148, 0.2)", // sage-soft @ 20% — disabled CTA
-  warningTint: "rgba(200, 116, 74, 0.12)", // warning-soft @ 12% — danger CTA
-} as const;
+export const WarshAlpha = AlphaTokens;
 
-export const Colors = {
-  bg: {
-    primary: WarshPalette.creamBg,
-    secondary: WarshPalette.navy,
-    card: WarshPalette.parchmentBg,
-    emphasis: WarshPalette.parchmentDeep,
-    surface: WarshPalette.cream,
-  },
-  text: {
-    primary: WarshPalette.ink,
-    secondary: WarshPalette.deep,
-    // Spec-11 §2.4: captions/helper text use muted ink, never gold.
-    muted: WarshPalette.subtleBrown,
-    gold: WarshPalette.goldText,
-    arabic: WarshPalette.ink,
-    danger: WarshPalette.wrongText,
-  },
-  accent: {
-    gold: WarshPalette.gold,
-    goldMuted: WarshPalette.parchment,
-    goldLight: WarshPalette.cream,
-    teal: WarshPalette.sage,
-    crimson: WarshPalette.wrongBorder,
-    streak: WarshPalette.sage,
-  },
-  border: {
-    default: WarshPalette.sageSoft,
-    subtle: WarshPalette.cream,
-    gold: WarshPalette.gold,
-  },
-  success: WarshPalette.sage,
-  error: WarshPalette.wrongText,
-  warning: WarshPalette.wrongBorder,
-  // Spec-11 §5.6: ink at 60% for confirmation modals
-  overlay: WarshAlpha.scrim,
-} as const;
+export const Colors = ColorRoleTokens;
 
 export const Fonts: Record<string, string | undefined> = {
   arabic: "Scheherazade New",
@@ -176,55 +60,21 @@ export const Fonts: Record<string, string | undefined> = {
 };
 
 // Spec-11 §3.3 type scale: base body 16/24, screen titles 28/38.
-const BaseFontSizes = {
-  // Cormorant Garamond display title, 30/36 (2026-08 auth redesign)
-  display: 30,
-  displayXL: 28,
-  displayL: 22,
-  h1: 22,
-  h2: 18,
-  h3: 16,
-  bodyL: 16,
-  bodyM: 14,
-  caption: 12,
-  label: 12, // minimum UI text size (UX evaluation 2026-09-24)
-  transliteration: 14,
-  arabicXL: 52,
-  // Discover card headword — sits between arabicL and arabicXL so the word
-  // still dominates the card under the 196pt illustration.
-  arabicDiscover: 44,
-  arabicL: 28,
-  arabicM: 20,
-  arabicS: 18,
-} as const;
+const BaseFontSizes = FontSizeTokens;
 
 // Laptop type scale (Pen section 32, owner-approved 2026-10-09; M18). Applies
 // only to web at 1024px or wider, read once when the app loads — phones, tablets
 // and narrow web windows keep the sizes above. Phone-size type read small on a
 // laptop; a global CSS zoom was tried and broke the layout, so the scale is
 // applied to the type tokens instead. Resize the window and reload to switch.
-export const DESKTOP_MIN_WIDTH = 1024;
+export const DESKTOP_MIN_WIDTH = WebLayoutTokens.bpLaptop;
+
+/** Web-only layout values: breakpoints, shell widths, content caps, gutters, grid columns. */
+export const WebLayout = WebLayoutTokens;
 export const IS_DESKTOP_WEB =
   Platform.OS === "web" && typeof window !== "undefined" && window.innerWidth >= DESKTOP_MIN_WIDTH;
 
-const DesktopFontSizes: Record<keyof typeof BaseFontSizes, number> = {
-  display: 34,
-  displayXL: 32,
-  displayL: 26,
-  h1: 26,
-  h2: 21,
-  h3: 17,
-  bodyL: 17,
-  bodyM: 16,
-  caption: 14,
-  label: 13,
-  transliteration: 16,
-  arabicXL: 60,
-  arabicDiscover: 50,
-  arabicL: 32,
-  arabicM: 23,
-  arabicS: 21,
-};
+const DesktopFontSizes: Record<keyof typeof BaseFontSizes, number> = DesktopFontSizeTokens;
 
 export const FontSizes: typeof BaseFontSizes = IS_DESKTOP_WEB
   ? (DesktopFontSizes as unknown as typeof BaseFontSizes)
@@ -248,72 +98,31 @@ export function desktopLineHeight(lineHeight: number, size: number, kind: "text"
   return Math.round((lineHeight * desktopFontSize(size, kind)) / size);
 }
 
-const BaseLineHeights = {
-  display: 36,
-  displayXL: 38,
-  displayL: 32,
-  h1: 32,
-  h2: 28,
-  h3: 24,
-  bodyL: 24,
-  bodyM: 20,
-  caption: 18,
-  label: 16,
-  transliteration: 20,
-  arabicXL: 80,
-  arabicDiscover: 64,
-  arabicL: 48,
-  arabicM: 32,
-  arabicS: 30,
-} as const;
+const BaseLineHeights = LineHeightTokens;
 
 // Line heights follow their type token so a scaled size keeps its leading.
 export const LineHeights: typeof BaseLineHeights = IS_DESKTOP_WEB
-  ? (Object.fromEntries(
-      Object.entries(BaseLineHeights).map(([key, value]) => [
-        key,
-        Math.round((value * DesktopFontSizes[key as keyof typeof DesktopFontSizes]) / BaseFontSizes[key as keyof typeof BaseFontSizes]),
-      ]),
-    ) as unknown as typeof BaseLineHeights)
+  ? (DesktopLineHeightTokens as unknown as typeof BaseLineHeights)
   : BaseLineHeights;
 
 // Four corner roles (UX evaluation 2026-09-24). Use a literal radius only for
 // a circle (width == height == 2r) or a hairline progress bar.
-export const Radii = {
-  xs: 4, // text inputs (2026-08 auth redesign)
-  sm: 8, // chips, tags, word tiles
-  md: 12, // buttons and cards
-  xl: 20, // bottom sheets and dialogs
-  full: 9999, // avatars and pills
-} as const;
+export const Radii = RadiusTokens;
 
-export const Spacing = {
-  xs: 4,
-  sm: 8,
-  md: 12,
-  lg: 16,
-  gutter: 20, // spec-11 §4.2: screen horizontal padding
-  xl: 24,
-  xxl: 32,
-  xxxl: 48,
-} as const;
+export const Spacing = SpacingTokens;
+
+type ShadowToken = (typeof ShadowTokens)[keyof typeof ShadowTokens];
+const toShadow = (t: ShadowToken, elevation: number) => ({
+  shadowColor: t.color,
+  shadowOffset: { width: t.offsetX, height: t.offsetY },
+  shadowOpacity: t.opacity,
+  shadowRadius: t.blur,
+  elevation,
+});
 
 export const Shadows = {
-  // Spec-11 §5.2: very soft shadow — elevation reads through color, not shadow
-  card: {
-    shadowColor: WarshPalette.ink,
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.04,
-    shadowRadius: 8,
-    elevation: 1,
-  },
-  goldGlow: {
-    shadowColor: WarshPalette.gold,
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 8,
-    elevation: 4,
-  },
+  card: toShadow(ShadowTokens.card, 1),
+  goldGlow: toShadow(ShadowTokens.goldGlow, 4),
 } as const;
 
 export const Animation = {

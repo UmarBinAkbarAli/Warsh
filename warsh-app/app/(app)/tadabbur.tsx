@@ -23,6 +23,7 @@ import { ScreenHeader } from "@components/ScreenHeader";
 import { BottomSheetModal } from "@components/BottomSheetModal";
 import { BrandButton } from "@components/BrandButton";
 import { useT } from "@i18n/index";
+import { isDesktopWeb } from "@components/WebPage";
 
 // ─── types ────────────────────────────────────────────────────────────────────
 
@@ -190,7 +191,7 @@ function ProgressBar({ percent }: { percent: number }) {
 export default function TadabburScreen() {
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && width >= 960;
+  const desktopWeb = isDesktopWeb(width);
   const router = useRouter();
   const params = useLocalSearchParams<{ surahId?: string }>();
 

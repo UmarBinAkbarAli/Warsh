@@ -2,9 +2,10 @@ import { useEffect, useState, type ReactNode } from "react";
 import { Image, Platform, StyleSheet, Text, useWindowDimensions, View } from "react-native";
 
 import { useT } from "@i18n/index";
-import { Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette, WarshAlpha } from "../constants/theme";
+import { Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette, WarshAlpha, WebLayout } from "../constants/theme";
 
-export const DESKTOP_WEB_BREAKPOINT = 900;
+// Same switch point as the app shell: the design system's web-bp-laptop.
+export const DESKTOP_WEB_BREAKPOINT = WebLayout.bpLaptop;
 
 export function useIsDesktopWeb() {
   const { width } = useWindowDimensions();
@@ -205,6 +206,6 @@ const styles = StyleSheet.create({
   },
   formFrame: {
     width: "100%",
-    maxWidth: 440,
+    maxWidth: WebLayout.formMax,
   },
 });

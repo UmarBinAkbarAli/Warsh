@@ -22,6 +22,7 @@ import { getVocabularyWordDetail, updateUserVocabularyWord } from "@services/api
 import { useTranslationLanguage, pickTranslation, pickLocalized } from "@services/language";
 import { useT } from "@i18n/index";
 import { getEveryAyahAudioUrl } from "@services/quranAudio";
+import { isDesktopWeb } from "@components/WebPage";
 
 interface QuranicExample {
   surahNumber: number;
@@ -98,7 +99,7 @@ export default function WordDetailScreen() {
   const { wordId } = useLocalSearchParams<{ wordId: string }>();
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && width >= 960;
+  const desktopWeb = isDesktopWeb(width);
   const router = useRouter();
   const language = useTranslationLanguage();
   const t = useT();

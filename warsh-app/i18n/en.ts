@@ -4,6 +4,8 @@ export const en = {
   "tabs.quran": "Quran",
   "tabs.noor": "Noor",
   "tabs.profile": "You",
+  "webSidebar.learner": "Learner",
+  "webSidebar.meta": "Warsh learner",
 
   "common.all": "All",
   "a11y.settings": "Settings",
@@ -355,6 +357,8 @@ export const en = {
   "chapter.lockedError": "This chapter is still locked. Complete earlier chapters first.",
   "chapter.loadError": "Unable to load chapter lessons.",
   "chapter.notFound": "Chapter not found.",
+  "chapter.errorTitle": "Couldn't open this chapter",
+  "chapter.allChapters": "All chapters",
   "chapter.number": "Chapter {{count}}",
   "chapter.backChapters": "Chapters",
   "chapter.skippedByPlacement": "Skipped by placement",

@@ -7,7 +7,6 @@ import {
   StyleSheet,
   Text,
   TextInput,
-  useWindowDimensions,
   View,
 } from "react-native";
 import { useFocusEffect, useRouter } from "expo-router";
@@ -27,6 +26,7 @@ import {
   Spacing,
   Radii,
 } from "../../constants/theme";
+import { WebGrid, useWebLayout, useWebPageStyle } from "@components/WebPage";
 
 interface ChapterLesson {
   id: string;
@@ -70,7 +70,6 @@ function toneOf(chapter: Chapter): Tone {
 export default function ChaptersScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const { width } = useWindowDimensions();
   const language = useTranslationLanguage();
   const t = useT();
   const [chapters, setChapters] = useState<Chapter[]>([]);
@@ -79,7 +78,10 @@ export default function ChaptersScreen() {
   const [lockedChapter, setLockedChapter] = useState<Chapter | null>(null);
   const [jumpOpen, setJumpOpen] = useState(false);
   const [jumpQuery, setJumpQuery] = useState("");
-  const desktopWeb = Platform.OS === "web" && width >= 960;
+  // A Collection page on web (design system › Web layout): each group's
+  // chapters become a 2 / 3 / 4-column grid on the shared frame.
+  const webLayout = useWebLayout();
+  const collectionStyle = useWebPageStyle("collection");
 
   useFocusEffect(
     useCallback(() => {
@@ -225,7 +227,7 @@ export default function ChaptersScreen() {
               </View>
             ) : null}
           </View>
-          <Text style={[styles.title, tone === "locked" && styles.titleLocked]} numberOfLines={1}>
+          <Text style={[styles.title, tone === "locked" && styles.titleLocked]} numberOfLines={webLayout.isWeb ? 2 : 1}>
             {title}
           </Text>
           {line ? <Text style={styles.subline}>{line}</Text> : null}
@@ -247,11 +249,10 @@ export default function ChaptersScreen() {
     : sorted;
 
   return (
-    <View style={[styles.container, { paddingTop: desktopWeb ? 0 : insets.top }]}>
+    <View style={[styles.container, { paddingTop: webLayout.isWeb ? 0 : insets.top }]}>
       <ScreenHeader
         title={t("learn.allChapters", { count: chapters.length })}
-        showBack={!desktopWeb}
-        style={desktopWeb ? styles.webHeader : null}
+        style={webLayout.isWeb ? [collectionStyle, styles.webHeader] : null}
         right={
           sorted.length > 0 ? (
             <Pressable
@@ -269,7 +270,7 @@ export default function ChaptersScreen() {
       {loading ? (
         <ActivityIndicator color={WarshPalette.gold} style={{ marginTop: Spacing.xl }} />
       ) : (
-        <ScrollView contentContainerStyle={[styles.list, desktopWeb && styles.webList]}>
+        <ScrollView contentContainerStyle={[styles.list, webLayout.isWeb && collectionStyle]}>
           <View style={styles.overall}>
             <View style={styles.overallRow}>
               <Text style={styles.overallLabel}>
@@ -301,7 +302,7 @@ export default function ChaptersScreen() {
                   </Text>
                   <Ionicons name={open ? "chevron-up" : "chevron-down"} size={20} color={WarshPalette.subtleBrown} />
                 </Pressable>
-                {open ? <View style={styles.groupRows}>{members.map(renderRow)}</View> : null}
+                {open ? <WebGrid gap={Spacing.sm}>{members.map(renderRow)}</WebGrid> : null}
               </View>
             );
           })}
@@ -408,10 +409,6 @@ export default function ChaptersScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: WarshPalette.creamBg },
   webHeader: {
-    width: "100%",
-    maxWidth: 760,
-    alignSelf: "center",
-    paddingHorizontal: 32,
     paddingTop: 36,
     paddingBottom: 16,
     borderBottomWidth: 0,
@@ -420,12 +417,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.xl,
     paddingTop: Spacing.xs,
     paddingBottom: Spacing.xxl,
-  },
-  webList: {
-    width: "100%",
-    maxWidth: 760,
-    alignSelf: "center",
-    paddingHorizontal: 32,
   },
   iconButton: {
     width: 48,
@@ -483,8 +474,9 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: WarshPalette.subtleBrown,
   },
-  groupRows: { gap: Spacing.sm },
   row: {
+    // Fills its grid cell, so cards in one web grid row match heights.
+    flexGrow: 1,
     flexDirection: "row",
     alignItems: "center",
     gap: Spacing.md,

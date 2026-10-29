@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { ActivityIndicator, Platform, Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from "react-native";
+import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import type { DimensionValue } from "react-native";
 import { useFocusEffect, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -11,6 +11,7 @@ import * as Theme from "../../../constants/theme";
 import { ArabicText } from "@components/ArabicText";
 import { StatusBarBacking } from "@components/StatusBarBacking";
 import { useT } from "@i18n/index";
+import { useWebLayout, useWebPageStyle } from "@components/WebPage";
 
 // You tab, redesigned on the Claude Design canvas (owner-approved 2026-10-22).
 // Icon rules for this screen: Ionicons outline only, 16 inline / 20 in cards /
@@ -22,8 +23,8 @@ type WeekDay = { weekday: number; done: boolean; today: boolean };
 export default function ProfileScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
-  const { width } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && width >= 960;
+  const webLayout = useWebLayout();
+  const dashboardStyle = useWebPageStyle("dashboard");
   const { user } = useAuth();
   const language = useLanguage();
   const t = useT();
@@ -77,7 +78,7 @@ export default function ProfileScreen() {
       : null;
 
   const header = (
-    <View style={[styles.header, { paddingTop: desktopWeb ? 0 : insets.top + Theme.Spacing.md }]}>
+    <View style={[styles.header, { paddingTop: webLayout.isWeb ? 0 : insets.top + Theme.Spacing.md }]}>
       <View style={styles.titleRow}>
         <Text style={styles.title}>{t("tabs.profile")}</Text>
         <View style={styles.headerActions}>
@@ -318,21 +319,35 @@ export default function ProfileScreen() {
 
   const errorText = error ? <Text style={styles.errorText}>{error}</Text> : null;
 
-  if (desktopWeb) {
+  // From the tablet breakpoint You is a Dashboard page (design system › Web
+  // layout): the header spans the page, and from `bpWide` the streak and Noor
+  // move into the side column beside progress and milestones. Below that it
+  // keeps the phone order in one column.
+  if (webLayout.isWeb) {
     return (
-      <ScrollView style={styles.screen} contentContainerStyle={styles.webContent}>
-        <View style={styles.webLayout}>
-          <View style={styles.webLeftColumn}>
-            {header}
-            {streakCard}
+      <ScrollView style={styles.screen} contentContainerStyle={[dashboardStyle, styles.webContent]}>
+        {header}
+        {webLayout.isWide ? (
+          <View style={[styles.webLayout, { gap: webLayout.gutter }]}>
+            <View style={styles.webMainColumn}>
+              {errorText}
+              {progressCard}
+              {milestonesCard}
+            </View>
+            <View style={styles.webSideColumn}>
+              {streakCard}
+              {noorCard}
+            </View>
           </View>
-          <View style={styles.webRightColumn}>
+        ) : (
+          <View style={styles.webSingleColumn}>
             {errorText}
+            {streakCard}
             {progressCard}
             {milestonesCard}
             {noorCard}
           </View>
-        </View>
+        )}
       </ScrollView>
     );
   }
@@ -377,26 +392,25 @@ const styles = StyleSheet.create({
     gap: Theme.Spacing.md,
   },
   webContent: {
+    paddingTop: 36,
     paddingBottom: 48,
   },
   webLayout: {
-    width: "100%",
-    maxWidth: 1180,
-    alignSelf: "center",
     flexDirection: "row",
     alignItems: "flex-start",
-    gap: 32,
-    paddingHorizontal: 32,
-    paddingTop: 36,
+    marginTop: Theme.Spacing.lg,
   },
-  webLeftColumn: {
-    width: 400,
-    flexShrink: 0,
-    gap: Theme.Spacing.lg,
-  },
-  webRightColumn: {
+  webMainColumn: {
     flex: 1,
     minWidth: 0,
+    gap: Theme.Spacing.md,
+  },
+  webSideColumn: {
+    width: Theme.WebLayout.sideColumn,
+    gap: Theme.Spacing.md,
+  },
+  webSingleColumn: {
+    marginTop: Theme.Spacing.lg,
     gap: Theme.Spacing.md,
   },
   header: {

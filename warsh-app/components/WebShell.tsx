@@ -1,12 +1,12 @@
 import type { ReactNode } from "react";
 import { Platform, StyleSheet, View } from "react-native";
 
-import { Colors } from "../constants/theme";
+import { Colors, WebLayout } from "../constants/theme";
 
 // Desktop web now follows the approved responsive Pen shell. Individual
 // screens may use this as their readable content cap; mobile web still follows
 // the native responsive layout at the actual viewport width.
-export const WEB_MAX_WIDTH = 1180;
+export const WEB_MAX_WIDTH = WebLayout.pageMax;
 
 export function WebShell({ children }: { children: ReactNode }) {
   if (Platform.OS !== "web") return <>{children}</>;

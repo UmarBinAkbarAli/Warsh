@@ -6,7 +6,6 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  useWindowDimensions,
   View,
 } from "react-native";
 import { TextInput } from "react-native-paper";
@@ -22,6 +21,7 @@ import { getVocabularyWords, getWordOfDay, getSRSDueWords } from "@services/api"
 import { useTranslationLanguage, pickTranslation } from "@services/language";
 import { StatusBarBacking } from "@components/StatusBarBacking";
 import { useT } from "@i18n/index";
+import { WebGrid, useWebLayout, useWebPageStyle } from "@components/WebPage";
 
 // ─── topic catalog ──────────────────────────────────────────────────────────
 
@@ -181,38 +181,29 @@ function WordOfDayCard({ word, language, onPress }: { word: VocabWord; language:
 
 function TopicGrid({ language, wordCounts, onPress }: { language: "en" | "ur"; wordCounts: Record<string, number>; onPress: (key: string) => void }) {
   const t = useT();
-  const pairs = [];
-  for (let i = 0; i < TOPIC_CATALOG.length; i += 2) {
-    pairs.push(TOPIC_CATALOG.slice(i, i + 2));
-  }
-
+  // Two columns on phones; the shared web grid widens it to 2 / 3 / 4.
   return (
-    <View>
-      {pairs.map((pair) => (
-        <View key={pair[0].key} style={styles.topicRow}>
-          {pair.map((topic) => (
-            <TouchableOpacity
-              key={topic.key}
-              style={styles.topicCard}
-              onPress={() => onPress(topic.key)}
-              activeOpacity={0.75}
-            >
-              <ArabicText size="sm" style={styles.topicArabic}>{topic.labelAr}</ArabicText>
-              <Text style={styles.topicEnglish}>{getTopicLabel(topic.key, language, t)}</Text>
-              {wordCounts[topic.key] != null ? (
-                <Text style={styles.topicCount}>
-                  {t("vocabulary.wordCount", {
-                    count: wordCounts[topic.key],
-                    suffix: wordCounts[topic.key] !== 1 ? "s" : "",
-                  })}
-                </Text>
-              ) : null}
-            </TouchableOpacity>
-          ))}
-          {pair.length === 1 ? <View style={styles.topicCard} /> : null}
-        </View>
+    <WebGrid phoneColumns={2} gap={Spacing.md}>
+      {TOPIC_CATALOG.map((topic) => (
+        <TouchableOpacity
+          key={topic.key}
+          style={styles.topicCard}
+          onPress={() => onPress(topic.key)}
+          activeOpacity={0.75}
+        >
+          <ArabicText size="sm" style={styles.topicArabic}>{topic.labelAr}</ArabicText>
+          <Text style={styles.topicEnglish}>{getTopicLabel(topic.key, language, t)}</Text>
+          {wordCounts[topic.key] != null ? (
+            <Text style={styles.topicCount}>
+              {t("vocabulary.wordCount", {
+                count: wordCounts[topic.key],
+                suffix: wordCounts[topic.key] !== 1 ? "s" : "",
+              })}
+            </Text>
+          ) : null}
+        </TouchableOpacity>
       ))}
-    </View>
+    </WebGrid>
   );
 }
 
@@ -220,7 +211,6 @@ function TopicGrid({ language, wordCounts, onPress }: { language: "en" | "ur"; w
 
 export default function VocabularyScreen() {
   const insets = useSafeAreaInsets();
-  const { width } = useWindowDimensions();
   const router = useRouter();
   const language = useTranslationLanguage();
   const t = useT();
@@ -232,7 +222,8 @@ export default function VocabularyScreen() {
   const [loading, setLoading] = useState(true);
   const [countsLoading, setCountsLoading] = useState(true);
   const [searching, setSearching] = useState(false);
-  const desktopWeb = Platform.OS === "web" && width >= 960;
+  const webLayout = useWebLayout();
+  const collectionStyle = useWebPageStyle("collection");
 
   useFocusEffect(
     useCallback(() => {
@@ -303,10 +294,10 @@ export default function VocabularyScreen() {
         style={styles.screen}
         contentContainerStyle={[
           styles.content,
-          desktopWeb && styles.webContent,
+          webLayout.isWeb && collectionStyle,
           {
-            paddingTop: desktopWeb ? 40 : insets.top + Spacing.xl,
-            paddingBottom: desktopWeb ? 48 : insets.bottom + 90,
+            paddingTop: webLayout.isWeb ? 40 : insets.top + Spacing.xl,
+            paddingBottom: webLayout.isWeb ? 48 : insets.bottom + 90,
           },
         ]}
         keyboardShouldPersistTaps="handled"
@@ -479,12 +470,6 @@ const styles = StyleSheet.create({
   },
   screen: { flex: 1, backgroundColor: Colors.bg.primary },
   content: { paddingHorizontal: Spacing.xl, paddingBottom: Spacing.xl * 2 },
-  webContent: {
-    width: "100%",
-    maxWidth: 980,
-    alignSelf: "center",
-    paddingHorizontal: 40,
-  },
 
   header: { marginBottom: Spacing.lg },
   eyebrow: {
@@ -611,7 +596,6 @@ const styles = StyleSheet.create({
   },
 
   // Topic grid
-  topicRow: { flexDirection: "row", gap: Spacing.md, marginBottom: Spacing.md },
   topicCard: {
     flex: 1, padding: Spacing.md, borderRadius: Radii.md,
     borderWidth: 0.5, borderColor: WarshPalette.parchmentCardBorder,

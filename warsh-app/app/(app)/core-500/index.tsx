@@ -26,6 +26,7 @@ import {
   WarshPalette,
 } from "../../../constants/theme";
 import { ScreenHeader } from "@components/ScreenHeader";
+import { isDesktopWeb } from "@components/WebPage";
 
 interface CoreSet {
   setNumber: number;
@@ -58,7 +59,7 @@ export default function Core500Screen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && width >= 960;
+  const desktopWeb = isDesktopWeb(width);
   const t = useT();
 
   const [overview, setOverview] = useState<Overview | null>(null);

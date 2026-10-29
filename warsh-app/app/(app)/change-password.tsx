@@ -26,12 +26,13 @@ import {
   Radii,
 } from "../../constants/theme";
 import { ScreenHeader } from "@components/ScreenHeader";
+import { isDesktopWeb } from "@components/WebPage";
 
 export default function ChangePasswordScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && width >= 960;
+  const desktopWeb = isDesktopWeb(width);
 
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");

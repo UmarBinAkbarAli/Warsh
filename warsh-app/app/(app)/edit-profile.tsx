@@ -18,6 +18,7 @@ import { useAuthStore } from "@stores/authStore";
 import { BrandButton } from "@components/BrandButton";
 import { ScreenHeader } from "@components/ScreenHeader";
 import { useT } from "@i18n/index";
+import { isDesktopWeb } from "@components/WebPage";
 
 type Lang = "en" | "ur";
 
@@ -27,7 +28,7 @@ const NAME_MAX_LENGTH = 60;
 export default function EditProfileScreen() {
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && width >= 960;
+  const desktopWeb = isDesktopWeb(width);
   const router = useRouter();
   const user = useAuthStore((s) => s.user);
   const patchUser = useAuthStore((s) => s.patchUser);

@@ -7,6 +7,7 @@ import { useLanguage } from "@services/language";
 import { useT } from "@i18n/index";
 import { Colors, Fonts, Radii, Spacing, WarshPalette } from "../../constants/theme";
 import { ArabicText } from "@components/ArabicText";
+import { isDesktopWeb } from "@components/WebPage";
 
 export default function TrialReminderScreen() {
   const router = useRouter();
@@ -14,7 +15,7 @@ export default function TrialReminderScreen() {
   const { width } = useWindowDimensions();
   const t = useT();
   const language = useLanguage();
-  const desktopWeb = Platform.OS === "web" && width >= 960;
+  const desktopWeb = isDesktopWeb(width);
   const { days } = useLocalSearchParams<{ days: string }>();
   const trialDays = parseInt(days ?? "7", 10) || 7;
 

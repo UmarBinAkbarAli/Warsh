@@ -4,6 +4,8 @@ export const ur = {
   "tabs.quran": "قرآن",
   "tabs.noor": "نور",
   "tabs.profile": "آپ",
+  "webSidebar.learner": "طالب علم",
+  "webSidebar.meta": "Warsh طالب علم",
 
   "common.all": "سب",
   "a11y.settings": "ترتیبات",
@@ -352,6 +354,8 @@ export const ur = {
   "chapter.lockedError": "یہ باب ابھی مقفل ہے۔ پہلے پچھلے ابواب مکمل کریں۔",
   "chapter.loadError": "باب کے اسباق لوڈ نہیں ہو سکے۔",
   "chapter.notFound": "باب نہیں ملا۔",
+  "chapter.errorTitle": "یہ باب نہیں کھل سکا",
+  "chapter.allChapters": "تمام ابواب",
   "chapter.number": "باب {{count}}",
   "chapter.backChapters": "ابواب",
   "chapter.skippedByPlacement": "پلیسمنٹ کی وجہ سے چھوڑا گیا",

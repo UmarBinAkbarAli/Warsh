@@ -26,6 +26,7 @@ import {
   WarshPalette,
 } from "../../../constants/theme";
 import { ScreenHeader } from "@components/ScreenHeader";
+import { isDesktopWeb } from "@components/WebPage";
 
 interface CoreWord {
   id: string;
@@ -45,7 +46,7 @@ export default function Core500WordsScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && width >= 960;
+  const desktopWeb = isDesktopWeb(width);
   const t = useT();
   const language = useTranslationLanguage();
 

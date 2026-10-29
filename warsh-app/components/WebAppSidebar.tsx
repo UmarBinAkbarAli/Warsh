@@ -2,11 +2,13 @@ import { Feather } from "@expo/vector-icons";
 import { usePathname, useRouter } from "expo-router";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
+import { useT } from "@i18n/index";
 import { useAuthStore } from "../stores/authStore";
-import { Fonts, Radii, Spacing, WarshPalette, desktopFontSize } from "../constants/theme";
+import { Fonts, Radii, Spacing, WarshPalette, WebLayout, desktopFontSize } from "../constants/theme";
 
 type NavItem = {
-  label: string;
+  /** i18n key — the same labels as the phone tab bar. */
+  labelKey: string;
   icon: keyof typeof Feather.glyphMap;
   href: string;
   active: (pathname: string) => boolean;
@@ -14,7 +16,7 @@ type NavItem = {
 
 const NAV_ITEMS: NavItem[] = [
   {
-    label: "Learn",
+    labelKey: "tabs.learn",
     icon: "book-open",
     href: "/(app)/(tabs)",
     active: (path) =>
@@ -24,25 +26,25 @@ const NAV_ITEMS: NavItem[] = [
       path.includes("/tadabbur"),
   },
   {
-    label: "Vocabulary",
+    labelKey: "tabs.vocabulary",
     icon: "layers",
     href: "/(app)/(tabs)/vocabulary",
     active: (path) => path.includes("/vocabulary"),
   },
   {
-    label: "Quran",
+    labelKey: "tabs.quran",
     icon: "book",
     href: "/(app)/(tabs)/quran",
     active: (path) => path.includes("/quran"),
   },
   {
-    label: "Noor",
+    labelKey: "tabs.noor",
     icon: "message-circle",
     href: "/(app)/(tabs)/chat",
     active: (path) => path.includes("/chat"),
   },
   {
-    label: "You",
+    labelKey: "tabs.profile",
     icon: "user",
     href: "/(app)/(tabs)/profile",
     active: (path) =>
@@ -53,20 +55,25 @@ const NAV_ITEMS: NavItem[] = [
   },
 ];
 
-export function WebAppSidebar() {
+/**
+ * Web navigation. Full sidebar from 1024px; `compact` is the 768–1023px icon
+ * rail (design system › Web layout): icons only, labels as accessibility labels.
+ */
+export function WebAppSidebar({ compact = false }: { compact?: boolean }) {
   const router = useRouter();
   const pathname = usePathname();
   const user = useAuthStore((state) => state.user);
-  const name = user?.name?.trim() || "Learner";
+  const t = useT();
+  const name = user?.name?.trim() || t("webSidebar.learner");
   const initial = name.slice(0, 1).toUpperCase();
 
   return (
-    <View style={styles.sidebar}>
-      <View style={styles.brand}>
+    <View style={[styles.sidebar, compact && styles.rail]}>
+      <View style={[styles.brand, compact && styles.brandRail]}>
         <View style={styles.mark}>
           <Text style={styles.markGlyph}>و</Text>
         </View>
-        <Text style={styles.wordmark}>WARSH</Text>
+        {compact ? null : <Text style={styles.wordmark}>WARSH</Text>}
       </View>
 
       <View style={styles.nav}>
@@ -74,12 +81,14 @@ export function WebAppSidebar() {
           const selected = item.active(pathname);
           return (
             <Pressable
-              key={item.label}
+              key={item.href}
               accessibilityRole="button"
+              accessibilityLabel={t(item.labelKey)}
               accessibilityState={{ selected }}
               onPress={() => router.replace(item.href as never)}
               style={({ pressed }) => [
                 styles.navItem,
+                compact && styles.navItemRail,
                 selected && styles.navItemSelected,
                 !selected && pressed && styles.navItemHovered,
               ]}
@@ -89,9 +98,11 @@ export function WebAppSidebar() {
                 size={19}
                 color={selected ? WarshPalette.white : WarshPalette.subtleBrown}
               />
-              <Text style={[styles.navLabel, selected && styles.navLabelSelected]}>
-                {item.label}
-              </Text>
+              {compact ? null : (
+                <Text style={[styles.navLabel, selected && styles.navLabelSelected]}>
+                  {t(item.labelKey)}
+                </Text>
+              )}
             </Pressable>
           );
         })}
@@ -99,22 +110,28 @@ export function WebAppSidebar() {
 
       <Pressable
         accessibilityRole="button"
+        accessibilityLabel={t("settings.title")}
         onPress={() => router.push("/(app)/settings")}
         style={({ pressed }) => [
           styles.footer,
+          compact && styles.footerRail,
           pressed && styles.footerHovered,
         ]}
       >
         <View style={styles.avatar}>
           <Text style={styles.avatarText}>{initial}</Text>
         </View>
-        <View style={styles.footerCopy}>
-          <Text numberOfLines={1} style={styles.footerName}>
-            {name}
-          </Text>
-          <Text style={styles.footerMeta}>Warsh learner</Text>
-        </View>
-        <Feather name="settings" size={17} color={WarshPalette.subtleBrown} />
+        {compact ? null : (
+          <>
+            <View style={styles.footerCopy}>
+              <Text numberOfLines={1} style={styles.footerName}>
+                {name}
+              </Text>
+              <Text style={styles.footerMeta}>{t("webSidebar.meta")}</Text>
+            </View>
+            <Feather name="settings" size={17} color={WarshPalette.subtleBrown} />
+          </>
+        )}
       </Pressable>
     </View>
   );
@@ -122,7 +139,7 @@ export function WebAppSidebar() {
 
 const styles = StyleSheet.create({
   sidebar: {
-    width: 260,
+    width: WebLayout.sidebarWidth,
     minHeight: "100%",
     paddingHorizontal: 20,
     paddingVertical: 32,
@@ -130,6 +147,23 @@ const styles = StyleSheet.create({
     backgroundColor: WarshPalette.white,
     borderRightWidth: 1,
     borderRightColor: WarshPalette.cream,
+  },
+  rail: {
+    width: WebLayout.railWidth,
+    paddingHorizontal: Spacing.md,
+    alignItems: "center",
+  },
+  brandRail: {
+    paddingHorizontal: 0,
+  },
+  navItemRail: {
+    width: 48,
+    paddingHorizontal: 0,
+    justifyContent: "center",
+  },
+  footerRail: {
+    padding: 6,
+    justifyContent: "center",
   },
   brand: {
     flexDirection: "row",

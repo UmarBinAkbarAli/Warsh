@@ -24,6 +24,7 @@ import {
 } from "../../constants/theme";
 import { pageForAyah } from "../../services/quran/data";
 import { useQuranStore } from "../../stores/quranStore";
+import { webShellMode } from "../WebPage";
 
 const TAB_ICONS: Record<string, keyof typeof Feather.glyphMap> = {
   index: "book-open",
@@ -43,7 +44,8 @@ export function FloatingTabBar({
   const { width } = useWindowDimensions();
   const [keyboardVisible, setKeyboardVisible] = useState(false);
 
-  const desktopWeb = Platform.OS === "web" && width >= 960;
+  // The web rail or sidebar takes over navigation from 768px.
+  const desktopWeb = webShellMode(width) !== "phone";
 
   useEffect(() => {
     const showSub = Keyboard.addListener(

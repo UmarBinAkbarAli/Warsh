@@ -44,6 +44,7 @@ import {
   type IapSubscription,
   type IapSubscriptionPurchase,
 } from "@services/iap";
+import { isDesktopWeb } from "@components/WebPage";
 
 // Single subscription product with two base plans
 export const SUBSCRIPTION_PRODUCT_ID = "warsh_premium";
@@ -58,7 +59,7 @@ interface Props {
 export default function PaywallScreen({ dismissable = true }: Props) {
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && width >= 960;
+  const desktopWeb = isDesktopWeb(width);
   const router = useRouter();
   const t = useT();
   const language = useLanguage();

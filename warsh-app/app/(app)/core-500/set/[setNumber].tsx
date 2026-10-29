@@ -14,6 +14,7 @@ import { useLanguage, useTranslationLanguage } from "@services/language";
 import { useAuthStore } from "@stores/authStore";
 import { useT } from "@i18n/index";
 import { Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette } from "../../../../constants/theme";
+import { isDesktopWeb } from "@components/WebPage";
 
 type Stage = "cards" | "intro" | "test";
 type Question = NonNullable<CoreAssessment["question"]>;
@@ -310,7 +311,7 @@ export default function Core500SetScreen() {
     {dots && <View style={styles.dots} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
       {dots.map((color, i) => <View key={i} style={[styles.dot, { backgroundColor: color }]} />)}
     </View>}
-    <ScrollView ref={scrollRef} contentContainerStyle={[styles.content, { paddingBottom: Math.max(insets.bottom, Spacing.lg) + Spacing.lg, maxWidth: Platform.OS === "web" && width >= 960 ? 720 : 560 }]}>
+    <ScrollView ref={scrollRef} contentContainerStyle={[styles.content, { paddingBottom: Math.max(insets.bottom, Spacing.lg) + Spacing.lg, maxWidth: isDesktopWeb(width) ? 720 : 560 }]}>
       {error && <View accessibilityRole="alert" style={styles.error}><Text style={styles.body}>{direction(error)}</Text>
         {words.length > 0 && <BrandButton variant="secondary" title={t("core500.resumeTest")} disabled={busy} onPress={() => setReload(n => n + 1)} />}
       </View>}

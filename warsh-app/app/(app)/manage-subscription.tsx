@@ -22,6 +22,7 @@ import { useT } from "@i18n/index";
 
 import { PLAY_SUBSCRIPTION_URL } from "../../constants/subscription";
 import { ScreenHeader } from "@components/ScreenHeader";
+import { isDesktopWeb } from "@components/WebPage";
 
 // Normalized store states persisted by the backend (source of truth).
 type StoreState =
@@ -45,7 +46,7 @@ interface SubState {
 export default function ManageSubscriptionScreen() {
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && width >= 960;
+  const desktopWeb = isDesktopWeb(width);
   const router = useRouter();
   const language = useLanguage();
   const t = useT();

@@ -25,6 +25,7 @@ import {
   WarshPalette,
 } from "../../constants/theme";
 import { ScreenHeader } from "@components/ScreenHeader";
+import { isDesktopWeb } from "@components/WebPage";
 
 interface Stats {
   userName: string;
@@ -47,7 +48,7 @@ export default function ShareStatsScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && width >= 960;
+  const desktopWeb = isDesktopWeb(width);
   const viewShotRef = useRef<View>(null);
 
   const [stats, setStats] = useState<Stats | null>(null);

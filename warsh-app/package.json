@@ -14,6 +14,7 @@
     "start": "expo start",
     "android": "expo run:android",
     "web": "expo start --web",
+    "design-sync": "node scripts/design-sync.mjs",
     "build:web": "node scripts/build-web.mjs",
     "lint": "eslint . --ext .ts,.tsx",
     "ios": "expo run:ios",

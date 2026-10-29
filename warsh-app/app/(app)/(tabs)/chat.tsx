@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { View, Text, ScrollView, Pressable, ActivityIndicator, Platform, TouchableOpacity, Alert, StyleSheet, TextInput, useWindowDimensions } from "react-native";
+import { View, Text, ScrollView, Pressable, ActivityIndicator, Platform, TouchableOpacity, Alert, StyleSheet, TextInput } from "react-native";
 import { useFocusEffect, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
@@ -28,16 +28,35 @@ import {
   requestConsumablePurchase,
   type IapSubscriptionPurchase,
 } from "@services/iap";
+import { useWebLayout, useWebPageStyle } from "@components/WebPage";
 
 const NOOR_PACK_PRODUCT_ID = "warsh_noor_pack";
 
-/** Prefix prose with a Unicode direction mark so the paragraph direction follows the
- *  reply language rather than Android's first-strong character. */
-function withDirectionMark(text: string, language: "en" | "ur"): string {
+type Direction = "ltr" | "rtl";
+
+const LATIN_LETTER = /[A-Za-z]/g;
+const ARABIC_SCRIPT_LETTER = /[؀-ۿݐ-ݿﭐ-﷿ﹰ-﻿]/g;
+
+/** A paragraph's direction from its own text, not the reply-language setting:
+ *  Noor answers an English question in English even for an Urdu learner, and
+ *  quotes Arabic inside both. Whichever script has more letters wins. */
+function paragraphDirection(text: string): Direction {
+  const latin = text.match(LATIN_LETTER)?.length ?? 0;
+  const arabicScript = text.match(ARABIC_SCRIPT_LETTER)?.length ?? 0;
+  return arabicScript > latin ? "rtl" : "ltr";
+}
+
+/** Prefix prose with a Unicode direction mark so the paragraph direction is the
+ *  one given rather than Android's first-strong character. */
+function withDirectionMark(text: string, direction: Direction): string {
   // Android resolves direction per paragraph, so the mark has to follow every
   // line break too, not just open the string.
-  const mark = language === "ur" ? "‏" : "‎";
+  const mark = direction === "rtl" ? "‏" : "‎";
   return mark + text.replace(/\n/g, `\n${mark}`);
+}
+
+function paragraphs(text: string): string[] {
+  return text.split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
 }
 
 type Headword = {
@@ -52,8 +71,9 @@ type ChatMessage = { role: "USER" | "ASSISTANT"; content: string; headword?: Hea
 export default function ChatScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
-  const { width } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && width >= 960;
+  const webLayout = useWebLayout();
+  const readingStyle = useWebPageStyle("reading");
+  const flush = webLayout.isWeb ? styles.flush : null;
   const user = useAuthStore((state) => state.user);
   const language = useTranslationLanguage();
   const t = useT();
@@ -370,7 +390,7 @@ export default function ChatScreen() {
     const headword = message.headword ?? null;
     const saved = headword?.wordId ? savedWords.has(headword.wordId) : false;
     return (
-      <View key={key} style={[styles.assistantRow, desktopWeb && styles.assistantRowWeb]}>
+      <View key={key} style={[styles.assistantRow, webLayout.isWeb && styles.assistantRowWeb]}>
         {noorMark("sm")}
         <View style={styles.assistantCard}>
           {headword ? (
@@ -384,14 +404,20 @@ export default function ChatScreen() {
             </View>
           ) : null}
           {/* Noor often opens an English reply with an Arabic greeting
-              ("السلام عليكم. How can I help…"); Android's first-strong rule
-              then lays the whole bubble out right-to-left and strands the
-              question mark on the left. Same fix as discover prose: a
-              direction mark for the reply language (`writingDirection` is
-              iOS-only). */}
-          <Text style={[styles.assistantText, language === "ur" ? styles.proseRtl : styles.proseLtr]}>
-            {withDirectionMark(message.content, language)}
-          </Text>
+              ("السلام عليكم. How can I help…"), and an Urdu learner can still
+              get an English answer. Each paragraph takes the direction of its
+              own text, with a direction mark for Android (`writingDirection`
+              is iOS- and web-only). */}
+          <View style={styles.assistantParagraphs}>
+            {paragraphs(message.content).map((paragraph, index) => {
+              const direction = paragraphDirection(paragraph);
+              return (
+                <Text key={index} style={[styles.assistantText, direction === "rtl" ? styles.proseRtl : styles.proseLtr]}>
+                  {withDirectionMark(paragraph, direction)}
+                </Text>
+              );
+            })}
+          </View>
           {headword?.wordId ? (
             <View style={styles.wordActions}>
               <PlayButton
@@ -456,13 +482,13 @@ export default function ChatScreen() {
     <View style={styles.screen}>
       <View
         style={
-          desktopWeb
-            ? styles.webColumn
+          webLayout.isWeb
+            ? [readingStyle, styles.webColumn]
             : [styles.column, { paddingTop: insets.top + Spacing.md, paddingBottom: insets.bottom + 80 }]
         }
       >
         {/* Header: title row (as Quran and You), then the tutor */}
-        <View style={styles.header}>
+        <View style={[styles.header, flush]}>
           <View style={styles.titleRow}>
             <Text style={styles.title}>{t("tabs.noor")}</Text>
             <View style={styles.meter} accessible accessibilityLabel={meterA11y}>
@@ -481,12 +507,12 @@ export default function ChatScreen() {
           ) : null}
         </View>
 
-        {error ? <Text style={styles.errorText}>{error}</Text> : null}
+        {error ? <Text style={[styles.errorText, flush]}>{error}</Text> : null}
 
         <ScrollView
           ref={scrollRef}
           style={styles.messages}
-          contentContainerStyle={styles.messagesContent}
+          contentContainerStyle={[styles.messagesContent, flush]}
           onContentSizeChange={() => scrollRef.current?.scrollToEnd({ animated: true })}
           keyboardShouldPersistTaps="handled"
         >
@@ -494,8 +520,10 @@ export default function ChatScreen() {
             ? welcome
             : messages.map((message, index) =>
                 message.role === "USER" ? (
-                  <View key={`USER-${index}`} style={[styles.userBubble, desktopWeb && styles.userBubbleWeb]}>
-                    <Text style={styles.userText}>{message.content}</Text>
+                  <View key={`USER-${index}`} style={[styles.userBubble, webLayout.isWeb && styles.userBubbleWeb]}>
+                    <Text style={[styles.userText, paragraphDirection(message.content) === "rtl" ? styles.proseRtl : styles.proseLtr]}>
+                      {withDirectionMark(message.content, paragraphDirection(message.content))}
+                    </Text>
                   </View>
                 ) : (
                   renderAssistant(message, `ASSISTANT-${index}`)
@@ -517,7 +545,7 @@ export default function ChatScreen() {
             horizontal
             showsHorizontalScrollIndicator={false}
             style={styles.followUps}
-            contentContainerStyle={styles.followUpsContent}
+            contentContainerStyle={[styles.followUpsContent, flush]}
             keyboardShouldPersistTaps="handled"
           >
             {followUps.map((followUp) => (
@@ -533,7 +561,7 @@ export default function ChatScreen() {
             ))}
           </ScrollView>
         ) : null}
-        <View style={styles.composer}>
+        <View style={[styles.composer, flush]}>
           <TextInput
             value={input}
             onChangeText={setInput}
@@ -565,7 +593,7 @@ export default function ChatScreen() {
           </Pressable>
         </View>
       </View>
-      {desktopWeb ? null : <StatusBarBacking />}
+      {webLayout.isWeb ? null : <StatusBarBacking />}
 
       {/* N2 — Overage Modal */}
       <BottomSheetModal
@@ -614,14 +642,16 @@ export default function ChatScreen() {
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: Colors.bg.primary },
   column: { flex: 1 },
+  // Reading page (design system › Web layout): the frame sets width, gutter
+  // and left edge, so the header, messages and composer drop their own side
+  // padding (see `flush`) to line up on it.
   webColumn: {
     flex: 1,
-    width: "100%",
-    maxWidth: 900,
-    alignSelf: "center",
     paddingTop: 36,
     paddingBottom: 28,
   },
+  flush: { paddingHorizontal: 0, marginHorizontal: 0 },
+  assistantParagraphs: { gap: Spacing.md },
   header: { paddingHorizontal: Spacing.xl },
   titleRow: {
     flexDirection: "row",

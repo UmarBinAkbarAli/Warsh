@@ -23,6 +23,7 @@ import { TOPIC_CATALOG, getTopicLabel } from "../(tabs)/vocabulary";
 import { useT } from "@i18n/index";
 import { prefetchVocabWordAudio } from "@services/audioCache";
 import { ScreenHeader } from "@components/ScreenHeader";
+import { isDesktopWeb } from "@components/WebPage";
 
 const PREFETCH_WORD_COUNT = 12;
 
@@ -49,7 +50,7 @@ export default function TopicDetailScreen() {
   const { topic } = useLocalSearchParams<{ topic: string }>();
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && width >= 960;
+  const desktopWeb = isDesktopWeb(width);
   const router = useRouter();
   const language = useTranslationLanguage();
   const t = useT();

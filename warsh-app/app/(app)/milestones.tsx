@@ -9,6 +9,7 @@ import { StatusBarBacking } from "@components/StatusBarBacking";
 import { useLanguage } from "@services/language";
 import { useT } from "@i18n/index";
 import { FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
+import { isDesktopWeb } from "@components/WebPage";
 
 type Achievement = {
   key: string;
@@ -30,7 +31,7 @@ export default function MilestonesScreen() {
   const t = useT();
   const language = useLanguage();
   const { width } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && width >= 960;
+  const desktopWeb = isDesktopWeb(width);
   const [achievements, setAchievements] = useState<Achievement[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

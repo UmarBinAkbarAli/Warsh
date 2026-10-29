@@ -22,6 +22,7 @@ import { prefetchCatalogAudio, prefetchRemoteAudio } from "@services/audioCache"
 import { prefetchChapter } from "@services/chapterPrefetch";
 import { useAuthStore } from "@stores/authStore";
 import { shouldOfferCommitmentPrompt } from "@services/commitmentPrompt";
+import { useWebPageStyle, webShellMode } from "@components/WebPage";
 
 // ---------------------------------------------------------------------------
 // API response shape — content is the raw warsh-content-schema v1.0 blob
@@ -439,6 +440,8 @@ function exLabels(ex: RawEx, t: TranslateFn): string[] {
 // Pure utility helpers
 // ---------------------------------------------------------------------------
 const ANSWER_DELAY_MS = 1800;
+// Hook, discover, practice, reveal, close: the step dots in the Focus bar.
+const LESSON_BEATS = 5;
 
 function resolveDiscoverImage(url?: string) {
   return url?.startsWith("/") ? `${API_BASE_URL}${url}` : url;
@@ -625,9 +628,12 @@ export default function LessonPlayScreen() {
   const answeredCorrectly = isAnswered && isAnswerCorrect(currentExercise, selectedAnswer, language, t);
   const completedExerciseCount = Math.min(currentExerciseIndex + (isAnswered ? 1 : 0), exercises.length);
   const { width: windowWidth } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && windowWidth >= 960;
-  const screenPadding = desktopWeb
-    ? { paddingTop: insets.top + 16, width: "100%" as const, maxWidth: 720, alignSelf: "center" as const }
+  // The player is a Focus page (design system › Web layout): no sidebar, the
+  // content centred at the reading width from the tablet breakpoint.
+  const focusWeb = webShellMode(windowWidth) !== "phone";
+  const focusStyle = useWebPageStyle("focus");
+  const screenPadding = focusWeb
+    ? { ...focusStyle, paddingTop: insets.top + 16 }
     : { paddingTop: insets.top + 16 };
 
   // Start warming every Discovery card as soon as the lesson loads (while the
@@ -1432,6 +1438,7 @@ export default function LessonPlayScreen() {
 
     return (
       <View style={[styles.fullScreen, screenPadding]}>
+        {renderFocusBar()}
         <View style={styles.centerStack}>
           {ayahAr ? <ArabicText size="lg" style={styles.hookAyah}>{ayahAr}</ArabicText> : null}
           {ayah?.label ? <Text style={styles.ayahRef}>{ayah.label as string}</Text> : null}
@@ -1822,6 +1829,7 @@ export default function LessonPlayScreen() {
   function renderReveal() {
     return (
       <View style={[styles.fullScreen, screenPadding, styles.revealScreen]}>
+        {renderFocusBar()}
         <ScrollView style={styles.revealScroll} contentContainerStyle={styles.revealContent} showsVerticalScrollIndicator={false}>
           {renderQuranConnection()}
         </ScrollView>
@@ -2002,6 +2010,27 @@ export default function LessonPlayScreen() {
             style={[styles.stepDot, i < index ? styles.stepDotDone : null, i === index ? styles.stepDotCurrent : null]}
           />
         ))}
+      </View>
+    );
+  }
+
+  // Web has no back gesture, so on the Focus layout the screens without a top
+  // row of their own get close plus the lesson's step progress. On the hook
+  // nothing has been learned yet, so close leaves without asking.
+  function renderFocusBar() {
+    if (!focusWeb) return null;
+    return (
+      <View style={styles.topRow}>
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel={t("player.leaveLesson")}
+          onPress={currentBeat === 1 ? () => leaveLesson(false) : requestExit}
+          style={styles.backButton}
+        >
+          <Ionicons name="close" size={24} color={WarshPalette.ink} />
+        </Pressable>
+        {renderStepDots(currentBeat - 1, LESSON_BEATS)}
+        <View style={styles.backButtonSpacer} />
       </View>
     );
   }
@@ -2496,12 +2525,14 @@ export default function LessonPlayScreen() {
     if (!table || !rows || rows.length === 0) {
       return (
         <View style={[styles.fullScreen, screenPadding]}>
+          {renderFocusBar()}
           <View style={styles.centerStack}>
             <View style={styles.verbPatternFallbackCard}>
               <Text style={styles.hookQuestion}>{t("player.verbPatternSoon")}</Text>
             </View>
           </View>
           <BrandButton title={t("common.continue")} onPress={() => goToBeat(3)} style={styles.bottomButton} />
+          {renderExitConfirm()}
         </View>
       );
     }
@@ -2513,6 +2544,7 @@ export default function LessonPlayScreen() {
 
     return (
       <ScrollView style={styles.verbPatternScreen} contentContainerStyle={[styles.verbPatternContent, screenPadding]} showsVerticalScrollIndicator={false}>
+        {renderFocusBar()}
         {table.root ? (
           <View style={styles.verbRootPill}>
             <Text style={styles.verbRootPillText}>{table.root as string}</Text>
@@ -2549,6 +2581,7 @@ export default function LessonPlayScreen() {
         </View>
 
         <BrandButton title={t("common.continue")} onPress={() => goToBeat(3)} style={StyleSheet.flatten([styles.bottomButton, styles.verbPatternContinueButton])} />
+        {renderExitConfirm()}
       </ScrollView>
     );
   }
@@ -2676,12 +2709,16 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.bodyL,
     lineHeight: 26,
   },
+  // Full width of the 360 column, centred: `alignSelf: "stretch"` under a
+  // maxWidth left the box against the left edge on wide web layouts.
   hookBodyUrdu: {
-    alignSelf: "stretch",
+    alignSelf: "center",
+    width: "100%",
     fontFamily: Fonts.urduFallback,
     fontSize: desktopFontSize(18),
     lineHeight: desktopLineHeight(34, 18),
     textAlign: "right",
+    writingDirection: "rtl",
   },
   bottomButton: {
     alignSelf: "stretch",
@@ -3597,6 +3634,8 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.urduFallback,
     fontSize: desktopFontSize(18),
     lineHeight: desktopLineHeight(34, 18),
+    textAlign: "right",
+    writingDirection: "rtl",
   },
   feedbackWrongTitle: {
     color: WarshPalette.wrongText,

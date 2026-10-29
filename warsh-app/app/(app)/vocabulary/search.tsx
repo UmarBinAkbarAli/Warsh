@@ -26,6 +26,7 @@ import {
   Spacing,
   Radii,
 } from "../../../constants/theme";
+import { isDesktopWeb } from "@components/WebPage";
 
 const RECENT_KEY = "warsh_vocab_searches";
 const MAX_RECENT = 5;
@@ -46,7 +47,7 @@ export default function VocabularySearchScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && width >= 960;
+  const desktopWeb = isDesktopWeb(width);
   const language = useTranslationLanguage();
   const t = useT();
 

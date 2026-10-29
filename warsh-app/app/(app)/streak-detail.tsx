@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Platform, ScrollView, StyleSheet, Text, TouchableOpacity, useWindowDimensions, View } from "react-native";
+import { Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
@@ -8,6 +8,7 @@ import api from "@services/api";
 import { useT } from "@i18n/index";
 import { StreakWeekRow } from "@components/StreakWeekRow";
 import { ScreenHeader } from "@components/ScreenHeader";
+import { useWebLayout, useWebPageStyle } from "@components/WebPage";
 
 interface StreakData {
   streak: number;
@@ -25,8 +26,9 @@ const MILESTONES = [
 
 export default function StreakDetailScreen() {
   const insets = useSafeAreaInsets();
-  const { width } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && width >= 960;
+  // A Reading page on web (design system › Web layout).
+  const webLayout = useWebLayout();
+  const readingStyle = useWebPageStyle("reading");
   const router = useRouter();
   const t = useT();
 
@@ -55,12 +57,12 @@ export default function StreakDetailScreen() {
 
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
-      <ScreenHeader title="Streak · الاستمرار" style={desktopWeb ? styles.webHeaderRow : null} />
+      <ScreenHeader title="Streak · الاستمرار" style={webLayout.isWeb ? [readingStyle, styles.webHeaderRow] : null} />
 
       <ScrollView
         contentContainerStyle={[
           styles.content,
-          desktopWeb && styles.webRow,
+          webLayout.isWeb && readingStyle,
           { paddingBottom: insets.bottom + Spacing.xxl },
         ]}
       >
@@ -162,15 +164,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.xl,
     paddingTop: Spacing.xl,
   },
-  webRow: {
-    width: "100%",
-    maxWidth: 640,
-    alignSelf: "center",
-  },
   webHeaderRow: {
-    width: "100%",
-    maxWidth: 640,
-    alignSelf: "center",
     borderBottomWidth: 0,
     paddingTop: 36,
   },

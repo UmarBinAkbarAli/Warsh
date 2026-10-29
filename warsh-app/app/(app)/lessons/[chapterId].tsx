@@ -35,6 +35,7 @@ import {
   desktopFontSize,
   desktopLineHeight,
 } from "../../../constants/theme";
+import { isDesktopWeb, useWebPageStyle } from "@components/WebPage";
 
 // ─── helpers ──────────────────────────────────────────────────────────────────
 
@@ -209,7 +210,10 @@ export default function ChapterScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && width >= 960;
+  const desktopWeb = isDesktopWeb(width);
+  // Shared page frame on web (design system › Web layout): starts on the same
+  // left edge as every other page instead of centring in the window.
+  const pageStyle = useWebPageStyle("dashboard");
   const androidMinimal = Platform.OS === "android";
   const { chapterId, savedLesson } = useLocalSearchParams<{ chapterId: string; savedLesson?: string }>();
   const userId = useAuthStore((s) => s.user?.id);
@@ -299,9 +303,23 @@ export default function ChapterScreen() {
   if (!chapter) {
     return (
       <View style={[styles.screen, { paddingTop: insets.top }]}>
-        <ScreenHeader />
+        <ScreenHeader style={desktopWeb ? [pageStyle, styles.webHeader] : null} />
+        {/* A title, the reason, and two ways on: retry (a network failure
+            may clear) and All chapters (a locked or missing chapter won't). */}
         <View style={styles.errorScreen}>
+          <Ionicons name="alert-circle-outline" size={40} color={WarshPalette.subtleBrown} accessibilityElementsHidden importantForAccessibility="no" />
+          <Text style={styles.errorTitle} accessibilityRole="header">{t("chapter.errorTitle")}</Text>
           <Text style={styles.errorText}>{error ?? t("chapter.notFound")}</Text>
+          <View style={styles.errorActions}>
+            {error === t("chapter.loadError") ? (
+              <BrandButton title={t("common.retry")} onPress={() => void loadChapter()} />
+            ) : null}
+            <BrandButton
+              title={t("chapter.allChapters")}
+              variant={error === t("chapter.loadError") ? "secondary" : "primary"}
+              onPress={() => router.replace("/(app)/chapters")}
+            />
+          </View>
         </View>
       </View>
     );
@@ -531,14 +549,14 @@ export default function ChapterScreen() {
     <View style={[styles.screen, desktopWeb ? null : { paddingTop: insets.top }]}>
       <ScreenHeader
         title={chapter.order ? t("chapter.number", { count: chapter.order }) : undefined}
-        style={desktopWeb ? styles.webHeader : androidMinimal ? styles.androidHeader : null}
+        style={desktopWeb ? [pageStyle, styles.webHeader] : androidMinimal ? styles.androidHeader : null}
       />
       <ScrollView
         style={styles.scroll}
         contentContainerStyle={[
           styles.content,
           desktopWeb
-            ? styles.webContent
+            ? [pageStyle, styles.webContent]
             : androidMinimal
               ? styles.androidContent
               : { paddingTop: Spacing.sm },
@@ -614,13 +632,9 @@ const styles = StyleSheet.create({
   scroll: { flex: 1 },
   content: { paddingHorizontal: Spacing.xl, paddingBottom: Spacing.xl * 3 },
   webContent: {
-    width: "100%",
-    maxWidth: 1180,
-    alignSelf: "center",
     flexDirection: "row",
     alignItems: "flex-start",
     gap: 32,
-    paddingHorizontal: 32,
     paddingTop: 36,
   },
   webMain: { flex: 1, minWidth: 0, maxWidth: 760 },
@@ -628,9 +642,11 @@ const styles = StyleSheet.create({
 
   loadingScreen: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: Colors.bg.primary },
   errorScreen: { flex: 1, justifyContent: "center", alignItems: "center", padding: Spacing.xl, backgroundColor: Colors.bg.primary },
-  errorText: { fontSize: FontSizes.bodyL, color: Colors.text.secondary, textAlign: "center" },
+  errorTitle: { fontFamily: Fonts.semiBold, fontSize: FontSizes.h2, color: Colors.text.primary, textAlign: "center", marginTop: Spacing.md },
+  errorText: { fontSize: FontSizes.bodyL, color: Colors.text.secondary, textAlign: "center", marginTop: Spacing.sm, maxWidth: 420 },
+  errorActions: { alignSelf: "stretch", maxWidth: 360, width: "100%", marginTop: Spacing.xl, marginHorizontal: "auto", gap: Spacing.sm },
 
-  webHeader: { width: "100%", maxWidth: 1180, alignSelf: "center", paddingTop: 24 },
+  webHeader: { paddingTop: 24 },
   androidHeader: { minHeight: 48 },
   androidContent: { paddingHorizontal: Spacing.gutter, paddingTop: Spacing.sm, paddingBottom: Spacing.xl * 3 },
   androidMain: { width: "100%" },

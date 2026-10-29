@@ -3,6 +3,7 @@ import { Stack, usePathname, useRouter } from "expo-router";
 import { Platform, useWindowDimensions, View } from "react-native";
 import { useAuthStore } from "@stores/authStore";
 import { WebAppSidebar } from "@components/WebAppSidebar";
+import { webShellMode } from "@components/WebPage";
 import { Colors } from "../../constants/theme";
 import {
   addNotificationResponseListener,
@@ -164,10 +165,11 @@ export default function AppLayout() {
     pathname.includes("/review") ||
     pathname.includes("celebration") ||
     pathname.includes("/paywall");
-  const desktopWeb =
-    Platform.OS === "web" && width >= 960 && !isFocusedExperience;
+  // Web shell by width (design system › Web layout): phone tab bar below
+  // 768px, icon rail to 1023px, full sidebar from 1024px. Focus screens get no shell.
+  const shell = webShellMode(width);
 
-  if (!desktopWeb) return stack;
+  if (shell === "phone" || isFocusedExperience) return stack;
 
   return (
     <View
@@ -177,7 +179,7 @@ export default function AppLayout() {
         backgroundColor: Colors.bg.primary,
       }}
     >
-      <WebAppSidebar />
+      <WebAppSidebar compact={shell === "rail"} />
       <View style={{ flex: 1, minWidth: 0 }}>{stack}</View>
     </View>
   );

@@ -21,6 +21,7 @@ import { useTranslationLanguage, pickTranslation } from "@services/language";
 import { useT } from "@i18n/index";
 import { prefetchVocabWordAudio } from "@services/audioCache";
 import { ScreenHeader } from "@components/ScreenHeader";
+import { isDesktopWeb } from "@components/WebPage";
 
 interface QuranicExample {
   surahNameEn: string;
@@ -49,7 +50,7 @@ type Stage = "loading" | "empty" | "pre" | "front" | "back" | "done";
 export default function SRSReviewScreen() {
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && width >= 960;
+  const desktopWeb = isDesktopWeb(width);
   const router = useRouter();
   const language = useTranslationLanguage();
   const t = useT();

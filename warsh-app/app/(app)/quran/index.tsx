@@ -6,9 +6,10 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { INDOPAK_FONT, QURAN_FONT } from "@components/quran/MushafPage";
 import { QuranSettingsSheet } from "@components/quran/QuranSheets";
+import { useWebLayout, useWebPageStyle } from "@components/WebPage";
 import { useT } from "@i18n/index";
 import { useQuranStore } from "@stores/quranStore";
-import { Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette, desktopFontSize, desktopLineHeight } from "../../../constants/theme";
+import { Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette, WebLayout, desktopFontSize, desktopLineHeight } from "../../../constants/theme";
 import {
   chapters,
   getChapter,
@@ -33,6 +34,8 @@ type Row = {
   indoPak?: boolean;
   page: number;
   bookmarkAyah?: number;
+  /** An empty cell that fills out the last row of the web grid. */
+  pad?: boolean;
 };
 
 /** Surah, juz (parah) and bookmark lists for the Quran reader (Pen sections 27 and 28). */
@@ -49,6 +52,11 @@ export default function QuranIndexScreen({ isTab = false }: { isTab?: boolean })
   const [searching, setSearching] = useState(false);
   const [query, setQuery] = useState("");
   const [settingsOpen, setSettingsOpen] = useState(false);
+  // A Collection page on web (design system › Web layout): the list becomes a
+  // 2 / 3 / 4-column grid of cards on the shared frame.
+  const webLayout = useWebLayout();
+  const collectionStyle = useWebPageStyle("collection");
+  const columns = webLayout.isWeb ? webLayout.gridColumns : 1;
 
   const openPage = (page: number) => router.push({ pathname: "/(app)/quran/[page]", params: { page: String(page) } });
 
@@ -112,11 +120,22 @@ export default function QuranIndexScreen({ isTab = false }: { isTab?: boolean })
   }
 
   const lastChapter = lastPage ? surahForPage(layout, lastPage) : null;
+  const remainder = rows.length % columns;
+  const gridRows: Row[] =
+    columns > 1 && remainder > 0
+      ? [
+          ...rows,
+          ...Array.from({ length: columns - remainder }, (_, i) => ({ key: `pad-${i}`, pad: true, badge: "", title: "", subtitle: "", page: 0 })),
+        ]
+      : rows;
 
   return (
-    <View style={[styles.screen, { paddingTop: insets.top + Spacing.sm }]}>
-      <View style={styles.topBar}>
-        {isTab ? (
+    <View style={[styles.screen, { paddingTop: webLayout.isWeb ? 36 : insets.top + Spacing.sm }]}>
+      <View style={[styles.topBar, webLayout.isWeb && collectionStyle]}>
+        {/* On web the sidebar always marks Quran as the current page, and the
+            tab and this stack copy share the /quran URL, so neither gets a
+            back chevron there. */}
+        {isTab || webLayout.isWeb ? (
           <View style={styles.titleButton}>
             <Text style={styles.title}>{t("quran.title")}</Text>
           </View>
@@ -157,15 +176,26 @@ export default function QuranIndexScreen({ isTab = false }: { isTab?: boolean })
       </View>
 
       <FlatList
-        data={rows}
+        // numColumns can't change on a mounted list, so a new column count remounts it.
+        key={`cols-${columns}`}
+        data={gridRows}
+        numColumns={columns}
+        columnWrapperStyle={columns > 1 ? { gap: WebLayout.gridGap } : undefined}
         keyExtractor={(row) => row.key}
         contentContainerStyle={[
           styles.content,
-          { paddingBottom: isTab ? insets.bottom + 90 : insets.bottom + Spacing.xl },
+          webLayout.isWeb && collectionStyle,
+          {
+            paddingBottom: webLayout.isWeb
+              ? Spacing.xxl
+              : isTab
+                ? insets.bottom + 90
+                : insets.bottom + Spacing.xl,
+          },
         ]}
         keyboardShouldPersistTaps="handled"
         ListHeaderComponent={
-          <View style={styles.header}>
+          <View style={[styles.header, webLayout.isWeb && styles.webHeader]}>
             {searching ? (
               <View style={styles.searchRow}>
                 <View style={styles.searchField}>
@@ -248,9 +278,9 @@ export default function QuranIndexScreen({ isTab = false }: { isTab?: boolean })
             <Text style={styles.empty}>{t("quran.noResults")}</Text>
           )
         }
-        ItemSeparatorComponent={() => <View style={styles.separator} />}
-        renderItem={({ item }) => (
-          <View style={styles.rowWrap}>
+        ItemSeparatorComponent={() => <View style={columns > 1 ? styles.gridSpacer : styles.separator} />}
+        renderItem={({ item }) => item.pad ? <View style={styles.gridCell} /> : (
+          <View style={[styles.rowWrap, columns > 1 && [styles.gridCell, styles.gridCard]]}>
           <Pressable
             onPress={() => openPage(item.page)}
             style={({ pressed }) => [styles.row, styles.rowMain, pressed && styles.pressed]}
@@ -420,6 +450,16 @@ const styles = StyleSheet.create({
     gap: Spacing.xs,
   },
   rowMain: { flex: 1, minWidth: 0 },
+  webHeader: { maxWidth: WebLayout.readingMax, paddingBottom: Spacing.lg },
+  gridCell: { flex: 1, minWidth: 0 },
+  gridCard: {
+    paddingHorizontal: Spacing.md,
+    borderRadius: Radii.md,
+    borderWidth: 0.5,
+    borderColor: WarshPalette.parchmentCardBorder,
+    backgroundColor: WarshPalette.white,
+  },
+  gridSpacer: { height: WebLayout.gridGap },
   removeButton: {
     width: 44,
     height: 44,

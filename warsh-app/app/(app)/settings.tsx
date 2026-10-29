@@ -9,7 +9,6 @@ import {
   Switch,
   Text,
   TouchableOpacity,
-  useWindowDimensions,
   View,
 } from "react-native";
 import { useFocusEffect, useLocalSearchParams, useRouter } from "expo-router";
@@ -35,6 +34,7 @@ import { BottomSheetModal } from "@components/BottomSheetModal";
 import { ConfirmDialog } from "@components/ConfirmDialog";
 import { type AppLanguage } from "@services/language";
 import { ScreenHeader } from "@components/ScreenHeader";
+import { useWebLayout, useWebPageStyle } from "@components/WebPage";
 
 // AsyncStorage keys for local preferences
 const PREFS_KEY = "warsh_settings";
@@ -177,8 +177,10 @@ export default function SettingsScreen() {
   const [confirmLogout, setConfirmLogout] = useState(false);
   const { logout } = useAuth();
   const insets = useSafeAreaInsets();
-  const { width } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && width >= 960;
+  // A Reading page on web (design system › Web layout). Settings sits in the
+  // sidebar as a top-level page, so it gets no back chevron there.
+  const webLayout = useWebLayout();
+  const readingStyle = useWebPageStyle("reading");
   const router = useRouter();
   const clearSession = useAuthStore((s) => s.clearSession);
   const user = useAuthStore((s) => s.user);
@@ -322,11 +324,15 @@ export default function SettingsScreen() {
 
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
-      <ScreenHeader title={t("settings.title")} style={desktopWeb ? styles.webHeaderRow : null} />
+      <ScreenHeader
+        title={t("settings.title")}
+        showBack={!webLayout.isWeb}
+        style={webLayout.isWeb ? [readingStyle, styles.webHeaderRow] : null}
+      />
 
       <ScrollView
         ref={scrollViewRef}
-        contentContainerStyle={[styles.content, desktopWeb && styles.webRow]}
+        contentContainerStyle={[styles.content, webLayout.isWeb && readingStyle]}
       >
 
         <SectionHeader title={t("settings.languageContent")} />
@@ -735,15 +741,7 @@ const styles = StyleSheet.create({
   },
 
   content: { paddingHorizontal: Spacing.xl, paddingTop: Spacing.md },
-  webRow: {
-    width: "100%",
-    maxWidth: 760,
-    alignSelf: "center",
-  },
   webHeaderRow: {
-    width: "100%",
-    maxWidth: 760,
-    alignSelf: "center",
     borderBottomWidth: 0,
     paddingTop: 36,
   },

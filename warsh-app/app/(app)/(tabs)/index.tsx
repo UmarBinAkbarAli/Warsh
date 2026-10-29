@@ -63,12 +63,14 @@ import {
   WarshPalette,
   desktopFontSize,
   desktopLineHeight,
+  WebLayout,
 } from "../../../constants/theme";
 import {
   isPremiumSuspended,
   toSubscriptionHealthState,
   type SubscriptionHealthState,
 } from "../../../constants/subscription";
+import { isDesktopWeb, useWebLayout, useWebPageStyle } from "@components/WebPage";
 
 // Streak and freeze memory is per account, like the onboarding keys below:
 // a device-global "last streak" made a fresh account on the same phone open to
@@ -182,13 +184,16 @@ export default function HomeScreen() {
   const [meaningLanguageChosen, setMeaningLanguageChosen] = useState(false);
   const [commitmentMade, setCommitmentMade] = useState(false);
 
-  // On web `width` is the full browser viewport, but the app is constrained
-  // to the centered WebShell column — cap to the frame width so content fits
-  // instead of overflowing and clipping. Native keeps its wider cap.
-  const desktopWeb = isWeb && width >= 960;
+  // From the tablet breakpoint Learn is a Dashboard page (design system ›
+  // Web layout): the shared frame sets its left edge, width and gutter, and
+  // the stats panel becomes a side column from `bpWide`. Native and
+  // phone-width web keep the single centred column.
+  const desktopWeb = isDesktopWeb(width);
   const android = Platform.OS === "android";
-  const availableWebWidth = desktopWeb ? width - 260 : width;
-  const contentWidth = Math.min(availableWebWidth, isWeb ? WEB_MAX_WIDTH : 720);
+  const webLayout = useWebLayout();
+  const dashboardStyle = useWebPageStyle("dashboard");
+  const dashboardWeb = webLayout.isWeb;
+  const contentWidth = Math.min(width, isWeb ? WEB_MAX_WIDTH : 720);
   const pagePadding = contentWidth >= 600 ? Spacing.xxl : Spacing.gutter;
 
   useEffect(() => {
@@ -627,14 +632,14 @@ export default function HomeScreen() {
         style={styles.scroll}
         contentContainerStyle={[
           styles.scrollContent,
-          {
-            width: contentWidth,
-            paddingHorizontal: pagePadding,
-            paddingTop: desktopWeb
-              ? Spacing.xxxl
-              : insets.top + Spacing.md,
-            paddingBottom: insets.bottom + 90,
-          },
+          dashboardWeb
+            ? [dashboardStyle, { paddingTop: Spacing.xxxl, paddingBottom: Spacing.xxxl }]
+            : {
+                width: contentWidth,
+                paddingHorizontal: pagePadding,
+                paddingTop: insets.top + Spacing.md,
+                paddingBottom: insets.bottom + 90,
+              },
         ]}
         showsVerticalScrollIndicator={false}
       >
@@ -815,8 +820,8 @@ export default function HomeScreen() {
           />
         ) : null}
 
-        <View style={desktopWeb ? styles.desktopDashboardGrid : undefined}>
-          <View style={desktopWeb ? styles.desktopPrimaryColumn : undefined}>
+        <View style={webLayout.isWide ? [styles.desktopDashboardGrid, { gap: webLayout.gutter }] : undefined}>
+          <View style={webLayout.isWide ? styles.desktopPrimaryColumn : undefined}>
             {showOnboardingChecklist &&
             activeChapter &&
             lessonsCompleted === 0 ? (
@@ -999,9 +1004,9 @@ export default function HomeScreen() {
               ) : null}
             </View>
           </View>
-          {desktopWeb ? (
-            <View style={styles.desktopRail}>
-              <View style={styles.statCard}>
+          {dashboardWeb ? (
+            <View style={webLayout.isWide ? styles.desktopRail : styles.desktopStatsRow}>
+              <View style={[styles.statCard, !webLayout.isWide && styles.statCardInRow]}>
                 <View style={styles.statTop}>
                   <Text style={styles.statLabel}>POINTS</Text>
                   <Ionicons
@@ -1013,7 +1018,7 @@ export default function HomeScreen() {
                 <Text style={styles.statValue}>{xp}</Text>
                 <Text style={styles.statCaption}>points earned</Text>
               </View>
-              <View style={styles.statCard}>
+              <View style={[styles.statCard, !webLayout.isWide && styles.statCardInRow]}>
                 <View style={styles.statTop}>
                   <Text style={styles.statLabel}>LESSONS</Text>
                   <Ionicons
@@ -1166,9 +1171,16 @@ const styles = StyleSheet.create({
     minWidth: 0,
   },
   desktopRail: {
-    width: 280,
+    width: WebLayout.sideColumn,
     gap: Spacing.lg,
   },
+  // Below `bpWide` the side panel stacks under the main column, its cards side by side.
+  desktopStatsRow: {
+    flexDirection: "row",
+    gap: WebLayout.gridGap,
+    marginTop: Spacing.xl,
+  },
+  statCardInRow: { flex: 1, minWidth: 0 },
   statCard: {
     minHeight: 150,
     padding: 22,
