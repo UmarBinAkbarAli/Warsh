@@ -16,7 +16,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { Image } from "expo-image";
 import { ArabicText } from "@components/ArabicText";
 import { PlayButton } from "@components/PlayButton";
-import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../../constants/theme";
+import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette, WebLayout } from "../../../constants/theme";
 import { getVocabularyWords, getWordOfDay, getSRSDueWords } from "@services/api";
 import { useTranslationLanguage, pickTranslation } from "@services/language";
 import { StatusBarBacking } from "@components/StatusBarBacking";
@@ -146,11 +146,13 @@ function WordRow({ word, language, onPress }: { word: VocabWord; language: "en" 
 
 // ─── word of day card ────────────────────────────────────────────────────────
 
-function WordOfDayCard({ word, language, onPress }: { word: VocabWord; language: "en" | "ur"; onPress?: () => void }) {
+/** `wide`: laptop web, where the word and its ayah sit side by side. */
+function WordOfDayCard({ word, language, onPress, wide = false }: { word: VocabWord; language: "en" | "ur"; onPress?: () => void; wide?: boolean }) {
   const t = useT();
   return (
-    <TouchableOpacity onPress={onPress} activeOpacity={onPress ? 0.8 : 1}>
-      <View style={styles.wotdCard}>
+    <TouchableOpacity onPress={onPress} activeOpacity={onPress ? 0.8 : 1} style={wide ? styles.wotdWide : null}>
+      <View style={[styles.wotdCard, wide && styles.wotdCardWide]}>
+        <View style={wide ? styles.wotdWord : null}>
         <Text style={styles.wotdLabel}>{t("vocabulary.wordOfDay")}</Text>
         {word.imageUrl ? (
           <Image source={{ uri: word.imageUrl }} style={styles.wotdImage} contentFit="contain" cachePolicy="disk" />
@@ -161,15 +163,17 @@ function WordOfDayCard({ word, language, onPress }: { word: VocabWord; language:
         </View>
         <Text style={styles.wotdMeaning}>{pickTranslation(word, language)}</Text>
         <Text style={styles.wotdTranslit}>{word.transliteration}</Text>
+        </View>
         {word.quranicExample ? (
-          <View style={styles.wotdAyah}>
+          <View style={[styles.wotdAyah, wide && styles.wotdAyahWide]}>
             <ArabicText size="sm" style={styles.wotdAyahText}>{word.quranicExample.ayahArabic}</ArabicText>
             <Text style={styles.wotdAyahRef}>
               {word.quranicExample.surahNameEn} · {word.quranicExample.surahNumber}:{word.quranicExample.ayahNumber}
             </Text>
+            {onPress && wide ? <Text style={styles.wotdTapHint}>{t("vocabulary.tapToExplore")}</Text> : null}
           </View>
         ) : null}
-        {onPress ? (
+        {onPress && !wide ? (
           <Text style={styles.wotdTapHint}>{t("vocabulary.tapToExplore")}</Text>
         ) : null}
       </View>
@@ -288,6 +292,52 @@ export default function VocabularyScreen() {
 
   const isSearching = query.trim().length >= 2;
 
+  const reviewCard =
+    srsDueCount > 0 ? (
+      <TouchableOpacity
+        style={[styles.reviewCard, webLayout.isDesktop && styles.sideCard]}
+        onPress={() => router.push("/(app)/vocabulary/review")}
+        activeOpacity={0.8}
+      >
+        <View style={styles.reviewCardLeft}>
+          <Ionicons name="repeat-outline" size={22} color={WarshPalette.sage} />
+          <View style={{ marginLeft: Spacing.sm }}>
+            <Text style={styles.reviewCardTitle}>{t("vocabulary.review")}</Text>
+            <Text style={styles.reviewCardCount}>{t("vocabulary.reviewReady", { count: srsDueCount, suffix: srsDueCount !== 1 ? "s" : "" })}</Text>
+          </View>
+        </View>
+        <Text style={styles.reviewCardCta}>{t("vocabulary.begin")}</Text>
+      </TouchableOpacity>
+    ) : null;
+  const wordsStat = (
+    <View style={[styles.statBox, webLayout.isDesktop && styles.statBoxSide]}>
+      <Text style={styles.statValue}>{countsLoading && allWords.length === 0 ? "—" : allWords.length}</Text>
+      <Text style={styles.statLabel}>{t("vocabulary.wordsInBank")}</Text>
+    </View>
+  );
+  const topicsStat = (
+    <View style={[styles.statBox, webLayout.isDesktop && styles.statBoxSide]}>
+      <Text style={styles.statValue}>16</Text>
+      <Text style={styles.statLabel}>{t("vocabulary.topics")}</Text>
+    </View>
+  );
+  const myWordsCard = (
+    <TouchableOpacity
+      style={[styles.myWordsCard, webLayout.isDesktop && styles.sideCard]}
+      onPress={() => router.push("/(app)/vocabulary/my-words")}
+      activeOpacity={0.8}
+    >
+      <View style={styles.myWordsLeft}>
+        <Ionicons name="bookmark-outline" size={22} color={WarshPalette.gold} />
+        <View style={{ marginLeft: Spacing.sm, flexShrink: 1 }}>
+          <Text style={styles.myWordsTitle}>{t("vocabulary.myWords")}</Text>
+          <Text style={styles.myWordsSub}>{t("vocabulary.myWordsSub")}</Text>
+        </View>
+      </View>
+      <Text style={styles.myWordsCta}>{t("common.view")} ›</Text>
+    </TouchableOpacity>
+  );
+
   return (
     <View style={{ flex: 1 }}>
       <ScrollView
@@ -310,7 +360,11 @@ export default function VocabularyScreen() {
         </View>
 
         {/* Search */}
-        <TouchableOpacity activeOpacity={0.85} onPress={() => router.push("/(app)/vocabulary/search")}>
+        <TouchableOpacity
+          activeOpacity={0.85}
+          onPress={() => router.push("/(app)/vocabulary/search")}
+          style={webLayout.isDesktop ? styles.searchWeb : null}
+        >
           <View pointerEvents="none">
             <TextInput
               value={query}
@@ -363,62 +417,47 @@ export default function VocabularyScreen() {
           </View>
         ) : (
           <>
-            {/* Word of Day */}
-            {wordOfDay ? (
-              <View style={{ marginTop: Spacing.lg }}>
-                <WordOfDayCard
-                  word={wordOfDay}
-                  language={language}
-                  onPress={() => router.push(`/(app)/vocabulary/word/${wordOfDay.id}`)}
-                />
+            {/* Laptop web (design system › Web layout): Today's word takes the
+                main column, and review, the counts and My Words stack beside it.
+                Below 1024px everything stacks, as on the phone. */}
+            {webLayout.isDesktop ? (
+              <View style={styles.topRow}>
+                <View style={styles.topMain}>
+                  {wordOfDay ? (
+                    <WordOfDayCard
+                      wide
+                      word={wordOfDay}
+                      language={language}
+                      onPress={() => router.push(`/(app)/vocabulary/word/${wordOfDay.id}`)}
+                    />
+                  ) : null}
+                </View>
+                <View style={styles.topSide}>
+                  {reviewCard}
+                  {wordsStat}
+                  {topicsStat}
+                  {myWordsCard}
+                </View>
               </View>
-            ) : null}
-
-            {/* SRS Review card */}
-            {srsDueCount > 0 ? (
-              <TouchableOpacity
-                style={styles.reviewCard}
-                onPress={() => router.push("/(app)/vocabulary/review")}
-                activeOpacity={0.8}
-              >
-                <View style={styles.reviewCardLeft}>
-                  <Ionicons name="repeat-outline" size={22} color={WarshPalette.sage} />
-                  <View style={{ marginLeft: Spacing.sm }}>
-                    <Text style={styles.reviewCardTitle}>{t("vocabulary.review")}</Text>
-                    <Text style={styles.reviewCardCount}>{t("vocabulary.reviewReady", { count: srsDueCount, suffix: srsDueCount !== 1 ? "s" : "" })}</Text>
+            ) : (
+              <>
+                {wordOfDay ? (
+                  <View style={{ marginTop: Spacing.lg }}>
+                    <WordOfDayCard
+                      word={wordOfDay}
+                      language={language}
+                      onPress={() => router.push(`/(app)/vocabulary/word/${wordOfDay.id}`)}
+                    />
                   </View>
+                ) : null}
+                {reviewCard}
+                <View style={styles.statsRow}>
+                  {wordsStat}
+                  {topicsStat}
                 </View>
-                <Text style={styles.reviewCardCta}>{t("vocabulary.begin")}</Text>
-              </TouchableOpacity>
-            ) : null}
-
-            {/* Stats */}
-            <View style={styles.statsRow}>
-              <View style={styles.statBox}>
-                <Text style={styles.statValue}>{countsLoading && allWords.length === 0 ? "—" : allWords.length}</Text>
-                <Text style={styles.statLabel}>{t("vocabulary.wordsInBank")}</Text>
-              </View>
-              <View style={styles.statBox}>
-                <Text style={styles.statValue}>16</Text>
-                <Text style={styles.statLabel}>{t("vocabulary.topics")}</Text>
-              </View>
-            </View>
-
-            {/* My Words */}
-            <TouchableOpacity
-              style={styles.myWordsCard}
-              onPress={() => router.push("/(app)/vocabulary/my-words")}
-              activeOpacity={0.8}
-            >
-              <View style={styles.myWordsLeft}>
-                <Ionicons name="bookmark-outline" size={22} color={WarshPalette.gold} />
-                <View style={{ marginLeft: Spacing.sm }}>
-                  <Text style={styles.myWordsTitle}>{t("vocabulary.myWords")}</Text>
-                  <Text style={styles.myWordsSub}>{t("vocabulary.myWordsSub")}</Text>
-                </View>
-              </View>
-              <Text style={styles.myWordsCta}>{t("common.view")} ›</Text>
-            </TouchableOpacity>
+                {myWordsCard}
+              </>
+            )}
 
             {/* Browse by Topic */}
             <Text style={styles.sectionTitle}>{t("vocabulary.browseByTopic")}</Text>
@@ -574,7 +613,7 @@ const styles = StyleSheet.create({
     backgroundColor: WarshPalette.parchmentBg,
     marginBottom: Spacing.lg,
   },
-  myWordsLeft: { flexDirection: "row", alignItems: "center" },
+  myWordsLeft: { flexDirection: "row", alignItems: "center", flexShrink: 1, marginRight: Spacing.sm },
   myWordsTitle: {
     color: WarshPalette.ink, fontFamily: Fonts.display,
     fontSize: FontSizes.bodyL,
@@ -584,7 +623,7 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.bodyM,
   },
   myWordsCta: {
-    color: WarshPalette.goldText, fontFamily: Fonts.semiBold,
+    flexShrink: 0, color: WarshPalette.goldText, fontFamily: Fonts.semiBold,
     fontSize: FontSizes.bodyL,
   },
 
@@ -642,6 +681,24 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.bodyM, fontStyle: "italic",
   },
   wotdImage: { width: "100%", height: 150, marginBottom: Spacing.sm },
+
+  // Laptop web top row
+  searchWeb: { maxWidth: WebLayout.readingMax },
+  topRow: { flexDirection: "row", alignItems: "stretch", gap: WebLayout.gridGap, marginTop: Spacing.lg, marginBottom: Spacing.lg },
+  topMain: { flex: 2, minWidth: 0 },
+  topSide: { flex: 1, minWidth: 0, gap: WebLayout.gridGap },
+  sideCard: { marginTop: 0, marginBottom: 0 },
+  // Side stats keep their content height and share any spare room, so the
+  // column ends level with Today's word.
+  statBoxSide: { flexBasis: "auto", justifyContent: "center" },
+  wotdWide: { flex: 1 },
+  wotdCardWide: { flex: 1, flexDirection: "row", gap: Spacing.xl },
+  wotdWord: { flex: 1, minWidth: 0 },
+  wotdAyahWide: {
+    flex: 1, minWidth: 0, marginTop: 0, paddingTop: 0, justifyContent: "center",
+    borderTopWidth: 0, borderStartWidth: 0.5, borderStartColor: WarshPalette.parchmentCardBorder,
+    paddingStart: Spacing.xl,
+  },
 
   // Empty
   emptyCard: {
