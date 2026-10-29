@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { StyleSheet, Text, View, type StyleProp, type TextStyle } from "react-native";
+import { Platform, StyleSheet, Text, View, type StyleProp, type TextStyle } from "react-native";
 
 import { Fonts, MushafPalette, TajweedPalette, WarshPalette, Radii } from "../../constants/theme";
 import {
@@ -53,6 +53,12 @@ const MAX_FONT_TO_LINE: Record<MushafLayout, number> = { madani15: 0.56, indopak
 // Room for the few-percent difference between the build-time HarfBuzz
 // measurement and the platform's own text layout.
 const WIDTH_SAFETY = 0.96;
+// Web only: a page in a wide, short window gets its font size from the line
+// height, so stretching the frame to the window only spreads each line's
+// words apart. The frame instead narrows to the width a line of this many em
+// needs at that size: the 90th-percentile widest line of the layout, so the
+// width holds steady from page to page and keeps the printed page's shape.
+const PAGE_MEASURE_EM: Record<MushafLayout, number> = { madani15: 21, indopak15: 19.5, indopak16: 20 };
 // How far past its box (on the left) a coloured word may draw before
 // Android wraps it; see TajweedWord.
 const COLOURED_WORD_SLACK = 80;
@@ -85,8 +91,12 @@ export const MushafPage = memo(function MushafPage({
 }: MushafPageProps) {
   const page = getPage(layout, pageNumber);
   const coloured = tajweed && hasTajweed(layout);
-  const innerWidth = width - FRAME_PADDING_X * 2 - 2;
   const lineHeight = Math.floor((height - FRAME_PADDING_Y * 2 - HEADER_HEIGHT - FOOTER_HEIGHT - 2) / linesPerPage(layout));
+  const frameWidth =
+    Platform.OS === "web"
+      ? Math.min(width, Math.ceil((lineHeight * MAX_FONT_TO_LINE[layout] * PAGE_MEASURE_EM[layout]) / WIDTH_SAFETY) + FRAME_PADDING_X * 2 + 2)
+      : width;
+  const innerWidth = frameWidth - FRAME_PADDING_X * 2 - 2;
   const fontSize = Math.max(
     10,
     Math.floor(
@@ -99,7 +109,7 @@ export const MushafPage = memo(function MushafPage({
   const runningText = [styles.runningText, { fontFamily: running.font }];
 
   return (
-    <View style={[styles.frame, { width, height }]}>
+    <View style={[styles.frame, { width: frameWidth, height }]}>
       <View style={[styles.runningHeader, { height: HEADER_HEIGHT }]}>
         <Text style={runningText}>{`${running.juz} ${running.digits(juzForPage(layout, pageNumber))}`}</Text>
         <Text style={runningText}>{`${running.surah} ${firstSurah.ar}`}</Text>
