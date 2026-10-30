@@ -1072,17 +1072,16 @@ export const ur = {
   "chapterTest.loadError": "باب کا امتحان لوڈ نہیں ہو سکا۔",
   "chapterTest.submitError": "جوابات جمع نہیں ہو سکے۔ براہ کرم دوبارہ کوشش کریں۔",
 
-  // PLACEHOLDER COPY — English text retained deliberately; slide copywriting
-  // (both languages) is a later pass. Structure is final; only values change.
-  "onboarding.slide1Title": "Learn to recite the Qur'an anywhere",
+  // Welcome slides: one feature each (Claude Design canvas, Welcome slides page).
+  "onboarding.slide1Title": "جس قرآن کی آپ تلاوت کرتے ہیں، اسے سمجھیں",
   "onboarding.slide1Body":
-    "Ustaad Noor walks you through every letter and word, one short lesson at a time.",
-  "onboarding.slide2Title": "Learn to recite the Qur'an anywhere",
+    "مختصر اسباق ہر آیت کے الفاظ اور قواعد سکھاتے ہیں۔",
+  "onboarding.slide2Title": "اعتماد سے عربی بولیں",
   "onboarding.slide2Body":
-    "Ustaad Noor walks you through every letter and word, one short lesson at a time.",
-  "onboarding.slide3Title": "Learn to recite the Qur'an anywhere",
+    "گفتگو لیب: ایک حقیقی گفتگو سنیں، پھر عربی میں بول کر جواب دیں۔",
+  "onboarding.slide3Title": "الفاظ جو یاد رہیں",
   "onboarding.slide3Body":
-    "Ustaad Noor walks you through every letter and word, one short lesson at a time.",
+    "قرآن کے سب سے عام الفاظ سیکھیں، اور جہاں اٹکیں وہاں استاد نور سے پوچھیں۔",
   "lab.pill": "گفتگو لیب",
   "lab.pillChapter": "گفتگو لیب · باب {{chapter}}",
   "lab.missionLabel": "آپ کا مشن",

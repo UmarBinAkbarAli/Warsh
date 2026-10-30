@@ -1072,17 +1072,16 @@ export const en = {
   "chapterTest.loadError": "Warsh could not load this chapter test.",
   "chapterTest.submitError": "Warsh could not submit your answers. Please try again.",
 
-  // PLACEHOLDER COPY — slides 2 and 3 reuse slide 1's text until copywriting
-  // lands (user decision 2026-08-16). Structure is final; only values change.
-  "onboarding.slide1Title": "Learn to recite the Quran anywhere",
+  // Welcome slides: one feature each (Claude Design canvas, Welcome slides page).
+  "onboarding.slide1Title": "Understand the Quran you recite",
   "onboarding.slide1Body":
-    "Ustaad Noor walks you through every letter and word, one short lesson at a time.",
-  "onboarding.slide2Title": "Learn to recite the Quran anywhere",
+    "Short lessons teach the words and grammar behind every ayah.",
+  "onboarding.slide2Title": "Speak Arabic with confidence",
   "onboarding.slide2Body":
-    "Ustaad Noor walks you through every letter and word, one short lesson at a time.",
-  "onboarding.slide3Title": "Learn to recite the Quran anywhere",
+    "Conversation Lab: listen to a real conversation, then answer out loud in Arabic.",
+  "onboarding.slide3Title": "Words that stay with you",
   "onboarding.slide3Body":
-    "Ustaad Noor walks you through every letter and word, one short lesson at a time.",
+    "Learn the most common Quranic words, and ask Ustaad Noor whenever you're stuck.",
   "lab.pill": "CONVERSATION LAB",
   "lab.pillChapter": "CONVERSATION LAB · CHAPTER {{chapter}}",
   "lab.missionLabel": "YOUR MISSION",

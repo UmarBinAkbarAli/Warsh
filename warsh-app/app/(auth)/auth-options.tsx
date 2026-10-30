@@ -33,7 +33,7 @@ import {
   WarshPalette,
 } from "../../constants/theme";
 
-// Hero art is a flat illustration exported from Figma at 3x (412 x 348).
+// Hero art: the Claude Design canvas welcome-slide images (Welcome slides page), 2x of 618 x 522.
 const HERO_ASPECT = 412 / 348;
 
 const SLIDES = [

@@ -1,5 +1,15 @@
 import { useEffect, useState, type ReactNode } from "react";
-import { Image, Platform, StyleSheet, Text, useWindowDimensions, View } from "react-native";
+import {
+  AccessibilityInfo,
+  Animated,
+  Easing,
+  Image,
+  Platform,
+  StyleSheet,
+  Text,
+  useWindowDimensions,
+  View,
+} from "react-native";
 
 import { useT } from "@i18n/index";
 import { Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette, WarshAlpha, WebLayout } from "../constants/theme";
@@ -14,73 +24,112 @@ export function useIsDesktopWeb() {
 
 const SLIDE_DURATION_MS = 5000;
 
-// Composited hero scene: the phone mockup plus two app-card cutouts
-// scattered on top at an angle, like they've been tossed onto the screen.
-const PHONE_ASPECT = 418 / 861;
-const PHONE_WIDTH = 168;
-const PHONE_HEIGHT = PHONE_WIDTH / PHONE_ASPECT;
+// Composited hero scene, designed on the Claude Design canvas (Welcome slides
+// page, WelcomeHero1-3): the phone, plus two floating cards exported as their
+// own images so each can drift very slightly. Coordinates are the canvas's,
+// in its 618 x 522 frame; each card image carries CARD_PAD of shadow per side.
+const ART_WIDTH = 618;
+const ART_HEIGHT = 522;
+const CARD_PAD = 44;
+const SCENE_WIDTH = 360;
+const SCALE = SCENE_WIDTH / ART_WIDTH;
+const SCENE_HEIGHT = ART_HEIGHT * SCALE;
 
-const CARD_ART = {
-  alifBaaTaa: { source: require("../assets/images/hero-card-alif-baa-taa.png"), aspect: 887 / 314 },
-  ayah: { source: require("../assets/images/hero-card-ayah.png"), aspect: 877 / 345 },
-  surah: { source: require("../assets/images/hero-card-surah.png"), aspect: 887 / 314 },
-  vocab: { source: require("../assets/images/hero-card-vocab.png"), aspect: 564 / 272 },
-} as const;
+type CardLayout = { source: number; left: number; top: number; width: number; height: number; rotate: number };
 
-type CardKey = keyof typeof CARD_ART;
-type CardLayout = { card: CardKey; width: number; top: number; left: number; rotate: string };
-
-const SCENE_WIDTH = 300;
-const SCENE_HEIGHT = 360;
-const PHONE_LEFT = (SCENE_WIDTH - PHONE_WIDTH) / 2;
-const PHONE_TOP = 10;
-
-const SLIDES: { key: string; cards: CardLayout[] }[] = [
+const SLIDES: { key: string; phone: number; cards: [CardLayout, CardLayout] }[] = [
   {
     key: "s1",
+    phone: require("../assets/images/welcome-slide-1-phone.png"),
     cards: [
-      { card: "alifBaaTaa", width: 186, top: 46, left: 2, rotate: "-7deg" },
-      { card: "surah", width: 172, top: 244, left: 112, rotate: "6deg" },
+      { source: require("../assets/images/welcome-slide-1-card1.png"), left: 18, top: 96, width: 200, height: 91, rotate: -5 },
+      { source: require("../assets/images/welcome-slide-1-card2.png"), left: 350, top: 318, width: 250, height: 130, rotate: 4 },
     ],
   },
   {
     key: "s2",
+    phone: require("../assets/images/welcome-slide-2-phone.png"),
     cards: [
-      { card: "ayah", width: 184, top: 40, left: 108, rotate: "6deg" },
-      { card: "vocab", width: 150, top: 250, left: 0, rotate: "-8deg" },
+      { source: require("../assets/images/welcome-slide-2-card1.png"), left: 388, top: 44, width: 214, height: 127, rotate: 5 },
+      { source: require("../assets/images/welcome-slide-2-card2.png"), left: 16, top: 316, width: 300, height: 122, rotate: -4 },
     ],
   },
   {
     key: "s3",
+    phone: require("../assets/images/welcome-slide-3-phone.png"),
     cards: [
-      { card: "vocab", width: 150, top: 44, left: 118, rotate: "8deg" },
-      { card: "alifBaaTaa", width: 186, top: 246, left: 6, rotate: "-6deg" },
+      { source: require("../assets/images/welcome-slide-3-card1.png"), left: 20, top: 74, width: 206, height: 72, rotate: -5 },
+      { source: require("../assets/images/welcome-slide-3-card2.png"), left: 344, top: 286, width: 258, height: 153, rotate: 4 },
     ],
   },
 ];
 
-function HeroScene({ cards }: { cards: CardLayout[] }) {
+// A very subtle wiggle: under a degree of tilt and a few pixels of drift,
+// with the two cards on different periods so they never move in step.
+const WIGGLE_DEGREES = 0.8;
+const WIGGLE_DRIFT = 3;
+const WIGGLE_PERIODS_MS = [2800, 3600];
+
+function FloatingCard({ card, index, still }: { card: CardLayout; index: number; still: boolean }) {
+  const [phase] = useState(() => new Animated.Value(0));
+
+  useEffect(() => {
+    if (still) return undefined;
+    const half = WIGGLE_PERIODS_MS[index] / 2;
+    const loop = Animated.loop(
+      Animated.sequence([
+        Animated.timing(phase, { toValue: 1, duration: half, easing: Easing.inOut(Easing.sin), useNativeDriver: false }),
+        Animated.timing(phase, { toValue: 0, duration: half, easing: Easing.inOut(Easing.sin), useNativeDriver: false }),
+      ])
+    );
+    loop.start();
+    return () => loop.stop();
+  }, [index, phase, still]);
+
+  const direction = index === 0 ? 1 : -1;
+  const rotate = phase.interpolate({
+    inputRange: [0, 1],
+    outputRange: [`${card.rotate - WIGGLE_DEGREES * direction}deg`, `${card.rotate + WIGGLE_DEGREES * direction}deg`],
+  });
+  const translateY = phase.interpolate({ inputRange: [0, 1], outputRange: [0, -WIGGLE_DRIFT] });
+
+  return (
+    <Animated.Image
+      source={card.source}
+      resizeMode="contain"
+      style={[
+        styles.card,
+        {
+          left: (card.left - CARD_PAD) * SCALE,
+          top: (card.top - CARD_PAD) * SCALE,
+          width: (card.width + CARD_PAD * 2) * SCALE,
+          height: (card.height + CARD_PAD * 2) * SCALE,
+          transform: [{ translateY }, { rotate }],
+        },
+      ]}
+    />
+  );
+}
+
+function HeroScene({ phone, cards }: { phone: number; cards: CardLayout[] }) {
+  const [reduceMotion, setReduceMotion] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+    AccessibilityInfo.isReduceMotionEnabled().then((value) => {
+      if (active) setReduceMotion(value);
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
+
   return (
     <View style={styles.scene}>
-      <Image
-        source={require("../assets/images/hero-phone.png")}
-        style={[styles.phone, { left: PHONE_LEFT, top: PHONE_TOP }]}
-        resizeMode="contain"
-      />
-      {cards.map(({ card, width, top, left, rotate }) => {
-        const art = CARD_ART[card];
-        return (
-          <Image
-            key={card}
-            source={art.source}
-            resizeMode="contain"
-            style={[
-              styles.card,
-              { width, height: width / art.aspect, top, left, transform: [{ rotate }] },
-            ]}
-          />
-        );
-      })}
+      <Image source={phone} style={styles.phone} resizeMode="contain" />
+      {cards.map((card, index) => (
+        <FloatingCard key={index} card={card} index={index} still={reduceMotion} />
+      ))}
     </View>
   );
 }
@@ -101,7 +150,7 @@ function BrandCarousel() {
   return (
     <View style={styles.carousel}>
       <View style={styles.slide}>
-        <HeroScene cards={slide.cards} />
+        <HeroScene key={slide.key} phone={slide.phone} cards={slide.cards} />
         <Text style={styles.title}>{t(`onboarding.slide${index + 1}Title`)}</Text>
         <Text style={styles.body}>{t(`onboarding.slide${index + 1}Body`)}</Text>
       </View>
@@ -161,8 +210,10 @@ const styles = StyleSheet.create({
   },
   phone: {
     position: "absolute",
-    width: PHONE_WIDTH,
-    height: PHONE_HEIGHT,
+    left: 0,
+    top: 0,
+    width: SCENE_WIDTH,
+    height: SCENE_HEIGHT,
   },
   card: {
     position: "absolute",

@@ -453,6 +453,20 @@ on the emulator.
 - Animations use the JS driver on purpose; the native driver was not verified for
   `setValue` during a drag.
 
+### Welcome slides — 2026-10-30
+
+**Designed on the Claude Design canvas (page "Welcome slides"), approved by the
+owner, implemented.** The three welcome slides were placeholders (one "Learn to
+recite" line repeated, an old Learn-screen mockup with a recitation badge the app
+does not have). Each slide now shows one real feature with its own text, in
+English and Urdu: understanding an ayah word by word, Conversation Lab (speaking),
+and Vocabulary with Ustaad Noor. The phone welcome screen uses the full picture
+(`onboarding-hero-1..3.png`); the laptop sign-in panel layers the phone and two
+card images (`welcome-slide-N-phone/card1/card2.png`) and the cards drift by under
+a degree and a few pixels, out of step, unless the system asks for reduced motion.
+Images are exported from the canvas boards `WelcomeHero1-3` at 2x. Android picks
+this up in the next Play release.
+
 ### App-language picker hidden — 2026-10-30
 
 **Owner decision, design step skipped by the owner.** Production had 25 accounts on
