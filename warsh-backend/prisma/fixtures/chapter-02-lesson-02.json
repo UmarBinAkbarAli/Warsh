@@ -79,11 +79,11 @@
         },
         {
           "en": "the pen",
-          "ur": "وہ قلم"
+          "ur": "قلم"
         },
         {
           "en": "the man",
-          "ur": "وہ آدمی"
+          "ur": "آدمی"
         }
       ],
       "xp_value": 1,
@@ -91,50 +91,54 @@
     },
     {
       "id": "ch02-l02-ex02",
-      "hint": {
-        "en": "Make كتاب definite.",
-        "ur": "كتاب کو معرفہ بنائیں۔"
-      },
-      "mode": "TAP",
       "type": "FILL_BLANK",
+      "mode": "TAP",
+      "xp_value": 1,
+      "sentence_ar": "ذَٰلِكَ ___",
+      "hint": {
+        "en": "That is the Book (Al-Baqarah 2:2). Pick the definite form.",
+        "ur": "یہ وہ کتاب ہے (البقرہ 2:2)۔ معرفہ شکل چنیں۔"
+      },
       "options": [
         {
-          "ar": "ال",
-          "en": "the",
-          "ur": "ال",
-          "ar_plain": "ال",
-          "translit": "al"
+          "ar": "الْكِتَابُ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitābu",
+          "en": "the book",
+          "ur": "کتاب"
         },
         {
-          "ar": "بِ",
-          "en": "with",
-          "ur": "کے ساتھ",
-          "ar_plain": "ب",
-          "translit": "bi"
+          "ar": "كِتَابٌ",
+          "ar_plain": "كتاب",
+          "translit": "kitābun",
+          "en": "a book",
+          "ur": "ایک کتاب"
         },
         {
-          "ar": "وَ",
-          "en": "and",
-          "ur": "اور",
-          "ar_plain": "و",
-          "translit": "wa"
+          "ar": "قَلَمٌ",
+          "ar_plain": "قلم",
+          "translit": "qalamun",
+          "en": "a pen",
+          "ur": "ایک قلم"
         },
         {
-          "ar": "مِنْ",
-          "en": "from",
-          "ur": "سے",
-          "ar_plain": "من",
-          "translit": "min"
+          "ar": "بَيْتٌ",
+          "ar_plain": "بيت",
+          "translit": "baytun",
+          "en": "a house",
+          "ur": "ایک گھر"
         }
       ],
-      "xp_value": 1,
-      "sentence_ar": "___كِتَابُ",
       "correct_answer": {
-        "ar": "ال",
-        "en": "the",
-        "ur": "ال",
-        "ar_plain": "ال",
-        "translit": "al"
+        "ar": "الْكِتَابُ",
+        "ar_plain": "الكتاب",
+        "translit": "al-kitābu",
+        "en": "the book",
+        "ur": "کتاب"
+      },
+      "explanation_on_wrong": {
+        "en": "The Book is definite, so it takes ال and loses its tanween: الْكِتَابُ.",
+        "ur": "کتاب معرفہ ہے، اس لیے ال لگتا ہے اور تنوین ہٹ جاتی ہے: الْكِتَابُ۔"
       }
     },
     {
@@ -173,7 +177,7 @@
       ],
       "target_translation": {
         "en": "The house.",
-        "ur": " گھر۔"
+        "ur": "گھر۔"
       }
     },
     {
@@ -181,10 +185,45 @@
       "type": "TRUE_FALSE",
       "xp_value": 1,
       "statement": {
-        "en": "الْكِتَابُ is definite.",
-        "ur": "الْكِتَابُ معرفہ ہے۔"
+        "en": "A noun can carry ال and tanween at the same time.",
+        "ur": "ایک اسم پر ال اور تنوین ایک ساتھ آ سکتے ہیں۔"
       },
-      "correct_answer": true
+      "correct_answer": false,
+      "explanation_on_wrong": {
+        "en": "Never both: كِتَابٌ (a book) or الْكِتَابُ (the book).",
+        "ur": "دونوں کبھی ایک ساتھ نہیں: كِتَابٌ (ایک کتاب) یا الْكِتَابُ (کتاب)۔"
+      }
+    },
+    {
+      "id": "ch02-l02-ex06",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "الْمَسْجِدُ",
+        "ar_plain": "المسجد",
+        "translit": "al-masjidu",
+        "en": "the mosque",
+        "ur": "مسجد"
+      },
+      "options": [
+        {
+          "en": "a mosque",
+          "ur": "ایک مسجد"
+        },
+        {
+          "en": "the mosque",
+          "ur": "مسجد"
+        },
+        {
+          "en": "the house",
+          "ur": "گھر"
+        },
+        {
+          "en": "the book",
+          "ur": "کتاب"
+        }
+      ],
+      "correct_index": 1
     }
   ],
   "discover_cards": [
@@ -199,29 +238,29 @@
         {
           "ar": "كِتَابٌ → الْكِتَابُ",
           "en": "a book → the book",
-          "ur": "ایک کتاب → وہ کتاب",
+          "ur": "ایک کتاب → کتاب",
           "ar_plain": "كتاب → الكتاب",
           "translit": "kitābun → al-kitābu"
         },
         {
           "ar": "رَجُلٌ → الرَّجُلُ",
           "en": "a man → the man",
-          "ur": "ایک آدمی → وہ آدمی",
+          "ur": "ایک آدمی → آدمی",
           "ar_plain": "رجل → الرجل",
           "translit": "rajulun → ar-rajulu"
         },
         {
           "ar": "طَرِيقٌ → الطَّرِيقُ",
           "en": "a path → the path",
-          "ur": "ایک راستہ → وہ راستہ",
+          "ur": "ایک راستہ → راستہ",
           "ar_plain": "طريق → الطريق",
           "translit": "ṭarīqun → aṭ-ṭarīqu"
         }
       ],
       "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/ch02-l02-al-definite.webp",
       "explanation": {
-        "en": "Add ال to any noun and tanween disappears — the word becomes definite. You cannot have both. كِتَابٌ (a book) → الْكِتَابُ (the book). بَيْتٌ (a house) → الْبَيْتُ (the house). رَجُلٌ (a man) → الرَّجُلُ (the man).",
-        "ur": "کسی بھی اسم کے آگے ال لگائیں اور تنوین غائب ہو جاتی ہے — لفظ معرفہ بن جاتا ہے۔ دونوں ایک ساتھ نہیں آ سکتے۔ كِتابٌ (ایک کتاب) → الْكِتابُ (کتاب)۔"
+        "en": "Add ال to any noun and tanween disappears — the word becomes definite. You cannot have both. كِتَابٌ (a book) → الْكِتَابُ (the book). بَيْتٌ (a house) → الْبَيْتُ (the house). With some letters, like ر and ط, the ل is silent and the next letter doubles: الرَّجُلُ is read ar-rajulu.",
+        "ur": "کسی بھی اسم کے آگے ال لگائیں اور تنوین غائب ہو جاتی ہے — لفظ معرفہ بن جاتا ہے۔ دونوں ایک ساتھ نہیں آ سکتے۔ كِتَابٌ (ایک کتاب) → الْكِتَابُ (کتاب)۔ کچھ حروف، جیسے ر اور ط، کے ساتھ ل پڑھا نہیں جاتا اور اگلا حرف مشدد ہو جاتا ہے: الرَّجُلُ کو اَر-رَجُلُ پڑھتے ہیں۔"
       }
     },
     {
@@ -233,19 +272,31 @@
       },
       "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/ch02-l02-mubtada-khabar.webp",
       "explanation": {
-        "en": "A complete Arabic statement: definite noun (subject) + indefinite word (predicate). No 'is'. الْكِتَابُ (the book) + جَدِيدٌ (new) = 'The book is new.' The adjectives below are your predicates.",
-        "ur": "مکمل عربی جملہ: معرفہ اسم (مبتدأ) + نکرہ لفظ (خبر)۔ 'ہے' نہیں۔ الْكِتابُ (وہ کتاب) + جَدِيدٌ (نیا) = 'وہ کتاب نئی ہے'۔ نیچے والی صفات آپ کی خبر ہیں۔"
+        "en": "A complete Arabic statement: definite noun (subject) + indefinite word (predicate). There is no word for \"is\". الْكِتَابُ (the book) + جَدِيدٌ (new) = \"The book is new.\" You will build these sentences in Lesson 4.",
+        "ur": "مکمل عربی جملہ: معرفہ اسم (مبتدأ) + نکرہ لفظ (خبر)۔ \"ہے\" کے لیے کوئی لفظ نہیں۔ الْكِتَابُ (کتاب) + جَدِيدٌ (نیا) = \"کتاب نئی ہے\"۔ یہ جملے آپ سبق 4 میں بنائیں گے۔"
       }
     },
     {
       "text": {
         "ar": "بَيْتٌ → الْبَيْتُ",
         "en": "a house → the house",
-        "ur": "ایک گھر →  گھر",
+        "ur": "ایک گھر → گھر",
         "ar_plain": "بيت → البيت",
         "translit": "baytun → al-baytu"
       },
-      "type": "EXAMPLE"
+      "type": "EXAMPLE",
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/bayt.webp"
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "مَسْجِدٌ → الْمَسْجِدُ",
+        "ar_plain": "مسجد → المسجد",
+        "translit": "masjidun → al-masjidu",
+        "en": "a mosque → the mosque",
+        "ur": "ایک مسجد → مسجد"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/masjid.webp"
     },
     {
       "text": {

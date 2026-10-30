@@ -10,17 +10,17 @@
   },
   "hook": {
     "ayah": {
-      "surah": 2,
-      "ayah": 255,
-      "label": "Ayat al-Kursi — Al-Baqarah 2:255",
-      "ar": "لَهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ",
-      "en": "To Him belongs whatever is in the heavens and whatever is in the earth.",
-      "ur": "اسی کا ہے جو کچھ آسمانوں میں ہے اور جو کچھ زمین میں ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002255.mp3"
+      "surah": 75,
+      "ayah": 10,
+      "label": "Al-Qiyamah 75:10",
+      "ar": "يَقُولُ ٱلْإِنسَٰنُ يَوْمَئِذٍ أَيْنَ ٱلْمَفَرُّ",
+      "en": "Man will say on that Day, “Where is the escape?”",
+      "ur": "اس دن انسان کہے گا: بھاگنے کی جگہ کہاں ہے؟",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/075010.mp3"
     },
     "noor_intro": {
-      "en": "أَيْنَ means where? Use it to ask about a person or thing.",
-      "ur": "أَيْنَ کا مطلب کہاں ہے؟ اسے کسی شخص یا چیز کی جگہ پوچھنے کے لیے استعمال کریں۔"
+      "en": "أَيْنَ means where? Put a definite noun after it to ask where something is.",
+      "ur": "أَيْنَ کا مطلب ہے کہاں؟ اس کے بعد معرفہ اسم رکھ کر پوچھیں کہ کوئی چیز کہاں ہے۔"
     },
     "autoplay": false
   },
@@ -36,8 +36,8 @@
       },
       "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/ayna.mp3",
       "explanation": {
-        "en": "أَيْنَ — where? The question that opens location sentences. أَيْنَ الْكِتَابُ؟ = Where is the book? Answer with a noun + preposition + place.",
-        "ur": "أَيْنَ — کہاں؟ وہ سوال جو جگہ کے جملے کھولتا ہے۔ أَيْنَ الْكِتابُ؟ = وہ کتاب کہاں ہے؟ جواب: اسم + حرف جر + جگہ۔"
+        "en": "أَيْنَ — where? It always comes first in the question. أَيْنَ الْكِتَابُ؟ = Where is the book?",
+        "ur": "أَيْنَ — کہاں؟ یہ ہمیشہ سوال کے شروع میں آتا ہے۔ أَيْنَ الْكِتَابُ؟ = کتاب کہاں ہے؟"
       },
       "introduces_vocab": {
         "ar_plain": "أين"
@@ -45,23 +45,33 @@
       "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/ayna.webp"
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "فِي",
-        "ar_plain": "في",
-        "translit": "fī",
-        "en": "in / at / inside",
-        "ur": "میں / اندر"
+      "type": "CONCEPT",
+      "concept": {
+        "ar": "أَيْنَ + الْمَعْرِفَة",
+        "en": "أَيْنَ + a definite noun = Where is …?",
+        "ur": "أَيْنَ + معرفہ اسم = … کہاں ہے؟"
       },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/fi.mp3",
       "explanation": {
-        "en": "فِي — in/at. الْكِتَابُ فِي الْبَيْتِ = The book is in the house. Notice: the noun after فِي takes a kasra ending (الْبَيْتِ, not الْبَيْتُ). Prepositions change the ending of the noun that follows.",
-        "ur": "فِي — میں/اندر۔ الْكِتابُ فِي الْبَيْتِ = وہ کتاب گھر میں ہے۔ غور کریں: فِي کے بعد اسم کسرہ کے ساتھ آتا ہے (الْبَيْتِ، الْبَيْتُ نہیں)۔ حروف جر اپنے بعد آنے والے اسم کی آخری آواز بدل دیتے ہیں۔"
+        "en": "Put أَيْنَ first, then the noun with ال and its ـُ ending. Arabic has no word for \"is\" here: أَيْنَ الْكِتَابُ؟ is literally \"where the book?\"",
+        "ur": "پہلے أَيْنَ، پھر ال اور ـُ کے ساتھ اسم۔ یہاں \"ہے\" کے لیے کوئی لفظ نہیں: أَيْنَ الْكِتَابُ؟ لفظی طور پر \"کہاں کتاب؟\" ہے۔"
       },
-      "introduces_vocab": {
-        "ar_plain": "في"
-      },
-      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/fi.webp"
+      "examples": [
+        {
+          "ar": "أَيْنَ الْكِتَابُ؟",
+          "ar_plain": "أين الكتاب؟",
+          "translit": "ayna al-kitābu?",
+          "en": "Where is the book?",
+          "ur": "کتاب کہاں ہے؟"
+        },
+        {
+          "ar": "أَيْنَ الرَّجُلُ؟",
+          "ar_plain": "أين الرجل؟",
+          "translit": "ayna ar-rajulu?",
+          "en": "Where is the man?",
+          "ur": "آدمی کہاں ہے؟"
+        }
+      ],
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/kitab.webp"
     },
     {
       "type": "EXAMPLE",
@@ -72,17 +82,29 @@
         "en": "Where is the house?",
         "ur": "گھر کہاں ہے؟"
       },
-      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/ayna.webp"
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/bayt.webp"
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "أَيْنَ الْكِتَابُ؟",
-        "ar_plain": "أين الكتاب؟",
-        "translit": "ayna al-kitābu?",
-        "en": "Where is the book?",
-        "ur": "کتاب کہاں ہے؟"
-      }
+        "ar": "أَيْنَ الْمَسْجِدُ؟",
+        "ar_plain": "أين المسجد؟",
+        "translit": "ayna al-masjidu?",
+        "en": "Where is the mosque?",
+        "ur": "مسجد کہاں ہے؟"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/masjid.webp"
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "أَيْنَ الْقَلَمُ؟",
+        "ar_plain": "أين القلم؟",
+        "translit": "ayna al-qalamu?",
+        "en": "Where is the pen?",
+        "ur": "قلم کہاں ہے؟"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/qalam.webp"
     }
   ],
   "exercises": [
@@ -123,7 +145,7 @@
       "xp_value": 1,
       "target_translation": {
         "en": "Where is the mosque?",
-        "ur": "وہ مسجد کہاں ہے؟"
+        "ur": "مسجد کہاں ہے؟"
       },
       "tiles": [
         {
@@ -148,13 +170,51 @@
     },
     {
       "id": "ch02-l03-ex03",
-      "type": "TRUE_FALSE",
+      "type": "FILL_BLANK",
+      "mode": "TAP",
       "xp_value": 1,
-      "statement": {
-        "en": "أَيْنَ asks “where?”.",
-        "ur": "أَيْنَ “کہاں؟” پوچھنے کے لیے ہے۔"
+      "sentence_ar": "___ الْبَيْتُ؟",
+      "hint": {
+        "en": "Ask: Where is the house?",
+        "ur": "پوچھیں: گھر کہاں ہے؟"
       },
-      "correct_answer": true
+      "options": [
+        {
+          "ar": "ذَٰلِكَ",
+          "ar_plain": "ذلك",
+          "translit": "dhālika",
+          "en": "that",
+          "ur": "وہ"
+        },
+        {
+          "ar": "أَيْنَ",
+          "ar_plain": "أين",
+          "translit": "ayna",
+          "en": "where",
+          "ur": "کہاں"
+        },
+        {
+          "ar": "تِلْكَ",
+          "ar_plain": "تلك",
+          "translit": "tilka",
+          "en": "that (f.)",
+          "ur": "وہ"
+        },
+        {
+          "ar": "كِتَابٌ",
+          "ar_plain": "كتاب",
+          "translit": "kitābun",
+          "en": "a book",
+          "ur": "ایک کتاب"
+        }
+      ],
+      "correct_answer": {
+        "ar": "أَيْنَ",
+        "ar_plain": "أين",
+        "translit": "ayna",
+        "en": "where",
+        "ur": "کہاں"
+      }
     },
     {
       "id": "ch02-l03-ex04",
@@ -164,7 +224,7 @@
         "ar": "أَيْنَ الْكِتَابُ",
         "ar_plain": "أين الكتاب",
         "translit": "ayna al-kitābu",
-        "en": "where is the book?",
+        "en": "Where is the book?",
         "ur": "کتاب کہاں ہے؟"
       },
       "options": [
@@ -189,43 +249,82 @@
     },
     {
       "id": "ch02-l03-ex05",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "أَيْنَ الْقَلَمُ؟",
+        "ar_plain": "أين القلم؟",
+        "translit": "ayna al-qalamu?",
+        "en": "Where is the pen?",
+        "ur": "قلم کہاں ہے؟"
+      },
+      "options": [
+        {
+          "en": "Where is a pen?",
+          "ur": "کوئی قلم کہاں ہے؟"
+        },
+        {
+          "en": "That is the pen.",
+          "ur": "وہ قلم ہے۔"
+        },
+        {
+          "en": "Where is the pen?",
+          "ur": "قلم کہاں ہے؟"
+        },
+        {
+          "en": "Where is the book?",
+          "ur": "کتاب کہاں ہے؟"
+        }
+      ],
+      "correct_index": 2
+    },
+    {
+      "id": "ch02-l03-ex06",
       "type": "TRUE_FALSE",
       "xp_value": 1,
       "statement": {
-        "en": "أَيْنَ means where?",
-        "ur": "أَيْنَ کا مطلب کہاں ہے؟"
+        "en": "In أَيْنَ الْمَسْجِدُ؟ there is a separate Arabic word for \"is\".",
+        "ur": "أَيْنَ الْمَسْجِدُ؟ میں \"ہے\" کے لیے الگ عربی لفظ ہے۔"
       },
-      "correct_answer": true
+      "correct_answer": false,
+      "explanation_on_wrong": {
+        "en": "Only two words: أَيْنَ (where) + الْمَسْجِدُ (the mosque). \"Is\" is understood.",
+        "ur": "صرف دو لفظ: أَيْنَ (کہاں) + الْمَسْجِدُ (مسجد)۔ \"ہے\" خود سمجھا جاتا ہے۔"
+      }
     }
   ],
   "reveal": {
-    "concept_name": {
-      "en": "فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ",
-      "ar": "فِي آيَة الْكُرْسِيّ",
-      "ur": "آیت الکرسی میں فِي"
-    },
     "ayah": {
-      "surah": 2,
-      "ayah": 255,
-      "label": "Al-Baqarah 2:255 (Ayat al-Kursi)",
-      "ar": "لَهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ",
-      "en": "To Him belongs whatever is in the heavens and whatever is in the earth.",
-      "ur": "اسی کا ہے جو کچھ آسمانوں میں ہے اور جو کچھ زمین میں ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002255.mp3"
+      "surah": 75,
+      "ayah": 10,
+      "label": "Al-Qiyamah 75:10",
+      "ar": "يَقُولُ ٱلْإِنسَٰنُ يَوْمَئِذٍ أَيْنَ ٱلْمَفَرُّ",
+      "en": "Man will say on that Day, “Where is the escape?”",
+      "ur": "اس دن انسان کہے گا: بھاگنے کی جگہ کہاں ہے؟",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/075010.mp3"
     },
+    "concept_name": {
+      "ar": "أَيْنَ ٱلْمَفَرُّ",
+      "en": "أَيْنَ ٱلْمَفَرُّ — Where is the escape?",
+      "ur": "أَيْنَ ٱلْمَفَرُّ — بھاگنے کی جگہ کہاں ہے؟"
+    },
+    "highlighted_words": [
+      "أَيْنَ",
+      "ٱلْمَفَرُّ"
+    ],
     "highlighted_word_indices": [
-      2,
-      6
+      3,
+      4
     ],
     "noor_explanation": {
-      "en": "فِي السَّمَاوَاتِ — in the heavens. فِي الأَرْضِ — in the earth. You see فِي twice. الْأَرْضِ ends in kasra — the effect of فِي on the noun after it. The same preposition you put between a book and a house, Allah uses to encompass all creation. The Quran's deepest claims are built from its simplest words.",
-      "ur": "فِي السَّمَاوَاتِ — آسمانوں میں۔ فِي الأَرْضِ — زمین میں۔ آپ دو بار فِي دیکھتے ہیں۔ الأَرْضِ کسرہ کے ساتھ ختم ہوتا ہے — اپنے بعد والے اسم پر فِي کا اثر۔ وہی حرف جر جو آپ نے کتاب اور گھر کے درمیان رکھا، اللہ پوری مخلوق کو اس سے سمیٹتا ہے۔"
+      "en": "أَيْنَ ٱلْمَفَرُّ — Where is the escape? The exact pattern you just learned: أَيْنَ + a definite noun with ـُ. On the Day of Judgement, man asks it, and the next ayah answers: there is no refuge.",
+      "ur": "أَيْنَ ٱلْمَفَرُّ — بھاگنے کی جگہ کہاں ہے؟ بالکل وہی ترکیب جو آپ نے ابھی سیکھی: أَيْنَ + ـُ والا معرفہ اسم۔ قیامت کے دن انسان یہ پوچھے گا، اور اگلی آیت جواب دیتی ہے: کوئی پناہ نہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You can now ask where something is. The next lessons teach each location word separately.",
-      "ur": "اب آپ پوچھ سکتے ہیں کہ کوئی چیز کہاں ہے۔ اگلے اسباق میں ہر جگہ بتانے والا لفظ الگ سیکھیں گے۔"
+      "en": "You can now ask where something is: أَيْنَ + the noun. Next: describing a noun with an adjective.",
+      "ur": "اب آپ پوچھ سکتے ہیں کہ کوئی چیز کہاں ہے: أَيْنَ + اسم۔ اگلا سبق: اسم کی صفت بیان کرنا۔"
     }
   }
 }
