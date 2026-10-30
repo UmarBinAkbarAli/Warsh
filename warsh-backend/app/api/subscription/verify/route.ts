@@ -3,6 +3,7 @@ import { prisma } from "../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../lib/auth";
 import { StoreVerificationError, verifyStoreSubscription } from "../../../../lib/storeVerification";
 import { getStoreAccountId } from "../../../../lib/noorPackPurchase";
+import { queuePurchaseEvent } from "../../../../lib/analyticsOutbox";
 
 export async function POST(request: Request) {
   const userId = await getUserIdFromRequest(request);
@@ -37,7 +38,8 @@ export async function POST(request: Request) {
 
   let user;
   try {
-    user = await prisma.user.update({
+    user = await prisma.$transaction(async (tx) => {
+      const updated = await tx.user.update({
       where: { id: userId },
       data: {
         // Persist the verified store state (active / canceled-but-in-period /
@@ -52,6 +54,13 @@ export async function POST(request: Request) {
         lastPurchaseToken: purchaseToken ?? null,
       },
       select: { subscriptionStatus: true, subscriptionActiveUntil: true },
+      });
+      if (typeof purchaseToken === "string" && purchaseToken && verifiedSubscription.activeUntil && ["active", "in_grace"].includes(verifiedSubscription.storeState)) {
+        await queuePurchaseEvent(tx, userId, "subscription_grant_confirmed", `${purchaseToken}:${verifiedSubscription.activeUntil.toISOString()}`, {
+          platform, product_id: verifiedSubscription.productId, plan: verifiedSubscription.basePlanId ?? "unknown",
+        });
+      }
+      return updated;
     });
   } catch (error) {
     // lastPurchaseToken is unique. If this exact token is already attached to a

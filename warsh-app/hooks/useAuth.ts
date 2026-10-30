@@ -4,6 +4,7 @@ import api from "@services/api";
 import { useAuthStore } from "@stores/authStore";
 import { cancelAllNotifications } from "@services/notifications";
 import { signOutGoogle } from "@services/googleSignIn";
+import { track } from "@services/analytics";
 
 export function useAuth() {
   const { user, token, isHydrated, setSession, clearSession } = useAuthStore();
@@ -52,6 +53,7 @@ export function useAuth() {
   }, []);
 
   async function logout() {
+    await track("logout_requested");
     await cancelAllNotifications().catch(() => {});
     await signOutGoogle().catch(() => {});
     await clearSession();

@@ -1,6 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 import { activateKeepAwakeAsync, deactivateKeepAwake } from "expo-keep-awake";
 import { useLocalSearchParams, useRouter } from "expo-router";
+import { track } from "@services/analytics";
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import {
   FlatList,
@@ -139,6 +140,7 @@ export default function QuranReaderScreen() {
 
   useEffect(() => {
     setLastAyah(ayahForPage(layout, currentPage));
+    track("quran_page_viewed", { page: currentPage, layout });
   }, [layout, currentPage, setLastAyah]);
 
   useEffect(() => {
@@ -262,7 +264,7 @@ export default function QuranReaderScreen() {
             </Pressable>
           ) : null}
           <Pressable
-            onPress={() => toggleBookmark(pageAyahs)}
+            onPress={() => { toggleBookmark(pageAyahs); track("quran_bookmark_changed", { page: currentPage, action: bookmarked ? "removed" : "added" }); }}
             hitSlop={8}
             accessibilityRole="button"
             accessibilityState={{ selected: bookmarked }}

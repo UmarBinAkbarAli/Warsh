@@ -8,6 +8,10 @@
   ],
   "crons": [
     {
+      "path": "/api/cron/analytics-outbox",
+      "schedule": "15 4 * * *"
+    },
+    {
       "path": "/api/cron/reset-streaks",
       "schedule": "0 23 * * *"
     },

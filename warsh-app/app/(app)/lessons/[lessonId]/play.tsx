@@ -15,7 +15,7 @@ import { Animation, Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, Warsh
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { CHECKPOINT_MAX_BEAT, CHECKPOINT_MIN_BEAT, lessonCheckpointKey } from "@services/lessonCheckpoint";
 import { cancelTodayReminders, fireMilestoneNotification } from "@services/notifications";
-import { trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from "@services/analytics";
+import { track, trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from "@services/analytics";
 import { pickLocalized, useLanguage, useTranslationLanguage } from "@services/language";
 import { useT } from "@i18n/index";
 import { prefetchCatalogAudio, prefetchRemoteAudio } from "@services/audioCache";
@@ -582,6 +582,9 @@ export default function LessonPlayScreen() {
   const [currentBeat, setCurrentBeat] = useState(1);
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
+  useEffect(() => {
+    if (lesson && lessonId) track("lesson_step_viewed", { lesson_id: lessonId, beat: currentBeat, card_index: currentCardIndex, exercise_index: currentExerciseIndex });
+  }, [lesson, lessonId, currentBeat, currentCardIndex, currentExerciseIndex]);
   const [selectedAnswer, setSelectedAnswer] = useState<SelectedAnswer>(null);
   const [isAnswered, setIsAnswered] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -872,6 +875,7 @@ export default function LessonPlayScreen() {
   }
 
   function leaveLesson(saved: boolean) {
+    if (!completionResult) track("lesson_exited", { lesson_id: lessonId, beat: currentBeat, checkpoint_saved: saved });
     setShowExitConfirm(false);
     const chapterId = lesson?.chapterId;
     if (!chapterId) {
@@ -913,6 +917,7 @@ export default function LessonPlayScreen() {
     setSelectedAnswer(answer);
     setIsAnswered(true);
     const correct = isAnswerCorrect(currentExercise, answer, language, t);
+    track("answer_submitted", { lesson_id: lessonId, exercise_index: currentExerciseIndex, is_correct: correct });
     exerciseResultsRef.current.push(correct);
     if (!correct && currentExercise) missedExercisesRef.current.push(currentExercise);
   }
@@ -1062,7 +1067,7 @@ export default function LessonPlayScreen() {
             textAlign="right"
           />
           {hintAvailable && !writeHintShown && !isAnswered ? (
-            <Pressable onPress={() => setWriteHintShown(true)} style={styles.hintButton} hitSlop={8}>
+            <Pressable onPress={() => { setWriteHintShown(true); track("hint_opened", { lesson_id: lessonId, exercise_index: currentExerciseIndex }); }} style={styles.hintButton} hitSlop={8}>
               <Text style={styles.hintButtonText}>{t("player.showHint")}</Text>
             </Pressable>
           ) : null}

@@ -23,6 +23,7 @@ import { SubscriptionBanner } from "@components/SubscriptionBanner";
 import { TranslationLanguagePrompt } from "@components/TranslationLanguagePrompt";
 import { useT } from "@i18n/index";
 import {
+  track,
   trackSubscriptionBannerCta,
   trackSubscriptionBannerShown,
 } from "@services/analytics";
@@ -494,13 +495,16 @@ export default function HomeScreen() {
       return;
     }
     if (activeLesson) {
+      track("lesson_selected", { lesson_id: activeLesson.id, source: "continue" });
       router.push(`/lessons/${activeLesson.id}/play`);
     } else if (activeChapter) {
+      track("chapter_opened", { chapter_id: activeChapter.id, source: "continue" });
       router.push(`/lessons/${activeChapter.id}`);
     }
   }
 
   function openPathLesson(lesson: PathLesson) {
+    track("lesson_selected", { lesson_id: lesson.id, is_locked: Boolean(lesson.isLocked), is_chapter_test: Boolean(lesson.isChapterTest), source: "chapter_path" });
     if (premiumSuspended) {
       router.push("/(app)/manage-subscription");
       return;

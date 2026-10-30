@@ -9,6 +9,7 @@ import { QuranSettingsSheet } from "@components/quran/QuranSheets";
 import { useWebLayout, useWebPageStyle } from "@components/WebPage";
 import { useT } from "@i18n/index";
 import { useQuranStore } from "@stores/quranStore";
+import { track } from "@services/analytics";
 import { Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette, WebLayout, desktopFontSize, desktopLineHeight } from "../../../constants/theme";
 import {
   chapters,
@@ -282,7 +283,7 @@ export default function QuranIndexScreen({ isTab = false }: { isTab?: boolean })
         renderItem={({ item }) => item.pad ? <View style={styles.gridCell} /> : (
           <View style={[styles.rowWrap, columns > 1 && [styles.gridCell, styles.gridCard]]}>
           <Pressable
-            onPress={() => openPage(item.page)}
+            onPress={() => { if (tab === "surah") track("quran_surah_opened", { surah_number: Number(item.badge) }); openPage(item.page); }}
             style={({ pressed }) => [styles.row, styles.rowMain, pressed && styles.pressed]}
             accessibilityRole="button"
           >
@@ -312,7 +313,7 @@ export default function QuranIndexScreen({ isTab = false }: { isTab?: boolean })
           </Pressable>
           {item.bookmarkAyah ? (
             <Pressable
-              onPress={() => removeBookmark(item.bookmarkAyah!)}
+              onPress={() => { removeBookmark(item.bookmarkAyah!); track("quran_bookmark_changed", { page: item.page, action: "removed" }); }}
               style={({ pressed }) => [styles.removeButton, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel={t("quran.removeBookmark", { surah: item.title, page: item.page })}

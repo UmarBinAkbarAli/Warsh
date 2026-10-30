@@ -46,6 +46,12 @@ const DEPLOY_ROOT_SUBDIR = "warsh-app";
 const ENV_PATH = ".env";
 
 const originalEnv = existsSync(ENV_PATH) ? readFileSync(ENV_PATH, "utf8") : "";
+const releaseEnv = existsSync(".env.release") ? readFileSync(".env.release", "utf8") : "";
+const releaseMixpanelToken = releaseEnv.match(/^EXPO_PUBLIC_MIXPANEL_TOKEN=(.+)$/m)?.[1]?.trim();
+const mixpanelToken = process.env.EXPO_PUBLIC_MIXPANEL_TOKEN?.trim() || releaseMixpanelToken;
+if (!mixpanelToken) throw new Error("A production EXPO_PUBLIC_MIXPANEL_TOKEN is required in the environment or .env.release.");
+if (!/^[a-zA-Z0-9_-]{1,128}$/.test(mixpanelToken)) throw new Error("Invalid production Mixpanel token.");
+process.env.EXPO_PUBLIC_MIXPANEL_TOKEN = mixpanelToken;
 
 // Keep every line of the existing .env except the two we must force for prod.
 const keptLines = originalEnv
@@ -53,10 +59,11 @@ const keptLines = originalEnv
   .filter(
     (line) =>
       !/^\s*EXPO_PUBLIC_API_URL\s*=/.test(line) &&
-      !/^\s*EXPO_PUBLIC_ENVIRONMENT\s*=/.test(line),
+      !/^\s*EXPO_PUBLIC_ENVIRONMENT\s*=/.test(line) &&
+      !/^\s*EXPO_PUBLIC_MIXPANEL_TOKEN\s*=/.test(line),
   )
   .join("\n");
-const prodEnv = `EXPO_PUBLIC_API_URL=${API_URL}\nEXPO_PUBLIC_ENVIRONMENT=production\n${keptLines}\n`;
+const prodEnv = `EXPO_PUBLIC_API_URL=${API_URL}\nEXPO_PUBLIC_ENVIRONMENT=production\nEXPO_PUBLIC_MIXPANEL_TOKEN=${mixpanelToken}\n${keptLines}\n`;
 
 function walk(dir) {
   const out = [];
@@ -81,6 +88,9 @@ function assertNoLocalhostInBundle() {
       `Refusing to deploy: a localhost API URL leaked into the bundle (${offenders.length} file(s)). ` +
         `The Metro cache may not have cleared.`,
     );
+  }
+  if (!walk(jsDir).some((file) => file.endsWith(".js") && readFileSync(file, "utf8").includes(mixpanelToken))) {
+    throw new Error("The production Mixpanel token is missing from the web bundle.");
   }
 }
 

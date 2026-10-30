@@ -1,4 +1,5 @@
 import { prisma } from "./prisma";
+import { queuePurchaseEvent } from "./analyticsOutbox";
 import {
   fetchGooglePlaySubscriptionSnapshot,
   type GoogleSubscriptionSnapshot,
@@ -91,9 +92,9 @@ export async function applySubscriptionNotification(notif: SubscriptionNotificat
   if (!resolved) return;
 
   if (notificationType === SUBSCRIPTION_REVOKED) {
-    await prisma.user.update({
-      where: { id: resolved.userId },
-      data: { subscriptionStatus: "expired", subscriptionActiveUntil: new Date() },
+    await prisma.$transaction(async (tx) => {
+      await tx.user.update({ where: { id: resolved.userId }, data: { subscriptionStatus: "expired", subscriptionActiveUntil: new Date() } });
+      await queuePurchaseEvent(tx, resolved.userId, "subscription_revoked", purchaseToken, { platform: "android" });
     });
     return;
   }
@@ -111,12 +112,17 @@ export async function applySubscriptionNotification(notif: SubscriptionNotificat
     }
   }
 
-  await prisma.user.update({
-    where: { id: resolved.userId },
-    data: {
-      subscriptionStatus: snapshot.storeState,
-      subscriptionActiveUntil: snapshot.activeUntil ?? undefined,
-      subscriptionProductId: snapshot.basePlanId ?? undefined,
-    },
+  const current = snapshot;
+  await prisma.$transaction(async (tx) => {
+    await tx.user.update({ where: { id: resolved.userId }, data: {
+      subscriptionStatus: current.storeState,
+      subscriptionActiveUntil: current.activeUntil ?? undefined,
+      subscriptionProductId: current.basePlanId ?? undefined,
+    } });
+    const names: Record<number, string> = { 2: "subscription_renewed", 3: "subscription_cancelled", 13: "subscription_expired" };
+    const event = names[notificationType];
+    if (event) await queuePurchaseEvent(tx, resolved.userId, event, `${purchaseToken}:${current.activeUntil?.toISOString() ?? "unknown"}`, {
+      platform: "android", status: current.storeState, plan: current.basePlanId ?? "unknown",
+    });
   });
 }

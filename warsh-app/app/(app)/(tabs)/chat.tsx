@@ -13,7 +13,7 @@ import { StatusBarBacking } from "@components/StatusBarBacking";
 import { useT } from "@i18n/index";
 import { useAuthStore } from "@stores/authStore";
 import { Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette, desktopFontSize, desktopLineHeight } from "../../../constants/theme";
-import { trackNoorMessageSent } from "@services/analytics";
+import { track, trackNoorMessageSent } from "@services/analytics";
 import { useTranslationLanguage } from "@services/language";
 import {
   addIapPurchaseListeners,
@@ -270,6 +270,7 @@ export default function ChatScreen() {
   async function sendMessage(text = input) {
     const message = text.trim();
     if (!message || sending) return;
+    track("noor_message_submitted");
     setSending(true);
     setError(null);
     try {
@@ -287,6 +288,7 @@ export default function ChatScreen() {
         packBalance: data.noorOverageBalance ?? 0,
       });
       trackNoorMessageSent(usedToday);
+      track("noor_response_received");
       if (text === input) setInput("");
       const newAchievement = data.newAchievement;
       if (newAchievement) {
@@ -302,12 +304,14 @@ export default function ChatScreen() {
         });
       }
     } catch (err: any) {
+      track("noor_response_failed", { status: typeof err.response?.status === "number" ? err.response.status : 0 });
       if (isSubscriptionRequiredError(err)) {
         router.replace(await subscriptionRequiredRoute());
       } else if (err.response?.status === 429 && err.response?.data?.code === "rate_limited") {
         // Burst limit, not the daily quota — don't offer to sell credits.
         setError(t("chat.tooFast"));
       } else if (err.response?.status === 429) {
+        track("noor_limit_reached");
         setShowOverageModal(true);
       } else if (err.response?.data?.code === "assistant_unavailable") {
         setError(t("chat.unavailable"));
@@ -323,6 +327,7 @@ export default function ChatScreen() {
     setSavedWords((prev) => new Set(prev).add(wordId));
     try {
       await updateUserVocabularyWord(wordId, { isFavorite: true });
+      track("word_saved", { word_id: wordId, source: "noor" });
     } catch {
       setSavedWords((prev) => {
         const next = new Set(prev);

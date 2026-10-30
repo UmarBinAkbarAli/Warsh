@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import type { FaqSection } from './faq-content';
+import { trackSiteEvent } from './SiteAnalytics';
 
 export type { FaqItem, FaqSection } from './faq-content';
 
@@ -28,7 +29,7 @@ export function Faq({ sections }: { sections: FaqSection[] }) {
             {section.label}
           </p>
           <div className="flex flex-col gap-2">
-            {section.items.map((item) => {
+            {section.items.map((item, index) => {
               const key = `${section.label}-${item.q}`;
               const isOpen = openKey === key;
               const panelId = `faq-panel-${slugify(key)}`;
@@ -39,7 +40,7 @@ export function Faq({ sections }: { sections: FaqSection[] }) {
                     className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-sm font-semibold text-navy"
                     aria-expanded={isOpen}
                     aria-controls={panelId}
-                    onClick={() => setOpenKey(isOpen ? null : key)}
+                    onClick={() => { if (!isOpen) trackSiteEvent('faq_expanded', { section: slugify(section.label), index }); setOpenKey(isOpen ? null : key); }}
                   >
                     <span>{item.q}</span>
                     <span className="text-lg text-gold-deep" aria-hidden>

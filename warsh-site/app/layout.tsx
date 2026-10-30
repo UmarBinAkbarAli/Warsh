@@ -4,6 +4,7 @@ import './globals.css';
 import { Nav } from './components/Nav';
 import { FooterGate } from './components/FooterGate';
 import { BackToTop } from './components/BackToTop';
+import { SiteAnalytics } from './components/SiteAnalytics';
 import {
   ADDRESS,
   NAV_LINKS,
@@ -217,6 +218,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         />
       </head>
       <body className="font-sans">
+        <SiteAnalytics />
         <Nav />
         <main role="main">{children}</main>
         <FooterGate />

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import { Stack, usePathname, useRouter } from "expo-router";
-import { Platform, useWindowDimensions, View } from "react-native";
+import { Stack, usePathname, useRouter, useSegments } from "expo-router";
+import { AppState, Platform, useWindowDimensions, View } from "react-native";
 import { useAuthStore } from "@stores/authStore";
 import { WebAppSidebar } from "@components/WebAppSidebar";
 import { webShellMode } from "@components/WebPage";
@@ -12,8 +12,9 @@ import {
   setupNotificationSchedules,
 } from "@services/notifications";
 import { setSentryUser, clearSentryUser } from "@services/sentry";
-import { identifyUser, resetAnalytics, setAnalyticsSuppressed } from "@services/analytics";
+import { identifyUser, resetAnalytics, setAnalyticsSuppressed, track } from "@services/analytics";
 import { ensureRestoreCredential } from "@services/restoreCredentials";
+import { reportFirstEligibleSession, reportInstallAttribution } from "@services/installAttribution";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import api from "@services/api";
 
@@ -53,6 +54,7 @@ async function initNotifications() {
 export default function AppLayout() {
   const router = useRouter();
   const pathname = usePathname();
+  const segments = useSegments();
   const { width } = useWindowDimensions();
   const isHydrated = useAuthStore((state) => state.isHydrated);
   const token = useAuthStore((state) => state.token);
@@ -90,16 +92,33 @@ export default function AppLayout() {
   useEffect(() => {
     if (token && user) {
       setSentryUser(user.id);
-      const minor = user.isMinor === true;
+      const minor = user.isMinor !== false || !user.dateOfBirth;
       setAnalyticsSuppressed(minor);
       if (!minor) {
         identifyUser(user.id, { goal: user.goal, level: user.level, native_language: user.nativeLanguage });
+        void reportInstallAttribution();
       }
     } else {
       clearSentryUser();
       resetAnalytics();
     }
   }, [token, user]);
+
+  const screen = segments.join("/");
+  useEffect(() => {
+    if (!token || user?.isMinor !== false || !user.dateOfBirth) return;
+    void reportFirstEligibleSession();
+    track("app_session_started");
+    const listener = AppState.addEventListener("change", (state) => {
+      if (state === "active") track("app_foregrounded");
+    });
+    return () => listener.remove();
+  }, [token, user?.id, user?.isMinor, user?.dateOfBirth]);
+  useEffect(() => {
+    if (token && user?.isMinor === false && user.dateOfBirth) {
+      track("screen_viewed", { screen });
+    }
+  }, [screen, token, user?.id, user?.isMinor, user?.dateOfBirth]);
 
   // Android restore key for Zero-Tap Sign-In: registered once per device
   // after sign-in (or on the first launch of a build that has it).
@@ -119,6 +138,7 @@ export default function AppLayout() {
 
     // Handle notification tap — deep link to the right screen
     addNotificationResponseListener((screen) => {
+      track("notification_opened", { screen });
       if (screen === "learn") router.push("/(app)/(tabs)");
       else if (screen === "vocabulary") router.push("/(app)/(tabs)/vocabulary");
       else if (screen === "milestones") router.push("/milestones" as any);

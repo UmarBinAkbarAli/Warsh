@@ -27,7 +27,7 @@ import {
   cancelAllNotifications,
 } from "@services/notifications";
 import { isSentrySmokeTestEnabled, sendSentrySmokeTest } from "@services/sentry";
-import { trackCommitmentSet } from "@services/analytics";
+import { track, trackCommitmentSet } from "@services/analytics";
 import { DAILY_UNIT_MINUTES, STREAK_GOAL_OPTIONS } from "../../constants/commitment";
 import { useT } from "@i18n/index";
 import { BottomSheetModal } from "@components/BottomSheetModal";
@@ -228,6 +228,7 @@ export default function SettingsScreen() {
     const updated = { ...prefs, [key]: value };
     setPrefs(updated);
     await savePrefs(updated);
+    track("setting_changed", { setting: key, value });
 
     // Re-schedule notifications whenever a notification pref changes
     if (NOTIFICATION_PREFS.includes(key as keyof Prefs)) {

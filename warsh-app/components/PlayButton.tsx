@@ -3,6 +3,7 @@ import { ActivityIndicator, Pressable, StyleSheet, Text } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Audio } from "expo-av";
 import { getCachedCatalogAudioUri, getCachedRemoteAudioUri, getVocabWordAudioUri } from "@services/audioCache";
+import { track } from "@services/analytics";
 import { Fonts, FontSizes, Radii, WarshPalette } from "../constants/theme";
 
 type PlayButtonProps = {
@@ -57,6 +58,8 @@ export function PlayButton({ text, cacheKey, category = "words", wordId, audioUr
 
   const startPlay = useCallback(async () => {
     if (!mountedRef.current) return;
+    const analyticsProps = { category, ...(wordId ? { word_id: wordId } : {}), automatic: autoPlay };
+    track("audio_play_requested", analyticsProps);
     if (soundRef.current) {
       await soundRef.current.stopAsync().catch(() => undefined);
       await soundRef.current.unloadAsync().catch(() => undefined);
@@ -76,19 +79,22 @@ export function PlayButton({ text, cacheKey, category = "words", wordId, audioUr
         if (status.isLoaded && status.didJustFinish) {
           sound.unloadAsync().catch(() => undefined);
           if (mountedRef.current) {
+            track("audio_play_completed", analyticsProps);
             soundRef.current = null;
             setPlayState("idle");
           }
         }
       });
       await sound.playAsync();
+      track("audio_play_started", analyticsProps);
     } catch {
+      track("audio_play_failed", analyticsProps);
       if (mountedRef.current) {
         setPlayState("error");
         setTimeout(() => { if (mountedRef.current) setPlayState("idle"); }, 2000);
       }
     }
-  }, [resolveUri]);
+  }, [resolveUri, category, wordId, autoPlay]);
 
   useEffect(() => {
     if (!autoPlay || !text) return;

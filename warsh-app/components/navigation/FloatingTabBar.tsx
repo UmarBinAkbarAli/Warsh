@@ -23,6 +23,7 @@ import {
   WarshPalette,
 } from "../../constants/theme";
 import { pageForAyah } from "../../services/quran/data";
+import { track } from "@services/analytics";
 import { useQuranStore } from "../../stores/quranStore";
 import { webShellMode } from "../WebPage";
 
@@ -90,6 +91,7 @@ export function FloatingTabBar({
           const iconName = TAB_ICONS[route.name] || "circle";
 
           const onPress = () => {
+            track("tab_selected", { tab: route.name });
             const event = navigation.emit({
               type: "tabPress",
               target: route.key,

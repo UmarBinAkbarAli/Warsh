@@ -54,6 +54,7 @@ model User {
     coreSetProgress    UserCoreSetProgress[]
     coreAssessments    Core500Assessment[]
     restoreCredentials RestoreCredential[]
+    analyticsOutbox AnalyticsOutbox[]
 }
 
 // Android Restore Credentials (Credential Manager restore keys). A restore key
@@ -504,4 +505,17 @@ model RateLimitBucket {
     resetAt DateTime
 
     @@index([resetAt])
+}
+
+// Durable, deduplicated analytics delivery; no purchase tokens are stored here.
+model AnalyticsOutbox {
+    id          String   @id
+    userId      String
+    user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+    event       String
+    properties  Json
+    occurredAt  DateTime @default(now())
+    deliveredAt DateTime?
+
+    @@index([deliveredAt, occurredAt])
 }

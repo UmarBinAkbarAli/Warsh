@@ -11,6 +11,7 @@ class PlayInAppUpdatePackage : ReactPackage {
   ): List<NativeModule> = listOf(
     PlayInAppUpdateModule(reactContext),
     RestoreCredentialsModule(reactContext),
+    InstallReferrerModule(reactContext),
   )
 
   override fun createViewManagers(

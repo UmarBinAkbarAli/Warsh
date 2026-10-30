@@ -1,6 +1,5 @@
 import { Feather, Ionicons } from "@expo/vector-icons";
 import * as Sentry from "@sentry/react-native";
-import { initAnalytics } from "@services/analytics";
 import { initSentry } from "@services/sentry";
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
@@ -16,7 +15,6 @@ import { WarshPaperTheme } from "../constants/paperTheme";
 import { Colors } from "../constants/theme";
 
 const sentryEnabled = initSentry();
-void initAnalytics();
 
 class ErrorBoundary extends Component<
   { children: React.ReactNode },

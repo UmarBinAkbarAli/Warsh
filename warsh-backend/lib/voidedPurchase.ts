@@ -1,5 +1,6 @@
 import { prisma } from "./prisma";
 import { hashPurchaseToken } from "./noorPackPurchase";
+import { queuePurchaseEvent } from "./analyticsOutbox";
 
 /**
  * Google's refund/chargeback notification. `productType` is 1 for a subscription
@@ -101,6 +102,7 @@ export async function applyVoidedPurchase(notif: VoidedPurchaseNotification) {
       where: { id: purchase.userId },
       data: { noorOverageBalance: next },
     });
+    await queuePurchaseEvent(tx, purchase.userId, "noor_credit_refunded", purchase.id, { credits_granted: purchase.creditsGranted, platform: "android" });
 
     console.log(
       "[rtdn] clawed back voided Noor pack:",
@@ -124,9 +126,14 @@ export async function applyVoidedPurchase(notif: VoidedPurchaseNotification) {
  * every morning.
  */
 async function revokeSubscriptionByToken(purchaseToken: string): Promise<number> {
-  const revoked = await prisma.user.updateMany({
-    where: { lastPurchaseToken: purchaseToken, NOT: { subscriptionStatus: "expired" } },
-    data: { subscriptionStatus: "expired", subscriptionActiveUntil: new Date() },
+  return prisma.$transaction(async (tx) => {
+    const user = await tx.user.findFirst({ where: { lastPurchaseToken: purchaseToken }, select: { id: true } });
+    if (!user) return 0;
+    const revoked = await tx.user.updateMany({
+      where: { id: user.id, lastPurchaseToken: purchaseToken, NOT: { subscriptionStatus: "expired" } },
+      data: { subscriptionStatus: "expired", subscriptionActiveUntil: new Date() },
+    });
+    if (revoked.count) await queuePurchaseEvent(tx, user.id, "subscription_refunded", purchaseToken, { platform: "android" });
+    return revoked.count;
   });
-  return revoked.count;
 }

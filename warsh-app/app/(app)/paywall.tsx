@@ -25,7 +25,7 @@ import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
 import { useT } from "@i18n/index";
 import { useLanguage } from "@services/language";
-import { trackPaywallViewed, trackSubscriptionStarted, trackSubscriptionRestored } from "@services/analytics";
+import { track, trackPaywallViewed, trackSubscriptionStarted, trackSubscriptionRestored } from "@services/analytics";
 import {
   acknowledgeAndroidPurchase,
   addIapPurchaseListeners,
@@ -248,6 +248,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
       return;
     }
     setPurchasing(true);
+    track("purchase_started", { plan: selected });
     purchaseInFlightRef.current = true;
     planChangeInFlightRef.current = false;
     const productId = SUBSCRIPTION_PRODUCT_ID;
@@ -353,8 +354,10 @@ export default function PaywallScreen({ dismissable = true }: Props) {
     setPurchasing(false);
     const code = err?.code;
     if (code === "E_USER_CANCELLED" || code === "user-cancelled" || code === "USER_CANCELED" || code === "USER_CANCELLED") {
+      track("purchase_cancelled");
       return; // User cancelled — no alert needed
     }
+    track("purchase_failed");
     if (isBillingDeclinedError(err)) {
       Alert.alert(
         "Payment didn't go through",
@@ -413,12 +416,13 @@ export default function PaywallScreen({ dismissable = true }: Props) {
       return;
     }
     setRestoring(true);
+    track("restore_started");
     try {
       const purchases = await getAvailableIapPurchases();
       const activePurchase = purchases.find(
         (p) => p.productId === SUBSCRIPTION_PRODUCT_ID
       );
-      if (!activePurchase) { Alert.alert("No subscription found", "No active subscription was found."); return; }
+      if (!activePurchase) { track("restore_failed", { reason: "no_purchase" }); Alert.alert("No subscription found", "No active subscription was found."); return; }
       const restoreToken = (activePurchase as IapSubscriptionPurchase).purchaseToken ?? undefined;
       await verifyPurchase({
         productId: activePurchase.productId,
@@ -433,6 +437,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
         { text: "Continue", onPress: () => router.replace("/(app)/(tabs)") },
       ]);
     } catch (err: any) {
+      track("restore_failed", { reason: "verification_or_store_error" });
       if (isIapUnavailableError(err)) {
         Alert.alert("Restore unavailable", "In-app purchases are not available on this build.");
       } else {
@@ -572,7 +577,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
               accessibilityRole="radio"
               accessibilityState={{ checked: selected === "annual" }}
               style={[styles.planCard, selected === "annual" && styles.planCardSelected]}
-              onPress={() => setSelected("annual")}
+              onPress={() => { setSelected("annual"); track("subscription_plan_selected", { plan: "annual" }); }}
               activeOpacity={0.82}
             >
               <Ionicons
@@ -599,7 +604,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
               accessibilityRole="radio"
               accessibilityState={{ checked: selected === "monthly" }}
               style={[styles.planCard, selected === "monthly" && styles.planCardSelected]}
-              onPress={() => setSelected("monthly")}
+              onPress={() => { setSelected("monthly"); track("subscription_plan_selected", { plan: "monthly" }); }}
               activeOpacity={0.82}
             >
               <Ionicons

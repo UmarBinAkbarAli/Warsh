@@ -24,6 +24,7 @@ import { BottomSheetModal } from "@components/BottomSheetModal";
 import { BrandButton } from "@components/BrandButton";
 import { useT } from "@i18n/index";
 import { isDesktopWeb } from "@components/WebPage";
+import { trackTadabburSurahViewed } from "@services/analytics";
 
 // ─── types ────────────────────────────────────────────────────────────────────
 
@@ -235,6 +236,7 @@ export default function TadabburScreen() {
     try {
       const res = await getTadabburSurah(surahId);
       const surah: SurahMeta = surahs.find((s) => s.id === surahId) ?? res.data.data.surah;
+      if (surah) trackTadabburSurahViewed(surah.id, surah.nameEn, surah.comprehensionPercent);
       setAyat(res.data.data.ayat);
       setSurahMeta(surah);
 

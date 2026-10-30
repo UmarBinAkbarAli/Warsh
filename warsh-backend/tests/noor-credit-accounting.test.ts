@@ -91,6 +91,7 @@ async function withVoidStub(
     findUnique: prisma.storePurchase.findUnique,
     updateMany: prisma.storePurchase.updateMany,
     userFind: prisma.user.findUnique,
+    userFindFirst: prisma.user.findFirst,
     userUpdate: prisma.user.update,
     userUpdateMany: prisma.user.updateMany,
     transaction: prisma.$transaction,
@@ -115,6 +116,7 @@ async function withVoidStub(
   (prisma.user as { findUnique: unknown }).findUnique = (async () => ({
     noorOverageBalance: harness.balance,
   })) as unknown as typeof prisma.user.findUnique;
+  (prisma.user as { findFirst: unknown }).findFirst = async () => ({ id: "user-1" });
   (prisma.user as { update: unknown }).update = (async (args: Record<string, unknown>) => {
     harness.userUpdates.push(args);
     return {};
@@ -133,6 +135,7 @@ async function withVoidStub(
     (prisma.storePurchase as { findUnique: unknown }).findUnique = original.findUnique;
     (prisma.storePurchase as { updateMany: unknown }).updateMany = original.updateMany;
     (prisma.user as { findUnique: unknown }).findUnique = original.userFind;
+    (prisma.user as { findFirst: unknown }).findFirst = original.userFindFirst;
     (prisma.user as { update: unknown }).update = original.userUpdate;
     (prisma.user as { updateMany: unknown }).updateMany = original.userUpdateMany;
     (prisma as { $transaction: unknown }).$transaction = original.transaction;
@@ -213,7 +216,7 @@ test("revoking a voided subscription is guarded so a daily replay is a no-op", a
   await withVoidStub({ purchase: pack(), balance: 20 }, async (harness) => {
     await applyVoidedPurchase({ purchaseToken: "tok", productType: 1 });
     const revoke = harness.userUpdateMany[0] as { where: Record<string, unknown> };
-    assert.deepEqual(revoke.where, { lastPurchaseToken: "tok", NOT: { subscriptionStatus: "expired" } });
+    assert.deepEqual(revoke.where, { id: "user-1", lastPurchaseToken: "tok", NOT: { subscriptionStatus: "expired" } });
   });
 });
 

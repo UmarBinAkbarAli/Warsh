@@ -51,7 +51,8 @@ export default function PrivacyPage() {
         <LI>
           <strong>Diagnostics, analytics, and device data:</strong> app version, operating system
           and device information, pseudonymous user ID, crash and performance diagnostics,
-          IP/network information processed by hosting providers, and app-interaction events used
+          IP/network information processed by hosting providers, website page and link interactions,
+          campaign attribution, and app-interaction events used
           to operate, secure, troubleshoot, and improve the Service.
         </LI>
         <LI>
@@ -190,12 +191,16 @@ export default function PrivacyPage() {
       </P>
       <P>
         For learners aged 13 to 17, Warsh applies additional protections: product analytics
-        (Mixpanel) are switched off entirely, Ustaad Noor is instructed to keep every reply
+        (Mixpanel) are switched off for their signed-in account, Ustaad Noor is instructed to keep every reply
         suitable for a young learner and never to ask for personal details, and the only
         emails we send are the account and password messages you request. Crash reporting
         (Sentry) remains on with personal data removed. Parents or guardians can ask us to
         delete a teen&rsquo;s account at any time from{' '}
         <A href="/delete-account">warsh.app/delete-account</A>.
+      </P>
+      <P>
+        The public website uses pseudonymous analytics for visitors whose age is not known.
+        Signed-in app analytics are disabled for known minor accounts.
       </P>
 
       <H2>10. Your Choices and Rights</H2>

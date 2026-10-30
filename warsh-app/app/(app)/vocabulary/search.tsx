@@ -16,6 +16,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { Image } from "expo-image";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import api from "@services/api";
+import { track } from "@services/analytics";
 import { useTranslationLanguage, pickTranslation } from "@services/language";
 import { useT } from "@i18n/index";
 import {
@@ -87,6 +88,7 @@ export default function VocabularySearchScreen() {
           `/api/vocabulary/words?search=${encodeURIComponent(query)}`
         );
         setResults(res.data.data ?? []);
+        track("vocabulary_search_completed", { query_length: query.trim().length, result_count: (res.data.data ?? []).length });
       } catch {
         setResults([]);
       } finally {

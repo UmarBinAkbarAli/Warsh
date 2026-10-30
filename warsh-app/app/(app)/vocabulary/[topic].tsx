@@ -18,6 +18,7 @@ import { ArabicText } from "@components/ArabicText";
 import { PlayButton } from "@components/PlayButton";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../../constants/theme";
 import { getVocabularyWords } from "@services/api";
+import { track } from "@services/analytics";
 import { useTranslationLanguage, pickTranslation } from "@services/language";
 import { TOPIC_CATALOG, getTopicLabel } from "../(tabs)/vocabulary";
 import { useT } from "@i18n/index";
@@ -63,6 +64,7 @@ export default function TopicDetailScreen() {
   useFocusEffect(
     useCallback(() => {
       if (!topic) return;
+      if (TOPIC_CATALOG.some((entry) => entry.key === topic)) track("vocabulary_topic_opened", { topic });
       setLoading(true);
       getVocabularyWords({ topic })
         .then((res) => setWords(res.data.data))

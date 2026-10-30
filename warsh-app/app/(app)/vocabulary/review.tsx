@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   ActivityIndicator,
   Platform,
@@ -16,7 +16,7 @@ import { ArabicText } from "@components/ArabicText";
 import { PlayButton } from "@components/PlayButton";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../../constants/theme";
 import { getSRSDueWords, submitSRSReview } from "@services/api";
-import { trackSRSReviewCompleted } from "@services/analytics";
+import { track, trackSRSReviewCompleted } from "@services/analytics";
 import { useTranslationLanguage, pickTranslation } from "@services/language";
 import { useT } from "@i18n/index";
 import { prefetchVocabWordAudio } from "@services/audioCache";
@@ -60,9 +60,11 @@ export default function SRSReviewScreen() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [results, setResults] = useState({ hard: 0, good: 0, easy: 0 });
   const [submitting, setSubmitting] = useState(false);
+  const reviewProgress = useRef({ started: false, completed: false, reviewed: 0, total: 0 });
 
   useFocusEffect(
     useCallback(() => {
+      reviewProgress.current = { started: false, completed: false, reviewed: 0, total: 0 };
       setStage("loading");
       setCurrentIndex(0);
       setResults({ hard: 0, good: 0, easy: 0 });
@@ -70,9 +72,17 @@ export default function SRSReviewScreen() {
         .then((res) => {
           const words: DueWord[] = res.data.data;
           setQueue(words);
+          reviewProgress.current.total = words.length;
           setStage(words.length === 0 ? "empty" : "pre");
         })
         .catch(() => setStage("empty"));
+      return () => {
+        const progress = reviewProgress.current;
+        if (progress.started && !progress.completed) {
+          track("srs_review_exited", { words_reviewed: progress.reviewed, words_due: progress.total });
+          progress.started = false;
+        }
+      };
     }, [])
   );
 
@@ -84,6 +94,8 @@ export default function SRSReviewScreen() {
     setSubmitting(true);
     try {
       await submitSRSReview(current.wordId, quality);
+      track("srs_rating_submitted", { word_id: current.wordId, rating: quality });
+      reviewProgress.current.reviewed += 1;
       const nextResults = {
         hard: results.hard + (quality === 2 ? 1 : 0),
         good: results.good + (quality === 4 ? 1 : 0),
@@ -91,7 +103,12 @@ export default function SRSReviewScreen() {
       };
       setResults(nextResults);
       if (currentIndex + 1 >= queue.length) {
-        trackSRSReviewCompleted({ wordsReviewed: queue.length, ...nextResults });
+        if (reviewProgress.current.reviewed === queue.length) {
+          trackSRSReviewCompleted({ wordsReviewed: queue.length, ...nextResults });
+        } else {
+          track("srs_review_finished_with_errors", { words_reviewed: reviewProgress.current.reviewed, words_due: queue.length });
+        }
+        reviewProgress.current.completed = true;
         setStage("done");
       } else {
         setCurrentIndex((i) => i + 1);
@@ -100,6 +117,8 @@ export default function SRSReviewScreen() {
     } catch {
       // If review fails, just advance anyway
       if (currentIndex + 1 >= queue.length) {
+        track("srs_review_finished_with_errors", { words_reviewed: reviewProgress.current.reviewed, words_due: queue.length });
+        reviewProgress.current.completed = true;
         setStage("done");
       } else {
         setCurrentIndex((i) => i + 1);
@@ -162,7 +181,7 @@ export default function SRSReviewScreen() {
           <Text style={styles.preTitle}>{t("vocabulary.review")}</Text>
           <Text style={styles.preCount}>{t("vocabulary.reviewReady", { count: total, suffix: total !== 1 ? "s" : "" })}</Text>
           <Text style={styles.preCopy}>{t("vocabulary.reviewIntro")}</Text>
-          <TouchableOpacity style={styles.beginBtn} onPress={() => setStage("front")}>
+          <TouchableOpacity style={styles.beginBtn} onPress={() => { reviewProgress.current.started = true; track("srs_review_started", { words_due: queue.length }); setStage("front"); }}>
             <Text style={styles.beginBtnText}>{t("vocabulary.begin")}</Text>
           </TouchableOpacity>
         </View>

@@ -5,6 +5,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { useT } from "@i18n/index";
 import { useQuranStore } from "@stores/quranStore";
+import { track } from "@services/analytics";
 import { BottomSheetModal, SheetScrollView } from "../BottomSheetModal";
 import { Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
 import { hasTajweed, isIndoPak, segmentsOf, wordText, type MushafLayout, type QuranWord } from "../../services/quran/data";
@@ -108,7 +109,7 @@ export function QuranSettingsSheet({ visible, onClose }: { visible: boolean; onC
           return (
             <Pressable
               key={key ?? "off"}
-              onPress={soon ? undefined : () => setTranslation(key)}
+              onPress={soon ? undefined : () => { setTranslation(key); track("quran_translation_changed", { translation: key ?? "off" }); }}
               disabled={soon}
               style={[styles.option, selected && styles.optionSelected, soon && styles.optionDisabled]}
               accessibilityRole="radio"

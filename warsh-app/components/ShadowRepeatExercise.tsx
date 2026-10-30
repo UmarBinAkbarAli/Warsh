@@ -7,6 +7,7 @@ import { ArabicText } from "./ArabicText";
 import { WaveformBars } from "./WaveformBars";
 import { BrandButton } from "./BrandButton";
 import { recheckMicPermission, requestMicPermission } from "@services/micPermission";
+import { track } from "@services/analytics";
 import { WarshPalette, Fonts, WarshAlpha, Radii, desktopFontSize, desktopLineHeight } from "../constants/theme";
 import { useT } from "@i18n/index";
 
@@ -173,6 +174,7 @@ export function ShadowRepeatExercise({ arabic, transliteration, translation, ori
 
   function handleSkip() {
     setShowPermissionModal(false);
+    track("speaking_practice_skipped");
     onComplete(false);
   }
 
@@ -194,6 +196,7 @@ export function ShadowRepeatExercise({ arabic, transliteration, translation, ori
       });
 
       await recording.startAsync();
+      track("speaking_practice_started");
       recordingRef.current = recording;
       setState("recording");
 
@@ -202,6 +205,7 @@ export function ShadowRepeatExercise({ arabic, transliteration, translation, ori
       }, MAX_RECORDING_MS);
     } catch {
       // If recording fails, treat as skipped
+      track("speaking_practice_failed");
       onComplete(false);
     }
   }
@@ -307,6 +311,7 @@ export function ShadowRepeatExercise({ arabic, transliteration, translation, ori
       FileSystem.deleteAsync(recordingUri, { idempotent: true }).catch(() => {});
     }
     setState("done");
+    track("speaking_practice_completed");
     onComplete(true);
   }
 

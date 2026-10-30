@@ -43,6 +43,8 @@ async function withHarness(
   const originalFetch = globalThis.fetch;
   const originalFindFirst = prisma.user.findFirst;
   const originalUpdate = prisma.user.update;
+  const originalTransaction = prisma.$transaction;
+  const originalFindUnique = prisma.user.findUnique;
   const originalKey = process.env.GOOGLE_PLAY_SERVICE_ACCOUNT_KEY;
   const originalPackage = process.env.GOOGLE_PLAY_PACKAGE_NAME;
   const harness: Harness = { usersByToken: { ...seed.usersByToken }, updates: [] };
@@ -75,6 +77,8 @@ async function withHarness(
     }
     return {};
   }) as unknown as typeof prisma.user.update;
+  (prisma.user as { findUnique: unknown }).findUnique = async () => ({ dateOfBirth: null });
+  (prisma as { $transaction: unknown }).$transaction = async (callback: (tx: typeof prisma) => Promise<unknown>) => callback(prisma);
 
   try {
     await callback(harness);
@@ -82,6 +86,8 @@ async function withHarness(
     globalThis.fetch = originalFetch;
     (prisma.user as { findFirst: unknown }).findFirst = originalFindFirst;
     (prisma.user as { update: unknown }).update = originalUpdate;
+    (prisma.user as { findUnique: unknown }).findUnique = originalFindUnique;
+    (prisma as { $transaction: unknown }).$transaction = originalTransaction;
     if (originalKey === undefined) delete process.env.GOOGLE_PLAY_SERVICE_ACCOUNT_KEY;
     else process.env.GOOGLE_PLAY_SERVICE_ACCOUNT_KEY = originalKey;
     if (originalPackage === undefined) delete process.env.GOOGLE_PLAY_PACKAGE_NAME;

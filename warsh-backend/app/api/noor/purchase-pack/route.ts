@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { Prisma } from "@prisma/client";
 import { prisma } from "../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../lib/auth";
+import { queuePurchaseEvent } from "../../../../lib/analyticsOutbox";
 import {
   consumeGooglePlayProduct,
   StoreVerificationError,
@@ -119,11 +120,15 @@ export async function POST(request: Request) {
         },
       });
 
-      return tx.user.update({
+      const updated = await tx.user.update({
         where: { id: userId },
         data: { noorOverageBalance: { increment: creditsGranted } },
         select: { noorOverageBalance: true },
       });
+      await queuePurchaseEvent(tx, userId, "noor_credit_grant_confirmed", tokenHash, {
+        platform, product_id: NOOR_PACK_PRODUCT_ID, quantity: verifiedPurchase.quantity, credits_granted: creditsGranted,
+      });
+      return updated;
     });
 
     // Only now that the ledger row and the balance are committed is it safe to

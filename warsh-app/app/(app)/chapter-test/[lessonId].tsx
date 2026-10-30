@@ -13,6 +13,7 @@ import { useLocalSearchParams, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import api from "@services/api";
+import { track } from "@services/analytics";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
 import { useTranslationLanguage } from "@services/language";
@@ -115,6 +116,7 @@ export default function ChapterTestScreen() {
   const shellStyle = [{ paddingTop: insets.top + Spacing.sm }, Platform.OS === "web" && { width: contentWidth, alignSelf: "center" as const }];
 
   function resetTest() {
+    track("chapter_test_started", { lesson_id: lessonId });
     setAnswers({});
     setQuestionIndex(0);
     setResult(null);
@@ -134,6 +136,7 @@ export default function ChapterTestScreen() {
         })),
       });
       setResult(response.data.data);
+      track("chapter_test_completed", { lesson_id: lessonId, passed: Boolean(response.data.data.passed), score: response.data.data.score });
       setPhase("result");
     } catch {
       // A mobile timeout can happen after the backend has already committed the
@@ -145,6 +148,7 @@ export default function ChapterTestScreen() {
           const recovery = await api.get(`/api/lessons/${lessonId}`);
           const savedResult = recovery.data.data.lesson.chapterTestResult as TestResult | null;
           if (savedResult?.passed) {
+            track("chapter_test_completed", { lesson_id: lessonId, passed: true, score: savedResult.score, recovered: true });
             setResult(savedResult);
             setPhase("result");
             return;
@@ -154,6 +158,7 @@ export default function ChapterTestScreen() {
         }
       }
       setError(t("chapterTest.submitError"));
+      track("chapter_test_submit_failed", { lesson_id: lessonId });
     } finally {
       setSubmitting(false);
     }

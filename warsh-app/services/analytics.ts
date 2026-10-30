@@ -1,62 +1,117 @@
-import { Platform } from "react-native";
+import { NativeModules, Platform } from "react-native";
 import { Mixpanel } from "mixpanel-react-native";
+import { useAuthStore } from "@stores/authStore";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const TOKEN = process.env.EXPO_PUBLIC_MIXPANEL_TOKEN;
 const ENV = process.env.EXPO_PUBLIC_ENVIRONMENT ?? "development";
 
 let mp: Mixpanel | null = null;
+let web: typeof import("mixpanel-browser").default | null = null;
+let initialization: Promise<void> | null = null;
+let queue: Promise<void> = Promise.resolve();
+let identifiedId: string | null = null;
+const LAST_USER_KEY = "warsh_analytics_last_user_v1";
 
-export async function initAnalytics() {
-  // mixpanel-react-native is a native module with no web implementation. Skip on
-  // web so it can't throw/reject; every track()/identify() call already no-ops
-  // while `mp` stays null.
-  if (Platform.OS === "web") return;
-  if (!TOKEN || mp) return;
-  try {
-    mp = new Mixpanel(TOKEN, /* trackAutomaticEvents */ false);
-    await mp.init();
-    // Off by default Mixpanel geolocates every event from the sender's IP,
-    // which Play's Data safety form counts as "approximate location". Warsh
-    // never reads it, so don't collect it.
-    mp.setUseIpAddressForGeolocation(false);
-  } catch {
-    mp = null;
-  }
+export function initAnalytics(): Promise<void> {
+  if (!TOKEN) return Promise.resolve();
+  if (initialization) return initialization;
+  initialization = (async () => {
+    if (Platform.OS === "web") {
+      // Initialise only for a verified adult account, never while age is unknown.
+      const sdk = (await import("mixpanel-browser")).default;
+      const options = { autocapture: false, track_pageview: false, ip: false, cross_subdomain_cookie: true,
+        track_marketing: false, store_google: false, save_referrer: false,
+        property_blacklist: ["$current_url", "$referrer", "$initial_referrer", "$search_keyword"] };
+      sdk.init(TOKEN, options);
+      web = sdk;
+    } else {
+      const instance = new Mixpanel(TOKEN, false);
+      await instance.init();
+      instance.setUseIpAddressForGeolocation(false);
+      mp = instance;
+    }
+  })().catch(() => { initialization = null; });
+  return initialization;
 }
 
-// Learners the backend knows to be under 18 get no analytics at all: no
-// identify, no people properties, no events. Set from the authenticated layout
-// as soon as the profile is known.
-let suppressed = false;
+function eligibleId(): string | null {
+  const { token, user } = useAuthStore.getState();
+  return token && user?.dateOfBirth && user.isMinor === false ? user.id : null;
+}
+
+// Serialize identity changes and emissions. Recheck the current account after
+// each asynchronous boundary so queued work cannot cross an account switch.
+function enqueue(action: () => void): Promise<boolean> {
+  const userId = eligibleId();
+  if (!userId) return Promise.resolve(false);
+  let sent = false;
+  queue = queue.then(async () => {
+    if (eligibleId() !== userId) return;
+    await initAnalytics();
+    if (eligibleId() !== userId || (!mp && !web)) return;
+    if (identifiedId !== userId) {
+      const previousId = identifiedId ?? await AsyncStorage.getItem(LAST_USER_KEY);
+      if (eligibleId() !== userId) return;
+      // The website and web app share a Mixpanel cookie. Local app storage may
+      // have been cleared while that cookie still belongs to another account.
+      // Never attach an authenticated browser identity to a different user.
+      const browserUserId = web?.get_property("$user_id");
+      if ((previousId && previousId !== userId) ||
+          (typeof browserUserId === "string" && browserUserId !== userId)) await resetSdk();
+      if (mp) await mp.identify(userId);
+      else web?.identify(userId);
+      if (eligibleId() !== userId) { await resetSdk(); identifiedId = null; return; }
+      identifiedId = userId;
+      await AsyncStorage.setItem(LAST_USER_KEY, userId);
+      if (eligibleId() !== userId) { await resetSdk(); identifiedId = null; return; }
+    }
+    action();
+    sent = true;
+  }).catch(() => {});
+  return queue.then(() => sent);
+}
+
+async function resetSdk() {
+  // The SDK's public reset() discards the native promise. Await the bridge so
+  // the next identify cannot race with a reset from the previous account.
+  if (mp && TOKEN && NativeModules.MixpanelReactNative) await NativeModules.MixpanelReactNative.reset(TOKEN);
+  else mp?.reset();
+  web?.reset();
+}
 
 export function setAnalyticsSuppressed(value: boolean) {
-  suppressed = value;
-  if (value && mp) mp.reset();
+  if (value) resetAnalytics();
 }
 
-function track(event: string, props?: Record<string, unknown>) {
-  if (!mp || suppressed) return;
-  mp.track(event, { environment: ENV, ...props });
+export function track(event: string, props?: Record<string, unknown>) {
+  return enqueue(() => {
+    const properties = { environment: ENV, surface: Platform.OS === "web" ? "web_app" : Platform.OS, ...props };
+    if (mp) mp.track(event, properties);
+    else web?.track(event, properties);
+  });
 }
-
-// ─── Identity ─────────────────────────────────────────────────────────────────
 
 export function identifyUser(userId: string, peopleProps?: Record<string, unknown>) {
-  if (!mp || suppressed) return;
-  mp.identify(userId);
-  if (peopleProps) {
-    mp.getPeople().set(peopleProps);
-  }
+  if (eligibleId() !== userId) return;
+  if (peopleProps) setPeopleProps(peopleProps);
 }
 
 export function resetAnalytics() {
-  if (!mp) return;
-  mp.reset();
+  // Execute in order with any identify already in flight.
+  queue = queue.then(async () => { await resetSdk(); identifiedId = null; }).catch(() => {});
 }
 
 export function setPeopleProps(props: Record<string, unknown>) {
-  if (!mp || suppressed) return;
-  mp.getPeople().set(props);
+  enqueue(() => { if (mp) mp.getPeople().set(props); else web?.people.set(props); });
+}
+
+function peopleOnce(props: Record<string, unknown>) {
+  enqueue(() => { if (mp) mp.getPeople().setOnce(props); else web?.people.set_once(props); });
+}
+
+function peopleIncrement(key: string) {
+  enqueue(() => { if (mp) mp.getPeople().increment(key, 1); else web?.people.increment(key, 1); });
 }
 
 // ─── Onboarding & Auth ────────────────────────────────────────────────────────
@@ -96,7 +151,7 @@ export function trackRestoreSignIn() {
 
 export function trackSignupCompleted(props: { goal: string; level: string; placement: string; language: string }) {
   track("signup_completed", props);
-  mp?.getPeople().setOnce({ signup_date: new Date().toISOString(), ...props });
+  peopleOnce({ signup_date: new Date().toISOString(), ...props });
 }
 
 export function trackLoginCompleted() {
@@ -123,8 +178,8 @@ export function trackLessonCompleted(props: {
     current_streak: props.currentStreak,
     daily_goal_met: props.dailyGoalMet,
   });
-  mp?.getPeople().increment("lessons_completed", 1);
-  mp?.getPeople().set({ current_streak: props.currentStreak });
+  peopleIncrement("lessons_completed");
+  setPeopleProps({ current_streak: props.currentStreak });
 }
 
 export function trackMilestoneUnlocked(key: string, title: string, xp: number) {
@@ -135,7 +190,7 @@ export function trackMilestoneUnlocked(key: string, title: string, xp: number) {
 
 export function trackNoorMessageSent(messagesUsedToday: number) {
   track("noor_message_sent", { messages_used_today: messagesUsedToday });
-  mp?.getPeople().increment("noor_messages_sent", 1);
+  peopleIncrement("noor_messages_sent");
 }
 
 // ─── Vocabulary & Tadabbur ────────────────────────────────────────────────────
@@ -147,7 +202,7 @@ export function trackSRSReviewCompleted(props: { wordsReviewed: number; hard: nu
     good_count: props.good,
     easy_count: props.easy,
   });
-  mp?.getPeople().increment("srs_reviews_completed", 1);
+  peopleIncrement("srs_reviews_completed");
 }
 
 export function trackTadabburSurahViewed(surahId: string, surahNameEn: string, comprehensionPercent: number) {
@@ -162,12 +217,12 @@ export function trackPaywallViewed(source?: string) {
 
 export function trackSubscriptionStarted(plan: "monthly" | "annual") {
   track("subscription_started", { plan });
-  mp?.getPeople().set({ subscription_status: "active", subscription_plan: plan });
+  setPeopleProps({ subscription_status: "active", subscription_plan: plan });
 }
 
 export function trackSubscriptionRestored(productId: string) {
   track("subscription_restored", { product_id: productId });
-  mp?.getPeople().set({ subscription_status: "active" });
+  setPeopleProps({ subscription_status: "active" });
 }
 
 // Learn-tab subscription health banner (Pen section 23). `state` is the

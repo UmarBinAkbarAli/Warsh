@@ -19,6 +19,7 @@ import { PlayButton } from "@components/PlayButton";
 import { ScreenHeader } from "@components/ScreenHeader";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette, desktopFontSize, desktopLineHeight } from "../../../../constants/theme";
 import { getVocabularyWordDetail, updateUserVocabularyWord } from "@services/api";
+import { track } from "@services/analytics";
 import { useTranslationLanguage, pickTranslation, pickLocalized } from "@services/language";
 import { useT } from "@i18n/index";
 import { getEveryAyahAudioUrl } from "@services/quranAudio";
@@ -116,6 +117,7 @@ export default function WordDetailScreen() {
       setLoading(true);
       getVocabularyWordDetail(wordId)
         .then((res) => {
+          track("word_viewed", { word_id: wordId });
           setWord(res.data.data.word);
           setUserWord(res.data.data.userWord);
           setRelatedWords(res.data.data.relatedWords);
@@ -166,6 +168,7 @@ export default function WordDetailScreen() {
     setSaving(true);
     try {
       const res = await updateUserVocabularyWord(word.id, save ? { isFavorite: true, markForReview: true } : { isFavorite: false });
+      track(save ? "word_saved" : "word_unsaved", { word_id: word.id });
       setUserWord(res.data.data);
     } finally {
       setSaving(false);
