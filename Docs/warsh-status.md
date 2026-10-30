@@ -453,6 +453,19 @@ on the emulator.
 - Animations use the JS driver on purpose; the native driver was not verified for
   `setValue` during a drag.
 
+### App-language picker hidden — 2026-10-30
+
+**Owner decision, design step skipped by the owner.** Production had 25 accounts on
+the Urdu interface but only one active learner using it, so the interface-language
+choice is hidden: the EN/UR pill on the welcome screen, the App language row in
+Settings and the language cards in Edit profile are gone. New accounts use the
+English interface (onboarding defaults `language` to `en` and sends it on sign-up;
+the backend's `ur` fallback only applies to clients that send nothing). Meaning
+language is unchanged: Settings row plus the first-visit prompt on Learn. Existing
+Urdu-interface accounts keep Urdu; no data was changed. `i18n/ur.ts` and the
+Settings sheet's app branch stay so the picker can return. Android picks this up
+in the next Play release; web is live on push.
+
 ### Web layout and design-system tokens — 2026-10-29
 
 **Implemented, merged to `main` (`4ca8e57`, `515a96f`, `7406cf2`) and live on

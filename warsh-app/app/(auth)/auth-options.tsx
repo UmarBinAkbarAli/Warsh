@@ -18,9 +18,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 
 import { GoogleAuthSection } from "@components/GoogleAuthSection";
-import { LanguageSheet } from "@components/LanguageSheet";
 import { useIsDesktopWeb, WebAuthLayout } from "@components/WebAuthLayout";
-import { useOnboardingStore } from "@stores/onboardingStore";
 import { WEB_BASE_URL } from "@services/api";
 import { useLanguage } from "@services/language";
 import { useT } from "@i18n/index";
@@ -49,14 +47,12 @@ export default function OnboardingScreen() {
   const insets = useSafeAreaInsets();
   const t = useT();
   const { width, height } = useWindowDimensions();
-  const language = useOnboardingStore((s) => s.language);
   const isUrdu = useLanguage() === "ur";
   // The desktop-web left panel (WebAuthLayout) already shows this slider,
   // so avoid rendering it twice on the right/form side.
   const desktop = useIsDesktopWeb();
 
   const [index, setIndex] = useState(0);
-  const [sheetOpen, setSheetOpen] = useState(false);
   const listRef = useRef<FlatList>(null);
 
   // The slide track is laid out against the rendered content width, which on
@@ -92,7 +88,8 @@ export default function OnboardingScreen() {
   return (
     <WebAuthLayout>
       <View style={[styles.screen, { paddingTop: insets.top }]}>
-        {/* Top bar — logo left, language pill right */}
+        {/* Top bar — logo. The app-language picker is hidden (owner, 2026-10-30):
+            new accounts use the English interface; meanings are chosen on Learn. */}
         <View style={styles.topBar}>
           <Image
             source={require("../../assets/images/warsh-logo.png")}
@@ -100,17 +97,6 @@ export default function OnboardingScreen() {
             resizeMode="contain"
             accessibilityLabel="Warsh"
           />
-          <Pressable
-            onPress={() => setSheetOpen(true)}
-            accessibilityRole="button"
-            accessibilityLabel={t("language.sheetTitle")}
-            style={styles.langPill}
-            hitSlop={8}
-          >
-            <Ionicons name="globe-outline" size={16} color={WarshPalette.gold} />
-            <Text style={styles.langCode}>{language === "ur" ? "UR" : "EN"}</Text>
-            <Ionicons name="chevron-down" size={13} color={WarshPalette.subtleBrown} />
-          </Pressable>
         </View>
 
         {/* Slides — hero art plus its copy move together. Desktop web shows
@@ -183,7 +169,6 @@ export default function OnboardingScreen() {
           </View>
         </View>
 
-        <LanguageSheet visible={sheetOpen} onClose={() => setSheetOpen(false)} />
       </View>
     </WebAuthLayout>
   );
@@ -205,21 +190,6 @@ const styles = StyleSheet.create({
   logo: {
     width: 41,
     height: 28,
-  },
-  langPill: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: Spacing.xs,
-    height: 28,
-    paddingHorizontal: Spacing.md,
-    borderRadius: Radii.full,
-    backgroundColor: WarshPalette.neutralChip,
-  },
-  langCode: {
-    fontFamily: Fonts.semiBold,
-    fontSize: FontSizes.caption,
-    letterSpacing: 0.6,
-    color: WarshPalette.navy,
   },
   track: {
     flexGrow: 0,

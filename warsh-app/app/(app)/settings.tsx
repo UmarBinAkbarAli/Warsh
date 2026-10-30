@@ -335,17 +335,10 @@ export default function SettingsScreen() {
         contentContainerStyle={[styles.content, webLayout.isWeb && readingStyle]}
       >
 
+        {/* App language is hidden (owner, 2026-10-30); only meanings are chosen here.
+            Accounts already set to Urdu keep their Urdu interface. */}
         <SectionHeader title={t("settings.languageContent")} />
-        <Text style={styles.languageIntro}>{t("settings.languageContentBody")}</Text>
         <View style={styles.card}>
-          <SettingRow
-            icon="language-outline"
-            label={t("settings.appLanguage")}
-            sublabel={`${t("settings.appLanguageSub")} · ${user?.nativeLanguage === "ur" ? t("language.urdu") : t("language.english")}`}
-            onPress={() => setLanguageSheet("app")}
-            showChevron
-          />
-          <View style={styles.divider} />
           <SettingRow
             icon="book-outline"
             label={t("settings.meaningLanguage")}
@@ -353,15 +346,6 @@ export default function SettingsScreen() {
             onPress={() => setLanguageSheet("translation")}
             showChevron
           />
-        </View>
-        <View style={styles.languageSummary}>
-          <Ionicons name="sparkles-outline" size={18} color={WarshPalette.gold} />
-          <Text style={styles.languageSummaryText}>
-            {t("language.selectionSummary", {
-              app: user?.nativeLanguage === "ur" ? t("language.urdu") : t("language.english"),
-              meaning: (user?.translationLanguage ?? user?.nativeLanguage) === "ur" ? t("language.urdu") : t("language.english"),
-            })}
-          </Text>
         </View>
 
         {/* Notifications */}

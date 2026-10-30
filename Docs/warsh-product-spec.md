@@ -20,7 +20,7 @@ When changing a locked product decision, update this document and add a dated de
 - AI tutor: **Ustaad Noor · اُستاد نور**
 - Primary category: Quranic Arabic learning
 - Initial audience and market: Muslim learners aged 13 and up (teens 13–17 and adults), initially focused on Pakistan. Under-13 accounts are refused.
-- UI languages: English and Urdu
+- UI language: English for new accounts. The app-language picker is hidden (owner decision, 2026-10-30); accounts already set to Urdu keep the Urdu interface, and the Urdu strings stay in the app so the picker can return. Meanings (translations and explanations) remain English or Urdu, chosen per learner.
 - Teaching language: Fus'ha/Quranic Arabic; no dialect curriculum
 
 The name honors Warsh, one of the canonical transmitters associated with Quranic recitation. It signals that the product is rooted in the Quran while remaining a modern learning application. The name must not be used to imply that the app teaches only the Warsh recitation or replaces qualified teachers and scholars.
@@ -101,10 +101,9 @@ The current essential journey is:
 
 1. Branded preview experience
 2. Name
-3. UI language
-4. Account registration
-5. Permissions
-6. Learn home
+3. Account registration
+4. Permissions
+5. Learn home, where a first-visit prompt asks for the meaning language (English or Urdu)
 
 Goal, level, daily commitment, placement, and ready screens remain available concepts, but the current production flow may use safe defaults to reduce signup friction. Any reintroduction must be intentional and reflected in status and analytics.
 

@@ -5,7 +5,6 @@ import {
   StyleSheet,
   Text,
   TextInput,
-  TouchableOpacity,
   useWindowDimensions,
   View,
 } from "react-native";
@@ -20,8 +19,6 @@ import { ScreenHeader } from "@components/ScreenHeader";
 import { useT } from "@i18n/index";
 import { isDesktopWeb } from "@components/WebPage";
 
-type Lang = "en" | "ur";
-
 // Mirrors DISPLAY_NAME_MAX_LENGTH in warsh-backend/lib/displayName.ts.
 const NAME_MAX_LENGTH = 60;
 
@@ -34,9 +31,6 @@ export default function EditProfileScreen() {
   const patchUser = useAuthStore((s) => s.patchUser);
   const t = useT();
 
-  const [selectedLang, setSelectedLang] = useState<Lang>(
-    (user?.nativeLanguage as Lang) ?? "en"
-  );
   const [name, setName] = useState(user?.name ?? "");
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -56,8 +50,12 @@ export default function EditProfileScreen() {
     setError(null);
     setSuccess(false);
     try {
-      await api.patch("/api/users/me", { nativeLanguage: selectedLang, ...(nameChanged ? { name: trimmedName } : {}) });
-      patchUser({ nativeLanguage: selectedLang, ...(nameChanged ? { name: trimmedName } : {}) });
+      // The app-language choice is hidden (owner, 2026-10-30), so only the name
+      // is saved here and an existing Urdu interface is left as it is.
+      if (nameChanged) {
+        await api.patch("/api/users/me", { name: trimmedName });
+        patchUser({ name: trimmedName });
+      }
       setSuccess(true);
       setTimeout(() => router.back(), 800);
     } catch {
@@ -106,38 +104,6 @@ export default function EditProfileScreen() {
             accessibilityLabel={t("editProfile.name")}
             placeholderTextColor={WarshPalette.subtleBrown}
           />
-        </View>
-
-        {/* Language section */}
-        <Text style={styles.sectionHeader}>{t("editProfile.language")}</Text>
-        <View style={styles.langRow}>
-          <TouchableOpacity
-            style={[
-              styles.langCard,
-              selectedLang === "en" ? styles.langCardSelected : styles.langCardUnselected,
-            ]}
-            onPress={() => setSelectedLang("en")}
-            activeOpacity={0.75}
-          >
-            <Text style={[styles.langTitle, selectedLang === "en" ? styles.langTitleSelected : null]}>
-              {t("editProfile.englishLabel")}
-            </Text>
-            <Text style={styles.langSubtitle}>{t("editProfile.englishUi")}</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={[
-              styles.langCard,
-              selectedLang === "ur" ? styles.langCardSelected : styles.langCardUnselected,
-            ]}
-            onPress={() => setSelectedLang("ur")}
-            activeOpacity={0.75}
-          >
-            <Text style={[styles.langTitle, selectedLang === "ur" ? styles.langTitleSelected : null]}>
-              {t("editProfile.urduLabel")}
-            </Text>
-            <Text style={styles.langSubtitle}>{t("editProfile.urduUi")}</Text>
-          </TouchableOpacity>
         </View>
 
         {/* Save button */}
@@ -253,46 +219,6 @@ const styles = StyleSheet.create({
     backgroundColor: WarshPalette.white,
   },
 
-
-  // Language cards
-  langRow: {
-    flexDirection: "row",
-    gap: Spacing.sm,
-    marginBottom: Spacing.xl,
-  },
-  langCard: {
-    flex: 1,
-    borderRadius: Radii.md,
-    borderWidth: 1.5,
-    paddingVertical: Spacing.md,
-    paddingHorizontal: Spacing.sm,
-    alignItems: "center",
-  },
-  langCardSelected: {
-    backgroundColor: WarshPalette.parchmentBg,
-    borderColor: WarshPalette.gold,
-  },
-  langCardUnselected: {
-    backgroundColor: WarshPalette.white,
-    borderColor: WarshPalette.defaultCardBorder,
-  },
-  langTitle: {
-    fontFamily: Fonts.semiBold,
-    fontSize: FontSizes.bodyL,
-    color: WarshPalette.bodyBrown,
-    textAlign: "center",
-  },
-  langTitleSelected: {
-    color: WarshPalette.ink,
-    fontFamily: Fonts.bold,
-  },
-  langSubtitle: {
-    fontFamily: Fonts.regular,
-    fontSize: FontSizes.caption,
-    color: WarshPalette.subtleBrown,
-    marginTop: 2,
-    textAlign: "center",
-  },
 
   // Save button
   saveButtonContainer: {
