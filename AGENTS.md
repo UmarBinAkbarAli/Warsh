@@ -175,6 +175,12 @@ npx vitest run <file>
   agreed, which is what lets `content:export` and `content:sync` tell a Studio edit
   from a Git edit. Never push fixtures over the database without `content:check`
   passing first.
+- A Studio edit is the owner's decision. When `content:export` pulls one in, keep it
+  exactly: never re-add a card or exercise the owner deleted, and never revert text
+  they changed, even if it looks like a mistake — ask instead. Commit `f6862d8`
+  ("restore ex05") silently undid an owner deletion this way, and the deleted test
+  card reappeared in the app. Run `content:export` immediately before editing a
+  fixture so it starts from the owner's latest Studio state.
 - Lesson audio is keyed by a sha256 of the Arabic text and runtime lookup has no
   generation fallback, so editing Arabic text orphans its clip.
   `lib/audioTargets.ts` defines which strings need audio for both the generator and
