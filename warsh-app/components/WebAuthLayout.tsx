@@ -134,9 +134,15 @@ function HeroScene({ phone, cards }: { phone: number; cards: CardLayout[] }) {
   );
 }
 
+// Slides cross-fade rather than cut: all three stay mounted (so their images
+// are already loaded) and stack in a box tall enough for the longest copy.
+const FADE_MS = 600;
+const SLIDE_HEIGHT = SCENE_HEIGHT + 200;
+
 function BrandCarousel() {
   const t = useT();
   const [index, setIndex] = useState(0);
+  const [fades] = useState(() => SLIDES.map((_, i) => new Animated.Value(i === 0 ? 1 : 0)));
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -145,14 +151,36 @@ function BrandCarousel() {
     return () => clearInterval(timer);
   }, []);
 
-  const slide = SLIDES[index];
+  useEffect(() => {
+    const fade = Animated.parallel(
+      fades.map((value, i) =>
+        Animated.timing(value, {
+          toValue: i === index ? 1 : 0,
+          duration: FADE_MS,
+          easing: Easing.inOut(Easing.ease),
+          useNativeDriver: false,
+        })
+      )
+    );
+    fade.start();
+    return () => fade.stop();
+  }, [fades, index]);
 
   return (
     <View style={styles.carousel}>
-      <View style={styles.slide}>
-        <HeroScene key={slide.key} phone={slide.phone} cards={slide.cards} />
-        <Text style={styles.title}>{t(`onboarding.slide${index + 1}Title`)}</Text>
-        <Text style={styles.body}>{t(`onboarding.slide${index + 1}Body`)}</Text>
+      <View style={styles.slides}>
+        {SLIDES.map((slide, i) => (
+          <Animated.View
+            key={slide.key}
+            aria-hidden={i !== index}
+            pointerEvents="none"
+            style={[styles.slide, { opacity: fades[i] }]}
+          >
+            <HeroScene phone={slide.phone} cards={slide.cards} />
+            <Text style={styles.title}>{t(`onboarding.slide${i + 1}Title`)}</Text>
+            <Text style={styles.body}>{t(`onboarding.slide${i + 1}Body`)}</Text>
+          </Animated.View>
+        ))}
       </View>
 
       <View style={styles.pager}>
@@ -199,8 +227,15 @@ const styles = StyleSheet.create({
     maxWidth: 360,
     alignItems: "center",
   },
-  slide: {
+  slides: {
     width: "100%",
+    height: SLIDE_HEIGHT,
+  },
+  slide: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
     alignItems: "center",
     gap: Spacing.md,
   },
