@@ -121,7 +121,7 @@ Local check setup: staging Postgres runs as `warsh-staging-postgres-alt` on 127.
 
 ## Next steps
 
-1. Optional: once Umar asks, a scheduled task to sync the design system to the app.
+None. There is no scheduled sync: Umar asks explicitly when design-system changes should be applied, then follow "How to sync from now on" above.
 
 ## Umar's preferences
 
