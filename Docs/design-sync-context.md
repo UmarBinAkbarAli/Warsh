@@ -14,7 +14,7 @@ Make the **Warsh Design System** (a Claude Design System artifact) the single so
 ## Repo state
 
 - Repo: `D:\Code\Warsh` (monorepo; app in `warsh-app/`, Expo 54 / React Native, web via react-native-web).
-- Branch: **`design-sync/setup`**, created from `main@8460bfa`. **Nothing is committed yet**; all changes below are in the working tree. Commit only when Umar asks.
+- Branch: the work was done on `design-sync/setup` and merged to `main` on 2026-10-29 (`4ca8e57`, `515a96f`, `7406cf2`); the branch is deleted. A push to `main` deploys app.warsh.app, so it is live.
 - `warsh-backend/lesson-image-delivery/` is an untracked folder that was already there. It is Umar's, so leave it alone.
 
 ## What the design system holds
@@ -97,7 +97,7 @@ Every web screen should use one of these:
 - **All 27 `width >= 960` checks** in screens were replaced with `isDesktopWeb(width)`, so they now switch at 1024px. `WebAuthLayout`'s 900px switch is also now 1024px.
 - Learn (`app/(app)/(tabs)/index.tsx`) now works out its available width by subtracting the sidebar or rail width from `WebLayout` instead of a fixed 260px.
 - `tsc --noEmit` is clean.
-- **No screen uses `WebPage` / `useWebPageStyle` yet.** That's step 4.
+- Screens now use `WebPage` / `useWebPageStyle` (see Progress below).
 
 ## Audit findings to fix
 
@@ -109,30 +109,24 @@ Every web screen should use one of these:
 6. Quran and Settings show a back chevron although they're top-level.
 7. The Learn header row (name, streak, avatar) floats at the far right edge.
 8. The chapter-lessons error state is bare: no title, retry or way back.
-9. Sidebar labels in `WebAppSidebar` are hard-coded English rather than translated (not fixed yet).
+9. Sidebar labels in `WebAppSidebar` are hard-coded English rather than translated (fixed).
 
 ## Progress in Claude Code (2026-10-29)
 
-Step 1 and step 2 are done and checked in a browser at 1440/1024/768px: Learn and You (Dashboard), the lesson player (Focus, with close, progress and right-to-left Urdu), Noor (Reading, with per-paragraph text direction), Vocabulary, All chapters and the Quran list (Collection grids), and Settings and Streak (Reading; Settings has no back chevron on web, and Streak keeps it as a stack screen). Also done: `WebAppSidebar` labels translated (finding 9); the chapter-lessons error state has a title, Try again and All chapters (finding 8); the chapter lessons page is on the shared frame (not yet checked in a browser). Audit re-run (step 3): every page starts on the same left edge, 308px at 1440, 292px at 1024 and 96px at 768. Owner decisions pending: Quran grid at 1024px truncates names (2 columns?), and Vocabulary's top cards stretch to 1180px.
+Step 1 and step 2 are done and checked in a browser at 1440/1024/768px: Learn and You (Dashboard), the lesson player (Focus, with close, progress and right-to-left Urdu), Noor (Reading, with per-paragraph text direction), Vocabulary, All chapters and the Quran list (Collection grids), and Settings and Streak (Reading; Settings has no back chevron on web, and Streak keeps it as a stack screen). Also done: `WebAppSidebar` labels translated (finding 9); the chapter-lessons error state has a title, Try again and All chapters (finding 8); the chapter lessons page is on the shared frame (not yet checked in a browser). Audit re-run (step 3): every page starts on the same left edge, 308px at 1440, 292px at 1024 and 96px at 768. Vocabulary's top cards were settled in `7406cf2` (from 1024px, Today's word in the main column and review, counts and My Words in the side column). Mushaf page keeps a printed-page width on wide screens (`515a96f`).
+
+**Still open:** owner decision on the Quran list at 1024px, where 3 columns truncate surah names (2 columns?).
 
 Local check setup: staging Postgres runs as `warsh-staging-postgres-alt` on 127.0.0.1:15432, the local backend on :3000 points at it, and the web app is on localhost:8081.
 
 ## Next steps
 
-1. **Check the shell in a browser.** Umar runs `npm run web` in `warsh-app` and signs in on localhost (it's a separate site from app.warsh.app, so the login doesn't carry over). Check the rail and sidebar at 768, 1024 and 1440px against the audit screenshots. The Linux shell on Umar's laptop used in the Cowork chat couldn't keep a dev server running, which is why this was left for him; in Claude Code you can run it directly.
-2. **Move screens onto the frame**, one branch per screen or two, worst first:
-   1. Learn (Dashboard)
-   2. Lesson player (Focus: add close and progress, right-to-left fix)
-   3. Noor (Reading, plus mixed-direction text)
-   4. You (Dashboard)
-   5. Vocabulary, All chapters, Quran list (Collection, using `WebGrid`)
-   6. Settings and Streak (Reading)
-   - Also remove the back chevrons on the tabs.
-3. Re-run the audit at 768, 1024 and 1440px and compare.
-4. Optional: once Umar asks, a scheduled task to sync the design system to the app.
+1. Owner decision: Quran list columns at 1024px.
+2. Optional: once Umar asks, a scheduled task to sync the design system to the app.
 
 ## Umar's preferences
 
 - Concise, precise communication; design-quality output.
 - Heavy work (builds, rendering) runs on his laptop, not in the cloud.
 - Work on branches; don't commit, push or merge without asking.
+- App testing goes to a Haiku subagent or to Umar, never to Opus.

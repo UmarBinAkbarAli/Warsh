@@ -453,6 +453,28 @@ on the emulator.
 - Animations use the JS driver on purpose; the native driver was not verified for
   `setValue` during a drag.
 
+### Web layout and design-system tokens — 2026-10-29
+
+**Implemented, merged to `main` (`4ca8e57`, `515a96f`, `7406cf2`) and live on
+app.warsh.app.** The Warsh Design System artifact
+(https://claude.ai/artifact/LtpUxEekKJzn1RxqmPgryY) is the source of truth for
+styling values; `npm run design-sync` copies `warsh-app/design-system/tokens.json`
+into `constants/tokens.generated.ts`, which `theme.ts` reads (never edit values by
+hand; `-- --check` fails when stale). Full handover: `Docs/design-sync-context.md`.
+
+- Web shell by width: phone layout below 768px, icon rail at 768–1023px, full
+  sidebar from 1024px; lesson player and Quran reader have no shell.
+- Every web screen uses one of four page types from `components/WebPage.tsx`
+  (Dashboard, Collection, Reading, Focus), so all pages share one left edge
+  (308px at 1440, 292px at 1024, 96px at 768). Collections become 2/3/4-column grids.
+- Fixed from the web audit: lesson player close and progress, right-to-left Urdu,
+  per-paragraph text direction in Noor, no back chevron on top-level pages,
+  translated sidebar labels, chapter-lessons error state (title, Try again,
+  All chapters). Chapter lessons page checked at 1440/1024/768; its progress
+  card moves beside the lessons only from 1280px (it squeezed them to 334px at 1024).
+- Open, owner decision: the Quran list at 1024px shows 3 columns and truncates
+  surah names.
+
 ### Claude Design canvas, whole app — 2026-10-23
 
 **Implemented and committed; 1.0.18 (42) submitted to Play 2026-10-24 (100 % rollout,
