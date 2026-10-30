@@ -175,12 +175,22 @@ npx vitest run <file>
   agreed, which is what lets `content:export` and `content:sync` tell a Studio edit
   from a Git edit. Never push fixtures over the database without `content:check`
   passing first.
-- A Studio edit is the owner's decision. When `content:export` pulls one in, keep it
-  exactly: never re-add a card or exercise the owner deleted, and never revert text
-  they changed, even if it looks like a mistake — ask instead. Commit `f6862d8`
-  ("restore ex05") silently undid an owner deletion this way, and the deleted test
-  card reappeared in the app. Run `content:export` immediately before editing a
-  fixture so it starts from the owner's latest Studio state.
+- **Content is edited in Studio (owner rule, 2026-10-31).** The owner reviews and
+  fixes Chapters 2–72 lesson by lesson in Warsh Studio (`api.warsh.app/dashboard`),
+  not in code. Every Claude session follows this:
+  1. Start any content work with `content:check`. If the database is ahead, run
+     `content:export` and commit it ("content: export Studio edits") before
+     touching anything else.
+  2. Do not change lesson content in `prisma/fixtures/` unless the owner asked for
+     that specific change. When they do, change only the named lessons, publish
+     with `content:sync -- --content --git-changed`, and confirm `content:check`
+     is clean afterwards.
+  3. A Studio edit is the owner's decision. Never re-add a card or exercise they
+     deleted, and never revert text they changed, even if it looks like a
+     mistake — ask instead. Commit `f6862d8` ("restore ex05") silently undid an
+     owner deletion this way and the deleted test card reappeared in the app.
+  4. Never re-run a `content:promote-*` script or the seed for a chapter that is
+     live: they rewrite whole lessons and erase Studio work.
 - Lesson audio is keyed by a sha256 of the Arabic text and runtime lookup has no
   generation fallback, so editing Arabic text orphans its clip.
   `lib/audioTargets.ts` defines which strings need audio for both the generator and
