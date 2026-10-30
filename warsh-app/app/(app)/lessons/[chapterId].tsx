@@ -32,10 +32,11 @@ import {
   Spacing,
   WarshAlpha,
   WarshPalette,
+  WebLayout,
   desktopFontSize,
   desktopLineHeight,
 } from "../../../constants/theme";
-import { isDesktopWeb, useWebPageStyle } from "@components/WebPage";
+import { isDesktopWeb, useWebLayout, useWebPageStyle } from "@components/WebPage";
 
 // ─── helpers ──────────────────────────────────────────────────────────────────
 
@@ -214,6 +215,10 @@ export default function ChapterScreen() {
   // Shared page frame on web (design system › Web layout): starts on the same
   // left edge as every other page instead of centring in the window.
   const pageStyle = useWebPageStyle("dashboard");
+  // The progress card gets its own side column only from 1280px; below that it
+  // would squeeze the lesson column, so it stacks above the lessons instead.
+  const { isWide } = useWebLayout();
+  const sideColumn = desktopWeb && isWide;
   const androidMinimal = Platform.OS === "android";
   const { chapterId, savedLesson } = useLocalSearchParams<{ chapterId: string; savedLesson?: string }>();
   const userId = useAuthStore((s) => s.user?.id);
@@ -373,7 +378,7 @@ export default function ChapterScreen() {
   const lessonList = (
     <View
       style={[
-        desktopWeb ? undefined : { marginTop: Spacing.xl },
+        sideColumn ? undefined : { marginTop: Spacing.xl },
         androidMinimal && styles.androidLessonListWrap,
       ]}
     >
@@ -556,7 +561,7 @@ export default function ChapterScreen() {
         contentContainerStyle={[
           styles.content,
           desktopWeb
-            ? [pageStyle, styles.webContent]
+            ? [pageStyle, styles.webContent, sideColumn && styles.webContentRow]
             : androidMinimal
               ? styles.androidContent
               : { paddingTop: Spacing.sm },
@@ -586,11 +591,11 @@ export default function ChapterScreen() {
               : pickLocalized(chapter.description, chapter.descriptionUr, language)}
           </Text>
 
-          {desktopWeb ? null : androidMinimal ? androidProgress : progressCard}
+          {sideColumn ? null : androidMinimal ? androidProgress : progressCard}
           {lessonList}
         </View>
 
-        {desktopWeb ? <View style={styles.webRail}>{progressCard}</View> : null}
+        {sideColumn ? <View style={styles.webRail}>{progressCard}</View> : null}
       </ScrollView>
       <StatusBarBacking />
 
@@ -631,14 +636,10 @@ const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: Colors.bg.primary },
   scroll: { flex: 1 },
   content: { paddingHorizontal: Spacing.xl, paddingBottom: Spacing.xl * 3 },
-  webContent: {
-    flexDirection: "row",
-    alignItems: "flex-start",
-    gap: 32,
-    paddingTop: 36,
-  },
-  webMain: { flex: 1, minWidth: 0, maxWidth: 760 },
-  webRail: { width: 320, flexShrink: 0 },
+  webContent: { paddingTop: 36 },
+  webContentRow: { flexDirection: "row", alignItems: "flex-start", gap: 32 },
+  webMain: { flex: 1, minWidth: 0, maxWidth: WebLayout.readingMax },
+  webRail: { width: WebLayout.sideColumn, flexShrink: 0 },
 
   loadingScreen: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: Colors.bg.primary },
   errorScreen: { flex: 1, justifyContent: "center", alignItems: "center", padding: Spacing.xl, backgroundColor: Colors.bg.primary },
