@@ -472,8 +472,7 @@ hand; `-- --check` fails when stale). Full handover: `Docs/design-sync-context.m
   translated sidebar labels, chapter-lessons error state (title, Try again,
   All chapters). Chapter lessons page checked at 1440/1024/768; its progress
   card moves beside the lessons only from 1280px (it squeezed them to 334px at 1024).
-- Open, owner decision: the Quran list at 1024px shows 3 columns and truncates
-  surah names.
+- The Quran list keeps 3 columns at 1024px (owner checked and accepted, 2026-10-30).
 
 ### Claude Design canvas, whole app — 2026-10-23
 

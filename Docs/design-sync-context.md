@@ -115,14 +115,13 @@ Every web screen should use one of these:
 
 Step 1 and step 2 are done and checked in a browser at 1440/1024/768px: Learn and You (Dashboard), the lesson player (Focus, with close, progress and right-to-left Urdu), Noor (Reading, with per-paragraph text direction), Vocabulary, All chapters and the Quran list (Collection grids), and Settings and Streak (Reading; Settings has no back chevron on web, and Streak keeps it as a stack screen). Also done: `WebAppSidebar` labels translated (finding 9); the chapter-lessons error state has a title, Try again and All chapters (finding 8); the chapter lessons page is on the shared frame (not yet checked in a browser). Audit re-run (step 3): every page starts on the same left edge, 308px at 1440, 292px at 1024 and 96px at 768. Vocabulary's top cards were settled in `7406cf2` (from 1024px, Today's word in the main column and review, counts and My Words in the side column). Mushaf page keeps a printed-page width on wide screens (`515a96f`).
 
-**Still open:** owner decision on the Quran list at 1024px, where 3 columns truncate surah names (2 columns?).
+The Quran list keeps 3 columns at 1024px (owner accepted, 2026-10-30).
 
 Local check setup: staging Postgres runs as `warsh-staging-postgres-alt` on 127.0.0.1:15432, the local backend on :3000 points at it, and the web app is on localhost:8081.
 
 ## Next steps
 
-1. Owner decision: Quran list columns at 1024px.
-2. Optional: once Umar asks, a scheduled task to sync the design system to the app.
+1. Optional: once Umar asks, a scheduled task to sync the design system to the app.
 
 ## Umar's preferences
 
