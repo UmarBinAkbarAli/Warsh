@@ -237,7 +237,7 @@ export default function ManageSubscriptionScreen() {
           {/* Actions */}
           <View style={styles.actions}>
             {showSeePlans ? (
-              <TouchableOpacity style={styles.primaryBtn} onPress={() => router.push("/(app)/paywall")}>
+              <TouchableOpacity style={styles.primaryBtn} onPress={() => router.push({ pathname: "/(app)/paywall", params: { source: "manage_see_plans" } })}>
                 <Text style={styles.primaryBtnText}>{t("manageSub.seePlans")}</Text>
               </TouchableOpacity>
             ) : null}
@@ -250,7 +250,7 @@ export default function ManageSubscriptionScreen() {
             ) : null}
 
             {showChangePlan ? (
-              <TouchableOpacity style={styles.linkBtn} onPress={() => router.push("/(app)/paywall")}>
+              <TouchableOpacity style={styles.linkBtn} onPress={() => router.push({ pathname: "/(app)/paywall", params: { source: "manage_change_plan" } })}>
                 <Text style={styles.linkText}>{t("manageSub.changePlan")}</Text>
               </TouchableOpacity>
             ) : null}

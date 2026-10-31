@@ -659,7 +659,7 @@ export default function HomeScreen() {
         {!isWeb && subscriptionStatus === "expired" ? (
           <TouchableOpacity
             style={styles.trialExpiredBanner}
-            onPress={() => router.push("/(app)/paywall")}
+            onPress={() => router.push({ pathname: "/(app)/paywall", params: { source: "learn_expired_banner" } })}
             activeOpacity={0.85}
           >
             <Ionicons
@@ -676,7 +676,7 @@ export default function HomeScreen() {
         {isWeb && subscriptionStatus === "expired" ? (
           <TouchableOpacity
             style={styles.trialExpiredBanner}
-            onPress={() => router.push("/(app)/paywall")}
+            onPress={() => router.push({ pathname: "/(app)/paywall", params: { source: "learn_expired_banner" } })}
             activeOpacity={0.85}
           >
             <Ionicons
@@ -713,7 +713,7 @@ export default function HomeScreen() {
                   : t("learn.trialEndsInDays", { days: trialDaysRemaining })}
             </Text>
             <View style={styles.trialBannerActions}>
-              <TouchableOpacity onPress={() => router.push("/(app)/paywall")}>
+              <TouchableOpacity onPress={() => router.push({ pathname: "/(app)/paywall", params: { source: "learn_trial_banner" } })}>
                 <Text style={styles.trialBannerCta}>
                   {t("learn.subscribe")}
                 </Text>

@@ -716,7 +716,7 @@ export default function LessonPlayScreen() {
         }
       } catch (loadError) {
         if (isSubscriptionRequiredError(loadError)) {
-          router.replace(await subscriptionRequiredRoute());
+          router.replace(await subscriptionRequiredRoute("lesson"));
           return;
         }
         track("lesson_load_failed", { lesson_id: lessonId, error_code: analyticsErrorCode(loadError) });

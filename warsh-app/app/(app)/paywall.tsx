@@ -14,7 +14,7 @@ import {
   useWindowDimensions,
   View,
 } from "react-native";
-import { useFocusEffect, useRouter } from "expo-router";
+import { useFocusEffect, useLocalSearchParams, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import * as Crypto from "expo-crypto";
 import { useAuthStore } from "@stores/authStore";
@@ -61,6 +61,9 @@ export default function PaywallScreen({ dismissable = true }: Props) {
   const { width } = useWindowDimensions();
   const desktopWeb = isDesktopWeb(width);
   const router = useRouter();
+  const { source } = useLocalSearchParams<{ source?: string }>();
+  // Analytics only: which locked feature or banner opened the paywall.
+  const paywallSource = typeof source === "string" && /^[a-z0-9_]{1,40}$/.test(source) ? source : "direct";
   const t = useT();
   const language = useLanguage();
   const user = useAuthStore((state) => state.user);
@@ -167,7 +170,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
         })
         .catch(() => {});
 
-      trackPaywallViewed();
+      trackPaywallViewed(paywallSource);
       let cancelled = false;
 
       (async () => {
@@ -179,7 +182,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
       })();
 
       return () => { cancelled = true; endIapConnection(); };
-    }, [])
+    }, [paywallSource])
   );
 
   // The recurring pricing phase Play reports for a plan; earlier phases are

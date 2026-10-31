@@ -161,7 +161,7 @@ export default function ChatScreen() {
       }
     } catch (err) {
       if (isSubscriptionRequiredError(err)) {
-        router.replace(await subscriptionRequiredRoute());
+        router.replace(await subscriptionRequiredRoute("noor"));
         return;
       }
       setError(t("chat.loadError"));
@@ -306,7 +306,7 @@ export default function ChatScreen() {
     } catch (err: any) {
       track("noor_response_failed", { status: typeof err.response?.status === "number" ? err.response.status : 0 });
       if (isSubscriptionRequiredError(err)) {
-        router.replace(await subscriptionRequiredRoute());
+        router.replace(await subscriptionRequiredRoute("noor"));
       } else if (err.response?.status === 429 && err.response?.data?.code === "rate_limited") {
         // Burst limit, not the daily quota — don't offer to sell credits.
         setError(t("chat.tooFast"));

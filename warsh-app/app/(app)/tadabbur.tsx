@@ -222,7 +222,7 @@ export default function TadabburScreen() {
         })
         .catch((loadError) => {
           if (isSubscriptionRequiredError(loadError)) {
-            void subscriptionRequiredRoute().then((route) => router.replace(route));
+            void subscriptionRequiredRoute("tadabbur").then((route) => router.replace(route));
           }
         })
         .finally(() => setLoading(false));
@@ -258,7 +258,7 @@ export default function TadabburScreen() {
       }
     } catch (loadError) {
       if (isSubscriptionRequiredError(loadError)) {
-        router.replace(await subscriptionRequiredRoute());
+        router.replace(await subscriptionRequiredRoute("tadabbur"));
       }
     }
     finally { setLoadingAyat(false); }

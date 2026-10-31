@@ -149,14 +149,15 @@ export function getSubscriptionStatus() {
 // subscriber Google has suspended (account hold / paused) needs their payment
 // method fixed in Google Play, not the paywall — Manage subscription says so and
 // links there. Falls back to the paywall when the status cannot be read.
-export async function subscriptionRequiredRoute(): Promise<"/(app)/paywall" | "/(app)/manage-subscription"> {
+// `source` names the locked feature for paywall analytics (e.g. "lesson").
+export async function subscriptionRequiredRoute(source: string) {
   try {
     const res = await getSubscriptionStatus();
-    if (isPremiumSuspended(res.data?.data?.subscriptionStatus)) return "/(app)/manage-subscription";
+    if (isPremiumSuspended(res.data?.data?.subscriptionStatus)) return "/(app)/manage-subscription" as const;
   } catch {
     // fall through
   }
-  return "/(app)/paywall";
+  return { pathname: "/(app)/paywall" as const, params: { source } };
 }
 
 export function verifyPurchase(data: { productId: string; purchaseToken?: string; receiptData?: string; platform: "android" | "ios" }) {
