@@ -559,10 +559,10 @@ screen rather than above the tab bar, where it would cover lesson buttons.
   infrastructure exist.
 - Audit exports exist for 585 vocabulary images and 1,203 discover-card word
   appearances.
-- The protected Warsh Studio Content Review Desk exposes all 72 chapters and 391
-  lessons as complete review documents, including Arabic, English, Urdu, exercises,
-  correct-answer data, images, and audio. Review status, notes, and exact
-  content-path/media issues are stored separately from learner content.
+- Lesson review runs on Warsh Studio's curriculum screen: each lesson shows Not
+  reviewed / Needs fixing / Approved with automatic problem checks. Review state is
+  stored separately from learner content. (The separate Content Review Desk was
+  removed on 2026-10-31; it held no notes.)
 
 ### Backend and infrastructure
 

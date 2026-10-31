@@ -191,13 +191,12 @@ npm run db:migrate
 
 `Lesson.content` is a JSON value validated by `@warsh/lesson-schema`. Admin writes and fixture validation must use the same package. Exercise IDs must remain stable and globally collision-safe according to the implemented validators.
 
-Warsh Studio exposes a protected review-only view at
-`/dashboard/content-review`. `LessonContentReview` stores the reviewer decision
-and overall note, while `ContentReviewIssue` stores the exact JSON path, content
-or media label, issue category, note, optional media URL, and resolution state.
-These records must remain separate from `Lesson.content`; flagging a problem
-must never edit the learner-facing lesson implicitly. Lessons cannot be marked
-`APPROVED` while open review issues remain.
+Lesson review lives on Warsh Studio's curriculum screen (`/dashboard/curriculum`).
+`LessonContentReview` stores the reviewer decision, and `ContentReviewIssue`
+stores automatic problem checks the owner dismissed (issue type `AUTO_CHECK`).
+These records must remain separate from `Lesson.content`; reviewing never edits
+the learner-facing lesson. Lessons cannot be marked `APPROVED` while an
+automatic problem or an open review issue remains.
 
 ### Course and completion
 
@@ -276,8 +275,8 @@ The repository currently contains 68 API route files. Major groups are:
 - `/api/audio/tts` — backward-compatible lookup-only alias for distributed builds; never generates speech
 - `/api/users/me`
 - `/api/admin/*`
-- `/api/admin/content-review*` — review index, full lesson documents, review
-  decisions, and issue lifecycle
+- `/api/admin/review*` — lesson review checklist, decisions, and dismissed
+  automatic checks
 - `/api/webhooks/google`
 - `/api/cron/*`
 - `/api/health`
