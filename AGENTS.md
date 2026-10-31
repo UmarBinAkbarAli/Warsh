@@ -191,6 +191,12 @@ npx vitest run <file>
      owner deletion this way and the deleted test card reappeared in the app.
   4. Never re-run a `content:promote-*` script or the seed for a chapter that is
      live: they rewrite whole lessons and erase Studio work.
+- Studio's curriculum screen is the owner's review checklist. Its automatic
+  problem checks live in `lib/lessonChecks.ts` (shared by the editor and the
+  server; `npm run content:review-checks` runs them over the fixtures), and a
+  lesson cannot be approved while one remains unfixed or undismissed. Approval
+  and dismissed checks are stored in `LessonContentReview` / `ContentReviewIssue`
+  (issue type `AUTO_CHECK`), never in `Lesson.content`.
 - Lesson audio is keyed by a sha256 of the Arabic text and runtime lookup has no
   generation fallback, so editing Arabic text orphans its clip.
   `lib/audioTargets.ts` defines which strings need audio for both the generator and

@@ -1,52 +1,67 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { DashboardChapter, DashboardLesson, PromoCodeStat } from "./DashboardClient";
+import type { DashboardChapter, DashboardLesson, LessonReview, PromoCodeStat } from "./DashboardClient";
 
-type Filter = "all" | "live" | "draft" | "review";
+// The curriculum screen is the owner's review checklist: every lesson is
+// Approved, Needs fixing (problems found by lib/lessonChecks.ts, or marked by
+// the owner) or Not reviewed, with progress per chapter and across the course.
 
-const FILTERS: { key: Filter; label: string }[] = [
-  { key: "all", label: "All" },
-  { key: "live", label: "Live" },
-  { key: "draft", label: "Draft" },
-  { key: "review", label: "Needs review" },
-];
+export type ReviewState = "approved" | "fix" | "todo";
+type Filter = "all" | ReviewState;
 
-function matchesFilter(lesson: DashboardLesson, filter: Filter): boolean {
-  if (filter === "live") return lesson.status === "PUBLISHED";
-  if (filter === "draft") return lesson.status === "DRAFT";
-  if (filter === "review") return (lesson.openIssues ?? 0) > 0;
-  return true;
+export function reviewStateOf(review: LessonReview | undefined): ReviewState {
+  if (!review) return "todo";
+  if (review.reviewStatus === "APPROVED") return "approved";
+  if (review.reviewStatus === "NEEDS_CORRECTION" || review.problemCount > 0) return "fix";
+  return "todo";
 }
 
-function formatUpdated(iso?: string): string {
-  if (!iso) return "—";
-  const d = new Date(iso);
-  if (Number.isNaN(d.getTime())) return "—";
-  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  return `${d.getUTCDate()} ${months[d.getUTCMonth()]}`;
-}
+export const REVIEW_TONE: Record<ReviewState, { label: string; bg: string; border: string; text: string; action: string }> = {
+  approved: { label: "Approved", bg: "#edf1e4", border: "#a8bc8f", text: "#5a6953", action: "View" },
+  fix: { label: "Needs fixing", bg: "#f7e9e0", border: "#d99a78", text: "#9c5432", action: "Fix" },
+  todo: { label: "Not reviewed", bg: "#eae5da", border: "#cfc8b6", text: "#4a4a4a", action: "Review" },
+};
 
-function LessonStatus({ lesson }: { lesson: DashboardLesson }) {
-  const issues = lesson.openIssues ?? 0;
-  const live = lesson.status === "PUBLISHED";
-  const label = issues > 0 ? "Review issue" : live ? "Live" : "Draft";
-  const tone = issues > 0
-    ? { color: "#9a4040", background: "#f6e6e6" }
-    : live
-      ? { color: "#2f6f4f", background: "#e6f2ea" }
-      : { color: "#8a6a1c", background: "#f6edd2" };
+export function ReviewChip({ state }: { state: ReviewState }) {
+  const t = REVIEW_TONE[state];
   return (
-    <span style={{ ...tone, fontSize: 12, fontWeight: 600, padding: "2px 8px", borderRadius: 999 }}>
-      {label}
+    <span
+      style={{
+        minWidth: 104,
+        textAlign: "center",
+        padding: "3px 10px",
+        borderRadius: 6,
+        border: `1px solid ${t.border}`,
+        background: t.bg,
+        color: t.text,
+        fontSize: 12.5,
+        fontWeight: 600,
+        whiteSpace: "nowrap",
+      }}
+    >
+      {t.label}
     </span>
   );
 }
 
-const COLS = "minmax(0, 1fr) 120px 70px 90px 130px";
+function lessonNote(lesson: DashboardLesson, review: LessonReview | undefined, state: ReviewState): string {
+  if (!review) return "Checking…";
+  if (state === "approved") {
+    return review.problemCount > 0
+      ? `Approved · ${review.problemCount} new problem${review.problemCount === 1 ? "" : "s"} since`
+      : "Approved";
+  }
+  if (review.problemCount > 0) {
+    return `${review.problemCount} problem${review.problemCount === 1 ? "" : "s"} · ${review.summary}`;
+  }
+  if (review.reviewStatus === "NEEDS_CORRECTION") return "Marked as needs fixing";
+  return lesson.status === "DRAFT" ? "No problems found · not live yet" : "No problems found";
+}
 
 export default function CurriculumOverview({
   chapters,
+  reviews,
   promoCodes,
   adminToken,
   onAdminTokenChange,
@@ -56,6 +71,7 @@ export default function CurriculumOverview({
   onOpenChapter,
 }: {
   chapters: DashboardChapter[];
+  reviews: Map<string, LessonReview> | null;
   promoCodes: PromoCodeStat[];
   adminToken: string;
   onAdminTokenChange: (token: string) => void;
@@ -66,19 +82,34 @@ export default function CurriculumOverview({
 }) {
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState<Filter>("all");
-  const [collapsed, setCollapsed] = useState<Set<string>>(
-    () => new Set(chapters.slice(1).map((c) => c.id)),
-  );
   const [showSettings, setShowSettings] = useState(false);
 
-  const totalLessons = chapters.reduce((s, c) => s + c.lessons.length, 0);
-  const totalDrafts = chapters.reduce(
-    (s, c) => s + c.lessons.filter((l) => l.status === "DRAFT").length,
-    0,
-  );
-  const chaptersWithIssues = chapters.filter((c) =>
-    c.lessons.some((l) => (l.openIssues ?? 0) > 0),
-  ).length;
+  const stateOf = (lesson: DashboardLesson) => reviewStateOf(reviews?.get(lesson.id));
+
+  const totals = useMemo(() => {
+    const t = { all: 0, approved: 0, fix: 0, todo: 0 };
+    for (const c of chapters) {
+      for (const l of c.lessons) {
+        t.all += 1;
+        t[reviewStateOf(reviews?.get(l.id))] += 1;
+      }
+    }
+    return t;
+  }, [chapters, reviews]);
+
+  // The next lesson to review: the first one, in course order, not approved.
+  const next = useMemo(() => {
+    if (!reviews) return null;
+    for (const chapter of chapters) {
+      const lesson = chapter.lessons.find((l) => reviewStateOf(reviews.get(l.id)) !== "approved");
+      if (lesson) return { chapter, lesson };
+    }
+    return null;
+  }, [chapters, reviews]);
+
+  const [collapsed, setCollapsed] = useState<Set<string> | null>(null);
+  const isCollapsed = (id: string) =>
+    collapsed ? collapsed.has(id) : id !== (next?.chapter.id ?? chapters[0]?.id);
 
   const q = query.trim().toLowerCase();
   const searching = q.length > 0 || filter !== "all";
@@ -87,53 +118,72 @@ export default function CurriculumOverview({
     return chapters
       .map((chapter) => {
         const chapterHit =
-          q.length > 0 &&
-          (chapter.title.toLowerCase().includes(q) || chapter.titleAr.includes(query.trim()));
+          q.length > 0 && (chapter.title.toLowerCase().includes(q) || chapter.titleAr.includes(query.trim()));
         const lessons = chapter.lessons.filter((l) => {
-          if (!matchesFilter(l, filter)) return false;
+          if (filter !== "all" && reviewStateOf(reviews?.get(l.id)) !== filter) return false;
           if (!q) return true;
-          return (
-            chapterHit ||
-            l.title.toLowerCase().includes(q) ||
-            l.titleAr.includes(query.trim())
-          );
+          return chapterHit || l.title.toLowerCase().includes(q) || l.titleAr.includes(query.trim());
         });
         return { chapter, lessons };
       })
       .filter((r) => (searching ? r.lessons.length > 0 : true));
-  }, [chapters, q, query, filter, searching]);
+  }, [chapters, reviews, q, query, filter, searching]);
 
   function toggle(id: string) {
     setCollapsed((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id);
-      else next.add(id);
-      return next;
+      const base = prev ?? new Set(chapters.filter((c) => isCollapsed(c.id)).map((c) => c.id));
+      const nextSet = new Set(base);
+      if (nextSet.has(id)) nextSet.delete(id);
+      else nextSet.add(id);
+      return nextSet;
     });
   }
 
-  const border = "1px solid #e2d9c4";
+  const pct = (n: number) => (totals.all ? `${(n / totals.all) * 100}%` : "0%");
 
   return (
-    <div style={{ display: "grid", gap: 16, maxWidth: 1180, margin: "0 auto", width: "100%" }}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12, flexWrap: "wrap" }}>
-        <div>
-          <h1 style={{ margin: 0, fontSize: 26 }}>Curriculum</h1>
-          <p style={{ margin: "4px 0 0", color: "#6a6b5b", fontSize: 14 }}>
-            {chapters.length} chapters · {totalLessons} lessons · {totalDrafts} drafts ·{" "}
-            {chaptersWithIssues} with open review issues
+    <div style={{ display: "grid", gap: 20, maxWidth: 1180, margin: "0 auto", width: "100%", color: "#1a1a1a" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 16, flexWrap: "wrap" }}>
+        <div style={{ maxWidth: 640 }}>
+          <h1 style={{ margin: 0, fontSize: 30 }}>Lesson review</h1>
+          <p style={{ margin: "6px 0 0", color: "#3d3d3d", fontSize: 15, lineHeight: "22px" }}>
+            Open a lesson, fix what is flagged, then approve it. Problems are found for you; approving is your decision.
           </p>
         </div>
-        <div style={{ display: "flex", gap: 8, position: "relative" }}>
+        <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap", position: "relative" }}>
           <button type="button" onClick={() => setShowSettings((v) => !v)} style={ghostBtn}>
             Settings
           </button>
           <button type="button" onClick={onNewChapter} style={ghostBtn}>
             + New chapter
           </button>
-          <button type="button" onClick={() => onAddLesson()} style={primaryBtn}>
-            Add lesson
+          <button type="button" onClick={() => onAddLesson()} style={ghostBtn}>
+            + Lesson
           </button>
+          {next && (
+            <button
+              type="button"
+              onClick={() => onOpenLesson(next.chapter.id, next.lesson.id)}
+              style={{
+                display: "grid",
+                gap: 2,
+                textAlign: "left",
+                padding: "10px 20px",
+                minHeight: 52,
+                borderRadius: 10,
+                border: "none",
+                background: "#071b44",
+                color: "#d4b06a",
+                cursor: "pointer",
+                font: "inherit",
+              }}
+            >
+              <span style={{ fontSize: 15, fontWeight: 600 }}>Continue reviewing</span>
+              <span style={{ fontSize: 12.5, color: "#f3ead6" }}>
+                Chapter {next.chapter.order} · Lesson {next.lesson.order} — {next.lesson.title}
+              </span>
+            </button>
+          )}
           {showSettings && (
             <div
               style={{
@@ -163,9 +213,7 @@ export default function CurriculumOverview({
               </label>
               <div style={{ display: "grid", gap: 6 }}>
                 <strong style={{ fontSize: 13, color: "#5f5844" }}>Promo codes</strong>
-                {promoCodes.length === 0 && (
-                  <span style={{ fontSize: 13, color: "#8a7f63" }}>No promo codes.</span>
-                )}
+                {promoCodes.length === 0 && <span style={{ fontSize: 13, color: "#8a7f63" }}>No promo codes.</span>}
                 {promoCodes.map((p) => (
                   <div key={p.code} style={{ display: "flex", justifyContent: "space-between", fontSize: 13 }}>
                     <code style={{ fontWeight: 700 }}>{p.code}</code>
@@ -176,7 +224,7 @@ export default function CurriculumOverview({
                     </span>
                   </div>
                 ))}
-                <a href="/dashboard/promo" style={{ fontSize: 12.5, color: "#0f766e", fontWeight: 600 }}>
+                <a href="/dashboard/promo" style={{ fontSize: 12.5, color: "#85672c", fontWeight: 600 }}>
                   Manage promo codes
                 </a>
               </div>
@@ -185,153 +233,226 @@ export default function CurriculumOverview({
         </div>
       </div>
 
-      <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
-        <input
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search lessons, chapters or Arabic words"
-          style={{ ...inputStyle, flex: "1 1 280px", minWidth: 0 }}
-        />
-        <div style={{ display: "flex", gap: 6 }}>
-          {FILTERS.map((f) => (
-            <button
-              key={f.key}
-              type="button"
-              onClick={() => setFilter(f.key)}
-              aria-pressed={filter === f.key}
-              style={{
-                ...ghostBtn,
-                ...(filter === f.key
-                  ? { background: "#1f2f4a", color: "#fff", borderColor: "#1f2f4a" }
-                  : {}),
-              }}
-            >
-              {f.label}
-            </button>
+      <section
+        aria-label="Review progress"
+        style={{ background: "#faf6e9", border, borderRadius: 14, padding: "18px 22px", display: "grid", gap: 14 }}
+      >
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 8, flexWrap: "wrap" }}>
+          <strong style={{ fontSize: 16 }}>
+            {totals.approved} of {totals.all} lessons approved
+          </strong>
+          <span style={{ color: "#5f5f5f", fontSize: 13 }}>
+            {reviews ? `Chapters 1–${chapters.length}` : "Checking every lesson for problems…"}
+          </span>
+        </div>
+        <div style={{ height: 10, borderRadius: 5, background: "#e7e1d3", overflow: "hidden", display: "flex" }}>
+          <div style={{ width: pct(totals.approved), background: "#5a6953" }} />
+          <div style={{ width: pct(totals.fix), background: "#c8744a" }} />
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 12 }}>
+          {(
+            [
+              ["approved", totals.approved, "Approved"],
+              ["fix", totals.fix, "Need fixing (problems found)"],
+              ["todo", totals.todo, "Not reviewed yet"],
+            ] as const
+          ).map(([key, n, label]) => (
+            <div key={key} style={{ display: "grid", gap: 2, padding: "10px 14px", borderRadius: 10, background: REVIEW_TONE[key].bg }}>
+              <span style={{ fontSize: 24, lineHeight: "30px", fontWeight: 700, color: REVIEW_TONE[key].text }}>
+                {reviews ? n : "…"}
+              </span>
+              <span style={{ fontSize: 13, color: "#3d3d3d" }}>{label}</span>
+            </div>
           ))}
         </div>
-        {!searching && (
-          <div style={{ display: "flex", gap: 10, fontSize: 13 }}>
-            <button type="button" style={linkBtn} onClick={() => setCollapsed(new Set())}>
-              Expand all
-            </button>
-            <button type="button" style={linkBtn} onClick={() => setCollapsed(new Set(chapters.map((c) => c.id)))}>
-              Collapse all
-            </button>
-          </div>
-        )}
-      </div>
+      </section>
 
-      <div style={{ border, borderRadius: 12, background: "#fffdf7", overflow: "hidden" }}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: COLS,
-            gap: 12,
-            padding: "10px 16px",
-            background: "#f3ecda",
-            fontSize: 12,
-            fontWeight: 700,
-            color: "#6a6b5b",
-            textTransform: "uppercase",
-            letterSpacing: 0.4,
-          }}
-        >
-          <span>Name</span>
-          <span>Status</span>
-          <span>Cards</span>
-          <span>Exercises</span>
-          <span>Updated</span>
-        </div>
-        {rows.length === 0 && (
-          <div style={{ padding: 24, color: "#8a7f63", fontSize: 14 }}>
-            No lessons match this search.
-          </div>
-        )}
-        {rows.map(({ chapter, lessons }) => {
-          const open = searching || !collapsed.has(chapter.id);
-          const live = chapter.lessons.filter((l) => l.status === "PUBLISHED").length;
-          const draft = chapter.lessons.length - live;
-          return (
-            <div key={chapter.id} style={{ borderTop: border }}>
-              <div
+      <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center", justifyContent: "space-between" }}>
+        <div role="group" aria-label="Show" style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+          {(
+            [
+              ["all", "All"],
+              ["fix", `Needs fixing · ${totals.fix}`],
+              ["todo", `Not reviewed · ${totals.todo}`],
+              ["approved", `Approved · ${totals.approved}`],
+            ] as const
+          ).map(([key, label]) => {
+            const active = filter === key;
+            const tone = key === "all" ? null : REVIEW_TONE[key];
+            return (
+              <button
+                key={key}
+                type="button"
+                aria-pressed={active}
+                onClick={() => setFilter(key)}
                 style={{
-                  display: "grid",
-                  gridTemplateColumns: COLS,
-                  gap: 12,
-                  alignItems: "center",
-                  padding: "10px 16px",
-                  background: "#faf5e8",
+                  minHeight: 36,
+                  padding: "0 14px",
+                  borderRadius: 999,
+                  border: active ? "2px solid #c49b4d" : `1px solid ${tone?.border ?? "#d8cfb8"}`,
+                  background: active ? "#fbf3dc" : "#faf6e9",
+                  color: active ? "#1a1a1a" : tone?.text ?? "#3d3d3d",
+                  font: "inherit",
+                  fontSize: 13.5,
+                  fontWeight: 600,
+                  cursor: "pointer",
                 }}
               >
-                <button
-                  type="button"
-                  onClick={() => (searching ? undefined : toggle(chapter.id))}
-                  aria-expanded={open}
-                  style={{ ...linkBtn, color: "#1d221b", textAlign: "left", display: "flex", gap: 8, alignItems: "baseline", minWidth: 0 }}
-                >
-                  <span aria-hidden>{open ? "▾" : "▸"}</span>
-                  <strong style={{ fontSize: 15 }}>
-                    {chapter.order} · {chapter.title}
-                  </strong>
-                  <span style={{ fontSize: 12.5, color: "#8a7f63", fontWeight: 400 }}>
-                    {chapter.lessons.length} lessons
-                  </span>
-                </button>
-                <span style={{ fontSize: 12.5, color: "#6a6b5b", gridColumn: "2 / span 3" }}>
-                  {live} Live · {draft} Draft
-                </span>
-                <span style={{ display: "flex", gap: 8, justifyContent: "flex-end" }}>
-                  <button type="button" style={linkBtn} onClick={() => onAddLesson(chapter.id)} title="Add a lesson to this chapter">
-                    + Lesson
-                  </button>
-                  <button type="button" style={linkBtn} onClick={() => onOpenChapter(chapter.id)} title="Edit chapter">
-                    Edit
-                  </button>
-                </span>
-              </div>
-              {open &&
-                lessons.map((lesson) => (
-                  <button
-                    key={lesson.id}
-                    type="button"
-                    onClick={() => onOpenLesson(chapter.id, lesson.id)}
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns: COLS,
-                      gap: 12,
-                      alignItems: "center",
-                      width: "100%",
-                      padding: "10px 16px 10px 40px",
-                      border: "none",
-                      borderTop: border,
-                      background: "transparent",
-                      textAlign: "left",
-                      font: "inherit",
-                      fontSize: 14,
-                      cursor: "pointer",
-                      color: "#1d221b",
-                    }}
-                  >
-                    <span style={{ minWidth: 0, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
-                      Lesson {lesson.order} · {lesson.title}
-                    </span>
-                    <span><LessonStatus lesson={lesson} /></span>
-                    <span>{lesson.cardCount ?? "—"}</span>
-                    <span>{lesson.exerciseCount ?? "—"}</span>
-                    <span style={{ color: "#6a6b5b" }}>{formatUpdated(lesson.updatedAt)}</span>
-                  </button>
-                ))}
-            </div>
-          );
-        })}
+                {label}
+              </button>
+            );
+          })}
+        </div>
+        <input
+          type="search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Search a lesson or Arabic word"
+          aria-label="Search lessons"
+          style={{ ...inputStyle, flex: "0 1 300px", minWidth: 0 }}
+        />
       </div>
-      <p style={{ margin: 0, fontSize: 12.5, color: "#8a7f63" }}>
-        Lessons stay in pedagogical order. Click a lesson to open the focused editor.
-      </p>
+
+      {rows.length === 0 && <div style={{ padding: 24, color: "#5f5f5f", fontSize: 14 }}>No lessons match.</div>}
+
+      {rows.map(({ chapter, lessons }) => {
+        const open = searching || !isCollapsed(chapter.id);
+        const count = { approved: 0, fix: 0, todo: 0 };
+        for (const l of chapter.lessons) count[stateOf(l)] += 1;
+        const n = chapter.lessons.length || 1;
+        const allApproved = count.approved === chapter.lessons.length && chapter.lessons.length > 0;
+        return (
+          <section
+            key={chapter.id}
+            aria-label={`Chapter ${chapter.order}`}
+            style={{
+              background: "#faf6e9",
+              border: open ? "2px solid #d4b06a" : border,
+              borderRadius: 14,
+              overflow: "hidden",
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "12px 20px", flexWrap: "wrap" }}>
+              <button
+                type="button"
+                onClick={() => (searching ? undefined : toggle(chapter.id))}
+                aria-expanded={open}
+                style={{ ...plainBtn, display: "flex", alignItems: "center", gap: 12, flex: "1 1 300px", minWidth: 0, textAlign: "left" }}
+              >
+                <span aria-hidden style={{ color: "#6f7169", width: 12 }}>{open ? "▾" : "▸"}</span>
+                <span style={{ display: "grid", minWidth: 0 }}>
+                  <strong style={{ fontSize: 15.5 }}>
+                    Chapter {chapter.order} · {chapter.title}
+                  </strong>
+                  <span dir="rtl" lang="ar" style={{ fontFamily: "'Scheherazade New', Amiri, serif", fontSize: 18, lineHeight: "28px", color: "#3d3d3d", textAlign: "left" }}>
+                    {chapter.titleAr}
+                  </span>
+                </span>
+              </button>
+              <div style={{ width: 180, height: 8, borderRadius: 4, background: "#e7e1d3", overflow: "hidden", display: "flex" }}>
+                <div style={{ width: `${(count.approved / n) * 100}%`, background: "#5a6953" }} />
+                <div style={{ width: `${(count.fix / n) * 100}%`, background: "#c8744a" }} />
+              </div>
+              <span style={{ fontSize: 13, color: "#3d3d3d", minWidth: 220 }}>
+                {!reviews
+                  ? `${chapter.lessons.length} lessons`
+                  : allApproved
+                    ? `All ${chapter.lessons.length} approved`
+                    : `${count.approved} approved · ${count.fix} need fixing · ${count.todo} to review`}
+              </span>
+              <span style={{ display: "flex", gap: 10 }}>
+                <button type="button" style={linkBtn} onClick={() => onAddLesson(chapter.id)} title="Add a lesson to this chapter">
+                  + Lesson
+                </button>
+                <button type="button" style={linkBtn} onClick={() => onOpenChapter(chapter.id)} title="Edit chapter">
+                  Edit
+                </button>
+              </span>
+            </div>
+            {open && (
+              <ol style={{ listStyle: "none", margin: 0, padding: 0 }}>
+                {lessons.map((lesson) => {
+                  const review = reviews?.get(lesson.id);
+                  const state = stateOf(lesson);
+                  const isNext = next?.lesson.id === lesson.id;
+                  return (
+                    <li key={lesson.id} style={{ borderTop: border, background: isNext ? "#fbf3dc" : "transparent" }}>
+                      <button
+                        type="button"
+                        onClick={() => onOpenLesson(chapter.id, lesson.id)}
+                        style={{ ...plainBtn, width: "100%", display: "flex", alignItems: "center", gap: 14, padding: "10px 20px", flexWrap: "wrap", textAlign: "left" }}
+                      >
+                        <span
+                          style={{
+                            width: 28,
+                            height: 28,
+                            borderRadius: 14,
+                            background: "#f4ebd0",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            fontSize: 12.5,
+                            fontWeight: 600,
+                            color: "#3d3d3d",
+                            flex: "none",
+                          }}
+                        >
+                          {lesson.order}
+                        </span>
+                        <span style={{ display: "grid", gap: 2, flex: "1 1 320px", minWidth: 0 }}>
+                          <span style={{ fontSize: 14.5, fontWeight: 600 }}>
+                            {lesson.title}
+                            {lesson.status === "DRAFT" && (
+                              <span style={{ marginLeft: 8, fontSize: 11, fontWeight: 700, color: "#85672c", background: "#f4ebd0", borderRadius: 4, padding: "1px 6px" }}>
+                                Draft
+                              </span>
+                            )}
+                          </span>
+                          <span
+                            style={{
+                              fontSize: 13,
+                              color: state === "fix" && (review?.problemCount ?? 0) > 0 ? "#9c5432" : "#5f5f5f",
+                              overflow: "hidden",
+                              textOverflow: "ellipsis",
+                              whiteSpace: "nowrap",
+                            }}
+                          >
+                            {lessonNote(lesson, review, state)}
+                          </span>
+                        </span>
+                        <ReviewChip state={state} />
+                        <span
+                          style={{
+                            minHeight: 34,
+                            minWidth: 72,
+                            padding: "0 14px",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            border: "1px solid #d4b06a",
+                            borderRadius: 8,
+                            background: "#fff",
+                            color: "#85672c",
+                            fontWeight: 600,
+                            fontSize: 13.5,
+                          }}
+                        >
+                          {REVIEW_TONE[state].action}
+                        </span>
+                      </button>
+                    </li>
+                  );
+                })}
+              </ol>
+            )}
+          </section>
+        );
+      })}
     </div>
   );
 }
+
+const border = "1px solid #e8e3d9";
 
 const inputStyle: React.CSSProperties = {
   padding: "8px 12px",
@@ -343,7 +464,7 @@ const inputStyle: React.CSSProperties = {
 };
 
 const ghostBtn: React.CSSProperties = {
-  padding: "7px 12px",
+  padding: "8px 12px",
   borderRadius: 8,
   border: "1px solid #d8cfb8",
   background: "#fbf8f0",
@@ -353,11 +474,13 @@ const ghostBtn: React.CSSProperties = {
   cursor: "pointer",
 };
 
-const primaryBtn: React.CSSProperties = {
-  ...ghostBtn,
-  background: "#1f2f4a",
-  borderColor: "#1f2f4a",
-  color: "#fff",
+const plainBtn: React.CSSProperties = {
+  background: "none",
+  border: "none",
+  padding: 0,
+  font: "inherit",
+  color: "inherit",
+  cursor: "pointer",
 };
 
 const linkBtn: React.CSSProperties = {
@@ -368,6 +491,6 @@ const linkBtn: React.CSSProperties = {
   font: "inherit",
   fontSize: 13,
   fontWeight: 600,
-  color: "#0f766e",
+  color: "#85672c",
   cursor: "pointer",
 };

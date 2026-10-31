@@ -3,7 +3,8 @@
 import { useState, useCallback, useMemo, useEffect, useLayoutEffect, useRef } from "react";
 import styles from "./dashboard.module.css";
 import ImageField from "./ImageField";
-import CurriculumOverview from "./CurriculumOverview";
+import CurriculumOverview, { ReviewChip, reviewStateOf } from "./CurriculumOverview";
+import { applyFix, checkLesson, type LessonProblem, type ProblemFix, type ProblemTarget, type VocabIntro } from "../../lib/lessonChecks";
 import DashboardNav from "./DashboardNav";
 import type {
   LessonContent,
@@ -59,6 +60,99 @@ export type DashboardChapter = {
   status: ContentStatus;
   lessons: DashboardLesson[];
 };
+
+// One lesson's line on the review checklist (GET /api/admin/review).
+export type LessonReview = {
+  reviewStatus: "NOT_REVIEWED" | "NEEDS_CORRECTION" | "APPROVED";
+  problemCount: number;
+  summary: string;
+};
+
+// Plain names for card and exercise types, shown instead of the schema enums.
+const CARD_LABELS: Record<string, string> = {
+  WORD: "Word card",
+  CONCEPT: "Rule card",
+  EXAMPLE: "Example card",
+  CONTRAST: "Contrast card",
+  AYAH_PREVIEW: "Ayah card",
+  GRAMMAR_NOTE: "Grammar note",
+  SENTENCE: "Sentence card",
+};
+const EXERCISE_LABELS: Record<string, string> = {
+  TRUE_FALSE: "True or false",
+  TAP_TRANSLATION: "Pick the meaning",
+  FILL_BLANK: "Fill the gap",
+  BUILD_SENTENCE: "Build the sentence",
+  MATCHING: "Match the pairs",
+  GRAMMAR_PARSE: "Name the parts",
+  CONVERSATION_BUILDER: "Conversation",
+  SHADOW_REPEAT: "Listen and repeat",
+  AUDIO_RECOGNITION: "Listen and pick",
+  WRITE_ARABIC: "Write in Arabic",
+  HARAKAH_PLACEMENT: "Add the harakat",
+  WORD_ORDER: "Put in order",
+  TRANSLATE_TO_ARABIC: "Translate to Arabic",
+  IDENTIFY_ROOT: "Find the root",
+  MATCH_AYAH: "Match the ayah",
+};
+
+function sameTarget(a: ProblemTarget, kind: ProblemTarget["kind"], index?: number): boolean {
+  return a.kind === kind && ("index" in a ? a.index === index : index === undefined);
+}
+
+function ProblemCount({ count }: { count: number }) {
+  if (count <= 0) return null;
+  return (
+    <span
+      aria-label={`${count} problem${count === 1 ? "" : "s"}`}
+      style={{ minWidth: 22, height: 22, padding: "0 6px", boxSizing: "border-box", borderRadius: 11, background: "#9c5432", color: "#fff", fontSize: 11.5, fontWeight: 700, display: "inline-flex", alignItems: "center", justifyContent: "center", flex: "none" }}
+    >
+      {count}
+    </span>
+  );
+}
+
+// The problems on the item open in the editing pane, each with its fix.
+function ProblemNotes({
+  problems,
+  onFix,
+  onDismiss,
+}: {
+  problems: LessonProblem[];
+  onFix: (fix: ProblemFix) => void;
+  onDismiss: (p: LessonProblem) => void;
+}) {
+  if (problems.length === 0) return null;
+  return (
+    <div style={{ display: "grid", gap: 8, marginBottom: 12 }}>
+      {problems.map((p) => (
+        <div
+          key={p.key}
+          role="alert"
+          style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 10, padding: "10px 12px", borderRadius: 10, background: "#f7e9e0", border: "1px solid #d99a78" }}
+        >
+          <span dir="ltr" style={{ flex: "1 1 280px", color: "#9c5432", fontSize: 14, lineHeight: "21px" }}>{p.text}</span>
+          {p.fix && (
+            <button
+              type="button"
+              onClick={() => onFix(p.fix!)}
+              style={{ minHeight: 34, padding: "0 12px", borderRadius: 8, border: "none", background: "#071b44", color: "#d4b06a", fontWeight: 600, fontSize: 13.5, cursor: "pointer" }}
+            >
+              {p.fix.label}
+            </button>
+          )}
+          <button
+            type="button"
+            onClick={() => onDismiss(p)}
+            style={{ minHeight: 34, padding: "0 8px", border: "none", background: "transparent", color: "#9c5432", fontSize: 13, textDecoration: "underline", cursor: "pointer" }}
+          >
+            Dismiss
+          </button>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export type PromoCodeStat = {
   code: string;
@@ -1397,6 +1491,7 @@ type OutlineItemProps = {
   index: number;
   selected: boolean;
   urduCount: number;
+  problemCount: number;
   onEdit: () => void;
   onDelete: () => void;
   onDuplicate: () => void;
@@ -1423,6 +1518,7 @@ function OutlineActions(p: OutlineItemProps) {
 
 function DiscoverCardItem(p: OutlineItemProps & { card: DiscoverCard }) {
   const title = getDiscoverCardTitle(p.card);
+  const imageUrl = (p.card as { image_url?: string }).image_url?.trim();
   return (
     <div
       className={`${styles.cardItem} ${styles.outlineItem}${p.selected ? " " + styles.outlineSelected : ""}${p.isDragOver ? " " + styles.dragOver : ""}`}
@@ -1434,11 +1530,22 @@ function DiscoverCardItem(p: OutlineItemProps & { card: DiscoverCard }) {
       <button type="button" className={styles.outlineHead} onClick={p.onEdit} aria-pressed={p.selected}>
         <span className={styles.dragHandle} title="Drag to reorder">⋮⋮</span>
         <span className={styles.cardIndex}>{p.index + 1}</span>
-        <strong className={styles.cardTitle} dir="auto" style={{ flex: 1, textAlign: "left", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
-          {title}
-        </strong>
+        {imageUrl ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={imageUrl} alt="" width={36} height={36} style={{ width: 36, height: 36, objectFit: "contain", borderRadius: 6, background: "#f4ebd0", flex: "none" }} />
+        ) : (
+          <span style={{ width: 36, height: 36, flex: "none", borderRadius: 6, border: "1.5px dashed #c8744a", fontSize: 9.5, lineHeight: "11px", color: "#9c5432", display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center" }}>
+            No image
+          </span>
+        )}
+        <span style={{ display: "grid", flex: 1, minWidth: 0, textAlign: "left" }}>
+          <span style={{ fontSize: 11.5, color: "#5f5f5f" }}>{CARD_LABELS[p.card.type] ?? p.card.type}</span>
+          <strong className={styles.cardTitle} dir="auto" style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+            {title}
+          </strong>
+        </span>
         <UrduMissingBadge count={p.urduCount} />
-        <span className={styles.cardType}>{p.card.type}</span>
+        <ProblemCount count={p.problemCount} />
       </button>
       {p.selected && <OutlineActions {...p} />}
     </div>
@@ -1458,11 +1565,14 @@ function ExerciseItem(p: OutlineItemProps & { exercise: Exercise }) {
       <button type="button" className={styles.outlineHead} onClick={p.onEdit} aria-pressed={p.selected}>
         <span className={styles.dragHandle} title="Drag to reorder">⋮⋮</span>
         <span className={styles.cardIndex}>{p.index + 1}</span>
-        <span className={styles.cardPrompt} dir="auto" style={{ flex: 1, textAlign: "left", color: "var(--ink)" }}>
-          {prompt || p.exercise.id}
+        <span style={{ display: "grid", flex: 1, minWidth: 0, textAlign: "left" }}>
+          <span style={{ fontSize: 11.5, color: "#5f5f5f" }}>{EXERCISE_LABELS[p.exercise.type] ?? p.exercise.type}</span>
+          <span className={styles.cardPrompt} dir="auto" style={{ color: "var(--ink)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+            {prompt || p.exercise.id}
+          </span>
         </span>
         <UrduMissingBadge count={p.urduCount} />
-        <span className={styles.cardType}>{p.exercise.type}</span>
+        <ProblemCount count={p.problemCount} />
       </button>
       {p.selected && <OutlineActions {...p} />}
     </div>
@@ -1500,6 +1610,35 @@ export default function DashboardClient({
   const [view, setView] = useState<"overview" | "chapter" | "editor">("overview");
   const [adminToken, setAdminToken] = useState("");
   const [status, setStatus] = useState("Ready");
+
+  // ---- Review checklist ----
+  // Every lesson's review status and remaining problems. Loaded after the page
+  // renders (it reads all lesson content) and again on each return to it.
+  const [reviews, setReviews] = useState<Map<string, LessonReview> | null>(null);
+  const fetchReviews = useCallback(async () => {
+    try {
+      const res = await fetch("/api/admin/review");
+      if (!res.ok) return;
+      const payload = await res.json();
+      const rows = payload.data.lessons as (LessonReview & { id: string })[];
+      setReviews(new Map(rows.map(({ id, ...r }) => [id, r])));
+    } catch {
+      // The checklist shows "Checking…" until a later refresh succeeds.
+    }
+  }, []);
+  useEffect(() => {
+    fetchReviews();
+  }, [fetchReviews]);
+
+  // The open lesson's review status, dismissed problems and the course's
+  // introduced words, which the live checks need.
+  const [lessonReview, setLessonReview] = useState<{
+    lessonId: string;
+    status: LessonReview["reviewStatus"];
+    dismissed: Set<string>;
+    intros: VocabIntro[];
+  } | null>(null);
+  const [reviewBusy, setReviewBusy] = useState(false);
 
   // ---- Add lesson dialog ----
   const [showAddLesson, setShowAddLesson] = useState(false);
@@ -1680,6 +1819,7 @@ export default function DashboardClient({
     setShowJsonView(false);
     setShowPreview(false);
     setView("overview");
+    fetchReviews();
   }
 
   function selectLesson(lesson: DashboardLesson) {
@@ -2237,6 +2377,146 @@ export default function DashboardClient({
     setEditorState({ mode: "edit-exercise", editingIndex: newIndex, dirty: true });
   }
 
+  useEffect(() => {
+    if (view !== "editor" || !selectedLessonId) return;
+    let cancelled = false;
+    fetch(`/api/admin/review/${selectedLessonId}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((payload) => {
+        if (cancelled || !payload) return;
+        setLessonReview({
+          lessonId: selectedLessonId,
+          status: payload.data.status,
+          dismissed: new Set(payload.data.dismissed as string[]),
+          intros: payload.data.intros as VocabIntro[],
+        });
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, [view, selectedLessonId]);
+
+  // Checked live against the draft, so a fix clears its problem as you type.
+  const problems = useMemo<LessonProblem[]>(() => {
+    if (!lessonDraft || !selectedLesson || !selectedChapter || lessonReview?.lessonId !== selectedLesson.id) return [];
+    return checkLesson(buildCurrentContent(), {
+      lessonId: selectedLesson.id,
+      chapter: selectedChapter.order,
+      lesson: selectedLesson.order,
+      template: lessonDraft.template,
+      intros: lessonReview.intros,
+    }).filter((p) => !lessonReview.dismissed.has(p.key));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lessonDraft, draftDiscoverCards, draftExercises, draftHRC, lessonReview, selectedLesson?.id, selectedChapter?.order]);
+
+  const problemsAt = (kind: ProblemTarget["kind"], index?: number) => problems.filter((p) => sameTarget(p.target, kind, index));
+
+  function goToProblem(t: ProblemTarget) {
+    if (t.kind === "card") setEditorState((st) => ({ mode: "edit-card", editingIndex: t.index, dirty: st.dirty }));
+    else if (t.kind === "exercise") setEditorState((st) => ({ mode: "edit-exercise", editingIndex: t.index, dirty: st.dirty }));
+    else {
+      setHrcSection(t.kind);
+      setEditorState((st) => ({ mode: "edit-hrc", editingIndex: null, dirty: st.dirty }));
+    }
+  }
+
+  function applyProblemFix(fix: ProblemFix) {
+    const content = buildCurrentContent();
+    if (!content) return;
+    const fixed = applyFix(content, fix) as Record<string, unknown>;
+    setDraftDiscoverCards((fixed.discover_cards ?? []) as DiscoverCard[]);
+    setDraftExercises((fixed.exercises ?? []) as Exercise[]);
+    setDraftHRC({
+      hook: fixed.hook as LessonContent["hook"],
+      reveal: fixed.reveal as NonNullable<LessonContent["reveal"]>,
+      close: fixed.close as LessonContent["close"],
+    });
+    setPaneNonce((n) => n + 1);
+    setEditorState((st) => ({ ...st, dirty: true }));
+  }
+
+  const adminHeaders = (): Record<string, string> => ({
+    "Content-Type": "application/json",
+    ...(adminToken ? { "x-admin-token": adminToken } : {}),
+  });
+
+  async function dismissProblem(p: LessonProblem) {
+    if (!selectedLesson) return;
+    const lessonId = selectedLesson.id;
+    const update = (fn: (keys: Set<string>) => void) =>
+      setLessonReview((r) => {
+        if (!r || r.lessonId !== lessonId) return r;
+        const keys = new Set(r.dismissed);
+        fn(keys);
+        return { ...r, dismissed: keys };
+      });
+    update((keys) => keys.add(p.key));
+    const res = await fetch(`/api/admin/review/${lessonId}/dismiss`, {
+      method: "POST",
+      headers: adminHeaders(),
+      body: JSON.stringify({ key: p.key, where: p.where, text: p.text }),
+    }).catch(() => null);
+    if (!res?.ok) {
+      update((keys) => keys.delete(p.key));
+      setStatus("Could not dismiss that problem.");
+    }
+  }
+
+  async function restoreDismissed() {
+    if (!selectedLesson || !lessonReview || lessonReview.lessonId !== selectedLesson.id) return;
+    const lessonId = selectedLesson.id;
+    const keys = [...lessonReview.dismissed];
+    await Promise.all(
+      keys.map((key) =>
+        fetch(`/api/admin/review/${lessonId}/dismiss?key=${encodeURIComponent(key)}`, { method: "DELETE", headers: adminHeaders() }).catch(() => null),
+      ),
+    );
+    setLessonReview((r) => (r && r.lessonId === lessonId ? { ...r, dismissed: new Set() } : r));
+  }
+
+  async function setReviewStatus(next: LessonReview["reviewStatus"]): Promise<boolean> {
+    if (!selectedLesson) return false;
+    const lessonId = selectedLesson.id;
+    setReviewBusy(true);
+    try {
+      const res = await fetch(`/api/admin/review/${lessonId}`, {
+        method: "PATCH",
+        headers: adminHeaders(),
+        body: JSON.stringify({ status: next }),
+      });
+      const payload = await res.json().catch(() => null);
+      if (!res.ok) {
+        setStatus(payload?.error ?? "Could not update the review status.");
+        return false;
+      }
+      setLessonReview((r) => (r && r.lessonId === lessonId ? { ...r, status: next } : r));
+      setReviews((m) => {
+        const copy = new Map(m ?? []);
+        copy.set(lessonId, { reviewStatus: next, problemCount: problems.length, summary: copy.get(lessonId)?.summary ?? "" });
+        return copy;
+      });
+      setStatus(next === "APPROVED" ? "Lesson approved ✓" : "Marked as needs fixing");
+      return true;
+    } catch {
+      setStatus("Network error — the review status was not saved.");
+      return false;
+    } finally {
+      setReviewBusy(false);
+    }
+  }
+
+  async function approveAndNext() {
+    if (!selectedChapter || !selectedLesson) return;
+    if (!(await setReviewStatus("APPROVED"))) return;
+    const at = selectedChapter.lessons.findIndex((l) => l.id === selectedLesson.id);
+    const nextInChapter = selectedChapter.lessons[at + 1];
+    const nextChapter = chapters.find((c) => c.order > selectedChapter.order && c.lessons.length > 0);
+    if (nextInChapter) openLessonFromOverview(selectedChapter.id, nextInChapter.id);
+    else if (nextChapter) openLessonFromOverview(nextChapter.id, nextChapter.lessons[0].id);
+    else backToOverview();
+  }
+
   if (!selectedChapter) {
     return (
       <main className={styles.empty}>
@@ -2322,6 +2602,7 @@ export default function DashboardClient({
         {view === "overview" && (
           <CurriculumOverview
             chapters={chapters}
+            reviews={reviews}
             promoCodes={promoCodes}
             adminToken={adminToken}
             onAdminTokenChange={setAdminToken}
@@ -2354,6 +2635,15 @@ export default function DashboardClient({
                 </h2>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+                {selectedLesson && (
+                  <ReviewChip
+                    state={reviewStateOf({
+                      reviewStatus: lessonReview?.lessonId === selectedLesson.id ? lessonReview.status : "NOT_REVIEWED",
+                      problemCount: problems.length,
+                      summary: "",
+                    })}
+                  />
+                )}
                 {selectedLesson && <StatusPill status={selectedLesson.status} />}
                 {(selectedLesson?.openIssues ?? 0) > 0 && (
                   <span style={{ fontSize: 12, fontWeight: 600, color: "#9a4040", background: "#f6e6e6", padding: "2px 8px", borderRadius: 999 }}>
@@ -2403,6 +2693,67 @@ export default function DashboardClient({
                 </button>
               </div>
             </div>
+            <section
+              aria-label="Review"
+              style={{ position: "sticky", top: 0, zIndex: 3, background: "#071b44", color: "#f3ead6", borderRadius: 14, padding: "12px 18px", display: "flex", flexWrap: "wrap", alignItems: "center", gap: 14, marginBottom: 12 }}
+            >
+              <div style={{ display: "grid", gap: 2, flex: "1 1 320px" }}>
+                <strong style={{ fontSize: 15.5, color: "#fff" }}>
+                  {lessonReview?.lessonId !== selectedLesson?.id
+                    ? "Checking this lesson…"
+                    : problems.length === 0
+                      ? "No problems left"
+                      : `${problems.length} problem${problems.length === 1 ? "" : "s"} left`}
+                  {lessonReview && lessonReview.lessonId === selectedLesson?.id && lessonReview.dismissed.size > 0 && (
+                    <span style={{ fontWeight: 400, color: "#d5dae5" }}>
+                      {" "}· {lessonReview.dismissed.size} dismissed ·{" "}
+                      <button type="button" onClick={restoreDismissed} style={{ background: "none", border: "none", padding: 0, color: "#d4b06a", font: "inherit", textDecoration: "underline", cursor: "pointer" }}>
+                        bring back
+                      </button>
+                    </span>
+                  )}
+                </strong>
+                <span style={{ fontSize: 13, color: "#d5dae5" }}>
+                  {editorState.dirty
+                    ? "Save your changes before approving."
+                    : lessonReview?.status === "APPROVED"
+                      ? "You approved this lesson."
+                      : "Approve unlocks when every problem is fixed or dismissed."}
+                </span>
+              </div>
+              <button
+                type="button"
+                disabled={reviewBusy || lessonReview?.status === "NEEDS_CORRECTION"}
+                onClick={() => setReviewStatus("NEEDS_CORRECTION")}
+                style={{ minHeight: 44, padding: "0 16px", borderRadius: 10, border: "1px solid #d4b06a", background: "transparent", color: "#d4b06a", fontWeight: 600, fontSize: 14, cursor: "pointer", opacity: lessonReview?.status === "NEEDS_CORRECTION" ? 0.5 : 1 }}
+              >
+                {lessonReview?.status === "NEEDS_CORRECTION" ? "Marked as needs fixing" : "Mark as needs fixing"}
+              </button>
+              {(() => {
+                const ready = !reviewBusy && !editorState.dirty && problems.length === 0 && lessonReview?.lessonId === selectedLesson?.id;
+                return (
+                  <button
+                    type="button"
+                    disabled={!ready}
+                    onClick={approveAndNext}
+                    title={ready ? undefined : editorState.dirty ? "Save first" : "Fix or dismiss every problem first"}
+                    style={{
+                      minHeight: 44,
+                      padding: "0 20px",
+                      borderRadius: 10,
+                      border: ready ? "1px solid #d4b06a" : "1px solid #9dab94",
+                      background: ready ? "#d4b06a" : "#ede6d6",
+                      color: ready ? "#071b44" : "#5f5f5f",
+                      fontWeight: 700,
+                      fontSize: 14,
+                      cursor: ready ? "pointer" : "not-allowed",
+                    }}
+                  >
+                    {lessonReview?.status === "APPROVED" ? "Approved · next lesson" : "Approve and next lesson"}
+                  </button>
+                );
+              })()}
+            </section>
             <div className={styles.topbar}>
               <div className={styles.modeTabs} aria-label="Dashboard view mode">
                 <button
@@ -2901,8 +3252,8 @@ export default function DashboardClient({
                 <div className={styles.cardList}>
                   {([
                     ["hook", "Opening ayah", Boolean(draftHRC.hook ?? parsedContent?.hook)],
-                    ["reveal", "Reveal", Boolean(draftHRC.reveal ?? parsedContent?.reveal)],
-                    ["close", "Wrap-up (Noor message)", true],
+                    ["reveal", "Closing ayah", Boolean(draftHRC.reveal ?? parsedContent?.reveal)],
+                    ["close", "Noor’s goodbye", true],
                   ] as const)
                     .filter(([, , present]) => present)
                     .map(([key, label]) => {
@@ -2921,6 +3272,7 @@ export default function DashboardClient({
                           >
                             <strong className={styles.cardTitle} style={{ flex: 1, textAlign: "left" }}>{label}</strong>
                             <UrduMissingBadge count={missingUrduCount(part)} />
+                            <ProblemCount count={problemsAt(key).length} />
                           </button>
                         </div>
                       );
@@ -2931,7 +3283,7 @@ export default function DashboardClient({
               {/* ---- DISCOVER CARDS ---- */}
               <div className={styles.builderSection}>
                 <div className={styles.sectionHeader}>
-                  <h3>Discover ({draftDiscoverCards.length})</h3>
+                  <h3>Discover cards ({draftDiscoverCards.length})</h3>
                   <div className={styles.addButtons}>
                     {(["WORD", "CONCEPT", "EXAMPLE", "CONTRAST", "AYAH_PREVIEW"] as DiscoverCardType[])
                       .filter((t) => discoverCardFormConfig[t]?.authoringScope)
@@ -2950,6 +3302,7 @@ export default function DashboardClient({
                       index={i}
                       selected={editorState.mode === "edit-card" && editorState.editingIndex === i}
                       urduCount={missingUrduCount(card)}
+                      problemCount={problemsAt("card", i).length}
                       onEdit={() => setEditorState((st) => ({ mode: "edit-card", editingIndex: i, dirty: st.dirty }))}
                       onDelete={() => handleDeleteCard(i)}
                       onDuplicate={() => handleDuplicateCard(i)}
@@ -2999,6 +3352,7 @@ export default function DashboardClient({
                       index={i}
                       selected={editorState.mode === "edit-exercise" && editorState.editingIndex === i}
                       urduCount={missingUrduCount(ex)}
+                      problemCount={problemsAt("exercise", i).length}
                       onEdit={() => setEditorState((st) => ({ mode: "edit-exercise", editingIndex: i, dirty: st.dirty }))}
                       onDelete={() => handleDeleteExercise(i)}
                       onDuplicate={() => handleDuplicateExercise(i)}
@@ -3031,6 +3385,37 @@ export default function DashboardClient({
 
             {/* ---- EDITING PANE (sits beside the outline, never below it) ---- */}
             <div className={styles.studioPane}>
+              {problems.length > 0 && (
+                <section
+                  aria-label="Problems in this lesson"
+                  style={{ background: "#faf6e9", border: "1px solid #e8e3d9", borderRadius: 14, padding: "14px 16px", marginBottom: 14 }}
+                >
+                  <h3 style={{ margin: "0 0 6px", fontSize: 17 }}>Problems found ({problems.length})</h3>
+                  <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
+                    {problems.map((p) => (
+                      <li key={p.key} style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 10, padding: "8px 0", borderTop: "1px solid #e8e3d9" }}>
+                        <span style={{ flex: "none", width: 96, fontSize: 12, fontWeight: 600, color: "#5f5f5f" }}>{p.where}</span>
+                        <span dir="ltr" style={{ flex: "1 1 240px", minWidth: 0, fontSize: 13.5, unicodeBidi: "plaintext" }}>{p.text}</span>
+                        <button type="button" onClick={() => goToProblem(p.target)} style={{ background: "none", border: "none", padding: 0, color: "#85672c", fontWeight: 600, fontSize: 13, cursor: "pointer" }}>
+                          Go to
+                        </button>
+                        <button type="button" onClick={() => dismissProblem(p)} style={{ background: "none", border: "none", padding: 0, color: "#5f5f5f", fontSize: 12.5, textDecoration: "underline", cursor: "pointer" }}>
+                          Dismiss
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
+              {editorState.mode === "edit-card" && editorState.editingIndex !== null && (
+                <ProblemNotes problems={problemsAt("card", editorState.editingIndex)} onFix={applyProblemFix} onDismiss={dismissProblem} />
+              )}
+              {editorState.mode === "edit-exercise" && editorState.editingIndex !== null && (
+                <ProblemNotes problems={problemsAt("exercise", editorState.editingIndex)} onFix={applyProblemFix} onDismiss={dismissProblem} />
+              )}
+              {editorState.mode === "edit-hrc" && (
+                <ProblemNotes problems={problemsAt(hrcSection)} onFix={applyProblemFix} onDismiss={dismissProblem} />
+              )}
               {editorState.mode === "edit-card" && editorState.editingIndex !== null && draftDiscoverCards[editorState.editingIndex] && (
                 <CardEditForm
                   key={`card-${editorState.editingIndex}-${paneNonce}`}
@@ -3063,7 +3448,7 @@ export default function DashboardClient({
               {editorState.mode === "edit-hrc" && parsedContent && (
                 <div className={styles.editPanel}>
                   <div className={styles.editPanelHeader}>
-                    <h4>{hrcSection === "hook" ? "Opening ayah" : hrcSection === "reveal" ? "Reveal" : "Wrap-up"}</h4>
+                    <h4>{hrcSection === "hook" ? "Opening ayah" : hrcSection === "reveal" ? "Closing ayah" : "Noor’s goodbye"}</h4>
                     <div className={styles.editPanelActions}>
                       <button className={styles.cancelBtn} onClick={() => setEditorState((st) => ({ mode: "view", editingIndex: null, dirty: st.dirty }))} type="button">Done</button>
                     </div>

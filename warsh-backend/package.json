@@ -75,7 +75,8 @@
     "content:restore-curriculum": "node scripts/restore-curriculum-vocabulary.cjs",
     "content:restore-tadabbur": "node scripts/restore-tadabbur-surahs.cjs",
     "content:add-tadabbur-urdu": "node scripts/add-tadabbur-urdu.cjs",
-    "media:prune-orphans": "npx tsx scripts/prune-orphan-vocab-media.ts"
+    "media:prune-orphans": "npx tsx scripts/prune-orphan-vocab-media.ts",
+    "content:review-checks": "npx tsx scripts/check-lessons.ts"
   },
   "prisma": {
     "seed": "node prisma/seed.cjs"

@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { getAdminReadError, getAdminWriteError } from "../../../../../../lib/admin";
 import { prisma } from "../../../../../../lib/prisma";
+import { remainingProblems } from "../../../../../../lib/lessonReview";
 
 interface Props {
   params: { id: string };
@@ -126,6 +127,16 @@ export async function PATCH(request: Request, { params }: Props) {
   }
 
   if (parsed.data.status === "APPROVED") {
+    const problems = await remainingProblems(params.id);
+    if (problems && problems.length > 0) {
+      return NextResponse.json(
+        {
+          error: `Fix or dismiss the ${problems.length} automatic problem${problems.length === 1 ? "" : "s"} in the curriculum editor first.`,
+          code: "lesson_problems",
+        },
+        { status: 409 },
+      );
+    }
     const openIssueCount = await prisma.contentReviewIssue.count({
       where: {
         review: { lessonId: params.id },
