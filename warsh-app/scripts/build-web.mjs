@@ -17,6 +17,7 @@ process.chdir(appDir);
 
 const apiUrl = process.env.EXPO_PUBLIC_API_URL?.trim();
 const environment = process.env.EXPO_PUBLIC_ENVIRONMENT?.trim();
+const mixpanelToken = process.env.EXPO_PUBLIC_MIXPANEL_TOKEN?.trim();
 
 if (!apiUrl || !/^https:\/\//i.test(apiUrl)) {
   throw new Error("EXPO_PUBLIC_API_URL must be set to the HTTPS web deployment origin.");
@@ -24,6 +25,10 @@ if (!apiUrl || !/^https:\/\//i.test(apiUrl)) {
 
 if (environment !== "production") {
   throw new Error("EXPO_PUBLIC_ENVIRONMENT must be set to production.");
+}
+
+if (!mixpanelToken || !/^[a-zA-Z0-9_-]{1,128}$/.test(mixpanelToken)) {
+  throw new Error("A valid EXPO_PUBLIC_MIXPANEL_TOKEN must be set for the web build.");
 }
 
 function walk(directory) {
@@ -50,6 +55,10 @@ function assertNoLocalApiInBundle() {
 
   if (offenders.length > 0) {
     throw new Error(`A local API URL leaked into ${offenders.length} web bundle file(s).`);
+  }
+
+  if (!walk(javascriptDirectory).some((file) => file.endsWith(".js") && readFileSync(file, "utf8").includes(mixpanelToken))) {
+    throw new Error("The production Mixpanel token is missing from the web bundle.");
   }
 }
 
