@@ -9,14 +9,17 @@ Status: **largely implemented and live (2026-10-31)** — see `Docs/warsh-status
 - Nothing is sent before sign-in (age unknown), so `signup_started/failed`, `login_failed` and password-reset events are intentionally absent. The old preview/onboarding helpers were deleted with the screens that called them; `signup_completed` carries goal/level/placement.
 - Website section/pricing/blog events are dropped; `website_link_clicked` with destination covers CTA, navigation and outbound clicks.
 
-## Remaining (2026-10-31)
+## Remaining (updated 2026-10-31 evening)
 
 1. Confirm the scheduled `/api/cron/analytics-outbox` run delivers the four rows queued 2026-10-31 06:31–07:01 UTC (first eligible run 2026-11-01 04:15 UTC).
-2. Build the six reports below in Mixpanel and add event descriptions; annotate the rollout date.
-3. Ship the shared contract and new events (below) in the next APK/web deploy, then confirm them in Mixpanel.
-4. Full Android regression matrix before version 44+ leaves internal testing.
+2. Release 1.0.21 (45), which carries the shared contract, new events and the paywall `source` fix to Android. Built and release-gated 2026-10-31; not uploaded.
+3. Billing, in-app update and Google sign-in rows of the Android matrix need the Play-installed phone.
+4. Event descriptions in Mixpanel Lexicon and a rollout annotation were not added.
 
-Implemented after this audit: shared properties on every app, website and backend event (`schema_version`, `app_version`/`app_build` or `site_version`, `session_id` with 30-minute idle renewal, `ui_language`), and `notification_permission_result`, `share_sheet_opened`/`share_failed`, `help_opened`, `lesson_load_failed`, `streak_freeze_used`, `core500_set_opened`/`core500_set_load_failed`. A "meaning revealed" event was dropped: no such interaction exists in the app.
+Done 2026-10-31: the website, web app and backend changes are deployed (`8946ed8`, `b01ef78`). Mixpanel board **Warsh Journey** holds five saved reports — the free plan caps saved reports at five per user, so adoption and tracking health share one report:
+Journey: website to first lesson (funnel); Lesson drop-off (funnel); Paywall to confirmed purchase (funnel, broken down by step-1 `source`; `subscription_plan_selected` is omitted because the annual plan is pre-selected); Retention after first lesson (lesson_completed → app_session_started, day 1/7/30); Feature adoption and tracking health (weekly uniques per feature by `surface`). Events from builds before `f17305b` have no `surface` and show as "(not set)".
+
+Implemented after this audit: shared properties on every app, website and backend event (`schema_version`, `app_version`/`app_build` or `site_version`, `session_id` with 30-minute idle renewal, `ui_language`), and `notification_permission_result`, `share_sheet_opened`/`share_failed`, `help_opened`, `lesson_load_failed`, `streak_freeze_used`, `core500_set_opened`/`core500_set_load_failed`. A "meaning revealed" event was dropped: no such interaction exists in the app. `paywall_viewed` now carries a real `source` (`lesson`, `noor`, `tadabbur`, `learn_expired_banner`, `learn_trial_banner`, `manage_see_plans`, `manage_change_plan`, otherwise `direct`); before `b01ef78` every view was "unknown".
 
 ## Evidence and current integration
 
