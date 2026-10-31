@@ -22,7 +22,7 @@ const CSP = [
   "img-src 'self' https://assets.warsh.app data:",
   "media-src 'self' https://assets.warsh.app",
   "font-src 'self' data:",
-  "connect-src 'self' https://api.warsh.app",
+  "connect-src 'self' https://api.warsh.app https://api-js.mixpanel.com",
   // Matches the iframe allowlist in content/blog.ts and backend blogSanitize.ts.
   "frame-src https://www.youtube.com https://youtube.com https://player.vimeo.com",
   "form-action 'self'",
