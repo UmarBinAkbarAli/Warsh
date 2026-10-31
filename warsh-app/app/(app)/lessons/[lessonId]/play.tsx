@@ -15,7 +15,7 @@ import { Animation, Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, Warsh
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { CHECKPOINT_MAX_BEAT, CHECKPOINT_MIN_BEAT, lessonCheckpointKey } from "@services/lessonCheckpoint";
 import { cancelTodayReminders, fireMilestoneNotification } from "@services/notifications";
-import { track, trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from "@services/analytics";
+import { analyticsErrorCode, track, trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from "@services/analytics";
 import { pickLocalized, useLanguage, useTranslationLanguage } from "@services/language";
 import { useT } from "@i18n/index";
 import { prefetchCatalogAudio, prefetchRemoteAudio } from "@services/audioCache";
@@ -719,6 +719,7 @@ export default function LessonPlayScreen() {
           router.replace(await subscriptionRequiredRoute());
           return;
         }
+        track("lesson_load_failed", { lesson_id: lessonId, error_code: analyticsErrorCode(loadError) });
         setError(t("player.loadError"));
       } finally {
         setLoading(false);

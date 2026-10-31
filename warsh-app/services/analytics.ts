@@ -2,6 +2,8 @@ import { NativeModules, Platform } from "react-native";
 import { Mixpanel } from "mixpanel-react-native";
 import { useAuthStore } from "@stores/authStore";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import * as Application from "expo-application";
+import Constants from "expo-constants";
 
 const TOKEN = process.env.EXPO_PUBLIC_MIXPANEL_TOKEN;
 const ENV = process.env.EXPO_PUBLIC_ENVIRONMENT ?? "development";
@@ -12,6 +14,39 @@ let initialization: Promise<void> | null = null;
 let queue: Promise<void> = Promise.resolve();
 let identifiedId: string | null = null;
 const LAST_USER_KEY = "warsh_analytics_last_user_v1";
+
+// Shared event contract. Bump SCHEMA_VERSION when an existing event's meaning
+// or properties change, so reports can separate old and new data.
+const SCHEMA_VERSION = 1;
+const SESSION_IDLE_MS = 30 * 60 * 1000;
+const APP_VERSION = Application.nativeApplicationVersion ?? Constants.expoConfig?.version ?? "unknown";
+const APP_BUILD = Application.nativeBuildVersion ?? undefined;
+let sessionId = "";
+let lastEventAt = 0;
+
+// A session groups events; it is random and never identifies a person. It
+// renews after 30 minutes without an event.
+function currentSessionId() {
+  const now = Date.now();
+  if (!sessionId || now - lastEventAt > SESSION_IDLE_MS) {
+    sessionId = `${now.toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
+  }
+  lastEventAt = now;
+  return sessionId;
+}
+
+function commonProperties() {
+  const language = useAuthStore.getState().user?.nativeLanguage;
+  return {
+    environment: ENV,
+    surface: Platform.OS === "web" ? "web_app" : Platform.OS,
+    schema_version: SCHEMA_VERSION,
+    app_version: APP_VERSION,
+    ...(APP_BUILD ? { app_build: APP_BUILD } : {}),
+    session_id: currentSessionId(),
+    ui_language: language === "ur" ? "ur" : "en",
+  };
+}
 
 export function initAnalytics(): Promise<void> {
   if (!TOKEN) return Promise.resolve();
@@ -80,13 +115,19 @@ async function resetSdk() {
   web?.reset();
 }
 
+// A stable, non-identifying failure code: HTTP status or "network".
+export function analyticsErrorCode(error: unknown): string {
+  const status = (error as { response?: { status?: unknown } } | null)?.response?.status;
+  return typeof status === "number" ? `http_${status}` : "network";
+}
+
 export function setAnalyticsSuppressed(value: boolean) {
   if (value) resetAnalytics();
 }
 
 export function track(event: string, props?: Record<string, unknown>) {
   return enqueue(() => {
-    const properties = { environment: ENV, surface: Platform.OS === "web" ? "web_app" : Platform.OS, ...props };
+    const properties = { ...commonProperties(), ...props };
     if (mp) mp.track(event, properties);
     else web?.track(event, properties);
   });
@@ -115,22 +156,6 @@ function peopleIncrement(key: string) {
 }
 
 // ─── Onboarding & Auth ────────────────────────────────────────────────────────
-
-export function trackPreviewCompleted() {
-  track("preview_completed");
-}
-
-export function trackOnboardingGoalSelected(goal: string) {
-  track("onboarding_goal_selected", { goal });
-}
-
-export function trackOnboardingLevelSelected(level: string) {
-  track("onboarding_level_selected", { level });
-}
-
-export function trackOnboardingPlacementSelected(placement: string) {
-  track("onboarding_placement_selected", { placement });
-}
 
 // The single commitment moment: a streak goal in days, from the Learn
 // checklist, the once-only post-celebration prompt, or Settings.

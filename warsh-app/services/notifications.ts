@@ -5,6 +5,7 @@ import { WarshPalette } from "../constants/theme";
 import { translate } from "../i18n";
 import { useAuthStore } from "../stores/authStore";
 import type { AppLanguage } from "./language";
+import { track } from "./analytics";
 
 type NotificationsModule = typeof import("expo-notifications");
 
@@ -102,6 +103,7 @@ export async function requestNotificationPermission(): Promise<boolean> {
   await ensureReminderChannel(Notifications);
 
   const { status } = await Notifications.requestPermissionsAsync();
+  track("notification_permission_result", { status });
   return status === "granted";
 }
 

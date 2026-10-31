@@ -8,6 +8,7 @@ import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
 import { PlayButton } from "@components/PlayButton";
 import { AyahExamples } from "@components/core500/AyahExamples";
+import { analyticsErrorCode, track } from "@services/analytics";
 import { getApiErrorMessage } from "@services/api";
 import { coreDirectionMark, loadCoreAssessment, loadCoreSet, updateCoreAssessment, type CoreAssessment, type CoreSetWord } from "@services/core500";
 import { useLanguage, useTranslationLanguage } from "@services/language";
@@ -61,6 +62,7 @@ export default function Core500SetScreen() {
         const [set, saved] = await Promise.all([loadCoreSet(setNumber), AsyncStorage.getItem(storageKey)]);
         const assessment = set.assessmentSupported ? await loadCoreAssessment(setNumber) : null;
         if (cancelled) return;
+        track("core500_set_opened", { set_number: setNumber, words: set.words.length, resumed: Number(saved ?? 0) > 0 });
         setReady(!!set.assessmentSupported && !!set.examplesReady);
         setWords(set.words); setTest(null); setStage("cards"); setResume(null);
         const savedIndex = Number(saved ?? 0);
@@ -68,7 +70,9 @@ export default function Core500SetScreen() {
         if (assessment && assessment.phase !== "COMPLETE") setResume(assessment);
         else if (assessment?.phase === "COMPLETE") { setTest(assessment); setStage("test"); }
         else if (savedIndex >= set.words.length) setStage("intro");
-      } catch (err) { if (!cancelled) setError(getApiErrorMessage(err, t("core500.loadFailed"))); }
+      } catch (err) {
+        track("core500_set_load_failed", { set_number: setNumber, error_code: analyticsErrorCode(err) });
+        if (!cancelled) setError(getApiErrorMessage(err, t("core500.loadFailed"))); }
       finally { if (!cancelled) setLoading(false); }
     })();
     return () => { cancelled = true; };

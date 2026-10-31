@@ -13,6 +13,8 @@ test("web analytics gates events and profiles and separates switched accounts", 
   const mocks: Record<string, string> = {
     "react-native": `export const Platform={OS:'web'}; export const NativeModules={};`,
     "mixpanel-react-native": `export class Mixpanel {}`,
+    "expo-application": `export const nativeApplicationVersion=null; export const nativeBuildVersion=null;`,
+    "expo-constants": `export default {expoConfig:{version:'9.9.9'}};`,
     "@stores/authStore": `export const useAuthStore={getState:()=>globalThis.__warshAnalyticsHarness.state};`,
     "@react-native-async-storage/async-storage": `export default {getItem:async k=>globalThis.__warshAnalyticsHarness.storage.get(k)??null,setItem:async(k,v)=>{globalThis.__warshAnalyticsHarness.storage.set(k,v)}};`,
     "mixpanel-browser": `const h=globalThis.__warshAnalyticsHarness,c=h.calls; export default {init:()=>c.push({kind:'init'}),get_property:k=>k==='$user_id'?h.browserUserId:undefined,identify:v=>{h.browserUserId=v;c.push({kind:'identify',value:v})},reset:()=>{h.browserUserId=null;c.push({kind:'reset'})},track:(e,p)=>c.push({kind:'track',value:{event:e,props:p}}),people:{set:p=>c.push({kind:'people',value:p}),set_once:p=>c.push({kind:'people',value:p}),increment:(k,v)=>c.push({kind:'people',value:{k,v}})}};`,
@@ -33,7 +35,12 @@ test("web analytics gates events and profiles and separates switched accounts", 
     assert.equal(await analytics.track("adult_event"), true);
     assert.deepEqual(calls.filter(c => c.kind === "identify").map(c => c.value), ["adult-a"]);
     assert.ok(calls.findIndex(c => c.kind === "reset") < calls.findIndex(c => c.kind === "identify"));
-    assert.equal((calls.find(c => c.kind === "track")?.value as any).props.surface, "web_app");
+    const firstProps = (calls.find(c => c.kind === "track")?.value as any).props;
+    assert.equal(firstProps.surface, "web_app");
+    assert.equal(firstProps.schema_version, 1);
+    assert.equal(firstProps.app_version, "9.9.9");
+    assert.equal(firstProps.ui_language, "en");
+    assert.match(firstProps.session_id, /^[a-z0-9]+-[a-z0-9]+$/);
 
     state.user = { id: "minor", dateOfBirth: "2014-01-01", isMinor: true };
     const beforeMinor = calls.length;

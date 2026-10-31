@@ -7,6 +7,33 @@ import mixpanel from 'mixpanel-browser';
 const token = process.env.NEXT_PUBLIC_MIXPANEL_TOKEN;
 let initialized = false;
 
+// Shared event contract with the app (schema_version, version, session).
+const SCHEMA_VERSION = 1;
+const SITE_VERSION = process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA?.slice(0, 7) ?? 'unknown';
+const SESSION_KEY = 'warsh_site_session_v1';
+const SESSION_IDLE_MS = 30 * 60 * 1000;
+
+// A random grouping id, never a person identifier; renews after 30 idle minutes.
+function sessionId() {
+  const now = Date.now();
+  let stored: { id: string; at: number } | null = null;
+  try { stored = JSON.parse(sessionStorage.getItem(SESSION_KEY) ?? 'null'); } catch { /* storage blocked */ }
+  const id = stored && now - stored.at <= SESSION_IDLE_MS ? stored.id
+    : `${now.toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
+  try { sessionStorage.setItem(SESSION_KEY, JSON.stringify({ id, at: now })); } catch { /* storage blocked */ }
+  return id;
+}
+
+function common() {
+  return {
+    surface: 'website',
+    schema_version: SCHEMA_VERSION,
+    site_version: SITE_VERSION,
+    session_id: sessionId(),
+    ui_language: document.documentElement.lang || 'en',
+  };
+}
+
 function init() {
   if (!token || initialized) return false;
   const options = {
@@ -30,7 +57,7 @@ function safeCampaign(value: string | null) {
 
 export function trackSiteEvent(event: string, properties: Record<string, string | number>) {
   if (!initialized) init();
-  if (initialized) mixpanel.track(event, { surface: 'website', ...properties });
+  if (initialized) mixpanel.track(event, { ...common(), ...properties });
 }
 
 export function SiteAnalytics() {
@@ -53,7 +80,7 @@ export function SiteAnalytics() {
       }
       mixpanel.register(Object.fromEntries(Object.entries(campaign).map(([key, value]) => [`last_${key}`, value])));
     }
-    mixpanel.track('website_page_viewed', { surface: 'website', page_path: pathname, ...campaign });
+    mixpanel.track('website_page_viewed', { ...common(), page_path: pathname, ...campaign });
   }, [pathname]);
 
   useEffect(() => {
@@ -77,7 +104,7 @@ export function SiteAnalytics() {
         }
       }
       mixpanel.track('website_link_clicked', {
-        surface: 'website', page_path: window.location.pathname, destination,
+        ...common(), page_path: window.location.pathname, destination,
         ...(destination === 'website' ? { destination_path: target.pathname } : {}),
       });
     }

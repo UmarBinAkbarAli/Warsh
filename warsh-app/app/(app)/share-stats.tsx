@@ -13,6 +13,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import ViewShot, { captureRef } from "react-native-view-shot";
 import * as Sharing from "expo-sharing";
+import { track } from "@services/analytics";
 import api from "@services/api";
 import { ArabicText } from "@components/ArabicText";
 import {
@@ -85,10 +86,12 @@ export default function ShareStatsScreen() {
       const uri = await captureRef(viewShotRef, { format: "png", quality: 1 });
       const canShare = await Sharing.isAvailableAsync();
       if (canShare) {
+        track("share_sheet_opened", { content: "stats" });
         await Sharing.shareAsync(uri, { mimeType: "image/png", dialogTitle: "Share your Warsh stats" });
       }
     } catch {
       // silently fail
+      track("share_failed", { content: "stats" });
     } finally {
       setSharing(false);
     }

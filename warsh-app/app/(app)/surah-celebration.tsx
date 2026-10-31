@@ -4,6 +4,7 @@ import { useLocalSearchParams, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { captureRef } from "react-native-view-shot";
 import * as Sharing from "expo-sharing";
+import { track } from "@services/analytics";
 import { BrandButton } from "@components/BrandButton";
 import {
   Colors,
@@ -39,10 +40,12 @@ export default function SurahCelebrationScreen() {
       const uri = await captureRef(viewShotRef, { format: "png", quality: 1 });
       const canShare = await Sharing.isAvailableAsync();
       if (canShare) {
+        track("share_sheet_opened", { content: "surah_milestone" });
         await Sharing.shareAsync(uri, { mimeType: "image/png", dialogTitle: "Share your Warsh Surah milestone" });
       }
     } catch {
       // Share failures are non-blocking for the celebration flow.
+      track("share_failed", { content: "surah_milestone" });
     } finally {
       setSharing(false);
     }

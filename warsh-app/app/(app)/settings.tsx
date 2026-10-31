@@ -485,7 +485,7 @@ export default function SettingsScreen() {
           <SettingRow
             icon="help-circle-outline"
             label={t("settings.helpFaq")}
-            onPress={() => openExternalUrl(`${WEB_BASE_URL}/help`)}
+            onPress={() => { track("help_opened", { source: "settings" }); openExternalUrl(`${WEB_BASE_URL}/help`); }}
             showChevron
           />
           <View style={styles.divider} />

@@ -336,6 +336,7 @@ export default function HomeScreen() {
 
       if (progress.freezeUsedYesterday && shownDate !== today) {
         setShowFreezeBanner(true);
+        track("streak_freeze_used", { source: "learn_banner" });
       }
 
       const lastStreak = lastStreakRaw

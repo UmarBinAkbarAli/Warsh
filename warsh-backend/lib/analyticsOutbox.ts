@@ -32,7 +32,7 @@ export async function deliverAnalyticsOutbox() {
     eligible.push(row);
   }
   if (eligible.length) {
-    const body = eligible.map(row => ({ event: row.event, properties: { ...(row.properties as object), token, distinct_id: row.userId, time: Math.floor(row.occurredAt.getTime() / 1000), $insert_id: row.id, surface: "backend" } }));
+    const body = eligible.map(row => ({ event: row.event, properties: { ...(row.properties as object), token, distinct_id: row.userId, time: Math.floor(row.occurredAt.getTime() / 1000), $insert_id: row.id, surface: "backend", schema_version: 1 } }));
     const response = await fetch("https://api.mixpanel.com/track/?ip=0&verbose=1", {
       method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body),
       signal: AbortSignal.timeout(5000),
