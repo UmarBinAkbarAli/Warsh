@@ -198,6 +198,6 @@ release.
 
 ## Related
 
-- `AGENTS.md` — repository invariants, release gate, and recovery paths
+- `AGENTS.md` — repository invariants and recovery paths (release gate: `Docs/warsh-release-runbook.md`)
 - `warsh-backend/lib/course.ts` — authoritative locking and completion rules
 - `warsh-app/services/courseContinuity.ts` — in-app detection of a broken map

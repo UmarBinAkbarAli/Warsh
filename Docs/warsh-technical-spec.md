@@ -763,7 +763,7 @@ Their public URLs are required website/store contracts. Any routing change requi
 ## 13. Validation and release gates
 
 The full release gate — code validation, content-mirror validation, Android
-artifact validation, and the runtime checklist — lives in `AGENTS.md` under
+artifact validation, and the runtime checklist — lives in `Docs/warsh-release-runbook.md` under
 **Release gate**, next to the commands it runs. It is not duplicated here.
 
 ## 14. Scaling and deferred infrastructure

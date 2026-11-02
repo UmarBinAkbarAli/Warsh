@@ -220,14 +220,14 @@ files remain release evidence.
   Sentry last heard from release 1.0.7 (29) on 2026-08-22. Inspecting the built
   artifacts proved it: neither the Sep 12 AAB (1.0.9) nor the Sep 14 APK contains
   a Sentry DSN or the Mixpanel token. `eas.json`, `start-warsh.ps1` and the
-  AGENTS.md recipe export API URL, environment and the Google client ID — never
+  release recipe export API URL, environment and the Google client ID — never
   `EXPO_PUBLIC_SENTRY_DSN` or `EXPO_PUBLIC_MIXPANEL_TOKEN` — and `warsh-app/.env`
   holds both blank (an interrupted Jul 24 build left the only copy in
   `.env.warsh-release-backup-38232`). So the app's crash reporting and analytics
   have been silently off in production; the backend's Sentry is unaffected.
   Fixed for the next build: the two client keys now live in the gitignored
   `warsh-app/.env.release`, `start-warsh.ps1` exports them (and refuses to build
-  without the file), the AGENTS.md recipe does the same, and
+  without the file), the release recipe (`Docs/warsh-release-runbook.md`) does the same, and
   `verify:release-api-url` fails any bundle that does not contain the exact
   values — it fails on the 1.0.9 AAB, as it should. Shipped in 1.0.10 (34) and
   confirmed live on 2026-09-15: Sentry has the release's first events from a
