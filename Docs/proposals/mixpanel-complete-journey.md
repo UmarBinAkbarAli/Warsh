@@ -11,9 +11,9 @@ Status: **largely implemented and live (2026-10-31)** — see `Docs/warsh-status
 
 ## Remaining (updated 2026-10-31 evening)
 
-1. Release 1.0.21 (45), which carries the shared contract, new events and the paywall `source` fix to Android. Built and release-gated 2026-10-31; uploaded to Production (100% rollout) and sent for review 2026-11-02. Once live, confirm `schema_version` and a real paywall `source` on Android events.
+1. Release 1.0.21 (45), which carries the shared contract, new events and the paywall `source` fix to Android. Built and release-gated 2026-10-31; uploaded to Production (100% rollout) and sent for review 2026-11-02; Play's pre-review checks passed and it is in review. Once live, confirm `schema_version` and a real paywall `source` on Android events.
 2. Billing, in-app update and Google sign-in rows of the Android matrix need the Play-installed phone.
-3. Event descriptions in Mixpanel Lexicon and a rollout annotation were not added.
+3. ~~Lexicon descriptions and rollout annotation~~ — done 2026-11-02: all 83 app/website/server events have Lexicon descriptions (10 described before their first event: purchase_cancelled/failed, restore_failed, subscription_banner_shown/cta, subscription_revoked/refunded, quran_translation_changed, tadabbur_surah_viewed, srs_review_finished_with_errors), and a project annotation marks 2026-10-31 as the rollout.
 
 Done: the scheduled outbox delivery is verified (2026-11-02) — the four rows queued 2026-10-31 were delivered unattended at 23:57 UTC that night.  the website, web app and backend changes are deployed (`8946ed8`, `b01ef78`). Mixpanel board **Warsh Journey** holds five saved reports — the free plan caps saved reports at five per user, so adoption and tracking health share one report:
 Journey: website to first lesson (funnel); Lesson drop-off (funnel); Paywall to confirmed purchase (funnel, broken down by step-1 `source`; `subscription_plan_selected` is omitted because the annual plan is pre-selected); Retention after first lesson (lesson_completed → app_session_started, day 1/7/30); Feature adoption and tracking health (weekly uniques per feature by `surface`). Events from builds before `f17305b` have no `surface` and show as "(not set)".

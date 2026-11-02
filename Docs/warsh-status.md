@@ -7,7 +7,7 @@
 
 ## Mixpanel work in progress — 2026-10-30
 
-- 2026-11-02: **1.0.21 (45) submitted to Production for review** at a 100% rollout (bundle re-verified with `verify:release-api-url` and `verify:play-signing`; Play reported no device-support loss). The first upload attempt failed with Play's generic "Couldn't upload" and succeeded on retry. Remaining Mixpanel items: Play-installed billing / in-app update / Google sign-in checks on 45, and Lexicon descriptions plus a rollout annotation.
+- 2026-11-02: **1.0.21 (45) submitted to Production for review** at a 100% rollout (bundle re-verified with `verify:release-api-url` and `verify:play-signing`; Play reported no device-support loss). The first upload attempt failed with Play's generic "Couldn't upload" and succeeded on retry. Play's pre-review checks passed; it is in Google review. Same day: Lexicon descriptions for all 83 events and a 2026-10-31 rollout annotation were added in `warsh - production`. The only remaining Mixpanel item is the Play-installed billing / in-app update / Google sign-in check on 45 once it is live.
 
 - 2026-11-02: the scheduled analytics outbox delivery is verified. The four rows queued 2026-10-31 06:31–07:01 UTC (subscription grant, cancellation, expiry, Noor refund) were marked delivered at 2026-10-31 23:57:15 UTC; only `/api/cron/analytics-outbox` delivers rows, and a row is marked only after Mixpanel `/track` accepts the batch. Vercel fires this cron at about 23:57 UTC (04:57 PKT), not at the `15 4 * * *` in `vercel.json`; delivery still happens daily, inside the four-day window.
 
