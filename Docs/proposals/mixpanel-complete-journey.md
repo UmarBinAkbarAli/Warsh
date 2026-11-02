@@ -11,7 +11,7 @@ Status: **largely implemented and live (2026-10-31)** — see `Docs/warsh-status
 
 ## Remaining (updated 2026-10-31 evening)
 
-1. Release 1.0.21 (45), which carries the shared contract, new events and the paywall `source` fix to Android. Built and release-gated 2026-10-31; not uploaded.
+1. Release 1.0.21 (45), which carries the shared contract, new events and the paywall `source` fix to Android. Built and release-gated 2026-10-31; uploaded to Production (100% rollout) and sent for review 2026-11-02. Once live, confirm `schema_version` and a real paywall `source` on Android events.
 2. Billing, in-app update and Google sign-in rows of the Android matrix need the Play-installed phone.
 3. Event descriptions in Mixpanel Lexicon and a rollout annotation were not added.
 
