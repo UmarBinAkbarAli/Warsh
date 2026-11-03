@@ -462,7 +462,9 @@ Design-first workflow.
   out as plain text is replaced by the canonical quote, or removed if already
   tagged. In live gpt-4o-mini runs (EN/UR), 50:16 and 3:8 came back exact, and
   the "China" saying was refused as not an ayah. Partial ayat written from
-  memory are not detected.
+  memory are not detected. Deployed (`96f19f2`) and verified on the
+  Play-installed 45: one exact 50:16 quote with its reference, no duplicate and
+  no visible tag.
 
 ### Play Store listing refresh — 2026-10-24
 
