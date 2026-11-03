@@ -1,6 +1,9 @@
 import OpenAI from "openai";
 import * as Sentry from "@sentry/nextjs";
 import { HEADWORD_INSTRUCTION } from "./noorHeadwordTag";
+import { AYAH_INSTRUCTION, SEARCH_QURAN_TOOL, expandAyahTags, searchQuran } from "./noorAyah";
+
+const MAX_SEARCH_ROUNDS = 3;
 
 const SYSTEM_PROMPT = `You are Ustaad Noor — the AI tutor inside Warsh, 
 an Arabic learning app for Muslims who want to understand the Quran 
@@ -41,7 +44,8 @@ the Warsh 5-beat flow: Quranic hook, discovery, practice, reveal, and close.
 
 You always explain using examples first, rules second. You connect 
 everything to the Quran and Salah — words the student already knows 
-from daily worship. You reference specific ayat when genuinely relevant.
+from daily worship. You reference specific ayat when genuinely relevant,
+quoting them only through the ayah tag described below.
 
 When a student asks about a concept, you:
 1. Give one clear example in Arabic with translation
@@ -149,7 +153,9 @@ export async function getAssistantReply(
 
   let reply: string;
   try {
-    reply = await getOpenAIReply(message, history, responseLanguage, options);
+    // Ayah tags become the exact Mushaf text before the reply is stored, so the
+    // app, the history and the model's own context all see the real ayah.
+    reply = expandAyahTags(await getOpenAIReply(message, history, responseLanguage, options));
   } catch (error) {
     // Report it here so a rejected key is an alert rather than something only
     // the logs know — a degraded reply is otherwise a successful response and
@@ -199,7 +205,7 @@ async function getOpenAIReply(
   const messages: OpenAI.Chat.ChatCompletionMessageParam[] = [
     {
       role: "system",
-      content: SYSTEM_PROMPT + langInstruction + HEADWORD_INSTRUCTION + (options.minor ? MINOR_SAFETY_INSTRUCTION : ""),
+      content: SYSTEM_PROMPT + langInstruction + AYAH_INSTRUCTION + HEADWORD_INSTRUCTION + (options.minor ? MINOR_SAFETY_INSTRUCTION : ""),
     },
     ...history.map((m) => ({
       role: (m.role === "USER" ? "user" : "assistant") as "user" | "assistant",
@@ -208,6 +214,31 @@ async function getOpenAIReply(
     { role: "user", content: message },
   ];
 
-  const response = await client.chat.completions.create({ model, max_tokens: 512, messages });
-  return response.choices[0].message.content ?? "";
+  // Noor may look ayat up before answering (lib/noorAyah). Bounded so a model
+  // that keeps searching costs at most a few extra calls; the last round
+  // offers no tool, which forces a written answer.
+  for (let round = 0; ; round++) {
+    const allowTools = round < MAX_SEARCH_ROUNDS;
+    const response = await client.chat.completions.create({
+      model,
+      max_tokens: 512,
+      messages,
+      ...(allowTools ? { tools: [SEARCH_QURAN_TOOL] } : {}),
+    });
+    const choice = response.choices[0].message;
+    const calls = choice.tool_calls?.filter((call) => call.type === "function") ?? [];
+    if (!allowTools || calls.length === 0) return choice.content ?? "";
+
+    messages.push(choice);
+    for (const call of calls) {
+      let result: unknown;
+      try {
+        const { arabic } = JSON.parse(call.function.arguments) as { arabic?: unknown };
+        result = typeof arabic === "string" ? searchQuran(arabic) : { error: "arabic must be a string" };
+      } catch {
+        result = { error: "invalid arguments" };
+      }
+      messages.push({ role: "tool", tool_call_id: call.id, content: JSON.stringify(result) });
+    }
+  }
 }

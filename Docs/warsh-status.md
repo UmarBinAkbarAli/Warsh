@@ -451,7 +451,18 @@ Design-first workflow.
   word card on Android (the test question was typed in Latin letters, since adb
   cannot type Arabic, and that reply had no word card).
   Seen while testing (not caused by this change): Noor quoted a non-existent ayah,
-  and replied in Urdu to an English-setting account with an Urdu history.
+  and replied in Urdu to an English-setting account with an Urdu history. The
+  Urdu reply is by design (Noor answers in the meaning language, not the
+  interface language). The invented ayah is fixed 2026-11-03 (`lib/noorAyah.ts`).
+  Noor finds ayat with a `search_quran` tool over the bundled Mushaf text
+  (`lib/data/quran-ayat.json`, rebuilt by `scripts/build-quran-ayat.mjs` from
+  the app's `pages.json`) and quotes them with an `⟦ayah: S:A⟧` tag that the
+  server swaps for the exact text and reference before storing. A reference that
+  doesn't exist is dropped. A whole ayah, or a run of consecutive ayat, written
+  out as plain text is replaced by the canonical quote, or removed if already
+  tagged. In live gpt-4o-mini runs (EN/UR), 50:16 and 3:8 came back exact, and
+  the "China" saying was refused as not an ayah. Partial ayat written from
+  memory are not detected.
 
 ### Play Store listing refresh — 2026-10-24
 
