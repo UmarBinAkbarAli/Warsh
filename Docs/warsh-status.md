@@ -8,6 +8,7 @@
 ## Mixpanel work in progress — 2026-10-30
 
 - 2026-11-03: **1.0.21 (45) is approved and live** (Play Console: "App update published", 2026-11-02). On the Tecno KF8 with the Play-installed 45 (`installerPackageName=com.android.vending`), the owner account passed three checks. Google sign-out and sign-in returned to the same progress (Ch 72 L3) after only the account chooser. A cold start showed no false in-app update prompt and no update or billing errors in logcat; no newer build exists, so the real update flow is unexercised. A monthly license-tester subscription ("Test card, always approves", 5-minute test cycle) completed and showed ACTIVE under Manage subscription. That test subscription renews on the test schedule and then lapses by itself.
+  Same day, same phone: the You tab and Noor redesign render correctly. Settings has no App language row. Lessons of every template open and advance cleanly: STANDARD, REVIEW (ch05 review), VERB_PATTERN (ch34-l02 conjugation table), SPOKEN_PHRASES (ch07-l05 Conversation Lab). So do the Ch 4 chapter test and Core 500 set and word views. Logcat had no FATAL or ReactNativeJS errors. In Mixpanel the 45 events carry `app_version` 1.0.21, `schema_version`, `session_id` and `ui_language`; `paywall_viewed` carries `source` (`manage_see_plans`). `chapter_test_started`, lesson, answer and audio events arrived live. Welcome slides on Android were not checked because they need a signed-out phone.
 
 - 2026-11-02: **1.0.21 (45) submitted to Production for review** at a 100% rollout (bundle re-verified with `verify:release-api-url` and `verify:play-signing`; Play reported no device-support loss). The first upload attempt failed with Play's generic "Couldn't upload" and succeeded on retry. Play's pre-review checks passed; it is in Google review. Same day: Lexicon descriptions for all 83 events and a 2026-10-31 rollout annotation were added in `warsh - production`. The only remaining Mixpanel item is the Play-installed billing / in-app update / Google sign-in check on 45 once it is live.
 
@@ -445,7 +446,10 @@ Design-first workflow.
   word comes from a `⟦word: …⟧` tag Noor is asked to append (stored, stripped for
   the app) or, failing that, the single Arabic word in the learner's question —
   `lib/noorHeadword.ts`.
-- Not yet checked: Android rendering of both screens, the Noor first-visit state.
+- Android rendering of both screens verified on the Play-installed 1.0.21 (45),
+  Tecno KF8, 2026-11-03. Still not checked: the Noor first-visit state and the
+  word card on Android (the test question was typed in Latin letters, since adb
+  cannot type Arabic, and that reply had no word card).
   Seen while testing (not caused by this change): Noor quoted a non-existent ayah,
   and replied in Urdu to an English-setting account with an Urdu history.
 
