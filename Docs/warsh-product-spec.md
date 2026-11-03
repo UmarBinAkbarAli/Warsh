@@ -271,12 +271,12 @@ Warsh has one subscription tier. Launch positioning is approximately $1/month or
 ### Trial and paywall
 
 - Trial begins at account creation.
-- Trial duration: seven full days from account creation.
-- The trial provides complete access to all 72 chapters, Noor, Tadabbur, speaking practice, and paid media for those seven days. Curriculum progress never ends the trial early.
+- Trial duration: 30 full days from account creation.
+- The trial provides complete access to all 72 chapters, Noor, Tadabbur, speaking practice, and paid media for those 30 days. Curriculum progress never ends the trial early.
 - A learner may complete as much of the course as they can during the trial, including all 72 chapters if they are able to do so.
 - Paid lessons, Noor, and Tadabbur are gated after trial/subscription expiry.
 - Vocabulary remains free forever.
-- Entitlement is checked when paid content is retrieved and when lesson completion is submitted. A request made after the seven-day expiry may redirect to the paywall even if the screen was opened shortly before expiry.
+- Entitlement is checked when paid content is retrieved and when lesson completion is submitted. A request made after the 30-day expiry may redirect to the paywall even if the screen was opened shortly before expiry.
 - Restore purchases and clear subscription-management instructions are mandatory.
 
 ### Store products

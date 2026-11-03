@@ -58,7 +58,7 @@ export default function TermsPage() {
 
       <H2>4. Subscriptions and Billing</H2>
       <P>
-        Warsh offers monthly and annual paid subscriptions. A free trial of seven days is
+        Warsh offers monthly and annual paid subscriptions. A free trial of 30 days is
         available for new accounts. The trial period is governed by the terms described in our
         app.
       </P>

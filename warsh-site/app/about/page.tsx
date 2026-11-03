@@ -307,7 +307,7 @@ export default function AboutPage() {
               <h3>What you can rely on</h3>
               <p>
                 The Vocabulary Bank is free permanently, including after a subscription ends. Every
-                account starts with 7 days of full access. Warsh runs on Android 8 and later, and
+                account starts with 30 days of full access. Warsh runs on Android 8 and later, and
                 is publicly available on Google Play. How our lessons are written and reviewed, and
                 the limits we hold ourselves to, are set out in our{' '}
                 <Link href="/editorial-guidelines">editorial guidelines</Link>.

@@ -8,7 +8,7 @@ import { PLAY_STORE_URL, SITE_URL } from '@/content/site';
 export const metadata: Metadata = {
   title: 'Pricing — Learn Fusha With Warsh',
   description:
-    'Try Warsh with seven days of complete access. Continue with one subscription while keeping the complete Vocabulary Bank free forever.',
+    'Try Warsh with 30 days of complete access. Continue with one subscription while keeping the complete Vocabulary Bank free forever.',
   alternates: { canonical: '/pricing' },
 };
 
@@ -34,7 +34,7 @@ const faqSections: FaqSection[] = [
     label: 'Questions',
     items: [
       {
-        q: 'What happens after the seven days?',
+        q: 'What happens after the 30 days?',
         a: 'Lessons, Ustaad Noor, Tadabbur, speaking practice, and subscription media require an active subscription. The Vocabulary Bank carries on working, including your saved words and review queue.',
       },
       {
@@ -51,7 +51,7 @@ const faqSections: FaqSection[] = [
       },
       {
         q: 'Is Ustaad Noor free forever?',
-        a: 'No. Noor is available during the seven-day trial and with an active subscription. Five messages are included each day, and optional packs provide additional messages.',
+        a: 'No. Noor is available during the 30-day trial and with an active subscription. Five messages are included each day, and optional packs provide additional messages.',
       },
     ],
   },
@@ -76,7 +76,7 @@ export default function PricingPage() {
           One learning path. One simple subscription.
         </h1>
         <p className="mt-3 text-base leading-relaxed text-deep">
-          Begin with seven full days of access to the curriculum, Ustaad Noor, Tadabbur, and
+          Begin with 30 full days of access to the curriculum, Ustaad Noor, Tadabbur, and
           speaking practice. After the trial, subscribe or continue with the free Vocabulary Bank.
         </p>
       </div>
@@ -115,7 +115,7 @@ export default function PricingPage() {
           <p className="mt-1 text-sm text-cream-bg/70">or about $10 / year</p>
           <p className="mt-3 text-sm leading-relaxed text-cream-bg/80">
             One subscription unlocks the complete structured learning experience after your
-            seven-day trial. There is no higher tier waiting behind it.
+            30-day trial. There is no higher tier waiting behind it.
           </p>
           <ul className="mt-6 flex flex-1 flex-col gap-3 text-sm text-cream-bg/90">
             {paidThings.map((thing) => (
@@ -133,7 +133,7 @@ export default function PricingPage() {
             rel="noopener noreferrer"
             className="mt-8 inline-flex items-center justify-center rounded-md bg-gold px-6 py-3 text-sm font-semibold text-navy transition-colors duration-fast hover:bg-gold-deep"
           >
-            Begin your seven-day trial
+            Begin your 30-day trial
           </a>
           <p className="mt-3 text-xs leading-relaxed text-cream-bg/60">
             Prices are Google Play&rsquo;s reference prices and vary by region; the price you

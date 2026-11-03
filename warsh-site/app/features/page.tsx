@@ -212,12 +212,12 @@ export default function FeaturesPage() {
                   <span className="wf-label__ar">وَرْش</span>
                 </h2>
                 <p className="wf-label__what">
-                  Begin with seven days of complete access, while keeping the Vocabulary Bank free permanently.
+                  Begin with 30 days of complete access, while keeping the Vocabulary Bank free permanently.
                 </p>
 
                 <dl className="wf-specs">
                   <dt>Access</dt>
-                  <dd>A 7-day free trial of everything</dd>
+                  <dd>A 30-day free trial of everything</dd>
                   <dt>Price</dt>
                   <dd>About $1 a month, or about $10 a year</dd>
                   <dt>Where</dt>

@@ -90,7 +90,7 @@ export function getSubscriptionState(user: UserSub) {
   // subscriptionStatus. If a purchase made during the trial later lapses (test
   // subscriptions, cancellation, failed payment) while trial days remain, the
   // user falls back to the remaining trial instead of being locked out. Spec:
-  // the trial is seven full days of access that nothing cuts short early.
+  // the trial is 30 full days of access that nothing cuts short early.
   // (When a purchase is active we surface the subscription rather than the trial.)
   const trialActive = trialWindowOpen && !subscriptionActive;
 

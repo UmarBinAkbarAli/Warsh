@@ -29,7 +29,7 @@ model User {
     // Null means a legacy account that has not answered yet; the app prompts.
     dateOfBirth    DateTime?         @db.Date
     trialStartAt   DateTime          @default(now())
-    trialExpiresAt DateTime          @default(dbgenerated("now() + interval '7 days'"))
+    trialExpiresAt DateTime          @default(dbgenerated("now() + interval '30 days'"))
     subscriptionStatus String        @default("trial")
     subscriptionProductId String?
     subscriptionActiveUntil DateTime?

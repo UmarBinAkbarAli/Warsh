@@ -13,7 +13,7 @@ export const FAQ_SECTIONS: FaqSection[] = [
     items: [
       {
         q: 'How does the free trial work?',
-        a: 'Every new account starts with 7 full days of free access to all Warsh features. Your trial begins the moment you create an account, and you may explore as much of the 72-chapter course as you can during those 7 days. Chapter progress never ends the trial early. After 7 days, you will need a paid subscription to continue accessing lessons, Noor, and Tadabbur; the Vocabulary Bank remains free.',
+        a: 'Every new account starts with 30 full days of free access to all Warsh features. Your trial begins the moment you create an account, and you may explore as much of the 72-chapter course as you can during those 30 days. Chapter progress never ends the trial early. After 30 days, you will need a paid subscription to continue accessing lessons, Noor, and Tadabbur; the Vocabulary Bank remains free.',
       },
       {
         q: 'How do I cancel my subscription?',
@@ -171,7 +171,7 @@ export const HOME_FAQ_SECTIONS: FaqSection[] = [
       },
       {
         q: 'What does Warsh cost?',
-        a: 'Every new account gets 7 full days of everything, free. After that one subscription covers the whole app, about $1 a month or about $10 a year, with the exact price set by Google Play for your region. The Vocabulary Bank stays free forever, subscription or not, and there are no ads.',
+        a: 'Every new account gets 30 full days of everything, free. After that one subscription covers the whole app, about $1 a month or about $10 a year, with the exact price set by Google Play for your region. The Vocabulary Bank stays free forever, subscription or not, and there are no ads.',
       },
       {
         q: 'Which devices can I use Warsh on?',

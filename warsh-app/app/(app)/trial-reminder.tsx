@@ -17,7 +17,7 @@ export default function TrialReminderScreen() {
   const language = useLanguage();
   const desktopWeb = isDesktopWeb(width);
   const { days } = useLocalSearchParams<{ days: string }>();
-  const trialDays = parseInt(days ?? "7", 10) || 7;
+  const trialDays = parseInt(days ?? "30", 10) || 30;
 
   // Subscription end date
   const endDate = new Date();

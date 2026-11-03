@@ -138,7 +138,7 @@ export default function HomePage() {
               <hr className="wh-rule" style={{ margin: '2.5rem 0 1.25rem' }} />
 
               <ul className="wh-meta">
-                <li>7 days of complete access</li>
+                <li>30 days of complete access</li>
                 <li>English and Urdu guidance</li>
                 <li>Vocabulary Bank free forever</li>
               </ul>
@@ -375,7 +375,7 @@ export default function HomePage() {
                   One path. One clear subscription.
                 </h3>
                 <p className="wh-p" style={{ marginTop: '1.25rem' }}>
-                  Begin with seven days of complete access. One subscription continues the full
+                  Begin with 30 days of complete access. One subscription continues the full
                   learning path, while the Vocabulary Bank stays free forever.
                 </p>
 
