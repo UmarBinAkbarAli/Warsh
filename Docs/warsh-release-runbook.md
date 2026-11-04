@@ -103,7 +103,7 @@ npm run content:export     # pull them into prisma/fixtures, then commit
 - Protected course and progress endpoints return the expected envelopes.
 - Android and web load the same production API through their supported origins.
 - Chapter lock and completion rules hold server-side.
-- Trial access lasts seven full days regardless of chapter progress; after expiry,
+- Trial access lasts 30 full days regardless of chapter progress; after expiry,
   paid lesson retrieval/completion, Noor, Tadabbur, and catalogue audio return
   `subscription_required` while vocabulary endpoints remain available.
 - Media URLs load from the configured public R2 host.

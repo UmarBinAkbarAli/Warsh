@@ -2184,7 +2184,7 @@ with `Retry-After: 10`. `tests/noor-burst-limit.test.ts` covers both keys.
 - **IAP risk:** purchase, restore, acknowledgement, consumable and
   cancellation/expiry are verified end to end on a Play-installed build
   (2026-08-29). What remains is refunded *subscriptions*, which keep entitlement
-  until the next lazy refresh. The trial is seven days of full access; Chapter 1
+  until the next lazy refresh. The trial is 30 days of full access; Chapter 1
   completion is not a paywall trigger.
 - **Config-value risk:** production environment variables are consumed with no
   validation in several places, and a bad value can disable a control silently
