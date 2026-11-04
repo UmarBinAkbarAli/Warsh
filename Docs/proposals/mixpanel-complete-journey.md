@@ -9,10 +9,12 @@ Status: **largely implemented and live (2026-10-31)** — see `Docs/warsh-status
 - Nothing is sent before sign-in (age unknown), so `signup_started/failed`, `login_failed` and password-reset events are intentionally absent. The old preview/onboarding helpers were deleted with the screens that called them; `signup_completed` carries goal/level/placement.
 - Website section/pricing/blog events are dropped; `website_link_clicked` with destination covers CTA, navigation and outbound clicks.
 
-## Remaining (updated 2026-10-31 evening)
+## Status: complete (2026-11-03)
 
-1. Release 1.0.21 (45), which carries the shared contract, new events and the paywall `source` fix to Android. Built and release-gated 2026-10-31; uploaded to Production (100% rollout) and sent for review 2026-11-02; Play's pre-review checks passed and it is in review. Once live, confirm `schema_version` and a real paywall `source` on Android events.
-2. Billing, in-app update and Google sign-in rows of the Android matrix need the Play-installed phone.
+Nothing remains open. Known limitations: website-to-Play visitors who never sign in on web stay unlinked; the real in-app update prompt awaits the next release; Android welcome slides were not checked signed-out.
+
+1. ~~Release 1.0.21 (45)~~ — done: live 2026-11-02; Android events carry `schema_version` and a real paywall `source` (`manage_see_plans`).
+2. ~~Billing, in-app update and Google sign-in on the Play-installed phone~~ — done 2026-11-03 on the Tecno KF8 (no false update prompt; the real update flow awaits a newer build). Same-account identity verified across android, backend, web_app and website.
 3. ~~Lexicon descriptions and rollout annotation~~ — done 2026-11-02: all 83 app/website/server events have Lexicon descriptions (10 described before their first event: purchase_cancelled/failed, restore_failed, subscription_banner_shown/cta, subscription_revoked/refunded, quran_translation_changed, tadabbur_surah_viewed, srs_review_finished_with_errors), and a project annotation marks 2026-10-31 as the rollout.
 
 Done: the scheduled outbox delivery is verified (2026-11-02) — the four rows queued 2026-10-31 were delivered unattended at 23:57 UTC that night.  the website, web app and backend changes are deployed (`8946ed8`, `b01ef78`). Mixpanel board **Warsh Journey** holds five saved reports — the free plan caps saved reports at five per user, so adoption and tracking health share one report:

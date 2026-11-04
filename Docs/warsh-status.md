@@ -5,7 +5,9 @@
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Post-launch hardening
 
-## Mixpanel work in progress — 2026-10-30
+## Mixpanel integration — complete (2026-11-03)
+
+Complete as of 2026-11-03: Android 1.0.21 (45), website, web app and backend events are live and verified, with same-account identity merged across surfaces. Known limitations, not open work: a visitor who goes from the website straight to Play without signing in on web stays unlinked. The real in-app update prompt is checked with the next release. Android welcome slides need a signed-out phone. The entries below are the dated history.
 
 - 2026-11-03: **1.0.21 (45) is approved and live** (Play Console: "App update published", 2026-11-02). On the Tecno KF8 with the Play-installed 45 (`installerPackageName=com.android.vending`), the owner account passed three checks. Google sign-out and sign-in returned to the same progress (Ch 72 L3) after only the account chooser. A cold start showed no false in-app update prompt and no update or billing errors in logcat; no newer build exists, so the real update flow is unexercised. A monthly license-tester subscription ("Test card, always approves", 5-minute test cycle) completed and showed ACTIVE under Manage subscription. That test subscription renews on the test schedule and then lapses by itself.
   Same day, same phone: the You tab and Noor redesign render correctly. Settings has no App language row. Lessons of every template open and advance cleanly: STANDARD, REVIEW (ch05 review), VERB_PATTERN (ch34-l02 conjugation table), SPOKEN_PHRASES (ch07-l05 Conversation Lab). So do the Ch 4 chapter test and Core 500 set and word views. Logcat had no FATAL or ReactNativeJS errors. In Mixpanel the 45 events carry `app_version` 1.0.21, `schema_version`, `session_id` and `ui_language`; `paywall_viewed` carries `source` (`manage_see_plans`). `chapter_test_started`, lesson, answer and audio events arrived live. Welcome slides on Android were not checked because they need a signed-out phone.
