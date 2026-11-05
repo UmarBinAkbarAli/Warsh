@@ -9,7 +9,7 @@ import { LessonPlayer, type LessonPreview, type LessonPreviewPosition } from "./
 // Warsh Studio shows this page inside its phone frame. It runs the real lesson
 // player on the lesson Studio is editing, saved or not. It needs no sign-in,
 // shows only what Studio sends it, and records nothing.
-const STUDIO_ORIGINS = ["https://api.warsh.app", "http://localhost:3000", "http://127.0.0.1:3000"];
+const STUDIO_ORIGINS = __DEV__ ? ["http://localhost:3000", "http://127.0.0.1:3000"] : ["https://api.warsh.app"];
 
 type IncomingMessage =
   | { type: "warsh-preview:lesson"; lesson: LessonPreview["lesson"]; language: "en" | "ur" }
