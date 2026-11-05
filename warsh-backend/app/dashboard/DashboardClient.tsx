@@ -3,6 +3,7 @@
 import { useState, useCallback, useMemo, useEffect, useLayoutEffect, useRef } from "react";
 import styles from "./dashboard.module.css";
 import ImageField from "./ImageField";
+import PhonePreview, { type PreviewPosition } from "./PhonePreview";
 import CurriculumOverview, { ReviewChip, reviewStateOf } from "./CurriculumOverview";
 import { applyFix, checkLesson, type LessonProblem, type ProblemFix, type ProblemTarget, type VocabIntro } from "../../lib/lessonChecks";
 import DashboardNav from "./DashboardNav";
@@ -349,14 +350,14 @@ function JsonFieldEditor({ label, value, onChange }: { label: string; value: unk
 // Calls `onChange` with each edited draft (never on the first render), so edits
 // land in the lesson draft immediately instead of waiting for a Save click.
 function useEmitDraft<T>(draft: T, onChange: (next: T) => void) {
-  const first = useRef(true);
+  // Compared by value, not a first-run flag: React's dev mode runs this effect
+  // twice on mount, which marked a lesson edited just for opening an item.
+  const emitted = useRef(draft);
   const latest = useRef(onChange);
   latest.current = onChange;
   useEffect(() => {
-    if (first.current) {
-      first.current = false;
-      return;
-    }
+    if (emitted.current === draft) return;
+    emitted.current = draft;
     latest.current(draft);
   }, [draft]);
 }
@@ -2534,9 +2535,20 @@ export default function DashboardClient({
   }
 
   const currentLessonPosition = selectedChapter.lessons.findIndex((lesson) => lesson.id === selectedLessonId) + 1;
-  const pvHook = draftHRC.hook ?? parsedContent?.hook;
-  const pvReveal = draftHRC.reveal ?? parsedContent?.reveal;
-  const pvClose = draftHRC.close ?? parsedContent?.close;
+  const isChapterTest =
+    (lessonDraft?.originalContent as { assessment?: { type?: string } } | null | undefined)?.assessment?.type === "CHAPTER_TEST";
+  // The phone opens on whatever is selected. Reveal's ayah is the screen after
+  // Noor's goodbye; the app has no separate reveal screen for ordinary lessons.
+  const previewTarget: PreviewPosition | null =
+    editorState.mode === "edit-card" && editorState.editingIndex !== null
+      ? { beat: 2, cardIndex: editorState.editingIndex, exerciseIndex: 0, closeStep: 0 }
+      : editorState.mode === "edit-exercise" && editorState.editingIndex !== null
+        ? { beat: 3, cardIndex: 0, exerciseIndex: editorState.editingIndex, closeStep: 0 }
+        : editorState.mode === "edit-hrc"
+          ? hrcSection === "hook"
+            ? { beat: 1, cardIndex: 0, exerciseIndex: 0, closeStep: 0 }
+            : { beat: 5, cardIndex: 0, exerciseIndex: 0, closeStep: hrcSection === "reveal" ? 1 : 0 }
+          : null;
   const activeMode = showJsonView ? "json" : "builder";
 
   const chapterBtnStyle: React.CSSProperties = {
@@ -3475,134 +3487,30 @@ export default function DashboardClient({
                 </div>
               )}
             </div>
-          {showPreview && (
-            <div className={`${styles.previewPanel} ${styles.studioPreview}`}>
-              <div className={styles.previewHeader}>
-                <h3>Learner preview</h3>
-                <button className={styles.cancelBtn} onClick={() => setShowPreview(false)} type="button">Hide</button>
+          {showPreview && selectedLesson && (
+            isChapterTest ? (
+              <div className={styles.studioPreview}>
+                <div className={styles.studioEmpty}>
+                  <strong>Chapter tests have no phone preview</strong>
+                  <span>They run on a separate screen in the app, so check this one in the app itself.</span>
+                  <button className={styles.cancelBtn} onClick={() => setShowPreview(false)} type="button">Hide</button>
+                </div>
               </div>
-              <div className={styles.previewBody}>
-                {/* Hook */}
-                {pvHook?.ayah?.ar && (
-                  <div className={styles.previewSection}>
-                    <div className={styles.previewSectionTitle}>Hook</div>
-                    <div style={{ direction: "rtl", fontSize: 20, fontFamily: "Amiri, serif", color: "#1e211b" }}>
-                      {pvHook.ayah.ar}
-                    </div>
-                    {pvHook.ayah.en && (
-                      <div style={{ fontSize: 13, color: "#6f725f" }}>{pvHook.ayah.en}</div>
-                    )}
-                    {pvHook.noor_intro?.en && (
-                      <div style={{ fontSize: 12, color: "#8a651f", marginTop: 4 }}>Noor: {pvHook.noor_intro.en}</div>
-                    )}
-                  </div>
-                )}
-                {/* Discover Cards */}
-                {draftDiscoverCards.length > 0 && (
-                  <div className={styles.previewSection}>
-                    <div className={styles.previewSectionTitle}>Discover Cards ({draftDiscoverCards.length})</div>
-                    {draftDiscoverCards.map((card, i) => {
-                      const title = getDiscoverCardTitle(card);
-                      return (
-                        <div key={i} className={styles.previewCard}>
-                          <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-                            <span className={styles.previewCardType}>{card.type}</span>
-                            <span style={{ fontSize: 11, color: "#8a651f" }}>#{i + 1}</span>
-                          </div>
-                          {title && <div className={styles.previewCardTitle}>{title}</div>}
-                          {card.type === "WORD" && card.text?.en && (
-                            <div className={styles.previewCardSubtitle}>{card.text.en}</div>
-                          )}
-                          {(card.type === "CONCEPT" || card.type === "CONTRAST" || card.type === "AYAH_PREVIEW") && (
-                            <div className={styles.previewCardSubtitle}>{card.concept?.ar}</div>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
-                )}
-                {/* Exercises */}
-                {draftExercises.length > 0 && (
-                  <div className={styles.previewSection}>
-                    <div className={styles.previewSectionTitle}>Practice Exercises ({draftExercises.length})</div>
-                    {draftExercises.map((ex, i) => {
-                      const prompt = ex.type === "TAP_TRANSLATION" ? ex.prompt?.ar
-                        : ex.type === "FILL_BLANK" ? ex.sentence_ar
-                        : ex.type === "TRUE_FALSE" ? ex.statement?.en
-                        : ex.type === "BUILD_SENTENCE" ? ex.target_translation?.en
-                        : ex.type === "GRAMMAR_PARSE" ? ex.sentence_ar
-                        : ex.type === "MATCHING" ? `${ex.left_column?.length ?? 0} pairs`
-                        : ex.type === "SHADOW_REPEAT" ? ex.phrase?.ar
-                        : ex.type === "CONVERSATION_BUILDER" ? ex.prompt_line?.en
-                        : ex.type === "AUDIO_RECOGNITION" ? `[Audio ${ex.audio_url ? "URL set" : "no URL"}]`
-                        : ex.type === "WRITE_ARABIC" ? ex.prompt?.en
-                        : ex.type === "HARAKAH_PLACEMENT" ? ex.word_unvowelled
-                        : ex.type === "WORD_ORDER" ? ex.context?.en
-                        : ex.type === "TRANSLATE_TO_ARABIC" ? ex.source?.en
-                        : ex.type === "IDENTIFY_ROOT" ? ex.word?.ar
-                        : ex.type === "MATCH_AYAH" ? ex.ayah_fragment?.ar
-                        : null;
-                      return (
-                        <div key={ex.id} className={styles.previewExercise}>
-                          <div className={styles.previewExerciseMeta}>
-                            <span className={styles.previewExerciseType}>{ex.type}</span>
-                            <span className={styles.previewExerciseId}>{ex.id}</span>
-                            {ex.xp_value != null && (
-                              <span className={styles.xpChip}>{ex.xp_value}XP</span>
-                            )}
-                          </div>
-                          {prompt && (
-                            <div className={styles.previewExercisePrompt} dir="rtl">{prompt}</div>
-                          )}
-                          {/* TAP_TRANSLATION options preview */}
-                          {ex.type === "TAP_TRANSLATION" && ex.options && (
-                            <div className={styles.previewExerciseOptions}>
-                              {ex.options.map((opt, oi) => (
-                                <div key={oi} className={styles.previewOptionItem}>
-                                  {oi}: {opt.en}
-                                </div>
-                              ))}
-                            </div>
-                          )}
-                          {/* MATCHING pairs preview */}
-                          {ex.type === "MATCHING" && ex.left_column && (
-                            <div style={{ fontSize: 11, color: "#6f725f" }}>
-                              {ex.left_column.length} left · {ex.right_column?.length ?? 0} right · {ex.correct_pairs?.length ?? 0} pairs
-                            </div>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
-                )}
-                {/* Reveal */}
-                {pvReveal && (
-                  <div className={styles.previewSection}>
-                    <div className={styles.previewSectionTitle}>Reveal</div>
-                    <div style={{ fontSize: 13, color: "#5c4a1e" }}>
-                      {pvReveal.concept_name?.en}
-                    </div>
-                    {pvReveal.noor_explanation?.en && (
-                      <div style={{ fontSize: 12, color: "#6f725f" }}>{pvReveal.noor_explanation.en}</div>
-                    )}
-                  </div>
-                )}
-                {/* Close */}
-                {pvClose?.noor_message?.en && (
-                  <div className={styles.previewSection}>
-                    <div className={styles.previewSectionTitle}>Close</div>
-                    <div style={{ fontSize: 13, color: "#5c4a1e", fontStyle: "italic" }}>
-                      {pvClose.noor_message.en}
-                    </div>
-                  </div>
-                )}
-                {draftDiscoverCards.length === 0 && draftExercises.length === 0 && (
-                  <div className={styles.noPreviewContent}>
-                    No discover cards or exercises yet.
-                  </div>
-                )}
-              </div>
-            </div>
+            ) : (
+              <PhonePreview
+                lesson={{
+                  id: selectedLesson.id,
+                  title: lessonDraft.title,
+                  titleAr: lessonDraft.titleAr,
+                  xpReward: lessonDraft.xpReward,
+                  template: lessonDraft.template,
+                  content: buildCurrentContent(),
+                }}
+                target={previewTarget}
+                dirty={editorState.dirty}
+                onHide={() => setShowPreview(false)}
+              />
+            )
           )}
           </div>
           )}

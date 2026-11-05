@@ -2,6 +2,17 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "npm run build:web",
   "outputDirectory": "dist",
+  "headers": [
+    {
+      "source": "/studio-preview",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "frame-ancestors https://api.warsh.app http://localhost:3000 http://127.0.0.1:3000"
+        }
+      ]
+    }
+  ],
   "rewrites": [
     {
       "source": "/assets/node_modules/:path*",

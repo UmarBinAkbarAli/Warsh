@@ -15,7 +15,7 @@ import { Animation, Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, Warsh
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { CHECKPOINT_MAX_BEAT, CHECKPOINT_MIN_BEAT, lessonCheckpointKey } from "@services/lessonCheckpoint";
 import { cancelTodayReminders, fireMilestoneNotification } from "@services/notifications";
-import { analyticsErrorCode, track, trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from "@services/analytics";
+import { analyticsErrorCode, track as sendAnalyticsEvent, trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from "@services/analytics";
 import { pickLocalized, useLanguage, useTranslationLanguage } from "@services/language";
 import { useT } from "@i18n/index";
 import { prefetchCatalogAudio, prefetchRemoteAudio } from "@services/audioCache";
@@ -40,6 +40,26 @@ type RawLesson = {
   isChapterTest?: boolean;
   isSkippedByPlacement?: boolean;
 };
+
+export type LessonPreviewPosition = {
+  beat: number;
+  cardIndex: number;
+  exerciseIndex: number;
+  closeStep: number;
+};
+
+/**
+ * Studio's phone preview. The lesson comes from the editor instead of the API,
+ * and nothing is recorded: no progress, checkpoint, XP or analytics.
+ */
+export type LessonPreview = {
+  lesson: RawLesson;
+  /** A new object moves the player to that screen. */
+  jump: LessonPreviewPosition | null;
+  onPosition: (position: LessonPreviewPosition) => void;
+};
+
+const noAnalytics = (_event: string, _props?: Record<string, unknown>) => {};
 
 type CompletionResult = {
   xpEarned: number;
@@ -569,13 +589,21 @@ function renderMaybeArabic(value: string, arabicStyle: TextStyle = styles.option
 // Component
 // ---------------------------------------------------------------------------
 export default function LessonPlayScreen() {
+  return <LessonPlayer />;
+}
+
+export function LessonPlayer({ preview }: { preview?: LessonPreview }) {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const language = useTranslationLanguage();
   const t = useT();
   const uiLanguage = useLanguage();
-  const { lessonId } = useLocalSearchParams<{ lessonId: string }>();
-  const userId = useAuthStore((state) => state.user?.id);
+  const params = useLocalSearchParams<{ lessonId: string }>();
+  const lessonId = preview ? preview.lesson.id : params.lessonId;
+  const signedInUserId = useAuthStore((state) => state.user?.id);
+  // Without a user id the player writes no checkpoint for this lesson.
+  const userId = preview ? undefined : signedInUserId;
+  const track = preview ? noAnalytics : sendAnalyticsEvent;
   const [lesson, setLesson] = useState<RawLesson | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -697,7 +725,42 @@ export default function LessonPlayScreen() {
     prefetchCatalogAudio(requests).catch(() => undefined);
   }, [exercises, lesson, lessonId]);
 
+  // Studio sends every edit as a new lesson object; the learner's place in the
+  // lesson stays put unless the screen they were on no longer exists.
+  const previewLesson = preview?.lesson;
+  const previewJump = preview?.jump;
+  const onPreviewPosition = preview?.onPosition;
   useEffect(() => {
+    if (!previewLesson) return;
+    const content = (previewLesson.content ?? {}) as Record<string, any>;
+    setLesson(previewLesson);
+    setLoading(false);
+    setCurrentCardIndex((i) => Math.min(i, Math.max(0, (content.discover_cards?.length ?? 1) - 1)));
+    setCurrentExerciseIndex((i) => Math.min(i, Math.max(0, (content.exercises?.length ?? 1) - 1)));
+  }, [previewLesson]);
+
+  useEffect(() => {
+    if (!previewJump) return;
+    setCurrentBeat(previewJump.beat);
+    setCurrentCardIndex(previewJump.cardIndex);
+    setCurrentExerciseIndex(previewJump.exerciseIndex);
+    setCloseStep(previewJump.closeStep);
+    setSelectedAnswer(null);
+    setIsAnswered(false);
+    setWriteHintShown(false);
+    setMatchActive(null);
+    setSpPhraseIdx(0);
+    setSpPhraseStep("intro");
+    setSpRecognitionAnswer(null);
+    setSpRecognitionAnswered(false);
+  }, [previewJump]);
+
+  useEffect(() => {
+    onPreviewPosition?.({ beat: currentBeat, cardIndex: currentCardIndex, exerciseIndex: currentExerciseIndex, closeStep });
+  }, [onPreviewPosition, currentBeat, currentCardIndex, currentExerciseIndex, closeStep]);
+
+  useEffect(() => {
+    if (preview) return;
     async function loadLesson() {
       if (!lessonId) { setError(t("player.invalidLesson")); setLoading(false); return; }
       try {
@@ -729,6 +792,23 @@ export default function LessonPlayScreen() {
   }, [lessonId, userId, router, t]);
 
   useEffect(() => {
+    if (preview) {
+      // The close screens need a result; a preview never calls the server.
+      if (currentBeat === 5) {
+        setCompletionResult({
+          xpEarned: lesson?.xpReward ?? 10,
+          chapterBonusXp: 0,
+          chapterJustCompleted: false,
+          nextChapterId: null,
+          totalXp: 0,
+          currentStreak: 0,
+          streakCelebration: false,
+          newAchievements: [],
+          dailyGoalMet: false,
+        });
+      }
+      return;
+    }
     async function finishLesson() {
       if (!lessonId || currentBeat !== 5 || completionFiredRef.current) return;
       completionFiredRef.current = true;
@@ -876,6 +956,12 @@ export default function LessonPlayScreen() {
   }
 
   function leaveLesson(saved: boolean) {
+    if (preview) {
+      setShowExitConfirm(false);
+      setCurrentBeat(1);
+      setCloseStep(0);
+      return;
+    }
     if (!completionResult) track("lesson_exited", { lesson_id: lessonId, beat: currentBeat, checkpoint_saved: saved });
     setShowExitConfirm(false);
     const chapterId = lesson?.chapterId;
@@ -1994,6 +2080,10 @@ export default function LessonPlayScreen() {
   }
 
   async function finishClose() {
+    if (preview) {
+      leaveLesson(false);
+      return;
+    }
     const shouldShowStreakCelebration = Boolean(completionResult?.streakCelebration);
     const achievements = completionResult?.newAchievements ?? [];
     if (achievements.length > 0) {

@@ -10,6 +10,23 @@ const remoteAudioDownloads = new Map<string, Promise<string>>();
 const catalogAudioDownloads = new Map<string, Promise<string>>();
 const vocabWordAudioDownloads = new Map<string, Promise<string>>();
 
+// Studio's phone preview has no signed-in learner, so the API's catalogue
+// redirect refuses it. The catalogue files are public; this builds the same
+// address the API redirects to (lib/audioCatalog.ts in the backend).
+const PUBLIC_CATALOG_AUDIO_URL = "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/catalog/v1";
+let directCatalogAudio = false;
+
+export function enableDirectCatalogAudio() {
+  directCatalogAudio = true;
+}
+
+async function directCatalogAudioUrl(text: string) {
+  const normalized = text.normalize("NFC").trim().replace(/\s+/g, " ");
+  const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(normalized));
+  const hex = Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, "0")).join("");
+  return `${PUBLIC_CATALOG_AUDIO_URL}/${hex}.mp3`;
+}
+
 type CatalogAudioRequest = {
   text: string;
   cacheKey?: string;
@@ -95,6 +112,11 @@ export async function getCachedCatalogAudioUri(request: CatalogAudioRequest) {
   const download = (async () => {
     const token = await getToken();
     const remoteUrl = `${API_BASE_URL}/api/audio/catalog?text=${encodeURIComponent(text)}`;
+
+    if (Platform.OS === "web" && directCatalogAudio) {
+      // Played straight from the file: an audio element needs no CORS header, fetch would.
+      return directCatalogAudioUrl(text);
+    }
 
     if (Platform.OS === "web") {
       return fetchWebAudioUrl(
