@@ -74,6 +74,7 @@ same volume.
 ```powershell
 npm run dev
 npm run build                  # prisma generate && next build
+npm run lint                   # next lint
 npm test                       # tsx --test tests/**/*.test.ts
 npx tsx --test tests/streak.test.ts     # single test file
 
@@ -101,6 +102,8 @@ npm run android
 npm run web
 npm run lint -- --quiet
 npx tsc --noEmit
+npm run test:e2e               # Playwright (web)
+npm run verify:release-api-url # confirm a release bundle points at the production API
 npm run deploy:web             # Expo web export -> app.warsh.app (Vercel)
 ```
 
@@ -110,6 +113,20 @@ npm run deploy:web             # Expo web export -> app.warsh.app (Vercel)
 npm run build                  # tsup
 npm test                       # vitest run
 npx vitest run <file>
+```
+
+The backend never reads this package directly — it reads the copy in
+`warsh-backend/vendor/lesson-schema/` (linked into `node_modules`). After any change
+under `src/`, run `npm run build` here, copy `dist/` over
+`warsh-backend/vendor/lesson-schema/dist/`, and commit both in the same commit as the
+feature. Skipping the copy makes Studio and the server reject lessons that use the
+new fields.
+
+### Site (`cd warsh-site`)
+
+```powershell
+npm run dev
+npm run build
 ```
 
 ## Implementation rules
