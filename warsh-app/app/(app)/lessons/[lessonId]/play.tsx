@@ -14,7 +14,7 @@ import { getConversationLab, LabCanDoCard, LabIntroScreen, LabListenAndPhrases, 
 import { Animation, Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshAlpha, WarshPalette, desktopFontSize, desktopLineHeight } from "../../../../constants/theme";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { CHECKPOINT_MAX_BEAT, CHECKPOINT_MIN_BEAT, lessonCheckpointKey } from "@services/lessonCheckpoint";
-import { cancelTodayReminders, fireMilestoneNotification } from "@services/notifications";
+import { enableReminders, fireMilestoneNotification } from "@services/notifications";
 import { analyticsErrorCode, track as sendAnalyticsEvent, trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from "@services/analytics";
 import { pickLocalized, useLanguage, useTranslationLanguage } from "@services/language";
 import { useT } from "@i18n/index";
@@ -846,9 +846,10 @@ export function LessonPlayer({ preview }: { preview?: LessonPreview }) {
           void prefetchChapter(data.nextChapterId as string);
         }
         trackLessonCompleted({ lessonId, lessonType: lesson?.template, xpEarned: data.xpEarned, currentStreak: data.currentStreak, dailyGoalMet });
-        if (dailyGoalMet) {
-          cancelTodayReminders().catch(() => {});
-        }
+        // The first finished lesson is when the reminder prompt is shown;
+        // afterwards this renews the week of reminders and skips tonight's
+        // once the daily goal is met.
+        enableReminders({ ask: true }).catch(() => {});
         for (const achievement of achievements as { key: string; title: string; xpReward: number }[]) {
           fireMilestoneNotification(achievement.title).catch(() => {});
           trackMilestoneUnlocked(achievement.key ?? "", achievement.title, achievement.xpReward ?? 0);

@@ -5,6 +5,19 @@
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Post-launch hardening
 
+## Reminders never reached Android 13+ learners — fixed in code (2026-11-22, unreleased)
+
+Found while checking Mixpanel: `notification_permission_result` had 0 events in 30 days. On Android 13+, expo-notifications reports a never-asked permission as `denied` (notifications stay off until `POST_NOTIFICATIONS` is granted), and `requestNotificationPermission` returned early on `denied`, so the system prompt was never shown and no reminder was ever scheduled for those learners. Evidence: a learner who signed up 2026-11-20 on Android 16 / 1.0.21 sent sign-up, session, commitment and lesson events but no permission event. Earlier device checks ran on the Tecno (Android 11, no runtime prompt), which is why it went unseen. The Settings reminder switches failed the same way.
+
+A second defect stopped reminders for active learners: meeting the daily goal cancelled the repeating 20:00 reminder outright, and it came back only when the app was opened again.
+
+Fix (app code, ships with the next release; not yet on a device):
+- The prompt is asked when `canAskAgain` is true, not only when the status is `undetermined`.
+- It is shown once, automatically, right after the first finished lesson, not on app entry. Learners who already finished a lesson are asked on their next app open. The Settings switches can still ask after a "no".
+- The daily reminder is a week of one-off 20:00 alarms that skip today once the daily goal is met. Each app open and finished lesson renews them; the old repeating alarm is cancelled on upgrade.
+
+Verify on a physical Android 13+ phone (the emulator skips notifications; the Tecno is Android 11): a fresh install is prompted after the first lesson, `notification_permission_result` reaches Mixpanel, and `dumpsys alarm` shows tomorrow's 20:00 reminder. Open follow-up: the streak-risk reminder still uses a repeating alarm under a date-tagged id.
+
 ## Mixpanel integration — complete (2026-11-03)
 
 Complete as of 2026-11-03: Android 1.0.21 (45), website, web app and backend events are live and verified, with same-account identity merged across surfaces. Known limitations, not open work: a visitor who goes from the website straight to Play without signing in on web stays unlinked. The real in-app update prompt is checked with the next release. Android welcome slides need a signed-out phone. The entries below are the dated history.

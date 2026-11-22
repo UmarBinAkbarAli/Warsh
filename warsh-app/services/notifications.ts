@@ -57,7 +57,9 @@ async function getNotifications() {
 }
 
 const IDS = {
-  dailyReminder: "warsh-daily-reminder",
+  // Before 1.0.22 the daily reminder was one repeating alarm under this id.
+  legacyDailyReminder: "warsh-daily-reminder",
+  dailyReminderPrefix: "warsh-daily-reminder-",
   streakRisk: () => `warsh-streak-risk-${todayTag()}`,
   wordOfDay: "warsh-word-of-day",
 };
@@ -96,9 +98,14 @@ export async function requestNotificationPermission(): Promise<boolean> {
   const Notifications = await getNotifications();
   if (!Notifications) return false;
 
-  const { status: existing } = await Notifications.getPermissionsAsync();
+  // On Android 13+ expo-notifications reports "denied" for a permission that
+  // was never asked (notifications stay off until POST_NOTIFICATIONS is
+  // granted), so "denied" alone must not stop us. `canAskAgain` is false only
+  // once the learner has refused for good (or on Android 12 and older, where
+  // there is no runtime prompt and they switched notifications off).
+  const { status: existing, canAskAgain } = await Notifications.getPermissionsAsync();
   if (existing === "granted") return true;
-  if (existing === "denied") return false;
+  if (!canAskAgain) return false;
 
   await ensureReminderChannel(Notifications);
 
@@ -141,6 +148,49 @@ async function scheduleDailyAt(
   });
 }
 
+// Device-local calendar date, so "today" matches the learner's own evening.
+function localDateTag(date: Date) {
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
+}
+
+const DAILY_REMINDER_DAYS = 7;
+
+async function cancelDailyReminders(Notifications: NotificationsModule) {
+  const scheduled = await Notifications.getAllScheduledNotificationsAsync().catch(() => []);
+  await Promise.all([
+    Notifications.cancelScheduledNotificationAsync(IDS.legacyDailyReminder).catch(() => {}),
+    ...scheduled
+      .filter((item) => item.identifier.startsWith(IDS.dailyReminderPrefix))
+      .map((item) => Notifications.cancelScheduledNotificationAsync(item.identifier).catch(() => {})),
+  ]);
+}
+
+// One reminder per evening for the next week, as separate one-off alarms.
+// A single repeating alarm cannot skip just today, so meeting the daily goal
+// used to cancel it outright, and it only came back when the learner opened
+// the app again — the very learner the reminder exists for. One-off alarms let
+// today be skipped while tomorrow's stays, and stop after a week of silence
+// instead of nagging forever. Every app open and finished lesson renews them.
+async function scheduleDailyReminders(
+  Notifications: NotificationsModule,
+  title: string,
+  body: string,
+  skipToday: boolean
+) {
+  await cancelDailyReminders(Notifications);
+  const now = new Date();
+  for (let offset = 0; offset < DAILY_REMINDER_DAYS; offset++) {
+    const at = new Date(now.getFullYear(), now.getMonth(), now.getDate() + offset, 20, 0, 0);
+    if (offset === 0 && (skipToday || at <= now)) continue;
+    await Notifications.scheduleNotificationAsync({
+      identifier: `${IDS.dailyReminderPrefix}${localDateTag(at)}`,
+      content: { title, body, data: { screen: "learn" }, sound: false },
+      trigger: { type: Notifications.SchedulableTriggerInputTypes.DATE, date: at, channelId: REMINDER_CHANNEL_ID },
+    });
+  }
+}
+
 export interface NotificationPrefs {
   dailyReminderEnabled: boolean;
   streakRiskEnabled: boolean;
@@ -152,7 +202,9 @@ export async function setupNotificationSchedules(
   prefs: NotificationPrefs,
   userName: string,
   currentStreak: number,
-  streakGoalDays?: number | null
+  streakGoalDays?: number | null,
+  // True once today's daily goal is met: no reminder tonight.
+  skipToday = false
 ): Promise<void> {
   const Notifications = await getNotifications();
   if (!Notifications) return;
@@ -163,19 +215,19 @@ export async function setupNotificationSchedules(
   await ensureReminderChannel(Notifications);
 
   if (prefs.dailyReminderEnabled) {
-    await scheduleDailyAt(
-      IDS.dailyReminder,
-      20,
-      0,
+    await scheduleDailyReminders(
+      Notifications,
       t("notifications.dailyTitle", { name: userName.trim() || t("notifications.friend") }),
       t("notifications.dailyBody"),
-      { screen: "learn" }
+      skipToday
     );
   } else {
-    await Notifications.cancelScheduledNotificationAsync(IDS.dailyReminder).catch(() => {});
+    await cancelDailyReminders(Notifications);
   }
 
-  if (prefs.streakRiskEnabled && currentStreak >= 3) {
+  if (skipToday) {
+    await Notifications.cancelScheduledNotificationAsync(IDS.streakRisk()).catch(() => {});
+  } else if (prefs.streakRiskEnabled && currentStreak >= 3) {
     const daysToGoal = streakGoalDays ? streakGoalDays - currentStreak : 0;
     const streakRiskBody =
       streakGoalDays && daysToGoal > 0
@@ -208,14 +260,64 @@ export async function setupNotificationSchedules(
   }
 }
 
-export async function cancelTodayReminders(): Promise<void> {
-  const Notifications = await getNotifications();
-  if (!Notifications) return;
+const SETTINGS_PREFS_KEY = "warsh_settings";
 
-  await Promise.all([
-    Notifications.cancelScheduledNotificationAsync(IDS.dailyReminder).catch(() => {}),
-    Notifications.cancelScheduledNotificationAsync(IDS.streakRisk()).catch(() => {}),
+// Schedule reminders from the learner's saved preferences and current streak.
+// With `ask`, show the system permission prompt when it can still be shown;
+// without it, schedule only if permission was already granted. The prompt is
+// asked after the learner's first finished lesson, never on app entry, because
+// Android allows it to be shown at most twice. It is shown automatically only
+// once per device; after a "no", the Settings switches can still ask.
+const REMINDER_PROMPTED_KEY = "warsh_reminder_prompted_v1";
+
+export async function enableReminders({ ask }: { ask: boolean }): Promise<void> {
+  const [{ default: AsyncStorage }, { default: api }] = await Promise.all([
+    import("@react-native-async-storage/async-storage"),
+    import("./api"),
   ]);
+  let granted = (await getNotificationPermissionStatus()) === "granted";
+  if (!granted && ask && !(await AsyncStorage.getItem(REMINDER_PROMPTED_KEY))) {
+    await AsyncStorage.setItem(REMINDER_PROMPTED_KEY, "1");
+    granted = await requestNotificationPermission();
+  }
+  if (!granted) return;
+
+  const [rawPrefs, progressRes] = await Promise.all([
+    AsyncStorage.getItem(SETTINGS_PREFS_KEY),
+    api.get("/api/progress"),
+  ]);
+  const prefs = rawPrefs ? JSON.parse(rawPrefs) : {};
+  const progress = progressRes.data.data;
+  await setupNotificationSchedules(
+    {
+      dailyReminderEnabled: prefs.dailyReminderEnabled !== false,
+      streakRiskEnabled: prefs.streakRiskEnabled !== false,
+      milestoneEnabled: prefs.milestoneEnabled !== false,
+      wordOfDayEnabled: prefs.wordOfDayEnabled !== false,
+    },
+    progress.userName ?? "",
+    progress.streak ?? 0,
+    progress.streakGoalDays ?? null,
+    progress.dailyGoalMet === true
+  );
+}
+
+// App entry: keep existing reminders current, and ask learners who already
+// finished a lesson before this prompt moved (they were never asked).
+export async function initReminders(): Promise<void> {
+  if ((await getNotificationPermissionStatus()) === "granted") {
+    await enableReminders({ ask: false });
+    return;
+  }
+  const [{ default: AsyncStorage }, { default: api }] = await Promise.all([
+    import("@react-native-async-storage/async-storage"),
+    import("./api"),
+  ]);
+  if (await AsyncStorage.getItem(REMINDER_PROMPTED_KEY)) return;
+  const progress = (await api.get("/api/progress")).data.data;
+  if (Array.isArray(progress.completedLessons) && progress.completedLessons.length > 0) {
+    await enableReminders({ ask: true });
+  }
 }
 
 export async function fireMilestoneNotification(milestoneTitle: string): Promise<void> {

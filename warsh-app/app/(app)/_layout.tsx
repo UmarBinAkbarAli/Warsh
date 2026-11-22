@@ -8,48 +8,13 @@ import { Colors } from "../../constants/theme";
 import {
   addNotificationResponseListener,
   clearNotificationBadge,
-  requestNotificationPermission,
-  setupNotificationSchedules,
+  initReminders,
 } from "@services/notifications";
 import { setSentryUser, clearSentryUser } from "@services/sentry";
 import { identifyUser, resetAnalytics, setAnalyticsSuppressed, track } from "@services/analytics";
 import { ensureRestoreCredential } from "@services/restoreCredentials";
 import { reportFirstEligibleSession, reportInstallAttribution } from "@services/installAttribution";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import api from "@services/api";
-
-const PREFS_KEY = "warsh_settings";
-
-async function initNotifications() {
-  const granted = await requestNotificationPermission();
-  if (!granted) return;
-
-  try {
-    const [rawPrefs, progressRes] = await Promise.all([
-      AsyncStorage.getItem(PREFS_KEY),
-      api.get("/api/progress"),
-    ]);
-    const prefs = rawPrefs ? JSON.parse(rawPrefs) : {};
-    const progress = progressRes.data.data;
-    const userName = progress.userName ?? "";
-    const currentStreak = progress.streak ?? 0;
-    const streakGoalDays = progress.streakGoalDays ?? null;
-
-    await setupNotificationSchedules(
-      {
-        dailyReminderEnabled: prefs.dailyReminderEnabled !== false,
-        streakRiskEnabled: prefs.streakRiskEnabled !== false,
-        milestoneEnabled: prefs.milestoneEnabled !== false,
-        wordOfDayEnabled: prefs.wordOfDayEnabled !== false,
-      },
-      userName,
-      currentStreak,
-      streakGoalDays
-    );
-  } catch {
-    // Non-critical — don't block the app
-  }
-}
 
 export default function AppLayout() {
   const router = useRouter();
@@ -130,8 +95,9 @@ export default function AppLayout() {
   useEffect(() => {
     if (!token) return;
 
-    // Init schedules once on login
-    void initNotifications();
+    // Keep reminders current once on login. The permission prompt itself
+    // waits for the first finished lesson (see enableReminders).
+    void initReminders().catch(() => {});
 
     // Clear badge when app opens
     void clearNotificationBadge();
