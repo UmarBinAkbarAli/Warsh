@@ -163,7 +163,10 @@ export async function getCachedRemoteAudioUri(
   const download = (async () => {
     await ensureAudioCacheDir();
     if (Platform.OS === "web") {
-      return fetchWebAudioUrl(remoteUrl, localUri);
+      // Played straight from the file: an audio element needs no CORS header,
+      // fetch would. R2 sends none, so a fetch here failed and the card's own
+      // recording was silently replaced by the older catalogue clip.
+      return remoteUrl;
     }
     if (await isFreshCachedFile(localUri)) return localUri;
 
